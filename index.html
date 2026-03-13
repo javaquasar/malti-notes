@@ -6,135 +6,94 @@
   <title>MQF-1 Maltese Study Site</title>
   <link rel="stylesheet" href="./assets/css/site.css">
   <style>
-    :root {
-      --bg: #f4efe4;
-      --paper: #fffaf1;
-      --ink: #17352f;
-      --muted: #5f6f67;
-      --line: #d9ceb7;
-      --accent: #bf5b2c;
-      --teal: #2f8f83;
-      --shadow: 0 18px 40px rgba(33, 35, 27, 0.08);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at top left, rgba(47, 143, 131, 0.12), transparent 28%),
-        radial-gradient(circle at top right, rgba(191, 91, 44, 0.10), transparent 24%),
-        linear-gradient(180deg, #f7f1e6 0%, var(--bg) 100%);
-      color: var(--ink);
-      line-height: 1.5;
-    }
-    .page {
-      width: min(1180px, calc(100% - 32px));
-      margin: 24px auto 48px;
-    }
-    .hero, .section, .resource-card, .page-card {
+.hero, .section, .resource-card, .page-card {
       background: var(--paper);
       border: 1px solid rgba(95, 111, 103, 0.18);
       border-radius: 24px;
       box-shadow: var(--shadow);
     }
-    .hero {
-      overflow: hidden;
-      margin-bottom: 24px;
-    }
-    .hero-band {
+
+.hero-band {
       height: 16px;
       background: linear-gradient(90deg, var(--teal) 0 18%, var(--accent) 18% 28%, transparent 28%);
     }
-    .hero-body {
+
+.hero-body {
       padding: 30px;
       display: grid;
       grid-template-columns: 1.45fr 0.95fr;
       gap: 24px;
     }
-    h1, h2, h3 {
-      margin: 0 0 10px;
-      line-height: 1.1;
-    }
-    h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
-    h2 { font-size: 1.45rem; }
-    h3 { font-size: 1.08rem; }
-    .lead {
+
+h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
+
+h2 { font-size: 1.45rem; }
+
+.lead {
       font-size: 1.04rem;
       color: var(--muted);
       max-width: 66ch;
       margin-bottom: 18px;
     }
-    .hero-note {
-      background: #f9f1e2;
-      border: 1px solid rgba(191, 91, 44, 0.18);
-      border-radius: 20px;
-      padding: 18px;
-    }
-    .hero-note p {
+
+.hero-note p {
       margin: 0 0 10px;
       color: var(--muted);
     }
-    .hero-note ul {
+
+.hero-note ul {
       margin: 0;
       padding-left: 18px;
     }
-    .section {
+
+.section {
       padding: 24px;
       margin-bottom: 24px;
     }
-    .tag {
-      display: inline-block;
-      font-size: 0.82rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(191, 91, 44, 0.10);
-      color: #7a3c1b;
-      margin-bottom: 10px;
-    }
-    .grid {
+
+.grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
       margin-top: 16px;
     }
-    .page-card, .resource-card {
+
+.page-card, .resource-card {
       padding: 18px;
       background: rgba(255, 255, 255, 0.56);
     }
-    .page-card p, .resource-card p {
+
+.page-card p, .resource-card p {
       margin: 0;
       color: var(--muted);
     }
-    .page-card a, .resource-card a {
+
+.page-card a, .resource-card a {
       color: var(--teal);
       text-decoration: none;
       font-weight: 700;
     }
-    .page-card a:hover, .resource-card a:hover {
+
+.page-card a:hover, .resource-card a:hover {
       text-decoration: underline;
     }
-    .list {
+
+.list {
       margin: 12px 0 0;
       padding-left: 18px;
       color: var(--muted);
     }
-    .footer-note {
+
+.footer-note {
       margin-top: 14px;
       color: var(--muted);
       font-size: 0.94rem;
     }
-    code {
-      font-family: Consolas, "Courier New", monospace;
-      font-size: 0.92em;
-      background: rgba(47, 143, 131, 0.08);
-      padding: 2px 6px;
-      border-radius: 6px;
-    }
-    
-    @media (max-width: 920px) {
+
+@media (max-width: 920px) {
       .hero-body, .grid { grid-template-columns: 1fr; }
     }
-  </style>
+</style>
 </head>
 <body>
   <div class="page">
@@ -158,10 +117,9 @@
         <div>
           <h1>MQF-1 Maltese Study Site</h1>
           <p class="lead">
-            A clean entry page for the MQF-1 study materials. All internal links below are relative, so this folder can be uploaded to GitHub Pages later without changing the paths.
+            A clean entry page for the MQF-1 study materials.
           </p>
           <div class="pill-row">
-            <span class="pill">GitHub Pages friendly</span>
             <span class="pill">relative links</span>
             <span class="pill">grammar</span>
             <span class="pill">speaking</span>
@@ -229,7 +187,6 @@
         <ul class="list">
           <li>good for graded exposure outside the course</li>
           <li>useful when you want more listening and reading input</li>
-          <li>easy to link from GitHub Pages because it is just a normal external URL</li>
         </ul>
       </article>
     </section>
