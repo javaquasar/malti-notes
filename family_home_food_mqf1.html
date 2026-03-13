@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQF-1 Family, Home and Food Guide</title>
+  <style>
+    :root {
+      --bg: #f4efe4;
+      --paper: #fffaf1;
+      --ink: #17352f;
+      --muted: #5f6f67;
+      --line: #d9ceb7;
+      --accent: #bf5b2c;
+      --teal: #2f8f83;
+      --shadow: 0 18px 40px rgba(33, 35, 27, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(47, 143, 131, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(191, 91, 44, 0.10), transparent 24%),
+        linear-gradient(180deg, #f7f1e6 0%, var(--bg) 100%);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .page {
+      width: min(1220px, calc(100% - 32px));
+      margin: 24px auto 48px;
+    }
+    .hero, .sidebar, .card {
+      background: var(--paper);
+      border: 1px solid rgba(95, 111, 103, 0.18);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .hero {
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .band {
+      height: 16px;
+      background: linear-gradient(90deg, var(--teal) 0 14%, var(--accent) 14% 22%, transparent 22%);
+    }
+    .hero-body {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.45fr 0.95fr;
+      gap: 24px;
+    }
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+    h1 { font-size: clamp(2rem, 4vw, 3.1rem); }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.05rem; }
+    .lead {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 68ch;
+      margin-bottom: 18px;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      border: 1px solid rgba(47, 143, 131, 0.24);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(47, 143, 131, 0.08);
+      font-size: 0.95rem;
+    }
+    .note {
+      background: #f9f1e2;
+      border: 1px solid rgba(191, 91, 44, 0.18);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .note p { margin: 0 0 10px; color: var(--muted); }
+    .note ul { margin: 0; padding-left: 18px; }
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+      padding: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+    }
+    .sidebar li + li { margin-top: 8px; }
+    .sidebar a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .sidebar a:hover { text-decoration: underline; }
+    .mini { font-size: 0.93rem; color: var(--muted); }
+    .content {
+      display: grid;
+      gap: 20px;
+    }
+    .card { padding: 24px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      background: rgba(47, 143, 131, 0.10);
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .two-col, .three-col {
+      display: grid;
+      gap: 16px;
+    }
+    .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .item, .example, .pattern {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: rgba(255,255,255,0.58);
+    }
+    .item strong, .example strong, .pattern strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+    .item span, .example span, .pattern span {
+      color: var(--muted);
+      font-size: 0.94rem;
+      display: block;
+    }
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+    .footer-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    code {
+      background: rgba(23,53,47,0.08);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.92em;
+    }
+    @media (max-width: 1100px) {
+      .hero-body, .layout, .two-col, .three-col { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+  
+    .story-lines {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .story-line {
+      border-top: 1px dashed rgba(95, 111, 103, 0.2);
+      padding-top: 10px;
+    }
+    .story-line:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .story-line .mt {
+      display: block;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .story-line .en {
+      display: block;
+      color: var(--muted);
+      margin-top: 2px;
+      font-size: 0.96rem;
+    }
+
+
+    .site-header {
+      background: var(--paper);
+      border: 1px solid rgba(95, 111, 103, 0.18);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .site-brand {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .site-nav a {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+    .site-nav a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-brand" href="./index.html">MQF-1 Maltese Study Site</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./verbs_guide_mqf1.html">Verbs</a>
+        <a href="./numbers_calendar_time_mqf1.html">Numbers and Time</a>
+        <a href="./family_home_food_mqf1.html">Family, Home and Food</a>
+        <a href="./pronouns_possessives_mqf1.html">Pronouns</a>
+        <a href="./picture_description_mqf1.html">Pictures</a>
+        <a href="./daily_routine_mqf1.html">Routine</a>
+        <a href="./sentence_builder_mqf1.html">Sentence Builder</a>
+        <a href="./common_mistakes_mqf1.html">Common Mistakes</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="band"></div>
+      <div class="hero-body">
+        <div>
+          <h1>MQF-1 Family, Home and Food</h1>
+          <p class="lead">This is a practical home-study page for the most common homework topics: family, house, rooms, furniture, food, drinks, and simple likes or dislikes. The examples stay close to MQF-1 and are designed for short written or spoken answers.</p>
+          <div class="pill-row">
+            <span class="pill">Family words</span>
+            <span class="pill">Home and rooms</span>
+            <span class="pill">Furniture</span>
+            <span class="pill">Food and drinks</span>
+            <span class="pill">Likes and dislikes</span>
+          </div>
+        </div>
+        <aside class="note">
+          <p><strong>Best use for homework</strong></p>
+          <ul>
+            <li>Read one block and then say 3 short sentences aloud.</li>
+            <li>Reuse the model patterns instead of making long answers.</li>
+            <li>Keep the grammar simple and safe.</li>
+            <li>Use this page together with the verbs and picture pages.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Sections</h2>
+        <ul>
+          <li><a href="#family">Family</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#furniture">Furniture</a></li>
+          <li><a href="#food">Food</a></li>
+          <li><a href="#drinks">Drinks</a></li>
+          <li><a href="#likes">Likes And Dislikes</a></li>
+          <li><a href="#answers">Homework Answers</a></li>
+          <li><a href="#story-bank">30 Family Stories</a></li>
+        </ul>
+        <p class="mini">Safe pattern: <code>Għandi...</code>, <code>Hemm...</code>, <code>Inħobb...</code>, <code>Ma nħobbx...</code>.</p>
+      </aside>
+
+      <main class="content">
+        <section class="card" id="family">
+          <span class="tag">Family</span>
+          <h2>Family Words</h2>
+          <div class="three-col">
+            <div class="item"><strong>omm</strong><span>mother</span></div>
+            <div class="item"><strong>missier</strong><span>father</span></div>
+            <div class="item"><strong>nanna</strong><span>grandmother</span></div>
+            <div class="item"><strong>nannu</strong><span>grandfather</span></div>
+            <div class="item"><strong>ħu / ħija</strong><span>brother / my brother</span></div>
+            <div class="item"><strong>oħt / oħti</strong><span>sister / my sister</span></div>
+            <div class="item"><strong>iben</strong><span>son</span></div>
+            <div class="item"><strong>bint</strong><span>daughter</span></div>
+            <div class="item"><strong>tifel</strong><span>boy / son in context</span></div>
+            <div class="item"><strong>tifla</strong><span>girl / daughter in context</span></div>
+            <div class="item"><strong>raġel</strong><span>man / husband [basic meaning varies by context]</span></div>
+            <div class="item"><strong>mara</strong><span>woman / wife [basic meaning varies by context]</span></div>
+            <div class="item"><strong>żewġ</strong><span>husband / two [context-based]</span></div>
+            <div class="item"><strong>familja</strong><span>family</span></div>
+            <div class="item"><strong>ġenituri</strong><span>parents</span></div>
+            <div class="item"><strong>tfal</strong><span>children</span></div>
+            <div class="item"><strong>kuġin</strong><span>cousin</span></div>
+            <div class="item"><strong>ziju</strong><span>uncle</span></div>
+            <div class="item"><strong>zija</strong><span>aunt</span></div>
+            <div class="item"><strong>neputi</strong><span>grandson / nephew [basic use]</span></div>
+            <div class="item"><strong>neputija</strong><span>granddaughter / niece [basic use]</span></div>
+            <div class="item"><strong>ħbieb</strong><span>friends</span></div>
+            <div class="item"><strong>qarib</strong><span>relative</span></div>
+            <div class="item"><strong>familja kbira</strong><span>big family</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>Din hija ommi.</strong><span>This is my mother.</span></div>
+            <div class="example"><strong>Dan huwa missieri.</strong><span>This is my father.</span></div>
+            <div class="example"><strong>In-nanna tiegħi toqgħod qrib tagħna.</strong><span>My grandmother lives near us.</span></div>
+            <div class="example"><strong>In-nannu tiegħi jixrob kafè filgħodu.</strong><span>My grandfather drinks coffee in the morning.</span></div>
+            <div class="example"><strong>għandi ħu u oħt.</strong><span>I have a brother and a sister.</span></div>
+            <div class="example"><strong>It-tifel huwa żgħir u t-tifla hija ferħana.</strong><span>The boy is small and the girl is happy.</span></div>
+            <div class="example"><strong>Il-ġenituri tiegħi huma d-dar.</strong><span>My parents are at home.</span></div>
+            <div class="example"><strong>għandna familja kbira.</strong><span>We have a big family.</span></div>
+          </div>
+        </section>
+        <section class="card" id="home">
+          <span class="tag">Home</span>
+          <h2>Home Vocabulary</h2>
+          <div class="two-col">
+            <div class="item"><strong>dar</strong><span>house / home</span></div>
+            <div class="item"><strong>appartament</strong><span>apartment</span></div>
+            <div class="item"><strong>bieb</strong><span>door</span></div>
+            <div class="item"><strong>tieqa</strong><span>window</span></div>
+            <div class="item"><strong>ġnien</strong><span>garden</span></div>
+            <div class="item"><strong>gallarija</strong><span>balcony</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>Jien noqgħod f'dar.</strong><span>I live in a house.</span></div>
+            <div class="example"><strong>Id-dar tiegħi hija kbira.</strong><span>My house is big.</span></div>
+            <div class="example"><strong>Hemm tieqa kbira fil-kċina.</strong><span>There is a big window in the kitchen.</span></div>
+            <div class="example"><strong>Għandi ġnien żgħir.</strong><span>I have a small garden.</span></div>
+          </div>
+        </section>
+
+        <section class="card" id="rooms">
+          <span class="tag">Rooms</span>
+          <h2>Rooms In The House</h2>
+          <div class="three-col">
+            <div class="item"><strong>kċina</strong><span>kitchen</span></div>
+            <div class="item"><strong>kamra tas-sodda</strong><span>bedroom</span></div>
+            <div class="item"><strong>kamra tal-banju</strong><span>bathroom</span></div>
+            <div class="item"><strong>salott</strong><span>living room</span></div>
+            <div class="item"><strong>kamra tal-ikel</strong><span>dining room</span></div>
+            <div class="item"><strong>kuritur</strong><span>corridor</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>Il-kċina hija nadifa.</strong><span>The kitchen is clean.</span></div>
+            <div class="example"><strong>Il-kamra tas-sodda tiegħi hija żgħira.</strong><span>My bedroom is small.</span></div>
+            <div class="example"><strong>Hemm saqqu fil-kamra tas-sodda.</strong><span>There is a bed in the bedroom.</span></div>
+            <div class="example"><strong>Is-salott huwa komdu.</strong><span>The living room is comfortable.</span></div>
+          </div>
+        </section>
+
+        <section class="card" id="furniture">
+          <span class="tag">Furniture</span>
+          <h2>Basic Furniture</h2>
+          <div class="three-col">
+            <div class="item"><strong>mejda</strong><span>table</span></div>
+            <div class="item"><strong>siġġu</strong><span>chair</span></div>
+            <div class="item"><strong>sufan</strong><span>sofa</span></div>
+            <div class="item"><strong>sodda</strong><span>bed</span></div>
+            <div class="item"><strong>friġġ</strong><span>fridge</span></div>
+            <div class="item"><strong>armarju</strong><span>wardrobe / cupboard</span></div>
+            <div class="item"><strong>bank</strong><span>bench / seat [basic use]</span></div>
+            <div class="item"><strong>lampa</strong><span>lamp</span></div>
+            <div class="item"><strong>xkaffa</strong><span>shelf</span></div>
+            <div class="item"><strong>bieb</strong><span>door</span></div>
+            <div class="item"><strong>tieqa</strong><span>window</span></div>
+            <div class="item"><strong>televixin / TV</strong><span>television</span></div>
+            <div class="item"><strong>skrivanija</strong><span>desk</span></div>
+            <div class="item"><strong>mera</strong><span>mirror</span></div>
+            <div class="item"><strong>komodina</strong><span>small bedside table</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>ħemm mejda fil-kċina.</strong><span>There is a table in the kitchen.</span></div>
+            <div class="example"><strong>ħemm erba' siġġijiet fis-salott.</strong><span>There are four chairs in the living room.</span></div>
+            <div class="example"><strong>Is-sufan huwa quddiem it-TV.</strong><span>The sofa is in front of the TV.</span></div>
+            <div class="example"><strong>Is-sodda tinsab fil-kamra tas-sodda.</strong><span>The bed is in the bedroom.</span></div>
+            <div class="example"><strong>Il-friġġ jinsab fil-kċina.</strong><span>The fridge is in the kitchen.</span></div>
+            <div class="example"><strong>Il-lampa hija ħdejn is-sodda.</strong><span>The lamp is near the bed.</span></div>
+            <div class="example"><strong>ħemm xkaffa kbira fil-kamra.</strong><span>There is a big shelf in the room.</span></div>
+            <div class="example"><strong>għandi skrivanija żgħira fid-dar.</strong><span>I have a small desk at home.</span></div>
+          </div>
+        </section>
+        <section class="card" id="food">
+          <span class="tag">Food</span>
+          <h2>Basic Food Vocabulary</h2>
+          <div class="three-col">
+            <div class="item"><strong>ħobż</strong><span>bread</span></div>
+            <div class="item"><strong>ġobon</strong><span>cheese</span></div>
+            <div class="item"><strong>bajda</strong><span>egg</span></div>
+            <div class="item"><strong>laħam</strong><span>meat</span></div>
+            <div class="item"><strong>ħaxix</strong><span>vegetables</span></div>
+            <div class="item"><strong>frott</strong><span>fruit</span></div>
+            <div class="item"><strong>soppa</strong><span>soup</span></div>
+            <div class="item"><strong>ross</strong><span>rice</span></div>
+            <div class="item"><strong>patata</strong><span>potato</span></div>
+            <div class="item"><strong>tadam</strong><span>tomato</span></div>
+            <div class="item"><strong>karrotta</strong><span>carrot</span></div>
+            <div class="item"><strong>pizza</strong><span>pizza</span></div>
+            <div class="item"><strong>tiġieġ</strong><span>chicken</span></div>
+            <div class="item"><strong>insalata</strong><span>salad</span></div>
+            <div class="item"><strong>kejk</strong><span>cake</span></div>
+            <div class="item"><strong>ħut</strong><span>fish</span></div>
+            <div class="item"><strong>għaġin</strong><span>pasta</span></div>
+            <div class="item"><strong>butir</strong><span>butter</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>Inħobb il-ħobż u l-ġobon.</strong><span>I like bread and cheese.</span></div>
+            <div class="example"><strong>Jien niekol bajda filgħodu.</strong><span>I eat an egg in the morning.</span></div>
+            <div class="example"><strong>Aħna nieklu ħafna ħaxix.</strong><span>We eat a lot of vegetables.</span></div>
+            <div class="example"><strong>ħemm ross u tiġieġ fuq il-mejda.</strong><span>There is rice and chicken on the table.</span></div>
+            <div class="example"><strong>ħi tħobb l-insalata u l-frott.</strong><span>She likes salad and fruit.</span></div>
+            <div class="example"><strong>Xi kultant niekol pizza filgħaxija.</strong><span>Sometimes I eat pizza in the evening.</span></div>
+            <div class="example"><strong>Missieri jħobb il-ħut.</strong><span>My father likes fish.</span></div>
+            <div class="example"><strong>Ommi tagħmel soppa tajba.</strong><span>My mother makes good soup.</span></div>
+          </div>
+        </section>
+        <section class="card" id="drinks">
+          <span class="tag">Drinks</span>
+          <h2>Drinks</h2>
+          <div class="three-col">
+            <div class="item"><strong>ilma</strong><span>water</span></div>
+            <div class="item"><strong>kafè</strong><span>coffee</span></div>
+            <div class="item"><strong>te</strong><span>tea</span></div>
+            <div class="item"><strong>meraq</strong><span>juice</span></div>
+            <div class="item"><strong>ħalib</strong><span>milk</span></div>
+            <div class="item"><strong>xorb kiesaħ</strong><span>cold drink [basic use]</span></div>
+            <div class="item"><strong>ilma kiesaħ</strong><span>cold water</span></div>
+            <div class="item"><strong>te sħun</strong><span>hot tea</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>Jien nixrob ilma.</strong><span>I drink water.</span></div>
+            <div class="example"><strong>Filgħodu nieħu kafè.</strong><span>In the morning I have coffee.</span></div>
+            <div class="example"><strong>Filgħaxija nixrob te.</strong><span>In the evening I drink tea.</span></div>
+            <div class="example"><strong>Inħobb meraq kiesaħ.</strong><span>I like cold juice.</span></div>
+            <div class="example"><strong>It-tifel jixrob ħalib.</strong><span>The boy drinks milk.</span></div>
+            <div class="example"><strong>Ma nixrobx ħafna kafè.</strong><span>I do not drink a lot of coffee.</span></div>
+            <div class="example"><strong>Ommi tħobb te sħun.</strong><span>My mother likes hot tea.</span></div>
+            <div class="example"><strong>Missieri jixrob ilma kiesaħ.</strong><span>My father drinks cold water.</span></div>
+          </div>
+        </section>
+        <section class="card" id="likes">
+          <span class="tag">Likes</span>
+          <h2>Likes And Dislikes</h2>
+          <div class="two-col">
+            <div class="pattern"><strong>Inħobb + noun / verb</strong><span><code>Inħobb il-frott.</code> / <code>Inħobb niekol soppa.</code></span></div>
+            <div class="pattern"><strong>Ma nħobbx + noun / verb</strong><span><code>Ma nħobbx il-kafè.</code> / <code>Ma nħobbx niekol ħafna laħam.</code></span></div>
+            <div class="pattern"><strong>Jien inħobb...</strong><span>Use this for simple personal answers.</span></div>
+            <div class="pattern"><strong>Jien ma nħobbx...</strong><span>Use this for simple negative answers.</span></div>
+          </div>
+          <div class="list" style="margin-top:16px;">
+            <div class="example"><strong>Inħobb il-pizza.</strong><span>I like pizza.</span></div>
+            <div class="example"><strong>Ma nħobbx it-te.</strong><span>I do not like tea.</span></div>
+            <div class="example"><strong>Inħobb niekol mal-familja.</strong><span>I like eating with the family.</span></div>
+            <div class="example"><strong>Ma nħobbx niekol tard. [UNCERTAIN]</strong><span>I do not like eating late. [UNCERTAIN]</span></div>
+          </div>
+        </section>
+
+        <section class="card" id="answers">
+          <span class="tag">Homework</span>
+          <h2>Ready-Made Homework Answers</h2>
+          <div class="list">
+            <div class="example"><strong>Il-familja tiegħi hija żgħira. Għandi omm, missier u ħu. Aħna noqogħdu f'dar kbira.</strong><span>My family is small. I have a mother, a father and a brother. We live in a big house.</span></div>
+            <div class="example"><strong>Id-dar tiegħi għandha kċina, salott u kamra tas-sodda. Hemm mejda fil-kċina u saqqu fil-kamra tas-sodda.</strong><span>My house has a kitchen, a living room and a bedroom. There is a table in the kitchen and a bed in the bedroom.</span></div>
+            <div class="example"><strong>Inħobb il-frott, il-ħobż u l-ġobon. Filgħodu nieħu kafè u niekol bajda.</strong><span>I like fruit, bread and cheese. In the morning I have coffee and eat an egg.</span></div>
+            <div class="example"><strong>Ma nħobbx ħafna te, imma nħobb ilma u meraq.</strong><span>I do not like tea very much, but I like water and juice.</span></div>
+            <div class="example"><strong>Jien inħobb niekol mal-familja tiegħi d-dar.</strong><span>I like eating with my family at home.</span></div>
+          </div>
+          <p class="footer-note">This page stays practical on purpose: short vocabulary, short examples, and safe model answers for common homework topics.</p>
+        </section>
+
+        <section class="card" id="story-bank">
+          <span class="tag">Final Story Bank</span>
+          <h2>30 Family Stories</h2>
+          <div class="formula"><code>Each story has 10 short sentences. Every Maltese sentence is followed by its English translation.</code></div>
+          <div class="list">
+            <div class="example"><strong>Story 1</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien għandi familja żgħira.</span>
+                <span class="en">I have a small family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandi omm u missier.</span>
+                <span class="en">I have a mother and a father.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien m'għandix ħu.</span>
+                <span class="en">I do not have a brother.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien m'għandix oħt.</span>
+                <span class="en">I do not have a sister.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'dar kbira.</span>
+                <span class="en">We live in a big house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna għandha kċina u salott.</span>
+                <span class="en">Our house has a kitchen and a living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tixrob te filgħodu.</span>
+                <span class="en">My mother drinks tea in the morning.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jixrob kafè.</span>
+                <span class="en">My father drinks coffee.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu flimkien filgħaxija.</span>
+                <span class="en">We eat together in the evening.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tiegħi hija ferħana.</span>
+                <span class="en">My family is happy.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 2</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien għandi familja kbira.</span>
+                <span class="en">I have a big family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandi omm, missier u żewġ aħwa.</span>
+                <span class="en">I have a mother, a father, and two siblings.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandi ħija u oħti.</span>
+                <span class="en">I have my brother and my sister.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija huwa student.</span>
+                <span class="en">My brother is a student.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti hija żgħira.</span>
+                <span class="en">My sister is small.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'appartament.</span>
+                <span class="en">We live in an apartment.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija nadifa.</span>
+                <span class="en">Our home is clean.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu fil-kċina.</span>
+                <span class="en">We eat in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija Aħna naraw it-TV.</span>
+                <span class="en">In the evening we watch TV.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb il-familja tiegħi.</span>
+                <span class="en">I love my family.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 3</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien noqgħod man-nanna u n-nannu tiegħi.</span>
+                <span class="en">I live with my grandmother and grandfather.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħuma jgħixu f'dar kwieta.</span>
+                <span class="en">They live in a quiet house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nanna tiegħi tħobb it-te.</span>
+                <span class="en">My grandmother likes tea.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nannu tiegħi jħobb il-kafè.</span>
+                <span class="en">My grandfather likes coffee.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu ħobż u ġobon flimkien.</span>
+                <span class="en">We eat bread and cheese together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm ġnien żgħir fid-dar.</span>
+                <span class="en">There is a small garden at the house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nanna hija fil-kċina ħafna drabi.</span>
+                <span class="en">My grandmother is often in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nannu joqgħod fis-salott.</span>
+                <span class="en">My grandfather sits in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb noqgħod magħhom.</span>
+                <span class="en">I like staying with them.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tiegħi hija sabiħa.</span>
+                <span class="en">My family is beautiful.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 4</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien għandi mara u żewġt itfal.</span>
+                <span class="en">I have a wife and two children.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tifel huwa żgħir.</span>
+                <span class="en">The boy is small.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tifla hija ferħana.</span>
+                <span class="en">The girl is happy.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'dar kbira.</span>
+                <span class="en">We live in a big house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm tliet kmamar fid-dar.</span>
+                <span class="en">There are three rooms in the house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi toqgħod qrib tagħna.</span>
+                <span class="en">My mother lives near us.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu jiena nieħu kafè.</span>
+                <span class="en">In the morning I have coffee.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tfal jixorbu ħalib.</span>
+                <span class="en">The children drink milk.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija Aħna nieklu soppa jew ross.</span>
+                <span class="en">In the evening we eat soup or rice.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb il-familja tiegħi ħafna.</span>
+                <span class="en">I love my family very much.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 5</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien għandi raġel u ma għandniex tfal.</span>
+                <span class="en">I have a husband and we do not have children.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'appartament żgħir.</span>
+                <span class="en">We live in a small apartment.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna għandha kamra tas-sodda u salott.</span>
+                <span class="en">Our home has a bedroom and a living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien naħdem filgħodu.</span>
+                <span class="en">I work in the morning.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ir-raġel tiegħi jaħdem ukoll.</span>
+                <span class="en">My husband works too.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija Aħna nieklu flimkien.</span>
+                <span class="en">In the evening we eat together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu l-kwiet.</span>
+                <span class="en">We like peace and quiet.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fi tmiem il-ġimgħa immorru mixja.</span>
+                <span class="en">At the weekend we go for a walk.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu d-dar tagħna.</span>
+                <span class="en">We love our home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna kuntenti flimkien.</span>
+                <span class="en">We are happy together.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 6</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien student u noqgħod mal-familja tiegħi.</span>
+                <span class="en">I am a student and I live with my family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri huwa għalliem.</span>
+                <span class="en">My father is a teacher.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi taħdem fi ħanut.</span>
+                <span class="en">My mother works in a shop.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandi ħu wieħed.</span>
+                <span class="en">I have one brother.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħuwa jħobb il-futbol.</span>
+                <span class="en">He likes football.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tħobb il-mużika.</span>
+                <span class="en">My sister likes music.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu fit-tmienja.</span>
+                <span class="en">We eat at eight.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nagħmel il-homework.</span>
+                <span class="en">In the evening I do homework.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara nara t-TV mal-familja.</span>
+                <span class="en">After that I watch TV with my family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-ġenituri tiegħi jgħinuni ħafna.</span>
+                <span class="en">My parents help me a lot.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 7</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Il-familja tiegħi tħobb il-ħobż u l-ġobon.</span>
+                <span class="en">My family likes bread and cheese.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tagħmel insalata tajba.</span>
+                <span class="en">My mother makes a good salad.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jħobb il-laħam u l-ħut.</span>
+                <span class="en">My father likes meat and fish.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb il-pizza.</span>
+                <span class="en">I like pizza.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tħobb il-frott.</span>
+                <span class="en">My sister likes fruit.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija jħobb it-tiġieġ u r-ross.</span>
+                <span class="en">My brother likes chicken and rice.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu nieklu bajd u ħobż.</span>
+                <span class="en">In the morning we eat eggs and bread.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">F'nofsinhar nieklu soppa jew għaġin.</span>
+                <span class="en">At midday we eat soup or pasta.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nieklu ikla żgħira.</span>
+                <span class="en">In the evening we eat a small meal.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu nieklu flimkien.</span>
+                <span class="en">We like eating together.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 8</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien inħobb il-qari.</span>
+                <span class="en">I like reading.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tħobb il-mużika.</span>
+                <span class="en">My sister likes music.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija jħobb il-futbol.</span>
+                <span class="en">My brother likes football.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tħobb issajjar.</span>
+                <span class="en">My mother likes cooking.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jħobb jimxi.</span>
+                <span class="en">My father likes walking.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija Aħna nitkellmu dwar il-passatempi tagħna.</span>
+                <span class="en">In the evening we talk about our hobbies.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi kultant Aħna naraw film flimkien.</span>
+                <span class="en">Sometimes we watch a film together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fi tmiem il-ġimgħa naqra ktieb fid-dar.</span>
+                <span class="en">At the weekend I read a book at home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tisma' l-mużika fil-kamra tagħha.</span>
+                <span class="en">My sister listens to music in her room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna lkoll għandna passatempi differenti.</span>
+                <span class="en">We all have different hobbies.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 9</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Missieri jaħdem f'uffiċċju.</span>
+                <span class="en">My father works in an office.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi taħdem fi skola.</span>
+                <span class="en">My mother works in a school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien student.</span>
+                <span class="en">I am a student.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija jaħdem f'ħanut.</span>
+                <span class="en">My brother works in a shop.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti taħdem id-dar xi kultant.</span>
+                <span class="en">My sister works at home sometimes.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu kulħadd ikun okkupat.</span>
+                <span class="en">In the morning everyone is busy.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noħorġu mid-dar kmieni.</span>
+                <span class="en">We leave the house early.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nerġgħu lura d-dar.</span>
+                <span class="en">In the evening we come back home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nitkellmu dwar ix-xogħol u l-iskola.</span>
+                <span class="en">We talk about work and school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tagħna taħdem ħafna.</span>
+                <span class="en">Our family works a lot.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 10</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Id-dar tiegħi hija kbira u sabiħa.</span>
+                <span class="en">My house is big and beautiful.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm kċina kbira.</span>
+                <span class="en">There is a big kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm salott komdu.</span>
+                <span class="en">There is a comfortable living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm żewġ kmamar tas-sodda.</span>
+                <span class="en">There are two bedrooms.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm kamra tal-banju żgħira.</span>
+                <span class="en">There is a small bathroom.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kċina hemm mejda u siġġijiet.</span>
+                <span class="en">In the kitchen there is a table and chairs.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fis-salott hemm sufan u televixin.</span>
+                <span class="en">In the living room there is a sofa and a television.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kamra tiegħi hemm sodda u skrivanija.</span>
+                <span class="en">In my room there is a bed and a desk.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jiena nħobb ħafna d-dar tiegħi.</span>
+                <span class="en">I like my house very much.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija nadifa u kwieta.</span>
+                <span class="en">Our house is clean and quiet.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 11</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien għandi familja kbira ħafna.</span>
+                <span class="en">I have a very big family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandi omm, missier, nanna u nannu.</span>
+                <span class="en">I have a mother, father, grandmother, and grandfather.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandi wkoll ħu u oħt.</span>
+                <span class="en">I also have a brother and a sister.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu kollha flimkien.</span>
+                <span class="en">We all live together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija kbira.</span>
+                <span class="en">Our house is big.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nanna tagħmel ikel tajjeb.</span>
+                <span class="en">Grandmother makes good food.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nannu jħobb joqgħod fil-ġnien.</span>
+                <span class="en">Grandfather likes sitting in the garden.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi u missieri jaħdmu kuljum.</span>
+                <span class="en">My mother and father work every day.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nitkellmu ħafna flimkien.</span>
+                <span class="en">We talk a lot together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tagħna hija magħquda.</span>
+                <span class="en">Our family is united.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 12</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien noqgħod ma' ommi biss.</span>
+                <span class="en">I live only with my mother.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna familja żgħira imma ferħana.</span>
+                <span class="en">We are a small but happy family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi taħdem ħafna.</span>
+                <span class="en">My mother works a lot.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien ngħinħa fid-dar.</span>
+                <span class="en">I help her at home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu nieħdu kafè u ħobż.</span>
+                <span class="en">In the morning we have coffee and bread.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara mmur l-iskola.</span>
+                <span class="en">After that I go to school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nieklu soppa jew ross.</span>
+                <span class="en">In the evening we eat soup or rice.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nitkellmu ħafna fil-kċina.</span>
+                <span class="en">We talk a lot in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi hija importanti ħafna għalija.</span>
+                <span class="en">My mother is very important to me.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb ħafna lil ommi.</span>
+                <span class="en">I love my mother very much.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 13</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien noqgħod ma' missieri biss.</span>
+                <span class="en">I live only with my father.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jsajjar tajjeb.</span>
+                <span class="en">My father cooks well.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħuwa jħobb it-tiġieġ u l-patata.</span>
+                <span class="en">He likes chicken and potatoes.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien ngħin lilu fil-kċina.</span>
+                <span class="en">I help him in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'appartament żgħir.</span>
+                <span class="en">We live in a small apartment.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fis-salott hemm sufan blu.</span>
+                <span class="en">In the living room there is a blue sofa.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kamra tiegħi hemm sodda u xkaffa.</span>
+                <span class="en">In my room there is a bed and a shelf.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija naraw it-TV flimkien.</span>
+                <span class="en">In the evening we watch TV together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri huwa kalm u ġentili.</span>
+                <span class="en">My father is calm and kind.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien kuntent ħafna miegħu.</span>
+                <span class="en">I am very happy with him.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 14</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien u marti għandna tifla waħda.</span>
+                <span class="en">My wife and I have one daughter.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tifla tagħna hija żgħira.</span>
+                <span class="en">Our daughter is small.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija tħobb il-ħalib u l-frott.</span>
+                <span class="en">She likes milk and fruit.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu qrib l-iskola.</span>
+                <span class="en">We live near the school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu inwasslu lit-tifla l-iskola.</span>
+                <span class="en">In the morning we take our daughter to school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara mmorru għax-xogħol.</span>
+                <span class="en">After that we go to work.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nieklu flimkien.</span>
+                <span class="en">In the evening we eat together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara naqraw ktieb lit-tifla.</span>
+                <span class="en">After that we read a book to our daughter.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija torqod kmieni.</span>
+                <span class="en">She sleeps early.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu ħafna l-ħajja tagħna.</span>
+                <span class="en">We love our life very much.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 15</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien u żewġi għandna tifel wieħed.</span>
+                <span class="en">My husband and I have one son.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tifel tagħna jħobb il-ballun.</span>
+                <span class="en">Our son likes the ball.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħuwa jilgħab fil-ġnien wara l-iskola.</span>
+                <span class="en">He plays in the garden after school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien nagħmel l-ikel fil-kċina.</span>
+                <span class="en">I make the food in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">żewġi jgħin fid-dar.</span>
+                <span class="en">My husband helps at home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu fit-tmienja.</span>
+                <span class="en">We eat at eight.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara nistrieħu fis-salott.</span>
+                <span class="en">After that we rest in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi kultant naraw film flimkien.</span>
+                <span class="en">Sometimes we watch a film together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tifel tagħna jidher ferħan ħafna.</span>
+                <span class="en">Our son looks very happy.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tagħna hija sabiħa.</span>
+                <span class="en">Our family is beautiful.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 16</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Aħna erbat aħwa.</span>
+                <span class="en">We are four siblings.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Tnejn huma subien u tnejn huma bniet.</span>
+                <span class="en">Two are boys and two are girls.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tgħid li Aħna storbjużi.</span>
+                <span class="en">My mother says that we are noisy.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jidħak ħafna.</span>
+                <span class="en">My father laughs a lot.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna dejjem hija mimlija nies.</span>
+                <span class="en">Our house is always full of people.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kċina dejjem hemm ikel.</span>
+                <span class="en">There is always food in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fis-salott hemm ħafna siġġijiet.</span>
+                <span class="en">There are many chairs in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nitkellmu u nidħku.</span>
+                <span class="en">In the evening we talk and laugh.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi kultant in-nanna tiġi għandna.</span>
+                <span class="en">Sometimes grandmother comes to us.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna familja vivaċi u ferriħija.</span>
+                <span class="en">We are a lively and cheerful family.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 17</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien ngħix ma' kuġin tiegħi.</span>
+                <span class="en">I live with my cousin.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna studenti u noqogħdu f'appartament.</span>
+                <span class="en">We are students and we live in an apartment.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">L-appartament huwa żgħir imma sabiħ.</span>
+                <span class="en">The apartment is small but beautiful.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm kċina u kamra tas-sodda.</span>
+                <span class="en">There is a kitchen and a bedroom.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu nieħdu kafè.</span>
+                <span class="en">In the morning we have coffee.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">F'nofsinhar nieklu xi ħaga żgħira.</span>
+                <span class="en">At midday we eat something small.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nagħmlu l-ikel flimkien.</span>
+                <span class="en">In the evening we make food together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi kultant nistudjaw fis-salott.</span>
+                <span class="en">Sometimes we study in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nżommu d-dar nadifa.</span>
+                <span class="en">We keep the house clean.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-ħajja tagħna hija sempliċi.</span>
+                <span class="en">Our life is simple.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 18</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Il-ġenituri tiegħi jħobbu l-annimali.</span>
+                <span class="en">My parents like animals.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għandna qattus fid-dar.</span>
+                <span class="en">We have a cat at home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tfal iħobbu jilagħbu miegħu.</span>
+                <span class="en">The children like playing with it.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-qattus jorqod fuq is-sufan.</span>
+                <span class="en">The cat sleeps on the sofa.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tagħti l-ikel lill-qattus filgħodu.</span>
+                <span class="en">My mother gives food to the cat in the morning.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jagħti l-ilma filgħaxija.</span>
+                <span class="en">My father gives water in the evening.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija kalma.</span>
+                <span class="en">Our house is calm.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu noqogħdu fis-salott.</span>
+                <span class="en">We like sitting in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-qattus huwa parti mill-familja.</span>
+                <span class="en">The cat is part of the family.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Kulħadd iħobbu ħafna.</span>
+                <span class="en">Everyone loves it very much.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 19</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'dar qrib il-baħar.</span>
+                <span class="en">We live in a house near the sea.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Mit-tieqa nara l-ilma.</span>
+                <span class="en">From the window I can see the water.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu l-post ikun kwiet.</span>
+                <span class="en">In the morning the place is quiet.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tħobb tiftaħ it-tieqa.</span>
+                <span class="en">My mother likes opening the window.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jħobb jixrob kafè fuq il-gallarija.</span>
+                <span class="en">My father likes drinking coffee on the balcony.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb naqra fis-salott.</span>
+                <span class="en">I like reading in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tisma' l-mużika fil-kamra tagħha.</span>
+                <span class="en">My sister listens to music in her room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija mmorru mixja.</span>
+                <span class="en">In the evening we go for a walk.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija sabiħa ħafna.</span>
+                <span class="en">Our house is very beautiful.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu dan il-post.</span>
+                <span class="en">We love this place.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 20</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien naħdem fi skola.</span>
+                <span class="en">I work in a school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Marti taħdem f'ħanut.</span>
+                <span class="en">My wife works in a shop.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ibni huwa student.</span>
+                <span class="en">My son is a student.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Binti hija żgħira ħafna.</span>
+                <span class="en">My daughter is very small.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu noħorġu kmieni.</span>
+                <span class="en">In the morning we go out early.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara x-xogħol immur id-dar.</span>
+                <span class="en">After work I go home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Marti tagħmel l-ikel fil-kċina.</span>
+                <span class="en">My wife makes the food in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien ngħin lit-tfal bil-homework.</span>
+                <span class="en">I help the children with homework.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nieklu flimkien.</span>
+                <span class="en">In the evening we eat together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-ħajja tagħna hija mimlija xogħol u mħabba.</span>
+                <span class="en">Our life is full of work and love.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 21</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien inħobb niekol ikel bnin.</span>
+                <span class="en">I like eating good food.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu niekol ħobż, ġobon u bajda.</span>
+                <span class="en">In the morning I eat bread, cheese, and an egg.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">F'nofsinhar niekol ross jew għaġin.</span>
+                <span class="en">At midday I eat rice or pasta.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija inħobb is-soppa.</span>
+                <span class="en">In the evening I like soup.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tħobb il-pizza.</span>
+                <span class="en">My sister likes pizza.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija jħobb il-laħam.</span>
+                <span class="en">My brother likes meat.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tħobb il-frott u l-ħaxix.</span>
+                <span class="en">My mother likes fruit and vegetables.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jħobb il-ħut.</span>
+                <span class="en">My father likes fish.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna ma nħobbux ħafna xorb kiesaħ.</span>
+                <span class="en">We do not like cold drinks very much.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tagħna tħobb ikel sempliċi.</span>
+                <span class="en">Our family likes simple food.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 22</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Id-dar tan-nanna tiegħi hija antika imma sabiħa.</span>
+                <span class="en">My grandmother's house is old but beautiful.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm mejda kbira fil-kċina.</span>
+                <span class="en">There is a big table in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm ħafna ritratti fuq il-ħajt.</span>
+                <span class="en">There are many pictures on the wall.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Is-salott għandu sufan komdu.</span>
+                <span class="en">The living room has a comfortable sofa.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kamra hemm lampa sabiħa.</span>
+                <span class="en">In the room there is a beautiful lamp.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nanna tħobb iżżomm kollox nadif.</span>
+                <span class="en">My grandmother likes keeping everything clean.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nannu joqgħod ħdejn it-tieqa.</span>
+                <span class="en">My grandfather sits near the window.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nżuru lilhom il-ħadd.</span>
+                <span class="en">We visit them on Sunday.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħuma dejjem jagħtuna te u kejk.</span>
+                <span class="en">They always give us tea and cake.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħhom tagħtina paċi.</span>
+                <span class="en">Their house gives us peace.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 23</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien għandi żewġt itfal u qattus.</span>
+                <span class="en">I have two children and a cat.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">It-tfal jilagħbu fis-salott.</span>
+                <span class="en">The children play in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-qattus joqgħod taħt il-mejda.</span>
+                <span class="en">The cat stays under the table.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tiġi għandna darbtejn fil-ġimgħa.</span>
+                <span class="en">My mother comes to us twice a week.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħija tgħin mat-tfal.</span>
+                <span class="en">She helps with the children.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien naħdem filgħodu.</span>
+                <span class="en">I work in the morning.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">żewġi jaħdem wara nofsinhar.</span>
+                <span class="en">My husband works in the afternoon.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija kulħadd ikun id-dar.</span>
+                <span class="en">In the evening everyone is at home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu u nitkellmu flimkien.</span>
+                <span class="en">We eat and talk together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna dejjem tkun mimlija ħajja.</span>
+                <span class="en">Our home is always full of life.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 24</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Aħna familja mingħajr tfal.</span>
+                <span class="en">We are a family without children.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu l-kwiet u l-ordni.</span>
+                <span class="en">We like peace and order.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija żgħira izda komda.</span>
+                <span class="en">Our home is small but comfortable.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kċina hemm friġġ kbir u mejda tonda.</span>
+                <span class="en">In the kitchen there is a big fridge and a round table.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fis-salott hemm sufan griż.</span>
+                <span class="en">In the living room there is a grey sofa.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien naqra ħafna kotba.</span>
+                <span class="en">I read many books.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ir-raġel tiegħi jħobb il-mużika.</span>
+                <span class="en">My husband likes music.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nixorbu te flimkien.</span>
+                <span class="en">In the evening we drink tea together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fi tmiem il-ġimgħa nżuru lill-ħbieb.</span>
+                <span class="en">At the weekend we visit friends.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna kuntenti ħafna b'din il-ħajja.</span>
+                <span class="en">We are very happy with this life.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 25</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien, oħti u ommi noqogħdu flimkien.</span>
+                <span class="en">My sister, my mother, and I live together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna tliet nisa fid-dar.</span>
+                <span class="en">We are three women in the house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi taħdem ħafna.</span>
+                <span class="en">My mother works a lot.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tistudja l-universita.</span>
+                <span class="en">My sister studies at university.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien naħdem part-time.</span>
+                <span class="en">I work part-time.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu kulħadd joħrog kmieni.</span>
+                <span class="en">In the morning everyone leaves early.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija niltaqgħu fil-kċina.</span>
+                <span class="en">In the evening we meet in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Nieklu u nitkellmu flimkien.</span>
+                <span class="en">We eat and talk together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi drabi naraw programm fuq it-TV.</span>
+                <span class="en">Sometimes we watch a program on TV.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija kalma u sabiħa.</span>
+                <span class="en">Our home is calm and beautiful.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 26</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Missieri għandu ħu u oħt.</span>
+                <span class="en">My father has a brother and a sister.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">għalhekk għandi ziju u zija.</span>
+                <span class="en">So I have an uncle and an aunt.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tagħna tiltaqa' ħafna drabi.</span>
+                <span class="en">Our family meets very often.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nanna tagħmel ħafna ikel.</span>
+                <span class="en">Grandmother makes a lot of food.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">In-nannu jgħid stejjer antiki.</span>
+                <span class="en">Grandfather tells old stories.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-kuġini tiegħi jilagħbu fil-ġnien.</span>
+                <span class="en">My cousins play in the garden.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nieklu fuq mejda kbira.</span>
+                <span class="en">We eat at a big table.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara nixorbu kafè jew te.</span>
+                <span class="en">After that we drink coffee or tea.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Kulħadd jidher ferħan.</span>
+                <span class="en">Everyone looks happy.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jiena nħobb dawn il-laqgħat tal-familja.</span>
+                <span class="en">I love these family gatherings.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 27</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien student u naħdem ukoll.</span>
+                <span class="en">I am a student and I work too.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu mmur l-iskola.</span>
+                <span class="en">In the morning I go to school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara mmur għax-xogħol.</span>
+                <span class="en">After that I go to work.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Meta nasal id-dar inkun għajjien.</span>
+                <span class="en">When I arrive home I am tired.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tagħmilli te sħun.</span>
+                <span class="en">My mother makes hot tea for me.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jistaqsini dwar il-ġurnata tiegħi.</span>
+                <span class="en">My father asks me about my day.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Oħti tgħinni xi kultant.</span>
+                <span class="en">My sister helps me sometimes.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nagħmel il-homework.</span>
+                <span class="en">In the evening I do homework.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara norqod kmieni.</span>
+                <span class="en">After that I sleep early.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-familja tiegħi tagħtini ħafna saħħa.</span>
+                <span class="en">My family gives me a lot of strength.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 28</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu f'dar b'żewġ sulari.</span>
+                <span class="en">We live in a two-floor house.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-pjan t'isfel hemm il-kċina u s-salott.</span>
+                <span class="en">On the ground floor there is the kitchen and the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-pjan ta' fuq hemm il-kmamar tas-sodda.</span>
+                <span class="en">Upstairs there are the bedrooms.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-kamra tiegħi għandha tieqa kbira.</span>
+                <span class="en">My room has a big window.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">ħemm skrivanija u siġġu ħdejn it-tieqa.</span>
+                <span class="en">There is a desk and a chair near the window.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fil-kċina hemm friġġ u armarju.</span>
+                <span class="en">In the kitchen there is a fridge and a cupboard.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fis-salott hemm sufan u mejda żgħira.</span>
+                <span class="en">In the living room there is a sofa and a small table.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna hija moderna.</span>
+                <span class="en">Our house is modern.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nżommuha nadifa kuljum.</span>
+                <span class="en">We keep it clean every day.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien inħobb ħafna fejn noqgħod.</span>
+                <span class="en">I like where I live very much.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 29</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Jien u marti nħobbu nistiednu lill-ħbieb.</span>
+                <span class="en">My wife and I like inviting friends.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nagħmlu ikla żgħira.</span>
+                <span class="en">In the evening we make a small meal.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Fuq il-mejda jkun hemm ħobż, ġobon u insalata.</span>
+                <span class="en">On the table there are bread, cheese, and salad.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi kultant nagħmlu pizza.</span>
+                <span class="en">Sometimes we make pizza.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-ħbieb tagħna jġibu kejk jew meraq.</span>
+                <span class="en">Our friends bring cake or juice.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna noqogħdu fis-salott u nitkellmu.</span>
+                <span class="en">We sit in the living room and talk.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Xi drabi naraw film flimkien.</span>
+                <span class="en">Sometimes we watch a film together.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Id-dar tagħna ma hijiex kbira imma hija komda.</span>
+                <span class="en">Our home is not big but it is comfortable.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Il-ħbieb iħobbu jiġu għandna.</span>
+                <span class="en">Our friends like coming to our home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Aħna nħobbu ħafna dawn il-lejliet.</span>
+                <span class="en">We like these evenings very much.</span>
+              </div>
+            </div></div>
+            <div class="example"><strong>Story 30</strong><div class="story-lines">
+              <div class="story-line">
+                <span class="mt">Il-familja tiegħi tgħix ħajja sempliċi.</span>
+                <span class="en">My family lives a simple life.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħodu nqumu kmieni.</span>
+                <span class="en">In the morning we wake up early.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Ommi tagħmel il-kafè u t-te.</span>
+                <span class="en">My mother makes the coffee and the tea.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Missieri jiftaħ it-tieqa fil-kċina.</span>
+                <span class="en">My father opens the window in the kitchen.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Jien u ħija nħejju għall-iskola.</span>
+                <span class="en">My brother and I get ready for school.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara nofsinhar nerġgħu lura d-dar.</span>
+                <span class="en">In the afternoon we come back home.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Nieklu flimkien fuq il-mejda.</span>
+                <span class="en">We eat together at the table.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Filgħaxija nitkellmu dwar il-ġurnata.</span>
+                <span class="en">In the evening we talk about the day.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Wara nistrieħu fis-salott.</span>
+                <span class="en">After that we rest in the living room.</span>
+              </div>
+              <div class="story-line">
+                <span class="mt">Din il-ħajja tagħmilni kuntent ħafna.</span>
+                <span class="en">This life makes me very happy.</span>
+              </div>
+            </div></div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

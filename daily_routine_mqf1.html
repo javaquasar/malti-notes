@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQF-1 Daily Routine Guide</title>
+  <style>
+    :root {
+      --bg: #f4efe4;
+      --paper: #fffaf1;
+      --ink: #17352f;
+      --muted: #5f6f67;
+      --line: #d9ceb7;
+      --accent: #bf5b2c;
+      --teal: #2f8f83;
+      --shadow: 0 18px 40px rgba(33, 35, 27, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(47, 143, 131, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(191, 91, 44, 0.10), transparent 24%),
+        linear-gradient(180deg, #f7f1e6 0%, var(--bg) 100%);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .page { width: min(1180px, calc(100% - 32px)); margin: 24px auto 48px; }
+    .hero, .sidebar, .content-card {
+      background: var(--paper);
+      border: 1px solid rgba(95, 111, 103, 0.18);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .hero { overflow: hidden; margin-bottom: 24px; }
+    .hero-band { height: 16px; background: linear-gradient(90deg, var(--teal) 0 16%, var(--accent) 16% 24%, transparent 24%); }
+    .hero-body { padding: 28px; display: grid; grid-template-columns: 1.45fr 0.95fr; gap: 24px; }
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.1; }
+    h1 { font-size: clamp(2rem, 4vw, 3.1rem); }
+    h2 { font-size: 1.45rem; margin-bottom: 14px; }
+    h3 { font-size: 1.08rem; }
+    .lead { font-size: 1.02rem; color: var(--muted); max-width: 64ch; margin-bottom: 18px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { border: 1px solid rgba(47, 143, 131, 0.24); border-radius: 999px; padding: 8px 12px; background: rgba(47, 143, 131, 0.08); font-size: 0.95rem; }
+    .hero-note { background: #f9f1e2; border: 1px solid rgba(191, 91, 44, 0.18); border-radius: 20px; padding: 18px; }
+    .hero-note p { margin: 0 0 10px; color: var(--muted); }
+    .hero-note ul { margin: 0; padding-left: 18px; }
+    .grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; }
+    .sidebar { position: sticky; top: 20px; align-self: start; padding: 20px; }
+    .sidebar h2 { font-size: 1.05rem; margin-bottom: 12px; }
+    .sidebar ul { list-style: none; padding: 0; margin: 0 0 18px; }
+    .sidebar li + li { margin-top: 8px; }
+    .sidebar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+    .sidebar a:hover { border-bottom-color: var(--accent); }
+    .sidebar .mini { font-size: 0.93rem; color: var(--muted); }
+    .content { display: grid; gap: 20px; }
+    .content-card { padding: 24px; }
+    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .box, .story { border: 1px solid var(--line); border-radius: 18px; padding: 16px; background: rgba(255, 255, 255, 0.44); }
+    .tag { display: inline-block; font-size: 0.82rem; padding: 4px 8px; border-radius: 999px; background: rgba(191, 91, 44, 0.10); color: #7a3c1b; margin-bottom: 10px; }
+    .formula { font-size: 1rem; background: #f8f3ea; border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 14px; margin: 12px 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.96rem; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px; vertical-align: top; text-align: left; }
+    th { font-size: 0.88rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--muted); }
+    code { font-family: Consolas, "Courier New", monospace; font-size: 0.92em; background: rgba(47, 143, 131, 0.08); padding: 2px 6px; border-radius: 6px; }
+    .example-list { margin: 12px 0 0; padding-left: 18px; }
+    .example-list li + li { margin-top: 8px; }
+    .line-pair { padding: 10px 0; border-top: 1px dashed rgba(95, 111, 103, 0.24); }
+    .line-pair:first-child { border-top: none; padding-top: 0; }
+    .mt-line { font-weight: 700; }
+    .en-line { color: var(--muted); }
+    .footer-note { margin-top: 10px; font-size: 0.93rem; color: var(--muted); }
+    
+    .site-header {
+      background: var(--paper);
+      border: 1px solid rgba(95, 111, 103, 0.18);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .site-brand {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .site-nav a {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+    .site-nav a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 980px) { .hero-body, .grid, .two-col { grid-template-columns: 1fr; } .sidebar { position: static; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-brand" href="./index.html">MQF-1 Maltese Study Site</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./verbs_guide_mqf1.html">Verbs</a>
+        <a href="./numbers_calendar_time_mqf1.html">Numbers and Time</a>
+        <a href="./family_home_food_mqf1.html">Family, Home and Food</a>
+        <a href="./pronouns_possessives_mqf1.html">Pronouns</a>
+        <a href="./picture_description_mqf1.html">Pictures</a>
+        <a href="./daily_routine_mqf1.html">Routine</a>
+        <a href="./sentence_builder_mqf1.html">Sentence Builder</a>
+        <a href="./common_mistakes_mqf1.html">Common Mistakes</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-band"></div>
+      <div class="hero-body">
+        <div>
+          <h1>Daily Routine</h1>
+          <p class="lead">A practical MQF-1 page for talking about your usual day: waking up, going to work, eating, drinking, resting, going home, meeting friends, and building short oral or written answers with safe course grammar.</p>
+          <div class="pill-row">
+            <span class="pill">routine verbs</span>
+            <span class="pill">time phrases</span>
+            <span class="pill">oral answers</span>
+            <span class="pill">short writing</span>
+          </div>
+        </div>
+        <div class="hero-note">
+          <h2>Use This Page For</h2>
+          <p>When you need to speak or write about a normal day using simple MQF-1 patterns.</p>
+          <ul>
+            <li>what I do in the morning</li>
+            <li>what I eat and drink</li>
+            <li>where I go during the day</li>
+            <li>what I do after work</li>
+            <li>how to build a 5 to 10 sentence answer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="grid">
+      <aside class="sidebar">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#core-verbs">Core Verbs</a></li>
+          <li><a href="#time-blocks">Time Blocks</a></li>
+          <li><a href="#routine-templates">Routine Templates</a></li>
+          <li><a href="#question-answer">Question and Answer</a></li>
+          <li><a href="#mini-routine-bank">Mini Routine Bank</a></li>
+          <li><a href="#model-story">Model Story</a></li>
+        </ul>
+        <p class="mini">Keep answers short, clear, and repetitive. That usually sounds better than trying to make one long risky sentence.</p>
+      </aside>
+      <main class="content">
+        <section class="content-card" id="core-verbs">
+          <span class="tag">Core Verbs</span>
+          <h2>Everyday Verbs for a Normal Day</h2>
+          <table>
+            <thead><tr><th>Maltese</th><th>English</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td><code>inqum</code></td><td>I get up</td><td><code>Filgħodu inqum kmieni.</code></td></tr>
+              <tr><td><code>immur</code></td><td>I go</td><td><code>Immur ix-xogħol filgħodu.</code></td></tr>
+              <tr><td><code>naħdem</code></td><td>I work</td><td><code>Naħdem f'uffiċċju.</code></td></tr>
+              <tr><td><code>niekol</code></td><td>I eat</td><td><code>F'nofsinhar niekol soppa.</code></td></tr>
+              <tr><td><code>nixrob</code></td><td>I drink</td><td><code>Filgħodu nixrob kafè.</code></td></tr>
+              <tr><td><code>nistrieħ</code></td><td>I rest</td><td><code>Wara x-xogħol nistrieħ.</code></td></tr>
+              <tr><td><code>niltaqa'</code></td><td>I meet</td><td><code>Niltaqa' mal-ħbieb tiegħi.</code></td></tr>
+              <tr><td><code>noqgħod</code></td><td>I live / stay</td><td><code>Noqgħod Malta.</code></td></tr>
+              <tr><td><code>nimxi</code></td><td>I walk</td><td><code>Xi kultant nimxi d-dar.</code></td></tr>
+              <tr><td><code>norqod</code></td><td>I sleep</td><td><code>Bil-lejl norqod id-dar.</code></td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="content-card" id="time-blocks">
+          <span class="tag">Time Blocks</span>
+          <h2>Useful Time Phrases for Routine Answers</h2>
+          <div class="two-col">
+            <div class="box"><h3>Day Parts</h3><ul class="example-list"><li><code>filgħodu</code> - in the morning</li><li><code>f'nofsinhar</code> - at midday / at lunch time</li><li><code>waranofsinhar</code> - in the afternoon</li><li><code>filgħaxija</code> - in the evening</li><li><code>bil-lejl</code> - at night</li></ul></div>
+            <div class="box"><h3>Frequency</h3><ul class="example-list"><li><code>kuljum</code> - every day</li><li><code>normalment</code> - normally</li><li><code>spiss</code> - often</li><li><code>xi kultant</code> - sometimes</li><li><code>qatt</code> - never</li></ul></div>
+          </div>
+          <div class="formula"><code>time + verb + place / detail</code></div>
+          <ul class="example-list"><li><code>Filgħodu nixrob kafè d-dar.</code></li><li><code>Waranofsinhar niltaqa' ma' sħabi.</code></li><li><code>Filgħaxija niekol mal-familja.</code></li><li><code>Bil-lejl norqod kmieni.</code></li></ul>
+        </section>
+        <section class="content-card" id="routine-templates">
+          <span class="tag">Templates</span>
+          <h2>Safe Sentence Templates</h2>
+          <div class="two-col">
+            <div class="box"><h3>Simple Present</h3><div class="formula"><code>Jien + verb + time + place</code></div><ul class="example-list"><li><code>Jien naħdem filgħodu.</code></li><li><code>Jien niekol id-dar.</code></li><li><code>Jien niltaqa' mal-ħbieb filgħaxija.</code></li></ul></div>
+            <div class="box"><h3>Present Continuous</h3><div class="formula"><code>qed / qiegħed / qiegħda + verb</code></div><ul class="example-list"><li><code>Jien qiegħed naħdem.</code></li><li><code>Jien qiegħda nixrob te.</code></li><li><code>Aħna qegħdin nieklu.</code></li></ul></div>
+            <div class="box"><h3>Likes and Routine</h3><div class="formula"><code>inħobb + verb</code></div><ul class="example-list"><li><code>Inħobb nixrob kafè.</code></li><li><code>Inħobb nimxi filgħaxija.</code></li><li><code>Ma nħobbx inqum kmieni.</code></li></ul></div>
+            <div class="box"><h3>After Work</h3><div class="formula"><code>wara + noun + verb</code></div><ul class="example-list"><li><code>Wara x-xogħol immur id-dar.</code></li><li><code>Wara x-xogħol nistrieħ.</code></li><li><code>Wara x-xogħol niltaqa' ma' sħabi.</code></li></ul></div>
+          </div>
+        </section>
+        <section class="content-card" id="question-answer">
+          <span class="tag">Speaking</span>
+          <h2>Routine Questions and Short Answers</h2>
+          <div class="two-col">
+            <div class="box">
+              <h3>Common Questions</h3>
+              <div class="line-pair"><div class="mt-line">X'tagħmel filgħodu?</div><div class="en-line">What do you do in the morning?</div></div>
+              <div class="line-pair"><div class="mt-line">Fejn taħdem?</div><div class="en-line">Where do you work?</div></div>
+              <div class="line-pair"><div class="mt-line">X'tiekol f'nofsinhar?</div><div class="en-line">What do you eat at midday?</div></div>
+              <div class="line-pair"><div class="mt-line">X'tixrob filgħodu?</div><div class="en-line">What do you drink in the morning?</div></div>
+              <div class="line-pair"><div class="mt-line">X'tagħmel wara x-xogħol?</div><div class="en-line">What do you do after work?</div></div>
+            </div>
+            <div class="box">
+              <h3>Safe Answers</h3>
+              <div class="line-pair"><div class="mt-line">Filgħodu nixrob kafè u niekol ftit ħobż.</div><div class="en-line">In the morning I drink coffee and eat some bread.</div></div>
+              <div class="line-pair"><div class="mt-line">Naħdem f'uffiċċju.</div><div class="en-line">I work in an office.</div></div>
+              <div class="line-pair"><div class="mt-line">F'nofsinhar niekol ikla ħafifa.</div><div class="en-line">At midday I eat a light meal.</div></div>
+              <div class="line-pair"><div class="mt-line">Wara x-xogħol immur id-dar u nistrieħ.</div><div class="en-line">After work I go home and rest.</div></div>
+              <div class="line-pair"><div class="mt-line">Xi kultant niltaqa' mal-ħbieb tiegħi.</div><div class="en-line">Sometimes I meet my friends.</div></div>
+            </div>
+          </div>
+        </section>
+        <section class="content-card" id="mini-routine-bank">
+          <span class="tag">Ready-Made Lines</span>
+          <h2>Mini Routine Bank</h2>
+          <div class="two-col">
+            <div class="box"><ul class="example-list"><li><code>Kuljum inqum kmieni.</code></li><li><code>Filgħodu nieħu kafè.</code></li><li><code>Normalment immur ix-xogħol bil-karozza.</code></li><li><code>Xi kultant immur bil-mixi.</code></li><li><code>Naħdem sa wara nofsinhar.</code></li><li><code>F'nofsinhar niekol soppa jew ross.</code></li></ul></div>
+            <div class="box"><ul class="example-list"><li><code>Wara x-xogħol immur id-dar.</code></li><li><code>Filgħaxija niltaqa' mal-familja.</code></li><li><code>Inħobb nistrieħ filgħaxija.</code></li><li><code>Xi kultant niltaqa' ma' sħabi.</code></li><li><code>Bil-lejl nixrob te.</code></li><li><code>Imbagħad norqod kmieni.</code></li></ul></div>
+          </div>
+        </section>
+        <section class="content-card" id="model-story">
+          <span class="tag">Model Story</span>
+          <h2>10-Sentence Daily Routine Model</h2>
+          <div class="story">
+            <div class="line-pair"><div class="mt-line">Kuljum inqum fis-sebgħa.</div><div class="en-line">Every day I get up at seven.</div></div>
+            <div class="line-pair"><div class="mt-line">Filgħodu nixrob kafè d-dar.</div><div class="en-line">In the morning I drink coffee at home.</div></div>
+            <div class="line-pair"><div class="mt-line">Xi drabi niekol ftit ħobż u ġobon.</div><div class="en-line">Sometimes I eat some bread and cheese.</div></div>
+            <div class="line-pair"><div class="mt-line">Wara immur ix-xogħol.</div><div class="en-line">After that I go to work.</div></div>
+            <div class="line-pair"><div class="mt-line">Naħdem f'uffiċċju.</div><div class="en-line">I work in an office.</div></div>
+            <div class="line-pair"><div class="mt-line">F'nofsinhar niekol ikla ħafifa.</div><div class="en-line">At midday I eat a light meal.</div></div>
+            <div class="line-pair"><div class="mt-line">Waranofsinhar inkompli naħdem.</div><div class="en-line">In the afternoon I continue to work.</div></div>
+            <div class="line-pair"><div class="mt-line">Wara x-xogħol immur id-dar.</div><div class="en-line">After work I go home.</div></div>
+            <div class="line-pair"><div class="mt-line">Filgħaxija niltaqa' mal-familja jew mal-ħbieb tiegħi.</div><div class="en-line">In the evening I meet my family or my friends.</div></div>
+            <div class="line-pair"><div class="mt-line">Bil-lejl nistrieħ u norqod.</div><div class="en-line">At night I rest and sleep.</div></div>
+          </div>
+          <p class="footer-note">Use this story as a model. Change only one or two details at a time: time, transport, food, place, or who you meet.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
