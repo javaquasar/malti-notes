@@ -6,114 +6,65 @@
   <title>MQF-1 Numbers, Calendar and Time Guide</title>
   <link rel="stylesheet" href="./assets/css/site.css">
   <style>
-.hero-band {
-      height: 16px;
-      background: linear-gradient(90deg, var(--teal) 0 14%, var(--accent) 14% 22%, transparent 22%);
-    }
-
-.hero-body {
-      padding: 28px;
-      display: grid;
-      grid-template-columns: 1.5fr 0.9fr;
-      gap: 24px;
-    }
-
-.lead {
-      font-size: 1.02rem;
-      color: var(--muted);
-      max-width: 62ch;
-      margin-bottom: 18px;
-    }
-
-.hero-note p { margin: 0 0 10px; color: var(--muted); }
-
-.hero-note ul { margin: 0; padding-left: 18px; }
-
-.three-col {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-.box {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.44);
-    }
-
-th, td {
-      border-bottom: 1px solid var(--line);
-      padding: 10px;
-      vertical-align: top;
-      text-align: left;
-    }
-
-.muted { color: var(--muted); }
-
 .number-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-.number-column {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.44);
-    }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
 
 .number-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 8px;
-    }
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
 
 .number-line {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      font-size: 1rem;
-    }
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 1rem;
+}
 
 .number-line strong {
-      min-width: 42px;
-      color: var(--teal);
-      font-size: 1.06rem;
-    }
+  min-width: 42px;
+  color: var(--teal);
+  font-size: 1.06rem;
+}
 
 .num-word {
-      color: var(--teal);
-      font-size: 1.06rem;
-      letter-spacing: 0.01em;
-    }
+  color: var(--teal);
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+}
 
 .num-root {
-      color: #d22a2a;
-      font-weight: 700;
-    }
+  color: #d22a2a;
+  font-weight: 700;
+}
 
-.footer-note {
-      margin-top: 10px;
-      font-size: 0.93rem;
-      color: var(--muted);
-    }
+.phrase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.phrase-card {
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.phrase-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
 
 @media (max-width: 980px) {
-      .hero-body, .grid, .two-col, .three-col, .number-grid { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-    }
-
-.phrase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-
-.phrase-card { border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; background: rgba(255,255,255,0.5); }
-
-.phrase-card strong { display: block; margin-bottom: 6px; }
-
-@media (max-width: 980px) { .phrase-grid { grid-template-columns: 1fr; } }
+  .hero-body, .grid, .two-col, .number-grid, .phrase-grid { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
 </style>
 </head>
 <body>
