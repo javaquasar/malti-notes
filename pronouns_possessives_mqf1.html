@@ -9,6 +9,20 @@
 @media (max-width: 980px) {
   .hero-body, .layout, .two-col, .three-col { grid-template-columns: 1fr; }
   .sidebar { position: static; }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .item,
+  .box,
+  .formula,
+  code {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
 </style>
 </head>

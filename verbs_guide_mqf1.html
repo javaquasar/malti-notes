@@ -179,6 +179,21 @@
   .hero-body, .grid, .two-col, .pattern-grid { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   .compact-list, .compact-list.compact-3 { columns: 1; }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .verb-trigger,
+  .legend-chip,
+  .mini-card,
+  .verb-visual,
+  .formula {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
 </style>
 </head>
