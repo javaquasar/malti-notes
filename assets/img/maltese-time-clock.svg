@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Maltese Time Reference Clock</title>
+  <desc id="desc">An annotated clock showing Maltese time expressions such as u &#295;amsa, u g&#295;axra, u kwart, u g&#295;oxrin, u nofs, u nofs u &#295;amsa, u nofs neqsin &#295;amsa, neqsin g&#295;oxrin, neqsin kwart, neqsin g&#295;axra, and neqsin &#295;amsa.</desc>
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9f2017"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4667dd"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .label {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: 700;
+        fill: #202020;
+      }
+      .clock-num {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 52px;
+        fill: #262626;
+      }
+      .tick {
+        stroke: #666666;
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#dfe1e5"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="600" cy="430" r="192" fill="#c12720"/>
+    <circle cx="600" cy="430" r="178" fill="#f7f7f7" stroke="#8d8d8d" stroke-width="4"/>
+    <circle cx="600" cy="430" r="168" fill="none" stroke="#d6d6d6" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(600 430)">
+    <g id="ticks">
+      <line class="tick" x1="0" y1="-154" x2="0" y2="-164" stroke-width="5"/>
+      <line class="tick" x1="80" y1="-132" x2="85" y2="-141" stroke-width="5"/>
+      <line class="tick" x1="132" y1="-80" x2="141" y2="-85" stroke-width="5"/>
+      <line class="tick" x1="154" y1="0" x2="164" y2="0" stroke-width="5"/>
+      <line class="tick" x1="132" y1="80" x2="141" y2="85" stroke-width="5"/>
+      <line class="tick" x1="80" y1="132" x2="85" y2="141" stroke-width="5"/>
+      <line class="tick" x1="0" y1="154" x2="0" y2="164" stroke-width="5"/>
+      <line class="tick" x1="-80" y1="132" x2="-85" y2="141" stroke-width="5"/>
+      <line class="tick" x1="-132" y1="80" x2="-141" y2="85" stroke-width="5"/>
+      <line class="tick" x1="-154" y1="0" x2="-164" y2="0" stroke-width="5"/>
+      <line class="tick" x1="-132" y1="-80" x2="-141" y2="-85" stroke-width="5"/>
+      <line class="tick" x1="-80" y1="-132" x2="-85" y2="-141" stroke-width="5"/>
+    </g>
+
+    <g text-anchor="middle" dominant-baseline="middle">
+      <text class="clock-num" x="0" y="-118">12</text>
+      <text class="clock-num" x="58" y="-103">1</text>
+      <text class="clock-num" x="103" y="-58">2</text>
+      <text class="clock-num" x="118" y="0">3</text>
+      <text class="clock-num" x="103" y="58">4</text>
+      <text class="clock-num" x="58" y="103">5</text>
+      <text class="clock-num" x="0" y="118">6</text>
+      <text class="clock-num" x="-58" y="103">7</text>
+      <text class="clock-num" x="-103" y="58">8</text>
+      <text class="clock-num" x="-118" y="0">9</text>
+      <text class="clock-num" x="-103" y="-58">10</text>
+      <text class="clock-num" x="-58" y="-103">11</text>
+    </g>
+
+    <line x1="0" y1="8" x2="0" y2="-112" stroke="#191919" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="4" x2="120" y2="4" stroke="#191919" stroke-width="8" stroke-linecap="round"/>
+    <line x1="0" y1="10" x2="0" y2="88" stroke="#191919" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="10" fill="#191919"/>
+  </g>
+
+  <g fill="none" stroke-width="6" stroke-linecap="round">
+    <line x1="693" y1="270" x2="885" y2="100" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="755" y1="347" x2="914" y2="225" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="780" y1="434" x2="968" y2="434" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="755" y1="521" x2="914" y2="630" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="600" y1="624" x2="600" y2="810" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="693" y1="583" x2="885" y2="730" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="500" y1="624" x2="345" y2="742" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+
+    <line x1="510" y1="286" x2="325" y2="145" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+    <line x1="468" y1="340" x2="275" y2="372" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+    <line x1="420" y1="434" x2="304" y2="434" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+    <line x1="474" y1="526" x2="340" y2="625" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+  </g>
+
+  <g class="label">
+    <text x="915" y="105" text-anchor="start">...u &#295;amsa</text>
+    <text x="955" y="228" text-anchor="start">...u g&#295;axra</text>
+    <text x="980" y="446" text-anchor="start">...u kwart</text>
+    <text x="945" y="660" text-anchor="start">...u g&#295;oxrin</text>
+    <text x="600" y="858" text-anchor="middle">...u nofs</text>
+    <text x="60" y="780" text-anchor="start">...u nofs u &#295;amsa</text>
+    <text x="770" y="780" text-anchor="start">...u nofs neqsin &#295;amsa</text>
+    <text x="70" y="126" text-anchor="start">...neqsin &#295;amsa</text>
+    <text x="88" y="375" text-anchor="start">...neqsin g&#295;axra</text>
+    <text x="145" y="446" text-anchor="start">...neqsin kwart</text>
+    <text x="40" y="660" text-anchor="start">...neqsin g&#295;oxrin</text>
+  </g>
+</svg>
