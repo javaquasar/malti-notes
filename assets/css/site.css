@@ -14,7 +14,7 @@
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -136,9 +136,11 @@ h3 { font-size: 1.08rem; }
 .content-card { padding: 24px; }
 
 .sidebar {
+  position: -webkit-sticky;
   position: sticky;
   top: 20px;
   align-self: start;
+  height: fit-content;
   padding: 20px;
 }
 
