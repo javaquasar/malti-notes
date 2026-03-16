@@ -32,6 +32,22 @@
 
   <rect width="1200" height="900" fill="#dfe1e5"/>
 
+  <g fill="none" stroke-width="6" stroke-linecap="round">
+    <line x1="693" y1="270" x2="885" y2="100" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="755" y1="347" x2="914" y2="225" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="780" y1="434" x2="968" y2="434" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="755" y1="521" x2="914" y2="630" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="693" y1="583" x2="790" y2="730" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="600" y1="624" x2="600" y2="810" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+    <line x1="500" y1="583" x2="370" y2="742" stroke="#9f2017" marker-end="url(#arrow-red)"/>
+
+    <line x1="437" y1="521" x2="345" y2="610" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+    <line x1="420" y1="434" x2="304" y2="434" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+    <line x1="437" y1="340" x2="330" y2="260" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+    <line x1="510" y1="270" x2="360" y2="140" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
+
+  </g>
+
   <g filter="url(#shadow)">
     <circle cx="600" cy="430" r="192" fill="#c12720"/>
     <circle cx="600" cy="430" r="178" fill="#f7f7f7" stroke="#8d8d8d" stroke-width="4"/>
@@ -69,26 +85,10 @@
       <text class="clock-num" x="-58" y="-103">11</text>
     </g>
 
-    <line x1="0" y1="8" x2="0" y2="-112" stroke="#191919" stroke-width="10" stroke-linecap="round"/>
-    <line x1="0" y1="4" x2="120" y2="4" stroke="#191919" stroke-width="8" stroke-linecap="round"/>
+    <line x1="0" y1="8" x2="0" y2="-70" stroke="#191919" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#191919" stroke-width="8" stroke-linecap="round"/>
     <line x1="0" y1="10" x2="0" y2="88" stroke="#191919" stroke-width="4" stroke-linecap="round"/>
     <circle cx="0" cy="0" r="10" fill="#191919"/>
-  </g>
-
-  <g fill="none" stroke-width="6" stroke-linecap="round">
-    <line x1="693" y1="270" x2="885" y2="100" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-    <line x1="755" y1="347" x2="914" y2="225" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-    <line x1="780" y1="434" x2="968" y2="434" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-    <line x1="755" y1="521" x2="914" y2="630" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-    <line x1="693" y1="583" x2="790" y2="730" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-    <line x1="600" y1="624" x2="600" y2="810" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-    <line x1="500" y1="583" x2="370" y2="742" stroke="#9f2017" marker-end="url(#arrow-red)"/>
-
-    <line x1="437" y1="521" x2="345" y2="610" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
-    <line x1="420" y1="434" x2="304" y2="434" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
-    <line x1="437" y1="340" x2="330" y2="260" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
-    <line x1="510" y1="270" x2="360" y2="140" stroke="#4667dd" marker-end="url(#arrow-blue)"/>
-
   </g>
 
   <g class="label">
@@ -104,4 +104,5 @@
     <text x="30" y="445" text-anchor="start">...neqsin kwart</text>
     <text x="35" y="630" text-anchor="start">...neqsin g&#295;oxrin</text>
   </g>
+
 </svg>
