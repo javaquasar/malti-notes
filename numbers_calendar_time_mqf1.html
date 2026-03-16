@@ -1,639 +1,639 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MQF-1 Numbers, Calendar and Time Guide</title>
-  <link rel="stylesheet" href="./assets/css/site.css">
-  <style>
-.number-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 Numbers, Calendar and Time Guide</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .number-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
 
-.number-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 8px;
-}
+        .number-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 8px;
+        }
 
-.number-line {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-size: 1rem;
-}
+        .number-line {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 1rem;
+        }
 
-.number-line strong {
-  min-width: 42px;
-  color: var(--teal);
-  font-size: 1.06rem;
-}
+        .number-line strong {
+            min-width: 42px;
+            color: var(--teal);
+            font-size: 1.06rem;
+        }
 
-.num-word {
-  color: var(--teal);
-  font-size: 1.06rem;
-  letter-spacing: 0.01em;
-}
+        .num-word {
+            color: var(--teal);
+            font-size: 1.06rem;
+            letter-spacing: 0.01em;
+        }
 
-.num-root {
-  color: #d22a2a;
-  font-weight: 700;
-}
+        .num-root {
+            color: #d22a2a;
+            font-weight: 700;
+        }
 
-.phrase-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
 
-.phrase-card {
-  border-radius: 16px;
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.5);
-}
+        .phrase-card {
+            border-radius: 16px;
+            padding: 12px 14px;
+            background: rgba(255, 255, 255, 0.5);
+        }
 
-.phrase-card strong {
-  display: block;
-  margin-bottom: 6px;
-}
+        .phrase-card strong {
+            display: block;
+            margin-bottom: 6px;
+        }
 
-@media (max-width: 980px) {
-  .hero-body, .grid, .two-col, .number-grid, .phrase-grid { grid-template-columns: 1fr; }
-  .sidebar { position: static; }
-  table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .number-line,
-  .phrase-card,
-  .formula {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-</style>
+        @media (max-width: 980px) {
+            .hero-body, .grid, .two-col, .number-grid, .phrase-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            table {
+                display: block;
+                max-width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .number-line,
+            .phrase-card,
+            .formula {
+                max-width: 100%;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
+<div class="page">
     <header class="site-header">
-      <a class="site-brand" href="./index.html">MQF-1 Maltese Study Site</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="./index.html">Home</a>
-        <a href="./verbs_guide_mqf1.html">Verbs</a>
-        <a href="./numbers_calendar_time_mqf1.html">Numbers and Time</a>
-        <a href="./family_home_food_mqf1.html">Family, Home and Food</a>
-        <a href="./pronouns_possessives_mqf1.html">Pronouns</a>
-        <a href="./picture_description_mqf1.html">Pictures</a>
-        <a href="./daily_routine_mqf1.html">Routine</a>
-        <a href="./sentence_builder_mqf1.html">Sentence Builder</a>
-        <a href="./common_mistakes_mqf1.html">Common Mistakes</a>
-      </nav>
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
     </header>
     <section class="hero">
-      <div class="hero-band"></div>
-      <div class="hero-body">
-        <div>
-          <h1>Numbers, Calendar and Time</h1>
-          <p class="lead">
-            A practical MQF-1 guide to numbers, weekdays, months, seasons, and telling the time in Maltese.
-            The page follows the same study style as the verbs guide and focuses on high-frequency course-safe patterns.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Numbers</span>
-            <span class="pill">Days of the Week</span>
-            <span class="pill">Months</span>
-            <span class="pill">Seasons</span>
-            <span class="pill">Clock Time</span>
-          </div>
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Numbers, Calendar and Time</h1>
+                <p class="lead">
+                    A practical Level 1 guide to numbers, weekdays, months, seasons, and telling the time in Maltese.
+                    The page follows the same study style as the verbs guide and focuses on high-frequency course-safe patterns.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">Numbers</span>
+                    <span class="pill">Days of the Week</span>
+                    <span class="pill">Months</span>
+                    <span class="pill">Seasons</span>
+                    <span class="pill">Clock Time</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Use This Page For</h2>
+                <p>Quick reference before homework, oral tasks, and lesson review.</p>
+                <ul>
+                    <li>saying the date and time</li>
+                    <li>talking about today, tomorrow, and yesterday</li>
+                    <li>reading schedules and appointments</li>
+                    <li>using numbers in daily life</li>
+                </ul>
+            </div>
         </div>
-        <div class="hero-note">
-          <h2>Use This Page For</h2>
-          <p>Quick reference before homework, oral tasks, and lesson review.</p>
-          <ul>
-            <li>saying the date and time</li>
-            <li>talking about today, tomorrow, and yesterday</li>
-            <li>reading schedules and appointments</li>
-            <li>using numbers in daily life</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <div class="grid">
-      <aside class="sidebar">
-        <h2>Contents</h2>
-        <ul>
-          <li><a href="#numbers">Numbers</a></li>
-          <li><a href="#ordinals">Ordinal Numbers</a></li>
-          <li><a href="#group-counts">Pairs and Group Counts</a></li>
-          <li><a href="#weekdays">Days of the Week</a></li>
-          <li><a href="#months">Months</a></li>
-          <li><a href="#seasons">Seasons</a></li>
-          <li><a href="#time-words">Time Words</a></li>
-          <li><a href="#clock-time">Clock Time</a></li>
-          <li><a href="#ready-models">Ready Models</a></li>
-        </ul>
-        <p class="mini">
-          The number and time patterns here follow MQF-1 lesson material, especially the lesson on <code>Il-Ħin</code>.
-        </p>
-      </aside>
-
-      <main class="content">
-        <section class="content-card" id="numbers">
-          <span class="tag">Numbers</span>
-          <h2>Core Numbers</h2>
-          <div class="number-grid">
-            <div class="number-column">
-              <h3>1-10</h3>
-              <ul class="number-list">
-                <li class="number-line"><strong>1</strong><span class="num-word">wie<span class="num-root">ħed</span></span></li>
-                <li class="number-line"><strong>2</strong><span class="num-word"><span class="num-root">tnejn</span></span></li>
-                <li class="number-line"><strong>3</strong><span class="num-word"><span class="num-root">tlie</span>ta</span></li>
-                <li class="number-line"><strong>4</strong><span class="num-word"><span class="num-root">erb</span>għa</span></li>
-                <li class="number-line"><strong>5</strong><span class="num-word"><span class="num-root">ħams</span>a</span></li>
-                <li class="number-line"><strong>6</strong><span class="num-word"><span class="num-root">sitt</span>a</span></li>
-                <li class="number-line"><strong>7</strong><span class="num-word"><span class="num-root">seb</span>għa</span></li>
-                <li class="number-line"><strong>8</strong><span class="num-word"><span class="num-root">tmien</span>ja</span></li>
-                <li class="number-line"><strong>9</strong><span class="num-word"><span class="num-root">dis</span>għa</span></li>
-                <li class="number-line"><strong>10</strong><span class="num-word">għaxra</span></li>
-              </ul>
-            </div>
-            <div class="number-column">
-              <h3>11-19</h3>
-              <ul class="number-list">
-                <li class="number-line"><strong>11</strong><span class="num-word"><span class="num-root">ħ</span>dax</span></li>
-                <li class="number-line"><strong>12</strong><span class="num-word"><span class="num-root">tn</span>ax</span></li>
-                <li class="number-line"><strong>13</strong><span class="num-word"><span class="num-root">tlett</span>ax</span></li>
-                <li class="number-line"><strong>14</strong><span class="num-word"><span class="num-root">erba</span>tax</span></li>
-                <li class="number-line"><strong>15</strong><span class="num-word"><span class="num-root">ħmis</span>tax</span></li>
-                <li class="number-line"><strong>16</strong><span class="num-word"><span class="num-root">sitt</span>ax</span></li>
-                <li class="number-line"><strong>17</strong><span class="num-word"><span class="num-root">sba</span>tax</span></li>
-                <li class="number-line"><strong>18</strong><span class="num-word"><span class="num-root">tmin</span>tax</span></li>
-                <li class="number-line"><strong>19</strong><span class="num-word"><span class="num-root">dsa</span>tax</span></li>
-              </ul>
-            </div>
-            <div class="number-column">
-              <h3>Tens</h3>
-              <ul class="number-list">
-                <li class="number-line"><strong>20</strong><span class="num-word">għoxrin</span></li>
-                <li class="number-line"><strong>30</strong><span class="num-word"><span class="num-root">tlet</span>in</span></li>
-                <li class="number-line"><strong>40</strong><span class="num-word"><span class="num-root">erbgħ</span>in</span></li>
-                <li class="number-line"><strong>50</strong><span class="num-word"><span class="num-root">ħams</span>in</span></li>
-                <li class="number-line"><strong>60</strong><span class="num-word"><span class="num-root">sitt</span>in</span></li>
-                <li class="number-line"><strong>70</strong><span class="num-word"><span class="num-root">sebgħ</span>in</span></li>
-                <li class="number-line"><strong>80</strong><span class="num-word"><span class="num-root">tmen</span>in</span></li>
-                <li class="number-line"><strong>90</strong><span class="num-word"><span class="num-root">disgħ</span>in</span></li>
-                <li class="number-line"><strong>100</strong><span class="num-word">mija</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="formula"><code>[unit] + u + [ten]</code></div>
-          <ul class="example-list">
-            <li><code>wieħed u għoxrin minuta</code> = twenty-one minutes</li>
-            <li><code>sitta u tletin minuta</code> = thirty-six minutes</li>
-            <li><code>erbgħa u għoxrin siegħa</code> = twenty-four hours</li>
-          </ul>
-        </section>
-
-
-        <section class="content-card" id="ordinals">
-          <span class="tag">Ordinal Numbers</span>
-          <h2>First, Second, Third...</h2>
-          <div class="two-col">
-            <div class="box">
-              <table>
-                <thead><tr><th>Maltese</th><th>English</th></tr></thead>
-                <tbody>
-                  <tr><td>l-ewwel</td><td>first</td></tr>
-                  <tr><td>it-tieni</td><td>second</td></tr>
-                  <tr><td>it-tielet</td><td>third</td></tr>
-                  <tr><td>ir-raba'</td><td>fourth</td></tr>
-                  <tr><td>il-ħames</td><td>fifth</td></tr>
-                  <tr><td>is-sitt</td><td>sixth</td></tr>
-                  <tr><td>is-seba'</td><td>seventh</td></tr>
-                  <tr><td>it-tmien</td><td>eighth</td></tr>
-                  <tr><td>id-disa'</td><td>ninth</td></tr>
-                  <tr><td>l-għaxar</td><td>tenth</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="box">
-              <h3>Examples</h3>
-              <ul class="example-list">
-                <li><code>Huwa l-ewwel.</code> = He is first.</li>
-                <li><code>Din it-tieni darba.</code> = This is the second time.</li>
-                <li><code>It-tielet lezzjoni</code> = the third lesson</li>
-                <li><code>Ir-raba' jum</code> = the fourth day</li>
-                <li><code>Il-ħames xahar</code> = the fifth month</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-card" id="group-counts">
-          <span class="tag">Counting People and Things</span>
-          <h2>Pairs, Threes, Fours and Group Examples</h2>
-          <div class="two-col">
-            <div class="box">
-              <h3>Very Common Counting Patterns</h3>
-              <table>
-                <thead><tr><th>Maltese</th><th>English</th></tr></thead>
-                <tbody>
-                  <tr><td>żewġt itfal</td><td>two children</td></tr>
-                  <tr><td>żewġt iklieb</td><td>two dogs</td></tr>
-                  <tr><td>żewġ fliexken</td><td>two bottles</td></tr>
-                  <tr><td>tliet itfal</td><td>three children</td></tr>
-                  <tr><td>tliet persuni</td><td>three people</td></tr>
-                  <tr><td>erbat itfal</td><td>four children</td></tr>
-                  <tr><td>erba' persuni</td><td>four people</td></tr>
-                  <tr><td>ħames itfal</td><td>five children</td></tr>
-                  <tr><td>sitt itfal</td><td>six children</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="box">
-              <h3>Examples In Sentences</h3>
-              <ul class="example-list">
-                <li><code>Fl-istampa hemm żewġt itfal.</code> = In the picture there are two children.</li>
-                <li><code>Jien nara tliet persuni.</code> = I can see three people.</li>
-                <li><code>Hemm erba' siġġijiet fil-kċina.</code> = There are four chairs in the kitchen.</li>
-                <li><code>Fuq il-mejda hemm żewġ fliexken.</code> = There are two bottles on the table.</li>
-                <li><code>Fl-istampa qed naraw ħames itfal.</code> = In the picture we can see five children.</li>
-              </ul>
-            </div>
-          </div>
-          <p class="footer-note">MQF-1 also reviewed special pair forms like <code>għajnejn</code>, <code>widnejn</code>, <code>saqajn</code>, and <code>sagħtejn</code>.</p>
-        </section>
-        <section class="content-card" id="weekdays">
-          <span class="tag">Calendar</span>
-          <h2>Days of the Week</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Maltese</th>
-                <th>English</th>
-                <th>Simple Example</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><code>It-Tnejn</code></td><td>Monday</td><td><code>It-Tnejn għandi xogħol.</code></td></tr>
-              <tr><td><code>It-Tlieta</code></td><td>Tuesday</td><td><code>It-Tlieta sejra fid-disgħa u għaxra.</code></td></tr>
-              <tr><td><code>L-Erbgħa</code></td><td>Wednesday</td><td><code>L-Erbgħa għandi appuntament.</code></td></tr>
-              <tr><td><code>Il-Ħamis</code></td><td>Thursday</td><td><code>Il-Ħamis immur il-ħanut.</code></td></tr>
-              <tr><td><code>Il-Ġimgħa</code></td><td>Friday</td><td><code>Il-Ġimgħa niekol mal-familja.</code></td></tr>
-              <tr><td><code>Is-Sibt</code></td><td>Saturday</td><td><code>Is-Sibt immur il-baħar.</code></td></tr>
-              <tr><td><code>Il-Ħadd</code></td><td>Sunday</td><td><code>Il-Ħadd noqgħod id-dar.</code></td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="content-card" id="months">
-          <span class="tag">Calendar</span>
-          <h2>Months of the Year</h2>
-          <div class="two-col">
-            <div class="box">
-              <table>
-                <tbody>
-                  <tr><th>Jannar</th><td>January</td></tr>
-                  <tr><th>Frar</th><td>February</td></tr>
-                  <tr><th>Marzu</th><td>March</td></tr>
-                  <tr><th>April</th><td>April</td></tr>
-                  <tr><th>Mejju</th><td>May</td></tr>
-                  <tr><th>Ġunju</th><td>June</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="box">
-              <table>
-                <tbody>
-                  <tr><th>Lulju</th><td>July</td></tr>
-                  <tr><th>Awwissu</th><td>August</td></tr>
-                  <tr><th>Settembru</th><td>September</td></tr>
-                  <tr><th>Ottubru</th><td>October</td></tr>
-                  <tr><th>Novembru</th><td>November</td></tr>
-                  <tr><th>Diċembru</th><td>December</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <ul class="example-list">
-            <li><code>fl-20 ta' April</code> = on the 20th of April</li>
-            <li><code>f'Mejju</code> = in May</li>
-            <li><code>f'Diċembru</code> = in December</li>
-          </ul>
-        </section>
-
-        <section class="content-card" id="seasons">
-          <span class="tag">Seasons</span>
-          <h2>Seasons of the Year</h2>
-          <div class="two-col">
-            <div class="box">
-              <h3>Vocabulary</h3>
-              <table>
-                <tbody>
-                  <tr><th>ir-rebbiegħa</th><td>spring</td></tr>
-                  <tr><th>is-sajf</th><td>summer</td></tr>
-                  <tr><th>il-ħarifa</th><td>autumn</td></tr>
-                  <tr><th>ix-xitwa</th><td>winter</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="box">
-              <h3>Simple Examples</h3>
-              <ul class="example-list">
-                <li><code>Fis-sajf inħobb immur il-baħar.</code> = In summer I like to go to the sea.</li>
-                <li><code>Fix-xitwa noqgħod id-dar.</code> = In winter I stay at home.</li>
-                <li><code>Ir-rebbiegħa hija sabiħa.</code> = Spring is beautiful.</li>
-                <li><code>Il-ħarifa hija kwieta.</code> = Autumn is quiet.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-card" id="time-words">
-          <span class="tag">Time Words</span>
-          <h2>Useful Time Words</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Maltese</th>
-                <th>English</th>
-                <th>Example</th>
-                <th>Example Translation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><code>illum</code></td><td>today</td><td><code>Illum għandi xogħol.</code></td><td>Today I have work.</td></tr>
-              <tr><td><code>ilbieraħ</code></td><td>yesterday</td><td><code>Ilbieraħ mort il-ħanut.</code></td><td>Yesterday I went to the shop.</td></tr>
-              <tr><td><code>għada</code></td><td>tomorrow</td><td><code>għada se nqum kmieni.</code></td><td>Tomorrow I will wake up early.</td></tr>
-              <tr><td><code>ilbiraħtlula</code></td><td>the day before yesterday</td><td><code>Ilbiraħtlula kont id-dar.</code></td><td>The day before yesterday I was at home.</td></tr>
-              <tr><td><code>pitgħada</code></td><td>the day after tomorrow</td><td><code>Pitgħada se niltaqa' ma' ħabib.</code></td><td>The day after tomorrow I will meet a friend.</td></tr>
-              <tr><td><code>jumejn ilu</code></td><td>two days ago</td><td><code>Jumejn ilu mort il-bank.</code></td><td>Two days ago I went to the bank.</td></tr>
-              <tr><td><code>jum</code></td><td>day</td><td><code>Illum huwa jum twil.</code></td><td>Today is a long day.</td></tr>
-              <tr><td><code>ġurnata</code></td><td>day</td><td><code>Kelli ġurnata sabiħa.</code></td><td>I had a beautiful day.</td></tr>
-              <tr><td><code>issa</code></td><td>now</td><td><code>Issa qed nistudja.</code></td><td>Now I am studying.</td></tr>
-              <tr><td><code>kuljum</code></td><td>every day</td><td><code>Kuljum nieħu kaf?.</code></td><td>Every day I have coffee.</td></tr>
-              <tr><td><code>il-ġimgħa l-oħra</code></td><td>last week</td><td><code>Il-ġimgħa l-oħra mort Ta' Qali.</code></td><td>Last week I went to Ta' Qali.</td></tr>
-              <tr><td><code>il-ġimgħa d-dieħla</code></td><td>next week</td><td><code>Il-ġimgħa d-dieħla għandi appuntament.</code></td><td>Next week I have an appointment.</td></tr>
-              <tr><td><code>il-ġimgħa ta' wara</code></td><td>the week after</td><td><code>Il-ġimgħa ta' wara se mmur għawdex.</code></td><td>The week after I will go to ġozo.</td></tr>
-              <tr><td><code>xahar ilu</code></td><td>a month ago</td><td><code>Xahar ilu bdejt il-kors.</code></td><td>A month ago I started the course.</td></tr>
-              <tr><td><code>ix-xahar li għadda</code></td><td>last month</td><td><code>Ix-xahar li għadda kont imsiefer.</code></td><td>Last month I was abroad.</td></tr>
-              <tr><td><code>ix-xahar id-dieħel</code></td><td>the next month</td><td><code>Ix-xahar id-dieħel għandi ħafna xogħol.</code></td><td>Next month I have a lot of work.</td></tr>
-              <tr><td><code>ix-xahar ta' wara</code></td><td>the month after</td><td><code>Ix-xahar ta' wara se nibda lezzjoni ġdida.</code></td><td>The month after I will start a new lesson.</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="content-card" id="clock-time">
-          <span class="tag">Clock Time</span>
-          <h2>Telling the Time in Maltese</h2>
-          <div class="two-col">
-            <div class="box">
-              <h3>Full Hours</h3>
-              <table>
-                <tbody>
-                  <tr><th>1:00</th><td><code>is-siegħa</code></td></tr>
-                  <tr><th>2:00</th><td><code>is-sagħtejn</code></td></tr>
-                  <tr><th>3:00</th><td><code>it-tlieta</code></td></tr>
-                  <tr><th>4:00</th><td><code>l-erbgħa</code></td></tr>
-                  <tr><th>5:00</th><td><code>il-ħamsa</code></td></tr>
-                  <tr><th>6:00</th><td><code>is-sitta</code></td></tr>
-                  <tr><th>7:00</th><td><code>is-sebgħa</code></td></tr>
-                  <tr><th>8:00</th><td><code>it-tmienja</code></td></tr>
-                  <tr><th>9:00</th><td><code>id-disgħa</code></td></tr>
-                  <tr><th>10:00</th><td><code>l-għaxra</code></td></tr>
-                  <tr><th>11:00</th><td><code>il-ħdax</code></td></tr>
-                  <tr><th>12:00pm</th><td><code>nofsinhar</code></td></tr>
-                  <tr><th>12:00am</th><td><code>nofsillejl</code></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="box">
-              <h3>Parts of the Day</h3>
-              <table>
-                <tbody>
-                  <tr><th>ta' filgħodu</th><td>in the morning</td></tr>
-                  <tr><th>ta' waranofsinhar</th><td>in the afternoon</td></tr>
-                  <tr><th>ta' filgħaxija</th><td>in the evening</td></tr>
-                  <tr><th>ta' billejl</th><td>at night</td></tr>
-                </tbody>
-              </table>
-              <ul class="example-list">
-                <li><code>is-sitta ta' filgħodu</code> = six in the morning</li>
-                <li><code>l-erbgħa ta' waranofsinhar</code> = four in the afternoon</li>
-                <li><code>id-disgħa ta' billejl</code> = nine at night</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="two-col">
-            <div class="box">
-              <h3><code>u</code> = past</h3>
-              <div class="formula"><code>[hour] + u + [minutes]</code></div>
-              <ul class="example-list">
-                <li><code>it-tlieta u ħamsa</code> = five past three</li>
-                <li><code>l-erbgħa u għaxra</code> = ten past four</li>
-                <li><code>il-ħamsa u kwart</code> = quarter past five</li>
-                <li><code>it-tmienja u nofs</code> = half past eight</li>
-              </ul>
-            </div>
-            <div class="box">
-              <h3><code>neqsin</code> = to</h3>
-              <div class="formula"><code>[next hour] + neqsin + [minutes]</code></div>
-              <ul class="example-list">
-                <li><code>il-ħamsa neqsin ħamsa</code> = five to five</li>
-                <li><code>is-sebgħa neqsin kwart</code> = quarter to seven</li>
-                <li><code>it-tmienja neqsin għoxrin</code> = twenty to eight</li>
-                <li><code>l-erbgħa neqsin għaxra</code> = ten to four</li>
-              </ul>
-            </div>
-          </div>
-
-
-          <div class="box">
-            <h3>More Minute Examples</h3>
-            <table>
-              <thead><tr><th>Time</th><th>Maltese</th><th>English</th></tr></thead>
-              <tbody>
-                <tr><td>3:05</td><td><code>it-tlieta u ħamsa</code></td><td>five past three</td></tr>
-                <tr><td>4:10</td><td><code>l-erbgħa u għaxra</code></td><td>ten past four</td></tr>
-                <tr><td>5:15</td><td><code>il-ħamsa u kwart</code></td><td>quarter past five</td></tr>
-                <tr><td>6:20</td><td><code>is-sitta u għoxrin</code></td><td>twenty past six</td></tr>
-                <tr><td>8:30</td><td><code>it-tmienja u nofs</code></td><td>half past eight</td></tr>
-                <tr><td>4:55</td><td><code>il-ħamsa neqsin ħamsa</code></td><td>five to five</td></tr>
-                <tr><td>6:45</td><td><code>is-sebgħa neqsin kwart</code></td><td>quarter to seven</td></tr>
-                <tr><td>7:40</td><td><code>it-tmienja neqsin għoxrin</code></td><td>twenty to eight</td></tr>
-                <tr><td>3:50</td><td><code>l-erbgħa neqsin għaxra</code></td><td>ten to four</td></tr>
-                <tr><td>4:25</td><td><code>l-erbgħa u nofs neqsin ħamsa</code></td><td>twenty-five past four</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="box">
-            <h3>Maltese Time Clock</h3>
-            <p class="muted">This visual summary shows the main minute patterns around the clock: <code>u ?amsa</code>, <code>u g?axra</code>, <code>u kwart</code>, <code>u g?oxrin</code>, <code>u nofs</code>, and the matching <code>neqsin</code> forms.</p>
-            <img src="./assets/img/maltese-time-clock.svg" alt="Clock showing Maltese time expressions" style="display:block; width:100%; height:auto; border-radius:18px; margin-top:14px;">
-          </div>
-          <div class="box">
-            <h3>Time Units</h3>
-            <table>
-              <tbody>
-                <tr><th>siegħa</th><td>hour</td></tr>
-                <tr><th>sigħat</th><td>hours</td></tr>
-                <tr><th>minuta</th><td>minute</td></tr>
-                <tr><th>minuti</th><td>minutes</td></tr>
-                <tr><th>sekonda</th><td>second</td></tr>
-                <tr><th>sekondi</th><td>seconds</td></tr>
-                <tr><th>kwart</th><td>quarter</td></tr>
-                <tr><th>nofs</th><td>half</td></tr>
-              </tbody>
-            </table>
-            <p class="footer-note">
-              In MQF-1 the course notes also highlight a useful pattern: <code>2-10 + minuti</code>,
-              but <code>11+ + minuta</code> in the lesson examples.
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#numbers">Numbers</a></li>
+                <li><a href="#ordinals">Ordinal Numbers</a></li>
+                <li><a href="#group-counts">Pairs and Group Counts</a></li>
+                <li><a href="#weekdays">Days of the Week</a></li>
+                <li><a href="#months">Months</a></li>
+                <li><a href="#seasons">Seasons</a></li>
+                <li><a href="#time-words">Time Words</a></li>
+                <li><a href="#clock-time">Clock Time</a></li>
+                <li><a href="#ready-models">Ready Models</a></li>
+            </ul>
+            <p class="mini">
+                The number and time patterns here follow Level 1 lesson material, especially the lesson on <code>Il-Ħin</code>.
             </p>
-          </div>
-        </section>
+        </aside>
 
-        <section class="content-card" id="ready-models">
-          <span class="tag">Practice</span>
-          <h2>Ready-Made Models</h2>
-          <div class="two-col">
-            <div class="box">
-              <h3>Date and Calendar</h3>
-              <ul class="example-list">
-                <li><code>Illum it-Tlieta.</code> = Today is Tuesday.</li>
-                <li><code>Għandi appuntament f'April.</code> = I have an appointment in April.</li>
-                <li><code>Fis-sajf inħobb immur il-baħar.</code> = In summer I like to go to the sea.</li>
-                <li><code>Il-ġimgħa d-dieħla se mmur Għawdex.</code> = Next week I will go to Gozo.</li>
-              </ul>
-            </div>
-            <div class="box">
-              <h3>Time and Routine</h3>
-              <ul class="example-list">
-                <li><code>X'ħin hu?</code> = What time is it’</li>
-                <li><code>Huwa l-erbgħa u għaxra.</code> = It is ten past four.</li>
-                <li><code>Filgħodu nqum fis-sebgħa.</code> = In the morning I wake up at seven.</li>
-                <li><code>Ilbieraħ mort il-ħanut fl-għaxra ta' billejl.</code> = Yesterday I went to the shop at ten at night.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="content-card" id="life-phrases">
-          <span class="tag">Life Phrases</span>
-          <h2>Plans, Dates, Appointments and Everyday Events</h2>
-          <p class="muted">These short phrases are designed for practical speaking and homework. They use safe MQF-1 grammar and come with English translation.</p>
-          <div class="phrase-grid">
-            <div class="phrase-card"><strong>1. Illum għandi xogħol.</strong><span>Today I have work.</span></div>
-            <div class="phrase-card"><strong>2. Illum għandi lezzjoni.</strong><span>Today I have a lesson.</span></div>
-            <div class="phrase-card"><strong>3. Illum għandi appuntament.</strong><span>Today I have an appointment.</span></div>
-            <div class="phrase-card"><strong>4. Illum se mmur il-ħanut.</strong><span>Today I will go to the shop.</span></div>
-            <div class="phrase-card"><strong>5. Illum se nibqa' d-dar.</strong><span>Today I will stay at home.</span></div>
-            <div class="phrase-card"><strong>6. Illum se nistudja.</strong><span>Today I will study.</span></div>
-            <div class="phrase-card"><strong>7. Illum se nistrieħ.</strong><span>Today I will rest.</span></div>
-            <div class="phrase-card"><strong>8. Illum filgħodu nieħu kafè.</strong><span>This morning I have coffee.</span></div>
-            <div class="phrase-card"><strong>9. Illejla se niekol mal-familja.</strong><span>Tonight I will eat with the family.</span></div>
-            <div class="phrase-card"><strong>10. Illum qiegħed id-dar.</strong><span>Today I am at home.</span></div>
-            <div class="phrase-card"><strong>11. Ilbieraħ mort il-ħanut.</strong><span>Yesterday I went to the shop.</span></div>
-            <div class="phrase-card"><strong>12. Ilbieraħ kont ix-xogħol.</strong><span>Yesterday I was at work.</span></div>
-            <div class="phrase-card"><strong>13. Ilbieraħ kilt mal-ħbieb.</strong><span>Yesterday I ate with friends.</span></div>
-            <div class="phrase-card"><strong>14. Ilbieraħ xtrajt ħobż u ġobon.</strong><span>Yesterday I bought bread and cheese.</span></div>
-            <div class="phrase-card"><strong>15. Ilbieraħ xrobt kafè.</strong><span>Yesterday I drank coffee.</span></div>
-            <div class="phrase-card"><strong>16. Ilbieraħ mort il-baħar.</strong><span>Yesterday I went to the sea.</span></div>
-            <div class="phrase-card"><strong>17. Ilbieraħ kont ferħan.</strong><span>Yesterday I was happy.</span></div>
-            <div class="phrase-card"><strong>18. Ilbieraħ kont imdejjaq.</strong><span>Yesterday I was sad.</span></div>
-            <div class="phrase-card"><strong>19. Ilbieraħ fl-għaxra ta' billejl kont id-dar.</strong><span>Yesterday at ten at night I was at home.</span></div>
-            <div class="phrase-card"><strong>20. Ilbieraħ kelli ħafna xogħol.</strong><span>Yesterday I had a lot of work.</span></div>
-            <div class="phrase-card"><strong>21. Għada se mmur ix-xogħol.</strong><span>Tomorrow I will go to work.</span></div>
-            <div class="phrase-card"><strong>22. Għada se mmur il-ħanut.</strong><span>Tomorrow I will go to the shop.</span></div>
-            <div class="phrase-card"><strong>23. Għada se niltaqa' ma' ħija.</strong><span>Tomorrow I will meet my brother.</span></div>
-            <div class="phrase-card"><strong>24. Għada se niekol mal-familja.</strong><span>Tomorrow I will eat with the family.</span></div>
-            <div class="phrase-card"><strong>25. Għada se nixrob kafè.</strong><span>Tomorrow I will drink coffee.</span></div>
-            <div class="phrase-card"><strong>26. Għada se nqum kmieni.</strong><span>Tomorrow I will wake up early.</span></div>
-            <div class="phrase-card"><strong>27. Għada se norqod kmieni.</strong><span>Tomorrow I will sleep early.</span></div>
-            <div class="phrase-card"><strong>28. Għada se nkun id-dar.</strong><span>Tomorrow I will be at home.</span></div>
-            <div class="phrase-card"><strong>29. Għada għandi appuntament.</strong><span>Tomorrow I have an appointment.</span></div>
-            <div class="phrase-card"><strong>30. Għada għandi lezzjoni.</strong><span>Tomorrow I have a lesson.</span></div>
-            <div class="phrase-card"><strong>31. Pitgħada se mmur għand ommi.</strong><span>The day after tomorrow I will go to my mother's place.</span></div>
-            <div class="phrase-card"><strong>32. Pitgħada se niltaqa' ma' ħabib.</strong><span>The day after tomorrow I will meet a friend.</span></div>
-            <div class="phrase-card"><strong>33. Pitgħada se niekol barra.</strong><span>The day after tomorrow I will eat out.</span></div>
-            <div class="phrase-card"><strong>34. Dalwaqt se nibda.</strong><span>I will start soon.</span></div>
-            <div class="phrase-card"><strong>35. Dalwaqt se mmur.</strong><span>I will go soon.</span></div>
-            <div class="phrase-card"><strong>36. Issa għandi ħin.</strong><span>Now I have time.</span></div>
-            <div class="phrase-card"><strong>37. Issa m'għandix ħin.</strong><span>Now I do not have time.</span></div>
-            <div class="phrase-card"><strong>38. Issa qed nistudja.</strong><span>Now I am studying.</span></div>
-            <div class="phrase-card"><strong>39. Issa qed niekol.</strong><span>Now I am eating.</span></div>
-            <div class="phrase-card"><strong>40. Issa qed nixrob te.</strong><span>Now I am drinking tea.</span></div>
-            <div class="phrase-card"><strong>41. Kuljum nieħu kafè.</strong><span>Every day I have coffee.</span></div>
-            <div class="phrase-card"><strong>42. Kuljum immur ix-xogħol.</strong><span>Every day I go to work.</span></div>
-            <div class="phrase-card"><strong>43. Kuljum niekol xi ħaġa filgħodu.</strong><span>Every day I eat something in the morning.</span></div>
-            <div class="phrase-card"><strong>44. Kuljum naqbad tal-linja.</strong><span>Every day I catch the bus.</span></div>
-            <div class="phrase-card"><strong>45. Kuljum nqum fis-sitta.</strong><span>Every day I wake up at six.</span></div>
-            <div class="phrase-card"><strong>46. Filgħodu nieħu kafè.</strong><span>In the morning I have coffee.</span></div>
-            <div class="phrase-card"><strong>47. Filgħodu niekol bajda.</strong><span>In the morning I eat an egg.</span></div>
-            <div class="phrase-card"><strong>48. Filgħodu mmur ix-xogħol.</strong><span>In the morning I go to work.</span></div>
-            <div class="phrase-card"><strong>49. F'nofsinhar nieħu soppa.</strong><span>At noon I have soup.</span></div>
-            <div class="phrase-card"><strong>50. F'nofsinhar niekol ikla.</strong><span>At noon I eat a meal.</span></div>
-            <div class="phrase-card"><strong>51. F'nofsinhar għandi appuntament.</strong><span>At noon I have an appointment.</span></div>
-            <div class="phrase-card"><strong>52. Filgħaxija nieħu xi ħaġa ħafifa.</strong><span>In the evening I have something light.</span></div>
-            <div class="phrase-card"><strong>53. Filgħaxija niekol mal-familja.</strong><span>In the evening I eat with the family.</span></div>
-            <div class="phrase-card"><strong>54. Filgħaxija noqgħod id-dar.</strong><span>In the evening I stay at home.</span></div>
-            <div class="phrase-card"><strong>55. Ta' filgħodu għandi xogħol.</strong><span>In the morning I have work.</span></div>
-            <div class="phrase-card"><strong>56. Ta' waranofsinhar għandi lezzjoni.</strong><span>In the afternoon I have a lesson.</span></div>
-            <div class="phrase-card"><strong>57. Ta' filgħaxija se mmur il-ħanut.</strong><span>In the evening I will go to the shop.</span></div>
-            <div class="phrase-card"><strong>58. Illejla nkun id-dar.</strong><span>Tonight I will be at home.</span></div>
-            <div class="phrase-card"><strong>59. It-Tnejn għandi xogħol.</strong><span>On Monday I have work.</span></div>
-            <div class="phrase-card"><strong>60. It-Tlieta għandi appuntament.</strong><span>On Tuesday I have an appointment.</span></div>
-            <div class="phrase-card"><strong>61. L-Erbgħa se mmur il-bank.</strong><span>On Wednesday I will go to the bank.</span></div>
-            <div class="phrase-card"><strong>62. Il-Ħamis niekol barra.</strong><span>On Thursday I eat out.</span></div>
-            <div class="phrase-card"><strong>63. Il-Ġimgħa niltaqa' mal-ħbieb.</strong><span>On Friday I meet friends.</span></div>
-            <div class="phrase-card"><strong>64. Is-Sibt immur il-baħar.</strong><span>On Saturday I go to the sea.</span></div>
-            <div class="phrase-card"><strong>65. Il-Ħadd noqgħod id-dar.</strong><span>On Sunday I stay at home.</span></div>
-            <div class="phrase-card"><strong>66. F'April għandi vaganza.</strong><span>In April I have a holiday.</span></div>
-            <div class="phrase-card"><strong>67. F'Mejju għandi appuntament.</strong><span>In May I have an appointment.</span></div>
-            <div class="phrase-card"><strong>68. F'Ġunju se mmur il-baħar.</strong><span>In June I will go to the sea.</span></div>
-            <div class="phrase-card"><strong>69. F'Lulju għandi ħafna ħin.</strong><span>In July I have a lot of time.</span></div>
-            <div class="phrase-card"><strong>70. F'Awwissu nieħu vaganza.</strong><span>In August I take a holiday.</span></div>
-            <div class="phrase-card"><strong>71. F'Settembru nibda l-kors.</strong><span>In September I start the course.</span></div>
-            <div class="phrase-card"><strong>72. F'Ottubru noqgħod aktar id-dar.</strong><span>In October I stay at home more.</span></div>
-            <div class="phrase-card"><strong>73. F'Novembru għandi ħafna xogħol.</strong><span>In November I have a lot of work.</span></div>
-            <div class="phrase-card"><strong>74. F'Diċembru niekol mal-familja.</strong><span>In December I eat with the family.</span></div>
-            <div class="phrase-card"><strong>75. Fil-20 ta' April għandi appuntament.</strong><span>On the 20th of April I have an appointment.</span></div>
-            <div class="phrase-card"><strong>76. Fil-11 ta' Mejju se niltaqa' ma' oħti.</strong><span>On the 11th of May I will meet my sister.</span></div>
-            <div class="phrase-card"><strong>77. Fis-sajf inħobb immur il-baħar.</strong><span>In summer I like to go to the sea.</span></div>
-            <div class="phrase-card"><strong>78. Fix-xitwa noqgħod id-dar.</strong><span>In winter I stay at home.</span></div>
-            <div class="phrase-card"><strong>79. Fir-rebbiegħa nħossni ferħan.</strong><span>In spring I feel happy.</span></div>
-            <div class="phrase-card"><strong>80. Fil-ħarifa l-post jidher kwiet.</strong><span>In autumn the place looks quiet.</span></div>
-            <div class="phrase-card"><strong>81. X'ħin hu?</strong><span>What time is it?</span></div>
-            <div class="phrase-card"><strong>82. Hija s-siegħa.</strong><span>It is one o'clock.</span></div>
-            <div class="phrase-card"><strong>83. Huma s-sagħtejn.</strong><span>It is two o'clock.</span></div>
-            <div class="phrase-card"><strong>84. Huma t-tlieta u ħamsa.</strong><span>It is five past three.</span></div>
-            <div class="phrase-card"><strong>85. Huma l-erbgħa u għaxra.</strong><span>It is ten past four.</span></div>
-            <div class="phrase-card"><strong>86. Huma l-ħamsa u kwart.</strong><span>It is quarter past five.</span></div>
-            <div class="phrase-card"><strong>87. Huma t-tmienja u nofs.</strong><span>It is half past eight.</span></div>
-            <div class="phrase-card"><strong>88. Huma l-ħamsa neqsin ħamsa.</strong><span>It is five to five.</span></div>
-            <div class="phrase-card"><strong>89. Huma s-sebgħa neqsin kwart.</strong><span>It is quarter to seven.</span></div>
-            <div class="phrase-card"><strong>90. Huma l-erbgħa neqsin għaxra.</strong><span>It is ten to four.</span></div>
-            <div class="phrase-card"><strong>91. L-appuntament tiegħi hu fit-tnejn.</strong><span>My appointment is at two o'clock.</span></div>
-            <div class="phrase-card"><strong>92. Il-lezzjoni tibda fit-tlieta.</strong><span>The lesson starts at three o'clock.</span></div>
-            <div class="phrase-card"><strong>93. Se niltaqa' miegħek fl-erbgħa u nofs.</strong><span>I will meet you at half past four.</span></div>
-            <div class="phrase-card"><strong>94. Għandi ikla f'nofsinhar.</strong><span>I have lunch at noon.</span></div>
-            <div class="phrase-card"><strong>95. Mort id-dar f'nofsillejl.</strong><span>I went home at midnight.</span></div>
-            <div class="phrase-card"><strong>96. Sejra għand ommi fit-tmienja u kwart.</strong><span>I am going to my mother's place at quarter past eight.</span></div>
-            <div class="phrase-card"><strong>97. Għada se mmur ix-xogħol fis-sebgħa u ħamsa.</strong><span>Tomorrow I will go to work at five past seven.</span></div>
-            <div class="phrase-card"><strong>98. Se nkun għand ommi sat-tmienja.</strong><span>I will be at my mother's place until eight o'clock.</span></div>
-            <div class="phrase-card"><strong>99. Għandi bżonn ftit aktar ħin.</strong><span>I need a little more time.</span></div>
-            <div class="phrase-card"><strong>100. Dalwaqt se nkun lest.</strong><span>I will be ready soon.</span></div>
-          </div>
-        </section>
-      </main>
+        <main class="content">
+            <section class="content-card" id="numbers">
+                <span class="tag">Numbers</span>
+                <h2>Core Numbers</h2>
+                <div class="number-grid">
+                    <div class="number-column">
+                        <h3>1-10</h3>
+                        <ul class="number-list">
+                            <li class="number-line"><strong>1</strong><span class="num-word">wie<span class="num-root">ħed</span></span></li>
+                            <li class="number-line"><strong>2</strong><span class="num-word"><span class="num-root">tnejn</span></span></li>
+                            <li class="number-line"><strong>3</strong><span class="num-word"><span class="num-root">tlie</span>ta</span></li>
+                            <li class="number-line"><strong>4</strong><span class="num-word"><span class="num-root">erb</span>għa</span></li>
+                            <li class="number-line"><strong>5</strong><span class="num-word"><span class="num-root">ħams</span>a</span></li>
+                            <li class="number-line"><strong>6</strong><span class="num-word"><span class="num-root">sitt</span>a</span></li>
+                            <li class="number-line"><strong>7</strong><span class="num-word"><span class="num-root">seb</span>għa</span></li>
+                            <li class="number-line"><strong>8</strong><span class="num-word"><span class="num-root">tmien</span>ja</span></li>
+                            <li class="number-line"><strong>9</strong><span class="num-word"><span class="num-root">dis</span>għa</span></li>
+                            <li class="number-line"><strong>10</strong><span class="num-word">għaxra</span></li>
+                        </ul>
+                    </div>
+                    <div class="number-column">
+                        <h3>11-19</h3>
+                        <ul class="number-list">
+                            <li class="number-line"><strong>11</strong><span class="num-word"><span class="num-root">ħ</span>dax</span></li>
+                            <li class="number-line"><strong>12</strong><span class="num-word"><span class="num-root">tn</span>ax</span></li>
+                            <li class="number-line"><strong>13</strong><span class="num-word"><span class="num-root">tlett</span>ax</span></li>
+                            <li class="number-line"><strong>14</strong><span class="num-word"><span class="num-root">erba</span>tax</span></li>
+                            <li class="number-line"><strong>15</strong><span class="num-word"><span class="num-root">ħmis</span>tax</span></li>
+                            <li class="number-line"><strong>16</strong><span class="num-word"><span class="num-root">sitt</span>ax</span></li>
+                            <li class="number-line"><strong>17</strong><span class="num-word"><span class="num-root">sba</span>tax</span></li>
+                            <li class="number-line"><strong>18</strong><span class="num-word"><span class="num-root">tmin</span>tax</span></li>
+                            <li class="number-line"><strong>19</strong><span class="num-word"><span class="num-root">dsa</span>tax</span></li>
+                        </ul>
+                    </div>
+                    <div class="number-column">
+                        <h3>Tens</h3>
+                        <ul class="number-list">
+                            <li class="number-line"><strong>20</strong><span class="num-word">għoxrin</span></li>
+                            <li class="number-line"><strong>30</strong><span class="num-word"><span class="num-root">tlet</span>in</span></li>
+                            <li class="number-line"><strong>40</strong><span class="num-word"><span class="num-root">erbgħ</span>in</span></li>
+                            <li class="number-line"><strong>50</strong><span class="num-word"><span class="num-root">ħams</span>in</span></li>
+                            <li class="number-line"><strong>60</strong><span class="num-word"><span class="num-root">sitt</span>in</span></li>
+                            <li class="number-line"><strong>70</strong><span class="num-word"><span class="num-root">sebgħ</span>in</span></li>
+                            <li class="number-line"><strong>80</strong><span class="num-word"><span class="num-root">tmen</span>in</span></li>
+                            <li class="number-line"><strong>90</strong><span class="num-word"><span class="num-root">disgħ</span>in</span></li>
+                            <li class="number-line"><strong>100</strong><span class="num-word">mija</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="formula"><code>[unit] + u + [ten]</code></div>
+                <ul class="example-list">
+                    <li><code>wieħed u għoxrin minuta</code> = twenty-one minutes</li>
+                    <li><code>sitta u tletin minuta</code> = thirty-six minutes</li>
+                    <li><code>erbgħa u għoxrin siegħa</code> = twenty-four hours</li>
+                </ul>
+            </section>
+
+
+            <section class="content-card" id="ordinals">
+                <span class="tag">Ordinal Numbers</span>
+                <h2>First, Second, Third...</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <table>
+                            <thead><tr><th>Maltese</th><th>English</th></tr></thead>
+                            <tbody>
+                            <tr><td>l-ewwel</td><td>first</td></tr>
+                            <tr><td>it-tieni</td><td>second</td></tr>
+                            <tr><td>it-tielet</td><td>third</td></tr>
+                            <tr><td>ir-raba'</td><td>fourth</td></tr>
+                            <tr><td>il-ħames</td><td>fifth</td></tr>
+                            <tr><td>is-sitt</td><td>sixth</td></tr>
+                            <tr><td>is-seba'</td><td>seventh</td></tr>
+                            <tr><td>it-tmien</td><td>eighth</td></tr>
+                            <tr><td>id-disa'</td><td>ninth</td></tr>
+                            <tr><td>l-għaxar</td><td>tenth</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="box">
+                        <h3>Examples</h3>
+                        <ul class="example-list">
+                            <li><code>Huwa l-ewwel.</code> = He is first.</li>
+                            <li><code>Din it-tieni darba.</code> = This is the second time.</li>
+                            <li><code>It-tielet lezzjoni</code> = the third lesson</li>
+                            <li><code>Ir-raba' jum</code> = the fourth day</li>
+                            <li><code>Il-ħames xahar</code> = the fifth month</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="group-counts">
+                <span class="tag">Counting People and Things</span>
+                <h2>Pairs, Threes, Fours and Group Examples</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <h3>Very Common Counting Patterns</h3>
+                        <table>
+                            <thead><tr><th>Maltese</th><th>English</th></tr></thead>
+                            <tbody>
+                            <tr><td>żewġt itfal</td><td>two children</td></tr>
+                            <tr><td>żewġt iklieb</td><td>two dogs</td></tr>
+                            <tr><td>żewġ fliexken</td><td>two bottles</td></tr>
+                            <tr><td>tliet itfal</td><td>three children</td></tr>
+                            <tr><td>tliet persuni</td><td>three people</td></tr>
+                            <tr><td>erbat itfal</td><td>four children</td></tr>
+                            <tr><td>erba' persuni</td><td>four people</td></tr>
+                            <tr><td>ħames itfal</td><td>five children</td></tr>
+                            <tr><td>sitt itfal</td><td>six children</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="box">
+                        <h3>Examples In Sentences</h3>
+                        <ul class="example-list">
+                            <li><code>Fl-istampa hemm żewġt itfal.</code> = In the picture there are two children.</li>
+                            <li><code>Jien nara tliet persuni.</code> = I can see three people.</li>
+                            <li><code>Hemm erba' siġġijiet fil-kċina.</code> = There are four chairs in the kitchen.</li>
+                            <li><code>Fuq il-mejda hemm żewġ fliexken.</code> = There are two bottles on the table.</li>
+                            <li><code>Fl-istampa qed naraw ħames itfal.</code> = In the picture we can see five children.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="footer-note">Level 1 also reviewed special pair forms like <code>għajnejn</code>, <code>widnejn</code>, <code>saqajn</code>, and <code>sagħtejn</code>.</p>
+            </section>
+            <section class="content-card" id="weekdays">
+                <span class="tag">Calendar</span>
+                <h2>Days of the Week</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Maltese</th>
+                        <th>English</th>
+                        <th>Simple Example</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td><code>It-Tnejn</code></td><td>Monday</td><td><code>It-Tnejn għandi xogħol.</code></td></tr>
+                    <tr><td><code>It-Tlieta</code></td><td>Tuesday</td><td><code>It-Tlieta sejra fid-disgħa u għaxra.</code></td></tr>
+                    <tr><td><code>L-Erbgħa</code></td><td>Wednesday</td><td><code>L-Erbgħa għandi appuntament.</code></td></tr>
+                    <tr><td><code>Il-Ħamis</code></td><td>Thursday</td><td><code>Il-Ħamis immur il-ħanut.</code></td></tr>
+                    <tr><td><code>Il-Ġimgħa</code></td><td>Friday</td><td><code>Il-Ġimgħa niekol mal-familja.</code></td></tr>
+                    <tr><td><code>Is-Sibt</code></td><td>Saturday</td><td><code>Is-Sibt immur il-baħar.</code></td></tr>
+                    <tr><td><code>Il-Ħadd</code></td><td>Sunday</td><td><code>Il-Ħadd noqgħod id-dar.</code></td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="content-card" id="months">
+                <span class="tag">Calendar</span>
+                <h2>Months of the Year</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <table>
+                            <tbody>
+                            <tr><th>Jannar</th><td>January</td></tr>
+                            <tr><th>Frar</th><td>February</td></tr>
+                            <tr><th>Marzu</th><td>March</td></tr>
+                            <tr><th>April</th><td>April</td></tr>
+                            <tr><th>Mejju</th><td>May</td></tr>
+                            <tr><th>Ġunju</th><td>June</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="box">
+                        <table>
+                            <tbody>
+                            <tr><th>Lulju</th><td>July</td></tr>
+                            <tr><th>Awwissu</th><td>August</td></tr>
+                            <tr><th>Settembru</th><td>September</td></tr>
+                            <tr><th>Ottubru</th><td>October</td></tr>
+                            <tr><th>Novembru</th><td>November</td></tr>
+                            <tr><th>Diċembru</th><td>December</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <ul class="example-list">
+                    <li><code>fl-20 ta' April</code> = on the 20th of April</li>
+                    <li><code>f'Mejju</code> = in May</li>
+                    <li><code>f'Diċembru</code> = in December</li>
+                </ul>
+            </section>
+
+            <section class="content-card" id="seasons">
+                <span class="tag">Seasons</span>
+                <h2>Seasons of the Year</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <h3>Vocabulary</h3>
+                        <table>
+                            <tbody>
+                            <tr><th>ir-rebbiegħa</th><td>spring</td></tr>
+                            <tr><th>is-sajf</th><td>summer</td></tr>
+                            <tr><th>il-ħarifa</th><td>autumn</td></tr>
+                            <tr><th>ix-xitwa</th><td>winter</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="box">
+                        <h3>Simple Examples</h3>
+                        <ul class="example-list">
+                            <li><code>Fis-sajf inħobb immur il-baħar.</code> = In summer I like to go to the sea.</li>
+                            <li><code>Fix-xitwa noqgħod id-dar.</code> = In winter I stay at home.</li>
+                            <li><code>Ir-rebbiegħa hija sabiħa.</code> = Spring is beautiful.</li>
+                            <li><code>Il-ħarifa hija kwieta.</code> = Autumn is quiet.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="time-words">
+                <span class="tag">Time Words</span>
+                <h2>Useful Time Words</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Maltese</th>
+                        <th>English</th>
+                        <th>Example</th>
+                        <th>Example Translation</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td><code>illum</code></td><td>today</td><td><code>Illum għandi xogħol.</code></td><td>Today I have work.</td></tr>
+                    <tr><td><code>ilbieraħ</code></td><td>yesterday</td><td><code>Ilbieraħ mort il-ħanut.</code></td><td>Yesterday I went to the shop.</td></tr>
+                    <tr><td><code>għada</code></td><td>tomorrow</td><td><code>għada se nqum kmieni.</code></td><td>Tomorrow I will wake up early.</td></tr>
+                    <tr><td><code>ilbiraħtlula</code></td><td>the day before yesterday</td><td><code>Ilbiraħtlula kont id-dar.</code></td><td>The day before yesterday I was at home.</td></tr>
+                    <tr><td><code>pitgħada</code></td><td>the day after tomorrow</td><td><code>Pitgħada se niltaqa' ma' ħabib.</code></td><td>The day after tomorrow I will meet a friend.</td></tr>
+                    <tr><td><code>jumejn ilu</code></td><td>two days ago</td><td><code>Jumejn ilu mort il-bank.</code></td><td>Two days ago I went to the bank.</td></tr>
+                    <tr><td><code>jum</code></td><td>day</td><td><code>Illum huwa jum twil.</code></td><td>Today is a long day.</td></tr>
+                    <tr><td><code>ġurnata</code></td><td>day</td><td><code>Kelli ġurnata sabiħa.</code></td><td>I had a beautiful day.</td></tr>
+                    <tr><td><code>issa</code></td><td>now</td><td><code>Issa qed nistudja.</code></td><td>Now I am studying.</td></tr>
+                    <tr><td><code>kuljum</code></td><td>every day</td><td><code>Kuljum nieħu kaf?.</code></td><td>Every day I have coffee.</td></tr>
+                    <tr><td><code>il-ġimgħa l-oħra</code></td><td>last week</td><td><code>Il-ġimgħa l-oħra mort Ta' Qali.</code></td><td>Last week I went to Ta' Qali.</td></tr>
+                    <tr><td><code>il-ġimgħa d-dieħla</code></td><td>next week</td><td><code>Il-ġimgħa d-dieħla għandi appuntament.</code></td><td>Next week I have an appointment.</td></tr>
+                    <tr><td><code>il-ġimgħa ta' wara</code></td><td>the week after</td><td><code>Il-ġimgħa ta' wara se mmur għawdex.</code></td><td>The week after I will go to ġozo.</td></tr>
+                    <tr><td><code>xahar ilu</code></td><td>a month ago</td><td><code>Xahar ilu bdejt il-kors.</code></td><td>A month ago I started the course.</td></tr>
+                    <tr><td><code>ix-xahar li għadda</code></td><td>last month</td><td><code>Ix-xahar li għadda kont imsiefer.</code></td><td>Last month I was abroad.</td></tr>
+                    <tr><td><code>ix-xahar id-dieħel</code></td><td>the next month</td><td><code>Ix-xahar id-dieħel għandi ħafna xogħol.</code></td><td>Next month I have a lot of work.</td></tr>
+                    <tr><td><code>ix-xahar ta' wara</code></td><td>the month after</td><td><code>Ix-xahar ta' wara se nibda lezzjoni ġdida.</code></td><td>The month after I will start a new lesson.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="content-card" id="clock-time">
+                <span class="tag">Clock Time</span>
+                <h2>Telling the Time in Maltese</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <h3>Full Hours</h3>
+                        <table>
+                            <tbody>
+                            <tr><th>1:00</th><td><code>is-siegħa</code></td></tr>
+                            <tr><th>2:00</th><td><code>is-sagħtejn</code></td></tr>
+                            <tr><th>3:00</th><td><code>it-tlieta</code></td></tr>
+                            <tr><th>4:00</th><td><code>l-erbgħa</code></td></tr>
+                            <tr><th>5:00</th><td><code>il-ħamsa</code></td></tr>
+                            <tr><th>6:00</th><td><code>is-sitta</code></td></tr>
+                            <tr><th>7:00</th><td><code>is-sebgħa</code></td></tr>
+                            <tr><th>8:00</th><td><code>it-tmienja</code></td></tr>
+                            <tr><th>9:00</th><td><code>id-disgħa</code></td></tr>
+                            <tr><th>10:00</th><td><code>l-għaxra</code></td></tr>
+                            <tr><th>11:00</th><td><code>il-ħdax</code></td></tr>
+                            <tr><th>12:00pm</th><td><code>nofsinhar</code></td></tr>
+                            <tr><th>12:00am</th><td><code>nofsillejl</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="box">
+                        <h3>Parts of the Day</h3>
+                        <table>
+                            <tbody>
+                            <tr><th>ta' filgħodu</th><td>in the morning</td></tr>
+                            <tr><th>ta' waranofsinhar</th><td>in the afternoon</td></tr>
+                            <tr><th>ta' filgħaxija</th><td>in the evening</td></tr>
+                            <tr><th>ta' billejl</th><td>at night</td></tr>
+                            </tbody>
+                        </table>
+                        <ul class="example-list">
+                            <li><code>is-sitta ta' filgħodu</code> = six in the morning</li>
+                            <li><code>l-erbgħa ta' waranofsinhar</code> = four in the afternoon</li>
+                            <li><code>id-disgħa ta' billejl</code> = nine at night</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <div class="box">
+                        <h3><code>u</code> = past</h3>
+                        <div class="formula"><code>[hour] + u + [minutes]</code></div>
+                        <ul class="example-list">
+                            <li><code>it-tlieta u ħamsa</code> = five past three</li>
+                            <li><code>l-erbgħa u għaxra</code> = ten past four</li>
+                            <li><code>il-ħamsa u kwart</code> = quarter past five</li>
+                            <li><code>it-tmienja u nofs</code> = half past eight</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3><code>neqsin</code> = to</h3>
+                        <div class="formula"><code>[next hour] + neqsin + [minutes]</code></div>
+                        <ul class="example-list">
+                            <li><code>il-ħamsa neqsin ħamsa</code> = five to five</li>
+                            <li><code>is-sebgħa neqsin kwart</code> = quarter to seven</li>
+                            <li><code>it-tmienja neqsin għoxrin</code> = twenty to eight</li>
+                            <li><code>l-erbgħa neqsin għaxra</code> = ten to four</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <h3>More Minute Examples</h3>
+                    <table>
+                        <thead><tr><th>Time</th><th>Maltese</th><th>English</th></tr></thead>
+                        <tbody>
+                        <tr><td>3:05</td><td><code>it-tlieta u ħamsa</code></td><td>five past three</td></tr>
+                        <tr><td>4:10</td><td><code>l-erbgħa u għaxra</code></td><td>ten past four</td></tr>
+                        <tr><td>5:15</td><td><code>il-ħamsa u kwart</code></td><td>quarter past five</td></tr>
+                        <tr><td>6:20</td><td><code>is-sitta u għoxrin</code></td><td>twenty past six</td></tr>
+                        <tr><td>8:30</td><td><code>it-tmienja u nofs</code></td><td>half past eight</td></tr>
+                        <tr><td>4:55</td><td><code>il-ħamsa neqsin ħamsa</code></td><td>five to five</td></tr>
+                        <tr><td>6:45</td><td><code>is-sebgħa neqsin kwart</code></td><td>quarter to seven</td></tr>
+                        <tr><td>7:40</td><td><code>it-tmienja neqsin għoxrin</code></td><td>twenty to eight</td></tr>
+                        <tr><td>3:50</td><td><code>l-erbgħa neqsin għaxra</code></td><td>ten to four</td></tr>
+                        <tr><td>4:25</td><td><code>l-erbgħa u nofs neqsin ħamsa</code></td><td>twenty-five past four</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box">
+                    <h3>Maltese Time Clock</h3>
+                    <p class="muted">This visual summary shows the main minute patterns around the clock: <code>u ?amsa</code>, <code>u g?axra</code>, <code>u kwart</code>, <code>u g?oxrin</code>, <code>u nofs</code>, and the matching <code>neqsin</code> forms.</p>
+                    <img src="./assets/img/maltese-time-clock.svg" alt="Clock showing Maltese time expressions" style="display:block; width:100%; height:auto; border-radius:18px; margin-top:14px;">
+                </div>
+                <div class="box">
+                    <h3>Time Units</h3>
+                    <table>
+                        <tbody>
+                        <tr><th>siegħa</th><td>hour</td></tr>
+                        <tr><th>sigħat</th><td>hours</td></tr>
+                        <tr><th>minuta</th><td>minute</td></tr>
+                        <tr><th>minuti</th><td>minutes</td></tr>
+                        <tr><th>sekonda</th><td>second</td></tr>
+                        <tr><th>sekondi</th><td>seconds</td></tr>
+                        <tr><th>kwart</th><td>quarter</td></tr>
+                        <tr><th>nofs</th><td>half</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="footer-note">
+                        In Level 1 the course notes also highlight a useful pattern: <code>2-10 + minuti</code>,
+                        but <code>11+ + minuta</code> in the lesson examples.
+                    </p>
+                </div>
+            </section>
+
+            <section class="content-card" id="ready-models">
+                <span class="tag">Practice</span>
+                <h2>Ready-Made Models</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <h3>Date and Calendar</h3>
+                        <ul class="example-list">
+                            <li><code>Illum it-Tlieta.</code> = Today is Tuesday.</li>
+                            <li><code>Għandi appuntament f'April.</code> = I have an appointment in April.</li>
+                            <li><code>Fis-sajf inħobb immur il-baħar.</code> = In summer I like to go to the sea.</li>
+                            <li><code>Il-ġimgħa d-dieħla se mmur Għawdex.</code> = Next week I will go to Gozo.</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Time and Routine</h3>
+                        <ul class="example-list">
+                            <li><code>X'ħin hu?</code> = What time is it’</li>
+                            <li><code>Huwa l-erbgħa u għaxra.</code> = It is ten past four.</li>
+                            <li><code>Filgħodu nqum fis-sebgħa.</code> = In the morning I wake up at seven.</li>
+                            <li><code>Ilbieraħ mort il-ħanut fl-għaxra ta' billejl.</code> = Yesterday I went to the shop at ten at night.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="content-card" id="life-phrases">
+                <span class="tag">Life Phrases</span>
+                <h2>Plans, Dates, Appointments and Everyday Events</h2>
+                <p class="muted">These short phrases are designed for practical speaking and homework. They use safe Level 1 grammar and come with English translation.</p>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><strong>1. Illum għandi xogħol.</strong><span>Today I have work.</span></div>
+                    <div class="phrase-card"><strong>2. Illum għandi lezzjoni.</strong><span>Today I have a lesson.</span></div>
+                    <div class="phrase-card"><strong>3. Illum għandi appuntament.</strong><span>Today I have an appointment.</span></div>
+                    <div class="phrase-card"><strong>4. Illum se mmur il-ħanut.</strong><span>Today I will go to the shop.</span></div>
+                    <div class="phrase-card"><strong>5. Illum se nibqa' d-dar.</strong><span>Today I will stay at home.</span></div>
+                    <div class="phrase-card"><strong>6. Illum se nistudja.</strong><span>Today I will study.</span></div>
+                    <div class="phrase-card"><strong>7. Illum se nistrieħ.</strong><span>Today I will rest.</span></div>
+                    <div class="phrase-card"><strong>8. Illum filgħodu nieħu kafè.</strong><span>This morning I have coffee.</span></div>
+                    <div class="phrase-card"><strong>9. Illejla se niekol mal-familja.</strong><span>Tonight I will eat with the family.</span></div>
+                    <div class="phrase-card"><strong>10. Illum qiegħed id-dar.</strong><span>Today I am at home.</span></div>
+                    <div class="phrase-card"><strong>11. Ilbieraħ mort il-ħanut.</strong><span>Yesterday I went to the shop.</span></div>
+                    <div class="phrase-card"><strong>12. Ilbieraħ kont ix-xogħol.</strong><span>Yesterday I was at work.</span></div>
+                    <div class="phrase-card"><strong>13. Ilbieraħ kilt mal-ħbieb.</strong><span>Yesterday I ate with friends.</span></div>
+                    <div class="phrase-card"><strong>14. Ilbieraħ xtrajt ħobż u ġobon.</strong><span>Yesterday I bought bread and cheese.</span></div>
+                    <div class="phrase-card"><strong>15. Ilbieraħ xrobt kafè.</strong><span>Yesterday I drank coffee.</span></div>
+                    <div class="phrase-card"><strong>16. Ilbieraħ mort il-baħar.</strong><span>Yesterday I went to the sea.</span></div>
+                    <div class="phrase-card"><strong>17. Ilbieraħ kont ferħan.</strong><span>Yesterday I was happy.</span></div>
+                    <div class="phrase-card"><strong>18. Ilbieraħ kont imdejjaq.</strong><span>Yesterday I was sad.</span></div>
+                    <div class="phrase-card"><strong>19. Ilbieraħ fl-għaxra ta' billejl kont id-dar.</strong><span>Yesterday at ten at night I was at home.</span></div>
+                    <div class="phrase-card"><strong>20. Ilbieraħ kelli ħafna xogħol.</strong><span>Yesterday I had a lot of work.</span></div>
+                    <div class="phrase-card"><strong>21. Għada se mmur ix-xogħol.</strong><span>Tomorrow I will go to work.</span></div>
+                    <div class="phrase-card"><strong>22. Għada se mmur il-ħanut.</strong><span>Tomorrow I will go to the shop.</span></div>
+                    <div class="phrase-card"><strong>23. Għada se niltaqa' ma' ħija.</strong><span>Tomorrow I will meet my brother.</span></div>
+                    <div class="phrase-card"><strong>24. Għada se niekol mal-familja.</strong><span>Tomorrow I will eat with the family.</span></div>
+                    <div class="phrase-card"><strong>25. Għada se nixrob kafè.</strong><span>Tomorrow I will drink coffee.</span></div>
+                    <div class="phrase-card"><strong>26. Għada se nqum kmieni.</strong><span>Tomorrow I will wake up early.</span></div>
+                    <div class="phrase-card"><strong>27. Għada se norqod kmieni.</strong><span>Tomorrow I will sleep early.</span></div>
+                    <div class="phrase-card"><strong>28. Għada se nkun id-dar.</strong><span>Tomorrow I will be at home.</span></div>
+                    <div class="phrase-card"><strong>29. Għada għandi appuntament.</strong><span>Tomorrow I have an appointment.</span></div>
+                    <div class="phrase-card"><strong>30. Għada għandi lezzjoni.</strong><span>Tomorrow I have a lesson.</span></div>
+                    <div class="phrase-card"><strong>31. Pitgħada se mmur għand ommi.</strong><span>The day after tomorrow I will go to my mother's place.</span></div>
+                    <div class="phrase-card"><strong>32. Pitgħada se niltaqa' ma' ħabib.</strong><span>The day after tomorrow I will meet a friend.</span></div>
+                    <div class="phrase-card"><strong>33. Pitgħada se niekol barra.</strong><span>The day after tomorrow I will eat out.</span></div>
+                    <div class="phrase-card"><strong>34. Dalwaqt se nibda.</strong><span>I will start soon.</span></div>
+                    <div class="phrase-card"><strong>35. Dalwaqt se mmur.</strong><span>I will go soon.</span></div>
+                    <div class="phrase-card"><strong>36. Issa għandi ħin.</strong><span>Now I have time.</span></div>
+                    <div class="phrase-card"><strong>37. Issa m'għandix ħin.</strong><span>Now I do not have time.</span></div>
+                    <div class="phrase-card"><strong>38. Issa qed nistudja.</strong><span>Now I am studying.</span></div>
+                    <div class="phrase-card"><strong>39. Issa qed niekol.</strong><span>Now I am eating.</span></div>
+                    <div class="phrase-card"><strong>40. Issa qed nixrob te.</strong><span>Now I am drinking tea.</span></div>
+                    <div class="phrase-card"><strong>41. Kuljum nieħu kafè.</strong><span>Every day I have coffee.</span></div>
+                    <div class="phrase-card"><strong>42. Kuljum immur ix-xogħol.</strong><span>Every day I go to work.</span></div>
+                    <div class="phrase-card"><strong>43. Kuljum niekol xi ħaġa filgħodu.</strong><span>Every day I eat something in the morning.</span></div>
+                    <div class="phrase-card"><strong>44. Kuljum naqbad tal-linja.</strong><span>Every day I catch the bus.</span></div>
+                    <div class="phrase-card"><strong>45. Kuljum nqum fis-sitta.</strong><span>Every day I wake up at six.</span></div>
+                    <div class="phrase-card"><strong>46. Filgħodu nieħu kafè.</strong><span>In the morning I have coffee.</span></div>
+                    <div class="phrase-card"><strong>47. Filgħodu niekol bajda.</strong><span>In the morning I eat an egg.</span></div>
+                    <div class="phrase-card"><strong>48. Filgħodu mmur ix-xogħol.</strong><span>In the morning I go to work.</span></div>
+                    <div class="phrase-card"><strong>49. F'nofsinhar nieħu soppa.</strong><span>At noon I have soup.</span></div>
+                    <div class="phrase-card"><strong>50. F'nofsinhar niekol ikla.</strong><span>At noon I eat a meal.</span></div>
+                    <div class="phrase-card"><strong>51. F'nofsinhar għandi appuntament.</strong><span>At noon I have an appointment.</span></div>
+                    <div class="phrase-card"><strong>52. Filgħaxija nieħu xi ħaġa ħafifa.</strong><span>In the evening I have something light.</span></div>
+                    <div class="phrase-card"><strong>53. Filgħaxija niekol mal-familja.</strong><span>In the evening I eat with the family.</span></div>
+                    <div class="phrase-card"><strong>54. Filgħaxija noqgħod id-dar.</strong><span>In the evening I stay at home.</span></div>
+                    <div class="phrase-card"><strong>55. Ta' filgħodu għandi xogħol.</strong><span>In the morning I have work.</span></div>
+                    <div class="phrase-card"><strong>56. Ta' waranofsinhar għandi lezzjoni.</strong><span>In the afternoon I have a lesson.</span></div>
+                    <div class="phrase-card"><strong>57. Ta' filgħaxija se mmur il-ħanut.</strong><span>In the evening I will go to the shop.</span></div>
+                    <div class="phrase-card"><strong>58. Illejla nkun id-dar.</strong><span>Tonight I will be at home.</span></div>
+                    <div class="phrase-card"><strong>59. It-Tnejn għandi xogħol.</strong><span>On Monday I have work.</span></div>
+                    <div class="phrase-card"><strong>60. It-Tlieta għandi appuntament.</strong><span>On Tuesday I have an appointment.</span></div>
+                    <div class="phrase-card"><strong>61. L-Erbgħa se mmur il-bank.</strong><span>On Wednesday I will go to the bank.</span></div>
+                    <div class="phrase-card"><strong>62. Il-Ħamis niekol barra.</strong><span>On Thursday I eat out.</span></div>
+                    <div class="phrase-card"><strong>63. Il-Ġimgħa niltaqa' mal-ħbieb.</strong><span>On Friday I meet friends.</span></div>
+                    <div class="phrase-card"><strong>64. Is-Sibt immur il-baħar.</strong><span>On Saturday I go to the sea.</span></div>
+                    <div class="phrase-card"><strong>65. Il-Ħadd noqgħod id-dar.</strong><span>On Sunday I stay at home.</span></div>
+                    <div class="phrase-card"><strong>66. F'April għandi vaganza.</strong><span>In April I have a holiday.</span></div>
+                    <div class="phrase-card"><strong>67. F'Mejju għandi appuntament.</strong><span>In May I have an appointment.</span></div>
+                    <div class="phrase-card"><strong>68. F'Ġunju se mmur il-baħar.</strong><span>In June I will go to the sea.</span></div>
+                    <div class="phrase-card"><strong>69. F'Lulju għandi ħafna ħin.</strong><span>In July I have a lot of time.</span></div>
+                    <div class="phrase-card"><strong>70. F'Awwissu nieħu vaganza.</strong><span>In August I take a holiday.</span></div>
+                    <div class="phrase-card"><strong>71. F'Settembru nibda l-kors.</strong><span>In September I start the course.</span></div>
+                    <div class="phrase-card"><strong>72. F'Ottubru noqgħod aktar id-dar.</strong><span>In October I stay at home more.</span></div>
+                    <div class="phrase-card"><strong>73. F'Novembru għandi ħafna xogħol.</strong><span>In November I have a lot of work.</span></div>
+                    <div class="phrase-card"><strong>74. F'Diċembru niekol mal-familja.</strong><span>In December I eat with the family.</span></div>
+                    <div class="phrase-card"><strong>75. Fil-20 ta' April għandi appuntament.</strong><span>On the 20th of April I have an appointment.</span></div>
+                    <div class="phrase-card"><strong>76. Fil-11 ta' Mejju se niltaqa' ma' oħti.</strong><span>On the 11th of May I will meet my sister.</span></div>
+                    <div class="phrase-card"><strong>77. Fis-sajf inħobb immur il-baħar.</strong><span>In summer I like to go to the sea.</span></div>
+                    <div class="phrase-card"><strong>78. Fix-xitwa noqgħod id-dar.</strong><span>In winter I stay at home.</span></div>
+                    <div class="phrase-card"><strong>79. Fir-rebbiegħa nħossni ferħan.</strong><span>In spring I feel happy.</span></div>
+                    <div class="phrase-card"><strong>80. Fil-ħarifa l-post jidher kwiet.</strong><span>In autumn the place looks quiet.</span></div>
+                    <div class="phrase-card"><strong>81. X'ħin hu?</strong><span>What time is it?</span></div>
+                    <div class="phrase-card"><strong>82. Hija s-siegħa.</strong><span>It is one o'clock.</span></div>
+                    <div class="phrase-card"><strong>83. Huma s-sagħtejn.</strong><span>It is two o'clock.</span></div>
+                    <div class="phrase-card"><strong>84. Huma t-tlieta u ħamsa.</strong><span>It is five past three.</span></div>
+                    <div class="phrase-card"><strong>85. Huma l-erbgħa u għaxra.</strong><span>It is ten past four.</span></div>
+                    <div class="phrase-card"><strong>86. Huma l-ħamsa u kwart.</strong><span>It is quarter past five.</span></div>
+                    <div class="phrase-card"><strong>87. Huma t-tmienja u nofs.</strong><span>It is half past eight.</span></div>
+                    <div class="phrase-card"><strong>88. Huma l-ħamsa neqsin ħamsa.</strong><span>It is five to five.</span></div>
+                    <div class="phrase-card"><strong>89. Huma s-sebgħa neqsin kwart.</strong><span>It is quarter to seven.</span></div>
+                    <div class="phrase-card"><strong>90. Huma l-erbgħa neqsin għaxra.</strong><span>It is ten to four.</span></div>
+                    <div class="phrase-card"><strong>91. L-appuntament tiegħi hu fit-tnejn.</strong><span>My appointment is at two o'clock.</span></div>
+                    <div class="phrase-card"><strong>92. Il-lezzjoni tibda fit-tlieta.</strong><span>The lesson starts at three o'clock.</span></div>
+                    <div class="phrase-card"><strong>93. Se niltaqa' miegħek fl-erbgħa u nofs.</strong><span>I will meet you at half past four.</span></div>
+                    <div class="phrase-card"><strong>94. Għandi ikla f'nofsinhar.</strong><span>I have lunch at noon.</span></div>
+                    <div class="phrase-card"><strong>95. Mort id-dar f'nofsillejl.</strong><span>I went home at midnight.</span></div>
+                    <div class="phrase-card"><strong>96. Sejra għand ommi fit-tmienja u kwart.</strong><span>I am going to my mother's place at quarter past eight.</span></div>
+                    <div class="phrase-card"><strong>97. Għada se mmur ix-xogħol fis-sebgħa u ħamsa.</strong><span>Tomorrow I will go to work at five past seven.</span></div>
+                    <div class="phrase-card"><strong>98. Se nkun għand ommi sat-tmienja.</strong><span>I will be at my mother's place until eight o'clock.</span></div>
+                    <div class="phrase-card"><strong>99. Għandi bżonn ftit aktar ħin.</strong><span>I need a little more time.</span></div>
+                    <div class="phrase-card"><strong>100. Dalwaqt se nkun lest.</strong><span>I will be ready soon.</span></div>
+                </div>
+            </section>
+        </main>
     </div>
-  </div>
+</div>
 </body>
 </html>

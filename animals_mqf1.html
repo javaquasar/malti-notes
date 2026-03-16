@@ -1,190 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MQF-1 Animals Guide</title>
-  <link rel="stylesheet" href="./assets/css/site.css">
-  <style>
-.top-home {
-  margin-bottom: 18px;
-}
-.top-home a {
-  color: var(--teal);
-  font-weight: 700;
-  text-decoration: none;
-}
-.top-home a:hover { text-decoration: underline; }
-.animal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.pattern-grid-animals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.pattern-card, .sentence-card, .animal-note {
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 14px 16px;
-  background: rgba(255,255,255,0.5);
-  min-width: 0;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-.pattern-card strong, .sentence-card strong { display:block; margin-bottom:6px; }
-.pattern-card span, .sentence-card span { display:block; color: var(--muted); }
-.source-row { display:flex; flex-wrap:wrap; gap:10px; margin: 10px 0 0; }
-.source-chip {
-  display:inline-flex; align-items:center; border-radius:999px; padding:6px 10px; font-size:0.84rem;
-  background: rgba(47,143,131,0.10); color: var(--teal); border:1px solid rgba(47,143,131,0.18);
-}
-.sentence-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.muted-note { color: var(--muted); font-size: 0.95rem; }
-.animal-grid > *, .pattern-grid-animals > *, .sentence-grid > *, .content > * {
-  min-width: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 Animals Guide</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .top-home {
+            margin-bottom: 18px;
+        }
 
-table {
-  table-layout: fixed;
-}
+        .top-home a {
+            color: var(--teal);
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-th, td {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
+        .top-home a:hover {
+            text-decoration: underline;
+        }
 
-code {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-@media (max-width: 980px) {
-  .hero-body, .animal-grid, .pattern-grid-animals, .sentence-grid { grid-template-columns: 1fr; }
-  table { display:block; width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling: touch; }
-  .pattern-card, .sentence-card, .animal-note, .formula {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-  </style>
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .pattern-grid-animals {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .pattern-card, .sentence-card, .animal-note {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            min-width: 0;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .pattern-card strong, .sentence-card strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .pattern-card span, .sentence-card span {
+            display: block;
+            color: var(--muted);
+        }
+
+        .source-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0 0;
+        }
+
+        .source-chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.84rem;
+            background: rgba(47, 143, 131, 0.10);
+            color: var(--teal);
+            border: 1px solid rgba(47, 143, 131, 0.18);
+        }
+
+        .sentence-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .muted-note {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .animal-grid > *, .pattern-grid-animals > *, .sentence-grid > *, .content > * {
+            min-width: 0;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+
+        th, td {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        code {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        @media (max-width: 980px) {
+            .hero-body, .animal-grid, .pattern-grid-animals, .sentence-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .pattern-card, .sentence-card, .animal-note, .formula {
+                max-width: 100%;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
+<div class="page">
     <header class="site-header">
-      <a class="site-brand" href="./index.html">MQF-1 Animals Guide</a>
+        <a class="site-brand" href="./index.html">Level 1 Animals Guide</a>
     </header>
 
     <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
 
     <section class="hero">
-      <div class="hero-band"></div>
-      <div class="hero-body">
-        <div>
-          <h1>Domestic and Wild Animals</h1>
-          <p class="lead">This page is built from <code>Lesson 17 - L-annimali</code>. It keeps the lesson vocabulary for domestic and wild animals, adds a few very common animals already mentioned in the lesson overview, and finishes with 100 simple description sentences for speaking and writing practice.</p>
-          <div class="pill-row">
-            <span class="pill">Lesson 17 based</span>
-            <span class="pill">domestic animals</span>
-            <span class="pill">wild / zoo animals</span>
-            <span class="pill">100 description sentences</span>
-          </div>
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Domestic and Wild Animals</h1>
+                <p class="lead">This page is built from <code>Lesson 17 - L-annimali</code>. It keeps the lesson
+                    vocabulary for domestic and wild animals, adds a few very common animals already mentioned in the
+                    lesson overview, and finishes with 100 simple description sentences for speaking and writing
+                    practice.</p>
+                <div class="pill-row">
+                    <span class="pill">Lesson 17 based</span>
+                    <span class="pill">domestic animals</span>
+                    <span class="pill">wild / zoo animals</span>
+                    <span class="pill">100 description sentences</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>How To Use This Page</h2>
+                <ul>
+                    <li>learn the animal names first</li>
+                    <li>reuse the body-part and colour patterns from the lesson</li>
+                    <li>practice with short descriptions before speaking freely</li>
+                    <li>treat lines marked <code>[added-example]</code> or <code>[overview-based]</code> as safe
+                        expansions, not direct slide quotes
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="hero-note">
-          <h2>How To Use This Page</h2>
-          <ul>
-            <li>learn the animal names first</li>
-            <li>reuse the body-part and colour patterns from the lesson</li>
-            <li>practice with short descriptions before speaking freely</li>
-            <li>treat lines marked <code>[added-example]</code> or <code>[overview-based]</code> as safe expansions, not direct slide quotes</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <div class="grid">
-      <aside class="sidebar">
-        <h2>Contents</h2>
-        <ul>
-          <li><a href="#domestic">Domestic Animals</a></li>
-          <li><a href="#wild">Wild and Zoo Animals</a></li>
-          <li><a href="#lesson-patterns">Lesson 17 Description Patterns</a></li>
-          <li><a href="#domestic-bank">50 Domestic Descriptions</a></li>
-          <li><a href="#wild-bank">50 Wild / Zoo Descriptions</a></li>
-        </ul>
-        <p class="mini">The main grammar on this page comes from <code>dan / din / dawn</code>, <code>għandi</code>, <code>għandu / għandha</code>, colours, body parts, and simple present tense.</p>
-      </aside>
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#domestic">Domestic Animals</a></li>
+                <li><a href="#wild">Wild and Zoo Animals</a></li>
+                <li><a href="#lesson-patterns">Lesson 17 Description Patterns</a></li>
+                <li><a href="#domestic-bank">50 Domestic Descriptions</a></li>
+                <li><a href="#wild-bank">50 Wild / Zoo Descriptions</a></li>
+            </ul>
+            <p class="mini">The main grammar on this page comes from <code>dan / din / dawn</code>, <code>għandi</code>,
+                <code>għandu / għandha</code>, colours, body parts, and simple present tense.</p>
+        </aside>
 
-      <main class="content">
-        <section class="content-card" id="domestic">
-          <span class="tag">Section 1</span>
-          <h2>Domestic Animals</h2>
-          <p class="muted-note">This section uses the lesson table on domestic animals and the overview slide with common animals found in Malta or kept at home or on farms.</p>
-          <div class="source-row">
-            <span class="source-chip">lesson table</span>
-            <span class="source-chip">gender forms</span>
-            <span class="source-chip">common home and farm animals</span>
-          </div>
-          <div class="animal-grid">
-            <div class="animal-note">
-              <h3>Lesson 17 Core Domestic Vocabulary</h3>
-              <table><thead><tr><th>Maltese</th><th>Female / Pair</th><th>Plural</th><th>English</th></tr></thead><tbody><tr><td>kelb</td><td>kelba</td><td>klieb</td><td>dog</td></tr><tr><td>qattus</td><td>qattusa</td><td>qtates</td><td>cat</td></tr><tr><td>għasfur</td><td>għasfura</td><td>għasafar</td><td>bird</td></tr><tr><td>pappagall</td><td>mara / raġel</td><td>pappagalli</td><td>parrot</td></tr><tr><td>fenek</td><td>fenka</td><td>[UNCERTAIN]</td><td>rabbit</td></tr><tr><td>fenek tal-Indi</td><td>fenka tal-Indi</td><td>[UNCERTAIN]</td><td>guinea pig</td></tr><tr><td>tiġieġa</td><td>serduq</td><td>tiġieġ / sriedaq</td><td>hen / rooster</td></tr><tr><td>ħuta</td><td>ħuta mara / ħuta raġel</td><td>[UNCERTAIN]</td><td>fish</td></tr><tr><td>fekruna tal-art</td><td>fekruna raġel / mara</td><td>[UNCERTAIN]</td><td>tortoise</td></tr><tr><td>fekruna tal-ilma</td><td>fekruna raġel / mara</td><td>[UNCERTAIN]</td><td>turtle</td></tr></tbody></table>
-            </div>
-            <div class="animal-note">
-              <h3>Popular Domestic and Farm Animals From The Lesson Overview</h3>
-              <table><thead><tr><th>Maltese</th><th>Gender Note</th><th>Plural</th><th>English</th></tr></thead><tbody><tr><td>hamster</td><td>—</td><td>hamsters [UNCERTAIN]</td><td>hamster</td></tr><tr><td>ferret</td><td>—</td><td>ferrets [UNCERTAIN]</td><td>ferret</td></tr><tr><td>chincilla</td><td>—</td><td>chincillas [UNCERTAIN]</td><td>chinchilla</td></tr><tr><td>baqra</td><td>barri</td><td>baqar</td><td>cow / bull</td></tr><tr><td>żiemel</td><td>—</td><td>żwiemel</td><td>horse</td></tr><tr><td>nagħġa</td><td>—</td><td>[UNCERTAIN]</td><td>sheep</td></tr><tr><td>ħanżir</td><td>ħanżira</td><td>ħnieżer</td><td>pig</td></tr><tr><td>dundjan</td><td>—</td><td>dundjani</td><td>turkey</td></tr><tr><td>serp</td><td>serp mara / raġel</td><td>sriep</td><td>snake</td></tr></tbody></table>
-            </div>
-          </div>
-        </section>
+        <main class="content">
+            <section class="content-card" id="domestic">
+                <span class="tag">Section 1</span>
+                <h2>Domestic Animals</h2>
+                <p class="muted-note">This section uses the lesson table on domestic animals and the overview slide with
+                    common animals found in Malta or kept at home or on farms.</p>
+                <div class="source-row">
+                    <span class="source-chip">lesson table</span>
+                    <span class="source-chip">gender forms</span>
+                    <span class="source-chip">common home and farm animals</span>
+                </div>
+                <div class="animal-grid">
+                    <div class="animal-note">
+                        <h3>Lesson 17 Core Domestic Vocabulary</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Maltese</th>
+                                <th>Female / Pair</th>
+                                <th>Plural</th>
+                                <th>English</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>kelb</td>
+                                <td>kelba</td>
+                                <td>klieb</td>
+                                <td>dog</td>
+                            </tr>
+                            <tr>
+                                <td>qattus</td>
+                                <td>qattusa</td>
+                                <td>qtates</td>
+                                <td>cat</td>
+                            </tr>
+                            <tr>
+                                <td>għasfur</td>
+                                <td>għasfura</td>
+                                <td>għasafar</td>
+                                <td>bird</td>
+                            </tr>
+                            <tr>
+                                <td>pappagall</td>
+                                <td>mara / raġel</td>
+                                <td>pappagalli</td>
+                                <td>parrot</td>
+                            </tr>
+                            <tr>
+                                <td>fenek</td>
+                                <td>fenka</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>rabbit</td>
+                            </tr>
+                            <tr>
+                                <td>fenek tal-Indi</td>
+                                <td>fenka tal-Indi</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>guinea pig</td>
+                            </tr>
+                            <tr>
+                                <td>tiġieġa</td>
+                                <td>serduq</td>
+                                <td>tiġieġ / sriedaq</td>
+                                <td>hen / rooster</td>
+                            </tr>
+                            <tr>
+                                <td>ħuta</td>
+                                <td>ħuta mara / ħuta raġel</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>fish</td>
+                            </tr>
+                            <tr>
+                                <td>fekruna tal-art</td>
+                                <td>fekruna raġel / mara</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>tortoise</td>
+                            </tr>
+                            <tr>
+                                <td>fekruna tal-ilma</td>
+                                <td>fekruna raġel / mara</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>turtle</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="animal-note">
+                        <h3>Popular Domestic and Farm Animals From The Lesson Overview</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Maltese</th>
+                                <th>Gender Note</th>
+                                <th>Plural</th>
+                                <th>English</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>hamster</td>
+                                <td>—</td>
+                                <td>hamsters [UNCERTAIN]</td>
+                                <td>hamster</td>
+                            </tr>
+                            <tr>
+                                <td>ferret</td>
+                                <td>—</td>
+                                <td>ferrets [UNCERTAIN]</td>
+                                <td>ferret</td>
+                            </tr>
+                            <tr>
+                                <td>chincilla</td>
+                                <td>—</td>
+                                <td>chincillas [UNCERTAIN]</td>
+                                <td>chinchilla</td>
+                            </tr>
+                            <tr>
+                                <td>baqra</td>
+                                <td>barri</td>
+                                <td>baqar</td>
+                                <td>cow / bull</td>
+                            </tr>
+                            <tr>
+                                <td>żiemel</td>
+                                <td>—</td>
+                                <td>żwiemel</td>
+                                <td>horse</td>
+                            </tr>
+                            <tr>
+                                <td>nagħġa</td>
+                                <td>—</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>sheep</td>
+                            </tr>
+                            <tr>
+                                <td>ħanżir</td>
+                                <td>ħanżira</td>
+                                <td>ħnieżer</td>
+                                <td>pig</td>
+                            </tr>
+                            <tr>
+                                <td>dundjan</td>
+                                <td>—</td>
+                                <td>dundjani</td>
+                                <td>turkey</td>
+                            </tr>
+                            <tr>
+                                <td>serp</td>
+                                <td>serp mara / raġel</td>
+                                <td>sriep</td>
+                                <td>snake</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-        <section class="content-card" id="wild">
-          <span class="tag">Section 2</span>
-          <h2>Wild and Zoo Animals</h2>
-          <p class="muted-note">These animals come from the plural slides and the overview slide with animals that do not usually live in homes in Malta.</p>
-          <div class="source-row">
-            <span class="source-chip">lesson plurals</span>
-            <span class="source-chip">wild animals</span>
-            <span class="source-chip">zoo vocabulary</span>
-          </div>
-          <div class="animal-grid">
-            <div class="animal-note">
-              <h3>Wild Animals From The Main Plural Slides</h3>
-              <table><thead><tr><th>Maltese singular</th><th>Plural</th><th>English</th></tr></thead><tbody><tr><td>iljun</td><td>iljuni</td><td>lion</td></tr><tr><td>tigra</td><td>tigri</td><td>tiger</td></tr><tr><td>ġiraffa</td><td>ġiraffi</td><td>giraffe</td></tr><tr><td>żebra</td><td>żebri</td><td>zebra</td></tr><tr><td>iljunfant</td><td>iljunfanti</td><td>elephant</td></tr><tr><td>kukkudrill</td><td>kukkudrilli</td><td>crocodile</td></tr><tr><td>ajkla</td><td>ajkli</td><td>eagle</td></tr><tr><td>balena</td><td>baleni</td><td>whale</td></tr><tr><td>gurilla</td><td>gurilli</td><td>gorilla</td></tr><tr><td>xadina</td><td>xadini</td><td>monkey</td></tr><tr><td>pagun</td><td>paguni</td><td>peacock</td></tr><tr><td>pingwin</td><td>pingwini</td><td>penguin</td></tr><tr><td>ġurat</td><td>ġurati</td><td>grasshopper</td></tr><tr><td>pitirross</td><td>pitirrossi</td><td>robin</td></tr></tbody></table>
-            </div>
-            <div class="animal-note">
-              <h3>Very Common Big Animals Mentioned In The Lesson Overview</h3>
-              <table><thead><tr><th>Maltese singular</th><th>Plural</th><th>English</th></tr></thead><tbody><tr><td>ippopotamu</td><td>[UNCERTAIN]</td><td>hippopotamus</td></tr><tr><td>rinoċeront</td><td>[UNCERTAIN]</td><td>rhinoceros</td></tr></tbody></table>
-            </div>
-          </div>
-        </section>
+            <section class="content-card" id="wild">
+                <span class="tag">Section 2</span>
+                <h2>Wild and Zoo Animals</h2>
+                <p class="muted-note">These animals come from the plural slides and the overview slide with animals that
+                    do not usually live in homes in Malta.</p>
+                <div class="source-row">
+                    <span class="source-chip">lesson plurals</span>
+                    <span class="source-chip">wild animals</span>
+                    <span class="source-chip">zoo vocabulary</span>
+                </div>
+                <div class="animal-grid">
+                    <div class="animal-note">
+                        <h3>Wild Animals From The Main Plural Slides</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Maltese singular</th>
+                                <th>Plural</th>
+                                <th>English</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>iljun</td>
+                                <td>iljuni</td>
+                                <td>lion</td>
+                            </tr>
+                            <tr>
+                                <td>tigra</td>
+                                <td>tigri</td>
+                                <td>tiger</td>
+                            </tr>
+                            <tr>
+                                <td>ġiraffa</td>
+                                <td>ġiraffi</td>
+                                <td>giraffe</td>
+                            </tr>
+                            <tr>
+                                <td>żebra</td>
+                                <td>żebri</td>
+                                <td>zebra</td>
+                            </tr>
+                            <tr>
+                                <td>iljunfant</td>
+                                <td>iljunfanti</td>
+                                <td>elephant</td>
+                            </tr>
+                            <tr>
+                                <td>kukkudrill</td>
+                                <td>kukkudrilli</td>
+                                <td>crocodile</td>
+                            </tr>
+                            <tr>
+                                <td>ajkla</td>
+                                <td>ajkli</td>
+                                <td>eagle</td>
+                            </tr>
+                            <tr>
+                                <td>balena</td>
+                                <td>baleni</td>
+                                <td>whale</td>
+                            </tr>
+                            <tr>
+                                <td>gurilla</td>
+                                <td>gurilli</td>
+                                <td>gorilla</td>
+                            </tr>
+                            <tr>
+                                <td>xadina</td>
+                                <td>xadini</td>
+                                <td>monkey</td>
+                            </tr>
+                            <tr>
+                                <td>pagun</td>
+                                <td>paguni</td>
+                                <td>peacock</td>
+                            </tr>
+                            <tr>
+                                <td>pingwin</td>
+                                <td>pingwini</td>
+                                <td>penguin</td>
+                            </tr>
+                            <tr>
+                                <td>ġurat</td>
+                                <td>ġurati</td>
+                                <td>grasshopper</td>
+                            </tr>
+                            <tr>
+                                <td>pitirross</td>
+                                <td>pitirrossi</td>
+                                <td>robin</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="animal-note">
+                        <h3>Very Common Big Animals Mentioned In The Lesson Overview</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Maltese singular</th>
+                                <th>Plural</th>
+                                <th>English</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>ippopotamu</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>hippopotamus</td>
+                            </tr>
+                            <tr>
+                                <td>rinoċeront</td>
+                                <td>[UNCERTAIN]</td>
+                                <td>rhinoceros</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-        <section class="content-card" id="lesson-patterns">
-          <span class="tag">Section 3</span>
-          <h2>Lesson 17 Description Patterns</h2>
-          <div class="formula"><code>Dan / Din / Dawn + annimal</code> | <code>għandu / għandha + parti tal-ġisem</code> | <code>kulur + parti tal-ġisem</code></div>
-          <div class="pattern-grid-animals">
-            <div class="pattern-card"><strong>Il-kelb jinbaħ.</strong><span>The dog barks.</span></div><div class="pattern-card"><strong>Il-qattus jingħi.</strong><span>The cat meows.</span></div><div class="pattern-card"><strong>L-għasfur isaffar.</strong><span>The bird chirps.</span></div><div class="pattern-card"><strong>L-għasfur jgħanni.</strong><span>The bird sings.</span></div><div class="pattern-card"><strong>L-għasfur jitkellem.</strong><span>The bird speaks.</span></div><div class="pattern-card"><strong>denb</strong><span>tail</span></div><div class="pattern-card"><strong>ġwienaħ</strong><span>wings</span></div><div class="pattern-card"><strong>pil</strong><span>coat</span></div><div class="pattern-card"><strong>suf</strong><span>fur</span></div><div class="pattern-card"><strong>rix</strong><span>feathers</span></div><div class="pattern-card"><strong>ġilda</strong><span>skin</span></div>
-          </div>
-          <div class="animal-note" style="margin-top:16px;">
-            <h3>Model From The Lesson</h3>
-            <p><code>Għandi għasfur kbir b’munqar oranġjo. Għandu għonqu abjad u għajnejh blu.</code></p>
-            <p class="muted-note">This is one of the most useful lesson patterns: animal + colour + body part + <code>għandu</code>.</p>
-          </div>
-        </section>
+            <section class="content-card" id="lesson-patterns">
+                <span class="tag">Section 3</span>
+                <h2>Lesson 17 Description Patterns</h2>
+                <div class="formula"><code>Dan / Din / Dawn + annimal</code> | <code>għandu / għandha + parti
+                    tal-ġisem</code> | <code>kulur + parti tal-ġisem</code></div>
+                <div class="pattern-grid-animals">
+                    <div class="pattern-card"><strong>Il-kelb jinbaħ.</strong><span>The dog barks.</span></div>
+                    <div class="pattern-card"><strong>Il-qattus jingħi.</strong><span>The cat meows.</span></div>
+                    <div class="pattern-card"><strong>L-għasfur isaffar.</strong><span>The bird chirps.</span></div>
+                    <div class="pattern-card"><strong>L-għasfur jgħanni.</strong><span>The bird sings.</span></div>
+                    <div class="pattern-card"><strong>L-għasfur jitkellem.</strong><span>The bird speaks.</span></div>
+                    <div class="pattern-card"><strong>denb</strong><span>tail</span></div>
+                    <div class="pattern-card"><strong>ġwienaħ</strong><span>wings</span></div>
+                    <div class="pattern-card"><strong>pil</strong><span>coat</span></div>
+                    <div class="pattern-card"><strong>suf</strong><span>fur</span></div>
+                    <div class="pattern-card"><strong>rix</strong><span>feathers</span></div>
+                    <div class="pattern-card"><strong>ġilda</strong><span>skin</span></div>
+                </div>
+                <div class="animal-note" style="margin-top:16px;">
+                    <h3>Model From The Lesson</h3>
+                    <p><code>Għandi għasfur kbir b’munqar oranġjo. Għandu għonqu abjad u għajnejh blu.</code></p>
+                    <p class="muted-note">This is one of the most useful lesson patterns: animal + colour + body part +
+                        <code>għandu</code>.</p>
+                </div>
+            </section>
 
-        <section class="content-card" id="domestic-bank">
-          <span class="tag">Practice Bank</span>
-          <h2>50 Domestic Animal Descriptions</h2>
-          <p class="muted-note">Short, course-safe lines for homework and oral practice. The grammar stays simple and close to the lesson.</p>
-          <div class="sentence-grid">
-            <div class="sentence-card"><strong>1. Dan kelb żgħir.</strong><span>This is a small dog.</span></div><div class="sentence-card"><strong>2. Il-kelb huwa iswed.</strong><span>The dog is black.</span></div><div class="sentence-card"><strong>3. Il-kelb għandu denb twil.</strong><span>The dog has a long tail.</span></div><div class="sentence-card"><strong>4. Il-kelb jinbaħ ħafna.</strong><span>The dog barks a lot.</span></div><div class="sentence-card"><strong>5. Dan il-kelb għandu għajnejn kannella.</strong><span>This dog has brown eyes.</span></div><div class="sentence-card"><strong>6. Din kelba bajda.</strong><span>This is a white female dog.</span></div><div class="sentence-card"><strong>7. Il-kelba hija ferħana.</strong><span>The female dog is happy.</span></div><div class="sentence-card"><strong>8. Għandi kelb id-dar.</strong><span>I have a dog at home.</span></div><div class="sentence-card"><strong>9. Il-kelb tiegħi jismu Max. [added-example]</strong><span>My dog is called Max. [added-example]</span></div><div class="sentence-card"><strong>10. Inħobb il-kelb tiegħi għax huwa ħelu.</strong><span>I like my dog because it is cute.</span></div><div class="sentence-card"><strong>11. Dan qattus kbir.</strong><span>This is a big cat.</span></div><div class="sentence-card"><strong>12. Din qattusa bajda.</strong><span>This is a white female cat.</span></div><div class="sentence-card"><strong>13. Il-qattus għandu pil artab. [added-example]</strong><span>The cat has soft fur. [added-example]</span></div><div class="sentence-card"><strong>14. Il-qattus jingħi filgħodu.</strong><span>The cat meows in the morning.</span></div><div class="sentence-card"><strong>15. Il-qattusa għandha għajnejn ħodor.</strong><span>The female cat has green eyes.</span></div><div class="sentence-card"><strong>16. Għandi qattusa d-dar.</strong><span>I have a female cat at home.</span></div><div class="sentence-card"><strong>17. Il-qattusa tħobb torqod. [added-example]</strong><span>The cat likes to sleep. [added-example]</span></div><div class="sentence-card"><strong>18. Dan il-qattus għandu denb twil.</strong><span>This cat has a long tail.</span></div><div class="sentence-card"><strong>19. Il-qtates huma annimali domestiċi popolari.</strong><span>Cats are popular domestic animals.</span></div><div class="sentence-card"><strong>20. Jien inħobb il-qattus għax huwa kwiet. [added-example]</strong><span>I like the cat because it is quiet. [added-example]</span></div><div class="sentence-card"><strong>21. Dan għasfur żgħir.</strong><span>This is a small bird.</span></div><div class="sentence-card"><strong>22. Dawn għasafar bojod.</strong><span>These are white birds.</span></div><div class="sentence-card"><strong>23. L-għasfur għandu ġwienaħ bojod.</strong><span>The bird has white wings.</span></div><div class="sentence-card"><strong>24. L-għasfur isaffar.</strong><span>The bird chirps.</span></div><div class="sentence-card"><strong>25. L-għasfur jgħanni filgħodu.</strong><span>The bird sings in the morning.</span></div><div class="sentence-card"><strong>26. Dan pappagall aħdar.</strong><span>This is a green parrot.</span></div><div class="sentence-card"><strong>27. Għandi żewġ pappagalli.</strong><span>I have two parrots.</span></div><div class="sentence-card"><strong>28. Waħda hija mara u wieħed huwa raġel.</strong><span>One is female and one is male.</span></div><div class="sentence-card"><strong>29. Il-pappagall jitkellem ftit. [added-example]</strong><span>The parrot speaks a little. [added-example]</span></div><div class="sentence-card"><strong>30. Il-pappagall għandu munqar oranġjo.</strong><span>The parrot has an orange beak.</span></div><div class="sentence-card"><strong>31. Dan fenek abjad.</strong><span>This is a white rabbit.</span></div><div class="sentence-card"><strong>32. Il-fenek għandu widnejn twal. [added-example]</strong><span>The rabbit has long ears. [added-example]</span></div><div class="sentence-card"><strong>33. Għandi fenek tal-Indi żgħir.</strong><span>I have a small guinea pig.</span></div><div class="sentence-card"><strong>34. Il-fenek tal-Indi huwa kannella u abjad. [added-example]</strong><span>The guinea pig is brown and white. [added-example]</span></div><div class="sentence-card"><strong>35. Din ħuta blu.</strong><span>This is a blue fish.</span></div><div class="sentence-card"><strong>36. Il-ħuta għandha denb aħmar.</strong><span>The fish has a red tail.</span></div><div class="sentence-card"><strong>37. Il-ħuta tiegħi huwa raġel.</strong><span>My fish is male.</span></div><div class="sentence-card"><strong>38. Għandi fekruna tal-art.</strong><span>I have a tortoise.</span></div><div class="sentence-card"><strong>39. Il-fekruna għandha ħames snin.</strong><span>The tortoise is five years old.</span></div><div class="sentence-card"><strong>40. Il-fekruna għandha ġilda iebsa. [added-example]</strong><span>The tortoise has hard skin. [added-example]</span></div><div class="sentence-card"><strong>41. Din tiġieġa bajda.</strong><span>This is a white hen.</span></div><div class="sentence-card"><strong>42. Dan serduq sabiħ.</strong><span>This is a nice rooster.</span></div><div class="sentence-card"><strong>43. It-tiġieġa għandha rix abjad.</strong><span>The hen has white feathers.</span></div><div class="sentence-card"><strong>44. Dan żiemel kannella.</strong><span>This is a brown horse.</span></div><div class="sentence-card"><strong>45. Iż-żiemel huwa kbir u sabiħ.</strong><span>The horse is big and beautiful.</span></div><div class="sentence-card"><strong>46. Din baqra sewda.</strong><span>This is a black cow.</span></div><div class="sentence-card"><strong>47. Il-baqra hija annimal kbir.</strong><span>The cow is a big animal.</span></div><div class="sentence-card"><strong>48. Dan ħanżir roża. [added-example]</strong><span>This is a pink pig. [added-example]</span></div><div class="sentence-card"><strong>49. L-annimali domestiċi jgħixu mal-bniedem. [added-example]</strong><span>Domestic animals live with people. [added-example]</span></div><div class="sentence-card"><strong>50. Jien inħobb l-annimali domestiċi għax huma ħelwin u sbieħ. [added-example]</strong><span>I like domestic animals because they are cute and beautiful. [added-example]</span></div>
-          </div>
-        </section>
+            <section class="content-card" id="domestic-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>50 Domestic Animal Descriptions</h2>
+                <p class="muted-note">Short, course-safe lines for homework and oral practice. The grammar stays simple
+                    and close to the lesson.</p>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. Dan kelb żgħir.</strong><span>This is a small dog.</span>
+                    </div>
+                    <div class="sentence-card"><strong>2. Il-kelb huwa iswed.</strong><span>The dog is black.</span>
+                    </div>
+                    <div class="sentence-card"><strong>3. Il-kelb għandu denb twil.</strong><span>The dog has a long tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>4. Il-kelb jinbaħ
+                        ħafna.</strong><span>The dog barks a lot.</span></div>
+                    <div class="sentence-card"><strong>5. Dan il-kelb għandu għajnejn kannella.</strong><span>This dog has brown eyes.</span>
+                    </div>
+                    <div class="sentence-card"><strong>6. Din kelba
+                        bajda.</strong><span>This is a white female dog.</span></div>
+                    <div class="sentence-card"><strong>7. Il-kelba hija
+                        ferħana.</strong><span>The female dog is happy.</span></div>
+                    <div class="sentence-card"><strong>8. Għandi kelb id-dar.</strong><span>I have a dog at home.</span>
+                    </div>
+                    <div class="sentence-card"><strong>9. Il-kelb tiegħi jismu Max. [added-example]</strong><span>My dog is called Max. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>10. Inħobb il-kelb tiegħi għax huwa ħelu.</strong><span>I like my dog because it is cute.</span>
+                    </div>
+                    <div class="sentence-card"><strong>11. Dan qattus kbir.</strong><span>This is a big cat.</span>
+                    </div>
+                    <div class="sentence-card"><strong>12. Din qattusa
+                        bajda.</strong><span>This is a white female cat.</span></div>
+                    <div class="sentence-card"><strong>13. Il-qattus għandu pil artab. [added-example]</strong><span>The cat has soft fur. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>14. Il-qattus jingħi filgħodu.</strong><span>The cat meows in the morning.</span>
+                    </div>
+                    <div class="sentence-card"><strong>15. Il-qattusa għandha għajnejn ħodor.</strong><span>The female cat has green eyes.</span>
+                    </div>
+                    <div class="sentence-card"><strong>16. Għandi qattusa d-dar.</strong><span>I have a female cat at home.</span>
+                    </div>
+                    <div class="sentence-card"><strong>17. Il-qattusa tħobb torqod. [added-example]</strong><span>The cat likes to sleep. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>18. Dan il-qattus għandu denb twil.</strong><span>This cat has a long tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>19. Il-qtates huma annimali domestiċi popolari.</strong><span>Cats are popular domestic animals.</span>
+                    </div>
+                    <div class="sentence-card"><strong>20. Jien inħobb il-qattus għax huwa kwiet.
+                        [added-example]</strong><span>I like the cat because it is quiet. [added-example]</span></div>
+                    <div class="sentence-card"><strong>21. Dan għasfur żgħir.</strong><span>This is a small bird.</span>
+                    </div>
+                    <div class="sentence-card"><strong>22. Dawn għasafar
+                        bojod.</strong><span>These are white birds.</span></div>
+                    <div class="sentence-card"><strong>23. L-għasfur għandu ġwienaħ bojod.</strong><span>The bird has white wings.</span>
+                    </div>
+                    <div class="sentence-card"><strong>24. L-għasfur isaffar.</strong><span>The bird chirps.</span>
+                    </div>
+                    <div class="sentence-card"><strong>25. L-għasfur jgħanni filgħodu.</strong><span>The bird sings in the morning.</span>
+                    </div>
+                    <div class="sentence-card"><strong>26. Dan pappagall
+                        aħdar.</strong><span>This is a green parrot.</span></div>
+                    <div class="sentence-card"><strong>27. Għandi żewġ
+                        pappagalli.</strong><span>I have two parrots.</span></div>
+                    <div class="sentence-card"><strong>28. Waħda hija mara u wieħed huwa raġel.</strong><span>One is female and one is male.</span>
+                    </div>
+                    <div class="sentence-card"><strong>29. Il-pappagall jitkellem ftit. [added-example]</strong><span>The parrot speaks a little. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>30. Il-pappagall għandu munqar oranġjo.</strong><span>The parrot has an orange beak.</span>
+                    </div>
+                    <div class="sentence-card"><strong>31. Dan fenek abjad.</strong><span>This is a white rabbit.</span>
+                    </div>
+                    <div class="sentence-card"><strong>32. Il-fenek għandu widnejn twal. [added-example]</strong><span>The rabbit has long ears. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>33. Għandi fenek tal-Indi żgħir.</strong><span>I have a small guinea pig.</span>
+                    </div>
+                    <div class="sentence-card"><strong>34. Il-fenek tal-Indi huwa kannella u abjad.
+                        [added-example]</strong><span>The guinea pig is brown and white. [added-example]</span></div>
+                    <div class="sentence-card"><strong>35. Din ħuta blu.</strong><span>This is a blue fish.</span></div>
+                    <div class="sentence-card"><strong>36. Il-ħuta għandha denb aħmar.</strong><span>The fish has a red tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>37. Il-ħuta tiegħi huwa
+                        raġel.</strong><span>My fish is male.</span></div>
+                    <div class="sentence-card"><strong>38. Għandi fekruna
+                        tal-art.</strong><span>I have a tortoise.</span></div>
+                    <div class="sentence-card"><strong>39. Il-fekruna għandha ħames snin.</strong><span>The tortoise is five years old.</span>
+                    </div>
+                    <div class="sentence-card"><strong>40. Il-fekruna għandha ġilda iebsa.
+                        [added-example]</strong><span>The tortoise has hard skin. [added-example]</span></div>
+                    <div class="sentence-card"><strong>41. Din tiġieġa bajda.</strong><span>This is a white hen.</span>
+                    </div>
+                    <div class="sentence-card"><strong>42. Dan serduq
+                        sabiħ.</strong><span>This is a nice rooster.</span></div>
+                    <div class="sentence-card"><strong>43. It-tiġieġa għandha rix abjad.</strong><span>The hen has white feathers.</span>
+                    </div>
+                    <div class="sentence-card"><strong>44. Dan żiemel
+                        kannella.</strong><span>This is a brown horse.</span></div>
+                    <div class="sentence-card"><strong>45. Iż-żiemel huwa kbir u sabiħ.</strong><span>The horse is big and beautiful.</span>
+                    </div>
+                    <div class="sentence-card"><strong>46. Din baqra sewda.</strong><span>This is a black cow.</span>
+                    </div>
+                    <div class="sentence-card"><strong>47. Il-baqra hija annimal kbir.</strong><span>The cow is a big animal.</span>
+                    </div>
+                    <div class="sentence-card"><strong>48. Dan ħanżir roża. [added-example]</strong><span>This is a pink pig. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>49. L-annimali domestiċi jgħixu mal-bniedem.
+                        [added-example]</strong><span>Domestic animals live with people. [added-example]</span></div>
+                    <div class="sentence-card"><strong>50. Jien inħobb l-annimali domestiċi għax huma ħelwin u sbieħ.
+                        [added-example]</strong><span>I like domestic animals because they are cute and beautiful. [added-example]</span>
+                    </div>
+                </div>
+            </section>
 
-        <section class="content-card" id="wild-bank">
-          <span class="tag">Practice Bank</span>
-          <h2>50 Wild or Zoo Animal Descriptions</h2>
-          <p class="muted-note">Use these lines for zoo pictures, wild animal descriptions, and short speaking answers.</p>
-          <div class="sentence-grid">
-            <div class="sentence-card"><strong>1. Dan iljun kbir.</strong><span>This is a big lion.</span></div><div class="sentence-card"><strong>2. L-iljun għandu denb twil.</strong><span>The lion has a long tail.</span></div><div class="sentence-card"><strong>3. L-iljun huwa annimal slavaġ.</strong><span>The lion is a wild animal.</span></div><div class="sentence-card"><strong>4. L-iljuni jgħixu fiż-żoo jew fis-selvaġġ. [added-example]</strong><span>Lions live in the zoo or in the wild. [added-example]</span></div><div class="sentence-card"><strong>5. Din tigra oranġjo u sewda.</strong><span>This is an orange and black tiger.</span></div><div class="sentence-card"><strong>6. It-tigra għandha ġilda sabiħa. [added-example]</strong><span>The tiger has beautiful skin. [added-example]</span></div><div class="sentence-card"><strong>7. It-tigra għandha denb twil.</strong><span>The tiger has a long tail.</span></div><div class="sentence-card"><strong>8. It-tigri huma annimali slavaġ.</strong><span>Tigers are wild animals.</span></div><div class="sentence-card"><strong>9. Din ġiraffa twila.</strong><span>This is a tall giraffe.</span></div><div class="sentence-card"><strong>10. Il-ġiraffa għandha għonq twil ħafna.</strong><span>The giraffe has a very long neck.</span></div><div class="sentence-card"><strong>11. Il-ġiraffa għandha ġilda kannella u bajda. [added-example]</strong><span>The giraffe has brown and white skin. [added-example]</span></div><div class="sentence-card"><strong>12. Dawn ġiraffi kbar.</strong><span>These are big giraffes.</span></div><div class="sentence-card"><strong>13. Din żebra sabiħa.</strong><span>This is a beautiful zebra.</span></div><div class="sentence-card"><strong>14. Iż-żebra għandha kulur iswed u abjad.</strong><span>The zebra has black and white colour.</span></div><div class="sentence-card"><strong>15. Iż-żebra għandha erba’ saqajn.</strong><span>The zebra has four legs.</span></div><div class="sentence-card"><strong>16. Dawn żebri fiż-żoo.</strong><span>These are zebras in the zoo.</span></div><div class="sentence-card"><strong>17. Dan iljunfant kbir ħafna.</strong><span>This is a very big elephant.</span></div><div class="sentence-card"><strong>18. L-iljunfant għandu widnejn kbar. [added-example]</strong><span>The elephant has big ears. [added-example]</span></div><div class="sentence-card"><strong>19. L-iljunfant għandu denb qasir. [added-example]</strong><span>The elephant has a short tail. [added-example]</span></div><div class="sentence-card"><strong>20. L-iljunfanti huma annimali kbar.</strong><span>Elephants are big animals.</span></div><div class="sentence-card"><strong>21. Dan kukkudrill aħdar.</strong><span>This is a green crocodile.</span></div><div class="sentence-card"><strong>22. Il-kukkudrill għandu denb twil.</strong><span>The crocodile has a long tail.</span></div><div class="sentence-card"><strong>23. Il-kukkudrill jgħix fl-ilma. [added-example]</strong><span>The crocodile lives in water. [added-example]</span></div><div class="sentence-card"><strong>24. Dawn kukkudrilli kbar.</strong><span>These are big crocodiles.</span></div><div class="sentence-card"><strong>25. Din ajkla kbira.</strong><span>This is a big eagle.</span></div><div class="sentence-card"><strong>26. L-ajkla għandha ġwienaħ kbar.</strong><span>The eagle has big wings.</span></div><div class="sentence-card"><strong>27. L-ajkla għandha munqar qawwi. [added-example]</strong><span>The eagle has a strong beak. [added-example]</span></div><div class="sentence-card"><strong>28. L-ajkli huma għasafar slavaġ.</strong><span>Eagles are wild birds.</span></div><div class="sentence-card"><strong>29. Din balena kbira ħafna.</strong><span>This is a very big whale.</span></div><div class="sentence-card"><strong>30. Il-balena tgħix fil-baħar. [added-example]</strong><span>The whale lives in the sea. [added-example]</span></div><div class="sentence-card"><strong>31. Il-balena għandha denb kbir.</strong><span>The whale has a big tail.</span></div><div class="sentence-card"><strong>32. Dan pingwin żgħir.</strong><span>This is a small penguin.</span></div><div class="sentence-card"><strong>33. Il-pingwin huwa iswed u abjad.</strong><span>The penguin is black and white.</span></div><div class="sentence-card"><strong>34. Il-pingwin jgħix f’post kiesaħ. [added-example]</strong><span>The penguin lives in a cold place. [added-example]</span></div><div class="sentence-card"><strong>35. Dawn pingwini fil-grupp.</strong><span>These are penguins in a group.</span></div><div class="sentence-card"><strong>36. Dan pagun sabiħ ħafna.</strong><span>This is a very beautiful peacock.</span></div><div class="sentence-card"><strong>37. Il-pagun għandu rix sabiħ.</strong><span>The peacock has beautiful feathers.</span></div><div class="sentence-card"><strong>38. Il-pagun għandu kuluri qawwijin. [added-example]</strong><span>The peacock has bright colours. [added-example]</span></div><div class="sentence-card"><strong>39. Din xadina ħelwa.</strong><span>This is a cute monkey.</span></div><div class="sentence-card"><strong>40. Ix-xadina għandha denb twil.</strong><span>The monkey has a long tail.</span></div><div class="sentence-card"><strong>41. Ix-xadina tħobb titla’. [added-example]</strong><span>The monkey likes to climb. [added-example]</span></div><div class="sentence-card"><strong>42. Dawn xadini fil-gaġġa. [added-example]</strong><span>These are monkeys in the cage. [added-example]</span></div><div class="sentence-card"><strong>43. Din gurilla kbira.</strong><span>This is a big gorilla.</span></div><div class="sentence-card"><strong>44. Il-gurilla għandha dirgħajn twal. [added-example]</strong><span>The gorilla has long arms. [added-example]</span></div><div class="sentence-card"><strong>45. Il-gurilla hija annimal qawwi. [added-example]</strong><span>The gorilla is a strong animal. [added-example]</span></div><div class="sentence-card"><strong>46. Dan ippopotamu kbir. [overview-based]</strong><span>This is a big hippopotamus. [overview-based]</span></div><div class="sentence-card"><strong>47. Ir-rinoċeront għandu ġilda griża. [overview-based]</strong><span>The rhinoceros has grey skin. [overview-based]</span></div><div class="sentence-card"><strong>48. L-annimali slavaġ ma jgħixux id-dar. [added-example]</strong><span>Wild animals do not live at home. [added-example]</span></div><div class="sentence-card"><strong>49. Ħafna annimali slavaġ jinsabu fiż-żoo.</strong><span>Many wild animals are in the zoo.</span></div><div class="sentence-card"><strong>50. Jien inħobb immur fiż-żoo biex nara l-annimali. [added-example]</strong><span>I like to go to the zoo to see the animals. [added-example]</span></div>
-          </div>
-        </section>
-      </main>
+            <section class="content-card" id="wild-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>50 Wild or Zoo Animal Descriptions</h2>
+                <p class="muted-note">Use these lines for zoo pictures, wild animal descriptions, and short speaking
+                    answers.</p>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. Dan iljun kbir.</strong><span>This is a big lion.</span></div>
+                    <div class="sentence-card"><strong>2. L-iljun għandu denb twil.</strong><span>The lion has a long tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>3. L-iljun huwa annimal slavaġ.</strong><span>The lion is a wild animal.</span>
+                    </div>
+                    <div class="sentence-card"><strong>4. L-iljuni jgħixu fiż-żoo jew fis-selvaġġ.
+                        [added-example]</strong><span>Lions live in the zoo or in the wild. [added-example]</span></div>
+                    <div class="sentence-card"><strong>5. Din tigra oranġjo u sewda.</strong><span>This is an orange and black tiger.</span>
+                    </div>
+                    <div class="sentence-card"><strong>6. It-tigra għandha ġilda sabiħa. [added-example]</strong><span>The tiger has beautiful skin. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>7. It-tigra għandha denb twil.</strong><span>The tiger has a long tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>8. It-tigri huma annimali slavaġ.</strong><span>Tigers are wild animals.</span>
+                    </div>
+                    <div class="sentence-card"><strong>9. Din ġiraffa
+                        twila.</strong><span>This is a tall giraffe.</span></div>
+                    <div class="sentence-card"><strong>10. Il-ġiraffa għandha għonq twil ħafna.</strong><span>The giraffe has a very long neck.</span>
+                    </div>
+                    <div class="sentence-card"><strong>11. Il-ġiraffa għandha ġilda kannella u bajda.
+                        [added-example]</strong><span>The giraffe has brown and white skin. [added-example]</span></div>
+                    <div class="sentence-card"><strong>12. Dawn ġiraffi
+                        kbar.</strong><span>These are big giraffes.</span></div>
+                    <div class="sentence-card"><strong>13. Din żebra
+                        sabiħa.</strong><span>This is a beautiful zebra.</span></div>
+                    <div class="sentence-card"><strong>14. Iż-żebra għandha kulur iswed u abjad.</strong><span>The zebra has black and white colour.</span>
+                    </div>
+                    <div class="sentence-card"><strong>15. Iż-żebra għandha erba’ saqajn.</strong><span>The zebra has four legs.</span>
+                    </div>
+                    <div class="sentence-card"><strong>16. Dawn żebri fiż-żoo.</strong><span>These are zebras in the zoo.</span>
+                    </div>
+                    <div class="sentence-card"><strong>17. Dan iljunfant kbir ħafna.</strong><span>This is a very big elephant.</span>
+                    </div>
+                    <div class="sentence-card"><strong>18. L-iljunfant għandu widnejn kbar.
+                        [added-example]</strong><span>The elephant has big ears. [added-example]</span></div>
+                    <div class="sentence-card"><strong>19. L-iljunfant għandu denb qasir. [added-example]</strong><span>The elephant has a short tail. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>20. L-iljunfanti huma annimali kbar.</strong><span>Elephants are big animals.</span>
+                    </div>
+                    <div class="sentence-card"><strong>21. Dan kukkudrill aħdar.</strong><span>This is a green crocodile.</span>
+                    </div>
+                    <div class="sentence-card"><strong>22. Il-kukkudrill għandu denb twil.</strong><span>The crocodile has a long tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>23. Il-kukkudrill jgħix fl-ilma. [added-example]</strong><span>The crocodile lives in water. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>24. Dawn kukkudrilli kbar.</strong><span>These are big crocodiles.</span>
+                    </div>
+                    <div class="sentence-card"><strong>25. Din ajkla kbira.</strong><span>This is a big eagle.</span>
+                    </div>
+                    <div class="sentence-card"><strong>26. L-ajkla għandha ġwienaħ kbar.</strong><span>The eagle has big wings.</span>
+                    </div>
+                    <div class="sentence-card"><strong>27. L-ajkla għandha munqar qawwi. [added-example]</strong><span>The eagle has a strong beak. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>28. L-ajkli huma għasafar slavaġ.</strong><span>Eagles are wild birds.</span>
+                    </div>
+                    <div class="sentence-card"><strong>29. Din balena kbira ħafna.</strong><span>This is a very big whale.</span>
+                    </div>
+                    <div class="sentence-card"><strong>30. Il-balena tgħix fil-baħar. [added-example]</strong><span>The whale lives in the sea. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>31. Il-balena għandha denb kbir.</strong><span>The whale has a big tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>32. Dan pingwin
+                        żgħir.</strong><span>This is a small penguin.</span></div>
+                    <div class="sentence-card"><strong>33. Il-pingwin huwa iswed u abjad.</strong><span>The penguin is black and white.</span>
+                    </div>
+                    <div class="sentence-card"><strong>34. Il-pingwin jgħix f’post kiesaħ.
+                        [added-example]</strong><span>The penguin lives in a cold place. [added-example]</span></div>
+                    <div class="sentence-card"><strong>35. Dawn pingwini fil-grupp.</strong><span>These are penguins in a group.</span>
+                    </div>
+                    <div class="sentence-card"><strong>36. Dan pagun sabiħ ħafna.</strong><span>This is a very beautiful peacock.</span>
+                    </div>
+                    <div class="sentence-card"><strong>37. Il-pagun għandu rix sabiħ.</strong><span>The peacock has beautiful feathers.</span>
+                    </div>
+                    <div class="sentence-card"><strong>38. Il-pagun għandu kuluri qawwijin.
+                        [added-example]</strong><span>The peacock has bright colours. [added-example]</span></div>
+                    <div class="sentence-card"><strong>39. Din xadina ħelwa.</strong><span>This is a cute monkey.</span>
+                    </div>
+                    <div class="sentence-card"><strong>40. Ix-xadina għandha denb twil.</strong><span>The monkey has a long tail.</span>
+                    </div>
+                    <div class="sentence-card"><strong>41. Ix-xadina tħobb titla’. [added-example]</strong><span>The monkey likes to climb. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>42. Dawn xadini fil-gaġġa. [added-example]</strong><span>These are monkeys in the cage. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>43. Din gurilla
+                        kbira.</strong><span>This is a big gorilla.</span></div>
+                    <div class="sentence-card"><strong>44. Il-gurilla għandha dirgħajn twal.
+                        [added-example]</strong><span>The gorilla has long arms. [added-example]</span></div>
+                    <div class="sentence-card"><strong>45. Il-gurilla hija annimal qawwi. [added-example]</strong><span>The gorilla is a strong animal. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>46. Dan ippopotamu kbir. [overview-based]</strong><span>This is a big hippopotamus. [overview-based]</span>
+                    </div>
+                    <div class="sentence-card"><strong>47. Ir-rinoċeront għandu ġilda griża.
+                        [overview-based]</strong><span>The rhinoceros has grey skin. [overview-based]</span></div>
+                    <div class="sentence-card"><strong>48. L-annimali slavaġ ma jgħixux id-dar. [added-example]</strong><span>Wild animals do not live at home. [added-example]</span>
+                    </div>
+                    <div class="sentence-card"><strong>49. Ħafna annimali slavaġ jinsabu fiż-żoo.</strong><span>Many wild animals are in the zoo.</span>
+                    </div>
+                    <div class="sentence-card"><strong>50. Jien inħobb immur fiż-żoo biex nara l-annimali.
+                        [added-example]</strong><span>I like to go to the zoo to see the animals. [added-example]</span>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-  </div>
+</div>
 </body>
 </html>
