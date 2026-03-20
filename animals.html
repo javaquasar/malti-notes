@@ -47,6 +47,15 @@
             margin-bottom: 6px;
         }
 
+        .animal-note h4 {
+            margin: 18px 0 10px;
+            font-size: 1rem;
+        }
+
+        .animal-note h4:first-of-type {
+            margin-top: 0;
+        }
+
         .pattern-card span, .sentence-card span {
             display: block;
             color: var(--muted);
@@ -81,6 +90,80 @@
             font-size: 0.95rem;
         }
 
+        .toolbar-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .toggle-images {
+            appearance: none;
+            border: 1px solid rgba(47, 143, 131, 0.24);
+            border-radius: 999px;
+            padding: 10px 16px;
+            background: rgba(47, 143, 131, 0.08);
+            color: var(--ink);
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .toggle-images:hover {
+            background: rgba(47, 143, 131, 0.14);
+        }
+
+        .animal-gallery,
+        .animal-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .animal-figure-card {
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.58);
+            margin: 0;
+            min-width: 0;
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        .animal-figure-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            margin-bottom: 10px;
+        }
+
+        .animal-figure-card strong,
+        .animal-figure-card span,
+        .animal-figure-card small {
+            display: block;
+            overflow-wrap: normal;
+            word-break: normal;
+            white-space: normal;
+        }
+
+        .animal-figure-card span {
+            color: var(--muted);
+        }
+
+        .animal-figure-card small {
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        body.compact-animals .animal-figure-card img {
+            display: none;
+        }
+
         .animal-grid > *, .pattern-grid-animals > *, .sentence-grid > *, .content > * {
             min-width: 0;
         }
@@ -100,7 +183,7 @@
         }
 
         @media (max-width: 980px) {
-            .hero-body, .animal-grid, .pattern-grid-animals, .sentence-grid {
+            .hero-body, .animal-grid, .pattern-grid-animals, .sentence-grid, .animal-gallery, .animal-card-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -121,24 +204,28 @@
     </style>
 </head>
 <body>
+<!-- Internal source note: this page was originally built from Lesson 17 - L-annimali and related course review material. -->
 <div class="page">
     <header class="site-header">
         <a class="site-brand" href="./index.html">Level 1 Animals Guide</a>
     </header>
 
     <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
+    <div class="toolbar-row">
+        <button type="button" class="toggle-images" data-animal-toggle aria-pressed="false">Hide animal images</button>
+        <span class="mini">Use compact mode when you want to focus on words, forms, and sentence banks.</span>
+    </div>
 
     <section class="hero">
         <div class="hero-band"></div>
         <div class="hero-body">
             <div>
                 <h1>Domestic and Wild Animals</h1>
-                <p class="lead">This page is built from <code>Lesson 17 - L-annimali</code>. It keeps the lesson
-                    vocabulary for domestic and wild animals, adds a few very common animals already mentioned in the
-                    lesson overview, and finishes with 100 simple description sentences for speaking and writing
-                    practice.</p>
+                <p class="lead">This page brings together core vocabulary for domestic and wild animals, adds a few
+                    very common extra animals, and finishes with 100 simple description sentences for speaking and
+                    writing practice.</p>
                 <div class="pill-row">
-                    <span class="pill">Lesson 17 based</span>
+                    <span class="pill">course based</span>
                     <span class="pill">domestic animals</span>
                     <span class="pill">wild / zoo animals</span>
                     <span class="pill">100 description sentences</span>
@@ -183,150 +270,37 @@
                     <span class="source-chip">gender forms</span>
                     <span class="source-chip">common home and farm animals</span>
                 </div>
-                <div class="animal-grid">
-                    <div class="animal-note">
-                        <h3>Lesson 17 Core Domestic Vocabulary</h3>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Maltese</th>
-                                <th>Female / Pair</th>
-                                <th>Plural</th>
-                                <th>English</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>kelb</td>
-                                <td>kelba</td>
-                                <td>klieb</td>
-                                <td>dog</td>
-                            </tr>
-                            <tr>
-                                <td>qattus</td>
-                                <td>qattusa</td>
-                                <td>qtates</td>
-                                <td>cat</td>
-                            </tr>
-                            <tr>
-                                <td>għasfur</td>
-                                <td>għasfura</td>
-                                <td>għasafar</td>
-                                <td>bird</td>
-                            </tr>
-                            <tr>
-                                <td>pappagall</td>
-                                <td>mara / raġel</td>
-                                <td>pappagalli</td>
-                                <td>parrot</td>
-                            </tr>
-                            <tr>
-                                <td>fenek</td>
-                                <td>fenka</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>rabbit</td>
-                            </tr>
-                            <tr>
-                                <td>fenek tal-Indi</td>
-                                <td>fenka tal-Indi</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>guinea pig</td>
-                            </tr>
-                            <tr>
-                                <td>tiġieġa</td>
-                                <td>serduq</td>
-                                <td>tiġieġ / sriedaq</td>
-                                <td>hen / rooster</td>
-                            </tr>
-                            <tr>
-                                <td>ħuta</td>
-                                <td>ħuta mara / ħuta raġel</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>fish</td>
-                            </tr>
-                            <tr>
-                                <td>fekruna tal-art</td>
-                                <td>fekruna raġel / mara</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>tortoise</td>
-                            </tr>
-                            <tr>
-                                <td>fekruna tal-ilma</td>
-                                <td>fekruna raġel / mara</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>turtle</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div class="animal-note">
+                    <h3>Domestic and Farm Animal Vocabulary</h3>
+                    <h4>Core domestic animals</h4>
+                    <div class="animal-card-grid">
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/dog.svg" alt="Dog illustration"><strong>kelb</strong><span>dog</span><small>female: kelba</small><small>plural: klieb</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/cat.svg" alt="Cat illustration"><strong>qattus</strong><span>cat</span><small>female: qattusa</small><small>plural: qtates</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/bird.svg" alt="Bird illustration"><strong>g&#x0127;asfur</strong><span>bird</span><small>female: g&#x0127;asfura</small><small>plural: g&#x0127;asafar</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/parrot.svg" alt="Parrot illustration"><strong>pappagall</strong><span>parrot</span><small>gender note: mara / ra&#x0121;el</small><small>plural: pappagalli</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/rabbit.svg" alt="Rabbit illustration"><strong>fenek</strong><span>rabbit</span><small>female: fenka</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/guinea-pig.svg" alt="Guinea pig illustration"><strong>fenek tal-Indi</strong><span>guinea pig</span><small>female: fenka tal-Indi</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/chicken.svg" alt="Chicken illustration"><strong>ti&#x0121;ie&#x0121;a</strong><span>hen / rooster</span><small>pair note: serduq</small><small>plural: ti&#x0121;ie&#x0121; / sriedaq</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/fish.svg" alt="Fish illustration"><strong>&#x0127;uta</strong><span>fish</span><small>gender note: &#x0127;uta mara / &#x0127;uta ra&#x0121;el</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/tortoise.svg" alt="Tortoise illustration"><strong>fekruna tal-art</strong><span>tortoise</span><small>gender note: fekruna ra&#x0121;el / mara</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/turtle.svg" alt="Turtle illustration"><strong>fekruna tal-ilma</strong><span>turtle</span><small>gender note: fekruna ra&#x0121;el / mara</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/hamster.svg" alt="Hamster illustration"><strong>hamster</strong><span>same in English</span><small>gender note: -</small><small>plural: hamsters [UNCERTAIN]</small></figure>
                     </div>
-                    <div class="animal-note">
-                        <h3>Popular Domestic and Farm Animals From The Lesson Overview</h3>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Maltese</th>
-                                <th>Gender Note</th>
-                                <th>Plural</th>
-                                <th>English</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>hamster</td>
-                                <td>—</td>
-                                <td>hamsters [UNCERTAIN]</td>
-                                <td>hamster</td>
-                            </tr>
-                            <tr>
-                                <td>ferret</td>
-                                <td>—</td>
-                                <td>ferrets [UNCERTAIN]</td>
-                                <td>ferret</td>
-                            </tr>
-                            <tr>
-                                <td>chincilla</td>
-                                <td>—</td>
-                                <td>chincillas [UNCERTAIN]</td>
-                                <td>chinchilla</td>
-                            </tr>
-                            <tr>
-                                <td>baqra</td>
-                                <td>barri</td>
-                                <td>baqar</td>
-                                <td>cow / bull</td>
-                            </tr>
-                            <tr>
-                                <td>żiemel</td>
-                                <td>—</td>
-                                <td>żwiemel</td>
-                                <td>horse</td>
-                            </tr>
-                            <tr>
-                                <td>nagħġa</td>
-                                <td>—</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>sheep</td>
-                            </tr>
-                            <tr>
-                                <td>ħanżir</td>
-                                <td>ħanżira</td>
-                                <td>ħnieżer</td>
-                                <td>pig</td>
-                            </tr>
-                            <tr>
-                                <td>dundjan</td>
-                                <td>—</td>
-                                <td>dundjani</td>
-                                <td>turkey</td>
-                            </tr>
-                            <tr>
-                                <td>serp</td>
-                                <td>serp mara / raġel</td>
-                                <td>sriep</td>
-                                <td>snake</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <h4>Popular domestic and farm animals</h4>
+                    <div class="animal-card-grid">
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/ferret.svg" alt="Ferret illustration"><strong>nemes</strong><span>ferret</span><small>gender note: -</small><small>plural: ferrets [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/chinchilla.svg" alt="Chinchilla illustration"><strong>&#x010B;in&#x010B;illa</strong><span>chinchilla</span><small>gender note: -</small><small>plural: chinchillas [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/cow.svg" alt="Cow illustration"><strong>baqra</strong><span>cow / bull</span><small>pair note: barri</small><small>plural: baqar</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/horse.svg" alt="Horse illustration"><strong>&#x017C;iemel</strong><span>horse</span><small>gender note: -</small><small>plural: &#x017C;wiemel</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/sheep.svg" alt="Sheep illustration"><strong>nag&#x0127;&#x0121;a</strong><span>sheep</span><small>gender note: -</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/pig.svg" alt="Pig illustration"><strong>&#x0127;an&#x017C;ir</strong><span>pig</span><small>female: &#x0127;an&#x017C;ira</small><small>plural: &#x0127;nie&#x017C;er</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/turkey.svg" alt="Turkey illustration"><strong>dundjan</strong><span>turkey</span><small>gender note: -</small><small>plural: dundjani</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/snake.svg" alt="Snake illustration"><strong>serp</strong><span>snake</span><small>gender note: serp mara / ra&#x0121;el</small><small>plural: sriep</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/goat.svg" alt="Goat illustration"><strong>mog&#x0127;&#x017C;a</strong><span>goat</span><small>gender note: -</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/duck.svg" alt="Duck illustration"><strong>papra</strong><span>duck</span><small>gender note: -</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/goose.svg" alt="Goose illustration"><strong>wi&#x017C;&#x017C;</strong><span>goose</span><small>gender note: -</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/mouse.svg" alt="Mouse illustration"><strong>&#x0121;urdien</strong><span>mouse</span><small>gender note: -</small><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/rat.svg" alt="Rat illustration"><strong>far</strong><span>rat</span><small>gender note: -</small><small>plural: [UNCERTAIN]</small></figure>
                     </div>
                 </div>
             </section>
@@ -341,121 +315,57 @@
                     <span class="source-chip">wild animals</span>
                     <span class="source-chip">zoo vocabulary</span>
                 </div>
-                <div class="animal-grid">
-                    <div class="animal-note">
-                        <h3>Wild Animals From The Main Plural Slides</h3>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Maltese singular</th>
-                                <th>Plural</th>
-                                <th>English</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>iljun</td>
-                                <td>iljuni</td>
-                                <td>lion</td>
-                            </tr>
-                            <tr>
-                                <td>tigra</td>
-                                <td>tigri</td>
-                                <td>tiger</td>
-                            </tr>
-                            <tr>
-                                <td>ġiraffa</td>
-                                <td>ġiraffi</td>
-                                <td>giraffe</td>
-                            </tr>
-                            <tr>
-                                <td>żebra</td>
-                                <td>żebri</td>
-                                <td>zebra</td>
-                            </tr>
-                            <tr>
-                                <td>iljunfant</td>
-                                <td>iljunfanti</td>
-                                <td>elephant</td>
-                            </tr>
-                            <tr>
-                                <td>kukkudrill</td>
-                                <td>kukkudrilli</td>
-                                <td>crocodile</td>
-                            </tr>
-                            <tr>
-                                <td>ajkla</td>
-                                <td>ajkli</td>
-                                <td>eagle</td>
-                            </tr>
-                            <tr>
-                                <td>balena</td>
-                                <td>baleni</td>
-                                <td>whale</td>
-                            </tr>
-                            <tr>
-                                <td>gurilla</td>
-                                <td>gurilli</td>
-                                <td>gorilla</td>
-                            </tr>
-                            <tr>
-                                <td>xadina</td>
-                                <td>xadini</td>
-                                <td>monkey</td>
-                            </tr>
-                            <tr>
-                                <td>pagun</td>
-                                <td>paguni</td>
-                                <td>peacock</td>
-                            </tr>
-                            <tr>
-                                <td>pingwin</td>
-                                <td>pingwini</td>
-                                <td>penguin</td>
-                            </tr>
-                            <tr>
-                                <td>ġurat</td>
-                                <td>ġurati</td>
-                                <td>grasshopper</td>
-                            </tr>
-                            <tr>
-                                <td>pitirross</td>
-                                <td>pitirrossi</td>
-                                <td>robin</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div class="animal-note">
+                    <h3>Wild and Zoo Animal Vocabulary</h3>
+                    <div class="animal-card-grid">
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/lion.svg" alt="Lion illustration"><strong>iljun</strong><span>lion</span><small>plural: iljuni</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/tiger.svg" alt="Tiger illustration"><strong>tigra</strong><span>tiger</span><small>plural: tigri</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/giraffe.svg" alt="Giraffe illustration"><strong>&#x0121;iraffa</strong><span>giraffe</span><small>plural: &#x0121;iraffi</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/zebra.svg" alt="Zebra illustration"><strong>&#x017C;ebra</strong><span>zebra</span><small>plural: &#x017C;ebri</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/elephant.svg" alt="Elephant illustration"><strong>iljunfant</strong><span>elephant</span><small>plural: iljunfanti</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/crocodile.svg" alt="Crocodile illustration"><strong>kukkudrill</strong><span>crocodile</span><small>plural: kukkudrilli</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/eagle.svg" alt="Eagle illustration"><strong>ajkla</strong><span>eagle</span><small>plural: ajkli</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/gorilla.svg" alt="Gorilla illustration"><strong>gurilla</strong><span>gorilla</span><small>plural: gurilli</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/monkey.svg" alt="Monkey illustration"><strong>xadina</strong><span>monkey</span><small>plural: xadini</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/peacock.svg" alt="Peacock illustration"><strong>pagun</strong><span>peacock</span><small>plural: paguni</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/penguin.svg" alt="Penguin illustration"><strong>pingwin</strong><span>penguin</span><small>plural: pingwini</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/robin.svg" alt="Robin illustration"><strong>pitirross</strong><span>robin</span><small>plural: pitirrossi</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/hippo.svg" alt="Hippopotamus illustration"><strong>ippopotamu</strong><span>hippopotamus</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/rhino.svg" alt="Rhinoceros illustration"><strong>rino&#x010B;eront</strong><span>rhinoceros</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/bear.svg" alt="Bear illustration"><strong>ors</strong><span>bear</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/wolf.svg" alt="Wolf illustration"><strong>lupu</strong><span>wolf</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/fox.svg" alt="Fox illustration"><strong>volpi</strong><span>fox</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/deer.svg" alt="Deer illustration"><strong>&#x010B;riev</strong><span>deer</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/camel.svg" alt="Camel illustration"><strong>&#x0121;emel</strong><span>camel</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/leopard.svg" alt="Leopard illustration"><strong>leopardu</strong><span>leopard</span><small>plural: [UNCERTAIN]</small></figure>
                     </div>
-                    <div class="animal-note">
-                        <h3>Very Common Big Animals Mentioned In The Lesson Overview</h3>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Maltese singular</th>
-                                <th>Plural</th>
-                                <th>English</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>ippopotamu</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>hippopotamus</td>
-                            </tr>
-                            <tr>
-                                <td>rinoċeront</td>
-                                <td>[UNCERTAIN]</td>
-                                <td>rhinoceros</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <h4>Sea animals</h4>
+                    <div class="animal-card-grid">
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/whale.svg" alt="Whale illustration"><strong>balena</strong><span>whale</span><small>plural: baleni</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/dolphin.svg" alt="Dolphin illustration"><strong>delfin</strong><span>dolphin</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/shark.svg" alt="Shark illustration"><strong>kelb il-ba&#x0127;ar</strong><span>shark</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/octopus.svg" alt="Octopus illustration"><strong>qarnita</strong><span>octopus</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/crab.svg" alt="Crab illustration"><strong>gran&#x010B;</strong><span>crab</span><small>plural: [UNCERTAIN]</small></figure>
+                    </div>
+                    <h4>Small animals and insects</h4>
+                    <div class="animal-card-grid">
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/grasshopper.svg" alt="Grasshopper illustration"><strong>&#x0121;urat</strong><span>grasshopper</span><small>plural: &#x0121;urati</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/butterfly.svg" alt="Butterfly illustration"><strong>farfett</strong><span>butterfly</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/ant.svg" alt="Ant illustration"><strong>nemla</strong><span>ant</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/bee.svg" alt="Bee illustration"><strong>na&#x0127;la</strong><span>bee</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/mosquito.svg" alt="Mosquito illustration"><strong>nemusa</strong><span>mosquito</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/spider.svg" alt="Spider illustration"><strong>brimba</strong><span>spider</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/cockroach.svg" alt="Cockroach illustration"><strong>wirdiena</strong><span>cockroach</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/caterpillar.svg" alt="Caterpillar illustration"><strong>caterpillar</strong><span>caterpillar</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/beetle.svg" alt="Beetle illustration"><strong>&#x0127;anfusa</strong><span>beetle</span><small>plural: [UNCERTAIN]</small></figure>
+                        <figure class="animal-figure-card"><img src="./assets/img/animals/scorpion.svg" alt="Scorpion illustration"><strong>skorpjun</strong><span>scorpion</span><small>plural: [UNCERTAIN]</small></figure>
                     </div>
                 </div>
             </section>
 
             <section class="content-card" id="lesson-patterns">
                 <span class="tag">Section 3</span>
-                <h2>Lesson 17 Description Patterns</h2>
+                <h2>Animal Description Patterns</h2>
                 <div class="formula"><code>Dan / Din / Dawn + annimal</code> | <code>għandu / għandha + parti
                     tal-ġisem</code> | <code>kulur + parti tal-ġisem</code></div>
                 <div class="pattern-grid-animals">
@@ -699,5 +609,6 @@
         </main>
     </div>
 </div>
+<script src="./assets/js/animal-compact-toggle.js"></script>
 </body>
 </html>
