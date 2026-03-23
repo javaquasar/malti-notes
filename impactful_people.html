@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactful People in Maltese</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .top-home { margin-bottom: 18px; }
+        .top-home a { color: var(--teal); font-weight: 700; text-decoration: none; }
+        .top-home a:hover { text-decoration: underline; }
+        .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .people-grid, .triple-grid { display: grid; gap: 14px; }
+        .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .triple-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .vocab-card, .pattern-card, .sentence-card, .question-card, .mistake-card, .lesson-note, .person-card, .triple-card {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            min-width: 0;
+        }
+        .vocab-card strong, .pattern-card strong, .sentence-card strong, .question-card strong, .mistake-card strong, .person-card strong, .triple-card strong {
+            display: block; margin-bottom: 6px;
+        }
+        .vocab-card span, .pattern-card span, .sentence-card span, .question-card span, .mistake-card span, .person-card span, .triple-card span {
+            display: block; color: var(--muted);
+        }
+        .person-card small, .lesson-note p { color: var(--muted); }
+        .line-pair { padding: 10px 0; border-top: 1px dashed rgba(95, 111, 103, 0.24); }
+        .line-pair:first-child { border-top: none; padding-top: 0; }
+        .mt-line { font-weight: 700; }
+        .en-line { color: var(--muted); }
+        .source-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; }
+        .source-chip {
+            display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px;
+            font-size: 0.84rem; background: rgba(47, 143, 131, 0.10); color: var(--teal);
+            border: 1px solid rgba(47, 143, 131, 0.18);
+        }
+        .lesson-note h3, .lesson-note h4 { margin-bottom: 10px; }
+        .person-card ul { margin: 10px 0 0; padding-left: 18px; }
+        .person-card li + li { margin-top: 6px; }
+        @media (max-width: 980px) {
+            .hero-body, .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .people-grid, .triple-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Internal source note: this page was built from course materials about impactful personalities, adjectives, and the past tense verbs kien/kienet and għamel/għamlet. -->
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
+    </header>
+
+    <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Impactful People</h1>
+                <p class="lead">
+                    A practical page for describing important people, using past tense, professions, adjectives,
+                    and short biography patterns in Maltese.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">kien / kienet</span>
+                    <span class="pill">għamel / għamlet</span>
+                    <span class="pill">jobs and roles</span>
+                    <span class="pill">mini biographies</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Use This Page For</h2>
+                <ul>
+                    <li>describing famous and important people</li>
+                    <li>using past tense simply</li>
+                    <li>talking about professions and impact</li>
+                    <li>preparing short speaking presentations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#core-idea">Core Idea</a></li>
+                <li><a href="#past-verbs">Past Tense Core Verbs</a></li>
+                <li><a href="#jobs">Jobs and Roles</a></li>
+                <li><a href="#adjectives">Adjectives</a></li>
+                <li><a href="#pattern">Biography Sentence Pattern</a></li>
+                <li><a href="#international">International Personalities</a></li>
+                <li><a href="#maltese">Maltese Personalities</a></li>
+                <li><a href="#fill-in">Fill-in Practice</a></li>
+                <li><a href="#pair-work">Pair Work and Presentation</a></li>
+                <li><a href="#present-past">Present vs Past</a></li>
+                <li><a href="#culture">Culture Note</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#practice-bank">Practice Bank</a></li>
+            </ul>
+            <p class="mini">
+                The two key patterns on this page are <code>Huwa kien / Hija kienet</code> and
+                <code>Huwa għamel / Hija għamlet</code>.
+            </p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card" id="core-idea">
+                <span class="tag">Section 1</span>
+                <h2>Core Idea</h2>
+                <div class="lesson-note">
+                    <div class="line-pair"><div class="mt-line">Se naqraw dwar xi personaġġi ta' impatt minn madwar id-dinja u minn Malta.</div><div class="en-line">We are going to read about some impactful personalities from around the world and from Malta.</div></div>
+                    <div class="line-pair"><div class="mt-line">F'din it-tema huwa importanti li naraw kif nużaw il-verb kien jew kienet.</div><div class="en-line">In this topic it is important to see how we use the verb kien or kienet.</div></div>
+                    <div class="line-pair"><div class="mt-line">Nużaw ukoll għamel jew għamlet biex nitkellmu dwar bidla, xogħol, jew impatt.</div><div class="en-line">We also use għamel or għamlet to talk about change, work, or impact.</div></div>
+                    <div class="source-row">
+                        <span class="source-chip">people and biographies</span>
+                        <span class="source-chip">past tense</span>
+                        <span class="source-chip">adjectives</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="past-verbs">
+                <span class="tag">Section 2</span>
+                <h2>Past Tense Core Verbs</h2>
+                <div class="triple-grid">
+                    <div class="triple-card"><strong>Jien kont</strong><span>I was</span></div>
+                    <div class="triple-card"><strong>Int kont</strong><span>you were</span></div>
+                    <div class="triple-card"><strong>Huwa kien</strong><span>he was</span></div>
+                    <div class="triple-card"><strong>Hija kienet</strong><span>she was</span></div>
+                    <div class="triple-card"><strong>Aħna konna</strong><span>we were</span></div>
+                    <div class="triple-card"><strong>Intom kontu</strong><span>you all were</span></div>
+                    <div class="triple-card"><strong>Huma kienu</strong><span>they were</span></div>
+                </div>
+                <div class="triple-grid" style="margin-top: 14px;">
+                    <div class="triple-card"><strong>Jien għamilt</strong><span>I did / made</span></div>
+                    <div class="triple-card"><strong>Int għamilt</strong><span>you did / made</span></div>
+                    <div class="triple-card"><strong>Huwa għamel</strong><span>he did / made</span></div>
+                    <div class="triple-card"><strong>Hija għamlet</strong><span>she did / made</span></div>
+                    <div class="triple-card"><strong>Aħna għamilna</strong><span>we did / made</span></div>
+                    <div class="triple-card"><strong>Intom għamiltu</strong><span>you all did / made</span></div>
+                    <div class="triple-card"><strong>Huma għamlu</strong><span>they did / made</span></div>
+                </div>
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <div class="line-pair"><div class="mt-line">Huwa kien famuż.</div><div class="en-line">He was famous.</div></div>
+                    <div class="line-pair"><div class="mt-line">Hija kienet popolari.</div><div class="en-line">She was popular.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa għamel bidla.</div><div class="en-line">He made a change.</div></div>
+                    <div class="line-pair"><div class="mt-line">Hija għamlet impatt.</div><div class="en-line">She made an impact.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="jobs">
+                <span class="tag">Section 3</span>
+                <h2>Jobs and Roles</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>mexxej / mexxejja</strong><span>leader</span></div>
+                    <div class="vocab-card"><strong>attivist / attivista</strong><span>activist</span></div>
+                    <div class="vocab-card"><strong>mużiċist / mużiċista</strong><span>musician</span></div>
+                    <div class="vocab-card"><strong>xjentist / xjentista</strong><span>scientist</span></div>
+                    <div class="vocab-card"><strong>avukat / avukata</strong><span>lawyer</span></div>
+                    <div class="vocab-card"><strong>għalliem / għalliema</strong><span>teacher</span></div>
+                    <div class="vocab-card"><strong>volontier / volontiera</strong><span>volunteer</span></div>
+                    <div class="vocab-card"><strong>kompożitur / kompożitriċi</strong><span>composer</span></div>
+                    <div class="vocab-card"><strong>kantant / kantanta</strong><span>singer</span></div>
+                    <div class="vocab-card"><strong>ġurnalista</strong><span>journalist</span></div>
+                    <div class="vocab-card"><strong>poeta</strong><span>poet</span></div>
+                    <div class="vocab-card"><strong>professur</strong><span>professor</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="adjectives">
+                <span class="tag">Section 4</span>
+                <h2>Adjectives for Describing a Person</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>famuż / famuża</strong><span>famous</span></div>
+                    <div class="vocab-card"><strong>popolari</strong><span>popular</span></div>
+                    <div class="vocab-card"><strong>umli</strong><span>humble</span></div>
+                    <div class="vocab-card"><strong>leali</strong><span>loyal</span></div>
+                    <div class="vocab-card"><strong>intelliġenti</strong><span>intelligent</span></div>
+                    <div class="vocab-card"><strong>responsabbli</strong><span>responsible</span></div>
+                    <div class="vocab-card"><strong>kuraġġuż / kuraġġuża</strong><span>courageous</span></div>
+                    <div class="vocab-card"><strong>onest / onesta</strong><span>honest</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="pattern">
+                <span class="tag">Section 5</span>
+                <h2>Biography Sentence Pattern</h2>
+                <div class="pattern-grid">
+                    <div class="pattern-card"><strong><code>Isem: ...</code></strong><span>Name of the person</span></div>
+                    <div class="pattern-card"><strong><code>Huwa kien ... / Hija kienet ...</code></strong><span>Job, role, or adjective</span></div>
+                    <div class="pattern-card"><strong><code>Huwa għamel ... / Hija għamlet ...</code></strong><span>What the person did</span></div>
+                    <div class="pattern-card"><strong><code>Huwa / Hija importanti għax ...</code></strong><span>Why the person matters</span></div>
+                </div>
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <h3>Ready-made mini biography</h3>
+                    <div class="line-pair"><div class="mt-line">Hija kienet attivista.</div><div class="en-line">She was an activist.</div></div>
+                    <div class="line-pair"><div class="mt-line">Hija għamlet impatt kbir.</div><div class="en-line">She made a big impact.</div></div>
+                    <div class="line-pair"><div class="mt-line">Hija importanti għax ġġieldet għal edukazzjoni aħjar.</div><div class="en-line">She is important because she fought for better education.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="international">
+                <span class="tag">Section 6</span>
+                <h2>International Personalities</h2>
+                <div class="people-grid">
+                    <article class="person-card"><strong>Albert Einstein</strong><span>xjenzat</span><ul><li>Huwa kien xjenzat.</li><li>Huwa studja x-xjenza.</li><li>Huwa famuż fid-dinja.</li><li>Huwa żviluppa teoriji varji fix-xjenza.</li></ul></article>
+                    <article class="person-card"><strong>Martin Luther King Jr.</strong><span>mexxej</span><ul><li>Huwa kien mexxej.</li><li>Huwa tkellem dwar ugwaljanza.</li><li>Huwa għamel bidla kbira.</li></ul></article>
+                    <article class="person-card"><strong>Malala Yousafzai</strong><span>attivista</span><ul><li>Hija tiġġieled għall-edukazzjoni għat-tfajliet.</li><li>Hija attivista.</li><li>Hija importanti.</li><li>Hija mill-Pakistan.</li></ul></article>
+                    <article class="person-card"><strong>Ludwig van Beethoven</strong><span>kompożitur</span><ul><li>Huwa kien kompożitur.</li><li>Huwa kien mużiċist famuż.</li><li>Huwa għamel ħafna komponimenti klassiċi.</li></ul></article>
+                </div>
+            </section>
+
+            <section class="content-card" id="maltese">
+                <span class="tag">Section 7</span>
+                <h2>Maltese Personalities</h2>
+                <div class="people-grid">
+                    <article class="person-card"><strong>Dun Karm Psaila</strong><span>poeta Malti</span><ul><li>Huwa kien poeta Malti.</li><li>Huwa kiteb l-Innu Nazzjonali.</li><li>Huwa importanti għal Malta.</li></ul></article>
+                    <article class="person-card"><strong>George Borg Olivier</strong><span>Prim Ministru / avukat</span><ul><li>Huwa kien Prim Ministru ta' Malta.</li><li>Malta saret indipendenti fl-1964.</li><li>Huwa personaġġ importanti.</li><li>Huwa kien avukat.</li></ul></article>
+                    <article class="person-card"><strong>Pietru Pawl Saydon</strong><span>qassis</span><ul><li>Huwa twieled iż-Żurrieq.</li><li>Huwa kien qassis.</li><li>Huwa kien studja f'Ruma.</li><li>Huwa ttraduċa l-Bibbja għall-Malti.</li></ul></article>
+                    <article class="person-card"><strong>Agatha Barbara</strong><span>għalliema / President</span><ul><li>Hija kienet għalliema.</li><li>Hija importanti fl-istorja ta' Malta.</li><li>Hija kienet l-ewwel mara President ta' Malta.</li></ul></article>
+                    <article class="person-card"><strong>Daphne Caruana Galizia</strong><span>ġurnalista</span><ul><li>Hija kienet ġurnalista.</li><li>Hija kitbet dwar il-politika.</li><li>Hija personaġġ importanti fil-ġurnaliżmu.</li></ul></article>
+                    <article class="person-card"><strong>Neil Agius</strong><span>għawwiem</span><ul><li>Huwa għawwiem.</li><li>Huwa għamel rekords fl-għawm.</li><li>Huwa importanti fl-isport Malti.</li></ul></article>
+                    <article class="person-card"><strong>Hayley Bugeja u Maria Farrugia</strong><span>plejers tal-futbol</span><ul><li>Huma plejers tal-futbol.</li><li>Huma jilagħbu mat-tim nazzjonali ta' Malta.</li><li>Huma lagħbu ma' timijiet barra minn Malta.</li><li>Huma importanti fil-futbol tan-nisa f'Malta.</li></ul></article>
+                    <article class="person-card"><strong>Oliver Friggieri</strong><span>poeta / filosfu / professur</span><ul><li>Huwa kien poeta.</li><li>Huwa kien filosfu Malti.</li><li>Huwa kien professur l-Università.</li><li>Huwa kien mill-Furjana.</li></ul></article>
+                </div>
+            </section>
+
+            <section class="content-card" id="fill-in">
+                <span class="tag">Section 8</span>
+                <h2>Fill-in Practice</h2>
+                <div class="question-grid">
+                    <div class="question-card"><strong>Albert Einstein kien ________.</strong><span>xjentist</span></div>
+                    <div class="question-card"><strong>Beethoven kien ________.</strong><span>kompożitur</span></div>
+                    <div class="question-card"><strong>Busker hija band _________ f'Malta.</strong><span>popolari</span></div>
+                    <div class="question-card"><strong>Ira Losco hija kantanta ________ f'Malta.</strong><span>famuża</span></div>
+                    <div class="question-card"><strong>Greta Thunberg hija _________.</strong><span>attivista</span></div>
+                    <div class="question-card"><strong>Patri Dijonisju Mintoff huwa bniedem ______.</strong><span>umli</span></div>
+                    <div class="question-card"><strong>Nelson Mandela kien bniedem _______.</strong><span>kuraġġuż</span></div>
+                    <div class="question-card"><strong>Albert Einstein kien persuna ________.</strong><span>intelliġenti</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="pair-work">
+                <span class="tag">Section 9</span>
+                <h2>Pair Work and Presentation</h2>
+                <div class="lesson-note">
+                    <h3>Guess who?</h3>
+                    <div class="line-pair"><div class="mt-line">Huwa kien famuż.</div><div class="en-line">He was famous.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa kien kompożitur.</div><div class="en-line">He was a composer.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa għamel ħafna komponimenti klassiċi.</div><div class="en-line">He made many classical compositions.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa importanti għall-mużika klassika.</div><div class="en-line">He is important for classical music.</div></div>
+                </div>
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <h3>Presentation template</h3>
+                    <div class="line-pair"><div class="mt-line">Isem: __________</div><div class="en-line">Name: __________</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa kien / Hija kienet __________.</div><div class="en-line">He was / She was __________.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa għamel / Hija għamlet __________.</div><div class="en-line">He did / She did __________.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa / Hija importanti għax __________.</div><div class="en-line">He / She is important because __________.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="present-past">
+                <span class="tag">Section 10</span>
+                <h2>Present vs Past</h2>
+                <div class="pattern-grid">
+                    <div class="pattern-card"><strong><code>Huwa kien famuż.</code></strong><span>past: he was famous</span></div>
+                    <div class="pattern-card"><strong><code>Hija kienet popolari.</code></strong><span>past: she was popular</span></div>
+                    <div class="pattern-card"><strong><code>Huwa għamel bidla.</code></strong><span>past: he made a change</span></div>
+                    <div class="pattern-card"><strong><code>Hija għamlet impatt.</code></strong><span>past: she made an impact</span></div>
+                    <div class="pattern-card"><strong><code>Hija attivista.</code></strong><span>present: she is an activist</span></div>
+                    <div class="pattern-card"><strong><code>Huwa plejer tal-futbol.</code></strong><span>present: he is a football player</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="culture">
+                <span class="tag">Section 11</span>
+                <h2>Culture Note</h2>
+                <div class="lesson-note">
+                    <h3>Oliver Friggieri and <em>Il-Bikja tal-Buskett</em></h3>
+                    <div class="line-pair"><div class="mt-line">Fil-klassi tkellimna wkoll fuq Oliver Friggieri.</div><div class="en-line">In class we also spoke about Oliver Friggieri.</div></div>
+                    <div class="line-pair"><div class="mt-line">Huwa kien poeta, filosfu, u professur Malti.</div><div class="en-line">He was a Maltese poet, philosopher, and professor.</div></div>
+                    <div class="line-pair"><div class="mt-line">Fil-poeżija <em>Il-Bikja tal-Buskett</em> naraw kliem dwar in-natura, il-ħarruba, u l-ambjent.</div><div class="en-line">In the poem <em>Il-Bikja tal-Buskett</em> we see language about nature, the carob tree, and the environment.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="mistakes">
+                <span class="tag">Section 12</span>
+                <h2>Common Mistakes</h2>
+                <div class="mistake-grid">
+                    <div class="mistake-card"><strong>Do not mix up kien and kienet</strong><span><code>Huwa kien</code> for a man, but <code>Hija kienet</code> for a woman.</span></div>
+                    <div class="mistake-card"><strong>Do not mix up għamel and għamlet</strong><span><code>Huwa għamel</code> for a man, but <code>Hija għamlet</code> for a woman.</span></div>
+                    <div class="mistake-card"><strong>Watch masculine and feminine jobs</strong><span><code>avukat / avukata</code>, <code>kantant / kantanta</code>, <code>għalliem / għalliema</code>.</span></div>
+                    <div class="mistake-card"><strong>Watch masculine and feminine adjectives</strong><span><code>famuż / famuża</code>, <code>onest / onesta</code>, <code>kuraġġuż / kuraġġuża</code>.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="practice-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>Practice Bank</h2>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. Huwa kien mexxej.</strong><span>He was a leader.</span></div>
+                    <div class="sentence-card"><strong>2. Hija kienet attivista.</strong><span>She was an activist.</span></div>
+                    <div class="sentence-card"><strong>3. Huwa kien xjentist.</strong><span>He was a scientist.</span></div>
+                    <div class="sentence-card"><strong>4. Hija kienet ġurnalista.</strong><span>She was a journalist.</span></div>
+                    <div class="sentence-card"><strong>5. Huwa kien famuż.</strong><span>He was famous.</span></div>
+                    <div class="sentence-card"><strong>6. Hija kienet popolari.</strong><span>She was popular.</span></div>
+                    <div class="sentence-card"><strong>7. Huwa kien umli.</strong><span>He was humble.</span></div>
+                    <div class="sentence-card"><strong>8. Hija kienet onesta.</strong><span>She was honest.</span></div>
+                    <div class="sentence-card"><strong>9. Huwa għamel bidla kbira.</strong><span>He made a big change.</span></div>
+                    <div class="sentence-card"><strong>10. Hija għamlet impatt.</strong><span>She made an impact.</span></div>
+                    <div class="sentence-card"><strong>11. Martin Luther King Jr. kien mexxej.</strong><span>Martin Luther King Jr. was a leader.</span></div>
+                    <div class="sentence-card"><strong>12. Malala Yousafzai hija attivista.</strong><span>Malala Yousafzai is an activist.</span></div>
+                    <div class="sentence-card"><strong>13. Dun Karm Psaila kien poeta Malti.</strong><span>Dun Karm Psaila was a Maltese poet.</span></div>
+                    <div class="sentence-card"><strong>14. George Borg Olivier kien Prim Ministru ta' Malta.</strong><span>George Borg Olivier was Prime Minister of Malta.</span></div>
+                    <div class="sentence-card"><strong>15. Pietru Pawl Saydon kien qassis.</strong><span>Pietru Pawl Saydon was a priest.</span></div>
+                    <div class="sentence-card"><strong>16. Agatha Barbara kienet għalliema.</strong><span>Agatha Barbara was a teacher.</span></div>
+                    <div class="sentence-card"><strong>17. Daphne Caruana Galizia kitbet dwar il-politika.</strong><span>Daphne Caruana Galizia wrote about politics.</span></div>
+                    <div class="sentence-card"><strong>18. Neil Agius għamel rekords fl-għawm.</strong><span>Neil Agius made records in swimming.</span></div>
+                    <div class="sentence-card"><strong>19. Hayley Bugeja u Maria Farrugia huma plejers tal-futbol.</strong><span>Hayley Bugeja and Maria Farrugia are football players.</span></div>
+                    <div class="sentence-card"><strong>20. Oliver Friggieri kien professur l-Università.</strong><span>Oliver Friggieri was a professor at the University.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
