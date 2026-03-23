@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport and Travel</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .top-home {
+            margin-bottom: 18px;
+        }
+
+        .top-home a {
+            color: var(--teal);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .top-home a:hover {
+            text-decoration: underline;
+        }
+
+        .vocab-grid,
+        .pattern-grid-transport,
+        .sentence-grid,
+        .question-grid,
+        .route-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .vocab-grid,
+        .pattern-grid-transport,
+        .sentence-grid,
+        .question-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .route-grid {
+            grid-template-columns: 1.08fr 0.92fr;
+            align-items: start;
+        }
+
+        .vocab-card,
+        .transport-figure-card,
+        .pattern-card,
+        .sentence-card,
+        .question-card,
+        .route-card,
+        .transport-note {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            min-width: 0;
+        }
+
+        .vocab-card strong,
+        .transport-figure-card strong,
+        .pattern-card strong,
+        .sentence-card strong,
+        .question-card strong,
+        .route-card strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .vocab-card span,
+        .transport-figure-card span,
+        .pattern-card span,
+        .sentence-card span,
+        .question-card span,
+        .route-card span {
+            display: block;
+            color: var(--muted);
+        }
+
+        .route-card small {
+            display: block;
+            margin-top: 6px;
+            color: var(--ink);
+            line-height: 1.6;
+            font-size: 1.02rem;
+        }
+
+        .toolbar-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .toggle-images {
+            appearance: none;
+            border: 1px solid rgba(55, 126, 119, 0.22);
+            background: #eef4ec;
+            color: var(--teal);
+            border-radius: 999px;
+            padding: 10px 16px;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .toggle-images:hover {
+            background: #e5f0ea;
+        }
+
+        .transport-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .transport-figure-card {
+            margin: 0;
+        }
+
+        .transport-figure-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        .transport-figure-card small {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            line-height: 1.55;
+            font-size: 0.97rem;
+        }
+
+        body.compact-transport .transport-figure-card img {
+            display: none;
+        }
+
+        .route-card .line-pair {
+            padding: 8px 0;
+        }
+
+        .route-card .mt-line {
+            font-weight: 400;
+        }
+
+        .route-card .en-line {
+            font-size: 1.02rem;
+        }
+
+        .route-figure {
+            margin: 0;
+        }
+
+        .route-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .route-figure figcaption {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+
+        .line-pair {
+            padding: 10px 0;
+            border-top: 1px dashed rgba(95, 111, 103, 0.24);
+        }
+
+        .line-pair:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .mt-line {
+            font-weight: 700;
+        }
+
+        .en-line {
+            color: var(--muted);
+        }
+
+        .route-list {
+            margin: 12px 0 0;
+            padding-left: 18px;
+        }
+
+        .route-list li + li {
+            margin-top: 8px;
+        }
+
+        @media (max-width: 980px) {
+            .hero-body,
+            .vocab-grid,
+            .transport-card-grid,
+            .pattern-grid-transport,
+            .sentence-grid,
+            .question-grid,
+            .route-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Internal source note: this page was built from course materials about transport and travelling in Malta. -->
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
+    </header>
+
+    <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Transport and Travel</h1>
+                <p class="lead">
+                    A practical page for speaking about transport, daily travel, and simple routes in Malta with easy
+                    beginner-friendly Maltese.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">bil-mixi</span>
+                    <span class="pill">bit-tal-linja</span>
+                    <span class="pill">bil-ferry</span>
+                    <span class="pill">bir-rota</span>
+                    <span class="pill">bit-taxi</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Use This Page For</h2>
+                <ul>
+                    <li>naming common transport in Malta</li>
+                    <li>saying how you usually travel</li>
+                    <li>describing a route simply</li>
+                    <li>comparing different ways of travelling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#transport">Means of Transport</a></li>
+                <li><a href="#frequency">Frequency and Travel Words</a></li>
+                <li><a href="#grammar">Useful Grammar</a></li>
+                <li><a href="#route-example">Sliema to Valletta Example</a></li>
+                <li><a href="#alternatives">Alternative Routes</a></li>
+                <li><a href="#questions">Questions and Answers</a></li>
+                <li><a href="#story-bank">Story Bank</a></li>
+            </ul>
+            <p class="mini">
+                This page keeps the language simple and practical, so it can be reused in speaking tasks and short writing.
+            </p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card" id="transport">
+                <span class="tag">Section 1</span>
+                <h2>Means of Transport</h2>
+                <div class="toolbar-row">
+                    <button type="button" class="toggle-images" data-transport-toggle aria-pressed="false">Hide transport images</button>
+                    <span class="mini">Use compact mode when you want to focus on the words and route examples.</span>
+                </div>
+                <div class="transport-card-grid">
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/walk.svg" alt="Walking illustration"><strong>bil-mixi</strong><span>on foot</span><small>Jiena xi kultant immur bil-mixi.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/bus.svg" alt="Bus illustration"><strong>bit-tal-linja</strong><span>by bus</span><small>Kuljum ħafna nies imorru bit-tal-linja.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/car.svg" alt="Car illustration"><strong>bil-karozza</strong><span>by car</span><small>Hu jmur ix-xogħol bil-karozza.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/bicycle.svg" alt="Bicycle illustration"><strong>bir-rota</strong><span>by bicycle</span><small>Xi nies imorru bir-rota meta t-temp ikun sabiħ.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/ferry.svg" alt="Ferry illustration"><strong>bil-ferry</strong><span>by ferry</span><small>Bil-ferry taqsam malajr minn Tas-Sliema għall-Belt.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/taxi.svg" alt="Taxi illustration"><strong>bit-taxi</strong><span>by taxi</span><small>Bit-taxi tasal komdu u malajr.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/ship.svg" alt="Ship illustration"><strong>vapur</strong><span>ship / ferry</span><small>Meta mmorru Għawdex, naqbdu l-vapur.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/boat.svg" alt="Boat illustration"><strong>dgħajsa</strong><span>boat</span><small>Dgħajsa hija mezz ta' trasport fuq il-baħar.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/airplane.svg" alt="Airplane illustration"><strong>ajruplan</strong><span>airplane</span><small>Bl-ajruplan immorru minn pajjiż għal ieħor.</small></figure>
+                    <figure class="transport-figure-card"><img src="./assets/img/transport/scooter.svg" alt="Scooter illustration"><strong>mutur / scooter</strong><span>motorcycle / scooter</span><small>Xi nies jippreferu jmorru bil-mutur.</small></figure>
+                </div>
+            </section>
+
+            <section class="content-card" id="frequency">
+                <span class="tag">Section 2</span>
+                <h2>Frequency and Travel Words</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>kuljum</strong><span>every day</span><small>Kuljum naqbad tal-linja.</small></div>
+                    <div class="vocab-card"><strong>ta' spiss</strong><span>often</span><small>Ta' spiss immur bil-ferry.</small></div>
+                    <div class="vocab-card"><strong>xi kultant</strong><span>sometimes</span><small>Xi kultant immur bir-rota.</small></div>
+                    <div class="vocab-card"><strong>rari</strong><span>rarely</span><small>Rari nuża t-taxi.</small></div>
+                    <div class="vocab-card"><strong>malajr</strong><span>quickly</span><small>Bil-ferry tasal malajr.</small></div>
+                    <div class="vocab-card"><strong>bil-mod</strong><span>slowly</span><small>Meta hemm traffiku, il-vjaġġ ikun bil-mod.</small></div>
+                    <div class="vocab-card"><strong>it-traffiku</strong><span>traffic</span><small>Xi kultant it-traffiku jkun ħafna.</small></div>
+                    <div class="vocab-card"><strong>il-waqfa</strong><span>bus stop / stop</span><small>Il-waqfa hija viċin id-dar tiegħi.</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="grammar">
+                <span class="tag">Section 3</span>
+                <h2>Useful Grammar</h2>
+                <div class="pattern-grid-transport">
+                    <div class="pattern-card">
+                        <strong><code>bi + transport</code></strong>
+                        <span><code>bil-karozza</code>, <code>bil-ferry</code>, <code>bit-taxi</code>, <code>bir-rota</code>, <code>bit-tal-linja</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>Kuljum nuża ...</code></strong>
+                        <span>A safe frame for talking about everyday transport habits.</span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>Biex immur ... nuża ...</code></strong>
+                        <span><code>Biex immur il-Belt, nuża l-ferry.</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>naqbad / nieħu / nuża / immur / nasal</code></strong>
+                        <span>Useful route verbs for simple beginner descriptions.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="route-example">
+                <span class="tag">Route Example</span>
+                <h2>How To Go From Sliema To Valletta</h2>
+                <div class="route-grid">
+                    <figure class="route-figure">
+                        <img src="./assets/img/transport/sliema-valletta-route.png" alt="Route illustration from Sliema to Valletta">
+                        <figcaption>
+                            Route example from Sliema to Valletta based on the class map screenshot.
+                        </figcaption>
+                    </figure>
+                    <div class="route-card">
+                        <strong>Tweġiba sempliċi</strong>
+                        <span>Jekk inti Tas-Sliema u trid tmur il-Belt Valletta, tista' tmur bil-ferry, bit-tal-linja, bil-karozza, bir-rota jew bit-taxi.</span>
+                        <ul class="route-list">
+                            <li>Normalment il-ferry huwa l-aktar mezz qasir u prattiku għal din ir-rotta.</li>
+                            <li>Bħala eżempju ta' ħinijiet, il-ferry ta' spiss jitlaq kull tletin minuta u l-ewwel vjaġġ jista' jibda fis-06:45 mit-Tnejn sas-Sibt.</li>
+                            <li>Ir-rotta 15 bit-tal-linja hija wkoll għażla komuni minn Tas-Sliema għall-Belt, b'tluq filgħodu bħal 05:30, 06:00, 06:30 u 07:00.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="transport-note" style="margin-top:16px;">
+                    <h3>Expanded Example</h3>
+                    <div class="line-pair">
+                        <div class="mt-line">Jekk inti Tas-Sliema u trid tmur il-Belt Valletta, l-aktar triq faċli ġeneralment hija bil-ferry.</div>
+                        <div class="en-line">If you are in Sliema and you want to go to Valletta, the easiest route is generally by ferry.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">L-ewwel, timxi sa Sliema Ferry jew tasal hemm bir-rota jew bit-taxi.</div>
+                        <div class="en-line">First, you walk to Sliema Ferry or arrive there by bicycle or taxi.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Wara, tieħu l-ferry minn Tas-Sliema għall-Belt.</div>
+                        <div class="en-line">After that, you take the ferry from Sliema to Valletta.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Dan il-vjaġġ huwa qasir u normalment jieħu madwar kwart.</div>
+                        <div class="en-line">This trip is short and normally takes about fifteen minutes.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Jekk ma tridx taqsam bil-baħar, tista' wkoll taqbad bit-tal-linja.</div>
+                        <div class="en-line">If you do not want to cross by sea, you can also take the bus.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Bit-tal-linja l-vjaġġ huwa itwal u jista' jieħu bejn għoxrin u tletin minuta, u xi kultant aktar minħabba t-traffiku.</div>
+                        <div class="en-line">By bus the trip is longer and can take between twenty and thirty minutes, and sometimes more because of traffic.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Bil-karozza jew bit-taxi tmur madwar il-port, iżda hemm ħafna traffiku f'ċerti ħinijiet u xi kultant il-parkeġġ huwa diffiċli.</div>
+                        <div class="en-line">By car or taxi you go around the harbour, but there is a lot of traffic at certain times and parking can be difficult.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Bir-rota tista' tmur ukoll, speċjalment jekk it-temp ikun sabiħ, imma din it-triq tieħu aktar ħin mill-ferry.</div>
+                        <div class="en-line">You can also go by bicycle, especially if the weather is nice, but this route takes longer than the ferry.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="alternatives">
+                <span class="tag">Section 4</span>
+                <h2>Alternative Routes</h2>
+                <div class="sentence-grid">
+                    <div class="route-card">
+                        <strong>Bil-ferry</strong>
+                        <div class="line-pair">
+                            <div class="mt-line">Bil-ferry tasal malajr u b'mod dirett.</div>
+                            <div class="en-line">By ferry you arrive quickly and directly.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Din hija għażla komda għax ma tridx tmur madwar it-triq kollha tal-port.</div>
+                            <div class="en-line">This is a comfortable option because you do not need to go all around the harbour road.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Il-vjaġġ fuq l-ilma huwa qasir u normalment jieħu madwar kwart.</div>
+                            <div class="en-line">The trip on the water is short and normally takes about fifteen minutes.</div>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <strong>Bit-tal-linja</strong>
+                        <div class="line-pair">
+                            <div class="mt-line">Tista' wkoll taqbad bit-tal-linja minn Tas-Sliema għall-Belt.</div>
+                            <div class="en-line">You can also take the bus from Sliema to Valletta.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Din hija għażla tajba jekk ma tridx tuża l-ferry jew jekk inti diġà qrib il-waqfa.</div>
+                            <div class="en-line">This is a good option if you do not want to use the ferry or if you are already near the bus stop.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Il-vjaġġ jista' jieħu bejn għoxrin u tletin minuta, u xi kultant aktar minħabba t-traffiku.</div>
+                            <div class="en-line">The trip can take between twenty and thirty minutes, and sometimes longer because of traffic.</div>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <strong>Bil-karozza</strong>
+                        <div class="line-pair">
+                            <div class="mt-line">Bil-karozza tmur madwar il-port u tasal il-Belt bit-triq.</div>
+                            <div class="en-line">By car you go around the harbour and arrive in Valletta by road.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Din tista' tkun għażla tajba jekk inti diġà fil-karozza jew jekk għandek ħafna affarijiet miegħek.</div>
+                            <div class="en-line">This can be a good option if you are already in the car or if you have many things with you.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Madankollu, it-traffiku u l-parkeġġ kultant jagħmlu l-vjaġġ aktar twil.</div>
+                            <div class="en-line">However, traffic and parking sometimes make the trip longer.</div>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <strong>Bir-rota</strong>
+                        <div class="line-pair">
+                            <div class="mt-line">Bir-rota tista' tmur ukoll, speċjalment meta t-temp ikun sabiħ.</div>
+                            <div class="en-line">You can also go by bicycle, especially when the weather is nice.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Din hija għażla sabiħa għal min iħobb jiċċaqlaq u ma jridx juża karozza.</div>
+                            <div class="en-line">This is a nice option for someone who likes to move around and does not want to use a car.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Normalment tieħu aktar ħin mill-ferry, iżda hija għażla tajba għal vjaġġ qasir meta t-temp ikun tajjeb.</div>
+                            <div class="en-line">It normally takes more time than the ferry, but it is a good option for a short trip when the weather is good.</div>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <strong>Bit-taxi</strong>
+                        <div class="line-pair">
+                            <div class="mt-line">Bit-taxi tasal komdu u mingħajr ħafna mixi.</div>
+                            <div class="en-line">By taxi you arrive comfortably and without much walking.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Din hija għażla tajba jekk għandek basktijiet, jekk tkun mgħaġġel, jew jekk ma tridx tistenna.</div>
+                            <div class="en-line">This is a good option if you have bags, if you are in a hurry, or if you do not want to wait.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Iż-żmien huwa simili għall-karozza u jiddependi mit-traffiku.</div>
+                            <div class="en-line">The time is similar to travelling by car and depends on traffic.</div>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <strong>Rakkomandazzjoni sempliċi</strong>
+                        <div class="line-pair">
+                            <div class="mt-line">Għal din ir-rotta, jien nagħżel il-ferry għax huwa qasir, sabiħ u prattiku.</div>
+                            <div class="en-line">For this route, I choose the ferry because it is short, pleasant, and practical.</div>
+                        </div>
+                        <div class="line-pair">
+                            <div class="mt-line">Għal student tal-bidu, il-ferry spiss ikun l-aktar tweġiba sempliċi u naturali għal dan l-eżempju.</div>
+                            <div class="en-line">For a beginner student, the ferry is often the simplest and most natural answer for this example.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="questions">
+                <span class="tag">Section 5</span>
+                <h2>Questions and Answers</h2>
+                <div class="question-grid">
+                    <div class="question-card"><strong>Kif tmur il-Belt?</strong><span>Jien immur il-Belt bil-ferry jew bit-tal-linja.</span></div>
+                    <div class="question-card"><strong>Liema mezz ta' trasport tuża kuljum?</strong><span>Kuljum naqbad bit-tal-linja.</span></div>
+                    <div class="question-card"><strong>Xi kultant tmur bir-rota?</strong><span>Iva, xi kultant immur bir-rota.</span></div>
+                    <div class="question-card"><strong>Għaliex tuża l-ferry?</strong><span>Għax huwa mgħaġġel u l-vjaġġ huwa sabiħ.</span></div>
+                    <div class="question-card"><strong>Meta tuża t-taxi?</strong><span>Rari nuża t-taxi, imma nużah meta għandi bżonn nasal malajr.</span></div>
+                    <div class="question-card"><strong>Kemm jieħu l-vjaġġ bil-ferry?</strong><span>Il-vjaġġ bil-ferry jieħu madwar kwart.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="story-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>Story Bank</h2>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. Kuljum ħafna nies jaqbdu bit-tal-linja.</strong><span>Every day many people take the bus.</span></div>
+                    <div class="sentence-card"><strong>2. Xi kultant immur bil-mixi.</strong><span>Sometimes I go on foot.</span></div>
+                    <div class="sentence-card"><strong>3. Rari nuża t-taxi.</strong><span>I rarely use a taxi.</span></div>
+                    <div class="sentence-card"><strong>4. Hu jmur ix-xogħol bil-karozza.</strong><span>He goes to work by car.</span></div>
+                    <div class="sentence-card"><strong>5. Oħti tmur bir-rota.</strong><span>My sister goes by bicycle.</span></div>
+                    <div class="sentence-card"><strong>6. Meta mmorru Għawdex, naqbdu l-vapur.</strong><span>When we go to Gozo, we take the ferry.</span></div>
+                    <div class="sentence-card"><strong>7. Bl-ajruplan immorru minn pajjiż għal ieħor.</strong><span>By airplane we go from one country to another.</span></div>
+                    <div class="sentence-card"><strong>8. Bil-mixi huwa tajjeb għal triq qasira.</strong><span>Walking is good for a short route.</span></div>
+                    <div class="sentence-card"><strong>9. Bit-taxi tasal komdu.</strong><span>By taxi you arrive comfortably.</span></div>
+                    <div class="sentence-card"><strong>10. Jekk inti Tas-Sliema, tista' tmur il-Belt bil-ferry.</strong><span>If you are in Sliema, you can go to Valletta by ferry.</span></div>
+                    <div class="sentence-card"><strong>11. Il-ferry jitlaq ta' spiss matul il-jum.</strong><span>The ferry leaves often during the day.</span></div>
+                    <div class="sentence-card"><strong>12. Eżempju ta' l-ewwel ferry huwa fis-06:45 mit-Tnejn sas-Sibt.</strong><span>An example of the first ferry is at 06:45 from Monday to Saturday.</span></div>
+                    <div class="sentence-card"><strong>13. Il-vjaġġ bil-ferry huwa qasir.</strong><span>The ferry trip is short.</span></div>
+                    <div class="sentence-card"><strong>14. Il-vjaġġ jieħu madwar kwart.</strong><span>The trip takes about fifteen minutes.</span></div>
+                    <div class="sentence-card"><strong>15. Tista' wkoll taqbad bit-tal-linja minn Tas-Sliema.</strong><span>You can also take the bus from Sliema.</span></div>
+                    <div class="sentence-card"><strong>16. Bħala eżempju, ir-rotta 15 għandha tluq fil-05:30, 06:00 u 06:30.</strong><span>As an example, route 15 has departures at 05:30, 06:00 and 06:30.</span></div>
+                    <div class="sentence-card"><strong>17. Bit-tal-linja l-vjaġġ jista' jieħu bejn għoxrin u tletin minuta.</strong><span>By bus the trip can take between twenty and thirty minutes.</span></div>
+                    <div class="sentence-card"><strong>18. Xi kultant jieħu aktar minħabba t-traffiku.</strong><span>Sometimes it takes longer because of traffic.</span></div>
+                    <div class="sentence-card"><strong>19. Bil-karozza tmur madwar il-port.</strong><span>By car you go around the harbour.</span></div>
+                    <div class="sentence-card"><strong>20. Bil-karozza l-problema tista' tkun il-parkeġġ.</strong><span>By car the problem can be parking.</span></div>
+                    <div class="sentence-card"><strong>21. Bir-rota l-vjaġġ huwa itwal mill-ferry.</strong><span>By bicycle the trip is longer than the ferry.</span></div>
+                    <div class="sentence-card"><strong>22. Imma bir-rota hija għażla sabiħa meta t-temp ikun tajjeb.</strong><span>But by bicycle it is a nice choice when the weather is good.</span></div>
+                    <div class="sentence-card"><strong>23. Jien inħobb il-ferry għax nara l-baħar.</strong><span>I like the ferry because I see the sea.</span></div>
+                    <div class="sentence-card"><strong>24. Mill-ferry tara veduta sabiħa tal-port.</strong><span>From the ferry you see a beautiful view of the harbour.</span></div>
+                    <div class="sentence-card"><strong>25. It-taxi hija tajba meta għandi bagalja.</strong><span>A taxi is good when I have luggage.</span></div>
+                    <div class="sentence-card"><strong>26. Meta għandi ftit ħin, nuża t-taxi.</strong><span>When I have little time, I use the taxi.</span></div>
+                    <div class="sentence-card"><strong>27. Jekk it-triq hija qasira, nista' nimxi.</strong><span>If the route is short, I can walk.</span></div>
+                    <div class="sentence-card"><strong>28. Għal din it-triq minn Tas-Sliema għall-Belt, il-ferry huwa l-aktar prattiku.</strong><span>For this route from Sliema to Valletta, the ferry is the most practical.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/transport-compact-toggle.js"></script>
+</body>
+</html>
+
