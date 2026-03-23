@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places and Events Guide</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .top-home {
+            margin-bottom: 18px;
+        }
+
+        .top-home a {
+            color: var(--teal);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .top-home a:hover {
+            text-decoration: underline;
+        }
+
+        .vocab-grid,
+        .pattern-grid-places,
+        .sentence-grid,
+        .question-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .vocab-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .pattern-grid-places {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .sentence-grid,
+        .question-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .vocab-card,
+        .pattern-card,
+        .sentence-card,
+        .question-card,
+        .lesson-note {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            min-width: 0;
+        }
+
+        .vocab-card strong,
+        .pattern-card strong,
+        .sentence-card strong,
+        .question-card strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .vocab-card span,
+        .pattern-card span,
+        .sentence-card span,
+        .question-card span {
+            display: block;
+            color: var(--muted);
+        }
+
+        .vocab-card small,
+        .lesson-note p {
+            color: var(--muted);
+        }
+
+        .source-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0 0;
+        }
+
+        .source-chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.84rem;
+            background: rgba(47, 143, 131, 0.10);
+            color: var(--teal);
+            border: 1px solid rgba(47, 143, 131, 0.18);
+        }
+
+        .lesson-note h3 {
+            margin-bottom: 10px;
+        }
+
+        .line-pair {
+            padding: 10px 0;
+            border-top: 1px dashed rgba(95, 111, 103, 0.24);
+        }
+
+        .line-pair:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .mt-line {
+            font-weight: 700;
+        }
+
+        .en-line {
+            color: var(--muted);
+        }
+
+        @media (max-width: 980px) {
+            .hero-body,
+            .vocab-grid,
+            .pattern-grid-places,
+            .sentence-grid,
+            .question-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Internal source note: this page was built from course materials about places of interest and events in Malta. -->
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
+    </header>
+
+    <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Places and Events</h1>
+                <p class="lead">
+                    A practical guide for talking about interesting places, museums, historic sites, festivals, and
+                    simple personal preferences about where you like to go in Malta.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">places of interest</span>
+                    <span class="pill">events and festivals</span>
+                    <span class="pill">describing places</span>
+                    <span class="pill">inħobb immur</span>
+                    <span class="pill">darba mort</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Use This Page For</h2>
+                <ul>
+                    <li>naming interesting places in Malta</li>
+                    <li>describing a place with simple adjectives</li>
+                    <li>saying where you like to go</li>
+                    <li>writing short paragraphs about places and events</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#places">Places of Interest</a></li>
+                <li><a href="#landscape-culture">Landscape and Culture</a></li>
+                <li><a href="#events-food">Events and Festival Food</a></li>
+                <li><a href="#adjectives">Adjectives for Description</a></li>
+                <li><a href="#patterns">Useful Patterns</a></li>
+                <li><a href="#models">Ready-Made Models</a></li>
+                <li><a href="#questions">Questions and Answers</a></li>
+                <li><a href="#story-bank">Story Bank</a></li>
+            </ul>
+            <p class="mini">
+                This page focuses on simple, reusable speaking and writing patterns for places, visits, and cultural
+                events.
+            </p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card" id="places">
+                <span class="tag">Section 1</span>
+                <h2>Places of Interest</h2>
+                <p class="muted">Core place vocabulary and named sites from the course material.</p>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>post / postijiet</strong><span>place / places</span><small>F'Malta hawn ħafna postijiet interessanti.</small></div>
+                    <div class="vocab-card"><strong>Blue Grotto</strong><span>Blue Grotto</span><small>Darba mort Blue Grotto.</small></div>
+                    <div class="vocab-card"><strong>Muża</strong><span>Muża museum</span><small>Darba mort Muża nara esebizzjoni tal-arti.</small></div>
+                    <div class="vocab-card"><strong>il-Belt Valletta</strong><span>Valletta</span><small>Muża qiegħed il-Belt Valletta.</small></div>
+                    <div class="vocab-card"><strong>l-Imdina</strong><span>Mdina</span><small>L-Imdina hija belt qadima u sabiħa.</small></div>
+                    <div class="vocab-card"><strong>il-Katakombi</strong><span>the Catacombs</span><small>Meta nkun ir-Rabat, inħobb inżur il-Katakombi.</small></div>
+                    <div class="vocab-card"><strong>il-Palazz tal-Inkwiżitur</strong><span>the Inquisitor's Palace</span><small>Jien inħobb immur il-Palazz tal-Inkwiżitur.</small></div>
+                    <div class="vocab-card"><strong>Ġgantija</strong><span>Ġgantija temple complex</span><small>Il-Ġgantija huwa maqdes kbir.</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="landscape-culture">
+                <span class="tag">Section 2</span>
+                <h2>Landscape and Culture</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>kaskata / kaskati</strong><span>waterfall / waterfalls</span><small>Malta m'għandhiex kaskati kbar.</small></div>
+                    <div class="vocab-card"><strong>xmara / xmajjar</strong><span>river / rivers</span><small>xmajjar naturali</small></div>
+                    <div class="vocab-card"><strong>veduta / veduti</strong><span>view / views</span><small>il-veduti sbieħ</small></div>
+                    <div class="vocab-card"><strong>irdum / irdumijiet</strong><span>cliff / cliffs</span><small>l-irdumijiet ta' Ħad-Dingli</small></div>
+                    <div class="vocab-card"><strong>mużew / mużewijiet</strong><span>museum / museums</span><small>Inħobb immur ġo mużewijiet.</small></div>
+                    <div class="vocab-card"><strong>maqdes / tempju</strong><span>temple / shrine</span><small>Il-Ġgantija huwa maqdes kbir.</small></div>
+                    <div class="vocab-card"><strong>monument</strong><span>monument</span><small>Monument famuż</small></div>
+                    <div class="vocab-card"><strong>pjazza</strong><span>square</span><small>Pjazza sabiħa fil-belt.</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="events-food">
+                <span class="tag">Section 3</span>
+                <h2>Events and Festival Food</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>karnival</strong><span>carnival</span><small>Ikel tal-Karnival</small></div>
+                    <div class="vocab-card"><strong>prinjolata</strong><span>prinjolata dessert</span><small>Il-prinjolata hija ħelwa u popolari.</small></div>
+                    <div class="vocab-card"><strong>perlini</strong><span>sugar pearls / sweets</span><small>Il-prinjolata u l-perlini</small></div>
+                    <div class="vocab-card"><strong>iċ-ċikkulata</strong><span>chocolate</span><small>Fil-prinjolata hemm iċ-ċikkulata.</small></div>
+                    <div class="vocab-card"><strong>krema</strong><span>cream</span><small>Il-ħlewwa għandha krema.</small></div>
+                    <div class="vocab-card"><strong>ġewż</strong><span>walnuts</span><small>Fil-prinjolata hemm ġewż.</small></div>
+                    <div class="vocab-card"><strong>festival tal-mużika</strong><span>music festival</span><small>Inħobb immur festival tal-mużika.</small></div>
+                    <div class="vocab-card"><strong>festival tal-birra</strong><span>beer festival</span><small>Hemm festival tal-birra fis-sajf.</small></div>
+                    <div class="vocab-card"><strong>festival tal-inbid</strong><span>wine festival</span><small>Huma jmorru festival tal-inbid.</small></div>
+                    <div class="vocab-card"><strong>esebizzjoni / wirja</strong><span>exhibition</span><small>Darba mort Muża nara esebizzjoni tal-arti.</small></div>
+                    <div class="vocab-card"><strong>tradizzjoni</strong><span>tradition</span><small>Il-karnival huwa tradizzjoni popolari.</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="adjectives">
+                <span class="tag">Section 4</span>
+                <h2>Adjectives for Description</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>qadim / qadima</strong><span>old</span><small>knisja qadima</small></div>
+                    <div class="vocab-card"><strong>sabiħ / sabiħa</strong><span>beautiful</span><small>ġnien sabiħ</small></div>
+                    <div class="vocab-card"><strong>interessanti</strong><span>interesting</span><small>mużew interessanti</small></div>
+                    <div class="vocab-card"><strong>famuż / famuża</strong><span>famous</span><small>monument famuż</small></div>
+                    <div class="vocab-card"><strong>kwiet / kwieta</strong><span>quiet</span><small>raħal kwiet</small></div>
+                    <div class="vocab-card"><strong>popolari</strong><span>popular</span><small>bajja popolari</small></div>
+                    <div class="vocab-card"><strong>modern / moderna</strong><span>modern</span><small>bini modern</small></div>
+                    <div class="vocab-card"><strong>għoli / għolja</strong><span>high / tall</span><small>bini għoli</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="patterns">
+                <span class="tag">Section 5</span>
+                <h2>Useful Patterns</h2>
+                <div class="pattern-grid-places">
+                    <div class="pattern-card">
+                        <strong><code>noun + adjective</code></strong>
+                        <span><code>knisja qadima</code>, <code>mużew interessanti</code>, <code>monument famuż</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>Jien immur, int tmur, huwa jmur ...</code></strong>
+                        <span>Present tense of <code>mar</code> for speaking about where you go.</span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>Inħobb immur + place / event</code></strong>
+                        <span><code>Inħobb immur festivals.</code> / <code>Inħobb immur ġo mużewijiet.</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>Darba mort + place</code></strong>
+                        <span><code>Darba mort Blue Grotto.</code> / <code>Darba mort Muża.</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>Meta nkun + place, inħobb + verb</code></strong>
+                        <span><code>Meta nkun ir-Rabat, inħobb inżur il-Katakombi.</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>F'Malta nistgħu naraw ...</code></strong>
+                        <span><code>F'Malta nistgħu naraw ħafna affarijiet interessanti.</code></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="models">
+                <span class="tag">Section 6</span>
+                <h2>Ready-Made Models</h2>
+                <div class="lesson-note">
+                    <h3>Short speaking paragraph</h3>
+                    <div class="line-pair">
+                        <div class="mt-line">Jien inħobb immur postijiet storiċi.</div>
+                        <div class="en-line">I like to go to historical places.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">L-Imdina hija belt qadima u sabiħa.</div>
+                        <div class="en-line">Mdina is an old and beautiful city.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Meta nkun ir-Rabat, inħobb inżur il-Katakombi.</div>
+                        <div class="en-line">When I am in Rabat, I like to visit the Catacombs.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Darba mort Muża nara esebizzjoni tal-arti.</div>
+                        <div class="en-line">Once I went to Muża to see an art exhibition.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">F'Malta hawn ħafna postijiet interessanti.</div>
+                        <div class="en-line">In Malta there are many interesting places.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="questions">
+                <span class="tag">Section 7</span>
+                <h2>Questions and Answers</h2>
+                <div class="question-grid">
+                    <div class="question-card"><strong>Liema post tħobb?</strong><span>Jien inħobb l-Imdina.</span></div>
+                    <div class="question-card"><strong>Għaliex tħobb l-Imdina?</strong><span>Għax hija qadima u sabiħa.</span></div>
+                    <div class="question-card"><strong>Fejn tħobb tmur?</strong><span>Inħobb immur ġo mużewijiet.</span></div>
+                    <div class="question-card"><strong>X'tista' tara f'Malta?</strong><span>Nistgħu naraw postijiet interessanti, veduti sbieħ u monumenti famużi.</span></div>
+                    <div class="question-card"><strong>Darba mort Muża?</strong><span>Iva, darba mort Muża nara esebizzjoni.</span></div>
+                    <div class="question-card"><strong>X'inhu festival tal-mużika?</strong><span>Huwa avveniment b'ħafna mużika u nies.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="story-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>Story Bank</h2>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. F'Malta hawn ħafna postijiet interessanti.</strong><span>In Malta there are many interesting places.</span></div>
+                    <div class="sentence-card"><strong>2. L-Imdina hija belt qadima u sabiħa.</strong><span>Mdina is an old and beautiful city.</span></div>
+                    <div class="sentence-card"><strong>3. Il-Katakombi huma post storiku famuż.</strong><span>The Catacombs are a famous historical place.</span></div>
+                    <div class="sentence-card"><strong>4. Inħobb immur ġo mużewijiet.</strong><span>I like to go to museums.</span></div>
+                    <div class="sentence-card"><strong>5. Darba mort Blue Grotto.</strong><span>Once I went to Blue Grotto.</span></div>
+                    <div class="sentence-card"><strong>6. Darba mort Muża nara esebizzjoni tal-arti.</strong><span>Once I went to Muża to see an art exhibition.</span></div>
+                    <div class="sentence-card"><strong>7. Ġgantija huwa maqdes kbir.</strong><span>Ġgantija is a big temple.</span></div>
+                    <div class="sentence-card"><strong>8. L-irdumijiet ta' Ħad-Dingli huma sbieħ ħafna.</strong><span>The Dingli cliffs are very beautiful.</span></div>
+                    <div class="sentence-card"><strong>9. Il-veduti huma sbieħ u kwieti.</strong><span>The views are beautiful and quiet.</span></div>
+                    <div class="sentence-card"><strong>10. Malta m'għandhiex kaskati kbar.</strong><span>Malta does not have big waterfalls.</span></div>
+                    <div class="sentence-card"><strong>11. Inħobb immur festivals fis-sajf.</strong><span>I like to go to festivals in summer.</span></div>
+                    <div class="sentence-card"><strong>12. Hemm festival tal-mużika fil-belt.</strong><span>There is a music festival in the city.</span></div>
+                    <div class="sentence-card"><strong>13. Xi nies iħobbu festival tal-birra.</strong><span>Some people like the beer festival.</span></div>
+                    <div class="sentence-card"><strong>14. Oħrajn iħobbu festival tal-inbid.</strong><span>Others like the wine festival.</span></div>
+                    <div class="sentence-card"><strong>15. Il-karnival huwa tradizzjoni popolari.</strong><span>Carnival is a popular tradition.</span></div>
+                    <div class="sentence-card"><strong>16. Il-prinjolata hija ħelwa tradizzjonali.</strong><span>Prinjolata is a traditional dessert.</span></div>
+                    <div class="sentence-card"><strong>17. Fil-prinjolata hemm krema u ċikkulata.</strong><span>In prinjolata there is cream and chocolate.</span></div>
+                    <div class="sentence-card"><strong>18. Xi kultant hemm ukoll ġewż u perlini.</strong><span>Sometimes there are also walnuts and sugar pearls.</span></div>
+                    <div class="sentence-card"><strong>19. Jien inħobb postijiet storiċi.</strong><span>I like historical places.</span></div>
+                    <div class="sentence-card"><strong>20. Oħti tħobb postijiet moderni.</strong><span>My sister likes modern places.</span></div>
+                    <div class="sentence-card"><strong>21. Huwa jmur il-pjazza kull nhar ta' Sibt.</strong><span>He goes to the square every Saturday.</span></div>
+                    <div class="sentence-card"><strong>22. Hija tmur il-mużew mal-ħbieb tagħha.</strong><span>She goes to the museum with her friends.</span></div>
+                    <div class="sentence-card"><strong>23. Aħna mmorru l-Belt Valletta xi kultant.</strong><span>We go to Valletta sometimes.</span></div>
+                    <div class="sentence-card"><strong>24. Intom tmorru l-karnival?</strong><span>Do you go to carnival?</span></div>
+                    <div class="sentence-card"><strong>25. Huma jmorru jaraw monument famuż.</strong><span>They go to see a famous monument.</span></div>
+                    <div class="sentence-card"><strong>26. F'Malta nistgħu naraw ħafna affarijiet interessanti.</strong><span>In Malta we can see many interesting things.</span></div>
+                    <div class="sentence-card"><strong>27. Il-bini modern huwa għoli ħafna.</strong><span>The modern building is very tall.</span></div>
+                    <div class="sentence-card"><strong>28. Ir-raħal huwa kwiet u sabiħ.</strong><span>The village is quiet and beautiful.</span></div>
+                    <div class="sentence-card"><strong>29. Il-monument huwa famuż.</strong><span>The monument is famous.</span></div>
+                    <div class="sentence-card"><strong>30. Il-knisja hija qadima.</strong><span>The church is old.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
