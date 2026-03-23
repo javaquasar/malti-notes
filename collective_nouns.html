@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collective in Maltese</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .top-home {
+            margin-bottom: 18px;
+        }
+
+        .top-home a {
+            color: var(--teal);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .top-home a:hover {
+            text-decoration: underline;
+        }
+
+        .vocab-grid,
+        .pattern-grid,
+        .sentence-grid,
+        .question-grid,
+        .mistake-grid,
+        .triple-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .vocab-grid,
+        .pattern-grid,
+        .sentence-grid,
+        .question-grid,
+        .mistake-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .triple-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .vocab-card,
+        .pattern-card,
+        .sentence-card,
+        .question-card,
+        .mistake-card,
+        .lesson-note,
+        .triple-card {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            min-width: 0;
+        }
+
+        .vocab-card strong,
+        .pattern-card strong,
+        .sentence-card strong,
+        .question-card strong,
+        .mistake-card strong,
+        .triple-card strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .vocab-card span,
+        .pattern-card span,
+        .sentence-card span,
+        .question-card span,
+        .mistake-card span,
+        .triple-card span {
+            display: block;
+            color: var(--muted);
+        }
+
+        .vocab-card small,
+        .lesson-note p,
+        .triple-card small {
+            color: var(--muted);
+        }
+
+        .lesson-note h3,
+        .lesson-note h4 {
+            margin-bottom: 10px;
+        }
+
+        .source-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0 0;
+        }
+
+        .source-chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.84rem;
+            background: rgba(47, 143, 131, 0.10);
+            color: var(--teal);
+            border: 1px solid rgba(47, 143, 131, 0.18);
+        }
+
+        .line-pair {
+            padding: 10px 0;
+            border-top: 1px dashed rgba(95, 111, 103, 0.24);
+        }
+
+        .line-pair:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .mt-line {
+            font-weight: 700;
+        }
+
+        .en-line {
+            color: var(--muted);
+        }
+
+        .triple-card code {
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 980px) {
+            .hero-body,
+            .vocab-grid,
+            .pattern-grid,
+            .sentence-grid,
+            .question-grid,
+            .mistake-grid,
+            .triple-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Internal source note: this page was built from course materials about the collective in Maltese, especially food, fruit, vegetables, and insects. -->
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
+    </header>
+
+    <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>The Collective in Maltese</h1>
+                <p class="lead">
+                    A practical page about the Maltese collective, with fruit, vegetables, insects, food, adjective agreement,
+                    shopping phrases, and ready-made speaking models.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">frott</span>
+                    <span class="pill">ħaxix</span>
+                    <span class="pill">insetti</span>
+                    <span class="pill">ikel</span>
+                    <span class="pill">shopping language</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Use This Page For</h2>
+                <ul>
+                    <li>understanding what the collective means</li>
+                    <li>seeing singular and collective side by side</li>
+                    <li>using adjectives correctly with collective nouns</li>
+                    <li>speaking about shopping, food, and quantities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#core-idea">Core Idea</a></li>
+                <li><a href="#main-patterns">Main Patterns</a></li>
+                <li><a href="#fruit">Fruit</a></li>
+                <li><a href="#vegetables">Vegetables</a></li>
+                <li><a href="#insects">Insects and Small Animals</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#adjectives">Collective With Adjectives</a></li>
+                <li><a href="#shopping">Shopping and Quantity</a></li>
+                <li><a href="#questions">Questions and Answers</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#practice-bank">Practice Bank</a></li>
+            </ul>
+            <p class="mini">
+                The most important idea is simple: the collective often talks about a group or quantity, but adjectives
+                and verbs usually stay in the singular.
+            </p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card" id="core-idea">
+                <span class="tag">Section 1</span>
+                <h2>Core Idea</h2>
+                <div class="lesson-note">
+                    <h3>What the collective shows</h3>
+                    <div class="line-pair">
+                        <div class="mt-line">Il-kollettiv fil-Malti juri ġabra ta' oġġetti tal-istess għamla, kwalità jew tip.</div>
+                        <div class="en-line">The collective in Maltese shows a collection of objects of the same form, quality, or type.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Għalkemm juri sens ta' kwantità, ħafna drabi jieħu aġġettiv u verb fis-singular.</div>
+                        <div class="en-line">Even though it shows quantity, it often takes an adjective and a verb in the singular.</div>
+                    </div>
+                    <div class="source-row">
+                        <span class="source-chip">core lesson definition</span>
+                        <span class="source-chip">adjective agreement</span>
+                        <span class="source-chip">shopping usage</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="main-patterns">
+                <span class="tag">Section 2</span>
+                <h2>Main Patterns</h2>
+                <div class="triple-grid">
+                    <div class="triple-card">
+                        <strong>Singular</strong>
+                        <span>one item</span>
+                        <code>tuffieħa</code>
+                        <small>one apple</small>
+                    </div>
+                    <div class="triple-card">
+                        <strong>Collective</strong>
+                        <span>fruit / food / insects in general or in quantity</span>
+                        <code>tuffieħ</code>
+                        <small>apples as a group or quantity</small>
+                    </div>
+                    <div class="triple-card">
+                        <strong>Counted Form</strong>
+                        <span>when the lesson gives a number + plural form</span>
+                        <code>żewġ basliet</code>
+                        <small>two onions</small>
+                    </div>
+                    <div class="triple-card">
+                        <strong>Specific Number</strong>
+                        <span>use the plural when counting individual items</span>
+                        <code>żewġ larinġiet</code>
+                        <small>two oranges</small>
+                    </div>
+                    <div class="triple-card">
+                        <strong>Large Quantity</strong>
+                        <span>use the collective with much, some, kilo, half kilo</span>
+                        <code>ħafna larinġ</code>
+                        <small>a lot of oranges</small>
+                    </div>
+                    <div class="triple-card">
+                        <strong>Adjective Rule</strong>
+                        <span>the collective usually takes the masculine singular adjective</span>
+                        <code>tuffieħ aħdar</code>
+                        <small>green apples / apple fruit</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="fruit">
+                <span class="tag">Section 3</span>
+                <h2>Fruit</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>tuffieħa → tuffieħ</strong><span>apple → apples / apple fruit</span><small>Tuffieħa ħadra → tuffieħ aħdar</small></div>
+                    <div class="vocab-card"><strong>banana → banana</strong><span>banana → bananas</span><small>In the lesson this stays feminine.</small></div>
+                    <div class="vocab-card"><strong>larinġa → larinġ</strong><span>orange → oranges</span><small>Example counted form: żewġ larinġiet</small></div>
+                    <div class="vocab-card"><strong>lanġasa → lanġas</strong><span>pear → pears</span><small>kilo u nofs lanġas</small></div>
+                    <div class="vocab-card"><strong>mandolina → mandolin</strong><span>mandarin → mandarins</span><small>kilo mandolin</small></div>
+                    <div class="vocab-card"><strong>dulliegħa → dulliegħ</strong><span>watermelon → watermelons</span><small>Example counted form: żewġ dulligħat</small></div>
+                    <div class="vocab-card"><strong>bettieħa → bettieħ</strong><span>melon → melons</span><small>Bettieħa friska → bettieħ frisk</small></div>
+                    <div class="vocab-card"><strong>ħawħa → ħawħ</strong><span>peach → peaches</span><small>fruit vocabulary from the lesson list</small></div>
+                    <div class="vocab-card"><strong>frawla → frawli</strong><span>strawberry → strawberries</span><small>used in the shopping story</small></div>
+                    <div class="vocab-card"><strong>lumija → lumi</strong><span>lemon → lemons</span><small>Lumija safra → lumi isfar</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="vegetables">
+                <span class="tag">Section 4</span>
+                <h2>Vegetables</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>ħassa → ħass</strong><span>lettuce → lettuce</span><small>Ħassa friska → ħass frisk</small></div>
+                    <div class="vocab-card"><strong>pastarda → pastard</strong><span>cauliflower → cauliflowers</span><small>lesson list item</small></div>
+                    <div class="vocab-card"><strong>tadama → tadam</strong><span>tomato → tomatoes</span><small>Tadama ħamra → tadam aħmar</small></div>
+                    <div class="vocab-card"><strong>basla → basal</strong><span>onion → onions</span><small>Example counted form: żewġ basliet</small></div>
+                    <div class="vocab-card"><strong>patata → patata</strong><span>potato → potatoes</span><small>wiżna patata</small></div>
+                    <div class="vocab-card"><strong>tewma → tewm</strong><span>garlic → garlic</span><small>Tewma żgħira → tewm żgħir</small></div>
+                    <div class="vocab-card"><strong>faqqiegħa → faqqiegħ</strong><span>mushroom → mushrooms</span><small>lesson list item</small></div>
+                    <div class="vocab-card"><strong>ħjara → ħjar</strong><span>cucumber → cucumbers</span><small>Ħjara ħadra → ħjar aħdar</small></div>
+                    <div class="vocab-card"><strong>brunġiela → brunġiel</strong><span>aubergine → aubergines</span><small>naqra brunġiel</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="insects">
+                <span class="tag">Section 5</span>
+                <h2>Insects and Small Animals</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>nemla → nemel</strong><span>ant → ants</span><small>Nemel iswed</small></div>
+                    <div class="vocab-card"><strong>nemusa → nemus</strong><span>mosquito → mosquitoes</span><small>revision slide example</small></div>
+                    <div class="vocab-card"><strong>dubbiena → dubbien</strong><span>fly → flies</span><small>Dubbiena maħmuġa → dubbien maħmuġ</small></div>
+                    <div class="vocab-card"><strong>wirdiena → wirdien</strong><span>cockroach → cockroaches</span><small>lesson list item</small></div>
+                    <div class="vocab-card"><strong>naħla → naħal</strong><span>bee → bees</span><small>Naħla bieżla → naħal bieżel</small></div>
+                    <div class="vocab-card"><strong>żunżana → żunżan</strong><span>wasp → wasps</span><small>lesson list item</small></div>
+                    <div class="vocab-card"><strong>dudu → dud</strong><span>worm / bug → worms / bugs</span><small>Dudu twil → dud twil</small></div>
+                    <div class="vocab-card"><strong>brimba → brimb</strong><span>spider → spiders</span><small>lesson list item</small></div>
+                    <div class="vocab-card"><strong>bebbuxu → bebbux</strong><span>snail → snails</span><small>Bebbuxu kbir → bebbux kbir</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="food">
+                <span class="tag">Section 6</span>
+                <h2>Food</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>ġobna → ġobon</strong><span>cheese → cheese / cheeses</span><small>Ġobna tajba → ġobon tajjeb</small></div>
+                    <div class="vocab-card"><strong>ħobża → ħobż</strong><span>bread loaf → bread</span><small>Ħobża tajba → ħobż tajjeb</small></div>
+                    <div class="vocab-card"><strong>tiġieġa → tiġieġ</strong><span>chicken → chicken</span><small>food list item</small></div>
+                    <div class="vocab-card"><strong>bajda → bajd</strong><span>egg → eggs</span><small>revision slide example</small></div>
+                    <div class="vocab-card"><strong>laħma → laħam</strong><span>meat cut → meat</span><small>food list item</small></div>
+                    <div class="vocab-card"><strong>ħelwa → ħelu</strong><span>sweet → sweets</span><small>revision slide example</small></div>
+                    <div class="vocab-card"><strong>ħuta → ħut</strong><span>fish → fish</span><small>Ħuta friska → ħut frisk</small></div>
+                    <div class="vocab-card"><strong>rossa → ross</strong><span>grain of rice → rice</span><small>Rossa bajda → ross abjad</small></div>
+                    <div class="vocab-card"><strong>melħa → melħ</strong><span>salt grain → salt</span><small>food list item</small></div>
+                    <div class="vocab-card"><strong>zokkor</strong><span>sugar</span><small>listed directly as collective-style food vocabulary</small></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="adjectives">
+                <span class="tag">Section 7</span>
+                <h2>Collective With Adjectives</h2>
+                <div class="lesson-note">
+                    <h3>Singular adjective vs collective adjective</h3>
+                    <div class="line-pair">
+                        <div class="mt-line">Tuffieħa ħamra → tuffieħ aħmar</div>
+                        <div class="en-line">Red apple → red apples / apple fruit</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Lanġasa tajba → lanġas tajjeb</div>
+                        <div class="en-line">Good pear → good pears</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Lumija safra → lumi isfar</div>
+                        <div class="en-line">Yellow lemon → yellow lemons</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Bettieħa friska → bettieħ frisk</div>
+                        <div class="en-line">Fresh melon → fresh melons</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Basla kbira → basal kbir</div>
+                        <div class="en-line">Big onion → big onions</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Naħla bieżla → naħal bieżel</div>
+                        <div class="en-line">Hardworking bee → hardworking bees</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Ġobna tajba → ġobon tajjeb</div>
+                        <div class="en-line">Good cheese → good cheese</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Ħuta friska → ħut frisk</div>
+                        <div class="en-line">Fresh fish → fresh fish</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="shopping">
+                <span class="tag">Section 8</span>
+                <h2>Shopping and Quantity</h2>
+                <div class="pattern-grid">
+                    <div class="pattern-card">
+                        <strong><code>ħafna + collective</code></strong>
+                        <span><code>ħafna larinġ</code>, <code>ħafna dulliegħ</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>ftit / naqra + collective</code></strong>
+                        <span><code>ftit tewm</code>, <code>naqra brunġiel</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>kilo / nofs kilo + collective</code></strong>
+                        <span><code>kilo larinġ</code>, <code>nofs kilo larinġ</code>, <code>kilo u nofs lanġas</code></span>
+                    </div>
+                    <div class="pattern-card">
+                        <strong><code>number + plural</code></strong>
+                        <span><code>żewġ basliet</code>, <code>żewġ tewmiet</code>, <code>żewġ larinġiet</code>, <code>żewġ dulligħat</code>, <code>erba' tadamiet</code></span>
+                    </div>
+                </div>
+
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <h3>Ready-made shopping lines</h3>
+                    <div class="line-pair">
+                        <div class="mt-line">Agħmel lista ta' frott u ħaxix li tħobb tixtri.</div>
+                        <div class="en-line">Make a list of fruit and vegetables that you like to buy.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Pereżempju: kilo brunġiel, wiżna patata, żewġ basliet, larinġ, lumi.</div>
+                        <div class="en-line">For example: a kilo of aubergines, a sack of potatoes, two onions, oranges, lemons.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Għandna bżonn tuffieħ.</div>
+                        <div class="en-line">We need apples.</div>
+                    </div>
+                    <div class="line-pair">
+                        <div class="mt-line">Għandi bżonn larinġ.</div>
+                        <div class="en-line">I need oranges.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="questions">
+                <span class="tag">Section 9</span>
+                <h2>Questions and Answers</h2>
+                <div class="question-grid">
+                    <div class="question-card"><strong>X'inhu l-kollettiv ta' tuffieħa?</strong><span>Il-kollettiv ta' tuffieħa huwa tuffieħ.</span></div>
+                    <div class="question-card"><strong>X'inhu l-kollettiv ta' tadama?</strong><span>Il-kollettiv ta' tadama huwa tadam.</span></div>
+                    <div class="question-card"><strong>Meta nuża l-plural?</strong><span>Nuża l-plural meta rrid ngħid numru speċifiku, bħal żewġ basliet.</span></div>
+                    <div class="question-card"><strong>Meta nuża l-kollettiv?</strong><span>Nuża l-kollettiv meta nitkellem fuq ħafna, ftit, kilo jew tip ta' ikel u frott.</span></div>
+                    <div class="question-card"><strong>Kif ngħid “fresh fish”?</strong><span>Ngħid ħut frisk.</span></div>
+                    <div class="question-card"><strong>Kif ngħid “good cheese”?</strong><span>Ngħid ġobon tajjeb.</span></div>
+                    <div class="question-card"><strong>X'se tixtri mis-suq?</strong><span>Se nixtri ftit ħass, kilo larinġ u naqra brunġiel.</span></div>
+                    <div class="question-card"><strong>Għandek bżonn xi frott?</strong><span>Iva, għandi bżonn tuffieħ u lumi.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="mistakes">
+                <span class="tag">Section 10</span>
+                <h2>Common Mistakes</h2>
+                <div class="mistake-grid">
+                    <div class="mistake-card">
+                        <strong>Do not keep the feminine adjective with the collective</strong>
+                        <span><code>tuffieħa ħamra</code> is singular, but <code>tuffieħ aħmar</code> is collective.</span>
+                    </div>
+                    <div class="mistake-card">
+                        <strong>Do not use the collective after a counted number if the lesson gives a plural form</strong>
+                        <span>Say <code>żewġ basliet</code>, not just a bare collective after the number.</span>
+                    </div>
+                    <div class="mistake-card">
+                        <strong>The collective is not always the same as the singular</strong>
+                        <span><code>tadama → tadam</code>, <code>nemusa → nemus</code>, <code>ħuta → ħut</code>.</span>
+                    </div>
+                    <div class="mistake-card">
+                        <strong>Use the collective naturally in shopping language</strong>
+                        <span>With <code>ħafna</code>, <code>ftit</code>, <code>naqra</code>, <code>kilo</code>, and <code>nofs kilo</code>, the lesson usually uses the collective.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="practice-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>Practice Bank</h2>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. Tuffieħa ħadra, imma tuffieħ aħdar.</strong><span>Green apple, but green apples / apple fruit.</span></div>
+                    <div class="sentence-card"><strong>2. Tadama ħamra, imma tadam aħmar.</strong><span>Red tomato, but red tomatoes.</span></div>
+                    <div class="sentence-card"><strong>3. Basla kbira, imma basal kbir.</strong><span>Big onion, but big onions.</span></div>
+                    <div class="sentence-card"><strong>4. Ħjara ħadra, imma ħjar aħdar.</strong><span>Green cucumber, but green cucumbers.</span></div>
+                    <div class="sentence-card"><strong>5. Ħobża tajba, imma ħobż tajjeb.</strong><span>Good loaf of bread, but good bread.</span></div>
+                    <div class="sentence-card"><strong>6. Ġobna tajba, imma ġobon tajjeb.</strong><span>Good cheese, but good cheese in collective use.</span></div>
+                    <div class="sentence-card"><strong>7. Ħuta friska, imma ħut frisk.</strong><span>Fresh fish, but fish in collective use.</span></div>
+                    <div class="sentence-card"><strong>8. Naħla bieżla, imma naħal bieżel.</strong><span>Hardworking bee, but hardworking bees.</span></div>
+                    <div class="sentence-card"><strong>9. Nemusa żgħira, imma nemus żgħir.</strong><span>Small mosquito, but small mosquitoes.</span></div>
+                    <div class="sentence-card"><strong>10. Dubbiena maħmuġa, imma dubbien maħmuġ.</strong><span>Dirty fly, but dirty flies.</span></div>
+                    <div class="sentence-card"><strong>11. Għandi bżonn tuffieħ.</strong><span>I need apples.</span></div>
+                    <div class="sentence-card"><strong>12. Għandna bżonn larinġ.</strong><span>We need oranges.</span></div>
+                    <div class="sentence-card"><strong>13. Se nixtri kilo mandolin.</strong><span>I am going to buy a kilo of mandarins.</span></div>
+                    <div class="sentence-card"><strong>14. Nixtieq nofs kilo larinġ.</strong><span>I would like half a kilo of oranges.</span></div>
+                    <div class="sentence-card"><strong>15. Għandi bżonn kilo u nofs lanġas.</strong><span>I need one and a half kilos of pears.</span></div>
+                    <div class="sentence-card"><strong>16. Se nixtri naqra brunġiel.</strong><span>I am going to buy some aubergines.</span></div>
+                    <div class="sentence-card"><strong>17. Irrid ftit tewm.</strong><span>I want some garlic.</span></div>
+                    <div class="sentence-card"><strong>18. Għandna ħafna larinġ id-dar.</strong><span>We have a lot of oranges at home.</span></div>
+                    <div class="sentence-card"><strong>19. Illum xtrajt ħafna dulliegħ.</strong><span>Today I bought a lot of watermelons.</span></div>
+                    <div class="sentence-card"><strong>20. Għandi żewġ basliet u erba' tadamiet.</strong><span>I have two onions and four tomatoes.</span></div>
+                    <div class="sentence-card"><strong>21. Xtrajt żewġ larinġiet u żewġ tewmiet.</strong><span>I bought two oranges and two garlic bulbs.</span></div>
+                    <div class="sentence-card"><strong>22. Fil-lista tal-ħaxix ktibt tadam, ħass, brunġiel u ħjar.</strong><span>In the vegetable list I wrote tomatoes, lettuce, aubergines, and cucumbers.</span></div>
+                    <div class="sentence-card"><strong>23. Fil-lista tal-frott ktibt tuffieħ, larinġ, mandolin u lanġas.</strong><span>In the fruit list I wrote apples, oranges, mandarins, and pears.</span></div>
+                    <div class="sentence-card"><strong>24. Jien inħobb nixtri frott frisk.</strong><span>I like to buy fresh fruit.</span></div>
+                    <div class="sentence-card"><strong>25. Ommi tħobb tixtri ħaxix frisk.</strong><span>My mother likes to buy fresh vegetables.</span></div>
+                    <div class="sentence-card"><strong>26. Fil-kċina għandna lumi, tuffieħ u bajd.</strong><span>In the kitchen we have lemons, apples, and eggs.</span></div>
+                    <div class="sentence-card"><strong>27. Fil-friġġ hemm ġobon tajjeb u ħut frisk.</strong><span>In the fridge there is good cheese and fresh fish.</span></div>
+                    <div class="sentence-card"><strong>28. Fis-suq rajt naħal u dubbien.</strong><span>At the market I saw bees and flies.</span></div>
+                    <div class="sentence-card"><strong>29. Ma rridx larinġ għax ma jidhirx frisk.</strong><span>I do not want oranges because they do not look fresh.</span></div>
+                    <div class="sentence-card"><strong>30. Illum mort is-suq u xtrajt ftit frott u ħaxix.</strong><span>Today I went to the market and bought some fruit and vegetables.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
