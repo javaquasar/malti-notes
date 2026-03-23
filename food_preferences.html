@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Preferences in Maltese</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .top-home { margin-bottom: 18px; }
+        .top-home a { color: var(--teal); font-weight: 700; text-decoration: none; }
+        .top-home a:hover { text-decoration: underline; }
+        .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .meal-grid, .triple-grid { display: grid; gap: 14px; }
+        .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .meal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .triple-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .vocab-card, .pattern-card, .sentence-card, .question-card, .mistake-card, .lesson-note, .meal-card, .triple-card {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            min-width: 0;
+        }
+        .vocab-card strong, .pattern-card strong, .sentence-card strong, .question-card strong, .mistake-card strong, .meal-card strong, .triple-card strong {
+            display: block; margin-bottom: 6px;
+        }
+        .vocab-card span, .pattern-card span, .sentence-card span, .question-card span, .mistake-card span, .meal-card span, .triple-card span {
+            display: block; color: var(--muted);
+        }
+        .line-pair { padding: 10px 0; border-top: 1px dashed rgba(95, 111, 103, 0.24); }
+        .line-pair:first-child { border-top: none; padding-top: 0; }
+        .mt-line { font-weight: 700; }
+        .en-line { color: var(--muted); }
+        .source-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; }
+        .source-chip {
+            display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px;
+            font-size: 0.84rem; background: rgba(47, 143, 131, 0.10); color: var(--teal);
+            border: 1px solid rgba(47, 143, 131, 0.18);
+        }
+        .lesson-note h3, .lesson-note h4 { margin-bottom: 10px; }
+        @media (max-width: 980px) {
+            .hero-body, .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .meal-grid, .triple-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Internal source note: this page was built from course materials about food vocabulary, food preferences, key food verbs, dialogue, and traditional Maltese food. -->
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
+    </header>
+
+    <div class="top-home"><a href="./index.html">&larr; Back to Home</a></div>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Food Preferences</h1>
+                <p class="lead">
+                    A practical page for food vocabulary, meals during the day, common expressions, important food verbs,
+                    and simple Maltese food discussions.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">xi tħobb tiekol</span>
+                    <span class="pill">niekol</span>
+                    <span class="pill">nieħu</span>
+                    <span class="pill">nixrob</span>
+                    <span class="pill">traditional food</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Use This Page For</h2>
+                <ul>
+                    <li>talking about food preferences</li>
+                    <li>describing what you eat during the day</li>
+                    <li>using the main food verbs</li>
+                    <li>speaking about Maltese and international dishes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#core-idea">Core Idea</a></li>
+                <li><a href="#shopping">Shopping List Vocabulary</a></li>
+                <li><a href="#ingredients">Common Food and Ingredients</a></li>
+                <li><a href="#questions">Food Question Patterns</a></li>
+                <li><a href="#breakfast">Breakfast</a></li>
+                <li><a href="#lunch">Lunch</a></li>
+                <li><a href="#dinner">Dinner</a></li>
+                <li><a href="#pair-work">Pair Work Questions</a></li>
+                <li><a href="#dialogue">Dialogue and Common Expressions</a></li>
+                <li><a href="#verbs">Important Food Verbs</a></li>
+                <li><a href="#verb-sentences">Food Verb Sentences</a></li>
+                <li><a href="#tea-coffee">Tea and Coffee Expressions</a></li>
+                <li><a href="#traditional">Traditional Maltese Food</a></li>
+                <li><a href="#favourite-food">Favourite Food From Your Country</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#practice-bank">Practice Bank</a></li>
+            </ul>
+            <p class="mini">
+                The main speaking patterns on this page are <code>Xi tħobb tiekol?</code>,
+                <code>X'tixtieq?</code>, and the verbs <code>niekol</code>, <code>nieħu</code>, <code>nixrob</code>.
+            </p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card" id="core-idea">
+                <span class="tag">Section 1</span>
+                <h2>Core Idea</h2>
+                <div class="lesson-note">
+                    <div class="line-pair"><div class="mt-line">F'din it-tema nitkellmu fuq l-ikel, ix-xorb, u x'inhuma l-gosti tagħna.</div><div class="en-line">In this topic we talk about food, drink, and what our preferences are.</div></div>
+                    <div class="line-pair"><div class="mt-line">Nużaw vokabularju komuni tal-ikel, sentenzi dwar il-ħin tal-ġurnata, u djalogi qosra.</div><div class="en-line">We use common food vocabulary, sentences about times of day, and short dialogues.</div></div>
+                    <div class="line-pair"><div class="mt-line">Il-verbi l-aktar importanti hawn huma niekol, nieħu, u nixrob.</div><div class="en-line">The most important verbs here are niekol, nieħu, and nixrob.</div></div>
+                    <div class="source-row">
+                        <span class="source-chip">food vocabulary</span>
+                        <span class="source-chip">meal patterns</span>
+                        <span class="source-chip">dialogue</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="shopping">
+                <span class="tag">Section 2</span>
+                <h2>Shopping List Vocabulary</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>ħalib</strong><span>milk</span></div>
+                    <div class="vocab-card"><strong>kartuna bajd</strong><span>box of eggs</span></div>
+                    <div class="vocab-card"><strong>borża ross</strong><span>bag of rice</span></div>
+                    <div class="vocab-card"><strong>pakkett għaġin</strong><span>packet of pasta</span></div>
+                    <div class="vocab-card"><strong>bott piżelli</strong><span>tin of peas</span></div>
+                    <div class="vocab-card"><strong>kaxxa frawli</strong><span>box of strawberries</span></div>
+                    <div class="vocab-card"><strong>kapuljat</strong><span>minced meat</span></div>
+                    <div class="vocab-card"><strong>ġobon</strong><span>cheese</span></div>
+                    <div class="vocab-card"><strong>perżut</strong><span>ham</span></div>
+                    <div class="vocab-card"><strong>ħobż</strong><span>bread</span></div>
+                    <div class="vocab-card"><strong>butir</strong><span>butter</span></div>
+                    <div class="vocab-card"><strong>flixkun inbid aħmar</strong><span>bottle of red wine</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="ingredients">
+                <span class="tag">Section 3</span>
+                <h2>Common Food and Ingredients</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>kafè</strong><span>coffee</span></div>
+                    <div class="vocab-card"><strong>te</strong><span>tea</span></div>
+                    <div class="vocab-card"><strong>zokkor</strong><span>sugar</span></div>
+                    <div class="vocab-card"><strong>melħ</strong><span>salt</span></div>
+                    <div class="vocab-card"><strong>bżar</strong><span>pepper</span></div>
+                    <div class="vocab-card"><strong>tiġieġa</strong><span>chicken</span></div>
+                    <div class="vocab-card"><strong>laħam</strong><span>meat</span></div>
+                    <div class="vocab-card"><strong>ħut</strong><span>fish</span></div>
+                    <div class="vocab-card"><strong>torta</strong><span>pie</span></div>
+                    <div class="vocab-card"><strong>bajda</strong><span>egg</span></div>
+                    <div class="vocab-card"><strong>ross</strong><span>rice</span></div>
+                    <div class="vocab-card"><strong>ħaxix</strong><span>vegetables</span></div>
+                    <div class="vocab-card"><strong>patata</strong><span>potatoes</span></div>
+                    <div class="vocab-card"><strong>soppa</strong><span>soup</span></div>
+                    <div class="vocab-card"><strong>frott</strong><span>fruit</span></div>
+                    <div class="vocab-card"><strong>gallettina</strong><span>biscuit</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="questions">
+                <span class="tag">Section 4</span>
+                <h2>Food Question Patterns</h2>
+                <div class="pattern-grid">
+                    <div class="pattern-card"><strong><code>Xi tħobb tiekol?</code></strong><span>What do you like to eat?</span></div>
+                    <div class="pattern-card"><strong><code>Xi trid?</code></strong><span>What do you want?</span></div>
+                    <div class="pattern-card"><strong><code>X'tixtieq?</code></strong><span>What would you like?</span></div>
+                    <div class="pattern-card"><strong><code>X'tippreferi?</code></strong><span>What do you prefer?</span></div>
+                    <div class="pattern-card"><strong><code>X'għandek bżonn?</code></strong><span>What do you need?</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="breakfast">
+                <span class="tag">Section 5</span>
+                <h2>Breakfast</h2>
+                <div class="meal-grid">
+                    <div class="meal-card"><strong>Filgħodu nħobb niekol bajda u towst bil-butir.</strong><span>In the morning I like to eat an egg and toast with butter.</span></div>
+                    <div class="meal-card"><strong>Filgħodu nħobb nieħu cereal bil-ħalib.</strong><span>In the morning I like to have cereal with milk.</span></div>
+                    <div class="meal-card"><strong>Filgħodu ma nħobbx niekol.</strong><span>In the morning I do not like to eat.</span></div>
+                    <div class="meal-card"><strong>Filgħodu nieħu kafè u gallettina.</strong><span>In the morning I have coffee and a biscuit.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="lunch">
+                <span class="tag">Section 6</span>
+                <h2>Lunch</h2>
+                <div class="meal-grid">
+                    <div class="meal-card"><strong>F'nofsinhar inħobb niekol xi laħam u ħaxix.</strong><span>At midday I like to eat some meat and vegetables.</span></div>
+                    <div class="meal-card"><strong>F'nofsinhar inħobb nieħu soppa.</strong><span>At midday I like to have soup.</span></div>
+                    <div class="meal-card"><strong>F'nofsinhar nieħu biċċa ħobż bil-butir u ġobon.</strong><span>At midday I have a piece of bread with butter and cheese.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="dinner">
+                <span class="tag">Section 7</span>
+                <h2>Dinner</h2>
+                <div class="meal-grid">
+                    <div class="meal-card"><strong>Filgħaxija ma nħobbx niekol.</strong><span>In the evening I do not like to eat.</span></div>
+                    <div class="meal-card"><strong>Filgħaxija nħobb nieħu xi ħaġa ħafifa, bħal soppa jew brodu.</strong><span>In the evening I like to have something light, such as soup or broth.</span></div>
+                    <div class="meal-card"><strong>Filgħaxija nħobb nieħu xi towst.</strong><span>In the evening I like to have some toast.</span></div>
+                    <div class="meal-card"><strong>Filgħaxija nħobb nieħu tiġieġ.</strong><span>In the evening I like to have chicken.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="pair-work">
+                <span class="tag">Section 8</span>
+                <h2>Pair Work Questions</h2>
+                <div class="question-grid">
+                    <div class="question-card"><strong>Xi tħobb tiekol filgħodu?</strong><span>What do you like to eat in the morning?</span></div>
+                    <div class="question-card"><strong>X'ħin tiekol dan l-ikel?</strong><span>At what time do you eat this food?</span></div>
+                    <div class="question-card"><strong>Xi tħobb tiekol f'nofsinhar?</strong><span>What do you like to eat at midday?</span></div>
+                    <div class="question-card"><strong>Tieħu te jew kafè matul il-ġurnata?</strong><span>Do you take tea or coffee during the day?</span></div>
+                    <div class="question-card"><strong>Xi tħobb tiekol filgħaxija?</strong><span>What do you like to eat in the evening?</span></div>
+                    <div class="question-card"><strong>X'ħin tiekol l-ikla ta' filgħaxija?</strong><span>At what time do you eat the evening meal?</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="dialogue">
+                <span class="tag">Section 9</span>
+                <h2>Dialogue and Common Expressions</h2>
+                <div class="lesson-note">
+                    <h3>Work break dialogue</h3>
+                    <div class="line-pair"><div class="mt-line">X'qed issajjar?</div><div class="en-line">What are you cooking?</div></div>
+                    <div class="line-pair"><div class="mt-line">Qed insaħħan l-ikel ta' nofsinhar.</div><div class="en-line">I am heating my lunch.</div></div>
+                    <div class="line-pair"><div class="mt-line">Ifuħ!</div><div class="en-line">It smells nice!</div></div>
+                    <div class="line-pair"><div class="mt-line">Int se tiekol xi ħaġa?</div><div class="en-line">Are you going to eat something?</div></div>
+                    <div class="line-pair"><div class="mt-line">L-ikla t-tajba.</div><div class="en-line">Enjoy your meal.</div></div>
+                    <div class="line-pair"><div class="mt-line">Lilek ukoll.</div><div class="en-line">Same to you.</div></div>
+                </div>
+                <div class="pattern-grid" style="margin-top: 16px;">
+                    <div class="pattern-card"><strong><code>Ifuħ!</code></strong><span>Smells nice!</span></div>
+                    <div class="pattern-card"><strong><code>Ħa nersaqlek</code></strong><span>Let me move for you / let me get out of the way</span></div>
+                    <div class="pattern-card"><strong><code>Għal hemm!</code></strong><span>See you later!</span></div>
+                    <div class="pattern-card"><strong><code>bil-ġuħ</code></strong><span>hungry</span></div>
+                    <div class="pattern-card"><strong><code>L-ikla t-tajba</code></strong><span>Enjoy your meal</span></div>
+                    <div class="pattern-card"><strong><code>Lilek ukoll</code></strong><span>Same to you</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="verbs">
+                <span class="tag">Section 10</span>
+                <h2>Important Food Verbs</h2>
+                <div class="triple-grid">
+                    <div class="triple-card"><strong>nixrob</strong><span>to drink</span><small>xrobt / se nixrob</small></div>
+                    <div class="triple-card"><strong>nieħu</strong><span>to take / have</span><small>ħadt / se nieħu</small></div>
+                    <div class="triple-card"><strong>niekol</strong><span>to eat</span><small>kilt / se niekol</small></div>
+                </div>
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <div class="line-pair"><div class="mt-line">Jien nixrob / xrobt / se nixrob.</div><div class="en-line">I drink / drank / will drink.</div></div>
+                    <div class="line-pair"><div class="mt-line">Jien nieħu / ħadt / se nieħu.</div><div class="en-line">I take / took / will take.</div></div>
+                    <div class="line-pair"><div class="mt-line">Jien niekol / kilt / se niekol.</div><div class="en-line">I eat / ate / will eat.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="verb-sentences">
+                <span class="tag">Section 11</span>
+                <h2>Food Verb Sentences</h2>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>Ilbieraħ kilt żewġ pastizzi.</strong><span>Yesterday I ate two pastizzi.</span></div>
+                    <div class="sentence-card"><strong>Inħobb niekol ikel tradizzjonali Malti.</strong><span>I like to eat traditional Maltese food.</span></div>
+                    <div class="sentence-card"><strong>Inħobb nieħu birra filgħaxija.</strong><span>I like to have beer in the evening.</span></div>
+                    <div class="sentence-card"><strong>Inħobb nixrob tazza nbid ma' biċċa laħam.</strong><span>I like to drink a glass of wine with a piece of meat.</span></div>
+                    <div class="sentence-card"><strong>Mal-ħut inħobb nieħu tazza nbid bajda.</strong><span>With fish I like to have a glass of white wine.</span></div>
+                    <div class="sentence-card"><strong>Għandi ikla tax-xogħol u se nieklu pizza.</strong><span>I have a work meal and we are going to eat pizza.</span></div>
+                    <div class="sentence-card"><strong>Fil-brejk se niekol ftira biż-żejt.</strong><span>During the break I am going to eat ftira biż-żejt.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="tea-coffee">
+                <span class="tag">Section 12</span>
+                <h2>Tea and Coffee Expressions</h2>
+                <div class="question-grid">
+                    <div class="question-card"><strong>Xi ħadd irid te jew kafè?</strong><span>Does anyone want tea or coffee?</span></div>
+                    <div class="question-card"><strong>Tieħu zokkor mat-te?</strong><span>Do you take sugar with tea?</span></div>
+                    <div class="question-card"><strong>Tieħu ħalib mal-kafè?</strong><span>Do you take milk with coffee?</span></div>
+                    <div class="question-card"><strong>Tieħu ħafna ħalib mal-kafè?</strong><span>Do you take a lot of milk with coffee?</span></div>
+                    <div class="question-card"><strong>Tieħu ftit ħalib mat-te?</strong><span>Do you take a little milk with tea?</span></div>
+                    <div class="question-card"><strong>Trid gallettina?</strong><span>Do you want a biscuit?</span></div>
+                    <div class="question-card"><strong>Jaħraq! Attent!</strong><span>It is hot! Careful!</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="traditional">
+                <span class="tag">Section 13</span>
+                <h2>Traditional Maltese Food</h2>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>l-istuffat tal-fenek</strong><span>rabbit stew</span></div>
+                    <div class="vocab-card"><strong>il-ftira biż-żejt</strong><span>ftira with oil</span></div>
+                    <div class="vocab-card"><strong>qagħaq tal-għasel</strong><span>honey rings</span></div>
+                    <div class="vocab-card"><strong>ġbejna tal-bżar</strong><span>peppered cheeselet</span></div>
+                    <div class="vocab-card"><strong>imqaret</strong><span>date pastries</span></div>
+                    <div class="vocab-card"><strong>fenek moqli</strong><span>fried rabbit</span></div>
+                    <div class="vocab-card"><strong>perlini</strong><span>perlini</span></div>
+                    <div class="vocab-card"><strong>bebbux</strong><span>snails</span></div>
+                    <div class="vocab-card"><strong>stuffat tal-qarnit</strong><span>octopus stew</span></div>
+                </div>
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <h3>L-istuffat tal-fenek</h3>
+                    <div class="line-pair"><div class="mt-line">L-istuffat isir billi l-fenek jitqatta' f'biċċiet u jitħalla jissajjar bil-mod f'zalza.</div><div class="en-line">The stew is made by cutting the rabbit into pieces and letting it cook slowly in a sauce.</div></div>
+                    <div class="line-pair"><div class="mt-line">Iż-zalza ssir mit-tadam, inbid aħmar, tewm, basal u ħwawar.</div><div class="en-line">The sauce is made from tomatoes, red wine, garlic, onions, and spices.</div></div>
+                    <div class="line-pair"><div class="mt-line">Tradizzjonalment, l-istuffat tal-fenek jiġi servut ma' ħobż frisk Malti.</div><div class="en-line">Traditionally, rabbit stew is served with fresh Maltese bread.</div></div>
+                </div>
+                <div class="lesson-note" style="margin-top: 16px;">
+                    <h3>Il-ftira biż-żejt</h3>
+                    <div class="line-pair"><div class="mt-line">Il-ftira biż-żejt hija ikla tradizzjonali u sempliċi ħafna fil-kċina ta' Malta.</div><div class="en-line">Ftira biż-żejt is a very traditional and simple meal in Maltese cuisine.</div></div>
+                    <div class="line-pair"><div class="mt-line">Hija tip ta' ħobż Malti ċatt u tond, b'qoxra kemxejn tqarmeċ.</div><div class="en-line">It is a type of flat and round Maltese bread with a slightly crunchy crust.</div></div>
+                    <div class="line-pair"><div class="mt-line">Normalment timtela biż-żejt taż-żebbuġa, tadam, tonn, kappar, żebbuġ, basal u xi drabi ġbejniet jew bajd mgħolli.</div><div class="en-line">It is usually filled with olive oil, tomato, tuna, capers, olives, onion, and sometimes cheeselets or boiled eggs.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="favourite-food">
+                <span class="tag">Section 14</span>
+                <h2>Favourite Food From Your Country</h2>
+                <div class="lesson-note">
+                    <h3>Group discussion template</h3>
+                    <div class="line-pair"><div class="mt-line">L-ikel favorit li ddiskutejna fil-grupp huwa ___________.</div><div class="en-line">The favourite food we discussed in the group is ___________.</div></div>
+                    <div class="line-pair"><div class="mt-line">Dan l-ikel ġej minn _________.</div><div class="en-line">This food comes from _________.</div></div>
+                    <div class="line-pair"><div class="mt-line">Dan il-platt huwa ____________.</div><div class="en-line">This dish is a ____________.</div></div>
+                    <div class="line-pair"><div class="mt-line">Dan il-platt fih / ma fihx zalza ħamra.</div><div class="en-line">This dish has / does not have red sauce.</div></div>
+                    <div class="line-pair"><div class="mt-line">L-ingredjenti li nużaw għal dan il-platt huma: __________.</div><div class="en-line">The ingredients we use for this dish are: __________.</div></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="mistakes">
+                <span class="tag">Section 15</span>
+                <h2>Common Mistakes</h2>
+                <div class="mistake-grid">
+                    <div class="mistake-card"><strong>Do not mix up niekol, nieħu, and nixrob</strong><span><code>niekol</code> for eating, <code>nixrob</code> for drinking, and <code>nieħu</code> for taking / having.</span></div>
+                    <div class="mistake-card"><strong>Use ma...x in negative food sentences</strong><span><code>Ma nħobbx niekol</code>, not a direct English-style negative.</span></div>
+                    <div class="mistake-card"><strong>Watch the question word</strong><span><code>Xi tħobb tiekol?</code> is not the same as <code>X'tixtieq?</code> or <code>X'għandek bżonn?</code>.</span></div>
+                    <div class="mistake-card"><strong>Watch small food words</strong><span><code>bil-butir</code>, <code>mal-ħut</code>, <code>mat-te</code>, <code>mal-kafè</code>.</span></div>
+                </div>
+            </section>
+
+            <section class="content-card" id="practice-bank">
+                <span class="tag">Practice Bank</span>
+                <h2>Practice Bank</h2>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><strong>1. Filgħodu nħobb niekol bajda u towst bil-butir.</strong><span>In the morning I like to eat an egg and toast with butter.</span></div>
+                    <div class="sentence-card"><strong>2. Filgħodu nħobb nieħu cereal bil-ħalib.</strong><span>In the morning I like to have cereal with milk.</span></div>
+                    <div class="sentence-card"><strong>3. Filgħodu nieħu kafè u gallettina.</strong><span>In the morning I have coffee and a biscuit.</span></div>
+                    <div class="sentence-card"><strong>4. F'nofsinhar inħobb niekol xi laħam u ħaxix.</strong><span>At midday I like to eat some meat and vegetables.</span></div>
+                    <div class="sentence-card"><strong>5. F'nofsinhar inħobb nieħu soppa.</strong><span>At midday I like to have soup.</span></div>
+                    <div class="sentence-card"><strong>6. Filgħaxija nħobb nieħu xi ħaġa ħafifa.</strong><span>In the evening I like to have something light.</span></div>
+                    <div class="sentence-card"><strong>7. Filgħaxija nħobb nieħu tiġieġ.</strong><span>In the evening I like to have chicken.</span></div>
+                    <div class="sentence-card"><strong>8. Xi tħobb tiekol?</strong><span>What do you like to eat?</span></div>
+                    <div class="sentence-card"><strong>9. X'tixtieq?</strong><span>What would you like?</span></div>
+                    <div class="sentence-card"><strong>10. X'għandek bżonn?</strong><span>What do you need?</span></div>
+                    <div class="sentence-card"><strong>11. Ilbieraħ kilt żewġ pastizzi.</strong><span>Yesterday I ate two pastizzi.</span></div>
+                    <div class="sentence-card"><strong>12. Inħobb niekol ikel tradizzjonali Malti.</strong><span>I like to eat traditional Maltese food.</span></div>
+                    <div class="sentence-card"><strong>13. Inħobb nieħu birra filgħaxija.</strong><span>I like to have beer in the evening.</span></div>
+                    <div class="sentence-card"><strong>14. Inħobb nixrob tazza nbid ma' biċċa laħam.</strong><span>I like to drink a glass of wine with a piece of meat.</span></div>
+                    <div class="sentence-card"><strong>15. Mal-ħut inħobb nieħu tazza nbid bajda.</strong><span>With fish I like to have a glass of white wine.</span></div>
+                    <div class="sentence-card"><strong>16. Fil-brejk se niekol ftira biż-żejt.</strong><span>During the break I am going to eat ftira biż-żejt.</span></div>
+                    <div class="sentence-card"><strong>17. Xi ħadd irid te jew kafè?</strong><span>Does anyone want tea or coffee?</span></div>
+                    <div class="sentence-card"><strong>18. Tieħu zokkor mat-te?</strong><span>Do you take sugar with tea?</span></div>
+                    <div class="sentence-card"><strong>19. Tieħu ħalib mal-kafè?</strong><span>Do you take milk with coffee?</span></div>
+                    <div class="sentence-card"><strong>20. Trid gallettina?</strong><span>Do you want a biscuit?</span></div>
+                    <div class="sentence-card"><strong>21. Ifuħ!</strong><span>It smells nice!</span></div>
+                    <div class="sentence-card"><strong>22. L-ikla t-tajba.</strong><span>Enjoy your meal.</span></div>
+                    <div class="sentence-card"><strong>23. Lilek ukoll.</strong><span>Same to you.</span></div>
+                    <div class="sentence-card"><strong>24. Il-ftira biż-żejt hija popolari ħafna.</strong><span>Ftira biż-żejt is very popular.</span></div>
+                    <div class="sentence-card"><strong>25. L-istuffat tal-fenek huwa ikel tradizzjonali Malti.</strong><span>Rabbit stew is traditional Maltese food.</span></div>
+                    <div class="sentence-card"><strong>26. Dan il-platt ġej minn pajjiżi.</strong><span>This dish comes from my country.</span></div>
+                    <div class="sentence-card"><strong>27. Dan il-platt huwa platt ewlieni.</strong><span>This dish is a main dish.</span></div>
+                    <div class="sentence-card"><strong>28. Dan il-platt fih zalza ħamra.</strong><span>This dish has red sauce.</span></div>
+                    <div class="sentence-card"><strong>29. L-ingredjenti għal dan il-platt huma ross, laħam u ħaxix.</strong><span>The ingredients for this dish are rice, meat, and vegetables.</span></div>
+                    <div class="sentence-card"><strong>30. Inħobb nitkellem dwar l-ikel favorit tiegħi.</strong><span>I like to talk about my favourite food.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
