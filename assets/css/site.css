@@ -206,6 +206,26 @@ h3 { font-size: 1.08rem; }
 .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+.question-grid,
+.dialogue-grid,
+.wrong-right-grid,
+.roleplay-grid,
+.visual-vocab-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.question-grid,
+.dialogue-grid,
+.wrong-right-grid,
+.roleplay-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.visual-vocab-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
 .box,
 .story,
 .mistake,
@@ -237,6 +257,52 @@ h3 { font-size: 1.08rem; }
   color: var(--muted);
   font-size: 0.94rem;
   display: block;
+}
+
+.visual-vocab-card {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(199, 106, 42, 0.28);
+  border-radius: 24px;
+  min-width: 0;
+}
+
+.visual-vocab-card figure {
+  margin: 0;
+}
+
+.visual-vocab-card img {
+  width: 100%;
+  height: 112px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(239, 230, 215, 0.7);
+  display: block;
+}
+
+.visual-vocab-card strong,
+.visual-vocab-card span,
+.visual-vocab-card small {
+  display: block;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.visual-vocab-card strong {
+  margin-top: 10px;
+  font-size: 1.08rem;
+}
+
+.visual-vocab-card span {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.visual-vocab-card small {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 .formula {
@@ -349,12 +415,51 @@ td {
   gap: 10px;
 }
 
+.example-bank {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.example-line {
+  border-top: 1px dashed rgba(95, 111, 103, 0.22);
+  padding-top: 10px;
+}
+
+.example-line:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.example-line .mt {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.example-line .en {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.wide-box {
+  padding: 18px;
+  border: 1px solid rgba(199, 106, 42, 0.26);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
 @media (max-width: 980px) {
   .layout,
   .grid,
   .hero-body,
   .two-col,
-  .three-col {
+  .three-col,
+  .question-grid,
+  .dialogue-grid,
+  .wrong-right-grid,
+  .roleplay-grid {
     grid-template-columns: 1fr;
   }
 
