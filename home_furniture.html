@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home, Rooms and Furniture in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <style>
+        .home-toggle-row { display: flex; justify-content: flex-end; margin-bottom: 14px; }
+        .home-toggle { border: 1px solid rgba(47, 143, 131, 0.22); background: rgba(47, 143, 131, 0.08); color: var(--teal); border-radius: 999px; padding: 10px 14px; font: inherit; font-weight: 700; cursor: pointer; }
+        .home-toggle:hover { background: rgba(47, 143, 131, 0.13); }
+        .visual-vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+        .visual-vocab-card { padding: 14px; background: rgba(255, 255, 255, 0.58); border: 1px solid rgba(199, 106, 42, 0.28); border-radius: 24px; min-width: 0; }
+        .visual-vocab-card figure { margin: 0; }
+        .visual-vocab-card img { width: 100%; height: 112px; object-fit: contain; border-radius: 18px; background: rgba(239, 230, 215, 0.7); display: block; }
+        .home-compact .visual-vocab-card img { display: none; }
+        .visual-vocab-card strong, .visual-vocab-card span, .visual-vocab-card small { display: block; white-space: normal; word-break: normal; overflow-wrap: normal; }
+        .visual-vocab-card strong { margin-top: 10px; font-size: 1.08rem; }
+        .visual-vocab-card span { margin-top: 4px; color: var(--muted); }
+        .visual-vocab-card small { margin-top: 8px; color: var(--muted); line-height: 1.45; }
+        .wide-box { padding: 18px; border: 1px solid rgba(199, 106, 42, 0.26); border-radius: 24px; background: rgba(255, 255, 255, 0.52); }
+        .question-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+        .example-bank { display: grid; gap: 10px; margin-top: 16px; }
+        .example-line { border-top: 1px dashed rgba(95, 111, 103, 0.22); padding-top: 10px; }
+        .example-line:first-child { border-top: none; padding-top: 0; }
+        .example-line .mt { display: block; color: var(--ink); font-weight: 700; }
+        .example-line .en { display: block; margin-top: 4px; color: var(--muted); }
+        @media (max-width: 900px) { .question-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./verbs_guide.html">Verbs</a>
+            <a href="./numbers_calendar_time.html">Numbers and Time</a>
+            <a href="./family_home_food.html">Family, Home and Food</a>
+            <a href="./pronouns_possessives.html">Pronouns</a>
+            <a href="./picture_description.html">Pictures</a>
+            <a href="./daily_routine.html">Routine</a>
+            <a href="./sentence_builder.html">Sentence Builder</a>
+            <a href="./common_mistakes.html">Common Mistakes</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Home, Rooms and Furniture</h1>
+                <p class="lead">This page is designed for describing a home in simple Maltese: the outside parts of the
+                    house, the rooms inside, and the most useful furniture words. It is especially helpful for picture
+                    description, homework, and short speaking answers about where you live.</p>
+                <div class="pill-row">
+                    <span class="pill">Outside parts</span>
+                    <span class="pill">Rooms</span>
+                    <span class="pill">Furniture</span>
+                    <span class="pill">100 examples</span>
+                    <span class="pill">Picture description</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Best way to use this page</strong></p>
+                <ul>
+                    <li>Learn 5 words and then say one sentence with each word.</li>
+                    <li>Reuse <code>hemm</code>, <code>għandi</code>, <code>fil-</code>, and <code>ħdejn</code>.</li>
+                    <li>Start with short safe descriptions before you build longer answers.</li>
+                    <li>Hide the pictures when you want a compact revision mode.</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#outside">Outside Parts Of The House</a></li>
+                <li><a href="#rooms">Rooms Inside The House</a></li>
+                <li><a href="#furniture">Furniture And Objects</a></li>
+                <li><a href="#patterns">Useful Home Patterns</a></li>
+                <li><a href="#questions">Questions And Answers</a></li>
+                <li><a href="#examples-outside">34 Outside Examples</a></li>
+                <li><a href="#examples-rooms">33 Room Examples</a></li>
+                <li><a href="#examples-furniture">33 Furniture Examples</a></li>
+            </ul>
+            <p class="mini">Safe pattern:
+                <code>Hemm...</code>,
+                <code>Għandi...</code>,
+                <code>Fil-kċina hemm...</code>,
+                <code>Is-sufan huwa...</code>.
+            </p>
+        </aside>
+
+        <main class="content">
+            <section class="card" id="outside">
+                <span class="tag">Home</span>
+                <h2>Outside Parts Of The House</h2>
+                <div class="home-toggle-row">
+                    <button class="home-toggle" type="button" data-home-image-toggle aria-pressed="false">Hide home images</button>
+                </div>
+                <div class="visual-vocab-grid">
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/house-front.svg" alt="House"></figure><strong>dar</strong><span>house / home</span><small><code>Id-dar</code> can mean the house or the home, depending on context.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/roof.svg" alt="Roof"></figure><strong>saqaf</strong><span>roof / ceiling in some contexts</span><small>Useful in home description and object location tasks.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/door.svg" alt="Door"></figure><strong>bieb</strong><span>door</span><small>Very common with <code>iftaħ</code>, <code>agħlaq</code>, and <code>ħdejn il-bieb</code>.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/window.svg" alt="Window"></figure><strong>tieqa</strong><span>window</span><small>Useful with curtains, weather, and room light.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/balcony.svg" alt="Balcony"></figure><strong>gallarija</strong><span>balcony</span><small>Very useful in Malta for apartments and town houses.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/garden.svg" alt="Garden"></figure><strong>ġnien</strong><span>garden</span><small>Good with flowers, pets, coffee outside, and family house descriptions.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/garage.svg" alt="Garage"></figure><strong>garaxx</strong><span>garage</span><small>Very useful with transport words like <code>karozza</code> and <code>rota</code>.</small></article>
+                </div>
+            </section>
+
+            <section class="card" id="rooms">
+                <span class="tag">Rooms</span>
+                <h2>Rooms Inside The House</h2>
+                <div class="visual-vocab-grid">
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/kitchen.svg" alt="Kitchen"></figure><strong>kċina</strong><span>kitchen</span><small>One of the most useful room words in the whole course.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/bedroom.svg" alt="Bedroom"></figure><strong>kamra tas-sodda</strong><span>bedroom</span><small>Often appears with bed, wardrobe, lamp, and sleep vocabulary.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/bathroom.svg" alt="Bathroom"></figure><strong>kamra tal-banju</strong><span>bathroom</span><small>Very useful with daily routine verbs.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/living-room.svg" alt="Living room"></figure><strong>salott</strong><span>living room</span><small>Often used with sofa, television, and family time.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/dining-room.svg" alt="Dining room"></figure><strong>kamra tal-ikel</strong><span>dining room</span><small>Useful when talking about meals and family dinner.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/desk.svg" alt="Study room"></figure><strong>studju</strong><span>study / study room</span><small>Good for work, homework, reading, and desk vocabulary.</small></article>
+                </div>
+            </section>
+
+            <section class="card" id="furniture">
+                <span class="tag">Furniture</span>
+                <h2>Furniture And Useful Home Objects</h2>
+                <div class="visual-vocab-grid">
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/table.svg" alt="Table"></figure><strong>mejda</strong><span>table</span><small>Very common in picture description and meal vocabulary.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/chair.svg" alt="Chair"></figure><strong>siġġu</strong><span>chair</span><small>Useful with <code>ħdejn</code>, <code>quddiem</code>, and room layout.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/sofa.svg" alt="Sofa"></figure><strong>sufan</strong><span>sofa</span><small>Very common in house pictures and homework answers.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/bed.svg" alt="Bed"></figure><strong>sodda</strong><span>bed</span><small>Useful with bedroom, sleep, and routine language.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/wardrobe.svg" alt="Wardrobe"></figure><strong>armarju</strong><span>wardrobe / cupboard</span><small>Very useful in bedroom and clothing context.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/lamp.svg" alt="Lamp"></figure><strong>lampa</strong><span>lamp</span><small>Good for colour, light, and night-time description.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/desk.svg" alt="Desk"></figure><strong>skrivanija</strong><span>desk</span><small>Very useful for study and work descriptions.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/fridge.svg" alt="Fridge"></figure><strong>friġġ</strong><span>fridge</span><small>Bridges home vocabulary with food and drink vocabulary.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/shelf.svg" alt="Shelf"></figure><strong>xkaffa</strong><span>shelf</span><small>Useful with books, plants, and object location.</small></article>
+                    <article class="visual-vocab-card"><figure><img src="./assets/img/home/mirror.svg" alt="Mirror"></figure><strong>mera</strong><span>mirror</span><small>Very useful in the bathroom or bedroom.</small></article>
+                </div>
+            </section>
+
+            <section class="card" id="patterns">
+                <span class="tag">Patterns</span>
+                <h2>Useful Home Patterns</h2>
+                <div class="question-grid">
+                    <div class="wide-box">
+                        <h3>Safe Sentence Formulas</h3>
+                        <div class="example-bank">
+                            <div class="example-line"><span class="mt"><code>Hemm + noun + fil-...</code></span><span class="en">There is / there are + noun + in the...</span></div>
+                            <div class="example-line"><span class="mt"><code>Għandi + noun</code></span><span class="en">I have + noun.</span></div>
+                            <div class="example-line"><span class="mt"><code>Id-dar tiegħi hija + adjective</code></span><span class="en">My house is + adjective.</span></div>
+                            <div class="example-line"><span class="mt"><code>Fil-kċina hemm...</code></span><span class="en">In the kitchen there is / there are...</span></div>
+                            <div class="example-line"><span class="mt"><code>Ħdejn il-... hemm...</code></span><span class="en">Next to the... there is / there are...</span></div>
+                        </div>
+                    </div>
+                    <div class="wide-box">
+                        <h3>Useful Adjectives</h3>
+                        <div class="three-col">
+                            <div class="item"><strong>kbira / kbir</strong><span>big</span></div>
+                            <div class="item"><strong>żgħira / żgħir</strong><span>small</span></div>
+                            <div class="item"><strong>nadifa / nadif</strong><span>clean</span></div>
+                            <div class="item"><strong>komda / komdu</strong><span>comfortable</span></div>
+                            <div class="item"><strong>sabiħa / sabiħ</strong><span>beautiful</span></div>
+                            <div class="item"><strong>dawl</strong><span>bright / light</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="questions">
+                <span class="tag">Questions</span>
+                <h2>Questions And Answers For Small Talk And Homework</h2>
+                <div class="question-grid">
+                    <div class="wide-box">
+                        <h3>Questions</h3>
+                        <div class="example-bank">
+                            <div class="example-line"><span class="mt">Fejn toqgħod?</span><span class="en">Where do you live?</span></div>
+                            <div class="example-line"><span class="mt">Toqgħod f'dar jew f'appartament?</span><span class="en">Do you live in a house or in an apartment?</span></div>
+                            <div class="example-line"><span class="mt">Id-dar tiegħek hija kbira jew żgħira?</span><span class="en">Is your house big or small?</span></div>
+                            <div class="example-line"><span class="mt">Kemm hemm kmamar fid-dar tiegħek?</span><span class="en">How many rooms are there in your home?</span></div>
+                            <div class="example-line"><span class="mt">Xi hemm fil-kċina?</span><span class="en">What is in the kitchen?</span></div>
+                            <div class="example-line"><span class="mt">Xi hemm fis-salott?</span><span class="en">What is in the living room?</span></div>
+                        </div>
+                    </div>
+                    <div class="wide-box">
+                        <h3>Answers</h3>
+                        <div class="example-bank">
+                            <div class="example-line"><span class="mt">Noqgħod f'appartament f'Tas-Sliema.</span><span class="en">I live in an apartment in Sliema.</span></div>
+                            <div class="example-line"><span class="mt">Id-dar tiegħi hija żgħira imma komda.</span><span class="en">My home is small but comfortable.</span></div>
+                            <div class="example-line"><span class="mt">Għandi kċina, salott, u żewġ kmamar tas-sodda.</span><span class="en">I have a kitchen, a living room, and two bedrooms.</span></div>
+                            <div class="example-line"><span class="mt">Fil-kċina hemm mejda, siġġijiet, u friġġ.</span><span class="en">In the kitchen there is a table, chairs, and a fridge.</span></div>
+                            <div class="example-line"><span class="mt">Fis-salott hemm sufan u televixin.</span><span class="en">In the living room there is a sofa and a television.</span></div>
+                            <div class="example-line"><span class="mt">Il-kamra favorita tiegħi hija l-kamra tas-sodda.</span><span class="en">My favourite room is the bedroom.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="examples-outside">
+                <span class="tag">Examples</span>
+                <h2>34 Outside And Exterior Examples</h2>
+                <div class="example-bank">
+                    <div class="example-line"><span class="mt">Jien noqgħod f'dar kbira.</span><span class="en">I live in a big house.</span></div>
+                    <div class="example-line"><span class="mt">Hi toqgħod f'appartament żgħir.</span><span class="en">She lives in a small apartment.</span></div>
+                    <div class="example-line"><span class="mt">Id-dar tiegħi hija sabiħa.</span><span class="en">My house is beautiful.</span></div>
+                    <div class="example-line"><span class="mt">Id-dar tagħna hija qrib il-baħar.</span><span class="en">Our house is near the sea.</span></div>
+                    <div class="example-line"><span class="mt">Quddiem id-dar hemm bieb kbir.</span><span class="en">In front of the house there is a big door.</span></div>
+                    <div class="example-line"><span class="mt">Il-bieb huwa kannella skur.</span><span class="en">The door is dark brown.</span></div>
+                    <div class="example-line"><span class="mt">Fuq il-bieb hemm numru żgħir.</span><span class="en">Above the door there is a small number.</span></div>
+                    <div class="example-line"><span class="mt">Ħdejn il-bieb hemm tieqa.</span><span class="en">Next to the door there is a window.</span></div>
+                    <div class="example-line"><span class="mt">It-tieqa hija miftuħa.</span><span class="en">The window is open.</span></div>
+                    <div class="example-line"><span class="mt">It-tieqa għandha purtieri bojod.</span><span class="en">The window has white curtains.</span></div>
+                    <div class="example-line"><span class="mt">Is-saqaf tad-dar huwa aħmar.</span><span class="en">The roof of the house is red.</span></div>
+                    <div class="example-line"><span class="mt">Is-saqaf huwa għoli.</span><span class="en">The roof is high.</span></div>
+                    <div class="example-line"><span class="mt">Id-dar għandha gallarija żgħira.</span><span class="en">The house has a small balcony.</span></div>
+                    <div class="example-line"><span class="mt">Fuq il-gallarija hemm siġġu wieħed.</span><span class="en">On the balcony there is one chair.</span></div>
+                    <div class="example-line"><span class="mt">Xi kultant noqgħod fuq il-gallarija filgħodu.</span><span class="en">Sometimes I stay on the balcony in the morning.</span></div>
+                    <div class="example-line"><span class="mt">Wara d-dar hemm ġnien.</span><span class="en">Behind the house there is a garden.</span></div>
+                    <div class="example-line"><span class="mt">Il-ġnien huwa nadif u sabiħ.</span><span class="en">The garden is clean and beautiful.</span></div>
+                    <div class="example-line"><span class="mt">Fil-ġnien hemm siġar u fjuri.</span><span class="en">In the garden there are trees and flowers.</span></div>
+                    <div class="example-line"><span class="mt">Fil-ġnien hemm mejda żgħira.</span><span class="en">In the garden there is a small table.</span></div>
+                    <div class="example-line"><span class="mt">Nixrob kafè fil-ġnien meta t-temp ikun sabiħ.</span><span class="en">I drink coffee in the garden when the weather is nice.</span></div>
+                    <div class="example-line"><span class="mt">Fuq barra d-dar hemm dawl isfar.</span><span class="en">Outside the house there is a yellow light.</span></div>
+                    <div class="example-line"><span class="mt">Il-ħajt ta' barra huwa abjad.</span><span class="en">The outside wall is white.</span></div>
+                    <div class="example-line"><span class="mt">Il-garaxx huwa taħt id-dar.</span><span class="en">The garage is under the house.</span></div>
+                    <div class="example-line"><span class="mt">Fil-garaxx hemm karozza waħda.</span><span class="en">There is one car in the garage.</span></div>
+                    <div class="example-line"><span class="mt">Il-bieb tal-garaxx huwa griż.</span><span class="en">The garage door is grey.</span></div>
+                    <div class="example-line"><span class="mt">Quddiem il-garaxx hemm triq kwieta.</span><span class="en">In front of the garage there is a quiet street.</span></div>
+                    <div class="example-line"><span class="mt">Id-dar ta' nannuwi għandha ġnien kbir.</span><span class="en">My grandparents' house has a big garden.</span></div>
+                    <div class="example-line"><span class="mt">Id-dar tiegħi m'għandhiex garaxx.</span><span class="en">My house does not have a garage.</span></div>
+                    <div class="example-line"><span class="mt">L-appartament tagħna għandu gallarija sabiħa.</span><span class="en">Our apartment has a beautiful balcony.</span></div>
+                    <div class="example-line"><span class="mt">Mit-tieqa nara t-triq.</span><span class="en">From the window I can see the street.</span></div>
+                    <div class="example-line"><span class="mt">Mit-tieqa nara l-baħar.</span><span class="en">From the window I can see the sea.</span></div>
+                    <div class="example-line"><span class="mt">Inħobb id-dar tiegħi għax hija komda.</span><span class="en">I like my home because it is comfortable.</span></div>
+                    <div class="example-line"><span class="mt">Id-dar hija żgħira, imma hija sabiħa ħafna.</span><span class="en">The house is small, but it is very beautiful.</span></div>
+                    <div class="example-line"><span class="mt">Filgħaxija d-dawl ta' barra jkun mixgħul.</span><span class="en">In the evening the outside light is on.</span></div>
+                </div>
+            </section>
+
+            <section class="card" id="examples-rooms">
+                <span class="tag">Examples</span>
+                <h2>33 Room Description Examples</h2>
+                <div class="example-bank">
+                    <div class="example-line"><span class="mt">Fil-kċina hemm mejda kbira.</span><span class="en">In the kitchen there is a big table.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kċina hemm friġġ abjad.</span><span class="en">In the kitchen there is a white fridge.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kċina hemm erba' siġġijiet.</span><span class="en">There are four chairs in the kitchen.</span></div>
+                    <div class="example-line"><span class="mt">Il-kċina hija nadifa u sabiħa.</span><span class="en">The kitchen is clean and beautiful.</span></div>
+                    <div class="example-line"><span class="mt">Aħna nieklu fil-kamra tal-ikel.</span><span class="en">We eat in the dining room.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kamra tal-ikel hemm mejda twila.</span><span class="en">In the dining room there is a long table.</span></div>
+                    <div class="example-line"><span class="mt">Il-kamra tal-ikel hija qrib il-kċina.</span><span class="en">The dining room is near the kitchen.</span></div>
+                    <div class="example-line"><span class="mt">Fis-salott hemm sufan komdu.</span><span class="en">In the living room there is a comfortable sofa.</span></div>
+                    <div class="example-line"><span class="mt">Fis-salott hemm televixin kbir.</span><span class="en">In the living room there is a big television.</span></div>
+                    <div class="example-line"><span class="mt">Aħna naraw it-televixin fis-salott.</span><span class="en">We watch television in the living room.</span></div>
+                    <div class="example-line"><span class="mt">Fis-salott hemm tieqa kbira.</span><span class="en">In the living room there is a big window.</span></div>
+                    <div class="example-line"><span class="mt">Il-kamra tas-sodda tiegħi hija żgħira.</span><span class="en">My bedroom is small.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kamra tas-sodda hemm sodda waħda.</span><span class="en">There is one bed in the bedroom.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kamra tas-sodda hemm armarju kbir.</span><span class="en">There is a big wardrobe in the bedroom.</span></div>
+                    <div class="example-line"><span class="mt">Fuq il-komodina hemm lampa.</span><span class="en">There is a lamp on the bedside table.</span></div>
+                    <div class="example-line"><span class="mt">Il-kamra tas-sodda hija kwieta ħafna.</span><span class="en">The bedroom is very quiet.</span></div>
+                    <div class="example-line"><span class="mt">Norqod fil-kamra tas-sodda kull lejl.</span><span class="en">I sleep in the bedroom every night.</span></div>
+                    <div class="example-line"><span class="mt">Il-kamra tal-banju hija żgħira imma nadifa.</span><span class="en">The bathroom is small but clean.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kamra tal-banju hemm mera.</span><span class="en">There is a mirror in the bathroom.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kamra tal-banju hemm sink u doċċa.</span><span class="en">In the bathroom there is a sink and a shower.</span></div>
+                    <div class="example-line"><span class="mt">Naħsel snieni fil-kamra tal-banju.</span><span class="en">I brush my teeth in the bathroom.</span></div>
+                    <div class="example-line"><span class="mt">L-istudju tiegħi għandu skrivanija żgħira.</span><span class="en">My study has a small desk.</span></div>
+                    <div class="example-line"><span class="mt">Fl-istudju hemm laptop u kotba.</span><span class="en">In the study there is a laptop and books.</span></div>
+                    <div class="example-line"><span class="mt">Naħdem fl-istudju filgħodu.</span><span class="en">I work in the study in the morning.</span></div>
+                    <div class="example-line"><span class="mt">Naqra ktieb fl-istudju filgħaxija.</span><span class="en">I read a book in the study in the evening.</span></div>
+                    <div class="example-line"><span class="mt">Il-kuritur huwa twil u dejjaq.</span><span class="en">The corridor is long and narrow.</span></div>
+                    <div class="example-line"><span class="mt">Mill-kuritur tista' tmur għall-kċina.</span><span class="en">From the corridor you can go to the kitchen.</span></div>
+                    <div class="example-line"><span class="mt">Mill-kuritur tista' tmur għas-salott ukoll.</span><span class="en">From the corridor you can also go to the living room.</span></div>
+                    <div class="example-line"><span class="mt">Il-kċina hija l-kamra favorita ta' ommi.</span><span class="en">The kitchen is my mother's favourite room.</span></div>
+                    <div class="example-line"><span class="mt">Is-salott huwa l-akbar kamra fid-dar.</span><span class="en">The living room is the biggest room in the house.</span></div>
+                    <div class="example-line"><span class="mt">Il-kamra tas-sodda tiegħi għandha tieqa kbira.</span><span class="en">My bedroom has a big window.</span></div>
+                    <div class="example-line"><span class="mt">Fil-kamra tal-ikel nieklu flimkien.</span><span class="en">We eat together in the dining room.</span></div>
+                    <div class="example-line"><span class="mt">Kull kamra fid-dar għandha dawl tajjeb.</span><span class="en">Every room in the house has good light.</span></div>
+                </div>
+            </section>
+
+            <section class="card" id="examples-furniture">
+                <span class="tag">Examples</span>
+                <h2>33 Furniture And Object Examples</h2>
+                <div class="example-bank">
+                    <div class="example-line"><span class="mt">Il-mejda hija fil-kċina.</span><span class="en">The table is in the kitchen.</span></div>
+                    <div class="example-line"><span class="mt">Il-mejda hija kannella.</span><span class="en">The table is brown.</span></div>
+                    <div class="example-line"><span class="mt">Hemm ktieb fuq il-mejda.</span><span class="en">There is a book on the table.</span></div>
+                    <div class="example-line"><span class="mt">Hemm tazza fuq il-mejda.</span><span class="en">There is a cup on the table.</span></div>
+                    <div class="example-line"><span class="mt">Is-siġġu huwa ħdejn il-mejda.</span><span class="en">The chair is next to the table.</span></div>
+                    <div class="example-line"><span class="mt">Għandi sitt siġġijiet fil-kamra tal-ikel.</span><span class="en">I have six chairs in the dining room.</span></div>
+                    <div class="example-line"><span class="mt">Is-sufan huwa komdu ħafna.</span><span class="en">The sofa is very comfortable.</span></div>
+                    <div class="example-line"><span class="mt">Il-qattus jorqod fuq is-sufan.</span><span class="en">The cat sleeps on the sofa.</span></div>
+                    <div class="example-line"><span class="mt">Quddiem is-sufan hemm mejda żgħira.</span><span class="en">In front of the sofa there is a small table.</span></div>
+                    <div class="example-line"><span class="mt">Is-sodda tiegħi hija kbira.</span><span class="en">My bed is big.</span></div>
+                    <div class="example-line"><span class="mt">Il-kutra hija fuq is-sodda.</span><span class="en">The blanket is on the bed.</span></div>
+                    <div class="example-line"><span class="mt">Żewġ imħaded huma fuq is-sodda.</span><span class="en">Two pillows are on the bed.</span></div>
+                    <div class="example-line"><span class="mt">L-armarju huwa ħdejn is-sodda.</span><span class="en">The wardrobe is next to the bed.</span></div>
+                    <div class="example-line"><span class="mt">Fl-armarju għandi ħafna ħwejjeġ.</span><span class="en">I have many clothes in the wardrobe.</span></div>
+                    <div class="example-line"><span class="mt">Il-bieb tal-armarju huwa magħluq.</span><span class="en">The wardrobe door is closed.</span></div>
+                    <div class="example-line"><span class="mt">Il-lampa hija fuq il-komodina.</span><span class="en">The lamp is on the bedside table.</span></div>
+                    <div class="example-line"><span class="mt">Il-lampa hija safra.</span><span class="en">The lamp is yellow.</span></div>
+                    <div class="example-line"><span class="mt">Filgħaxija nixgħel il-lampa.</span><span class="en">In the evening I switch on the lamp.</span></div>
+                    <div class="example-line"><span class="mt">L-iskrivanija hija quddiem it-tieqa.</span><span class="en">The desk is in front of the window.</span></div>
+                    <div class="example-line"><span class="mt">Fuq l-iskrivanija hemm laptop.</span><span class="en">There is a laptop on the desk.</span></div>
+                    <div class="example-line"><span class="mt">Naħdem fuq l-iskrivanija tiegħi kuljum.</span><span class="en">I work at my desk every day.</span></div>
+                    <div class="example-line"><span class="mt">Il-friġġ huwa fil-kċina.</span><span class="en">The fridge is in the kitchen.</span></div>
+                    <div class="example-line"><span class="mt">Fil-friġġ hemm ħalib u ġobon.</span><span class="en">There is milk and cheese in the fridge.</span></div>
+                    <div class="example-line"><span class="mt">Il-friġġ huwa ġdid.</span><span class="en">The fridge is new.</span></div>
+                    <div class="example-line"><span class="mt">Ix-xkaffa hija fuq il-ħajt.</span><span class="en">The shelf is on the wall.</span></div>
+                    <div class="example-line"><span class="mt">Fuq ix-xkaffa hemm kotba.</span><span class="en">There are books on the shelf.</span></div>
+                    <div class="example-line"><span class="mt">Fuq ix-xkaffa hemm pjanta żgħira.</span><span class="en">There is a small plant on the shelf.</span></div>
+                    <div class="example-line"><span class="mt">Il-mera hija fil-kamra tal-banju.</span><span class="en">The mirror is in the bathroom.</span></div>
+                    <div class="example-line"><span class="mt">Il-mera hija kbira u nadifa.</span><span class="en">The mirror is big and clean.</span></div>
+                    <div class="example-line"><span class="mt">Nara wiċċi fil-mera.</span><span class="en">I see my face in the mirror.</span></div>
+                    <div class="example-line"><span class="mt">Il-purtieri huma ħdejn it-tieqa.</span><span class="en">The curtains are next to the window.</span></div>
+                    <div class="example-line"><span class="mt">It-televixin huwa fis-salott.</span><span class="en">The television is in the living room.</span></div>
+                    <div class="example-line"><span class="mt">Il-bank żgħir huwa fil-ġnien.</span><span class="en">The small bench is in the garden.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/home-compact-toggle.js"></script>
+</body>
+</html>
