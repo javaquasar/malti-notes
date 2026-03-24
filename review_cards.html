@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Cards</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/site.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./animals.html">Animals</a>
+            <a href="./verbs_guide.html">Verbs</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Review Cards</h1>
+                <p class="lead">Save words from vocabulary pages and repeat them here as simple browser-based flashcards. Your progress stays in this browser.</p>
+                <div class="pill-row">
+                    <span class="pill">localStorage</span>
+                    <span class="pill">again / good / easy</span>
+                    <span class="pill">animals MVP</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>How it works</strong></p>
+                <ul>
+                    <li>add words from the animals page</li>
+                    <li>show the answer only when ready</li>
+                    <li>grade each card and keep progress locally</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Review</h2>
+            <p class="mini" id="review-stats">0 saved, 0 due now</p>
+            <p><a class="action-link" href="./animals.html">Add More Animal Words</a></p>
+            <p><button class="action-button" id="clear-review" type="button">Clear Review List</button></p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card">
+                <div class="review-card-shell">
+                    <div class="review-stage" id="review-stage"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/review-cards.js"></script>
+</body>
+</html>
