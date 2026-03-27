@@ -59,6 +59,9 @@
     }
   ];
 
+  const currentGroupLabel =
+    groups.find((group) => group.items.some(([href]) => href === currentFile))?.label || null;
+
   const linkHtml = (href, label, extraClass = "") => {
     const current = currentFile === href ? " is-current" : "";
     return `<a class="nav-link${current}${extraClass ? ` ${extraClass}` : ""}" href="./${href}">${label}</a>`;
@@ -74,7 +77,7 @@
       .join("");
 
     return `
-      <details class="nav-group"${hasCurrent ? " open" : ""}>
+      <details class="nav-group${hasCurrent ? " is-current-group" : ""}"${hasCurrent ? " open" : ""}>
         <summary>${label}</summary>
         <div class="nav-menu">
           ${itemsHtml}
@@ -91,7 +94,7 @@
       <nav class="site-nav site-nav-compact" aria-label="Primary">
         ${linkHtml("index.html", "Home")}
         ${groups.map(groupHtml).join("")}
-        <a class="nav-link" href="./index.html#pages">All Pages</a>
+        ${linkHtml("all_pages.html", "All Pages")}
       </nav>
     </div>
   `;
@@ -106,6 +109,10 @@
       header.classList.toggle("nav-open", next);
       toggle.setAttribute("aria-expanded", String(next));
     });
+  }
+
+  if (currentFile === "index.html" && currentGroupLabel) {
+    header.dataset.currentGroup = currentGroupLabel;
   }
 
   detailsList.forEach((details) => {

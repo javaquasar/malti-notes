@@ -691,6 +691,17 @@ td {
   text-decoration: none;
 }
 
+.nav-group.is-current-group summary {
+  background: rgba(47, 143, 131, 0.12);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-menu .is-current {
+  background: rgba(47, 143, 131, 0.10);
+  text-decoration: none;
+}
+
 .list {
   display: grid;
   gap: 10px;
