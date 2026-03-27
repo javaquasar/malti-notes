@@ -6,6 +6,7 @@
     <title>Level 1 Numbers, Calendar and Time Guide</title>
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
     <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
     <style>
         .number-grid {
             display: grid;
@@ -49,12 +50,6 @@
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 14px;
-        }
-
-        .phrase-card {
-            border-radius: 16px;
-            padding: 12px 14px;
-            background: rgba(255, 255, 255, 0.5);
         }
 
         .phrase-card strong {
@@ -395,10 +390,11 @@
             <section class="content-card" id="clock-time">
                 <span class="tag">Clock Time</span>
                 <h2>Telling the Time in Maltese</h2>
+                <div class="section-stack">
                 <div class="two-col">
                     <div class="box">
                         <h3>Full Hours</h3>
-                        <table>
+                        <table class="table-soft">
                             <tbody>
                             <tr><th>1:00</th><td><code>is-siegħa</code></td></tr>
                             <tr><th>2:00</th><td><code>is-sagħtejn</code></td></tr>
@@ -418,7 +414,7 @@
                     </div>
                     <div class="box">
                         <h3>Parts of the Day</h3>
-                        <table>
+                        <table class="table-soft">
                             <tbody>
                             <tr><th>ta' filgħodu</th><td>in the morning</td></tr>
                             <tr><th>ta' waranofsinhar</th><td>in the afternoon</td></tr>
@@ -460,7 +456,7 @@
 
                 <div class="box">
                     <h3>More Minute Examples</h3>
-                    <table>
+                    <table class="table-soft">
                         <thead><tr><th>Time</th><th>Maltese</th><th>English</th></tr></thead>
                         <tbody>
                         <tr><td>3:05</td><td><code>it-tlieta u ħamsa</code></td><td>five past three</td></tr>
@@ -483,7 +479,7 @@
                 </div>
                 <div class="box">
                     <h3>Time Units</h3>
-                    <table>
+                    <table class="table-soft">
                         <tbody>
                         <tr><th>siegħa</th><td>hour</td></tr>
                         <tr><th>sigħat</th><td>hours</td></tr>
@@ -499,6 +495,7 @@
                         In Level 1 the course notes also highlight a useful pattern: <code>2-10 + minuti</code>,
                         but <code>11+ + minuta</code> in the lesson examples.
                     </p>
+                </div>
                 </div>
             </section>
 

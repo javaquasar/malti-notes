@@ -121,6 +121,10 @@ h3 { font-size: 1.08rem; }
 
 .content { display: grid; gap: 20px; }
 
+.section-stack > * + * {
+  margin-top: 16px;
+}
+
 
 .hero-body > *,
 .grid > *,
@@ -223,6 +227,54 @@ h3 { font-size: 1.08rem; }
   gap: 18px;
 }
 
+.review-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.review-form-grid .full {
+  grid-column: 1 / -1;
+}
+
+.review-input,
+.review-textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+  font: inherit;
+}
+
+.review-textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.verb-drill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.verb-drill-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.verb-drill-card h3 {
+  margin-bottom: 6px;
+}
+
+.verb-drill-card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
 .review-stage {
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -263,6 +315,12 @@ h3 { font-size: 1.08rem; }
 .review-empty {
   text-align: center;
   padding: 26px;
+}
+
+@media (max-width: 980px) {
+  .review-form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pill-row {
@@ -451,6 +509,38 @@ table {
   border-collapse: collapse;
   margin-top: 10px;
   font-size: 0.96rem;
+}
+
+.box > table,
+.story > table,
+.mistake > table,
+.item > table,
+.example > table,
+.pattern > table,
+.pair > table,
+.number-column > table,
+.phrase-card > table,
+.verb-visual > table {
+  margin-top: 14px;
+}
+
+.table-soft {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(95, 111, 103, 0.14);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.table-soft th,
+.table-soft td {
+  padding: 12px 14px;
+}
+
+.table-soft tr:last-child th,
+.table-soft tr:last-child td {
+  border-bottom: none;
 }
 
 th {
