@@ -1,0 +1,65 @@
+:root,
+:root[data-theme="classic"] {
+  --theme-name: "classic";
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-mono: Consolas, "Courier New", monospace;
+  --color-bg: #f4efe4;
+  --color-bg-top: #f7f1e6;
+  --color-surface: #fffaf1;
+  --color-surface-muted: rgba(255, 255, 255, 0.56);
+  --color-surface-soft: rgba(255, 255, 255, 0.46);
+  --color-surface-strong: rgba(255, 255, 255, 0.76);
+  --color-text: #17352f;
+  --color-text-muted: #5f6f67;
+  --color-border: #d9ceb7;
+  --color-border-strong: rgba(95, 111, 103, 0.18);
+  --color-accent: #bf5b2c;
+  --color-accent-soft: rgba(191, 91, 44, 0.1);
+  --color-accent-border: rgba(191, 91, 44, 0.22);
+  --color-brand: #2f8f83;
+  --color-brand-soft: rgba(47, 143, 131, 0.08);
+  --color-brand-hover: rgba(47, 143, 131, 0.14);
+  --color-brand-border: rgba(47, 143, 131, 0.24);
+  --hero-glow-left: rgba(47, 143, 131, 0.12);
+  --hero-glow-right: rgba(191, 91, 44, 0.1);
+  --shadow-soft: 0 18px 40px rgba(33, 35, 27, 0.08);
+  --radius-panel: 24px;
+  --radius-card: 18px;
+  --radius-chip: 999px;
+  --space-page-x: 16px;
+  --space-page-y: 24px;
+  --space-section: 24px;
+  --page-max-width: 1220px;
+
+  --bg: var(--color-bg);
+  --paper: var(--color-surface);
+  --ink: var(--color-text);
+  --muted: var(--color-text-muted);
+  --line: var(--color-border);
+  --accent: var(--color-accent);
+  --teal: var(--color-brand);
+  --shadow: var(--shadow-soft);
+}
+
+:root[data-theme="forest"] {
+  --theme-name: "forest";
+  --color-bg: #edf3ec;
+  --color-bg-top: #f5faf4;
+  --color-surface: #fbfdf9;
+  --color-surface-muted: rgba(255, 255, 255, 0.62);
+  --color-surface-soft: rgba(255, 255, 255, 0.5);
+  --color-surface-strong: rgba(255, 255, 255, 0.8);
+  --color-text: #1b3326;
+  --color-text-muted: #5b6f61;
+  --color-border: #d1ddcf;
+  --color-border-strong: rgba(91, 111, 97, 0.18);
+  --color-accent: #9c5a2f;
+  --color-accent-soft: rgba(156, 90, 47, 0.1);
+  --color-accent-border: rgba(156, 90, 47, 0.22);
+  --color-brand: #3a7d67;
+  --color-brand-soft: rgba(58, 125, 103, 0.08);
+  --color-brand-hover: rgba(58, 125, 103, 0.14);
+  --color-brand-border: rgba(58, 125, 103, 0.24);
+  --hero-glow-left: rgba(58, 125, 103, 0.12);
+  --hero-glow-right: rgba(156, 90, 47, 0.1);
+}

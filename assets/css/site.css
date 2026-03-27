@@ -1,14 +1,3 @@
-:root {
-  --bg: #f4efe4;
-  --paper: #fffaf1;
-  --ink: #17352f;
-  --muted: #5f6f67;
-  --line: #d9ceb7;
-  --accent: #bf5b2c;
-  --teal: #2f8f83;
-  --shadow: 0 18px 40px rgba(33, 35, 27, 0.08);
-}
-
 * { box-sizing: border-box; }
 
 html,
@@ -19,17 +8,17 @@ body {
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: radial-gradient(circle at top left, rgba(47, 143, 131, 0.12), transparent 28%), radial-gradient(circle at top right, rgba(191, 91, 44, 0.10), transparent 24%), linear-gradient(180deg, #f7f1e6 0%, var(--bg) 100%);
+  font-family: var(--font-body);
+  background: radial-gradient(circle at top left, var(--hero-glow-left), transparent 28%), radial-gradient(circle at top right, var(--hero-glow-right), transparent 24%), linear-gradient(180deg, var(--color-bg-top) 0%, var(--color-bg) 100%);
   color: var(--ink);
   line-height: 1.5;
 }
 
 .page {
-  width: min(1220px, 100%);
-  margin: 24px auto 48px;
-  padding-left: max(16px, env(safe-area-inset-left));
-  padding-right: max(16px, env(safe-area-inset-right));
+  width: min(var(--page-max-width), 100%);
+  margin: var(--space-page-y) auto 48px;
+  padding-left: max(var(--space-page-x), env(safe-area-inset-left));
+  padding-right: max(var(--space-page-x), env(safe-area-inset-right));
 }
 
 .hero,
@@ -40,8 +29,8 @@ body {
 .resource-card,
 .page-card {
   background: var(--paper);
-  border: 1px solid rgba(95, 111, 103, 0.18);
-  border-radius: 24px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-panel);
   box-shadow: var(--shadow);
 }
 
@@ -90,7 +79,7 @@ h3 { font-size: 1.08rem; }
 .hero-note {
   background: #f9f1e2;
   border: 1px solid rgba(191, 91, 44, 0.18);
-  border-radius: 20px;
+  border-radius: calc(var(--radius-panel) - 4px);
   padding: 18px;
 }
 
@@ -178,10 +167,10 @@ h3 { font-size: 1.08rem; }
 .action-button,
 .review-add-button {
   appearance: none;
-  border: 1px solid rgba(47, 143, 131, 0.24);
-  border-radius: 999px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: var(--radius-chip);
   padding: 9px 14px;
-  background: rgba(47, 143, 131, 0.08);
+  background: var(--color-brand-soft);
   color: var(--ink);
   font: inherit;
   font-weight: 700;
@@ -196,7 +185,7 @@ h3 { font-size: 1.08rem; }
 .action-link:hover,
 .action-button:hover,
 .review-add-button:hover {
-  background: rgba(47, 143, 131, 0.14);
+  background: var(--color-brand-hover);
 }
 
 .review-add-button {
@@ -206,8 +195,8 @@ h3 { font-size: 1.08rem; }
 }
 
 .review-add-button.is-added {
-  background: rgba(191, 91, 44, 0.10);
-  border-color: rgba(191, 91, 44, 0.22);
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
   color: var(--accent);
 }
 
@@ -330,17 +319,17 @@ h3 { font-size: 1.08rem; }
 }
 
 .pill {
-  border: 1px solid rgba(47, 143, 131, 0.24);
-  border-radius: 999px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: var(--radius-chip);
   padding: 8px 12px;
-  background: rgba(47, 143, 131, 0.08);
+  background: var(--color-brand-soft);
   font-size: 0.95rem;
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
-  border-radius: 999px;
+  border-radius: var(--radius-chip);
   padding: 6px 10px;
   font-size: 0.82rem;
   letter-spacing: 0.03em;
@@ -495,9 +484,9 @@ h3 { font-size: 1.08rem; }
 .muted { color: var(--muted); }
 
 code {
-  font-family: Consolas, "Courier New", monospace;
+  font-family: var(--font-mono);
   font-size: 0.92em;
-  background: rgba(47, 143, 131, 0.08);
+  background: var(--color-brand-soft);
   padding: 2px 6px;
   border-radius: 6px;
   overflow-wrap: anywhere;
