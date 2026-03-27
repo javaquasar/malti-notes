@@ -252,6 +252,7 @@
 .sentence-card,
 .animal-note,
 .vocab-card,
+.color-card,
 .transport-figure-card,
 .question-card,
 .route-card,
@@ -289,6 +290,7 @@
 .pattern-card strong,
 .sentence-card strong,
 .vocab-card strong,
+.color-card strong,
 .transport-figure-card strong,
 .question-card strong,
 .route-card strong,
@@ -304,6 +306,7 @@
 .pattern-card span,
 .sentence-card span,
 .vocab-card span,
+.color-card span,
 .transport-figure-card span,
 .question-card span,
 .route-card span,
@@ -316,6 +319,7 @@
 }
 
 .vocab-card small,
+.color-card small,
 .lesson-note p,
 .triple-card small,
 .mini-card p,
@@ -347,6 +351,22 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin-top: 18px;
+}
+
+.color-card {
+  display: grid;
+  gap: 10px;
+}
+
+.color-swatch {
+  height: 92px;
+  border-radius: 16px;
+  border: 1px solid rgba(95, 111, 103, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.color-card code {
+  width: fit-content;
 }
 
 .animal-figure-card,
