@@ -29,13 +29,16 @@
                 <div class="pill-row">
                     <span class="pill">localStorage</span>
                     <span class="pill">again / good / easy</span>
-                    <span class="pill">animals MVP</span>
+                    <span class="pill">custom words</span>
+                    <span class="pill">verb forms</span>
                 </div>
             </div>
             <aside class="note">
                 <p><strong>How it works</strong></p>
                 <ul>
                     <li>add words from the animals page</li>
+                    <li>add your own custom Maltese words</li>
+                    <li>add verb drills from the verbs page</li>
                     <li>show the answer only when ready</li>
                     <li>grade each card and keep progress locally</li>
                 </ul>
@@ -47,11 +50,42 @@
         <aside class="sidebar">
             <h2>Review</h2>
             <p class="mini" id="review-stats">0 saved, 0 due now</p>
+            <p class="mini" id="review-breakdown">0 words, 0 verb forms</p>
             <p><a class="action-link" href="./animals.html">Add More Animal Words</a></p>
+            <p><a class="action-link" href="./verbs_guide.html">Add Verb Drill</a></p>
             <p><button class="action-button" id="clear-review" type="button">Clear Review List</button></p>
         </aside>
 
         <main class="content">
+            <section class="content-card">
+                <span class="tag">Custom Add</span>
+                <h2>Add a Custom Maltese Word</h2>
+                <form class="review-form-grid" id="custom-word-form">
+                    <label>
+                        <strong>Maltese</strong>
+                        <input class="review-input" id="custom-maltese" name="maltese" type="text" placeholder="e.g. saqqu" required>
+                    </label>
+                    <label>
+                        <strong>English</strong>
+                        <input class="review-input" id="custom-english" name="english" type="text" placeholder="e.g. mattress">
+                    </label>
+                    <label>
+                        <strong>Topic</strong>
+                        <input class="review-input" id="custom-topic" name="topic" type="text" placeholder="e.g. Home">
+                    </label>
+                    <label>
+                        <strong>Status</strong>
+                        <div class="status-chip" id="custom-status">Nothing added yet.</div>
+                    </label>
+                    <label class="full">
+                        <strong>Example</strong>
+                        <textarea class="review-textarea" id="custom-example" name="example" placeholder="Optional example sentence"></textarea>
+                    </label>
+                    <div class="full">
+                        <button class="action-button" type="submit">Save Custom Word</button>
+                    </div>
+                </form>
+            </section>
             <section class="content-card">
                 <div class="review-card-shell">
                     <div class="review-stage" id="review-stage"></div>

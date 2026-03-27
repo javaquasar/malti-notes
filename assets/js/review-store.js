@@ -1,5 +1,5 @@
 (function () {
-    var STORAGE_KEY = "malti_review_words_v1";
+    var STORAGE_KEY = "malti_review_cards_v2";
 
     function loadState() {
         try {
@@ -18,6 +18,26 @@
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     }
 
+    function collapseSpaces(value) {
+        return String(value || "").replace(/\s+/g, " ").trim();
+    }
+
+    function normalizeQuotes(value) {
+        return collapseSpaces(value).replace(/[’`´]/g, "'");
+    }
+
+    function normalizeForKey(value) {
+        return normalizeQuotes(value).toLocaleLowerCase();
+    }
+
+    function titleCaseLoose(value) {
+        var clean = collapseSpaces(value);
+        if (!clean) {
+            return "";
+        }
+        return clean.charAt(0).toUpperCase() + clean.slice(1);
+    }
+
     function toIsoAfterDays(days) {
         var now = new Date();
         now.setHours(0, 0, 0, 0);
@@ -25,109 +45,184 @@
         return now.toISOString();
     }
 
-    function normalizeWord(word) {
-        var item = Object.assign({}, word);
-        item.id = item.id || [item.topic || "General", item.maltese || "", item.english || ""].join("::");
-        item.topic = item.topic || "General";
+    function normalizeCard(card) {
+        var item = Object.assign({}, card);
+        item.type = item.type || "word-card";
+        item.topic = titleCaseLoose(item.topic || "General");
         item.sourcePage = item.sourcePage || "";
-        item.example = item.example || "";
         item.addedAt = item.addedAt || new Date().toISOString();
         item.reviewCount = typeof item.reviewCount === "number" ? item.reviewCount : 0;
         item.box = typeof item.box === "number" ? item.box : 0;
         item.nextReviewAt = item.nextReviewAt || new Date().toISOString();
         item.lastReviewedAt = item.lastReviewedAt || null;
+
+        if (item.type === "verb-form-card") {
+            item.lemma = collapseSpaces(item.lemma);
+            item.translation = collapseSpaces(item.translation);
+            item.tense = collapseSpaces(item.tense);
+            item.pronoun = collapseSpaces(item.pronoun);
+            item.prompt = collapseSpaces(item.prompt || (item.pronoun + " + " + item.lemma));
+            item.answer = collapseSpaces(item.answer);
+            item.example = collapseSpaces(item.example || "");
+            item.normalizedKey = item.normalizedKey || [
+                normalizeForKey(item.lemma),
+                normalizeForKey(item.tense),
+                normalizeForKey(item.pronoun)
+            ].join("::");
+            item.id = item.id || ("verb::" + item.normalizedKey);
+        } else {
+            item.maltese = collapseSpaces(item.maltese);
+            item.english = collapseSpaces(item.english || "");
+            item.example = collapseSpaces(item.example || "");
+            item.displayMaltese = item.displayMaltese || item.maltese;
+            item.normalizedMaltese = item.normalizedMaltese || normalizeForKey(item.maltese);
+            item.id = item.id || ("word::" + item.topic + "::" + item.normalizedMaltese);
+        }
+
         return item;
     }
 
-    function getAllWords() {
+    function getAllCards() {
         var state = loadState();
         return Object.keys(state).map(function (key) {
-            return normalizeWord(state[key]);
+            return normalizeCard(state[key]);
         }).sort(function (a, b) {
-            return (a.maltese || "").localeCompare(b.maltese || "");
+            var left = a.type === "verb-form-card" ? a.prompt : a.maltese;
+            var right = b.type === "verb-form-card" ? b.prompt : b.maltese;
+            return String(left || "").localeCompare(String(right || ""));
         });
     }
 
-    function getWord(id) {
+    function getCard(id) {
         var state = loadState();
-        return state[id] ? normalizeWord(state[id]) : null;
+        return state[id] ? normalizeCard(state[id]) : null;
     }
 
-    function hasWord(id) {
-        return !!getWord(id);
+    function hasCard(id) {
+        return !!getCard(id);
     }
 
-    function addWord(word) {
+    function saveCard(card) {
         var state = loadState();
-        var normalized = normalizeWord(word);
+        var normalized = normalizeCard(card);
         if (!state[normalized.id]) {
             state[normalized.id] = normalized;
             saveState(state);
         }
-        return normalizeWord(state[normalized.id] || normalized);
+        return normalizeCard(state[normalized.id] || normalized);
     }
 
-    function removeWord(id) {
+    function addWord(word) {
+        return saveCard(Object.assign({}, word, { type: "word-card" }));
+    }
+
+    function addCustomWord(input) {
+        return addWord({
+            maltese: normalizeQuotes(input.maltese),
+            english: collapseSpaces(input.english || ""),
+            example: collapseSpaces(input.example || ""),
+            topic: input.topic || "Custom",
+            sourcePage: input.sourcePage || "manual"
+        });
+    }
+
+    function addVerbDrill(verb) {
+        var saved = [];
+        Object.keys(verb.forms || {}).forEach(function (tense) {
+            var tenseForms = verb.forms[tense];
+            Object.keys(tenseForms).forEach(function (pronoun) {
+                saved.push(saveCard({
+                    type: "verb-form-card",
+                    lemma: verb.lemma,
+                    translation: verb.translation,
+                    tense: tense,
+                    pronoun: pronoun,
+                    answer: tenseForms[pronoun],
+                    prompt: pronoun + " + " + verb.lemma + " (" + tense + ")",
+                    topic: verb.topic || "Verb Drill",
+                    sourcePage: verb.sourcePage || "verbs_guide.html",
+                    example: verb.example || ""
+                }));
+            });
+        });
+        return saved;
+    }
+
+    function removeCard(id) {
         var state = loadState();
         delete state[id];
         saveState(state);
     }
 
-    function getDueWords() {
+    function getDueCards() {
         var now = Date.now();
-        return getAllWords().filter(function (word) {
-            return new Date(word.nextReviewAt).getTime() <= now;
+        return getAllCards().filter(function (card) {
+            return new Date(card.nextReviewAt).getTime() <= now;
         });
     }
 
-    function reviewWord(id, grade) {
+    function reviewCard(id, grade) {
         var state = loadState();
         if (!state[id]) {
             return null;
         }
 
-        var word = normalizeWord(state[id]);
-        var nextBox = word.box;
+        var card = normalizeCard(state[id]);
+        var nextBox = card.box;
         var nextDays = 0;
 
         if (grade === "again") {
             nextBox = 0;
             nextDays = 0;
         } else if (grade === "good") {
-            nextBox = Math.min(word.box + 1, 4);
+            nextBox = Math.min(card.box + 1, 4);
             nextDays = [1, 2, 4, 7, 14][nextBox];
         } else if (grade === "easy") {
-            nextBox = Math.min(word.box + 2, 5);
+            nextBox = Math.min(card.box + 2, 5);
             nextDays = [2, 4, 7, 14, 21, 30][nextBox];
         }
 
-        word.box = nextBox;
-        word.reviewCount += 1;
-        word.lastReviewedAt = new Date().toISOString();
-        word.nextReviewAt = grade === "again" ? new Date(Date.now() + 10 * 60 * 1000).toISOString() : toIsoAfterDays(nextDays);
+        card.box = nextBox;
+        card.reviewCount += 1;
+        card.lastReviewedAt = new Date().toISOString();
+        card.nextReviewAt = grade === "again" ? new Date(Date.now() + 10 * 60 * 1000).toISOString() : toIsoAfterDays(nextDays);
 
-        state[id] = word;
+        state[id] = card;
         saveState(state);
-        return word;
+        return card;
     }
 
     function getStats() {
-        var all = getAllWords();
-        var due = getDueWords();
+        var all = getAllCards();
+        var due = getDueCards();
+        var verbCards = all.filter(function (card) { return card.type === "verb-form-card"; }).length;
+        var wordCards = all.length - verbCards;
         return {
             total: all.length,
-            due: due.length
+            due: due.length,
+            words: wordCards,
+            verbs: verbCards
         };
     }
 
     window.MaltiReviewStore = {
         addWord: addWord,
-        getAllWords: getAllWords,
-        getDueWords: getDueWords,
-        getWord: getWord,
-        hasWord: hasWord,
-        removeWord: removeWord,
-        reviewWord: reviewWord,
-        getStats: getStats
+        addCustomWord: addCustomWord,
+        addVerbDrill: addVerbDrill,
+        getAllWords: getAllCards,
+        getAllCards: getAllCards,
+        getDueWords: getDueCards,
+        getDueCards: getDueCards,
+        getWord: getCard,
+        getCard: getCard,
+        hasWord: hasCard,
+        hasCard: hasCard,
+        removeWord: removeCard,
+        removeCard: removeCard,
+        reviewWord: reviewCard,
+        reviewCard: reviewCard,
+        getStats: getStats,
+        normalizeQuotes: normalizeQuotes,
+        normalizeForKey: normalizeForKey
     };
 }());
