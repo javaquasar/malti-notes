@@ -8,141 +8,6 @@
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/site.css">
     <link rel="stylesheet" href="./assets/css/pages.css">
-    <style>
-        .top-home {
-            margin-bottom: 18px;
-        }
-
-        .top-home a {
-            color: var(--teal);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .top-home a:hover {
-            text-decoration: underline;
-        }
-
-        .vocab-grid,
-        .pattern-grid,
-        .sentence-grid,
-        .question-grid,
-        .mistake-grid,
-        .triple-grid {
-            display: grid;
-            gap: 14px;
-        }
-
-        .vocab-grid,
-        .pattern-grid,
-        .sentence-grid,
-        .question-grid,
-        .mistake-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .triple-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .vocab-card,
-        .pattern-card,
-        .sentence-card,
-        .question-card,
-        .mistake-card,
-        .lesson-note,
-        .triple-card {
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 14px 16px;
-            background: rgba(255, 255, 255, 0.5);
-            min-width: 0;
-        }
-
-        .vocab-card strong,
-        .pattern-card strong,
-        .sentence-card strong,
-        .question-card strong,
-        .mistake-card strong,
-        .triple-card strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .vocab-card span,
-        .pattern-card span,
-        .sentence-card span,
-        .question-card span,
-        .mistake-card span,
-        .triple-card span {
-            display: block;
-            color: var(--muted);
-        }
-
-        .vocab-card small,
-        .lesson-note p,
-        .triple-card small {
-            color: var(--muted);
-        }
-
-        .lesson-note h3,
-        .lesson-note h4 {
-            margin-bottom: 10px;
-        }
-
-        .source-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 10px 0 0;
-        }
-
-        .source-chip {
-            display: inline-flex;
-            align-items: center;
-            border-radius: 999px;
-            padding: 6px 10px;
-            font-size: 0.84rem;
-            background: rgba(47, 143, 131, 0.10);
-            color: var(--teal);
-            border: 1px solid rgba(47, 143, 131, 0.18);
-        }
-
-        .line-pair {
-            padding: 10px 0;
-            border-top: 1px dashed rgba(95, 111, 103, 0.24);
-        }
-
-        .line-pair:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .mt-line {
-            font-weight: 700;
-        }
-
-        .en-line {
-            color: var(--muted);
-        }
-
-        .triple-card code {
-            display: inline-block;
-            margin-top: 4px;
-        }
-
-        @media (max-width: 980px) {
-            .hero-body,
-            .vocab-grid,
-            .pattern-grid,
-            .sentence-grid,
-            .question-grid,
-            .mistake-grid,
-            .triple-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
 <!-- Internal source note: this page was built from course materials about the collective in Maltese, especially food, fruit, vegetables, and insects. -->
@@ -389,7 +254,7 @@
             <section class="content-card" id="shopping">
                 <span class="tag">Section 8</span>
                 <h2>Shopping and Quantity</h2>
-                <div class="pattern-grid">
+                <div class="pattern-grid-standard">
                     <div class="pattern-card">
                         <strong><code>ħafna + collective</code></strong>
                         <span><code>ħafna larinġ</code>, <code>ħafna dulliegħ</code></span>
@@ -408,7 +273,7 @@
                     </div>
                 </div>
 
-                <div class="lesson-note" style="margin-top: 16px;">
+                <div class="lesson-note mt-16">
                     <h3>Ready-made shopping lines</h3>
                     <div class="line-pair">
                         <div class="mt-line">Agħmel lista ta' frott u ħaxix li tħobb tixtri.</div>

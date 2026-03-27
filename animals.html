@@ -8,95 +8,6 @@
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/site.css">
     <link rel="stylesheet" href="./assets/css/pages.css">
-    <style>
-        .animal-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .pattern-grid-animals {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .pattern-card, .sentence-card, .animal-note {
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-
-        .pattern-card strong, .sentence-card strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .animal-note h4 {
-            margin: 18px 0 10px;
-            font-size: 1rem;
-        }
-
-        .animal-note h4:first-of-type {
-            margin-top: 0;
-        }
-
-        .pattern-card span, .sentence-card span {
-            display: block;
-            color: var(--muted);
-        }
-
-        .muted-note {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .animal-figure-card strong,
-        .animal-figure-card span,
-        .animal-figure-card small {
-            display: block;
-            overflow-wrap: normal;
-            word-break: normal;
-            white-space: normal;
-        }
-
-        .animal-grid > *, .pattern-grid-animals > *, .sentence-grid > *, .content > * {
-            min-width: 0;
-        }
-
-        table {
-            table-layout: fixed;
-        }
-
-        th, td {
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-
-        code {
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-
-        @media (max-width: 980px) {
-            .hero-body, .animal-grid, .pattern-grid-animals, .sentence-grid, .animal-gallery, .animal-card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            table {
-                display: block;
-                width: 100%;
-                max-width: 100%;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .formula {
-                max-width: 100%;
-                overflow-wrap: anywhere;
-                word-break: break-word;
-            }
-        }
-    </style>
 </head>
 <body>
 <!-- Internal source note: this page was originally built from Lesson 17 - L-annimali and related course review material. -->
@@ -279,7 +190,7 @@
                     <div class="pattern-card"><strong>rix</strong><span>feathers</span></div>
                     <div class="pattern-card"><strong>ġilda</strong><span>skin</span></div>
                 </div>
-                <div class="animal-note" style="margin-top:16px;">
+                <div class="animal-note mt-16">
                     <h3>Model From The Lesson</h3>
                     <p><code>Għandi għasfur kbir b’munqar oranġjo. Għandu għonqu abjad u għajnejh blu.</code></p>
                     <p class="muted-note">This is one of the most useful lesson patterns: animal + colour + body part +

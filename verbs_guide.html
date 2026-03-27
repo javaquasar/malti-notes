@@ -8,277 +8,6 @@
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/site.css">
     <link rel="stylesheet" href="./assets/css/pages.css">
-    <style>
-        .hero-link {
-            margin-top: 16px;
-            padding: 14px 16px;
-            border: 1px solid rgba(47, 143, 131, 0.22);
-            border-radius: 16px;
-            background: rgba(47, 143, 131, 0.07);
-        }
-
-        .hero-link p {
-            margin: 0 0 6px;
-            color: var(--muted);
-        }
-
-        .hero-link a {
-            color: var(--teal);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .hero-link a:hover {
-            text-decoration: underline;
-        }
-
-        .pattern-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 16px;
-        }
-
-        .pattern-legend {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-
-        .legend-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid var(--line);
-            font-size: 0.93rem;
-        }
-
-        .legend-swatch {
-            width: 12px;
-            height: 12px;
-            border-radius: 999px;
-            display: inline-block;
-        }
-
-        .swatch-change {
-            background: #d22a2a;
-        }
-
-        .swatch-stem {
-            background: var(--teal);
-        }
-
-        .swatch-ending {
-            background: #8cbc63;
-        }
-
-        .verb-visual h3 {
-            margin-bottom: 8px;
-        }
-
-        .verb-visual .rootline {
-            font-size: 1.6rem;
-            margin-bottom: 6px;
-            line-height: 1.2;
-        }
-
-        .subnote {
-            color: var(--muted);
-            margin: 0 0 14px;
-            font-size: 0.95rem;
-        }
-
-        .visual-table {
-            display: grid;
-            gap: 10px;
-        }
-
-        .visual-row {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 14px;
-            align-items: baseline;
-            font-size: 1.05rem;
-            border-top: 1px dashed rgba(95, 111, 103, 0.22);
-            padding-top: 10px;
-        }
-
-        .visual-row:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .pron-part {
-            color: #1e55cc;
-            font-weight: 700;
-        }
-
-        .change-part {
-            color: #d22a2a;
-            font-weight: 700;
-        }
-
-        .stem-part {
-            color: var(--ink);
-        }
-
-        .ending-part {
-            color: #2d5c14;
-            font-weight: 700;
-            background: rgba(140, 188, 99, 0.55);
-            padding: 0 4px;
-            border-radius: 4px;
-        }
-
-        .root-part {
-            color: var(--teal);
-            font-weight: 700;
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 5px;
-        }
-
-        .pattern-mini {
-            display: grid;
-            gap: 12px;
-        }
-
-        .mini-card {
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 14px;
-            background: rgba(255, 255, 255, 0.55);
-        }
-
-        .mini-card h4 {
-            margin: 0 0 8px;
-            font-size: 1rem;
-        }
-
-        .mini-card p {
-            margin: 0 0 8px;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .compact-list {
-            margin: 12px 0 0;
-            padding-left: 18px;
-            columns: 2;
-            column-gap: 26px;
-        }
-
-        .compact-list.compact-3 {
-            columns: 3;
-        }
-
-        .compact-list li {
-            break-inside: avoid;
-            margin-bottom: 8px;
-        }
-
-        .verb-drill-button {
-            width: 100%;
-        }
-
-        .verb-trigger {
-            font-family: Consolas, "Courier New", monospace;
-            font-size: 0.92em;
-            background: rgba(47, 143, 131, 0.08);
-            padding: 2px 6px;
-            border-radius: 6px;
-            border: 1px solid transparent;
-            color: var(--ink);
-            cursor: pointer;
-            margin-right: 4px;
-            display: inline-block;
-            white-space: nowrap;
-            word-break: normal;
-            overflow-wrap: normal;
-            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
-        }
-
-        .verb-trigger:hover,
-        .verb-trigger:focus-visible {
-            background: rgba(47, 143, 131, 0.16);
-            border-color: rgba(47, 143, 131, 0.28);
-            color: var(--teal);
-            transform: translateY(-1px);
-            outline: none;
-        }
-
-        #key-verbs {
-            display: grid;
-            gap: 18px;
-            min-width: 0;
-            overflow-x: hidden;
-        }
-
-        #key-verbs .box + .box {
-            margin-top: 8px;
-        }
-
-        #key-verbs .box {
-            max-width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        #key-verbs h3 {
-            margin-bottom: 12px;
-        }
-
-        #key-verbs table {
-            display: table;
-            width: 100%;
-            margin-top: 12px;
-        }
-
-        #key-verbs td,
-        #key-verbs th {
-            white-space: nowrap;
-        }
-
-        @media (max-width: 980px) {
-            .hero-body, .grid, .two-col, .pattern-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                position: static;
-            }
-
-            .compact-list, .compact-list.compact-3 {
-                columns: 1;
-            }
-
-            table {
-                display: block;
-                max-width: 100%;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            #key-verbs table {
-                width: 620px;
-                min-width: 620px;
-                max-width: none;
-            }
-
-            .verb-trigger,
-            .legend-chip,
-            .mini-card,
-            .verb-visual,
-            .formula {
-                max-width: 100%;
-                overflow-wrap: anywhere;
-                word-break: break-word;
-            }
-        }
-    </style>
 </head>
 <body>
 <div class="page">
@@ -403,7 +132,7 @@
                             <li><code>Huma se jixorbu.</code> = They will drink.</li>
                         </ul>
                     </div>
-                    <div class="box" style="grid-column: 1 / -1;">
+                    <div class="box full-span">
                         <h3>"To Be" in Present Identity Sentences</h3>
                         <div class="formula"><code>In the present tense Maltese often omits an explicit verb "to be" in
                             identity sentences. The gender difference usually appears in the noun or adjective, not in a
@@ -473,7 +202,7 @@
             <section class="content-card" id="visual-memory">
                 <span class="tag">Visual Memory</span>
                 <h2>Colour Patterns for Verb Changes</h2>
-                <p class="lead" style="max-width: none; margin-bottom: 16px;">This block highlights the parts that
+                <p class="lead mw-none mb-16">This block highlights the parts that
                     change most often: the pronoun, the personal marker at the start of the verb, and the plural ending.
                     Use it for fast visual memory, not as a full grammar rule for every verb.</p>
                 <div class="pattern-legend">
@@ -486,9 +215,9 @@
                     every Maltese verb. Use it to notice patterns, then confirm exact forms in the tables below or on <a
                             href="https://verb.mt" target="_blank" rel="noopener noreferrer">verb.mt</a>.
                 </div>
-                <div class="pattern-grid">
+                <div class="pattern-grid-verb">
                     <div class="verb-visual">
-                        <h3><span class="root-part">qagħad</span> <span style="font-weight:400; color:var(--muted);">(q-għ-d) - to stay / to live</span>
+                        <h3><span class="root-part">qagħad</span> <span class="inline-note">(q-għ-d) - to stay / to live</span>
                         </h3>
                         <p class="subnote">Present pattern from the course: singular changes mainly at the start; plural
                             keeps the same idea but adds <code>-u</code>.</p>
@@ -561,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Quick Visual Scheme: <code>niekol</code></h3>
                         <div class="list">
@@ -703,7 +432,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="box" style="margin-top:16px;">
+                    <div class="box mt-16">
                     <h3>Useful Lesson 6 Sentence Models</h3>
                     <ul class="example-list">
                         <li><code>Jien inħobb nagħmel kejk.</code> = I like to make a cake.</li>
@@ -746,7 +475,7 @@
                             goes to -aw</code></div>
                     </div>
                 </div>
-                <div class="box" style="margin-top:16px;">
+                    <div class="box mt-16">
                     <h3>Useful Practice Sentences</h3>
                     <ul class="example-list">
                         <li><code>Hu jħobb jittrejnja.</code> = He likes to train.</li>
@@ -1067,7 +796,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="box" style="margin-top:16px;">
+                    <div class="box mt-16">
                     <h3>Useful Everyday Commands</h3>
                     <table>
                         <thead>
@@ -1121,7 +850,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="two-col" style="margin-top:16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Polite Requests</h3>
                         <p class="mini">A very safe way to make the imperative softer is to add <code>Jekk
@@ -1558,7 +1287,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Question and Answer Models</h3>
                         <ul class="example-list">
@@ -1589,7 +1318,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Homework Questions</h3>
                         <ul class="example-list">
@@ -1680,7 +1409,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Common Homework Negatives</h3>
                         <ul class="example-list">
@@ -1802,7 +1531,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Family Answer Models</h3>
                         <ul class="example-list">
@@ -1829,7 +1558,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Useful Short Combinations</h3>
                         <ul class="example-list">
@@ -1884,7 +1613,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>From 3 Sentences to 4</h3>
                         <div class="formula"><code>who + where + action + opinion/detail</code></div>
@@ -1912,7 +1641,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="two-col" style="margin-top: 16px;">
+                    <div class="two-col mt-16">
                     <div class="box">
                         <h3>Picture Answer Chains</h3>
                         <ul class="example-list">
@@ -1983,11 +1712,11 @@
             <section class="content-card" id="course-verb-bank">
                 <span class="tag">Course Bank</span>
                 <h2>All Course Verbs</h2>
-                <p class="lead" style="max-width:none; margin-bottom: 12px;">This final section gathers the verb
+                <p class="lead mw-none mb-12">This final section gathers the verb
                     material that appeared across Level 1. It includes base verbs, important ready-made forms, and verb
                     phrases that are useful for homework, speaking, and picture description.</p>
                 <div class="two-col">
-                    <div class="box" style="grid-column: 1 / -1;">
+                    <div class="box full-span">
                         <h3>Base Verbs</h3>
                         <p class="muted">Main verb entries from the course vocabulary. Hover over a verb to spot the
                             interactive highlight, then click the verb itself to open <a href="https://verb.mt/"

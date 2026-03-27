@@ -8,43 +8,6 @@
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/site.css">
     <link rel="stylesheet" href="./assets/css/pages.css">
-    <style>
-        .top-home { margin-bottom: 18px; }
-        .top-home a { color: var(--teal); font-weight: 700; text-decoration: none; }
-        .top-home a:hover { text-decoration: underline; }
-        .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .meal-grid, .triple-grid { display: grid; gap: 14px; }
-        .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .meal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .triple-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .vocab-card, .pattern-card, .sentence-card, .question-card, .mistake-card, .lesson-note, .meal-card, .triple-card {
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 14px 16px;
-            background: rgba(255, 255, 255, 0.5);
-            min-width: 0;
-        }
-        .vocab-card strong, .pattern-card strong, .sentence-card strong, .question-card strong, .mistake-card strong, .meal-card strong, .triple-card strong {
-            display: block; margin-bottom: 6px;
-        }
-        .vocab-card span, .pattern-card span, .sentence-card span, .question-card span, .mistake-card span, .meal-card span, .triple-card span {
-            display: block; color: var(--muted);
-        }
-        .line-pair { padding: 10px 0; border-top: 1px dashed rgba(95, 111, 103, 0.24); }
-        .line-pair:first-child { border-top: none; padding-top: 0; }
-        .mt-line { font-weight: 700; }
-        .en-line { color: var(--muted); }
-        .source-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; }
-        .source-chip {
-            display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px;
-            font-size: 0.84rem; background: rgba(47, 143, 131, 0.10); color: var(--teal);
-            border: 1px solid rgba(47, 143, 131, 0.18);
-        }
-        .lesson-note h3, .lesson-note h4 { margin-bottom: 10px; }
-        @media (max-width: 980px) {
-            .hero-body, .vocab-grid, .pattern-grid, .sentence-grid, .question-grid, .mistake-grid, .meal-grid, .triple-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
 <!-- Internal source note: this page was built from course materials about food vocabulary, food preferences, key food verbs, dialogue, and traditional Maltese food. -->
@@ -183,7 +146,7 @@
             <section class="content-card" id="questions">
                 <span class="tag">Section 4</span>
                 <h2>Food Question Patterns</h2>
-                <div class="pattern-grid">
+                <div class="pattern-grid-standard">
                     <div class="pattern-card"><strong><code>Xi tħobb tiekol?</code></strong><span>What do you like to eat?</span></div>
                     <div class="pattern-card"><strong><code>Xi trid?</code></strong><span>What do you want?</span></div>
                     <div class="pattern-card"><strong><code>X'tixtieq?</code></strong><span>What would you like?</span></div>
@@ -249,7 +212,7 @@
                     <div class="line-pair"><div class="mt-line">L-ikla t-tajba.</div><div class="en-line">Enjoy your meal.</div></div>
                     <div class="line-pair"><div class="mt-line">Lilek ukoll.</div><div class="en-line">Same to you.</div></div>
                 </div>
-                <div class="pattern-grid" style="margin-top: 16px;">
+                <div class="pattern-grid-standard mt-16">
                     <div class="pattern-card"><strong><code>Ifuħ!</code></strong><span>Smells nice!</span></div>
                     <div class="pattern-card"><strong><code>Ħa nersaqlek</code></strong><span>Let me move for you / let me get out of the way</span></div>
                     <div class="pattern-card"><strong><code>Għal hemm!</code></strong><span>See you later!</span></div>
@@ -267,7 +230,7 @@
                     <div class="triple-card"><strong>nieħu</strong><span>to take / have</span><small>ħadt / se nieħu</small></div>
                     <div class="triple-card"><strong>niekol</strong><span>to eat</span><small>kilt / se niekol</small></div>
                 </div>
-                <div class="lesson-note" style="margin-top: 16px;">
+                <div class="lesson-note mt-16">
                     <div class="line-pair"><div class="mt-line">Jien nixrob / xrobt / se nixrob.</div><div class="en-line">I drink / drank / will drink.</div></div>
                     <div class="line-pair"><div class="mt-line">Jien nieħu / ħadt / se nieħu.</div><div class="en-line">I take / took / will take.</div></div>
                     <div class="line-pair"><div class="mt-line">Jien niekol / kilt / se niekol.</div><div class="en-line">I eat / ate / will eat.</div></div>
@@ -316,13 +279,13 @@
                     <div class="vocab-card"><strong>bebbux</strong><span>snails</span></div>
                     <div class="vocab-card"><strong>stuffat tal-qarnit</strong><span>octopus stew</span></div>
                 </div>
-                <div class="lesson-note" style="margin-top: 16px;">
+                <div class="lesson-note mt-16">
                     <h3>L-istuffat tal-fenek</h3>
                     <div class="line-pair"><div class="mt-line">L-istuffat isir billi l-fenek jitqatta' f'biċċiet u jitħalla jissajjar bil-mod f'zalza.</div><div class="en-line">The stew is made by cutting the rabbit into pieces and letting it cook slowly in a sauce.</div></div>
                     <div class="line-pair"><div class="mt-line">Iż-zalza ssir mit-tadam, inbid aħmar, tewm, basal u ħwawar.</div><div class="en-line">The sauce is made from tomatoes, red wine, garlic, onions, and spices.</div></div>
                     <div class="line-pair"><div class="mt-line">Tradizzjonalment, l-istuffat tal-fenek jiġi servut ma' ħobż frisk Malti.</div><div class="en-line">Traditionally, rabbit stew is served with fresh Maltese bread.</div></div>
                 </div>
-                <div class="lesson-note" style="margin-top: 16px;">
+                <div class="lesson-note mt-16">
                     <h3>Il-ftira biż-żejt</h3>
                     <div class="line-pair"><div class="mt-line">Il-ftira biż-żejt hija ikla tradizzjonali u sempliċi ħafna fil-kċina ta' Malta.</div><div class="en-line">Ftira biż-żejt is a very traditional and simple meal in Maltese cuisine.</div></div>
                     <div class="line-pair"><div class="mt-line">Hija tip ta' ħobż Malti ċatt u tond, b'qoxra kemxejn tqarmeċ.</div><div class="en-line">It is a type of flat and round Maltese bread with a slightly crunchy crust.</div></div>
