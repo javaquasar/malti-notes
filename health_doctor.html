@@ -55,7 +55,7 @@
         </ul>
     </aside>
     <main class="content">
-        <section class="card" id="body"><span class="tag">Health</span><h2>Body and Symptoms</h2><div class="three-col">                    <div class="item"><strong>ras</strong><span>head</span></div>                    <div class="item"><strong>griżmejn</strong><span>throat</span></div>                    <div class="item"><strong>żaqq</strong><span>stomach</span></div>                    <div class="item"><strong>uġigħ</strong><span>pain</span></div>                    <div class="item"><strong>deni</strong><span>fever</span></div>                    <div class="item"><strong>sogħla</strong><span>cough</span></div></div></section>
+        <section class="card" id="body"><span class="tag">Health</span><h2>Body and Symptoms</h2><div class="toolbar-row"><a class="action-link" href="./review_cards.html">Open Review Cards</a><span class="status-chip" data-review-summary>0 saved, 0 due</span><span class="mini">Add the core health words to review and revise them as quick survival cards.</span></div><div class="vocab-card-grid" data-health-group="health-body"></div></section>
         <section class="card" id="pain"><span class="tag">Pain</span><h2>I Have Pain</h2><div class="example-bank">                    <div class="example-line"><span class="mt">Għandi uġigħ ta' ras.</span><span class="en">I have a headache.</span></div>                    <div class="example-line"><span class="mt">Għandi uġigħ fil-griżmejn.</span><span class="en">I have a sore throat.</span></div>                    <div class="example-line"><span class="mt">Għandi uġigħ fiż-żaqq.</span><span class="en">I have a stomach ache.</span></div>                    <div class="example-line"><span class="mt">Għandi deni.</span><span class="en">I have a fever.</span></div></div></section>
         <section class="card" id="doctor"><span class="tag">Doctor</span><h2>At the Doctor</h2><div class="example-bank">                    <div class="example-line"><span class="mt">Ma nħossnix tajjeb.</span><span class="en">I do not feel well.</span></div>                    <div class="example-line"><span class="mt">Għandi bżonn tabib.</span><span class="en">I need a doctor.</span></div>                    <div class="example-line"><span class="mt">Ili marid jumejn.</span><span class="en">I have been ill for two days.</span></div></div></section>
         <section class="card" id="pharmacy"><span class="tag">Pharmacy</span><h2>At the Pharmacy</h2><div class="example-bank">                    <div class="example-line"><span class="mt">Għandi bżonn mediċina.</span><span class="en">I need medicine.</span></div>                    <div class="example-line"><span class="mt">Għandek xi ħaġa għas-sogħla?</span><span class="en">Do you have something for a cough?</span></div>                    <div class="example-line"><span class="mt">Għandek xi ħaġa għall-uġigħ ta' ras?</span><span class="en">Do you have something for a headache?</span></div></div></section>
@@ -68,14 +68,28 @@
 </div>
 
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/health_doctor.json",
+        sourcePage: "health_doctor.html",
+        reviewPrefix: "health",
+        groupAttribute: "data-health-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#body .toolbar-row",
+        pageBulkLabel: "Add all health words",
+        defaultTopic: "Health and Doctor",
+        examplePrefix: "Għandi"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/health_doctor_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "phrase-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

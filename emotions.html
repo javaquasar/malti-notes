@@ -97,45 +97,18 @@
             <section class="content-card" id="positive">
                 <span class="tag">Section 2</span>
                 <h2>Positive Emotions</h2>
-                <div class="vocab-grid">
-                    <div class="vocab-card"><strong>ferħan / ferħana / ferħanin</strong><span>happy</span></div>
-                    <div class="vocab-card"><strong>kuntent / kuntenta / kuntenti</strong><span>content</span></div>
-                    <div class="vocab-card"><strong>daħqan / daħqana / daħqanin</strong><span>with a smile</span></div>
-                    <div class="vocab-card"><strong>ottimist / ottimista / ottimisti</strong><span>optimist</span></div>
-                    <div class="vocab-card"><strong>eċitat / eċitata / eċitati</strong><span>excited</span></div>
-                    <div class="vocab-card"><strong>kburi / kburija / kburin</strong><span>proud</span></div>
-                    <div class="vocab-card"><strong>kwiet / kwieta / kwieti</strong><span>quiet</span></div>
-                    <div class="vocab-card"><strong>kalm / kalma / kalmi</strong><span>calm</span></div>
-                    <div class="vocab-card"><strong>emozzjonat / emozzjonata / emozzjonati</strong><span>emotional</span></div>
-                    <div class="vocab-card"><strong>kunfidenti / kunfidenti / kunfidenti</strong><span>confident</span></div>
-                    <div class="vocab-card"><strong>pożittiv / pożittiva / pożittivi</strong><span>positive</span></div>
-                    <div class="vocab-card"><strong>motivat / motivata / motivati</strong><span>motivated</span></div>
-                    <div class="vocab-card"><strong>ċert / ċerta / ċerti</strong><span>sure</span></div>
-                    <div class="vocab-card"><strong>rilassat / rilassata / rilassati</strong><span>relaxed</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add emotion words to review and practise masculine, feminine, and plural forms.</span>
                 </div>
+                <div class="vocab-card-grid" data-emotion-group="positive-emotions"></div>
             </section>
 
             <section class="content-card" id="difficult">
                 <span class="tag">Section 3</span>
                 <h2>Difficult Emotions</h2>
-                <div class="vocab-grid">
-                    <div class="vocab-card"><strong>anzjuż / anzjuża / anzjużi</strong><span>anxious</span></div>
-                    <div class="vocab-card"><strong>irrabjat / irrabjata / irrabjati</strong><span>angry</span></div>
-                    <div class="vocab-card"><strong>frustrat / frustrata / frustrati</strong><span>frustrated</span></div>
-                    <div class="vocab-card"><strong>diżorjentat / diżorjentata / diżorjentati</strong><span>disoriented</span></div>
-                    <div class="vocab-card"><strong>agressiv / agressiva / agressivi</strong><span>aggressive</span></div>
-                    <div class="vocab-card"><strong>imbeżża' / imbeżżgħa / imbeżżgħin</strong><span>fearful</span></div>
-                    <div class="vocab-card"><strong>imwerwer / imwerwra / imwerwrin</strong><span>terrified</span></div>
-                    <div class="vocab-card"><strong>imweġġa' / imweġġgħa / imweġġgħin</strong><span>hurt</span></div>
-                    <div class="vocab-card"><strong>imdejjaq / imdejqa / imdejqin</strong><span>sad</span></div>
-                    <div class="vocab-card"><strong>irritat / irritata / irritati</strong><span>irritated</span></div>
-                    <div class="vocab-card"><strong>nervuż / nervuża / nervużi</strong><span>nervous</span></div>
-                    <div class="vocab-card"><strong>nostalġiku / nostalġika / nostalġiċi</strong><span>nostalgic</span></div>
-                    <div class="vocab-card"><strong>mistħi / mistħija / mistħijin</strong><span>shy</span></div>
-                    <div class="vocab-card"><strong>imbarazzat / imbarazzata / imbarazzati</strong><span>embarrassed</span></div>
-                    <div class="vocab-card"><strong>negattiv / negattiva / negattivi</strong><span>negative</span></div>
-                    <div class="vocab-card"><strong>inkwetat / inkwetata / inkwetati</strong><span>worried</span></div>
-                </div>
+                <div class="vocab-card-grid" data-emotion-group="difficult-emotions"></div>
             </section>
 
             <section class="content-card" id="inhossni">
@@ -299,14 +272,28 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/emotions.json",
+        sourcePage: "emotions.html",
+        reviewPrefix: "emotions",
+        groupAttribute: "data-emotion-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#positive .toolbar-row",
+        pageBulkLabel: "Add all emotion words",
+        defaultTopic: "Emotions",
+        examplePrefix: "Jien inħossni"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/emotions_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "sentence-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

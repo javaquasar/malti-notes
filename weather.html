@@ -58,14 +58,12 @@
             <section class="card" id="weather">
                 <span class="tag">Vocabulary</span>
                 <h2>Weather Words</h2>
-                <div class="three-col">
-                    <div class="item"><strong>sħun</strong><span>hot</span></div>
-                    <div class="item"><strong>kiesaħ</strong><span>cold</span></div>
-                    <div class="item"><strong>xemx</strong><span>sun</span></div>
-                    <div class="item"><strong>xita</strong><span>rain</span></div>
-                    <div class="item"><strong>riħ</strong><span>wind</span></div>
-                    <div class="item"><strong>sħab</strong><span>clouds</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add weather and season words to review as quick vocabulary cards.</span>
                 </div>
+                <div class="vocab-card-grid" data-weather-group="weather-core"></div>
             </section>
 
             <section class="card" id="today">
@@ -86,12 +84,7 @@
                 <div class="question-grid">
                     <div class="wide-box">
                         <h3>Main words</h3>
-                        <div class="three-col">
-                            <div class="item"><strong>rebbiegħa</strong><span>spring</span></div>
-                            <div class="item"><strong>sajf</strong><span>summer</span></div>
-                            <div class="item"><strong>ħarifa</strong><span>autumn</span></div>
-                            <div class="item"><strong>xitwa</strong><span>winter</span></div>
-                        </div>
+                        <div class="vocab-card-grid" data-weather-group="weather-seasons"></div>
                     </div>
                     <div class="wide-box">
                         <h3>Ready models</h3>
@@ -176,14 +169,28 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/weather.json",
+        sourcePage: "weather.html",
+        reviewPrefix: "weather",
+        groupAttribute: "data-weather-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#weather .toolbar-row",
+        pageBulkLabel: "Add all weather words",
+        defaultTopic: "Weather",
+        examplePrefix: "Illum"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/weather_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "sentence-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
