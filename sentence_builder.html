@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,22 +52,7 @@
             <section class="content-card" id="main-pattern"><span class="tag">Main Pattern</span>
                 <h2>Core Sentence Formula</h2>
                 <div class="formula"><code>subject + verb + place + time + detail</code></div>
-                <div class="two-col">
-                    <div class="box"><h3>Short</h3>
-                        <ul class="example-list">
-                            <li><code>Jien naħdem.</code></li>
-                            <li><code>Hija tixrob.</code></li>
-                            <li><code>Huma jimxu.</code></li>
-                        </ul>
-                    </div>
-                    <div class="box"><h3>Expanded</h3>
-                        <ul class="example-list">
-                            <li><code>Jien naħdem f'uffiċċju filgħodu.</code></li>
-                            <li><code>Hija tixrob kafè d-dar.</code></li>
-                            <li><code>Huma jimxu fil-park filgħaxija.</code></li>
-                        </ul>
-                    </div>
-                </div>
+                <div data-example-group="combination-bank"></div>
             </section>
             <section class="content-card" id="building-blocks"><span class="tag">Building Blocks</span>
                 <h2>Pick One Piece from Each Column</h2>
@@ -197,56 +182,19 @@
             </section>
             <section class="content-card" id="combo-bank"><span class="tag">Combinations</span>
                 <h2>Combination Bank</h2>
-                <div class="two-col">
-                    <div class="box"><h3>10 Everyday Combinations</h3>
-                        <div class="line-pair">
-                            <div class="mt-line">Jien niekol id-dar filgħaxija.</div>
-                            <div class="en-line">I eat at home in the evening.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Jien nixrob kafè filgħodu.</div>
-                            <div class="en-line">I drink coffee in the morning.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Hi tixtri l-ħobż fil-ħanut.</div>
-                            <div class="en-line">She buys bread in the shop.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Hu jaħdem f'uffiċċju.</div>
-                            <div class="en-line">He works in an office.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Aħna niltaqgħu mal-ħbieb filgħaxija.</div>
-                            <div class="en-line">We meet friends in the evening.</div>
-                        </div>
-                    </div>
-                    <div class="box"><h3>10 Speaking Combinations</h3>
-                        <div class="line-pair">
-                            <div class="mt-line">Fl-istampa hemm familja fil-kċina.</div>
-                            <div class="en-line">In the picture there is a family in the kitchen.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Il-missier qiegħed isajjar.</div>
-                            <div class="en-line">The father is cooking.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">It-tifel qiegħed jgħin.</div>
-                            <div class="en-line">The boy is helping.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Għada se mmur il-belt.</div>
-                            <div class="en-line">Tomorrow I will go to the city.</div>
-                        </div>
-                        <div class="line-pair">
-                            <div class="mt-line">Huwa kien persuna importanti.</div>
-                            <div class="en-line">He was an important person.</div>
-                        </div>
-                    </div>
-                </div>
+                <div data-example-group="combination-bank"></div>
             </section>
         </main>
     </div>
 </div>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/sentence_builder_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "phrase-card"
+    });
+    </script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

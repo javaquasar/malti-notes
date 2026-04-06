@@ -322,42 +322,20 @@
             <section class="content-card" id="practice-bank">
                 <span class="tag">Practice Bank</span>
                 <h2>Practice Bank</h2>
-                <div class="sentence-grid">
-                    <div class="sentence-card"><strong>1. Tuffieħa ħadra, imma tuffieħ aħdar.</strong><span>Green apple, but green apples / apple fruit.</span></div>
-                    <div class="sentence-card"><strong>2. Tadama ħamra, imma tadam aħmar.</strong><span>Red tomato, but red tomatoes.</span></div>
-                    <div class="sentence-card"><strong>3. Basla kbira, imma basal kbir.</strong><span>Big onion, but big onions.</span></div>
-                    <div class="sentence-card"><strong>4. Ħjara ħadra, imma ħjar aħdar.</strong><span>Green cucumber, but green cucumbers.</span></div>
-                    <div class="sentence-card"><strong>5. Ħobża tajba, imma ħobż tajjeb.</strong><span>Good loaf of bread, but good bread.</span></div>
-                    <div class="sentence-card"><strong>6. Ġobna tajba, imma ġobon tajjeb.</strong><span>Good cheese, but good cheese in collective use.</span></div>
-                    <div class="sentence-card"><strong>7. Ħuta friska, imma ħut frisk.</strong><span>Fresh fish, but fish in collective use.</span></div>
-                    <div class="sentence-card"><strong>8. Naħla bieżla, imma naħal bieżel.</strong><span>Hardworking bee, but hardworking bees.</span></div>
-                    <div class="sentence-card"><strong>9. Nemusa żgħira, imma nemus żgħir.</strong><span>Small mosquito, but small mosquitoes.</span></div>
-                    <div class="sentence-card"><strong>10. Dubbiena maħmuġa, imma dubbien maħmuġ.</strong><span>Dirty fly, but dirty flies.</span></div>
-                    <div class="sentence-card"><strong>11. Għandi bżonn tuffieħ.</strong><span>I need apples.</span></div>
-                    <div class="sentence-card"><strong>12. Għandna bżonn larinġ.</strong><span>We need oranges.</span></div>
-                    <div class="sentence-card"><strong>13. Se nixtri kilo mandolin.</strong><span>I am going to buy a kilo of mandarins.</span></div>
-                    <div class="sentence-card"><strong>14. Nixtieq nofs kilo larinġ.</strong><span>I would like half a kilo of oranges.</span></div>
-                    <div class="sentence-card"><strong>15. Għandi bżonn kilo u nofs lanġas.</strong><span>I need one and a half kilos of pears.</span></div>
-                    <div class="sentence-card"><strong>16. Se nixtri naqra brunġiel.</strong><span>I am going to buy some aubergines.</span></div>
-                    <div class="sentence-card"><strong>17. Irrid ftit tewm.</strong><span>I want some garlic.</span></div>
-                    <div class="sentence-card"><strong>18. Għandna ħafna larinġ id-dar.</strong><span>We have a lot of oranges at home.</span></div>
-                    <div class="sentence-card"><strong>19. Illum xtrajt ħafna dulliegħ.</strong><span>Today I bought a lot of watermelons.</span></div>
-                    <div class="sentence-card"><strong>20. Għandi żewġ basliet u erba' tadamiet.</strong><span>I have two onions and four tomatoes.</span></div>
-                    <div class="sentence-card"><strong>21. Xtrajt żewġ larinġiet u żewġ tewmiet.</strong><span>I bought two oranges and two garlic bulbs.</span></div>
-                    <div class="sentence-card"><strong>22. Fil-lista tal-ħaxix ktibt tadam, ħass, brunġiel u ħjar.</strong><span>In the vegetable list I wrote tomatoes, lettuce, aubergines, and cucumbers.</span></div>
-                    <div class="sentence-card"><strong>23. Fil-lista tal-frott ktibt tuffieħ, larinġ, mandolin u lanġas.</strong><span>In the fruit list I wrote apples, oranges, mandarins, and pears.</span></div>
-                    <div class="sentence-card"><strong>24. Jien inħobb nixtri frott frisk.</strong><span>I like to buy fresh fruit.</span></div>
-                    <div class="sentence-card"><strong>25. Ommi tħobb tixtri ħaxix frisk.</strong><span>My mother likes to buy fresh vegetables.</span></div>
-                    <div class="sentence-card"><strong>26. Fil-kċina għandna lumi, tuffieħ u bajd.</strong><span>In the kitchen we have lemons, apples, and eggs.</span></div>
-                    <div class="sentence-card"><strong>27. Fil-friġġ hemm ġobon tajjeb u ħut frisk.</strong><span>In the fridge there is good cheese and fresh fish.</span></div>
-                    <div class="sentence-card"><strong>28. Fis-suq rajt naħal u dubbien.</strong><span>At the market I saw bees and flies.</span></div>
-                    <div class="sentence-card"><strong>29. Ma rridx larinġ għax ma jidhirx frisk.</strong><span>I do not want oranges because they do not look fresh.</span></div>
-                    <div class="sentence-card"><strong>30. Illum mort is-suq u xtrajt ftit frott u ħaxix.</strong><span>Today I went to the market and bought some fruit and vegetables.</span></div>
+                <div data-example-group="collective-practice-bank">
                 </div>
             </section>
         </main>
     </div>
 </div>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/collective_nouns_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "sentence-card"
+    });
+    </script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
