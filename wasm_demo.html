@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust and WASM Demo</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Rust and WASM Demo</h1>
+                <p class="lead">
+                    This page is a minimal first step toward client-side search powered by Rust and WebAssembly.
+                    It is designed to work with GitHub Actions later, so the site can stay fully static.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">Rust crate</span>
+                    <span class="pill">wasm-pack ready</span>
+                    <span class="pill">GitHub build friendly</span>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>Why This Matters</h2>
+                <p>A prebuilt WASM module is a good fit for fast client-side lookup without adding a backend.</p>
+                <ul>
+                    <li>search can stay fully static on GitHub Pages</li>
+                    <li>Rust can prepare compact matching logic</li>
+                    <li>the generated files can be rebuilt in CI</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#demo">Live Demo</a></li>
+                <li><a href="#layout">Project Layout</a></li>
+                <li><a href="#github">GitHub Build</a></li>
+            </ul>
+            <p class="mini">The local page works in fallback mode until the generated WASM bundle exists in <code>assets/wasm</code>.</p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card" id="demo">
+                <span class="tag">Minimal Example</span>
+                <h2>Live Demo</h2>
+                <div class="status-box" data-wasm-status data-state="loading">Trying to load the generated WASM bundle...</div>
+
+                <div class="demo-form">
+                    <label for="wasm-query">Try a small Maltese search query</label>
+                    <input id="wasm-query" type="text" placeholder="Type something like ghamel or cempel" data-wasm-input disabled>
+                </div>
+
+                <div class="result-grid">
+                    <div class="demo-box">
+                        <h3>Normalized Query</h3>
+                        <p><code data-wasm-normalized>waiting for WASM</code></p>
+                    </div>
+                    <div class="demo-box">
+                        <h3>Top Demo Matches</h3>
+                        <ul data-wasm-results>
+                            <li>Waiting for module load...</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="layout">
+                <span class="tag">Structure</span>
+                <h2>Project Layout</h2>
+                <div class="two-col">
+                    <div class="box">
+                        <h3>Rust Source</h3>
+                        <p><code class="command">wasm-search/Cargo.toml</code></p>
+                        <p><code class="command">wasm-search/src/lib.rs</code></p>
+                    </div>
+                    <div class="box">
+                        <h3>Generated Frontend Output</h3>
+                        <p><code class="command">assets/wasm/malti_notes_wasm.js</code></p>
+                        <p><code class="command">assets/wasm/malti_notes_wasm_bg.wasm</code></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" id="github">
+                <span class="tag">Automation</span>
+                <h2>GitHub Build</h2>
+                <p>The workflow is prepared to install Rust, build the WASM bundle with <code>wasm-pack</code>, place the generated files into <code>assets/wasm</code>, and package the static site for GitHub Pages deployment.</p>
+                <p><a href="./index.html">Back to the homepage</a></p>
+            </section>
+        </main>
+    </div>
+</div>
+<script type="module" src="./assets/js/wasm-demo-loader.js"></script>
+    <script src="./assets/js/site-header.js"></script>
+</body>
+</html>
