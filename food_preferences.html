@@ -91,43 +91,18 @@
             <section class="content-card" id="shopping">
                 <span class="tag">Section 2</span>
                 <h2>Shopping List Vocabulary</h2>
-                <div class="vocab-grid">
-                    <div class="vocab-card"><strong>ħalib</strong><span>milk</span></div>
-                    <div class="vocab-card"><strong>kartuna bajd</strong><span>box of eggs</span></div>
-                    <div class="vocab-card"><strong>borża ross</strong><span>bag of rice</span></div>
-                    <div class="vocab-card"><strong>pakkett għaġin</strong><span>packet of pasta</span></div>
-                    <div class="vocab-card"><strong>bott piżelli</strong><span>tin of peas</span></div>
-                    <div class="vocab-card"><strong>kaxxa frawli</strong><span>box of strawberries</span></div>
-                    <div class="vocab-card"><strong>kapuljat</strong><span>minced meat</span></div>
-                    <div class="vocab-card"><strong>ġobon</strong><span>cheese</span></div>
-                    <div class="vocab-card"><strong>perżut</strong><span>ham</span></div>
-                    <div class="vocab-card"><strong>ħobż</strong><span>bread</span></div>
-                    <div class="vocab-card"><strong>butir</strong><span>butter</span></div>
-                    <div class="vocab-card"><strong>flixkun inbid aħmar</strong><span>bottle of red wine</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the core food words first, then revisit the meal and dialogue sections.</span>
                 </div>
+                <div class="vocab-card-grid" data-food-group="food-shopping"></div>
             </section>
 
             <section class="content-card" id="ingredients">
                 <span class="tag">Section 3</span>
                 <h2>Common Food and Ingredients</h2>
-                <div class="vocab-grid">
-                    <div class="vocab-card"><strong>kafè</strong><span>coffee</span></div>
-                    <div class="vocab-card"><strong>te</strong><span>tea</span></div>
-                    <div class="vocab-card"><strong>zokkor</strong><span>sugar</span></div>
-                    <div class="vocab-card"><strong>melħ</strong><span>salt</span></div>
-                    <div class="vocab-card"><strong>bżar</strong><span>pepper</span></div>
-                    <div class="vocab-card"><strong>tiġieġa</strong><span>chicken</span></div>
-                    <div class="vocab-card"><strong>laħam</strong><span>meat</span></div>
-                    <div class="vocab-card"><strong>ħut</strong><span>fish</span></div>
-                    <div class="vocab-card"><strong>torta</strong><span>pie</span></div>
-                    <div class="vocab-card"><strong>bajda</strong><span>egg</span></div>
-                    <div class="vocab-card"><strong>ross</strong><span>rice</span></div>
-                    <div class="vocab-card"><strong>ħaxix</strong><span>vegetables</span></div>
-                    <div class="vocab-card"><strong>patata</strong><span>potatoes</span></div>
-                    <div class="vocab-card"><strong>soppa</strong><span>soup</span></div>
-                    <div class="vocab-card"><strong>frott</strong><span>fruit</span></div>
-                    <div class="vocab-card"><strong>gallettina</strong><span>biscuit</span></div>
-                </div>
+                <div class="vocab-card-grid" data-food-group="food-ingredients"></div>
             </section>
 
             <section class="content-card" id="questions">
@@ -343,6 +318,22 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
+    <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/food.json",
+        sourcePage: "food_preferences.html",
+        reviewPrefix: "food",
+        groupAttribute: "data-food-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#shopping .toolbar-row",
+        pageBulkLabel: "Add all food words",
+        defaultTopic: "Food",
+        examplePrefix: "Inħobb"
+    };
+    </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

@@ -58,17 +58,12 @@
             <section class="card" id="body">
                 <span class="tag">Vocabulary</span>
                 <h2>Body Parts</h2>
-                <div class="three-col">
-                    <div class="item"><strong>ras</strong><span>head</span></div>
-                    <div class="item"><strong>wiċċ</strong><span>face</span></div>
-                    <div class="item"><strong>gċajn</strong><span>eye</span></div>
-                    <div class="item"><strong>imnieħer</strong><span>nose</span></div>
-                    <div class="item"><strong>fomm</strong><span>mouth</span></div>
-                    <div class="item"><strong>widna</strong><span>ear</span></div>
-                    <div class="item"><strong>id</strong><span>hand</span></div>
-                    <div class="item"><strong>sieq</strong><span>leg / foot</span></div>
-                    <div class="item"><strong>xagħar</strong><span>hair</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Start with body parts, then add the appearance adjectives for picture description practice.</span>
                 </div>
+                <div class="vocab-card-grid" data-body-group="body-parts"></div>
             </section>
 
             <section class="card" id="face">
@@ -89,14 +84,7 @@
                 <div class="question-grid">
                     <div class="wide-box">
                         <h3>Adjectives</h3>
-                        <div class="three-col">
-                            <div class="item"><strong>twil / twila</strong><span>tall / long</span></div>
-                            <div class="item"><strong>qasir / qasira</strong><span>short</span></div>
-                            <div class="item"><strong>żagħżugħ / żagħżugħa</strong><span>young</span></div>
-                            <div class="item"><strong>żgħir / żgħira</strong><span>small</span></div>
-                            <div class="item"><strong>kbir / kbira</strong><span>big</span></div>
-                            <div class="item"><strong>sabiħ / sabiħa</strong><span>beautiful</span></div>
-                        </div>
+                        <div class="vocab-card-grid" data-body-group="body-appearance"></div>
                     </div>
                     <div class="wide-box">
                         <h3>Ready Models</h3>
@@ -244,6 +232,22 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
+    <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/body_appearance.json",
+        sourcePage: "body_appearance.html",
+        reviewPrefix: "body",
+        groupAttribute: "data-body-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#body .toolbar-row",
+        pageBulkLabel: "Add all body words",
+        defaultTopic: "Body and Appearance",
+        examplePrefix: "Għandi"
+    };
+    </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

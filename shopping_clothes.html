@@ -53,8 +53,30 @@
         </ul>
     </aside>
     <main class="content">
-        <section class="card" id="clothes"><span class="tag">Vocabulary</span><h2>Clothes Vocabulary</h2><div class="three-col">                    <div class="item"><strong>flokk</strong><span>shirt / top</span></div>                    <div class="item"><strong>qalziet</strong><span>trousers</span></div>                    <div class="item"><strong>libsa</strong><span>dress</span></div>                    <div class="item"><strong>ġakketta</strong><span>jacket</span></div>                    <div class="item"><strong>żarbun</strong><span>shoe</span></div>                    <div class="item"><strong>borża</strong><span>bag</span></div></div></section>
-        <section class="card" id="colours"><span class="tag">Details</span><h2>Colours and Sizes</h2><div class="question-grid"><div class="wide-box"><h3>Colours</h3><div class="three-col">                    <div class="item"><strong>aħmar</strong><span>red</span></div>                    <div class="item"><strong>blu</strong><span>blue</span></div>                    <div class="item"><strong>iswed</strong><span>black</span></div>                    <div class="item"><strong>abjad</strong><span>white</span></div>                    <div class="item"><strong>aħdar</strong><span>green</span></div>                    <div class="item"><strong>roża</strong><span>pink</span></div></div></div><div class="wide-box"><h3>Sizes</h3><div class="three-col">                    <div class="item"><strong>żgħir</strong><span>small</span></div>                    <div class="item"><strong>medju</strong><span>medium</span></div>                    <div class="item"><strong>kbir</strong><span>large</span></div></div></div></div></section>
+        <section class="card" id="clothes">
+            <span class="tag">Vocabulary</span>
+            <h2>Clothes Vocabulary</h2>
+            <div class="toolbar-row">
+                <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                <span class="mini">Add clothes, colours, and sizes to review so shopping phrases become easier to build.</span>
+            </div>
+            <div class="vocab-card-grid" data-shopping-group="shopping-clothes"></div>
+        </section>
+        <section class="card" id="colours">
+            <span class="tag">Details</span>
+            <h2>Colours and Sizes</h2>
+            <div class="question-grid">
+                <div class="wide-box">
+                    <h3>Colours</h3>
+                    <div class="vocab-card-grid" data-shopping-group="shopping-colours"></div>
+                </div>
+                <div class="wide-box">
+                    <h3>Sizes</h3>
+                    <div class="vocab-card-grid" data-shopping-group="shopping-sizes"></div>
+                </div>
+            </div>
+        </section>
         <section class="card" id="shopping"><span class="tag">Shopping</span><h2>Shopping Patterns</h2><div class="example-bank">                    <div class="example-line"><span class="mt">Nixtieq flokk blu.</span><span class="en">I would like a blue shirt.</span></div>                    <div class="example-line"><span class="mt">Kemm jiswa dan il-flokk?</span><span class="en">How much does this shirt cost?</span></div>                    <div class="example-line"><span class="mt">Għandek daqs kbir?</span><span class="en">Do you have a large size?</span></div>                    <div class="example-line"><span class="mt">Nista' nipprova dan?</span><span class="en">Can I try this on?</span></div></div></section>
         <section class="card" id="dialogues"><span class="tag">Dialogues</span><h2>Mini-dialogues</h2><div class="dialogue-grid"><div class="wide-box"><h3>Buying a shirt</h3><div class="example-bank">                    <div class="example-line"><span class="mt">A: Nixtieq flokk iswed.</span><span class="en">A: I would like a black shirt.</span></div>                    <div class="example-line"><span class="mt">B: Liema daqs għandek bżonn?</span><span class="en">B: What size do you need?</span></div>                    <div class="example-line"><span class="mt">A: Daqs medju, jekk jogħġbok.</span><span class="en">A: Medium size, please.</span></div></div></div><div class="wide-box"><h3>Asking the price</h3><div class="example-bank">                    <div class="example-line"><span class="mt">A: Kemm jiswa dan iż-żarbun?</span><span class="en">A: How much does this shoe cost?</span></div>                    <div class="example-line"><span class="mt">B: Jiswa tletin ewro.</span><span class="en">B: It costs thirty euro.</span></div>                    <div class="example-line"><span class="mt">A: Tajjeb, nieħduh.</span><span class="en">A: Good, I will take it.</span></div></div></div></div></section>
         <section class="card" id="roleplay"><span class="tag">Role Play</span><h2>Role Play Ideas</h2><div class="roleplay-grid"><div class="wide-box"><h3>Customer</h3><p class="mini">Ask for a colour, a size, and a price. Then decide if you want to buy it.</p></div><div class="wide-box"><h3>Shop assistant</h3><p class="mini">Offer another size, another colour, and say the price clearly.</p></div></div></section>
@@ -65,6 +87,23 @@
 </div>
 
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
+    <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/shopping_clothes.json",
+        sourcePage: "shopping_clothes.html",
+        reviewPrefix: "shopping",
+        groupAttribute: "data-shopping-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#clothes .toolbar-row",
+        pageBulkLabel: "Add all shopping words",
+        defaultTopic: "Shopping and Clothes",
+        examplePrefix: "Nixtieq",
+        swatchClass: "color-swatch"
+    };
+    </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
