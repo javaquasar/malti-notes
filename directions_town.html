@@ -51,7 +51,7 @@
                 <li><a href="#dialogues">Mini-dialogues</a></li>
                 <li><a href="#routes">Route Examples</a></li>
                 <li><a href="#wrong">Wrong vs Right</a></li>
-                <li><a href="#phrases">50 Thematic Phrases</a></li>
+                <li><a href="#phrases">Thematic Phrases</a></li>
                 <li><a href="#related">Related Pages</a></li>
             </ul>
         </aside>
@@ -158,8 +158,8 @@
 
             <section class="card" id="phrases">
                 <span class="tag">Phrases</span>
-                <h2>50 Thematic Phrases</h2>
-                <div class="example-bank">
+                <h2>Thematic Phrases</h2>
+                <div data-example-group="directions-phrases">
                     <div class="example-line"><span class="mt">Skużani, fejn hu l-bank?</span><span class="en">Excuse me, where is the bank?</span></div>
                     <div class="example-line"><span class="mt">Fejn hi l-ispiżerija?</span><span class="en">Where is the pharmacy?</span></div>
                     <div class="example-line"><span class="mt">Fejn hi l-waqfa tal-linja?</span><span class="en">Where is the bus stop?</span></div>
@@ -227,6 +227,14 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/directions_town_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "phrase-card"
+    });
+    </script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

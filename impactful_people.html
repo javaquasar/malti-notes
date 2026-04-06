@@ -262,7 +262,7 @@
             <section class="content-card" id="practice-bank">
                 <span class="tag">Practice Bank</span>
                 <h2>Practice Bank</h2>
-                <div class="sentence-grid">
+                <div data-example-group="impactful-practice-bank">
                     <div class="sentence-card"><strong>1. Huwa kien mexxej.</strong><span>He was a leader.</span></div>
                     <div class="sentence-card"><strong>2. Hija kienet attivista.</strong><span>She was an activist.</span></div>
                     <div class="sentence-card"><strong>3. Huwa kien xjentist.</strong><span>He was a scientist.</span></div>
@@ -288,6 +288,14 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/impactful_people_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "sentence-card"
+    });
+    </script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

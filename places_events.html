@@ -204,7 +204,7 @@
             <section class="content-card" id="story-bank">
                 <span class="tag">Practice Bank</span>
                 <h2>Story Bank</h2>
-                <div class="sentence-grid">
+                <div data-example-group="places-story-bank">
                     <div class="sentence-card"><strong>1. F'Malta hawn ħafna postijiet interessanti.</strong><span>In Malta there are many interesting places.</span></div>
                     <div class="sentence-card"><strong>2. L-Imdina hija belt qadima u sabiħa.</strong><span>Mdina is an old and beautiful city.</span></div>
                     <div class="sentence-card"><strong>3. Il-Katakombi huma post storiku famuż.</strong><span>The Catacombs are a famous historical place.</span></div>
@@ -240,6 +240,14 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/places_events_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "sentence-card"
+    });
+    </script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

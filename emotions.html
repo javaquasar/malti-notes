@@ -294,42 +294,19 @@
             <section class="content-card" id="practice-bank">
                 <span class="tag">Practice Bank</span>
                 <h2>Practice Bank</h2>
-                <div class="sentence-grid">
-                    <div class="sentence-card"><strong>1. Jien inħossni ferħan.</strong><span>I feel happy. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>2. Jien inħossni ferħana.</strong><span>I feel happy. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>3. Jien inħossni mdejjaq.</strong><span>I feel sad. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>4. Jien inħossni mdejqa.</strong><span>I feel sad. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>5. Illum inħossni kalm.</strong><span>Today I feel calm. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>6. Illum inħossni kalma.</strong><span>Today I feel calm. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>7. Xi kultant inħossni nervuż.</strong><span>Sometimes I feel nervous. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>8. Xi kultant inħossni nervuża.</strong><span>Sometimes I feel nervous. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>9. Meta nkun ħdejn il-baħar, inħossni rilassat.</strong><span>When I am near the sea, I feel relaxed. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>10. Meta nkun ħdejn il-baħar, inħossni rilassata.</strong><span>When I am near the sea, I feel relaxed. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>11. Meta jkolli ħafna xogħol, inħossni inkwetat.</strong><span>When I have a lot of work, I feel worried. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>12. Meta jkolli ħafna xogħol, inħossni inkwetata.</strong><span>When I have a lot of work, I feel worried. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>13. Meta niltaqa' mal-ħbieb, inħossni kuntent.</strong><span>When I meet friends, I feel content. (male speaker)</span></div>
-                    <div class="sentence-card"><strong>14. Meta niltaqa' mal-ħbieb, inħossni kuntenta.</strong><span>When I meet friends, I feel content. (female speaker)</span></div>
-                    <div class="sentence-card"><strong>15. Kif tħossok illum?</strong><span>How do you feel today?</span></div>
-                    <div class="sentence-card"><strong>16. Illum inħossni pożittiv / pożittiva.</strong><span>Today I feel positive.</span></div>
-                    <div class="sentence-card"><strong>17. Għaliex tħossok hekk?</strong><span>Why do you feel like that?</span></div>
-                    <div class="sentence-card"><strong>18. Għax illum għandi aħbar tajba.</strong><span>Because today I have good news.</span></div>
-                    <div class="sentence-card"><strong>19. Meta tħossok imbarazzat / imbarazzata?</strong><span>When do you feel embarrassed?</span></div>
-                    <div class="sentence-card"><strong>20. Inħossni imbarazzat / imbarazzata meta nagħmel żball.</strong><span>I feel embarrassed when I make a mistake.</span></div>
-                    <div class="sentence-card"><strong>21. Int tħossok kalm?</strong><span>Do you feel calm?</span></div>
-                    <div class="sentence-card"><strong>22. Iva, inħossni kalm / kalma.</strong><span>Yes, I feel calm.</span></div>
-                    <div class="sentence-card"><strong>23. Xi kultant inħossni frustrat / frustrata.</strong><span>Sometimes I feel frustrated.</span></div>
-                    <div class="sentence-card"><strong>24. Ma nħobbx inħossni negattiv / negattiva.</strong><span>I do not like feeling negative.</span></div>
-                    <div class="sentence-card"><strong>25. Inħobb inħossni kunfidenti.</strong><span>I like feeling confident.</span></div>
-                    <div class="sentence-card"><strong>26. Meta jkolli ħin għalija, inħossni kwiet / kwieta.</strong><span>When I have time for myself, I feel quiet / calm.</span></div>
-                    <div class="sentence-card"><strong>27. Kultant inħossni nostalġiku / nostalġika.</strong><span>Sometimes I feel nostalgic.</span></div>
-                    <div class="sentence-card"><strong>28. Meta xi ħadd jgħinni, inħossni kuntent / kuntenta.</strong><span>When someone helps me, I feel content.</span></div>
-                    <div class="sentence-card"><strong>29. Jien ma nħossnix aggressiv / agressiva llum.</strong><span>I do not feel aggressive today.</span></div>
-                    <div class="sentence-card"><strong>30. Illum inħossni aħjar.</strong><span>Today I feel better.</span></div>
-                </div>
+                <div data-example-group="emotions-practice-bank"></div>
             </section>
         </main>
     </div>
 </div>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/emotions_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "sentence-card"
+    });
+    </script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

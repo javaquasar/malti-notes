@@ -282,44 +282,14 @@
             <section class="content-card" id="practice-bank">
                 <span class="tag">Practice Bank</span>
                 <h2>Practice Bank</h2>
-                <div class="sentence-grid">
-                    <div class="sentence-card"><strong>1. Filgħodu nħobb niekol bajda u towst bil-butir.</strong><span>In the morning I like to eat an egg and toast with butter.</span></div>
-                    <div class="sentence-card"><strong>2. Filgħodu nħobb nieħu cereal bil-ħalib.</strong><span>In the morning I like to have cereal with milk.</span></div>
-                    <div class="sentence-card"><strong>3. Filgħodu nieħu kafè u gallettina.</strong><span>In the morning I have coffee and a biscuit.</span></div>
-                    <div class="sentence-card"><strong>4. F'nofsinhar inħobb niekol xi laħam u ħaxix.</strong><span>At midday I like to eat some meat and vegetables.</span></div>
-                    <div class="sentence-card"><strong>5. F'nofsinhar inħobb nieħu soppa.</strong><span>At midday I like to have soup.</span></div>
-                    <div class="sentence-card"><strong>6. Filgħaxija nħobb nieħu xi ħaġa ħafifa.</strong><span>In the evening I like to have something light.</span></div>
-                    <div class="sentence-card"><strong>7. Filgħaxija nħobb nieħu tiġieġ.</strong><span>In the evening I like to have chicken.</span></div>
-                    <div class="sentence-card"><strong>8. Xi tħobb tiekol?</strong><span>What do you like to eat?</span></div>
-                    <div class="sentence-card"><strong>9. X'tixtieq?</strong><span>What would you like?</span></div>
-                    <div class="sentence-card"><strong>10. X'għandek bżonn?</strong><span>What do you need?</span></div>
-                    <div class="sentence-card"><strong>11. Ilbieraħ kilt żewġ pastizzi.</strong><span>Yesterday I ate two pastizzi.</span></div>
-                    <div class="sentence-card"><strong>12. Inħobb niekol ikel tradizzjonali Malti.</strong><span>I like to eat traditional Maltese food.</span></div>
-                    <div class="sentence-card"><strong>13. Inħobb nieħu birra filgħaxija.</strong><span>I like to have beer in the evening.</span></div>
-                    <div class="sentence-card"><strong>14. Inħobb nixrob tazza nbid ma' biċċa laħam.</strong><span>I like to drink a glass of wine with a piece of meat.</span></div>
-                    <div class="sentence-card"><strong>15. Mal-ħut inħobb nieħu tazza nbid bajda.</strong><span>With fish I like to have a glass of white wine.</span></div>
-                    <div class="sentence-card"><strong>16. Fil-brejk se niekol ftira biż-żejt.</strong><span>During the break I am going to eat ftira biż-żejt.</span></div>
-                    <div class="sentence-card"><strong>17. Xi ħadd irid te jew kafè?</strong><span>Does anyone want tea or coffee?</span></div>
-                    <div class="sentence-card"><strong>18. Tieħu zokkor mat-te?</strong><span>Do you take sugar with tea?</span></div>
-                    <div class="sentence-card"><strong>19. Tieħu ħalib mal-kafè?</strong><span>Do you take milk with coffee?</span></div>
-                    <div class="sentence-card"><strong>20. Trid gallettina?</strong><span>Do you want a biscuit?</span></div>
-                    <div class="sentence-card"><strong>21. Ifuħ!</strong><span>It smells nice!</span></div>
-                    <div class="sentence-card"><strong>22. L-ikla t-tajba.</strong><span>Enjoy your meal.</span></div>
-                    <div class="sentence-card"><strong>23. Lilek ukoll.</strong><span>Same to you.</span></div>
-                    <div class="sentence-card"><strong>24. Il-ftira biż-żejt hija popolari ħafna.</strong><span>Ftira biż-żejt is very popular.</span></div>
-                    <div class="sentence-card"><strong>25. L-istuffat tal-fenek huwa ikel tradizzjonali Malti.</strong><span>Rabbit stew is traditional Maltese food.</span></div>
-                    <div class="sentence-card"><strong>26. Dan il-platt ġej minn pajjiżi.</strong><span>This dish comes from my country.</span></div>
-                    <div class="sentence-card"><strong>27. Dan il-platt huwa platt ewlieni.</strong><span>This dish is a main dish.</span></div>
-                    <div class="sentence-card"><strong>28. Dan il-platt fih zalza ħamra.</strong><span>This dish has red sauce.</span></div>
-                    <div class="sentence-card"><strong>29. L-ingredjenti għal dan il-platt huma ross, laħam u ħaxix.</strong><span>The ingredients for this dish are rice, meat, and vegetables.</span></div>
-                    <div class="sentence-card"><strong>30. Inħobb nitkellem dwar l-ikel favorit tiegħi.</strong><span>I like to talk about my favourite food.</span></div>
-                </div>
+                <div data-example-group="food-practice-bank"></div>
             </section>
         </main>
     </div>
 </div>
     <script src="./assets/js/review-store.js"></script>
     <script src="./assets/js/render-vocab-cards.js"></script>
+    <script src="./assets/js/render-example-banks.js"></script>
     <script>
     window.MaltiVocabReviewPage = {
         dataUrl: "./assets/data/food.json",
@@ -332,6 +302,11 @@
         defaultTopic: "Food",
         examplePrefix: "Inħobb"
     };
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/food_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "sentence-card"
+    });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>

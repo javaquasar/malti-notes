@@ -174,7 +174,7 @@
             <section class="content-card" id="alternatives">
                 <span class="tag">Section 4</span>
                 <h2>Alternative Routes</h2>
-                <div class="sentence-grid">
+                <div data-example-group="transport-story-bank">
                     <div class="route-card">
                         <strong>Bil-ferry</strong>
                         <div class="line-pair">
@@ -316,8 +316,14 @@
 </div>
 <script src="./assets/js/review-store.js"></script>
 <script src="./assets/js/render-vocab-cards.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/transport-compact-toggle.js"></script>
 <script>
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/transport_examples.json",
+    groupAttribute: "data-example-group",
+    cardClass: "sentence-card"
+});
 window.MaltiVocabReviewPage = {
     dataUrl: "./assets/data/transport.json",
     sourcePage: "transport_travel.html",
