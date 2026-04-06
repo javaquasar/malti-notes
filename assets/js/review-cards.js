@@ -1,6 +1,7 @@
 (function () {
     var currentCard = null;
     var queue = [];
+    var ANIMALS_DATA_URL = "./assets/data/animals.json";
 
     function byId(id) {
         return document.getElementById(id);
@@ -40,8 +41,13 @@
                 "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + " | " + escapeHtml(card.translation) + "</div>";
         }
 
+        var imageHtml = card.image
+            ? "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>"
+            : "";
+
         return "" +
             "<span class=\"tag\">Word Card</span>" +
+            imageHtml +
             "<div class=\"review-word\">" + escapeHtml(card.maltese) + "</div>" +
             "<div class=\"review-meta\">Topic: " + escapeHtml(card.topic) + "</div>";
     }
@@ -127,21 +133,78 @@
         });
     }
 
+    function toAnimalReviewId(item) {
+        return "word::animals::" + window.MaltiReviewStore.normalizeForKey(item.slug || item.maltese);
+    }
+
+    function backfillAnimalImages() {
+        return fetch(ANIMALS_DATA_URL)
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Could not load animals data for review backfill.");
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                var lookup = {};
+                (data.groups || []).forEach(function (group) {
+                    (group.items || []).forEach(function (item) {
+                        lookup[toAnimalReviewId(item)] = {
+                            id: toAnimalReviewId(item),
+                            maltese: item.maltese,
+                            english: item.english,
+                            topic: group.title || "Animals",
+                            sourcePage: data.page || "animals.html",
+                            example: item.example || ("Nara " + item.maltese + "."),
+                            image: item.image || "",
+                            imageAlt: item.imageAlt || item.english || item.maltese
+                        };
+                    });
+                });
+
+                var changed = false;
+                window.MaltiReviewStore.getAllCards().forEach(function (card) {
+                    if (card.type !== "word-card" || card.image) {
+                        return;
+                    }
+                    var animalCard = lookup[card.id];
+                    if (!animalCard) {
+                        return;
+                    }
+                    window.MaltiReviewStore.addWord(Object.assign({}, animalCard, {
+                        english: card.english || animalCard.english,
+                        example: card.example || animalCard.example,
+                        topic: card.topic || animalCard.topic,
+                        sourcePage: card.sourcePage || animalCard.sourcePage
+                    }));
+                    changed = true;
+                });
+
+                if (changed) {
+                    refillQueue();
+                }
+            })
+            .catch(function (error) {
+                console.warn(error);
+            });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         if (!window.MaltiReviewStore) {
             return;
         }
-
-        refillQueue();
-        renderCard();
         wireCustomForm();
-
-        byId("clear-review").addEventListener("click", function () {
-            window.MaltiReviewStore.getAllCards().forEach(function (card) {
-                window.MaltiReviewStore.removeCard(card.id);
-            });
-            queue = [];
+        backfillAnimalImages().finally(function () {
+            refillQueue();
             renderCard();
+
+            byId("clear-review").addEventListener("click", function () {
+                window.MaltiReviewStore.getAllCards().forEach(function (card) {
+                    window.MaltiReviewStore.removeCard(card.id);
+                });
+                queue = [];
+                renderCard();
+            });
         });
     });
 }());

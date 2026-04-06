@@ -82,6 +82,21 @@
         return item;
     }
 
+    function mergeCardData(existing, incoming) {
+        var merged = Object.assign({}, existing);
+
+        Object.keys(incoming || {}).forEach(function (key) {
+            var value = incoming[key];
+            var isEmptyString = typeof value === "string" && !value.trim();
+            if (value === undefined || value === null || isEmptyString) {
+                return;
+            }
+            merged[key] = value;
+        });
+
+        return merged;
+    }
+
     function getAllCards() {
         var state = loadState();
         return Object.keys(state).map(function (key) {
@@ -105,11 +120,10 @@
     function saveCard(card) {
         var state = loadState();
         var normalized = normalizeCard(card);
-        if (!state[normalized.id]) {
-            state[normalized.id] = normalized;
-            saveState(state);
-        }
-        return normalizeCard(state[normalized.id] || normalized);
+        var existing = state[normalized.id] ? normalizeCard(state[normalized.id]) : null;
+        state[normalized.id] = existing ? normalizeCard(mergeCardData(existing, normalized)) : normalized;
+        saveState(state);
+        return normalizeCard(state[normalized.id]);
     }
 
     function addWord(word) {
