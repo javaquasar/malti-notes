@@ -52,7 +52,8 @@
                 sourcePage: config.sourcePage,
                 example: createExample(item, config.examplePrefix || "Nara"),
                 image: item.image || "",
-                imageAlt: item.imageAlt || item.english || item.maltese
+                imageAlt: item.imageAlt || item.english || item.maltese,
+                swatchStyle: item.swatchStyle || ""
             };
         }
 

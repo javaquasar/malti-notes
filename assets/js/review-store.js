@@ -1,13 +1,13 @@
 (function () {
-    var STORAGE_KEY = "malti_review_cards_v2";
+    const STORAGE_KEY = "malti_review_cards_v2";
 
     function loadState() {
         try {
-            var raw = window.localStorage.getItem(STORAGE_KEY);
+            const raw = window.localStorage.getItem(STORAGE_KEY);
             if (!raw) {
                 return {};
             }
-            var parsed = JSON.parse(raw);
+            const parsed = JSON.parse(raw);
             return parsed && typeof parsed === "object" ? parsed : {};
         } catch (error) {
             return {};
@@ -31,7 +31,7 @@
     }
 
     function titleCaseLoose(value) {
-        var clean = collapseSpaces(value);
+        const clean = collapseSpaces(value);
         if (!clean) {
             return "";
         }
@@ -39,14 +39,14 @@
     }
 
     function toIsoAfterDays(days) {
-        var now = new Date();
+        const now = new Date();
         now.setHours(0, 0, 0, 0);
         now.setDate(now.getDate() + days);
         return now.toISOString();
     }
 
     function normalizeCard(card) {
-        var item = Object.assign({}, card);
+        const item = Object.assign({}, card);
         item.type = item.type || "word-card";
         item.topic = titleCaseLoose(item.topic || "General");
         item.sourcePage = item.sourcePage || "";
@@ -83,11 +83,11 @@
     }
 
     function mergeCardData(existing, incoming) {
-        var merged = Object.assign({}, existing);
+        const merged = Object.assign({}, existing);
 
         Object.keys(incoming || {}).forEach(function (key) {
-            var value = incoming[key];
-            var isEmptyString = typeof value === "string" && !value.trim();
+            const value = incoming[key];
+            const isEmptyString = typeof value === "string" && !value.trim();
             if (value === undefined || value === null || isEmptyString) {
                 return;
             }
@@ -98,18 +98,18 @@
     }
 
     function getAllCards() {
-        var state = loadState();
+        const state = loadState();
         return Object.keys(state).map(function (key) {
             return normalizeCard(state[key]);
         }).sort(function (a, b) {
-            var left = a.type === "verb-form-card" ? a.prompt : a.maltese;
-            var right = b.type === "verb-form-card" ? b.prompt : b.maltese;
+            const left = a.type === "verb-form-card" ? a.prompt : a.maltese;
+            const right = b.type === "verb-form-card" ? b.prompt : b.maltese;
             return String(left || "").localeCompare(String(right || ""));
         });
     }
 
     function getCard(id) {
-        var state = loadState();
+        const state = loadState();
         return state[id] ? normalizeCard(state[id]) : null;
     }
 
@@ -118,9 +118,9 @@
     }
 
     function saveCard(card) {
-        var state = loadState();
-        var normalized = normalizeCard(card);
-        var existing = state[normalized.id] ? normalizeCard(state[normalized.id]) : null;
+        const state = loadState();
+        const normalized = normalizeCard(card);
+        const existing = state[normalized.id] ? normalizeCard(state[normalized.id]) : null;
         state[normalized.id] = existing ? normalizeCard(mergeCardData(existing, normalized)) : normalized;
         saveState(state);
         return normalizeCard(state[normalized.id]);
@@ -141,9 +141,9 @@
     }
 
     function addVerbDrill(verb) {
-        var saved = [];
+        const saved = [];
         Object.keys(verb.forms || {}).forEach(function (tense) {
-            var tenseForms = verb.forms[tense];
+            const tenseForms = verb.forms[tense];
             Object.keys(tenseForms).forEach(function (pronoun) {
                 saved.push(saveCard({
                     type: "verb-form-card",
@@ -163,27 +163,27 @@
     }
 
     function removeCard(id) {
-        var state = loadState();
+        const state = loadState();
         delete state[id];
         saveState(state);
     }
 
     function getDueCards() {
-        var now = Date.now();
+        const now = Date.now();
         return getAllCards().filter(function (card) {
             return new Date(card.nextReviewAt).getTime() <= now;
         });
     }
 
     function reviewCard(id, grade) {
-        var state = loadState();
+        const state = loadState();
         if (!state[id]) {
             return null;
         }
 
-        var card = normalizeCard(state[id]);
-        var nextBox = card.box;
-        var nextDays = 0;
+        const card = normalizeCard(state[id]);
+        let nextBox = card.box;
+        let nextDays = 0;
 
         if (grade === "again") {
             nextBox = 0;
@@ -207,10 +207,10 @@
     }
 
     function getStats() {
-        var all = getAllCards();
-        var due = getDueCards();
-        var verbCards = all.filter(function (card) { return card.type === "verb-form-card"; }).length;
-        var wordCards = all.length - verbCards;
+        const all = getAllCards();
+        const due = getDueCards();
+        const verbCards = all.filter(function (card) { return card.type === "verb-form-card"; }).length;
+        const wordCards = all.length - verbCards;
         return {
             total: all.length,
             due: due.length,

@@ -2,6 +2,7 @@
     var currentCard = null;
     var queue = [];
     var ANIMALS_DATA_URL = "./assets/data/animals.json";
+    var COLORS_DATA_URL = "./assets/data/colors.json";
 
     function byId(id) {
         return document.getElementById(id);
@@ -41,13 +42,16 @@
                 "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + " | " + escapeHtml(card.translation) + "</div>";
         }
 
-        var imageHtml = card.image
-            ? "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>"
-            : "";
+        var visualHtml = "";
+        if (card.image) {
+            visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
+        } else if (card.swatchStyle) {
+            visualHtml = "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";
+        }
 
         return "" +
             "<span class=\"tag\">Word Card</span>" +
-            imageHtml +
+            visualHtml +
             "<div class=\"review-word\">" + escapeHtml(card.maltese) + "</div>" +
             "<div class=\"review-meta\">Topic: " + escapeHtml(card.topic) + "</div>";
     }
@@ -189,12 +193,67 @@
             });
     }
 
+    function toColorReviewId(item) {
+        return "word::colors::" + window.MaltiReviewStore.normalizeForKey(item.slug || item.maltese);
+    }
+
+    function backfillColorSwatches() {
+        return fetch(COLORS_DATA_URL)
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Could not load colors data for review backfill.");
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                var lookup = {};
+                (data.groups || []).forEach(function (group) {
+                    (group.items || []).forEach(function (item) {
+                        lookup[toColorReviewId(item)] = {
+                            id: toColorReviewId(item),
+                            maltese: item.maltese,
+                            english: item.english,
+                            topic: group.title || "Colours",
+                            sourcePage: data.page || "colors_maltese.html",
+                            example: item.example || ("Dan hu " + item.maltese + "."),
+                            swatchStyle: item.swatchStyle || ""
+                        };
+                    });
+                });
+
+                var changed = false;
+                window.MaltiReviewStore.getAllCards().forEach(function (card) {
+                    if (card.type !== "word-card" || card.swatchStyle) {
+                        return;
+                    }
+                    var colorCard = lookup[card.id];
+                    if (!colorCard) {
+                        return;
+                    }
+                    window.MaltiReviewStore.addWord(Object.assign({}, colorCard, {
+                        english: card.english || colorCard.english,
+                        example: card.example || colorCard.example,
+                        topic: card.topic || colorCard.topic,
+                        sourcePage: card.sourcePage || colorCard.sourcePage
+                    }));
+                    changed = true;
+                });
+
+                if (changed) {
+                    refillQueue();
+                }
+            })
+            .catch(function (error) {
+                console.warn(error);
+            });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         if (!window.MaltiReviewStore) {
             return;
         }
         wireCustomForm();
-        backfillAnimalImages().finally(function () {
+        Promise.allSettled([backfillAnimalImages(), backfillColorSwatches()]).finally(function () {
             refillQueue();
             renderCard();
 

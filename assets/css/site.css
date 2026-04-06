@@ -297,6 +297,15 @@ h3 { font-size: 1.08rem; }
   border: 1px solid rgba(199, 106, 42, 0.18);
 }
 
+.review-color-swatch {
+  width: min(100%, 220px);
+  height: 160px;
+  display: block;
+  border-radius: 22px;
+  border: 1px solid rgba(199, 106, 42, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
 .review-answer {
   display: grid;
   gap: 10px;
@@ -382,7 +391,7 @@ h3 { font-size: 1.08rem; }
 }
 
 .visual-vocab-grid {
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .box,
@@ -419,10 +428,11 @@ h3 { font-size: 1.08rem; }
 }
 
 .visual-vocab-card {
-  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius-card) + 2px);
+  padding: 12px;
   background: rgba(255, 255, 255, 0.58);
-  border: 1px solid rgba(199, 106, 42, 0.28);
-  border-radius: 24px;
+  margin: 0;
   min-width: 0;
 }
 
@@ -432,11 +442,12 @@ h3 { font-size: 1.08rem; }
 
 .visual-vocab-card img {
   width: 100%;
-  height: 112px;
+  height: auto;
   object-fit: contain;
-  border-radius: 18px;
-  background: rgba(239, 230, 215, 0.7);
+  border-radius: 14px;
+  background: rgba(239, 230, 215, 0.72);
   display: block;
+  margin-bottom: 10px;
 }
 
 .visual-vocab-card strong,
@@ -449,7 +460,6 @@ h3 { font-size: 1.08rem; }
 }
 
 .visual-vocab-card strong {
-  margin-top: 10px;
   font-size: 1.08rem;
 }
 

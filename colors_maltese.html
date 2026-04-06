@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,80 +63,12 @@
             <section class="content-card" id="core-colours">
                 <span class="tag">Vocabulary</span>
                 <h2>Core Colours</h2>
-                <div class="color-grid">
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#ffffff;"></div>
-                        <strong>abjad</strong>
-                        <span>white</span>
-                        <small><code>qmis abjad</code> = white shirt</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#111111;"></div>
-                        <strong>iswed</strong>
-                        <span>black</span>
-                        <small><code>karozza sewda</code> = black car</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#d73a31;"></div>
-                        <strong>aħmar</strong>
-                        <span>red</span>
-                        <small><code>fjura ħamra</code> = red flower</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#2f7be5;"></div>
-                        <strong>blu</strong>
-                        <span>blue</span>
-                        <small><code>baħar blu</code> = blue sea</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#f0d23d;"></div>
-                        <strong>isfar</strong>
-                        <span>yellow</span>
-                        <small><code>xemx safra</code> = yellow sun</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#3f9b4d;"></div>
-                        <strong>aħdar</strong>
-                        <span>green</span>
-                        <small><code>ħaxix aħdar</code> = green vegetables</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#f19d2a;"></div>
-                        <strong>oranġjo</strong>
-                        <span>orange</span>
-                        <small><code>ballun oranġjo</code> = orange balloon</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#7d4cc7;"></div>
-                        <strong>vjola</strong>
-                        <span>purple</span>
-                        <small><code>fjura vjola</code> = purple flower</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#f7adc6;"></div>
-                        <strong>roża</strong>
-                        <span>pink</span>
-                        <small><code>borża roża</code> = pink bag</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#8a5e3b;"></div>
-                        <strong>kannella</strong>
-                        <span>brown</span>
-                        <small><code>mejda kannella</code> = brown table</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:#b8b8b8;"></div>
-                        <strong>griż</strong>
-                        <span>grey</span>
-                        <small><code>qattus griż</code> = grey cat</small>
-                    </article>
-                    <article class="color-card">
-                        <div class="color-swatch" style="background:linear-gradient(135deg,#ffd8e3,#cfe8ff,#f7e8a2);"></div>
-                        <strong>ikkulurit</strong>
-                        <span>colourful</span>
-                        <small><code>stampa ikkulurita</code> = colourful picture</small>
-                    </article>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the core colours to review and practise them as quick cards.</span>
                 </div>
+                <div class="vocab-card-grid" data-color-group="core-colours"></div>
             </section>
 
             <section class="content-card" id="extra-shades">
@@ -362,6 +294,25 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
+    <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/colors.json",
+        sourcePage: "colors_maltese.html",
+        reviewPrefix: "colors",
+        groupAttribute: "data-color-group",
+        cardClass: "color-card",
+        pageToolbarSelector: "#core-colours .toolbar-row",
+        pageBulkLabel: "Add all colour words",
+        defaultTopic: "Colours",
+        examplePrefix: "Dan hu",
+        swatchClass: "color-swatch"
+    };
+    </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
+
+

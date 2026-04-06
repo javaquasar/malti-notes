@@ -7,14 +7,33 @@
         });
     }
 
+    function createVisualLead(item, options) {
+        if (item.image) {
+            var img = document.createElement("img");
+            img.src = item.image;
+            img.alt = item.imageAlt || item.english || item.maltese;
+            return img;
+        }
+
+        if (item.swatchStyle) {
+            var swatch = document.createElement("div");
+            swatch.className = options.swatchClass || "color-swatch";
+            swatch.setAttribute("style", item.swatchStyle);
+            swatch.setAttribute("aria-hidden", "true");
+            return swatch;
+        }
+
+        return null;
+    }
+
     function createFigureCard(item, options) {
         var figure = document.createElement("figure");
         figure.className = options.cardClass || "visual-vocab-card";
 
-        var img = document.createElement("img");
-        img.src = item.image;
-        img.alt = item.imageAlt || item.english || item.maltese;
-        figure.appendChild(img);
+        var lead = createVisualLead(item, options || {});
+        if (lead) {
+            figure.appendChild(lead);
+        }
 
         var strong = document.createElement("strong");
         strong.textContent = item.maltese;
