@@ -607,9 +607,16 @@ td {
   text-decoration: none;
   font-size: 0.94rem;
   font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 10px;
+  transition: background-color 140ms ease, color 140ms ease;
 }
 
-.site-nav a:hover { text-decoration: underline; }
+.site-nav a:hover {
+  background: rgba(47, 143, 131, 0.10);
+  color: var(--ink);
+  text-decoration: none;
+}
 
 .site-header.nav-managed {
   position: relative;
@@ -649,11 +656,16 @@ td {
   font-weight: 700;
   cursor: pointer;
   list-style: none;
+  border-radius: 999px;
+  padding: 6px 10px;
+  transition: background-color 140ms ease, color 140ms ease;
 }
 
 .site-nav-compact .nav-link:hover,
 .site-nav-compact summary:hover {
-  text-decoration: underline;
+  background: rgba(47, 143, 131, 0.10);
+  color: var(--ink);
+  text-decoration: none;
 }
 
 .site-nav-compact summary::-webkit-details-marker {

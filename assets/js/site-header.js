@@ -102,6 +102,24 @@
   const toggle = header.querySelector(".site-nav-toggle");
   const panel = header.querySelector(".site-nav-panel");
   const detailsList = Array.from(header.querySelectorAll(".nav-group"));
+  const closeTimers = new WeakMap();
+
+  const clearCloseTimer = (details) => {
+    const timer = closeTimers.get(details);
+    if (timer) {
+      window.clearTimeout(timer);
+      closeTimers.delete(details);
+    }
+  };
+
+  const scheduleClose = (details, delay = 180) => {
+    clearCloseTimer(details);
+    const timer = window.setTimeout(() => {
+      details.open = false;
+      closeTimers.delete(details);
+    }, delay);
+    closeTimers.set(details, timer);
+  };
 
   if (toggle && panel) {
     toggle.addEventListener("click", () => {
@@ -118,9 +136,24 @@
   detailsList.forEach((details) => {
     details.addEventListener("toggle", () => {
       if (!details.open) return;
+      clearCloseTimer(details);
       detailsList.forEach((other) => {
         if (other !== details) other.open = false;
       });
+    });
+
+    details.addEventListener("pointerenter", () => {
+      clearCloseTimer(details);
+    });
+
+    details.addEventListener("focusout", (event) => {
+      const nextTarget = event.relatedTarget;
+      if (nextTarget && details.contains(nextTarget)) return;
+      details.open = false;
+    });
+
+    details.addEventListener("mouseleave", () => {
+      scheduleClose(details);
     });
   });
 
