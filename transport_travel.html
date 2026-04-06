@@ -68,20 +68,11 @@
                 <h2>Means of Transport</h2>
                 <div class="toolbar-row">
                     <button type="button" class="toggle-images" data-transport-toggle aria-pressed="false">Hide transport images</button>
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                     <span class="mini">Use compact mode when you want to focus on the words and route examples.</span>
                 </div>
-                <div class="transport-card-grid">
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/walk.svg" alt="Walking illustration"><strong>bil-mixi</strong><span>on foot</span><small>Jiena xi kultant immur bil-mixi.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/bus.svg" alt="Bus illustration"><strong>bit-tal-linja</strong><span>by bus</span><small>Kuljum ħafna nies imorru bit-tal-linja.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/car.svg" alt="Car illustration"><strong>bil-karozza</strong><span>by car</span><small>Hu jmur ix-xogħol bil-karozza.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/bicycle.svg" alt="Bicycle illustration"><strong>bir-rota</strong><span>by bicycle</span><small>Xi nies imorru bir-rota meta t-temp ikun sabiħ.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/ferry.svg" alt="Ferry illustration"><strong>bil-ferry</strong><span>by ferry</span><small>Bil-ferry taqsam malajr minn Tas-Sliema għall-Belt.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/taxi.svg" alt="Taxi illustration"><strong>bit-taxi</strong><span>by taxi</span><small>Bit-taxi tasal komdu u malajr.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/ship.svg" alt="Ship illustration"><strong>vapur</strong><span>ship / ferry</span><small>Meta mmorru Għawdex, naqbdu l-vapur.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/boat.svg" alt="Boat illustration"><strong>dgħajsa</strong><span>boat</span><small>Dgħajsa hija mezz ta' trasport fuq il-baħar.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/airplane.svg" alt="Airplane illustration"><strong>ajruplan</strong><span>airplane</span><small>Bl-ajruplan immorru minn pajjiż għal ieħor.</small></figure>
-                    <figure class="transport-figure-card"><img src="./assets/img/transport/scooter.svg" alt="Scooter illustration"><strong>mutur / scooter</strong><span>motorcycle / scooter</span><small>Xi nies jippreferu jmorru bil-mutur.</small></figure>
-                </div>
+                <div class="transport-card-grid" data-transport-group="transport-core"></div>
             </section>
 
             <section class="content-card" id="frequency">
@@ -323,8 +314,10 @@
         </main>
     </div>
 </div>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
 <script src="./assets/js/transport-compact-toggle.js"></script>
-    <script src="./assets/js/site-header.js"></script>
+<script src="./assets/js/transport-review.js"></script>
+<script src="./assets/js/site-header.js"></script>
 </body>
 </html>
-
