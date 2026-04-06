@@ -317,7 +317,20 @@
 <script src="./assets/js/review-store.js"></script>
 <script src="./assets/js/render-vocab-cards.js"></script>
 <script src="./assets/js/transport-compact-toggle.js"></script>
-<script src="./assets/js/transport-review.js"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/transport.json",
+    sourcePage: "transport_travel.html",
+    reviewPrefix: "transport",
+    groupAttribute: "data-transport-group",
+    cardClass: "transport-figure-card",
+    pageToolbarSelector: "#transport .toolbar-row",
+    pageBulkLabel: "Add all transport words",
+    defaultTopic: "Transport",
+    examplePrefix: "Jiena nuża"
+};
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
 <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
