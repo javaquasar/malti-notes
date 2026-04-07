@@ -53,9 +53,39 @@
 
         <main class="content">
             <section class="content-card">
+                <span class="tag">Study Filters</span>
+                <h2>Choose What To Study</h2>
+                <div class="review-filter-grid">
+                    <label>
+                        <strong>Topic</strong>
+                        <select class="review-select" id="review-topic-filter">
+                            <option value="">All topics</option>
+                        </select>
+                    </label>
+                    <label>
+                        <strong>Card Type</strong>
+                        <select class="review-select" id="review-type-filter">
+                            <option value="">All cards</option>
+                            <option value="word-card">Words</option>
+                            <option value="verb-form-card">Verb forms</option>
+                        </select>
+                    </label>
+                    <label class="review-check">
+                        <input id="review-due-only" type="checkbox">
+                        <span><strong>Study only due</strong><small>Show only cards that are due now.</small></span>
+                    </label>
+                    <div class="review-filter-status" id="review-filter-status">All saved cards are included.</div>
+                </div>
+            </section>
+            <section class="content-card">
                 <div class="review-card-shell">
                     <div class="review-stage" id="review-stage"></div>
                 </div>
+            </section>
+            <section class="content-card">
+                <span class="tag">Saved Cards</span>
+                <h2>Saved Review Cards</h2>
+                <div class="review-saved-list" id="review-saved-list"></div>
             </section>
             <section class="content-card">
                 <span class="tag">Custom Add</span>

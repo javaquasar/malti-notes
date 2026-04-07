@@ -16,21 +16,136 @@
             .replace(/"/g, "&quot;");
     }
 
+    function getAllCards() {
+        return window.MaltiReviewStore.getAllCards();
+    }
+
+    function getDueIds() {
+        var lookup = {};
+        window.MaltiReviewStore.getDueCards().forEach(function (card) {
+            lookup[card.id] = true;
+        });
+        return lookup;
+    }
+
+    function getFilters() {
+        return {
+            topic: byId("review-topic-filter") ? byId("review-topic-filter").value : "",
+            type: byId("review-type-filter") ? byId("review-type-filter").value : "",
+            dueOnly: !!(byId("review-due-only") && byId("review-due-only").checked)
+        };
+    }
+
+    function cardMatches(card, filters, dueLookup) {
+        if (filters.topic && card.topic !== filters.topic) {
+            return false;
+        }
+        if (filters.type && card.type !== filters.type) {
+            return false;
+        }
+        if (filters.dueOnly && !dueLookup[card.id]) {
+            return false;
+        }
+        return true;
+    }
+
+    function getFilteredCards() {
+        var filters = getFilters();
+        var dueLookup = getDueIds();
+        return getAllCards().filter(function (card) {
+            return cardMatches(card, filters, dueLookup);
+        });
+    }
+
     function renderStats() {
         var stats = window.MaltiReviewStore.getStats();
         byId("review-stats").textContent = stats.total + " saved, " + stats.due + " due now";
         byId("review-breakdown").textContent = stats.words + " words, " + stats.verbs + " verb forms";
     }
 
-    function refillQueue() {
-        queue = window.MaltiReviewStore.getDueCards();
-        if (!queue.length) {
-            queue = window.MaltiReviewStore.getAllCards();
+    function renderFilterStatus() {
+        var filters = getFilters();
+        var all = getAllCards();
+        var filtered = getFilteredCards();
+        var dueLookup = getDueIds();
+        var filteredDue = filtered.filter(function (card) { return dueLookup[card.id]; }).length;
+        var bits = [];
+
+        if (filters.topic) {
+            bits.push("topic: " + filters.topic);
+        }
+        if (filters.type === "word-card") {
+            bits.push("type: words");
+        } else if (filters.type === "verb-form-card") {
+            bits.push("type: verb forms");
+        }
+        if (filters.dueOnly) {
+            bits.push("due only");
+        }
+
+        byId("review-filter-status").textContent = bits.length
+            ? (filtered.length + " matching card(s), " + filteredDue + " due now | " + bits.join(" | "))
+            : ("All saved cards are included. " + all.length + " total, " + filteredDue + " due now.");
+    }
+
+    function updateTopicOptions() {
+        var select = byId("review-topic-filter");
+        if (!select) {
+            return;
+        }
+
+        var current = select.value;
+        var topics = [];
+        var seen = {};
+
+        getAllCards().forEach(function (card) {
+            if (!card.topic || seen[card.topic]) {
+                return;
+            }
+            seen[card.topic] = true;
+            topics.push(card.topic);
+        });
+
+        topics.sort(function (a, b) {
+            return String(a).localeCompare(String(b));
+        });
+
+        select.innerHTML = "<option value=\"\">All topics</option>" + topics.map(function (topic) {
+            return "<option value=\"" + escapeHtml(topic) + "\">" + escapeHtml(topic) + "</option>";
+        }).join("");
+
+        if (current && seen[current]) {
+            select.value = current;
         }
     }
 
+    function refillQueue() {
+        queue = getFilteredCards().slice();
+    }
+
+    function formatNextReview(card) {
+        var dueLookup = getDueIds();
+        if (dueLookup[card.id]) {
+            return "Due now";
+        }
+        if (!card.nextReviewAt) {
+            return "Not scheduled";
+        }
+        var next = new Date(card.nextReviewAt);
+        if (isNaN(next.getTime())) {
+            return "Not scheduled";
+        }
+        return "Next: " + next.toLocaleString();
+    }
+
     function renderEmpty() {
-        byId("review-stage").innerHTML = "<div class=\"review-empty\"><h2>No review cards yet</h2><p class=\"mini\">Add custom words, save animal vocabulary, or add a verb drill from the verbs page.</p><p><a class=\"action-link\" href=\"./animals.html\">Open Animals Page</a> <a class=\"action-link\" href=\"./verbs_guide.html\">Open Verbs Page</a></p></div>";
+        var filteredCount = getFilteredCards().length;
+        var hasSavedCards = getAllCards().length > 0;
+        var message = hasSavedCards && filteredCount === 0
+            ? "No cards match the current filters."
+            : "Add custom words, save vocabulary from topic pages, or add a verb drill from the verbs page.";
+
+        byId("review-stage").innerHTML = "<div class=\"review-empty\"><h2>No review cards ready</h2><p class=\"mini\">" + escapeHtml(message) + "</p><p><a class=\"action-link\" href=\"./animals.html\">Open Animals Page</a> <a class=\"action-link\" href=\"./verbs_guide.html\">Open Verbs Page</a></p></div>";
     }
 
     function buildFront(card) {
@@ -70,11 +185,66 @@
             "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>";
     }
 
+    function renderSavedList() {
+        var container = byId("review-saved-list");
+        if (!container) {
+            return;
+        }
+
+        var cards = getFilteredCards();
+        if (!cards.length) {
+            container.innerHTML = "<div class=\"review-saved-empty\">No saved cards match the current filters.</div>";
+            return;
+        }
+
+        container.innerHTML = cards.map(function (card) {
+            var title = card.type === "verb-form-card"
+                ? (card.pronoun + " + " + card.lemma)
+                : card.maltese;
+            var subtitle = card.type === "verb-form-card"
+                ? (card.answer + " | " + card.translation)
+                : (card.english || "(translation to add later)");
+
+            return "" +
+                "<article class=\"review-saved-item\" data-review-card-id=\"" + escapeHtml(card.id) + "\">" +
+                    "<div class=\"review-saved-top\">" +
+                        "<div>" +
+                            "<div class=\"review-saved-title\">" + escapeHtml(title) + "</div>" +
+                            "<div class=\"review-meta\">" + escapeHtml(subtitle) + "</div>" +
+                        "</div>" +
+                        "<div class=\"review-saved-meta\">" +
+                            "<span class=\"review-saved-chip\">" + escapeHtml(card.topic) + "</span>" +
+                            "<span class=\"review-saved-chip\">" + escapeHtml(card.type === "verb-form-card" ? "verb form" : "word") + "</span>" +
+                            "<span class=\"review-saved-chip\">" + escapeHtml(formatNextReview(card)) + "</span>" +
+                        "</div>" +
+                    "</div>" +
+                    "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>" +
+                    "<div class=\"review-saved-actions\">" +
+                        "<button class=\"action-button\" type=\"button\" data-remove-review-card=\"" + escapeHtml(card.id) + "\">Remove</button>" +
+                    "</div>" +
+                "</article>";
+        }).join("");
+
+        container.querySelectorAll("[data-remove-review-card]").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var id = button.getAttribute("data-remove-review-card");
+                window.MaltiReviewStore.removeCard(id);
+                if (currentCard && currentCard.id === id) {
+                    currentCard = null;
+                }
+                refreshAll(true);
+            });
+        });
+    }
+
     function renderCard() {
         renderStats();
+        renderFilterStatus();
+
         if (!queue.length) {
             refillQueue();
         }
+
         currentCard = queue.shift() || null;
         if (!currentCard) {
             renderEmpty();
@@ -100,7 +270,28 @@
         byId("review-grade-actions").querySelectorAll("[data-grade]").forEach(function (button) {
             button.addEventListener("click", function () {
                 window.MaltiReviewStore.reviewCard(currentCard.id, button.getAttribute("data-grade"));
-                renderCard();
+                refreshAll(false);
+            });
+        });
+    }
+
+    function refreshAll(resetQueue) {
+        updateTopicOptions();
+        if (resetQueue) {
+            queue = [];
+        }
+        renderSavedList();
+        renderCard();
+    }
+
+    function wireFilters() {
+        ["review-topic-filter", "review-type-filter", "review-due-only"].forEach(function (id) {
+            var element = byId(id);
+            if (!element) {
+                return;
+            }
+            element.addEventListener("change", function () {
+                refreshAll(true);
             });
         });
     }
@@ -131,9 +322,8 @@
             });
 
             form.reset();
-            refillQueue();
-            renderStats();
             byId("custom-status").textContent = "Custom word saved.";
+            refreshAll(true);
         });
     }
 
@@ -167,7 +357,7 @@
                 });
 
                 var changed = false;
-                window.MaltiReviewStore.getAllCards().forEach(function (card) {
+                getAllCards().forEach(function (card) {
                     if (card.type !== "word-card" || card.image) {
                         return;
                     }
@@ -184,12 +374,11 @@
                     changed = true;
                 });
 
-                if (changed) {
-                    refillQueue();
-                }
+                return changed;
             })
             .catch(function (error) {
                 console.warn(error);
+                return false;
             });
     }
 
@@ -222,7 +411,7 @@
                 });
 
                 var changed = false;
-                window.MaltiReviewStore.getAllCards().forEach(function (card) {
+                getAllCards().forEach(function (card) {
                     if (card.type !== "word-card" || card.swatchStyle) {
                         return;
                     }
@@ -239,12 +428,11 @@
                     changed = true;
                 });
 
-                if (changed) {
-                    refillQueue();
-                }
+                return changed;
             })
             .catch(function (error) {
                 console.warn(error);
+                return false;
             });
     }
 
@@ -252,17 +440,20 @@
         if (!window.MaltiReviewStore) {
             return;
         }
+
+        wireFilters();
         wireCustomForm();
+
         Promise.allSettled([backfillAnimalImages(), backfillColorSwatches()]).finally(function () {
-            refillQueue();
-            renderCard();
+            refreshAll(true);
 
             byId("clear-review").addEventListener("click", function () {
-                window.MaltiReviewStore.getAllCards().forEach(function (card) {
+                getAllCards().forEach(function (card) {
                     window.MaltiReviewStore.removeCard(card.id);
                 });
                 queue = [];
-                renderCard();
+                currentCard = null;
+                refreshAll(true);
             });
         });
     });
