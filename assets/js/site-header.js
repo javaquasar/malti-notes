@@ -102,7 +102,11 @@
   const toggle = header.querySelector(".site-nav-toggle");
   const panel = header.querySelector(".site-nav-panel");
   const detailsList = Array.from(header.querySelectorAll(".nav-group"));
+  const menuLinks = Array.from(header.querySelectorAll(".nav-menu a, .site-nav-compact > .nav-link"));
   const closeTimers = new WeakMap();
+  const desktopHoverMedia = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  const isDesktopHover = () => desktopHoverMedia.matches;
 
   const clearCloseTimer = (details) => {
     const timer = closeTimers.get(details);
@@ -143,17 +147,30 @@
     });
 
     details.addEventListener("pointerenter", () => {
+      if (!isDesktopHover()) return;
       clearCloseTimer(details);
     });
 
     details.addEventListener("focusout", (event) => {
+      if (!isDesktopHover()) return;
       const nextTarget = event.relatedTarget;
       if (nextTarget && details.contains(nextTarget)) return;
       details.open = false;
     });
 
     details.addEventListener("mouseleave", () => {
+      if (!isDesktopHover()) return;
       scheduleClose(details);
+    });
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      detailsList.forEach((details) => {
+        details.open = false;
+      });
+      header.classList.remove("nav-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
     });
   });
 
