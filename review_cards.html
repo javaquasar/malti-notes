@@ -83,11 +83,6 @@
                 </div>
             </section>
             <section class="content-card">
-                <span class="tag">Saved Cards</span>
-                <h2>Saved Review Cards</h2>
-                <div class="review-saved-list" id="review-saved-list"></div>
-            </section>
-            <section class="content-card">
                 <span class="tag">Custom Add</span>
                 <h2>Add a Custom Maltese Word</h2>
                 <form class="review-form-grid" id="custom-word-form">
@@ -115,6 +110,19 @@
                         <button class="action-button" type="submit">Save Custom Word</button>
                     </div>
                 </form>
+            </section>
+            <section class="content-card">
+                <details class="review-saved-panel" id="review-saved-panel">
+                    <summary class="review-saved-summary">
+                        <span class="tag">Saved Cards</span>
+                        <span class="review-saved-summary-text">Manage saved review cards</span>
+                        <span class="status-chip" id="review-saved-count">0 cards</span>
+                    </summary>
+                    <div class="review-saved-body">
+                        <h2>Saved Review Cards</h2>
+                        <div class="review-saved-list" id="review-saved-list"></div>
+                    </div>
+                </details>
             </section>
         </main>
     </div>

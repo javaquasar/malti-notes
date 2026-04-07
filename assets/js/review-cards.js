@@ -187,11 +187,15 @@
 
     function renderSavedList() {
         var container = byId("review-saved-list");
+        var count = byId("review-saved-count");
         if (!container) {
             return;
         }
 
         var cards = getFilteredCards();
+        if (count) {
+            count.textContent = cards.length + (cards.length === 1 ? " card" : " cards");
+        }
         if (!cards.length) {
             container.innerHTML = "<div class=\"review-saved-empty\">No saved cards match the current filters.</div>";
             return;
