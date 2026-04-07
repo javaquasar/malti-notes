@@ -660,6 +660,205 @@ h3 { font-size: 1.08rem; }
   color: var(--muted);
 }
 
+.lookup-status-box {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--ink-soft);
+}
+
+.lookup-status-box[data-state="ready"] {
+  border-color: rgba(66, 145, 109, 0.26);
+  background: rgba(224, 243, 231, 0.72);
+  color: var(--ink);
+}
+
+.lookup-status-box[data-state="fallback"] {
+  border-color: rgba(199, 106, 42, 0.26);
+  background: rgba(249, 235, 225, 0.82);
+}
+
+.verb-lookup-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.verb-lookup-form label {
+  font-weight: 700;
+}
+
+.verb-lookup-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font: inherit;
+}
+
+.verb-lookup-input:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+.verb-lookup-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  margin-top: 16px;
+}
+
+.verb-lookup-output code {
+  font-size: 0.96rem;
+}
+
+.verb-match-button {
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.verb-match-button:hover {
+  border-color: rgba(47, 143, 131, 0.34);
+  background: rgba(224, 243, 231, 0.52);
+}
+
+.verb-match-button strong,
+.verb-match-button span {
+  display: block;
+}
+
+.verb-match-button span {
+  margin-top: 6px;
+  color: var(--ink-soft);
+}
+
+.verb-dialog {
+  width: min(860px, calc(100vw - 28px));
+  max-height: calc(100vh - 28px);
+  padding: 0;
+  border: 1px solid rgba(95, 111, 103, 0.28);
+  border-radius: 22px;
+  background: rgba(252, 248, 239, 0.98);
+  box-shadow: 0 24px 72px rgba(19, 53, 47, 0.24);
+  overflow: hidden;
+}
+
+.verb-dialog::backdrop {
+  background: rgba(14, 29, 26, 0.46);
+}
+
+.verb-dialog-shell {
+  padding: 0;
+  max-height: calc(100vh - 28px);
+  overflow: auto;
+}
+
+.verb-dialog-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 18px 18px 12px;
+  background: rgb(252, 248, 239);
+  border-bottom: 1px solid rgba(95, 111, 103, 0.14);
+  box-shadow: 0 10px 20px rgba(252, 248, 239, 0.96);
+}
+
+.verb-dialog-top h3 {
+  margin-bottom: 6px;
+}
+
+.verb-dialog-close {
+  border: 1px solid rgba(95, 111, 103, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  font: inherit;
+  padding: 7px 11px;
+  cursor: pointer;
+}
+
+.verb-meta-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-top: 14px;
+  padding: 0 18px;
+}
+
+.verb-meta-card,
+.verb-table-card {
+  padding: 12px;
+  border: 1px solid rgba(95, 111, 103, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  overflow-x: auto;
+}
+
+.verb-meta-list {
+  display: grid;
+  gap: 8px;
+}
+
+.verb-meta-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.verb-meta-row strong {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-transform: lowercase;
+}
+
+.verb-meta-row span {
+  font-size: 1rem;
+}
+
+.verb-table-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 0 18px 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.verb-table-card table {
+  width: auto;
+  margin-top: 8px;
+  table-layout: auto;
+}
+
+.verb-table-card--compact {
+  justify-self: stretch;
+  width: 100%;
+}
+
+.verb-table-card th,
+.verb-table-card td {
+  padding: 7px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
 .line-pair {
   padding: 10px 0;
   border-top: 1px dashed rgba(95, 111, 103, 0.24);
@@ -1018,5 +1217,17 @@ td {
     margin-top: 8px;
     box-shadow: none;
     background: rgba(255, 255, 255, 0.58);
+  }
+
+  .verb-lookup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verb-table-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verb-meta-row {
+    grid-template-columns: 92px minmax(0, 1fr);
   }
 }

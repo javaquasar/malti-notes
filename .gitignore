@@ -1,3 +1,10 @@
 .idea/
 .DS_Store
 Thumbs.db
+wasm-search/target/
+assets/wasm/
+assets/data/generated/
+!assets/data/generated/
+assets/data/generated/*
+!assets/data/generated/verb_lookup_manifest.json
+!assets/data/generated/verb_lookup_pack.msgpack.gz

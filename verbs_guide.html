@@ -67,6 +67,7 @@
                 <li><a href="#past">Past Tense</a></li>
                 <li><a href="#future">Future Tense</a></li>
                 <li><a href="#imperative">Imperative</a></li>
+                <li><a href="#verb-form-finder">Find a Verb Form</a></li>
                 <li><a href="#key-verbs">Key Verbs</a></li>
                 <li><a href="#question-patterns">Question Patterns</a></li>
                 <li><a href="#negative-questions">Negative Patterns</a></li>
@@ -864,6 +865,35 @@
                 </div>
                 <p class="footer-note">For Level 1 speaking and classroom use, the most useful imperative verbs are the
                     practical ones: come, go, eat, drink, read, write, open, close, listen, and look.</p>
+            </section>
+
+            <section class="content-card" id="verb-form-finder" data-verb-lookup>
+                <span class="tag">Verb Lookup</span>
+                <h2>Find a Verb</h2>
+                <div class="lookup-status-box" data-verb-lookup-status data-state="loading" hidden></div>
+                <div class="verb-lookup-form">
+                    <label for="verb-form-input">Type any Maltese verb form</label>
+                    <input
+                        id="verb-form-input"
+                        class="verb-lookup-input"
+                        type="text"
+                        placeholder="għamilt / mort / se mmur / niekol"
+                        data-verb-lookup-input
+                        disabled
+                    >
+                </div>
+                <div class="verb-lookup-grid">
+                    <div class="box verb-lookup-output">
+                        <h3>Normalized Query</h3>
+                        <p><code data-verb-lookup-normalized>waiting for pack</code></p>
+                    </div>
+                    <div class="box verb-lookup-output">
+                        <h3>Possible Matches</h3>
+                        <div data-verb-lookup-results>
+                            <p class="mini">When the pack is available, matches will appear here.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="content-card" id="key-verbs">
@@ -2853,6 +2883,7 @@
   <script src="./assets/js/verb-trigger.js"></script>
   <script src="./assets/js/review-store.js"></script>
   <script src="./assets/js/verbs-review.js"></script>
+  <script type="module" src="./assets/js/verb-lookup-loader.js"></script>
   <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
