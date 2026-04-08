@@ -105,12 +105,35 @@ function renderMetaCard(label, value) {
   `;
 }
 
+const PERSON_ORDER = ["jien", "int", "huwa", "hija", "aħna", "intom", "huma"];
+
+function formatPersonLabel(person) {
+  const value = String(person || "").trim();
+  if (!value) {
+    return "";
+  }
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function orderedPeople(table) {
+  const keys = new Set([
+    ...Object.keys(table?.positive || {}),
+    ...Object.keys(table?.negative || {}),
+  ]);
+
+  return [
+    ...PERSON_ORDER.filter((person) => keys.has(person)),
+    ...[...keys].filter((person) => !PERSON_ORDER.includes(person)).sort((a, b) => a.localeCompare(b)),
+  ];
+}
+
 function renderTenseTable(title, table) {
   if (!table || (!Object.keys(table.positive || {}).length && !Object.keys(table.negative || {}).length)) {
     return "";
   }
 
   const hasNegative = Object.keys(table.negative || {}).length > 0;
+  const people = orderedPeople(table);
   return `
     <div class="verb-table-card verb-table-card--compact">
       <h4>${title}</h4>
@@ -123,9 +146,9 @@ function renderTenseTable(title, table) {
           </tr>
         </thead>
         <tbody>
-          ${Object.keys(table.positive || table.negative || {}).map((person) => `
+          ${people.map((person) => `
             <tr>
-              <th>${person}</th>
+              <th>${formatPersonLabel(person)}</th>
               <td>${table.positive?.[person] ? `<code>${table.positive[person]}</code>` : ""}</td>
               ${hasNegative ? `<td>${table.negative?.[person] ? `<code>${table.negative[person]}</code>` : ""}</td>` : ""}
             </tr>
@@ -171,6 +194,24 @@ function openVerbDialog(root, pack, slug) {
     .map((key) => renderTenseTable(tableTitles[key], details.tables?.[key]))
     .join("");
 
+  dialog.showModal();
+}
+
+function openFallbackVerbDialog(root, verb, description) {
+  const dialog = createDialog(root);
+  dialog.querySelector("[data-verb-dialog-title]").textContent = verb || "Verb";
+  dialog.querySelector("[data-verb-dialog-meanings]").textContent = description || "Course entry";
+  dialog.querySelector("[data-verb-dialog-meta]").innerHTML = `
+    <div class="verb-meta-card">
+      <div class="verb-meta-list">
+        <div class="verb-meta-row">
+          <strong>status</strong>
+          <span>No local full table is available for this course entry yet.</span>
+        </div>
+      </div>
+    </div>
+  `;
+  dialog.querySelector("[data-verb-dialog-tables]").innerHTML = "";
   dialog.showModal();
 }
 
@@ -265,7 +306,7 @@ function renderMatches(query, pack, helpers, resultsNode) {
     return;
   }
 
-  const exactMatches = pack.forms[normalized] || [];
+  const exactMatches = findExactMatches(normalized, pack);
   if (exactMatches.length) {
     renderExactMatches(exactMatches, resultsNode);
     return;
@@ -276,6 +317,64 @@ function renderMatches(query, pack, helpers, resultsNode) {
   }
 
   renderLemmaSuggestions(normalized, pack, helpers, resultsNode);
+}
+
+function buildNormalizedVariants(normalized) {
+  const variants = new Set();
+  if (normalized) {
+    variants.add(normalized);
+  }
+  if (normalized && normalized.startsWith("i") && normalized.length > 1) {
+    variants.add(normalized.slice(1));
+  }
+  return [...variants];
+}
+
+function findExactMatches(normalized, pack) {
+  const matches = [];
+  const seen = new Set();
+
+  for (const variant of buildNormalizedVariants(normalized)) {
+    for (const match of pack.forms[variant] || []) {
+      const key = `${match.slug}|${match.tense}|${match.person}|${match.form}`;
+      if (seen.has(key)) {
+        continue;
+      }
+      seen.add(key);
+      matches.push(match);
+    }
+  }
+
+  return matches;
+}
+
+function openFromTrigger(verb, root, pack, helpers, inputNode, normalizedNode, resultsNode) {
+  const raw = String(verb || "").trim();
+  if (!raw) {
+    return false;
+  }
+
+  const normalized = helpers.normalizeQuery(raw);
+  inputNode.value = raw;
+  normalizedNode.textContent = normalized || "empty query";
+  renderMatches(raw, pack, helpers, resultsNode);
+
+  const exactMatches = normalized ? findExactMatches(normalized, pack) : [];
+  if (exactMatches.length) {
+    const firstSlug = exactMatches[0]?.slug;
+    if (firstSlug) {
+      openVerbDialog(root, pack, firstSlug);
+      return true;
+    }
+  }
+
+  const lemmaMatch = (pack.index || []).find((entry) => helpers.normalizeQuery(entry.lemma) === normalized);
+  if (lemmaMatch?.slug) {
+    openVerbDialog(root, pack, lemmaMatch.slug);
+    return true;
+  }
+
+  return false;
 }
 
 async function initVerbLookup() {
@@ -305,6 +404,16 @@ async function initVerbLookup() {
       renderMatches(inputNode.value, pack, helpers, resultsNode);
     };
 
+    window.MaltiVerbLookup = {
+      open(verb) {
+        return openFromTrigger(verb, root, pack, helpers, inputNode, normalizedNode, resultsNode);
+      },
+      openFallback(verb, description) {
+        openFallbackVerbDialog(root, verb, description);
+        return true;
+      }
+    };
+
     inputNode.addEventListener("input", update);
     resultsNode.addEventListener("click", (event) => {
       const button = event.target.closest("[data-verb-open]");
@@ -316,6 +425,15 @@ async function initVerbLookup() {
 
     update();
   } catch (error) {
+    window.MaltiVerbLookup = {
+      open() {
+        return false;
+      },
+      openFallback(verb, description) {
+        openFallbackVerbDialog(root, verb, description);
+        return true;
+      }
+    };
     normalizedNode.textContent = "pack missing";
     resultsNode.innerHTML = "<p class=\"mini\">The page is ready for local verb-pack lookup, but no generated pack is available yet.</p>";
     console.warn("Verb lookup loader fallback:", error);

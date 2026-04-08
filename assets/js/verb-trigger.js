@@ -9,15 +9,24 @@ document.addEventListener('click', async (event) => {
     return;
   }
 
-  if (navigator.clipboard && window.isSecureContext) {
+  const handled = typeof window.MaltiVerbLookup?.open === 'function'
+    ? window.MaltiVerbLookup.open(verb)
+    : false;
+  if (!handled && typeof window.MaltiVerbLookup?.openFallback === 'function') {
+    const sibling = trigger.parentElement?.querySelector('.muted');
+    const rawDescription = (sibling?.textContent || '').replace(/^\s*-\s*/, '').trim();
+    const publicDescription = rawDescription.includes('| Lesson')
+      ? rawDescription.split('| Lesson', 1)[0].trim()
+      : rawDescription;
+    return window.MaltiVerbLookup.openFallback(verb, publicDescription);
+  }
+  if (!handled && navigator.clipboard && window.isSecureContext) {
     try {
       await navigator.clipboard.writeText(verb);
     } catch (error) {
-      // Ignore clipboard failures and still open the resource.
+      // Ignore clipboard failures.
     }
   }
-
-  window.open('https://verb.mt/', '_blank', 'noopener,noreferrer');
 });
 
 document.querySelectorAll('.verb-trigger').forEach((trigger) => {
@@ -27,6 +36,6 @@ document.querySelectorAll('.verb-trigger').forEach((trigger) => {
   }
 
   if (!trigger.title) {
-    trigger.title = `Click to open verb.mt and copy: ${verb}`;
+    trigger.title = `Click to view forms for: ${verb}`;
   }
 });
