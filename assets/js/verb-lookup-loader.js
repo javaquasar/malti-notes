@@ -16,14 +16,14 @@ function fallbackNormalizeQuery(input) {
   };
 
   return String(input || "")
-    .replaceAll("Ã ", "à")
-    .replaceAll("Ã¨", "è")
-    .replaceAll("Ã©", "é")
-    .replaceAll("Ã¬", "ì")
-    .replaceAll("Ã²", "ò")
-    .replaceAll("Ã¹", "ù")
-    .replaceAll("â€˜", "‘")
-    .replaceAll("â€™", "’")
+    .replaceAll("ÃƒÂ ", "à")
+    .replaceAll("ÃƒÂ¨", "è")
+    .replaceAll("ÃƒÂ©", "é")
+    .replaceAll("ÃƒÂ¬", "ì")
+    .replaceAll("ÃƒÂ²", "ò")
+    .replaceAll("ÃƒÂ¹", "ù")
+    .replaceAll("Ã¢â‚¬Ëœ", "‘")
+    .replaceAll("Ã¢â‚¬â„¢", "’")
     .split("")
     .map((char) => replacements[char] || char.toLowerCase())
     .join("")
@@ -118,7 +118,7 @@ function createDialog(root) {
   return dialog;
 }
 
-function renderMetaCard(label, value) {
+function renderMetaRow(label, value) {
   if (!value) {
     return "";
   }
@@ -185,8 +185,12 @@ function renderTenseTable(title, table) {
   `;
 }
 
+function getVerbDetails(pack, slug) {
+  return pack.details?.[slug] || null;
+}
+
 function openVerbDialog(root, pack, slug) {
-  const details = pack.details?.[slug];
+  const details = getVerbDetails(pack, slug);
   if (!details) {
     return;
   }
@@ -200,11 +204,11 @@ function openVerbDialog(root, pack, slug) {
     <div class="verb-meta-card">
       <div class="verb-meta-list">
         ${[
-          renderMetaCard("forma", meta.form),
-          renderMetaCard("tip", meta.type),
-          renderMetaCard("kategorija", meta.category1),
-          renderMetaCard("għerq", meta.root),
-          renderMetaCard("kategorija", meta.category2)
+          renderMetaRow("forma", meta.form),
+          renderMetaRow("tip", meta.type),
+          renderMetaRow("kategorija", meta.category1),
+          renderMetaRow("għerq", meta.root),
+          renderMetaRow("kategorija", meta.category2)
         ].join("")}
       </div>
     </div>
@@ -256,7 +260,7 @@ function renderExactMatches(matches, resultsNode) {
       ${matches.slice(0, 8).map((match) =>
         renderMatchButton(
           match.form,
-          `${match.lemma} · ${match.tense} · ${match.person}${match.meaning ? ` · ${match.meaning}` : ""}`,
+          `${match.lemma} · ${match.tense} · ${formatPersonLabel(match.person)}${match.meaning ? ` · ${match.meaning}` : ""}`,
           match.slug
         )
       ).join("")}
@@ -264,8 +268,16 @@ function renderExactMatches(matches, resultsNode) {
   `;
 }
 
+function renderAliasMatch(details, slug, label) {
+  return renderMatchButton(
+    label || details.lemma || slug,
+    `${details.lemma || slug}${details.meanings?.[0] ? ` · ${details.meanings[0]}` : ""}`,
+    slug
+  );
+}
+
 function renderFormSuggestions(normalized, pack, helpers, resultsNode) {
-  const suggestions = Object.keys(pack.forms)
+  const suggestions = Object.keys(pack.forms || {})
     .map((formKey) => ({
       formKey,
       score: helpers.scoreCandidate(normalized, formKey),
@@ -286,7 +298,7 @@ function renderFormSuggestions(normalized, pack, helpers, resultsNode) {
         const first = entry.matches[0];
         return renderMatchButton(
           entry.formKey,
-          `${first.lemma} · ${first.tense} · ${first.person}${first.meaning ? ` · ${first.meaning}` : ""}`,
+          `${first.lemma} · ${first.tense} · ${formatPersonLabel(first.person)}${first.meaning ? ` · ${first.meaning}` : ""}`,
           first.slug
         );
       }).join("")}
@@ -296,8 +308,56 @@ function renderFormSuggestions(normalized, pack, helpers, resultsNode) {
   return true;
 }
 
+function renderEnglishMatches(normalized, pack, helpers, resultsNode) {
+  const exact = pack.englishIndex?.[normalized] || [];
+  if (exact.length) {
+    resultsNode.innerHTML = `
+      <p class="mini">English meaning matches:</p>
+      <div class="list">
+        ${exact.slice(0, 8).map((entry) =>
+          renderMatchButton(
+            entry.lemma,
+            `${entry.meaning} · lemma`,
+            entry.slug
+          )
+        ).join("")}
+      </div>
+    `;
+    return true;
+  }
+
+  const suggestions = Object.keys(pack.englishIndex || {})
+    .map((key) => ({
+      key,
+      score: helpers.scoreCandidate(normalized, key),
+      entries: pack.englishIndex[key]
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.key.localeCompare(b.key))
+    .slice(0, 8);
+
+  if (!suggestions.length) {
+    return false;
+  }
+
+  resultsNode.innerHTML = `
+    <p class="mini">Closest English meanings:</p>
+    <div class="list">
+      ${suggestions.map((entry) => {
+        const first = entry.entries[0];
+        return renderMatchButton(
+          first.lemma,
+          `${entry.key} · ${first.meaning}`,
+          first.slug
+        );
+      }).join("")}
+    </div>
+  `;
+  return true;
+}
+
 function renderLemmaSuggestions(normalized, pack, helpers, resultsNode) {
-  const suggestions = pack.index
+  const suggestions = (pack.index || [])
     .map((entry) => ({
       ...entry,
       score: helpers.scoreCandidate(normalized, entry.lemma)
@@ -307,12 +367,12 @@ function renderLemmaSuggestions(normalized, pack, helpers, resultsNode) {
     .slice(0, 8);
 
   if (!suggestions.length) {
-    resultsNode.innerHTML = "<p class=\"mini\">No exact form match yet. Try another form or rebuild the local lookup pack.</p>";
+    resultsNode.innerHTML = "<p class=\"mini\">No local verb match yet. Try another Maltese form or an English meaning.</p>";
     return;
   }
 
   resultsNode.innerHTML = `
-    <p class="mini">No form match yet. Closest verb entries:</p>
+    <p class="mini">Closest verb entries:</p>
     <div class="list">
       ${suggestions.map((entry) =>
         renderMatchButton(
@@ -323,26 +383,6 @@ function renderLemmaSuggestions(normalized, pack, helpers, resultsNode) {
       ).join("")}
     </div>
   `;
-}
-
-function renderMatches(query, pack, helpers, resultsNode) {
-  const normalized = helpers.normalizeQuery(query);
-  if (!normalized) {
-    resultsNode.innerHTML = "<p class=\"mini\">Type a verb form such as <code>għamilt</code>, <code>mort</code>, or <code>niekol</code>.</p>";
-    return;
-  }
-
-  const exactMatches = findExactMatches(normalized, pack);
-  if (exactMatches.length) {
-    renderExactMatches(exactMatches, resultsNode);
-    return;
-  }
-
-  if (renderFormSuggestions(normalized, pack, helpers, resultsNode)) {
-    return;
-  }
-
-  renderLemmaSuggestions(normalized, pack, helpers, resultsNode);
 }
 
 function buildNormalizedVariants(normalized) {
@@ -388,8 +428,8 @@ function findExactMatches(normalized, pack) {
   const seen = new Set();
 
   for (const variant of buildNormalizedVariants(normalized)) {
-    for (const match of pack.forms[variant] || []) {
-      const key = `${match.slug}|${match.tense}|${match.person}|${match.form}`;
+    for (const match of pack.forms?.[variant] || []) {
+      const key = `${match.slug}|${match.tense}|${match.person}|${match.form}|${match.polarity || "positive"}`;
       if (seen.has(key)) {
         continue;
       }
@@ -399,6 +439,53 @@ function findExactMatches(normalized, pack) {
   }
 
   return matches;
+}
+
+function findAliasSlug(normalized, pack) {
+  for (const variant of buildNormalizedVariants(normalized)) {
+    const slug = pack.aliases?.[variant];
+    if (slug) {
+      return slug;
+    }
+  }
+  return "";
+}
+
+function renderMatches(query, pack, helpers, resultsNode) {
+  const normalized = helpers.normalizeQuery(query);
+  if (!normalized) {
+    resultsNode.innerHTML = "<p class=\"mini\">Type a Maltese verb form such as <code>għamilt</code>, <code>mort</code>, <code>niekol</code>, or an English meaning like <code>pay</code>.</p>";
+    return;
+  }
+
+  const exactMatches = findExactMatches(normalized, pack);
+  if (exactMatches.length) {
+    renderExactMatches(exactMatches, resultsNode);
+    return;
+  }
+
+  const aliasSlug = findAliasSlug(normalized, pack);
+  if (aliasSlug) {
+    const details = getVerbDetails(pack, aliasSlug);
+    if (details) {
+      resultsNode.innerHTML = `
+        <div class="list">
+          ${renderAliasMatch(details, aliasSlug, query)}
+        </div>
+      `;
+      return;
+    }
+  }
+
+  if (renderEnglishMatches(normalized, pack, helpers, resultsNode)) {
+    return;
+  }
+
+  if (renderFormSuggestions(normalized, pack, helpers, resultsNode)) {
+    return;
+  }
+
+  renderLemmaSuggestions(normalized, pack, helpers, resultsNode);
 }
 
 function openFromTrigger(entry, root, pack, helpers, inputNode, normalizedNode, resultsNode) {
@@ -414,7 +501,7 @@ function openFromTrigger(entry, root, pack, helpers, inputNode, normalizedNode, 
   normalizedNode.textContent = normalized || "empty query";
   renderMatches(searchQuery, pack, helpers, resultsNode);
 
-  if (payload.slugHint && pack.details?.[payload.slugHint]) {
+  if (payload.slugHint && getVerbDetails(pack, payload.slugHint)) {
     openVerbDialog(root, pack, payload.slugHint);
     return true;
   }
@@ -428,9 +515,21 @@ function openFromTrigger(entry, root, pack, helpers, inputNode, normalizedNode, 
     }
   }
 
-  const lemmaMatch = (pack.index || []).find((entry) => helpers.normalizeQuery(entry.lemma) === normalized);
+  const aliasSlug = normalized ? findAliasSlug(normalized, pack) : "";
+  if (aliasSlug) {
+    openVerbDialog(root, pack, aliasSlug);
+    return true;
+  }
+
+  const lemmaMatch = (pack.index || []).find((item) => helpers.normalizeQuery(item.lemma) === normalized);
   if (lemmaMatch?.slug) {
     openVerbDialog(root, pack, lemmaMatch.slug);
+    return true;
+  }
+
+  const englishMatch = pack.englishIndex?.[normalized]?.[0];
+  if (englishMatch?.slug) {
+    openVerbDialog(root, pack, englishMatch.slug);
     return true;
   }
 

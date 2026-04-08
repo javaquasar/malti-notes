@@ -35,6 +35,16 @@ Optional debug file:
 
 The generated folder is ignored by git.
 
+## Local extensions
+
+Additional local verbs and aliases can be added in:
+
+```text
+assets\data\verbs_extensions.json
+```
+
+These entries are merged into the final pack during the build, so the browser does not need a separate runtime overrides file.
+
 ## Run
 
 The script first looks for a repo-root `.env` file, then falls back to process environment variables, then to CLI flags.
@@ -72,7 +82,10 @@ C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\build_verb_looku
 
 - `index`: lightweight verb catalogue for lookup and drill entry points
 - `forms`: normalized form lookup such as `ghamilt -> [possible analyses]`
+- `aliases`: extra lookup aliases for course forms and local extensions
+- `englishIndex`: normalized English meaning index such as `pay -> [matching verbs]`
 - `tables`: compact positive present/past/imperative-style tables for drill generation
+- `details`: modal dialog data for full local verb previews
 
 The published binary artifact is MessagePack compressed with gzip.
 

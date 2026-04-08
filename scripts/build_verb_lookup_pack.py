@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE_ENV = "MALTI_VERB_MT_SOURCE"
 DEFAULT_OUTPUT_ENV = "MALTI_VERB_LOOKUP_OUTPUT"
 DEFAULT_OUTPUT = ROOT / "assets" / "data" / "generated"
+EXTENSIONS_PATH = ROOT / "assets" / "data" / "verbs_extensions.json"
 
 TENSE_MAP = {
     "imperfett": "present",
@@ -29,11 +30,12 @@ PERSON_MAP = {
     "huwa": "huwa",
     "hija": "hija",
     "aħna": "aħna",
+    "aÄ§na": "aħna",
     "intom": "intom",
     "huma": "huma",
 }
 
-MOJIBAKE_MARKERS = ("Ã", "Ä", "Å", "â", "�")
+MOJIBAKE_MARKERS = ("Ãƒ", "Ã„", "Ã…", "Ã¢", "ï¿½")
 
 
 def maybe_fix_mojibake(value: str) -> str:
@@ -102,6 +104,12 @@ def read_json(path: Path) -> Any:
     return clean_json(json.loads(path.read_text(encoding="utf-8")))
 
 
+def load_extensions() -> dict[str, Any]:
+    if not EXTENSIONS_PATH.exists():
+        return {"aliases": {}, "details": {}}
+    return read_json(EXTENSIONS_PATH)
+
+
 def load_dotenv(dotenv_path: Path) -> None:
     if not dotenv_path.exists():
         return
@@ -146,6 +154,48 @@ def map_people_table(values: dict[str, str]) -> dict[str, str]:
     return mapped
 
 
+def index_meanings(
+    english_index: dict[str, list[dict[str, str]]],
+    slug: str,
+    lemma: str,
+    meanings: list[str],
+) -> None:
+    seen: set[str] = set()
+    for meaning in meanings or []:
+        if not isinstance(meaning, str):
+            continue
+        raw = meaning.strip()
+        if not raw:
+            continue
+
+        variants = {raw}
+        if raw.lower().startswith("to "):
+            variants.add(raw[3:].strip())
+
+        expanded = set(variants)
+        for variant in variants:
+            for part in variant.replace(";", ",").split(","):
+                piece = part.strip()
+                if not piece:
+                    continue
+                expanded.add(piece)
+                if piece.lower().startswith("to "):
+                    expanded.add(piece[3:].strip())
+
+        for variant in expanded:
+            normalized = normalize_key(variant)
+            if not normalized or normalized in seen:
+                continue
+            seen.add(normalized)
+            english_index[normalized].append(
+                {
+                    "slug": slug,
+                    "lemma": lemma,
+                    "meaning": raw,
+                }
+            )
+
+
 def build_pack(source_root: Path) -> dict[str, Any]:
     index_path = source_root / "index.json"
     slug_root = source_root / "by-slug"
@@ -153,6 +203,8 @@ def build_pack(source_root: Path) -> dict[str, Any]:
 
     compact_index: list[dict[str, Any]] = []
     forms_index: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    english_index: dict[str, list[dict[str, str]]] = defaultdict(list)
+    aliases: dict[str, str] = {}
     tables: dict[str, dict[str, Any]] = {}
     details: dict[str, dict[str, Any]] = {}
 
@@ -172,9 +224,10 @@ def build_pack(source_root: Path) -> dict[str, Any]:
                 "meanings": meanings[:3],
                 "form": row.get("forma") or "",
                 "type": row.get("tip") or "",
-                "root": row.get("għerq") or row.get("g\u0127erq") or "",
+                "root": row.get("għerq") or row.get("g\u0127erq") or row.get("gÄ§erq") or "",
             }
         )
+        index_meanings(english_index, slug, lemma, meanings)
 
         verb_path = slug_root / letter_slug / f"{slug}.json"
         if not verb_path.exists():
@@ -194,7 +247,7 @@ def build_pack(source_root: Path) -> dict[str, Any]:
                 "form": meta.get("forma") or row.get("forma") or "",
                 "type": meta.get("tip") or row.get("tip") or "",
                 "category1": meta.get("kategorija_1") or "",
-                "root": meta.get("għerq") or meta.get("g\u0127erq") or row.get("għerq") or row.get("g\u0127erq") or "",
+                "root": meta.get("għerq") or meta.get("g\u0127erq") or meta.get("gÄ§erq") or row.get("għerq") or row.get("g\u0127erq") or row.get("gÄ§erq") or "",
                 "category2": meta.get("kategorija_2") or "",
             },
             "tables": {},
@@ -203,7 +256,7 @@ def build_pack(source_root: Path) -> dict[str, Any]:
         for source_tense, public_tense in TENSE_MAP.items():
             section = sections.get(source_tense) or {}
             columns = section.get("columns") or {}
-            positive = map_people_table(columns.get("pożittiv") or {})
+            positive = map_people_table(columns.get("pożittiv") or columns.get("poÅ¼ittiv") or {})
             negative = map_people_table(columns.get("negattiv") or {})
 
             if not positive and not negative:
@@ -217,7 +270,8 @@ def build_pack(source_root: Path) -> dict[str, Any]:
             if positive:
                 table_entry[public_tense] = positive
 
-                for person, form in positive.items():
+            for polarity_name, forms in (("positive", positive), ("negative", negative)):
+                for person, form in forms.items():
                     normalized = normalize_key(form)
                     if not normalized:
                         continue
@@ -229,6 +283,7 @@ def build_pack(source_root: Path) -> dict[str, Any]:
                             "meaning": meanings[0] if meanings else "",
                             "tense": public_tense,
                             "person": person,
+                            "polarity": polarity_name,
                             "form": form,
                         }
                     )
@@ -236,12 +291,92 @@ def build_pack(source_root: Path) -> dict[str, Any]:
         if table_entry:
             tables[slug] = table_entry
 
+    extensions = load_extensions()
+    for alias, slug in (extensions.get("aliases") or {}).items():
+        normalized_alias = normalize_key(alias)
+        if normalized_alias and slug:
+            aliases[normalized_alias] = slug
+
+    for slug, extension_details in (extensions.get("details") or {}).items():
+        details_entry = clean_json(extension_details)
+        lemma = details_entry.get("lemma") or slug
+        meanings = details_entry.get("meanings") or []
+        meta = details_entry.get("meta") or {}
+        table_map = details_entry.get("tables") or {}
+
+        if not any(entry["slug"] == slug for entry in compact_index):
+            compact_index.append(
+                {
+                    "slug": slug,
+                    "letterSlug": "",
+                    "lemma": lemma,
+                    "meanings": meanings[:3],
+                    "form": meta.get("form") or "",
+                    "type": meta.get("type") or "",
+                    "root": meta.get("root") or "",
+                }
+            )
+
+        normalized_tables: dict[str, dict[str, dict[str, str]]] = {}
+        compact_table_entry: dict[str, dict[str, str]] = {}
+        for public_tense in ("present", "past", "imperative"):
+            source_table = table_map.get(public_tense) or {}
+            positive = map_people_table(source_table.get("positive") or {})
+            negative = map_people_table(source_table.get("negative") or {})
+            if not positive and not negative:
+                continue
+
+            normalized_tables[public_tense] = {
+                "positive": positive,
+                "negative": negative,
+            }
+
+            if positive:
+                compact_table_entry[public_tense] = positive
+
+            for polarity_name, forms in (("positive", positive), ("negative", negative)):
+                for person, form in forms.items():
+                    normalized_form = normalize_key(form)
+                    if not normalized_form:
+                        continue
+                    forms_index[normalized_form].append(
+                        {
+                            "slug": slug,
+                            "letterSlug": "",
+                            "lemma": lemma,
+                            "meaning": meanings[0] if meanings else "",
+                            "tense": public_tense,
+                            "person": person,
+                            "polarity": polarity_name,
+                            "form": form,
+                        }
+                    )
+
+        details[slug] = {
+            "slug": slug,
+            "letterSlug": "",
+            "lemma": lemma,
+            "meanings": meanings,
+            "meta": {
+                "form": meta.get("form") or "",
+                "type": meta.get("type") or "",
+                "category1": meta.get("category1") or "",
+                "root": meta.get("root") or "",
+                "category2": meta.get("category2") or "",
+            },
+            "tables": normalized_tables,
+        }
+        if compact_table_entry:
+            tables[slug] = compact_table_entry
+        index_meanings(english_index, slug, lemma, meanings)
+
     forms_index = dict(sorted(forms_index.items()))
+    english_index = dict(sorted(english_index.items()))
     compact_index.sort(key=lambda item: normalize_key(item["lemma"]))
 
     return {
         "meta": {
-            "version": 3,
+            "version": 4,
             "generatedAt": datetime.now(UTC).isoformat(),
             "verbCount": len(compact_index),
             "lookupFormCount": len(forms_index),
@@ -249,6 +384,8 @@ def build_pack(source_root: Path) -> dict[str, Any]:
         },
         "index": compact_index,
         "forms": forms_index,
+        "aliases": aliases,
+        "englishIndex": english_index,
         "tables": tables,
         "details": details,
     }
