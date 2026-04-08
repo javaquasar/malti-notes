@@ -1,0 +1,181 @@
+# Unreachable All Course Verbs
+
+This report lists `All Course Verbs` entries from `verbs_guide.html` that are not currently reachable through the local verb lookup engine using the same direct matching logic as the page.
+
+- Total entries checked: 197
+- Reachable: 35
+- Unreachable: 162
+- Plain forms missing: 113
+- Alternative / combined entries missing: 6
+- Phrase entries missing: 43
+
+## Plain forms
+
+- aħseb
+- iddisinja
+- ieqaf
+- ikkollezzjona
+- insuq
+- inġemma’
+- inħallas
+- inħobb
+- inżur
+- isaffar
+- iċċempel
+- jagħmel
+- jagħmlu
+- jaqbeż
+- jaħdem
+- jerġa’
+- jgħanni
+- jgħin
+- jibża’
+- jieħdu
+- jieħu
+- jilagħbu
+- jimxu
+- jinbaħ
+- jingħi
+- jistartja
+- jittrejnja
+- jiċċekkja
+- jiġi
+- jiġri
+- joqgħod
+- joqogħdu
+- joħroġ
+- jħobb
+- jħobbu
+- mort
+- nagħmel
+- nagħmlu
+- naċċerta
+- naħdem
+- naħsel
+- nibża’
+- niddeċiedi
+- niddisinja
+- nieħdu
+- nieħu
+- niffirma
+- niffoka
+- niffranka
+- nikkollezzjona
+- nilgħab
+- nimmarka
+- nimxi
+- ninħasel
+- ninżel
+- nipparkja
+- nippreferi
+- nipprintja
+- nirbaħ
+- nirrilassa
+- nirringrazzja
+- niskennja
+- niskurja
+- nistrieħ
+- nistudja
+- nitma’
+- nittrejnja
+- niċċekkja
+- niġi
+- niġri
+- noqgħod
+- noqogħdu
+- nuża
+- nħobbu
+- sajjar
+- sibt
+- studja
+- tagħmel
+- tagħmlu
+- taħdem
+- taħsel
+- tieħdu
+- tieħu
+- tikkuntattja
+- tilgħab
+- tinsab
+- tinħasel
+- tipprintja
+- tipprova
+- tirbaħ
+- tirrilassa
+- tistartja
+- tistrieħ
+- tistudja
+- tiċċekkja
+- tiġi
+- tiġri
+- tmexxi
+- toqgħod
+- toqogħdu
+- toħroġ
+- tħobb
+- tħobbu
+- waqa’
+- aħsibha
+- inħossni
+- jisimha
+- jisimni
+- jismu
+- Narak
+- nħossuna
+- qaltli
+- tħossok
+
+## Alternative or combined entries
+
+- għamel / għamlet
+- iġġrejnja / ittrejnja
+- kien / kienet
+- mar / immur
+- saqqui / saqquq
+- isajru / jagħmlu l-ikel
+
+## Verb phrases / multi-word entries
+
+- immur il-baħar
+- imur Tas-Sliema
+- jafu l-Malti
+- jagħmel ix-xogħol tad-dar
+- jagħmel kejk
+- jagħmlu ikliet tal-familja
+- jmorru bil-mixi
+- ma rridx
+- mmorru passiġġata
+- nagħmel l-ikel
+- nagħmlu x-xogħol fil-ġnien
+- ngħallimkom il-Malti
+- nitgħallem il-Malti
+- qed nara
+- qed naraw
+- se mmur
+- se nara
+- se nasal
+- se niddeċiedi
+- se nidħol
+- se nieħu
+- se niffranka
+- se nilbes
+- se nimxi
+- se nipprova
+- se nistieden
+- se nitlaq
+- se nixtri
+- se nonfoq
+- se noqgħod
+- se nsiefer
+- se nuża
+- se nġemma’
+- se nħallas
+- tagħmel il-ħbieb
+- tagħmel l-isports
+- tagħmlu xagħarkom
+- tibgħat messaġġ
+- tikkonsisti f'
+- tmorru bil-karozza
+- tmur Għawdex
+- tmur il-Belt
+- tmur tbiddel

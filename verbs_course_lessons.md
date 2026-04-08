@@ -1,8 +1,8 @@
 # Verbs Course Lesson Map
 
-This table exports the lesson/source references hidden from the public verb bank on `verbs_guide.html`.
+This table exports the lesson/source references hidden from the public verb bank in `assets/data/verbs_course_bank.json`.
 
-Total entries: 204
+Total entries: 197
 
 | Form | Meaning / Public Label | Lesson Source |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ Total entries: 204
 | inżur | I visit | Lesson 15 - Postijiet ta' interess u avvenimenti |
 | isaffar | chirps / whistles | Lesson 17 - L-annimali |
 | iċċempel | call | Lesson 8 - Id-dar tiegħi |
-| iġġrejnja / ittrejnja | to train [UNCERTAIN: slide uses `Ittrejnja`] \| verb [UNCERTAIN] | Lesson 6 - Xi tħobb tagħmel |
+| iġġrejnja / ittrejnja | to train | Lesson 6 - Xi tħobb tagħmel |
 | jagħmel | he does / he makes | Lesson 6 - Xi tħobb tagħmel |
 | jagħmlu | they do / they make | Lesson 6 - Xi tħobb tagħmel |
 | jaqbeż | he jumps | Lesson 5 - Reviżjoni |
@@ -109,7 +109,7 @@ Total entries: 204
 | raqad | to sleep | Lesson 6 - Xi tħobb tagħmel |
 | rebaħ | to win | Lesson 6 - Xi tħobb tagħmel |
 | sajjar | to cook | Lesson 13 - Reviżjoni ta' wara Diċembru |
-| saqqui / saqquq [UNCERTAIN] | water \| verb [UNCERTAIN] | Lesson 8 - Id-dar tiegħi |
+| saqqui / saqquq | water | Lesson 8 - Id-dar tiegħi |
 | sibt | I found | Lesson 18 - Il-Kollettiv |
 | studja | studied | Lesson 20 - Personaġġi ta' impatt |
 | tagħmel | you do / you make | Lesson 6 - Xi tħobb tagħmel, Lesson 8 - Id-dar tiegħi |
@@ -138,7 +138,7 @@ Total entries: 204
 | tiġri | you run | Lesson 6 - Xi tħobb tagħmel |
 | tkellem | spoke | Lesson 20 - Personaġġi ta' impatt |
 | tkisser | you break | Lesson 5 - Reviżjoni |
-| tmexxi | you lead / drive [UNCERTAIN] | Lesson 5 - Reviżjoni |
+| tmexxi | you lead / drive | Lesson 5 - Reviżjoni |
 | toqgħod | you live / you stay | Lesson 4 - Minn fejn int, Lesson 6 - Xi tħobb tagħmel |
 | toqogħdu | you (plural) live / stay | Lesson 4 - Minn fejn int, Lesson 6 - Xi tħobb tagħmel |
 | torqod | you sleep | Lesson 8 - Id-dar tiegħi |
@@ -150,63 +150,56 @@ Total entries: 204
 | ġera | to run | Lesson 6 - Xi tħobb tagħmel |
 | ħabb | to like / to love | Lesson 6 - Xi tħobb tagħmel |
 | ħadem | to work | Lesson 6 - Xi tħobb tagħmel |
-| għandek | you have \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| għandha | she has \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| għandhom | they have \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| għandi | I have \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| għandkom | you (plural) have \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| għandna | we have \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| għandu | he has \| verb form | Lesson 7 - Il-familja tiegħi, Lesson 9 - Għand it-tabib |
-| aħsibha | think about it \| verb phrase | Lesson 9 u 10 - Għand it-tabib |
-| immur il-baħar | go to the beach \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| imur Tas-Sliema | go to Sliema \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| inħossni | I feel \| verb phrase | Lesson 19 - L-emozzjonijiet |
-| isajru / jagħmlu l-ikel | are cooking / making food \| verb phrase | Lesson 22 - X'qed tara fl-istampa |
-| jafu l-Malti | know Maltese \| verb phrase | Lesson 1 - L-Alfabett |
-| jagħmel ix-xogħol tad-dar | do housework \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| jagħmel kejk | make a cake \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| jagħmlu ikliet tal-familja | do / have family gatherings \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| jisimha | she is called \| verb phrase [UNCERTAIN] | Lesson 1 - L-Alfabett |
-| jisimni | my name is / I am called \| verb phrase [UNCERTAIN] | Lesson 1 - L-Alfabett |
-| jismu | he is called \| verb phrase [UNCERTAIN] | Lesson 1 - L-Alfabett |
-| jmorru bil-mixi | go on foot \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| ma rridx | I don’t want \| verb phrase | Lesson 5 - Reviżjoni |
-| mmorru passiġġata | go for a walk \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| nagħmel l-ikel | make the food \| verb phrase | Lesson 8 - Id-dar tiegħi |
-| nagħmlu x-xogħol fil-ġnien | do work in the garden \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| Narak | See you \| verb phrase [UNCERTAIN] | Lesson 1 - L-Alfabett |
-| ngħallimkom il-Malti | I will teach you Maltese \| verb phrase | Lesson 1 - L-Alfabett |
-| nitgħallem il-Malti | I learn Maltese \| verb phrase | Lesson 1 - L-Alfabett |
-| nħossuna | we feel \| verb phrase | Lesson 19 - L-emozzjonijiet |
-| qaltli | she told me \| verb phrase | Lesson 1 - L-Alfabett |
-| qed nara | I am seeing \| verb phrase | Lesson 22 - X'qed tara fl-istampa |
-| qed naraw | we are seeing \| verb phrase | Lesson 22 - X'qed tara fl-istampa |
-| se mmur | I will go \| verb phrase | Lesson 12 - Il-Futur |
-| se nara | I will see \| verb phrase | Lesson 12 - Il-Futur |
-| se nasal | I will arrive \| verb phrase | Lesson 12 - Il-Futur |
-| se niddeċiedi | I will decide \| verb phrase | Lesson 12 - Il-Futur |
-| se nidħol | I will go in \| verb phrase | Lesson 12 - Il-Futur |
-| se nieħu | I will take \| verb phrase | Lesson 12 - Il-Futur |
-| se niffranka | I will save \| verb phrase | Lesson 12 - Il-Futur |
-| se nilbes | I will wear \| verb phrase | Lesson 12 - Il-Futur |
-| se nimxi | I will walk \| verb phrase | Lesson 12 - Il-Futur |
-| se nipprova | I will try \| verb phrase | Lesson 12 - Il-Futur |
-| se nistieden | I will invite \| verb phrase | Lesson 12 - Il-Futur |
-| se nitlaq | I will leave \| verb phrase | Lesson 12 - Il-Futur |
-| se nixtri | I will buy \| verb phrase | Lesson 12 - Il-Futur |
-| se nonfoq | I will spend \| verb phrase | Lesson 12 - Il-Futur |
-| se noqgħod | I will stay \| verb phrase | Lesson 12 - Il-Futur |
-| se nsiefer | I will travel \| verb phrase | Lesson 12 - Il-Futur |
-| se nuża | I will use \| verb phrase | Lesson 12 - Il-Futur |
-| se nġemma’ | I will save up \| verb phrase | Lesson 12 - Il-Futur |
-| se nħallas | I will pay \| verb phrase | Lesson 12 - Il-Futur |
-| tagħmel il-ħbieb | make friends \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| tagħmel l-isports | do sports \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| tagħmlu xagħarkom | do your hair \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| tibgħat messaġġ | send a message \| verb phrase | Lesson 8 - Id-dar tiegħi |
-| tikkonsisti f' | consists of \| verb phrase | Lesson 7 - Il-familja tiegħi |
-| tmorru bil-karozza | go by car \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| tmur Għawdex | go to Gozo \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| tmur il-Belt | go to Valletta \| verb phrase | Lesson 6 - Xi tħobb tagħmel |
-| tmur tbiddel | go change \| verb phrase | Lesson 11 - Għand tal-ħanut |
-| tħossok | you feel \| verb phrase | Lesson 19 - L-emozzjonijiet |
+| aħsibha | think about it | Lesson 9 u 10 - Għand it-tabib |
+| immur il-baħar | go to the beach | Lesson 6 - Xi tħobb tagħmel |
+| imur Tas-Sliema | go to Sliema | Lesson 6 - Xi tħobb tagħmel |
+| inħossni | I feel | Lesson 19 - L-emozzjonijiet |
+| isajru / jagħmlu l-ikel | are cooking / making food | Lesson 22 - X'qed tara fl-istampa |
+| jafu l-Malti | know Maltese | Lesson 1 - L-Alfabett |
+| jagħmel ix-xogħol tad-dar | do housework | Lesson 6 - Xi tħobb tagħmel |
+| jagħmel kejk | make a cake | Lesson 6 - Xi tħobb tagħmel |
+| jagħmlu ikliet tal-familja | do / have family gatherings | Lesson 6 - Xi tħobb tagħmel |
+| jisimha | she is called | Lesson 1 - L-Alfabett |
+| jisimni | my name is / I am called | Lesson 1 - L-Alfabett |
+| jismu | he is called | Lesson 1 - L-Alfabett |
+| jmorru bil-mixi | go on foot | Lesson 6 - Xi tħobb tagħmel |
+| ma rridx | I don’t want | Lesson 5 - Reviżjoni |
+| mmorru passiġġata | go for a walk | Lesson 6 - Xi tħobb tagħmel |
+| nagħmel l-ikel | make the food | Lesson 8 - Id-dar tiegħi |
+| nagħmlu x-xogħol fil-ġnien | do work in the garden | Lesson 6 - Xi tħobb tagħmel |
+| Narak | See you | Lesson 1 - L-Alfabett |
+| ngħallimkom il-Malti | I will teach you Maltese | Lesson 1 - L-Alfabett |
+| nitgħallem il-Malti | I learn Maltese | Lesson 1 - L-Alfabett |
+| nħossuna | we feel | Lesson 19 - L-emozzjonijiet |
+| qaltli | she told me | Lesson 1 - L-Alfabett |
+| qed nara | I am seeing | Lesson 22 - X'qed tara fl-istampa |
+| qed naraw | we are seeing | Lesson 22 - X'qed tara fl-istampa |
+| se mmur | I will go | Lesson 12 - Il-Futur |
+| se nara | I will see | Lesson 12 - Il-Futur |
+| se nasal | I will arrive | Lesson 12 - Il-Futur |
+| se niddeċiedi | I will decide | Lesson 12 - Il-Futur |
+| se nidħol | I will go in | Lesson 12 - Il-Futur |
+| se nieħu | I will take | Lesson 12 - Il-Futur |
+| se niffranka | I will save | Lesson 12 - Il-Futur |
+| se nilbes | I will wear | Lesson 12 - Il-Futur |
+| se nimxi | I will walk | Lesson 12 - Il-Futur |
+| se nipprova | I will try | Lesson 12 - Il-Futur |
+| se nistieden | I will invite | Lesson 12 - Il-Futur |
+| se nitlaq | I will leave | Lesson 12 - Il-Futur |
+| se nixtri | I will buy | Lesson 12 - Il-Futur |
+| se nonfoq | I will spend | Lesson 12 - Il-Futur |
+| se noqgħod | I will stay | Lesson 12 - Il-Futur |
+| se nsiefer | I will travel | Lesson 12 - Il-Futur |
+| se nuża | I will use | Lesson 12 - Il-Futur |
+| se nġemma’ | I will save up | Lesson 12 - Il-Futur |
+| se nħallas | I will pay | Lesson 12 - Il-Futur |
+| tagħmel il-ħbieb | make friends | Lesson 6 - Xi tħobb tagħmel |
+| tagħmel l-isports | do sports | Lesson 6 - Xi tħobb tagħmel |
+| tagħmlu xagħarkom | do your hair | Lesson 6 - Xi tħobb tagħmel |
+| tibgħat messaġġ | send a message | Lesson 8 - Id-dar tiegħi |
+| tikkonsisti f' | consists of | Lesson 7 - Il-familja tiegħi |
+| tmorru bil-karozza | go by car | Lesson 6 - Xi tħobb tagħmel |
+| tmur Għawdex | go to Gozo | Lesson 6 - Xi tħobb tagħmel |
+| tmur il-Belt | go to Valletta | Lesson 6 - Xi tħobb tagħmel |
+| tmur tbiddel | go change | Lesson 11 - Għand tal-ħanut |
+| tħossok | you feel | Lesson 19 - L-emozzjonijiet |
