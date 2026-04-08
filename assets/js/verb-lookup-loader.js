@@ -1,21 +1,29 @@
 function fallbackNormalizeQuery(input) {
   const replacements = {
-    à: "a", á: "a", â: "a", ã: "a", ä: "a", å: "a",
-    è: "e", é: "e", ê: "e", ë: "e",
-    ì: "i", í: "i", î: "i", ï: "i",
-    ò: "o", ó: "o", ô: "o", õ: "o", ö: "o",
-    ù: "u", ú: "u", û: "u", ü: "u",
-    ċ: "c", ġ: "g", ħ: "h", ż: "z",
-    À: "a", Á: "a", Â: "a", Ã: "a", Ä: "a", Å: "a",
-    È: "e", É: "e", Ê: "e", Ë: "e",
-    Ì: "i", Í: "i", Î: "i", Ï: "i",
-    Ò: "o", Ó: "o", Ô: "o", Õ: "o", Ö: "o",
-    Ù: "u", Ú: "u", Û: "u", Ü: "u",
-    Ċ: "c", Ġ: "g", Ħ: "h", Ż: "z",
+    "à": "a", "á": "a", "â": "a", "ã": "a", "ä": "a", "å": "a",
+    "è": "e", "é": "e", "ê": "e", "ë": "e",
+    "ì": "i", "í": "i", "î": "i", "ï": "i",
+    "ò": "o", "ó": "o", "ô": "o", "õ": "o", "ö": "o",
+    "ù": "u", "ú": "u", "û": "u", "ü": "u",
+    "ċ": "c", "ġ": "g", "ħ": "h", "ż": "z",
+    "À": "a", "Á": "a", "Â": "a", "Ã": "a", "Ä": "a", "Å": "a",
+    "È": "e", "É": "e", "Ê": "e", "Ë": "e",
+    "Ì": "i", "Í": "i", "Î": "i", "Ï": "i",
+    "Ò": "o", "Ó": "o", "Ô": "o", "Õ": "o", "Ö": "o",
+    "Ù": "u", "Ú": "u", "Û": "u", "Ü": "u",
+    "Ċ": "c", "Ġ": "g", "Ħ": "h", "Ż": "z",
     "’": "'", "‘": "'", "`": "'"
   };
 
   return String(input || "")
+    .replaceAll("Ã ", "à")
+    .replaceAll("Ã¨", "è")
+    .replaceAll("Ã©", "é")
+    .replaceAll("Ã¬", "ì")
+    .replaceAll("Ã²", "ò")
+    .replaceAll("Ã¹", "ù")
+    .replaceAll("â€˜", "‘")
+    .replaceAll("â€™", "’")
     .split("")
     .map((char) => replacements[char] || char.toLowerCase())
     .join("")
@@ -30,8 +38,26 @@ async function loadWasmHelpers() {
     const wasm = await import("../wasm/malti_notes_wasm.js");
     await wasm.default();
     return {
-      normalizeQuery: wasm.normalize_query,
-      scoreCandidate: wasm.score_candidate,
+      normalizeQuery(input) {
+        return fallbackNormalizeQuery(wasm.normalize_query(input));
+      },
+      scoreCandidate(query, candidate) {
+        const normalizedQuery = fallbackNormalizeQuery(wasm.normalize_query(query));
+        const normalizedCandidate = fallbackNormalizeQuery(wasm.normalize_query(candidate));
+        if (!normalizedQuery || !normalizedCandidate) {
+          return 0;
+        }
+        if (normalizedQuery === normalizedCandidate) {
+          return 100;
+        }
+        if (normalizedCandidate.startsWith(normalizedQuery)) {
+          return 75;
+        }
+        if (normalizedCandidate.includes(normalizedQuery)) {
+          return 50;
+        }
+        return 0;
+      },
       decodePack(bytes) {
         return JSON.parse(wasm.decode_msgpack_to_json(bytes));
       }
@@ -330,6 +356,33 @@ function buildNormalizedVariants(normalized) {
   return [...variants];
 }
 
+function normalizeOpenPayload(entry) {
+  if (typeof entry === "string") {
+    return {
+      verb: entry,
+      lookupHint: "",
+      slugHint: "",
+      description: ""
+    };
+  }
+
+  if (!entry || typeof entry !== "object") {
+    return {
+      verb: "",
+      lookupHint: "",
+      slugHint: "",
+      description: ""
+    };
+  }
+
+  return {
+    verb: String(entry.verb || "").trim(),
+    lookupHint: String(entry.lookupHint || "").trim(),
+    slugHint: String(entry.slugHint || "").trim(),
+    description: String(entry.description || "").trim()
+  };
+}
+
 function findExactMatches(normalized, pack) {
   const matches = [];
   const seen = new Set();
@@ -348,16 +401,23 @@ function findExactMatches(normalized, pack) {
   return matches;
 }
 
-function openFromTrigger(verb, root, pack, helpers, inputNode, normalizedNode, resultsNode) {
-  const raw = String(verb || "").trim();
+function openFromTrigger(entry, root, pack, helpers, inputNode, normalizedNode, resultsNode) {
+  const payload = normalizeOpenPayload(entry);
+  const raw = payload.verb;
   if (!raw) {
     return false;
   }
 
-  const normalized = helpers.normalizeQuery(raw);
+  const searchQuery = payload.lookupHint || raw;
+  const normalized = helpers.normalizeQuery(searchQuery);
   inputNode.value = raw;
   normalizedNode.textContent = normalized || "empty query";
-  renderMatches(raw, pack, helpers, resultsNode);
+  renderMatches(searchQuery, pack, helpers, resultsNode);
+
+  if (payload.slugHint && pack.details?.[payload.slugHint]) {
+    openVerbDialog(root, pack, payload.slugHint);
+    return true;
+  }
 
   const exactMatches = normalized ? findExactMatches(normalized, pack) : [];
   if (exactMatches.length) {

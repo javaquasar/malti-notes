@@ -9,15 +9,21 @@ document.addEventListener('click', async (event) => {
     return;
   }
 
+  const sibling = trigger.parentElement?.querySelector('.muted');
+  const rawDescription = (sibling?.textContent || '').replace(/^\s*-\s*/, '').trim();
+  const publicDescription = rawDescription.includes('| Lesson')
+    ? rawDescription.split('| Lesson', 1)[0].trim()
+    : rawDescription;
+
   const handled = typeof window.MaltiVerbLookup?.open === 'function'
-    ? window.MaltiVerbLookup.open(verb)
+    ? window.MaltiVerbLookup.open({
+        verb,
+        lookupHint: (trigger.dataset.lookupHint || '').trim(),
+        slugHint: (trigger.dataset.slugHint || '').trim(),
+        description: publicDescription,
+      })
     : false;
   if (!handled && typeof window.MaltiVerbLookup?.openFallback === 'function') {
-    const sibling = trigger.parentElement?.querySelector('.muted');
-    const rawDescription = (sibling?.textContent || '').replace(/^\s*-\s*/, '').trim();
-    const publicDescription = rawDescription.includes('| Lesson')
-      ? rawDescription.split('| Lesson', 1)[0].trim()
-      : rawDescription;
     return window.MaltiVerbLookup.openFallback(verb, publicDescription);
   }
   if (!handled && navigator.clipboard && window.isSecureContext) {

@@ -49,6 +49,13 @@ async function renderVerbsCourseBank(config) {
       button.className = "verb-trigger";
       button.type = "button";
       button.textContent = item.form || "";
+      button.dataset.verb = item.form || "";
+      if (item.lookupHint) {
+        button.dataset.lookupHint = item.lookupHint;
+      }
+      if (item.slugHint) {
+        button.dataset.slugHint = item.slugHint;
+      }
       if (item.lessonSource) {
         button.dataset.lessonSource = item.lessonSource;
       }

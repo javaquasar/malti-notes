@@ -1,181 +1,126 @@
-# Unreachable All Course Verbs
+# Remaining Unreachable Course Verbs
 
-This report lists `All Course Verbs` entries from `verbs_guide.html` that are not currently reachable through the local verb lookup engine using the same direct matching logic as the page.
+These entries from `assets/data/verbs_course_bank.json` still do not open a full local verb modal through the current lookup path (`exact form -> exact lemma`).
 
 - Total entries checked: 197
-- Reachable: 35
-- Unreachable: 162
-- Plain forms missing: 113
-- Alternative / combined entries missing: 6
-- Phrase entries missing: 43
+- Reachable now: 96
+- Still unreachable: 101
+- Plain forms: 52
+- Alternative / combined forms: 6
+- Phrases / multi-word entries: 49
 
-## Plain forms
+## Plain Forms
 
-- aħseb
-- iddisinja
-- ieqaf
-- ikkollezzjona
-- insuq
-- inġemma’
-- inħallas
-- inħobb
-- inżur
-- isaffar
-- iċċempel
-- jagħmel
-- jagħmlu
-- jaqbeż
-- jaħdem
-- jerġa’
-- jgħanni
-- jgħin
-- jibża’
-- jieħdu
-- jieħu
-- jilagħbu
-- jimxu
-- jinbaħ
-- jingħi
-- jistartja
-- jittrejnja
-- jiċċekkja
-- jiġi
-- jiġri
-- joqgħod
-- joqogħdu
-- joħroġ
-- jħobb
-- jħobbu
-- mort
-- nagħmel
-- nagħmlu
-- naċċerta
-- naħdem
-- naħsel
-- nibża’
-- niddeċiedi
-- niddisinja
-- nieħdu
-- nieħu
-- niffirma
-- niffoka
-- niffranka
-- nikkollezzjona
-- nilgħab
-- nimmarka
-- nimxi
-- ninħasel
-- ninżel
-- nipparkja
-- nippreferi
-- nipprintja
-- nirbaħ
-- nirrilassa
-- nirringrazzja
-- niskennja
-- niskurja
-- nistrieħ
-- nistudja
-- nitma’
-- nittrejnja
-- niċċekkja
-- niġi
-- niġri
-- noqgħod
-- noqogħdu
-- nuża
-- nħobbu
-- sajjar
-- sibt
-- studja
-- tagħmel
-- tagħmlu
-- taħdem
-- taħsel
-- tieħdu
-- tieħu
-- tikkuntattja
-- tilgħab
-- tinsab
-- tinħasel
-- tipprintja
-- tipprova
-- tirbaħ
-- tirrilassa
-- tistartja
-- tistrieħ
-- tistudja
-- tiċċekkja
-- tiġi
-- tiġri
-- tmexxi
-- toqgħod
-- toqogħdu
-- toħroġ
-- tħobb
-- tħobbu
-- waqa’
-- aħsibha
-- inħossni
-- jisimha
-- jisimni
-- jismu
-- Narak
-- nħossuna
-- qaltli
-- tħossok
+- iddisinja | to design
+- ieqaf | stop
+- ikkollezzjona | to collect
+- insuq | I drive
+- isaffar | chirps / whistles
+- jimxu | walk
+- jistartja | he starts
+- jittrejnja | he trains
+- jiċċekkja | he checks
+- mort | I went
+- niddeċiedi | I decide
+- niddisinja | I design
+- niffirma | I sign
+- niffoka | I focus
+- niffranka | I save
+- nikkollezzjona | I collect
+- nimmarka | I mark
+- nimxi | I walk
+- nipparkja | I park
+- nippreferi | I prefer
+- nipprintja | I print
+- nirrilassa | I relax
+- nirringrazzja | I thank
+- niskennja | I scan
+- niskurja | I score
+- nistrieħ | I rest
+- nistudja | I study
+- nittrejnja | I train
+- niċċekkja | I check
+- sajjar | to cook
+- sibt | I found
+- studja | studied
+- tikkuntattja | contact
+- tinsab | is located
+- tipprintja | you print
+- tipprova | try on / try
+- tirrilassa | you relax
+- tistartja | you start
+- tistrieħ | you rest
+- tistudja | she studies
+- tiċċekkja | you check
+- tmexxi | you lead / drive
+- waqa’ | to fall
+- aħsibha | think about it
+- inħossni | I feel
+- jisimha | she is called
+- jisimni | my name is / I am called
+- jismu | he is called
+- Narak | See you
+- nħossuna | we feel
+- qaltli | she told me
+- tħossok | you feel
 
-## Alternative or combined entries
+## Alternative / Combined Entries
 
-- għamel / għamlet
-- iġġrejnja / ittrejnja
-- kien / kienet
-- mar / immur
-- saqqui / saqquq
-- isajru / jagħmlu l-ikel
+- għamel / għamlet | did / made
+- iġġrejnja / ittrejnja | to train
+- kien / kienet | was
+- mar / immur | to go / I go
+- saqqui / saqquq | water
+- isajru / jagħmlu l-ikel | are cooking / making food
 
-## Verb phrases / multi-word entries
+## Phrases / Multi-word Entries
 
-- immur il-baħar
-- imur Tas-Sliema
-- jafu l-Malti
-- jagħmel ix-xogħol tad-dar
-- jagħmel kejk
-- jagħmlu ikliet tal-familja
-- jmorru bil-mixi
-- ma rridx
-- mmorru passiġġata
-- nagħmel l-ikel
-- nagħmlu x-xogħol fil-ġnien
-- ngħallimkom il-Malti
-- nitgħallem il-Malti
-- qed nara
-- qed naraw
-- se mmur
-- se nara
-- se nasal
-- se niddeċiedi
-- se nidħol
-- se nieħu
-- se niffranka
-- se nilbes
-- se nimxi
-- se nipprova
-- se nistieden
-- se nitlaq
-- se nixtri
-- se nonfoq
-- se noqgħod
-- se nsiefer
-- se nuża
-- se nġemma’
-- se nħallas
-- tagħmel il-ħbieb
-- tagħmel l-isports
-- tagħmlu xagħarkom
-- tibgħat messaġġ
-- tikkonsisti f'
-- tmorru bil-karozza
-- tmur Għawdex
-- tmur il-Belt
-- tmur tbiddel
+- għamel / għamlet | did / made
+- iġġrejnja / ittrejnja | to train
+- kien / kienet | was
+- mar / immur | to go / I go
+- saqqui / saqquq | water
+- immur il-baħar | go to the beach
+- imur Tas-Sliema | go to Sliema
+- isajru / jagħmlu l-ikel | are cooking / making food
+- jafu l-Malti | know Maltese
+- jagħmel ix-xogħol tad-dar | do housework
+- jagħmel kejk | make a cake
+- jagħmlu ikliet tal-familja | do / have family gatherings
+- jmorru bil-mixi | go on foot
+- ma rridx | I don’t want
+- mmorru passiġġata | go for a walk
+- nagħmel l-ikel | make the food
+- nagħmlu x-xogħol fil-ġnien | do work in the garden
+- ngħallimkom il-Malti | I will teach you Maltese
+- nitgħallem il-Malti | I learn Maltese
+- qed nara | I am seeing
+- qed naraw | we are seeing
+- se mmur | I will go
+- se nara | I will see
+- se nasal | I will arrive
+- se niddeċiedi | I will decide
+- se nidħol | I will go in
+- se nieħu | I will take
+- se niffranka | I will save
+- se nilbes | I will wear
+- se nimxi | I will walk
+- se nipprova | I will try
+- se nistieden | I will invite
+- se nitlaq | I will leave
+- se nixtri | I will buy
+- se nonfoq | I will spend
+- se noqgħod | I will stay
+- se nsiefer | I will travel
+- se nuża | I will use
+- se nġemma’ | I will save up
+- se nħallas | I will pay
+- tagħmel il-ħbieb | make friends
+- tagħmel l-isports | do sports
+- tagħmlu xagħarkom | do your hair
+- tibgħat messaġġ | send a message
+- tikkonsisti f' | consists of
+- tmorru bil-karozza | go by car
+- tmur Għawdex | go to Gozo
+- tmur il-Belt | go to Valletta
+- tmur tbiddel | go change

@@ -16,9 +16,21 @@ fn normalize_char(ch: char) -> char {
     }
 }
 
+fn normalize_sequences(input: &str) -> String {
+    input
+        .replace("Ã ", "à")
+        .replace("Ã¨", "è")
+        .replace("Ã©", "é")
+        .replace("Ã¬", "ì")
+        .replace("Ã²", "ò")
+        .replace("Ã¹", "ù")
+        .replace("â€˜", "‘")
+        .replace("â€™", "’")
+}
+
 #[wasm_bindgen]
 pub fn normalize_query(input: &str) -> String {
-    let normalized = input
+    let normalized = normalize_sequences(input)
         .chars()
         .map(normalize_char)
         .collect::<String>()
