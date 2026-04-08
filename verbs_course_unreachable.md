@@ -1,12 +1,11 @@
 # Remaining Unreachable Course Verbs
 
-These entries from `assets/data/verbs_course_bank.json` still do not open a full local verb modal through the current lookup path (`exact form -> exact lemma`).
+These entries from `assets/data/verbs_course_bank.json` still do not open a full local verb modal through the current lookup path (`slugHint -> exact form -> exact lemma`).
 
 - Total entries checked: 197
-- Reachable now: 96
-- Still unreachable: 101
-- Plain forms: 52
-- Alternative / combined forms: 6
+- Still unreachable: 95
+- Plain forms: 46
+- Alternative / combined forms: 0
 - Phrases / multi-word entries: 49
 
 ## Plain Forms
@@ -54,24 +53,12 @@ These entries from `assets/data/verbs_course_bank.json` still do not open a full
 - tiċċekkja | you check
 - tmexxi | you lead / drive
 - waqa’ | to fall
-- aħsibha | think about it
-- inħossni | I feel
 - jisimha | she is called
 - jisimni | my name is / I am called
 - jismu | he is called
-- Narak | See you
-- nħossuna | we feel
-- qaltli | she told me
-- tħossok | you feel
 
 ## Alternative / Combined Entries
 
-- għamel / għamlet | did / made
-- iġġrejnja / ittrejnja | to train
-- kien / kienet | was
-- mar / immur | to go / I go
-- saqqui / saqquq | water
-- isajru / jagħmlu l-ikel | are cooking / making food
 
 ## Phrases / Multi-word Entries
 
