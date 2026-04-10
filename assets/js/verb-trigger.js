@@ -8,12 +8,23 @@ document.addEventListener('click', async (event) => {
   if (!verb) {
     return;
   }
+  const verbType = (trigger.dataset.verbType || '').trim();
+  const explicitMeaning = (trigger.dataset.meaning || '').trim();
 
   const sibling = trigger.parentElement?.querySelector('.muted');
   const rawDescription = (sibling?.textContent || '').replace(/^\s*-\s*/, '').trim();
-  const publicDescription = rawDescription.includes('| Lesson')
-    ? rawDescription.split('| Lesson', 1)[0].trim()
-    : rawDescription;
+  const publicDescription = (explicitMeaning || rawDescription).includes('| Lesson')
+    ? (explicitMeaning || rawDescription).split('| Lesson', 1)[0].trim()
+    : (explicitMeaning || rawDescription);
+
+  if (verbType === 'phrase' && typeof window.MaltiVerbLookup?.openPhrase === 'function') {
+    return window.MaltiVerbLookup.openPhrase({
+      phrase: verb,
+      description: publicDescription,
+      lessonSource: (trigger.dataset.lessonSource || '').trim(),
+      mainVerb: (trigger.dataset.mainVerb || '').trim(),
+    });
+  }
 
   const handled = typeof window.MaltiVerbLookup?.open === 'function'
     ? window.MaltiVerbLookup.open({
@@ -42,6 +53,8 @@ document.querySelectorAll('.verb-trigger').forEach((trigger) => {
   }
 
   if (!trigger.title) {
-    trigger.title = `Click to view forms for: ${verb}`;
+    trigger.title = trigger.dataset.verbType === 'phrase'
+      ? `Click to view this phrase: ${verb}`
+      : `Click to view forms for: ${verb}`;
   }
 });

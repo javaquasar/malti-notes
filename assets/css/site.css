@@ -861,6 +861,37 @@ h3 { font-size: 1.08rem; }
   white-space: nowrap;
 }
 
+.phrase-dialog-card {
+  max-width: 100%;
+}
+
+.phrase-dialog-line {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.phrase-dialog-note {
+  margin: 0;
+}
+
+.phrase-dialog-actions {
+  margin-top: 12px;
+}
+
+.verb-dialog-open-main {
+  border: 1px solid rgba(95, 111, 103, 0.24);
+  border-radius: 999px;
+  background: rgba(243, 248, 244, 0.96);
+  color: var(--ink);
+  font: inherit;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.verb-dialog-open-main:hover {
+  background: rgba(230, 239, 233, 0.98);
+}
+
 .line-pair {
   padding: 10px 0;
   border-top: 1px dashed rgba(95, 111, 103, 0.24);

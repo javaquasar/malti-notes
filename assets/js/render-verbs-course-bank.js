@@ -1,3 +1,20 @@
+function deriveMainVerbFromPhrase(text) {
+  const value = String(text || "").trim();
+  if (!value) {
+    return "";
+  }
+
+  const firstVariant = value.split("/")[0].trim();
+  const words = firstVariant.split(/\s+/).filter(Boolean);
+  if (!words.length) {
+    return "";
+  }
+
+  const skipWords = new Set(["se", "qed", "ma"]);
+  const candidate = words.find((word) => !skipWords.has(word.toLowerCase()));
+  return candidate || words[0];
+}
+
 async function renderVerbsCourseBank(config) {
   const { dataUrl, rootSelector = "#course-verb-bank" } = config || {};
   if (!dataUrl) {
@@ -50,6 +67,18 @@ async function renderVerbsCourseBank(config) {
       button.type = "button";
       button.textContent = item.form || "";
       button.dataset.verb = item.form || "";
+      if (item.type) {
+        button.dataset.verbType = item.type;
+      }
+      if (item.meaning) {
+        button.dataset.meaning = item.meaning;
+      }
+      if (item.type === "phrase") {
+        const mainVerb = item.mainVerb || deriveMainVerbFromPhrase(item.form || "");
+        if (mainVerb) {
+          button.dataset.mainVerb = mainVerb;
+        }
+      }
       if (item.lookupHint) {
         button.dataset.lookupHint = item.lookupHint;
       }
@@ -59,7 +88,9 @@ async function renderVerbsCourseBank(config) {
       if (item.lessonSource) {
         button.dataset.lessonSource = item.lessonSource;
       }
-      button.title = `Click to view forms for: ${item.form || ""}`;
+      button.title = item.type === "phrase"
+        ? `Click to view this phrase: ${item.form || ""}`
+        : `Click to view forms for: ${item.form || ""}`;
 
       const muted = document.createElement("span");
       muted.className = "muted";

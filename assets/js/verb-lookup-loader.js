@@ -260,6 +260,50 @@ function openFallbackVerbDialog(root, verb, description) {
   dialog.showModal();
 }
 
+function openPhraseDialog(root, phrase, description, lessonSource, mainVerb) {
+  const dialog = createDialog(root);
+  dialog.querySelector("[data-verb-dialog-title]").textContent = phrase || "Phrase";
+  dialog.querySelector("[data-verb-dialog-meanings]").textContent = description || "Course phrase";
+
+  const metaRows = [
+    renderMetaRow("type", "course phrase"),
+    renderMetaRow("use", "Study and reuse this expression as a whole chunk."),
+    renderMetaRow("lesson", lessonSource || ""),
+  ].filter(Boolean);
+
+  dialog.querySelector("[data-verb-dialog-meta]").innerHTML = `
+    <div class="verb-meta-card">
+      <div class="verb-meta-list">
+        ${metaRows.join("")}
+      </div>
+    </div>
+  `;
+
+  dialog.querySelector("[data-verb-dialog-tables]").innerHTML = `
+    <div class="verb-table-card phrase-dialog-card">
+      <h4>Phrase</h4>
+      <p class="phrase-dialog-line"><code>${phrase || ""}</code></p>
+      <p class="mini phrase-dialog-note">This entry is stored as a ready-made course phrase, not as one single verb lexeme.</p>
+      ${mainVerb ? `
+        <div class="phrase-dialog-actions">
+          <button type="button" class="verb-dialog-open-main" data-open-main-verb="${mainVerb}">Open main verb forms</button>
+        </div>
+      ` : ""}
+    </div>
+  `;
+  const openMainButton = dialog.querySelector("[data-open-main-verb]");
+  if (openMainButton) {
+    openMainButton.addEventListener("click", () => {
+      const targetVerb = openMainButton.dataset.openMainVerb || "";
+      dialog.close();
+      if (window.MaltiVerbLookup?.open) {
+        window.MaltiVerbLookup.open({ verb: targetVerb });
+      }
+    });
+  }
+  dialog.showModal();
+}
+
 function renderMatchButton(label, subtitle, slug) {
   return `
     <button type="button" class="verb-match-button" data-verb-open="${slug}">
@@ -582,6 +626,16 @@ async function initVerbLookup() {
       open(verb) {
         return openFromTrigger(verb, root, pack, helpers, inputNode, normalizedNode, resultsNode);
       },
+      openPhrase(payload) {
+        openPhraseDialog(
+          root,
+          payload?.phrase || "",
+          payload?.description || "",
+          payload?.lessonSource || "",
+          payload?.mainVerb || "",
+        );
+        return true;
+      },
       openFallback(verb, description) {
         openFallbackVerbDialog(root, verb, description);
         return true;
@@ -602,6 +656,16 @@ async function initVerbLookup() {
     window.MaltiVerbLookup = {
       open() {
         return false;
+      },
+      openPhrase(payload) {
+        openPhraseDialog(
+          root,
+          payload?.phrase || "",
+          payload?.description || "",
+          payload?.lessonSource || "",
+          payload?.mainVerb || "",
+        );
+        return true;
       },
       openFallback(verb, description) {
         openFallbackVerbDialog(root, verb, description);

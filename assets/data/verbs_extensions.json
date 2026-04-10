@@ -27,7 +27,29 @@
     "tistrieh": "istrieh-course",
     "ieqaf": "ieqaf-course",
     "sajjar": "sajjar-course",
-    "isaffar": "saffar-course"
+    "isaffar": "saffar-course",
+    "nimxi": "mexa-course",
+    "mort": "mar-course",
+    "waqa'": "waqa-course",
+    "tmexxi": "mexxa-course",
+    "tinsab": "nsab-course",
+    "nidde?iedi": "idde?ieda-course",
+    "nippreferi": "ipprefera-course",
+    "sibt": "sab-course",
+    "tipprova": "ipprova-course",
+    "niffoka": "iffoka-course",
+    "nimmarka": "immarka-course",
+    "nipparkja": "ipparkja-course",
+    "niskennja": "iskennja-course",
+    "niskurja": "iskurja-course",
+    "niffranka": "iffranka-course",
+    "nirringrazzja": "irringrazzja-course",
+    "jittrejnja": "ittrejnja-course",
+    "nittrejnja": "ittrejnja-course",
+    "insuq": "issuq-course",
+    "jismu": "name-pattern-course",
+    "jisimha": "name-pattern-course",
+    "jisimni": "name-pattern-course"
   },
   "details": {
     "iddisinja": {
@@ -547,6 +569,1023 @@
             "int": "ssaffarx",
             "intom": "ssaffrux"
           }
+        }
+      }
+    },
+    "mexa-course": {
+      "lemma": "mexa",
+      "meanings": [
+        "to walk",
+        "to progress",
+        "to make one's way in the world"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "m-x-j",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "jien": "mxejt",
+            "int": "mxejt",
+            "huwa": "mexa",
+            "hija": "mxiet",
+            "a?na": "mxejna",
+            "intom": "mxejtu",
+            "huma": "mxew"
+          },
+          "negative": {
+            "jien": "ma mxejtx",
+            "int": "ma mxejtx",
+            "huwa": "ma mexiex",
+            "hija": "ma mxiitx",
+            "a?na": "ma mxejniex",
+            "intom": "ma mxejtux",
+            "huma": "ma mxewx"
+          }
+        },
+        "present": {
+          "positive": {
+            "jien": "nimxi",
+            "int": "timxi",
+            "huwa": "jimxi",
+            "hija": "timxi",
+            "a?na": "nimxu",
+            "intom": "timxu",
+            "huma": "jimxu"
+          },
+          "negative": {
+            "jien": "ma nimxix",
+            "int": "ma timxix",
+            "huwa": "ma jimxix",
+            "hija": "ma timxix",
+            "a?na": "ma nimxux",
+            "intom": "ma timxux",
+            "huma": "ma jimxux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "imxi",
+            "intom": "imxu"
+          },
+          "negative": {
+            "int": "timxix",
+            "intom": "timxux"
+          }
+        }
+      }
+    },
+    "mar-course": {
+      "lemma": "mar",
+      "meanings": [
+        "to go",
+        "to leave",
+        "to go bad (used especially of food)",
+        "to die"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "m-r-j",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "jien": "mort",
+            "int": "mort",
+            "huwa": "mar",
+            "hija": "marret",
+            "a?na": "morna",
+            "intom": "mortu",
+            "huma": "marru"
+          },
+          "negative": {
+            "jien": "ma mortx",
+            "int": "ma mortx",
+            "huwa": "ma marx",
+            "hija": "ma marritx",
+            "a?na": "ma morniex",
+            "intom": "ma mortux",
+            "huma": "ma marrux"
+          }
+        },
+        "present": {
+          "positive": {
+            "jien": "mmur",
+            "int": "tmur",
+            "huwa": "jmur",
+            "hija": "tmur",
+            "a?na": "mmorru",
+            "intom": "tmorru",
+            "huma": "jmorru"
+          },
+          "negative": {
+            "jien": "ma mmurx",
+            "int": "ma tmurx",
+            "huwa": "ma jmurx",
+            "hija": "ma tmurx",
+            "a?na": "ma mmorrux",
+            "intom": "ma tmorrux",
+            "huma": "ma jmorrux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "mur",
+            "intom": "morru"
+          },
+          "negative": {
+            "int": "tmurx",
+            "intom": "tmorrux"
+          }
+        }
+      }
+    },
+    "waqa-course": {
+      "lemma": "waqa'",
+      "meanings": [
+        "to fall",
+        "to be lowered (especially used of prices)",
+        "to relapse"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "w-q-j",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "jien": "waqajt",
+            "int": "waqajt",
+            "huwa": "waqa'",
+            "hija": "waqgħet",
+            "a?na": "waqajna",
+            "intom": "waqajtu",
+            "huma": "waqgħu"
+          },
+          "negative": {
+            "jien": "ma waqajtx",
+            "int": "ma waqajtx",
+            "huwa": "ma waqax",
+            "hija": "ma waqgħitx",
+            "a?na": "ma waqajniex",
+            "intom": "ma waqajtux",
+            "huma": "ma waqgħux"
+          }
+        },
+        "present": {
+          "positive": {
+            "jien": "naqa'",
+            "int": "taqa'",
+            "huwa": "jaqa'",
+            "hija": "taqa'",
+            "a?na": "naqgħu",
+            "intom": "taqgħu",
+            "huma": "jaqgħu"
+          },
+          "negative": {
+            "jien": "ma naqa'x",
+            "int": "ma taqa'x",
+            "huwa": "ma jaqa'x",
+            "hija": "ma taqa'x",
+            "a?na": "ma naqgħux",
+            "intom": "ma taqgħux",
+            "huma": "ma jaqgħux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "aqa'",
+            "intom": "aqgħu"
+          },
+          "negative": {
+            "int": "taqa'x",
+            "intom": "taqgħux"
+          }
+        }
+      }
+    },
+    "mexxa-course": {
+      "lemma": "mexxa",
+      "meanings": [
+        "to cause to walk",
+        "to lead",
+        "to manage",
+        "to sell a product"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "m-x-j",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "jien": "mexxejt",
+            "int": "mexxejt",
+            "huwa": "mexxa",
+            "hija": "mexxiet",
+            "a?na": "mexxejna",
+            "intom": "mexxejtu",
+            "huma": "mexxew"
+          },
+          "negative": {
+            "jien": "ma mexxejtx",
+            "int": "ma mexxejtx",
+            "huwa": "ma mexxiex",
+            "hija": "ma mexxiitx",
+            "a?na": "ma mexxejniex",
+            "intom": "ma mexxejtux",
+            "huma": "ma mexxewx"
+          }
+        },
+        "present": {
+          "positive": {
+            "jien": "mmexxi",
+            "int": "tmexxi",
+            "huwa": "jmexxi",
+            "hija": "tmexxi",
+            "a?na": "mmexxu",
+            "intom": "tmexxu",
+            "huma": "jmexxu"
+          },
+          "negative": {
+            "jien": "ma mmexxix",
+            "int": "ma tmexxix",
+            "huwa": "ma jmexxix",
+            "hija": "ma tmexxix",
+            "a?na": "ma mmexxux",
+            "intom": "ma tmexxux",
+            "huma": "ma jmexxux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "mexxi",
+            "intom": "mexxu"
+          },
+          "negative": {
+            "int": "tmexxix",
+            "intom": "tmexxux"
+          }
+        }
+      }
+    },
+    "nsab-course": {
+      "lemma": "nsab",
+      "meanings": [
+        "to be found",
+        "to be located"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "s-j-b",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "jien": "nsabt",
+            "int": "nsabt",
+            "huwa": "nsab",
+            "hija": "nsabet",
+            "a?na": "nsabna",
+            "intom": "nsabtu",
+            "huma": "nsabu"
+          },
+          "negative": {
+            "jien": "ma nsabtx",
+            "int": "ma nsabtx",
+            "huwa": "ma nsabx",
+            "hija": "ma nsabitx",
+            "a?na": "ma nsabniex",
+            "intom": "ma nsabtux",
+            "huma": "ma nsabux"
+          }
+        },
+        "present": {
+          "positive": {
+            "jien": "ninsab",
+            "int": "tinsab",
+            "huwa": "jinsab",
+            "hija": "tinsab",
+            "a?na": "ninsabu",
+            "intom": "tinsabu",
+            "huma": "jinsabu"
+          },
+          "negative": {
+            "jien": "ma ninsabx",
+            "int": "ma tinsabx",
+            "huwa": "ma jinsabx",
+            "hija": "ma tinsabx",
+            "a?na": "ma ninsabux",
+            "intom": "ma tinsabux",
+            "huma": "ma jinsabux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "nsab",
+            "intom": "nsabu"
+          },
+          "negative": {
+            "int": "tinsabx",
+            "intom": "tinsabux"
+          }
+        }
+      }
+    },
+    "idde?ieda-course": {
+      "lemma": "idde?ieda",
+      "meanings": [
+        "to decide"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "-",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {}
+    },
+    "ipprefera-course": {
+      "lemma": "ipprefera",
+      "meanings": [
+        "prefer"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "-",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {}
+    },
+    "sab-course": {
+      "lemma": "sab",
+      "meanings": [
+        "to find",
+        "to discover",
+        "to realise"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "s-j-b",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "jien": "sibt",
+            "int": "sibt",
+            "huwa": "sab",
+            "hija": "sabet",
+            "a?na": "sibna",
+            "intom": "sibtu",
+            "huma": "sabu"
+          },
+          "negative": {
+            "jien": "ma sibtx",
+            "int": "ma sibtx",
+            "huwa": "ma sabx",
+            "hija": "ma sabitx",
+            "a?na": "ma sibniex",
+            "intom": "ma sibtux",
+            "huma": "ma sabux"
+          }
+        },
+        "present": {
+          "positive": {
+            "jien": "nsib",
+            "int": "ssib",
+            "huwa": "jsib",
+            "hija": "ssib",
+            "a?na": "nsibu",
+            "intom": "ssibu",
+            "huma": "jsibu"
+          },
+          "negative": {
+            "jien": "ma nsibx",
+            "int": "ma ssibx",
+            "huwa": "ma jsibx",
+            "hija": "ma ssibx",
+            "a?na": "ma nsibux",
+            "intom": "ma ssibux",
+            "huma": "ma jsibux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "sib",
+            "intom": "sibu"
+          },
+          "negative": {
+            "int": "ssibx",
+            "intom": "ssibux"
+          }
+        }
+      }
+    },
+    "ipprova-course": {
+      "lemma": "ipprova",
+      "meanings": [
+        "to try",
+        "to prove",
+        "to test"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "course mapping",
+        "root": "-",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "past": {
+          "positive": {
+            "huwa": "ipprova",
+            "hija": "ipprovat"
+          },
+          "negative": {
+            "huwa": "ma ipprovax",
+            "hija": "ma ipprovatx"
+          }
+        },
+        "present": {
+          "positive": {
+            "huwa": "jipprova",
+            "hija": "tipprova"
+          },
+          "negative": {
+            "huwa": "ma jipprovax",
+            "hija": "ma tipprovax"
+          }
+        }
+      }
+    },
+    "iffoka-course": {
+      "lemma": "iffoka",
+      "meanings": [
+        "to focus"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "niffoka",
+            "int": "tiffoka",
+            "huwa": "jiffoka",
+            "hija": "tiffoka",
+            "a?na": "niffokaw",
+            "intom": "tiffokaw",
+            "huma": "jiffokaw"
+          },
+          "negative": {
+            "jien": "ma niffokax",
+            "int": "ma tiffokax",
+            "huwa": "ma jiffokax",
+            "hija": "ma tiffokax",
+            "a?na": "ma niffokawx",
+            "intom": "ma tiffokawx",
+            "huma": "ma jiffokawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "iffokajt",
+            "int": "iffokajt",
+            "huwa": "iffoka",
+            "hija": "iffokat",
+            "a?na": "iffokajna",
+            "intom": "iffokajtu",
+            "huma": "iffokaw"
+          },
+          "negative": {
+            "jien": "ma iffokajtx",
+            "int": "ma iffokajtx",
+            "huwa": "ma iffokax",
+            "hija": "ma iffokatx",
+            "a?na": "ma iffokajnax",
+            "intom": "ma iffokajtux",
+            "huma": "ma iffokawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "iffoka",
+            "intom": "iffokaw"
+          },
+          "negative": {
+            "int": "tiffokax",
+            "intom": "tiffokawx"
+          }
+        }
+      }
+    },
+    "immarka-course": {
+      "lemma": "immarka",
+      "meanings": [
+        "to mark"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nimmarka",
+            "int": "timmarka",
+            "huwa": "jimmarka",
+            "hija": "timmarka",
+            "a?na": "nimmarkaw",
+            "intom": "timmarkaw",
+            "huma": "jimmarkaw"
+          },
+          "negative": {
+            "jien": "ma nimmarkax",
+            "int": "ma timmarkax",
+            "huwa": "ma jimmarkax",
+            "hija": "ma timmarkax",
+            "a?na": "ma nimmarkawx",
+            "intom": "ma timmarkawx",
+            "huma": "ma jimmarkawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "immarkajt",
+            "int": "immarkajt",
+            "huwa": "immarka",
+            "hija": "immarkat",
+            "a?na": "immarkajna",
+            "intom": "immarkajtu",
+            "huma": "immarkaw"
+          },
+          "negative": {
+            "jien": "ma immarkajtx",
+            "int": "ma immarkajtx",
+            "huwa": "ma immarkax",
+            "hija": "ma immarkatx",
+            "a?na": "ma immarkajnax",
+            "intom": "ma immarkajtux",
+            "huma": "ma immarkawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "immarka",
+            "intom": "immarkaw"
+          },
+          "negative": {
+            "int": "timmarkax",
+            "intom": "timmarkawx"
+          }
+        }
+      }
+    },
+    "ipparkja-course": {
+      "lemma": "ipparkja",
+      "meanings": [
+        "to park"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nipparkja",
+            "int": "tipparkja",
+            "huwa": "jipparkja",
+            "hija": "tipparkja",
+            "a?na": "nipparkjaw",
+            "intom": "tipparkjaw",
+            "huma": "jipparkjaw"
+          },
+          "negative": {
+            "jien": "ma nipparkjax",
+            "int": "ma tipparkjax",
+            "huwa": "ma jipparkjax",
+            "hija": "ma tipparkjax",
+            "a?na": "ma nipparkjawx",
+            "intom": "ma tipparkjawx",
+            "huma": "ma jipparkjawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "ipparkjajt",
+            "int": "ipparkjajt",
+            "huwa": "ipparkja",
+            "hija": "ipparkjat",
+            "a?na": "ipparkjajna",
+            "intom": "ipparkjajtu",
+            "huma": "ipparkjaw"
+          },
+          "negative": {
+            "jien": "ma ipparkjajtx",
+            "int": "ma ipparkjajtx",
+            "huwa": "ma ipparkjax",
+            "hija": "ma ipparkjatx",
+            "a?na": "ma ipparkjajnax",
+            "intom": "ma ipparkjajtux",
+            "huma": "ma ipparkjawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "ipparkja",
+            "intom": "ipparkjaw"
+          },
+          "negative": {
+            "int": "tipparkjax",
+            "intom": "tipparkjawx"
+          }
+        }
+      }
+    },
+    "iskennja-course": {
+      "lemma": "iskennja",
+      "meanings": [
+        "to scan"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "niskennja",
+            "int": "tiskennja",
+            "huwa": "jiskennja",
+            "hija": "tiskennja",
+            "a?na": "niskennjaw",
+            "intom": "tiskennjaw",
+            "huma": "jiskennjaw"
+          },
+          "negative": {
+            "jien": "ma niskennjax",
+            "int": "ma tiskennjax",
+            "huwa": "ma jiskennjax",
+            "hija": "ma tiskennjax",
+            "a?na": "ma niskennjawx",
+            "intom": "ma tiskennjawx",
+            "huma": "ma jiskennjawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "iskennjajt",
+            "int": "iskennjajt",
+            "huwa": "iskennja",
+            "hija": "iskennjat",
+            "a?na": "iskennjajna",
+            "intom": "iskennjajtu",
+            "huma": "iskennjaw"
+          },
+          "negative": {
+            "jien": "ma iskennjajtx",
+            "int": "ma iskennjajtx",
+            "huwa": "ma iskennjax",
+            "hija": "ma iskennjatx",
+            "a?na": "ma iskennjajnax",
+            "intom": "ma iskennjajtux",
+            "huma": "ma iskennjawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "iskennja",
+            "intom": "iskennjaw"
+          },
+          "negative": {
+            "int": "tiskennjax",
+            "intom": "tiskennjawx"
+          }
+        }
+      }
+    },
+    "iskurja-course": {
+      "lemma": "iskurja",
+      "meanings": [
+        "to score"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "niskurja",
+            "int": "tiskurja",
+            "huwa": "jiskurja",
+            "hija": "tiskurja",
+            "a?na": "niskurjaw",
+            "intom": "tiskurjaw",
+            "huma": "jiskurjaw"
+          },
+          "negative": {
+            "jien": "ma niskurjax",
+            "int": "ma tiskurjax",
+            "huwa": "ma jiskurjax",
+            "hija": "ma tiskurjax",
+            "a?na": "ma niskurjawx",
+            "intom": "ma tiskurjawx",
+            "huma": "ma jiskurjawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "iskurjajt",
+            "int": "iskurjajt",
+            "huwa": "iskurja",
+            "hija": "iskurjat",
+            "a?na": "iskurjajna",
+            "intom": "iskurjajtu",
+            "huma": "iskurjaw"
+          },
+          "negative": {
+            "jien": "ma iskurjajtx",
+            "int": "ma iskurjajtx",
+            "huwa": "ma iskurjax",
+            "hija": "ma iskurjatx",
+            "a?na": "ma iskurjajnax",
+            "intom": "ma iskurjajtux",
+            "huma": "ma iskurjawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "iskurja",
+            "intom": "iskurjaw"
+          },
+          "negative": {
+            "int": "tiskurjax",
+            "intom": "tiskurjawx"
+          }
+        }
+      }
+    },
+    "iffranka-course": {
+      "lemma": "iffranka",
+      "meanings": [
+        "to save"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "niffranka",
+            "int": "tiffranka",
+            "huwa": "jiffranka",
+            "hija": "tiffranka",
+            "a?na": "niffrankaw",
+            "intom": "tiffrankaw",
+            "huma": "jiffrankaw"
+          },
+          "negative": {
+            "jien": "ma niffrankax",
+            "int": "ma tiffrankax",
+            "huwa": "ma jiffrankax",
+            "hija": "ma tiffrankax",
+            "a?na": "ma niffrankawx",
+            "intom": "ma tiffrankawx",
+            "huma": "ma jiffrankawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "iffrankajt",
+            "int": "iffrankajt",
+            "huwa": "iffranka",
+            "hija": "iffrankat",
+            "a?na": "iffrankajna",
+            "intom": "iffrankajtu",
+            "huma": "iffrankaw"
+          },
+          "negative": {
+            "jien": "ma iffrankajtx",
+            "int": "ma iffrankajtx",
+            "huwa": "ma iffrankax",
+            "hija": "ma iffrankatx",
+            "a?na": "ma iffrankajnax",
+            "intom": "ma iffrankajtux",
+            "huma": "ma iffrankawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "iffranka",
+            "intom": "iffrankaw"
+          },
+          "negative": {
+            "int": "tiffrankax",
+            "intom": "tiffrankawx"
+          }
+        }
+      }
+    },
+    "irringrazzja-course": {
+      "lemma": "irringrazzja",
+      "meanings": [
+        "to thank"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nirringrazzja",
+            "int": "tirringrazzja",
+            "huwa": "jirringrazzja",
+            "hija": "tirringrazzja",
+            "a?na": "nirringrazzjaw",
+            "intom": "tirringrazzjaw",
+            "huma": "jirringrazzjaw"
+          },
+          "negative": {
+            "jien": "ma nirringrazzjax",
+            "int": "ma tirringrazzjax",
+            "huwa": "ma jirringrazzjax",
+            "hija": "ma tirringrazzjax",
+            "a?na": "ma nirringrazzjawx",
+            "intom": "ma tirringrazzjawx",
+            "huma": "ma jirringrazzjawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "irringrazzjajt",
+            "int": "irringrazzjajt",
+            "huwa": "irringrazzja",
+            "hija": "irringrazzjat",
+            "a?na": "irringrazzjajna",
+            "intom": "irringrazzjajtu",
+            "huma": "irringrazzjaw"
+          },
+          "negative": {
+            "jien": "ma irringrazzjajtx",
+            "int": "ma irringrazzjajtx",
+            "huwa": "ma irringrazzjax",
+            "hija": "ma irringrazzjatx",
+            "a?na": "ma irringrazzjajnax",
+            "intom": "ma irringrazzjajtux",
+            "huma": "ma irringrazzjawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "irringrazzja",
+            "intom": "irringrazzjaw"
+          },
+          "negative": {
+            "int": "tirringrazzjax",
+            "intom": "tirringrazzjawx"
+          }
+        }
+      }
+    },
+    "ittrejnja-course": {
+      "lemma": "ittrejnja",
+      "meanings": [
+        "to train"
+      ],
+      "meta": {
+        "type": "local inferred extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nittrejnja",
+            "int": "tittrejnja",
+            "huwa": "jittrejnja",
+            "hija": "tittrejnja",
+            "a?na": "nittrejnjaw",
+            "intom": "tittrejnjaw",
+            "huma": "jittrejnjaw"
+          },
+          "negative": {
+            "jien": "ma nittrejnjax",
+            "int": "ma tittrejnjax",
+            "huwa": "ma jittrejnjax",
+            "hija": "ma tittrejnjax",
+            "a?na": "ma nittrejnjawx",
+            "intom": "ma tittrejnjawx",
+            "huma": "ma jittrejnjawx"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "ittrejnjajt",
+            "int": "ittrejnjajt",
+            "huwa": "ittrejnja",
+            "hija": "ittrejnjat",
+            "a?na": "ittrejnjajna",
+            "intom": "ittrejnjajtu",
+            "huma": "ittrejnjaw"
+          },
+          "negative": {
+            "jien": "ma ittrejnjajtx",
+            "int": "ma ittrejnjajtx",
+            "huwa": "ma ittrejnjax",
+            "hija": "ma ittrejnjatx",
+            "a?na": "ma ittrejnjajnax",
+            "intom": "ma ittrejnjajtux",
+            "huma": "ma ittrejnjawx"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "ittrejnja",
+            "intom": "ittrejnjaw"
+          },
+          "negative": {
+            "int": "tittrejnjax",
+            "intom": "tittrejnjawx"
+          }
+        }
+      }
+    },
+    "issuq-course": {
+      "lemma": "issuq",
+      "meanings": [
+        "to drive"
+      ],
+      "meta": {
+        "type": "local course extension",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "insuq",
+            "int": "issuq",
+            "huwa": "jsuq",
+            "hija": "issuq",
+            "a?na": "insuqu",
+            "intom": "issuqu",
+            "huma": "jsuqu"
+          },
+          "negative": {
+            "jien": "ma insuqx",
+            "int": "ma issuqx",
+            "huwa": "ma jsuqx",
+            "hija": "ma issuqx",
+            "a?na": "ma insuqux",
+            "intom": "ma issuqux",
+            "huma": "ma jsuqux"
+          }
+        }
+      }
+    },
+    "name-pattern-course": {
+      "lemma": "jismu / jisimha / jisimni",
+      "meanings": [
+        "to be called",
+        "to have the name ..."
+      ],
+      "meta": {
+        "type": "local course pattern",
+        "root": "-"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "jisimni",
+            "huwa": "jismu",
+            "hija": "jisimha"
+          },
+          "negative": {}
         }
       }
     }
