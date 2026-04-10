@@ -23,6 +23,8 @@ document.addEventListener('click', async (event) => {
       description: publicDescription,
       lessonSource: (trigger.dataset.lessonSource || '').trim(),
       mainVerb: (trigger.dataset.mainVerb || '').trim(),
+      mainLookupHint: (trigger.dataset.mainLookupHint || '').trim(),
+      mainSlugHint: (trigger.dataset.mainSlugHint || '').trim(),
     });
   }
 

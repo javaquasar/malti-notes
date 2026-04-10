@@ -260,7 +260,7 @@ function openFallbackVerbDialog(root, verb, description) {
   dialog.showModal();
 }
 
-function openPhraseDialog(root, phrase, description, lessonSource, mainVerb) {
+function openPhraseDialog(root, phrase, description, lessonSource, mainVerb, mainLookupHint, mainSlugHint) {
   const dialog = createDialog(root);
   dialog.querySelector("[data-verb-dialog-title]").textContent = phrase || "Phrase";
   dialog.querySelector("[data-verb-dialog-meanings]").textContent = description || "Course phrase";
@@ -286,7 +286,13 @@ function openPhraseDialog(root, phrase, description, lessonSource, mainVerb) {
       <p class="mini phrase-dialog-note">This entry is stored as a ready-made course phrase, not as one single verb lexeme.</p>
       ${mainVerb ? `
         <div class="phrase-dialog-actions">
-          <button type="button" class="verb-dialog-open-main" data-open-main-verb="${mainVerb}">Open main verb forms</button>
+          <button
+            type="button"
+            class="verb-dialog-open-main"
+            data-open-main-verb="${mainVerb}"
+            data-open-main-lookup-hint="${mainLookupHint || ""}"
+            data-open-main-slug-hint="${mainSlugHint || ""}"
+          >Open main verb forms</button>
         </div>
       ` : ""}
     </div>
@@ -295,9 +301,15 @@ function openPhraseDialog(root, phrase, description, lessonSource, mainVerb) {
   if (openMainButton) {
     openMainButton.addEventListener("click", () => {
       const targetVerb = openMainButton.dataset.openMainVerb || "";
+      const targetLookupHint = openMainButton.dataset.openMainLookupHint || "";
+      const targetSlugHint = openMainButton.dataset.openMainSlugHint || "";
       dialog.close();
       if (window.MaltiVerbLookup?.open) {
-        window.MaltiVerbLookup.open({ verb: targetVerb });
+        window.MaltiVerbLookup.open({
+          verb: targetVerb,
+          lookupHint: targetLookupHint,
+          slugHint: targetSlugHint,
+        });
       }
     });
   }
@@ -633,6 +645,8 @@ async function initVerbLookup() {
           payload?.description || "",
           payload?.lessonSource || "",
           payload?.mainVerb || "",
+          payload?.mainLookupHint || "",
+          payload?.mainSlugHint || "",
         );
         return true;
       },
@@ -664,6 +678,8 @@ async function initVerbLookup() {
           payload?.description || "",
           payload?.lessonSource || "",
           payload?.mainVerb || "",
+          payload?.mainLookupHint || "",
+          payload?.mainSlugHint || "",
         );
         return true;
       },

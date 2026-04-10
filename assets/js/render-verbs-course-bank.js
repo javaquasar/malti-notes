@@ -78,6 +78,12 @@ async function renderVerbsCourseBank(config) {
         if (mainVerb) {
           button.dataset.mainVerb = mainVerb;
         }
+        if (item.mainLookupHint) {
+          button.dataset.mainLookupHint = item.mainLookupHint;
+        }
+        if (item.mainSlugHint) {
+          button.dataset.mainSlugHint = item.mainSlugHint;
+        }
       }
       if (item.lookupHint) {
         button.dataset.lookupHint = item.lookupHint;
