@@ -58,6 +58,15 @@
                 <div class="review-topic-grid" id="review-topic-grid"></div>
             </section>
             <section class="content-card">
+                <span class="tag">Quick Session</span>
+                <h2>Start a Short Review Run</h2>
+                <div class="review-session-grid">
+                    <button class="action-button" type="button" id="review-session-10-all">Study 10 cards</button>
+                    <button class="action-button" type="button" id="review-session-10-due">Study 10 due</button>
+                    <div class="review-filter-status" id="review-session-status">No quick session is active.</div>
+                </div>
+            </section>
+            <section class="content-card">
                 <span class="tag">Study Filters</span>
                 <h2>Choose What To Study</h2>
                 <div class="review-filter-grid">
@@ -73,6 +82,14 @@
                             <option value="">All cards</option>
                             <option value="word-card">Words</option>
                             <option value="verb-form-card">Verb forms</option>
+                        </select>
+                    </label>
+                    <label>
+                        <strong>Direction</strong>
+                        <select class="review-select" id="review-direction-filter">
+                            <option value="maltese-to-english">Maltese -> English</option>
+                            <option value="english-to-maltese">English -> Maltese</option>
+                            <option value="image-to-maltese">Image / Colour -> Maltese</option>
                         </select>
                     </label>
                     <label class="review-check">

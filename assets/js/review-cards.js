@@ -1,6 +1,10 @@
 (function () {
     var currentCard = null;
     var queue = [];
+    var quickSession = {
+        active: false,
+        limit: 0
+    };
     var ANIMALS_DATA_URL = "./assets/data/animals.json";
     var COLORS_DATA_URL = "./assets/data/colors.json";
 
@@ -32,6 +36,7 @@
         return {
             topic: byId("review-topic-filter") ? byId("review-topic-filter").value : "",
             type: byId("review-type-filter") ? byId("review-type-filter").value : "",
+            direction: byId("review-direction-filter") ? byId("review-direction-filter").value : "maltese-to-english",
             dueOnly: !!(byId("review-due-only") && byId("review-due-only").checked)
         };
     }
@@ -55,6 +60,16 @@
         return getAllCards().filter(function (card) {
             return cardMatches(card, filters, dueLookup);
         });
+    }
+
+    function clearQuickSession() {
+        quickSession.active = false;
+        quickSession.limit = 0;
+    }
+
+    function activateQuickSession(limit) {
+        quickSession.active = true;
+        quickSession.limit = limit;
     }
 
     function renderStats() {
@@ -202,6 +217,15 @@
         } else if (filters.type === "verb-form-card") {
             bits.push("type: verb forms");
         }
+        if (!filters.type || filters.type === "word-card") {
+            if (filters.direction === "english-to-maltese") {
+                bits.push("direction: English -> Maltese");
+            } else if (filters.direction === "image-to-maltese") {
+                bits.push("direction: Image / Colour -> Maltese");
+            } else {
+                bits.push("direction: Maltese -> English");
+            }
+        }
         if (filters.dueOnly) {
             bits.push("due only");
         }
@@ -209,6 +233,25 @@
         byId("review-filter-status").textContent = bits.length
             ? (filtered.length + " matching card(s), " + filteredDue + " due now | " + bits.join(" | "))
             : ("All saved cards are included. " + all.length + " total, " + filteredDue + " due now.");
+    }
+
+    function renderQuickSessionStatus() {
+        var status = byId("review-session-status");
+        if (!status) {
+            return;
+        }
+
+        if (!quickSession.active || !quickSession.limit) {
+            status.textContent = "No quick session is active.";
+            return;
+        }
+
+        var filters = getFilters();
+        var filtered = getFilteredCards();
+        var sessionCards = filtered.slice(0, quickSession.limit);
+        var mode = filters.dueOnly ? "due cards" : "cards";
+        var scope = filters.topic ? (" in " + filters.topic) : "";
+        status.textContent = "Quick session active: up to " + quickSession.limit + " " + mode + scope + ". " + sessionCards.length + " card(s) in this run.";
     }
 
     function updateTopicOptions() {
@@ -243,7 +286,11 @@
     }
 
     function refillQueue() {
-        queue = getFilteredCards().slice();
+        var cards = getFilteredCards().slice();
+        if (quickSession.active && quickSession.limit > 0) {
+            cards = cards.slice(0, quickSession.limit);
+        }
+        queue = cards;
     }
 
     function formatNextReview(card) {
@@ -281,6 +328,16 @@
             parts.push("Mode: All cards");
         }
 
+        if (!filters.type || filters.type === "word-card") {
+            if (filters.direction === "english-to-maltese") {
+                parts.push("Direction: English -> Maltese");
+            } else if (filters.direction === "image-to-maltese") {
+                parts.push("Direction: Image / Colour -> Maltese");
+            } else {
+                parts.push("Direction: Maltese -> English");
+            }
+        }
+
         if (filters.dueOnly) {
             parts.push("Due only");
         }
@@ -297,7 +354,18 @@
         var message = "Add custom words, save vocabulary from topic pages, or add a verb drill from the verbs page.";
         var actions = "<p><a class=\"action-link\" href=\"./animals.html\">Open Animals Page</a> <a class=\"action-link\" href=\"./verbs_guide.html\">Open Verbs Page</a></p>";
 
-        if (hasSavedCards && filteredCount === 0) {
+        if (quickSession.active && hasSavedCards && filteredCount > 0) {
+            title = filters.dueOnly ? "Quick due session complete" : "Quick session complete";
+            message = filters.dueOnly
+                ? "You finished this short due-only run. You can restart it, keep studying the full topic, or go back to all topics."
+                : "You reached the end of this short review run. You can restart it, continue with the full set, or go back to all topics.";
+            actions = "" +
+                "<div class=\"review-empty-actions\">" +
+                    "<button class=\"action-button\" type=\"button\" id=\"review-restart-quick-session\">Restart quick session</button>" +
+                    "<button class=\"action-button\" type=\"button\" id=\"review-turn-off-quick-session\">Continue full study</button>" +
+                    "<button class=\"action-button\" type=\"button\" id=\"review-reset-filters\">Back to all topics</button>" +
+                "</div>";
+        } else if (hasSavedCards && filteredCount === 0) {
             title = filters.dueOnly ? "No due cards in this view" : "No cards match the current filters";
             message = filters.dueOnly
                 ? "You finished the due cards for the current topic or mode. You can keep studying the full set or switch to another topic."
@@ -317,15 +385,20 @@
                 var topic = byId("review-topic-filter");
                 var type = byId("review-type-filter");
                 var dueOnly = byId("review-due-only");
+                var direction = byId("review-direction-filter");
                 if (topic) {
                     topic.value = "";
                 }
                 if (type) {
                     type.value = "";
                 }
+                if (direction) {
+                    direction.value = "maltese-to-english";
+                }
                 if (dueOnly) {
                     dueOnly.checked = false;
                 }
+                clearQuickSession();
                 refreshAll(true);
             });
         }
@@ -337,9 +410,30 @@
                 if (dueOnly) {
                     dueOnly.checked = false;
                 }
+                clearQuickSession();
                 refreshAll(true);
             });
         }
+
+        var restartQuickButton = byId("review-restart-quick-session");
+        if (restartQuickButton) {
+            restartQuickButton.addEventListener("click", function () {
+                refreshAll(true);
+            });
+        }
+
+        var turnOffQuickButton = byId("review-turn-off-quick-session");
+        if (turnOffQuickButton) {
+            turnOffQuickButton.addEventListener("click", function () {
+                clearQuickSession();
+                refreshAll(true);
+            });
+        }
+    }
+
+    function getWordDirection() {
+        var filters = getFilters();
+        return filters.direction || "maltese-to-english";
     }
 
     function buildFront(card) {
@@ -351,6 +445,7 @@
                 "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + " | " + escapeHtml(card.translation) + "</div>";
         }
 
+        var direction = getWordDirection();
         var visualHtml = "";
         if (card.image) {
             visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
@@ -358,11 +453,29 @@
             visualHtml = "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";
         }
 
+        var promptWord = escapeHtml(card.maltese);
+        var promptMeta = "Topic: " + escapeHtml(card.topic);
+        var tag = "Word Card";
+
+        if (direction === "english-to-maltese") {
+            promptWord = escapeHtml(card.english || "(translation to add later)");
+            promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
+            tag = "English -> Maltese";
+        } else if (direction === "image-to-maltese" && visualHtml) {
+            promptWord = "<span class=\"review-word review-word--prompt\">What is this in Maltese?</span>";
+            promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
+            tag = "Image / Colour -> Maltese";
+        } else if (direction === "image-to-maltese") {
+            promptWord = escapeHtml(card.english || "(translation to add later)");
+            promptMeta = "No image on this card, so this prompt falls back to English | Topic: " + escapeHtml(card.topic);
+            tag = "English -> Maltese";
+        }
+
         return "" +
-            "<span class=\"tag\">Word Card</span>" +
+            "<span class=\"tag\">" + tag + "</span>" +
             visualHtml +
-            "<div class=\"review-word\">" + escapeHtml(card.maltese) + "</div>" +
-            "<div class=\"review-meta\">Topic: " + escapeHtml(card.topic) + "</div>";
+            "<div class=\"review-word\">" + promptWord + "</div>" +
+            "<div class=\"review-meta\">" + promptMeta + "</div>";
     }
 
     function buildAnswer(card) {
@@ -373,8 +486,18 @@
                 "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
         }
 
+        var direction = getWordDirection();
+        var title = escapeHtml(card.english || "(translation to add later)");
+        var secondary = "<div class=\"review-meta\">Maltese: " + escapeHtml(card.maltese) + "</div>";
+
+        if (direction === "english-to-maltese" || direction === "image-to-maltese") {
+            title = escapeHtml(card.maltese);
+            secondary = "<div class=\"review-meta\">English: " + escapeHtml(card.english || "(translation to add later)") + "</div>";
+        }
+
         return "" +
-            "<h3>" + escapeHtml(card.english || "(translation to add later)") + "</h3>" +
+            "<h3>" + title + "</h3>" +
+            secondary +
             "<div class=\"review-meta\">Example: " + escapeHtml(card.example || "No example yet.") + "</div>" +
             "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>";
     }
@@ -482,20 +605,58 @@
             queue = [];
         }
         renderTopicOverview();
+        renderQuickSessionStatus();
         renderSavedList();
         renderCard();
     }
 
     function wireFilters() {
-        ["review-topic-filter", "review-type-filter", "review-due-only"].forEach(function (id) {
+        ["review-topic-filter", "review-type-filter", "review-direction-filter", "review-due-only"].forEach(function (id) {
             var element = byId(id);
             if (!element) {
                 return;
             }
             element.addEventListener("change", function () {
+                clearQuickSession();
                 refreshAll(true);
             });
         });
+    }
+
+    function wireQuickSessions() {
+        var studyTenAll = byId("review-session-10-all");
+        var studyTenDue = byId("review-session-10-due");
+
+        function scrollToStage() {
+            var stage = byId("review-stage");
+            if (stage && typeof stage.scrollIntoView === "function") {
+                stage.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+
+        if (studyTenAll) {
+            studyTenAll.addEventListener("click", function () {
+                var dueOnly = byId("review-due-only");
+                if (dueOnly) {
+                    dueOnly.checked = false;
+                }
+                activateQuickSession(10);
+                refreshAll(true);
+                scrollToStage();
+            });
+        }
+
+        if (studyTenDue) {
+            studyTenDue.addEventListener("click", function () {
+                var dueOnly = byId("review-due-only");
+                if (dueOnly) {
+                    dueOnly.checked = true;
+                }
+                activateQuickSession(10);
+                refreshAll(true);
+                scrollToStage();
+            });
+        }
     }
 
     function wireCustomForm() {
@@ -644,6 +805,7 @@
         }
 
         wireFilters();
+        wireQuickSessions();
         wireCustomForm();
 
         Promise.allSettled([backfillAnimalImages(), backfillColorSwatches()]).finally(function () {
