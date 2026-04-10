@@ -261,14 +261,85 @@
         return "Next: " + next.toLocaleString();
     }
 
+    function buildSessionSummary(current, remainingCount) {
+        var filters = getFilters();
+        var parts = [];
+
+        if (filters.topic) {
+            parts.push("Topic: " + filters.topic);
+        } else if (current && current.topic) {
+            parts.push("Topic: " + current.topic);
+        } else {
+            parts.push("Topic: All topics");
+        }
+
+        if (filters.type === "word-card") {
+            parts.push("Mode: Words");
+        } else if (filters.type === "verb-form-card") {
+            parts.push("Mode: Verb forms");
+        } else {
+            parts.push("Mode: All cards");
+        }
+
+        if (filters.dueOnly) {
+            parts.push("Due only");
+        }
+
+        parts.push(remainingCount + " remaining after this card");
+        return parts.join(" | ");
+    }
+
     function renderEmpty() {
+        var filters = getFilters();
         var filteredCount = getFilteredCards().length;
         var hasSavedCards = getAllCards().length > 0;
-        var message = hasSavedCards && filteredCount === 0
-            ? "No cards match the current filters."
-            : "Add custom words, save vocabulary from topic pages, or add a verb drill from the verbs page.";
+        var title = "No review cards ready";
+        var message = "Add custom words, save vocabulary from topic pages, or add a verb drill from the verbs page.";
+        var actions = "<p><a class=\"action-link\" href=\"./animals.html\">Open Animals Page</a> <a class=\"action-link\" href=\"./verbs_guide.html\">Open Verbs Page</a></p>";
 
-        byId("review-stage").innerHTML = "<div class=\"review-empty\"><h2>No review cards ready</h2><p class=\"mini\">" + escapeHtml(message) + "</p><p><a class=\"action-link\" href=\"./animals.html\">Open Animals Page</a> <a class=\"action-link\" href=\"./verbs_guide.html\">Open Verbs Page</a></p></div>";
+        if (hasSavedCards && filteredCount === 0) {
+            title = filters.dueOnly ? "No due cards in this view" : "No cards match the current filters";
+            message = filters.dueOnly
+                ? "You finished the due cards for the current topic or mode. You can keep studying the full set or switch to another topic."
+                : "The current filters hide all saved cards. Try another topic or reset the filters.";
+            actions = "" +
+                "<div class=\"review-empty-actions\">" +
+                    "<button class=\"action-button\" type=\"button\" id=\"review-reset-filters\">Back to all topics</button>" +
+                    (filters.topic ? "<button class=\"action-button\" type=\"button\" id=\"review-study-topic-full\">Study full topic</button>" : "") +
+                "</div>";
+        }
+
+        byId("review-stage").innerHTML = "<div class=\"review-empty\"><h2>" + escapeHtml(title) + "</h2><p class=\"mini\">" + escapeHtml(message) + "</p>" + actions + "</div>";
+
+        var resetButton = byId("review-reset-filters");
+        if (resetButton) {
+            resetButton.addEventListener("click", function () {
+                var topic = byId("review-topic-filter");
+                var type = byId("review-type-filter");
+                var dueOnly = byId("review-due-only");
+                if (topic) {
+                    topic.value = "";
+                }
+                if (type) {
+                    type.value = "";
+                }
+                if (dueOnly) {
+                    dueOnly.checked = false;
+                }
+                refreshAll(true);
+            });
+        }
+
+        var fullTopicButton = byId("review-study-topic-full");
+        if (fullTopicButton) {
+            fullTopicButton.addEventListener("click", function () {
+                var dueOnly = byId("review-due-only");
+                if (dueOnly) {
+                    dueOnly.checked = false;
+                }
+                refreshAll(true);
+            });
+        }
     }
 
     function buildFront(card) {
@@ -378,7 +449,10 @@
             return;
         }
 
+        var sessionSummary = buildSessionSummary(currentCard, queue.length);
+
         byId("review-stage").innerHTML = "" +
+            "<div class=\"review-session-bar\">" + escapeHtml(sessionSummary) + "</div>" +
             buildFront(currentCard) +
             "<div class=\"review-answer\" id=\"review-answer\" hidden>" + buildAnswer(currentCard) + "</div>" +
             "<div class=\"review-actions\"><button class=\"action-button\" id=\"show-answer-button\" type=\"button\">Show answer</button></div>" +
