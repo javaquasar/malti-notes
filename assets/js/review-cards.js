@@ -115,14 +115,29 @@
             return;
         }
 
+        function getTopicLoadLabel(topic) {
+            if (!topic.due) {
+                return { label: "No due cards", level: "clear" };
+            }
+            if (topic.due >= 8) {
+                return { label: "Heavy review", level: "heavy" };
+            }
+            if (topic.due >= 4) {
+                return { label: "Medium review", level: "medium" };
+            }
+            return { label: "Light review", level: "light" };
+        }
+
         container.innerHTML = topics.map(function (topic) {
+            var load = getTopicLoadLabel(topic);
             return "" +
-                "<article class=\"review-topic-card\">" +
+                "<article class=\"review-topic-card review-topic-card--" + load.level + "\">" +
                     "<div class=\"review-topic-top\">" +
                         "<h3>" + escapeHtml(topic.topic) + "</h3>" +
                         "<span class=\"status-chip\">" + topic.due + " due</span>" +
                     "</div>" +
                     "<p class=\"review-topic-total\">" + topic.total + (topic.total === 1 ? " saved card" : " saved cards") + "</p>" +
+                    "<div class=\"review-topic-load\">" + escapeHtml(load.label) + "</div>" +
                     "<div class=\"review-topic-breakdown\">" +
                         "<span class=\"review-topic-chip\">" + topic.words + " words</span>" +
                         "<span class=\"review-topic-chip\">" + topic.verbs + " verb forms</span>" +
