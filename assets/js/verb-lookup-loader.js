@@ -1,4 +1,4 @@
-function fallbackNormalizeQuery(input) {
+﻿function fallbackNormalizeQuery(input) {
   const replacements = {
     "à": "a", "á": "a", "â": "a", "ã": "a", "ä": "a", "å": "a",
     "è": "e", "é": "e", "ê": "e", "ë": "e",
@@ -131,6 +131,26 @@ function renderMetaRow(label, value) {
   `;
 }
 
+function isLocalExtensionMeta(meta) {
+  return String(meta?.type || "").trim().toLowerCase() === "local extension";
+}
+
+function buildMetaRows(meta) {
+  if (isLocalExtensionMeta(meta)) {
+    return [
+      renderMetaRow("għerq", meta.root)
+    ].filter(Boolean);
+  }
+
+  return [
+    renderMetaRow("forma", meta.form),
+    renderMetaRow("tip", meta.type),
+    renderMetaRow("kategorija", meta.category1),
+    renderMetaRow("għerq", meta.root),
+    renderMetaRow("kategorija", meta.category2)
+  ].filter(Boolean);
+}
+
 const PERSON_ORDER = ["jien", "int", "huwa", "hija", "aħna", "intom", "huma"];
 
 function formatPersonLabel(person) {
@@ -200,19 +220,14 @@ function openVerbDialog(root, pack, slug) {
   dialog.querySelector("[data-verb-dialog-meanings]").textContent = (details.meanings || []).join(" · ");
 
   const meta = details.meta || {};
-  dialog.querySelector("[data-verb-dialog-meta]").innerHTML = `
+  const metaRows = buildMetaRows(meta);
+  dialog.querySelector("[data-verb-dialog-meta]").innerHTML = metaRows.length ? `
     <div class="verb-meta-card">
       <div class="verb-meta-list">
-        ${[
-          renderMetaRow("forma", meta.form),
-          renderMetaRow("tip", meta.type),
-          renderMetaRow("kategorija", meta.category1),
-          renderMetaRow("għerq", meta.root),
-          renderMetaRow("kategorija", meta.category2)
-        ].join("")}
+        ${metaRows.join("")}
       </div>
     </div>
-  `;
+  ` : "";
 
   const tableTitles = {
     present: "Imperfett",
@@ -600,3 +615,4 @@ async function initVerbLookup() {
 }
 
 initVerbLookup();
+

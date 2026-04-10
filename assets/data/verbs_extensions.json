@@ -24,12 +24,17 @@
     "nistrieħ": "istrieh-course",
     "tistrieħ": "istrieh-course",
     "nistrieh": "istrieh-course",
-    "tistrieh": "istrieh-course"
+    "tistrieh": "istrieh-course",
+    "ieqaf": "ieqaf-course",
+    "sajjar": "sajjar-course",
+    "isaffar": "saffar-course"
   },
   "details": {
     "iddisinja": {
       "lemma": "iddisinja",
-      "meanings": ["to design"],
+      "meanings": [
+        "to design"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -60,7 +65,9 @@
     },
     "ikkollezzjona": {
       "lemma": "ikkollezzjona",
-      "meanings": ["to collect"],
+      "meanings": [
+        "to collect"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -91,7 +98,9 @@
     },
     "istartja": {
       "lemma": "istartja",
-      "meanings": ["to start"],
+      "meanings": [
+        "to start"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -121,7 +130,9 @@
     },
     "iċċekkja": {
       "lemma": "iċċekkja",
-      "meanings": ["to check"],
+      "meanings": [
+        "to check"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -152,7 +163,9 @@
     },
     "studja-course": {
       "lemma": "studja",
-      "meanings": ["to study"],
+      "meanings": [
+        "to study"
+      ],
       "meta": {
         "form": "course pattern",
         "type": "course override",
@@ -184,7 +197,9 @@
     },
     "iffirma-course": {
       "lemma": "iffirma",
-      "meanings": ["to sign"],
+      "meanings": [
+        "to sign"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -213,7 +228,9 @@
     },
     "ipprintja-course": {
       "lemma": "ipprintja",
-      "meanings": ["to print"],
+      "meanings": [
+        "to print"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -243,7 +260,9 @@
     },
     "ikkuntattja-course": {
       "lemma": "ikkuntattja",
-      "meanings": ["to contact"],
+      "meanings": [
+        "to contact"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -272,7 +291,9 @@
     },
     "irrilassa-course": {
       "lemma": "irrilassa",
-      "meanings": ["to relax"],
+      "meanings": [
+        "to relax"
+      ],
       "meta": {
         "form": "borrowed pattern",
         "type": "course override",
@@ -302,7 +323,9 @@
     },
     "istrieh-course": {
       "lemma": "istrieħ",
-      "meanings": ["to rest"],
+      "meanings": [
+        "to rest"
+      ],
       "meta": {
         "form": "course pattern",
         "type": "course override",
@@ -327,6 +350,203 @@
             "int": "istrieħ"
           },
           "negative": {}
+        }
+      }
+    },
+    "ieqaf-course": {
+      "lemma": "waqaf",
+      "meanings": [
+        "to stand up to",
+        "to stop"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "needs fuller tables",
+        "root": "w-q-f",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nieqaf",
+            "int": "tieqaf",
+            "huwa": "jieqaf",
+            "hija": "tieqaf",
+            "a?na": "nieqfu",
+            "intom": "tieqfu",
+            "huma": "jieqfu"
+          },
+          "negative": {
+            "jien": "ma nieqafx",
+            "int": "ma tieqafx",
+            "huwa": "ma jieqafx",
+            "hija": "ma tieqafx",
+            "a?na": "ma nieqfux",
+            "intom": "ma tieqfux",
+            "huma": "ma jieqfux"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "waqaft",
+            "int": "waqaft",
+            "huwa": "waqaf",
+            "hija": "waqfet",
+            "a?na": "waqafna",
+            "intom": "waqaftu",
+            "huma": "waqfu"
+          },
+          "negative": {
+            "jien": "ma waqaftx",
+            "int": "ma waqaftx",
+            "huwa": "ma waqafx",
+            "hija": "ma waqfitx",
+            "a?na": "ma waqafniex",
+            "intom": "ma waqaftux",
+            "huma": "ma waqfux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "ieqaf",
+            "intom": "ieqfu"
+          },
+          "negative": {
+            "int": "tieqafx",
+            "intom": "tieqfux"
+          }
+        }
+      }
+    },
+    "sajjar-course": {
+      "lemma": "sajjar",
+      "meanings": [
+        "to cook"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "needs fuller tables",
+        "root": "s-j-r",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nsajjar",
+            "int": "ssajjar",
+            "huwa": "jsajjar",
+            "hija": "ssajjar",
+            "a?na": "nsajru",
+            "intom": "ssajru",
+            "huma": "jsajru"
+          },
+          "negative": {
+            "jien": "ma nsajjarx",
+            "int": "ma ssajjarx",
+            "huwa": "ma jsajjarx",
+            "hija": "ma ssajjarx",
+            "a?na": "ma nsajrux",
+            "intom": "ma ssajrux",
+            "huma": "ma jsajrux"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "sajjart",
+            "int": "sajjart",
+            "huwa": "sajjar",
+            "hija": "sajret",
+            "a?na": "sajjarna",
+            "intom": "sajjartu",
+            "huma": "sajru"
+          },
+          "negative": {
+            "jien": "ma sajjartx",
+            "int": "ma sajjartx",
+            "huwa": "ma sajjarx",
+            "hija": "ma sajritx",
+            "a?na": "ma sajjarniex",
+            "intom": "ma sajjartux",
+            "huma": "ma sajrux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "sajjar",
+            "intom": "sajru"
+          },
+          "negative": {
+            "int": "ssajjarx",
+            "intom": "ssajrux"
+          }
+        }
+      }
+    },
+    "saffar-course": {
+      "lemma": "saffar",
+      "meanings": [
+        "to hiss or buzz",
+        "to whistle"
+      ],
+      "meta": {
+        "form": "gabra-supported",
+        "type": "local extension",
+        "category1": "needs fuller tables",
+        "root": "s-f-r",
+        "category2": "full tables from wordforms"
+      },
+      "tables": {
+        "present": {
+          "positive": {
+            "jien": "nsaffar",
+            "int": "ssaffar",
+            "huwa": "jsaffar",
+            "hija": "ssaffar",
+            "a?na": "nsaffru",
+            "intom": "ssaffru",
+            "huma": "jsaffru"
+          },
+          "negative": {
+            "jien": "ma nsaffarx",
+            "int": "ma ssaffarx",
+            "huwa": "ma jsaffarx",
+            "hija": "ma ssaffarx",
+            "a?na": "ma nsaffrux",
+            "intom": "ma ssaffrux",
+            "huma": "ma jsaffrux"
+          }
+        },
+        "past": {
+          "positive": {
+            "jien": "saffart",
+            "int": "saffart",
+            "huwa": "saffar",
+            "hija": "saffret",
+            "a?na": "saffarna",
+            "intom": "saffartu",
+            "huma": "saffru"
+          },
+          "negative": {
+            "jien": "ma saffartx",
+            "int": "ma saffartx",
+            "huwa": "ma saffarx",
+            "hija": "ma saffritx",
+            "a?na": "ma saffarniex",
+            "intom": "ma saffartux",
+            "huma": "ma saffrux"
+          }
+        },
+        "imperative": {
+          "positive": {
+            "int": "saffar",
+            "intom": "saffru"
+          },
+          "negative": {
+            "int": "ssaffarx",
+            "intom": "ssaffrux"
+          }
         }
       }
     }

@@ -99,3 +99,34 @@ The current build keeps:
 - imperative (`imperattiv`) when available
 
 It also tries to repair common mojibake inside the source JSON during the build step.
+
+## Research Missing Verbs
+
+To enrich the local extension layer from the current unreachable course forms, use:
+
+```text
+scripts\fetch_missing_verbs.py
+```
+
+Example:
+
+```powershell
+C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\fetch_missing_verbs.py --limit 25
+```
+
+This script reads:
+
+- `verbs_course_unreachable.md`
+
+And writes:
+
+- `assets\data\generated\missing_verbs_candidates.json`
+- `assets\data\generated\missing_verbs_draft_extensions.json`
+
+Recommended workflow:
+
+1. Run `fetch_missing_verbs.py`.
+2. Review the top candidates in `missing_verbs_candidates.json`.
+3. Copy the useful draft rows from `missing_verbs_draft_extensions.json` into `assets\data\verbs_extensions.json`.
+4. Add or improve tables manually where needed.
+5. Rebuild the pack with `build_verb_lookup_pack.py`.
