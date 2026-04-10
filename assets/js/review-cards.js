@@ -127,8 +127,29 @@
                         "<span class=\"review-topic-chip\">" + topic.words + " words</span>" +
                         "<span class=\"review-topic-chip\">" + topic.verbs + " verb forms</span>" +
                     "</div>" +
+                    "<div class=\"review-topic-actions\">" +
+                        "<button class=\"action-button\" type=\"button\" data-study-topic=\"" + escapeHtml(topic.topic) + "\">Study this topic</button>" +
+                    "</div>" +
                 "</article>";
         }).join("");
+
+        container.querySelectorAll("[data-study-topic]").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var select = byId("review-topic-filter");
+                if (select) {
+                    select.value = button.getAttribute("data-study-topic") || "";
+                }
+                var dueOnly = byId("review-due-only");
+                if (dueOnly) {
+                    dueOnly.checked = false;
+                }
+                refreshAll(true);
+                var stage = byId("review-stage");
+                if (stage && typeof stage.scrollIntoView === "function") {
+                    stage.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
     }
 
     function renderFilterStatus() {
