@@ -63,6 +63,74 @@
         byId("review-breakdown").textContent = stats.words + " words, " + stats.verbs + " verb forms";
     }
 
+    function buildTopicStats() {
+        var dueLookup = getDueIds();
+        var topics = {};
+
+        getAllCards().forEach(function (card) {
+            var topic = card.topic || "General";
+            if (!topics[topic]) {
+                topics[topic] = {
+                    topic: topic,
+                    total: 0,
+                    due: 0,
+                    words: 0,
+                    verbs: 0
+                };
+            }
+
+            topics[topic].total += 1;
+            if (dueLookup[card.id]) {
+                topics[topic].due += 1;
+            }
+            if (card.type === "verb-form-card") {
+                topics[topic].verbs += 1;
+            } else {
+                topics[topic].words += 1;
+            }
+        });
+
+        return Object.keys(topics)
+            .map(function (key) { return topics[key]; })
+            .sort(function (a, b) {
+                if (b.due !== a.due) {
+                    return b.due - a.due;
+                }
+                if (b.total !== a.total) {
+                    return b.total - a.total;
+                }
+                return String(a.topic).localeCompare(String(b.topic));
+            });
+    }
+
+    function renderTopicOverview() {
+        var container = byId("review-topic-grid");
+        if (!container) {
+            return;
+        }
+
+        var topics = buildTopicStats();
+        if (!topics.length) {
+            container.innerHTML = "<div class=\"review-topic-empty\">No saved topics yet. Add a few words from vocabulary pages and the topic dashboard will appear here.</div>";
+            return;
+        }
+
+        container.innerHTML = topics.map(function (topic) {
+            return "" +
+                "<article class=\"review-topic-card\">" +
+                    "<div class=\"review-topic-top\">" +
+                        "<h3>" + escapeHtml(topic.topic) + "</h3>" +
+                        "<span class=\"status-chip\">" + topic.due + " due</span>" +
+                    "</div>" +
+                    "<p class=\"review-topic-total\">" + topic.total + (topic.total === 1 ? " saved card" : " saved cards") + "</p>" +
+                    "<div class=\"review-topic-breakdown\">" +
+                        "<span class=\"review-topic-chip\">" + topic.words + " words</span>" +
+                        "<span class=\"review-topic-chip\">" + topic.verbs + " verb forms</span>" +
+                    "</div>" +
+                "</article>";
+        }).join("");
+    }
+
     function renderFilterStatus() {
         var filters = getFilters();
         var all = getAllCards();
@@ -284,6 +352,7 @@
         if (resetQueue) {
             queue = [];
         }
+        renderTopicOverview();
         renderSavedList();
         renderCard();
     }
