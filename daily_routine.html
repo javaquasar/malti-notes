@@ -61,67 +61,12 @@
             <section class="content-card" id="core-verbs">
                 <span class="tag">Core Verbs</span>
                 <h2>Everyday Verbs for a Normal Day</h2>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Maltese</th>
-                        <th>English</th>
-                        <th>Example</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><code>inqum</code></td>
-                        <td>I get up</td>
-                        <td><code>Filgħodu inqum kmieni.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>immur</code></td>
-                        <td>I go</td>
-                        <td><code>Immur ix-xogħol filgħodu.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>naħdem</code></td>
-                        <td>I work</td>
-                        <td><code>Naħdem f'uffiċċju.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>niekol</code></td>
-                        <td>I eat</td>
-                        <td><code>F'nofsinhar niekol soppa.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>nixrob</code></td>
-                        <td>I drink</td>
-                        <td><code>Filgħodu nixrob kafè.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>nistrieħ</code></td>
-                        <td>I rest</td>
-                        <td><code>Wara x-xogħol nistrieħ.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>niltaqa'</code></td>
-                        <td>I meet</td>
-                        <td><code>Niltaqa' mal-ħbieb tiegħi.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>noqgħod</code></td>
-                        <td>I live / stay</td>
-                        <td><code>Noqgħod Malta.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>nimxi</code></td>
-                        <td>I walk</td>
-                        <td><code>Xi kultant nimxi d-dar.</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>norqod</code></td>
-                        <td>I sleep</td>
-                        <td><code>Bil-lejl norqod id-dar.</code></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the core routine verbs first, then reuse the templates and model story for longer answers.</span>
+                </div>
+                <div class="vocab-card-grid" data-daily-routine-group="daily-routine-core"></div>
             </section>
             <section class="content-card" id="time-blocks">
                 <span class="tag">Time Blocks</span>
@@ -425,6 +370,22 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
+    <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/daily_routine.json",
+        sourcePage: "daily_routine.html",
+        reviewPrefix: "daily-routine",
+        groupAttribute: "data-daily-routine-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#core-verbs .toolbar-row",
+        pageBulkLabel: "Add all daily-routine verbs",
+        defaultTopic: "Daily Routine",
+        examplePrefix: "Filgħodu"
+    };
+    </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
