@@ -3,7 +3,14 @@
     var queue = [];
     var quickSession = {
         active: false,
-        limit: 0
+        limit: 0,
+        deckIds: [],
+        completed: false,
+        reviewed: 0,
+        again: 0,
+        good: 0,
+        easy: 0,
+        label: ""
     };
     var ANIMALS_DATA_URL = "./assets/data/animals.json";
     var COLORS_DATA_URL = "./assets/data/colors.json";
@@ -65,11 +72,56 @@
     function clearQuickSession() {
         quickSession.active = false;
         quickSession.limit = 0;
+        quickSession.deckIds = [];
+        quickSession.completed = false;
+        quickSession.reviewed = 0;
+        quickSession.again = 0;
+        quickSession.good = 0;
+        quickSession.easy = 0;
+        quickSession.label = "";
     }
 
     function activateQuickSession(limit) {
         quickSession.active = true;
         quickSession.limit = limit;
+        quickSession.deckIds = [];
+        quickSession.completed = false;
+        quickSession.reviewed = 0;
+        quickSession.again = 0;
+        quickSession.good = 0;
+        quickSession.easy = 0;
+        quickSession.label = "";
+    }
+
+    function buildQuickSessionDeck() {
+        return getFilteredCards().slice(0, quickSession.limit).map(function (card) {
+            return card.id;
+        });
+    }
+
+    function getCardsByIds(ids) {
+        var lookup = {};
+        getAllCards().forEach(function (card) {
+            lookup[card.id] = card;
+        });
+        return ids.map(function (id) {
+            return lookup[id];
+        }).filter(Boolean);
+    }
+
+    function restartQuickSession() {
+        if (!quickSession.active || !quickSession.deckIds.length) {
+            return;
+        }
+        quickSession.completed = false;
+        quickSession.reviewed = 0;
+        quickSession.again = 0;
+        quickSession.good = 0;
+        quickSession.easy = 0;
+        queue = getCardsByIds(quickSession.deckIds);
+        renderQuickSessionStatus();
+        renderSavedList();
+        renderCard();
     }
 
     function renderStats() {
@@ -237,30 +289,44 @@
 
     function renderQuickSessionStatus() {
         var status = byId("review-session-status");
+        var repeatButton = byId("review-session-repeat");
         if (!status) {
             return;
         }
 
         if (!quickSession.active || !quickSession.limit) {
             status.textContent = "No quick session is active.";
+            if (repeatButton) {
+                repeatButton.hidden = true;
+            }
             return;
         }
 
         var filters = getFilters();
-        var filtered = getFilteredCards();
-        var sessionCards = filtered.slice(0, quickSession.limit);
+        var sessionCards = quickSession.deckIds.length
+            ? getCardsByIds(quickSession.deckIds)
+            : getFilteredCards().slice(0, quickSession.limit);
         var mode = filters.dueOnly ? "due cards" : "cards";
         var scope = filters.topic ? (" in " + filters.topic) : "";
-        status.textContent = "Quick session active: up to " + quickSession.limit + " " + mode + scope + ". " + sessionCards.length + " card(s) in this run.";
+        var progress = quickSession.reviewed
+            ? (" Reviewed " + quickSession.reviewed + " | Again " + quickSession.again + " | Good " + quickSession.good + " | Easy " + quickSession.easy + ".")
+            : "";
+        var label = quickSession.label ? (quickSession.label + " | ") : "";
+        status.textContent = label + "Quick session active: up to " + quickSession.limit + " " + mode + scope + ". " + sessionCards.length + " card(s) in this run." + progress;
+        if (repeatButton) {
+            repeatButton.hidden = !quickSession.deckIds.length;
+        }
     }
 
     function updateTopicOptions() {
         var select = byId("review-topic-filter");
-        if (!select) {
+        var savedSelect = byId("review-saved-topic-filter");
+        if (!select && !savedSelect) {
             return;
         }
 
-        var current = select.value;
+        var current = select ? select.value : "";
+        var savedCurrent = savedSelect ? savedSelect.value : "";
         var topics = [];
         var seen = {};
 
@@ -276,19 +342,32 @@
             return String(a).localeCompare(String(b));
         });
 
-        select.innerHTML = "<option value=\"\">All topics</option>" + topics.map(function (topic) {
+        var optionsHtml = topics.map(function (topic) {
             return "<option value=\"" + escapeHtml(topic) + "\">" + escapeHtml(topic) + "</option>";
         }).join("");
 
-        if (current && seen[current]) {
-            select.value = current;
+        if (select) {
+            select.innerHTML = "<option value=\"\">All topics</option>" + optionsHtml;
+            if (current && seen[current]) {
+                select.value = current;
+            }
+        }
+
+        if (savedSelect) {
+            savedSelect.innerHTML = "<option value=\"\">All saved topics</option>" + optionsHtml;
+            if (savedCurrent && seen[savedCurrent]) {
+                savedSelect.value = savedCurrent;
+            }
         }
     }
 
     function refillQueue() {
         var cards = getFilteredCards().slice();
         if (quickSession.active && quickSession.limit > 0) {
-            cards = cards.slice(0, quickSession.limit);
+            if (!quickSession.deckIds.length) {
+                quickSession.deckIds = buildQuickSessionDeck();
+            }
+            cards = getCardsByIds(quickSession.deckIds);
         }
         queue = cards;
     }
@@ -342,8 +421,48 @@
             parts.push("Due only");
         }
 
+        if (quickSession.active && quickSession.limit) {
+            parts.push("Quick session: " + quickSession.limit);
+        }
+
         parts.push(remainingCount + " remaining after this card");
         return parts.join(" | ");
+    }
+
+    function getSavedListFilters() {
+        return {
+            search: byId("review-saved-search") ? String(byId("review-saved-search").value || "").trim().toLowerCase() : "",
+            topic: byId("review-saved-topic-filter") ? byId("review-saved-topic-filter").value : ""
+        };
+    }
+
+    function getAnswerOptions() {
+        return {
+            showVisual: !!(byId("review-answer-show-visual") && byId("review-answer-show-visual").checked),
+            showExample: !byId("review-answer-show-example") || byId("review-answer-show-example").checked
+        };
+    }
+
+    function getSavedListCards() {
+        var filters = getSavedListFilters();
+        return getFilteredCards().filter(function (card) {
+            if (filters.topic && card.topic !== filters.topic) {
+                return false;
+            }
+            if (!filters.search) {
+                return true;
+            }
+            var haystack = [
+                card.maltese,
+                card.english,
+                card.topic,
+                card.lemma,
+                card.answer,
+                card.pronoun,
+                card.translation
+            ].join(" ").toLowerCase();
+            return haystack.indexOf(filters.search) !== -1;
+        });
     }
 
     function renderEmpty() {
@@ -353,12 +472,24 @@
         var title = "No review cards ready";
         var message = "Add custom words, save vocabulary from topic pages, or add a verb drill from the verbs page.";
         var actions = "<p><a class=\"action-link\" href=\"./animals.html\">Open Animals Page</a> <a class=\"action-link\" href=\"./verbs_guide.html\">Open Verbs Page</a></p>";
+        var summary = "";
 
         if (quickSession.active && hasSavedCards && filteredCount > 0) {
+            quickSession.completed = true;
             title = filters.dueOnly ? "Quick due session complete" : "Quick session complete";
             message = filters.dueOnly
                 ? "You finished this short due-only run. You can restart it, keep studying the full topic, or go back to all topics."
                 : "You reached the end of this short review run. You can restart it, continue with the full set, or go back to all topics.";
+            summary = "" +
+                "<div class=\"review-session-summary-card\">" +
+                    "<h3>" + escapeHtml(quickSession.label || "Quick session") + "</h3>" +
+                    "<div class=\"review-session-summary-grid\">" +
+                        "<span class=\"review-topic-chip\">Reviewed " + quickSession.reviewed + "</span>" +
+                        "<span class=\"review-topic-chip\">Again " + quickSession.again + "</span>" +
+                        "<span class=\"review-topic-chip\">Good " + quickSession.good + "</span>" +
+                        "<span class=\"review-topic-chip\">Easy " + quickSession.easy + "</span>" +
+                    "</div>" +
+                "</div>";
             actions = "" +
                 "<div class=\"review-empty-actions\">" +
                     "<button class=\"action-button\" type=\"button\" id=\"review-restart-quick-session\">Restart quick session</button>" +
@@ -377,7 +508,7 @@
                 "</div>";
         }
 
-        byId("review-stage").innerHTML = "<div class=\"review-empty\"><h2>" + escapeHtml(title) + "</h2><p class=\"mini\">" + escapeHtml(message) + "</p>" + actions + "</div>";
+        byId("review-stage").innerHTML = "<div class=\"review-empty\"><h2>" + escapeHtml(title) + "</h2><p class=\"mini\">" + escapeHtml(message) + "</p>" + summary + actions + "</div>";
 
         var resetButton = byId("review-reset-filters");
         if (resetButton) {
@@ -418,7 +549,7 @@
         var restartQuickButton = byId("review-restart-quick-session");
         if (restartQuickButton) {
             restartQuickButton.addEventListener("click", function () {
-                refreshAll(true);
+                restartQuickSession();
             });
         }
 
@@ -487,18 +618,34 @@
         }
 
         var direction = getWordDirection();
+        var answerOptions = getAnswerOptions();
         var title = escapeHtml(card.english || "(translation to add later)");
         var secondary = "<div class=\"review-meta\">Maltese: " + escapeHtml(card.maltese) + "</div>";
+        var visualHtml = "";
+        var exampleHtml = "";
 
         if (direction === "english-to-maltese" || direction === "image-to-maltese") {
             title = escapeHtml(card.maltese);
             secondary = "<div class=\"review-meta\">English: " + escapeHtml(card.english || "(translation to add later)") + "</div>";
         }
 
+        if (answerOptions.showVisual) {
+            if (card.image) {
+                visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
+            } else if (card.swatchStyle) {
+                visualHtml = "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";
+            }
+        }
+
+        if (answerOptions.showExample) {
+            exampleHtml = "<div class=\"review-meta\">Example: " + escapeHtml(card.example || "No example yet.") + "</div>";
+        }
+
         return "" +
+            visualHtml +
             "<h3>" + title + "</h3>" +
             secondary +
-            "<div class=\"review-meta\">Example: " + escapeHtml(card.example || "No example yet.") + "</div>" +
+            exampleHtml +
             "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>";
     }
 
@@ -509,7 +656,7 @@
             return;
         }
 
-        var cards = getFilteredCards();
+        var cards = getSavedListCards();
         if (count) {
             count.textContent = cards.length + (cards.length === 1 ? " card" : " cards");
         }
@@ -593,7 +740,18 @@
 
         byId("review-grade-actions").querySelectorAll("[data-grade]").forEach(function (button) {
             button.addEventListener("click", function () {
-                window.MaltiReviewStore.reviewCard(currentCard.id, button.getAttribute("data-grade"));
+                var grade = button.getAttribute("data-grade");
+                window.MaltiReviewStore.reviewCard(currentCard.id, grade);
+                if (quickSession.active) {
+                    quickSession.reviewed += 1;
+                    if (grade === "again") {
+                        quickSession.again += 1;
+                    } else if (grade === "good") {
+                        quickSession.good += 1;
+                    } else if (grade === "easy") {
+                        quickSession.easy += 1;
+                    }
+                }
                 refreshAll(false);
             });
         });
@@ -626,6 +784,9 @@
     function wireQuickSessions() {
         var studyTenAll = byId("review-session-10-all");
         var studyTenDue = byId("review-session-10-due");
+        var studyTenWords = byId("review-session-10-words");
+        var studyTenVerbs = byId("review-session-10-verbs");
+        var repeatQuick = byId("review-session-repeat");
 
         function scrollToStage() {
             var stage = byId("review-stage");
@@ -634,15 +795,29 @@
             }
         }
 
+        function setTypeFilter(value) {
+            var type = byId("review-type-filter");
+            if (type) {
+                type.value = value;
+            }
+        }
+
+        function startQuickSession(label, limit) {
+            activateQuickSession(limit);
+            quickSession.label = label;
+            quickSession.deckIds = buildQuickSessionDeck();
+            refreshAll(true);
+            scrollToStage();
+        }
+
         if (studyTenAll) {
             studyTenAll.addEventListener("click", function () {
                 var dueOnly = byId("review-due-only");
                 if (dueOnly) {
                     dueOnly.checked = false;
                 }
-                activateQuickSession(10);
-                refreshAll(true);
-                scrollToStage();
+                setTypeFilter("");
+                startQuickSession("Quick session: all cards", 10);
             });
         }
 
@@ -652,9 +827,92 @@
                 if (dueOnly) {
                     dueOnly.checked = true;
                 }
-                activateQuickSession(10);
-                refreshAll(true);
+                setTypeFilter("");
+                startQuickSession("Quick session: due cards", 10);
+            });
+        }
+
+        if (studyTenWords) {
+            studyTenWords.addEventListener("click", function () {
+                var dueOnly = byId("review-due-only");
+                if (dueOnly) {
+                    dueOnly.checked = false;
+                }
+                setTypeFilter("word-card");
+                startQuickSession("Quick session: words", 10);
+            });
+        }
+
+        if (studyTenVerbs) {
+            studyTenVerbs.addEventListener("click", function () {
+                var dueOnly = byId("review-due-only");
+                if (dueOnly) {
+                    dueOnly.checked = false;
+                }
+                setTypeFilter("verb-form-card");
+                startQuickSession("Quick session: verb forms", 10);
+            });
+        }
+
+        if (repeatQuick) {
+            repeatQuick.addEventListener("click", function () {
+                restartQuickSession();
                 scrollToStage();
+            });
+        }
+    }
+
+    function wireSavedListTools() {
+        var search = byId("review-saved-search");
+        var topic = byId("review-saved-topic-filter");
+        var removeFiltered = byId("review-remove-saved-filtered");
+        var removeVerbs = byId("review-remove-saved-verbs");
+
+        if (search) {
+            search.addEventListener("input", function () {
+                renderSavedList();
+            });
+        }
+
+        if (topic) {
+            topic.addEventListener("change", function () {
+                renderSavedList();
+            });
+        }
+
+        if (removeFiltered) {
+            removeFiltered.addEventListener("click", function () {
+                var cards = getSavedListCards();
+                if (!cards.length || !window.confirm("Remove the currently shown saved cards?")) {
+                    return;
+                }
+                cards.forEach(function (card) {
+                    window.MaltiReviewStore.removeCard(card.id);
+                });
+                if (currentCard && !getAllCards().some(function (card) { return card.id === currentCard.id; })) {
+                    currentCard = null;
+                }
+                clearQuickSession();
+                refreshAll(true);
+            });
+        }
+
+        if (removeVerbs) {
+            removeVerbs.addEventListener("click", function () {
+                var cards = getSavedListCards().filter(function (card) {
+                    return card.type === "verb-form-card";
+                });
+                if (!cards.length || !window.confirm("Remove the shown verb-form cards?")) {
+                    return;
+                }
+                cards.forEach(function (card) {
+                    window.MaltiReviewStore.removeCard(card.id);
+                });
+                if (currentCard && !getAllCards().some(function (card) { return card.id === currentCard.id; })) {
+                    currentCard = null;
+                }
+                clearQuickSession();
+                refreshAll(true);
             });
         }
     }
@@ -806,6 +1064,7 @@
 
         wireFilters();
         wireQuickSessions();
+        wireSavedListTools();
         wireCustomForm();
 
         Promise.allSettled([backfillAnimalImages(), backfillColorSwatches()]).finally(function () {

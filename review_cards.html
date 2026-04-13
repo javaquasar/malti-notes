@@ -63,6 +63,9 @@
                 <div class="review-session-grid">
                     <button class="action-button" type="button" id="review-session-10-all">Study 10 cards</button>
                     <button class="action-button" type="button" id="review-session-10-due">Study 10 due</button>
+                    <button class="action-button" type="button" id="review-session-10-words">Study 10 words</button>
+                    <button class="action-button" type="button" id="review-session-10-verbs">Study 10 verb forms</button>
+                    <button class="action-button" type="button" id="review-session-repeat" hidden>Repeat this quick session</button>
                     <div class="review-filter-status" id="review-session-status">No quick session is active.</div>
                 </div>
             </section>
@@ -95,6 +98,14 @@
                     <label class="review-check">
                         <input id="review-due-only" type="checkbox">
                         <span><strong>Study only due</strong><small>Show only cards that are due now.</small></span>
+                    </label>
+                    <label class="review-check">
+                        <input id="review-answer-show-visual" type="checkbox">
+                        <span><strong>Show visual on answer</strong><small>Repeat the image or colour swatch on the back side.</small></span>
+                    </label>
+                    <label class="review-check">
+                        <input id="review-answer-show-example" type="checkbox" checked>
+                        <span><strong>Show example on answer</strong><small>Keep the example sentence visible on the back side.</small></span>
                     </label>
                     <div class="review-filter-status" id="review-filter-status">All saved cards are included.</div>
                 </div>
@@ -142,6 +153,22 @@
                     </summary>
                     <div class="review-saved-body">
                         <h2>Saved Review Cards</h2>
+                        <div class="review-saved-tools">
+                            <label>
+                                <strong>Search</strong>
+                                <input class="review-input" id="review-saved-search" type="text" placeholder="Search Maltese, English, topic">
+                            </label>
+                            <label>
+                                <strong>Saved Topic</strong>
+                                <select class="review-select" id="review-saved-topic-filter">
+                                    <option value="">All saved topics</option>
+                                </select>
+                            </label>
+                            <div class="review-saved-bulk-actions">
+                                <button class="action-button" type="button" id="review-remove-saved-filtered">Remove shown cards</button>
+                                <button class="action-button" type="button" id="review-remove-saved-verbs">Remove shown verb forms</button>
+                            </div>
+                        </div>
                         <div class="review-saved-list" id="review-saved-list"></div>
                     </div>
                 </details>
