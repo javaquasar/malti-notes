@@ -269,14 +269,14 @@
         } else if (filters.type === "verb-form-card") {
             bits.push("type: verb forms");
         }
-        if (!filters.type || filters.type === "word-card") {
-            if (filters.direction === "english-to-maltese") {
-                bits.push("direction: English -> Maltese");
-            } else if (filters.direction === "image-to-maltese") {
-                bits.push("direction: Image / Colour -> Maltese");
-            } else {
-                bits.push("direction: Maltese -> English");
-            }
+        if (filters.direction === "english-to-maltese") {
+            bits.push("direction: English -> Maltese");
+        } else if (filters.direction === "image-to-maltese") {
+            bits.push(filters.type === "verb-form-card"
+                ? "direction: Maltese -> English"
+                : "direction: Image / Colour -> Maltese");
+        } else {
+            bits.push("direction: Maltese -> English");
         }
         if (filters.dueOnly) {
             bits.push("due only");
@@ -407,14 +407,20 @@
             parts.push("Mode: All cards");
         }
 
-        if (!filters.type || filters.type === "word-card") {
-            if (filters.direction === "english-to-maltese") {
-                parts.push("Direction: English -> Maltese");
-            } else if (filters.direction === "image-to-maltese") {
-                parts.push("Direction: Image / Colour -> Maltese");
-            } else {
+        if (filters.direction === "english-to-maltese") {
+            parts.push("Direction: English -> Maltese");
+        } else if (filters.direction === "image-to-maltese") {
+            if (filters.type === "verb-form-card") {
                 parts.push("Direction: Maltese -> English");
+            } else {
+                parts.push("Direction: Image / Colour -> Maltese");
             }
+        } else {
+            parts.push("Direction: Maltese -> English");
+        }
+
+        if (filters.type === "verb-form-card" && filters.direction === "image-to-maltese") {
+            parts.push("Verb forms ignore image mode");
         }
 
         if (filters.dueOnly) {
@@ -568,15 +574,26 @@
     }
 
     function buildFront(card) {
+        var direction = getWordDirection();
+
         if (card.type === "verb-form-card") {
+            if (direction === "english-to-maltese") {
+                return "" +
+                    "<span class=\"tag\">Verb Form | English -> Maltese</span>" +
+                    "<div class=\"review-meta\">Tense: " + escapeHtml(card.tense) + "</div>" +
+                    "<div class=\"review-word\">" + escapeHtml(card.translation || card.lemma) + "</div>" +
+                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + "</div>" +
+                    "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>" +
+                    "<div class=\"review-meta\">Build the Maltese form for this pronoun and tense.</div>";
+            }
+
             return "" +
-                "<span class=\"tag\">Verb Form</span>" +
+                "<span class=\"tag\">Verb Form | Maltese -> English</span>" +
                 "<div class=\"review-meta\">Tense: " + escapeHtml(card.tense) + "</div>" +
-                "<div class=\"review-word\">" + escapeHtml(card.pronoun) + "</div>" +
-                "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + " | " + escapeHtml(card.translation) + "</div>";
+                "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>" +
+                "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Lemma: " + escapeHtml(card.lemma) + "</div>";
         }
 
-        var direction = getWordDirection();
         var visualHtml = "";
         if (card.image) {
             visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
@@ -610,14 +627,24 @@
     }
 
     function buildAnswer(card) {
+        var direction = getWordDirection();
         if (card.type === "verb-form-card") {
+            if (direction === "english-to-maltese") {
+                return "" +
+                    "<h3>" + escapeHtml(card.answer) + "</h3>" +
+                    "<div class=\"review-meta\">English: " + escapeHtml(card.translation || card.lemma) + "</div>" +
+                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + "</div>" +
+                    "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
+                    "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
+            }
+
             return "" +
-                "<h3>" + escapeHtml(card.answer) + "</h3>" +
+                "<h3>" + escapeHtml(card.translation || "(translation to add later)") + "</h3>" +
+                "<div class=\"review-meta\">Answer: " + escapeHtml(card.answer) + "</div>" +
                 "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
                 "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
         }
 
-        var direction = getWordDirection();
         var answerOptions = getAnswerOptions();
         var title = escapeHtml(card.english || "(translation to add later)");
         var secondary = "<div class=\"review-meta\">Maltese: " + escapeHtml(card.maltese) + "</div>";
