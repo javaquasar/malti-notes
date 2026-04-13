@@ -62,14 +62,12 @@
             <section class="card" id="vocab">
                 <span class="tag">Vocabulary</span>
                 <h2>Restaurant Vocabulary</h2>
-                <div class="three-col">
-                    <div class="item"><strong>menu</strong><span>menu</span></div>
-                    <div class="item"><strong>mejda</strong><span>table</span></div>
-                    <div class="item"><strong>ristorant</strong><span>restaurant</span></div>
-                    <div class="item"><strong>platt</strong><span>dish / plate</span></div>
-                    <div class="item"><strong>kont</strong><span>bill</span></div>
-                    <div class="item"><strong>riżervazzjoni</strong><span>reservation</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the core restaurant words first, then reuse the dialogue and phrase sections for speaking practice.</span>
                 </div>
+                <div class="vocab-card-grid" data-restaurant-group="restaurant-core"></div>
             </section>
 
             <section class="card" id="ordering">
@@ -243,14 +241,28 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/restaurant_ordering.json",
+        sourcePage: "restaurant_ordering.html",
+        reviewPrefix: "restaurant",
+        groupAttribute: "data-restaurant-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#vocab .toolbar-row",
+        pageBulkLabel: "Add all restaurant words",
+        defaultTopic: "Restaurant",
+        examplePrefix: "Nixtieq"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/restaurant_ordering_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "phrase-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
