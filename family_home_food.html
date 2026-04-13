@@ -192,26 +192,12 @@
             <section class="card" id="food">
                 <span class="tag">Food</span>
                 <h2>Basic Food Vocabulary</h2>
-                <div class="three-col">
-                    <div class="item"><strong>ħobż</strong><span>bread</span></div>
-                    <div class="item"><strong>ġobon</strong><span>cheese</span></div>
-                    <div class="item"><strong>bajda</strong><span>egg</span></div>
-                    <div class="item"><strong>laħam</strong><span>meat</span></div>
-                    <div class="item"><strong>ħaxix</strong><span>vegetables</span></div>
-                    <div class="item"><strong>frott</strong><span>fruit</span></div>
-                    <div class="item"><strong>soppa</strong><span>soup</span></div>
-                    <div class="item"><strong>ross</strong><span>rice</span></div>
-                    <div class="item"><strong>patata</strong><span>potato</span></div>
-                    <div class="item"><strong>tadam</strong><span>tomato</span></div>
-                    <div class="item"><strong>karrotta</strong><span>carrot</span></div>
-                    <div class="item"><strong>pizza</strong><span>pizza</span></div>
-                    <div class="item"><strong>tiġieġ</strong><span>chicken</span></div>
-                    <div class="item"><strong>insalata</strong><span>salad</span></div>
-                    <div class="item"><strong>kejk</strong><span>cake</span></div>
-                    <div class="item"><strong>ħut</strong><span>fish</span></div>
-                    <div class="item"><strong>għaġin</strong><span>pasta</span></div>
-                    <div class="item"><strong>butir</strong><span>butter</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Start with the food vocabulary here, then reuse the model answers and stories for homework practice.</span>
                 </div>
+                <div class="vocab-card-grid" data-family-home-food-group="family-home-food-core"></div>
                 <div class="list mt-16">
                     <div class="example"><strong>Inħobb il-ħobż u l-ġobon.</strong><span>I like bread and cheese.</span>
                     </div>
@@ -1636,6 +1622,22 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
+    <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/family_home_food.json",
+        sourcePage: "family_home_food.html",
+        reviewPrefix: "family-home-food",
+        groupAttribute: "data-family-home-food-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#food .toolbar-row",
+        pageBulkLabel: "Add all family-home-food words",
+        defaultTopic: "Family, Home and Food",
+        examplePrefix: "Inħobb"
+    };
+    </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
