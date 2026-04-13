@@ -59,14 +59,12 @@
             <section class="card" id="common">
                 <span class="tag">Everyday</span>
                 <h2>Common Problems</h2>
-                <div class="three-col">
-                    <div class="item"><strong>problema</strong><span>problem</span></div>
-                    <div class="item"><strong>tlift</strong><span>I lost</span></div>
-                    <div class="item"><strong>għandi bżonn għajnuna</strong><span>I need help</span></div>
-                    <div class="item"><strong>għajjien / għajjiena</strong><span>tired</span></div>
-                    <div class="item"><strong>m'għandix ħin</strong><span>I do not have time</span></div>
-                    <div class="item"><strong>stressjat / stressjata</strong><span>stressed</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the core daily-problem words first, then revisit the dialogues and phrase bank for speaking practice.</span>
                 </div>
+                <div class="vocab-card-grid" data-daily-problems-group="daily-problems-core"></div>
             </section>
 
             <section class="card" id="transport">
@@ -214,14 +212,28 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/daily_problems.json",
+        sourcePage: "daily_problems.html",
+        reviewPrefix: "daily-problems",
+        groupAttribute: "data-daily-problems-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#common .toolbar-row",
+        pageBulkLabel: "Add all daily-problem words",
+        defaultTopic: "Daily Problems",
+        examplePrefix: "Għandi"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/daily_problems_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "phrase-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
