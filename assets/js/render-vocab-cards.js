@@ -1,4 +1,16 @@
 (function () {
+    function getItemNotes(item) {
+        if (Array.isArray(item.notes)) {
+            return item.notes;
+        }
+
+        if (typeof item.note === "string" && item.note.trim()) {
+            return [item.note.trim()];
+        }
+
+        return [];
+    }
+
     function createNotes(container, notes) {
         (notes || []).forEach(function (note) {
             var small = document.createElement("small");
@@ -43,7 +55,7 @@
         span.textContent = item.english;
         figure.appendChild(span);
 
-        createNotes(figure, item.notes);
+        createNotes(figure, getItemNotes(item));
 
         if (typeof options.reviewButtonFactory === "function") {
             var reviewButton = options.reviewButtonFactory(item);
