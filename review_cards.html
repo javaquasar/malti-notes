@@ -95,6 +95,15 @@
                             <option value="image-to-maltese">Image / Colour -> Maltese</option>
                         </select>
                     </label>
+                    <label>
+                        <strong>Verb Tense</strong>
+                        <select class="review-select" id="review-tense-filter">
+                            <option value="">All tenses</option>
+                            <option value="present">Present</option>
+                            <option value="past">Past</option>
+                            <option value="imperative">Imperative</option>
+                        </select>
+                    </label>
                     <label class="review-check">
                         <input id="review-due-only" type="checkbox">
                         <span><strong>Study only due</strong><small>Show only cards that are due now.</small></span>
@@ -106,6 +115,10 @@
                     <label class="review-check">
                         <input id="review-answer-show-example" type="checkbox" checked>
                         <span><strong>Show example on answer</strong><small>Keep the example sentence visible on the back side.</small></span>
+                    </label>
+                    <label class="review-check">
+                        <input id="review-verb-show-lemma" type="checkbox" checked>
+                        <span><strong>Show lemma on verb front</strong><small>Keep the dictionary form visible while reviewing verb cards.</small></span>
                     </label>
                     <div class="review-filter-status" id="review-filter-status">All saved cards are included.</div>
                 </div>

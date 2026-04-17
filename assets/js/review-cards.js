@@ -43,6 +43,7 @@
         return {
             topic: byId("review-topic-filter") ? byId("review-topic-filter").value : "",
             type: byId("review-type-filter") ? byId("review-type-filter").value : "",
+            tense: byId("review-tense-filter") ? byId("review-tense-filter").value : "",
             direction: byId("review-direction-filter") ? byId("review-direction-filter").value : "maltese-to-english",
             dueOnly: !!(byId("review-due-only") && byId("review-due-only").checked)
         };
@@ -55,10 +56,35 @@
         if (filters.type && card.type !== filters.type) {
             return false;
         }
+        if (filters.tense) {
+            if (card.type !== "verb-form-card") {
+                return false;
+            }
+            if (String(card.tense || "").toLowerCase() !== String(filters.tense).toLowerCase()) {
+                return false;
+            }
+        }
         if (filters.dueOnly && !dueLookup[card.id]) {
             return false;
         }
         return true;
+    }
+
+    function formatTenseLabel(value) {
+        var tense = String(value || "").trim().toLowerCase();
+        if (!tense) {
+            return "";
+        }
+        if (tense === "present") {
+            return "Present";
+        }
+        if (tense === "past") {
+            return "Past";
+        }
+        if (tense === "imperative") {
+            return "Imperative";
+        }
+        return tense.charAt(0).toUpperCase() + tense.slice(1);
     }
 
     function getFilteredCards() {
@@ -269,6 +295,9 @@
         } else if (filters.type === "verb-form-card") {
             bits.push("type: verb forms");
         }
+        if (filters.tense) {
+            bits.push("tense: " + formatTenseLabel(filters.tense));
+        }
         if (filters.direction === "english-to-maltese") {
             bits.push("direction: English -> Maltese");
         } else if (filters.direction === "image-to-maltese") {
@@ -308,11 +337,12 @@
             : getFilteredCards().slice(0, quickSession.limit);
         var mode = filters.dueOnly ? "due cards" : "cards";
         var scope = filters.topic ? (" in " + filters.topic) : "";
+        var tense = filters.tense ? (" | " + formatTenseLabel(filters.tense)) : "";
         var progress = quickSession.reviewed
             ? (" Reviewed " + quickSession.reviewed + " | Again " + quickSession.again + " | Good " + quickSession.good + " | Easy " + quickSession.easy + ".")
             : "";
         var label = quickSession.label ? (quickSession.label + " | ") : "";
-        status.textContent = label + "Quick session active: up to " + quickSession.limit + " " + mode + scope + ". " + sessionCards.length + " card(s) in this run." + progress;
+        status.textContent = label + "Quick session active: up to " + quickSession.limit + " " + mode + scope + tense + ". " + sessionCards.length + " card(s) in this run." + progress;
         if (repeatButton) {
             repeatButton.hidden = !quickSession.deckIds.length;
         }
@@ -406,6 +436,9 @@
         } else {
             parts.push("Mode: All cards");
         }
+        if (filters.tense) {
+            parts.push("Tense: " + formatTenseLabel(filters.tense));
+        }
 
         if (filters.direction === "english-to-maltese") {
             parts.push("Direction: English -> Maltese");
@@ -445,7 +478,8 @@
     function getAnswerOptions() {
         return {
             showVisual: !!(byId("review-answer-show-visual") && byId("review-answer-show-visual").checked),
-            showExample: !byId("review-answer-show-example") || byId("review-answer-show-example").checked
+            showExample: !byId("review-answer-show-example") || byId("review-answer-show-example").checked,
+            showVerbLemmaFront: !byId("review-verb-show-lemma") || byId("review-verb-show-lemma").checked
         };
     }
 
@@ -630,6 +664,7 @@
 
     function buildFront(card) {
         var direction = getWordDirection();
+        var answerOptions = getAnswerOptions();
 
         if (card.type === "verb-form-card") {
             if (direction === "english-to-maltese") {
@@ -638,7 +673,9 @@
                     "<span class=\"tag\">Verb Form | English -> Maltese</span>" +
                     "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + " | Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                     "<div class=\"review-word\">" + escapeHtml(primaryMeaning) + "</div>" +
-                    "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>";
+                    (answerOptions.showVerbLemmaFront
+                        ? ("<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>")
+                        : "");
             }
 
             return "" +
@@ -646,7 +683,9 @@
                 "<div class=\"review-meta\">Tense: " + escapeHtml(card.tense) + "</div>" +
                 "<div class=\"review-meta\">Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                 "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>" +
-                "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Lemma: " + escapeHtml(card.lemma) + "</div>";
+                "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) +
+                (answerOptions.showVerbLemmaFront ? (" | Lemma: " + escapeHtml(card.lemma)) : "") +
+                "</div>";
         }
 
         var visualHtml = "";
@@ -687,6 +726,7 @@
             if (direction === "english-to-maltese") {
                 return "" +
                     "<h3>" + escapeHtml(card.answer) + "</h3>" +
+                    "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>" +
                     "<div class=\"review-meta\">Full meanings: " + escapeHtml(card.translation || card.lemma) + "</div>" +
                     "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + " | Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                     "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
@@ -696,6 +736,7 @@
             return "" +
                 "<h3>" + escapeHtml(card.translation || "(translation to add later)") + "</h3>" +
                 "<div class=\"review-meta\">Answer: " + escapeHtml(card.answer) + "</div>" +
+                "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>" +
                 "<div class=\"review-meta\">Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                 "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
                 "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
@@ -788,26 +829,16 @@
         });
     }
 
-    function renderCard() {
-        renderStats();
-        renderFilterStatus();
-
-        if (!queue.length) {
-            refillQueue();
-        }
-
-        currentCard = queue.shift() || null;
-        if (!currentCard) {
-            renderEmpty();
-            return;
-        }
-
+    function renderCurrentCardStage() {
         var sessionSummary = buildSessionSummary(currentCard, queue.length);
+        var verbCardAttrs = currentCard && currentCard.type === "verb-form-card"
+            ? " data-review-open-verb=\"true\" title=\"Click to open the full verb table\""
+            : "";
 
         byId("review-stage").innerHTML = "" +
             "<div class=\"review-session-bar\">" + escapeHtml(sessionSummary) + "</div>" +
-            buildFront(currentCard) +
-            "<div class=\"review-answer\" id=\"review-answer\" hidden>" + buildAnswer(currentCard) + "</div>" +
+            "<div class=\"review-card-body\"" + verbCardAttrs + ">" + buildFront(currentCard) + "</div>" +
+            "<div class=\"review-answer\" id=\"review-answer\" hidden" + verbCardAttrs + ">" + buildAnswer(currentCard) + "</div>" +
             "<div class=\"review-actions\"><button class=\"action-button\" id=\"show-answer-button\" type=\"button\">Show answer</button></div>" +
             "<div class=\"review-grade-actions\" id=\"review-grade-actions\" hidden>" +
                 "<button class=\"action-button\" data-grade=\"again\" type=\"button\">Again</button>" +
@@ -820,6 +851,20 @@
             byId("review-grade-actions").hidden = false;
             this.hidden = true;
         });
+
+        if (currentCard && currentCard.type === "verb-form-card") {
+            byId("review-stage").querySelectorAll("[data-review-open-verb]").forEach(function (node) {
+                node.addEventListener("click", function () {
+                    if (!window.MaltiVerbLookup?.open) {
+                        return;
+                    }
+                    window.MaltiVerbLookup.open({
+                        verb: currentCard.lemma,
+                        lookupHint: currentCard.answer
+                    });
+                });
+            });
+        }
 
         byId("review-grade-actions").querySelectorAll("[data-grade]").forEach(function (button) {
             button.addEventListener("click", function () {
@@ -840,6 +885,23 @@
         });
     }
 
+    function renderCard() {
+        renderStats();
+        renderFilterStatus();
+
+        if (!queue.length) {
+            refillQueue();
+        }
+
+        currentCard = queue.shift() || null;
+        if (!currentCard) {
+            renderEmpty();
+            return;
+        }
+
+        renderCurrentCardStage();
+    }
+
     function refreshAll(resetQueue) {
         updateTopicOptions();
         if (resetQueue) {
@@ -852,7 +914,7 @@
     }
 
     function wireFilters() {
-        ["review-topic-filter", "review-type-filter", "review-direction-filter", "review-due-only"].forEach(function (id) {
+        ["review-topic-filter", "review-type-filter", "review-tense-filter", "review-direction-filter", "review-due-only"].forEach(function (id) {
             var element = byId(id);
             if (!element) {
                 return;
@@ -860,6 +922,21 @@
             element.addEventListener("change", function () {
                 clearQuickSession();
                 refreshAll(true);
+            });
+        });
+    }
+
+    function wireAnswerOptions() {
+        ["review-answer-show-visual", "review-answer-show-example", "review-verb-show-lemma"].forEach(function (id) {
+            var element = byId(id);
+            if (!element) {
+                return;
+            }
+            element.addEventListener("change", function () {
+                if (!currentCard) {
+                    return;
+                }
+                renderCurrentCardStage();
             });
         });
     }
@@ -1146,6 +1223,7 @@
         }
 
         wireFilters();
+        wireAnswerOptions();
         wireQuickSessions();
         wireSavedListTools();
         wireCustomForm();
