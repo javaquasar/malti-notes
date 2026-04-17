@@ -124,33 +124,18 @@
             <section class="content-card" id="ordinals">
                 <span class="tag">Ordinal Numbers</span>
                 <h2>First, Second, Third...</h2>
-                <div class="two-col">
-                    <div class="box">
-                        <table>
-                            <thead><tr><th>Maltese</th><th>English</th></tr></thead>
-                            <tbody>
-                            <tr><td>l-ewwel</td><td>first</td></tr>
-                            <tr><td>it-tieni</td><td>second</td></tr>
-                            <tr><td>it-tielet</td><td>third</td></tr>
-                            <tr><td>ir-raba'</td><td>fourth</td></tr>
-                            <tr><td>il-ħames</td><td>fifth</td></tr>
-                            <tr><td>is-sitt</td><td>sixth</td></tr>
-                            <tr><td>is-seba'</td><td>seventh</td></tr>
-                            <tr><td>it-tmien</td><td>eighth</td></tr>
-                            <tr><td>id-disa'</td><td>ninth</td></tr>
-                            <tr><td>l-għaxar</td><td>tenth</td></tr>
-                            </tbody>
-                        </table>
+                <div data-vocab-view-scope>
+                    <div class="toolbar-row">
+                        <div class="segmented-toggle" role="group" aria-label="Ordinal vocabulary view">
+                            <button type="button" class="toggle-chip is-active" data-vocab-view-button="cards" aria-pressed="true">Cards</button>
+                            <button type="button" class="toggle-chip" data-vocab-view-button="table" aria-pressed="false">Table</button>
+                        </div>
                     </div>
-                    <div class="box">
-                        <h3>Examples</h3>
-                        <ul class="example-list">
-                            <li><code>Huwa l-ewwel.</code> = He is first.</li>
-                            <li><code>Din it-tieni darba.</code> = This is the second time.</li>
-                            <li><code>It-tielet lezzjoni</code> = the third lesson</li>
-                            <li><code>Ir-raba' jum</code> = the fourth day</li>
-                            <li><code>Il-ħames xahar</code> = the fifth month</li>
-                        </ul>
+                    <div data-vocab-view-panel="cards">
+                        <div class="vocab-card-grid" data-calendar-group="calendar-ordinals"></div>
+                    </div>
+                    <div class="box" data-vocab-view-panel="table" hidden>
+                        <div data-vocab-table-group="calendar-ordinals"></div>
                     </div>
                 </div>
             </section>
@@ -297,15 +282,20 @@
                         </div>
                         <div class="box">
                             <h3>Parts of the Day</h3>
-                            <ul class="example-list">
-                                <li><code>filgħodu</code> = in the morning</li>
-                                <li><code>waranofsinhar</code> = in the afternoon</li>
-                                <li><code>filgħaxija</code> = in the evening</li>
-                                <li><code>ta' billejl</code> = at night</li>
-                                <li><code>is-sebgħa ta' filgħodu</code> = seven in the morning</li>
-                                <li><code>l-erbgħa ta' waranofsinhar</code> = four in the afternoon</li>
-                                <li><code>id-disgħa ta' billejl</code> = nine at night</li>
-                            </ul>
+                            <div data-vocab-view-scope>
+                                <div class="toolbar-row">
+                                    <div class="segmented-toggle" role="group" aria-label="Parts of the day vocabulary view">
+                                        <button type="button" class="toggle-chip is-active" data-vocab-view-button="cards" aria-pressed="true">Cards</button>
+                                        <button type="button" class="toggle-chip" data-vocab-view-button="table" aria-pressed="false">Table</button>
+                                    </div>
+                                </div>
+                                <div data-vocab-view-panel="cards">
+                                    <div class="vocab-card-grid" data-calendar-group="calendar-parts-of-day"></div>
+                                </div>
+                                <div data-vocab-view-panel="table" hidden>
+                                    <div data-vocab-table-group="calendar-parts-of-day"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -357,18 +347,20 @@
                     </div>
                     <div class="box">
                         <h3>Time Units</h3>
-                        <table class="table-soft">
-                            <tbody>
-                            <tr><th>siegħa</th><td>hour</td></tr>
-                            <tr><th>sigħat</th><td>hours</td></tr>
-                            <tr><th>minuta</th><td>minute</td></tr>
-                            <tr><th>minuti</th><td>minutes</td></tr>
-                            <tr><th>sekonda</th><td>second</td></tr>
-                            <tr><th>sekondi</th><td>seconds</td></tr>
-                            <tr><th>kwart</th><td>quarter</td></tr>
-                            <tr><th>nofs</th><td>half</td></tr>
-                            </tbody>
-                        </table>
+                        <div data-vocab-view-scope>
+                            <div class="toolbar-row">
+                                <div class="segmented-toggle" role="group" aria-label="Time unit vocabulary view">
+                                    <button type="button" class="toggle-chip is-active" data-vocab-view-button="cards" aria-pressed="true">Cards</button>
+                                    <button type="button" class="toggle-chip" data-vocab-view-button="table" aria-pressed="false">Table</button>
+                                </div>
+                            </div>
+                            <div data-vocab-view-panel="cards">
+                                <div class="vocab-card-grid" data-calendar-group="calendar-time-units"></div>
+                            </div>
+                            <div data-vocab-view-panel="table" hidden>
+                                <div data-vocab-table-group="calendar-time-units"></div>
+                            </div>
+                        </div>
                         <p class="footer-note">
                             In Level 1 the course notes also highlight a useful pattern: <code>2-10 + minuti</code>,
                             but <code>11+ + minuta</code> in the lesson examples.

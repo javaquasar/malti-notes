@@ -1,6 +1,22 @@
 {
   "groups": [
     {
+      "id": "calendar-ordinals",
+      "title": "Ordinal Numbers",
+      "items": [
+        { "id": "l-ewwel", "maltese": "l-ewwel", "english": "first", "note": "Huwa l-ewwel.", "example": "Huwa l-ewwel.", "exampleTranslation": "He is first." },
+        { "id": "it-tieni", "maltese": "it-tieni", "english": "second", "note": "Din it-tieni darba.", "example": "Din it-tieni darba.", "exampleTranslation": "This is the second time." },
+        { "id": "it-tielet", "maltese": "it-tielet", "english": "third", "note": "It-tielet lezzjoni.", "example": "It-tielet lezzjoni.", "exampleTranslation": "The third lesson." },
+        { "id": "ir-raba", "maltese": "ir-raba'", "english": "fourth", "note": "Ir-raba' jum.", "example": "Ir-raba' jum.", "exampleTranslation": "The fourth day." },
+        { "id": "il-hames", "maltese": "il-ħames", "english": "fifth", "note": "Il-ħames xahar.", "example": "Il-ħames xahar.", "exampleTranslation": "The fifth month." },
+        { "id": "is-sitt", "maltese": "is-sitt", "english": "sixth", "note": "Is-sitt lezzjoni.", "example": "Is-sitt lezzjoni.", "exampleTranslation": "The sixth lesson." },
+        { "id": "is-seba", "maltese": "is-seba'", "english": "seventh", "note": "Is-seba' jum.", "example": "Is-seba' jum.", "exampleTranslation": "The seventh day." },
+        { "id": "it-tmien", "maltese": "it-tmien", "english": "eighth", "note": "It-tmien sular.", "example": "It-tmien sular.", "exampleTranslation": "The eighth floor." },
+        { "id": "id-disa", "maltese": "id-disa'", "english": "ninth", "note": "Id-disa' paġna.", "example": "Id-disa' paġna.", "exampleTranslation": "The ninth page." },
+        { "id": "l-ghaxar", "maltese": "l-għaxar", "english": "tenth", "note": "L-għaxar kapitlu.", "example": "L-għaxar kapitlu.", "exampleTranslation": "The tenth chapter." }
+      ]
+    },
+    {
       "id": "calendar-weekdays",
       "title": "Days of the Week",
       "items": [
@@ -62,6 +78,30 @@
         { "id": "ix-xahar-li-ghadda", "maltese": "ix-xahar li għadda", "english": "last month", "note": "Ix-xahar li għadda kont imsiefer.", "example": "Ix-xahar li għadda kont imsiefer.", "exampleTranslation": "Last month I was abroad." },
         { "id": "ix-xahar-id-diehel", "maltese": "ix-xahar id-dieħel", "english": "the next month", "note": "Ix-xahar id-dieħel għandi ħafna xogħol.", "example": "Ix-xahar id-dieħel għandi ħafna xogħol.", "exampleTranslation": "Next month I have a lot of work." },
         { "id": "ix-xahar-ta-wara", "maltese": "ix-xahar ta' wara", "english": "the month after", "note": "Ix-xahar ta' wara se nibda lezzjoni ġdida.", "example": "Ix-xahar ta' wara se nibda lezzjoni ġdida.", "exampleTranslation": "The month after I will start a new lesson." }
+      ]
+    },
+    {
+      "id": "calendar-time-units",
+      "title": "Time Units",
+      "items": [
+        { "id": "siegha", "maltese": "siegħa", "english": "hour", "note": "Għandi siegħa ħin.", "example": "Għandi siegħa ħin.", "exampleTranslation": "I have an hour of time." },
+        { "id": "sighat", "maltese": "sigħat", "english": "hours", "note": "Ħdimt żewġ sigħat.", "example": "Ħdimt żewġ sigħat.", "exampleTranslation": "I worked for two hours." },
+        { "id": "minuta", "maltese": "minuta", "english": "minute", "note": "Stenna minuta.", "example": "Stenna minuta.", "exampleTranslation": "Wait a minute." },
+        { "id": "minuti", "maltese": "minuti", "english": "minutes", "note": "Għandi għaxar minuti.", "example": "Għandi għaxar minuti.", "exampleTranslation": "I have ten minutes." },
+        { "id": "sekonda", "maltese": "sekonda", "english": "second", "note": "Sekonda biss.", "example": "Sekonda biss.", "exampleTranslation": "Just a second." },
+        { "id": "sekondi", "maltese": "sekondi", "english": "seconds", "note": "Għaddew tletin sekonda.", "example": "Għaddew tletin sekonda.", "exampleTranslation": "Thirty seconds passed." },
+        { "id": "kwart", "maltese": "kwart", "english": "quarter", "note": "Il-ħamsa u kwart.", "example": "Il-ħamsa u kwart.", "exampleTranslation": "Quarter past five." },
+        { "id": "nofs", "maltese": "nofs", "english": "half", "note": "It-tmienja u nofs.", "example": "It-tmienja u nofs.", "exampleTranslation": "Half past eight." }
+      ]
+    },
+    {
+      "id": "calendar-parts-of-day",
+      "title": "Parts of the Day",
+      "items": [
+        { "id": "filghodu", "maltese": "filgħodu", "english": "in the morning", "note": "Filgħodu nqum kmieni.", "example": "Filgħodu nqum kmieni.", "exampleTranslation": "In the morning I wake up early." },
+        { "id": "waranofsinhar", "maltese": "waranofsinhar", "english": "in the afternoon", "note": "Waranofsinhar għandi lezzjoni.", "example": "Waranofsinhar għandi lezzjoni.", "exampleTranslation": "In the afternoon I have a lesson." },
+        { "id": "filghaxija", "maltese": "filgħaxija", "english": "in the evening", "note": "Filgħaxija nieħu te.", "example": "Filgħaxija nieħu te.", "exampleTranslation": "In the evening I have tea." },
+        { "id": "ta-billejl", "maltese": "ta' billejl", "english": "at night", "note": "Ma noħroġx ta' billejl.", "example": "Ma noħroġx ta' billejl.", "exampleTranslation": "I do not go out at night." }
       ]
     }
   ]
