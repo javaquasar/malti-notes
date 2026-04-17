@@ -1161,6 +1161,24 @@ table {
   -webkit-overflow-scrolling: touch;
 }
 
+.imperative-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.imperative-layout-main,
+.imperative-layout-side {
+  display: grid;
+  gap: 24px;
+  align-content: start;
+}
+
+.imperative-layout-side .box {
+  padding-bottom: 18px;
+}
+
 .imperative-shortlist-table {
   width: 100%;
   table-layout: auto;
@@ -1227,6 +1245,12 @@ table {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .imperative-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 th {

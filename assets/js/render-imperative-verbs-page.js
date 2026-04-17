@@ -131,12 +131,15 @@
                 return;
             }
 
-            var grid = root.querySelector("[data-imperative-grid]");
-            if (!grid) {
+            var layout = root.querySelector("[data-imperative-grid]");
+            var mainColumn = root.querySelector("[data-imperative-main]");
+            var sideColumn = root.querySelector("[data-imperative-side]");
+            if (!layout || !mainColumn || !sideColumn) {
                 return;
             }
 
-            grid.innerHTML = "";
+            mainColumn.innerHTML = "";
+            sideColumn.innerHTML = "";
             allWords = [];
 
             (data.groups || []).forEach(function (group) {
@@ -207,7 +210,11 @@
                 tableWrap.appendChild(table);
 
                 card.appendChild(tableWrap);
-                grid.appendChild(card);
+                if ((group.id || "") === "fil-mamma") {
+                    mainColumn.appendChild(card);
+                } else {
+                    sideColumn.appendChild(card);
+                }
             });
 
             var pageToolbar = root.querySelector("[data-page-imperative-toolbar]");
