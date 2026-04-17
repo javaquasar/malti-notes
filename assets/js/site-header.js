@@ -19,7 +19,8 @@
         ["prepositions_place.html", "Prepositions"],
         ["comparisons.html", "Comparisons"],
         ["collective_nouns.html", "Collective"],
-        ["numbers_calendar_time.html", "Numbers and Time"]
+        ["numbers_calendar_time.html", "Numbers and Time"],
+        ["imperative_verbs.html", "Imperative Verbs"]
       ]
     },
     {
