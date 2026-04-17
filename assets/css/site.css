@@ -970,6 +970,13 @@ h3 { font-size: 1.08rem; }
   box-shadow: 0 10px 20px rgba(252, 248, 239, 0.96);
 }
 
+.verb-dialog-top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
 .verb-dialog-top h3 {
   margin-bottom: 6px;
 }

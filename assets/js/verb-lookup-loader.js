@@ -103,7 +103,10 @@ function createDialog(root) {
           <h3 data-verb-dialog-title>Verb</h3>
           <p class="mini" data-verb-dialog-meanings></p>
         </div>
-        <button type="button" class="verb-dialog-close" data-verb-dialog-close>Close</button>
+        <div class="verb-dialog-top-actions">
+          <button type="button" class="verb-dialog-open-main" data-verb-dialog-add-review>Add all forms to review</button>
+          <button type="button" class="verb-dialog-close" data-verb-dialog-close>Close</button>
+        </div>
       </div>
       <div class="verb-meta-grid" data-verb-dialog-meta></div>
       <div class="verb-table-grid" data-verb-dialog-tables></div>
@@ -209,6 +212,33 @@ function getVerbDetails(pack, slug) {
   return pack.details?.[slug] || null;
 }
 
+function countVerbForms(details) {
+  var total = 0;
+  Object.keys(details?.tables || {}).forEach(function (tense) {
+    ["positive", "negative"].forEach(function (polarity) {
+      total += Object.keys(details?.tables?.[tense]?.[polarity] || {}).length;
+    });
+  });
+  return total;
+}
+
+function syncAddAllFormsButton(button, details) {
+  if (!button) {
+    return;
+  }
+
+  if (!window.MaltiReviewStore || !details) {
+    button.hidden = true;
+    return;
+  }
+
+  button.hidden = false;
+  button.disabled = false;
+  button.textContent = "Add all forms to review";
+  button.dataset.verbSlug = details.slug || "";
+  button.dataset.addCount = String(countVerbForms(details));
+}
+
 function openVerbDialog(root, pack, slug) {
   const details = getVerbDetails(pack, slug);
   if (!details) {
@@ -218,6 +248,7 @@ function openVerbDialog(root, pack, slug) {
   const dialog = createDialog(root);
   dialog.querySelector("[data-verb-dialog-title]").textContent = details.lemma || slug;
   dialog.querySelector("[data-verb-dialog-meanings]").textContent = (details.meanings || []).join(" · ");
+  syncAddAllFormsButton(dialog.querySelector("[data-verb-dialog-add-review]"), Object.assign({ slug: slug }, details));
 
   const meta = details.meta || {};
   const metaRows = buildMetaRows(meta);
@@ -239,6 +270,21 @@ function openVerbDialog(root, pack, slug) {
     .map((key) => renderTenseTable(tableTitles[key], details.tables?.[key]))
     .join("");
 
+  var addAllButton = dialog.querySelector("[data-verb-dialog-add-review]");
+  if (addAllButton) {
+    addAllButton.onclick = function () {
+      if (!window.MaltiReviewStore?.addVerbTables) {
+        return;
+      }
+      var saved = window.MaltiReviewStore.addVerbTables(details, {
+        topic: "Verb Drill",
+        sourcePage: "verbs_guide.html"
+      });
+      addAllButton.disabled = true;
+      addAllButton.textContent = saved.length + " forms added";
+    };
+  }
+
   dialog.showModal();
 }
 
@@ -246,6 +292,11 @@ function openFallbackVerbDialog(root, verb, description) {
   const dialog = createDialog(root);
   dialog.querySelector("[data-verb-dialog-title]").textContent = verb || "Verb";
   dialog.querySelector("[data-verb-dialog-meanings]").textContent = description || "Course entry";
+  var addAllButton = dialog.querySelector("[data-verb-dialog-add-review]");
+  if (addAllButton) {
+    addAllButton.hidden = true;
+    addAllButton.onclick = null;
+  }
   dialog.querySelector("[data-verb-dialog-meta]").innerHTML = `
     <div class="verb-meta-card">
       <div class="verb-meta-list">
@@ -264,6 +315,11 @@ function openPhraseDialog(root, phrase, description, lessonSource, mainVerb, mai
   const dialog = createDialog(root);
   dialog.querySelector("[data-verb-dialog-title]").textContent = phrase || "Phrase";
   dialog.querySelector("[data-verb-dialog-meanings]").textContent = description || "Course phrase";
+  var addAllButton = dialog.querySelector("[data-verb-dialog-add-review]");
+  if (addAllButton) {
+    addAllButton.hidden = true;
+    addAllButton.onclick = null;
+  }
 
   const metaRows = [
     renderMetaRow("type", "course phrase"),

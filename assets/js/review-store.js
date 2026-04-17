@@ -61,13 +61,15 @@
             item.translation = collapseSpaces(item.translation);
             item.tense = collapseSpaces(item.tense);
             item.pronoun = collapseSpaces(item.pronoun);
-            item.prompt = collapseSpaces(item.prompt || (item.pronoun + " + " + item.lemma));
+            item.polarity = collapseSpaces(item.polarity || "positive");
+            item.prompt = collapseSpaces(item.prompt || (item.pronoun + " + " + item.lemma + " (" + item.tense + (item.polarity === "negative" ? ", negative" : "") + ")"));
             item.answer = collapseSpaces(item.answer);
             item.example = collapseSpaces(item.example || "");
             item.normalizedKey = item.normalizedKey || [
                 normalizeForKey(item.lemma),
                 normalizeForKey(item.tense),
-                normalizeForKey(item.pronoun)
+                normalizeForKey(item.pronoun),
+                normalizeForKey(item.polarity)
             ].join("::");
             item.id = item.id || ("verb::" + item.normalizedKey);
         } else {
@@ -151,6 +153,7 @@
                     translation: verb.translation,
                     tense: tense,
                     pronoun: pronoun,
+                    polarity: "positive",
                     answer: tenseForms[pronoun],
                     prompt: pronoun + " + " + verb.lemma + " (" + tense + ")",
                     topic: verb.topic || "Verb Drill",
@@ -159,6 +162,36 @@
                 }));
             });
         });
+        return saved;
+    }
+
+    function addVerbTables(details, options) {
+        const saved = [];
+        const tables = details?.tables || {};
+        const settings = options || {};
+        const translation = collapseSpaces(settings.translation || (details?.meanings || []).join(" / "));
+
+        Object.keys(tables).forEach(function (tense) {
+            ["positive", "negative"].forEach(function (polarity) {
+                const forms = tables[tense]?.[polarity] || {};
+                Object.keys(forms).forEach(function (pronoun) {
+                    saved.push(saveCard({
+                        type: "verb-form-card",
+                        lemma: details.lemma,
+                        translation: translation,
+                        tense: tense,
+                        pronoun: pronoun,
+                        polarity: polarity,
+                        answer: forms[pronoun],
+                        prompt: pronoun + " + " + details.lemma + " (" + tense + (polarity === "negative" ? ", negative" : "") + ")",
+                        topic: settings.topic || "Verb Drill",
+                        sourcePage: settings.sourcePage || "verbs_guide.html",
+                        example: settings.example || ""
+                    }));
+                });
+            });
+        });
+
         return saved;
     }
 
@@ -223,6 +256,7 @@
         addWord: addWord,
         addCustomWord: addCustomWord,
         addVerbDrill: addVerbDrill,
+        addVerbTables: addVerbTables,
         getAllWords: getAllCards,
         getAllCards: getAllCards,
         getDueWords: getDueCards,

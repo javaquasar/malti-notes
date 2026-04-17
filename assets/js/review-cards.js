@@ -573,23 +573,78 @@
         return filters.direction || "maltese-to-english";
     }
 
+    function getPrimaryVerbMeaning(value) {
+        var text = String(value || "").trim();
+        if (!text) {
+            return "";
+        }
+
+        var dotParts = text.split("·").map(function (part) {
+            return part.trim();
+        }).filter(Boolean);
+        if (dotParts.length) {
+            return dotParts[0];
+        }
+
+        var slashParts = text.split("/").map(function (part) {
+            return part.trim();
+        }).filter(Boolean);
+        if (slashParts.length) {
+            return slashParts[0];
+        }
+
+        var commaParts = text.split(",").map(function (part) {
+            return part.trim();
+        }).filter(Boolean);
+        if (commaParts.length) {
+            return commaParts[0];
+        }
+
+        return text;
+    }
+
+    function formatVerbPolarity(card) {
+        return card.polarity === "negative" ? "Negative" : "Positive";
+    }
+
+    function getShortVerbMeaning(value) {
+        var text = String(value || "").trim();
+        if (!text) {
+            return "";
+        }
+
+        text = text
+            .replaceAll("Â·", "·")
+            .replaceAll("Ã‚Â·", "·")
+            .replaceAll("•", "·");
+
+        var parts = text.split(/[·\/,;|]/).map(function (part) {
+            return part.trim();
+        }).filter(Boolean);
+        if (parts.length) {
+            return parts[0];
+        }
+
+        return text;
+    }
+
     function buildFront(card) {
         var direction = getWordDirection();
 
         if (card.type === "verb-form-card") {
             if (direction === "english-to-maltese") {
+                var primaryMeaning = getShortVerbMeaning(card.translation || card.lemma) || "(meaning to add later)";
                 return "" +
                     "<span class=\"tag\">Verb Form | English -> Maltese</span>" +
-                    "<div class=\"review-meta\">Tense: " + escapeHtml(card.tense) + "</div>" +
-                    "<div class=\"review-word\">" + escapeHtml(card.translation || card.lemma) + "</div>" +
-                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + "</div>" +
-                    "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>" +
-                    "<div class=\"review-meta\">Build the Maltese form for this pronoun and tense.</div>";
+                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + " | Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
+                    "<div class=\"review-word\">" + escapeHtml(primaryMeaning) + "</div>" +
+                    "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>";
             }
 
             return "" +
                 "<span class=\"tag\">Verb Form | Maltese -> English</span>" +
                 "<div class=\"review-meta\">Tense: " + escapeHtml(card.tense) + "</div>" +
+                "<div class=\"review-meta\">Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                 "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>" +
                 "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Lemma: " + escapeHtml(card.lemma) + "</div>";
         }
@@ -632,8 +687,8 @@
             if (direction === "english-to-maltese") {
                 return "" +
                     "<h3>" + escapeHtml(card.answer) + "</h3>" +
-                    "<div class=\"review-meta\">English: " + escapeHtml(card.translation || card.lemma) + "</div>" +
-                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + "</div>" +
+                    "<div class=\"review-meta\">Full meanings: " + escapeHtml(card.translation || card.lemma) + "</div>" +
+                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + " | Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                     "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
                     "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
             }
@@ -641,6 +696,7 @@
             return "" +
                 "<h3>" + escapeHtml(card.translation || "(translation to add later)") + "</h3>" +
                 "<div class=\"review-meta\">Answer: " + escapeHtml(card.answer) + "</div>" +
+                "<div class=\"review-meta\">Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
                 "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
                 "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
         }
@@ -697,7 +753,7 @@
                 ? (card.pronoun + " + " + card.lemma)
                 : card.maltese;
             var subtitle = card.type === "verb-form-card"
-                ? (card.answer + " | " + card.translation)
+                ? (card.answer + " | " + card.translation + " | " + formatVerbPolarity(card))
                 : (card.english || "(translation to add later)");
 
             return "" +
