@@ -1179,6 +1179,11 @@ table {
   padding-bottom: 18px;
 }
 
+.imperative-layout-side .source-row {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .imperative-shortlist-table {
   width: 100%;
   table-layout: auto;
