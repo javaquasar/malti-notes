@@ -662,6 +662,24 @@
         return text;
     }
 
+    function isImperativeShortlistCard(card) {
+        return card && card.type === "word-card" && card.sourcePage === "imperative_verbs.html";
+    }
+
+    function getImperativeReviewMeta(card) {
+        var example = String(card.example || "").trim();
+        var singularMatch = example.match(/Singular imperative:\s*([^\.]+)\.?/i);
+        var pluralMatch = example.match(/Plural imperative:\s*([^\.]+)\.?/i);
+        var bits = [];
+        if (singularMatch && singularMatch[1]) {
+            bits.push("Singular: " + singularMatch[1].trim());
+        }
+        if (pluralMatch && pluralMatch[1]) {
+            bits.push("Plural: " + pluralMatch[1].trim());
+        }
+        return bits.join(" | ");
+    }
+
     function buildFront(card) {
         var direction = getWordDirection();
         var answerOptions = getAnswerOptions();
@@ -698,11 +716,14 @@
         var promptWord = escapeHtml(card.maltese);
         var promptMeta = "Topic: " + escapeHtml(card.topic);
         var tag = "Word Card";
+        var imperativeMeta = isImperativeShortlistCard(card)
+            ? escapeHtml(getImperativeReviewMeta(card))
+            : "";
 
         if (direction === "english-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
             promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
-            tag = "English -> Maltese";
+            tag = isImperativeShortlistCard(card) ? "Imperative Verb | English -> Maltese" : "English -> Maltese";
         } else if (direction === "image-to-maltese" && visualHtml) {
             promptWord = "<span class=\"review-word review-word--prompt\">What is this in Maltese?</span>";
             promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
@@ -710,13 +731,14 @@
         } else if (direction === "image-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
             promptMeta = "No image on this card, so this prompt falls back to English | Topic: " + escapeHtml(card.topic);
-            tag = "English -> Maltese";
+            tag = isImperativeShortlistCard(card) ? "Imperative Verb | English -> Maltese" : "English -> Maltese";
         }
 
         return "" +
             "<span class=\"tag\">" + tag + "</span>" +
             visualHtml +
             "<div class=\"review-word\">" + promptWord + "</div>" +
+            (imperativeMeta ? ("<div class=\"review-meta\">" + imperativeMeta + "</div>") : "") +
             "<div class=\"review-meta\">" + promptMeta + "</div>";
     }
 
@@ -751,6 +773,10 @@
         if (direction === "english-to-maltese" || direction === "image-to-maltese") {
             title = escapeHtml(card.maltese);
             secondary = "<div class=\"review-meta\">English: " + escapeHtml(card.english || "(translation to add later)") + "</div>";
+        }
+
+        if (isImperativeShortlistCard(card)) {
+            secondary += "<div class=\"review-meta\">" + escapeHtml(getImperativeReviewMeta(card) || "Imperative forms to add later.") + "</div>";
         }
 
         if (answerOptions.showVisual) {
