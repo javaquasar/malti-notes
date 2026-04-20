@@ -806,12 +806,14 @@
 
             return "" +
                 "<span class=\"tag\">Verb Form | MT -> EN</span>" +
-                buildVerbMetaStack(card, { showTense: true, showPolarity: true }) +
-                "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>" +
                 buildVerbMetaStack(card, {
                     showPronoun: true,
+                    showTense: true,
+                    showPolarity: true,
                     showLemma: answerOptions.showVerbLemmaFront
-                });
+                }) +
+                "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>" +
+                "";
         }
 
         var visualHtml = "";
