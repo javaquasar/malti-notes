@@ -824,7 +824,6 @@
         }
 
         var promptWord = escapeHtml(card.maltese);
-        var promptMeta = "Topic: " + escapeHtml(card.topic);
         var tag = "MT -> EN";
         var imperativeMeta = isImperativeShortlistCard(card)
             ? escapeHtml(getImperativeReviewMeta(card))
@@ -832,15 +831,12 @@
 
         if (direction === "english-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
-            promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
             tag = isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
         } else if (direction === "image-to-maltese" && visualHtml) {
             promptWord = "<span class=\"review-word review-word--prompt\">What is this in Maltese?</span>";
-            promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
             tag = "Image / Colour -> MT";
         } else if (direction === "image-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
-            promptMeta = "No image on this card, so this prompt falls back to English | Topic: " + escapeHtml(card.topic);
             tag = isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
         }
 
@@ -848,8 +844,7 @@
             "<span class=\"tag\">" + tag + "</span>" +
             visualHtml +
             "<div class=\"review-word\">" + promptWord + "</div>" +
-            (imperativeMeta ? ("<div class=\"review-meta\">" + imperativeMeta + "</div>") : "") +
-            "<div class=\"review-meta\">" + promptMeta + "</div>";
+            (imperativeMeta ? ("<div class=\"review-meta\">" + imperativeMeta + "</div>") : "");
     }
 
     function buildAnswer(card) {

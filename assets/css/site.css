@@ -556,14 +556,18 @@ h3 { font-size: 1.08rem; }
 }
 
 .review-flip-wrap {
-  perspective: 1400px;
-  -webkit-perspective: 1400px;
+  display: flex;
+  justify-content: center;
+  perspective: 2200px;
+  -webkit-perspective: 2200px;
 }
 
 .review-flip-card {
   position: relative;
+  width: min(100%, 520px);
   min-height: 360px;
   cursor: pointer;
+  transform-origin: center center;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transition: transform 0.55s ease;
@@ -744,6 +748,7 @@ h3 { font-size: 1.08rem; }
   }
 
   .review-flip-card {
+    width: 100%;
     min-height: 420px;
   }
 
