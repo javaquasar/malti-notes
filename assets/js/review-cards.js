@@ -49,6 +49,10 @@
         };
     }
 
+    function getCardLayoutMode() {
+        return byId("review-card-layout") ? byId("review-card-layout").value : "classic";
+    }
+
     function cardMatches(card, filters, dueLookup) {
         if (filters.topic && card.topic !== filters.topic) {
             return false;
@@ -641,6 +645,32 @@
         return card.polarity === "negative" ? "Negative" : "Positive";
     }
 
+    function buildVerbMetaStack(card, options) {
+        var parts = [];
+        if (options && options.showPronoun) {
+            parts.push("<div class=\"review-meta\"><code>Pronoun</code>: " + escapeHtml(card.pronoun) + "</div>");
+        }
+        if (options && options.showTense) {
+            parts.push("<div class=\"review-meta\"><code>Tense</code>: " + escapeHtml(card.tense) + "</div>");
+        }
+        if (options && options.showPolarity) {
+            parts.push("<div class=\"review-meta\"><code>Polarity</code>: " + escapeHtml(formatVerbPolarity(card)) + "</div>");
+        }
+        if (options && options.showLemma) {
+            parts.push("<div class=\"review-meta\"><code>Lemma</code>: " + escapeHtml(card.lemma) + "</div>");
+        }
+        if (options && options.showMeanings) {
+            parts.push("<div class=\"review-meta\"><code>Full meanings</code>: " + escapeHtml(card.translation || card.lemma) + "</div>");
+        }
+        if (options && options.showPrompt) {
+            parts.push("<div class=\"review-meta\"><code>Prompt</code>: " + escapeHtml(card.prompt) + "</div>");
+        }
+        if (options && options.showSource) {
+            parts.push("<div class=\"review-meta\"><code>Source</code>: " + escapeHtml(card.sourcePage) + "</div>");
+        }
+        return "<div class=\"review-meta-stack\">" + parts.join("") + "</div>";
+    }
+
     function getShortVerbMeaning(value) {
         var text = String(value || "").trim();
         if (!text) {
@@ -688,22 +718,20 @@
             if (direction === "english-to-maltese") {
                 var primaryMeaning = getShortVerbMeaning(card.translation || card.lemma) || "(meaning to add later)";
                 return "" +
-                    "<span class=\"tag\">Verb Form | English -> Maltese</span>" +
-                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + " | Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
+                    "<span class=\"tag\">Verb Form | EN -> MT</span>" +
+                    buildVerbMetaStack(card, { showPronoun: true, showTense: true, showPolarity: true }) +
                     "<div class=\"review-word\">" + escapeHtml(primaryMeaning) + "</div>" +
-                    (answerOptions.showVerbLemmaFront
-                        ? ("<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>")
-                        : "");
+                    (answerOptions.showVerbLemmaFront ? buildVerbMetaStack(card, { showLemma: true }) : "");
             }
 
             return "" +
-                "<span class=\"tag\">Verb Form | Maltese -> English</span>" +
-                "<div class=\"review-meta\">Tense: " + escapeHtml(card.tense) + "</div>" +
-                "<div class=\"review-meta\">Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
+                "<span class=\"tag\">Verb Form | MT -> EN</span>" +
+                buildVerbMetaStack(card, { showTense: true, showPolarity: true }) +
                 "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>" +
-                "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) +
-                (answerOptions.showVerbLemmaFront ? (" | Lemma: " + escapeHtml(card.lemma)) : "") +
-                "</div>";
+                buildVerbMetaStack(card, {
+                    showPronoun: true,
+                    showLemma: answerOptions.showVerbLemmaFront
+                });
         }
 
         var visualHtml = "";
@@ -723,15 +751,15 @@
         if (direction === "english-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
             promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
-            tag = isImperativeShortlistCard(card) ? "Imperative Verb | English -> Maltese" : "English -> Maltese";
+            tag = isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
         } else if (direction === "image-to-maltese" && visualHtml) {
             promptWord = "<span class=\"review-word review-word--prompt\">What is this in Maltese?</span>";
             promptMeta = "Answer in Maltese | Topic: " + escapeHtml(card.topic);
-            tag = "Image / Colour -> Maltese";
+            tag = "Image / Colour -> MT";
         } else if (direction === "image-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
             promptMeta = "No image on this card, so this prompt falls back to English | Topic: " + escapeHtml(card.topic);
-            tag = isImperativeShortlistCard(card) ? "Imperative Verb | English -> Maltese" : "English -> Maltese";
+            tag = isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
         }
 
         return "" +
@@ -748,20 +776,28 @@
             if (direction === "english-to-maltese") {
                 return "" +
                     "<h3>" + escapeHtml(card.answer) + "</h3>" +
-                    "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>" +
-                    "<div class=\"review-meta\">Full meanings: " + escapeHtml(card.translation || card.lemma) + "</div>" +
-                    "<div class=\"review-meta\">Pronoun: " + escapeHtml(card.pronoun) + " | Tense: " + escapeHtml(card.tense) + " | Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
-                    "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
-                    "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
+                    buildVerbMetaStack(card, {
+                        showLemma: true,
+                        showMeanings: true,
+                        showPronoun: true,
+                        showTense: true,
+                        showPolarity: true,
+                        showPrompt: true,
+                        showSource: true
+                    });
             }
 
             return "" +
                 "<h3>" + escapeHtml(card.translation || "(translation to add later)") + "</h3>" +
-                "<div class=\"review-meta\">Answer: " + escapeHtml(card.answer) + "</div>" +
-                "<div class=\"review-meta\">Lemma: " + escapeHtml(card.lemma) + "</div>" +
-                "<div class=\"review-meta\">Polarity: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
-                "<div class=\"review-meta\">Prompt: " + escapeHtml(card.prompt) + "</div>" +
-                "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage) + "</div>";
+                "<div class=\"review-meta-stack\">" +
+                    "<div class=\"review-meta\"><code>Answer</code>: " + escapeHtml(card.answer) + "</div>" +
+                "</div>" +
+                buildVerbMetaStack(card, {
+                    showLemma: true,
+                    showPolarity: true,
+                    showPrompt: true,
+                    showSource: true
+                });
         }
 
         var answerOptions = getAnswerOptions();
@@ -857,6 +893,141 @@
 
     function renderCurrentCardStage() {
         var sessionSummary = buildSessionSummary(currentCard, queue.length);
+
+        byId("review-stage").innerHTML = `
+        <div class="review-session-bar">${escapeHtml(sessionSummary)}</div>
+
+        <div class="session-progress">
+            <div class="session-progress-bar" id="session-progress-bar"></div>
+        </div>
+
+        <div class="review-card-container">
+            <div class="review-card" id="review-card">
+                <!-- Front -->
+                <div class="review-card-front" id="card-front">
+                    <div class="review-meta-info">
+                        ${currentCard.type === "verb-form-card"
+            ? `${escapeHtml(currentCard.pronoun)} • ${escapeHtml(currentCard.tense)}${currentCard.polarity === "negative" ? " (negative)" : ""}`
+            : escapeHtml(currentCard.topic || "Vocabulary")}
+                    </div>
+                    <div class="maltese-text" id="front-text">
+                        ${escapeHtml(currentCard.type === "verb-form-card" ? currentCard.prompt : currentCard.maltese)}
+                    </div>
+                    <div style="margin-top:20px; font-size:0.95rem; opacity:0.7;">
+                        (tap or click to reveal answer)
+                    </div>
+                </div>
+
+                <!-- Back -->
+                <div class="review-card-back" id="card-back">
+                    <div class="maltese-text">${escapeHtml(currentCard.type === "verb-form-card" ? currentCard.answer : currentCard.maltese)}</div>
+                    
+                    <div class="english-text" style="margin-top:24px;">
+                        ${escapeHtml(currentCard.english || currentCard.translation || currentCard.meaning || "—")}
+                    </div>
+
+                    ${currentCard.example ? `
+                    <div style="margin-top:28px; padding:16px; background:rgba(0,0,0,0.04); border-radius:12px; max-width:440px; font-size:1.05rem;">
+                        <strong>Example:</strong><br>${escapeHtml(currentCard.example)}
+                    </div>` : ''}
+                </div>
+            </div>
+        </div>
+
+        <div class="review-grade-actions" id="review-grade-actions" hidden>
+            <button class="action-button" data-grade="again" type="button">Again</button>
+            <button class="action-button" data-grade="hard" type="button">Hard</button>
+            <button class="action-button" data-grade="good" type="button">Good</button>
+            <button class="action-button" data-grade="easy" type="button">Easy</button>
+        </div>
+    `;
+
+        // === Flip logic ===
+        const card = document.getElementById("review-card");
+        let flipped = false;
+
+        card.addEventListener("click", () => {
+            if (!flipped) {
+                card.classList.add("flipped");
+                flipped = true;
+                document.getElementById("review-grade-actions").hidden = false;
+            }
+        });
+
+        // Grade buttons
+        document.querySelectorAll("#review-grade-actions button").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                e.stopImmediatePropagation();
+                const grade = btn.dataset.grade;
+
+                if (currentCard && currentCard.id) {
+                    window.MaltiReviewStore.reviewCard(currentCard.id, grade);
+
+                    // Update quick session stats if active
+                    if (quickSession.active) {
+                        quickSession.reviewed++;
+                        if (grade === "again") quickSession.again++;
+                        else if (grade === "good") quickSession.good++;
+                        else if (grade === "easy") quickSession.easy++;
+                    }
+                }
+
+                // Reset flip for next card
+                setTimeout(() => {
+                    card.classList.remove("flipped");
+                    flipped = false;
+                    refreshAll(false);
+                }, 280);
+            });
+        });
+
+        // Update progress bar
+        const progressEl = document.getElementById("session-progress-bar");
+        if (progressEl) {
+            const total = queue.length + (currentCard ? 1 : 0) + reviewedThisSession; // approximate
+            const progress = total > 0 ? Math.round(((reviewedThisSession || 0) / (total + 5)) * 100) : 30;
+            progressEl.style.width = `${Math.min(progress, 100)}%`;
+        }
+    }
+
+    function bindVerbOpenHandlers() {
+        if (!currentCard || currentCard.type !== "verb-form-card") {
+            return;
+        }
+        byId("review-stage").querySelectorAll("[data-review-open-verb]").forEach(function (node) {
+            node.addEventListener("click", function () {
+                if (!window.MaltiVerbLookup || !window.MaltiVerbLookup.open) {
+                    return;
+                }
+                window.MaltiVerbLookup.open({
+                    verb: currentCard.lemma,
+                    lookupHint: currentCard.answer
+                });
+            });
+        });
+    }
+
+    function bindGradeButtons() {
+        byId("review-grade-actions").querySelectorAll("[data-grade]").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var grade = button.getAttribute("data-grade");
+                window.MaltiReviewStore.reviewCard(currentCard.id, grade);
+                if (quickSession.active) {
+                    quickSession.reviewed += 1;
+                    if (grade === "again") {
+                        quickSession.again += 1;
+                    } else if (grade === "good") {
+                        quickSession.good += 1;
+                    } else if (grade === "easy") {
+                        quickSession.easy += 1;
+                    }
+                }
+                refreshAll(false);
+            });
+        });
+    }
+
+    function renderClassicCardStage(sessionSummary) {
         var verbCardAttrs = currentCard && currentCard.type === "verb-form-card"
             ? " data-review-open-verb=\"true\" title=\"Click to open the full verb table\""
             : "";
@@ -878,37 +1049,68 @@
             this.hidden = true;
         });
 
-        if (currentCard && currentCard.type === "verb-form-card") {
-            byId("review-stage").querySelectorAll("[data-review-open-verb]").forEach(function (node) {
-                node.addEventListener("click", function () {
-                    if (!window.MaltiVerbLookup?.open) {
-                        return;
-                    }
-                    window.MaltiVerbLookup.open({
-                        verb: currentCard.lemma,
-                        lookupHint: currentCard.answer
-                    });
-                });
-            });
-        }
+        bindVerbOpenHandlers();
+        bindGradeButtons();
+    }
 
-        byId("review-grade-actions").querySelectorAll("[data-grade]").forEach(function (button) {
-            button.addEventListener("click", function () {
-                var grade = button.getAttribute("data-grade");
-                window.MaltiReviewStore.reviewCard(currentCard.id, grade);
-                if (quickSession.active) {
-                    quickSession.reviewed += 1;
-                    if (grade === "again") {
-                        quickSession.again += 1;
-                    } else if (grade === "good") {
-                        quickSession.good += 1;
-                    } else if (grade === "easy") {
-                        quickSession.easy += 1;
-                    }
+    function renderFlipCardStage(sessionSummary) {
+        var verbCardAttrs = currentCard && currentCard.type === "verb-form-card"
+            ? " data-review-open-verb=\"true\" title=\"Click to open the full verb table\""
+            : "";
+
+        byId("review-stage").innerHTML = "" +
+            "<div class=\"review-session-bar\">" + escapeHtml(sessionSummary) + "</div>" +
+            "<div class=\"review-flip-wrap\">" +
+                "<div class=\"review-flip-card\" id=\"review-flip-card\"" + verbCardAttrs + ">" +
+                    "<div class=\"review-flip-face review-flip-face--front\">" +
+                        "<div class=\"review-flip-face-inner\">" +
+                            buildFront(currentCard) +
+                            "<div class=\"review-flip-hint\">Tap or click to reveal the answer</div>" +
+                        "</div>" +
+                    "</div>" +
+                    "<div class=\"review-flip-face review-flip-face--back\"" + verbCardAttrs + ">" +
+                        "<div class=\"review-flip-face-inner\">" +
+                            buildAnswer(currentCard) +
+                        "</div>" +
+                    "</div>" +
+                "</div>" +
+            "</div>" +
+            "<div class=\"review-grade-actions\" id=\"review-grade-actions\" hidden>" +
+                "<button class=\"action-button\" data-grade=\"again\" type=\"button\">Again</button>" +
+                "<button class=\"action-button\" data-grade=\"good\" type=\"button\">Good</button>" +
+                "<button class=\"action-button\" data-grade=\"easy\" type=\"button\">Easy</button>" +
+            "</div>";
+
+        (function () {
+            var flipCard = byId("review-flip-card");
+            var flipped = false;
+            if (!flipCard) {
+                return;
+            }
+            flipCard.addEventListener("click", function () {
+                if (flipped) {
+                    flipCard.classList.remove("is-flipped");
+                    flipped = false;
+                    byId("review-grade-actions").hidden = true;
+                    return;
                 }
-                refreshAll(false);
+                flipCard.classList.add("is-flipped");
+                flipped = true;
+                byId("review-grade-actions").hidden = false;
             });
-        });
+        }());
+
+        bindVerbOpenHandlers();
+        bindGradeButtons();
+    }
+
+    function renderCurrentCardStage() {
+        var sessionSummary = buildSessionSummary(currentCard, queue.length);
+        if (getCardLayoutMode() === "flip") {
+            renderFlipCardStage(sessionSummary);
+            return;
+        }
+        renderClassicCardStage(sessionSummary);
     }
 
     function renderCard() {
@@ -949,6 +1151,20 @@
                 clearQuickSession();
                 refreshAll(true);
             });
+        });
+    }
+
+    function wireLayoutMode() {
+        var element = byId("review-card-layout");
+        if (!element) {
+            return;
+        }
+        element.addEventListener("change", function () {
+            if (!currentCard) {
+                refreshAll(true);
+                return;
+            }
+            renderCurrentCardStage();
         });
     }
 
@@ -1249,6 +1465,7 @@
         }
 
         wireFilters();
+        wireLayoutMode();
         wireAnswerOptions();
         wireQuickSessions();
         wireSavedListTools();
