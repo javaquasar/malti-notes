@@ -70,65 +70,72 @@
                 </div>
             </section>
             <section class="content-card">
-                <span class="tag">Study Filters</span>
-                <h2>Choose What To Study</h2>
-                <div class="review-filter-grid">
-                    <label>
-                        <strong>Topic</strong>
-                        <select class="review-select" id="review-topic-filter">
-                            <option value="">All topics</option>
-                        </select>
-                    </label>
-                    <label>
-                        <strong>Card Type</strong>
-                        <select class="review-select" id="review-type-filter">
-                            <option value="">All cards</option>
-                            <option value="word-card">Words</option>
-                            <option value="verb-form-card">Verb forms</option>
-                        </select>
-                    </label>
-                    <label>
-                        <strong>Direction</strong>
-                        <select class="review-select" id="review-direction-filter">
-                            <option value="maltese-to-english">Maltese -> English</option>
-                            <option value="english-to-maltese">English -> Maltese</option>
-                            <option value="image-to-maltese">Image / Colour -> Maltese</option>
-                        </select>
-                    </label>
-                    <label>
-                        <strong>Card Layout</strong>
-                        <select class="review-select" id="review-card-layout">
-                            <option value="classic">Classic</option>
-                            <option value="flip">Flip card</option>
-                        </select>
-                    </label>
-                    <label>
-                        <strong>Verb Tense</strong>
-                        <select class="review-select" id="review-tense-filter">
-                            <option value="">All tenses</option>
-                            <option value="present">Present</option>
-                            <option value="past">Past</option>
-                            <option value="imperative">Imperative</option>
-                        </select>
-                    </label>
-                    <label class="review-check">
-                        <input id="review-due-only" type="checkbox">
-                        <span><strong>Study only due</strong><small>Show only cards that are due now.</small></span>
-                    </label>
-                    <label class="review-check">
-                        <input id="review-answer-show-visual" type="checkbox">
-                        <span><strong>Show visual on answer</strong><small>Repeat the image or colour swatch on the back side.</small></span>
-                    </label>
-                    <label class="review-check">
-                        <input id="review-answer-show-example" type="checkbox" checked>
-                        <span><strong>Show example on answer</strong><small>Keep the example sentence visible on the back side.</small></span>
-                    </label>
-                    <label class="review-check">
-                        <input id="review-verb-show-lemma" type="checkbox" checked>
-                        <span><strong>Show lemma on verb front</strong><small>Keep the dictionary form visible while reviewing verb cards.</small></span>
-                    </label>
-                    <div class="review-filter-status" id="review-filter-status">All saved cards are included.</div>
-                </div>
+                <details class="review-filters-panel" id="review-filters-panel" open>
+                    <summary class="review-filters-summary">
+                        <span class="tag">Study Filters</span>
+                        <span class="review-filters-summary-text">Choose What To Study</span>
+                        <span class="status-chip">Hide / Show</span>
+                    </summary>
+                    <div class="review-filters-body">
+                        <div class="review-filter-grid">
+                            <label>
+                                <strong>Topic</strong>
+                                <select class="review-select" id="review-topic-filter">
+                                    <option value="">All topics</option>
+                                </select>
+                            </label>
+                            <label>
+                                <strong>Card Type</strong>
+                                <select class="review-select" id="review-type-filter">
+                                    <option value="">All cards</option>
+                                    <option value="word-card">Words</option>
+                                    <option value="verb-form-card">Verb forms</option>
+                                </select>
+                            </label>
+                            <label>
+                                <strong>Direction</strong>
+                                <select class="review-select" id="review-direction-filter">
+                                    <option value="maltese-to-english">Maltese -> English</option>
+                                    <option value="english-to-maltese">English -> Maltese</option>
+                                    <option value="image-to-maltese">Image / Colour -> Maltese</option>
+                                </select>
+                            </label>
+                            <label>
+                                <strong>Card Layout</strong>
+                                <select class="review-select" id="review-card-layout">
+                                    <option value="classic">Classic</option>
+                                    <option value="flip">Flip card</option>
+                                </select>
+                            </label>
+                            <label>
+                                <strong>Verb Tense</strong>
+                                <select class="review-select" id="review-tense-filter">
+                                    <option value="">All tenses</option>
+                                    <option value="present">Present</option>
+                                    <option value="past">Past</option>
+                                    <option value="imperative">Imperative</option>
+                                </select>
+                            </label>
+                            <label class="review-check">
+                                <input id="review-due-only" type="checkbox">
+                                <span><strong>Study only due</strong><small>Show only cards that are due now.</small></span>
+                            </label>
+                            <label class="review-check">
+                                <input id="review-answer-show-visual" type="checkbox">
+                                <span><strong>Show visual on answer</strong><small>Repeat the image or colour swatch on the back side.</small></span>
+                            </label>
+                            <label class="review-check">
+                                <input id="review-answer-show-example" type="checkbox" checked>
+                                <span><strong>Show example on answer</strong><small>Keep the example sentence visible on the back side.</small></span>
+                            </label>
+                            <label class="review-check">
+                                <input id="review-verb-show-lemma" type="checkbox" checked>
+                                <span><strong>Show lemma on verb front</strong><small>Keep the dictionary form visible while reviewing verb cards.</small></span>
+                            </label>
+                            <div class="review-filter-status" id="review-filter-status">All saved cards are included.</div>
+                        </div>
+                    </div>
+                </details>
             </section>
             <section class="content-card">
                 <div class="review-card-shell">

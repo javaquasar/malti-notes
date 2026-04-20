@@ -273,6 +273,38 @@ h3 { font-size: 1.08rem; }
   font-size: 0.95rem;
 }
 
+.review-filters-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.review-filters-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.review-filters-summary::-webkit-details-marker {
+  display: none;
+}
+
+.review-filters-summary-text {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.review-filters-panel[open] .review-filters-summary {
+  margin-bottom: 4px;
+}
+
+.review-filters-body {
+  display: grid;
+  gap: 14px;
+}
+
 .review-session-grid {
   display: grid;
   gap: 12px;

@@ -14,6 +14,7 @@
     };
     var ANIMALS_DATA_URL = "./assets/data/animals.json";
     var COLORS_DATA_URL = "./assets/data/colors.json";
+    var REVIEW_PREFS_KEY = "malti-review-prefs-v1";
 
     function byId(id) {
         return document.getElementById(id);
@@ -51,6 +52,82 @@
 
     function getCardLayoutMode() {
         return byId("review-card-layout") ? byId("review-card-layout").value : "classic";
+    }
+
+    function getReviewPreferences() {
+        var filtersPanel = byId("review-filters-panel");
+        return {
+            topic: byId("review-topic-filter") ? byId("review-topic-filter").value : "",
+            type: byId("review-type-filter") ? byId("review-type-filter").value : "",
+            tense: byId("review-tense-filter") ? byId("review-tense-filter").value : "",
+            direction: byId("review-direction-filter") ? byId("review-direction-filter").value : "maltese-to-english",
+            dueOnly: !!(byId("review-due-only") && byId("review-due-only").checked),
+            layout: getCardLayoutMode(),
+            showVisual: !!(byId("review-answer-show-visual") && byId("review-answer-show-visual").checked),
+            showExample: !(byId("review-answer-show-example")) || !!byId("review-answer-show-example").checked,
+            showVerbLemma: !(byId("review-verb-show-lemma")) || !!byId("review-verb-show-lemma").checked,
+            filtersOpen: !filtersPanel || !!filtersPanel.open
+        };
+    }
+
+    function saveReviewPreferences() {
+        try {
+            window.localStorage.setItem(REVIEW_PREFS_KEY, JSON.stringify(getReviewPreferences()));
+        } catch (error) {
+            // Ignore storage errors and keep the page usable.
+        }
+    }
+
+    function loadReviewPreferences() {
+        try {
+            var raw = window.localStorage.getItem(REVIEW_PREFS_KEY);
+            if (!raw) {
+                return null;
+            }
+            return JSON.parse(raw);
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function applyReviewPreferences(preferences) {
+        if (!preferences) {
+            return;
+        }
+
+        function setValue(id, value) {
+            var element = byId(id);
+            if (element && typeof value === "string") {
+                element.value = value;
+            }
+        }
+
+        function setChecked(id, value) {
+            var element = byId(id);
+            if (element && typeof value === "boolean") {
+                element.checked = value;
+            }
+        }
+
+        setValue("review-topic-filter", preferences.topic || "");
+        setValue("review-type-filter", preferences.type || "");
+        setValue("review-tense-filter", preferences.tense || "");
+        setValue("review-direction-filter", preferences.direction || "maltese-to-english");
+        setValue("review-card-layout", preferences.layout || "classic");
+
+        setChecked("review-due-only", !!preferences.dueOnly);
+        setChecked("review-answer-show-visual", !!preferences.showVisual);
+        if (typeof preferences.showExample === "boolean") {
+            setChecked("review-answer-show-example", preferences.showExample);
+        }
+        if (typeof preferences.showVerbLemma === "boolean") {
+            setChecked("review-verb-show-lemma", preferences.showVerbLemma);
+        }
+
+        var filtersPanel = byId("review-filters-panel");
+        if (filtersPanel && typeof preferences.filtersOpen === "boolean") {
+            filtersPanel.open = preferences.filtersOpen;
+        }
     }
 
     function cardMatches(card, filters, dueLookup) {
@@ -256,6 +333,7 @@
                 if (dueOnly) {
                     dueOnly.checked = false;
                 }
+                saveReviewPreferences();
                 refreshAll(true);
                 var stage = byId("review-stage");
                 if (stage && typeof stage.scrollIntoView === "function") {
@@ -274,6 +352,7 @@
                 if (dueOnly) {
                     dueOnly.checked = true;
                 }
+                saveReviewPreferences();
                 refreshAll(true);
                 var stage = byId("review-stage");
                 if (stage && typeof stage.scrollIntoView === "function") {
@@ -574,6 +653,7 @@
                     dueOnly.checked = false;
                 }
                 clearQuickSession();
+                saveReviewPreferences();
                 refreshAll(true);
             });
         }
@@ -1149,6 +1229,7 @@
             }
             element.addEventListener("change", function () {
                 clearQuickSession();
+                saveReviewPreferences();
                 refreshAll(true);
             });
         });
@@ -1160,6 +1241,7 @@
             return;
         }
         element.addEventListener("change", function () {
+            saveReviewPreferences();
             if (!currentCard) {
                 refreshAll(true);
                 return;
@@ -1175,11 +1257,22 @@
                 return;
             }
             element.addEventListener("change", function () {
+                saveReviewPreferences();
                 if (!currentCard) {
                     return;
                 }
                 renderCurrentCardStage();
             });
+        });
+    }
+
+    function wireFiltersPanel() {
+        var panel = byId("review-filters-panel");
+        if (!panel) {
+            return;
+        }
+        panel.addEventListener("toggle", function () {
+            saveReviewPreferences();
         });
     }
 
@@ -1464,7 +1557,9 @@
             return;
         }
 
+        applyReviewPreferences(loadReviewPreferences());
         wireFilters();
+        wireFiltersPanel();
         wireLayoutMode();
         wireAnswerOptions();
         wireQuickSessions();
