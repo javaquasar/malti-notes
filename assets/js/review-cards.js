@@ -51,7 +51,7 @@
     }
 
     function getCardLayoutMode() {
-        return byId("review-card-layout") ? byId("review-card-layout").value : "classic";
+        return byId("review-card-layout") ? byId("review-card-layout").value : "flip";
     }
 
     function getReviewPreferences() {
@@ -113,7 +113,7 @@
         setValue("review-type-filter", preferences.type || "");
         setValue("review-tense-filter", preferences.tense || "");
         setValue("review-direction-filter", preferences.direction || "maltese-to-english");
-        setValue("review-card-layout", preferences.layout || "classic");
+        setValue("review-card-layout", preferences.layout || "flip");
 
         setChecked("review-due-only", !!preferences.dueOnly);
         setChecked("review-answer-show-visual", !!preferences.showVisual);
