@@ -823,7 +823,7 @@
 
         var promptWord = escapeHtml(card.maltese);
         var promptMeta = "Topic: " + escapeHtml(card.topic);
-        var tag = "Word Card";
+        var tag = "MT -> EN";
         var imperativeMeta = isImperativeShortlistCard(card)
             ? escapeHtml(getImperativeReviewMeta(card))
             : "";
@@ -1137,11 +1137,15 @@
         var verbCardAttrs = currentCard && currentCard.type === "verb-form-card"
             ? " data-review-open-verb=\"true\" title=\"Click to open the full verb table\""
             : "";
+        var flipCardClasses = "review-flip-card";
+        if (currentCard && (currentCard.image || currentCard.swatchStyle)) {
+            flipCardClasses += " review-flip-card--visual";
+        }
 
         byId("review-stage").innerHTML = "" +
             "<div class=\"review-session-bar\">" + escapeHtml(sessionSummary) + "</div>" +
             "<div class=\"review-flip-wrap\">" +
-                "<div class=\"review-flip-card\" id=\"review-flip-card\"" + verbCardAttrs + ">" +
+                "<div class=\"" + flipCardClasses + "\" id=\"review-flip-card\"" + verbCardAttrs + ">" +
                     "<div class=\"review-flip-face review-flip-face--front\">" +
                         "<div class=\"review-flip-face-inner\">" +
                             buildFront(currentCard) +
@@ -1273,6 +1277,80 @@
         }
         panel.addEventListener("toggle", function () {
             saveReviewPreferences();
+        });
+    }
+
+    function shouldIgnoreReviewHotkeys() {
+        var active = document.activeElement;
+        if (!active) {
+            return false;
+        }
+        var tag = String(active.tagName || "").toLowerCase();
+        return tag === "input" || tag === "textarea" || tag === "select" || tag === "button" || !!active.isContentEditable;
+    }
+
+    function clickGradeButton(grade) {
+        var container = byId("review-grade-actions");
+        if (!container || container.hidden) {
+            return false;
+        }
+        var button = container.querySelector("[data-grade=\"" + grade + "\"]");
+        if (!button) {
+            return false;
+        }
+        button.click();
+        return true;
+    }
+
+    function triggerRevealOrFlip() {
+        var showAnswerButton = byId("show-answer-button");
+        if (showAnswerButton && !showAnswerButton.hidden) {
+            showAnswerButton.click();
+            return true;
+        }
+
+        var flipCard = byId("review-flip-card");
+        if (flipCard) {
+            flipCard.click();
+            return true;
+        }
+
+        return false;
+    }
+
+    function wireReviewHotkeys() {
+        document.addEventListener("keydown", function (event) {
+            if (shouldIgnoreReviewHotkeys() || !currentCard) {
+                return;
+            }
+
+            var key = String(event.key || "");
+            if (key === " " || key === "Enter") {
+                if (triggerRevealOrFlip()) {
+                    event.preventDefault();
+                }
+                return;
+            }
+
+            if (key === "1") {
+                if (clickGradeButton("again")) {
+                    event.preventDefault();
+                }
+                return;
+            }
+
+            if (key === "2") {
+                if (clickGradeButton("good")) {
+                    event.preventDefault();
+                }
+                return;
+            }
+
+            if (key === "3") {
+                if (clickGradeButton("easy")) {
+                    event.preventDefault();
+                }
+            }
         });
     }
 
@@ -1562,6 +1640,7 @@
         wireFiltersPanel();
         wireLayoutMode();
         wireAnswerOptions();
+        wireReviewHotkeys();
         wireQuickSessions();
         wireSavedListTools();
         wireCustomForm();

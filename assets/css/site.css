@@ -570,6 +570,10 @@ h3 { font-size: 1.08rem; }
   will-change: transform;
 }
 
+.review-flip-card--visual {
+  min-height: 420px;
+}
+
 .review-flip-face {
   position: absolute;
   inset: 0;
@@ -612,6 +616,7 @@ h3 { font-size: 1.08rem; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .review-empty {
@@ -740,6 +745,10 @@ h3 { font-size: 1.08rem; }
 
   .review-flip-card {
     min-height: 420px;
+  }
+
+  .review-flip-card--visual {
+    min-height: 470px;
   }
 }
 
