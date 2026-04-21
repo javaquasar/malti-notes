@@ -72,6 +72,15 @@
                 normalizeForKey(item.polarity)
             ].join("::");
             item.id = item.id || ("verb::" + item.normalizedKey);
+        } else if (item.type === "sentence-card") {
+            item.maltese = collapseSpaces(item.maltese);
+            item.english = collapseSpaces(item.english || "");
+            item.group = collapseSpaces(item.group || "");
+            item.displayMaltese = item.displayMaltese || item.maltese;
+            item.normalizedMaltese = item.normalizedMaltese || normalizeForKey(item.maltese);
+            item.prompt = collapseSpaces(item.prompt || item.maltese);
+            item.answer = collapseSpaces(item.answer || item.english);
+            item.id = item.id || ("sentence::" + item.topic + "::" + item.normalizedMaltese);
         } else {
             item.maltese = collapseSpaces(item.maltese);
             item.english = collapseSpaces(item.english || "");
@@ -130,6 +139,10 @@
 
     function addWord(word) {
         return saveCard(Object.assign({}, word, { type: "word-card" }));
+    }
+
+    function addSentence(sentence) {
+        return saveCard(Object.assign({}, sentence, { type: "sentence-card" }));
     }
 
     function addCustomWord(input) {
@@ -243,17 +256,20 @@
         const all = getAllCards();
         const due = getDueCards();
         const verbCards = all.filter(function (card) { return card.type === "verb-form-card"; }).length;
-        const wordCards = all.length - verbCards;
+        const sentenceCards = all.filter(function (card) { return card.type === "sentence-card"; }).length;
+        const wordCards = all.length - verbCards - sentenceCards;
         return {
             total: all.length,
             due: due.length,
             words: wordCards,
-            verbs: verbCards
+            verbs: verbCards,
+            sentences: sentenceCards
         };
     }
 
     window.MaltiReviewStore = {
         addWord: addWord,
+        addSentence: addSentence,
         addCustomWord: addCustomWord,
         addVerbDrill: addVerbDrill,
         addVerbTables: addVerbTables,

@@ -234,7 +234,7 @@
     function renderStats() {
         var stats = window.MaltiReviewStore.getStats();
         byId("review-stats").textContent = stats.total + " saved, " + stats.due + " due now";
-        byId("review-breakdown").textContent = stats.words + " words, " + stats.verbs + " verb forms";
+        byId("review-breakdown").textContent = stats.words + " words, " + stats.sentences + " sentences, " + stats.verbs + " verb forms";
     }
 
     function buildTopicStats() {
@@ -249,7 +249,8 @@
                     total: 0,
                     due: 0,
                     words: 0,
-                    verbs: 0
+                    verbs: 0,
+                    sentences: 0
                 };
             }
 
@@ -259,6 +260,8 @@
             }
             if (card.type === "verb-form-card") {
                 topics[topic].verbs += 1;
+            } else if (card.type === "sentence-card") {
+                topics[topic].sentences += 1;
             } else {
                 topics[topic].words += 1;
             }
@@ -314,6 +317,7 @@
                     "<div class=\"review-topic-load\">" + escapeHtml(load.label) + "</div>" +
                     "<div class=\"review-topic-breakdown\">" +
                         "<span class=\"review-topic-chip\">" + topic.words + " words</span>" +
+                        "<span class=\"review-topic-chip\">" + topic.sentences + " sentences</span>" +
                         "<span class=\"review-topic-chip\">" + topic.verbs + " verb forms</span>" +
                     "</div>" +
                     "<div class=\"review-topic-actions\">" +
@@ -375,6 +379,8 @@
         }
         if (filters.type === "word-card") {
             bits.push("type: words");
+        } else if (filters.type === "sentence-card") {
+            bits.push("type: sentences");
         } else if (filters.type === "verb-form-card") {
             bits.push("type: verb forms");
         }
@@ -386,7 +392,9 @@
         } else if (filters.direction === "image-to-maltese") {
             bits.push(filters.type === "verb-form-card"
                 ? "direction: Maltese -> English"
-                : "direction: Image / Colour -> Maltese");
+                : (filters.type === "sentence-card"
+                    ? "direction: English -> Maltese"
+                    : "direction: Image / Colour -> Maltese"));
         } else {
             bits.push("direction: Maltese -> English");
         }
@@ -514,6 +522,8 @@
 
         if (filters.type === "word-card") {
             parts.push("Mode: Words");
+        } else if (filters.type === "sentence-card") {
+            parts.push("Mode: Sentences");
         } else if (filters.type === "verb-form-card") {
             parts.push("Mode: Verb forms");
         } else {
@@ -528,6 +538,8 @@
         } else if (filters.direction === "image-to-maltese") {
             if (filters.type === "verb-form-card") {
                 parts.push("Direction: Maltese -> English");
+            } else if (filters.type === "sentence-card") {
+                parts.push("Direction: English -> Maltese");
             } else {
                 parts.push("Direction: Image / Colour -> Maltese");
             }
@@ -579,6 +591,7 @@
                 card.maltese,
                 card.english,
                 card.topic,
+                card.group,
                 card.lemma,
                 card.answer,
                 card.pronoun,
@@ -816,6 +829,20 @@
                 "";
         }
 
+        if (card.type === "sentence-card") {
+            if (direction === "english-to-maltese" || direction === "image-to-maltese") {
+                return "" +
+                    "<span class=\"tag\">Sentence | EN -> MT</span>" +
+                    "<div class=\"review-word review-word--prompt\">" + escapeHtml(card.english || "(translation to add later)") + "</div>" +
+                    (card.group ? ("<div class=\"review-meta\"><code>Section</code>: " + escapeHtml(card.group) + "</div>") : "");
+            }
+
+            return "" +
+                "<span class=\"tag\">Sentence | MT -> EN</span>" +
+                "<div class=\"review-word review-word--prompt\">" + escapeHtml(card.maltese) + "</div>" +
+                (card.group ? ("<div class=\"review-meta\"><code>Section</code>: " + escapeHtml(card.group) + "</div>") : "");
+        }
+
         var visualHtml = "";
         if (card.image) {
             visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
@@ -877,6 +904,22 @@
                 });
         }
 
+        if (card.type === "sentence-card") {
+            if (direction === "english-to-maltese" || direction === "image-to-maltese") {
+                return "" +
+                    "<h3>" + escapeHtml(card.maltese) + "</h3>" +
+                    "<div class=\"review-meta\">English: " + escapeHtml(card.english || "(translation to add later)") + "</div>" +
+                    (card.group ? ("<div class=\"review-meta\">Section: " + escapeHtml(card.group) + "</div>") : "") +
+                    "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>";
+            }
+
+            return "" +
+                "<h3>" + escapeHtml(card.english || "(translation to add later)") + "</h3>" +
+                "<div class=\"review-meta\">Maltese: " + escapeHtml(card.maltese) + "</div>" +
+                (card.group ? ("<div class=\"review-meta\">Section: " + escapeHtml(card.group) + "</div>") : "") +
+                "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>";
+        }
+
         var answerOptions = getAnswerOptions();
         var title = escapeHtml(card.english || "(translation to add later)");
         var secondary = "<div class=\"review-meta\">Maltese: " + escapeHtml(card.maltese) + "</div>";
@@ -931,9 +974,13 @@
         container.innerHTML = cards.map(function (card) {
             var title = card.type === "verb-form-card"
                 ? (card.pronoun + " + " + card.lemma)
+                : card.type === "sentence-card"
+                    ? card.maltese
                 : card.maltese;
             var subtitle = card.type === "verb-form-card"
                 ? (card.answer + " | " + card.translation + " | " + formatVerbPolarity(card))
+                : card.type === "sentence-card"
+                    ? (card.english || "(translation to add later)")
                 : (card.english || "(translation to add later)");
 
             return "" +
@@ -942,10 +989,11 @@
                         "<div>" +
                             "<div class=\"review-saved-title\">" + escapeHtml(title) + "</div>" +
                             "<div class=\"review-meta\">" + escapeHtml(subtitle) + "</div>" +
+                            (card.type === "sentence-card" && card.group ? "<div class=\"review-meta\">Section: " + escapeHtml(card.group) + "</div>" : "") +
                         "</div>" +
                         "<div class=\"review-saved-meta\">" +
                             "<span class=\"review-saved-chip\">" + escapeHtml(card.topic) + "</span>" +
-                            "<span class=\"review-saved-chip\">" + escapeHtml(card.type === "verb-form-card" ? "verb form" : "word") + "</span>" +
+                            "<span class=\"review-saved-chip\">" + escapeHtml(card.type === "verb-form-card" ? "verb form" : (card.type === "sentence-card" ? "sentence" : "word")) + "</span>" +
                             "<span class=\"review-saved-chip\">" + escapeHtml(formatNextReview(card)) + "</span>" +
                         "</div>" +
                     "</div>" +
