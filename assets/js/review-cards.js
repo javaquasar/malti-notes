@@ -45,6 +45,7 @@
             topic: byId("review-topic-filter") ? byId("review-topic-filter").value : "",
             type: byId("review-type-filter") ? byId("review-type-filter").value : "",
             tense: byId("review-tense-filter") ? byId("review-tense-filter").value : "",
+            verbPractice: byId("review-verb-practice-filter") ? byId("review-verb-practice-filter").value : "meaning-to-form",
             direction: byId("review-direction-filter") ? byId("review-direction-filter").value : "maltese-to-english",
             dueOnly: !!(byId("review-due-only") && byId("review-due-only").checked)
         };
@@ -54,12 +55,19 @@
         return byId("review-card-layout") ? byId("review-card-layout").value : "flip";
     }
 
+    function getVerbPracticeMode() {
+        return byId("review-verb-practice-filter")
+            ? byId("review-verb-practice-filter").value
+            : "meaning-to-form";
+    }
+
     function getReviewPreferences() {
         var filtersPanel = byId("review-filters-panel");
         return {
             topic: byId("review-topic-filter") ? byId("review-topic-filter").value : "",
             type: byId("review-type-filter") ? byId("review-type-filter").value : "",
             tense: byId("review-tense-filter") ? byId("review-tense-filter").value : "",
+            verbPractice: getVerbPracticeMode(),
             direction: byId("review-direction-filter") ? byId("review-direction-filter").value : "maltese-to-english",
             dueOnly: !!(byId("review-due-only") && byId("review-due-only").checked),
             layout: getCardLayoutMode(),
@@ -112,6 +120,7 @@
         setValue("review-topic-filter", preferences.topic || "");
         setValue("review-type-filter", preferences.type || "");
         setValue("review-tense-filter", preferences.tense || "");
+        setValue("review-verb-practice-filter", preferences.verbPractice || "meaning-to-form");
         setValue("review-direction-filter", preferences.direction || "maltese-to-english");
         setValue("review-card-layout", preferences.layout || "flip");
 
@@ -128,6 +137,8 @@
         if (filtersPanel && typeof preferences.filtersOpen === "boolean") {
             filtersPanel.open = preferences.filtersOpen;
         }
+
+        updateVerbPracticeVisibility();
     }
 
     function cardMatches(card, filters, dueLookup) {
@@ -383,11 +394,20 @@
             bits.push("type: sentences");
         } else if (filters.type === "verb-form-card") {
             bits.push("type: verb forms");
+            if (filters.verbPractice === "form-to-pronoun") {
+                bits.push("practice: form -> pronoun");
+            } else if (filters.verbPractice === "form-to-tense") {
+                bits.push("practice: form -> tense");
+            } else {
+                bits.push("practice: meaning -> form");
+            }
         }
         if (filters.tense) {
             bits.push("tense: " + formatTenseLabel(filters.tense));
         }
-        if (filters.direction === "english-to-maltese") {
+        if (filters.type === "verb-form-card" && filters.verbPractice !== "meaning-to-form") {
+            bits.push("prompt: Maltese form");
+        } else if (filters.direction === "english-to-maltese") {
             bits.push("direction: English -> Maltese");
         } else if (filters.direction === "image-to-maltese") {
             bits.push(filters.type === "verb-form-card"
@@ -526,6 +546,13 @@
             parts.push("Mode: Sentences");
         } else if (filters.type === "verb-form-card") {
             parts.push("Mode: Verb forms");
+            if (filters.verbPractice === "form-to-pronoun") {
+                parts.push("Practice: Form -> Pronoun");
+            } else if (filters.verbPractice === "form-to-tense") {
+                parts.push("Practice: Form -> Tense");
+            } else {
+                parts.push("Practice: Meaning -> Form");
+            }
         } else {
             parts.push("Mode: All cards");
         }
@@ -533,7 +560,9 @@
             parts.push("Tense: " + formatTenseLabel(filters.tense));
         }
 
-        if (filters.direction === "english-to-maltese") {
+        if (filters.type === "verb-form-card" && filters.verbPractice !== "meaning-to-form") {
+            parts.push("Prompt: Maltese form");
+        } else if (filters.direction === "english-to-maltese") {
             parts.push("Direction: English -> Maltese");
         } else if (filters.direction === "image-to-maltese") {
             if (filters.type === "verb-form-card") {
@@ -576,6 +605,21 @@
             showExample: !byId("review-answer-show-example") || byId("review-answer-show-example").checked,
             showVerbLemmaFront: !byId("review-verb-show-lemma") || byId("review-verb-show-lemma").checked
         };
+    }
+
+    function updateVerbPracticeVisibility() {
+        var typeFilter = byId("review-type-filter");
+        var practiceSelect = byId("review-verb-practice-filter");
+        if (!practiceSelect) {
+            return;
+        }
+
+        var label = practiceSelect.closest("label");
+        var shouldShow = !typeFilter || !typeFilter.value || typeFilter.value === "verb-form-card";
+        if (label) {
+            label.hidden = !shouldShow;
+        }
+        practiceSelect.disabled = !shouldShow;
     }
 
     function getSavedListCards() {
@@ -808,6 +852,30 @@
         var answerOptions = getAnswerOptions();
 
         if (card.type === "verb-form-card") {
+            var verbPractice = getVerbPracticeMode();
+
+            if (verbPractice === "form-to-pronoun") {
+                return "" +
+                    "<span class=\"tag\">Verb Form | Pronoun</span>" +
+                    buildVerbMetaStack(card, {
+                        showTense: true,
+                        showPolarity: true,
+                        showLemma: answerOptions.showVerbLemmaFront
+                    }) +
+                    "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>";
+            }
+
+            if (verbPractice === "form-to-tense") {
+                return "" +
+                    "<span class=\"tag\">Verb Form | Tense</span>" +
+                    buildVerbMetaStack(card, {
+                        showPronoun: true,
+                        showPolarity: true,
+                        showLemma: answerOptions.showVerbLemmaFront
+                    }) +
+                    "<div class=\"review-word\">" + escapeHtml(card.answer) + "</div>";
+            }
+
             if (direction === "english-to-maltese") {
                 var primaryMeaning = getShortVerbMeaning(card.translation || card.lemma) || "(meaning to add later)";
                 return "" +
@@ -877,6 +945,40 @@
     function buildAnswer(card) {
         var direction = getWordDirection();
         if (card.type === "verb-form-card") {
+            var verbPractice = getVerbPracticeMode();
+
+            if (verbPractice === "form-to-pronoun") {
+                return "" +
+                    "<h3>" + escapeHtml(card.pronoun) + "</h3>" +
+                    "<div class=\"review-meta-stack\">" +
+                        "<div class=\"review-meta\"><code>Form</code>: " + escapeHtml(card.answer) + "</div>" +
+                        "<div class=\"review-meta\"><code>Tense</code>: " + escapeHtml(card.tense) + "</div>" +
+                        "<div class=\"review-meta\"><code>Polarity</code>: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
+                    "</div>" +
+                    buildVerbMetaStack(card, {
+                        showLemma: true,
+                        showMeanings: true,
+                        showPrompt: true,
+                        showSource: true
+                    });
+            }
+
+            if (verbPractice === "form-to-tense") {
+                return "" +
+                    "<h3>" + escapeHtml(card.tense) + "</h3>" +
+                    "<div class=\"review-meta-stack\">" +
+                        "<div class=\"review-meta\"><code>Form</code>: " + escapeHtml(card.answer) + "</div>" +
+                        "<div class=\"review-meta\"><code>Pronoun</code>: " + escapeHtml(card.pronoun) + "</div>" +
+                        "<div class=\"review-meta\"><code>Polarity</code>: " + escapeHtml(formatVerbPolarity(card)) + "</div>" +
+                    "</div>" +
+                    buildVerbMetaStack(card, {
+                        showLemma: true,
+                        showMeanings: true,
+                        showPrompt: true,
+                        showSource: true
+                    });
+            }
+
             if (direction === "english-to-maltese") {
                 return "" +
                     "<h3>" + escapeHtml(card.answer) + "</h3>" +
@@ -1271,13 +1373,14 @@
     }
 
     function wireFilters() {
-        ["review-topic-filter", "review-type-filter", "review-tense-filter", "review-direction-filter", "review-due-only"].forEach(function (id) {
+        ["review-topic-filter", "review-type-filter", "review-tense-filter", "review-verb-practice-filter", "review-direction-filter", "review-due-only"].forEach(function (id) {
             var element = byId(id);
             if (!element) {
                 return;
             }
             element.addEventListener("change", function () {
                 clearQuickSession();
+                updateVerbPracticeVisibility();
                 saveReviewPreferences();
                 refreshAll(true);
             });
@@ -1681,6 +1784,7 @@
         }
 
         applyReviewPreferences(loadReviewPreferences());
+        updateVerbPracticeVisibility();
         wireFilters();
         wireFiltersPanel();
         wireLayoutMode();
