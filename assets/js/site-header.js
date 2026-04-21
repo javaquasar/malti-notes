@@ -1,6 +1,7 @@
 (() => {
   const header = document.querySelector(".site-header");
   if (!header) return;
+  const REVIEW_STORAGE_KEY = "malti_review_cards_v2";
 
   const currentFile = (() => {
     const pathname = window.location.pathname || "";
@@ -138,6 +139,73 @@
     header.dataset.currentGroup = currentGroupLabel;
   }
 
+  const readReviewStats = () => {
+    try {
+      const raw = window.localStorage.getItem(REVIEW_STORAGE_KEY);
+      if (!raw) {
+        return { total: 0, due: 0 };
+      }
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object") {
+        return { total: 0, due: 0 };
+      }
+      const cards = Object.values(parsed);
+      const now = Date.now();
+      const due = cards.filter((card) => {
+        const nextReviewAt = card && card.nextReviewAt ? new Date(card.nextReviewAt).getTime() : 0;
+        return Number.isFinite(nextReviewAt) && nextReviewAt <= now;
+      }).length;
+      return { total: cards.length, due };
+    } catch (error) {
+      return { total: 0, due: 0 };
+    }
+  };
+
+  const ensureReviewFab = () => {
+    if (currentFile === "review_cards.html") {
+      return;
+    }
+
+    let fab = document.querySelector(".review-fab");
+    if (!fab) {
+      fab = document.createElement("a");
+      fab.className = "review-fab";
+      fab.href = "./review_cards.html";
+      fab.setAttribute("aria-label", "Open review cards");
+      fab.innerHTML = `
+        <span class="review-fab__label">
+          <span class="review-fab__label-full">Review</span>
+          <span class="review-fab__label-short">R</span>
+        </span>
+        <span class="review-fab__count" hidden>
+          <span class="review-fab__count-full"></span>
+          <span class="review-fab__count-short"></span>
+        </span>
+      `;
+      document.body.appendChild(fab);
+    }
+
+    const count = fab.querySelector(".review-fab__count");
+    const countFull = fab.querySelector(".review-fab__count-full");
+    const countShort = fab.querySelector(".review-fab__count-short");
+    const stats = readReviewStats();
+    if (!count || !countFull || !countShort) return;
+
+    if (stats.due > 0) {
+      count.hidden = false;
+      countFull.textContent = `${stats.due} due`;
+      countShort.textContent = String(stats.due);
+    } else if (stats.total > 0) {
+      count.hidden = false;
+      countFull.textContent = `${stats.total} saved`;
+      countShort.textContent = String(stats.total);
+    } else {
+      count.hidden = true;
+      countFull.textContent = "";
+      countShort.textContent = "";
+    }
+  };
+
   detailsList.forEach((details) => {
     details.addEventListener("toggle", () => {
       if (!details.open) return;
@@ -182,6 +250,15 @@
       });
       header.classList.remove("nav-open");
       if (toggle) toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  ensureReviewFab();
+  window.addEventListener("storage", ensureReviewFab);
+  window.addEventListener("focus", ensureReviewFab);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      ensureReviewFab();
     }
   });
 })();
