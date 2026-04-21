@@ -223,6 +223,7 @@ h3 { font-size: 1.08rem; }
   max-width: calc(100vw - 24px);
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   padding: 10px 12px;
   border-radius: 30px;
@@ -242,6 +243,8 @@ h3 { font-size: 1.08rem; }
 
 .review-fab__label {
   white-space: nowrap;
+  flex: 1 1 auto;
+  text-align: left;
 }
 
 .review-fab__label-short,
@@ -252,6 +255,8 @@ h3 { font-size: 1.08rem; }
 .review-fab__count {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  margin-left: auto;
   border-radius: 999px;
   padding: 4px 10px;
   background: rgba(95, 111, 103, 0.10);
