@@ -2,6 +2,7 @@
   const header = document.querySelector(".site-header");
   if (!header) return;
   const REVIEW_STORAGE_KEY = "malti_review_cards_v2";
+  const desktopReviewMedia = window.matchMedia("(min-width: 981px)");
 
   const currentFile = (() => {
     const pathname = window.location.pathname || "";
@@ -185,24 +186,44 @@
       document.body.appendChild(fab);
     }
 
-    const count = fab.querySelector(".review-fab__count");
-    const countFull = fab.querySelector(".review-fab__count-full");
-    const countShort = fab.querySelector(".review-fab__count-short");
     const stats = readReviewStats();
-    if (!count || !countFull || !countShort) return;
+    const sidebar = desktopReviewMedia.matches ? document.querySelector(".sidebar") : null;
+    if (sidebar && fab) {
+      const rect = sidebar.getBoundingClientRect();
+      fab.classList.add("is-sidebar-aligned");
+      fab.style.left = `${Math.round(rect.left)}px`;
+      fab.style.top = `${Math.round(rect.bottom + 14)}px`;
+      fab.style.width = `${Math.round(rect.width)}px`;
+      fab.style.right = "auto";
+      fab.style.bottom = "auto";
+    } else if (fab) {
+      fab.classList.remove("is-sidebar-aligned");
+      fab.style.left = "";
+      fab.style.top = "";
+      fab.style.width = "";
+      fab.style.right = "";
+      fab.style.bottom = "";
+    }
 
-    if (stats.due > 0) {
-      count.hidden = false;
-      countFull.textContent = `${stats.due} due`;
-      countShort.textContent = String(stats.due);
-    } else if (stats.total > 0) {
-      count.hidden = false;
-      countFull.textContent = `${stats.total} saved`;
-      countShort.textContent = String(stats.total);
-    } else {
-      count.hidden = true;
-      countFull.textContent = "";
-      countShort.textContent = "";
+    if (fab) {
+      const count = fab.querySelector(".review-fab__count");
+      const countFull = fab.querySelector(".review-fab__count-full");
+      const countShort = fab.querySelector(".review-fab__count-short");
+      if (!count || !countFull || !countShort) return;
+
+      if (stats.due > 0) {
+        count.hidden = false;
+        countFull.textContent = `${stats.due} due`;
+        countShort.textContent = String(stats.due);
+      } else if (stats.total > 0) {
+        count.hidden = false;
+        countFull.textContent = `${stats.total} saved`;
+        countShort.textContent = String(stats.total);
+      } else {
+        count.hidden = true;
+        countFull.textContent = "";
+        countShort.textContent = "";
+      }
     }
   };
 
@@ -256,6 +277,9 @@
   ensureReviewFab();
   window.addEventListener("storage", ensureReviewFab);
   window.addEventListener("focus", ensureReviewFab);
+  desktopReviewMedia.addEventListener("change", ensureReviewFab);
+  window.addEventListener("resize", ensureReviewFab);
+  window.addEventListener("scroll", ensureReviewFab, { passive: true });
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") {
       ensureReviewFab();
