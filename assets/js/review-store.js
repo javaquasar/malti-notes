@@ -50,6 +50,7 @@
         item.type = item.type || "word-card";
         item.topic = titleCaseLoose(item.topic || "General");
         item.sourcePage = item.sourcePage || "";
+        item.readingHint = collapseSpaces(item.readingHint || "");
         item.addedAt = item.addedAt || new Date().toISOString();
         item.reviewCount = typeof item.reviewCount === "number" ? item.reviewCount : 0;
         item.box = typeof item.box === "number" ? item.box : 0;

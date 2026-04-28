@@ -847,6 +847,10 @@
         return bits.join(" | ");
     }
 
+    function getReadingHintMeta(card) {
+        return String(card && card.readingHint || "").trim();
+    }
+
     function buildFront(card) {
         var direction = getWordDirection();
         var answerOptions = getAnswerOptions();
@@ -923,6 +927,7 @@
         var imperativeMeta = isImperativeShortlistCard(card)
             ? escapeHtml(getImperativeReviewMeta(card))
             : "";
+        var readingHintMeta = escapeHtml(getReadingHintMeta(card));
 
         if (direction === "english-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
@@ -939,6 +944,7 @@
             "<span class=\"tag\">" + tag + "</span>" +
             visualHtml +
             "<div class=\"review-word\">" + promptWord + "</div>" +
+            (readingHintMeta ? ("<div class=\"review-meta\"><code>Reading</code>: " + readingHintMeta + "</div>") : "") +
             (imperativeMeta ? ("<div class=\"review-meta\">" + imperativeMeta + "</div>") : "");
     }
 
@@ -1035,6 +1041,9 @@
 
         if (isImperativeShortlistCard(card)) {
             secondary += "<div class=\"review-meta\">" + escapeHtml(getImperativeReviewMeta(card) || "Imperative forms to add later.") + "</div>";
+        }
+        if (card.readingHint) {
+            secondary += "<div class=\"review-meta\"><code>Reading</code>: " + escapeHtml(card.readingHint) + "</div>";
         }
 
         if (answerOptions.showVisual) {

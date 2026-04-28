@@ -24,7 +24,8 @@
             english: item.english,
             topic: group.title || config.defaultTopic || "Imperative Verbs",
             sourcePage: config.sourcePage,
-            example: "Singular imperative: " + item.imperativeSingular + ". Plural imperative: " + item.imperativePlural + "."
+            example: "Singular imperative: " + item.imperativeSingular + ". Plural imperative: " + item.imperativePlural + ".",
+            readingHint: item.readingHint || ""
         };
     }
 
@@ -125,6 +126,14 @@
             return button;
         }
 
+        function formatImperativeForm(form, readingHint) {
+            var text = String(form || "");
+            if (readingHint) {
+                text += " [ " + String(readingHint) + " ]";
+            }
+            return text;
+        }
+
         function renderGroups(data) {
             var root = document.querySelector(config.rootSelector || "#imperative-shortlist");
             if (!root) {
@@ -190,11 +199,11 @@
                     imperativeCell.innerHTML = "" +
                         "<div class=\"imperative-pair-row\">" +
                             "<span class=\"imperative-pair-label\">Singular</span>" +
-                            "<code>" + String(item.imperativeSingular || "") + "</code>" +
+                            "<code>" + formatImperativeForm(item.imperativeSingular, item.readingHintSingular) + "</code>" +
                         "</div>" +
                         "<div class=\"imperative-pair-row\">" +
                             "<span class=\"imperative-pair-label\">Plural</span>" +
-                            "<code>" + String(item.imperativePlural || "") + "</code>" +
+                            "<code>" + formatImperativeForm(item.imperativePlural, item.readingHintPlural) + "</code>" +
                         "</div>";
 
                     row.appendChild(lemmaCell);

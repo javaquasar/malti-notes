@@ -163,7 +163,7 @@
   };
 
   const ensureReviewFab = () => {
-    if (currentFile === "review_cards.html") {
+    if (currentFile === "review_cards.html" || currentFile === "index.html") {
       return;
     }
 

@@ -62,6 +62,12 @@
             <section class="card" id="subject-pronouns">
                 <span class="tag">Subject Pronouns</span>
                 <h2>Main Pronouns</h2>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the core pronouns first, then reuse the Q&amp;A bank below for sentence review and speaking practice.</span>
+                </div>
+                <div class="vocab-card-grid" data-pronouns-group="pronouns-core"></div>
                 <div class="two-col">
                     <div class="box">
                         <table>
@@ -133,6 +139,7 @@
                 <span class="tag">Lesson 4.1</span>
                 <span class="tag">Demonstratives</span>
                 <h2>Demonstrative Pronouns</h2>
+                <div class="vocab-card-grid" data-pronouns-group="demonstratives-core"></div>
                 <div class="two-col">
                     <div class="box">
                         <h3>Near: this / these</h3>
@@ -384,6 +391,7 @@
             <section class="card" id="possessives">
                 <span class="tag">Possessives</span>
                 <h2>Possessive Forms</h2>
+                <div class="vocab-card-grid" data-pronouns-group="possessives-core"></div>
                 <div class="two-col">
                     <div class="box">
                         <table>
@@ -454,6 +462,7 @@
             <section class="card" id="family-examples">
                 <span class="tag">Family</span>
                 <h2>Family Examples</h2>
+                <div class="vocab-card-grid" data-pronouns-group="family-forms-core"></div>
                 <div class="three-col">
                     <div class="item"><strong>my mother</strong><span><code>omm(i)</code> / <code>ommi</code></span>
                     </div>
@@ -476,6 +485,7 @@
             <section class="card" id="home-examples">
                 <span class="tag">Home</span>
                 <h2>Home and Object Examples</h2>
+                <div class="vocab-card-grid" data-pronouns-group="home-forms-core"></div>
                 <div class="three-col">
                     <div class="item"><strong>my house</strong><span><code>id-dar tiegħi</code></span></div>
                     <div class="item"><strong>his house</strong><span><code>id-dar tiegħu</code></span></div>
@@ -497,6 +507,7 @@
             <section class="card" id="prepositions">
                 <span class="tag">Prepositions</span>
                 <h2>Prepositions and Small Particles</h2>
+                <div class="vocab-card-grid" data-pronouns-group="prepositions-core"></div>
                 <div class="two-col">
                     <div class="box">
                         <table>
@@ -663,14 +674,28 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/pronouns_possessives.json",
+        sourcePage: "pronouns_possessives.html",
+        reviewPrefix: "pronouns",
+        groupAttribute: "data-pronouns-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#subject-pronouns .toolbar-row",
+        pageBulkLabel: "Add all pronoun words",
+        defaultTopic: "Pronouns and Possessives",
+        examplePrefix: "Din"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/pronouns_possessives_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "sentence-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
