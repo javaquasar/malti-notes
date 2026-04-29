@@ -7,22 +7,23 @@
         return window.MaltiReviewStore || null;
     }
 
-    function makeReviewId(item) {
+    function makeReviewId(item, prefixOverride) {
         var config = getConfig();
         var store = getStore();
+        var prefix = prefixOverride || config.reviewPrefix;
         var key = store
             ? store.normalizeForKey(item.lemma || "")
             : String(item.lemma || "").toLowerCase();
-        return "word::" + config.reviewPrefix + "::" + key;
+        return "word::" + prefix + "::" + key;
     }
 
-    function toReviewWord(item, group) {
+    function toReviewWord(item, group, prefixOverride, topicOverride) {
         var config = getConfig();
         return {
-            id: makeReviewId(item),
+            id: makeReviewId(item, prefixOverride),
             maltese: item.lemma,
             english: item.english,
-            topic: group.title || config.defaultTopic || "Imperative Verbs",
+            topic: topicOverride || group.title || config.defaultTopic || "Imperative Verbs",
             sourcePage: config.sourcePage,
             example: "Singular imperative: " + item.imperativeSingular + ". Plural imperative: " + item.imperativePlural + ".",
             readingHint: item.readingHint || ""
@@ -134,11 +135,139 @@
             return text;
         }
 
+        function renderLesson23(data) {
+            var lesson = data.lesson23 || {};
+
+            var buildStepsRoot = document.querySelector("[data-imperative-build-steps]");
+            if (buildStepsRoot) {
+                buildStepsRoot.innerHTML = "";
+                (lesson.buildSteps || []).forEach(function (step) {
+                    var card = document.createElement("div");
+                    card.className = "box imperative-mini-box";
+                    card.innerHTML = "<h3>" + step.title + "</h3><p>" + step.text + "</p>";
+                    buildStepsRoot.appendChild(card);
+                });
+            }
+
+            var buildExamplesRoot = document.querySelector("[data-imperative-build-examples]");
+            if (buildExamplesRoot) {
+                buildExamplesRoot.innerHTML = "";
+                (lesson.buildExamples || []).forEach(function (item) {
+                    var card = document.createElement("div");
+                    card.className = "box imperative-example-box";
+                    card.innerHTML =
+                        "<div class=\"imperative-flow\">" +
+                            "<div><span class=\"imperative-flow-label\">Present (inti)</span><code>" + item.presentSingular + "</code></div>" +
+                            "<div><span class=\"imperative-flow-arrow\">-></span></div>" +
+                            "<div><span class=\"imperative-flow-label\">Command</span><code>" + item.imperativeSingular + "</code></div>" +
+                        "</div>" +
+                        "<div class=\"imperative-flow imperative-flow-plural\">" +
+                            "<div><span class=\"imperative-flow-label\">Present (intom)</span><code>" + item.presentPlural + "</code></div>" +
+                            "<div><span class=\"imperative-flow-arrow\">-></span></div>" +
+                            "<div><span class=\"imperative-flow-label\">Command</span><code>" + item.imperativePlural + "</code></div>" +
+                        "</div>";
+                    buildExamplesRoot.appendChild(card);
+                });
+            }
+
+            var politeRoot = document.querySelector("[data-imperative-polite-notes]");
+            if (politeRoot) {
+                politeRoot.innerHTML = "";
+                (lesson.politeNotes || []).forEach(function (item) {
+                    var card = document.createElement("div");
+                    card.className = "box imperative-polite-box";
+                    card.innerHTML =
+                        "<h3><code>" + item.term + "</code></h3>" +
+                        "<p class=\"muted\">" + item.meaning + "</p>" +
+                        "<p><code>" + item.example + "</code></p>";
+                    politeRoot.appendChild(card);
+                });
+            }
+
+            var drillRoot = document.querySelector("[data-imperative-drills]");
+            if (drillRoot) {
+                drillRoot.innerHTML = "";
+                (lesson.drills || []).forEach(function (item, index) {
+                    var card = document.createElement("details");
+                    card.className = "box imperative-drill-box";
+                    card.innerHTML =
+                        "<summary>" +
+                            "<span class=\"imperative-drill-number\">" + (index + 1) + ".</span>" +
+                            "<span class=\"imperative-drill-prompt\">" +
+                                "<span><strong>Inti:</strong> <code>" + item.presentSingular + "</code></span>" +
+                                "<span><strong>Intom:</strong> <code>" + item.presentPlural + "</code></span>" +
+                            "</span>" +
+                            "<span class=\"imperative-drill-toggle\">Show answer</span>" +
+                        "</summary>" +
+                        "<div class=\"imperative-drill-answer\">" +
+                            "<div class=\"imperative-pair-row\">" +
+                                "<span class=\"imperative-pair-label\">Singular command</span>" +
+                                "<code>" + item.imperativeSingular + "</code>" +
+                            "</div>" +
+                            "<div class=\"imperative-pair-row\">" +
+                                "<span class=\"imperative-pair-label\">Plural command</span>" +
+                                "<code>" + item.imperativePlural + "</code>" +
+                            "</div>" +
+                        "</div>";
+                    drillRoot.appendChild(card);
+                });
+            }
+
+            var trickyRoot = document.querySelector("[data-imperative-tricky-items]");
+            var trickyToolbar = document.querySelector("[data-imperative-tricky-toolbar]");
+            if (trickyRoot) {
+                trickyRoot.innerHTML = "";
+                var trickyWords = (lesson.trickyItems || []).map(function (item) {
+                    return toReviewWord(
+                        item,
+                        { title: "Irregular / Tricky Imperatives" },
+                        "imperative-tricky",
+                        "Irregular / Tricky Imperatives"
+                    );
+                });
+
+                if (trickyToolbar && !trickyToolbar.querySelector("[data-imperative-tricky-add]")) {
+                    var bulkRow = createBulkRow("Add tricky verbs to review", trickyWords, "source-row");
+                    bulkRow.querySelector(".action-button").dataset.imperativeTrickyAdd = "true";
+                    trickyToolbar.appendChild(bulkRow);
+                }
+
+                (lesson.trickyItems || []).forEach(function (item) {
+                    var card = document.createElement("div");
+                    card.className = "box imperative-tricky-box";
+
+                    var header = document.createElement("div");
+                    header.className = "imperative-tricky-header";
+                    header.appendChild(buildVerbButton(item));
+
+                    var meaning = document.createElement("p");
+                    meaning.className = "muted";
+                    meaning.textContent = item.english || "";
+
+                    var present = document.createElement("div");
+                    present.className = "imperative-tricky-line";
+                    present.innerHTML = "<span class=\"imperative-pair-label\">Present</span><code>" + item.presentSingular + "</code><code>" + item.presentPlural + "</code>";
+
+                    var imperative = document.createElement("div");
+                    imperative.className = "imperative-tricky-line";
+                    imperative.innerHTML = "<span class=\"imperative-pair-label\">Imperative</span><code>" + item.imperativeSingular + "</code><code>" + item.imperativePlural + "</code>";
+
+                    card.appendChild(header);
+                    card.appendChild(meaning);
+                    card.appendChild(present);
+                    card.appendChild(imperative);
+                    trickyRoot.appendChild(card);
+                });
+            }
+        }
+
         function renderGroups(data) {
             var root = document.querySelector(config.rootSelector || "#imperative-shortlist");
             if (!root) {
                 return;
             }
+
+            renderLesson23(data);
 
             var layout = root.querySelector("[data-imperative-grid]");
             var mainColumn = root.querySelector("[data-imperative-main]");
