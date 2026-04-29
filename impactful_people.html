@@ -262,38 +262,33 @@
             <section class="content-card" id="practice-bank">
                 <span class="tag">Practice Bank</span>
                 <h2>Practice Bank</h2>
-                <div data-example-group="impactful-practice-bank">
-                    <div class="sentence-card"><strong>1. Huwa kien mexxej.</strong><span>He was a leader.</span></div>
-                    <div class="sentence-card"><strong>2. Hija kienet attivista.</strong><span>She was an activist.</span></div>
-                    <div class="sentence-card"><strong>3. Huwa kien xjentist.</strong><span>He was a scientist.</span></div>
-                    <div class="sentence-card"><strong>4. Hija kienet ġurnalista.</strong><span>She was a journalist.</span></div>
-                    <div class="sentence-card"><strong>5. Huwa kien famuż.</strong><span>He was famous.</span></div>
-                    <div class="sentence-card"><strong>6. Hija kienet popolari.</strong><span>She was popular.</span></div>
-                    <div class="sentence-card"><strong>7. Huwa kien umli.</strong><span>He was humble.</span></div>
-                    <div class="sentence-card"><strong>8. Hija kienet onesta.</strong><span>She was honest.</span></div>
-                    <div class="sentence-card"><strong>9. Huwa għamel bidla kbira.</strong><span>He made a big change.</span></div>
-                    <div class="sentence-card"><strong>10. Hija għamlet impatt.</strong><span>She made an impact.</span></div>
-                    <div class="sentence-card"><strong>11. Martin Luther King Jr. kien mexxej.</strong><span>Martin Luther King Jr. was a leader.</span></div>
-                    <div class="sentence-card"><strong>12. Malala Yousafzai hija attivista.</strong><span>Malala Yousafzai is an activist.</span></div>
-                    <div class="sentence-card"><strong>13. Dun Karm Psaila kien poeta Malti.</strong><span>Dun Karm Psaila was a Maltese poet.</span></div>
-                    <div class="sentence-card"><strong>14. George Borg Olivier kien Prim Ministru ta' Malta.</strong><span>George Borg Olivier was Prime Minister of Malta.</span></div>
-                    <div class="sentence-card"><strong>15. Pietru Pawl Saydon kien qassis.</strong><span>Pietru Pawl Saydon was a priest.</span></div>
-                    <div class="sentence-card"><strong>16. Agatha Barbara kienet għalliema.</strong><span>Agatha Barbara was a teacher.</span></div>
-                    <div class="sentence-card"><strong>17. Daphne Caruana Galizia kitbet dwar il-politika.</strong><span>Daphne Caruana Galizia wrote about politics.</span></div>
-                    <div class="sentence-card"><strong>18. Neil Agius għamel rekords fl-għawm.</strong><span>Neil Agius made records in swimming.</span></div>
-                    <div class="sentence-card"><strong>19. Hayley Bugeja u Maria Farrugia huma plejers tal-futbol.</strong><span>Hayley Bugeja and Maria Farrugia are football players.</span></div>
-                    <div class="sentence-card"><strong>20. Oliver Friggieri kien professur l-Università.</strong><span>Oliver Friggieri was a professor at the University.</span></div>
+                <div class="toolbar-row">
+                    <a class="action-button secondary" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Use this bank to review short biography lines and high-frequency past-tense patterns.</span>
                 </div>
+                <div data-example-group="impactful-practice-bank"></div>
             </section>
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        sourcePage: "impactful_people.html",
+        reviewPrefix: "impactful-people",
+        pageToolbarSelector: "#practice-bank .toolbar-row",
+        pageBulkLabel: "Add all biography lines",
+        defaultTopic: "Impactful People"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/impactful_people_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "sentence-card"
+        cardClass: "sentence-card",
+        sourcePage: "impactful_people.html",
+        reviewPrefix: "impactful-people",
+        defaultTopic: "Impactful People"
     });
     </script>
     <script src="./assets/js/site-header.js"></script>
