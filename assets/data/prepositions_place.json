@@ -14,10 +14,7 @@
           "english": "on",
           "example": "Il-ktieb huwa fuq il-mejda.",
           "note": "place",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
+          "review": { "enabled": true, "type": "word" }
         },
         {
           "slug": "taht",
@@ -25,10 +22,7 @@
           "english": "under",
           "example": "Il-ballun huwa taħt is-siġġu.",
           "note": "place",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
+          "review": { "enabled": true, "type": "word" }
         },
         {
           "slug": "hdejn",
@@ -36,10 +30,7 @@
           "english": "next to",
           "example": "Il-lampa hija ħdejn is-sodda.",
           "note": "place",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
+          "review": { "enabled": true, "type": "word" }
         },
         {
           "slug": "quddiem",
@@ -47,10 +38,7 @@
           "english": "in front of",
           "example": "Il-karozza hija quddiem id-dar.",
           "note": "place",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
+          "review": { "enabled": true, "type": "word" }
         },
         {
           "slug": "wara",
@@ -58,10 +46,7 @@
           "english": "behind",
           "example": "Il-ġnien huwa wara d-dar.",
           "note": "place",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
+          "review": { "enabled": true, "type": "word" }
         },
         {
           "slug": "bejn",
@@ -69,10 +54,15 @@
           "english": "between",
           "example": "Is-siġġu huwa bejn il-mejda u t-tieqa.",
           "note": "place",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
+          "review": { "enabled": true, "type": "word" }
+        },
+        {
+          "slug": "fnofs",
+          "maltese": "f’nofs / fin-nofs",
+          "english": "in the middle / centre",
+          "example": "Il-knisja qiegħda f’nofs il-pjazza.",
+          "note": "place",
+          "review": { "enabled": true, "type": "word" }
         }
       ]
     },
@@ -82,66 +72,12 @@
       "sectionTitle": "Furniture Position",
       "title": "Furniture and room objects",
       "items": [
-        {
-          "slug": "mejda",
-          "maltese": "mejda",
-          "english": "table",
-          "example": "Il-ktieb huwa fuq il-mejda.",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
-        },
-        {
-          "slug": "siggu",
-          "maltese": "siġġu",
-          "english": "chair",
-          "example": "Il-ballun huwa taħt is-siġġu.",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
-        },
-        {
-          "slug": "sufan",
-          "maltese": "sufan",
-          "english": "sofa",
-          "example": "Is-sufan huwa ħdejn it-tieqa.",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
-        },
-        {
-          "slug": "sodda",
-          "maltese": "sodda",
-          "english": "bed",
-          "example": "Il-lampa hija ħdejn is-sodda.",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
-        },
-        {
-          "slug": "xkaffa",
-          "maltese": "xkaffa",
-          "english": "shelf",
-          "example": "Il-kotba huma fuq ix-xkaffa.",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
-        },
-        {
-          "slug": "skrivanija",
-          "maltese": "skrivanija",
-          "english": "desk",
-          "example": "Il-laptop huwa fuq l-iskrivanija.",
-          "review": {
-            "enabled": true,
-            "type": "word"
-          }
-        }
+        { "slug": "mejda", "maltese": "mejda", "english": "table", "example": "Il-ktieb huwa fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "siggu", "maltese": "siġġu", "english": "chair", "example": "Il-ballun huwa taħt is-siġġu.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "sufan", "maltese": "sufan", "english": "sofa", "example": "Is-sufan huwa ħdejn it-tieqa.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "sodda", "maltese": "sodda", "english": "bed", "example": "Il-lampa hija ħdejn is-sodda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "xkaffa", "maltese": "xkaffa", "english": "shelf", "example": "Il-kotba huma fuq ix-xkaffa.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "skrivanija", "maltese": "skrivanija", "english": "desk", "example": "Il-laptop huwa fuq l-iskrivanija.", "review": { "enabled": true, "type": "word" } }
       ]
     }
   ]
