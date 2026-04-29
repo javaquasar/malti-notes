@@ -141,6 +141,13 @@
         updateVerbPracticeVisibility();
     }
 
+    function setBackupStatus(message) {
+        var node = byId("review-backup-status");
+        if (node) {
+            node.textContent = message;
+        }
+    }
+
     function cardMatches(card, filters, dueLookup) {
         if (filters.topic && card.topic !== filters.topic) {
             return false;
@@ -1707,6 +1714,100 @@
         });
     }
 
+    function buildReviewBackupPayload() {
+        var payload = window.MaltiReviewStore.exportBackup();
+        payload.preferences = getReviewPreferences();
+        payload.stats = window.MaltiReviewStore.getStats();
+        return payload;
+    }
+
+    function downloadReviewBackup() {
+        var payload = buildReviewBackupPayload();
+        var json = JSON.stringify(payload, null, 2);
+        var blob = new Blob([json], { type: "application/json" });
+        var url = window.URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        var date = new Date().toISOString().slice(0, 10);
+
+        link.href = url;
+        link.download = "malti-review-backup-" + date + ".json";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+
+        setBackupStatus("Review backup exported.");
+    }
+
+    function importReviewBackupFile(file) {
+        if (!file) {
+            return;
+        }
+
+        var reader = new FileReader();
+        reader.onload = function () {
+            try {
+                var parsed = JSON.parse(String(reader.result || "{}"));
+                var existing = window.MaltiReviewStore.getStats().total;
+                var confirmed = window.confirm(
+                    existing
+                        ? "Replace the current review progress with this backup?"
+                        : "Import this review backup?"
+                );
+
+                if (!confirmed) {
+                    setBackupStatus("Import cancelled.");
+                    return;
+                }
+
+                var result = window.MaltiReviewStore.importBackup(parsed, { mode: "replace" });
+
+                if (parsed && parsed.preferences && typeof parsed.preferences === "object") {
+                    applyReviewPreferences(parsed.preferences);
+                    saveReviewPreferences();
+                }
+
+                clearQuickSession();
+                queue = [];
+                currentCard = null;
+                refreshAll(true);
+                setBackupStatus("Imported " + result.imported + " cards.");
+            } catch (error) {
+                console.warn(error);
+                setBackupStatus("Could not import that backup file.");
+            }
+        };
+
+        reader.onerror = function () {
+            setBackupStatus("Could not read that backup file.");
+        };
+
+        reader.readAsText(file, "utf-8");
+    }
+
+    function wireReviewBackup() {
+        var exportButton = byId("export-review-backup");
+        var importButton = byId("import-review-backup");
+        var fileInput = byId("review-backup-file");
+
+        if (exportButton) {
+            exportButton.addEventListener("click", function () {
+                downloadReviewBackup();
+            });
+        }
+
+        if (importButton && fileInput) {
+            importButton.addEventListener("click", function () {
+                fileInput.value = "";
+                fileInput.click();
+            });
+
+            fileInput.addEventListener("change", function () {
+                importReviewBackupFile(fileInput.files && fileInput.files[0]);
+            });
+        }
+    }
+
     function toAnimalReviewId(item) {
         return "word::animals::" + window.MaltiReviewStore.normalizeForKey(item.slug || item.maltese);
     }
@@ -1831,16 +1932,17 @@
         wireQuickSessions();
         wireSavedListTools();
         wireCustomForm();
+        wireReviewBackup();
 
         Promise.allSettled([backfillAnimalImages(), backfillColorSwatches()]).finally(function () {
             refreshAll(true);
 
             byId("clear-review").addEventListener("click", function () {
-                getAllCards().forEach(function (card) {
-                    window.MaltiReviewStore.removeCard(card.id);
-                });
+                window.MaltiReviewStore.clearAllCards();
                 queue = [];
                 currentCard = null;
+                clearQuickSession();
+                setBackupStatus("Review list cleared.");
                 refreshAll(true);
             });
         });

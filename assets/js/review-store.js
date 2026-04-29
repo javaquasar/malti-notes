@@ -268,6 +268,64 @@
         };
     }
 
+    function clearAllCards() {
+        saveState({});
+    }
+
+    function exportBackup() {
+        return {
+            format: "malti-review-backup-v1",
+            exportedAt: new Date().toISOString(),
+            cards: getAllCards()
+        };
+    }
+
+    function extractCardsFromBackup(payload) {
+        if (Array.isArray(payload)) {
+            return payload;
+        }
+
+        if (!payload || typeof payload !== "object") {
+            throw new Error("Backup file is empty or invalid.");
+        }
+
+        if (Array.isArray(payload.cards)) {
+            return payload.cards;
+        }
+
+        if (payload.format === "malti-review-backup-v1") {
+            return [];
+        }
+
+        return Object.keys(payload).map(function (key) {
+            return payload[key];
+        });
+    }
+
+    function importBackup(payload, options) {
+        const settings = options || {};
+        const cards = extractCardsFromBackup(payload);
+        const baseState = settings.mode === "merge" ? loadState() : {};
+        const nextState = {};
+
+        Object.keys(baseState).forEach(function (key) {
+            nextState[key] = normalizeCard(baseState[key]);
+        });
+
+        cards.forEach(function (card) {
+            const normalized = normalizeCard(card);
+            const existing = nextState[normalized.id] ? normalizeCard(nextState[normalized.id]) : null;
+            nextState[normalized.id] = existing ? normalizeCard(mergeCardData(existing, normalized)) : normalized;
+        });
+
+        saveState(nextState);
+
+        return {
+            imported: cards.length,
+            total: Object.keys(nextState).length
+        };
+    }
+
     window.MaltiReviewStore = {
         addWord: addWord,
         addSentence: addSentence,
@@ -287,6 +345,9 @@
         reviewWord: reviewCard,
         reviewCard: reviewCard,
         getStats: getStats,
+        clearAllCards: clearAllCards,
+        exportBackup: exportBackup,
+        importBackup: importBackup,
         normalizeQuotes: normalizeQuotes,
         normalizeForKey: normalizeForKey
     };
