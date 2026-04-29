@@ -329,7 +329,9 @@
                 "<article class=\"review-topic-card review-topic-card--" + load.level + "\">" +
                     "<div class=\"review-topic-top\">" +
                         "<h3>" + escapeHtml(topic.topic) + "</h3>" +
-                        "<span class=\"status-chip\">" + topic.due + " due</span>" +
+                    "</div>" +
+                    "<div class=\"review-topic-meta-row\">" +
+                        "<span class=\"review-topic-due-badge\"><strong>" + topic.due + "</strong><span>due</span></span>" +
                     "</div>" +
                     "<p class=\"review-topic-total\">" + topic.total + (topic.total === 1 ? " saved card" : " saved cards") + "</p>" +
                     "<div class=\"review-topic-load\">" + escapeHtml(load.label) + "</div>" +
@@ -339,8 +341,8 @@
                         "<span class=\"review-topic-chip\">" + topic.verbs + " verb forms</span>" +
                     "</div>" +
                     "<div class=\"review-topic-actions\">" +
-                        "<button class=\"action-button\" type=\"button\" data-study-topic=\"" + escapeHtml(topic.topic) + "\">Study this topic</button>" +
-                        "<button class=\"action-button\" type=\"button\" data-study-topic-due=\"" + escapeHtml(topic.topic) + "\">Study due</button>" +
+                        "<button class=\"action-button review-topic-button\" type=\"button\" data-study-topic=\"" + escapeHtml(topic.topic) + "\">Study topic</button>" +
+                        "<button class=\"action-button review-topic-button review-topic-button--secondary\" type=\"button\" data-study-topic-due=\"" + escapeHtml(topic.topic) + "\">Due only</button>" +
                     "</div>" +
                 "</article>";
         }).join("");
