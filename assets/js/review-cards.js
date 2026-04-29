@@ -344,6 +344,14 @@
                 if (select) {
                     select.value = button.getAttribute("data-study-topic") || "";
                 }
+                var type = byId("review-type-filter");
+                if (type) {
+                    type.value = "";
+                }
+                var tense = byId("review-tense-filter");
+                if (tense) {
+                    tense.value = "";
+                }
                 var dueOnly = byId("review-due-only");
                 if (dueOnly) {
                     dueOnly.checked = false;
@@ -362,6 +370,14 @@
                 var select = byId("review-topic-filter");
                 if (select) {
                     select.value = button.getAttribute("data-study-topic-due") || "";
+                }
+                var type = byId("review-type-filter");
+                if (type) {
+                    type.value = "";
+                }
+                var tense = byId("review-tense-filter");
+                if (tense) {
+                    tense.value = "";
                 }
                 var dueOnly = byId("review-due-only");
                 if (dueOnly) {
@@ -695,6 +711,7 @@
             resetButton.addEventListener("click", function () {
                 var topic = byId("review-topic-filter");
                 var type = byId("review-type-filter");
+                var tense = byId("review-tense-filter");
                 var dueOnly = byId("review-due-only");
                 var direction = byId("review-direction-filter");
                 if (topic) {
@@ -702,6 +719,9 @@
                 }
                 if (type) {
                     type.value = "";
+                }
+                if (tense) {
+                    tense.value = "";
                 }
                 if (direction) {
                     direction.value = "maltese-to-english";
@@ -718,11 +738,20 @@
         var fullTopicButton = byId("review-study-topic-full");
         if (fullTopicButton) {
             fullTopicButton.addEventListener("click", function () {
+                var type = byId("review-type-filter");
+                var tense = byId("review-tense-filter");
                 var dueOnly = byId("review-due-only");
+                if (type) {
+                    type.value = "";
+                }
+                if (tense) {
+                    tense.value = "";
+                }
                 if (dueOnly) {
                     dueOnly.checked = false;
                 }
                 clearQuickSession();
+                saveReviewPreferences();
                 refreshAll(true);
             });
         }
