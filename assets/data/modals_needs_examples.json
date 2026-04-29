@@ -1,6 +1,201 @@
 {
   "groups": [
     {
+      "id": "modals-core-patterns",
+      "title": "What these patterns do",
+      "items": [
+        { "maltese": "Nista' mmur.", "english": "I can go." },
+        { "maltese": "Irrid naħdem.", "english": "I want / must work." },
+        { "maltese": "Nixtieq nixrob kafè.", "english": "I would like to drink coffee." },
+        { "maltese": "Għandi bżonn nistrieħ.", "english": "I need to rest." }
+      ]
+    },
+    {
+      "id": "modals-nista-pronouns",
+      "title": "Can - nista' - All Pronouns",
+      "items": [
+        { "maltese": "Jien nista' mmur.", "english": "I can go." },
+        { "maltese": "Int tista' tmur.", "english": "You can go." },
+        { "maltese": "Huwa jista' jmur.", "english": "He can go." },
+        { "maltese": "Hija tista' tmur.", "english": "She can go." },
+        { "maltese": "Aħna nistgħu mmorru.", "english": "We can go." },
+        { "maltese": "Intom tistgħu tmorru.", "english": "You all can go." },
+        { "maltese": "Huma jistgħu jmorru.", "english": "They can go." }
+      ]
+    },
+    {
+      "id": "modals-nista-models",
+      "title": "Can - nista' - More Models",
+      "items": [
+        { "maltese": "Nista' ngħin.", "english": "I can help." },
+        { "maltese": "Tista' titkellem bil-Malti?", "english": "Can you speak Maltese?" },
+        { "maltese": "Jista' jiġi wara x-xogħol.", "english": "He can come after work." },
+        { "maltese": "Nistgħu nibdew issa.", "english": "We can start now." }
+      ]
+    },
+    {
+      "id": "modals-jaf-pronouns",
+      "title": "Know How - jaf - All Pronouns",
+      "items": [
+        { "maltese": "Jien naf insuq.", "english": "I know how to drive." },
+        { "maltese": "Int taf issajjar.", "english": "You know how to cook." },
+        { "maltese": "Huwa jaf jitkellem bl-Ingliż.", "english": "He knows how to speak English." },
+        { "maltese": "Hija taf tgħum.", "english": "She knows how to swim." },
+        { "maltese": "Aħna nafu naħdmu flimkien.", "english": "We know how to work together." },
+        { "maltese": "Intom tafu taqraw bil-Malti.", "english": "You all know how to read in Maltese." },
+        { "maltese": "Huma jafu jsibu t-triq.", "english": "They know how to find the way." }
+      ]
+    },
+    {
+      "id": "modals-jaf-models",
+      "title": "Know How - jaf - When it is useful",
+      "items": [
+        { "maltese": "Nista' ngħin.", "english": "I can help." },
+        { "maltese": "Naf insajjar.", "english": "I know how to cook." },
+        { "maltese": "Tista' tgħinni?", "english": "Can you help me?" },
+        { "maltese": "Taf issib il-bank?", "english": "Do you know how to find the bank?" }
+      ]
+    },
+    {
+      "id": "modals-irrid-pronouns",
+      "title": "Want / Must - irrid - All Pronouns",
+      "items": [
+        { "maltese": "Jien irrid immur.", "english": "I want / must go." },
+        { "maltese": "Int trid tmur.", "english": "You want / must go." },
+        { "maltese": "Huwa jrid imur.", "english": "He wants / must go." },
+        { "maltese": "Hija trid tmur.", "english": "She wants / must go." },
+        { "maltese": "Aħna rridu mmorru.", "english": "We want / must go." },
+        { "maltese": "Intom tridu tmorru.", "english": "You all want / must go." },
+        { "maltese": "Huma jridu jmorru.", "english": "They want / must go." }
+      ]
+    },
+    {
+      "id": "modals-irrid-models",
+      "title": "Want / Must - irrid - More Models",
+      "items": [
+        { "maltese": "Irrid naħdem illum.", "english": "I must work today." },
+        { "maltese": "Trid tistrieħ.", "english": "You need / must rest." },
+        { "maltese": "Irridu nitilgħu kmieni.", "english": "We must leave early." },
+        { "maltese": "Jridu jaslu fil-ħin.", "english": "They must arrive on time." }
+      ]
+    },
+    {
+      "id": "modals-nixtieq-pronouns",
+      "title": "Would Like - nixtieq - All Pronouns",
+      "items": [
+        { "maltese": "Jien nixtieq niekol.", "english": "I would like to eat." },
+        { "maltese": "Int tixtieq tiekol.", "english": "You would like to eat." },
+        { "maltese": "Huwa jixtieq jiekol.", "english": "He would like to eat." },
+        { "maltese": "Hija tixtieq tiekol.", "english": "She would like to eat." },
+        { "maltese": "Aħna nixtiequ nieklu.", "english": "We would like to eat." },
+        { "maltese": "Intom tixtiequ tieklu.", "english": "You all would like to eat." },
+        { "maltese": "Huma jixtiequ jieklu.", "english": "They would like to eat." }
+      ]
+    },
+    {
+      "id": "modals-nixtieq-models",
+      "title": "Would Like - nixtieq - More Models",
+      "items": [
+        { "maltese": "Nixtieq nixrob ilma.", "english": "I would like to drink water." },
+        { "maltese": "Tixtieq tiġi magħna?", "english": "Would you like to come with us?" },
+        { "maltese": "Jixtieq jixtri karozza.", "english": "He would like to buy a car." },
+        { "maltese": "Nixtiequ niltaqgħu għada.", "english": "We would like to meet tomorrow." }
+      ]
+    },
+    {
+      "id": "modals-bzonn-pronouns",
+      "title": "Need - għandi bżonn - All Pronouns",
+      "items": [
+        { "maltese": "Jien għandi bżonn nistrieħ.", "english": "I need to rest." },
+        { "maltese": "Int għandek bżonn tistrieħ.", "english": "You need to rest." },
+        { "maltese": "Huwa għandu bżonn jistrieħ.", "english": "He needs to rest." },
+        { "maltese": "Hija għandha bżonn tistrieħ.", "english": "She needs to rest." },
+        { "maltese": "Aħna għandna bżonn nistrieħu.", "english": "We need to rest." },
+        { "maltese": "Intom għandkom bżonn tistrieħu.", "english": "You all need to rest." },
+        { "maltese": "Huma għandhom bżonn jistrieħu.", "english": "They need to rest." }
+      ]
+    },
+    {
+      "id": "modals-bzonn-models",
+      "title": "Need - għandi bżonn - More Models",
+      "items": [
+        { "maltese": "Għandi bżonn tabib.", "english": "I need a doctor." },
+        { "maltese": "Għandek bżonn ftit ħin.", "english": "You need a little time." },
+        { "maltese": "Għandna bżonn nixtru ikel.", "english": "We need to buy food." },
+        { "maltese": "Għandhom bżonn għajnuna.", "english": "They need help." }
+      ]
+    },
+    {
+      "id": "modals-missu-pronouns",
+      "title": "Should - missu - All Pronouns",
+      "items": [
+        { "maltese": "Jien imissni nistrieħ.", "english": "I should rest." },
+        { "maltese": "Int imissek tmur id-dar.", "english": "You should go home." },
+        { "maltese": "Huwa missu jiekol aktar.", "english": "He should eat more." },
+        { "maltese": "Hija missha torqod kmieni.", "english": "She should sleep early." },
+        { "maltese": "Aħna jmissna nibdew issa.", "english": "We should start now." },
+        { "maltese": "Intom imisskom titilqu kmieni.", "english": "You all should leave early." },
+        { "maltese": "Huma misshom jitkellmu mal-għalliem.", "english": "They should speak to the teacher." }
+      ]
+    },
+    {
+      "id": "modals-missu-models",
+      "title": "Should - missu - Advice Models",
+      "items": [
+        { "maltese": "Imissek tixrob aktar ilma.", "english": "You should drink more water." },
+        { "maltese": "Missu jmur għand it-tabib.", "english": "He should go to the doctor." },
+        { "maltese": "Missha tieħu pawża.", "english": "She should take a break." },
+        { "maltese": "Jmissna nistudjaw aktar.", "english": "We should study more." }
+      ]
+    },
+    {
+      "id": "modals-jehtieg-main",
+      "title": "It Is Necessary - jeħtieġ - Main Pattern",
+      "items": [
+        { "maltese": "Jeħtieġ li nitilqu issa.", "english": "It is necessary that we leave now." },
+        { "maltese": "Jeħtieġ aktar ħin.", "english": "More time is needed." },
+        { "maltese": "Jeħtieġ li tkun kwiet.", "english": "It is necessary that you stay calm." },
+        { "maltese": "Jeħtieġ li naslu kmieni.", "english": "It is necessary that we arrive early." }
+      ]
+    },
+    {
+      "id": "modals-jehtieg-subjects",
+      "title": "It Is Necessary - jeħtieġ - With Different Subjects",
+      "items": [
+        { "maltese": "Jeħtieġli nistrieħ.", "english": "I need to rest / it is necessary for me to rest." },
+        { "maltese": "Jeħtieġlek taħdem.", "english": "You need to work." },
+        { "maltese": "Jeħtieġlu jmur il-bank.", "english": "He needs to go to the bank." },
+        { "maltese": "Jeħtieġilha tistrieħ.", "english": "She needs to rest." },
+        { "maltese": "Jeħtieġilna nixtru ikel.", "english": "We need to buy food." },
+        { "maltese": "Jeħtieġilkom titkellmu bil-mod.", "english": "You all need to speak slowly." },
+        { "maltese": "Jeħtieġilhom jaslu fil-ħin.", "english": "They need to arrive on time." }
+      ]
+    },
+    {
+      "id": "modals-negative-models",
+      "title": "Negative Forms - Most useful negatives",
+      "items": [
+        { "maltese": "Ma nistax immur.", "english": "I cannot go." },
+        { "maltese": "Ma nistgħux nibqgħu.", "english": "We cannot stay." },
+        { "maltese": "Ma nixtieqx noħroġ illum.", "english": "I would not like to go out today." },
+        { "maltese": "M'għandix bżonn karozza.", "english": "I do not need a car." },
+        { "maltese": "Ma nafx insuq.", "english": "I do not know how to drive." },
+        { "maltese": "Ma jmissnix nitkellem hekk.", "english": "I should not speak like that." }
+      ]
+    },
+    {
+      "id": "modals-daily-life",
+      "title": "Daily Life Models",
+      "items": [
+        { "maltese": "Illum nista' noħroġ kmieni.", "english": "Today I can go out early." },
+        { "maltese": "Illum irrid naħdem id-dar.", "english": "Today I must work at home." },
+        { "maltese": "Għandi bżonn nixtri ftit ikel.", "english": "I need to buy some food." },
+        { "maltese": "Nixtieq nara lill-ħbieb tiegħi.", "english": "I would like to see my friends." },
+        { "maltese": "Ma nistax noħroġ illejla għax għandi x-xogħol.", "english": "I cannot go out tonight because I have work." },
+        { "maltese": "Nixtieq nistrieħ ftit wara x-xogħol.", "english": "I would like to rest a little after work." }
+      ]
+    },
+    {
       "id": "modals-phrases",
       "items": [
         { "maltese": "Nista' mmur illum.", "english": "I can go today." },
