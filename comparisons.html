@@ -58,47 +58,30 @@
             <section class="card" id="basic">
                 <span class="tag">Core</span>
                 <h2>Basic Comparison Words</h2>
-                <div class="three-col">
-                    <div class="item"><strong>ikbar</strong><span>bigger</span></div>
-                    <div class="item"><strong>iżgħar</strong><span>smaller</span></div>
-                    <div class="item"><strong>aħjar</strong><span>better</span></div>
-                    <div class="item"><strong>isbaħ</strong><span>more beautiful</span></div>
-                    <div class="item"><strong>aktar</strong><span>more</span></div>
-                    <div class="item"><strong>inqas</strong><span>less</span></div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Add the comparison words first, then reuse the phrase bank below for sentence practice and speaking.</span>
                 </div>
+                <div class="vocab-card-grid" data-comparisons-group="comparisons-core"></div>
             </section>
 
             <section class="card" id="people">
                 <span class="tag">People</span>
                 <h2>Comparing People</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Huwa itwal minn ħuh.</span><span class="en">He is taller than his brother.</span></div>
-                    <div class="example-line"><span class="mt">Hija iqsar minn oħtha.</span><span class="en">She is shorter than her sister.</span></div>
-                    <div class="example-line"><span class="mt">Dan it-tifel huwa iżgħar minn dak it-tifel.</span><span class="en">This boy is smaller than that boy.</span></div>
-                    <div class="example-line"><span class="mt">Dik il-mara tidher isbaħ.</span><span class="en">That woman looks more beautiful.</span></div>
-                </div>
+                <div data-example-group="comparisons-people"></div>
             </section>
 
             <section class="card" id="homes">
                 <span class="tag">Homes</span>
                 <h2>Comparing Homes and Places</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Din id-dar akbar minn dik.</span><span class="en">This house is bigger than that one.</span></div>
-                    <div class="example-line"><span class="mt">Il-kamra tiegħi iżgħar mill-kamra ta' &#295ija.</span><span class="en">My room is smaller than her room.</span></div>
-                    <div class="example-line"><span class="mt">Valletta hija aktar storika minn belt żgħira.</span><span class="en">Valletta is more historic than a small town.</span></div>
-                    <div class="example-line"><span class="mt">Dan il-post aħjar għall-mixjiet.</span><span class="en">This place is better for walks.</span></div>
-                </div>
+                <div data-example-group="comparisons-homes"></div>
             </section>
 
             <section class="card" id="objects">
                 <span class="tag">Objects</span>
                 <h2>Comparing Objects</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Din il-mejda akbar minn dik il-mejda.</span><span class="en">This table is bigger than that table.</span></div>
-                    <div class="example-line"><span class="mt">Dan is-siġġu aktar komdu.</span><span class="en">This chair is more comfortable.</span></div>
-                    <div class="example-line"><span class="mt">Dan il-flokk irħis aktar.</span><span class="en">This shirt is cheaper.</span></div>
-                    <div class="example-line"><span class="mt">Din il-karozza aħjar minn dik.</span><span class="en">This car is better than that one.</span></div>
-                </div>
+                <div data-example-group="comparisons-objects"></div>
             </section>
 
             <section class="card" id="questions">
@@ -127,17 +110,16 @@
             <section class="card" id="wrong">
                 <span class="tag">Review</span>
                 <h2>Wrong vs Right</h2>
-                <div class="wrong-right-grid">
-                    <div class="wide-box">
-                        <h3>Wrong</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Din akbar minn.</code></span><span class="en">Sentence not complete.</span></div>
+                <div class="section-stack">
+                    <div class="mistake">
+                        <h3>Common Problem</h3>
+                        <div class="line-pair">
+                            <div class="mt-line"><span class="wrong">Din akbar minn.</span></div>
+                            <div class="en-line">Wrong: sentence not complete.</div>
                         </div>
-                    </div>
-                    <div class="wide-box">
-                        <h3>Right</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Din akbar minn dik.</code></span><span class="en">This is bigger than that.</span></div>
+                        <div class="line-pair">
+                            <div class="mt-line"><span class="right">Din akbar minn dik.</span></div>
+                            <div class="en-line">Right: complete the comparison after <code>minn</code>.</div>
                         </div>
                     </div>
                 </div>
@@ -146,8 +128,7 @@
             <section class="card" id="phrases">
                 <span class="tag">Phrases</span>
                 <h2>Thematic Phrases</h2>
-                <div data-example-group="comparisons-phrases">
-                </div>
+                <div data-example-group="comparisons-phrases"></div>
             </section>
 
             <section class="card" id="related">
@@ -162,14 +143,28 @@
         </main>
     </div>
 </div>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/render-vocab-cards.js"></script>
     <script src="./assets/js/render-example-banks.js"></script>
     <script>
+    window.MaltiVocabReviewPage = {
+        dataUrl: "./assets/data/comparisons.json",
+        sourcePage: "comparisons.html",
+        reviewPrefix: "comparisons",
+        groupAttribute: "data-comparisons-group",
+        cardClass: "visual-vocab-card",
+        pageToolbarSelector: "#basic .toolbar-row",
+        pageBulkLabel: "Add all comparison words",
+        defaultTopic: "Comparisons",
+        examplePrefix: "Dan"
+    };
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/comparisons_examples.json",
         groupAttribute: "data-example-group",
         cardClass: "phrase-card"
     });
     </script>
+    <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>
