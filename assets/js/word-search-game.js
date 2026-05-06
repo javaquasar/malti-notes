@@ -767,6 +767,51 @@
     return value === entry.key;
   });
 
+  const scorePuzzle = (puzzle) => {
+    if (!puzzle.words.length) return -Infinity;
+
+    const cellUsage = new Map();
+    const directionUsage = new Map();
+    let edgeCells = 0;
+
+    puzzle.words.forEach((entry) => {
+      entry.cells.forEach((id) => {
+        cellUsage.set(id, (cellUsage.get(id) || 0) + 1);
+        const [row, col] = id.split("-").map(Number);
+        if (row === 0 || col === 0 || row === state.size - 1 || col === state.size - 1) {
+          edgeCells += 1;
+        }
+      });
+
+      const [firstRow, firstCol] = entry.cells[0].split("-").map(Number);
+      const [lastRow, lastCol] = entry.cells[entry.cells.length - 1].split("-").map(Number);
+      const rowDirection = Math.sign(lastRow - firstRow);
+      const colDirection = Math.sign(lastCol - firstCol);
+      const key = `${rowDirection},${colDirection}`;
+      directionUsage.set(key, (directionUsage.get(key) || 0) + 1);
+    });
+
+    const overlapCells = [...cellUsage.values()].filter((count) => count > 1);
+    const intersections = overlapCells.reduce((sum, count) => sum + count - 1, 0);
+    const isolatedWords = puzzle.words.filter((entry) => entry.cells.every((id) => cellUsage.get(id) === 1)).length;
+    const directionCounts = [...directionUsage.values()];
+    const directionSpread = directionCounts.length
+      ? Math.max(...directionCounts) - Math.min(...directionCounts)
+      : 0;
+    const placedRatio = puzzle.words.length / (state.size === 8 ? 7 : state.size === 12 ? 12 : 10);
+    const edgeRatio = edgeCells / Math.max(1, puzzle.words.reduce((sum, entry) => sum + entry.cells.length, 0));
+
+    return (
+      placedRatio * 140 +
+      intersections * 26 +
+      overlapCells.length * 12 +
+      directionUsage.size * 10 -
+      isolatedWords * 18 -
+      directionSpread * 8 -
+      edgeRatio * 18
+    );
+  };
+
   const generatePuzzleAttempt = () => {
     const targetCount = state.size === 8 ? 7 : state.size === 12 ? 12 : 10;
     const grid = makeGrid(state.size);
@@ -787,8 +832,6 @@
       ? freshCandidates
       : freshCandidates.concat(allCandidates.filter((entry) => state.seenWords.has(wordKey(entry.word))));
 
-    state.lastPuzzleUsedSeenWords = freshCandidates.length < targetCount && allCandidates.length > freshCandidates.length;
-
     candidates.forEach((entry) => {
       if (placed.length >= targetCount) return;
       const placedEntry = placeWord(grid, entry, directionUsage, placed.length >= 2);
@@ -803,22 +846,30 @@
       });
     }
 
-    fillGrid(grid);
     return {
       grid,
-      words: placed.sort((a, b) => a.word.localeCompare(b.word, "mt"))
+      words: placed.sort((a, b) => a.word.localeCompare(b.word, "mt")),
+      usedSeenWords: freshCandidates.length < targetCount && allCandidates.length > freshCandidates.length
     };
   };
 
   const generatePuzzle = () => {
-    for (let attempt = 0; attempt < 16; attempt += 1) {
+    let bestPuzzle = null;
+    let bestScore = -Infinity;
+
+    for (let attempt = 0; attempt < 40; attempt += 1) {
       const puzzle = generatePuzzleAttempt();
-      if (puzzle.words.length > 0 && validatePuzzle(puzzle)) {
-        return puzzle;
+      if (!puzzle.words.length || !validatePuzzle(puzzle)) continue;
+      const score = scorePuzzle(puzzle);
+      if (score > bestScore) {
+        bestPuzzle = puzzle;
+        bestScore = score;
       }
     }
 
-    const puzzle = generatePuzzleAttempt();
+    const puzzle = bestPuzzle || generatePuzzleAttempt();
+    state.lastPuzzleUsedSeenWords = Boolean(puzzle.usedSeenWords);
+    fillGrid(puzzle.grid);
     return validatePuzzle(puzzle)
       ? puzzle
       : { grid: makeGrid(state.size).map((row) => row.map(() => randomItem(MALTESE_LETTERS))), words: [] };
