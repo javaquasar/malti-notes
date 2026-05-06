@@ -927,6 +927,7 @@
 
 .word-search-new,
 .word-search-hint-button,
+.word-search-print,
 .word-search-reset-memory {
   width: 100%;
 }
@@ -939,6 +940,11 @@
 .word-search-reset-memory {
   background: var(--color-accent-soft);
   border-color: var(--color-accent-border);
+}
+
+.word-search-print {
+  background: var(--color-surface-soft);
+  border-color: var(--line);
 }
 
 .word-search-topline {
@@ -1538,5 +1544,83 @@ body.compact-animals .animal-gallery {
 
   .tip {
     position: static;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .site-header,
+  .hero,
+  .word-search-sidebar,
+  .review-fab,
+  .word-search-selection-preview,
+  .word-search-progress-track {
+    display: none !important;
+  }
+
+  .page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .layout,
+  .word-search-layout {
+    display: block;
+  }
+
+  .content,
+  .content-card,
+  .word-search-game-card,
+  .word-search-list-card {
+    display: block !important;
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  .content-card {
+    border: 1px solid #999999;
+    border-radius: 0;
+    margin: 0 0 14px;
+    padding: 14px;
+    background: #ffffff !important;
+  }
+
+  .word-search-board-wrap {
+    border: 0;
+    padding: 0;
+    background: #ffffff !important;
+  }
+
+  .word-search-board {
+    width: min(100%, 620px);
+    gap: 4px;
+  }
+
+  .word-search-cell,
+  .word-search-list li {
+    color: #000000 !important;
+    border-color: #777777 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+  }
+
+  .word-search-cell {
+    font-size: 15px;
+  }
+
+  .word-search-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .word-search-list li {
+    min-height: 0;
+    padding: 8px;
   }
 }

@@ -2,6 +2,7 @@
   const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "è", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
   const SEEN_STORAGE_KEY = "malti_word_search_seen_words_v1";
   const BEST_TIME_STORAGE_KEY = "malti_word_search_best_times_v1";
+  const SOUND_STORAGE_KEY = "malti_word_search_sound_v1";
   const DIRECTION_SETS = {
     easy: [
       { row: 0, col: 1 },
@@ -419,9 +420,11 @@
   const sizeSelect = document.querySelector("#word-search-size");
   const directionsSelect = document.querySelector("#word-search-directions");
   const hintsSelect = document.querySelector("#word-search-hints");
+  const soundSelect = document.querySelector("#word-search-sound");
   const listCard = document.querySelector("#word-search-list-card");
   const hintButton = document.querySelector("#word-search-hint");
   const newButton = document.querySelector("#word-search-new");
+  const printButton = document.querySelector("#word-search-print");
   const resetMemoryButton = document.querySelector("#word-search-reset-memory");
   const progress = document.querySelector("#word-search-progress");
   const progressFill = document.querySelector("#word-search-progress-fill");
@@ -438,6 +441,7 @@
     topic: "all",
     size: 10,
     directionsMode: "medium",
+    soundEnabled: true,
     puzzle: null,
     found: new Set(),
     seenWords: new Set(),
@@ -459,6 +463,20 @@
   const wordKey = (word) => tokenize(word).join("");
   const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
   const cellId = (row, col) => `${row}-${col}`;
+  const readSoundEnabled = () => {
+    try {
+      return window.localStorage.getItem(SOUND_STORAGE_KEY) !== "off";
+    } catch (error) {
+      return true;
+    }
+  };
+  const writeSoundEnabled = () => {
+    try {
+      window.localStorage.setItem(SOUND_STORAGE_KEY, state.soundEnabled ? "on" : "off");
+    } catch (error) {
+      // Ignore storage failures.
+    }
+  };
   const getDirections = () => DIRECTION_SETS[state.directionsMode] || DIRECTION_SETS.medium;
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
@@ -573,6 +591,7 @@
   };
 
   const playSound = (type) => {
+    if (!state.soundEnabled) return;
     const context = getAudioContext();
     if (!context) return;
 
@@ -1098,6 +1117,7 @@
     event.target.classList?.remove("is-success-pulse", "is-miss-shake");
   });
   newButton.addEventListener("click", startPuzzle);
+  printButton?.addEventListener("click", () => window.print());
   resetMemoryButton?.addEventListener("click", () => {
     state.seenWords.clear();
     writeSeenWords();
@@ -1109,8 +1129,15 @@
   directionsSelect?.addEventListener("change", startPuzzle);
   hintsSelect?.addEventListener("change", updateListVisibility);
   hintButton?.addEventListener("click", showHint);
+  soundSelect?.addEventListener("change", () => {
+    state.soundEnabled = soundSelect.value !== "off";
+    writeSoundEnabled();
+    status.textContent = state.soundEnabled ? "Sound on." : "Sound off.";
+  });
 
   initTopics();
+  state.soundEnabled = readSoundEnabled();
+  if (soundSelect) soundSelect.value = state.soundEnabled ? "on" : "off";
   state.seenWords = readSeenWords();
   updateMemoryLabel();
   updateListVisibility();
