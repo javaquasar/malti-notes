@@ -17,7 +17,7 @@
     "found-color-8"
   ];
 
-  const TOPICS = [
+  const FALLBACK_TOPICS = [
     {
       id: "house",
       label: "Home",
@@ -386,6 +386,9 @@
       ]
     }
   ];
+  const TOPICS = Array.isArray(window.MALTI_WORD_SEARCH_TOPICS)
+    ? window.MALTI_WORD_SEARCH_TOPICS
+    : FALLBACK_TOPICS;
 
   const board = document.querySelector("#word-search-board");
   const list = document.querySelector("#word-search-list");
