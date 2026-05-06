@@ -1,5 +1,6 @@
 (() => {
   const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "è", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
+  const SEEN_STORAGE_KEY = "malti_word_search_seen_words_v1";
   const DIRECTIONS = [
     { row: 0, col: 1 },
     { row: 1, col: 0 },
@@ -397,7 +398,9 @@
   const hintsSelect = document.querySelector("#word-search-hints");
   const listCard = document.querySelector("#word-search-list-card");
   const newButton = document.querySelector("#word-search-new");
+  const resetMemoryButton = document.querySelector("#word-search-reset-memory");
   const progress = document.querySelector("#word-search-progress");
+  const memoryLabel = document.querySelector("#word-search-memory");
   const status = document.querySelector("#word-search-status");
   const foundCount = document.querySelector("#word-search-found-count");
   const totalLabel = document.querySelector("#word-search-total");
@@ -409,6 +412,8 @@
     size: 10,
     puzzle: null,
     found: new Set(),
+    seenWords: new Set(),
+    lastPuzzleUsedSeenWords: false,
     dragging: false,
     startCell: null,
     selectedCells: []
@@ -419,6 +424,29 @@
   const wordKey = (word) => tokenize(word).join("");
   const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
   const cellId = (row, col) => `${row}-${col}`;
+
+  const readSeenWords = () => {
+    try {
+      const parsed = JSON.parse(window.localStorage.getItem(SEEN_STORAGE_KEY) || "[]");
+      return new Set(Array.isArray(parsed) ? parsed.filter((value) => typeof value === "string") : []);
+    } catch (error) {
+      return new Set();
+    }
+  };
+
+  const writeSeenWords = () => {
+    try {
+      window.localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify([...state.seenWords]));
+    } catch (error) {
+      // Ignore storage failures; the in-memory set still works for this page session.
+    }
+  };
+
+  const updateMemoryLabel = () => {
+    if (!memoryLabel) return;
+    const count = state.seenWords.size;
+    memoryLabel.textContent = `${count} seen ${count === 1 ? "word" : "words"} excluded.`;
+  };
 
   const getAudioContext = () => {
     if (!audioContext) {
@@ -464,6 +492,15 @@
     if (type === "refresh") {
       playTone(392, now, 0.1, "sine", 0.035);
       playTone(493.88, now + 0.06, 0.12, "sine", 0.032);
+      return;
+    }
+
+    if (type === "victory") {
+      playTone(523.25, now, 0.14, "sine", 0.055);
+      playTone(659.25, now + 0.08, 0.16, "sine", 0.052);
+      playTone(783.99, now + 0.16, 0.18, "sine", 0.05);
+      playTone(1046.5, now + 0.3, 0.32, "triangle", 0.045);
+      playTone(1318.51, now + 0.38, 0.28, "sine", 0.035);
       return;
     }
 
@@ -550,12 +587,18 @@
     const targetCount = state.size === 8 ? 7 : state.size === 12 ? 12 : 10;
     const grid = makeGrid(state.size);
     const placed = [];
-    const candidates = shuffle(getWords())
+    const allCandidates = shuffle(getWords())
       .filter((entry) => {
         const length = tokenize(entry.word).length;
         return length >= 2 && length <= state.size;
       })
       .sort((a, b) => tokenize(b.word).length - tokenize(a.word).length);
+    const freshCandidates = allCandidates.filter((entry) => !state.seenWords.has(wordKey(entry.word)));
+    const candidates = freshCandidates.length >= targetCount
+      ? freshCandidates
+      : freshCandidates.concat(allCandidates.filter((entry) => state.seenWords.has(wordKey(entry.word))));
+
+    state.lastPuzzleUsedSeenWords = freshCandidates.length < targetCount && allCandidates.length > freshCandidates.length;
 
     candidates.forEach((entry) => {
       if (placed.length >= targetCount) return;
@@ -630,6 +673,9 @@
   const markFound = (entry) => {
     const colorClass = FOUND_COLOR_CLASSES[state.found.size % FOUND_COLOR_CLASSES.length];
     state.found.add(entry.key);
+    state.seenWords.add(entry.key);
+    writeSeenWords();
+    updateMemoryLabel();
     entry.cells.forEach((id) => {
       const cell = board.querySelector(`[data-cell-id="${id}"]`);
       if (cell) {
@@ -655,7 +701,7 @@
 
     if (foundEntry) {
       markFound(foundEntry);
-      playSound("success");
+      playSound(state.found.size === state.puzzle.words.length ? "victory" : "success");
     } else if (state.selectedCells.length > 1) {
       status.textContent = "Try another line.";
       playSound("miss");
@@ -719,7 +765,9 @@
     renderBoard();
     renderList();
     updateProgress();
-    status.textContent = "New puzzle ready.";
+    status.textContent = state.lastPuzzleUsedSeenWords
+      ? "New puzzle ready. Some seen words were reused because this topic is running low."
+      : "New puzzle ready.";
   };
 
   board.addEventListener("animationend", () => {
@@ -777,11 +825,19 @@
   board.addEventListener("pointerup", finishSelection);
   board.addEventListener("pointercancel", finishSelection);
   newButton.addEventListener("click", startPuzzle);
+  resetMemoryButton?.addEventListener("click", () => {
+    state.seenWords.clear();
+    writeSeenWords();
+    updateMemoryLabel();
+    status.textContent = "Seen word memory reset.";
+  });
   topicSelect.addEventListener("change", startPuzzle);
   sizeSelect.addEventListener("change", startPuzzle);
   hintsSelect?.addEventListener("change", updateListVisibility);
 
   initTopics();
+  state.seenWords = readSeenWords();
+  updateMemoryLabel();
   updateListVisibility();
   startPuzzle();
 })();

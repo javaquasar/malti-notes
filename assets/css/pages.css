@@ -902,8 +902,14 @@
   font-size: 0.95rem;
 }
 
-.word-search-new {
+.word-search-new,
+.word-search-reset-memory {
   width: 100%;
+}
+
+.word-search-reset-memory {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
 }
 
 .word-search-topline {
