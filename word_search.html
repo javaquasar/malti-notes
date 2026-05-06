@@ -61,9 +61,13 @@
                 </select>
             </label>
 
-            <label class="word-search-check">
-                <input id="word-search-hide-list" type="checkbox">
-                <span><strong>Hide word list</strong><small>Use this for a harder puzzle.</small></span>
+            <label class="word-search-field">
+                <strong>Hints</strong>
+                <select class="review-select" id="word-search-hints">
+                    <option value="show-all">Show Maltese and English</option>
+                    <option value="hide-maltese">Hide Maltese words</option>
+                    <option value="hide-all">Hide all hints</option>
+                </select>
             </label>
 
             <button class="action-button word-search-new" id="word-search-new" type="button">New Puzzle</button>

@@ -902,30 +902,6 @@
   font-size: 0.95rem;
 }
 
-.word-search-check {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  background: var(--color-surface-soft);
-}
-
-.word-search-check input {
-  margin-top: 4px;
-  accent-color: var(--teal);
-}
-
-.word-search-check span {
-  display: grid;
-  gap: 2px;
-}
-
-.word-search-check small {
-  color: var(--muted);
-}
-
 .word-search-new {
   width: 100%;
 }
@@ -951,6 +927,26 @@
   display: none;
 }
 
+.word-search-list-card.hide-maltese .word-search-word {
+  position: relative;
+  color: transparent;
+  text-decoration: none;
+}
+
+.word-search-list-card.hide-maltese .word-search-word::after {
+  content: "Hidden";
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: var(--muted);
+  font-weight: 700;
+  opacity: 0.72;
+}
+
+.word-search-list-card.hide-maltese .word-search-list li.is-found .word-search-word::after {
+  content: "Found";
+  color: var(--word-search-found-ink, var(--teal));
+}
+
 .word-search-board-wrap {
   padding: clamp(10px, 2vw, 18px);
   border: 1px solid var(--line);
@@ -969,6 +965,25 @@
   margin: 0 auto;
   touch-action: none;
   user-select: none;
+}
+
+.word-search-board.is-refreshing,
+.word-search-list.is-refreshing {
+  animation: word-search-refresh 320ms ease-out both;
+}
+
+@keyframes word-search-refresh {
+  0% {
+    opacity: 0.46;
+    transform: scale(0.985);
+    filter: saturate(0.82);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: saturate(1);
+  }
 }
 
 .word-search-cell {
@@ -1075,6 +1090,7 @@
 .word-search-list li {
   min-height: 56px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
@@ -1082,6 +1098,8 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   background: var(--color-surface-soft);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .word-search-list li.is-found {
@@ -1095,13 +1113,21 @@
 }
 
 .word-search-word {
+  flex: 1 1 7.5rem;
+  min-width: 0;
   font-weight: 800;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .word-search-translation {
+  flex: 1 1 5.5rem;
+  min-width: 0;
   color: var(--muted);
   font-size: 0.9rem;
   text-align: right;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 body.compact-animals .animal-figure-card img,

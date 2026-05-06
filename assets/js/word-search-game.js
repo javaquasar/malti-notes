@@ -394,7 +394,7 @@
   const list = document.querySelector("#word-search-list");
   const topicSelect = document.querySelector("#word-search-topic");
   const sizeSelect = document.querySelector("#word-search-size");
-  const hideListCheckbox = document.querySelector("#word-search-hide-list");
+  const hintsSelect = document.querySelector("#word-search-hints");
   const listCard = document.querySelector("#word-search-list-card");
   const newButton = document.querySelector("#word-search-new");
   const progress = document.querySelector("#word-search-progress");
@@ -458,6 +458,12 @@
       playTone(523.25, now, 0.16, "sine", 0.055);
       playTone(659.25, now + 0.08, 0.18, "sine", 0.05);
       playTone(783.99, now + 0.16, 0.2, "sine", 0.045);
+      return;
+    }
+
+    if (type === "refresh") {
+      playTone(392, now, 0.1, "sine", 0.035);
+      playTone(493.88, now + 0.06, 0.12, "sine", 0.032);
       return;
     }
 
@@ -693,6 +699,16 @@
   };
 
   const startPuzzle = () => {
+    const animateRefresh = Boolean(state.puzzle);
+    if (animateRefresh) {
+      board.classList.remove("is-refreshing");
+      list.classList.remove("is-refreshing");
+      void board.offsetWidth;
+      board.classList.add("is-refreshing");
+      list.classList.add("is-refreshing");
+      playSound("refresh");
+    }
+
     state.topic = topicSelect.value;
     state.size = Number(sizeSelect.value);
     state.puzzle = generatePuzzle();
@@ -706,12 +722,29 @@
     status.textContent = "New puzzle ready.";
   };
 
+  board.addEventListener("animationend", () => {
+    board.classList.remove("is-refreshing");
+  });
+
+  list.addEventListener("animationend", () => {
+    list.classList.remove("is-refreshing");
+  });
+
   const updateListVisibility = () => {
-    if (!hideListCheckbox || !listCard) return;
-    const hidden = hideListCheckbox.checked;
+    if (!hintsSelect || !listCard) return;
+    const mode = hintsSelect.value;
+    const hidden = mode === "hide-all";
     listCard.classList.toggle("is-hidden", hidden);
+    listCard.classList.toggle("hide-maltese", mode === "hide-maltese");
     listCard.setAttribute("aria-hidden", String(hidden));
-    status.textContent = hidden ? "Word list hidden. Find words from memory." : "Word list visible.";
+
+    if (mode === "hide-all") {
+      status.textContent = "All hints hidden. Find words from memory.";
+    } else if (mode === "hide-maltese") {
+      status.textContent = "Maltese words hidden. Use the English hints.";
+    } else {
+      status.textContent = "All hints visible.";
+    }
   };
 
   const initTopics = () => {
@@ -746,7 +779,7 @@
   newButton.addEventListener("click", startPuzzle);
   topicSelect.addEventListener("change", startPuzzle);
   sizeSelect.addEventListener("change", startPuzzle);
-  hideListCheckbox?.addEventListener("change", updateListVisibility);
+  hintsSelect?.addEventListener("change", updateListVisibility);
 
   initTopics();
   updateListVisibility();
