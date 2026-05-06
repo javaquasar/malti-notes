@@ -426,6 +426,13 @@
   const newButton = document.querySelector("#word-search-new");
   const printButton = document.querySelector("#word-search-print");
   const resetMemoryButton = document.querySelector("#word-search-reset-memory");
+  const completionPanel = document.querySelector("#word-search-completion");
+  const completeTime = document.querySelector("#word-search-complete-time");
+  const completeBest = document.querySelector("#word-search-complete-best");
+  const completeMisses = document.querySelector("#word-search-complete-misses");
+  const completeSetup = document.querySelector("#word-search-complete-setup");
+  const completeNewButton = document.querySelector("#word-search-complete-new");
+  const completePrintButton = document.querySelector("#word-search-complete-print");
   const progress = document.querySelector("#word-search-progress");
   const progressFill = document.querySelector("#word-search-progress-fill");
   const memoryLabel = document.querySelector("#word-search-memory");
@@ -448,6 +455,7 @@
     lastPuzzleUsedSeenWords: false,
     startedAt: 0,
     elapsedSeconds: 0,
+    misses: 0,
     completed: false,
     dragging: false,
     startCell: null,
@@ -514,8 +522,25 @@
     updateBestTimeLabel();
   };
 
+  const currentBestTime = () => readBestTimes()[bestTimeKey()] || state.elapsedSeconds;
+
   const updateTimerLabel = () => {
     if (timerLabel) timerLabel.textContent = formatTime(state.elapsedSeconds);
+  };
+
+  const showCompletionPanel = () => {
+    if (!completionPanel) return;
+    const topicLabel = topicSelect.options[topicSelect.selectedIndex]?.textContent || "All topics";
+    const sizeLabel = sizeSelect.options[sizeSelect.selectedIndex]?.textContent?.replace(/ - /g, " ") || `${state.size} x ${state.size}`;
+    const directionsLabel = directionsSelect?.options[directionsSelect.selectedIndex]?.textContent?.split(" - ")[0] || "Medium";
+    if (completeTime) completeTime.textContent = formatTime(state.elapsedSeconds);
+    if (completeBest) completeBest.textContent = formatTime(currentBestTime());
+    if (completeMisses) completeMisses.textContent = String(state.misses);
+    if (completeSetup) completeSetup.textContent = `${topicLabel}, ${sizeLabel}, ${directionsLabel}`;
+    completionPanel.hidden = false;
+    completionPanel.classList.remove("is-visible");
+    void completionPanel.offsetWidth;
+    completionPanel.classList.add("is-visible");
   };
 
   const stopTimer = () => {
@@ -926,6 +951,7 @@
       state.elapsedSeconds = Math.max(state.elapsedSeconds, Math.floor((Date.now() - state.startedAt) / 1000));
       stopTimer();
       saveBestTime();
+      showCompletionPanel();
       status.textContent = "Puzzle complete. Great work.";
     }
   };
@@ -978,6 +1004,7 @@
       updateSelectionPreview(`Found: ${foundEntry.word}`);
       playSound(state.found.size === state.puzzle.words.length ? "victory" : "success");
     } else if (state.selectedCells.length > 1) {
+      state.misses += 1;
       status.textContent = "Try another line.";
       selectedElements.forEach((element) => {
         element.classList.remove("is-miss-shake");
@@ -1043,11 +1070,16 @@
     clearHint();
     state.puzzle = generatePuzzle();
     state.found = new Set();
+    state.misses = 0;
     state.dragging = false;
     state.startCell = null;
     state.selectedCells = [];
     renderBoard();
     renderList();
+    if (completionPanel) {
+      completionPanel.hidden = true;
+      completionPanel.classList.remove("is-visible");
+    }
     updateBestTimeLabel();
     startTimer();
     updateProgress();
@@ -1118,6 +1150,8 @@
   });
   newButton.addEventListener("click", startPuzzle);
   printButton?.addEventListener("click", () => window.print());
+  completeNewButton?.addEventListener("click", startPuzzle);
+  completePrintButton?.addEventListener("click", () => window.print());
   resetMemoryButton?.addEventListener("click", () => {
     state.seenWords.clear();
     writeSeenWords();

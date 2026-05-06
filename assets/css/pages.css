@@ -1364,6 +1364,63 @@
   color: var(--accent);
 }
 
+.word-search-completion {
+  border-color: var(--color-brand-border);
+  background:
+    linear-gradient(135deg, var(--color-brand-soft), var(--color-accent-soft)),
+    var(--paper);
+}
+
+.word-search-completion.is-visible {
+  animation: word-search-completion-in 360ms ease-out both;
+}
+
+.word-search-completion-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.word-search-completion-grid div {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface-strong);
+}
+
+.word-search-completion-grid strong {
+  font-size: 1.2rem;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.word-search-completion-grid span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.word-search-completion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@keyframes word-search-completion-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes word-search-success-pulse {
   0% { transform: scale(1); }
   45% {
@@ -1515,6 +1572,10 @@ body.compact-animals .animal-gallery {
     grid-template-columns: 1fr;
   }
 
+  .word-search-completion-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   #key-verbs table {
     width: 620px;
     min-width: 620px;
@@ -1556,6 +1617,7 @@ body.compact-animals .animal-gallery {
   .site-header,
   .hero,
   .word-search-sidebar,
+  .word-search-completion-actions,
   .review-fab,
   .word-search-selection-preview,
   .word-search-progress-track {
