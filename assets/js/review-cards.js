@@ -889,6 +889,32 @@
         return String(card && card.readingHint || "").trim();
     }
 
+    function buildWordCardVisual(card, includeVisual) {
+        if (!includeVisual) {
+            return "";
+        }
+        if (card.image) {
+            return "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
+        }
+        if (card.swatchStyle) {
+            return "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";
+        }
+        return "";
+    }
+
+    function getWordCardTag(card, direction) {
+        if (direction === "english-to-maltese") {
+            return isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
+        }
+        if (direction === "image-to-maltese" && (card.image || card.swatchStyle)) {
+            return "Image / Colour -> MT";
+        }
+        if (direction === "image-to-maltese") {
+            return isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
+        }
+        return "MT -> EN";
+    }
+
     function buildFront(card) {
         var direction = getWordDirection();
         var answerOptions = getAnswerOptions();
@@ -953,15 +979,10 @@
                 (card.group ? ("<div class=\"review-meta\"><code>Section</code>: " + escapeHtml(card.group) + "</div>") : "");
         }
 
-        var visualHtml = "";
-        if (card.image) {
-            visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
-        } else if (card.swatchStyle) {
-            visualHtml = "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";
-        }
+        var visualHtml = buildWordCardVisual(card, true);
 
         var promptWord = escapeHtml(card.maltese);
-        var tag = "MT -> EN";
+        var tag = getWordCardTag(card, direction);
         var imperativeMeta = isImperativeShortlistCard(card)
             ? escapeHtml(getImperativeReviewMeta(card))
             : "";
@@ -969,13 +990,10 @@
 
         if (direction === "english-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
-            tag = isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
         } else if (direction === "image-to-maltese" && visualHtml) {
             promptWord = "<span class=\"review-word review-word--prompt\">What is this in Maltese?</span>";
-            tag = "Image / Colour -> MT";
         } else if (direction === "image-to-maltese") {
             promptWord = escapeHtml(card.english || "(translation to add later)");
-            tag = isImperativeShortlistCard(card) ? "Imperative Verb | EN -> MT" : "EN -> MT";
         }
 
         return "" +
@@ -1068,40 +1086,35 @@
 
         var answerOptions = getAnswerOptions();
         var title = escapeHtml(card.english || "(translation to add later)");
-        var secondary = "<div class=\"review-meta\">Maltese: " + escapeHtml(card.maltese) + "</div>";
-        var visualHtml = "";
-        var exampleHtml = "";
+        var visualHtml = buildWordCardVisual(card, !!answerOptions.showVisual);
+        var meta = [];
+        var tag = getWordCardTag(card, direction);
 
         if (direction === "english-to-maltese" || direction === "image-to-maltese") {
             title = escapeHtml(card.maltese);
-            secondary = "<div class=\"review-meta\">English: " + escapeHtml(card.english || "(translation to add later)") + "</div>";
+            meta.push("<div class=\"review-meta\"><code>English</code>: " + escapeHtml(card.english || "(translation to add later)") + "</div>");
+        } else {
+            meta.push("<div class=\"review-meta\"><code>Maltese</code>: " + escapeHtml(card.maltese) + "</div>");
         }
 
         if (isImperativeShortlistCard(card)) {
-            secondary += "<div class=\"review-meta\">" + escapeHtml(getImperativeReviewMeta(card) || "Imperative forms to add later.") + "</div>";
+            meta.push("<div class=\"review-meta\">" + escapeHtml(getImperativeReviewMeta(card) || "Imperative forms to add later.") + "</div>");
         }
         if (card.readingHint) {
-            secondary += "<div class=\"review-meta\"><code>Reading</code>: " + escapeHtml(card.readingHint) + "</div>";
-        }
-
-        if (answerOptions.showVisual) {
-            if (card.image) {
-                visualHtml = "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
-            } else if (card.swatchStyle) {
-                visualHtml = "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";
-            }
+            meta.push("<div class=\"review-meta\"><code>Reading</code>: " + escapeHtml(card.readingHint) + "</div>");
         }
 
         if (answerOptions.showExample) {
-            exampleHtml = "<div class=\"review-meta\">Example: " + escapeHtml(card.example || "No example yet.") + "</div>";
+            meta.push("<div class=\"review-meta\"><code>Example</code>: " + escapeHtml(card.example || "No example yet.") + "</div>");
         }
 
+        meta.push("<div class=\"review-meta\"><code>Source</code>: " + escapeHtml(card.sourcePage || "manual") + "</div>");
+
         return "" +
+            "<span class=\"tag\">" + tag + "</span>" +
             visualHtml +
-            "<h3>" + title + "</h3>" +
-            secondary +
-            exampleHtml +
-            "<div class=\"review-meta\">Source: " + escapeHtml(card.sourcePage || "manual") + "</div>";
+            "<div class=\"review-word\">" + title + "</div>" +
+            "<div class=\"review-meta-stack\">" + meta.join("") + "</div>";
     }
 
     function renderSavedList() {
