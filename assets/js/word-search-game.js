@@ -1,5 +1,5 @@
 (() => {
-  const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
+  const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "è", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
   const DIRECTIONS = [
     { row: 0, col: 1 },
     { row: 1, col: 0 },
@@ -33,7 +33,26 @@
         ["taraġ", "stairs"],
         ["saqaf", "ceiling"],
         ["ħajt", "wall"],
-        ["ġnien", "garden"]
+        ["ġnien", "garden"],
+        ["gallarija", "balcony"],
+        ["garaxx", "garage"],
+        ["art", "floor"],
+        ["salott", "living room"],
+        ["banju", "bathroom"],
+        ["sufan", "sofa"],
+        ["armarju", "cupboard"],
+        ["gwardarobba", "wardrobe"],
+        ["tapit", "rug"],
+        ["purtiera", "curtain"],
+        ["friġġ", "fridge"],
+        ["forn", "oven"],
+        ["platt", "plate"],
+        ["tazza", "cup"],
+        ["furketta", "fork"],
+        ["sikkina", "knife"],
+        ["mgħarfa", "spoon"],
+        ["mera", "mirror"],
+        ["lampa", "lamp"]
       ]
     },
     {
@@ -51,7 +70,25 @@
         ["qanfud", "hedgehog"],
         ["fekruna", "turtle"],
         ["ħmar", "donkey"],
-        ["baqra", "cow"]
+        ["baqra", "cow"],
+        ["pappagall", "parrot"],
+        ["mogħża", "goat"],
+        ["nagħġa", "sheep"],
+        ["ħanżir", "pig"],
+        ["tiġieġa", "chicken"],
+        ["serduk", "rooster"],
+        ["papra", "duck"],
+        ["wiżża", "goose"],
+        ["naħla", "bee"],
+        ["brimba", "spider"],
+        ["dubbiena", "fly"],
+        ["far", "mouse"],
+        ["ljun", "lion"],
+        ["tigra", "tiger"],
+        ["xadina", "monkey"],
+        ["ors", "bear"],
+        ["volpi", "fox"],
+        ["delfin", "dolphin"]
       ]
     },
     {
@@ -67,7 +104,22 @@
         ["klassi", "class"],
         ["eżami", "exam"],
         ["qasir", "short"],
-        ["twil", "long"]
+        ["twil", "long"],
+        ["pinna", "pen"],
+        ["riga", "ruler"],
+        ["temprina", "sharpener"],
+        ["karta", "paper"],
+        ["bord", "board"],
+        ["għalliem", "teacher"],
+        ["għalliema", "teacher"],
+        ["student", "student"],
+        ["lezzjoni", "lesson"],
+        ["mistoqsija", "question"],
+        ["tweġiba", "answer"],
+        ["aqra", "read"],
+        ["ikteb", "write"],
+        ["isma", "listen"],
+        ["għid", "say"]
       ]
     },
     {
@@ -83,7 +135,27 @@
         ["ħut", "fish"],
         ["soppa", "soup"],
         ["ross", "rice"],
-        ["għaġin", "pasta"]
+        ["għaġin", "pasta"],
+        ["bajda", "egg"],
+        ["laħam", "meat"],
+        ["tiġieġ", "chicken"],
+        ["patata", "potato"],
+        ["tadam", "tomato"],
+        ["karrotta", "carrot"],
+        ["piżelli", "peas"],
+        ["frott", "fruit"],
+        ["ħaxix", "vegetables"],
+        ["insalata", "salad"],
+        ["butir", "butter"],
+        ["zokkor", "sugar"],
+        ["melħ", "salt"],
+        ["bżar", "pepper"],
+        ["kafè", "coffee"],
+        ["te", "tea"],
+        ["kejk", "cake"],
+        ["torta", "pie"],
+        ["frawli", "strawberries"],
+        ["larinġa", "orange"]
       ]
     },
     {
@@ -99,7 +171,19 @@
         ["zija", "aunt"],
         ["ziju", "uncle"],
         ["familja", "family"],
-        ["tarbija", "baby"]
+        ["tarbija", "baby"],
+        ["iben", "son"],
+        ["bint", "daughter"],
+        ["kuġin", "cousin"],
+        ["kuġina", "cousin"],
+        ["neputi", "nephew"],
+        ["neputija", "niece"],
+        ["raġel", "man"],
+        ["mara", "woman"],
+        ["tifel", "boy"],
+        ["tifla", "girl"],
+        ["tfal", "children"],
+        ["ġenituri", "parents"]
       ]
     },
     {
@@ -115,7 +199,190 @@
         ["għalqa", "field"],
         ["ġnien", "garden"],
         ["sħab", "clouds"],
-        ["qamar", "moon"]
+        ["qamar", "moon"],
+        ["sema", "sky"],
+        ["stilla", "star"],
+        ["ħamrija", "soil"],
+        ["werqa", "leaf"],
+        ["għerq", "root"],
+        ["żerriegħa", "seed"],
+        ["xatt", "shore"],
+        ["ramel", "sand"],
+        ["għolja", "hill"],
+        ["wied", "valley"]
+      ]
+    },
+    {
+      id: "body",
+      label: "Body",
+      words: [
+        ["ras", "head"],
+        ["xagħar", "hair"],
+        ["għajn", "eye"],
+        ["widna", "ear"],
+        ["imnieħer", "nose"],
+        ["ħalq", "mouth"],
+        ["sinna", "tooth"],
+        ["ilsien", "tongue"],
+        ["għonq", "neck"],
+        ["spalla", "shoulder"],
+        ["driegħ", "arm"],
+        ["id", "hand"],
+        ["saba", "finger"],
+        ["dahar", "back"],
+        ["żaqq", "belly"],
+        ["riġel", "leg"],
+        ["irkoppa", "knee"],
+        ["sieq", "foot"],
+        ["ġisem", "body"],
+        ["qalb", "heart"]
+      ]
+    },
+    {
+      id: "time",
+      label: "Time",
+      words: [
+        ["ħin", "time"],
+        ["siegħa", "hour"],
+        ["minuta", "minute"],
+        ["filgħodu", "morning"],
+        ["nofsinhar", "noon"],
+        ["filgħaxija", "evening"],
+        ["lejl", "night"],
+        ["illum", "today"],
+        ["għada", "tomorrow"],
+        ["lbieraħ", "yesterday"],
+        ["ġurnata", "day"],
+        ["ġimgħa", "week"],
+        ["xahar", "month"],
+        ["sena", "year"],
+        ["rebbiegħa", "spring"],
+        ["sajf", "summer"],
+        ["ħarifa", "autumn"],
+        ["xitwa", "winter"]
+      ]
+    },
+    {
+      id: "directions",
+      label: "Directions",
+      words: [
+        ["lemin", "right"],
+        ["xellug", "left"],
+        ["dritt", "straight"],
+        ["quddiem", "in front"],
+        ["wara", "behind"],
+        ["ħdejn", "near"],
+        ["fuq", "on"],
+        ["taħt", "under"],
+        ["ġewwa", "inside"],
+        ["barra", "outside"],
+        ["bejn", "between"],
+        ["triq", "street"],
+        ["kantuniera", "corner"],
+        ["qrib", "close"],
+        ["bogħod", "far"]
+      ]
+    },
+    {
+      id: "town",
+      label: "Town",
+      words: [
+        ["belt", "city"],
+        ["raħal", "village"],
+        ["ħanut", "shop"],
+        ["suq", "market"],
+        ["skola", "school"],
+        ["knisja", "church"],
+        ["sptar", "hospital"],
+        ["spiżerija", "pharmacy"],
+        ["librerija", "library"],
+        ["park", "park"],
+        ["pjazza", "square"],
+        ["bank", "bank"],
+        ["uffiċċju", "office"],
+        ["lukanda", "hotel"],
+        ["ristorant", "restaurant"],
+        ["mużew", "museum"]
+      ]
+    },
+    {
+      id: "clothes",
+      label: "Clothes",
+      words: [
+        ["qmis", "shirt"],
+        ["flokk", "top"],
+        ["qalziet", "trousers"],
+        ["dublett", "skirt"],
+        ["libsa", "dress"],
+        ["ġakketta", "jacket"],
+        ["kowt", "coat"],
+        ["żarbun", "shoe"],
+        ["kalzetti", "socks"],
+        ["kappell", "hat"],
+        ["xalpa", "scarf"],
+        ["ingwanti", "gloves"],
+        ["ċinturin", "belt"],
+        ["buttuna", "button"],
+        ["uniformi", "uniform"]
+      ]
+    },
+    {
+      id: "weather",
+      label: "Weather",
+      words: [
+        ["temp", "weather"],
+        ["sħun", "hot"],
+        ["kiesaħ", "cold"],
+        ["frisk", "cool"],
+        ["xemxi", "sunny"],
+        ["imsaħħab", "cloudy"],
+        ["xita", "rain"],
+        ["riħ", "wind"],
+        ["maltemp", "storm"],
+        ["ragħad", "thunder"],
+        ["beraq", "lightning"],
+        ["ċpar", "fog"],
+        ["silġ", "ice"],
+        ["qawsalla", "rainbow"]
+      ]
+    },
+    {
+      id: "transport",
+      label: "Transport",
+      words: [
+        ["karozza", "car"],
+        ["xarabank", "bus"],
+        ["rota", "bicycle"],
+        ["mutur", "motorbike"],
+        ["dgħajsa", "boat"],
+        ["vapur", "ship"],
+        ["ajruplan", "airplane"],
+        ["ferrovija", "train"],
+        ["taxi", "taxi"],
+        ["triq", "road"],
+        ["pont", "bridge"],
+        ["port", "harbour"],
+        ["waqfa", "stop"],
+        ["biljett", "ticket"],
+        ["vjaġġ", "journey"]
+      ]
+    },
+    {
+      id: "colors",
+      label: "Colours",
+      words: [
+        ["aħmar", "red"],
+        ["blu", "blue"],
+        ["isfar", "yellow"],
+        ["aħdar", "green"],
+        ["abjad", "white"],
+        ["iswed", "black"],
+        ["kannella", "brown"],
+        ["roża", "pink"],
+        ["vjola", "purple"],
+        ["oranġjo", "orange"],
+        ["griż", "grey"],
+        ["dehbi", "golden"]
       ]
     }
   ];
@@ -143,7 +410,7 @@
   };
   let audioContext = null;
 
-  const tokenize = (word) => word.toLowerCase().match(/għ|[a-zċġħż]/g) || [];
+  const tokenize = (word) => word.toLowerCase().match(/għ|[a-zàèìòùċġħż]/g) || [];
   const wordKey = (word) => tokenize(word).join("");
   const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
   const cellId = (row, col) => `${row}-${col}`;
