@@ -994,6 +994,7 @@
 
 .word-search-cell {
   appearance: none;
+  position: relative;
   display: grid;
   place-items: center;
   min-width: 0;
@@ -1024,64 +1025,199 @@
 
 .word-search-cell.found-color-1,
 .word-search-list li.found-color-1 {
-  --word-search-found-bg: #d8f1e8;
-  --word-search-found-border: #78bda5;
-  --word-search-found-ink: #1f6d58;
+  --word-search-found-bg: #bfe9db;
+  --word-search-found-border: #18a47c;
+  --word-search-found-ink: #075f49;
 }
 
 .word-search-cell.found-color-2,
 .word-search-list li.found-color-2 {
-  --word-search-found-bg: #fbe4c6;
-  --word-search-found-border: #d69a51;
-  --word-search-found-ink: #8a5420;
+  --word-search-found-bg: #ffd29a;
+  --word-search-found-border: #e98419;
+  --word-search-found-ink: #854506;
 }
 
 .word-search-cell.found-color-3,
 .word-search-list li.found-color-3 {
-  --word-search-found-bg: #e8dcfa;
-  --word-search-found-border: #a88ed5;
-  --word-search-found-ink: #66469a;
+  --word-search-found-bg: #dcc8ff;
+  --word-search-found-border: #8b5cf6;
+  --word-search-found-ink: #5531a8;
 }
 
 .word-search-cell.found-color-4,
 .word-search-list li.found-color-4 {
-  --word-search-found-bg: #d8e9fb;
-  --word-search-found-border: #80aeda;
-  --word-search-found-ink: #2f668e;
+  --word-search-found-bg: #b9dcff;
+  --word-search-found-border: #2685dc;
+  --word-search-found-ink: #145b9e;
 }
 
 .word-search-cell.found-color-5,
 .word-search-list li.found-color-5 {
-  --word-search-found-bg: #f8d9df;
-  --word-search-found-border: #d48494;
-  --word-search-found-ink: #8b3e4d;
+  --word-search-found-bg: #ffc2d0;
+  --word-search-found-border: #e84e75;
+  --word-search-found-ink: #9b173e;
 }
 
 .word-search-cell.found-color-6,
 .word-search-list li.found-color-6 {
-  --word-search-found-bg: #ddecc0;
-  --word-search-found-border: #9ab56a;
-  --word-search-found-ink: #556f27;
+  --word-search-found-bg: #cbe98c;
+  --word-search-found-border: #78a818;
+  --word-search-found-ink: #48680b;
 }
 
 .word-search-cell.found-color-7,
 .word-search-list li.found-color-7 {
-  --word-search-found-bg: #d7eeee;
-  --word-search-found-border: #70b7b7;
-  --word-search-found-ink: #277070;
+  --word-search-found-bg: #a7eef0;
+  --word-search-found-border: #12a7ad;
+  --word-search-found-ink: #066a70;
 }
 
 .word-search-cell.found-color-8,
 .word-search-list li.found-color-8 {
-  --word-search-found-bg: #f3dfbf;
-  --word-search-found-border: #c4954e;
-  --word-search-found-ink: #765a26;
+  --word-search-found-bg: #f6c485;
+  --word-search-found-border: #b96805;
+  --word-search-found-ink: #754000;
+}
+
+.word-search-cell.found-color-9,
+.word-search-list li.found-color-9 {
+  --word-search-found-bg: #b9e5ff;
+  --word-search-found-border: #0097c7;
+  --word-search-found-ink: #00607f;
+}
+
+.word-search-cell.found-color-10,
+.word-search-list li.found-color-10 {
+  --word-search-found-bg: #f6b6f2;
+  --word-search-found-border: #c53abb;
+  --word-search-found-ink: #7c1975;
+}
+
+.word-search-cell.found-color-11,
+.word-search-list li.found-color-11 {
+  --word-search-found-bg: #cfc6a4;
+  --word-search-found-border: #877338;
+  --word-search-found-ink: #54451d;
+}
+
+.word-search-cell.found-color-12,
+.word-search-list li.found-color-12 {
+  --word-search-found-bg: #b9dbc0;
+  --word-search-found-border: #238545;
+  --word-search-found-ink: #11572a;
 }
 
 .word-search-cell.is-found[class*="found-color-"] {
   border-color: var(--word-search-found-border);
   background: var(--word-search-found-bg);
   color: var(--word-search-found-ink);
+}
+
+.word-search-cell.overlap-color-1 {
+  --word-search-overlap-bg: #bfe9db;
+  --word-search-overlap-border: #18a47c;
+}
+
+.word-search-cell.overlap-color-2 {
+  --word-search-overlap-bg: #ffd29a;
+  --word-search-overlap-border: #e98419;
+}
+
+.word-search-cell.overlap-color-3 {
+  --word-search-overlap-bg: #dcc8ff;
+  --word-search-overlap-border: #8b5cf6;
+}
+
+.word-search-cell.overlap-color-4 {
+  --word-search-overlap-bg: #b9dcff;
+  --word-search-overlap-border: #2685dc;
+}
+
+.word-search-cell.overlap-color-5 {
+  --word-search-overlap-bg: #ffc2d0;
+  --word-search-overlap-border: #e84e75;
+}
+
+.word-search-cell.overlap-color-6 {
+  --word-search-overlap-bg: #cbe98c;
+  --word-search-overlap-border: #78a818;
+}
+
+.word-search-cell.overlap-color-7 {
+  --word-search-overlap-bg: #a7eef0;
+  --word-search-overlap-border: #12a7ad;
+}
+
+.word-search-cell.overlap-color-8 {
+  --word-search-overlap-bg: #f6c485;
+  --word-search-overlap-border: #b96805;
+}
+
+.word-search-cell.overlap-color-9 {
+  --word-search-overlap-bg: #b9e5ff;
+  --word-search-overlap-border: #0097c7;
+}
+
+.word-search-cell.overlap-color-10 {
+  --word-search-overlap-bg: #f6b6f2;
+  --word-search-overlap-border: #c53abb;
+}
+
+.word-search-cell.overlap-color-11 {
+  --word-search-overlap-bg: #cfc6a4;
+  --word-search-overlap-border: #877338;
+}
+
+.word-search-cell.overlap-color-12 {
+  --word-search-overlap-bg: #b9dbc0;
+  --word-search-overlap-border: #238545;
+}
+
+.word-search-cell.is-overlap {
+  border-color: var(--word-search-overlap-border, var(--word-search-found-border));
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.72), transparent 38%),
+    linear-gradient(135deg, var(--word-search-found-bg) 8%, var(--word-search-overlap-bg, var(--word-search-found-bg)) 92%);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.5),
+    0 0 0 2px var(--word-search-overlap-border, var(--word-search-found-border));
+}
+
+.word-search-cell.is-overlap::after {
+  content: attr(data-overlap-count);
+  position: absolute;
+  top: -0.42rem;
+  right: -0.42rem;
+  min-width: 1.05rem;
+  height: 1.05rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 2px 7px rgba(33, 35, 27, 0.18);
+}
+
+.word-search-cell[data-overlap-count="1"]::after {
+  display: none;
+}
+
+.word-search-cell[data-overlap-count="2"]::after {
+  background: var(--word-search-overlap-border, var(--word-search-found-border));
+}
+
+.word-search-cell[data-overlap-count="3"],
+.word-search-cell[data-overlap-count="4"],
+.word-search-cell[data-overlap-count="5"] {
+  background:
+    radial-gradient(circle at 25% 24%, var(--word-search-found-bg) 0 18%, transparent 19%),
+    radial-gradient(circle at 74% 25%, var(--word-search-overlap-bg, var(--word-search-found-bg)) 0 18%, transparent 19%),
+    radial-gradient(circle at 50% 76%, var(--color-surface) 0 16%, transparent 17%),
+    linear-gradient(135deg, var(--word-search-found-bg) 8%, var(--word-search-overlap-bg, var(--word-search-found-bg)) 92%);
 }
 
 .word-search-list {

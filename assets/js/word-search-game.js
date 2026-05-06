@@ -15,7 +15,11 @@
     "found-color-5",
     "found-color-6",
     "found-color-7",
-    "found-color-8"
+    "found-color-8",
+    "found-color-9",
+    "found-color-10",
+    "found-color-11",
+    "found-color-12"
   ];
 
   const FALLBACK_TOPICS = [
@@ -541,38 +545,70 @@
 
   const makeGrid = (size) => Array.from({ length: size }, () => Array.from({ length: size }, () => null));
 
-  const canPlace = (grid, tokens, row, col, direction) => {
+  const scorePlacement = (grid, tokens, row, col, direction, directionUsage) => {
+    let intersections = 0;
+    let touches = 0;
+
     for (let index = 0; index < tokens.length; index += 1) {
       const nextRow = row + direction.row * index;
       const nextCol = col + direction.col * index;
-      if (nextRow < 0 || nextRow >= grid.length || nextCol < 0 || nextCol >= grid.length) return false;
-      if (grid[nextRow][nextCol] && grid[nextRow][nextCol] !== tokens[index]) return false;
+      if (nextRow < 0 || nextRow >= grid.length || nextCol < 0 || nextCol >= grid.length) return null;
+      if (grid[nextRow][nextCol] && grid[nextRow][nextCol] !== tokens[index]) return null;
+      if (grid[nextRow][nextCol] === tokens[index]) intersections += 1;
+
+      for (let rowOffset = -1; rowOffset <= 1; rowOffset += 1) {
+        for (let colOffset = -1; colOffset <= 1; colOffset += 1) {
+          if (rowOffset === 0 && colOffset === 0) continue;
+          const neighbor = grid[nextRow + rowOffset]?.[nextCol + colOffset];
+          if (neighbor) touches += 1;
+        }
+      }
     }
-    return true;
+
+    const directionKey = `${direction.row},${direction.col}`;
+    const directionPenalty = (directionUsage[directionKey] || 0) * 7;
+    const fullSpanPenalty = tokens.length >= grid.length ? 18 : 0;
+    const edgePenalty = (row === 0 || col === 0 || row === grid.length - 1 || col === grid.length - 1) ? 3 : 0;
+    const intersectionBonus = intersections > 0 ? 34 + intersections * 16 : 0;
+
+    return {
+      row,
+      col,
+      direction,
+      directionKey,
+      intersections,
+      score: intersectionBonus + touches * 1.5 - directionPenalty - fullSpanPenalty - edgePenalty + Math.random() * 4
+    };
   };
 
-  const placeWord = (grid, entry) => {
+  const placeWord = (grid, entry, directionUsage, requireIntersection) => {
     const tokens = tokenize(entry.word);
+    const placements = [];
 
-    for (let attempt = 0; attempt < 180; attempt += 1) {
-      const direction = randomItem(DIRECTIONS);
-      const row = Math.floor(Math.random() * grid.length);
-      const col = Math.floor(Math.random() * grid.length);
+    DIRECTIONS.forEach((direction) => {
+      for (let row = 0; row < grid.length; row += 1) {
+        for (let col = 0; col < grid.length; col += 1) {
+          const placement = scorePlacement(grid, tokens, row, col, direction, directionUsage);
+          if (!placement) continue;
+          if (requireIntersection && placement.intersections === 0) continue;
+          placements.push(placement);
+        }
+      }
+    });
 
-      if (!canPlace(grid, tokens, row, col, direction)) continue;
+    const placement = placements.sort((a, b) => b.score - a.score)[0];
+    if (!placement) return null;
 
-      const cells = [];
-      tokens.forEach((token, index) => {
-        const nextRow = row + direction.row * index;
-        const nextCol = col + direction.col * index;
-        grid[nextRow][nextCol] = token;
-        cells.push(cellId(nextRow, nextCol));
-      });
+    const cells = [];
+    tokens.forEach((token, index) => {
+      const nextRow = placement.row + placement.direction.row * index;
+      const nextCol = placement.col + placement.direction.col * index;
+      grid[nextRow][nextCol] = token;
+      cells.push(cellId(nextRow, nextCol));
+    });
 
-      return { ...entry, key: wordKey(entry.word), tokens, cells };
-    }
-
-    return null;
+    directionUsage[placement.directionKey] = (directionUsage[placement.directionKey] || 0) + 1;
+    return { ...entry, key: wordKey(entry.word), tokens, cells };
   };
 
   const fillGrid = (grid) => {
@@ -583,16 +619,29 @@
     });
   };
 
-  const generatePuzzle = () => {
+  const validatePuzzle = (puzzle) => puzzle.words.every((entry) => {
+    const value = entry.cells.map((id) => {
+      const [row, col] = id.split("-").map(Number);
+      return puzzle.grid[row]?.[col] || "";
+    }).join("");
+    return value === entry.key;
+  });
+
+  const generatePuzzleAttempt = () => {
     const targetCount = state.size === 8 ? 7 : state.size === 12 ? 12 : 10;
     const grid = makeGrid(state.size);
     const placed = [];
+    const directionUsage = {};
+    const maxLength = Math.max(3, state.size - 1);
     const allCandidates = shuffle(getWords())
       .filter((entry) => {
         const length = tokenize(entry.word).length;
-        return length >= 2 && length <= state.size;
+        return length >= 2 && length <= maxLength;
       })
-      .sort((a, b) => tokenize(b.word).length - tokenize(a.word).length);
+      .sort((a, b) => {
+        const lengthDelta = tokenize(b.word).length - tokenize(a.word).length;
+        return lengthDelta + (Math.random() - 0.5) * 4;
+      });
     const freshCandidates = allCandidates.filter((entry) => !state.seenWords.has(wordKey(entry.word)));
     const candidates = freshCandidates.length >= targetCount
       ? freshCandidates
@@ -602,15 +651,37 @@
 
     candidates.forEach((entry) => {
       if (placed.length >= targetCount) return;
-      const placedEntry = placeWord(grid, entry);
+      const placedEntry = placeWord(grid, entry, directionUsage, placed.length >= 2);
       if (placedEntry) placed.push(placedEntry);
     });
+
+    if (placed.length < targetCount) {
+      candidates.forEach((entry) => {
+        if (placed.length >= targetCount || placed.some((placedEntry) => placedEntry.key === wordKey(entry.word))) return;
+        const placedEntry = placeWord(grid, entry, directionUsage, false);
+        if (placedEntry) placed.push(placedEntry);
+      });
+    }
 
     fillGrid(grid);
     return {
       grid,
       words: placed.sort((a, b) => a.word.localeCompare(b.word, "mt"))
     };
+  };
+
+  const generatePuzzle = () => {
+    for (let attempt = 0; attempt < 16; attempt += 1) {
+      const puzzle = generatePuzzleAttempt();
+      if (puzzle.words.length > 0 && validatePuzzle(puzzle)) {
+        return puzzle;
+      }
+    }
+
+    const puzzle = generatePuzzleAttempt();
+    return validatePuzzle(puzzle)
+      ? puzzle
+      : { grid: makeGrid(state.size).map((row) => row.map(() => randomItem(MALTESE_LETTERS))), words: [] };
   };
 
   const getLineCells = (start, end) => {
@@ -679,7 +750,13 @@
     entry.cells.forEach((id) => {
       const cell = board.querySelector(`[data-cell-id="${id}"]`);
       if (cell) {
-        cell.classList.add("is-found", colorClass);
+        const overlapCount = Number(cell.dataset.overlapCount || "0") + 1;
+        cell.dataset.overlapCount = String(overlapCount);
+        if (cell.classList.contains("is-found")) {
+          cell.classList.add("is-overlap", colorClass.replace("found-color", "overlap-color"));
+        } else {
+          cell.classList.add("is-found", colorClass);
+        }
       }
     });
     const wordItem = list.querySelector(`[data-word-key="${entry.key}"]`);
