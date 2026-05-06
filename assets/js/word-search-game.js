@@ -397,6 +397,7 @@
 
   const board = document.querySelector("#word-search-board");
   const list = document.querySelector("#word-search-list");
+  const selectionPreview = document.querySelector("#word-search-selection-preview");
   const topicSelect = document.querySelector("#word-search-topic");
   const sizeSelect = document.querySelector("#word-search-size");
   const hintsSelect = document.querySelector("#word-search-hints");
@@ -423,6 +424,8 @@
     selectedCells: []
   };
   let audioContext = null;
+  let lastTickAt = 0;
+  let lastTickCellId = "";
 
   const tokenize = (word) => word.toLowerCase().match(/għ|[a-zàèìòùċġħż]/g) || [];
   const wordKey = (word) => tokenize(word).join("");
@@ -496,6 +499,11 @@
     if (type === "refresh") {
       playTone(392, now, 0.1, "sine", 0.035);
       playTone(493.88, now + 0.06, 0.12, "sine", 0.032);
+      return;
+    }
+
+    if (type === "tick") {
+      playTone(176, now, 0.035, "triangle", 0.018);
       return;
     }
 
@@ -712,18 +720,53 @@
     };
   };
 
+  const playSelectionTick = (cell) => {
+    const id = cellId(cell.row, cell.col);
+    const now = performance.now();
+    if (id === lastTickCellId || now - lastTickAt < 55) return;
+    lastTickCellId = id;
+    lastTickAt = now;
+    playSound("tick");
+  };
+
   const clearSelecting = () => {
-    board.querySelectorAll(".is-selecting").forEach((cell) => cell.classList.remove("is-selecting"));
+    board.querySelectorAll(".is-selecting, .selection-start, .selection-end, .selection-horizontal, .selection-vertical, .selection-diagonal")
+      .forEach((cell) => {
+        cell.classList.remove("is-selecting", "selection-start", "selection-end", "selection-horizontal", "selection-vertical", "selection-diagonal");
+      });
+  };
+
+  const updateSelectionPreview = (message) => {
+    if (!selectionPreview) return;
+    const text = message || (state.selectedCells.length
+      ? selectedValue().toUpperCase()
+      : "Selected letters will appear here.");
+    selectionPreview.textContent = text;
+    selectionPreview.classList.toggle("is-active", state.selectedCells.length > 0 || Boolean(message));
   };
 
   const paintSelection = () => {
     clearSelecting();
-    state.selectedCells.forEach((cell) => {
+    const first = state.selectedCells[0];
+    const last = state.selectedCells[state.selectedCells.length - 1];
+    const directionClass = !first || !last
+      ? ""
+      : first.row === last.row
+        ? "selection-horizontal"
+        : first.col === last.col
+          ? "selection-vertical"
+          : "selection-diagonal";
+
+    state.selectedCells.forEach((cell, index) => {
       const element = board.querySelector(`[data-cell-id="${cellId(cell.row, cell.col)}"]`);
-      if (element && !element.classList.contains("is-found")) {
+      if (element) {
         element.classList.add("is-selecting");
+        if (directionClass) element.classList.add(directionClass);
+        if (index === 0) element.classList.add("selection-start");
+        if (index === state.selectedCells.length - 1 && state.selectedCells.length > 1) element.classList.add("selection-end");
       }
     });
+    updateSelectionPreview();
   };
 
   const selectedValue = () => state.selectedCells.map((cell) => state.puzzle.grid[cell.row][cell.col]).join("");
@@ -770,6 +813,9 @@
   const finishSelection = () => {
     if (!state.dragging) return;
 
+    const selectedElements = state.selectedCells
+      .map((cell) => board.querySelector(`[data-cell-id="${cellId(cell.row, cell.col)}"]`))
+      .filter(Boolean);
     const value = selectedValue();
     const reverseValue = tokenize(value).reverse().join("");
     const foundEntry = state.puzzle.words.find((entry) => (
@@ -778,9 +824,21 @@
 
     if (foundEntry) {
       markFound(foundEntry);
+      selectedElements.forEach((element) => {
+        element.classList.remove("is-success-pulse");
+        void element.offsetWidth;
+        element.classList.add("is-success-pulse");
+      });
+      updateSelectionPreview(`Found: ${foundEntry.word}`);
       playSound(state.found.size === state.puzzle.words.length ? "victory" : "success");
     } else if (state.selectedCells.length > 1) {
       status.textContent = "Try another line.";
+      selectedElements.forEach((element) => {
+        element.classList.remove("is-miss-shake");
+        void element.offsetWidth;
+        element.classList.add("is-miss-shake");
+      });
+      updateSelectionPreview("Try another line.");
       playSound("miss");
     }
 
@@ -788,6 +846,7 @@
     state.dragging = false;
     state.startCell = null;
     state.selectedCells = [];
+    window.setTimeout(() => updateSelectionPreview(), 260);
   };
 
   const renderBoard = () => {
@@ -887,6 +946,8 @@
     state.dragging = true;
     state.startCell = cell;
     state.selectedCells = [cell];
+    lastTickCellId = cellId(cell.row, cell.col);
+    lastTickAt = performance.now();
     board.setPointerCapture(event.pointerId);
     paintSelection();
   });
@@ -895,12 +956,16 @@
     if (!state.dragging || !state.startCell) return;
     const cell = getCellFromEvent(event);
     if (!cell) return;
+    playSelectionTick(cell);
     state.selectedCells = getLineCells(state.startCell, cell);
     paintSelection();
   });
 
   board.addEventListener("pointerup", finishSelection);
   board.addEventListener("pointercancel", finishSelection);
+  board.addEventListener("animationend", (event) => {
+    event.target.classList?.remove("is-success-pulse", "is-miss-shake");
+  });
   newButton.addEventListener("click", startPuzzle);
   resetMemoryButton?.addEventListener("click", () => {
     state.seenWords.clear();
