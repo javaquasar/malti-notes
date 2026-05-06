@@ -44,6 +44,10 @@
         <aside class="sidebar word-search-sidebar">
             <h2>Game Settings</h2>
             <p class="mini" id="word-search-progress">0 found, 0 left</p>
+            <div class="word-search-timer-panel">
+                <span id="word-search-timer">00:00</span>
+                <small id="word-search-best-time">Best: --</small>
+            </div>
 
             <label class="word-search-field">
                 <strong>Topic</strong>
@@ -62,6 +66,15 @@
             </label>
 
             <label class="word-search-field">
+                <strong>Directions</strong>
+                <select class="review-select" id="word-search-directions">
+                    <option value="easy">Easy - across and down</option>
+                    <option value="medium" selected>Medium - add diagonals</option>
+                    <option value="hard">Hard - add backwards</option>
+                </select>
+            </label>
+
+            <label class="word-search-field">
                 <strong>Hints</strong>
                 <select class="review-select" id="word-search-hints">
                     <option value="show-all">Show Maltese and English</option>
@@ -70,6 +83,7 @@
                 </select>
             </label>
 
+            <button class="action-button word-search-hint-button" id="word-search-hint" type="button">Hint</button>
             <button class="action-button word-search-new" id="word-search-new" type="button">New Puzzle</button>
             <button class="action-button word-search-reset-memory" id="word-search-reset-memory" type="button">Reset Seen Words</button>
             <p class="mini" id="word-search-memory">0 seen words excluded.</p>
@@ -84,6 +98,9 @@
                         <h2>Letter Grid</h2>
                     </div>
                     <span class="status-chip" id="word-search-found-count">0 found</span>
+                </div>
+                <div class="word-search-progress-track" aria-hidden="true">
+                    <div class="word-search-progress-fill" id="word-search-progress-fill"></div>
                 </div>
                 <div class="word-search-board-wrap">
                     <div class="word-search-board" id="word-search-board" aria-label="Maltese word search letter grid"></div>

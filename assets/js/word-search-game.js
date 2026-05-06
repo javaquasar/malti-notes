@@ -1,12 +1,29 @@
 (() => {
   const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "è", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
   const SEEN_STORAGE_KEY = "malti_word_search_seen_words_v1";
-  const DIRECTIONS = [
-    { row: 0, col: 1 },
-    { row: 1, col: 0 },
-    { row: 1, col: 1 },
-    { row: 1, col: -1 }
-  ];
+  const BEST_TIME_STORAGE_KEY = "malti_word_search_best_times_v1";
+  const DIRECTION_SETS = {
+    easy: [
+      { row: 0, col: 1 },
+      { row: 1, col: 0 }
+    ],
+    medium: [
+      { row: 0, col: 1 },
+      { row: 1, col: 0 },
+      { row: 1, col: 1 },
+      { row: 1, col: -1 }
+    ],
+    hard: [
+      { row: 0, col: 1 },
+      { row: 0, col: -1 },
+      { row: 1, col: 0 },
+      { row: -1, col: 0 },
+      { row: 1, col: 1 },
+      { row: 1, col: -1 },
+      { row: -1, col: 1 },
+      { row: -1, col: -1 }
+    ]
+  };
   const FOUND_COLOR_CLASSES = [
     "found-color-1",
     "found-color-2",
@@ -400,25 +417,34 @@
   const selectionPreview = document.querySelector("#word-search-selection-preview");
   const topicSelect = document.querySelector("#word-search-topic");
   const sizeSelect = document.querySelector("#word-search-size");
+  const directionsSelect = document.querySelector("#word-search-directions");
   const hintsSelect = document.querySelector("#word-search-hints");
   const listCard = document.querySelector("#word-search-list-card");
+  const hintButton = document.querySelector("#word-search-hint");
   const newButton = document.querySelector("#word-search-new");
   const resetMemoryButton = document.querySelector("#word-search-reset-memory");
   const progress = document.querySelector("#word-search-progress");
+  const progressFill = document.querySelector("#word-search-progress-fill");
   const memoryLabel = document.querySelector("#word-search-memory");
   const status = document.querySelector("#word-search-status");
   const foundCount = document.querySelector("#word-search-found-count");
   const totalLabel = document.querySelector("#word-search-total");
+  const timerLabel = document.querySelector("#word-search-timer");
+  const bestTimeLabel = document.querySelector("#word-search-best-time");
 
   if (!board || !list || !topicSelect || !sizeSelect || !newButton) return;
 
   const state = {
     topic: "all",
     size: 10,
+    directionsMode: "medium",
     puzzle: null,
     found: new Set(),
     seenWords: new Set(),
     lastPuzzleUsedSeenWords: false,
+    startedAt: 0,
+    elapsedSeconds: 0,
+    completed: false,
     dragging: false,
     startCell: null,
     selectedCells: []
@@ -426,11 +452,73 @@
   let audioContext = null;
   let lastTickAt = 0;
   let lastTickCellId = "";
+  let timerInterval = 0;
+  let hintTimeout = 0;
 
   const tokenize = (word) => word.toLowerCase().match(/għ|[a-zàèìòùċġħż]/g) || [];
   const wordKey = (word) => tokenize(word).join("");
   const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
   const cellId = (row, col) => `${row}-${col}`;
+  const getDirections = () => DIRECTION_SETS[state.directionsMode] || DIRECTION_SETS.medium;
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const rest = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(rest).padStart(2, "0")}`;
+  };
+  const bestTimeKey = () => `${state.topic}|${state.size}|${state.directionsMode}`;
+
+  const readBestTimes = () => {
+    try {
+      const parsed = JSON.parse(window.localStorage.getItem(BEST_TIME_STORAGE_KEY) || "{}");
+      return parsed && typeof parsed === "object" ? parsed : {};
+    } catch (error) {
+      return {};
+    }
+  };
+
+  const updateBestTimeLabel = () => {
+    if (!bestTimeLabel) return;
+    const best = readBestTimes()[bestTimeKey()];
+    bestTimeLabel.textContent = best ? `Best: ${formatTime(best)}` : "Best: --";
+  };
+
+  const saveBestTime = () => {
+    const bestTimes = readBestTimes();
+    const key = bestTimeKey();
+    const current = state.elapsedSeconds;
+    if (!current || (bestTimes[key] && bestTimes[key] <= current)) return;
+    bestTimes[key] = current;
+    try {
+      window.localStorage.setItem(BEST_TIME_STORAGE_KEY, JSON.stringify(bestTimes));
+    } catch (error) {
+      // Ignore storage failures on restrictive browsers.
+    }
+    updateBestTimeLabel();
+  };
+
+  const updateTimerLabel = () => {
+    if (timerLabel) timerLabel.textContent = formatTime(state.elapsedSeconds);
+  };
+
+  const stopTimer = () => {
+    if (timerInterval) {
+      window.clearInterval(timerInterval);
+      timerInterval = 0;
+    }
+  };
+
+  const startTimer = () => {
+    stopTimer();
+    state.startedAt = Date.now();
+    state.elapsedSeconds = 0;
+    state.completed = false;
+    updateTimerLabel();
+    timerInterval = window.setInterval(() => {
+      if (state.completed) return;
+      state.elapsedSeconds = Math.floor((Date.now() - state.startedAt) / 1000);
+      updateTimerLabel();
+    }, 500);
+  };
 
   const readSeenWords = () => {
     try {
@@ -593,7 +681,7 @@
     const tokens = tokenize(entry.word);
     const placements = [];
 
-    DIRECTIONS.forEach((direction) => {
+    getDirections().forEach((direction) => {
       for (let row = 0; row < grid.length; row += 1) {
         for (let col = 0; col < grid.length; col += 1) {
           const placement = scorePlacement(grid, tokens, row, col, direction, directionUsage);
@@ -730,10 +818,37 @@
   };
 
   const clearSelecting = () => {
-    board.querySelectorAll(".is-selecting, .selection-start, .selection-end, .selection-horizontal, .selection-vertical, .selection-diagonal")
+    board.querySelectorAll(".is-selecting, .selection-start, .selection-end, .selection-horizontal, .selection-vertical, .selection-diagonal, .selection-diagonal-down, .selection-diagonal-up")
       .forEach((cell) => {
-        cell.classList.remove("is-selecting", "selection-start", "selection-end", "selection-horizontal", "selection-vertical", "selection-diagonal");
+        cell.classList.remove("is-selecting", "selection-start", "selection-end", "selection-horizontal", "selection-vertical", "selection-diagonal", "selection-diagonal-down", "selection-diagonal-up");
       });
+  };
+
+  const clearHint = () => {
+    window.clearTimeout(hintTimeout);
+    hintTimeout = 0;
+    board.querySelectorAll(".is-hint").forEach((cell) => cell.classList.remove("is-hint"));
+    list.querySelectorAll(".is-hint").forEach((item) => item.classList.remove("is-hint"));
+  };
+
+  const showHint = () => {
+    if (!state.puzzle) return;
+    clearHint();
+    const options = state.puzzle.words.filter((entry) => !state.found.has(entry.key));
+    const entry = randomItem(options);
+    if (!entry) {
+      status.textContent = "No hints left. Puzzle complete.";
+      return;
+    }
+
+    const firstCell = board.querySelector(`[data-cell-id="${entry.cells[0]}"]`);
+    const wordItem = list.querySelector(`[data-word-key="${entry.key}"]`);
+    firstCell?.classList.add("is-hint");
+    wordItem?.classList.add("is-hint");
+    status.textContent = `Hint: starts with ${tokenize(entry.word)[0].toUpperCase()}.`;
+    playSound("tick");
+
+    hintTimeout = window.setTimeout(clearHint, 1800);
   };
 
   const updateSelectionPreview = (message) => {
@@ -749,13 +864,18 @@
     clearSelecting();
     const first = state.selectedCells[0];
     const last = state.selectedCells[state.selectedCells.length - 1];
-    const directionClass = !first || !last
-      ? ""
-      : first.row === last.row
-        ? "selection-horizontal"
-        : first.col === last.col
-          ? "selection-vertical"
-          : "selection-diagonal";
+    let directionClass = "";
+    if (first && last) {
+      if (first.row === last.row) {
+        directionClass = "selection-horizontal";
+      } else if (first.col === last.col) {
+        directionClass = "selection-vertical";
+      } else {
+        directionClass = (last.row - first.row) * (last.col - first.col) > 0
+          ? "selection-diagonal-down"
+          : "selection-diagonal-up";
+      }
+    }
 
     state.selectedCells.forEach((cell, index) => {
       const element = board.querySelector(`[data-cell-id="${cellId(cell.row, cell.col)}"]`);
@@ -778,8 +898,15 @@
     progress.textContent = `${found} found, ${left} left`;
     foundCount.textContent = `${found} found`;
     totalLabel.textContent = `${total} words`;
+    if (progressFill) {
+      progressFill.style.width = total ? `${Math.round((found / total) * 100)}%` : "0%";
+    }
 
     if (total > 0 && found === total) {
+      state.completed = true;
+      state.elapsedSeconds = Math.max(state.elapsedSeconds, Math.floor((Date.now() - state.startedAt) / 1000));
+      stopTimer();
+      saveBestTime();
       status.textContent = "Puzzle complete. Great work.";
     }
   };
@@ -817,7 +944,7 @@
       .map((cell) => board.querySelector(`[data-cell-id="${cellId(cell.row, cell.col)}"]`))
       .filter(Boolean);
     const value = selectedValue();
-    const reverseValue = tokenize(value).reverse().join("");
+    const reverseValue = state.selectedCells.map((cell) => state.puzzle.grid[cell.row][cell.col]).reverse().join("");
     const foundEntry = state.puzzle.words.find((entry) => (
       !state.found.has(entry.key) && (entry.key === value || entry.key === reverseValue)
     ));
@@ -893,6 +1020,8 @@
 
     state.topic = topicSelect.value;
     state.size = Number(sizeSelect.value);
+    state.directionsMode = directionsSelect?.value || "medium";
+    clearHint();
     state.puzzle = generatePuzzle();
     state.found = new Set();
     state.dragging = false;
@@ -900,6 +1029,8 @@
     state.selectedCells = [];
     renderBoard();
     renderList();
+    updateBestTimeLabel();
+    startTimer();
     updateProgress();
     status.textContent = state.lastPuzzleUsedSeenWords
       ? "New puzzle ready. Some seen words were reused because this topic is running low."
@@ -975,7 +1106,9 @@
   });
   topicSelect.addEventListener("change", startPuzzle);
   sizeSelect.addEventListener("change", startPuzzle);
+  directionsSelect?.addEventListener("change", startPuzzle);
   hintsSelect?.addEventListener("change", updateListVisibility);
+  hintButton?.addEventListener("click", showHint);
 
   initTopics();
   state.seenWords = readSeenWords();
