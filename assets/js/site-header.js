@@ -57,6 +57,7 @@
       label: "Review",
       items: [
         ["review_cards.html", "Review Cards"],
+        ["word_search.html", "Word Search"],
         ["common_mistakes.html", "Common Mistakes"]
       ]
     }

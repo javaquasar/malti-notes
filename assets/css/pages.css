@@ -884,6 +884,198 @@
   margin-top: 14px;
 }
 
+.word-search-layout {
+  align-items: start;
+}
+
+.word-search-sidebar {
+  display: grid;
+  gap: 14px;
+}
+
+.word-search-field {
+  display: grid;
+  gap: 7px;
+}
+
+.word-search-field strong {
+  font-size: 0.95rem;
+}
+
+.word-search-new {
+  width: 100%;
+}
+
+.word-search-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.word-search-topline h2 {
+  margin-bottom: 0;
+}
+
+.word-search-game-card {
+  overflow: hidden;
+}
+
+.word-search-board-wrap {
+  padding: clamp(10px, 2vw, 18px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(135deg, var(--color-brand-soft), var(--color-accent-soft)),
+    var(--color-surface-soft);
+}
+
+.word-search-board {
+  display: grid;
+  grid-template-columns: repeat(var(--word-search-size), minmax(0, 1fr));
+  gap: clamp(3px, 0.7vw, 7px);
+  width: min(100%, 650px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  touch-action: none;
+  user-select: none;
+}
+
+.word-search-cell {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  aspect-ratio: 1;
+  border: 1px solid rgba(95, 111, 103, 0.24);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font: inherit;
+  font-size: clamp(0.78rem, 2.2vw, 1.28rem);
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: inset 0 -2px 0 rgba(33, 35, 27, 0.04);
+}
+
+.word-search-cell.is-selecting {
+  border-color: var(--color-accent-border);
+  background: color-mix(in srgb, var(--color-accent-soft) 58%, white 42%);
+  color: var(--accent);
+}
+
+.word-search-cell.is-found {
+  border-color: var(--color-brand-border);
+  background: color-mix(in srgb, var(--color-brand-soft) 68%, white 32%);
+  color: var(--teal);
+}
+
+.word-search-cell.found-color-1,
+.word-search-list li.found-color-1 {
+  --word-search-found-bg: #d8f1e8;
+  --word-search-found-border: #78bda5;
+  --word-search-found-ink: #1f6d58;
+}
+
+.word-search-cell.found-color-2,
+.word-search-list li.found-color-2 {
+  --word-search-found-bg: #fbe4c6;
+  --word-search-found-border: #d69a51;
+  --word-search-found-ink: #8a5420;
+}
+
+.word-search-cell.found-color-3,
+.word-search-list li.found-color-3 {
+  --word-search-found-bg: #e8dcfa;
+  --word-search-found-border: #a88ed5;
+  --word-search-found-ink: #66469a;
+}
+
+.word-search-cell.found-color-4,
+.word-search-list li.found-color-4 {
+  --word-search-found-bg: #d8e9fb;
+  --word-search-found-border: #80aeda;
+  --word-search-found-ink: #2f668e;
+}
+
+.word-search-cell.found-color-5,
+.word-search-list li.found-color-5 {
+  --word-search-found-bg: #f8d9df;
+  --word-search-found-border: #d48494;
+  --word-search-found-ink: #8b3e4d;
+}
+
+.word-search-cell.found-color-6,
+.word-search-list li.found-color-6 {
+  --word-search-found-bg: #ddecc0;
+  --word-search-found-border: #9ab56a;
+  --word-search-found-ink: #556f27;
+}
+
+.word-search-cell.found-color-7,
+.word-search-list li.found-color-7 {
+  --word-search-found-bg: #d7eeee;
+  --word-search-found-border: #70b7b7;
+  --word-search-found-ink: #277070;
+}
+
+.word-search-cell.found-color-8,
+.word-search-list li.found-color-8 {
+  --word-search-found-bg: #f3dfbf;
+  --word-search-found-border: #c4954e;
+  --word-search-found-ink: #765a26;
+}
+
+.word-search-cell.is-found[class*="found-color-"] {
+  border-color: var(--word-search-found-border);
+  background: var(--word-search-found-bg);
+  color: var(--word-search-found-ink);
+}
+
+.word-search-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.word-search-list li {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface-soft);
+}
+
+.word-search-list li.is-found {
+  border-color: var(--word-search-found-border, var(--color-brand-border));
+  background: var(--word-search-found-bg, var(--color-brand-soft));
+}
+
+.word-search-list li.is-found .word-search-word {
+  text-decoration: line-through;
+  color: var(--word-search-found-ink, var(--teal));
+}
+
+.word-search-word {
+  font-weight: 800;
+}
+
+.word-search-translation {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
 body.compact-animals .animal-figure-card img,
 body.compact-transport .transport-figure-card img,
 .home-compact .visual-vocab-card img {
@@ -944,6 +1136,10 @@ body.compact-animals .animal-gallery {
   .compact-list,
   .compact-list.compact-3 {
     columns: 1;
+  }
+
+  .word-search-list {
+    grid-template-columns: 1fr;
   }
 
   #key-verbs table {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Word Search</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero word-search-hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Maltese Word Search</h1>
+                <p class="lead">Find hidden Maltese words by dragging across the letter grid. Choose a topic, start a new puzzle, and practise short Level 4-friendly vocabulary.</p>
+                <div class="pill-row">
+                    <span class="pill">word search</span>
+                    <span class="pill">topics</span>
+                    <span class="pill">random grid</span>
+                    <span class="pill">touch friendly</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Game Goal</strong></p>
+                <ul>
+                    <li>select a word topic</li>
+                    <li>drag from the first letter to the last</li>
+                    <li>found words stay highlighted</li>
+                    <li>make a fresh puzzle whenever you want</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <div class="layout word-search-layout">
+        <aside class="sidebar word-search-sidebar">
+            <h2>Game Settings</h2>
+            <p class="mini" id="word-search-progress">0 found, 0 left</p>
+
+            <label class="word-search-field">
+                <strong>Topic</strong>
+                <select class="review-select" id="word-search-topic">
+                    <option value="all">All topics</option>
+                </select>
+            </label>
+
+            <label class="word-search-field">
+                <strong>Challenge</strong>
+                <select class="review-select" id="word-search-size">
+                    <option value="8">Easy - 8 x 8</option>
+                    <option value="10" selected>Medium - 10 x 10</option>
+                    <option value="12">Hard - 12 x 12</option>
+                </select>
+            </label>
+
+            <button class="action-button word-search-new" id="word-search-new" type="button">New Puzzle</button>
+            <p class="mini" id="word-search-status">Choose a topic or start finding words.</p>
+        </aside>
+
+        <main class="content">
+            <section class="content-card word-search-game-card">
+                <div class="word-search-topline">
+                    <div>
+                        <span class="tag">Puzzle</span>
+                        <h2>Letter Grid</h2>
+                    </div>
+                    <span class="status-chip" id="word-search-found-count">0 found</span>
+                </div>
+                <div class="word-search-board-wrap">
+                    <div class="word-search-board" id="word-search-board" aria-label="Maltese word search letter grid"></div>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <div class="word-search-topline">
+                    <div>
+                        <span class="tag">Words</span>
+                        <h2>Find These Words</h2>
+                    </div>
+                    <span class="status-chip" id="word-search-total">0 words</span>
+                </div>
+                <ul class="word-search-list" id="word-search-list"></ul>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/word-search-game.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>
