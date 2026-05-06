@@ -391,6 +391,8 @@
   const list = document.querySelector("#word-search-list");
   const topicSelect = document.querySelector("#word-search-topic");
   const sizeSelect = document.querySelector("#word-search-size");
+  const hideListCheckbox = document.querySelector("#word-search-hide-list");
+  const listCard = document.querySelector("#word-search-list-card");
   const newButton = document.querySelector("#word-search-new");
   const progress = document.querySelector("#word-search-progress");
   const status = document.querySelector("#word-search-status");
@@ -701,6 +703,14 @@
     status.textContent = "New puzzle ready.";
   };
 
+  const updateListVisibility = () => {
+    if (!hideListCheckbox || !listCard) return;
+    const hidden = hideListCheckbox.checked;
+    listCard.classList.toggle("is-hidden", hidden);
+    listCard.setAttribute("aria-hidden", String(hidden));
+    status.textContent = hidden ? "Word list hidden. Find words from memory." : "Word list visible.";
+  };
+
   const initTopics = () => {
     TOPICS.forEach((topic) => {
       const option = document.createElement("option");
@@ -733,7 +743,9 @@
   newButton.addEventListener("click", startPuzzle);
   topicSelect.addEventListener("change", startPuzzle);
   sizeSelect.addEventListener("change", startPuzzle);
+  hideListCheckbox?.addEventListener("change", updateListVisibility);
 
   initTopics();
+  updateListVisibility();
   startPuzzle();
 })();
