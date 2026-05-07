@@ -671,6 +671,24 @@
     });
   };
 
+  const variantKey = (word) => {
+    const tokens = tokenize(word);
+    if (tokens.length > 3 && tokens[tokens.length - 1] === "a") {
+      return tokens.slice(0, -1).join("");
+    }
+    return tokens.join("");
+  };
+
+  const uniqueVariants = (words) => {
+    const seen = new Set();
+    return words.filter((entry) => {
+      const key = variantKey(entry.word);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  };
+
   const getWords = () => {
     const sourceTopics = state.topic === "all"
       ? TOPICS
@@ -827,10 +845,11 @@
         const lengthDelta = tokenize(b.word).length - tokenize(a.word).length;
         return lengthDelta + (Math.random() - 0.5) * 4;
       });
-    const freshCandidates = allCandidates.filter((entry) => !state.seenWords.has(wordKey(entry.word)));
-    const candidates = freshCandidates.length >= targetCount
+    const freshCandidates = uniqueVariants(allCandidates.filter((entry) => !state.seenWords.has(wordKey(entry.word))));
+    const seenCandidates = uniqueVariants(allCandidates.filter((entry) => state.seenWords.has(wordKey(entry.word))));
+    const candidates = uniqueVariants(freshCandidates.length >= targetCount
       ? freshCandidates
-      : freshCandidates.concat(allCandidates.filter((entry) => state.seenWords.has(wordKey(entry.word))));
+      : freshCandidates.concat(seenCandidates));
 
     candidates.forEach((entry) => {
       if (placed.length >= targetCount) return;
