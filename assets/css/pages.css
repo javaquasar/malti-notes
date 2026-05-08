@@ -902,6 +902,44 @@
   font-size: 0.95rem;
 }
 
+.word-search-topic-checks {
+  max-height: 190px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface-soft);
+}
+
+.word-search-topic-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.word-search-topic-check.is-all {
+  grid-column: 1 / -1;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  color: var(--teal);
+}
+
+.word-search-topic-check input {
+  flex: 0 0 auto;
+}
+
+.word-search-topic-check span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .word-search-timer-panel {
   display: flex;
   align-items: baseline;
@@ -958,6 +996,10 @@
 
 .word-search-topline h2 {
   margin-bottom: 0;
+}
+
+.word-search-print-header {
+  display: none;
 }
 
 .word-search-game-card {
@@ -1655,6 +1697,35 @@ body.compact-animals .animal-gallery {
     max-width: 100%;
   }
 
+  .word-search-print-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr 0.8fr;
+    gap: 8px;
+    align-items: end;
+    margin-bottom: 12px;
+    color: #000000 !important;
+    font-size: 12px;
+  }
+
+  .word-search-print-header h1 {
+    grid-column: 1 / -1;
+    margin: 0 0 2px;
+    font-size: 18px;
+  }
+
+  .word-search-print-header div {
+    min-height: 24px;
+    border-bottom: 1px solid #777777;
+  }
+
+  .word-search-print-header span {
+    font-weight: 700;
+  }
+
+  .word-search-print-header strong {
+    font-weight: 700;
+  }
+
   .word-search-game-card {
     break-inside: avoid;
     margin-bottom: 24px;
@@ -1733,6 +1804,31 @@ body.compact-animals .animal-gallery {
     font-size: 11px;
     line-height: 1.2;
     break-inside: avoid;
+  }
+
+  body[data-word-search-print="grid-only"] .word-search-list-card {
+    display: none !important;
+  }
+
+  body[data-word-search-print="grid-only"] .word-search-game-card {
+    margin-bottom: 0;
+  }
+
+  body[data-word-search-print="answer-key"] .word-search-cell.is-print-answer {
+    border-color: #111111 !important;
+    background:
+      linear-gradient(135deg, rgba(0, 0, 0, 0.16), transparent 46%),
+      #ffffff !important;
+    box-shadow: inset 0 0 0 2px #111111 !important;
+  }
+
+  body[data-word-search-print="answer-key"] .word-search-list li.is-print-answer {
+    border-color: #111111 !important;
+    background: #f2f2f2 !important;
+  }
+
+  body[data-word-search-print="answer-key"] .word-search-list li.is-print-answer .word-search-word {
+    text-decoration: underline !important;
   }
 
   .word-search-word,

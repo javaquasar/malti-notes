@@ -417,10 +417,14 @@
   const list = document.querySelector("#word-search-list");
   const selectionPreview = document.querySelector("#word-search-selection-preview");
   const topicSelect = document.querySelector("#word-search-topic");
+  const topicChecks = document.querySelector("#word-search-topic-checks");
   const sizeSelect = document.querySelector("#word-search-size");
   const directionsSelect = document.querySelector("#word-search-directions");
   const hintsSelect = document.querySelector("#word-search-hints");
   const soundSelect = document.querySelector("#word-search-sound");
+  const printModeSelect = document.querySelector("#word-search-print-mode");
+  const printTopicLabel = document.querySelector("#word-search-print-topic");
+  const printScoreLabel = document.querySelector("#word-search-print-score");
   const listCard = document.querySelector("#word-search-list-card");
   const hintButton = document.querySelector("#word-search-hint");
   const newButton = document.querySelector("#word-search-new");
@@ -446,6 +450,8 @@
 
   const state = {
     topic: "all",
+    selectedTopics: ["all"],
+    printMode: "worksheet",
     size: 10,
     directionsMode: "medium",
     soundEnabled: true,
@@ -499,7 +505,15 @@
     const rest = seconds % 60;
     return `${String(minutes).padStart(2, "0")}:${String(rest).padStart(2, "0")}`;
   };
-  const bestTimeKey = () => `${state.topic}|${state.size}|${state.directionsMode}`;
+  const topicStateKey = () => state.selectedTopics.join("+");
+  const topicLabel = () => {
+    if (state.selectedTopics.includes("all")) return "All topics";
+    return state.selectedTopics
+      .map((id) => TOPICS.find((topic) => topic.id === id)?.label)
+      .filter(Boolean)
+      .join(" + ") || "All topics";
+  };
+  const bestTimeKey = () => `${topicStateKey()}|${state.size}|${state.directionsMode}`;
 
   const readBestTimes = () => {
     try {
@@ -538,13 +552,12 @@
 
   const showCompletionPanel = () => {
     if (!completionPanel) return;
-    const topicLabel = topicSelect.options[topicSelect.selectedIndex]?.textContent || "All topics";
     const sizeLabel = sizeSelect.options[sizeSelect.selectedIndex]?.textContent?.replace(/ - /g, " ") || `${state.size} x ${state.size}`;
     const directionsLabel = directionsSelect?.options[directionsSelect.selectedIndex]?.textContent?.split(" - ")[0] || "Medium";
     if (completeTime) completeTime.textContent = formatTime(state.elapsedSeconds);
     if (completeBest) completeBest.textContent = formatTime(currentBestTime());
     if (completeMisses) completeMisses.textContent = String(state.misses);
-    if (completeSetup) completeSetup.textContent = `${topicLabel}, ${sizeLabel}, ${directionsLabel}`;
+    if (completeSetup) completeSetup.textContent = `${topicLabel()}, ${sizeLabel}, ${directionsLabel}`;
     completionPanel.hidden = false;
     completionPanel.classList.remove("is-visible");
     void completionPanel.offsetWidth;
@@ -710,10 +723,29 @@
     });
   };
 
+  const selectedTopicIds = () => {
+    const checked = topicChecks
+      ? [...topicChecks.querySelectorAll("input[type='checkbox']:checked")].map((input) => input.value)
+      : [];
+    if (checked.includes("all")) return ["all"];
+    if (checked.length) return checked;
+    return topicSelect.value === "all" ? ["all"] : [topicSelect.value];
+  };
+
+  const syncTopicControls = () => {
+    state.selectedTopics = selectedTopicIds();
+    state.topic = state.selectedTopics.includes("all") ? "all" : state.selectedTopics.join("+");
+    if (topicChecks) {
+      const allInput = topicChecks.querySelector('input[value="all"]');
+      if (allInput) allInput.checked = state.selectedTopics.includes("all");
+    }
+    if (printTopicLabel) printTopicLabel.textContent = topicLabel();
+  };
+
   const getWords = () => {
-    const sourceTopics = state.topic === "all"
+    const sourceTopics = state.selectedTopics.includes("all")
       ? TOPICS
-      : TOPICS.filter((topic) => topic.id === state.topic);
+      : TOPICS.filter((topic) => state.selectedTopics.includes(topic.id));
 
     return uniqueWords(sourceTopics.flatMap((topic) => topic.words.map(([word, translation]) => ({
       word,
@@ -1133,9 +1165,10 @@
 
   const renderList = () => {
     list.innerHTML = "";
-    state.puzzle.words.forEach((entry) => {
+    state.puzzle.words.forEach((entry, index) => {
       const item = document.createElement("li");
       item.dataset.wordKey = entry.key;
+      item.classList.add(`found-color-${(index % 12) + 1}`);
       item.innerHTML = `
         <span class="word-search-word">${entry.word}</span>
         <span class="word-search-translation">${entry.translation}</span>
@@ -1155,7 +1188,8 @@
       playSound("refresh");
     }
 
-    state.topic = topicSelect.value;
+    syncTopicControls();
+    state.printMode = printModeSelect?.value || "worksheet";
     state.size = Number(sizeSelect.value);
     state.directionsMode = directionsSelect?.value || "medium";
     clearHint();
@@ -1167,6 +1201,7 @@
     state.selectedCells = [];
     renderBoard();
     renderList();
+    updatePrintHeader();
     if (completionPanel) {
       completionPanel.hidden = true;
       completionPanel.classList.remove("is-visible");
@@ -1204,12 +1239,64 @@
     }
   };
 
+  const updatePrintHeader = () => {
+    if (printTopicLabel) printTopicLabel.textContent = topicLabel();
+    if (printScoreLabel) printScoreLabel.textContent = `____ / ${state.puzzle?.words.length || "____"}`;
+  };
+
+  const clearPrintAnswerKey = () => {
+    board.querySelectorAll(".is-print-answer").forEach((cell) => {
+      cell.classList.remove("is-print-answer");
+    });
+    list.querySelectorAll(".is-print-answer").forEach((item) => item.classList.remove("is-print-answer"));
+  };
+
+  const preparePrint = () => {
+    state.printMode = printModeSelect?.value || "worksheet";
+    document.body.dataset.wordSearchPrint = state.printMode;
+    updatePrintHeader();
+    clearPrintAnswerKey();
+    if (state.printMode !== "answer-key" || !state.puzzle) return;
+    state.puzzle.words.forEach((entry) => {
+      entry.cells.forEach((id) => {
+        const cell = board.querySelector(`[data-cell-id="${id}"]`);
+        cell?.classList.add("is-print-answer");
+      });
+      list.querySelector(`[data-word-key="${entry.key}"]`)?.classList.add("is-print-answer");
+    });
+  };
+
+  const printPuzzle = () => {
+    preparePrint();
+    window.print();
+  };
+
   const initTopics = () => {
+    if (topicChecks) {
+      const allLabel = document.createElement("label");
+      allLabel.className = "word-search-topic-check is-all";
+      allLabel.innerHTML = `
+        <input type="checkbox" value="all" checked>
+        <span>All topics</span>
+      `;
+      topicChecks.appendChild(allLabel);
+    }
+
     TOPICS.forEach((topic) => {
       const option = document.createElement("option");
       option.value = topic.id;
       option.textContent = topic.label;
       topicSelect.appendChild(option);
+
+      if (topicChecks) {
+        const label = document.createElement("label");
+        label.className = "word-search-topic-check";
+        label.innerHTML = `
+          <input type="checkbox" value="${topic.id}">
+          <span>${topic.label}</span>
+        `;
+        topicChecks.appendChild(label);
+      }
     });
   };
 
@@ -1240,19 +1327,53 @@
     event.target.classList?.remove("is-success-pulse", "is-miss-shake");
   });
   newButton.addEventListener("click", startPuzzle);
-  printButton?.addEventListener("click", () => window.print());
+  printButton?.addEventListener("click", printPuzzle);
   completeNewButton?.addEventListener("click", startPuzzle);
-  completePrintButton?.addEventListener("click", () => window.print());
+  completePrintButton?.addEventListener("click", printPuzzle);
   resetMemoryButton?.addEventListener("click", () => {
     state.seenWords.clear();
     writeSeenWords();
     updateMemoryLabel();
     status.textContent = "Seen word memory reset.";
   });
-  topicSelect.addEventListener("change", startPuzzle);
+  topicSelect.addEventListener("change", () => {
+    if (topicChecks) {
+      topicChecks.querySelectorAll("input[type='checkbox']").forEach((input) => {
+        input.checked = topicSelect.value !== "all" && input.value === topicSelect.value;
+      });
+      const allInput = topicChecks.querySelector('input[value="all"]');
+      if (allInput) allInput.checked = topicSelect.value === "all";
+    }
+    startPuzzle();
+  });
+  topicChecks?.addEventListener("change", (event) => {
+    const changed = event.target;
+    if (changed?.matches?.('input[value="all"]') && changed.checked) {
+      topicChecks.querySelectorAll('input[type="checkbox"]:not([value="all"])').forEach((input) => {
+        input.checked = false;
+      });
+    } else if (changed?.matches?.('input[type="checkbox"]') && changed.value !== "all" && changed.checked) {
+      const allInput = topicChecks.querySelector('input[value="all"]');
+      if (allInput) allInput.checked = false;
+    }
+    const checked = [...topicChecks.querySelectorAll("input[type='checkbox']:checked")];
+    if (!checked.length) {
+      const allInput = topicChecks.querySelector('input[value="all"]');
+      if (allInput) allInput.checked = true;
+      topicSelect.value = "all";
+    } else {
+      topicSelect.value = checked.length === 1 ? checked[0].value : "all";
+    }
+    startPuzzle();
+  });
   sizeSelect.addEventListener("change", startPuzzle);
   directionsSelect?.addEventListener("change", startPuzzle);
   hintsSelect?.addEventListener("change", updateListVisibility);
+  printModeSelect?.addEventListener("change", () => {
+    state.printMode = printModeSelect.value;
+    document.body.dataset.wordSearchPrint = state.printMode;
+  });
+  window.addEventListener("afterprint", clearPrintAnswerKey);
   hintButton?.addEventListener("click", showHint);
   soundSelect?.addEventListener("change", () => {
     state.soundEnabled = soundSelect.value !== "off";
