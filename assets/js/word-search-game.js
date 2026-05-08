@@ -679,20 +679,33 @@
     });
   };
 
-  const variantKey = (word) => {
-    const tokens = tokenize(word);
-    if (tokens.length > 3 && tokens[tokens.length - 1] === "a") {
-      return tokens.slice(0, -1).join("");
-    }
-    return tokens.join("");
+  const singularishKeys = (value) => {
+    const key = tokenize(value).join("");
+    const keys = new Set([key]);
+    if (key.length > 3 && key.endsWith("a")) keys.add(key.slice(0, -1));
+    if (key.length > 5 && key.endsWith("ijiet")) keys.add(key.slice(0, -4));
+    if (key.length > 5 && key.endsWith("jiet")) keys.add(key.slice(0, -4));
+    if (key.length > 5 && key.endsWith("iet")) keys.add(key.slice(0, -3));
+    if (key.length > 5 && key.endsWith("in")) keys.add(key.slice(0, -2));
+    if (key.length > 5 && key.endsWith("i")) keys.add(key.slice(0, -1));
+    if (key.length > 3 && key.endsWith("s")) keys.add(key.slice(0, -1));
+    if (key.length > 4 && key.endsWith("es")) keys.add(key.slice(0, -2));
+    if (key.length > 4 && key.endsWith("ies")) keys.add(`${key.slice(0, -3)}y`);
+    return [...keys].filter((item) => item.length > 2);
+  };
+
+  const variantKeys = (entry) => {
+    const keys = singularishKeys(entry.word).map((key) => `mt:${key}`);
+    singularishKeys(entry.translation || "").forEach((key) => keys.push(`en:${key}`));
+    return keys;
   };
 
   const uniqueVariants = (words) => {
     const seen = new Set();
     return words.filter((entry) => {
-      const key = variantKey(entry.word);
-      if (seen.has(key)) return false;
-      seen.add(key);
+      const keys = variantKeys(entry);
+      if (keys.some((key) => seen.has(key))) return false;
+      keys.forEach((key) => seen.add(key));
       return true;
     });
   };
