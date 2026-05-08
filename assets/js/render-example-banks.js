@@ -118,7 +118,7 @@ async function renderExampleBanksFromData(config) {
             const previous = container.previousElementSibling;
             if (!previous || !previous.hasAttribute || !previous.hasAttribute("data-sentence-review-row")) {
                 const row = document.createElement("div");
-                row.className = "source-row";
+                row.className = "toolbar-row";
                 row.setAttribute("data-sentence-review-row", "true");
 
                 const button = document.createElement("button");

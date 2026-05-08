@@ -89,7 +89,8 @@
 
         function createBulkRow(label, words, extraClass) {
             var row = document.createElement("div");
-            row.className = extraClass || "source-row";
+            row.className = extraClass || "toolbar-row";
+            row.setAttribute("data-section-review-row", "true");
 
             var button = document.createElement("button");
             button.type = "button";
@@ -227,7 +228,7 @@
                 });
 
                 if (trickyToolbar && !trickyToolbar.querySelector("[data-imperative-tricky-add]")) {
-                    var bulkRow = createBulkRow("Add tricky verbs to review", trickyWords, "source-row");
+                    var bulkRow = createBulkRow("Add tricky verbs to review", trickyWords, "toolbar-row");
                     bulkRow.querySelector(".action-button").dataset.imperativeTrickyAdd = "true";
                     trickyToolbar.appendChild(bulkRow);
                 }
@@ -301,7 +302,7 @@
                     card.appendChild(description);
                 }
 
-                card.appendChild(createBulkRow("Add section to review", words, "source-row"));
+                card.appendChild(createBulkRow("Add section to review", words, "toolbar-row"));
 
                 var table = document.createElement("table");
                 table.className = "table-soft imperative-shortlist-table";

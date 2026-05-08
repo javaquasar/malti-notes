@@ -120,7 +120,8 @@
 
         function createBulkActionRow(label, words) {
             const row = document.createElement("div");
-            row.className = "source-row";
+            row.className = "toolbar-row";
+            row.setAttribute("data-section-review-row", "true");
 
             const button = document.createElement("button");
             button.type = "button";
@@ -184,7 +185,7 @@
                 });
 
                 const previous = container.previousElementSibling;
-                if (!previous || !previous.classList.contains("source-row")) {
+                if (!previous || !previous.hasAttribute("data-section-review-row")) {
                     container.parentNode.insertBefore(createBulkActionRow("Add section to review", words), container);
                 }
 
