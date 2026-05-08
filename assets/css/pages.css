@@ -1609,6 +1609,10 @@ body.compact-animals .animal-gallery {
 }
 
 @media print {
+  @page {
+    margin: 12mm;
+  }
+
   body {
     background: #ffffff !important;
     color: #000000 !important;
@@ -1618,9 +1622,13 @@ body.compact-animals .animal-gallery {
   .hero,
   .word-search-sidebar,
   .word-search-completion-actions,
+  .word-search-completion,
   .review-fab,
   .word-search-selection-preview,
-  .word-search-progress-track {
+  .word-search-progress-track,
+  .word-search-game-card .tag,
+  #word-search-found-count,
+  #word-search-total {
     display: none !important;
   }
 
@@ -1640,16 +1648,51 @@ body.compact-animals .animal-gallery {
   .word-search-game-card,
   .word-search-list-card {
     display: block !important;
-    break-inside: avoid;
     box-shadow: none !important;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .word-search-game-card {
+    break-inside: avoid;
+    margin-bottom: 8px;
+  }
+
+  .word-search-list-card {
+    break-inside: auto;
+    margin-top: 0;
   }
 
   .content-card {
     border: 1px solid #999999;
     border-radius: 0;
-    margin: 0 0 14px;
-    padding: 14px;
+    margin: 0 0 8px;
+    padding: 10px;
     background: #ffffff !important;
+  }
+
+  .content-card.word-search-completion {
+    display: none !important;
+  }
+
+  .word-search-topline {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .word-search-topline h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .word-search-list-card .tag {
+    display: none !important;
+  }
+
+  .word-search-list-card h2 {
+    font-size: 15px;
   }
 
   .word-search-board-wrap {
@@ -1659,8 +1702,8 @@ body.compact-animals .animal-gallery {
   }
 
   .word-search-board {
-    width: min(100%, 620px);
-    gap: 4px;
+    width: min(100%, 500px);
+    gap: 3px;
   }
 
   .word-search-cell,
@@ -1673,16 +1716,43 @@ body.compact-animals .animal-gallery {
   }
 
   .word-search-cell {
-    font-size: 15px;
+    border-radius: 6px;
+    font-size: 13px;
   }
 
   .word-search-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
   }
 
   .word-search-list li {
+    display: block;
     min-height: 0;
-    padding: 8px;
+    padding: 5px 6px;
+    border-radius: 0;
+    font-size: 11px;
+    line-height: 1.2;
+    break-inside: avoid;
+  }
+
+  .word-search-word,
+  .word-search-translation,
+  .word-search-list-card.hide-maltese .word-search-word,
+  .word-search-list-card.hide-all .word-search-word,
+  .word-search-list-card.hide-all .word-search-translation {
+    color: #000000 !important;
+    font-size: 11px;
+    text-decoration: none !important;
+  }
+
+  .word-search-list-card.hide-maltese .word-search-word::after,
+  .word-search-list-card.hide-all .word-search-word::after,
+  .word-search-list-card.hide-all .word-search-translation::after {
+    content: none !important;
+  }
+
+  .word-search-translation {
+    display: block;
+    margin-top: 2px;
   }
 }

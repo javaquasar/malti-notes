@@ -1,5 +1,5 @@
 (() => {
-  const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "è", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
+  const MALTESE_LETTERS = ["a", "b", "c", "ċ", "d", "e", "f", "ġ", "g", "h", "ħ", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "ż", "z"];
   const SEEN_STORAGE_KEY = "malti_word_search_seen_words_v1";
   const BEST_TIME_STORAGE_KEY = "malti_word_search_best_times_v1";
   const SOUND_STORAGE_KEY = "malti_word_search_sound_v1";
@@ -467,7 +467,15 @@
   let timerInterval = 0;
   let hintTimeout = 0;
 
-  const tokenize = (word) => word.toLowerCase().match(/għ|[a-zàèìòùċġħż]/g) || [];
+  const normalizePuzzleText = (word) => word
+    .toLowerCase()
+    .normalize("NFC")
+    .replace(/[à]/g, "a")
+    .replace(/[è]/g, "e")
+    .replace(/[ì]/g, "i")
+    .replace(/[ò]/g, "o")
+    .replace(/[ù]/g, "u");
+  const tokenize = (word) => normalizePuzzleText(word).match(/għ|[a-zċġħż]/g) || [];
   const wordKey = (word) => tokenize(word).join("");
   const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
   const cellId = (row, col) => `${row}-${col}`;
