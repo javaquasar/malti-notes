@@ -228,6 +228,66 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "fuq",
         "upstairs"
+      ],
+      [
+        "basket",
+        "backpack"
+      ],
+      [
+        "blokok",
+        "block"
+      ],
+      [
+        "karta",
+        "card"
+      ],
+      [
+        "chopsticks",
+        "chopsticks"
+      ],
+      [
+        "cooker",
+        "cooker"
+      ],
+      [
+        "dixx",
+        "dish"
+      ],
+      [
+        "tikka",
+        "dot"
+      ],
+      [
+        "envelop",
+        "envelope"
+      ],
+      [
+        "kolla",
+        "glue"
+      ],
+      [
+        "sett",
+        "kit"
+      ],
+      [
+        "skart",
+        "litter"
+      ],
+      [
+        "zokk",
+        "log"
+      ],
+      [
+        "magna",
+        "machine"
+      ],
+      [
+        "xibka",
+        "net"
+      ],
+      [
+        "tinda",
+        "tent"
       ]
     ]
   },
@@ -618,6 +678,14 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "kreatura",
         "creature"
+      ],
+      [
+        "annimal",
+        "animal"
+      ],
+      [
+        "annimali",
+        "animals"
       ]
     ]
   },
@@ -768,6 +836,170 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "ktieb tal-iskola",
         "textbook"
+      ],
+      [
+        "bijoloġija",
+        "biology"
+      ],
+      [
+        "kimika",
+        "chemistry"
+      ],
+      [
+        "ġeografija",
+        "geography"
+      ],
+      [
+        "storja",
+        "history"
+      ],
+      [
+        "fiżika",
+        "physics"
+      ],
+      [
+        "matematika",
+        "mathematics"
+      ],
+      [
+        "sieħeb tal-klassi",
+        "classmate"
+      ],
+      [
+        "kulleġġ",
+        "college"
+      ],
+      [
+        "kors",
+        "course"
+      ],
+      [
+        "djarju",
+        "diary"
+      ],
+      [
+        "diploma",
+        "diploma"
+      ],
+      [
+        "xogħol tad-dar",
+        "homework"
+      ],
+      [
+        "istruzzjonijiet",
+        "instructions"
+      ],
+      [
+        "lingwa",
+        "language"
+      ],
+      [
+        "nota",
+        "note"
+      ],
+      [
+        "proġett",
+        "project"
+      ],
+      [
+        "kwizz",
+        "quiz"
+      ],
+      [
+        "staff",
+        "staff"
+      ],
+      [
+        "terminu",
+        "term"
+      ],
+      [
+        "eżerċizzju",
+        "exercise"
+      ],
+      [
+        "nitgħallem",
+        "learn"
+      ],
+      [
+        "ngħallem",
+        "teach"
+      ],
+      [
+        "bord iswed",
+        "blackboard"
+      ],
+      [
+        "artiklu",
+        "article"
+      ],
+      [
+        "assistent",
+        "assistant"
+      ],
+      [
+        "prinċipjant",
+        "beginner"
+      ],
+      [
+        "brejk",
+        "breaktime"
+      ],
+      [
+        "kollaġġ",
+        "collage"
+      ],
+      [
+        "konverżazzjoni",
+        "conversation"
+      ],
+      [
+        "direzzjonijiet",
+        "directions"
+      ],
+      [
+        "forma",
+        "form"
+      ],
+      [
+        "strument",
+        "instrument"
+      ],
+      [
+        "marka",
+        "mark"
+      ],
+      [
+        "prattika",
+        "practice"
+      ],
+      [
+        "nipprattika",
+        "practise"
+      ],
+      [
+        "post",
+        "seat"
+      ],
+      [
+        "pass",
+        "step"
+      ],
+      [
+        "ħġieġ",
+        "glass"
+      ],
+      [
+        "kaxxa",
+        "case"
+      ],
+      [
+        "ċellola",
+        "cell"
+      ],
+      [
+        "mappa",
+        "map"
       ]
     ]
   },
@@ -1158,6 +1390,42 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "kiwi",
         "kiwi"
+      ],
+      [
+        "bzar aħmar",
+        "chilli"
+      ],
+      [
+        "pulpetti",
+        "meatballs"
+      ],
+      [
+        "minerali",
+        "mineral"
+      ],
+      [
+        "porzjon",
+        "slice"
+      ],
+      [
+        "snakk",
+        "snack"
+      ],
+      [
+        "moqli",
+        "fried"
+      ],
+      [
+        "mgħolli",
+        "boiled"
+      ],
+      [
+        "ikel",
+        "dining"
+      ],
+      [
+        "kafetterija",
+        "cafe"
       ]
     ]
   },
@@ -1260,6 +1528,46 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "ġenituri",
         "parents"
+      ],
+      [
+        "raġel",
+        "man"
+      ],
+      [
+        "irġiel",
+        "men"
+      ],
+      [
+        "nies",
+        "people"
+      ],
+      [
+        "persuna",
+        "person"
+      ],
+      [
+        "kunjom",
+        "surname"
+      ],
+      [
+        "mara",
+        "woman"
+      ],
+      [
+        "nisa",
+        "women"
+      ],
+      [
+        "nanniet",
+        "grandparent"
+      ],
+      [
+        "adult",
+        "grown-up"
+      ],
+      [
+        "adoloxxent",
+        "teenager"
       ]
     ]
   },
@@ -1510,6 +1818,14 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "pasta tas-snien",
         "toothpaste"
+      ],
+      [
+        "saħħa",
+        "health"
+      ],
+      [
+        "suba tas-sieq",
+        "toe"
       ]
     ]
   },
@@ -1820,6 +2136,14 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "qawsalla",
         "rainbow"
+      ],
+      [
+        "imċajpar",
+        "foggy"
+      ],
+      [
+        "bir-riħ",
+        "windy"
       ]
     ]
   },
@@ -1922,6 +2246,50 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "triq",
         "street"
+      ],
+      [
+        "fuq",
+        "above"
+      ],
+      [
+        "minn fuq",
+        "over"
+      ],
+      [
+        "madwar",
+        "around"
+      ],
+      [
+        "minn naħa",
+        "across"
+      ],
+      [
+        "tul",
+        "along"
+      ],
+      [
+        "isfel",
+        "down"
+      ],
+      [
+        "faċċata",
+        "opposite"
+      ],
+      [
+        "lvant",
+        "east"
+      ],
+      [
+        "tramuntana",
+        "north"
+      ],
+      [
+        "nofsinhar",
+        "south"
+      ],
+      [
+        "punent",
+        "west"
       ]
     ]
   },
@@ -2132,6 +2500,154 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "viżitatur",
         "visitor"
+      ],
+      [
+        "bajja",
+        "beach"
+      ],
+      [
+        "pajjiż",
+        "country"
+      ],
+      [
+        "kampanja",
+        "countryside"
+      ],
+      [
+        "daħla",
+        "entrance"
+      ],
+      [
+        "ħruġ",
+        "exit"
+      ],
+      [
+        "sqaq",
+        "lane"
+      ],
+      [
+        "awtostrada",
+        "motorway"
+      ],
+      [
+        "mogħdija",
+        "path"
+      ],
+      [
+        "pjattaforma",
+        "platform"
+      ],
+      [
+        "bitħa",
+        "playground"
+      ],
+      [
+        "universita",
+        "university"
+      ],
+      [
+        "lift",
+        "elevator"
+      ],
+      [
+        "kont",
+        "bill"
+      ],
+      [
+        "flus",
+        "cash"
+      ],
+      [
+        "ċenteżmu",
+        "cent"
+      ],
+      [
+        "ċekk",
+        "cheque"
+      ],
+      [
+        "kreditu",
+        "credit"
+      ],
+      [
+        "klijent",
+        "customer"
+      ],
+      [
+        "dollaru",
+        "dollar"
+      ],
+      [
+        "ewro",
+        "euro"
+      ],
+      [
+        "merċa",
+        "grocery"
+      ],
+      [
+        "mistieden",
+        "guest"
+      ],
+      [
+        "gwida",
+        "guide"
+      ],
+      [
+        "bagalja",
+        "luggage"
+      ],
+      [
+        "menù",
+        "menu"
+      ],
+      [
+        "inħallas",
+        "pay"
+      ],
+      [
+        "sold",
+        "penny"
+      ],
+      [
+        "lira",
+        "pound"
+      ],
+      [
+        "prezz",
+        "price"
+      ],
+      [
+        "riċevuta",
+        "receipt"
+      ],
+      [
+        "kera",
+        "rent"
+      ],
+      [
+        "tiswija",
+        "repair"
+      ],
+      [
+        "ritorn",
+        "return"
+      ],
+      [
+        "inbigħ",
+        "sell"
+      ],
+      [
+        "servizzi",
+        "services"
+      ],
+      [
+        "xerrej",
+        "shopper"
+      ],
+      [
+        "bejgħ",
+        "sale"
       ]
     ]
   },
@@ -2302,6 +2818,34 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "kartiera",
         "wallet"
+      ],
+      [
+        "kostum",
+        "costume"
+      ],
+      [
+        "libsa eleganti",
+        "suit"
+      ],
+      [
+        "bagalja",
+        "suitcase"
+      ],
+      [
+        "nuċċali tax-xemx",
+        "sunglasses"
+      ],
+      [
+        "żipp",
+        "zip"
+      ],
+      [
+        "ħendbeg",
+        "handbag"
+      ],
+      [
+        "ħwejjeġ",
+        "clothes"
       ]
     ]
   },
@@ -2412,6 +2956,22 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "tajer",
         "tyre"
+      ],
+      [
+        "titjira",
+        "flight"
+      ],
+      [
+        "xufier",
+        "driver"
+      ],
+      [
+        "sewqan",
+        "driving"
+      ],
+      [
+        "kilometru",
+        "kilometre"
       ]
     ]
   },
@@ -2562,6 +3122,10 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "stressjata",
         "stressed"
+      ],
+      [
+        "sentimenti",
+        "feelings"
       ]
     ]
   },
@@ -2660,6 +3224,258 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "inpinġi",
         "I draw"
+      ],
+      [
+        "nistaqsi",
+        "ask"
+      ],
+      [
+        "insejjaħ",
+        "call"
+      ],
+      [
+        "naqbad",
+        "catch"
+      ],
+      [
+        "nibdel",
+        "change"
+      ],
+      [
+        "niċċekkja",
+        "check"
+      ],
+      [
+        "niġbor",
+        "collect"
+      ],
+      [
+        "niġi",
+        "come"
+      ],
+      [
+        "naqta",
+        "cut"
+      ],
+      [
+        "nimla",
+        "fill"
+      ],
+      [
+        "ningħaqad",
+        "join"
+      ],
+      [
+        "naf",
+        "know"
+      ],
+      [
+        "nidħak",
+        "laugh"
+      ],
+      [
+        "nitgħallem",
+        "learn"
+      ],
+      [
+        "nitlaq",
+        "leave"
+      ],
+      [
+        "inħares",
+        "look"
+      ],
+      [
+        "inpinġi",
+        "paint"
+      ],
+      [
+        "nagħżel",
+        "pick"
+      ],
+      [
+        "niġbed",
+        "pull"
+      ],
+      [
+        "inpoġġi",
+        "put"
+      ],
+      [
+        "niftakar",
+        "remember"
+      ],
+      [
+        "inkanta",
+        "sing"
+      ],
+      [
+        "ngħallem",
+        "teach"
+      ],
+      [
+        "nipprova",
+        "try"
+      ],
+      [
+        "nuża",
+        "use"
+      ],
+      [
+        "inżur",
+        "visit"
+      ],
+      [
+        "nilbes",
+        "wear"
+      ],
+      [
+        "naġixxi",
+        "act"
+      ],
+      [
+        "naħmi",
+        "bake"
+      ],
+      [
+        "ngħalli",
+        "boil"
+      ],
+      [
+        "nikser",
+        "break"
+      ],
+      [
+        "nixkupilja",
+        "brush"
+      ],
+      [
+        "inġorr",
+        "carry"
+      ],
+      [
+        "nifraħ",
+        "cheer"
+      ],
+      [
+        "nitla",
+        "climb"
+      ],
+      [
+        "nagħlaq",
+        "close"
+      ],
+      [
+        "inxettel",
+        "comb"
+      ],
+      [
+        "naqsam",
+        "cross"
+      ],
+      [
+        "niddawwar",
+        "delay"
+      ],
+      [
+        "insuq",
+        "drive"
+      ],
+      [
+        "naqla",
+        "earn"
+      ],
+      [
+        "nispiċċa",
+        "end"
+      ],
+      [
+        "nidħol",
+        "enter"
+      ],
+      [
+        "naqa",
+        "fall"
+      ],
+      [
+        "inħoss",
+        "feel"
+      ],
+      [
+        "nikber",
+        "grow"
+      ],
+      [
+        "indendel",
+        "hang"
+      ],
+      [
+        "ngħaġġel",
+        "hurry"
+      ],
+      [
+        "nagħti daqqa",
+        "kick"
+      ],
+      [
+        "nimtedd",
+        "lie"
+      ],
+      [
+        "inħobb",
+        "love"
+      ],
+      [
+        "nimmissja",
+        "miss"
+      ],
+      [
+        "niftaħ",
+        "open"
+      ],
+      [
+        "ngħaddi",
+        "pass"
+      ],
+      [
+        "inferra",
+        "pour"
+      ],
+      [
+        "nirriċikla",
+        "recycle"
+      ],
+      [
+        "nirkeb",
+        "ride"
+      ],
+      [
+        "nonfoq",
+        "spend"
+      ],
+      [
+        "nixgħel",
+        "switch"
+      ],
+      [
+        "nieħu",
+        "take"
+      ],
+      [
+        "nitfa",
+        "throw"
+      ],
+      [
+        "nirranġa",
+        "tidy"
+      ],
+      [
+        "naħsel",
+        "wash"
+      ],
+      [
+        "nċaċċar",
+        "chat"
       ]
     ]
   },
@@ -3054,6 +3870,78 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "irjiħat",
         "windy"
+      ],
+      [
+        "aħjar",
+        "better"
+      ],
+      [
+        "bjond",
+        "blond"
+      ],
+      [
+        "brillanti",
+        "brilliant"
+      ],
+      [
+        "ċkejken",
+        "chubby"
+      ],
+      [
+        "klassiku",
+        "classical"
+      ],
+      [
+        "ħelu",
+        "cuddly"
+      ],
+      [
+        "nnukklat",
+        "curly"
+      ],
+      [
+        "oħxon",
+        "fat"
+      ],
+      [
+        "ċatt",
+        "flat"
+      ],
+      [
+        "divertenti",
+        "fun"
+      ],
+      [
+        "iebes",
+        "hard"
+      ],
+      [
+        "tqil",
+        "heavy"
+      ],
+      [
+        "qalbu tajba",
+        "kind"
+      ],
+      [
+        "miżżewweġ",
+        "married"
+      ],
+      [
+        "rqiq",
+        "slim"
+      ],
+      [
+        "jiddispjaċini",
+        "sorry"
+      ],
+      [
+        "ewlieni",
+        "main"
+      ],
+      [
+        "nofsani",
+        "middle"
       ]
     ]
   },
@@ -3176,6 +4064,30 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "niżżel",
         "download"
+      ],
+      [
+        "diska",
+        "cd"
+      ],
+      [
+        "nikklikkja",
+        "click"
+      ],
+      [
+        "magna",
+        "engine"
+      ],
+      [
+        "aħbarijiet",
+        "news"
+      ],
+      [
+        "informazzjoni",
+        "information"
+      ],
+      [
+        "teknoloġija",
+        "technology"
       ]
     ]
   },
@@ -3302,6 +4214,30 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "spettaklu",
         "show"
+      ],
+      [
+        "avventura",
+        "adventure"
+      ],
+      [
+        "fiera",
+        "fair"
+      ],
+      [
+        "moda",
+        "fashion"
+      ],
+      [
+        "festin",
+        "party"
+      ],
+      [
+        "stampa",
+        "picture"
+      ],
+      [
+        "kartolina",
+        "postcard"
       ]
     ]
   },
@@ -3444,6 +4380,58 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "windsurfing",
         "windsurfing"
+      ],
+      [
+        "ikkampjar",
+        "camping"
+      ],
+      [
+        "kamp",
+        "camp"
+      ],
+      [
+        "post tal-kampeġġ",
+        "campsite"
+      ],
+      [
+        "ċikliżmu",
+        "cycling"
+      ],
+      [
+        "delizzju",
+        "hobby"
+      ],
+      [
+        "delizzji",
+        "hobbies"
+      ],
+      [
+        "rikreazzjoni",
+        "leisure"
+      ],
+      [
+        "rakketta",
+        "racket"
+      ],
+      [
+        "tbaħħir",
+        "sailing"
+      ],
+      [
+        "surf",
+        "surf"
+      ],
+      [
+        "surfboard",
+        "surfboard"
+      ],
+      [
+        "surfboarding",
+        "surfboarding"
+      ],
+      [
+        "ngħum",
+        "swim"
       ]
     ]
   },
@@ -3562,6 +4550,38 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "traffiku",
         "traffic"
+      ],
+      [
+        "foresta tropikali",
+        "rainforest"
+      ],
+      [
+        "nixxiegħa",
+        "stream"
+      ],
+      [
+        "art",
+        "ground"
+      ],
+      [
+        "blata",
+        "rock"
+      ],
+      [
+        "sema",
+        "sky"
+      ],
+      [
+        "borra",
+        "snow"
+      ],
+      [
+        "maltempata",
+        "thunderstorm"
+      ],
+      [
+        "injam",
+        "wood"
       ]
     ]
   },
@@ -3708,6 +4728,46 @@ window.MALTI_WORD_SEARCH_TOPICS = [
       [
         "kap",
         "boss"
+      ],
+      [
+        "negozjant",
+        "businessman"
+      ],
+      [
+        "negozjanta",
+        "businesswoman"
+      ],
+      [
+        "naddaf",
+        "cleaner"
+      ],
+      [
+        "esploratur",
+        "explorer"
+      ],
+      [
+        "plejer",
+        "footballer"
+      ],
+      [
+        "sultan",
+        "king"
+      ],
+      [
+        "membru",
+        "member"
+      ],
+      [
+        "mużiċist",
+        "musician"
+      ],
+      [
+        "ġar",
+        "neighbour"
+      ],
+      [
+        "reġina",
+        "queen"
       ]
     ]
   },
