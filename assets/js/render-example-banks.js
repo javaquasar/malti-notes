@@ -1,8 +1,20 @@
+function applyClassList(element, classNames) {
+    if (!element || !classNames) {
+        return;
+    }
+
+    String(classNames)
+        .split(/\s+/)
+        .filter(Boolean)
+        .forEach((className) => element.classList.add(className));
+}
+
 async function renderExampleBanksFromData(config) {
     const {
         dataUrl,
         groupAttribute = "data-example-group",
-        cardClass = "sentence-card"
+        cardClass = "sentence-card",
+        containerClass = "sentence-grid"
     } = config || {};
 
     if (!dataUrl) {
@@ -109,7 +121,7 @@ async function renderExampleBanksFromData(config) {
         }
 
         container.innerHTML = "";
-        container.classList.add("sentence-grid");
+        applyClassList(container, containerClass);
 
         const sentenceItems = (group.items || []).map((item) => toSentenceCard(item, group, container));
         allSentenceItems.push(...sentenceItems);
@@ -181,4 +193,165 @@ async function renderExampleBanksFromData(config) {
     }
 }
 
+async function renderQuestionBanksFromData(config) {
+    const {
+        dataUrl,
+        groupAttribute = "data-question-group",
+        cardClass = "pair",
+        containerClass = "stack",
+        listKey = "questions",
+        numbered = true
+    } = config || {};
+
+    if (!dataUrl) {
+        return;
+    }
+
+    const response = await fetch(dataUrl);
+    if (!response.ok) {
+        throw new Error(`Could not load question data from ${dataUrl}`);
+    }
+
+    const data = await response.json();
+    const groups = Array.isArray(data.groups) ? data.groups : [];
+
+    function getStore() {
+        return window.MaltiReviewStore || null;
+    }
+
+    function getVocabConfig() {
+        return window.MaltiVocabReviewPage || {};
+    }
+
+    function getGroupLabel(container, group) {
+        const card = container.closest(".card, .content-card");
+        const heading = card ? card.querySelector("h2") : null;
+        return group.title || (heading ? heading.textContent.trim() : "");
+    }
+
+    function getQuestionTopic(groupLabel) {
+        const vocabConfig = getVocabConfig();
+        const baseTopic = config.defaultTopic || vocabConfig.defaultTopic || "Questions";
+        return groupLabel ? (baseTopic + " - " + groupLabel) : baseTopic;
+    }
+
+    function makeQuestionId(item, group) {
+        const store = getStore();
+        const vocabConfig = getVocabConfig();
+        const reviewPrefix = config.reviewPrefix || vocabConfig.reviewPrefix || "examples";
+        const key = store
+            ? store.normalizeForKey(item.slug || item.maltese)
+            : String(item.slug || item.maltese || "").toLowerCase();
+        return "sentence::" + reviewPrefix + "-questions::" + key;
+    }
+
+    function toQuestionCard(item, group, container) {
+        const groupLabel = getGroupLabel(container, group);
+        const vocabConfig = getVocabConfig();
+        return {
+            id: makeQuestionId(item, group),
+            type: "sentence-card",
+            maltese: item.maltese,
+            english: item.english,
+            topic: getQuestionTopic(groupLabel),
+            group: groupLabel,
+            sourcePage: config.sourcePage || vocabConfig.sourcePage || window.location.pathname.split("/").pop() || "",
+            prompt: item.maltese,
+            answer: item.english
+        };
+    }
+
+    function syncBulkButton(button) {
+        const store = getStore();
+        if (!store) {
+            return;
+        }
+        const items = JSON.parse(button.dataset.items || "[]");
+        const unsaved = items.filter((item) => !store.hasCard(item.id)).length;
+        const label = button.dataset.bulkLabel || "Add question bank to review";
+        button.textContent = unsaved === 0 ? "Question bank saved" : label;
+        button.disabled = unsaved === 0;
+
+        const status = button.parentElement && button.parentElement.querySelector("[data-section-status]");
+        if (status) {
+            status.textContent = unsaved === 0 ? (items.length + " saved") : ((items.length - unsaved) + " saved, " + unsaved + " left");
+        }
+    }
+
+    function addQuestionCards(items, bulkButtons) {
+        const store = getStore();
+        if (!store) {
+            return;
+        }
+        items.forEach((item) => {
+            if (!store.hasCard(item.id)) {
+                store.addSentence(item);
+            }
+        });
+        bulkButtons.forEach(syncBulkButton);
+        const summary = document.querySelector("[data-review-summary]");
+        if (summary) {
+            const stats = store.getStats();
+            summary.textContent = stats.total + " saved, " + stats.due + " due";
+        }
+    }
+
+    const bulkButtons = [];
+
+    groups.forEach((group) => {
+        const selector = `[${groupAttribute}="${group.id}"]`;
+        const container = document.querySelector(selector);
+        if (!container) {
+            return;
+        }
+
+        container.innerHTML = "";
+        applyClassList(container, containerClass);
+
+        const questionItems = (group[listKey] || []).map((item) => toQuestionCard(item, group, container));
+
+        if (getStore()) {
+            const previous = container.previousElementSibling;
+            if (!previous || !previous.hasAttribute || !previous.hasAttribute("data-question-review-row")) {
+                const row = document.createElement("div");
+                row.className = "toolbar-row";
+                row.setAttribute("data-question-review-row", "true");
+
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "action-button";
+                button.dataset.items = JSON.stringify(questionItems);
+                button.dataset.bulkLabel = config.bulkLabel || "Add question bank to review";
+                button.addEventListener("click", () => addQuestionCards(questionItems, bulkButtons));
+
+                const status = document.createElement("span");
+                status.className = "status-chip";
+                status.setAttribute("data-section-status", "");
+
+                row.appendChild(button);
+                row.appendChild(status);
+                container.parentNode.insertBefore(row, container);
+                bulkButtons.push(button);
+                syncBulkButton(button);
+            }
+        }
+
+        (group[listKey] || []).forEach((item, index) => {
+            const card = document.createElement("div");
+            card.className = cardClass;
+
+            const strong = document.createElement("strong");
+            strong.textContent = numbered ? `${index + 1}. ${item.maltese}` : item.maltese;
+
+            const span = document.createElement("span");
+            span.textContent = item.english;
+
+            card.appendChild(strong);
+            card.appendChild(span);
+            container.appendChild(card);
+        });
+    });
+}
+
 window.renderExampleBanksFromData = renderExampleBanksFromData;
+window.renderQuestionBanksFromData = renderQuestionBanksFromData;
