@@ -3,6 +3,72 @@
   "topic": "Weather",
   "groups": [
     {
+      "id": "weather-today",
+      "sectionId": "today",
+      "title": "Today the Weather Is...",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Illum it-temp huwa sabiħ.", "english": "Today the weather is nice." },
+        { "maltese": "Illum it-temp huwa sħun.", "english": "Today the weather is hot." },
+        { "maltese": "Illum it-temp huwa kiesaħ.", "english": "Today the weather is cold." },
+        { "maltese": "Illum qed tagħmel xita.", "english": "Today it is raining." },
+        { "maltese": "Illum hawn ħafna riħ.", "english": "Today it is very windy." }
+      ]
+    },
+    {
+      "id": "weather-seasons-models",
+      "sectionId": "seasons",
+      "title": "Ready models",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Fis-sajf it-temp ikun sħun.", "english": "In summer the weather is hot." },
+        { "maltese": "Fix-xitwa it-temp ikun kiesaħ.", "english": "In winter the weather is cold." },
+        { "maltese": "Fir-rebbiegħa t-temp ikun sabiħ.", "english": "In spring the weather is nice." },
+        { "maltese": "Fil-ħarifa tagħmel aktar xita.", "english": "In autumn it rains more." }
+      ]
+    },
+    {
+      "id": "weather-plans",
+      "sectionId": "plans",
+      "title": "Weather and Daily Plans",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Jekk it-temp ikun sabiħ, immur il-baħar.", "english": "If the weather is nice, I go to the sea." },
+        { "maltese": "Jekk tagħmel xita, nibqa' d-dar.", "english": "If it rains, I stay at home." },
+        { "maltese": "Jekk ikun kiesaħ, nilbes ġakketta.", "english": "If it is cold, I wear a jacket." },
+        { "maltese": "Jekk ikun sħun, nixrob ħafna ilma.", "english": "If it is hot, I drink a lot of water." }
+      ]
+    },
+    {
+      "id": "weather-dialogue-morning",
+      "sectionId": "dialogues",
+      "title": "Morning small talk",
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "numbered": false,
+      "items": [
+        { "maltese": "A: Kif inhu t-temp illum?", "english": "A: What is the weather like today?" },
+        { "maltese": "B: Illum sabiħ u xemxi.", "english": "B: Today it is nice and sunny." },
+        { "maltese": "A: Mela noħroġ wara x-xogħol.", "english": "A: Then I will go out after work." }
+      ]
+    },
+    {
+      "id": "weather-dialogue-rain",
+      "sectionId": "dialogues",
+      "title": "Rainy day",
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "numbered": false,
+      "items": [
+        { "maltese": "A: Qed tagħmel xita?", "english": "A: Is it raining?" },
+        { "maltese": "B: Iva, u hawn riħ ukoll.", "english": "B: Yes, and it is windy too." },
+        { "maltese": "A: Mela nibqa' d-dar illum.", "english": "A: Then I will stay at home today." }
+      ]
+    },
+    {
       "id": "weather-phrases",
       "sectionId": "phrases",
       "title": "Thematic Phrases",

@@ -69,31 +69,20 @@
             <section class="card" id="today">
                 <span class="tag">Small Talk</span>
                 <h2>Today the Weather Is...</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Illum it-temp huwa sabiħ.</span><span class="en">Today the weather is nice.</span></div>
-                    <div class="example-line"><span class="mt">Illum it-temp huwa sħun.</span><span class="en">Today the weather is hot.</span></div>
-                    <div class="example-line"><span class="mt">Illum it-temp huwa kiesaħ.</span><span class="en">Today the weather is cold.</span></div>
-                    <div class="example-line"><span class="mt">Illum qed tagħmel xita.</span><span class="en">Today it is raining.</span></div>
-                    <div class="example-line"><span class="mt">Illum hawn ħafna riħ.</span><span class="en">Today it is very windy.</span></div>
-                </div>
+                <div data-example-group="weather-today"></div>
             </section>
 
             <section class="card" id="seasons">
                 <span class="tag">Seasons</span>
                 <h2>Seasons</h2>
-<div class="grid-2">
-                    <div class="wide-box">
+                <div class="weather-sections-stack">
+                    <div class="example-bank-section">
                         <h3>Main words</h3>
                         <div class="grid-auto" data-weather-group="weather-seasons"></div>
                     </div>
-                    <div class="wide-box">
+                    <div class="example-bank-section">
                         <h3>Ready models</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">Fis-sajf it-temp ikun sħun.</span><span class="en">In summer the weather is hot.</span></div>
-                            <div class="example-line"><span class="mt">Fix-xitwa it-temp ikun kiesaħ.</span><span class="en">In winter the weather is cold.</span></div>
-                            <div class="example-line"><span class="mt">Fir-rebbiegħa t-temp ikun sabiħ.</span><span class="en">In spring the weather is nice.</span></div>
-                            <div class="example-line"><span class="mt">Fil-ħarifa tagħmel aktar xita.</span><span class="en">In autumn it rains more.</span></div>
-                        </div>
+                        <div data-example-group="weather-seasons-models"></div>
                     </div>
                 </div>
             </section>
@@ -101,33 +90,20 @@
             <section class="card" id="plans">
                 <span class="tag">Daily Plans</span>
                 <h2>Weather and Daily Plans</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Jekk it-temp ikun sabiħ, immur il-baħar.</span><span class="en">If the weather is nice, I go to the sea.</span></div>
-                    <div class="example-line"><span class="mt">Jekk tagħmel xita, nibqa' d-dar.</span><span class="en">If it rains, I stay at home.</span></div>
-                    <div class="example-line"><span class="mt">Jekk ikun kiesaħ, nilbes ġakketta.</span><span class="en">If it is cold, I wear a jacket.</span></div>
-                    <div class="example-line"><span class="mt">Jekk ikun sħun, nixrob ħafna ilma.</span><span class="en">If it is hot, I drink a lot of water.</span></div>
-                </div>
+                <div data-example-group="weather-plans"></div>
             </section>
 
             <section class="card" id="dialogues">
                 <span class="tag">Dialogues</span>
                 <h2>Mini-dialogues</h2>
-                <div class="dialogue-grid">
-                    <div class="wide-box">
+                <div class="example-bank-stack">
+                    <div class="example-bank-section">
                         <h3>Morning small talk</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">A: Kif inhu t-temp illum?</span><span class="en">A: What is the weather like today?</span></div>
-                            <div class="example-line"><span class="mt">B: Illum sabiħ u xemxi.</span><span class="en">B: Today it is nice and sunny.</span></div>
-                            <div class="example-line"><span class="mt">A: Mela noħroġ wara x-xogħol.</span><span class="en">A: Then I will go out after work.</span></div>
-                        </div>
+                        <div data-example-group="weather-dialogue-morning"></div>
                     </div>
-                    <div class="wide-box">
+                    <div class="example-bank-section">
                         <h3>Rainy day</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">A: Qed tagħmel xita?</span><span class="en">A: Is it raining?</span></div>
-                            <div class="example-line"><span class="mt">B: Iva, u hawn riħ ukoll.</span><span class="en">B: Yes, and it is windy too.</span></div>
-                            <div class="example-line"><span class="mt">A: Mela nibqa' d-dar illum.</span><span class="en">A: Then I will stay at home today.</span></div>
-                        </div>
+                        <div data-example-group="weather-dialogue-rain"></div>
                     </div>
                 </div>
             </section>
@@ -135,18 +111,20 @@
             <section class="card" id="wrong">
                 <span class="tag">Review</span>
                 <h2>Wrong vs Right</h2>
-                <div class="wrong-right-grid">
-                    <div class="wide-box">
+                <div class="grammar-contrast-grid">
+                    <div class="grammar-contrast-card grammar-contrast-card--wrong">
                         <h3>Wrong</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Illum temp sħun.</code></span><span class="en">Missing article and verb.</span></div>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--wrong">
+                            <span class="wrong">Wrong:</span> <code>Illum temp sħun.</code>
                         </div>
+                        <p class="mini">Missing the article and the verb. Weather statements usually need <code>it-temp</code> and <code>huwa</code>.</p>
                     </div>
-                    <div class="wide-box">
+                    <div class="grammar-contrast-card grammar-contrast-card--right">
                         <h3>Right</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Illum it-temp huwa sħun.</code></span><span class="en">Today the weather is hot.</span></div>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--right">
+                            <span class="right">Better:</span> <code>Illum it-temp huwa sħun.</code>
                         </div>
+                        <p class="mini">Today the weather is hot.</p>
                     </div>
                 </div>
             </section>
@@ -169,28 +147,34 @@
         </main>
     </div>
 </div>
-    <script src="./assets/js/review-store.js"></script>
-    <script src="./assets/js/render-vocab-cards.js"></script>
-    <script src="./assets/js/render-example-banks.js"></script>
-    <script>
-    window.MaltiVocabReviewPage = {
-        dataUrl: "./assets/data/weather.json",
-        sourcePage: "weather.html",
-        reviewPrefix: "weather",
-        groupAttribute: "data-weather-group",
-        cardClass: "visual-vocab-card",
-        pageToolbarSelector: "#weather .toolbar-row",
-        pageBulkLabel: "Add all weather words",
-        defaultTopic: "Weather",
-        examplePrefix: "Illum"
-    };
-    window.renderExampleBanksFromData({
-        dataUrl: "./assets/data/weather_examples.json",
-        groupAttribute: "data-example-group",
-        cardClass: "study-card"
-    });
-    </script>
-    <script src="./assets/js/vocab-review-page.js"></script>
-    <script src="./assets/js/site-header.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/weather.json",
+    sourcePage: "weather.html",
+    reviewPrefix: "weather",
+    groupAttribute: "data-weather-group",
+    cardClass: "visual-vocab-card",
+    pageToolbarSelector: "#weather .toolbar-row",
+    pageBulkLabel: "Add all weather words",
+    defaultTopic: "Weather",
+    examplePrefix: "Illum"
+};
+
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/weather_examples.json",
+    groupAttribute: "data-example-group",
+    cardClass: "study-card",
+    sourcePage: "weather.html",
+    defaultTopic: "Weather",
+    reviewPrefix: "weather",
+    pageToolbarSelector: "#weather .toolbar-row",
+    pageBulkLabel: "Add all weather phrases"
+});
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
+<script src="./assets/js/site-header.js"></script>
 </body>
 </html>
