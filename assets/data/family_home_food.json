@@ -3,6 +3,89 @@
   "topic": "Family, Home and Food",
   "groups": [
     {
+      "id": "fhf-family-core",
+      "sectionId": "family",
+      "sectionTitle": "Family Words",
+      "title": "Family words",
+      "items": [
+        { "slug": "omm", "maltese": "omm", "english": "mother", "example": "Din hija ommi.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "missier", "maltese": "missier", "english": "father", "example": "Dan huwa missieri.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "nanna", "maltese": "nanna", "english": "grandmother", "example": "In-nanna tiegħi toqgħod qrib tagħna.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "nannu", "maltese": "nannu", "english": "grandfather", "example": "In-nannu tiegħi jixrob kafè filgħodu.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "hu-hija", "maltese": "ħu / ħija", "english": "brother / my brother", "example": "Għandi ħu u oħt.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "oht-ohti", "maltese": "oħt / oħti", "english": "sister / my sister", "example": "Għandi ħu u oħt.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "iben", "maltese": "iben", "english": "son", "example": "Għandi iben wieħed.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "bint", "maltese": "bint", "english": "daughter", "example": "Għandha bint żgħira.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "tifel", "maltese": "tifel", "english": "boy / son in context", "example": "It-tifel huwa żgħir.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "tifla", "maltese": "tifla", "english": "girl / daughter in context", "example": "It-tifla hija ferħana.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "ragel", "maltese": "raġel", "english": "man / husband [basic meaning varies by context]", "example": "Ir-raġel tiegħi jaħdem ħafna.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "mara", "maltese": "mara", "english": "woman / wife [basic meaning varies by context]", "example": "Il-mara hija d-dar.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "zewg", "maltese": "żewġ", "english": "husband / two [context-based]", "example": "Għandi żewġ kuġini.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "familja", "maltese": "familja", "english": "family", "example": "Għandna familja kbira.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "genituri", "maltese": "ġenituri", "english": "parents", "example": "Il-ġenituri tiegħi huma d-dar.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "tfal", "maltese": "tfal", "english": "children", "example": "It-tfal qed jilagħbu.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "kugin", "maltese": "kuġin", "english": "cousin", "example": "Il-kuġin tiegħi joqgħod Malta.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "ziju", "maltese": "ziju", "english": "uncle", "example": "Iz-ziju tiegħi jħobb il-kafè.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "zija", "maltese": "zija", "english": "aunt", "example": "Iz-zija tiegħi tagħmel soppa tajba.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "neputi", "maltese": "neputi", "english": "grandson / nephew [basic use]", "example": "In-neputi tiegħi huwa student.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "neputija", "maltese": "neputija", "english": "granddaughter / niece [basic use]", "example": "In-neputija tiegħi hija ferħana.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "hbieb", "maltese": "ħbieb", "english": "friends", "example": "Niltaqa' mal-ħbieb filgħaxija.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "qarib", "maltese": "qarib", "english": "relative", "example": "Għandi qarib qrib tagħna.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "familja-kbira", "maltese": "familja kbira", "english": "big family", "example": "Għandna familja kbira.", "review": { "enabled": true, "type": "word" } }
+      ]
+    },
+    {
+      "id": "fhf-home-core",
+      "sectionId": "home",
+      "sectionTitle": "Home Vocabulary",
+      "title": "Home vocabulary",
+      "items": [
+        { "slug": "dar", "maltese": "dar", "english": "house / home", "example": "Jien noqgħod f'dar.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "appartament", "maltese": "appartament", "english": "apartment", "example": "Aħna noqogħdu f'appartament.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "bieb", "maltese": "bieb", "english": "door", "example": "Il-bieb huwa magħluq.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "tieqa", "maltese": "tieqa", "english": "window", "example": "Hemm tieqa kbira fil-kċina.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "gnien", "maltese": "ġnien", "english": "garden", "example": "Għandi ġnien żgħir.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "gallarija", "maltese": "gallarija", "english": "balcony", "example": "Għandna gallarija żgħira.", "review": { "enabled": true, "type": "word" } }
+      ]
+    },
+    {
+      "id": "fhf-rooms-core",
+      "sectionId": "rooms",
+      "sectionTitle": "Rooms In The House",
+      "title": "Rooms in the house",
+      "items": [
+        { "slug": "kcina", "maltese": "kċina", "english": "kitchen", "example": "Il-kċina hija nadifa.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "kamra-tas-sodda", "maltese": "kamra tas-sodda", "english": "bedroom", "example": "Il-kamra tas-sodda tiegħi hija żgħira.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "kamra-tal-banju", "maltese": "kamra tal-banju", "english": "bathroom", "example": "Il-kamra tal-banju hija nadifa.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "salott", "maltese": "salott", "english": "living room", "example": "Is-salott huwa komdu.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "kamra-tal-ikel", "maltese": "kamra tal-ikel", "english": "dining room", "example": "Nieklu fil-kamra tal-ikel.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "kuritur", "maltese": "kuritur", "english": "corridor", "example": "Il-kuritur huwa twil.", "review": { "enabled": true, "type": "word" } }
+      ]
+    },
+    {
+      "id": "fhf-furniture-core",
+      "sectionId": "furniture",
+      "sectionTitle": "Basic Furniture",
+      "title": "Basic furniture",
+      "items": [
+        { "slug": "mejda", "maltese": "mejda", "english": "table", "example": "Hemm mejda fil-kċina.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "siggu", "maltese": "siġġu", "english": "chair", "example": "Hemm erba' siġġijiet fis-salott.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "sufan", "maltese": "sufan", "english": "sofa", "example": "Is-sufan huwa quddiem it-TV.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "sodda", "maltese": "sodda", "english": "bed", "example": "Is-sodda tinsab fil-kamra tas-sodda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "frigg", "maltese": "friġġ", "english": "fridge", "example": "Il-friġġ jinsab fil-kċina.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "armarju", "maltese": "armarju", "english": "wardrobe / cupboard", "example": "L-armarju jinsab fil-kamra tas-sodda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "bank", "maltese": "bank", "english": "bench / seat [basic use]", "example": "Hemm bank żgħir fil-ġnien.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "lampa", "maltese": "lampa", "english": "lamp", "example": "Il-lampa hija ħdejn is-sodda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "xkaffa", "maltese": "xkaffa", "english": "shelf", "example": "Hemm xkaffa kbira fil-kamra.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "bieb-furniture", "maltese": "bieb", "english": "door", "example": "Il-bieb jinsab ħdejn it-tieqa.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "tieqa-furniture", "maltese": "tieqa", "english": "window", "example": "It-tieqa hija miftuħa.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "televixin", "maltese": "televixin / TV", "english": "television", "example": "It-TV jinsab quddiem is-sufan.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "skrivanija", "maltese": "skrivanija", "english": "desk", "example": "Għandi skrivanija żgħira fid-dar.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "mera", "maltese": "mera", "english": "mirror", "example": "Hemm mera fil-kuritur.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "komodina", "maltese": "komodina", "english": "small bedside table", "example": "Il-komodina tinsab ħdejn is-sodda.", "review": { "enabled": true, "type": "word" } }
+      ]
+    },
+    {
       "id": "family-home-food-core",
       "sectionId": "food",
       "sectionTitle": "Basic Food Vocabulary",
@@ -13,19 +96,35 @@
         { "slug": "bajda", "maltese": "bajda", "english": "egg", "example": "Jien niekol bajda filgħodu.", "review": { "enabled": true, "type": "word" } },
         { "slug": "laham", "maltese": "laħam", "english": "meat", "example": "Missieri jħobb il-ħut aktar mil-laħam.", "review": { "enabled": true, "type": "word" } },
         { "slug": "haxix", "maltese": "ħaxix", "english": "vegetables", "example": "Aħna nieklu ħafna ħaxix.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "frott", "maltese": "frott", "english": "fruit", "example": "Ħi tħobb l-insalata u l-frott.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "frott", "maltese": "frott", "english": "fruit", "example": "Hi tħobb l-insalata u l-frott.", "review": { "enabled": true, "type": "word" } },
         { "slug": "soppa", "maltese": "soppa", "english": "soup", "example": "Ommi tagħmel soppa tajba.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ross", "maltese": "ross", "english": "rice", "example": "Ħemm ross u tiġieġ fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "ross", "maltese": "ross", "english": "rice", "example": "Hemm ross u tiġieġ fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
         { "slug": "patata", "maltese": "patata", "english": "potato", "example": "Inħobb il-patata mal-ikel.", "review": { "enabled": true, "type": "word" } },
         { "slug": "tadam", "maltese": "tadam", "english": "tomato", "example": "Inħobb it-tadam fl-insalata.", "review": { "enabled": true, "type": "word" } },
         { "slug": "karrotta", "maltese": "karrotta", "english": "carrot", "example": "Il-karrotta hija ħaxixa komuni.", "review": { "enabled": true, "type": "word" } },
         { "slug": "pizza", "maltese": "pizza", "english": "pizza", "example": "Xi kultant niekol pizza filgħaxija.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tigieg", "maltese": "tiġieġ", "english": "chicken", "example": "Ħemm ross u tiġieġ fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "insalata", "maltese": "insalata", "english": "salad", "example": "Ħi tħobb l-insalata u l-frott.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "tigieg", "maltese": "tiġieġ", "english": "chicken", "example": "Hemm ross u tiġieġ fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "insalata", "maltese": "insalata", "english": "salad", "example": "Hi tħobb l-insalata u l-frott.", "review": { "enabled": true, "type": "word" } },
         { "slug": "kejk", "maltese": "kejk", "english": "cake", "example": "Inħobb niekol kejk fi tmiem il-ġimgħa.", "review": { "enabled": true, "type": "word" } },
         { "slug": "hut", "maltese": "ħut", "english": "fish", "example": "Missieri jħobb il-ħut.", "review": { "enabled": true, "type": "word" } },
         { "slug": "ghagin", "maltese": "għaġin", "english": "pasta", "example": "Aħna nieklu għaġin xi kultant.", "review": { "enabled": true, "type": "word" } },
         { "slug": "butir", "maltese": "butir", "english": "butter", "example": "Nieħu ħobż bil-butir filgħodu.", "review": { "enabled": true, "type": "word" } }
+      ]
+    },
+    {
+      "id": "fhf-drinks-core",
+      "sectionId": "drinks",
+      "sectionTitle": "Drinks",
+      "title": "Drinks",
+      "items": [
+        { "slug": "ilma", "maltese": "ilma", "english": "water", "example": "Jien nixrob ilma.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "kafe", "maltese": "kafè", "english": "coffee", "example": "Filgħodu nieħu kafè.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "te", "maltese": "te", "english": "tea", "example": "Filgħaxija nixrob te.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "meraq", "maltese": "meraq", "english": "juice", "example": "Inħobb meraq kiesaħ.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "halib", "maltese": "ħalib", "english": "milk", "example": "It-tifel jixrob ħalib.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "xorb-kiesah", "maltese": "xorb kiesaħ", "english": "cold drink [basic use]", "example": "Inħobb xorb kiesaħ fis-sajf.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "ilma-kiesah", "maltese": "ilma kiesaħ", "english": "cold water", "example": "Missieri jixrob ilma kiesaħ.", "review": { "enabled": true, "type": "word" } },
+        { "slug": "te-shun", "maltese": "te sħun", "english": "hot tea", "example": "Ommi tħobb te sħun.", "review": { "enabled": true, "type": "word" } }
       ]
     }
   ]
