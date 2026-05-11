@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Memory Game</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+    <link rel="stylesheet" href="./assets/css/topic-picker.css">
+    <link rel="stylesheet" href="./assets/css/vocabulary-games.css">
+</head>
+<body data-game="memory">
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Maltese Memory Game</h1>
+                <p class="lead">Match Maltese words with their English translations using the same topic bank as the word search.</p>
+                <div class="pill-row">
+                    <span class="pill">memory</span>
+                    <span class="pill">word pairs</span>
+                    <span class="pill">topics</span>
+                    <span class="pill">browser game</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Game Goal</strong></p>
+                <ul>
+                    <li>open two cards at a time</li>
+                    <li>match the Maltese word to English</li>
+                    <li>use topics to focus practice</li>
+                    <li>try to finish in fewer moves</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <div class="layout vocabulary-game-layout">
+        <aside class="sidebar vocabulary-game-sidebar">
+            <h2>Game Settings</h2>
+            <p class="mini game-status" id="memory-status">Find each Maltese word and its English translation.</p>
+            <div class="vocabulary-game-stat">
+                <strong id="memory-score">0 / 8</strong>
+                <span id="memory-moves">0 moves</span>
+            </div>
+            <p class="mini" id="memory-seen-memory">0 seen words excluded.</p>
+            <label class="vocabulary-game-field">
+                <strong>Topic</strong>
+                <select class="review-select" id="memory-topic"></select>
+                <div id="memory-topic-checks" aria-label="Choose one or more word topics"></div>
+            </label>
+            <label class="vocabulary-game-field">
+                <strong>Pairs</strong>
+                <select class="review-select" id="memory-pairs">
+                    <option value="6">Easy - 6 pairs</option>
+                    <option value="8" selected>Medium - 8 pairs</option>
+                    <option value="10">Hard - 10 pairs</option>
+                </select>
+            </label>
+            <label class="vocabulary-game-field">
+                <strong>Sound</strong>
+                <select class="review-select" id="memory-sound">
+                    <option value="on">Sound on</option>
+                    <option value="off">Sound off</option>
+                </select>
+            </label>
+            <div class="vocabulary-game-actions">
+                <button class="action-button" id="memory-new" type="button">New Game</button>
+                <button class="action-button" id="memory-reset-memory" type="button">Reset Seen Words</button>
+                <a class="action-link" href="./word_builder_game.html">Open Word Builder</a>
+                <a class="action-link" href="./word_search.html">Open Word Search</a>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="content-card">
+                <span class="tag">Memory</span>
+                <h2>Match The Cards</h2>
+                <div class="memory-board" id="memory-board" aria-label="Memory cards"></div>
+            </section>
+            <section class="content-card">
+                <span class="tag">Progress</span>
+                <h2>Matched Pairs</h2>
+                <ul class="matched-pair-list" id="memory-matched-list"></ul>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/word-search-bank.js"></script>
+<script src="./assets/js/topic-picker.js"></script>
+<script src="./assets/js/seen-words.js"></script>
+<script src="./assets/js/game-audio.js"></script>
+<script src="./assets/js/vocabulary-games.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

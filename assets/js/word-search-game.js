@@ -467,11 +467,12 @@
     startCell: null,
     selectedCells: []
   };
-  let audioContext = null;
   let lastTickAt = 0;
   let lastTickCellId = "";
   let timerInterval = 0;
   let hintTimeout = 0;
+  let topicPicker = null;
+  let seenTracker = null;
 
   const normalizePuzzleText = (word) => word
     .toLowerCase()
@@ -486,6 +487,7 @@
   const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
   const cellId = (row, col) => `${row}-${col}`;
   const readSoundEnabled = () => {
+    if (window.MaltiGameAudio) return window.MaltiGameAudio.readEnabled(SOUND_STORAGE_KEY);
     try {
       return window.localStorage.getItem(SOUND_STORAGE_KEY) !== "off";
     } catch (error) {
@@ -493,6 +495,10 @@
     }
   };
   const writeSoundEnabled = () => {
+    if (window.MaltiGameAudio) {
+      window.MaltiGameAudio.writeEnabled(SOUND_STORAGE_KEY, state.soundEnabled);
+      return;
+    }
     try {
       window.localStorage.setItem(SOUND_STORAGE_KEY, state.soundEnabled ? "on" : "off");
     } catch (error) {
@@ -585,6 +591,7 @@
   };
 
   const readSeenWords = () => {
+    if (seenTracker) return new Set(seenTracker.read());
     try {
       const parsed = JSON.parse(window.localStorage.getItem(SEEN_STORAGE_KEY) || "[]");
       return new Set(Array.isArray(parsed) ? parsed.filter((value) => typeof value === "string") : []);
@@ -594,6 +601,10 @@
   };
 
   const writeSeenWords = () => {
+    if (seenTracker) {
+      seenTracker.write();
+      return;
+    }
     try {
       window.localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify([...state.seenWords]));
     } catch (error) {
@@ -602,75 +613,17 @@
   };
 
   const updateMemoryLabel = () => {
+    if (seenTracker) {
+      seenTracker.updateLabel();
+      return;
+    }
     if (!memoryLabel) return;
     const count = state.seenWords.size;
     memoryLabel.textContent = `${count} seen ${count === 1 ? "word" : "words"} excluded.`;
   };
 
-  const getAudioContext = () => {
-    if (!audioContext) {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContext) return null;
-      audioContext = new AudioContext();
-    }
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
-    return audioContext;
-  };
-
-  const playTone = (frequency, startTime, duration, type, gainValue) => {
-    const context = getAudioContext();
-    if (!context) return;
-
-    const oscillator = context.createOscillator();
-    const gain = context.createGain();
-    oscillator.type = type;
-    oscillator.frequency.setValueAtTime(frequency, startTime);
-    gain.gain.setValueAtTime(0.0001, startTime);
-    gain.gain.exponentialRampToValueAtTime(gainValue, startTime + 0.015);
-    gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
-    oscillator.connect(gain);
-    gain.connect(context.destination);
-    oscillator.start(startTime);
-    oscillator.stop(startTime + duration + 0.03);
-  };
-
   const playSound = (type) => {
-    if (!state.soundEnabled) return;
-    const context = getAudioContext();
-    if (!context) return;
-
-    const now = context.currentTime;
-    if (type === "success") {
-      playTone(523.25, now, 0.16, "sine", 0.055);
-      playTone(659.25, now + 0.08, 0.18, "sine", 0.05);
-      playTone(783.99, now + 0.16, 0.2, "sine", 0.045);
-      return;
-    }
-
-    if (type === "refresh") {
-      playTone(392, now, 0.1, "sine", 0.035);
-      playTone(493.88, now + 0.06, 0.12, "sine", 0.032);
-      return;
-    }
-
-    if (type === "tick") {
-      playTone(176, now, 0.035, "triangle", 0.018);
-      return;
-    }
-
-    if (type === "victory") {
-      playTone(523.25, now, 0.14, "sine", 0.055);
-      playTone(659.25, now + 0.08, 0.16, "sine", 0.052);
-      playTone(783.99, now + 0.16, 0.18, "sine", 0.05);
-      playTone(1046.5, now + 0.3, 0.32, "triangle", 0.045);
-      playTone(1318.51, now + 0.38, 0.28, "sine", 0.035);
-      return;
-    }
-
-    playTone(196, now, 0.12, "triangle", 0.045);
-    playTone(146.83, now + 0.09, 0.16, "triangle", 0.04);
+    window.MaltiGameAudio?.play(type, { enabled: state.soundEnabled });
   };
 
   const shuffle = (items) => {
@@ -724,6 +677,7 @@
   };
 
   const selectedTopicIds = () => {
+    if (topicPicker) return topicPicker.selectedIds();
     const checked = topicChecks
       ? [...topicChecks.querySelectorAll("input[type='checkbox']:checked")].map((input) => input.value)
       : [];
@@ -1082,6 +1036,11 @@
   const markFound = (entry) => {
     const colorClass = FOUND_COLOR_CLASSES[state.found.size % FOUND_COLOR_CLASSES.length];
     state.found.add(entry.key);
+    if (seenTracker) {
+      seenTracker.add(entry.key);
+    } else {
+      state.seenWords.add(entry.key);
+    }
     state.seenWords.add(entry.key);
     writeSeenWords();
     updateMemoryLabel();
@@ -1272,6 +1231,18 @@
   };
 
   const initTopics = () => {
+    if (window.MaltiTopicPicker) {
+      topicPicker = window.MaltiTopicPicker.create({
+        topics: TOPICS,
+        select: topicSelect,
+        checks: topicChecks,
+        checkContainerClass: "word-search-topic-checks",
+        checkClass: "word-search-topic-check",
+        onChange: startPuzzle
+      });
+      return;
+    }
+
     if (topicChecks) {
       const allLabel = document.createElement("label");
       allLabel.className = "word-search-topic-check is-all";
@@ -1331,41 +1302,48 @@
   completeNewButton?.addEventListener("click", startPuzzle);
   completePrintButton?.addEventListener("click", printPuzzle);
   resetMemoryButton?.addEventListener("click", () => {
-    state.seenWords.clear();
-    writeSeenWords();
-    updateMemoryLabel();
+    if (seenTracker) {
+      seenTracker.reset();
+      state.seenWords.clear();
+    } else {
+      state.seenWords.clear();
+      writeSeenWords();
+      updateMemoryLabel();
+    }
     status.textContent = "Seen word memory reset.";
   });
-  topicSelect.addEventListener("change", () => {
-    if (topicChecks) {
-      topicChecks.querySelectorAll("input[type='checkbox']").forEach((input) => {
-        input.checked = topicSelect.value !== "all" && input.value === topicSelect.value;
-      });
-      const allInput = topicChecks.querySelector('input[value="all"]');
-      if (allInput) allInput.checked = topicSelect.value === "all";
-    }
-    startPuzzle();
-  });
-  topicChecks?.addEventListener("change", (event) => {
-    const changed = event.target;
-    if (changed?.matches?.('input[value="all"]') && changed.checked) {
-      topicChecks.querySelectorAll('input[type="checkbox"]:not([value="all"])').forEach((input) => {
-        input.checked = false;
-      });
-    } else if (changed?.matches?.('input[type="checkbox"]') && changed.value !== "all" && changed.checked) {
-      const allInput = topicChecks.querySelector('input[value="all"]');
-      if (allInput) allInput.checked = false;
-    }
-    const checked = [...topicChecks.querySelectorAll("input[type='checkbox']:checked")];
-    if (!checked.length) {
-      const allInput = topicChecks.querySelector('input[value="all"]');
-      if (allInput) allInput.checked = true;
-      topicSelect.value = "all";
-    } else {
-      topicSelect.value = checked.length === 1 ? checked[0].value : "all";
-    }
-    startPuzzle();
-  });
+  if (!window.MaltiTopicPicker) {
+    topicSelect.addEventListener("change", () => {
+      if (topicChecks) {
+        topicChecks.querySelectorAll("input[type='checkbox']").forEach((input) => {
+          input.checked = topicSelect.value !== "all" && input.value === topicSelect.value;
+        });
+        const allInput = topicChecks.querySelector('input[value="all"]');
+        if (allInput) allInput.checked = topicSelect.value === "all";
+      }
+      startPuzzle();
+    });
+    topicChecks?.addEventListener("change", (event) => {
+      const changed = event.target;
+      if (changed?.matches?.('input[value="all"]') && changed.checked) {
+        topicChecks.querySelectorAll('input[type="checkbox"]:not([value="all"])').forEach((input) => {
+          input.checked = false;
+        });
+      } else if (changed?.matches?.('input[type="checkbox"]') && changed.value !== "all" && changed.checked) {
+        const allInput = topicChecks.querySelector('input[value="all"]');
+        if (allInput) allInput.checked = false;
+      }
+      const checked = [...topicChecks.querySelectorAll("input[type='checkbox']:checked")];
+      if (!checked.length) {
+        const allInput = topicChecks.querySelector('input[value="all"]');
+        if (allInput) allInput.checked = true;
+        topicSelect.value = "all";
+      } else {
+        topicSelect.value = checked.length === 1 ? checked[0].value : "all";
+      }
+      startPuzzle();
+    });
+  }
   sizeSelect.addEventListener("change", startPuzzle);
   directionsSelect?.addEventListener("change", startPuzzle);
   hintsSelect?.addEventListener("change", updateListVisibility);
@@ -1384,6 +1362,10 @@
   initTopics();
   state.soundEnabled = readSoundEnabled();
   if (soundSelect) soundSelect.value = state.soundEnabled ? "on" : "off";
+  seenTracker = window.MaltiSeenWords?.create({
+    storageKey: SEEN_STORAGE_KEY,
+    label: memoryLabel
+  }) || null;
   state.seenWords = readSeenWords();
   updateMemoryLabel();
   updateListVisibility();

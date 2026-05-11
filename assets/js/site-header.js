@@ -85,6 +85,8 @@
       items: [
         ["review_cards.html", "Review Cards"],
         ["word_search.html", "Word Search"],
+        ["memory_game.html", "Memory Game"],
+        ["word_builder_game.html", "Word Builder"],
         ["common_mistakes.html", "Common Mistakes"]
       ]
     }

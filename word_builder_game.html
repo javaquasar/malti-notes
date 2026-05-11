@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Word Builder</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+    <link rel="stylesheet" href="./assets/css/topic-picker.css">
+    <link rel="stylesheet" href="./assets/css/vocabulary-games.css">
+</head>
+<body data-game="builder">
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Maltese Word Builder</h1>
+                <p class="lead">Build the Maltese word from letter tiles after seeing the English translation.</p>
+                <div class="pill-row">
+                    <span class="pill">spelling</span>
+                    <span class="pill">letter tiles</span>
+                    <span class="pill">topics</span>
+                    <span class="pill">same word bank</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Practice Focus</strong></p>
+                <ul>
+                    <li>read the English prompt</li>
+                    <li>tap tiles in the right order</li>
+                    <li>use a hint when stuck</li>
+                    <li>complete a short round set</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <div class="layout vocabulary-game-layout">
+        <aside class="sidebar vocabulary-game-sidebar">
+            <h2>Game Settings</h2>
+            <p class="mini game-status" id="builder-status">Build the Maltese word from the tiles.</p>
+            <div class="vocabulary-game-stat">
+                <strong id="builder-score">0 / 8</strong>
+                <span>round progress</span>
+            </div>
+            <p class="mini" id="builder-seen-memory">0 seen words excluded.</p>
+            <label class="vocabulary-game-field">
+                <strong>Topic</strong>
+                <select class="review-select" id="builder-topic"></select>
+                <div id="builder-topic-checks" aria-label="Choose one or more word topics"></div>
+            </label>
+            <label class="vocabulary-game-field">
+                <strong>Words</strong>
+                <select class="review-select" id="builder-count">
+                    <option value="6">Easy - 6 words</option>
+                    <option value="8" selected>Medium - 8 words</option>
+                    <option value="10">Hard - 10 words</option>
+                </select>
+            </label>
+            <label class="vocabulary-game-field">
+                <strong>Sound</strong>
+                <select class="review-select" id="builder-sound">
+                    <option value="on">Sound on</option>
+                    <option value="off">Sound off</option>
+                </select>
+            </label>
+            <div class="vocabulary-game-actions">
+                <button class="action-button" id="builder-new" type="button">New Game</button>
+                <button class="action-button" id="builder-reset-memory" type="button">Reset Seen Words</button>
+                <a class="action-link" href="./memory_game.html">Open Memory Game</a>
+                <a class="action-link" href="./word_search.html">Open Word Search</a>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="content-card builder-stage">
+                <div class="builder-prompt">
+                    <span class="builder-prompt-label">Translation</span>
+                    <p class="builder-translation" id="builder-translation"></p>
+                </div>
+                <div class="builder-answer" id="builder-answer" aria-label="Answer tiles"></div>
+                <div class="builder-bank" id="builder-bank" aria-label="Letter bank"></div>
+                <div class="pill-row">
+                    <button class="action-button" id="builder-check" type="button">Check</button>
+                    <button class="action-button" id="builder-hint" type="button">Hint</button>
+                    <button class="action-button" id="builder-clear" type="button">Clear</button>
+                    <button class="action-button" id="builder-skip" type="button">Skip</button>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <span class="tag">Rounds</span>
+                <h2>Current Set</h2>
+                <ul class="round-list" id="builder-rounds"></ul>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/word-search-bank.js"></script>
+<script src="./assets/js/topic-picker.js"></script>
+<script src="./assets/js/seen-words.js"></script>
+<script src="./assets/js/game-audio.js"></script>
+<script src="./assets/js/vocabulary-games.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>
