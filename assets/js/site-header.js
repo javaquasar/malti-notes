@@ -5,7 +5,8 @@
   const THEME_STORAGE_KEY = "malti_site_theme";
   const themes = [
     { value: "classic", label: "Classic" },
-    { value: "forest", label: "Forest" }
+    { value: "forest", label: "Forest" },
+    { value: "contrast", label: "Contrast" }
   ];
   const desktopReviewMedia = window.matchMedia("(min-width: 981px)");
 
