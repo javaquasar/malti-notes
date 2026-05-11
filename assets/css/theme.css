@@ -147,6 +147,90 @@
   --space-section: 24px;
   --page-max-width: 1220px;
 
+  --space-2xs: 4px;
+  --space-xs: 6px;
+  --space-sm: 8px;
+  --space-md: 10px;
+  --space-lg: 12px;
+  --space-xl: 14px;
+  --space-2xl: 16px;
+  --space-3xl: 18px;
+  --space-4xl: 20px;
+  --space-5xl: 24px;
+  --space-6xl: 28px;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-2xl: 18px;
+  --radius-3xl: 20px;
+  --radius-4xl: 22px;
+  --radius-pill: var(--radius-chip);
+
+  --surface-page: var(--color-bg);
+  --surface-page-top: var(--color-bg-top);
+  --surface-paper: var(--color-surface);
+  --surface-panel: var(--color-surface-panel);
+  --surface-panel-muted: var(--color-surface-panel-muted);
+  --surface-panel-soft: var(--color-surface-panel-soft);
+  --surface-card: var(--color-surface-soft);
+  --surface-card-muted: var(--color-surface-panel-softest);
+  --surface-card-strong: var(--color-surface-strong);
+  --surface-chip: var(--color-brand-soft);
+  --surface-chip-hover: var(--color-brand-hover);
+  --surface-note: var(--color-surface-note);
+  --surface-input: var(--color-surface-input);
+  --surface-command: var(--color-surface-command);
+  --surface-figure: var(--color-surface-panel-muted);
+  --surface-figure-media: var(--color-surface-accent-soft);
+  --surface-success-highlight: color-mix(in srgb, var(--color-success-soft) 55%, var(--color-white) 45%);
+  --surface-dialog-trigger: color-mix(in srgb, var(--surface-paper) 72%, var(--surface-chip) 28%);
+  --surface-dialog-trigger-hover: color-mix(in srgb, var(--surface-paper) 56%, var(--surface-chip) 44%);
+  --surface-table-soft: color-mix(in srgb, var(--surface-paper) 44%, transparent);
+
+  --text-primary: var(--color-text);
+  --text-muted: var(--color-text-muted);
+  --text-accent: var(--color-accent);
+  --text-brand: var(--color-brand);
+  --border-default: var(--color-border);
+  --border-panel: var(--color-border-strong);
+  --border-card: var(--color-border);
+  --border-muted: var(--color-border-panel);
+  --border-brand: var(--color-brand-border);
+  --border-accent: var(--color-accent-border);
+
+  --component-panel-bg: var(--surface-paper);
+  --component-panel-border: var(--border-panel);
+  --component-panel-radius: var(--radius-panel);
+  --component-panel-shadow: var(--shadow-soft);
+  --component-panel-padding: var(--space-5xl);
+
+  --component-card-bg: var(--surface-card-muted);
+  --component-card-border: var(--border-card);
+  --component-card-radius: var(--radius-card);
+  --component-card-padding: var(--space-2xl);
+  --component-study-card-bg: var(--surface-card);
+  --component-study-card-padding: var(--space-xl) var(--space-2xl);
+  --component-compact-card-padding: var(--space-lg) var(--space-xl);
+  --component-figure-card-bg: var(--surface-figure);
+  --component-figure-card-padding: var(--space-lg);
+
+  --component-chip-bg: var(--surface-chip);
+  --component-chip-hover-bg: var(--surface-chip-hover);
+  --component-chip-border: var(--border-brand);
+  --component-chip-radius: var(--radius-pill);
+  --component-note-bg: var(--surface-note);
+  --component-note-border: var(--color-note-border);
+
+  --grid-gap-sm: var(--space-xl);
+  --grid-gap-md: var(--space-2xl);
+  --grid-gap-lg: var(--space-4xl);
+  --flow-gap-sm: var(--space-lg);
+  --flow-gap-md: var(--space-2xl);
+  --flow-gap-lg: var(--space-5xl);
+
   --bg: var(--color-bg);
   --paper: var(--color-surface);
   --ink: var(--color-text);
