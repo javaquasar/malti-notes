@@ -73,25 +73,25 @@
                     <a class="action-link" href="./review_cards.html">Open Review Cards</a>
                     <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                 </div>
-                <div class="vocab-card-grid" data-home-group="home-outside"></div>
+                <div class="grid-auto" data-home-group="home-outside"></div>
             </section>
 
             <section class="card" id="rooms">
                 <span class="tag">Rooms</span>
                 <h2>Rooms Inside The House</h2>
-                <div class="vocab-card-grid" data-home-group="home-rooms"></div>
+                <div class="grid-auto" data-home-group="home-rooms"></div>
             </section>
 
             <section class="card" id="furniture">
                 <span class="tag">Furniture</span>
                 <h2>Furniture And Useful Home Objects</h2>
-                <div class="vocab-card-grid" data-home-group="home-furniture"></div>
+                <div class="grid-auto" data-home-group="home-furniture"></div>
             </section>
 
             <section class="card" id="patterns">
                 <span class="tag">Patterns</span>
                 <h2>Useful Home Patterns</h2>
-<div class="sentence-grid">
+<div class="grid-2">
                     <div class="wide-box">
                         <h3>Safe Sentence Formulas</h3>
                         <div class="example-bank">
@@ -104,7 +104,7 @@
                     </div>
                     <div class="wide-box">
                         <h3>Useful Adjectives</h3>
-                        <div class="three-col">
+                        <div class="grid-3">
                             <div class="item"><strong>kbira / kbir</strong><span>big</span></div>
                             <div class="item"><strong>żgħira / żgħir</strong><span>small</span></div>
                             <div class="item"><strong>nadifa / nadif</strong><span>clean</span></div>
@@ -119,7 +119,7 @@
             <section class="card" id="questions">
                 <span class="tag">Questions</span>
                 <h2>Questions And Answers For Small Talk And Homework</h2>
-<div class="sentence-grid">
+<div class="grid-2">
                     <div class="wide-box">
                         <h3>Questions</h3>
                         <div class="example-bank">
@@ -184,7 +184,7 @@ window.MaltiVocabReviewPage = {
 window.renderExampleBanksFromData({
     dataUrl: "./assets/data/home_furniture_examples.json",
     groupAttribute: "data-example-group",
-    cardClass: "sentence-card"
+    cardClass: "study-card"
 });
 </script>
 <script src="./assets/js/vocab-review-page.js"></script>

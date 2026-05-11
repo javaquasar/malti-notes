@@ -118,8 +118,11 @@ h3 { font-size: 1.08rem; }
 .hero-body > *,
 .grid > *,
 .layout > *,
-.two-col > *,
-.three-col > *,
+.grid-2 > *,
+.grid-3 > *,
+.grid-auto > *,
+.grid-split > *,
+.layout-2-sidebar > *,
 .content > * {
   min-width: 0;
 }
@@ -902,20 +905,54 @@ h3 { font-size: 1.08rem; }
   margin-bottom: 10px;
 }
 
-.two-col,
-.three-col {
+.stack,
+.toolbar-row,
+.grid-2,
+.grid-3,
+.grid-auto,
+.grid-split,
+.layout-2-sidebar {
   display: grid;
+}
+
+.stack,
+.grid-2,
+.grid-3,
+.grid-auto,
+.grid-split,
+.layout-2-sidebar {
   gap: 16px;
 }
 
-.two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-auto { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-split { grid-template-columns: 1.08fr 0.92fr; align-items: start; }
+.layout-2-sidebar { grid-template-columns: 1fr 1fr 260px; align-items: start; }
+
+.grid-gap-sm { gap: 14px; }
+.grid-gap-md { gap: 16px; }
+.grid-gap-lg { gap: 20px; }
+
+.grid-auto + .grid-2,
+.grid-auto + .grid-3,
+.grid-auto + .grid-auto,
+.grid-auto + .grid-split {
+  margin-top: 16px;
+}
 
 .clock-stack {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.sentence-grid,
 .dialogue-grid,
 .wrong-right-grid,
 .roleplay-grid,
@@ -924,7 +961,6 @@ h3 { font-size: 1.08rem; }
   gap: 16px;
 }
 
-.sentence-grid,
 .dialogue-grid,
 .wrong-right-grid,
 .roleplay-grid {
@@ -944,19 +980,73 @@ h3 { font-size: 1.08rem; }
 .pair,
 .number-column,
 .phrase-card,
+.study-card,
 .verb-visual {
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 16px;
+  background: var(--color-surface-panel-softest);
+  min-width: 0;
+}
+
+.study-card {
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  background: var(--color-surface-soft);
+}
+
+.study-card-large {
+  padding: 26px;
+}
+
+.study-card-compact {
+  padding: 12px 14px;
+}
+
+.study-card-note {
   background: var(--color-surface-panel-softest);
 }
 
 .item strong,
 .example strong,
 .pattern strong,
-.pair strong {
+.pair strong,
+.study-card strong {
   display: block;
   margin-bottom: 6px;
+}
+
+.study-card > span {
+  display: block;
+  color: var(--muted);
+}
+
+.study-card small,
+.study-card-note p,
+.study-card-compact p {
+  color: var(--muted);
+}
+
+.study-card h3,
+.study-card h4 {
+  margin-bottom: 10px;
+}
+
+.mt-14 { margin-top: 14px; }
+.mt-16 { margin-top: 16px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mw-none { max-width: none; }
+.full-span { grid-column: 1 / -1; }
+.inline-note { font-weight: 400; color: var(--muted); }
+
+.image-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  margin-top: 14px;
 }
 
 .item span,
@@ -1859,9 +1949,11 @@ td {
   .layout,
   .grid,
   .hero-body,
-  .two-col,
-  .three-col,
-  .sentence-grid,
+  .grid-2,
+  .grid-3,
+  .grid-auto,
+  .grid-split,
+  .layout-2-sidebar,
   .dialogue-grid,
   .wrong-right-grid,
   .roleplay-grid {

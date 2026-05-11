@@ -74,52 +74,52 @@
                     <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                     <span class="mini">Start with core places, then add landscape, event, and description words as you need them.</span>
                 </div>
-                <div class="vocab-card-grid" data-places-group="places-core"></div>
+                <div class="grid-auto" data-places-group="places-core"></div>
             </section>
 
             <section class="content-card" id="landscape-culture">
                 <span class="tag">Section 2</span>
                 <h2>Landscape and Culture</h2>
-                <div class="vocab-card-grid" data-places-group="places-landscape"></div>
+                <div class="grid-auto" data-places-group="places-landscape"></div>
             </section>
 
             <section class="content-card" id="events-food">
                 <span class="tag">Section 3</span>
                 <h2>Events and Festival Food</h2>
-                <div class="vocab-card-grid" data-places-group="places-events"></div>
+                <div class="grid-auto" data-places-group="places-events"></div>
             </section>
 
             <section class="content-card" id="adjectives">
                 <span class="tag">Section 4</span>
                 <h2>Adjectives for Description</h2>
-                <div class="vocab-card-grid" data-places-group="places-adjectives"></div>
+                <div class="grid-auto" data-places-group="places-adjectives"></div>
             </section>
 
             <section class="content-card" id="patterns">
                 <span class="tag">Section 5</span>
                 <h2>Useful Patterns</h2>
-                <div class="pattern-grid-places">
-                    <div class="pattern-card">
+                <div class="grid-2">
+                    <div class="study-card">
                         <strong><code>noun + adjective</code></strong>
                         <span><code>knisja qadima</code>, <code>mużew interessanti</code>, <code>monument famuż</code></span>
                     </div>
-                    <div class="pattern-card">
+                    <div class="study-card">
                         <strong><code>Jien immur, int tmur, huwa jmur ...</code></strong>
                         <span>Present tense of <code>mar</code> for speaking about where you go.</span>
                     </div>
-                    <div class="pattern-card">
+                    <div class="study-card">
                         <strong><code>Inħobb immur + place / event</code></strong>
                         <span><code>Inħobb immur festivals.</code> / <code>Inħobb immur ġo mużewijiet.</code></span>
                     </div>
-                    <div class="pattern-card">
+                    <div class="study-card">
                         <strong><code>Darba mort + place</code></strong>
                         <span><code>Darba mort Blue Grotto.</code> / <code>Darba mort Muża.</code></span>
                     </div>
-                    <div class="pattern-card">
+                    <div class="study-card">
                         <strong><code>Meta nkun + place, inħobb + verb</code></strong>
                         <span><code>Meta nkun ir-Rabat, inħobb inżur il-Katakombi.</code></span>
                     </div>
-                    <div class="pattern-card">
+                    <div class="study-card">
                         <strong><code>F'Malta nistgħu naraw ...</code></strong>
                         <span><code>F'Malta nistgħu naraw ħafna affarijiet interessanti.</code></span>
                     </div>
@@ -129,7 +129,7 @@
             <section class="content-card" id="models">
                 <span class="tag">Section 6</span>
                 <h2>Ready-Made Models</h2>
-                <div class="lesson-note">
+                <div class="study-card study-card-note">
                     <h3>Short speaking paragraph</h3>
                     <div class="line-pair">
                         <div class="mt-line">Jien inħobb immur postijiet storiċi.</div>
@@ -157,13 +157,13 @@
             <section class="content-card" id="questions">
                 <span class="tag">Section 7</span>
                 <h2>Questions and Answers</h2>
-<div class="sentence-grid">
-                    <div class="question-card"><strong>Liema post tħobb?</strong><span>Jien inħobb l-Imdina.</span></div>
-                    <div class="question-card"><strong>Għaliex tħobb l-Imdina?</strong><span>Għax hija qadima u sabiħa.</span></div>
-                    <div class="question-card"><strong>Fejn tħobb tmur?</strong><span>Inħobb immur ġo mużewijiet.</span></div>
-                    <div class="question-card"><strong>X'tista' tara f'Malta?</strong><span>Nistgħu naraw postijiet interessanti, veduti sbieħ u monumenti famużi.</span></div>
-                    <div class="question-card"><strong>Darba mort Muża?</strong><span>Iva, darba mort Muża nara esebizzjoni.</span></div>
-                    <div class="question-card"><strong>X'inhu festival tal-mużika?</strong><span>Huwa avveniment b'ħafna mużika u nies.</span></div>
+<div class="grid-2">
+                    <div class="study-card"><strong>Liema post tħobb?</strong><span>Jien inħobb l-Imdina.</span></div>
+                    <div class="study-card"><strong>Għaliex tħobb l-Imdina?</strong><span>Għax hija qadima u sabiħa.</span></div>
+                    <div class="study-card"><strong>Fejn tħobb tmur?</strong><span>Inħobb immur ġo mużewijiet.</span></div>
+                    <div class="study-card"><strong>X'tista' tara f'Malta?</strong><span>Nistgħu naraw postijiet interessanti, veduti sbieħ u monumenti famużi.</span></div>
+                    <div class="study-card"><strong>Darba mort Muża?</strong><span>Iva, darba mort Muża nara esebizzjoni.</span></div>
+                    <div class="study-card"><strong>X'inhu festival tal-mużika?</strong><span>Huwa avveniment b'ħafna mużika u nies.</span></div>
                 </div>
             </section>
 
@@ -193,7 +193,7 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/places_events_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "sentence-card"
+        cardClass: "study-card"
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>

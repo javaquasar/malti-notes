@@ -13,8 +13,8 @@ async function renderExampleBanksFromData(config) {
     const {
         dataUrl,
         groupAttribute = "data-example-group",
-        cardClass = "sentence-card",
-        containerClass = "sentence-grid"
+    cardClass = "study-card",
+        containerClass = "grid-2"
     } = config || {};
 
     if (!dataUrl) {

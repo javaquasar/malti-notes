@@ -63,7 +63,7 @@
                     <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                     <span class="mini">Add weather and season words to review as quick vocabulary cards.</span>
                 </div>
-                <div class="vocab-card-grid" data-weather-group="weather-core"></div>
+                <div class="grid-auto" data-weather-group="weather-core"></div>
             </section>
 
             <section class="card" id="today">
@@ -81,10 +81,10 @@
             <section class="card" id="seasons">
                 <span class="tag">Seasons</span>
                 <h2>Seasons</h2>
-<div class="sentence-grid">
+<div class="grid-2">
                     <div class="wide-box">
                         <h3>Main words</h3>
-                        <div class="vocab-card-grid" data-weather-group="weather-seasons"></div>
+                        <div class="grid-auto" data-weather-group="weather-seasons"></div>
                     </div>
                     <div class="wide-box">
                         <h3>Ready models</h3>
@@ -160,7 +160,7 @@
             <section class="card" id="related">
                 <span class="tag">Related</span>
                 <h2>Related Pages</h2>
-                <div class="three-col">
+                <div class="grid-3">
                     <div class="item"><strong><a href="./numbers_calendar_time.html">Numbers and Time</a></strong><span>Use days, months, and seasons together with weather.</span></div>
                     <div class="item"><strong><a href="./daily_routine.html">Daily Routine</a></strong><span>Talk about how the weather changes your plans.</span></div>
                     <div class="item"><strong><a href="./transport_travel.html">Transport and Travel</a></strong><span>Weather often affects travel and routes.</span></div>
@@ -187,7 +187,7 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/weather_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "sentence-card"
+        cardClass: "study-card"
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>

@@ -76,12 +76,12 @@
                     <span class="pill">gender forms</span>
                     <span class="pill">common home and farm animals</span>
                 </div>
-                <div class="animal-note">
+                <div class="study-card">
                     <h3>Domestic and Farm Animal Vocabulary</h3>
                     <h4>Core domestic animals</h4>
-                    <div class="animal-card-grid" data-animal-group="domestic-core"></div>
+                    <div class="grid-auto" data-animal-group="domestic-core"></div>
                     <h4>Popular domestic and farm animals</h4>
-                    <div class="animal-card-grid" data-animal-group="domestic-farm"></div>
+                    <div class="grid-auto" data-animal-group="domestic-farm"></div>
                 </div>
             </section>
 
@@ -95,13 +95,13 @@
                     <span class="pill">wild animals</span>
                     <span class="pill">zoo vocabulary</span>
                 </div>
-                <div class="animal-note">
+                <div class="study-card">
                     <h3>Wild and Zoo Animal Vocabulary</h3>
-                    <div class="animal-card-grid" data-animal-group="wild-zoo"></div>
+                    <div class="grid-auto" data-animal-group="wild-zoo"></div>
                     <h4>Sea animals</h4>
-                    <div class="animal-card-grid" data-animal-group="wild-sea"></div>
+                    <div class="grid-auto" data-animal-group="wild-sea"></div>
                     <h4>Small animals and insects</h4>
-                    <div class="animal-card-grid" data-animal-group="wild-small"></div>
+                    <div class="grid-auto" data-animal-group="wild-small"></div>
                 </div>
             </section>
 
@@ -110,20 +110,20 @@
                 <h2>Animal Description Patterns</h2>
                 <div class="formula"><code>Dan / Din / Dawn + annimal</code> | <code>għandu / għandha + parti
                     tal-ġisem</code> | <code>kulur + parti tal-ġisem</code></div>
-                <div class="pattern-grid-animals">
-                    <div class="pattern-card"><strong>Il-kelb jinbaħ.</strong><span>The dog barks.</span></div>
-                    <div class="pattern-card"><strong>Il-qattus jingħi.</strong><span>The cat meows.</span></div>
-                    <div class="pattern-card"><strong>L-għasfur isaffar.</strong><span>The bird chirps.</span></div>
-                    <div class="pattern-card"><strong>L-għasfur jgħanni.</strong><span>The bird sings.</span></div>
-                    <div class="pattern-card"><strong>L-għasfur jitkellem.</strong><span>The bird speaks.</span></div>
-                    <div class="pattern-card"><strong>denb</strong><span>tail</span></div>
-                    <div class="pattern-card"><strong>ġwienaħ</strong><span>wings</span></div>
-                    <div class="pattern-card"><strong>pil</strong><span>coat</span></div>
-                    <div class="pattern-card"><strong>suf</strong><span>fur</span></div>
-                    <div class="pattern-card"><strong>rix</strong><span>feathers</span></div>
-                    <div class="pattern-card"><strong>ġilda</strong><span>skin</span></div>
+                <div class="grid-2">
+                    <div class="study-card"><strong>Il-kelb jinbaħ.</strong><span>The dog barks.</span></div>
+                    <div class="study-card"><strong>Il-qattus jingħi.</strong><span>The cat meows.</span></div>
+                    <div class="study-card"><strong>L-għasfur isaffar.</strong><span>The bird chirps.</span></div>
+                    <div class="study-card"><strong>L-għasfur jgħanni.</strong><span>The bird sings.</span></div>
+                    <div class="study-card"><strong>L-għasfur jitkellem.</strong><span>The bird speaks.</span></div>
+                    <div class="study-card"><strong>denb</strong><span>tail</span></div>
+                    <div class="study-card"><strong>ġwienaħ</strong><span>wings</span></div>
+                    <div class="study-card"><strong>pil</strong><span>coat</span></div>
+                    <div class="study-card"><strong>suf</strong><span>fur</span></div>
+                    <div class="study-card"><strong>rix</strong><span>feathers</span></div>
+                    <div class="study-card"><strong>ġilda</strong><span>skin</span></div>
                 </div>
-                <div class="animal-note mt-16">
+                <div class="study-card mt-16">
                     <h3>Model From The Lesson</h3>
                     <p><code>Għandi għasfur kbir b’munqar oranġjo. Għandu għonqu abjad u għajnejh blu.</code></p>
                     <p class="muted-note">This is one of the most useful lesson patterns: animal + colour + body part +
@@ -168,7 +168,7 @@ window.MaltiVocabReviewPage = {
 window.renderExampleBanksFromData({
     dataUrl: "./assets/data/animals_examples.json",
     groupAttribute: "data-example-group",
-    cardClass: "sentence-card"
+    cardClass: "study-card"
 });
 </script>
 <script src="./assets/js/vocab-review-page.js"></script>

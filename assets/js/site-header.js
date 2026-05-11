@@ -68,7 +68,7 @@
 
   const linkHtml = (href, label, extraClass = "") => {
     const current = currentFile === href ? " is-current" : "";
-    return `<a class="nav-link${current}${extraClass ? ` ${extraClass}` : ""}" href="./${href}">${label}</a>`;
+    return `<a class="nav-link${current}${extraClass ? ` ${extraClass}` :""}" href="./${href}">${label}</a>`;
   };
 
   const groupHtml = ({ label, items }) => {
@@ -81,7 +81,7 @@
       .join("");
 
     return `
-      <details class="nav-group${hasCurrent ? " is-current-group" : ""}"${hasCurrent ? " open" : ""}>
+      <details class="nav-group${hasCurrent ?" is-current-group" : ""}"${hasCurrent ? " open" : ""}>
         <summary>${label}</summary>
         <div class="nav-menu">
           ${itemsHtml}

@@ -63,7 +63,7 @@
                     <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                     <span class="mini">Start with body parts, then add the appearance adjectives for picture description practice.</span>
                 </div>
-                <div class="vocab-card-grid" data-body-group="body-parts"></div>
+                <div class="grid-auto" data-body-group="body-parts"></div>
             </section>
 
             <section class="card" id="face">
@@ -81,10 +81,10 @@
             <section class="card" id="appearance">
                 <span class="tag">Description</span>
                 <h2>Basic Appearance</h2>
-<div class="sentence-grid">
+<div class="grid-2">
                     <div class="wide-box">
                         <h3>Adjectives</h3>
-                        <div class="vocab-card-grid" data-body-group="body-appearance"></div>
+                        <div class="grid-auto" data-body-group="body-appearance"></div>
                     </div>
                     <div class="wide-box">
                         <h3>Ready Models</h3>
@@ -124,7 +124,7 @@
             <section class="card" id="questions">
                 <span class="tag">Q&amp;A</span>
                 <h2>Questions and Answers</h2>
-<div class="sentence-grid">
+<div class="grid-2">
                     <div class="wide-box">
                         <h3>Questions</h3>
                         <div class="example-bank">
@@ -176,7 +176,7 @@
             <section class="card" id="related">
                 <span class="tag">Related</span>
                 <h2>Related Pages</h2>
-                <div class="three-col">
+                <div class="grid-3">
                     <div class="item"><strong><a href="./picture_description.html">Picture Description</a></strong><span>Use body and face details in oral tasks.</span></div>
                     <div class="item"><strong><a href="./health_doctor.html">Health and Doctor</a></strong><span>Body words are useful for symptoms and pain.</span></div>
                     <div class="item"><strong><a href="./comparisons.html">Comparisons</a></strong><span>Compare height, age, size, and appearance.</span></div>
@@ -203,7 +203,7 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/body_appearance_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "sentence-card"
+        cardClass: "study-card"
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
