@@ -461,6 +461,20 @@ body.compact-animals .animal-gallery {
   margin-bottom: var(--flow-gap-sm);
 }
 
+.attached-pattern-panel {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.attached-pattern-table {
+  background: var(--surface-panel-solid) !important;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 20px;
+  width: 100%;
+}
+
 .shopping-dialogue-bank h3 {
   margin-bottom: var(--space-md);
 }

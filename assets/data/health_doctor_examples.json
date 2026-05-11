@@ -2,6 +2,9 @@
   "groups": [
     {
       "id": "health-pain",
+      "title": "I Have Pain",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
       "items": [
         { "maltese": "Għandi uġigħ ta' ras.", "english": "I have a headache." },
         { "maltese": "Għandi uġigħ fil-griżmejn.", "english": "I have a sore throat." },
@@ -11,6 +14,9 @@
     },
     {
       "id": "health-useful-expressions",
+      "title": "Useful Expressions",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
       "items": [
         { "maltese": "Għandi uġigħ ta' ras.", "english": "I have a headache." },
         { "maltese": "Fejn weġġajt?", "english": "Where did you hurt yourself?" },
@@ -20,6 +26,9 @@
     },
     {
       "id": "health-doctor-visit",
+      "title": "At the Doctor",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
       "items": [
         { "maltese": "Ma nħossnix tajjeb.", "english": "I do not feel well." },
         { "maltese": "Għandi bżonn tabib.", "english": "I need a doctor." },
@@ -28,6 +37,9 @@
     },
     {
       "id": "health-pharmacy",
+      "title": "At the Pharmacy",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
       "items": [
         { "maltese": "Għandi bżonn mediċina.", "english": "I need medicine." },
         { "maltese": "Għandek xi ħaġa għas-sogħla?", "english": "Do you have something for a cough?" },
@@ -35,7 +47,32 @@
       ]
     },
     {
+      "id": "health-dialogue-doctor",
+      "title": "At the doctor",
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "numbered": false,
+      "items": [
+        { "maltese": "A: X'għandek?", "english": "A: What is wrong?" },
+        { "maltese": "B: Għandi uġigħ ta' ras u deni.", "english": "B: I have a headache and a fever." },
+        { "maltese": "A: Trid tistrieħ.", "english": "A: You need to rest." }
+      ]
+    },
+    {
+      "id": "health-dialogue-pharmacy",
+      "title": "At the pharmacy",
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "numbered": false,
+      "items": [
+        { "maltese": "A: Għandi sogħla.", "english": "A: I have a cough." },
+        { "maltese": "B: Għandna mediċina għas-sogħla.", "english": "B: We have medicine for cough." },
+        { "maltese": "A: Grazzi ħafna.", "english": "A: Thank you very much." }
+      ]
+    },
+    {
       "id": "health-phrases",
+      "title": "Thematic Phrases",
       "items": [
         { "maltese": "Ma nħossnix tajjeb.", "english": "I do not feel well." },
         { "maltese": "Illum inħossni ħażin.", "english": "Today I feel bad." },
