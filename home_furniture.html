@@ -51,6 +51,7 @@
                 <li><a href="#rooms">Rooms Inside The House</a></li>
                 <li><a href="#furniture">Furniture And Objects</a></li>
                 <li><a href="#patterns">Useful Home Patterns</a></li>
+                <li><a href="#adjectives">Useful Home Adjectives</a></li>
                 <li><a href="#questions">Questions And Answers</a></li>
                 <li><a href="#examples-outside">Outside Examples</a></li>
                 <li><a href="#examples-rooms">Room Examples</a></li>
@@ -91,56 +92,33 @@
             <section class="card" id="patterns">
                 <span class="tag">Patterns</span>
                 <h2>Useful Home Patterns</h2>
-<div class="grid-2">
-                    <div class="wide-box">
-                        <h3>Safe Sentence Formulas</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Hemm + noun + fil-...</code></span><span class="en">There is / there are + noun + in the...</span></div>
-                            <div class="example-line"><span class="mt"><code>Għandi + noun</code></span><span class="en">I have + noun.</span></div>
-                            <div class="example-line"><span class="mt"><code>Id-dar tiegħi hija + adjective</code></span><span class="en">My house is + adjective.</span></div>
-                            <div class="example-line"><span class="mt"><code>Fil-kċina hemm...</code></span><span class="en">In the kitchen there is / there are...</span></div>
-                            <div class="example-line"><span class="mt"><code>Ħdejn il-... hemm...</code></span><span class="en">Next to the... there is / there are...</span></div>
-                        </div>
-                    </div>
-                    <div class="wide-box">
-                        <h3>Useful Adjectives</h3>
-                        <div class="grid-3">
-                            <div class="item"><strong>kbira / kbir</strong><span>big</span></div>
-                            <div class="item"><strong>żgħira / żgħir</strong><span>small</span></div>
-                            <div class="item"><strong>nadifa / nadif</strong><span>clean</span></div>
-                            <div class="item"><strong>komda / komdu</strong><span>comfortable</span></div>
-                            <div class="item"><strong>sabiħa / sabiħ</strong><span>beautiful</span></div>
-                            <div class="item"><strong>dawl</strong><span>bright / light</span></div>
-                        </div>
-                    </div>
+                <div data-example-group="home-pattern-formulas"></div>
+            </section>
+
+            <section class="card" id="adjectives">
+                <span class="tag">Words</span>
+                <h2>Useful Home Adjectives</h2>
+                <div class="grid-3">
+                    <div class="item"><strong>kbira / kbir</strong><span>big</span></div>
+                    <div class="item"><strong>żgħira / żgħir</strong><span>small</span></div>
+                    <div class="item"><strong>nadifa / nadif</strong><span>clean</span></div>
+                    <div class="item"><strong>komda / komdu</strong><span>comfortable</span></div>
+                    <div class="item"><strong>sabiħa / sabiħ</strong><span>beautiful</span></div>
+                    <div class="item"><strong>dawl</strong><span>bright / light</span></div>
                 </div>
             </section>
 
             <section class="card" id="questions">
                 <span class="tag">Questions</span>
                 <h2>Questions And Answers For Small Talk And Homework</h2>
-<div class="grid-2">
-                    <div class="wide-box">
+                <div class="example-bank-stack">
+                    <div class="example-bank-section">
                         <h3>Questions</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">Fejn toqgħod?</span><span class="en">Where do you live?</span></div>
-                            <div class="example-line"><span class="mt">Toqgħod f'dar jew f'appartament?</span><span class="en">Do you live in a house or in an apartment?</span></div>
-                            <div class="example-line"><span class="mt">Id-dar tiegħek hija kbira jew żgħira?</span><span class="en">Is your house big or small?</span></div>
-                            <div class="example-line"><span class="mt">Kemm hemm kmamar fid-dar tiegħek?</span><span class="en">How many rooms are there in your home?</span></div>
-                            <div class="example-line"><span class="mt">Xi hemm fil-kċina?</span><span class="en">What is in the kitchen?</span></div>
-                            <div class="example-line"><span class="mt">Xi hemm fis-salott?</span><span class="en">What is in the living room?</span></div>
-                        </div>
+                        <div data-example-group="home-questions"></div>
                     </div>
-                    <div class="wide-box">
+                    <div class="example-bank-section">
                         <h3>Answers</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">Noqgħod f'appartament f'Tas-Sliema.</span><span class="en">I live in an apartment in Sliema.</span></div>
-                            <div class="example-line"><span class="mt">Id-dar tiegħi hija żgħira imma komda.</span><span class="en">My home is small but comfortable.</span></div>
-                            <div class="example-line"><span class="mt">Għandi kċina, salott, u żewġ kmamar tas-sodda.</span><span class="en">I have a kitchen, a living room, and two bedrooms.</span></div>
-                            <div class="example-line"><span class="mt">Fil-kċina hemm mejda, siġġijiet, u friġġ.</span><span class="en">In the kitchen there is a table, chairs, and a fridge.</span></div>
-                            <div class="example-line"><span class="mt">Fis-salott hemm sufan u televixin.</span><span class="en">In the living room there is a sofa and a television.</span></div>
-                            <div class="example-line"><span class="mt">Il-kamra favorita tiegħi hija l-kamra tas-sodda.</span><span class="en">My favourite room is the bedroom.</span></div>
-                        </div>
+                        <div data-example-group="home-answers"></div>
                     </div>
                 </div>
             </section>
@@ -184,7 +162,10 @@ window.MaltiVocabReviewPage = {
 window.renderExampleBanksFromData({
     dataUrl: "./assets/data/home_furniture_examples.json",
     groupAttribute: "data-example-group",
-    cardClass: "study-card"
+    cardClass: "study-card",
+    sourcePage: "home_furniture.html",
+    defaultTopic: "Home and Furniture",
+    reviewPrefix: "home-furniture"
 });
 </script>
 <script src="./assets/js/vocab-review-page.js"></script>

@@ -18,6 +18,8 @@ const pages = (process.env.VISUAL_PAGES || [
   "picture_description.html",
   "collective_nouns.html",
   "word_search.html",
+  "memory_game.html",
+  "word_builder_game.html",
   "shopping_clothes.html"
 ].join(","))
   .split(",")

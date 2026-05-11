@@ -9,6 +9,8 @@ const keyPages = [
   "picture_description.html",
   "collective_nouns.html",
   "word_search.html",
+  "memory_game.html",
+  "word_builder_game.html",
   "shopping_clothes.html"
 ];
 
@@ -18,7 +20,8 @@ const cssFiles = [
   "assets/css/themes/contrast.css",
   "assets/css/site.css",
   "assets/css/pages.css",
-  "assets/css/word-search.css"
+  "assets/css/word-search.css",
+  "assets/css/vocabulary-games.css"
 ];
 
 const runtimeCssTokens = new Set([
@@ -27,7 +30,8 @@ const runtimeCssTokens = new Set([
   "--word-search-found-border",
   "--word-search-found-ink",
   "--word-search-overlap-bg",
-  "--word-search-overlap-border"
+  "--word-search-overlap-border",
+  "--memory-columns"
 ]);
 
 function read(relPath) {
@@ -114,6 +118,23 @@ check("word search stays modular", () => {
     .forEach((page) => {
       assert(!read(page).includes("assets/css/word-search.css"), `${page} should not load word-search.css`);
     });
+});
+
+check("vocabulary games use shared word-search bank", () => {
+  ["memory_game.html", "word_builder_game.html"].forEach((page) => {
+    const html = read(page);
+    assert(html.includes("assets/css/vocabulary-games.css"), `${page} missing vocabulary-games.css`);
+    assert(html.includes("assets/js/word-search-bank.js"), `${page} missing word-search-bank.js`);
+    assert(html.includes("assets/js/game-audio.js"), `${page} missing game-audio.js`);
+    assert(html.includes("assets/js/vocabulary-games.js"), `${page} missing vocabulary-games.js`);
+  });
+});
+
+check("word search uses shared game audio", () => {
+  const html = read("word_search.html");
+  const js = read("assets/js/word-search-game.js");
+  assert(html.includes("assets/js/game-audio.js"), "word_search.html missing game-audio.js");
+  assert(js.includes("MaltiGameAudio"), "word-search-game.js does not use shared audio helper");
 });
 
 check("visual pages keep shared css stack", () => {

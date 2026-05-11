@@ -1,7 +1,56 @@
 {
   "groups": [
     {
+      "id": "transport-frequency",
+      "sectionId": "frequency",
+      "title": "Frequency and Travel Words",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "kuljum", "english": "every day", "note": "Kuljum naqbad tal-linja." },
+        { "maltese": "ta' spiss", "english": "often", "note": "Ta' spiss immur bil-ferry." },
+        { "maltese": "xi kultant", "english": "sometimes", "note": "Xi kultant immur bir-rota." },
+        { "maltese": "rari", "english": "rarely", "note": "Rari nuża t-taxi." },
+        { "maltese": "malajr", "english": "quickly", "note": "Bil-ferry tasal malajr." },
+        { "maltese": "bil-mod", "english": "slowly", "note": "Meta hemm traffiku, il-vjaġġ ikun bil-mod." },
+        { "maltese": "it-traffiku", "english": "traffic", "note": "Xi kultant it-traffiku jkun ħafna." },
+        { "maltese": "il-waqfa", "english": "bus stop / stop", "note": "Il-waqfa hija viċin id-dar tiegħi." }
+      ]
+    },
+    {
+      "id": "transport-grammar",
+      "sectionId": "grammar",
+      "title": "Useful Grammar",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "bi + transport", "english": "by + transport", "note": "bil-karozza, bil-ferry, bit-taxi, bir-rota, bit-tal-linja" },
+        { "maltese": "Kuljum nuża ...", "english": "A safe frame for everyday transport habits." },
+        { "maltese": "Biex immur ... nuża ...", "english": "Biex immur il-Belt, nuża l-ferry." },
+        { "maltese": "naqbad / nieħu / nuża / immur / nasal", "english": "Useful route verbs for simple beginner descriptions." }
+      ]
+    },
+    {
+      "id": "transport-qa",
+      "sectionId": "questions",
+      "title": "Questions and Answers",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Kif tmur il-Belt?", "english": "Jien immur il-Belt bil-ferry jew bit-tal-linja." },
+        { "maltese": "Liema mezz ta' trasport tuża kuljum?", "english": "Kuljum naqbad bit-tal-linja." },
+        { "maltese": "Xi kultant tmur bir-rota?", "english": "Iva, xi kultant immur bir-rota." },
+        { "maltese": "Għaliex tuża l-ferry?", "english": "Għax huwa mgħaġġel u l-vjaġġ huwa sabiħ." },
+        { "maltese": "Meta tuża t-taxi?", "english": "Rari nuża t-taxi, imma nużah meta għandi bżonn nasal malajr." },
+        { "maltese": "Kemm jieħu l-vjaġġ bil-ferry?", "english": "Il-vjaġġ bil-ferry jieħu madwar kwart." }
+      ]
+    },
+    {
       "id": "transport-story-bank",
+      "sectionId": "story-bank",
+      "title": "Story Bank",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
       "items": [
         { "maltese": "Kuljum ħafna nies jaqbdu bit-tal-linja.", "english": "Every day many people take the bus." },
         { "maltese": "Xi kultant immur bil-mixi.", "english": "Sometimes I go on foot." },

@@ -3,14 +3,91 @@
   "topic": "Body and Appearance",
   "groups": [
     {
+      "id": "body-face-details",
+      "sectionId": "face",
+      "title": "Face, Hair and Eyes",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Għandha xagħar twil.", "english": "She has long hair." },
+        { "maltese": "Għandu xagħar qasir.", "english": "He has short hair." },
+        { "maltese": "Għandha għajnejn kbar.", "english": "She has big eyes." },
+        { "maltese": "Għandu għajnejn kannella.", "english": "He has brown eyes." },
+        { "maltese": "Għandu imnieħer twil.", "english": "He has a long nose." }
+      ]
+    },
+    {
+      "id": "body-ready-models",
+      "sectionId": "appearance-models",
+      "title": "Ready Models",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Huwa twil.", "english": "He is tall." },
+        { "maltese": "Hija qasira.", "english": "She is short." },
+        { "maltese": "Huwa żagħżugħ.", "english": "He is young." },
+        { "maltese": "Hija anzjana.", "english": "She is elderly." }
+      ]
+    },
+    {
+      "id": "body-masculine-models",
+      "sectionId": "agreement",
+      "title": "Male speaker / male person",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Huwa twil.", "english": "He is tall." },
+        { "maltese": "Huwa sabiħ.", "english": "He is handsome / beautiful." },
+        { "maltese": "Huwa qasir.", "english": "He is short." }
+      ]
+    },
+    {
+      "id": "body-feminine-models",
+      "sectionId": "agreement",
+      "title": "Female speaker / female person",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Hija twila.", "english": "She is tall." },
+        { "maltese": "Hija sabiħa.", "english": "She is beautiful." },
+        { "maltese": "Hija qasira.", "english": "She is short." }
+      ]
+    },
+    {
+      "id": "body-questions",
+      "sectionId": "questions",
+      "title": "Questions",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Kif jidher?", "english": "What does he look like?" },
+        { "maltese": "Kif tidher?", "english": "What does she look like?" },
+        { "maltese": "Għandu xagħar twil jew qasir?", "english": "Does he have long or short hair?" },
+        { "maltese": "Għandha għajnejn kbar?", "english": "Does she have big eyes?" }
+      ]
+    },
+    {
+      "id": "body-answers",
+      "sectionId": "questions",
+      "title": "Answers",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        { "maltese": "Huwa twil u għandu xagħar qasir.", "english": "He is tall and he has short hair." },
+        { "maltese": "Hija qasira u għandha għajnejn kbar.", "english": "She is short and she has big eyes." },
+        { "maltese": "Iva, għandha xagħar twil.", "english": "Yes, she has long hair." },
+        { "maltese": "Le, għandu xagħar qasir.", "english": "No, he has short hair." }
+      ]
+    },
+    {
       "id": "body-phrases",
       "sectionId": "phrases",
       "title": "Thematic Phrases",
       "items": [
         { "maltese": "Għandi xagħar qasir.", "english": "I have short hair." },
         { "maltese": "Għandi xagħar twil.", "english": "I have long hair." },
-        { "maltese": "Għandi gċajnejn kannella.", "english": "I have brown eyes." },
-        { "maltese": "Għandi gċajnejn blu.", "english": "I have blue eyes." },
+        { "maltese": "Għandi għajnejn kannella.", "english": "I have brown eyes." },
+        { "maltese": "Għandi għajnejn blu.", "english": "I have blue eyes." },
         { "maltese": "Għandu wiċċ twil.", "english": "He has a long face." },
         { "maltese": "Għandha wiċċ tond.", "english": "She has a round face." },
         { "maltese": "Għandu imnieħer kbir.", "english": "He has a big nose." },
@@ -31,7 +108,7 @@
         { "maltese": "Għandha xagħar iswed.", "english": "She has black hair." },
         { "maltese": "Għandha xagħar kannella.", "english": "She has brown hair." },
         { "maltese": "Għandu xagħar blond.", "english": "He has blond hair." },
-        { "maltese": "Għandha gċajnejn sbieħ.", "english": "She has beautiful eyes." },
+        { "maltese": "Għandha għajnejn sbieħ.", "english": "She has beautiful eyes." },
         { "maltese": "Għandu tbissima sabiħa.", "english": "He has a beautiful smile." },
         { "maltese": "Hija tidher sabiħa.", "english": "She looks beautiful." },
         { "maltese": "Huwa jidher ferrieħi.", "english": "He looks cheerful." },
@@ -46,7 +123,7 @@
         { "maltese": "Hija għandha xagħar twil u dritt.", "english": "She has long straight hair." },
         { "maltese": "Huwa għandu xagħar qasir u skur.", "english": "He has short dark hair." },
         { "maltese": "Għandi wiċċ tond.", "english": "I have a round face." },
-        { "maltese": "Għandi xagħar twil u gċajnejn kannella.", "english": "I have long hair and brown eyes." },
+        { "maltese": "Għandi xagħar twil u għajnejn kannella.", "english": "I have long hair and brown eyes." },
         { "maltese": "Oħti hija twila.", "english": "My sister is tall." },
         { "maltese": "Hija qasira imma sabiħa.", "english": "She is short but beautiful." },
         { "maltese": "Huwa għandu xagħar qasir.", "english": "He has short hair." },

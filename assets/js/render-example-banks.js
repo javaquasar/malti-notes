@@ -172,6 +172,12 @@ async function renderExampleBanksFromData(config) {
 
             article.appendChild(strong);
             article.appendChild(span);
+
+            if (item.note) {
+                const note = document.createElement("small");
+                note.textContent = item.note;
+                article.appendChild(note);
+            }
             container.appendChild(article);
         });
     });
