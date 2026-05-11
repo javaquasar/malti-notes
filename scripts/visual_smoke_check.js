@@ -21,6 +21,15 @@ const cssFiles = [
   "assets/css/word-search.css"
 ];
 
+const runtimeCssTokens = new Set([
+  "--word-search-size",
+  "--word-search-found-bg",
+  "--word-search-found-border",
+  "--word-search-found-ink",
+  "--word-search-overlap-bg",
+  "--word-search-overlap-border"
+]);
+
 function read(relPath) {
   return fs.readFileSync(path.join(root, relPath), "utf8");
 }
@@ -55,6 +64,21 @@ check("css brace balance", () => {
   cssFiles.forEach((file) => {
     const text = read(file);
     assert(count(text, /\{/g) === count(text, /\}/g), `${file} has unbalanced braces`);
+  });
+});
+
+check("css tokens resolve", () => {
+  const declarations = new Set();
+  const usages = new Set();
+
+  cssFiles.forEach((file) => {
+    const text = read(file);
+    [...text.matchAll(/(--[a-zA-Z0-9_-]+)\s*:/g)].forEach((match) => declarations.add(match[1]));
+    [...text.matchAll(/var\((--[a-zA-Z0-9_-]+)/g)].forEach((match) => usages.add(match[1]));
+  });
+
+  [...usages].forEach((token) => {
+    assert(declarations.has(token) || runtimeCssTokens.has(token), `${token} is used but not declared`);
   });
 });
 
