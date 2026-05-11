@@ -57,6 +57,7 @@
                 <li><a href="#food">Food</a></li>
                 <li><a href="#adjectives">Collective With Adjectives</a></li>
                 <li><a href="#shopping">Shopping and Quantity</a></li>
+                <li><a href="#shopping-lines">Ready-Made Shopping Lines</a></li>
                 <li><a href="#questions">Questions and Answers</a></li>
                 <li><a href="#mistakes">Common Mistakes</a></li>
                 <li><a href="#practice-bank">Practice Bank</a></li>
@@ -137,7 +138,7 @@
                 <h2>Fruit</h2>
                 <div class="toolbar-row">
                     <a class="action-link" href="./review_cards.html">Open Review Cards</a>
-                    <span class="status-chip" data-review-summary>0 saved · 0 due</span>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                 </div>
                 <div class="grid-auto" data-collective-group="collective-fruit"></div>
             </section>
@@ -221,41 +222,18 @@
                         <span><code>żewġ basliet</code>, <code>żewġ tewmiet</code>, <code>żewġ larinġiet</code>, <code>żewġ dulligħat</code>, <code>erba' tadamiet</code></span>
                     </div>
                 </div>
+            </section>
 
-                <div class="study-card study-card-note mt-16">
-                    <h3>Ready-made shopping lines</h3>
-                    <div class="line-pair">
-                        <div class="mt-line">Agħmel lista ta' frott u ħaxix li tħobb tixtri.</div>
-                        <div class="en-line">Make a list of fruit and vegetables that you like to buy.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">Pereżempju: kilo brunġiel, wiżna patata, żewġ basliet, larinġ, lumi.</div>
-                        <div class="en-line">For example: a kilo of aubergines, a sack of potatoes, two onions, oranges, lemons.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">Għandna bżonn tuffieħ.</div>
-                        <div class="en-line">We need apples.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">Għandi bżonn larinġ.</div>
-                        <div class="en-line">I need oranges.</div>
-                    </div>
-                </div>
+            <section class="content-card" id="shopping-lines">
+                <span class="tag">Shopping Lines</span>
+                <h2>Ready-Made Shopping Lines</h2>
+                <div data-example-group="collective-shopping-lines"></div>
             </section>
 
             <section class="content-card" id="questions">
                 <span class="tag">Section 9</span>
                 <h2>Questions and Answers</h2>
-<div class="grid-2">
-                    <div class="study-card"><strong>X'inhu l-kollettiv ta' tuffieħa?</strong><span>Il-kollettiv ta' tuffieħa huwa tuffieħ.</span></div>
-                    <div class="study-card"><strong>X'inhu l-kollettiv ta' tadama?</strong><span>Il-kollettiv ta' tadama huwa tadam.</span></div>
-                    <div class="study-card"><strong>Meta nuża l-plural?</strong><span>Nuża l-plural meta rrid ngħid numru speċifiku, bħal żewġ basliet.</span></div>
-                    <div class="study-card"><strong>Meta nuża l-kollettiv?</strong><span>Nuża l-kollettiv meta nitkellem fuq ħafna, ftit, kilo jew tip ta' ikel u frott.</span></div>
-                    <div class="study-card"><strong>Kif ngħid “fresh fish”?</strong><span>Ngħid ħut frisk.</span></div>
-                    <div class="study-card"><strong>Kif ngħid “good cheese”?</strong><span>Ngħid ġobon tajjeb.</span></div>
-                    <div class="study-card"><strong>X'se tixtri mis-suq?</strong><span>Se nixtri ftit ħass, kilo larinġ u naqra brunġiel.</span></div>
-                    <div class="study-card"><strong>Għandek bżonn xi frott?</strong><span>Iva, għandi bżonn tuffieħ u lumi.</span></div>
-                </div>
+                <div data-example-group="collective-qa-bank"></div>
             </section>
 
             <section class="content-card" id="mistakes">
@@ -308,7 +286,10 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/collective_nouns_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "study-card"
+        cardClass: "study-card",
+        sourcePage: "collective_nouns.html",
+        defaultTopic: "Collective Nouns",
+        reviewPrefix: "collective"
     });
     </script>
     <script src="./assets/js/site-header.js"></script>

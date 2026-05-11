@@ -129,42 +129,13 @@
             <section class="content-card" id="models">
                 <span class="tag">Section 6</span>
                 <h2>Ready-Made Models</h2>
-                <div class="study-card study-card-note">
-                    <h3>Short speaking paragraph</h3>
-                    <div class="line-pair">
-                        <div class="mt-line">Jien inħobb immur postijiet storiċi.</div>
-                        <div class="en-line">I like to go to historical places.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">L-Imdina hija belt qadima u sabiħa.</div>
-                        <div class="en-line">Mdina is an old and beautiful city.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">Meta nkun ir-Rabat, inħobb inżur il-Katakombi.</div>
-                        <div class="en-line">When I am in Rabat, I like to visit the Catacombs.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">Darba mort Muża nara esebizzjoni tal-arti.</div>
-                        <div class="en-line">Once I went to Muża to see an art exhibition.</div>
-                    </div>
-                    <div class="line-pair">
-                        <div class="mt-line">F'Malta hawn ħafna postijiet interessanti.</div>
-                        <div class="en-line">In Malta there are many interesting places.</div>
-                    </div>
-                </div>
+                <div data-example-group="places-ready-models"></div>
             </section>
 
             <section class="content-card" id="questions">
                 <span class="tag">Section 7</span>
                 <h2>Questions and Answers</h2>
-<div class="grid-2">
-                    <div class="study-card"><strong>Liema post tħobb?</strong><span>Jien inħobb l-Imdina.</span></div>
-                    <div class="study-card"><strong>Għaliex tħobb l-Imdina?</strong><span>Għax hija qadima u sabiħa.</span></div>
-                    <div class="study-card"><strong>Fejn tħobb tmur?</strong><span>Inħobb immur ġo mużewijiet.</span></div>
-                    <div class="study-card"><strong>X'tista' tara f'Malta?</strong><span>Nistgħu naraw postijiet interessanti, veduti sbieħ u monumenti famużi.</span></div>
-                    <div class="study-card"><strong>Darba mort Muża?</strong><span>Iva, darba mort Muża nara esebizzjoni.</span></div>
-                    <div class="study-card"><strong>X'inhu festival tal-mużika?</strong><span>Huwa avveniment b'ħafna mużika u nies.</span></div>
-                </div>
+                <div data-example-group="places-qa-bank"></div>
             </section>
 
             <section class="content-card" id="story-bank">
@@ -193,7 +164,10 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/places_events_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "study-card"
+        cardClass: "study-card",
+        sourcePage: "places_events.html",
+        defaultTopic: "Places and Events",
+        reviewPrefix: "places"
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
