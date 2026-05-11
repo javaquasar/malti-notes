@@ -1,7 +1,52 @@
 {
   "groups": [
     {
+      "id": "shopping-patterns",
+      "title": "Shopping Patterns",
+      "items": [
+        { "maltese": "Nixtieq flokk blu.", "english": "I would like a blue shirt." },
+        { "maltese": "Kemm jiswa dan il-flokk?", "english": "How much does this shirt cost?" },
+        { "maltese": "Għandek daqs kbir?", "english": "Do you have a large size?" },
+        { "maltese": "Nista' nipprova dan?", "english": "Can I try this on?" }
+      ]
+    },
+    {
+      "id": "shopping-dialogue-shirt",
+      "title": "Buying a shirt",
+      "numbered": false,
+      "items": [
+        { "maltese": "A: Nixtieq flokk iswed.", "english": "A: I would like a black shirt." },
+        { "maltese": "B: Liema daqs għandek bżonn?", "english": "B: What size do you need?" },
+        { "maltese": "A: Daqs medju, jekk jogħġbok.", "english": "A: Medium size, please." }
+      ]
+    },
+    {
+      "id": "shopping-dialogue-price",
+      "title": "Asking the price",
+      "numbered": false,
+      "items": [
+        { "maltese": "A: Kemm jiswa dan iż-żarbun?", "english": "A: How much does this shoe cost?" },
+        { "maltese": "B: Jiswa tletin ewro.", "english": "B: It costs thirty euro." },
+        { "maltese": "A: Tajjeb, nieħduh.", "english": "A: Good, I will take it." }
+      ]
+    },
+    {
+      "id": "shopping-wrong",
+      "title": "Wrong",
+      "items": [
+        { "maltese": "Jien tixtieq flokk aħmar.", "english": "Wrong person and verb form." }
+      ]
+    },
+    {
+      "id": "shopping-right",
+      "title": "Right",
+      "items": [
+        { "maltese": "Jien nixtieq flokk aħmar.", "english": "I would like a red shirt." }
+      ]
+    },
+    {
       "id": "shopping-phrases",
+      "title": "Thematic Phrases",
       "items": [
         { "maltese": "Nixtieq flokk aħmar.", "english": "I would like a red shirt." },
         { "maltese": "Nixtieq flokk blu.", "english": "I would like a blue shirt." },
@@ -35,7 +80,7 @@
         { "maltese": "Inħobb il-kulur aħdar.", "english": "I like the colour green." },
         { "maltese": "Ma nħobbx il-kulur roża.", "english": "I do not like the colour pink." },
         { "maltese": "Il-ġakketta hija għalja.", "english": "The jacket is expensive." },
-        { "maltese": "Il-flokk huwa irħis.", "english": "The shirt is cheap." },
+        { "maltese": "Il-flokk huwa rħis.", "english": "The shirt is cheap." },
         { "maltese": "Din il-borża hija kbira.", "english": "This bag is big." },
         { "maltese": "Dik il-borża hija żgħira.", "english": "That bag is small." },
         { "maltese": "Jien għandi bżonn ġakketta ġdida.", "english": "I need a new jacket." },

@@ -13,8 +13,9 @@ async function renderExampleBanksFromData(config) {
     const {
         dataUrl,
         groupAttribute = "data-example-group",
-    cardClass = "study-card",
-        containerClass = "grid-2"
+        cardClass = "study-card",
+        containerClass = "grid-2",
+        numbered = true
     } = config || {};
 
     if (!dataUrl) {
@@ -162,7 +163,8 @@ async function renderExampleBanksFromData(config) {
 
             const strong = document.createElement("strong");
             const code = document.createElement("code");
-            code.textContent = `${index + 1}. ${item.maltese}`;
+            const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
+            code.textContent = shouldNumber ? `${index + 1}. ${item.maltese}` : item.maltese;
             strong.appendChild(code);
 
             const span = document.createElement("span");
