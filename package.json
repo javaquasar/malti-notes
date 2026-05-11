@@ -1,0 +1,20 @@
+{
+  "name": "malti-notes",
+  "version": "1.0.0",
+  "description": "Static Maltese study notes and review pages.",
+  "scripts": {
+    "visual:smoke": "node ./scripts/visual_smoke_check.js",
+    "visual:screenshots": "node ./scripts/visual_screenshots.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-jq:javaquasar/malti-notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}
