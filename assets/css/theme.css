@@ -189,6 +189,25 @@
   --surface-dialog-trigger: color-mix(in srgb, var(--surface-paper) 72%, var(--surface-chip) 28%);
   --surface-dialog-trigger-hover: color-mix(in srgb, var(--surface-paper) 56%, var(--surface-chip) 44%);
   --surface-table-soft: color-mix(in srgb, var(--surface-paper) 44%, transparent);
+  --surface-danger-soft: color-mix(in srgb, var(--color-danger) 8%, var(--color-white) 92%);
+  --surface-speech-card: color-mix(in srgb, var(--color-brand-soft) 65%, var(--color-white) 35%);
+
+  --game-panel-bg: var(--surface-card);
+  --game-board-bg: var(--color-surface-panel-solid);
+  --game-cell-bg: var(--color-surface-panel-tint);
+  --game-cell-text: var(--text-primary);
+  --game-cell-border: var(--border-default);
+  --game-cell-hover-border: var(--border-brand);
+  --game-selection-bg: color-mix(in srgb, var(--color-accent-soft) 72%, var(--color-white) 28%);
+  --game-selection-border: var(--color-accent-border-active);
+  --game-selection-text: var(--text-accent);
+  --game-found-bg: color-mix(in srgb, var(--color-brand-soft) 68%, var(--color-white) 32%);
+  --game-found-border: var(--border-brand);
+  --game-found-text: var(--text-brand);
+  --game-list-bg: var(--surface-card);
+  --game-list-border: var(--border-default);
+  --game-progress-bg: var(--color-muted-soft-bg);
+  --game-progress-fill: linear-gradient(90deg, var(--color-brand), var(--color-accent));
 
   --text-primary: var(--color-text);
   --text-muted: var(--color-text-muted);

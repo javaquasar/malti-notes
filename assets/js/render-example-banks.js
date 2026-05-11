@@ -122,7 +122,7 @@ async function renderExampleBanksFromData(config) {
         }
 
         container.innerHTML = "";
-        applyClassList(container, containerClass);
+        applyClassList(container, group.containerClass || containerClass);
 
         const sentenceItems = (group.items || []).map((item) => toSentenceCard(item, group, container));
         allSentenceItems.push(...sentenceItems);
@@ -155,7 +155,7 @@ async function renderExampleBanksFromData(config) {
 
         (group.items || []).forEach((item, index) => {
             const article = document.createElement("article");
-            article.className = cardClass;
+            article.className = group.cardClass || cardClass;
 
             if (item.origin) {
                 article.dataset.origin = item.origin;

@@ -4,12 +4,12 @@
 
 .word-search-sidebar {
   display: grid;
-  gap: 14px;
+  gap: var(--grid-gap-sm);
 }
 
 .word-search-field {
   display: grid;
-  gap: 7px;
+  gap: var(--space-xs);
 }
 
 .word-search-field strong {
@@ -20,29 +20,29 @@
   max-height: 190px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: var(--space-xs);
   overflow: auto;
-  padding: 8px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  background: var(--color-surface-soft);
+  padding: var(--space-sm);
+  border: 1px solid var(--game-list-border);
+  border-radius: var(--component-card-radius);
+  background: var(--game-list-bg);
 }
 
 .word-search-topic-check {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-xs);
   min-width: 0;
-  color: var(--ink);
+  color: var(--text-primary);
   font-size: 0.82rem;
   font-weight: 700;
 }
 
 .word-search-topic-check.is-all {
   grid-column: 1 / -1;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--line);
-  color: var(--teal);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--game-list-border);
+  color: var(--text-brand);
 }
 
 .word-search-topic-check input {
@@ -58,22 +58,22 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 10px;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  background: var(--color-surface-soft);
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--game-list-border);
+  border-radius: var(--component-card-radius);
+  background: var(--game-list-bg);
 }
 
 .word-search-timer-panel span {
-  color: var(--ink);
+  color: var(--text-primary);
   font-size: 1.35rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
 
 .word-search-timer-panel small {
-  color: var(--muted);
+  color: var(--text-muted);
   font-weight: 700;
 }
 
@@ -85,8 +85,8 @@
 }
 
 .word-search-hint-button {
-  background: var(--color-brand-soft);
-  border-color: var(--color-brand-border);
+  background: var(--component-chip-bg);
+  border-color: var(--component-chip-border);
 }
 
 .word-search-reset-memory {
@@ -95,8 +95,8 @@
 }
 
 .word-search-print {
-  background: var(--color-surface-soft);
-  border-color: var(--line);
+  background: var(--game-panel-bg);
+  border-color: var(--game-list-border);
 }
 
 .word-search-topline {
@@ -104,8 +104,8 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: var(--flow-gap-sm);
+  margin-bottom: var(--flow-gap-md);
 }
 
 .word-search-topline h2 {
@@ -124,16 +124,16 @@
   height: 10px;
   margin: -2px 0 16px;
   overflow: hidden;
-  border: 1px solid var(--color-brand-border);
-  border-radius: 999px;
-  background: var(--color-muted-soft-bg);
+  border: 1px solid var(--component-chip-border);
+  border-radius: var(--radius-pill);
+  background: var(--game-progress-bg);
 }
 
 .word-search-progress-fill {
   width: 0%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--teal), var(--accent));
+  background: var(--game-progress-fill);
   transition: width 260ms ease;
 }
 
@@ -158,16 +158,16 @@
 
 .word-search-list-card.hide-maltese .word-search-list li.is-found .word-search-word::after {
   content: "Found";
-  color: var(--word-search-found-ink, var(--teal));
+  color: var(--word-search-found-ink, var(--game-found-text));
 }
 
 .word-search-board-wrap {
   padding: clamp(10px, 2vw, 18px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
+  border: 1px solid var(--game-cell-border);
+  border-radius: var(--component-card-radius);
   background:
     linear-gradient(135deg, var(--color-brand-soft), var(--color-accent-soft)),
-    var(--color-surface-soft);
+    var(--game-board-bg);
 }
 
 .word-search-board {
@@ -207,10 +207,10 @@
   place-items: center;
   min-width: 0;
   aspect-ratio: 1;
-  border: 1px solid var(--color-border-emphasis);
-  border-radius: 10px;
-  background: var(--color-surface-panel-tint);
-  color: var(--ink);
+  border: 1px solid var(--game-cell-border);
+  border-radius: var(--space-md);
+  background: var(--game-cell-bg);
+  color: var(--game-cell-text);
   font: inherit;
   font-size: clamp(0.78rem, 2.2vw, 1.28rem);
   font-weight: 800;
@@ -226,11 +226,11 @@
 
 .word-search-cell.is-selecting {
   z-index: 2;
-  border-color: var(--color-accent-border-active);
+  border-color: var(--game-selection-border);
   background:
     linear-gradient(135deg, var(--color-white-strong), transparent 46%),
-    color-mix(in srgb, var(--color-accent-soft) 72%, white 28%);
-  color: var(--accent);
+    var(--game-selection-bg);
+  color: var(--game-selection-text);
   transform: scale(1.045);
   box-shadow:
     0 0 0 2px var(--color-accent-border),
@@ -311,14 +311,14 @@
 
 .word-search-cell:hover {
   transform: translateY(-1px);
-  border-color: var(--color-brand-border);
+  border-color: var(--game-cell-hover-border);
   box-shadow: var(--shadow-raised-soft);
 }
 
 .word-search-cell.is-found {
-  border-color: var(--color-brand-border);
-  background: color-mix(in srgb, var(--color-brand-soft) 68%, white 32%);
-  color: var(--teal);
+  border-color: var(--game-found-border);
+  background: var(--game-found-bg);
+  color: var(--game-found-text);
 }
 
 .word-search-cell.found-color-1,
@@ -500,31 +500,31 @@
 }
 
 .word-search-selection-preview {
-  margin-top: 12px;
+  margin-top: var(--flow-gap-sm);
   min-height: 2.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px dashed var(--color-border-dashed);
-  border-radius: var(--radius-card);
-  background: var(--color-surface-soft);
-  color: var(--muted);
+  border-radius: var(--component-card-radius);
+  background: var(--game-panel-bg);
+  color: var(--text-muted);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-align: center;
 }
 
 .word-search-selection-preview.is-active {
-  border-color: var(--color-accent-border);
-  background: var(--color-accent-soft);
-  color: var(--accent);
+  border-color: var(--game-selection-border);
+  background: var(--game-selection-bg);
+  color: var(--game-selection-text);
 }
 
 .word-search-completion {
-  border-color: var(--color-brand-border);
+  border-color: var(--component-chip-border);
   background:
     linear-gradient(135deg, var(--color-brand-soft), var(--color-accent-soft)),
-    var(--paper);
+    var(--surface-paper);
 }
 
 .word-search-completion.is-visible {
@@ -534,27 +534,27 @@
 .word-search-completion-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 16px 0;
+  gap: var(--flow-gap-sm);
+  margin: var(--flow-gap-md) 0;
 }
 
 .word-search-completion-grid div {
   display: grid;
-  gap: 4px;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  background: var(--color-surface-strong);
+  gap: var(--space-2xs);
+  padding: var(--space-lg);
+  border: 1px solid var(--game-list-border);
+  border-radius: var(--component-card-radius);
+  background: var(--surface-card-strong);
 }
 
 .word-search-completion-grid strong {
   font-size: 1.2rem;
-  color: var(--ink);
+  color: var(--text-primary);
   overflow-wrap: anywhere;
 }
 
 .word-search-completion-grid span {
-  color: var(--muted);
+  color: var(--text-muted);
   font-size: 0.88rem;
   font-weight: 700;
 }
@@ -562,7 +562,7 @@
 .word-search-completion-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--space-md);
 }
 
 @keyframes word-search-completion-in {
@@ -608,7 +608,7 @@
 .word-search-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
+  gap: var(--flow-gap-sm);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -620,23 +620,23 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 11px 13px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  background: var(--color-surface-soft);
+  gap: var(--space-md);
+  padding: 11px var(--space-xl);
+  border: 1px solid var(--game-list-border);
+  border-radius: var(--component-card-radius);
+  background: var(--game-list-bg);
   min-width: 0;
   overflow: hidden;
 }
 
 .word-search-list li.is-found {
-  border-color: var(--word-search-found-border, var(--color-brand-border));
-  background: var(--word-search-found-bg, var(--color-brand-soft));
+  border-color: var(--word-search-found-border, var(--game-found-border));
+  background: var(--word-search-found-bg, var(--game-found-bg));
 }
 
 .word-search-list li.is-found .word-search-word {
   text-decoration: line-through;
-  color: var(--word-search-found-ink, var(--teal));
+  color: var(--word-search-found-ink, var(--game-found-text));
 }
 
 .word-search-list li.is-hint {
@@ -655,7 +655,7 @@
 .word-search-translation {
   flex: 1 1 5.5rem;
   min-width: 0;
-  color: var(--muted);
+  color: var(--text-muted);
   font-size: 0.9rem;
   text-align: right;
   overflow-wrap: anywhere;

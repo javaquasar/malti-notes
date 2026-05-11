@@ -2,7 +2,33 @@
   const header = document.querySelector(".site-header");
   if (!header) return;
   const REVIEW_STORAGE_KEY = "malti_review_cards_v2";
+  const THEME_STORAGE_KEY = "malti_site_theme";
+  const themes = [
+    { value: "classic", label: "Classic" },
+    { value: "forest", label: "Forest" }
+  ];
   const desktopReviewMedia = window.matchMedia("(min-width: 981px)");
+
+  const getStoredTheme = () => {
+    try {
+      const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+      return themes.some((theme) => theme.value === stored) ? stored : "classic";
+    } catch (error) {
+      return "classic";
+    }
+  };
+
+  const applyTheme = (theme) => {
+    const safeTheme = themes.some((item) => item.value === theme) ? theme : "classic";
+    document.documentElement.dataset.theme = safeTheme;
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, safeTheme);
+    } catch (error) {
+      // Theme still applies for this session when storage is unavailable.
+    }
+  };
+
+  applyTheme(getStoredTheme());
 
   const currentFile = (() => {
     const pathname = window.location.pathname || "";
@@ -100,11 +126,18 @@
         ${groups.map(groupHtml).join("")}
         ${linkHtml("all_pages.html", "All Pages")}
       </nav>
+      <label class="theme-switcher">
+        <span>Theme</span>
+        <select data-theme-select aria-label="Choose site theme">
+          ${themes.map((theme) => `<option value="${theme.value}">${theme.label}</option>`).join("")}
+        </select>
+      </label>
     </div>
   `;
 
   const toggle = header.querySelector(".site-nav-toggle");
   const panel = header.querySelector(".site-nav-panel");
+  const themeSelect = header.querySelector("[data-theme-select]");
   const detailsList = Array.from(header.querySelectorAll(".nav-group"));
   const menuLinks = Array.from(header.querySelectorAll(".nav-menu a, .site-nav-compact > .nav-link"));
   const closeTimers = new WeakMap();
@@ -134,6 +167,13 @@
       const next = !header.classList.contains("nav-open");
       header.classList.toggle("nav-open", next);
       toggle.setAttribute("aria-expanded", String(next));
+    });
+  }
+
+  if (themeSelect) {
+    themeSelect.value = document.documentElement.dataset.theme || "classic";
+    themeSelect.addEventListener("change", () => {
+      applyTheme(themeSelect.value);
     });
   }
 
