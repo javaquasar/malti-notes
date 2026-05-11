@@ -3,6 +3,251 @@
   "topic": "Food Preferences",
   "groups": [
     {
+      "id": "food-breakfast-lines",
+      "sectionId": "breakfast",
+      "title": "Breakfast",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "Filgħodu nħobb niekol bajda u towst bil-butir.",
+          "english": "In the morning I like to eat an egg and toast with butter."
+        },
+        {
+          "maltese": "Filgħodu nħobb nieħu cereal bil-ħalib.",
+          "english": "In the morning I like to have cereal with milk."
+        },
+        {
+          "maltese": "Filgħodu ma nħobbx niekol.",
+          "english": "In the morning I do not like to eat."
+        },
+        {
+          "maltese": "Filgħodu nieħu kafè u gallettina.",
+          "english": "In the morning I have coffee and a biscuit."
+        }
+      ]
+    },
+    {
+      "id": "food-lunch-lines",
+      "sectionId": "lunch",
+      "title": "Lunch",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "F'nofsinhar inħobb niekol xi laħam u ħaxix.",
+          "english": "At midday I like to eat some meat and vegetables."
+        },
+        {
+          "maltese": "F'nofsinhar inħobb nieħu soppa.",
+          "english": "At midday I like to have soup."
+        },
+        {
+          "maltese": "F'nofsinhar nieħu biċċa ħobż bil-butir u ġobon.",
+          "english": "At midday I have a piece of bread with butter and cheese."
+        }
+      ]
+    },
+    {
+      "id": "food-dinner-lines",
+      "sectionId": "dinner",
+      "title": "Dinner",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "Filgħaxija ma nħobbx niekol.",
+          "english": "In the evening I do not like to eat."
+        },
+        {
+          "maltese": "Filgħaxija nħobb nieħu xi ħaġa ħafifa, bħal soppa jew brodu.",
+          "english": "In the evening I like to have something light, such as soup or broth."
+        },
+        {
+          "maltese": "Filgħaxija nħobb nieħu xi towst.",
+          "english": "In the evening I like to have some toast."
+        },
+        {
+          "maltese": "Filgħaxija nħobb nieħu tiġieġ.",
+          "english": "In the evening I like to have chicken."
+        }
+      ]
+    },
+    {
+      "id": "food-pair-work",
+      "sectionId": "pair-work",
+      "title": "Pair Work Questions",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "Xi tħobb tiekol filgħodu?",
+          "english": "What do you like to eat in the morning?"
+        },
+        {
+          "maltese": "X'ħin tiekol dan l-ikel?",
+          "english": "At what time do you eat this food?"
+        },
+        {
+          "maltese": "Xi tħobb tiekol f'nofsinhar?",
+          "english": "What do you like to eat at midday?"
+        },
+        {
+          "maltese": "Tieħu te jew kafè matul il-ġurnata?",
+          "english": "Do you take tea or coffee during the day?"
+        },
+        {
+          "maltese": "Xi tħobb tiekol filgħaxija?",
+          "english": "What do you like to eat in the evening?"
+        },
+        {
+          "maltese": "X'ħin tiekol l-ikla ta' filgħaxija?",
+          "english": "At what time do you eat the evening meal?"
+        }
+      ]
+    },
+    {
+      "id": "food-work-break-dialogue",
+      "sectionId": "dialogue",
+      "title": "Work break dialogue",
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "numbered": false,
+      "items": [
+        {
+          "maltese": "A: X'qed issajjar?",
+          "english": "A: What are you cooking?"
+        },
+        {
+          "maltese": "B: Qed insaħħan l-ikel ta' nofsinhar.",
+          "english": "B: I am heating my lunch."
+        },
+        {
+          "maltese": "A: Ifuħ!",
+          "english": "A: It smells nice!"
+        },
+        {
+          "maltese": "B: Int se tiekol xi ħaġa?",
+          "english": "B: Are you going to eat something?"
+        },
+        {
+          "maltese": "A: L-ikla t-tajba.",
+          "english": "A: Enjoy your meal."
+        },
+        {
+          "maltese": "B: Lilek ukoll.",
+          "english": "B: Same to you."
+        }
+      ]
+    },
+    {
+      "id": "food-common-expressions",
+      "sectionId": "dialogue",
+      "title": "Common expressions",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "Ifuħ!",
+          "english": "Smells nice!"
+        },
+        {
+          "maltese": "Ħa nersaqlek",
+          "english": "Let me move for you / let me get out of the way"
+        },
+        {
+          "maltese": "Għal hemm!",
+          "english": "See you later!"
+        },
+        {
+          "maltese": "bil-ġuħ",
+          "english": "hungry"
+        },
+        {
+          "maltese": "L-ikla t-tajba",
+          "english": "Enjoy your meal"
+        },
+        {
+          "maltese": "Lilek ukoll",
+          "english": "Same to you"
+        }
+      ]
+    },
+    {
+      "id": "food-verb-sentences",
+      "sectionId": "verb-sentences",
+      "title": "Food Verb Sentences",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "Ilbieraħ kilt żewġ pastizzi.",
+          "english": "Yesterday I ate two pastizzi."
+        },
+        {
+          "maltese": "Inħobb niekol ikel tradizzjonali Malti.",
+          "english": "I like to eat traditional Maltese food."
+        },
+        {
+          "maltese": "Inħobb nieħu birra filgħaxija.",
+          "english": "I like to have beer in the evening."
+        },
+        {
+          "maltese": "Inħobb nixrob tazza nbid ma' biċċa laħam.",
+          "english": "I like to drink a glass of wine with a piece of meat."
+        },
+        {
+          "maltese": "Mal-ħut inħobb nieħu tazza nbid bajda.",
+          "english": "With fish I like to have a glass of white wine."
+        },
+        {
+          "maltese": "Għandi ikla tax-xogħol u se nieklu pizza.",
+          "english": "I have a work meal and we are going to eat pizza."
+        },
+        {
+          "maltese": "Fil-brejk se niekol ftira biż-żejt.",
+          "english": "During the break I am going to eat ftira biż-żejt."
+        }
+      ]
+    },
+    {
+      "id": "food-tea-coffee",
+      "sectionId": "tea-coffee",
+      "title": "Tea and Coffee Expressions",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "maltese": "Xi ħadd irid te jew kafè?",
+          "english": "Does anyone want tea or coffee?"
+        },
+        {
+          "maltese": "Tieħu zokkor mat-te?",
+          "english": "Do you take sugar with tea?"
+        },
+        {
+          "maltese": "Tieħu ħalib mal-kafè?",
+          "english": "Do you take milk with coffee?"
+        },
+        {
+          "maltese": "Tieħu ħafna ħalib mal-kafè?",
+          "english": "Do you take a lot of milk with coffee?"
+        },
+        {
+          "maltese": "Tieħu ftit ħalib mat-te?",
+          "english": "Do you take a little milk with tea?"
+        },
+        {
+          "maltese": "Trid gallettina?",
+          "english": "Do you want a biscuit?"
+        },
+        {
+          "maltese": "Jaħraq! Attent!",
+          "english": "It is hot! Careful!"
+        }
+      ]
+    },
+    {
       "id": "food-practice-bank",
       "sectionId": "practice-bank",
       "title": "Practice Bank",
