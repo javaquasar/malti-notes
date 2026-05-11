@@ -32,7 +32,16 @@ Run the fast structural checks:
 npm run visual:smoke
 ```
 
-This checks key pages, CSS links, theme imports, CSS token declarations, and the word-search CSS split.
+This checks key pages, CSS links, theme imports, CSS token declarations, shared CSS layers, and game CSS modularity.
+
+For style-system changes, also run:
+
+```powershell
+npm run style:lint
+npm run theme:a11y
+```
+
+`style:lint` checks CSS brace balance, verifies that `site.css` imports all shared layers, and prevents direct `hex`, `rgb/rgba`, and `color-mix()` values outside theme files. `theme:a11y` checks key foreground/background contrast pairs for `classic`, `forest`, and `contrast`.
 
 ### Generate Screenshots
 
@@ -48,9 +57,11 @@ visual-regression/screenshots/<timestamp>/
 
 The workflow captures:
 
-- Pages: `index`, `verbs_guide`, `pronouns_possessives`, `picture_description`, `collective_nouns`, `word_search`, `memory_game`, `word_builder_game`, `shopping_clothes`.
+- Pages: `index`, `verbs_guide`, `pronouns_possessives`, `picture_description`, `collective_nouns`, `word_search`, `memory_game`, `word_builder_game`, `shopping_clothes`, `daily_problems`.
 - Themes: `classic`, `forest`, `contrast`.
 - Viewports: desktop and mobile.
+
+Each screenshot gets an isolated browser context, a deterministic `Math.random()` seed, and a cleared `localStorage` state so games and generated puzzles can be compared consistently.
 
 ### How To Use The Screenshots
 

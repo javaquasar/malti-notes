@@ -20,7 +20,8 @@ const pages = (process.env.VISUAL_PAGES || [
   "word_search.html",
   "memory_game.html",
   "word_builder_game.html",
-  "shopping_clothes.html"
+  "shopping_clothes.html",
+  "daily_problems.html"
 ].join(","))
   .split(",")
   .map((page) => page.trim())
@@ -45,6 +46,10 @@ const mimeTypes = {
 
 function safeName(value) {
   return value.replace(/[^a-z0-9._-]+/gi, "_").replace(/^_+|_+$/g, "");
+}
+
+function screenshotSeed(pageName, theme, viewportName) {
+  return `${pageName}:${theme}:${viewportName}`;
 }
 
 function makeServer() {
@@ -90,14 +95,31 @@ async function main() {
 
   try {
     for (const viewport of viewports) {
-      const context = await browser.newContext({
-        viewport: { width: viewport.width, height: viewport.height },
-        deviceScaleFactor: 1
-      });
-
       for (const theme of themes) {
         for (const pageName of pages) {
+          const context = await browser.newContext({
+            viewport: { width: viewport.width, height: viewport.height },
+            deviceScaleFactor: 1
+          });
           const page = await context.newPage();
+          await page.addInitScript(({ themeName, seed }) => {
+            let state = 0;
+
+            for (let index = 0; index < seed.length; index += 1) {
+              state = ((state << 5) - state + seed.charCodeAt(index)) >>> 0;
+            }
+
+            Math.random = () => {
+              state = (1664525 * state + 1013904223) >>> 0;
+              return state / 4294967296;
+            };
+
+            window.localStorage.clear();
+            window.localStorage.setItem("malti_site_theme", themeName);
+          }, {
+            themeName: theme,
+            seed: screenshotSeed(pageName, theme, viewport.name)
+          });
           await page.goto(`http://${host}:${port}/${pageName}`, { waitUntil: "networkidle" });
           await page.evaluate((themeName) => {
             document.documentElement.dataset.theme = themeName;
@@ -111,11 +133,10 @@ async function main() {
           );
           await page.screenshot({ path: screenshotPath, fullPage: true });
           await page.close();
+          await context.close();
           console.log(path.relative(root, screenshotPath));
         }
       }
-
-      await context.close();
     }
   } finally {
     await browser.close();

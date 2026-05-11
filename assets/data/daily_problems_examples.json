@@ -1,7 +1,62 @@
 {
   "groups": [
     {
+      "id": "daily-problems-transport",
+      "title": "Transport problems",
+      "items": [
+        { "maltese": "Il-linja waslet tard.", "english": "The bus arrived late." },
+        { "maltese": "Hemm traffiku ħafna.", "english": "There is a lot of traffic." },
+        { "maltese": "Ma nistax insib taxi.", "english": "I cannot find a taxi." },
+        { "maltese": "Tlift il-karozza fil-parkeġġ.", "english": "I lost the car in the car park." }
+      ]
+    },
+    {
+      "id": "daily-problems-home",
+      "title": "Home problems",
+      "items": [
+        { "maltese": "Tlift iċ-ċwievet.", "english": "I lost the keys." },
+        { "maltese": "Il-bieb ma jinfetaħx.", "english": "The door does not open." },
+        { "maltese": "Id-dawl ma jaħdimx.", "english": "The light does not work." },
+        { "maltese": "Għandi problema bl-ilma.", "english": "I have a problem with the water." }
+      ]
+    },
+    {
+      "id": "daily-problems-stress",
+      "title": "Time and stress",
+      "items": [
+        { "maltese": "Illum m'għandix ħin.", "english": "Today I do not have time." },
+        { "maltese": "Jien għajjien ħafna.", "english": "I am very tired." },
+        { "maltese": "Jien stressjat bix-xogħol.", "english": "I am stressed because of work." },
+        { "maltese": "Għandi bżonn mistrieħ.", "english": "I need rest." }
+      ]
+    },
+    {
+      "id": "daily-problems-dialogue-bus",
+      "title": "Late bus",
+      "numbered": false,
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "items": [
+        { "maltese": "A: Għaliex wasalt tard?", "english": "A: Why did you arrive late?" },
+        { "maltese": "B: Għax il-linja waslet tard.", "english": "B: Because the bus arrived late." },
+        { "maltese": "A: Nifhem. Illum hemm traffiku ħafna.", "english": "A: I understand. Today there is a lot of traffic." }
+      ]
+    },
+    {
+      "id": "daily-problems-dialogue-keys",
+      "title": "Lost keys",
+      "numbered": false,
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "items": [
+        { "maltese": "A: X'hemm?", "english": "A: What is wrong?" },
+        { "maltese": "B: Tlift iċ-ċwievet.", "english": "B: I lost the keys." },
+        { "maltese": "A: Tista' tfittex fil-borża?", "english": "A: Can you look in the bag?" }
+      ]
+    },
+    {
       "id": "daily-problems-phrases",
+      "title": "Thematic phrases",
       "items": [
         { "maltese": "Għandi problema.", "english": "I have a problem." },
         { "maltese": "Għandi problema żgħira.", "english": "I have a small problem." },

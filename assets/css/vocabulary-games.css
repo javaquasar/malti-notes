@@ -93,17 +93,17 @@
 }
 
 .memory-card-maltese {
-  --memory-kind-bg: color-mix(in srgb, var(--color-brand-soft) 64%, var(--color-white) 36%);
-  --memory-kind-border: color-mix(in srgb, var(--color-brand) 38%, var(--game-cell-border) 62%);
+  --memory-kind-bg: var(--game-memory-maltese-bg);
+  --memory-kind-border: var(--game-memory-maltese-border);
   --memory-kind-text: var(--text-brand);
-  --memory-kind-hidden-bg: color-mix(in srgb, var(--color-brand-soft) 46%, var(--surface-command) 54%);
+  --memory-kind-hidden-bg: var(--game-memory-maltese-hidden-bg);
 }
 
 .memory-card-english {
-  --memory-kind-bg: color-mix(in srgb, var(--color-accent-soft) 66%, var(--color-white) 34%);
-  --memory-kind-border: color-mix(in srgb, var(--color-accent) 34%, var(--game-cell-border) 66%);
+  --memory-kind-bg: var(--game-memory-english-bg);
+  --memory-kind-border: var(--game-memory-english-border);
   --memory-kind-text: var(--text-accent);
-  --memory-kind-hidden-bg: color-mix(in srgb, var(--color-accent-soft) 48%, var(--surface-command) 52%);
+  --memory-kind-hidden-bg: var(--game-memory-english-hidden-bg);
 }
 
 .memory-card:not(.is-flipped):not(.is-matched) {
@@ -213,7 +213,7 @@
 .builder-answer-tile.is-landing {
   border-style: solid;
   border-color: var(--game-selection-border);
-  background: color-mix(in srgb, var(--game-selection-bg) 72%, transparent);
+  background: var(--game-builder-answer-landing-bg);
 }
 
 .builder-letter-tile:disabled {

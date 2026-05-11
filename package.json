@@ -7,7 +7,9 @@
     "visual:screenshots": "node ./scripts/visual_screenshots.js",
     "visual:diff": "node ./scripts/visual_diff.js",
     "visual:baseline": "node ./scripts/visual_baseline.js",
-    "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline"
+    "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline",
+    "theme:a11y": "node ./scripts/theme_accessibility_check.js",
+    "style:lint": "node ./scripts/style_lint.js"
   },
   "repository": {
     "type": "git",

@@ -11,14 +11,29 @@ const keyPages = [
   "word_search.html",
   "memory_game.html",
   "word_builder_game.html",
-  "shopping_clothes.html"
+  "shopping_clothes.html",
+  "daily_problems.html"
 ];
+
+function listCssFiles(relDir) {
+  const absDir = path.join(root, relDir);
+
+  if (!fs.existsSync(absDir)) {
+    return [];
+  }
+
+  return fs.readdirSync(absDir)
+    .filter((file) => file.endsWith(".css"))
+    .sort()
+    .map((file) => path.join(relDir, file).replace(/\\/g, "/"));
+}
 
 const cssFiles = [
   "assets/css/theme.css",
   "assets/css/themes/forest.css",
   "assets/css/themes/contrast.css",
   "assets/css/site.css",
+  ...listCssFiles("assets/css/site"),
   "assets/css/pages.css",
   "assets/css/topic-picker.css",
   "assets/css/word-search.css",

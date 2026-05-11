@@ -208,6 +208,13 @@
   --game-found-bg: color-mix(in srgb, var(--color-brand-soft) 68%, var(--color-white) 32%);
   --game-found-border: var(--border-brand);
   --game-found-text: var(--text-brand);
+  --game-memory-maltese-bg: color-mix(in srgb, var(--color-brand-soft) 64%, var(--color-white) 36%);
+  --game-memory-maltese-border: color-mix(in srgb, var(--color-brand) 38%, var(--game-cell-border) 62%);
+  --game-memory-maltese-hidden-bg: color-mix(in srgb, var(--color-brand-soft) 46%, var(--surface-command) 54%);
+  --game-memory-english-bg: color-mix(in srgb, var(--color-accent-soft) 66%, var(--color-white) 34%);
+  --game-memory-english-border: color-mix(in srgb, var(--color-accent) 34%, var(--game-cell-border) 66%);
+  --game-memory-english-hidden-bg: color-mix(in srgb, var(--color-accent-soft) 48%, var(--surface-command) 52%);
+  --game-builder-answer-landing-bg: color-mix(in srgb, var(--game-selection-bg) 72%, transparent);
   --game-list-bg: var(--surface-card);
   --game-list-border: var(--border-default);
   --game-progress-bg: var(--color-muted-soft-bg);

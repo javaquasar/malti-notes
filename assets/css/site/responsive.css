@@ -1,0 +1,125 @@
+@media (max-width: 980px) {
+  .layout,
+  .grid,
+  .hero-body,
+  .grid-2,
+  .grid-3,
+  .grid-auto,
+  .grid-split,
+  .layout-2-sidebar,
+  .dialogue-grid,
+  .wrong-right-grid,
+  .roleplay-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    top: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .site-header {
+    padding: 12px 14px;
+  }
+
+  .card,
+  .content-card,
+  .sidebar {
+    padding: 18px;
+  }
+
+  .site-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-header.nav-managed {
+    align-items: flex-start;
+  }
+
+  .site-nav-panel {
+    width: 100%;
+    display: none;
+    padding-top: var(--space-xs);
+  }
+
+  .site-header.nav-open .site-nav-panel {
+    display: block;
+  }
+
+  .site-nav-compact {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-md);
+  }
+
+  .theme-switcher {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: var(--space-md);
+  }
+
+  .site-nav-compact .nav-link,
+  .site-nav-compact summary {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-group {
+    width: 100%;
+  }
+
+  .nav-menu {
+    position: static;
+    min-width: 0;
+    margin-top: 8px;
+    box-shadow: none;
+    background: var(--color-surface-panel-muted);
+  }
+
+  .verb-lookup-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .verb-table-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verb-meta-row {
+    grid-template-columns: 92px minmax(0, 1fr);
+  }
+
+  .review-fab {
+    left: auto;
+    right: calc(env(safe-area-inset-right) + 4px);
+    bottom: max(50px, calc(env(safe-area-inset-bottom) + 12px));
+    width: 45px;
+    max-width: 45px;
+    padding: 10px 6px;
+    gap: 4px;
+    font-size: 0.92rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-fab__label-full,
+  .review-fab__count-full {
+    display: none;
+  }
+
+  .review-fab__label-short,
+  .review-fab__count-short {
+    display: inline;
+  }
+
+  .review-fab__count {
+    padding: 3px 6px;
+    min-width: 0;
+  }
+}
+
