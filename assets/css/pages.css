@@ -11,6 +11,12 @@
   margin-top: var(--flow-gap-lg);
 }
 
+.grid-auto + .toolbar-row,
+.grid-2 + .toolbar-row,
+.grid-3 + .toolbar-row {
+  margin-top: var(--flow-gap-lg);
+}
+
 .comparison-invariant-box {
   margin-top: var(--flow-gap-lg);
 }

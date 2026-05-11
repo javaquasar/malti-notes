@@ -4,7 +4,10 @@
   "description": "Static Maltese study notes and review pages.",
   "scripts": {
     "visual:smoke": "node ./scripts/visual_smoke_check.js",
-    "visual:screenshots": "node ./scripts/visual_screenshots.js"
+    "visual:screenshots": "node ./scripts/visual_screenshots.js",
+    "visual:diff": "node ./scripts/visual_diff.js",
+    "visual:baseline": "node ./scripts/visual_baseline.js",
+    "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline"
   },
   "repository": {
     "type": "git",
@@ -15,6 +18,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "playwright": "^1.59.1"
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.59.1",
+    "pngjs": "^7.0.0"
   }
 }
