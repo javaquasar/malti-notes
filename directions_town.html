@@ -109,18 +109,20 @@
             <section class="card" id="wrong">
                 <span class="tag">Review</span>
                 <h2>Wrong vs Right</h2>
-                <div class="wrong-right-grid">
-                    <div class="wide-box">
+                <div class="grammar-contrast-grid">
+                    <div class="grammar-contrast-card grammar-contrast-card--wrong">
                         <h3>Wrong</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Mur fuq ix-xellug dritt.</code></span><span class="en">Mixed order and unclear direction.</span></div>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--wrong">
+                            <span class="wrong">Wrong:</span> <code>Mur fuq ix-xellug dritt.</code>
                         </div>
+                        <p class="mini">The order is mixed and the direction is unclear.</p>
                     </div>
-                    <div class="wide-box">
+                    <div class="grammar-contrast-card grammar-contrast-card--right">
                         <h3>Right</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Mur dritt u mbagħad iddur fuq ix-xellug.</code></span><span class="en">Go straight on and then turn left.</span></div>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--right">
+                            <span class="right">Better:</span> <code>Mur dritt u mbagħad iddur fuq ix-xellug.</code>
                         </div>
+                        <p class="mini">Give one clear movement first, then the next one.</p>
                     </div>
                 </div>
             </section>
@@ -161,7 +163,10 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/directions_town_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "phrase-card"
+        cardClass: "phrase-card",
+        sourcePage: "directions_town.html",
+        defaultTopic: "Directions and Places in Town",
+        reviewPrefix: "directions"
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
