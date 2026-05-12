@@ -444,6 +444,24 @@ body.compact-animals .animal-gallery {
   margin-bottom: var(--flow-gap-sm);
 }
 
+.modals-open-group {
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modals-open-group > [data-example-group] {
+  min-width: 0;
+}
+
+.modals-open-group > [data-example-group].grid-2,
+.modals-open-group > [data-example-group].grid-auto,
+.modals-open-group > [data-example-group].grid-3 {
+  align-items: start;
+}
+
 .shopping-dialogue-stack {
   display: grid;
   gap: var(--flow-gap-lg);
