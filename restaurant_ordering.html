@@ -48,7 +48,8 @@
             <ul>
                 <li><a href="#vocab">Restaurant Vocabulary</a></li>
                 <li><a href="#ordering">Ordering Patterns</a></li>
-                <li><a href="#reservation">Reservation and Bill</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#bill">Bill</a></li>
                 <li><a href="#dialogues">Mini-dialogues</a></li>
                 <li><a href="#roleplay">Role Play</a></li>
                 <li><a href="#wrong">Wrong vs Right</a></li>
@@ -73,54 +74,32 @@
             <section class="card" id="ordering">
                 <span class="tag">Ordering</span>
                 <h2>Ordering Patterns</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Nixtieq pizza, jekk jogħġbok.</span><span class="en">I would like a pizza, please.</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu ilma?</span><span class="en">Can I have water?</span></div>
-                    <div class="example-line"><span class="mt">X'tixtieq tiekol?</span><span class="en">What would you like to eat?</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq soppa u insalata.</span><span class="en">I would like soup and salad.</span></div>
-                </div>
+                <div data-example-group="restaurant-ordering-patterns"></div>
             </section>
 
             <section class="card" id="reservation">
                 <span class="tag">Service</span>
-                <h2>Reservation and Bill</h2>
-<div class="grid-2">
-                    <div class="wide-box">
-                        <h3>Reservation</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">Nixtieq nagħmel riżervazzjoni.</span><span class="en">I would like to make a reservation.</span></div>
-                            <div class="example-line"><span class="mt">Għal tnejn, jekk jogħġbok.</span><span class="en">For two, please.</span></div>
-                        </div>
-                    </div>
-                    <div class="wide-box">
-                        <h3>Bill</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">Il-kont, jekk jogħġbok.</span><span class="en">The bill, please.</span></div>
-                            <div class="example-line"><span class="mt">Nista' nħallas bil-karta?</span><span class="en">Can I pay by card?</span></div>
-                        </div>
-                    </div>
-                </div>
+                <h2>Reservation</h2>
+                <div data-example-group="restaurant-reservation"></div>
+            </section>
+
+            <section class="card" id="bill">
+                <span class="tag">Service</span>
+                <h2>Bill</h2>
+                <div data-example-group="restaurant-bill"></div>
             </section>
 
             <section class="card" id="dialogues">
                 <span class="tag">Dialogues</span>
                 <h2>Mini-dialogues</h2>
-                <div class="dialogue-grid">
-                    <div class="wide-box">
+                <div class="example-bank-stack">
+                    <div class="example-bank-section">
                         <h3>Ordering food</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">A: Il-menu, jekk jogħġbok.</span><span class="en">A: The menu, please.</span></div>
-                            <div class="example-line"><span class="mt">B: Żgur. X'tixtieq tiekol?</span><span class="en">B: Of course. What would you like to eat?</span></div>
-                            <div class="example-line"><span class="mt">A: Nixtieq pizza u ilma.</span><span class="en">A: I would like pizza and water.</span></div>
-                        </div>
+                        <div data-example-group="restaurant-dialogue-order"></div>
                     </div>
-                    <div class="wide-box">
+                    <div class="example-bank-section">
                         <h3>Asking for the bill</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt">A: Il-kont, jekk jogħġbok.</span><span class="en">A: The bill, please.</span></div>
-                            <div class="example-line"><span class="mt">B: Żgur. Trid tħallas bil-karta jew bi flus kontanti?</span><span class="en">B: Of course. Would you like to pay by card or cash?</span></div>
-                            <div class="example-line"><span class="mt">A: Bil-karta, jekk jogħġbok.</span><span class="en">A: By card, please.</span></div>
-                        </div>
+                        <div data-example-group="restaurant-dialogue-bill"></div>
                     </div>
                 </div>
             </section>
@@ -143,18 +122,20 @@
             <section class="card" id="wrong">
                 <span class="tag">Review</span>
                 <h2>Wrong vs Right</h2>
-                <div class="wrong-right-grid">
-                    <div class="wide-box">
+                <div class="grammar-contrast-grid">
+                    <div class="grammar-contrast-card grammar-contrast-card--wrong">
                         <h3>Wrong</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Jien tixtieq pizza.</code></span><span class="en">Wrong person and verb form.</span></div>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--wrong">
+                            <span class="wrong">Wrong:</span> <code>Jien tixtieq pizza.</code>
                         </div>
+                        <p class="mini">Wrong person and verb form. After <code>jien</code>, the verb should be <code>nixtieq</code>.</p>
                     </div>
-                    <div class="wide-box">
+                    <div class="grammar-contrast-card grammar-contrast-card--right">
                         <h3>Right</h3>
-                        <div class="example-bank">
-                            <div class="example-line"><span class="mt"><code>Jien nixtieq pizza.</code></span><span class="en">I would like pizza.</span></div>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--right">
+                            <span class="right">Better:</span> <code>Jien nixtieq pizza.</code>
                         </div>
+                        <p class="mini">I would like pizza.</p>
                     </div>
                 </div>
             </section>
@@ -162,71 +143,13 @@
             <section class="card" id="survival">
                 <span class="tag">Survival</span>
                 <h2>Survival Phrases</h2>
-                <div class="example-bank">
-                    <div class="example-line"><span class="mt">Mejda għal tnejn, jekk jogħġbok.</span><span class="en">A table for two, please.</span></div>
-                    <div class="example-line"><span class="mt">Għandi allerġija.</span><span class="en">I have an allergy.</span></div>
-                    <div class="example-line"><span class="mt">Dan fih laħam?</span><span class="en">Does this contain meat?</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu ilma ieħor?</span><span class="en">Can I have another water?</span></div>
-                </div>
+                <div data-example-group="restaurant-survival"></div>
             </section>
 
             <section class="card" id="phrases">
                 <span class="tag">Phrases</span>
                 <h2>Thematic Phrases</h2>
-                <div data-example-group="restaurant-phrases">
-                    <div class="example-line"><span class="mt">Il-menu, jekk jogħġbok.</span><span class="en">The menu, please.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq mejda għal tnejn.</span><span class="en">I would like a table for two.</span></div>
-                    <div class="example-line"><span class="mt">Għandi riżervazzjoni.</span><span class="en">I have a reservation.</span></div>
-                    <div class="example-line"><span class="mt">X'tixtieq tiekol?</span><span class="en">What would you like to eat?</span></div>
-                    <div class="example-line"><span class="mt">X'tixtieq tixrob?</span><span class="en">What would you like to drink?</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq pizza.</span><span class="en">I would like pizza.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq soppa.</span><span class="en">I would like soup.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq insalata.</span><span class="en">I would like a salad.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq platt tal-ħut.</span><span class="en">I would like a fish dish.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq tiġieġ bil-patata.</span><span class="en">I would like chicken with potatoes.</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu ilma?</span><span class="en">Can I have water?</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu kafè?</span><span class="en">Can I have coffee?</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu te?</span><span class="en">Can I have tea?</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu meraq?</span><span class="en">Can I have juice?</span></div>
-                    <div class="example-line"><span class="mt">Nista' nieħu birra?</span><span class="en">Can I have a beer?</span></div>
-                    <div class="example-line"><span class="mt">Jekk jogħġbok, ġib ilma.</span><span class="en">Please bring water.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq xi ħaġa ħafifa.</span><span class="en">I would like something light.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq deżerta wkoll.</span><span class="en">I would also like dessert.</span></div>
-                    <div class="example-line"><span class="mt">X'hemm fil-menu tal-lum?</span><span class="en">What is on today’s menu?</span></div>
-                    <div class="example-line"><span class="mt">X'inhu l-platt tal-lum?</span><span class="en">What is the dish of the day?</span></div>
-                    <div class="example-line"><span class="mt">Dan fih laħam?</span><span class="en">Does this contain meat?</span></div>
-                    <div class="example-line"><span class="mt">Dan fih ġobon?</span><span class="en">Does this contain cheese?</span></div>
-                    <div class="example-line"><span class="mt">Dan huwa pikkanti?</span><span class="en">Is this spicy?</span></div>
-                    <div class="example-line"><span class="mt">Ma niekolx laħam.</span><span class="en">I do not eat meat.</span></div>
-                    <div class="example-line"><span class="mt">Ma nixrobx alkoħol.</span><span class="en">I do not drink alcohol.</span></div>
-                    <div class="example-line"><span class="mt">Għandi allerġija.</span><span class="en">I have an allergy.</span></div>
-                    <div class="example-line"><span class="mt">Jekk jogħġbok, mingħajr ġobon.</span><span class="en">Please, without cheese.</span></div>
-                    <div class="example-line"><span class="mt">Jekk jogħġbok, mingħajr zokkor.</span><span class="en">Please, without sugar.</span></div>
-                    <div class="example-line"><span class="mt">Tixtieq deżerta?</span><span class="en">Would you like dessert?</span></div>
-                    <div class="example-line"><span class="mt">Le, grazzi. Jien mimli.</span><span class="en">No, thank you. I am full.</span></div>
-                    <div class="example-line"><span class="mt">Iva, nixtieq kejk.</span><span class="en">Yes, I would like cake.</span></div>
-                    <div class="example-line"><span class="mt">Kemm jiswa dan il-platt?</span><span class="en">How much does this dish cost?</span></div>
-                    <div class="example-line"><span class="mt">Dan jiswa għaxar ewro.</span><span class="en">This costs ten euro.</span></div>
-                    <div class="example-line"><span class="mt">Il-kont, jekk jogħġbok.</span><span class="en">The bill, please.</span></div>
-                    <div class="example-line"><span class="mt">Nista' nħallas bil-karta?</span><span class="en">Can I pay by card?</span></div>
-                    <div class="example-line"><span class="mt">Nista' nħallas bi flus kontanti?</span><span class="en">Can I pay in cash?</span></div>
-                    <div class="example-line"><span class="mt">Kollox kien tajjeb ħafna.</span><span class="en">Everything was very good.</span></div>
-                    <div class="example-line"><span class="mt">L-ikel kien tajjeb.</span><span class="en">The food was good.</span></div>
-                    <div class="example-line"><span class="mt">Ix-xorb kien frisk.</span><span class="en">The drink was cold.</span></div>
-                    <div class="example-line"><span class="mt">Is-servizz kien tajjeb.</span><span class="en">The service was good.</span></div>
-                    <div class="example-line"><span class="mt">Grazzi ħafna.</span><span class="en">Thank you very much.</span></div>
-                    <div class="example-line"><span class="mt">L-ikla t-tajba.</span><span class="en">Enjoy your meal.</span></div>
-                    <div class="example-line"><span class="mt">Lilek ukoll.</span><span class="en">You too.</span></div>
-                    <div class="example-line"><span class="mt">Jiena bil-ġuħ.</span><span class="en">I am hungry.</span></div>
-                    <div class="example-line"><span class="mt">Jiena bil-għatx.</span><span class="en">I am thirsty.</span></div>
-                    <div class="example-line"><span class="mt">Nixtieq nirriżerva għal erbgħa.</span><span class="en">I would like to reserve for four.</span></div>
-                    <div class="example-line"><span class="mt">Għas-sebgħa ta' filgħaxija, jekk jogħġbok.</span><span class="en">For seven in the evening, please.</span></div>
-                    <div class="example-line"><span class="mt">Aħna lesti biex nordnaw.</span><span class="en">We are ready to order.</span></div>
-                    <div class="example-line"><span class="mt">Trid xi ħaġa oħra?</span><span class="en">Would you like anything else?</span></div>
-                    <div class="example-line"><span class="mt">Le, grazzi. Dak kollox.</span><span class="en">No, thank you. That is all.</span></div>
-                    <div class="example-line"><span class="mt">Tista' ġġib mgħarfa oħra?</span><span class="en">Can you bring another spoon?</span></div>
-                    <div class="example-line"><span class="mt">Tista' ġġib ftit ilma ieħor?</span><span class="en">Can you bring a bit more water?</span></div>
-                </div>
+                <div data-example-group="restaurant-phrases"></div>
             </section>
 
             <section class="card" id="related">
@@ -259,7 +182,10 @@
     window.renderExampleBanksFromData({
         dataUrl: "./assets/data/restaurant_ordering_examples.json",
         groupAttribute: "data-example-group",
-        cardClass: "phrase-card"
+        cardClass: "phrase-card",
+        sourcePage: "restaurant_ordering.html",
+        reviewPrefix: "restaurant",
+        defaultTopic: "Restaurant"
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>

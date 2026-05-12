@@ -1,60 +1,331 @@
 {
   "groups": [
     {
-      "id": "restaurant-phrases",
+      "id": "restaurant-ordering-patterns",
+      "title": "Ordering Patterns",
       "items": [
-        { "maltese": "Il-menu, jekk jogħġbok.", "english": "The menu, please." },
-        { "maltese": "Nixtieq mejda għal tnejn.", "english": "I would like a table for two." },
-        { "maltese": "Għandi riżervazzjoni.", "english": "I have a reservation." },
-        { "maltese": "X'tixtieq tiekol?", "english": "What would you like to eat?" },
-        { "maltese": "X'tixtieq tixrob?", "english": "What would you like to drink?" },
-        { "maltese": "Nixtieq pizza.", "english": "I would like pizza." },
-        { "maltese": "Nixtieq soppa.", "english": "I would like soup." },
-        { "maltese": "Nixtieq insalata.", "english": "I would like a salad." },
-        { "maltese": "Nixtieq platt tal-ħut.", "english": "I would like a fish dish." },
-        { "maltese": "Nixtieq tiġieġ bil-patata.", "english": "I would like chicken with potatoes." },
-        { "maltese": "Nista' nieħu ilma?", "english": "Can I have water?" },
-        { "maltese": "Nista' nieħu kafè?", "english": "Can I have coffee?" },
-        { "maltese": "Nista' nieħu te?", "english": "Can I have tea?" },
-        { "maltese": "Nista' nieħu meraq?", "english": "Can I have juice?" },
-        { "maltese": "Nista' nieħu birra?", "english": "Can I have a beer?" },
-        { "maltese": "Jekk jogħġbok, ġib ilma.", "english": "Please bring water." },
-        { "maltese": "Nixtieq xi ħaġa ħafifa.", "english": "I would like something light." },
-        { "maltese": "Nixtieq deżerta wkoll.", "english": "I would also like dessert." },
-        { "maltese": "X'hemm fil-menu tal-lum?", "english": "What is on today's menu?" },
-        { "maltese": "X'inhu l-platt tal-lum?", "english": "What is the dish of the day?" },
-        { "maltese": "Dan fih laħam?", "english": "Does this contain meat?" },
-        { "maltese": "Dan fih ġobon?", "english": "Does this contain cheese?" },
-        { "maltese": "Dan huwa pikkanti?", "english": "Is this spicy?" },
-        { "maltese": "Ma niekolx laħam.", "english": "I do not eat meat." },
-        { "maltese": "Ma nixrobx alkoħol.", "english": "I do not drink alcohol." },
-        { "maltese": "Għandi allerġija.", "english": "I have an allergy." },
-        { "maltese": "Jekk jogħġbok, mingħajr ġobon.", "english": "Please, without cheese." },
-        { "maltese": "Jekk jogħġbok, mingħajr zokkor.", "english": "Please, without sugar." },
-        { "maltese": "Tixtieq deżerta?", "english": "Would you like dessert?" },
-        { "maltese": "Le, grazzi. Jien mimli.", "english": "No, thank you. I am full." },
-        { "maltese": "Iva, nixtieq kejk.", "english": "Yes, I would like cake." },
-        { "maltese": "Kemm jiswa dan il-platt?", "english": "How much does this dish cost?" },
-        { "maltese": "Dan jiswa għaxar ewro.", "english": "This costs ten euro." },
-        { "maltese": "Il-kont, jekk jogħġbok.", "english": "The bill, please." },
-        { "maltese": "Nista' nħallas bil-karta?", "english": "Can I pay by card?" },
-        { "maltese": "Nista' nħallas bi flus kontanti?", "english": "Can I pay in cash?" },
-        { "maltese": "Kollox kien tajjeb ħafna.", "english": "Everything was very good." },
-        { "maltese": "L-ikel kien tajjeb.", "english": "The food was good." },
-        { "maltese": "Ix-xorb kien frisk.", "english": "The drink was cold." },
-        { "maltese": "Is-servizz kien tajjeb.", "english": "The service was good." },
-        { "maltese": "Grazzi ħafna.", "english": "Thank you very much." },
-        { "maltese": "L-ikla t-tajba.", "english": "Enjoy your meal." },
-        { "maltese": "Lilek ukoll.", "english": "You too." },
-        { "maltese": "Jiena bil-ġuħ.", "english": "I am hungry." },
-        { "maltese": "Jiena bil-għatx.", "english": "I am thirsty." },
-        { "maltese": "Nixtieq nirriżerva għal erbgħa.", "english": "I would like to reserve for four." },
-        { "maltese": "Għas-sebgħa ta' filgħaxija, jekk jogħġbok.", "english": "For seven in the evening, please." },
-        { "maltese": "Aħna lesti biex nordnaw.", "english": "We are ready to order." },
-        { "maltese": "Trid xi ħaġa oħra?", "english": "Would you like anything else?" },
-        { "maltese": "Le, grazzi. Dak kollox.", "english": "No, thank you. That is all." },
-        { "maltese": "Tista' ġġib mgħarfa oħra?", "english": "Can you bring another spoon?" },
-        { "maltese": "Tista' ġġib ftit ilma ieħor?", "english": "Can you bring a bit more water?" }
+        {
+          "maltese": "Nixtieq pizza, jekk jogħġbok.",
+          "english": "I would like a pizza, please."
+        },
+        {
+          "maltese": "Nista' nieħu ilma?",
+          "english": "Can I have water?"
+        },
+        {
+          "maltese": "X'tixtieq tiekol?",
+          "english": "What would you like to eat?"
+        },
+        {
+          "maltese": "Nixtieq soppa u insalata.",
+          "english": "I would like soup and salad."
+        }
+      ]
+    },
+    {
+      "id": "restaurant-reservation",
+      "title": "Reservation",
+      "items": [
+        {
+          "maltese": "Nixtieq nagħmel riżervazzjoni.",
+          "english": "I would like to make a reservation."
+        },
+        {
+          "maltese": "Għal tnejn, jekk jogħġbok.",
+          "english": "For two, please."
+        }
+      ]
+    },
+    {
+      "id": "restaurant-bill",
+      "title": "Bill",
+      "items": [
+        {
+          "maltese": "Il-kont, jekk jogħġbok.",
+          "english": "The bill, please."
+        },
+        {
+          "maltese": "Nista' nħallas bil-karta?",
+          "english": "Can I pay by card?"
+        }
+      ]
+    },
+    {
+      "id": "restaurant-dialogue-order",
+      "title": "Ordering food",
+      "numbered": false,
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "items": [
+        {
+          "maltese": "A: Il-menu, jekk jogħġbok.",
+          "english": "A: The menu, please."
+        },
+        {
+          "maltese": "B: Żgur. X'tixtieq tiekol?",
+          "english": "B: Of course. What would you like to eat?"
+        },
+        {
+          "maltese": "A: Nixtieq pizza u ilma.",
+          "english": "A: I would like pizza and water."
+        }
+      ]
+    },
+    {
+      "id": "restaurant-dialogue-bill",
+      "title": "Asking for the bill",
+      "numbered": false,
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "phrase-card",
+      "items": [
+        {
+          "maltese": "A: Il-kont, jekk jogħġbok.",
+          "english": "A: The bill, please."
+        },
+        {
+          "maltese": "B: Żgur. Trid tħallas bil-karta jew bi flus kontanti?",
+          "english": "B: Of course. Would you like to pay by card or cash?"
+        },
+        {
+          "maltese": "A: Bil-karta, jekk jogħġbok.",
+          "english": "A: By card, please."
+        }
+      ]
+    },
+    {
+      "id": "restaurant-survival",
+      "title": "Survival Phrases",
+      "items": [
+        {
+          "maltese": "Mejda għal tnejn, jekk jogħġbok.",
+          "english": "A table for two, please."
+        },
+        {
+          "maltese": "Għandi allerġija.",
+          "english": "I have an allergy."
+        },
+        {
+          "maltese": "Dan fih laħam?",
+          "english": "Does this contain meat?"
+        },
+        {
+          "maltese": "Nista' nieħu ilma ieħor?",
+          "english": "Can I have another water?"
+        }
+      ]
+    },
+    {
+      "id": "restaurant-phrases",
+      "title": "Thematic Phrases",
+      "items": [
+        {
+          "maltese": "Il-menu, jekk jogħġbok.",
+          "english": "The menu, please."
+        },
+        {
+          "maltese": "Nixtieq mejda għal tnejn.",
+          "english": "I would like a table for two."
+        },
+        {
+          "maltese": "Għandi riżervazzjoni.",
+          "english": "I have a reservation."
+        },
+        {
+          "maltese": "X'tixtieq tiekol?",
+          "english": "What would you like to eat?"
+        },
+        {
+          "maltese": "X'tixtieq tixrob?",
+          "english": "What would you like to drink?"
+        },
+        {
+          "maltese": "Nixtieq pizza.",
+          "english": "I would like pizza."
+        },
+        {
+          "maltese": "Nixtieq soppa.",
+          "english": "I would like soup."
+        },
+        {
+          "maltese": "Nixtieq insalata.",
+          "english": "I would like a salad."
+        },
+        {
+          "maltese": "Nixtieq platt tal-ħut.",
+          "english": "I would like a fish dish."
+        },
+        {
+          "maltese": "Nixtieq tiġieġ bil-patata.",
+          "english": "I would like chicken with potatoes."
+        },
+        {
+          "maltese": "Nista' nieħu ilma?",
+          "english": "Can I have water?"
+        },
+        {
+          "maltese": "Nista' nieħu kafè?",
+          "english": "Can I have coffee?"
+        },
+        {
+          "maltese": "Nista' nieħu te?",
+          "english": "Can I have tea?"
+        },
+        {
+          "maltese": "Nista' nieħu meraq?",
+          "english": "Can I have juice?"
+        },
+        {
+          "maltese": "Nista' nieħu birra?",
+          "english": "Can I have a beer?"
+        },
+        {
+          "maltese": "Jekk jogħġbok, ġib ilma.",
+          "english": "Please bring water."
+        },
+        {
+          "maltese": "Nixtieq xi ħaġa ħafifa.",
+          "english": "I would like something light."
+        },
+        {
+          "maltese": "Nixtieq deżerta wkoll.",
+          "english": "I would also like dessert."
+        },
+        {
+          "maltese": "X'hemm fil-menu tal-lum?",
+          "english": "What is on today’s menu?"
+        },
+        {
+          "maltese": "X'inhu l-platt tal-lum?",
+          "english": "What is the dish of the day?"
+        },
+        {
+          "maltese": "Dan fih laħam?",
+          "english": "Does this contain meat?"
+        },
+        {
+          "maltese": "Dan fih ġobon?",
+          "english": "Does this contain cheese?"
+        },
+        {
+          "maltese": "Dan huwa pikkanti?",
+          "english": "Is this spicy?"
+        },
+        {
+          "maltese": "Ma niekolx laħam.",
+          "english": "I do not eat meat."
+        },
+        {
+          "maltese": "Ma nixrobx alkoħol.",
+          "english": "I do not drink alcohol."
+        },
+        {
+          "maltese": "Għandi allerġija.",
+          "english": "I have an allergy."
+        },
+        {
+          "maltese": "Jekk jogħġbok, mingħajr ġobon.",
+          "english": "Please, without cheese."
+        },
+        {
+          "maltese": "Jekk jogħġbok, mingħajr zokkor.",
+          "english": "Please, without sugar."
+        },
+        {
+          "maltese": "Tixtieq deżerta?",
+          "english": "Would you like dessert?"
+        },
+        {
+          "maltese": "Le, grazzi. Jien mimli.",
+          "english": "No, thank you. I am full."
+        },
+        {
+          "maltese": "Iva, nixtieq kejk.",
+          "english": "Yes, I would like cake."
+        },
+        {
+          "maltese": "Kemm jiswa dan il-platt?",
+          "english": "How much does this dish cost?"
+        },
+        {
+          "maltese": "Dan jiswa għaxar ewro.",
+          "english": "This costs ten euro."
+        },
+        {
+          "maltese": "Il-kont, jekk jogħġbok.",
+          "english": "The bill, please."
+        },
+        {
+          "maltese": "Nista' nħallas bil-karta?",
+          "english": "Can I pay by card?"
+        },
+        {
+          "maltese": "Nista' nħallas bi flus kontanti?",
+          "english": "Can I pay in cash?"
+        },
+        {
+          "maltese": "Kollox kien tajjeb ħafna.",
+          "english": "Everything was very good."
+        },
+        {
+          "maltese": "L-ikel kien tajjeb.",
+          "english": "The food was good."
+        },
+        {
+          "maltese": "Ix-xorb kien frisk.",
+          "english": "The drink was cold."
+        },
+        {
+          "maltese": "Is-servizz kien tajjeb.",
+          "english": "The service was good."
+        },
+        {
+          "maltese": "Grazzi ħafna.",
+          "english": "Thank you very much."
+        },
+        {
+          "maltese": "L-ikla t-tajba.",
+          "english": "Enjoy your meal."
+        },
+        {
+          "maltese": "Lilek ukoll.",
+          "english": "You too."
+        },
+        {
+          "maltese": "Jiena bil-ġuħ.",
+          "english": "I am hungry."
+        },
+        {
+          "maltese": "Jiena bil-għatx.",
+          "english": "I am thirsty."
+        },
+        {
+          "maltese": "Nixtieq nirriżerva għal erbgħa.",
+          "english": "I would like to reserve for four."
+        },
+        {
+          "maltese": "Għas-sebgħa ta' filgħaxija, jekk jogħġbok.",
+          "english": "For seven in the evening, please."
+        },
+        {
+          "maltese": "Aħna lesti biex nordnaw.",
+          "english": "We are ready to order."
+        },
+        {
+          "maltese": "Trid xi ħaġa oħra?",
+          "english": "Would you like anything else?"
+        },
+        {
+          "maltese": "Le, grazzi. Dak kollox.",
+          "english": "No, thank you. That is all."
+        },
+        {
+          "maltese": "Tista' ġġib mgħarfa oħra?",
+          "english": "Can you bring another spoon?"
+        },
+        {
+          "maltese": "Tista' ġġib ftit ilma ieħor?",
+          "english": "Can you bring a bit more water?"
+        }
       ]
     }
   ]
