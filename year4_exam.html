@@ -121,6 +121,46 @@
         });
     }
 
+    function bindCardReveal(card) {
+        var revealTimer = null;
+
+        function revealTranslation() {
+            if (state.hideEnglish) {
+                card.classList.add("is-translation-revealed");
+            }
+        }
+
+        function hideTranslation() {
+            window.clearTimeout(revealTimer);
+            revealTimer = null;
+            card.classList.remove("is-translation-revealed");
+        }
+
+        card.addEventListener("pointerenter", function (event) {
+            if (event.pointerType === "mouse") {
+                revealTranslation();
+            }
+        });
+        card.addEventListener("pointerleave", hideTranslation);
+        card.addEventListener("pointerdown", function (event) {
+            if (!state.hideEnglish) {
+                return;
+            }
+            if (event.pointerType === "mouse") {
+                revealTranslation();
+                return;
+            }
+            window.clearTimeout(revealTimer);
+            revealTimer = window.setTimeout(revealTranslation, 450);
+        });
+        card.addEventListener("pointerup", function (event) {
+            if (event.pointerType !== "mouse") {
+                hideTranslation();
+            }
+        });
+        card.addEventListener("pointercancel", hideTranslation);
+    }
+
     function render() {
         var query = search.value.trim().toLowerCase();
         var items = allItems().filter(function (item) {
@@ -139,6 +179,7 @@
             card.querySelector(".mini").textContent = item.groupTitle;
             card.querySelector(".example-text").textContent = item.example || item.maltese;
             card.querySelector(".example-translation").textContent = item.exampleTranslation || item.english || "";
+            bindCardReveal(card);
             grid.appendChild(card);
         });
         count.textContent = items.length + " visible words";

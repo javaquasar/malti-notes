@@ -533,6 +533,7 @@ body.compact-animals .animal-gallery {
   border-radius: var(--component-card-radius);
   padding: var(--space-lg);
   background: var(--surface-panel-solid);
+  touch-action: manipulation;
 }
 
 .year4-card code {
@@ -555,6 +556,12 @@ body.compact-animals .animal-gallery {
   color: transparent;
   text-shadow: 0 0 8px var(--color-text-muted);
   user-select: none;
+}
+
+.year4-card.hide-english.is-translation-revealed .english {
+  color: var(--color-text-muted);
+  text-shadow: none;
+  user-select: text;
 }
 
 .year4-example {
