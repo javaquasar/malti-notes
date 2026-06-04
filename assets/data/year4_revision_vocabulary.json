@@ -5945,6 +5945,101 @@
           "tier": "basics",
           "items": [
             {
+              "slug": "kelb",
+              "maltese": "kelb",
+              "english": "dog",
+              "example": "Dan kelb żgħir.",
+              "exampleTranslation": "This is a small dog.",
+              "exampleSource": "site examples",
+              "notes": [
+                "female: kelba",
+                "plural: klieb"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "qattus",
+              "maltese": "qattus",
+              "english": "cat",
+              "example": "Dan qattus kbir.",
+              "exampleTranslation": "This is a big cat.",
+              "exampleSource": "site examples",
+              "notes": [
+                "female: qattusa",
+                "plural: qtates"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "g-asfur",
+              "maltese": "għasfur",
+              "english": "bird",
+              "example": "Dan għasfur żgħir.",
+              "exampleTranslation": "This is a small bird.",
+              "exampleSource": "site examples",
+              "notes": [
+                "female: għasfura",
+                "plural: għasafar"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "pappagall",
+              "maltese": "pappagall",
+              "english": "parrot",
+              "example": "Dan pappagall aħdar.",
+              "exampleTranslation": "This is a green parrot.",
+              "exampleSource": "site examples",
+              "notes": [
+                "gender note: mara / raġel",
+                "plural: pappagalli"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "fenek",
+              "maltese": "fenek",
+              "english": "rabbit",
+              "example": "Dan fenek abjad.",
+              "exampleTranslation": "This is a white rabbit.",
+              "exampleSource": "site examples",
+              "notes": [
+                "female: fenka",
+                "plural: [UNCERTAIN]"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "fenek-tal-indi",
               "maltese": "fenek tal-Indi",
               "english": "guinea pig",
@@ -5983,6 +6078,25 @@
               }
             },
             {
+              "slug": "uta",
+              "maltese": "ħuta",
+              "english": "fish",
+              "example": "Din ħuta blu.",
+              "exampleTranslation": "This is a blue fish.",
+              "exampleSource": "site examples",
+              "notes": [
+                "gender note: ħuta mara / ħuta raġel",
+                "plural: [UNCERTAIN]"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "fekruna-tal-art",
               "maltese": "fekruna tal-art",
               "english": "tortoise",
@@ -6011,6 +6125,25 @@
               "notes": [
                 "gender note: fekruna raġel / mara",
                 "plural: [UNCERTAIN]"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hamster",
+              "maltese": "hamster",
+              "english": "same in English",
+              "example": "Nara hamster.",
+              "exampleTranslation": "I see same in English.",
+              "exampleSource": "site examples",
+              "notes": [
+                "gender note: -",
+                "plural: hamsters [UNCERTAIN]"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6070,6 +6203,25 @@
               }
             },
             {
+              "slug": "baqra",
+              "maltese": "baqra",
+              "english": "cow / bull",
+              "example": "Din baqra sewda.",
+              "exampleTranslation": "This is a black cow.",
+              "exampleSource": "site examples",
+              "notes": [
+                "pair note: barri",
+                "plural: baqar"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "iemel",
               "maltese": "żiemel",
               "english": "horse",
@@ -6108,6 +6260,25 @@
               }
             },
             {
+              "slug": "an-ir",
+              "maltese": "ħanżir",
+              "english": "pig",
+              "example": "Dan ħanżir roża.",
+              "exampleTranslation": "This is a pink pig.",
+              "exampleSource": "site examples",
+              "notes": [
+                "female: ħanżira",
+                "plural: ħnieżer"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "dundjan",
               "maltese": "dundjan",
               "english": "turkey",
@@ -6127,11 +6298,49 @@
               }
             },
             {
+              "slug": "serp",
+              "maltese": "serp",
+              "english": "snake",
+              "example": "Nara serp.",
+              "exampleTranslation": "I see snake.",
+              "exampleSource": "site examples",
+              "notes": [
+                "gender note: serp mara / raġel",
+                "plural: sriep"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "mog-a",
               "maltese": "mogħża",
               "english": "goat",
               "example": "Nara mogħża.",
               "exampleTranslation": "I see goat.",
+              "exampleSource": "site examples",
+              "notes": [
+                "gender note: -",
+                "plural: [UNCERTAIN]"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "papra",
+              "maltese": "papra",
+              "english": "duck",
+              "example": "Nara papra.",
+              "exampleTranslation": "I see duck.",
               "exampleSource": "site examples",
               "notes": [
                 "gender note: -",
@@ -6233,6 +6442,24 @@
           "tier": "basics",
           "items": [
             {
+              "slug": "iljun",
+              "maltese": "iljun",
+              "english": "lion",
+              "example": "Dan iljun kbir.",
+              "exampleTranslation": "This is a big lion.",
+              "exampleSource": "site examples",
+              "notes": [
+                "plural: iljuni"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "tigra",
               "maltese": "tigra",
               "english": "tiger",
@@ -6277,6 +6504,24 @@
               "exampleSource": "site examples",
               "notes": [
                 "plural: żebri"
+              ],
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "iljunfant",
+              "maltese": "iljunfant",
+              "english": "elephant",
+              "example": "Dan iljunfant kbir ħafna.",
+              "exampleTranslation": "This is a very big elephant.",
+              "exampleSource": "site examples",
+              "notes": [
+                "plural: iljunfanti"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6860,6 +7105,114 @@
           "tier": "basics",
           "items": [
             {
+              "slug": "abjad",
+              "maltese": "abjad",
+              "english": "white",
+              "example": "Il-qmis abjad.",
+              "exampleTranslation": "The shirt is white.",
+              "exampleSource": "site examples",
+              "notes": [
+                "qmis abjad = white shirt"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "iswed",
+              "maltese": "iswed",
+              "english": "black",
+              "example": "Il-qalziet iswed.",
+              "exampleTranslation": "The trousers are black.",
+              "exampleSource": "site examples",
+              "notes": [
+                "karozza sewda = black car"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ahmar",
+              "maltese": "aħmar",
+              "english": "red",
+              "example": "It-tuffieħ aħdar jew aħmar.",
+              "exampleTranslation": "The apple is green or red.",
+              "exampleSource": "site examples",
+              "notes": [
+                "fjura ħamra = red flower"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "blu",
+              "maltese": "blu",
+              "english": "blue",
+              "example": "Il-ballun blu.",
+              "exampleTranslation": "The balloon is blue.",
+              "exampleSource": "site examples",
+              "notes": [
+                "baħar blu = blue sea"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "isfar",
+              "maltese": "isfar",
+              "english": "yellow",
+              "example": "Nara isfar.",
+              "exampleTranslation": "I see yellow.",
+              "exampleSource": "site examples",
+              "notes": [
+                "xemx safra = yellow sun"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ahdar",
+              "maltese": "aħdar",
+              "english": "green",
+              "example": "Jien inħobb l-aħdar.",
+              "exampleTranslation": "I like green.",
+              "exampleSource": "site examples",
+              "notes": [
+                "ħaxix aħdar = green vegetables"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "orangjo",
               "maltese": "oranġjo",
               "english": "orange",
@@ -6868,6 +7221,60 @@
               "exampleSource": "site examples",
               "notes": [
                 "ballun oranġjo = orange balloon"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "vjola",
+              "maltese": "vjola",
+              "english": "purple",
+              "example": "Din il-fjura vjola.",
+              "exampleTranslation": "This flower is purple.",
+              "exampleSource": "site examples",
+              "notes": [
+                "fjura vjola = purple flower"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "roza",
+              "maltese": "roża",
+              "english": "pink",
+              "example": "Il-borża roża.",
+              "exampleTranslation": "The bag is pink.",
+              "exampleSource": "site examples",
+              "notes": [
+                "borża roża = pink bag"
+              ],
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kannella",
+              "maltese": "kannella",
+              "english": "brown",
+              "example": "Il-mejda kannella.",
+              "exampleTranslation": "The table is brown.",
+              "exampleSource": "site examples",
+              "notes": [
+                "mejda kannella = brown table"
               ],
               "sourceLabel": "Colours",
               "sourceFile": "colors.json",
@@ -7253,6 +7660,42 @@
           "tier": "basics",
           "items": [
             {
+              "slug": "jannar",
+              "maltese": "Jannar",
+              "english": "January",
+              "example": "fil-bidu ta' Jannar",
+              "exampleTranslation": "at the beginning of January",
+              "exampleSource": "topic data",
+              "notes": [
+                "fil-bidu ta' Jannar"
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "frar",
+              "maltese": "Frar",
+              "english": "February",
+              "example": "fi Frar",
+              "exampleTranslation": "in February",
+              "exampleSource": "topic data",
+              "notes": [
+                "fi Frar"
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "marzu",
               "maltese": "Marzu",
               "english": "March",
@@ -7261,6 +7704,24 @@
               "exampleSource": "topic data",
               "notes": [
                 "f'nofs Marzu"
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "april",
+              "maltese": "April",
+              "english": "April",
+              "example": "fl-20 ta' April",
+              "exampleTranslation": "on the 20th of April",
+              "exampleSource": "topic data",
+              "notes": [
+                "fl-20 ta' April"
               ],
               "sourceLabel": "Numbers, Calendar and Time",
               "sourceFile": "numbers_calendar_time.json",
@@ -7315,6 +7776,42 @@
               "exampleSource": "topic data",
               "notes": [
                 "fl-aħħar ta' Lulju"
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "awissu",
+              "maltese": "Awwissu",
+              "english": "August",
+              "example": "f'nofs Awwissu",
+              "exampleTranslation": "in the middle of August",
+              "exampleSource": "topic data",
+              "notes": [
+                "f'nofs Awwissu"
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "settembru",
+              "maltese": "Settembru",
+              "english": "September",
+              "example": "fil-bidu ta' Settembru",
+              "exampleTranslation": "at the beginning of September",
+              "exampleSource": "topic data",
+              "notes": [
+                "fil-bidu ta' Settembru"
               ],
               "sourceLabel": "Numbers, Calendar and Time",
               "sourceFile": "numbers_calendar_time.json",
@@ -7473,6 +7970,24 @@
           "tier": "basics",
           "items": [
             {
+              "slug": "illum",
+              "maltese": "illum",
+              "english": "today",
+              "example": "Illum għandi xogħol.",
+              "exampleTranslation": "Today I have work.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Illum għandi xogħol."
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "ilbierah",
               "maltese": "ilbieraħ",
               "english": "yesterday",
@@ -7553,6 +8068,24 @@
               "exampleSource": "topic data",
               "notes": [
                 "Jumejn ilu mort il-bank."
+              ],
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "jum",
+              "maltese": "jum",
+              "english": "day",
+              "example": "Illum huwa jum twil.",
+              "exampleTranslation": "Today is a long day.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Illum huwa jum twil."
               ],
               "sourceLabel": "Numbers, Calendar and Time",
               "sourceFile": "numbers_calendar_time.json",
@@ -8120,6 +8653,38 @@
               }
             },
             {
+              "slug": "tifel",
+              "maltese": "tifel",
+              "english": "boy / son in context",
+              "example": "It-tifel huwa żgħir u t-tifla hija ferħana.",
+              "exampleTranslation": "The boy is small and the girl is happy.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tifla",
+              "maltese": "tifla",
+              "english": "girl / daughter in context",
+              "example": "It-tifel huwa żgħir u t-tifla hija ferħana.",
+              "exampleTranslation": "The boy is small and the girl is happy.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "ragel",
               "maltese": "raġel",
               "english": "man / husband [basic meaning varies by context]",
@@ -8152,6 +8717,38 @@
               }
             },
             {
+              "slug": "zewg",
+              "maltese": "żewġ",
+              "english": "husband / two [context-based]",
+              "example": "Nara żewġ.",
+              "exampleTranslation": "I see husband / two [context-based].",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "familja",
+              "maltese": "familja",
+              "english": "family",
+              "example": "Għandna familja kbira.",
+              "exampleTranslation": "We have a big family.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "genituri",
               "maltese": "ġenituri",
               "english": "parents",
@@ -8168,11 +8765,59 @@
               }
             },
             {
+              "slug": "tfal",
+              "maltese": "tfal",
+              "english": "children",
+              "example": "Nara tfal.",
+              "exampleTranslation": "I see children.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "kugin",
               "maltese": "kuġin",
               "english": "cousin",
               "example": "Nara kuġin.",
               "exampleTranslation": "I see cousin.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ziju",
+              "maltese": "ziju",
+              "english": "uncle",
+              "example": "Nara ziju.",
+              "exampleTranslation": "I see uncle.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "zija",
+              "maltese": "zija",
+              "english": "aunt",
+              "example": "Nara zija.",
+              "exampleTranslation": "I see aunt.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Family, Home and Food",
@@ -8307,6 +8952,22 @@
               }
             },
             {
+              "slug": "bieb",
+              "maltese": "bieb",
+              "english": "door",
+              "example": "Nara bieb.",
+              "exampleTranslation": "I see door.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "tieqa",
               "maltese": "tieqa",
               "english": "window",
@@ -8414,6 +9075,22 @@
               }
             },
             {
+              "slug": "salott",
+              "maltese": "salott",
+              "english": "living room",
+              "example": "Is-salott huwa komdu.",
+              "exampleTranslation": "The living room is comfortable.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "kamra-tal-ikel",
               "maltese": "kamra tal-ikel",
               "english": "dining room",
@@ -8457,6 +9134,70 @@
           "tier": "basics",
           "items": [
             {
+              "slug": "mejda",
+              "maltese": "mejda",
+              "english": "table",
+              "example": "Hemm mejda fil-kċina.",
+              "exampleTranslation": "There is a table in the kitchen.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "siggu",
+              "maltese": "siġġu",
+              "english": "chair",
+              "example": "Nara siġġu.",
+              "exampleTranslation": "I see chair.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "sufan",
+              "maltese": "sufan",
+              "english": "sofa",
+              "example": "Is-sufan huwa quddiem it-TV.",
+              "exampleTranslation": "The sofa is in front of the TV.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "sodda",
+              "maltese": "sodda",
+              "english": "bed",
+              "example": "Il-kamra tas-sodda tiegħi hija żgħira.",
+              "exampleTranslation": "My bedroom is small.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "frigg",
               "maltese": "friġġ",
               "english": "fridge",
@@ -8478,6 +9219,38 @@
               "english": "wardrobe / cupboard",
               "example": "Nara armarju.",
               "exampleTranslation": "I see wardrobe / cupboard.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "bank",
+              "maltese": "bank",
+              "english": "bench / seat [basic use]",
+              "example": "Nara bank.",
+              "exampleTranslation": "I see bench / seat [basic use].",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "lampa",
+              "maltese": "lampa",
+              "english": "lamp",
+              "example": "Il-lampa hija ħdejn is-sodda.",
+              "exampleTranslation": "The lamp is near the bed.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Family, Home and Food",
@@ -8526,6 +9299,22 @@
               "english": "desk",
               "example": "Għandi skrivanija żgħira fid-dar.",
               "exampleTranslation": "I have a small desk at home.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "mera",
+              "maltese": "mera",
+              "english": "mirror",
+              "example": "Inħobb meraq kiesaħ.",
+              "exampleTranslation": "I like cold juice.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Family, Home and Food",
@@ -8628,6 +9417,38 @@
               }
             },
             {
+              "slug": "haxix",
+              "maltese": "ħaxix",
+              "english": "vegetables",
+              "example": "Aħna nieklu ħafna ħaxix.",
+              "exampleTranslation": "We eat a lot of vegetables.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "frott",
+              "maltese": "frott",
+              "english": "fruit",
+              "example": "Ħija tħobb l-insalata u l-frott.",
+              "exampleTranslation": "My sister likes salad and fruit.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "soppa",
               "maltese": "soppa",
               "english": "soup",
@@ -8676,6 +9497,22 @@
               }
             },
             {
+              "slug": "tadam",
+              "maltese": "tadam",
+              "english": "tomato",
+              "example": "Nara tadam.",
+              "exampleTranslation": "I see tomato.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "karrotta",
               "maltese": "karrotta",
               "english": "carrot",
@@ -8713,6 +9550,22 @@
               "english": "chicken",
               "example": "Hemm ross u tiġieġ fuq il-mejda.",
               "exampleTranslation": "There is rice and chicken on the table.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "insalata",
+              "maltese": "insalata",
+              "english": "salad",
+              "example": "Ħija tħobb l-insalata u l-frott.",
+              "exampleTranslation": "My sister likes salad and fruit.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Family, Home and Food",
@@ -8852,6 +9705,22 @@
               "english": "juice",
               "example": "Inħobb meraq kiesaħ.",
               "exampleTranslation": "I like cold juice.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "halib",
+              "maltese": "ħalib",
+              "english": "milk",
+              "example": "It-tifel jixrob ħalib.",
+              "exampleTranslation": "The boy drinks milk.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Family, Home and Food",
@@ -9461,6 +10330,22 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "gallettina",
+              "maltese": "gallettina",
+              "english": "biscuit",
+              "example": "Filgħodu nieħu kafè u gallettina.",
+              "exampleTranslation": "In the morning I have coffee and a biscuit.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -9473,6 +10358,86 @@
           "sourceFile": "shopping_clothes.json",
           "tier": "basics",
           "items": [
+            {
+              "slug": "flokk",
+              "maltese": "flokk",
+              "english": "shirt / top",
+              "example": "Nixtieq flokk blu.",
+              "exampleTranslation": "I would like a blue shirt.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "qalziet",
+              "maltese": "qalziet",
+              "english": "trousers",
+              "example": "Nixtieq qalziet iswed.",
+              "exampleTranslation": "I would like black trousers.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "libsa",
+              "maltese": "libsa",
+              "english": "dress",
+              "example": "Nixtieq libsa ħadra.",
+              "exampleTranslation": "I would like a green dress.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "gakketta",
+              "maltese": "ġakketta",
+              "english": "jacket",
+              "example": "Nixtieq ġakketta griża.",
+              "exampleTranslation": "I would like a grey jacket.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "zarbun",
+              "maltese": "żarbun",
+              "english": "shoe",
+              "example": "A: Kemm jiswa dan iż-żarbun?",
+              "exampleTranslation": "A: How much does this shoe cost?",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
             {
               "slug": "borza",
               "maltese": "borża",
@@ -9596,11 +10561,59 @@
               }
             },
             {
+              "slug": "xemx",
+              "maltese": "xemx",
+              "english": "sun",
+              "example": "B: Illum sabiħ u xemxi.",
+              "exampleTranslation": "B: Today it is nice and sunny.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "xita",
+              "maltese": "xita",
+              "english": "rain",
+              "example": "Illum qed tagħmel xita.",
+              "exampleTranslation": "Today it is raining.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "rih",
               "maltese": "riħ",
               "english": "wind",
               "example": "Illum hawn ħafna riħ.",
               "exampleTranslation": "Today it is very windy.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "shab",
+              "maltese": "sħab",
+              "english": "clouds",
+              "example": "Illum hemm sħab.",
+              "exampleTranslation": "Today it is cloudy.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Weather",
@@ -9842,6 +10855,24 @@
               }
             },
             {
+              "slug": "ajruplan",
+              "maltese": "ajruplan",
+              "english": "airplane",
+              "example": "Bl-ajruplan immorru minn pajjiż għal ieħor.",
+              "exampleTranslation": "By airplane we go from one country to another.",
+              "exampleSource": "site examples",
+              "notes": [
+                "Bl-ajruplan immorru minn pajjiż għal ieħor."
+              ],
+              "sourceLabel": "Transport",
+              "sourceFile": "transport.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "mutur-scooter",
               "maltese": "mutur / scooter",
               "english": "motorcycle / scooter",
@@ -9870,6 +10901,96 @@
           "sourceFile": "prepositions_place.json",
           "tier": "basics",
           "items": [
+            {
+              "slug": "fuq",
+              "maltese": "fuq",
+              "english": "on",
+              "example": "Il-ktieb huwa fuq il-mejda.",
+              "exampleTranslation": "The book is on the table.",
+              "exampleSource": "site examples",
+              "notes": [
+                "place"
+              ],
+              "sourceLabel": "Prepositions of Place",
+              "sourceFile": "prepositions_place.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "taht",
+              "maltese": "taħt",
+              "english": "under",
+              "example": "Il-ballun huwa taħt is-siġġu.",
+              "exampleTranslation": "The ball is under the chair.",
+              "exampleSource": "site examples",
+              "notes": [
+                "place"
+              ],
+              "sourceLabel": "Prepositions of Place",
+              "sourceFile": "prepositions_place.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hdejn",
+              "maltese": "ħdejn",
+              "english": "next to",
+              "example": "Il-lampa hija ħdejn is-sodda.",
+              "exampleTranslation": "The lamp is next to the bed.",
+              "exampleSource": "site examples",
+              "notes": [
+                "place"
+              ],
+              "sourceLabel": "Prepositions of Place",
+              "sourceFile": "prepositions_place.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "quddiem",
+              "maltese": "quddiem",
+              "english": "in front of",
+              "example": "Il-karozza hija quddiem id-dar.",
+              "exampleTranslation": "The car is in front of the house.",
+              "exampleSource": "site examples",
+              "notes": [
+                "place"
+              ],
+              "sourceLabel": "Prepositions of Place",
+              "sourceFile": "prepositions_place.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "wara",
+              "maltese": "wara",
+              "english": "behind",
+              "example": "Il-ġnien huwa wara d-dar.",
+              "exampleTranslation": "The garden is behind the house.",
+              "exampleSource": "site examples",
+              "notes": [
+                "place"
+              ],
+              "sourceLabel": "Prepositions of Place",
+              "sourceFile": "prepositions_place.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
             {
               "slug": "bejn",
               "maltese": "bejn",
@@ -9950,6 +11071,22 @@
               }
             },
             {
+              "slug": "skola",
+              "maltese": "skola",
+              "english": "school",
+              "example": "B: Hija faċċata tal-iskola.",
+              "exampleTranslation": "B: It is opposite the school.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "knisja",
               "maltese": "knisja",
               "english": "church",
@@ -9971,6 +11108,22 @@
               "english": "restaurant",
               "example": "Fejn hu r-ristorant?",
               "exampleTranslation": "Where is the restaurant?",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hanut",
+              "maltese": "ħanut",
+              "english": "shop",
+              "example": "Il-ħanut huwa fil-pjazza.",
+              "exampleTranslation": "The shop is in the square.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Directions and Town",
@@ -10110,6 +11263,22 @@
               "english": "here",
               "example": "Nara hawn.",
               "exampleTranslation": "I see here.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hemm",
+              "maltese": "hemm",
+              "english": "there / there is",
+              "example": "Fuq in-naħa tal-lemin tal-knisja hemm il-għassa.",
+              "exampleTranslation": "On the right side of the church there is the police station.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Directions and Town",
@@ -11043,6 +12212,22 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "pjazza",
+              "maltese": "pjazza",
+              "english": "square",
+              "example": "Huwa jmur il-pjazza kull nhar ta' Sibt.",
+              "exampleTranslation": "He goes to the square every Saturday.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -11259,6 +12444,22 @@
               }
             },
             {
+              "slug": "sabih",
+              "maltese": "sabiħ / sabiħa",
+              "english": "beautiful",
+              "example": "Nara sabiħ / sabiħa.",
+              "exampleTranslation": "I see beautiful.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "interessanti",
               "maltese": "interessanti",
               "english": "interesting",
@@ -11366,6 +12567,78 @@
           "tier": "extended",
           "items": [
             {
+              "slug": "jien",
+              "maltese": "jien",
+              "english": "I",
+              "example": "Jien noqgħod f'dar.",
+              "exampleTranslation": "I live in a house.",
+              "exampleSource": "site examples",
+              "notes": [
+                "subject pronoun"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "inti",
+              "maltese": "inti",
+              "english": "you",
+              "example": "Inti missier?",
+              "exampleTranslation": "Le, jien m'iniex missier.",
+              "exampleSource": "site examples",
+              "notes": [
+                "singular"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hu",
+              "maltese": "hu",
+              "english": "he",
+              "example": "Hu missieri.",
+              "exampleTranslation": "He is my father.",
+              "exampleSource": "site examples",
+              "notes": [
+                "masculine"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hi",
+              "maltese": "hi",
+              "english": "she",
+              "example": "Hi ommi.",
+              "exampleTranslation": "She is my mother.",
+              "exampleSource": "site examples",
+              "notes": [
+                "feminine"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "ahna",
               "maltese": "aħna",
               "english": "we",
@@ -11400,6 +12673,24 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "huma",
+              "maltese": "huma",
+              "english": "they",
+              "example": "Huma t-tfal tagħhom.",
+              "exampleTranslation": "They are their children.",
+              "exampleSource": "site examples",
+              "notes": [
+                "plural"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -11412,6 +12703,60 @@
           "sourceFile": "pronouns_possessives.json",
           "tier": "extended",
           "items": [
+            {
+              "slug": "dan",
+              "maltese": "dan",
+              "english": "this",
+              "example": "Dan ħija.",
+              "exampleTranslation": "This is my brother.",
+              "exampleSource": "site examples",
+              "notes": [
+                "masculine, near"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "din",
+              "maltese": "din",
+              "english": "this",
+              "example": "Din oħti.",
+              "exampleTranslation": "This is my sister.",
+              "exampleSource": "site examples",
+              "notes": [
+                "feminine, near"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "dawn",
+              "maltese": "dawn",
+              "english": "these",
+              "example": "Min huma dawn?",
+              "exampleTranslation": "Dawn huma ħbiebi.",
+              "exampleSource": "site examples",
+              "notes": [
+                "plural, near"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
             {
               "slug": "dak",
               "maltese": "dak",
@@ -11477,6 +12822,60 @@
           "sourceFile": "pronouns_possessives.json",
           "tier": "extended",
           "items": [
+            {
+              "slug": "tieghi",
+              "maltese": "tiegħi",
+              "english": "my / mine",
+              "example": "Din id-dar tiegħi.",
+              "exampleTranslation": "This is my house.",
+              "exampleSource": "site examples",
+              "notes": [
+                "singular owner"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tieghek",
+              "maltese": "tiegħek",
+              "english": "your / yours",
+              "example": "Min hemm fil-familja tiegħek?",
+              "exampleTranslation": "Għandi omm, missier u oħt.",
+              "exampleSource": "site examples",
+              "notes": [
+                "singular owner"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tieghu",
+              "maltese": "tiegħu",
+              "english": "his",
+              "example": "Din id-dar tiegħu.",
+              "exampleTranslation": "This is his house.",
+              "exampleSource": "site examples",
+              "notes": [
+                "masculine owner"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
             {
               "slug": "taghha",
               "maltese": "tagħha",
@@ -11835,6 +13234,60 @@
               }
             },
             {
+              "slug": "fuq",
+              "maltese": "fuq",
+              "english": "on",
+              "example": "Il-ktieb huwa fuq il-mejda.",
+              "exampleTranslation": "The book is on the table.",
+              "exampleSource": "site examples",
+              "notes": [
+                "location"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "taht",
+              "maltese": "taħt",
+              "english": "under",
+              "example": "Il-ballun huwa taħt is-siġġu.",
+              "exampleTranslation": "The ball is under the chair.",
+              "exampleSource": "site examples",
+              "notes": [
+                "location"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hdejn",
+              "maltese": "ħdejn",
+              "english": "next to",
+              "example": "It-tifel qiegħed ħdejn ommu.",
+              "exampleTranslation": "The boy is next to his mother.",
+              "exampleSource": "site examples",
+              "notes": [
+                "location"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "ma",
               "maltese": "ma'",
               "english": "with",
@@ -11871,6 +13324,24 @@
               }
             },
             {
+              "slug": "minn",
+              "maltese": "minn",
+              "english": "from",
+              "example": "Jien minn Malta.",
+              "exampleTranslation": "I am from Malta.",
+              "exampleSource": "site examples",
+              "notes": [
+                "origin"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "sa",
               "maltese": "sa",
               "english": "until / to",
@@ -11879,6 +13350,24 @@
               "exampleSource": "site examples",
               "notes": [
                 "time / limit"
+              ],
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ghal",
+              "maltese": "għal",
+              "english": "for / to",
+              "example": "Dan huwa rigal għal oħti.",
+              "exampleTranslation": "This is a gift for my sister.",
+              "exampleSource": "site examples",
+              "notes": [
+                "direction / purpose"
               ],
               "sourceLabel": "Pronouns and Possessives",
               "sourceFile": "pronouns_possessives.json",
@@ -11934,11 +13423,59 @@
               }
             },
             {
+              "slug": "immur",
+              "maltese": "immur",
+              "english": "I go",
+              "example": "X'tagħmel wara x-xogħol? Wara x-xogħol immur id-dar u nistrieħ.",
+              "exampleTranslation": "What do you do after work? After work I go home and rest.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "nahdem",
               "maltese": "naħdem",
               "english": "I work",
               "example": "Naħdem f'uffiċċju.",
               "exampleTranslation": "I work in an office.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "niekol",
+              "maltese": "niekol",
+              "english": "I eat",
+              "example": "X'tagħmel filgħodu? Filgħodu nixrob kafè u niekol ftit ħobż.",
+              "exampleTranslation": "What do you do in the morning? In the morning I drink coffee and eat some bread.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "nixrob",
+              "maltese": "nixrob",
+              "english": "I drink",
+              "example": "X'tagħmel filgħodu? Filgħodu nixrob kafè u niekol ftit ħobż.",
+              "exampleTranslation": "What do you do in the morning? In the morning I drink coffee and eat some bread.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Daily Routine",
@@ -12041,6 +13578,22 @@
           "tier": "extended",
           "items": [
             {
+              "slug": "ras",
+              "maltese": "ras",
+              "english": "head",
+              "example": "Għandi uġigħ ta' ras.",
+              "exampleTranslation": "I have a headache.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Health and Doctor",
+              "sourceFile": "health_doctor.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
               "slug": "grizmejn",
               "maltese": "griżmejn",
               "english": "throat",
@@ -12137,6 +13690,38 @@
               "english": "menu",
               "example": "A: Il-menu, jekk jogħġbok.",
               "exampleTranslation": "A: The menu, please.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Restaurant",
+              "sourceFile": "restaurant_ordering.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "mejda",
+              "maltese": "mejda",
+              "english": "table",
+              "example": "Mejda għal tnejn, jekk jogħġbok.",
+              "exampleTranslation": "A table for two, please.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "sourceLabel": "Restaurant",
+              "sourceFile": "restaurant_ordering.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ristorant",
+              "maltese": "ristorant",
+              "english": "restaurant",
+              "example": "Nara ristorant.",
+              "exampleTranslation": "I see restaurant.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Restaurant",
@@ -13356,6 +14941,24 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "zokkor",
+              "maltese": "zokkor",
+              "english": "sugar",
+              "example": "Nara zokkor.",
+              "exampleTranslation": "I see sugar.",
+              "exampleSource": "site examples",
+              "notes": [
+                "listed directly as collective-style food vocabulary"
+              ],
+              "sourceLabel": "Collective Nouns",
+              "sourceFile": "collective_nouns.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         }
@@ -13364,7 +14967,7 @@
   ],
   "counts": {
     "exam": 312,
-    "basics": 227,
-    "extended": 167
+    "basics": 295,
+    "extended": 192
   }
 }

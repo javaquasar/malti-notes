@@ -120,7 +120,7 @@
     }
 
     function allItems() {
-        return activeGroups().flatMap(function (group) {
+        var items = activeGroups().flatMap(function (group) {
             return group.items.map(function (item) {
                 return Object.assign({
                     groupTitle: group.title,
@@ -129,6 +129,18 @@
                     collectionId: group.collectionId
                 }, item);
             });
+        });
+        if (state.collection !== "all") {
+            return items;
+        }
+        var seen = new Set();
+        return items.filter(function (item) {
+            var key = item.maltese.toLowerCase();
+            if (seen.has(key)) {
+                return false;
+            }
+            seen.add(key);
+            return true;
         });
     }
 

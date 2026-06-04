@@ -199,12 +199,12 @@ const examKeys = examGroups.flatMap((group) => group.items).map((item) => normal
 
 const basicGroups = dedupeGroups(
   BASIC_SOURCES.flatMap(([file, sourceLabel]) => extractGroups(file, sourceLabel, "basics")),
-  examKeys
+  []
 );
 const basicKeys = basicGroups.flatMap((group) => group.items).map((item) => normalizeKey(item.maltese));
 const extendedGroups = dedupeGroups(
   EXTENDED_SOURCES.flatMap(([file, sourceLabel]) => extractGroups(file, sourceLabel, "extended")),
-  examKeys.concat(basicKeys)
+  []
 );
 
 const output = {
