@@ -21,7 +21,7 @@
         <div class="hero-body">
             <div>
                 <h1>Year 4 Exam Vocabulary</h1>
-                <p class="lead">A focused revision page for the 4th grade Maltese vocabulary list.</p>
+                <p class="lead">A focused revision page for the 4th grade Maltese exam list and core school vocabulary.</p>
                 <div class="pill-row">
                     <span class="pill">Year 4</span>
                     <span class="pill">exam words</span>
@@ -33,7 +33,7 @@
                 <p><strong>Revision Set</strong></p>
                 <ul>
                     <li>curated from the normalized Year 4 word list</li>
-                    <li>grouped by exam-friendly topics</li>
+                    <li>expanded with basics from the existing study pages</li>
                     <li>linked to the site games as the Year 4 Exam topic</li>
                 </ul>
             </aside>
@@ -54,11 +54,12 @@
         <main class="content">
             <section class="content-card">
                 <span class="tag">Word Bank</span>
-                <h2>Exam Words</h2>
+                <h2>Revision Word Bank</h2>
                 <div class="toolbar-row year4-toolbar">
                     <input class="review-select year4-search" id="year4-search" type="search" placeholder="Search Maltese or English">
                     <button class="action-button" id="year4-toggle" type="button">Hide English</button>
                 </div>
+                <div class="year4-collection-tabs" id="year4-collection-tabs" role="tablist" aria-label="Revision sets"></div>
                 <div class="year4-tabs" id="year4-tabs" role="tablist"></div>
                 <div class="year4-grid" id="year4-grid"></div>
             </section>
@@ -83,8 +84,9 @@
 </div>
 <script>
 (function () {
-    var state = { data: null, active: "all", hideEnglish: false, practice: [] };
+    var state = { data: null, collection: "exam", active: "all", hideEnglish: false, practice: [] };
     var grid = document.getElementById("year4-grid");
+    var collectionTabs = document.getElementById("year4-collection-tabs");
     var tabs = document.getElementById("year4-tabs");
     var search = document.getElementById("year4-search");
     var toggle = document.getElementById("year4-toggle");
@@ -94,16 +96,58 @@
     var feedback = document.getElementById("year4-feedback");
     var currentWord = null;
 
-    function allItems() {
-        return state.data.groups.flatMap(function (group) {
-            return group.items.map(function (item) {
-                return Object.assign({ groupTitle: group.title, groupId: group.id }, item);
+    function activeCollections() {
+        if (state.collection === "all") {
+            return state.data.collections;
+        }
+        return state.data.collections.filter(function (collection) {
+            return collection.id === state.collection;
+        });
+    }
+
+    function activeGroups() {
+        return activeCollections().flatMap(function (collection) {
+            return collection.groups.map(function (group) {
+                return Object.assign({ collectionTitle: collection.title, collectionId: collection.id }, group);
             });
         });
     }
 
+    function allItems() {
+        return activeGroups().flatMap(function (group) {
+            return group.items.map(function (item) {
+                return Object.assign({
+                    groupTitle: group.title,
+                    groupId: group.id,
+                    collectionTitle: group.collectionTitle,
+                    collectionId: group.collectionId
+                }, item);
+            });
+        });
+    }
+
+    function renderCollectionTabs() {
+        var collections = state.data.collections.map(function (collection) {
+            return { id: collection.id, title: collection.title };
+        }).concat([{ id: "all", title: "All" }]);
+        collectionTabs.innerHTML = "";
+        collections.forEach(function (collection) {
+            var button = document.createElement("button");
+            button.className = "year4-tab year4-collection-tab";
+            button.type = "button";
+            button.textContent = collection.title;
+            button.setAttribute("aria-selected", String(state.collection === collection.id));
+            button.addEventListener("click", function () {
+                state.collection = collection.id;
+                state.active = "all";
+                render();
+            });
+            collectionTabs.appendChild(button);
+        });
+    }
+
     function renderTabs() {
-        var groups = [{ id: "all", title: "All" }].concat(state.data.groups.map(function (group) {
+        var groups = [{ id: "all", title: "All Topics" }].concat(activeGroups().map(function (group) {
             return { id: group.id, title: group.title };
         }));
         tabs.innerHTML = "";
@@ -165,7 +209,7 @@
         var query = search.value.trim().toLowerCase();
         var items = allItems().filter(function (item) {
             var inGroup = state.active === "all" || item.groupId === state.active;
-            var inSearch = !query || item.maltese.toLowerCase().includes(query) || (item.english || "").toLowerCase().includes(query);
+            var inSearch = !query || item.maltese.toLowerCase().includes(query) || (item.english || "").toLowerCase().includes(query) || (item.sourceLabel || "").toLowerCase().includes(query);
             return inGroup && inSearch;
         });
         grid.innerHTML = "";
@@ -176,13 +220,14 @@
             card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p><div class='year4-example'><strong>Example</strong><span class='example-text'></span><strong>English</strong><span class='example-translation'></span></div>";
             card.querySelector("code").textContent = item.maltese;
             card.querySelector(".english").textContent = item.english || "translation pending";
-            card.querySelector(".mini").textContent = item.groupTitle;
+            card.querySelector(".mini").textContent = item.collectionTitle + " - " + (item.sourceLabel || item.groupTitle);
             card.querySelector(".example-text").textContent = item.example || item.maltese;
             card.querySelector(".example-translation").textContent = item.exampleTranslation || item.english || "";
             bindCardReveal(card);
             grid.appendChild(card);
         });
         count.textContent = items.length + " visible words";
+        renderCollectionTabs();
         renderTabs();
     }
 
@@ -211,7 +256,7 @@
         }
     }
 
-    fetch("./assets/data/year4_vocabulary.json")
+    fetch("./assets/data/year4_revision_vocabulary.json")
         .then(function (response) { return response.json(); })
         .then(function (data) {
             state.data = data;

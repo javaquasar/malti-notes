@@ -499,11 +499,16 @@ body.compact-animals .animal-gallery {
   flex: 1 1 260px;
 }
 
+.year4-collection-tabs,
 .year4-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
   margin: 0 0 var(--flow-gap-sm);
+}
+
+.year4-collection-tabs {
+  margin-bottom: var(--space-md);
 }
 
 .year4-tab {
@@ -519,6 +524,10 @@ body.compact-animals .animal-gallery {
   border-color: var(--text-accent);
   color: var(--text-accent);
   background: var(--color-surface-muted);
+}
+
+.year4-collection-tab {
+  font-weight: 700;
 }
 
 .year4-grid {
@@ -558,6 +567,7 @@ body.compact-animals .animal-gallery {
   user-select: none;
 }
 
+.year4-card.hide-english:hover .english,
 .year4-card.hide-english.is-translation-revealed .english {
   color: var(--color-text-muted);
   text-shadow: none;
