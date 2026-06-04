@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 4 Exam Vocabulary</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+    <link rel="stylesheet" href="./assets/css/vocabulary-games.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Year 4 Exam Vocabulary</h1>
+                <p class="lead">A focused revision page for the 4th grade Maltese vocabulary list.</p>
+                <div class="pill-row">
+                    <span class="pill">Year 4</span>
+                    <span class="pill">exam words</span>
+                    <span class="pill">flashcards</span>
+                    <span class="pill">spelling</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Revision Set</strong></p>
+                <ul>
+                    <li>curated from the normalized Year 4 word list</li>
+                    <li>grouped by exam-friendly topics</li>
+                    <li>linked to the site games as the Year 4 Exam topic</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Practice</h2>
+            <p class="mini" id="year4-count">Loading words...</p>
+            <div class="vocabulary-game-actions">
+                <a class="action-link" href="./memory_game.html">Memory Game</a>
+                <a class="action-link" href="./word_builder_game.html">Word Builder</a>
+                <a class="action-link" href="./word_search.html">Word Search</a>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="content-card">
+                <span class="tag">Word Bank</span>
+                <h2>Exam Words</h2>
+                <div class="toolbar-row year4-toolbar">
+                    <input class="review-select year4-search" id="year4-search" type="search" placeholder="Search Maltese or English">
+                    <button class="action-button" id="year4-toggle" type="button">Hide English</button>
+                </div>
+                <div class="year4-tabs" id="year4-tabs" role="tablist"></div>
+                <div class="year4-grid" id="year4-grid"></div>
+            </section>
+
+            <section class="content-card">
+                <span class="tag">Spelling</span>
+                <h2>Quick Check</h2>
+                <div class="year4-practice">
+                    <p class="mini" id="year4-prompt">Press New Word to start.</p>
+                    <div class="year4-practice-row">
+                        <input class="review-select year4-answer" id="year4-answer" type="text" autocomplete="off" spellcheck="false">
+                        <button class="action-button" id="year4-check" type="button">Check</button>
+                    </div>
+                    <div class="year4-practice-row">
+                        <p class="mini" id="year4-feedback"></p>
+                        <button class="action-button" id="year4-new" type="button">New Word</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script>
+(function () {
+    var state = { data: null, active: "all", hideEnglish: false, practice: [] };
+    var grid = document.getElementById("year4-grid");
+    var tabs = document.getElementById("year4-tabs");
+    var search = document.getElementById("year4-search");
+    var toggle = document.getElementById("year4-toggle");
+    var count = document.getElementById("year4-count");
+    var prompt = document.getElementById("year4-prompt");
+    var answer = document.getElementById("year4-answer");
+    var feedback = document.getElementById("year4-feedback");
+    var currentWord = null;
+
+    function allItems() {
+        return state.data.groups.flatMap(function (group) {
+            return group.items.map(function (item) {
+                return Object.assign({ groupTitle: group.title, groupId: group.id }, item);
+            });
+        });
+    }
+
+    function renderTabs() {
+        var groups = [{ id: "all", title: "All" }].concat(state.data.groups.map(function (group) {
+            return { id: group.id, title: group.title };
+        }));
+        tabs.innerHTML = "";
+        groups.forEach(function (group) {
+            var button = document.createElement("button");
+            button.className = "year4-tab";
+            button.type = "button";
+            button.textContent = group.title;
+            button.setAttribute("aria-selected", String(state.active === group.id));
+            button.addEventListener("click", function () {
+                state.active = group.id;
+                render();
+            });
+            tabs.appendChild(button);
+        });
+    }
+
+    function render() {
+        var query = search.value.trim().toLowerCase();
+        var items = allItems().filter(function (item) {
+            var inGroup = state.active === "all" || item.groupId === state.active;
+            var inSearch = !query || item.maltese.toLowerCase().includes(query) || (item.english || "").toLowerCase().includes(query);
+            return inGroup && inSearch;
+        });
+        grid.innerHTML = "";
+        items.forEach(function (item) {
+            var card = document.createElement("article");
+            card.className = "year4-card" + (state.hideEnglish ? " hide-english" : "");
+            card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p>";
+            card.querySelector("code").textContent = item.maltese;
+            card.querySelector(".english").textContent = item.english || "translation pending";
+            card.querySelector(".mini").textContent = item.groupTitle;
+            grid.appendChild(card);
+        });
+        count.textContent = items.length + " visible words";
+        renderTabs();
+    }
+
+    function newPracticeWord() {
+        var words = allItems().filter(function (item) { return item.english; });
+        currentWord = words[Math.floor(Math.random() * words.length)];
+        prompt.textContent = currentWord.english;
+        answer.value = "";
+        feedback.textContent = "";
+        answer.focus();
+    }
+
+    function normalizeText(value) {
+        return value.trim().toLowerCase();
+    }
+
+    function checkPracticeWord() {
+        if (!currentWord) {
+            newPracticeWord();
+            return;
+        }
+        if (normalizeText(answer.value) === normalizeText(currentWord.maltese)) {
+            feedback.textContent = "Correct: " + currentWord.maltese;
+        } else {
+            feedback.textContent = "Answer: " + currentWord.maltese;
+        }
+    }
+
+    fetch("./assets/data/year4_vocabulary.json")
+        .then(function (response) { return response.json(); })
+        .then(function (data) {
+            state.data = data;
+            render();
+            newPracticeWord();
+        });
+
+    search.addEventListener("input", render);
+    toggle.addEventListener("click", function () {
+        state.hideEnglish = !state.hideEnglish;
+        toggle.textContent = state.hideEnglish ? "Show English" : "Hide English";
+        render();
+    });
+    document.getElementById("year4-new").addEventListener("click", newPracticeWord);
+    document.getElementById("year4-check").addEventListener("click", checkPracticeWord);
+    answer.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            checkPracticeWord();
+        }
+    });
+}());
+</script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

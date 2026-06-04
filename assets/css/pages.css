@@ -490,6 +490,85 @@ body.compact-animals .animal-gallery {
   margin-bottom: var(--flow-gap-sm);
 }
 
+.year4-toolbar {
+  align-items: center;
+  margin-bottom: var(--flow-gap-sm);
+}
+
+.year4-search {
+  flex: 1 1 260px;
+}
+
+.year4-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: 0 0 var(--flow-gap-sm);
+}
+
+.year4-tab {
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-panel-solid);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.year4-tab[aria-selected="true"] {
+  border-color: var(--text-accent);
+  color: var(--text-accent);
+  background: var(--color-surface-muted);
+}
+
+.year4-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--grid-gap-sm);
+}
+
+.year4-card {
+  min-width: 0;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--component-card-radius);
+  padding: var(--space-lg);
+  background: var(--surface-panel-solid);
+}
+
+.year4-card code {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-size: 1.25rem;
+  overflow-wrap: anywhere;
+}
+
+.year4-card .english {
+  min-height: 1.45em;
+  color: var(--color-text-muted);
+}
+
+.year4-card .mini {
+  margin: var(--space-sm) 0 0;
+}
+
+.year4-card.hide-english .english {
+  color: transparent;
+  text-shadow: 0 0 8px var(--color-text-muted);
+  user-select: none;
+}
+
+.year4-practice {
+  display: grid;
+  gap: var(--grid-gap-sm);
+}
+
+.year4-practice-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
 .attached-pattern-panel {
   background: transparent;
   border: none;
@@ -510,50 +589,6 @@ body.compact-animals .animal-gallery {
 
 .shopping-dialogue-bank > .toolbar-row {
   margin-bottom: var(--flow-gap-sm);
-}
-
-#wrong .shopping-contrast-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3xl);
-}
-
-.shopping-contrast-card {
-  border: 1px solid var(--color-accent-border);
-  border-radius: var(--component-panel-radius);
-  padding: var(--space-3xl);
-  background: var(--color-surface-muted);
-}
-
-.shopping-contrast-card h3 {
-  margin-bottom: var(--space-lg);
-}
-
-.shopping-contrast-formula {
-  margin: 0 0 var(--space-xl);
-}
-
-.shopping-contrast-formula--wrong {
-  border-left-color: var(--color-danger);
-  background: var(--surface-danger-soft);
-}
-
-.shopping-contrast-formula--right {
-  border-left-color: var(--text-accent);
-}
-
-.shopping-contrast-card--wrong .wrong {
-  color: var(--color-danger);
-  font-weight: 700;
-}
-
-.shopping-contrast-card--right .right {
-  color: var(--text-accent);
-  font-weight: 700;
-}
-
-#wrong .shopping-contrast-card .mini {
-  margin: 0;
 }
 
 .grammar-contrast-grid {
@@ -672,11 +707,11 @@ body.compact-animals .animal-gallery {
     grid-template-columns: 1fr;
   }
 
-  #wrong .shopping-contrast-grid {
+  .grammar-contrast-grid {
     grid-template-columns: 1fr;
   }
 
-  .grammar-contrast-grid {
+  .year4-practice-row {
     grid-template-columns: 1fr;
   }
 }
