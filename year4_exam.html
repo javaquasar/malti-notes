@@ -60,7 +60,11 @@
                     <button class="action-button" id="year4-toggle" type="button">Hide English</button>
                 </div>
                 <div class="year4-collection-tabs" id="year4-collection-tabs" role="tablist" aria-label="Revision sets"></div>
-                <div class="year4-tabs" id="year4-tabs" role="tablist"></div>
+                <div class="year4-topic-filter-bar">
+                    <button class="action-button" id="year4-topic-toggle" type="button" aria-expanded="false" aria-controls="year4-tabs">Show Topic Filters</button>
+                    <p class="mini" id="year4-topic-summary">All Topics</p>
+                </div>
+                <div class="year4-tabs" id="year4-tabs" role="tablist" hidden></div>
                 <div class="year4-grid" id="year4-grid"></div>
             </section>
 
@@ -84,10 +88,12 @@
 </div>
 <script>
 (function () {
-    var state = { data: null, collection: "exam", active: "all", hideEnglish: false, practice: [] };
+    var state = { data: null, collection: "exam", active: "all", hideEnglish: false, groupsExpanded: false, practice: [] };
     var grid = document.getElementById("year4-grid");
     var collectionTabs = document.getElementById("year4-collection-tabs");
     var tabs = document.getElementById("year4-tabs");
+    var topicToggle = document.getElementById("year4-topic-toggle");
+    var topicSummary = document.getElementById("year4-topic-summary");
     var search = document.getElementById("year4-search");
     var toggle = document.getElementById("year4-toggle");
     var count = document.getElementById("year4-count");
@@ -163,6 +169,13 @@
             });
             tabs.appendChild(button);
         });
+        tabs.hidden = !state.groupsExpanded;
+        topicToggle.textContent = state.groupsExpanded ? "Hide Topic Filters" : "Show Topic Filters";
+        topicToggle.setAttribute("aria-expanded", String(state.groupsExpanded));
+        var activeGroup = groups.find(function (group) {
+            return group.id === state.active;
+        });
+        topicSummary.textContent = activeGroup ? activeGroup.title : "All Topics";
     }
 
     function bindCardReveal(card) {
@@ -269,6 +282,10 @@
         state.hideEnglish = !state.hideEnglish;
         toggle.textContent = state.hideEnglish ? "Show English" : "Hide English";
         render();
+    });
+    topicToggle.addEventListener("click", function () {
+        state.groupsExpanded = !state.groupsExpanded;
+        renderTabs();
     });
     document.getElementById("year4-new").addEventListener("click", newPracticeWord);
     document.getElementById("year4-check").addEventListener("click", checkPracticeWord);
