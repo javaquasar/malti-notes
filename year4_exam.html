@@ -132,10 +132,13 @@
         items.forEach(function (item) {
             var card = document.createElement("article");
             card.className = "year4-card" + (state.hideEnglish ? " hide-english" : "");
-            card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p>";
+            card.tabIndex = 0;
+            card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p><div class='year4-example'><strong>Example</strong><span class='example-text'></span><strong>English</strong><span class='example-translation'></span></div>";
             card.querySelector("code").textContent = item.maltese;
             card.querySelector(".english").textContent = item.english || "translation pending";
             card.querySelector(".mini").textContent = item.groupTitle;
+            card.querySelector(".example-text").textContent = item.example || item.maltese;
+            card.querySelector(".example-translation").textContent = item.exampleTranslation || item.english || "";
             grid.appendChild(card);
         });
         count.textContent = items.length + " visible words";

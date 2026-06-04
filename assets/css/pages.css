@@ -557,6 +557,25 @@ body.compact-animals .animal-gallery {
   user-select: none;
 }
 
+.year4-example {
+  display: none;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.year4-card:hover .year4-example,
+.year4-card:focus .year4-example,
+.year4-card:focus-within .year4-example {
+  display: grid;
+}
+
+.year4-example strong,
+.year4-example span {
+  display: block;
+}
+
 .year4-practice {
   display: grid;
   gap: var(--grid-gap-sm);
