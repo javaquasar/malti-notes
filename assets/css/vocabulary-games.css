@@ -2,70 +2,10 @@
   align-items: start;
 }
 
-.vocabulary-game-sidebar {
-  display: grid;
-  gap: var(--space-3xl);
-}
-
-.vocabulary-game-field {
-  display: grid;
-  gap: var(--space-sm);
-}
-
-.vocabulary-game-field strong {
-  color: var(--text-primary);
-}
-
-.vocabulary-game-actions {
-  display: grid;
-  gap: var(--space-sm);
-}
-
-.vocabulary-game-stat {
-  display: grid;
-  gap: var(--space-xs);
-  padding: var(--space-3xl);
-  border: 1px solid var(--game-list-border);
-  border-radius: var(--radius-lg);
-  background: var(--game-list-bg);
-}
-
-.vocabulary-game-stat strong {
-  font-size: 2rem;
-  line-height: 1;
-  color: var(--text-brand);
-}
-
-.vocabulary-game-stat span {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
 .memory-board {
   display: grid;
   grid-template-columns: repeat(var(--memory-columns, 4), minmax(0, 1fr));
   gap: var(--grid-gap-sm);
-}
-
-.memory-board.is-refreshing,
-.matched-pair-list.is-refreshing,
-.builder-stage.is-refreshing,
-.round-list.is-refreshing {
-  animation: vocabulary-game-refresh 360ms ease-out both;
-}
-
-@keyframes vocabulary-game-refresh {
-  0% {
-    opacity: 0.42;
-    transform: translateY(6px) scale(0.992);
-    filter: saturate(0.82);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: saturate(1);
-  }
 }
 
 .memory-card {

@@ -278,11 +278,13 @@
   overflow-x: hidden;
 }
 
-#key-verbs .box + .box {
+#key-verbs .box + .box,
+#key-verbs .study-card + .study-card {
   margin-top: var(--space-sm);
 }
 
-#key-verbs .box {
+#key-verbs .box,
+#key-verbs .study-card {
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -362,73 +364,6 @@ body.compact-animals .animal-gallery {
   display: none;
 }
 
-@media (max-width: 980px) {
-  .animal-gallery,
-  .grid-2,
-  .grid-3,
-  .grid-auto,
-  .grid-split,
-  .layout-2-sidebar,
-  .number-grid,
-  .phrase-grid,
-  .result-grid,
-  .pattern-grid-verb,
-  .home-page-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .study-card,
-  .transport-figure-card,
-  .route-card,
-  .color-card {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .compact-list,
-  .compact-list.compact-3 {
-    columns: 1;
-  }
-
-  #key-verbs table {
-    width: 620px;
-    min-width: 620px;
-    max-width: none;
-  }
-
-  .number-line,
-  .phrase-card,
-  .formula,
-  .item,
-  .box,
-  code,
-  .verb-trigger,
-  .legend-chip,
-  .study-card-compact,
-  .verb-visual {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-
-@media (max-width: 1100px) {
-  .layout-2-sidebar {
-    grid-template-columns: 1fr;
-  }
-
-  .tip {
-    position: static;
-  }
-}
 .open-group-grid {
   display: grid;
   gap: var(--flow-gap-lg);
@@ -644,114 +579,14 @@ body.compact-animals .animal-gallery {
   margin-bottom: var(--flow-gap-sm);
 }
 
-.grammar-contrast-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3xl);
-}
-
-.grammar-contrast-card {
-  border: 1px solid var(--color-accent-border);
-  border-radius: var(--component-panel-radius);
-  padding: var(--space-3xl);
-  background: var(--color-surface-muted);
-}
-
-.grammar-contrast-card h3 {
-  margin-bottom: var(--space-lg);
-}
-
-.grammar-contrast-formula {
-  margin: 0 0 var(--space-xl);
-}
-
-.grammar-contrast-formula--wrong {
-  border-left-color: var(--color-danger);
-  background: var(--surface-danger-soft);
-}
-
-.grammar-contrast-formula--right {
-  border-left-color: var(--text-accent);
-}
-
-.grammar-contrast-card--wrong .wrong {
-  color: var(--color-danger);
-  font-weight: 700;
-}
-
-.grammar-contrast-card--right .right {
-  color: var(--text-accent);
-  font-weight: 700;
-}
-
-.grammar-contrast-card .mini {
-  margin: 0;
-}
-
 #dialogues [data-example-group].grid-2 {
   grid-template-columns: 1fr;
   gap: var(--grid-gap-sm);
 }
 
-#dialogues .phrase-card {
-  width: min(560px, 84%);
-  border-radius: var(--component-panel-radius);
-  padding: var(--space-2xl) var(--space-3xl);
-  background: var(--color-surface-soft);
-  box-shadow: none;
-}
-
-#dialogues .phrase-card:nth-child(odd) {
-  justify-self: start;
-  border-top-left-radius: var(--space-md);
-}
-
-#dialogues .phrase-card:nth-child(even) {
-  justify-self: end;
-  border-top-right-radius: var(--space-md);
-  background: var(--surface-speech-card);
-}
-
-#dialogues .phrase-card strong {
-  margin-bottom: var(--space-sm);
-}
-
-#dialogues .phrase-card span {
-  display: block;
-  line-height: 1.45;
-}
-
 .example-dialogue-stack.grid-2 {
   grid-template-columns: 1fr;
   gap: 14px;
-}
-
-.example-dialogue-stack .phrase-card {
-  width: min(560px, 84%);
-  border-radius: var(--component-panel-radius);
-  padding: var(--space-2xl) var(--space-3xl);
-  background: var(--color-surface-soft);
-  box-shadow: none;
-}
-
-.example-dialogue-stack .phrase-card:nth-child(odd) {
-  justify-self: start;
-  border-top-left-radius: var(--space-md);
-}
-
-.example-dialogue-stack .phrase-card:nth-child(even) {
-  justify-self: end;
-  border-top-right-radius: var(--space-md);
-  background: var(--surface-speech-card);
-}
-
-.example-dialogue-stack .phrase-card strong {
-  margin-bottom: var(--space-sm);
-}
-
-.example-dialogue-stack .phrase-card span {
-  display: block;
-  line-height: 1.45;
 }
 
 @media (max-width: 720px) {

@@ -2,6 +2,7 @@
   .layout,
   .grid,
   .hero-body,
+  .animal-gallery,
   .grid-2,
   .grid-3,
   .grid-auto,
@@ -9,7 +10,12 @@
   .layout-2-sidebar,
   .dialogue-grid,
   .wrong-right-grid,
-  .roleplay-grid {
+  .roleplay-grid,
+  .number-grid,
+  .phrase-grid,
+  .result-grid,
+  .pattern-grid-verb,
+  .home-page-grid {
     grid-template-columns: 1fr;
   }
 
@@ -90,6 +96,51 @@
     grid-template-columns: 1fr;
   }
 
+  .study-card,
+  .transport-figure-card,
+  .route-card,
+  .color-card {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .compact-list,
+  .compact-list.compact-3 {
+    columns: 1;
+  }
+
+  #key-verbs table {
+    width: 620px;
+    min-width: 620px;
+    max-width: none;
+  }
+
+  .number-line,
+  .phrase-card,
+  .dialogue-card,
+  .formula,
+  .item,
+  .info-card,
+  .box,
+  .study-card,
+  code,
+  .verb-trigger,
+  .legend-chip,
+  .study-card-compact,
+  .verb-visual {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   .verb-meta-row {
     grid-template-columns: 92px minmax(0, 1fr);
   }
@@ -123,3 +174,12 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .layout-2-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .tip {
+    position: static;
+  }
+}

@@ -2,20 +2,6 @@
   align-items: start;
 }
 
-.word-search-sidebar {
-  display: grid;
-  gap: var(--grid-gap-sm);
-}
-
-.word-search-field {
-  display: grid;
-  gap: var(--space-xs);
-}
-
-.word-search-field strong {
-  font-size: 0.95rem;
-}
-
 .word-search-timer-panel {
   display: flex;
   align-items: baseline;

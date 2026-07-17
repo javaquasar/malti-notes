@@ -127,12 +127,14 @@
 
 .route-card strong,
 .route-card span,
-.phrase-card strong {
+.phrase-card strong,
+.dialogue-card strong {
   display: block;
 }
 
 .route-card strong,
-.phrase-card strong {
+.phrase-card strong,
+.dialogue-card strong {
   margin-bottom: var(--space-xs);
 }
 
@@ -247,5 +249,87 @@
 .lookup-status-box[data-state="fallback"] {
   border-color: var(--color-accent-border-strong);
   background: var(--color-surface-fallback);
+}
+
+.grammar-contrast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3xl);
+}
+
+.grammar-contrast-card {
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--component-panel-radius);
+  padding: var(--space-3xl);
+  background: var(--color-surface-muted);
+}
+
+.grammar-contrast-card h3 {
+  margin-bottom: var(--space-lg);
+}
+
+.grammar-contrast-formula {
+  margin: 0 0 var(--space-xl);
+}
+
+.grammar-contrast-formula--wrong {
+  border-left-color: var(--color-danger);
+  background: var(--surface-danger-soft);
+}
+
+.grammar-contrast-formula--right {
+  border-left-color: var(--text-accent);
+}
+
+.grammar-contrast-card--wrong .wrong {
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+.grammar-contrast-card--right .right {
+  color: var(--text-accent);
+  font-weight: 700;
+}
+
+.grammar-contrast-card .mini {
+  margin: 0;
+}
+
+.speech-card,
+#dialogues .dialogue-card,
+.example-dialogue-stack .dialogue-card {
+  width: min(560px, 84%);
+  border-radius: var(--component-panel-radius);
+  padding: var(--space-2xl) var(--space-3xl);
+  background: var(--color-surface-soft);
+  box-shadow: none;
+}
+
+.speech-card:nth-child(odd),
+#dialogues .dialogue-card:nth-child(odd),
+.example-dialogue-stack .dialogue-card:nth-child(odd) {
+  justify-self: start;
+  border-top-left-radius: var(--space-md);
+}
+
+.speech-card:nth-child(even),
+#dialogues .dialogue-card:nth-child(even),
+.example-dialogue-stack .dialogue-card:nth-child(even) {
+  justify-self: end;
+  border-top-right-radius: var(--space-md);
+  background: var(--surface-speech-card);
+}
+
+.speech-card strong,
+#dialogues .dialogue-card strong,
+.example-dialogue-stack .dialogue-card strong {
+  margin-bottom: var(--space-sm);
+}
+
+.speech-card span,
+#dialogues .dialogue-card span,
+.example-dialogue-stack .dialogue-card span {
+  display: block;
+  line-height: 1.45;
 }
 

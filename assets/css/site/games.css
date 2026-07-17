@@ -1,0 +1,124 @@
+.game-sidebar,
+.vocabulary-game-sidebar,
+.word-search-sidebar {
+  display: grid;
+  gap: var(--grid-gap-sm);
+}
+
+.vocabulary-game-sidebar {
+  gap: var(--space-3xl);
+}
+
+.game-field,
+.vocabulary-game-field,
+.word-search-field {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.word-search-field {
+  gap: var(--space-xs);
+}
+
+.game-field strong,
+.vocabulary-game-field strong {
+  color: var(--text-primary);
+}
+
+.word-search-field strong {
+  font-size: 0.95rem;
+}
+
+.game-actions,
+.vocabulary-game-actions {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.game-stat,
+.vocabulary-game-stat {
+  display: grid;
+  gap: var(--space-xs);
+  padding: var(--space-3xl);
+  border: 1px solid var(--game-list-border);
+  border-radius: var(--radius-lg);
+  background: var(--game-list-bg);
+}
+
+.game-stat strong,
+.vocabulary-game-stat strong {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-brand);
+}
+
+.game-stat span,
+.vocabulary-game-stat span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.topic-picker-checks,
+.word-search-topic-checks {
+  max-height: 190px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xs);
+  overflow: auto;
+  padding: var(--space-sm);
+  border: 1px solid var(--game-list-border);
+  border-radius: var(--component-card-radius);
+  background: var(--game-list-bg);
+}
+
+.topic-picker-check,
+.word-search-topic-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-width: 0;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.topic-picker-check.is-all,
+.word-search-topic-check.is-all {
+  grid-column: 1 / -1;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--game-list-border);
+  color: var(--text-brand);
+}
+
+.topic-picker-check input,
+.word-search-topic-check input {
+  flex: 0 0 auto;
+}
+
+.topic-picker-check span,
+.word-search-topic-check span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.game-refreshing,
+.memory-board.is-refreshing,
+.matched-pair-list.is-refreshing,
+.builder-stage.is-refreshing,
+.round-list.is-refreshing {
+  animation: game-refresh 360ms ease-out both;
+}
+
+@keyframes game-refresh {
+  0% {
+    opacity: 0.42;
+    transform: translateY(6px) scale(0.992);
+    filter: saturate(0.82);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: saturate(1);
+  }
+}

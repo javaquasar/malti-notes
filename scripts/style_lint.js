@@ -77,6 +77,7 @@ const siteEntry = fs.readFileSync(path.join(root, "assets/css/site.css"), "utf8"
   "components.css",
   "verbs.css",
   "imperative.css",
+  "games.css",
   "navigation.css",
   "responsive.css",
   "print.css"
