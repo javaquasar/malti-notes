@@ -44,6 +44,7 @@ jobs:
           npm run data:lint
           npm run links:lint
           npm run theme:a11y
+          npm run functional:test
           npm run visual:smoke
           npm run visual:ci
 

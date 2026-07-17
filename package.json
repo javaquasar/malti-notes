@@ -12,7 +12,8 @@
     "theme:a11y": "node ./scripts/theme_accessibility_check.js",
     "style:lint": "node ./scripts/style_lint.js",
     "data:lint": "node ./scripts/data_lint.js",
-    "links:lint": "node ./scripts/links_lint.js"
+    "links:lint": "node ./scripts/links_lint.js",
+    "functional:test": "node ./scripts/functional_check.js"
   },
   "repository": {
     "type": "git",
