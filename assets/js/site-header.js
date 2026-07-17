@@ -1,4 +1,4 @@
-(() => {
+(async () => {
   const header = document.querySelector(".site-header");
   if (!header) return;
   const REVIEW_STORAGE_KEY = "malti_review_cards_v2";
@@ -30,69 +30,38 @@
     return clean === "" ? "index.html" : clean;
   })();
 
-  const groups = [
-    {
-      label: "Grammar",
-      items: [
-        ["verbs_guide.html", "Verbs"],
-        ["pronouns_possessives.html", "Pronouns"],
-        ["sentence_builder.html", "Sentence Builder"],
-        ["modals_needs.html", "Modals"],
-        ["prepositions_place.html", "Prepositions"],
-        ["comparisons.html", "Comparisons"],
-        ["collective_nouns.html", "Collective"],
-        ["numbers_calendar_time.html", "Numbers and Time"],
-        ["imperative_verbs.html", "Imperative Verbs"]
-      ]
-    },
-    {
-      label: "Vocabulary",
-      items: [
-        ["animals.html", "Animals"],
-        ["colors_maltese.html", "Colours"],
-        ["home_furniture.html", "Home and Furniture"],
-        ["family_home_food.html", "Family, Home and Food"],
-        ["food_preferences.html", "Food"],
-        ["body_appearance.html", "Body and Appearance"],
-        ["emotions.html", "Emotions"],
-        ["weather.html", "Weather"]
-      ]
-    },
-    {
-      label: "Speaking",
-      items: [
-        ["picture_description.html", "Picture Description"],
-        ["daily_routine.html", "Daily Routine"],
-        ["directions_town.html", "Directions"],
-        ["places_events.html", "Places and Events"],
-        ["transport_travel.html", "Transport and Travel"],
-        ["restaurant_ordering.html", "Restaurant"],
-        ["shopping_clothes.html", "Shopping and Clothes"],
-        ["health_doctor.html", "Health and Doctor"],
-        ["daily_problems.html", "Daily Problems"],
-        ["impactful_people.html", "Impactful People"]
-      ]
-    },
-    {
-      label: "Review",
-      items: [
-        ["review_cards.html", "Review Cards"],
-        ["word_search.html", "Word Search"],
-        ["memory_game.html", "Memory Game"],
-        ["word_builder_game.html", "Word Builder"],
-        ["common_mistakes.html", "Common Mistakes"]
-      ]
+  const loadSiteMap = async () => {
+    const response = await fetch("./assets/data/site-map.json");
+    if (!response.ok) {
+      throw new Error(`Could not load site map (${response.status})`);
     }
-  ];
+    return response.json();
+  };
+  window.MaltiSiteMapReady = window.MaltiSiteMapReady || loadSiteMap();
+
+  let siteMap;
+  try {
+    siteMap = await window.MaltiSiteMapReady;
+  } catch (error) {
+    console.error("Could not initialize site navigation", error);
+    return;
+  }
+
+  const groups = siteMap.groups.map((group) => ({
+    ...group,
+    items: group.pages.map((page) => ({
+      ...page,
+      label: page.navLabel || page.label
+    }))
+  }));
 
   const currentGroupLabel =
-    groups.find((group) => group.items.some(([href]) => href === currentFile))?.label || null;
+    groups.find((group) => group.items.some((item) => item.href === currentFile))?.label || null;
   const searchItems = [
-    { href: "index.html", label: "Home", group: "Home" },
+    ...siteMap.standalone.map((item) => ({ ...item, group: "Home" })),
     ...groups.flatMap((group) =>
-      group.items.map(([href, label]) => ({ href, label, group: group.label }))
-    ),
-    { href: "all_pages.html", label: "All Pages", group: "Home" }
+      group.items.map((item) => ({ ...item, group: group.label }))
+    )
   ];
   const normalizeSearch = (value) => String(value || "").trim().toLowerCase();
 
@@ -102,11 +71,11 @@
   };
 
   const groupHtml = ({ label, items }) => {
-    const hasCurrent = items.some(([href]) => href === currentFile);
+    const hasCurrent = items.some((item) => item.href === currentFile);
     const itemsHtml = items
-      .map(([href, text]) => {
-        const current = currentFile === href ? " class=\"is-current\"" : "";
-        return `<a href="./${href}"${current}>${text}</a>`;
+      .map((item) => {
+        const current = currentFile === item.href ? " class=\"is-current\"" : "";
+        return `<a href="./${item.href}"${current}>${item.label}</a>`;
       })
       .join("");
 
@@ -188,7 +157,9 @@
 
     return searchItems
       .filter((item) => {
-        const haystack = normalizeSearch(`${item.label} ${item.group} ${item.href.replace(/[_-]/g, " ")}`);
+        const haystack = normalizeSearch(
+          `${item.label} ${item.group} ${item.description || ""} ${item.href.replace(/[_-]/g, " ")}`
+        );
         return haystack.includes(normalized);
       })
       .slice(0, 8);

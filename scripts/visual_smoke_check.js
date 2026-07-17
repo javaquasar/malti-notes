@@ -128,9 +128,12 @@ check("theme switcher knows all themes", () => {
 
 check("site header exposes page search", () => {
   const js = read("assets/js/site-header.js");
+  const siteMap = JSON.parse(read("assets/data/site-map.json"));
   const css = read("assets/css/site/navigation.css");
   assert(js.includes("data-site-search"), "site search input is missing");
   assert(js.includes("searchItems"), "site search index is missing");
+  assert(js.includes("MaltiSiteMapReady"), "site header does not load the shared site map");
+  assert(siteMap.groups.length === 4, "site map must expose four navigation groups");
   assert(css.includes(".site-search"), "site search styles are missing");
 });
 

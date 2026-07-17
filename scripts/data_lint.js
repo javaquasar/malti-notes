@@ -180,6 +180,90 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
   });
 }
 
+function validateSiteMap(file, data) {
+  const seenHrefs = new Set();
+  const seenFeatured = new Set();
+  const registeredPages = [];
+
+  function validateSitePage(page, owner) {
+    if (!isObject(page)) {
+      fail(file, `${owner} must be an object`);
+      return;
+    }
+
+    ["href", "label", "description"].forEach((field) => {
+      validateStringField(file, owner, field, page[field]);
+    });
+    validateStringField(file, owner, "navLabel", page.navLabel);
+
+    if (isNonEmptyString(page.href)) {
+      if (seenHrefs.has(page.href)) {
+        fail(file, `duplicate page href: ${page.href}`);
+      } else {
+        seenHrefs.add(page.href);
+        registeredPages.push(page.href);
+      }
+
+      if (!fs.existsSync(path.join(root, page.href))) {
+        fail(file, `${owner}.href points to missing HTML file: ${page.href}`);
+      }
+    }
+
+    if (page.featured !== undefined) {
+      if (!Number.isInteger(page.featured) || page.featured < 0) {
+        fail(file, `${owner}.featured must be a non-negative integer`);
+      } else if (seenFeatured.has(page.featured)) {
+        fail(file, `duplicate featured order: ${page.featured}`);
+      } else {
+        seenFeatured.add(page.featured);
+      }
+    }
+  }
+
+  if (!Array.isArray(data.standalone)) {
+    fail(file, "standalone must be an array");
+  } else {
+    data.standalone.forEach((page, index) => validateSitePage(page, `standalone[${index}]`));
+  }
+
+  if (!Array.isArray(data.groups)) {
+    fail(file, "groups must be an array");
+    return;
+  }
+
+  const seenGroupIds = new Set();
+  data.groups.forEach((group, groupIndex) => {
+    const owner = `groups[${groupIndex}]`;
+    if (!isObject(group)) {
+      fail(file, `${owner} must be an object`);
+      return;
+    }
+
+    ["id", "label", "heading"].forEach((field) => {
+      validateStringField(file, owner, field, group[field]);
+    });
+
+    if (isNonEmptyString(group.id)) {
+      if (seenGroupIds.has(group.id)) {
+        fail(file, `duplicate group id: ${group.id}`);
+      }
+      seenGroupIds.add(group.id);
+    }
+
+    if (!Array.isArray(group.pages) || !group.pages.length) {
+      fail(file, `${owner}.pages must be a non-empty array`);
+      return;
+    }
+    group.pages.forEach((page, pageIndex) => validateSitePage(page, `${owner}.pages[${pageIndex}]`));
+  });
+
+  const htmlPages = fs.readdirSync(root).filter((name) => name.endsWith(".html")).sort();
+  const unregistered = htmlPages.filter((name) => !registeredPages.includes(name));
+  if (unregistered.length) {
+    fail(file, `HTML pages missing from site map: ${unregistered.join(", ")}`);
+  }
+}
+
 function validateFile(absFile) {
   const relFile = normalize(path.relative(root, absFile));
   const raw = fs.readFileSync(absFile, "utf8");
@@ -194,6 +278,11 @@ function validateFile(absFile) {
 
   if (!isObject(data)) {
     fail(relFile, "top-level value must be an object");
+    return;
+  }
+
+  if (path.basename(absFile) === "site-map.json") {
+    validateSiteMap(relFile, data);
     return;
   }
 
