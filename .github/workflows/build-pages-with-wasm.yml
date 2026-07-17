@@ -42,6 +42,7 @@ jobs:
         run: |
           npm run style:lint
           npm run data:lint
+          npm run content:lint
           npm run links:lint
           npm run theme:a11y
           npm run functional:test
