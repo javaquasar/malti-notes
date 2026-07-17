@@ -5,6 +5,7 @@
   "scripts": {
     "visual:smoke": "node ./scripts/visual_smoke_check.js",
     "visual:screenshots": "node ./scripts/visual_screenshots.js",
+    "visual:ci": "node ./scripts/visual_ci_check.js",
     "visual:diff": "node ./scripts/visual_diff.js",
     "visual:baseline": "node ./scripts/visual_baseline.js",
     "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline",

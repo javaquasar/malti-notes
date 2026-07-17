@@ -4,7 +4,8 @@ const path = require("path");
 const { chromium } = require("playwright");
 
 const root = path.resolve(__dirname, "..");
-const chromePath = process.env.CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const defaultChromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const chromePath = process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
 const host = "127.0.0.1";
 const port = Number(process.env.VISUAL_PORT || 4173);
 const themes = (process.env.VISUAL_THEMES || "classic,forest,contrast")
@@ -82,16 +83,12 @@ function makeServer() {
 }
 
 async function main() {
-  if (!fs.existsSync(chromePath)) {
-    throw new Error(`Chrome executable not found: ${chromePath}. Set CHROME_PATH to override.`);
-  }
-
   const outputRoot = path.join(root, "visual-regression", "screenshots", new Date().toISOString().replace(/[:.]/g, "-"));
   fs.mkdirSync(outputRoot, { recursive: true });
 
   const server = makeServer();
   await new Promise((resolve) => server.listen(port, host, resolve));
-  const browser = await chromium.launch({ executablePath: chromePath });
+  const browser = await chromium.launch(chromePath ? { executablePath: chromePath } : {});
 
   try {
     for (const viewport of viewports) {
