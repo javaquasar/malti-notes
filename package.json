@@ -11,7 +11,8 @@
     "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline",
     "theme:a11y": "node ./scripts/theme_accessibility_check.js",
     "style:lint": "node ./scripts/style_lint.js",
-    "data:lint": "node ./scripts/data_lint.js"
+    "data:lint": "node ./scripts/data_lint.js",
+    "links:lint": "node ./scripts/links_lint.js"
   },
   "repository": {
     "type": "git",
