@@ -30,6 +30,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run quality checks
+        run: |
+          npm run style:lint
+          npm run theme:a11y
+          npm run visual:smoke
 
       - name: Install wasm-pack
         run: cargo install wasm-pack
