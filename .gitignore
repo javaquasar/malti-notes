@@ -13,3 +13,15 @@ visual-regression/screenshots/
 visual-regression/diffs/
 visual-regression/baseline/
 node_modules
+
+# Local archives and temporary exports
+*.7z
+*.zip
+tmp_*/
+
+# Runtime caches and logs
+__pycache__/
+*.py[cod]
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
