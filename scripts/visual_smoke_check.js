@@ -126,6 +126,22 @@ check("theme switcher knows all themes", () => {
   });
 });
 
+check("storage helper loads before asset scripts", () => {
+  fs.readdirSync(root)
+    .filter((file) => file.endsWith(".html"))
+    .forEach((page) => {
+      const html = read(page);
+      const scripts = [...html.matchAll(/<script src="\.\/assets\/js\/([^"]+)"><\/script>/g)]
+        .map((match) => match[1]);
+
+      if (!scripts.length) {
+        return;
+      }
+
+      assert(scripts[0] === "storage.js", `${page} must load storage.js before other asset scripts`);
+    });
+});
+
 check("word search stays modular", () => {
   const wordPage = read("word_search.html");
   assert(wordPage.includes("assets/css/word-search.css"), "word_search.html does not load word-search.css");

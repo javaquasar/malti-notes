@@ -1,21 +1,14 @@
 (function () {
     const STORAGE_KEY = "malti_review_cards_v2";
+    const storage = window.MaltiStorage;
 
     function loadState() {
-        try {
-            const raw = window.localStorage.getItem(STORAGE_KEY);
-            if (!raw) {
-                return {};
-            }
-            const parsed = JSON.parse(raw);
-            return parsed && typeof parsed === "object" ? parsed : {};
-        } catch (error) {
-            return {};
-        }
+        const parsed = storage.getJson(STORAGE_KEY, {});
+        return parsed && typeof parsed === "object" ? parsed : {};
     }
 
     function saveState(state) {
-        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        storage.setJson(STORAGE_KEY, state);
     }
 
     function collapseSpaces(value) {

@@ -3,6 +3,7 @@
   if (!header) return;
   const REVIEW_STORAGE_KEY = "malti_review_cards_v2";
   const THEME_STORAGE_KEY = "malti_site_theme";
+  const storage = window.MaltiStorage;
   const themes = [
     { value: "classic", label: "Classic" },
     { value: "forest", label: "Forest" },
@@ -11,22 +12,14 @@
   const desktopReviewMedia = window.matchMedia("(min-width: 981px)");
 
   const getStoredTheme = () => {
-    try {
-      const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
-      return themes.some((theme) => theme.value === stored) ? stored : "classic";
-    } catch (error) {
-      return "classic";
-    }
+    const stored = storage.getString(THEME_STORAGE_KEY, "classic");
+    return themes.some((theme) => theme.value === stored) ? stored : "classic";
   };
 
   const applyTheme = (theme) => {
     const safeTheme = themes.some((item) => item.value === theme) ? theme : "classic";
     document.documentElement.dataset.theme = safeTheme;
-    try {
-      window.localStorage.setItem(THEME_STORAGE_KEY, safeTheme);
-    } catch (error) {
-      // Theme still applies for this session when storage is unavailable.
-    }
+    storage.setString(THEME_STORAGE_KEY, safeTheme);
   };
 
   applyTheme(getStoredTheme());
@@ -185,25 +178,17 @@
   }
 
   const readReviewStats = () => {
-    try {
-      const raw = window.localStorage.getItem(REVIEW_STORAGE_KEY);
-      if (!raw) {
-        return { total: 0, due: 0 };
-      }
-      const parsed = JSON.parse(raw);
-      if (!parsed || typeof parsed !== "object") {
-        return { total: 0, due: 0 };
-      }
-      const cards = Object.values(parsed);
-      const now = Date.now();
-      const due = cards.filter((card) => {
-        const nextReviewAt = card && card.nextReviewAt ? new Date(card.nextReviewAt).getTime() : 0;
-        return Number.isFinite(nextReviewAt) && nextReviewAt <= now;
-      }).length;
-      return { total: cards.length, due };
-    } catch (error) {
+    const parsed = storage.getJson(REVIEW_STORAGE_KEY, null);
+    if (!parsed || typeof parsed !== "object") {
       return { total: 0, due: 0 };
     }
+    const cards = Object.values(parsed);
+    const now = Date.now();
+    const due = cards.filter((card) => {
+      const nextReviewAt = card && card.nextReviewAt ? new Date(card.nextReviewAt).getTime() : 0;
+      return Number.isFinite(nextReviewAt) && nextReviewAt <= now;
+    }).length;
+    return { total: cards.length, due };
   };
 
   const ensureReviewFab = () => {

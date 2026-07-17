@@ -15,6 +15,7 @@
     var ANIMALS_DATA_URL = "./assets/data/animals.json";
     var COLORS_DATA_URL = "./assets/data/colors.json";
     var REVIEW_PREFS_KEY = "malti-review-prefs-v1";
+    var storage = window.MaltiStorage;
 
     function byId(id) {
         return document.getElementById(id);
@@ -79,23 +80,11 @@
     }
 
     function saveReviewPreferences() {
-        try {
-            window.localStorage.setItem(REVIEW_PREFS_KEY, JSON.stringify(getReviewPreferences()));
-        } catch (error) {
-            // Ignore storage errors and keep the page usable.
-        }
+        storage.setJson(REVIEW_PREFS_KEY, getReviewPreferences());
     }
 
     function loadReviewPreferences() {
-        try {
-            var raw = window.localStorage.getItem(REVIEW_PREFS_KEY);
-            if (!raw) {
-                return null;
-            }
-            return JSON.parse(raw);
-        } catch (error) {
-            return null;
-        }
+        return storage.getJson(REVIEW_PREFS_KEY, null);
     }
 
     function applyReviewPreferences(preferences) {

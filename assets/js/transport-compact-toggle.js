@@ -1,4 +1,5 @@
 const TRANSPORT_STORAGE_KEY = "transportCompactMode";
+const transportStorage = window.MaltiStorage;
 
 function applyTransportCompactMode(enabled) {
   document.body.classList.toggle("compact-transport", enabled);
@@ -14,13 +15,13 @@ function initTransportCompactToggle() {
     return;
   }
 
-  const saved = window.localStorage.getItem(TRANSPORT_STORAGE_KEY) === "1";
+  const saved = transportStorage.getString(TRANSPORT_STORAGE_KEY, "0") === "1";
   applyTransportCompactMode(saved);
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const nextState = !document.body.classList.contains("compact-transport");
-      window.localStorage.setItem(TRANSPORT_STORAGE_KEY, nextState ? "1" : "0");
+      transportStorage.setString(TRANSPORT_STORAGE_KEY, nextState ? "1" : "0");
       applyTransportCompactMode(nextState);
     });
   });

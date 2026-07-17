@@ -3,6 +3,7 @@
   const SEEN_STORAGE_KEY = "malti_word_search_seen_words_v1";
   const BEST_TIME_STORAGE_KEY = "malti_word_search_best_times_v1";
   const SOUND_STORAGE_KEY = "malti_word_search_sound_v1";
+  const storage = window.MaltiStorage;
   const DIRECTION_SETS = {
     easy: [
       { row: 0, col: 1 },
@@ -488,22 +489,14 @@
   const cellId = (row, col) => `${row}-${col}`;
   const readSoundEnabled = () => {
     if (window.MaltiGameAudio) return window.MaltiGameAudio.readEnabled(SOUND_STORAGE_KEY);
-    try {
-      return window.localStorage.getItem(SOUND_STORAGE_KEY) !== "off";
-    } catch (error) {
-      return true;
-    }
+    return storage.getString(SOUND_STORAGE_KEY, "on") !== "off";
   };
   const writeSoundEnabled = () => {
     if (window.MaltiGameAudio) {
       window.MaltiGameAudio.writeEnabled(SOUND_STORAGE_KEY, state.soundEnabled);
       return;
     }
-    try {
-      window.localStorage.setItem(SOUND_STORAGE_KEY, state.soundEnabled ? "on" : "off");
-    } catch (error) {
-      // Ignore storage failures.
-    }
+    storage.setString(SOUND_STORAGE_KEY, state.soundEnabled ? "on" : "off");
   };
   const getDirections = () => DIRECTION_SETS[state.directionsMode] || DIRECTION_SETS.medium;
   const formatTime = (seconds) => {
@@ -522,12 +515,8 @@
   const bestTimeKey = () => `${topicStateKey()}|${state.size}|${state.directionsMode}`;
 
   const readBestTimes = () => {
-    try {
-      const parsed = JSON.parse(window.localStorage.getItem(BEST_TIME_STORAGE_KEY) || "{}");
-      return parsed && typeof parsed === "object" ? parsed : {};
-    } catch (error) {
-      return {};
-    }
+    const parsed = storage.getJson(BEST_TIME_STORAGE_KEY, {});
+    return parsed && typeof parsed === "object" ? parsed : {};
   };
 
   const updateBestTimeLabel = () => {
@@ -542,11 +531,7 @@
     const current = state.elapsedSeconds;
     if (!current || (bestTimes[key] && bestTimes[key] <= current)) return;
     bestTimes[key] = current;
-    try {
-      window.localStorage.setItem(BEST_TIME_STORAGE_KEY, JSON.stringify(bestTimes));
-    } catch (error) {
-      // Ignore storage failures on restrictive browsers.
-    }
+    storage.setJson(BEST_TIME_STORAGE_KEY, bestTimes);
     updateBestTimeLabel();
   };
 
@@ -592,12 +577,8 @@
 
   const readSeenWords = () => {
     if (seenTracker) return new Set(seenTracker.read());
-    try {
-      const parsed = JSON.parse(window.localStorage.getItem(SEEN_STORAGE_KEY) || "[]");
-      return new Set(Array.isArray(parsed) ? parsed.filter((value) => typeof value === "string") : []);
-    } catch (error) {
-      return new Set();
-    }
+    const parsed = storage.getJson(SEEN_STORAGE_KEY, []);
+    return new Set(Array.isArray(parsed) ? parsed.filter((value) => typeof value === "string") : []);
   };
 
   const writeSeenWords = () => {
@@ -605,11 +586,7 @@
       seenTracker.write();
       return;
     }
-    try {
-      window.localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify([...state.seenWords]));
-    } catch (error) {
-      // Ignore storage failures; the in-memory set still works for this page session.
-    }
+    storage.setJson(SEEN_STORAGE_KEY, [...state.seenWords]);
   };
 
   const updateMemoryLabel = () => {

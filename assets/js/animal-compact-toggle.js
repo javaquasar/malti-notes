@@ -1,4 +1,5 @@
 const STORAGE_KEY = "animalsCompactMode";
+const animalStorage = window.MaltiStorage;
 
 function applyCompactMode(enabled) {
   document.body.classList.toggle("compact-animals", enabled);
@@ -14,13 +15,13 @@ function initAnimalCompactToggle() {
     return;
   }
 
-  const saved = window.localStorage.getItem(STORAGE_KEY) === "1";
+  const saved = animalStorage.getString(STORAGE_KEY, "0") === "1";
   applyCompactMode(saved);
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const nextState = !document.body.classList.contains("compact-animals");
-      window.localStorage.setItem(STORAGE_KEY, nextState ? "1" : "0");
+      animalStorage.setString(STORAGE_KEY, nextState ? "1" : "0");
       applyCompactMode(nextState);
     });
   });

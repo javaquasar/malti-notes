@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector("[data-home-image-toggle]");
   const root = document.documentElement;
   const storageKey = "homeCompactMode";
+  const storage = window.MaltiStorage;
 
   if (!button) {
     return;
@@ -13,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     button.setAttribute("aria-pressed", compact ? "true" : "false");
   };
 
-  const saved = window.localStorage.getItem(storageKey) === "true";
+  const saved = storage.getString(storageKey, "false") === "true";
   update(saved);
 
   button.addEventListener("click", () => {
     const next = !root.classList.contains("home-compact");
-    window.localStorage.setItem(storageKey, String(next));
+    storage.setString(storageKey, String(next));
     update(next);
   });
 });

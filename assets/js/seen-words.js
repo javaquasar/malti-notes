@@ -1,24 +1,18 @@
 (() => {
+  const storage = window.MaltiStorage;
+
   const create = ({ storageKey, label, itemLabel = "word" }) => {
     let seen = new Set();
 
     const read = () => {
-      try {
-        const parsed = JSON.parse(window.localStorage.getItem(storageKey) || "[]");
-        seen = new Set(Array.isArray(parsed) ? parsed.filter((value) => typeof value === "string") : []);
-      } catch (error) {
-        seen = new Set();
-      }
+      const parsed = storage.getJson(storageKey, []);
+      seen = new Set(Array.isArray(parsed) ? parsed.filter((value) => typeof value === "string") : []);
       updateLabel();
       return seen;
     };
 
     const write = () => {
-      try {
-        window.localStorage.setItem(storageKey, JSON.stringify([...seen]));
-      } catch (error) {
-        // Keep the in-memory set when storage is unavailable.
-      }
+      storage.setJson(storageKey, [...seen]);
       updateLabel();
     };
 

@@ -1,5 +1,6 @@
 (() => {
   let audioContext = null;
+  const storage = window.MaltiStorage;
 
   const getAudioContext = () => {
     if (!audioContext) {
@@ -68,19 +69,11 @@
   };
 
   const readEnabled = (storageKey, fallback = true) => {
-    try {
-      return window.localStorage.getItem(storageKey) !== "off";
-    } catch (error) {
-      return fallback;
-    }
+    return storage.getString(storageKey, fallback ? "on" : "off") !== "off";
   };
 
   const writeEnabled = (storageKey, enabled) => {
-    try {
-      window.localStorage.setItem(storageKey, enabled ? "on" : "off");
-    } catch (error) {
-      // Ignore storage failures on restrictive browsers.
-    }
+    storage.setString(storageKey, enabled ? "on" : "off");
   };
 
   window.MaltiGameAudio = {
