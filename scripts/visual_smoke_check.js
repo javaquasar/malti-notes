@@ -137,6 +137,16 @@ check("site header exposes page search", () => {
   assert(css.includes(".site-search"), "site search styles are missing");
 });
 
+check("page directories render from shared data", () => {
+  const index = read("index.html");
+  const directory = read("all_pages.html");
+  const renderer = read("assets/js/site-map-pages.js");
+  assert(!index.includes('class="page-card"'), "index.html still duplicates page cards");
+  assert(!directory.includes('class="page-card"'), "all_pages.html still duplicates page cards");
+  assert(directory.includes("data-site-map-directory"), "all_pages.html lacks a generated directory target");
+  assert(renderer.includes("createCluster"), "site map renderer does not generate directory clusters");
+});
+
 check("offline application shell is complete", () => {
   const manifest = JSON.parse(read("manifest.webmanifest"));
   const serviceWorker = read("service-worker.js");
