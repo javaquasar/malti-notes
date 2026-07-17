@@ -62,13 +62,13 @@
 .site-nav-panel {
   display: flex;
   align-items: center;
-  gap: var(--space-md) var(--space-xl);
+  gap: var(--space-md);
 }
 
 .site-nav-compact {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md) var(--space-xl);
+  gap: var(--space-sm) var(--space-md);
   align-items: center;
 }
 
@@ -163,6 +163,79 @@
 .nav-menu .is-current {
   background: var(--color-brand-tint);
   text-decoration: none;
+}
+
+.site-search {
+  position: relative;
+  flex: 0 1 210px;
+  min-width: 170px;
+}
+
+.site-search input {
+  width: 100%;
+  border: 1px solid var(--component-chip-border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xs) var(--space-xl);
+  background: var(--surface-panel-muted);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.site-search input::placeholder {
+  color: var(--text-muted);
+}
+
+.site-search input:focus {
+  outline: 2px solid var(--color-brand-border);
+  outline-offset: 2px;
+}
+
+.site-search-results {
+  position: absolute;
+  top: calc(100% + var(--space-sm));
+  right: 0;
+  z-index: 40;
+  display: grid;
+  gap: var(--space-xs);
+  min-width: min(320px, 88vw);
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: var(--space-md);
+  border: 1px solid var(--component-panel-border);
+  border-radius: var(--component-card-radius);
+  background: var(--component-panel-bg);
+  box-shadow: var(--component-panel-shadow);
+}
+
+.site-search-results[hidden] {
+  display: none;
+}
+
+.site-search-result {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.site-search-result:hover,
+.site-search-result:focus-visible {
+  background: var(--color-brand-soft);
+  text-decoration: none;
+  outline: none;
+}
+
+.site-search-result strong,
+.site-search-result span {
+  display: block;
+}
+
+.site-search-result span {
+  margin-top: var(--space-2xs);
+  color: var(--text-muted);
+  font-size: 0.86rem;
 }
 
 .theme-switcher {

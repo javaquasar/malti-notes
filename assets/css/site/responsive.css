@@ -69,6 +69,19 @@
     margin-top: var(--space-md);
   }
 
+  .site-search {
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .site-search-results {
+    position: static;
+    min-width: 0;
+    max-height: none;
+    margin-top: var(--space-sm);
+  }
+
   .site-nav-compact .nav-link,
   .site-nav-compact summary {
     display: block;

@@ -126,6 +126,14 @@ check("theme switcher knows all themes", () => {
   });
 });
 
+check("site header exposes page search", () => {
+  const js = read("assets/js/site-header.js");
+  const css = read("assets/css/site/navigation.css");
+  assert(js.includes("data-site-search"), "site search input is missing");
+  assert(js.includes("searchItems"), "site search index is missing");
+  assert(css.includes(".site-search"), "site search styles are missing");
+});
+
 check("storage helper loads before asset scripts", () => {
   fs.readdirSync(root)
     .filter((file) => file.endsWith(".html"))

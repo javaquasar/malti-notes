@@ -87,6 +87,14 @@
 
   const currentGroupLabel =
     groups.find((group) => group.items.some(([href]) => href === currentFile))?.label || null;
+  const searchItems = [
+    { href: "index.html", label: "Home", group: "Home" },
+    ...groups.flatMap((group) =>
+      group.items.map(([href, label]) => ({ href, label, group: group.label }))
+    ),
+    { href: "all_pages.html", label: "All Pages", group: "Home" }
+  ];
+  const normalizeSearch = (value) => String(value || "").trim().toLowerCase();
 
   const linkHtml = (href, label, extraClass = "") => {
     const current = currentFile === href ? " is-current" : "";
@@ -122,6 +130,10 @@
         ${groups.map(groupHtml).join("")}
         ${linkHtml("all_pages.html", "All Pages")}
       </nav>
+      <form class="site-search" role="search" data-site-search-form>
+        <input type="search" data-site-search placeholder="Search pages" aria-label="Search pages" autocomplete="off">
+        <div class="site-search-results" data-site-search-results hidden></div>
+      </form>
       <label class="theme-switcher">
         <span>Theme</span>
         <select data-theme-select aria-label="Choose site theme">
@@ -134,6 +146,9 @@
   const toggle = header.querySelector(".site-nav-toggle");
   const panel = header.querySelector(".site-nav-panel");
   const themeSelect = header.querySelector("[data-theme-select]");
+  const searchForm = header.querySelector("[data-site-search-form]");
+  const searchInput = header.querySelector("[data-site-search]");
+  const searchResults = header.querySelector("[data-site-search-results]");
   const detailsList = Array.from(header.querySelectorAll(".nav-group"));
   const menuLinks = Array.from(header.querySelectorAll(".nav-menu a, .site-nav-compact > .nav-link"));
   const closeTimers = new WeakMap();
@@ -158,6 +173,54 @@
     closeTimers.set(details, timer);
   };
 
+  const closeSearch = () => {
+    if (!searchResults) return;
+    searchResults.hidden = true;
+    searchResults.innerHTML = "";
+  };
+
+  const searchMatches = (query) => {
+    const normalized = normalizeSearch(query);
+
+    if (!normalized) {
+      return [];
+    }
+
+    return searchItems
+      .filter((item) => {
+        const haystack = normalizeSearch(`${item.label} ${item.group} ${item.href.replace(/[_-]/g, " ")}`);
+        return haystack.includes(normalized);
+      })
+      .slice(0, 8);
+  };
+
+  const renderSearch = () => {
+    if (!searchInput || !searchResults) return;
+    const matches = searchMatches(searchInput.value);
+    searchResults.innerHTML = "";
+
+    if (!matches.length) {
+      searchResults.hidden = true;
+      return;
+    }
+
+    matches.forEach((item) => {
+      const link = document.createElement("a");
+      const title = document.createElement("strong");
+      const meta = document.createElement("span");
+
+      link.className = "site-search-result";
+      link.href = `./${item.href}`;
+      title.textContent = item.label;
+      meta.textContent = item.group;
+      link.appendChild(title);
+      link.appendChild(meta);
+      searchResults.appendChild(link);
+    });
+
+    searchResults.hidden = false;
+  };
+
   if (toggle && panel) {
     toggle.addEventListener("click", () => {
       const next = !header.classList.contains("nav-open");
@@ -170,6 +233,24 @@
     themeSelect.value = document.documentElement.dataset.theme || "classic";
     themeSelect.addEventListener("change", () => {
       applyTheme(themeSelect.value);
+    });
+  }
+
+  if (searchForm && searchInput && searchResults) {
+    searchInput.addEventListener("input", renderSearch);
+    searchInput.addEventListener("focus", renderSearch);
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeSearch();
+        searchInput.blur();
+      }
+    });
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const first = searchResults.querySelector("a");
+      if (first) {
+        window.location.href = first.href;
+      }
     });
   }
 
@@ -300,6 +381,7 @@
       });
       header.classList.remove("nav-open");
       if (toggle) toggle.setAttribute("aria-expanded", "false");
+      closeSearch();
     }
   });
 
