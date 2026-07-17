@@ -41,6 +41,7 @@ jobs:
       - name: Run quality checks
         run: |
           npm run style:lint
+          npm run data:lint
           npm run theme:a11y
           npm run visual:smoke
 
