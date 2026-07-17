@@ -36,7 +36,6 @@ const contentKeys = [
 ];
 
 const errors = [];
-const warnings = [];
 
 function normalize(file) {
   return file.replace(/\\/g, "/");
@@ -73,10 +72,6 @@ function hasContent(item) {
 
 function fail(file, message) {
   errors.push(`${file}: ${message}`);
-}
-
-function warn(file, message) {
-  warnings.push(`${file}: ${message}`);
 }
 
 function validateStringField(file, owner, field, value) {
@@ -131,7 +126,7 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
   }
 
   if (!isNonEmptyString(group.title) && !isNonEmptyString(group.sectionTitle)) {
-    warn(file, `group ${groupLabel} has no title or sectionTitle`);
+    fail(file, `group ${groupLabel} has no title or sectionTitle`);
   }
 
   validateStringField(file, `group ${groupLabel}`, "sectionId", group.sectionId);
@@ -150,7 +145,7 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
   }
 
   if (!group.items.length) {
-    warn(file, `group ${groupLabel} has no items`);
+    fail(file, `group ${groupLabel} has no items`);
   }
 
   const seenItemKeys = new Set();
@@ -176,7 +171,7 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
     }
 
     if (!hasContent(item)) {
-      warn(file, `group ${groupLabel} item ${itemIndex} has no recognizable text content`);
+      fail(file, `group ${groupLabel} item ${itemIndex} has no recognizable text content`);
     }
 
     if (item.review !== undefined) {
@@ -220,8 +215,6 @@ function validateFile(absFile) {
 
 listJsonFiles(dataRoot).sort().forEach(validateFile);
 
-warnings.forEach((message) => console.warn(`warn ${message}`));
-
 if (errors.length) {
   errors.forEach((message) => console.error(`fail ${message}`));
   console.error(`\n${errors.length} data lint error(s) found.`);
@@ -229,7 +222,3 @@ if (errors.length) {
 }
 
 console.log(`ok checked ${listJsonFiles(dataRoot).length} data files`);
-
-if (warnings.length) {
-  console.log(`${warnings.length} data lint warning(s) found.`);
-}
