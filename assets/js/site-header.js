@@ -1,4 +1,19 @@
 (async () => {
+  if (!document.querySelector('link[rel="manifest"]')) {
+    const manifest = document.createElement("link");
+    manifest.rel = "manifest";
+    manifest.href = "./manifest.webmanifest";
+    document.head.appendChild(manifest);
+  }
+
+  if ("serviceWorker" in navigator && /^https?:$/.test(window.location.protocol)) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+        console.warn("Offline support could not be enabled.", error);
+      });
+    }, { once: true });
+  }
+
   const header = document.querySelector(".site-header");
   if (!header) return;
   const REVIEW_STORAGE_KEY = "malti_review_cards_v2";

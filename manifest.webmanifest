@@ -1,0 +1,31 @@
+{
+  "name": "Maltese Study Site",
+  "short_name": "Malti Notes",
+  "description": "Maltese vocabulary, grammar, review cards, and practice games.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5efe2",
+  "theme_color": "#2f8f83",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./assets/img/favicon-option-speech.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Review Cards",
+      "short_name": "Review",
+      "url": "./review_cards.html"
+    },
+    {
+      "name": "Word Search",
+      "short_name": "Word Search",
+      "url": "./word_search.html"
+    }
+  ]
+}

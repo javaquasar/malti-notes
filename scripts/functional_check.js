@@ -14,6 +14,7 @@ const mimeTypes = {
   ".html": "text/html; charset=utf-8",
   ".js": "application/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".webmanifest": "application/manifest+json; charset=utf-8",
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
@@ -154,6 +155,22 @@ async function main() {
       await page.locator("#memory-new").click();
       assert(await page.locator(".memory-card").count() === 16, "New memory game has an incomplete deck.");
       assert((await page.locator("#memory-score").textContent()).trim() === "0 / 8 matched", "Memory score did not reset.");
+    });
+
+    await runTest(context, "offline application assets are registered", async (page) => {
+      await openCleanPage(page, "index.html");
+      const result = await page.evaluate(async () => {
+        const manifest = await fetch(document.querySelector('link[rel="manifest"]').href).then((response) => response.json());
+        const registration = await navigator.serviceWorker.ready;
+        return {
+          name: manifest.name,
+          startUrl: manifest.start_url,
+          hasActiveWorker: Boolean(registration.active)
+        };
+      });
+      assert(result.name === "Maltese Study Site", "Web manifest was not loaded.");
+      assert(result.startUrl === "./index.html", "Web manifest has an unexpected start URL.");
+      assert(result.hasActiveWorker, "Service worker did not become active.");
     });
 
     await context.close();

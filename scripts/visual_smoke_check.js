@@ -137,6 +137,20 @@ check("site header exposes page search", () => {
   assert(css.includes(".site-search"), "site search styles are missing");
 });
 
+check("offline application shell is complete", () => {
+  const manifest = JSON.parse(read("manifest.webmanifest"));
+  const serviceWorker = read("service-worker.js");
+  const siteHeader = read("assets/js/site-header.js");
+  assert(manifest.start_url === "./index.html", "manifest start URL must be index.html");
+  assert(manifest.display === "standalone", "manifest display mode must be standalone");
+  assert(serviceWorker.includes("CORE_ASSETS"), "service worker does not define its application shell");
+  assert(serviceWorker.includes("request.mode === \"navigate\""), "service worker lacks an offline navigation strategy");
+  assert(siteHeader.includes("serviceWorker.register"), "site header does not register the service worker");
+  manifest.icons.forEach((icon) => {
+    assert(fs.existsSync(path.join(root, icon.src.replace(/^\.\//, ""))), `manifest icon is missing: ${icon.src}`);
+  });
+});
+
 check("storage helper loads before asset scripts", () => {
   fs.readdirSync(root)
     .filter((file) => file.endsWith(".html"))

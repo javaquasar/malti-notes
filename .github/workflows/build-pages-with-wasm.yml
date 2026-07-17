@@ -69,6 +69,7 @@ jobs:
         run: |
           mkdir -p site-dist
           cp *.html site-dist/
+          cp manifest.webmanifest service-worker.js site-dist/
           cp -R assets site-dist/
 
       - name: Configure Pages
