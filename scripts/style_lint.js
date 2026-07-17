@@ -17,7 +17,7 @@ function listFiles(dir, ext, files = []) {
     const abs = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      if (entry.name === "node_modules" || entry.name === "visual-regression") {
+      if (entry.name === ".git" || entry.name === "node_modules" || entry.name === "target" || entry.name === "visual-regression") {
         return;
       }
 
@@ -46,6 +46,19 @@ const failures = [];
 const cssFiles = listFiles(path.join(root, "assets", "css"), ".css")
   .map((file) => normalize(path.relative(root, file)))
   .sort();
+const legacyClassTokens = ["box", "item", "pair", "pattern", "phrase-card"];
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function lineNumber(text, index) {
+  return text.slice(0, index).split(/\r?\n/).length;
+}
+
+function reportLegacyClass(file, text, token, index) {
+  report(`${file}:${lineNumber(text, index)}: legacy .${token} class token should use a semantic card class`);
+}
 
 cssFiles.forEach((file) => {
   const text = fs.readFileSync(path.join(root, file), "utf8");
@@ -67,7 +80,58 @@ cssFiles.forEach((file) => {
       }
     });
   }
+
+  legacyClassTokens.forEach((token) => {
+    const selectorPattern = new RegExp(`\\.${escapeRegExp(token)}(?=[\\s,.#:{>+~\\[])`, "g");
+    let match;
+
+    while ((match = selectorPattern.exec(text)) !== null) {
+      reportLegacyClass(file, text, token, match.index);
+    }
+  });
 });
+
+listFiles(root, ".html")
+  .map((file) => normalize(path.relative(root, file)))
+  .sort()
+  .forEach((file) => {
+    const text = fs.readFileSync(path.join(root, file), "utf8");
+    const classPattern = /class\s*=\s*["']([^"']+)["']/g;
+    let match;
+
+    while ((match = classPattern.exec(text)) !== null) {
+      const classes = match[1].split(/\s+/);
+      const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
+
+      if (legacyToken) {
+        reportLegacyClass(file, text, legacyToken, match.index);
+      }
+    }
+  });
+
+listFiles(path.join(root, "assets", "js"), ".js")
+  .map((file) => normalize(path.relative(root, file)))
+  .sort()
+  .forEach((file) => {
+    const text = fs.readFileSync(path.join(root, file), "utf8");
+    const patterns = [
+      /className\s*=\s*["']([^"']+)["']/g,
+      /cardClass\s*[:=]\s*["']([^"']+)["']/g
+    ];
+
+    patterns.forEach((pattern) => {
+      let match;
+
+      while ((match = pattern.exec(text)) !== null) {
+        const classes = match[1].split(/\s+/);
+        const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
+
+        if (legacyToken) {
+          reportLegacyClass(file, text, legacyToken, match.index);
+        }
+      }
+    });
+  });
 
 const siteEntry = fs.readFileSync(path.join(root, "assets/css/site.css"), "utf8");
 [

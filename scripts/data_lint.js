@@ -10,7 +10,6 @@ const allowedCardClasses = new Set([
   "example-card",
   "info-card",
   "pattern-card",
-  "phrase-card",
   "study-card"
 ]);
 

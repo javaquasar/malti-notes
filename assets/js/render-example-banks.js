@@ -205,7 +205,7 @@ async function renderQuestionBanksFromData(config) {
     const {
         dataUrl,
         groupAttribute = "data-question-group",
-        cardClass = "pair",
+        cardClass = "example-card",
         containerClass = "stack",
         listKey = "questions",
         numbered = true

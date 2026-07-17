@@ -144,7 +144,7 @@
                 buildStepsRoot.innerHTML = "";
                 (lesson.buildSteps || []).forEach(function (step) {
                     var card = document.createElement("div");
-                    card.className = "box imperative-mini-box";
+                    card.className = "study-card imperative-mini-box";
                     card.innerHTML = "<h3>" + step.title + "</h3><p>" + step.text + "</p>";
                     buildStepsRoot.appendChild(card);
                 });
@@ -155,7 +155,7 @@
                 buildExamplesRoot.innerHTML = "";
                 (lesson.buildExamples || []).forEach(function (item) {
                     var card = document.createElement("div");
-                    card.className = "box imperative-example-box";
+                    card.className = "study-card imperative-example-box";
                     card.innerHTML =
                         "<div class=\"imperative-flow\">" +
                             "<div><span class=\"imperative-flow-label\">Present (inti)</span><code>" + item.presentSingular + "</code></div>" +
@@ -176,7 +176,7 @@
                 politeRoot.innerHTML = "";
                 (lesson.politeNotes || []).forEach(function (item) {
                     var card = document.createElement("div");
-                    card.className = "box imperative-polite-box";
+                    card.className = "study-card imperative-polite-box";
                     card.innerHTML =
                         "<h3><code>" + item.term + "</code></h3>" +
                         "<p class=\"muted\">" + item.meaning + "</p>" +
@@ -190,7 +190,7 @@
                 drillRoot.innerHTML = "";
                 (lesson.drills || []).forEach(function (item, index) {
                     var card = document.createElement("details");
-                    card.className = "box imperative-drill-box";
+                    card.className = "study-card imperative-drill-box";
                     card.innerHTML =
                         "<summary>" +
                             "<span class=\"imperative-drill-number\">" + (index + 1) + ".</span>" +
@@ -235,7 +235,7 @@
 
                 (lesson.trickyItems || []).forEach(function (item) {
                     var card = document.createElement("div");
-                    card.className = "box imperative-tricky-box";
+                    card.className = "study-card imperative-tricky-box";
 
                     var header = document.createElement("div");
                     header.className = "imperative-tricky-header";
@@ -289,7 +289,7 @@
                 });
 
                 var card = document.createElement("div");
-                card.className = "box";
+                card.className = "study-card";
 
                 var heading = document.createElement("h3");
                 heading.textContent = group.title || "Verb Group";

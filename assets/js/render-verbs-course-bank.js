@@ -43,7 +43,7 @@ async function renderVerbsCourseBank(config) {
     container.innerHTML = "";
 
     const box = document.createElement("div");
-    box.className = "box full-span";
+    box.className = "study-card full-span";
 
     const heading = document.createElement("h3");
     heading.textContent = group.title || "Verb Bank";

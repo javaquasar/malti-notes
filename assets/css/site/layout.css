@@ -91,15 +91,10 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.box,
 .story,
 .mistake,
-.item,
 .example,
-.pattern,
-.pair,
 .number-column,
-.phrase-card,
 .study-card,
 .info-card,
 .example-card,
@@ -132,10 +127,7 @@
   background: var(--component-card-bg);
 }
 
-.item strong,
 .example strong,
-.pattern strong,
-.pair strong,
 .study-card strong,
 .info-card strong,
 .example-card strong,
@@ -201,10 +193,7 @@
   margin-top: 14px;
 }
 
-.item span,
 .example span,
-.pattern span,
-.pair span,
 .info-card span,
 .example-card span,
 .pattern-card span,
