@@ -153,6 +153,16 @@ check("storage helper loads before asset scripts", () => {
     });
 });
 
+check("review page can back up all progress", () => {
+  const html = read("review_cards.html");
+  const js = read("assets/js/progress-backup.js");
+  assert(html.includes("assets/js/progress-backup.js"), "review page does not load progress backup helper");
+  assert(html.includes("reset-all-progress"), "review page does not expose all-progress reset");
+  assert(js.includes("malti-progress-backup-v1"), "progress backup format is missing");
+  ["malti_review_cards_v2", "malti_word_search_seen_words_v1", "malti_memory_game_seen_words_v1"]
+    .forEach((key) => assert(js.includes(key), `progress backup omits ${key}`));
+});
+
 check("word search stays modular", () => {
   const wordPage = read("word_search.html");
   assert(wordPage.includes("assets/css/word-search.css"), "word_search.html does not load word-search.css");

@@ -1719,10 +1719,8 @@
     }
 
     function buildReviewBackupPayload() {
-        var payload = window.MaltiReviewStore.exportBackup();
-        payload.preferences = getReviewPreferences();
-        payload.stats = window.MaltiReviewStore.getStats();
-        return payload;
+        saveReviewPreferences();
+        return window.MaltiProgressBackup.exportBackup();
     }
 
     function downloadReviewBackup() {
@@ -1734,13 +1732,13 @@
         var date = new Date().toISOString().slice(0, 10);
 
         link.href = url;
-        link.download = "malti-review-backup-" + date + ".json";
+        link.download = "malti-progress-backup-" + date + ".json";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         window.URL.revokeObjectURL(url);
 
-        setBackupStatus("Review backup exported.");
+        setBackupStatus("All progress exported.");
     }
 
     function importReviewBackupFile(file) {
@@ -1752,11 +1750,8 @@
         reader.onload = function () {
             try {
                 var parsed = JSON.parse(String(reader.result || "{}"));
-                var existing = window.MaltiReviewStore.getStats().total;
                 var confirmed = window.confirm(
-                    existing
-                        ? "Replace the current review progress with this backup?"
-                        : "Import this review backup?"
+                    "Replace the current review and game progress with this backup?"
                 );
 
                 if (!confirmed) {
@@ -1764,18 +1759,29 @@
                     return;
                 }
 
-                var result = window.MaltiReviewStore.importBackup(parsed, { mode: "replace" });
+                var result;
+                var status;
+
+                if (parsed && parsed.format === window.MaltiProgressBackup.FORMAT) {
+                    result = window.MaltiProgressBackup.importBackup(parsed, { mode: "replace" });
+                    status = "Imported " + result.importedKeys + " progress sections.";
+                } else {
+                    result = window.MaltiReviewStore.importBackup(parsed, { mode: "replace" });
+                    status = "Imported " + result.imported + " review cards from a legacy backup.";
+                }
 
                 if (parsed && parsed.preferences && typeof parsed.preferences === "object") {
                     applyReviewPreferences(parsed.preferences);
                     saveReviewPreferences();
+                } else {
+                    applyReviewPreferences(loadReviewPreferences());
                 }
 
                 clearQuickSession();
                 queue = [];
                 currentCard = null;
                 refreshAll(true);
-                setBackupStatus("Imported " + result.imported + " cards.");
+                setBackupStatus(status);
             } catch (error) {
                 console.warn(error);
                 setBackupStatus("Could not import that backup file.");
@@ -1792,6 +1798,7 @@
     function wireReviewBackup() {
         var exportButton = byId("export-review-backup");
         var importButton = byId("import-review-backup");
+        var resetButton = byId("reset-all-progress");
         var fileInput = byId("review-backup-file");
 
         if (exportButton) {
@@ -1808,6 +1815,23 @@
 
             fileInput.addEventListener("change", function () {
                 importReviewBackupFile(fileInput.files && fileInput.files[0]);
+            });
+        }
+
+        if (resetButton) {
+            resetButton.addEventListener("click", function () {
+                if (!window.confirm("Reset all review progress, game history, records, and preferences?")) {
+                    setBackupStatus("Reset cancelled.");
+                    return;
+                }
+
+                window.MaltiProgressBackup.clearAll();
+                applyReviewPreferences(loadReviewPreferences());
+                clearQuickSession();
+                queue = [];
+                currentCard = null;
+                refreshAll(true);
+                setBackupStatus("All progress reset.");
             });
         }
     }
