@@ -22,6 +22,11 @@ const mimeTypes = {
   ".webp": "image/webp",
   ".wasm": "application/wasm"
 };
+const bankPages = fs.readdirSync(root)
+  .filter((file) => file.endsWith(".html"))
+  .filter((file) => /data-(?:example|question)-group/.test(fs.readFileSync(path.join(root, file), "utf8")))
+  .sort();
+
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -103,6 +108,53 @@ async function main() {
       assert(await page.locator("[data-site-map-directory] > .section").count() === 4, "Site directory does not contain four groups.");
       assert(await page.locator("[data-site-map-directory] .page-card").count() === 33, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 4, "Site directory quick jumps are incomplete.");
+    });
+
+    await runTest(context, "generated banks keep the shared card styling", async (page) => {
+      await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
+      await page.evaluate(() => window.localStorage.clear());
+      let checkedCards = 0;
+
+      for (const pageName of bankPages) {
+        await page.goto(`${baseUrl}/${pageName}`, { waitUntil: "networkidle" });
+        const result = await page.locator("[data-example-group], [data-question-group]").evaluateAll((containers) => {
+          const problems = [];
+          let cardCount = 0;
+
+          containers.forEach((container) => {
+            const groupName =
+              container.getAttribute("data-example-group") ||
+              container.getAttribute("data-question-group") ||
+              "unknown";
+
+            Array.from(container.children).forEach((card, index) => {
+              const style = window.getComputedStyle(card);
+              const strong = card.querySelector(":scope > strong");
+              const translation = card.querySelector(":scope > span");
+              const issues = [];
+              cardCount += 1;
+
+              if (parseFloat(style.borderTopWidth) === 0 || style.borderTopStyle === "none") issues.push("border");
+              if (parseFloat(style.paddingTop) === 0) issues.push("padding");
+              if (style.backgroundColor === "rgba(0, 0, 0, 0)") issues.push("background");
+              if (!strong || window.getComputedStyle(strong).display !== "block") issues.push("Maltese line display");
+              if (!translation || window.getComputedStyle(translation).display !== "block") issues.push("translation display");
+
+              if (issues.length) {
+                problems.push(`${groupName}[${index}] (${card.className}): ${issues.join(", ")}`);
+              }
+            });
+          });
+
+          return { cardCount, problems };
+        });
+
+        assert(result.cardCount > 0, `${pageName} did not render any bank cards.`);
+        assert(result.problems.length === 0, `${pageName}: ${result.problems.join("; ")}`);
+        checkedCards += result.cardCount;
+      }
+
+      assert(checkedCards > 0, "No generated bank cards were checked.");
     });
 
     await runTest(context, "theme choice survives a reload", async (page) => {
