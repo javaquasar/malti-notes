@@ -192,6 +192,28 @@ check("review page can back up all progress", () => {
     .forEach((key) => assert(js.includes(key), `progress backup omits ${key}`));
 });
 
+check("course pages use the shared learning runtime", () => {
+  const coursePath = read("course_path.html");
+  const serviceWorker = read("service-worker.js");
+  const topicPages = [
+    ["introductions_alphabet.html", "introductions_alphabet.json", "b1-introductions-check"],
+    ["school_classroom.html", "school_classroom.json", "b1-school-check"],
+    ["hobbies_future.html", "hobbies_future.json", "b2-hobbies-future-check"],
+    ["environment_recycling.html", "environment_recycling.json", "b2-recycling-check"]
+  ];
+
+  assert(coursePath.includes("assets/js/course-path.js"), "course path renderer is missing");
+  assert(coursePath.includes("assets/js/exercise-runner.js"), "course path exercise runtime is missing");
+  topicPages.forEach(([page, dataFile, exerciseSet]) => {
+    const html = read(page);
+    assert(html.includes(`assets/data/${dataFile}`), `${page} does not load ${dataFile}`);
+    assert(html.includes("assets/data/course_exercises.json"), `${page} does not load course exercises`);
+    assert(html.includes("assets/js/exercise-runner.js"), `${page} does not load the exercise runtime`);
+    assert(html.includes(exerciseSet), `${page} does not expose ${exerciseSet}`);
+    assert(serviceWorker.includes(`./${page}`), `${page} is missing from the offline shell`);
+  });
+});
+
 check("word search stays modular", () => {
   const wordPage = read("word_search.html");
   assert(wordPage.includes("assets/css/word-search.css"), "word_search.html does not load word-search.css");

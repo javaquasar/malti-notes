@@ -27,6 +27,13 @@ const bankPages = fs.readdirSync(root)
   .filter((file) => /data-(?:example|question)-group/.test(fs.readFileSync(path.join(root, file), "utf8")))
   .sort();
 
+const courseTopicPages = [
+  { pageName: "introductions_alphabet.html", groupSelector: "[data-introduction-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 },
+  { pageName: "school_classroom.html", groupSelector: "[data-school-group]", groupCount: 2, exerciseSetCount: 2, contextLinkCount: 2 },
+  { pageName: "hobbies_future.html", groupSelector: "[data-hobby-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 },
+  { pageName: "environment_recycling.html", groupSelector: "[data-recycling-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 }
+];
+
 const framedGroupClassTokens = [
   "content-group",
   "open-group",
@@ -155,6 +162,26 @@ async function main() {
       assert(await page.locator('[data-objective-key="b1-introductions::identity"]').isChecked(), "Course objective was not restored.");
     });
 
+    await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {
+      for (const config of courseTopicPages) {
+        await openCleanPage(page, config.pageName);
+        const groups = page.locator(config.groupSelector);
+        await groups.first().locator(":scope > *").first().waitFor();
+        assert(await groups.count() === config.groupCount, `${config.pageName} has an incomplete vocabulary group set.`);
+        const emptyGroups = await groups.evaluateAll((containers) => containers.filter((container) => !container.children.length).length);
+        assert(emptyGroups === 0, `${config.pageName} has an empty vocabulary group.`);
+
+        const exerciseSets = page.locator("[data-exercise-set]");
+        await exerciseSets.first().locator(".exercise-item").first().waitFor();
+        assert(await exerciseSets.count() === config.exerciseSetCount, `${config.pageName} has an incomplete quick-check set.`);
+        assert(await page.locator(".exercise-item").count() === config.exerciseSetCount * 3, `${config.pageName} has an incomplete exercise item set.`);
+
+        const contextLinks = page.locator("[data-course-context] .action-link");
+        await contextLinks.first().waitFor();
+        assert(await contextLinks.count() === config.contextLinkCount, `${config.pageName} has incorrect course chapter context.`);
+      }
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());
@@ -268,10 +295,14 @@ async function main() {
           topic: "Functional test"
         });
         window.localStorage.setItem("malti_word_search_seen_words_v1", JSON.stringify(["kelb"]));
+        window.localStorage.setItem("malti_course_progress_v1", JSON.stringify({ objectives: { "b1-introductions::identity": true }, activeLevel: "b1" }));
+        window.localStorage.setItem("malti_exercise_progress_v1", JSON.stringify({ "b1-introductions-check": { score: 3, total: 3, passed: true } }));
         const backup = window.MaltiProgressBackup.exportBackup();
         window.MaltiProgressBackup.clearAll();
         const clearedTotal = window.MaltiReviewStore.getStats().total;
         const clearedSeen = window.localStorage.getItem("malti_word_search_seen_words_v1");
+        const clearedCourse = window.localStorage.getItem("malti_course_progress_v1");
+        const clearedExercises = window.localStorage.getItem("malti_exercise_progress_v1");
         const imported = window.MaltiProgressBackup.importBackup(backup, { mode: "replace" });
         return {
           format: backup.format,
@@ -279,15 +310,21 @@ async function main() {
           importedKeys: imported.importedKeys,
           clearedTotal,
           clearedSeen,
+          clearedCourse,
+          clearedExercises,
           restoredTotal: window.MaltiReviewStore.getStats().total,
-          restoredSeen: JSON.parse(window.localStorage.getItem("malti_word_search_seen_words_v1"))
+          restoredSeen: JSON.parse(window.localStorage.getItem("malti_word_search_seen_words_v1")),
+          restoredCourse: JSON.parse(window.localStorage.getItem("malti_course_progress_v1")),
+          restoredExercises: JSON.parse(window.localStorage.getItem("malti_exercise_progress_v1"))
         };
       });
 
       assert(result.format === "malti-progress-backup-v1", "Unexpected backup format.");
-      assert(result.exportedKeys >= 2 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");
-      assert(result.clearedTotal === 0 && result.clearedSeen === null, "Progress was not cleared before import.");
-      assert(result.restoredTotal === 1 && result.restoredSeen[0] === "kelb", "Progress was not restored.");
+      assert(result.exportedKeys >= 4 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");
+      assert(result.clearedTotal === 0 && result.clearedSeen === null && result.clearedCourse === null && result.clearedExercises === null, "Progress was not cleared before import.");
+      assert(result.restoredTotal === 1 && result.restoredSeen[0] === "kelb", "Review and game progress was not restored.");
+      assert(result.restoredCourse.objectives["b1-introductions::identity"] === true, "Course progress was not restored.");
+      assert(result.restoredExercises["b1-introductions-check"].passed === true, "Exercise progress was not restored.");
     });
 
     await runTest(context, "word search creates a playable puzzle", async (page) => {

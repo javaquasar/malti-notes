@@ -2,6 +2,25 @@
 
 Static Maltese study notes, review pages, and vocabulary practice tools.
 
+## B1/B2 Course
+
+The site exposes a chapter-based route at `course_path.html`. Curriculum alignment lives in `assets/data/course_path.json`; original quick checks live in `assets/data/course_exercises.json` and are rendered by the shared `assets/js/exercise-runner.js` runtime.
+
+Course objectives and exercise scores are stored locally and are included in the all-progress export on `review_cards.html`. Topic pages listed in the course data automatically receive links back to their chapters.
+
+The course data validator enforces chapter, page, objective, and exercise-set references. Run the complete fast validation set with:
+
+```powershell
+npm run style:lint
+npm run data:lint
+npm run content:lint
+npm run links:lint
+npm run theme:a11y
+npm run visual:smoke
+```
+
+GitHub Actions also runs the Playwright functional and visual suites before publishing the static site.
+
 ## Visual Regression Workflow
 
 Use this workflow after broad CSS, layout, or theme changes.
@@ -57,7 +76,7 @@ visual-regression/screenshots/<timestamp>/
 
 The workflow captures:
 
-- Pages: `index`, `verbs_guide`, `pronouns_possessives`, `picture_description`, `collective_nouns`, `word_search`, `memory_game`, `word_builder_game`, `shopping_clothes`, `daily_problems`.
+- Pages: every entry in `scripts/visual_config.js`, including the course path and the four dedicated B1/B2 topic pages.
 - Themes: `classic`, `forest`, `contrast`.
 - Viewports: desktop and mobile.
 

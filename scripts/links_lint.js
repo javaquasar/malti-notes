@@ -8,6 +8,7 @@ const htmlFiles = fs.readdirSync(root)
 const errors = [];
 const htmlCache = new Map();
 const groupCache = new Map();
+const exerciseSetCache = new Map();
 
 function normalize(file) {
   return path.relative(root, file).replace(/\\/g, "/");
@@ -77,6 +78,38 @@ function readGroups(jsonFile, ownerFile, ownerSource, ownerIndex) {
   return groupCache.get(jsonFile);
 }
 
+function readExerciseSets(jsonFile) {
+  if (exerciseSetCache.has(jsonFile)) {
+    return exerciseSetCache.get(jsonFile);
+  }
+
+  if (!fs.existsSync(jsonFile)) {
+    exerciseSetCache.set(jsonFile, new Set());
+    return exerciseSetCache.get(jsonFile);
+  }
+
+  try {
+    const data = JSON.parse(fs.readFileSync(jsonFile, "utf8"));
+    exerciseSetCache.set(jsonFile, new Set((data.sets || []).map((set) => set && set.id).filter(Boolean)));
+  } catch (error) {
+    exerciseSetCache.set(jsonFile, new Set());
+  }
+
+  return exerciseSetCache.get(jsonFile);
+}
+
+function collectDataGroupAttributes(source) {
+  const attributes = [];
+  Array.from(source.matchAll(/<[a-z][^>]*>/gi)).forEach((tagMatch) => {
+    const tag = tagMatch[0];
+    const pattern = /\b(data-[a-z0-9-]+-group)\s*=\s*(["'])(.*?)\2/gi;
+    Array.from(tag.matchAll(pattern)).forEach((match) => {
+      attributes.push({ attribute: match[1], value: match[3], index: tagMatch.index + match.index });
+    });
+  });
+  return attributes;
+}
+
 function checkHref(file, source, href, index, anchorCache) {
   if (!href || href === "#" || /^(?:https?:|mailto:|tel:|data:|javascript:|\/\/)/i.test(href)) {
     return;
@@ -136,15 +169,41 @@ htmlFiles.forEach((name) => {
       file: path.resolve(path.dirname(file), match[1]),
       index: match.index
     }));
+
+  collectAttribute(source, "src")
+    .filter(({ value }) => value.endsWith(".js"))
+    .forEach(({ value, index }) => {
+      const scriptFile = path.resolve(path.dirname(file), value);
+      if (!fs.existsSync(scriptFile)) return;
+      const scriptSource = fs.readFileSync(scriptFile, "utf8");
+      Array.from(scriptSource.matchAll(/["']([^"']+\.json)["']/gi))
+        .filter((match) => /^(?:\.\.\/|\.\/|assets\/)/i.test(match[1]))
+        .forEach((match) => dataFiles.push({
+          file: path.resolve(path.dirname(file), match[1]),
+          index
+        }));
+    });
+
   const availableGroups = new Set();
+  const availableExerciseSets = new Set();
 
   dataFiles.forEach((entry) => {
     readGroups(entry.file, file, source, entry.index).forEach((group) => availableGroups.add(group));
+    readExerciseSets(entry.file).forEach((setId) => availableExerciseSets.add(setId));
   });
 
-  collectAttribute(source, "data-example-group").forEach(({ value, index }) => {
+  collectDataGroupAttributes(source).forEach(({ attribute, value, index }) => {
     if (!availableGroups.has(value)) {
-      fail(file, source, index, `data-example-group "${value}" is missing from the page's JSON data`);
+      fail(file, source, index, `${attribute} "${value}" is missing from the page's JSON data`);
+    }
+  });
+
+  collectAttribute(source, "data-exercise-set").forEach(({ value, index }) => {
+    if (!availableExerciseSets.has(value)) {
+      fail(file, source, index, `data-exercise-set "${value}" is missing from the page's JSON data`);
+    }
+    if (!source.includes("assets/js/exercise-runner.js")) {
+      fail(file, source, index, "exercise container requires assets/js/exercise-runner.js");
     }
   });
 });

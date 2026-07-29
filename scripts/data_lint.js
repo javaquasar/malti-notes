@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validateCourseFiles } = require("./course_data_validation");
 
 const root = path.resolve(__dirname, "..");
 const dataRoot = path.join(root, "assets", "data");
@@ -303,6 +304,7 @@ function validateFile(absFile) {
 }
 
 listJsonFiles(dataRoot).sort().forEach(validateFile);
+validateCourseFiles({ root, fail });
 
 if (errors.length) {
   errors.forEach((message) => console.error(`fail ${message}`));
