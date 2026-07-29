@@ -48,8 +48,25 @@ const cssFiles = listFiles(path.join(root, "assets", "css"), ".css")
   .sort();
 const legacyClassTokens = ["box", "item", "pair", "pattern", "phrase-card"];
 
+const legacyMarkupClassTokens = [...legacyClassTokens, "wide-box"];
+const framedGroupClassTokens = [
+  "content-group",
+  "open-group",
+  "example-bank-section",
+  "shopping-dialogue-bank",
+  "grammar-contrast-card",
+  "wide-box"
+];
+const framedGroupModifiers = new Map([
+  ["modals-open-group", "open-group"]
+]);
+
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function selectorHasClass(selector, token) {
+  return new RegExp(`\\.${escapeRegExp(token)}(?=[\\s,.#:{>+~\\[])`).test(selector);
 }
 
 function lineNumber(text, index) {
@@ -89,7 +106,56 @@ cssFiles.forEach((file) => {
       reportLegacyClass(file, text, token, match.index);
     }
   });
+
+  const cssRulePattern = /([^{}]+)\{([^{}]*)\}/g;
+  const visualResetPattern = /(?:^|;)\s*(?:padding(?:-[\w-]+)?\s*:\s*0(?:px)?|border(?:-[\w-]+)?\s*:\s*(?:none|0(?:px)?)|background(?:-color)?\s*:\s*transparent|border-radius\s*:\s*0(?:px)?)(?:\s*!important)?\s*(?:;|$)/i;
+  let ruleMatch;
+
+  while ((ruleMatch = cssRulePattern.exec(text)) !== null) {
+    const selector = ruleMatch[1].trim();
+    const declarations = ruleMatch[2];
+    const protectedToken = [
+      ...framedGroupClassTokens,
+      ...framedGroupModifiers.keys()
+    ].find((token) => selectorHasClass(selector, token));
+
+    if (protectedToken && visualResetPattern.test(declarations)) {
+      report(`${file}:${lineNumber(text, ruleMatch.index)}: .${protectedToken} must not reset its framed visual contract`);
+    }
+  }
 });
+
+const framedContractFile = "assets/css/site/components.css";
+const framedContractText = fs.readFileSync(path.join(root, framedContractFile), "utf8");
+const framedContractRule = [...framedContractText.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+  .find((match) => selectorHasClass(match[1], "content-group"));
+
+if (!framedContractRule) {
+  report(`${framedContractFile}: missing shared .content-group contract`);
+} else {
+  const selector = framedContractRule[1];
+  const declarations = framedContractRule[2];
+  const contractLine = lineNumber(framedContractText, framedContractRule.index);
+  const requiredDeclarations = [
+    ["min-width", /min-width\s*:\s*0/],
+    ["border", /border\s*:\s*1px\s+solid\s+var\(--color-accent-border\)/],
+    ["border-radius", /border-radius\s*:\s*var\(--component-panel-radius\)/],
+    ["padding", /padding\s*:\s*var\(--space-3xl\)/],
+    ["background", /background\s*:\s*var\(--color-surface-muted\)/]
+  ];
+
+  framedGroupClassTokens.forEach((token) => {
+    if (!selectorHasClass(selector, token)) {
+      report(`${framedContractFile}:${contractLine}: shared contract is missing .${token}`);
+    }
+  });
+
+  requiredDeclarations.forEach(([property, pattern]) => {
+    if (!pattern.test(declarations)) {
+      report(`${framedContractFile}:${contractLine}: shared contract is missing ${property}`);
+    }
+  });
+}
 
 listFiles(root, ".html")
   .map((file) => normalize(path.relative(root, file)))
@@ -101,11 +167,17 @@ listFiles(root, ".html")
 
     while ((match = classPattern.exec(text)) !== null) {
       const classes = match[1].split(/\s+/);
-      const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
+      const legacyToken = legacyMarkupClassTokens.find((token) => classes.includes(token));
 
       if (legacyToken) {
         reportLegacyClass(file, text, legacyToken, match.index);
       }
+
+      framedGroupModifiers.forEach((baseToken, modifierToken) => {
+        if (classes.includes(modifierToken) && !classes.includes(baseToken)) {
+          report(`${file}:${lineNumber(text, match.index)}: .${modifierToken} requires .${baseToken}`);
+        }
+      });
     }
 
     [
@@ -116,7 +188,7 @@ listFiles(root, ".html")
 
       while ((inlineMatch = pattern.exec(text)) !== null) {
         const classes = inlineMatch[1].split(/\s+/);
-        const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
+        const legacyToken = legacyMarkupClassTokens.find((token) => classes.includes(token));
 
         if (legacyToken) {
           reportLegacyClass(file, text, legacyToken, inlineMatch.index);
@@ -140,7 +212,7 @@ listFiles(path.join(root, "assets", "js"), ".js")
 
       while ((match = pattern.exec(text)) !== null) {
         const classes = match[1].split(/\s+/);
-        const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
+        const legacyToken = legacyMarkupClassTokens.find((token) => classes.includes(token));
 
         if (legacyToken) {
           reportLegacyClass(file, text, legacyToken, match.index);
