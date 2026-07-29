@@ -27,6 +27,20 @@ const bankPages = fs.readdirSync(root)
   .filter((file) => /data-(?:example|question)-group/.test(fs.readFileSync(path.join(root, file), "utf8")))
   .sort();
 
+const framedGroupClassTokens = [
+  "content-group",
+  "open-group",
+  "example-bank-section",
+  "shopping-dialogue-bank",
+  "grammar-contrast-card",
+  "wide-box"
+];
+const framedGroupSelector = framedGroupClassTokens.map((token) => `.${token}`).join(", ");
+const framedGroupPages = fs.readdirSync(root)
+  .filter((file) => file.endsWith(".html"))
+  .filter((file) => framedGroupClassTokens.some((token) => fs.readFileSync(path.join(root, file), "utf8").includes(token)))
+  .sort();
+
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -155,6 +169,54 @@ async function main() {
       }
 
       assert(checkedCards > 0, "No generated bank cards were checked.");
+    });
+
+    await runTest(context, "framed content groups keep the shared visual contract", async (page) => {
+      await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
+      await page.evaluate(() => window.localStorage.clear());
+      let checkedGroups = 0;
+
+      for (const pageName of framedGroupPages) {
+        await page.goto(`${baseUrl}/${pageName}`, { waitUntil: "networkidle" });
+        const result = await page.locator(framedGroupSelector).evaluateAll((groups) => {
+          const problems = [];
+
+          groups.forEach((group, index) => {
+            const style = window.getComputedStyle(group);
+            const heading = group.querySelector("h2, h3, h4")?.textContent.trim() || `group ${index + 1}`;
+            const borderWidths = [
+              style.borderTopWidth,
+              style.borderRightWidth,
+              style.borderBottomWidth,
+              style.borderLeftWidth
+            ].map(Number.parseFloat);
+            const paddings = [
+              style.paddingTop,
+              style.paddingRight,
+              style.paddingBottom,
+              style.paddingLeft
+            ].map(Number.parseFloat);
+            const issues = [];
+
+            if (borderWidths.some((width) => width === 0) || style.borderTopStyle === "none") issues.push("border");
+            if (paddings.some((padding) => padding === 0)) issues.push("padding");
+            if (style.backgroundColor === "transparent" || style.backgroundColor === "rgba(0, 0, 0, 0)") issues.push("background");
+            if (Number.parseFloat(style.borderTopLeftRadius) === 0) issues.push("radius");
+
+            if (issues.length) {
+              problems.push(`${heading} (${group.className}): ${issues.join(", ")}`);
+            }
+          });
+
+          return { groupCount: groups.length, problems };
+        });
+
+        assert(result.groupCount > 0, `${pageName} did not contain any framed groups.`);
+        assert(result.problems.length === 0, `${pageName}: ${result.problems.join("; ")}`);
+        checkedGroups += result.groupCount;
+      }
+
+      assert(checkedGroups > 0, "No framed content groups were checked.");
     });
 
     await runTest(context, "theme choice survives a reload", async (page) => {
