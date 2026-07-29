@@ -2,6 +2,7 @@ const fullPageVisualPages = [
   "index.html",
   "body_appearance.html",
   "collective_nouns.html",
+  "course_path.html",
   "colors_maltese.html",
   "common_mistakes.html",
   "comparisons.html",

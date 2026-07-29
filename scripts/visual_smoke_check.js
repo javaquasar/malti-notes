@@ -8,6 +8,7 @@ const keyPages = [
   "pronouns_possessives.html",
   "picture_description.html",
   "collective_nouns.html",
+  "course_path.html",
   "word_search.html",
   "memory_game.html",
   "word_builder_game.html",
@@ -133,7 +134,7 @@ check("site header exposes page search", () => {
   assert(js.includes("data-site-search"), "site search input is missing");
   assert(js.includes("searchItems"), "site search index is missing");
   assert(js.includes("MaltiSiteMapReady"), "site header does not load the shared site map");
-  assert(siteMap.groups.length === 4, "site map must expose four navigation groups");
+  assert(siteMap.groups.length === 5, "site map must expose five navigation groups");
   assert(css.includes(".site-search"), "site search styles are missing");
 });
 

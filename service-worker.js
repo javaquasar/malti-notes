@@ -1,11 +1,13 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}v3`;
+const CACHE_NAME = `${CACHE_PREFIX}v4`;
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./all_pages.html",
+  "./course_path.html",
   "./manifest.webmanifest",
   "./assets/data/site-map.json",
+  "./assets/data/course_path.json",
   "./assets/img/favicon-option-speech.svg",
   "./assets/css/theme.css",
   "./assets/css/themes/forest.css",
@@ -18,13 +20,16 @@ const CORE_ASSETS = [
   "./assets/css/site/verbs.css",
   "./assets/css/site/imperative.css",
   "./assets/css/site/games.css",
+  "./assets/css/site/learning.css",
   "./assets/css/site/navigation.css",
   "./assets/css/site/responsive.css",
   "./assets/css/site/print.css",
   "./assets/css/pages.css",
   "./assets/js/storage.js",
   "./assets/js/site-header.js",
-  "./assets/js/site-map-pages.js"
+  "./assets/js/site-map-pages.js",
+  "./assets/js/course-path.js",
+  "./assets/js/course-context.js"
 ];
 
 self.addEventListener("install", (event) => {

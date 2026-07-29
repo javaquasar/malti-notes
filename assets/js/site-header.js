@@ -382,4 +382,11 @@
       ensureReviewFab();
     }
   });
+
+  if (!document.querySelector('script[data-course-context-script]')) {
+    const courseContextScript = document.createElement("script");
+    courseContextScript.src = "./assets/js/course-context.js";
+    courseContextScript.dataset.courseContextScript = "";
+    document.body.appendChild(courseContextScript);
+  }
 })();

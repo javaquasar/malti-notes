@@ -1,9 +1,17 @@
 {
   "standalone": [
     { "href": "index.html", "label": "Home", "description": "Main entry point for the Maltese study site." },
-    { "href": "all_pages.html", "label": "All Pages", "description": "Grouped directory of every study and review page.", "featured": 0 }
+    { "href": "all_pages.html", "label": "All Pages", "description": "Grouped directory of every study and review page." }
   ],
   "groups": [
+    {
+      "id": "course",
+      "label": "Course",
+      "heading": "B1 and B2 Learning Path",
+      "pages": [
+        { "href": "course_path.html", "label": "B1 and B2 Learning Path", "navLabel": "Learning Path", "description": "A chapter-by-chapter route through the site's B1 and B2 study material with saved objectives.", "featured": 0 }
+      ]
+    },
     {
       "id": "grammar",
       "label": "Grammar",

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B1 and B2 Maltese Learning Path</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>B1 and B2 Learning Path</h1>
+                <p class="lead">
+                    A chapter-by-chapter route that connects the supplied course sequence with the site's grammar,
+                    vocabulary, speaking, and review pages.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">14 chapters</span>
+                    <span class="pill">B1 foundation</span>
+                    <span class="pill">B2 development</span>
+                    <span class="pill">saved progress</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Original practice</strong></p>
+                <p>
+                    The books are used only to align topics and learning objectives. This site does not reproduce
+                    their scans, illustrations, dialogues, or exercise text.
+                </p>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section course-shell">
+        <div class="course-dashboard">
+            <div class="course-progress-copy">
+                <strong>Overall progress</strong>
+                <span data-course-progress-label>Loading objectives...</span>
+                <div class="course-progress-track"
+                     data-course-progress
+                     role="progressbar"
+                     aria-label="Overall course progress"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="0">
+                    <div class="course-progress-fill"></div>
+                </div>
+            </div>
+            <span class="status-chip" data-course-level-status>Loading level...</span>
+        </div>
+
+        <div class="course-level-tabs segmented-toggle"
+             data-course-level-tabs
+             aria-label="Choose course level"></div>
+
+        <div data-course-path aria-live="polite">
+            <p>Loading the course path...</p>
+        </div>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/course-path.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>
