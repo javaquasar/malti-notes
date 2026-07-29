@@ -14,6 +14,7 @@ const defaultPages = [
   "directions_town.html",
   "modals_needs.html",
   "numbers_calendar_time.html",
+  "pronouns_possessives.html",
   "picture_description.html",
   "prepositions_place.html",
   "restaurant_ordering.html",
