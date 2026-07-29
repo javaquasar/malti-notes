@@ -1,0 +1,207 @@
+.exercise-set {
+  display: grid;
+  gap: var(--space-2xl);
+  min-width: 0;
+}
+
+.exercise-set-header,
+.exercise-question-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.exercise-set-header {
+  align-items: center;
+}
+
+.exercise-set-header h3,
+.exercise-question-header h4 {
+  margin: 0;
+}
+
+.exercise-form {
+  display: grid;
+}
+
+.exercise-item {
+  min-width: 0;
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--border-default);
+}
+
+.exercise-item:last-of-type {
+  border-bottom: 1px solid var(--border-default);
+}
+
+.exercise-listen-button {
+  padding: var(--space-xs) var(--space-lg);
+  font-size: 0.9rem;
+}
+
+.exercise-choices {
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.exercise-choice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-md);
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--surface-panel-soft);
+  cursor: pointer;
+}
+
+.exercise-choice:has(input:checked) {
+  border-color: var(--border-brand);
+  background: var(--color-brand-soft);
+}
+
+.exercise-choice input,
+.course-objective input {
+  accent-color: var(--color-brand);
+}
+
+.exercise-input-label {
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  max-width: 540px;
+  color: var(--text-muted);
+}
+
+.exercise-input-label input,
+.exercise-match-row select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-panel);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.exercise-matching {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.exercise-match-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.8fr) minmax(160px, 1.2fr);
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.exercise-match-row > span {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.exercise-order-bank,
+.exercise-order-answer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--space-sm);
+  min-height: 58px;
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.exercise-order-answer {
+  margin-top: var(--space-sm);
+  border-style: solid;
+  background: var(--surface-panel-soft);
+}
+
+.exercise-token {
+  appearance: none;
+  border: 1px solid var(--component-chip-border);
+  border-radius: var(--component-chip-radius);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--component-chip-bg);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.exercise-token.is-selected {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
+}
+
+.exercise-feedback {
+  margin: var(--space-lg) 0 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: var(--space-2xs) solid var(--border-default);
+  background: var(--color-muted-faint-bg);
+}
+
+.exercise-item.is-correct .exercise-feedback {
+  border-left-color: var(--color-success);
+  background: var(--surface-success-highlight);
+  color: var(--color-success);
+}
+
+.exercise-item.is-incorrect .exercise-feedback {
+  border-left-color: var(--color-danger);
+  background: var(--surface-danger-soft);
+}
+
+.exercise-actions {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+.exercise-result {
+  min-height: 1.6em;
+  margin: 0;
+  font-weight: 700;
+}
+
+.exercise-result[data-state="passed"] {
+  color: var(--color-success);
+}
+
+.exercise-result[data-state="review"] {
+  color: var(--color-danger);
+}
+
+.course-practice {
+  margin-top: var(--space-3xl);
+  border-top: 1px solid var(--border-default);
+  padding-top: var(--space-xl);
+}
+
+.course-practice > summary {
+  color: var(--text-brand);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-practice[open] > summary {
+  margin-bottom: var(--space-xl);
+}
+
+@media (max-width: 640px) {
+  .exercise-set-header,
+  .exercise-question-header,
+  .exercise-match-row {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-listen-button {
+    justify-self: start;
+  }
+}

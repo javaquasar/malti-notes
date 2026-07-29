@@ -65,6 +65,9 @@
     const objectives = document.createElement("div");
     const pagesHeading = document.createElement("h4");
     const pages = document.createElement("div");
+    const practice = document.createElement("details");
+    const practiceSummary = document.createElement("summary");
+    const practiceContainer = document.createElement("div");
     const stats = chapterObjectiveStats(chapter, progress);
 
     article.className = "course-chapter content-group";
@@ -87,10 +90,15 @@
     pagesHeading.textContent = "Study pages";
     pages.className = "course-page-links";
     pages.replaceChildren(...chapter.pages.map(createLink));
+    practice.className = "course-practice";
+    practiceSummary.textContent = "Quick check";
+    practiceContainer.dataset.exerciseSet = chapter.exerciseSetId;
+    practiceContainer.dataset.exerciseSrc = "./assets/data/course_exercises.json";
+    practice.append(practiceSummary, practiceContainer);
 
     titleWrap.append(eyebrow, title);
     header.append(titleWrap, status);
-    article.append(header, summary, objectiveHeading, objectives, pagesHeading, pages);
+    article.append(header, summary, objectiveHeading, objectives, pagesHeading, pages, practice);
     return article;
   };
 
@@ -130,11 +138,16 @@
     const keys = allObjectives(data);
     const completed = keys.filter((key) => progress.objectives?.[key] === true).length;
     const percent = keys.length ? Math.round((completed / keys.length) * 100) : 0;
+    const exerciseProgress = window.MaltiExerciseRunner?.getProgress?.() || {};
+    const setIds = data.levels.flatMap((item) => item.chapters.map((chapter) => chapter.exerciseSetId));
+    const passedSets = setIds.filter((setId) => exerciseProgress[setId]?.passed === true).length;
     const overall = document.querySelector("[data-course-progress]");
     const overallLabel = document.querySelector("[data-course-progress-label]");
     const level = data.levels.find((item) => item.id === activeLevelId);
     const levelKeys = level ? levelObjectiveKeys(level) : [];
     const levelCompleted = levelKeys.filter((key) => progress.objectives?.[key] === true).length;
+    const levelSetIds = level ? level.chapters.map((chapter) => chapter.exerciseSetId) : [];
+    const levelPassed = levelSetIds.filter((setId) => exerciseProgress[setId]?.passed === true).length;
     const levelStatus = document.querySelector("[data-course-level-status]");
 
     if (overall) {
@@ -142,17 +155,18 @@
       overall.setAttribute("aria-valuenow", String(percent));
     }
     if (overallLabel) {
-      overallLabel.textContent = `${completed} of ${keys.length} objectives complete`;
+      overallLabel.textContent = `${completed} of ${keys.length} objectives · ${passedSets} of ${setIds.length} quick checks passed`;
     }
     if (levelStatus && level) {
-      levelStatus.textContent = `${level.label}: ${levelCompleted}/${levelKeys.length}`;
+      levelStatus.textContent = `${level.label}: ${levelCompleted}/${levelKeys.length} objectives · ${levelPassed}/${levelSetIds.length} checks`;
     }
 
     data.levels.forEach((item) => {
       item.chapters.forEach((chapter) => {
         const status = document.querySelector(`[data-chapter-status="${chapter.id}"]`);
         const stats = chapterObjectiveStats(chapter, progress);
-        if (status) status.textContent = `${stats.completed}/${stats.total} objectives`;
+        const checkLabel = exerciseProgress[chapter.exerciseSetId]?.passed ? "check passed" : "check open";
+        if (status) status.textContent = `${stats.completed}/${stats.total} objectives · ${checkLabel}`;
       });
     });
   };
@@ -206,6 +220,8 @@
     }));
 
     selectLevel(activeLevelId, data, progress);
+    if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(root);
+    window.addEventListener("malti-exercise-progress", () => updateSummary(data, progress, activeLevelId));
 
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash);

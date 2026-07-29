@@ -1,0 +1,542 @@
+{
+  "topic": "B1 and B2 Course Quick Checks",
+  "sets": [
+    {
+      "id": "b1-introductions-check",
+      "chapterId": "b1-introductions",
+      "title": "Introductions Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "name-introduction",
+          "type": "multiple-choice",
+          "prompt": "Which sentence introduces your name?",
+          "choices": ["Jien jisimni Lara.", "Jien noqgħod Lara.", "Jien għandi Lara."],
+          "answer": "Jien jisimni Lara.",
+          "explanation": "Use jien jisimni followed by the name.",
+          "listen": "Jien jisimni Lara.",
+          "reviewCard": { "maltese": "Jien jisimni Lara.", "english": "My name is Lara." }
+        },
+        {
+          "id": "complete-name",
+          "type": "fill-blank",
+          "prompt": "Complete: Jien ___ Nina.",
+          "answer": "jisimni",
+          "accepted": ["jisimni"],
+          "explanation": "Jisimni means my name is.",
+          "reviewCard": { "maltese": "Jien jisimni Nina.", "english": "My name is Nina." }
+        },
+        {
+          "id": "adjective-gender",
+          "type": "matching",
+          "prompt": "Match each masculine adjective to its feminine form.",
+          "pairs": [
+            { "left": "ferħan", "right": "ferħana" },
+            { "left": "attiv", "right": "attiva" },
+            { "left": "ċajtier", "right": "ċajtiera" }
+          ],
+          "explanation": "These common personal adjectives change form for feminine agreement.",
+          "reviewCard": { "maltese": "Jien ferħana u attiva.", "english": "I am happy and active." }
+        }
+      ]
+    },
+    {
+      "id": "b1-residence-check",
+      "chapterId": "b1-residence",
+      "title": "Residence and Travel Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "residence-meaning",
+          "type": "multiple-choice",
+          "prompt": "What does Jien noqgħod il-Mosta mean?",
+          "choices": ["I live in Mosta.", "I work in Mosta.", "I am going to Mosta."],
+          "answer": "I live in Mosta.",
+          "explanation": "Noqgħod is the jien form used to say where you live.",
+          "listen": "Jien noqgħod il-Mosta.",
+          "reviewCard": { "maltese": "Jien noqgħod il-Mosta.", "english": "I live in Mosta." }
+        },
+        {
+          "id": "residence-plural",
+          "type": "fill-blank",
+          "prompt": "Complete: Aħna ___ Marsaskala.",
+          "answer": "noqogħdu",
+          "accepted": ["noqogħdu"],
+          "explanation": "Aħna takes noqogħdu.",
+          "reviewCard": { "maltese": "Aħna noqogħdu Marsaskala.", "english": "We live in Marsaskala." }
+        },
+        {
+          "id": "travel-order",
+          "type": "order-words",
+          "prompt": "Put the travel sentence in the correct order.",
+          "tokens": ["Huma", "jiġu", "l-iskola", "bil-karozza."],
+          "answer": "Huma jiġu l-iskola bil-karozza.",
+          "explanation": "The transport phrase comes after the destination.",
+          "listen": "Huma jiġu l-iskola bil-karozza.",
+          "reviewCard": { "maltese": "Huma jiġu l-iskola bil-karozza.", "english": "They come to school by car." }
+        }
+      ]
+    },
+    {
+      "id": "b1-school-check",
+      "chapterId": "b1-school",
+      "title": "School Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "school-objects",
+          "type": "matching",
+          "prompt": "Match the classroom words.",
+          "pairs": [
+            { "left": "il-ktieb", "right": "book" },
+            { "left": "il-lapes", "right": "pencil" },
+            { "left": "is-siġġu", "right": "chair" }
+          ],
+          "explanation": "Keep each school noun together with its article.",
+          "reviewCard": { "maltese": "Il-ktieb qiegħed fuq is-siġġu.", "english": "The book is on the chair." }
+        },
+        {
+          "id": "school-position",
+          "type": "fill-blank",
+          "prompt": "Complete: Il-ktieb qiegħed ___ il-mejda.",
+          "answer": "fuq",
+          "accepted": ["fuq"],
+          "explanation": "Fuq means on.",
+          "reviewCard": { "maltese": "Il-ktieb qiegħed fuq il-mejda.", "english": "The book is on the table." }
+        },
+        {
+          "id": "school-article",
+          "type": "multiple-choice",
+          "prompt": "Which sentence uses the correct article?",
+          "choices": ["Il-librerija hija kbira.", "L-librerija hija kbira.", "It-librerija hija kbira."],
+          "answer": "Il-librerija hija kbira.",
+          "explanation": "Librerija takes il- in this form.",
+          "listen": "Il-librerija hija kbira.",
+          "reviewCard": { "maltese": "Il-librerija hija kbira.", "english": "The library is big." }
+        }
+      ]
+    },
+    {
+      "id": "b1-animals-check",
+      "chapterId": "b1-animals",
+      "title": "Animals Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "animal-possession",
+          "type": "multiple-choice",
+          "prompt": "What does Għandha qattusa mean?",
+          "choices": ["She has a female cat.", "He sees a cat.", "They like cats."],
+          "answer": "She has a female cat.",
+          "explanation": "Għandha expresses possession for hi.",
+          "listen": "Għandha qattusa.",
+          "reviewCard": { "maltese": "Għandha qattusa.", "english": "She has a female cat." }
+        },
+        {
+          "id": "animal-we-have",
+          "type": "fill-blank",
+          "prompt": "Complete: Aħna ___ żewġ klieb.",
+          "answer": "għandna",
+          "accepted": ["għandna"],
+          "explanation": "Aħna takes għandna.",
+          "reviewCard": { "maltese": "Aħna għandna żewġ klieb.", "english": "We have two dogs." }
+        },
+        {
+          "id": "animal-plurals",
+          "type": "matching",
+          "prompt": "Match the singular animal to its plural.",
+          "pairs": [
+            { "left": "qattus", "right": "qtates" },
+            { "left": "kelb", "right": "klieb" },
+            { "left": "tiġieġa", "right": "tiġieġ" }
+          ],
+          "explanation": "These frequent animal nouns have forms worth learning as pairs.",
+          "reviewCard": { "maltese": "Dawn huma żewġ qtates u tliet klieb.", "english": "These are two cats and three dogs." }
+        }
+      ]
+    },
+    {
+      "id": "b1-colours-check",
+      "chapterId": "b1-colours",
+      "title": "Colours Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "colour-agreement",
+          "type": "multiple-choice",
+          "prompt": "Which description has feminine agreement?",
+          "choices": ["Din hija karozza ħamra.", "Din hija karozza aħmar.", "Dan huwa karozza ħamra."],
+          "answer": "Din hija karozza ħamra.",
+          "explanation": "Karozza is feminine, so use din and ħamra.",
+          "listen": "Din hija karozza ħamra.",
+          "reviewCard": { "maltese": "Din hija karozza ħamra.", "english": "This is a red car." }
+        },
+        {
+          "id": "colour-plural",
+          "type": "fill-blank",
+          "prompt": "Complete: Dawn huma kotba ___.",
+          "answer": "ħodor",
+          "accepted": ["ħodor"],
+          "explanation": "The plural colour form agrees with kotba.",
+          "reviewCard": { "maltese": "Dawn huma kotba ħodor.", "english": "These are green books." }
+        },
+        {
+          "id": "colour-demonstratives",
+          "type": "matching",
+          "prompt": "Match the near demonstrative to the noun.",
+          "pairs": [
+            { "left": "dan", "right": "kelb" },
+            { "left": "din", "right": "dar" },
+            { "left": "dawn", "right": "kotba" }
+          ],
+          "explanation": "Use dan for masculine singular, din for feminine singular, and dawn for plural.",
+          "reviewCard": { "maltese": "Dan kelb, din dar, u dawn kotba.", "english": "This dog, this house, and these books." }
+        }
+      ]
+    },
+    {
+      "id": "b1-food-check",
+      "chapterId": "b1-food",
+      "title": "Food Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "food-eat",
+          "type": "fill-blank",
+          "prompt": "Complete: Jien ___ il-ħobż filgħodu.",
+          "answer": "niekol",
+          "accepted": ["niekol"],
+          "explanation": "Jien takes niekol.",
+          "listen": "Jien niekol il-ħobż filgħodu.",
+          "reviewCard": { "maltese": "Jien niekol il-ħobż filgħodu.", "english": "I eat bread in the morning." }
+        },
+        {
+          "id": "food-preference",
+          "type": "multiple-choice",
+          "prompt": "What does Aħna nħobbu nixorbu l-ilma mean?",
+          "choices": ["We like drinking water.", "We need cold water.", "We buy water."],
+          "answer": "We like drinking water.",
+          "explanation": "Nħobbu introduces what we like doing.",
+          "reviewCard": { "maltese": "Aħna nħobbu nixorbu l-ilma.", "english": "We like drinking water." }
+        },
+        {
+          "id": "food-category",
+          "type": "true-false",
+          "prompt": "Il-kafè huwa xarba.",
+          "answer": true,
+          "explanation": "Kafè is a drink, so the statement is true.",
+          "listen": "Il-kafè huwa xarba.",
+          "reviewCard": { "maltese": "Il-kafè huwa xarba.", "english": "Coffee is a drink." }
+        }
+      ]
+    },
+    {
+      "id": "b1-family-check",
+      "chapterId": "b1-family",
+      "title": "Family Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "family-members",
+          "type": "matching",
+          "prompt": "Match the family words.",
+          "pairs": [
+            { "left": "omm", "right": "mother" },
+            { "left": "missier", "right": "father" },
+            { "left": "oħt", "right": "sister" }
+          ],
+          "explanation": "These are core family-member nouns.",
+          "reviewCard": { "maltese": "Ommi, missieri, u oħti jgħixu Malta.", "english": "My mother, father, and sister live in Malta." }
+        },
+        {
+          "id": "family-wake",
+          "type": "fill-blank",
+          "prompt": "Complete: Jien ___ fis-sebgħa.",
+          "answer": "inqum",
+          "accepted": ["inqum"],
+          "explanation": "Jien takes inqum.",
+          "reviewCard": { "maltese": "Jien inqum fis-sebgħa.", "english": "I wake up at seven." }
+        },
+        {
+          "id": "family-week",
+          "type": "order-words",
+          "prompt": "Put the family routine sentence in order.",
+          "tokens": ["Nhar il-Ħadd", "immorru", "għand", "in-nanna."],
+          "answer": "Nhar il-Ħadd immorru għand in-nanna.",
+          "explanation": "The day phrase can introduce the routine.",
+          "listen": "Nhar il-Ħadd immorru għand in-nanna.",
+          "reviewCard": { "maltese": "Nhar il-Ħadd immorru għand in-nanna.", "english": "On Sunday we go to grandmother's house." }
+        }
+      ]
+    },
+    {
+      "id": "b2-school-bag-check",
+      "chapterId": "b2-school-bag",
+      "title": "School Bag Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "bag-objects",
+          "type": "matching",
+          "prompt": "Match the school-bag words.",
+          "pairs": [
+            { "left": "il-kalkulatur", "right": "calculator" },
+            { "left": "il-pitazz", "right": "copybook" },
+            { "left": "il-bajrow", "right": "pen" }
+          ],
+          "explanation": "Keep each object together with its article.",
+          "reviewCard": { "maltese": "Fil-basket għandi kalkulatur, pitazz, u bajrow.", "english": "In the bag I have a calculator, a copybook, and a pen." }
+        },
+        {
+          "id": "bag-demonstrative",
+          "type": "multiple-choice",
+          "prompt": "Which sentence uses a feminine demonstrative correctly?",
+          "choices": ["Din il-karta hija bajda.", "Dan il-karta huwa abjad.", "Dawn il-karta huma bojod."],
+          "answer": "Din il-karta hija bajda.",
+          "explanation": "Karta is feminine singular, so use din and bajda.",
+          "listen": "Din il-karta hija bajda.",
+          "reviewCard": { "maltese": "Din il-karta hija bajda.", "english": "This paper is white." }
+        },
+        {
+          "id": "bag-description",
+          "type": "fill-blank",
+          "prompt": "Complete: Dan il-fajl huwa ___.",
+          "answer": "aħdar",
+          "accepted": ["aħdar"],
+          "explanation": "Fajl is masculine singular, so use aħdar.",
+          "reviewCard": { "maltese": "Dan il-fajl huwa aħdar.", "english": "This file is green." }
+        }
+      ]
+    },
+    {
+      "id": "b2-imperative-check",
+      "chapterId": "b2-imperative",
+      "title": "Imperative Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "imperative-pairs",
+          "type": "matching",
+          "prompt": "Match each singular command to its plural.",
+          "pairs": [
+            { "left": "ikteb", "right": "iktbu" },
+            { "left": "aqra", "right": "aqraw" },
+            { "left": "oqgħod", "right": "oqogħdu" }
+          ],
+          "explanation": "Learn frequent classroom commands as singular and plural pairs.",
+          "reviewCard": { "maltese": "Ikteb, aqra, u oqgħod attent.", "english": "Write, read, and pay attention." }
+        },
+        {
+          "id": "imperative-open-plural",
+          "type": "multiple-choice",
+          "prompt": "What is the plural command corresponding to Iftaħ?",
+          "choices": ["Iftħu", "Tiftħu", "Fetaħ"],
+          "answer": "Iftħu",
+          "explanation": "Iftaħ is singular and iftħu is plural.",
+          "listen": "Iftħu l-kotba.",
+          "reviewCard": { "maltese": "Iftħu l-kotba.", "english": "Open the books." }
+        },
+        {
+          "id": "imperative-polite",
+          "type": "fill-blank",
+          "prompt": "Complete: ___ il-ktieb, jekk jogħġbok.",
+          "answer": "Iftaħ",
+          "accepted": ["iftaħ"],
+          "explanation": "Use the singular command iftaħ with one person.",
+          "reviewCard": { "maltese": "Iftaħ il-ktieb, jekk jogħġbok.", "english": "Open the book, please." }
+        }
+      ]
+    },
+    {
+      "id": "b2-weather-check",
+      "chapterId": "b2-weather",
+      "title": "Weather Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "weather-cloudy",
+          "type": "multiple-choice",
+          "prompt": "What does It-temp huwa msaħħab mean?",
+          "choices": ["The weather is cloudy.", "The weather is windy.", "The weather is hot."],
+          "answer": "The weather is cloudy.",
+          "explanation": "Msaħħab describes cloudy weather.",
+          "listen": "It-temp huwa msaħħab.",
+          "reviewCard": { "maltese": "It-temp huwa msaħħab.", "english": "The weather is cloudy." }
+        },
+        {
+          "id": "weather-season",
+          "type": "true-false",
+          "prompt": "Fix-xitwa normalment ikun aktar kiesaħ.",
+          "answer": true,
+          "explanation": "The statement says that winter is normally colder.",
+          "reviewCard": { "maltese": "Fix-xitwa normalment ikun aktar kiesaħ.", "english": "In winter it is normally colder." }
+        },
+        {
+          "id": "weather-future",
+          "type": "fill-blank",
+          "prompt": "Complete: Għada se ___ kiesaħ.",
+          "answer": "jkun",
+          "accepted": ["jkun"],
+          "explanation": "Se jkun means it will be.",
+          "listen": "Għada se jkun kiesaħ.",
+          "reviewCard": { "maltese": "Għada se jkun kiesaħ.", "english": "Tomorrow it will be cold." }
+        }
+      ]
+    },
+    {
+      "id": "b2-clothes-check",
+      "chapterId": "b2-clothes",
+      "title": "Clothes Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "clothes-words",
+          "type": "matching",
+          "prompt": "Match the clothes.",
+          "pairs": [
+            { "left": "il-kowt", "right": "coat" },
+            { "left": "ix-xalpa", "right": "scarf" },
+            { "left": "id-dublett", "right": "skirt" }
+          ],
+          "explanation": "These clothes are useful in seasonal descriptions.",
+          "reviewCard": { "maltese": "Fix-xitwa nilbes kowt u xalpa.", "english": "In winter I wear a coat and scarf." }
+        },
+        {
+          "id": "clothes-season",
+          "type": "multiple-choice",
+          "prompt": "Which item is most suitable for a cold winter day?",
+          "choices": ["kowt oħxon", "malja tal-għawm", "flokk ħafif"],
+          "answer": "kowt oħxon",
+          "explanation": "A thick coat is suitable for cold weather.",
+          "listen": "Nilbes kowt oħxon fix-xitwa.",
+          "reviewCard": { "maltese": "Nilbes kowt oħxon fix-xitwa.", "english": "I wear a thick coat in winter." }
+        },
+        {
+          "id": "clothes-number",
+          "type": "fill-blank",
+          "prompt": "Complete the number link: Għandi tnax-___ flokk.",
+          "answer": "il",
+          "accepted": ["il"],
+          "explanation": "Numbers from eleven to nineteen use the linking element -il.",
+          "reviewCard": { "maltese": "Għandi tnax-il flokk.", "english": "I have twelve shirts." }
+        }
+      ]
+    },
+    {
+      "id": "b2-hobbies-future-check",
+      "chapterId": "b2-hobbies",
+      "title": "Hobbies and Future Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "hobby-future-meaning",
+          "type": "multiple-choice",
+          "prompt": "Which sentence describes a future plan?",
+          "choices": ["Għada se nilgħab it-tenis.", "Kuljum nilgħab it-tenis.", "Ilbieraħ lgħabt it-tenis."],
+          "answer": "Għada se nilgħab it-tenis.",
+          "explanation": "Se plus the present-type form creates a simple future statement.",
+          "listen": "Għada se nilgħab it-tenis.",
+          "reviewCard": { "maltese": "Għada se nilgħab it-tenis.", "english": "Tomorrow I will play tennis." }
+        },
+        {
+          "id": "hobby-bike",
+          "type": "fill-blank",
+          "prompt": "Complete: Għada se ___ bir-rota.",
+          "answer": "noħroġ",
+          "accepted": ["noħroġ"],
+          "explanation": "Se noħroġ expresses that I will go out.",
+          "reviewCard": { "maltese": "Għada se noħroġ bir-rota.", "english": "Tomorrow I will go out by bicycle." }
+        },
+        {
+          "id": "hobby-weekend-order",
+          "type": "order-words",
+          "prompt": "Put the weekend plan in order.",
+          "tokens": ["Fi tmiem il-ġimgħa", "se niltaqa'", "mal-ħbieb."],
+          "answer": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.",
+          "explanation": "The time phrase can introduce the future plan.",
+          "listen": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.",
+          "reviewCard": { "maltese": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.", "english": "At the weekend I will meet my friends." }
+        }
+      ]
+    },
+    {
+      "id": "b2-town-check",
+      "chapterId": "b2-town",
+      "title": "Town Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "town-places",
+          "type": "matching",
+          "prompt": "Match the town places.",
+          "pairs": [
+            { "left": "l-ispiżerija", "right": "pharmacy" },
+            { "left": "il-furnar", "right": "bakery" },
+            { "left": "il-bank", "right": "bank" }
+          ],
+          "explanation": "These are useful places for practical town tasks.",
+          "reviewCard": { "maltese": "L-ispiżerija qiegħda ħdejn il-bank.", "english": "The pharmacy is next to the bank." }
+        },
+        {
+          "id": "town-request",
+          "type": "multiple-choice",
+          "prompt": "Which is the clearest polite request in a shop?",
+          "choices": ["Nixtieq flixkun ilma, jekk jogħġbok.", "Mur flixkun ilma.", "Fejn flixkun ilma."],
+          "answer": "Nixtieq flixkun ilma, jekk jogħġbok.",
+          "explanation": "Nixtieq and jekk jogħġbok make the request polite.",
+          "listen": "Nixtieq flixkun ilma, jekk jogħġbok.",
+          "reviewCard": { "maltese": "Nixtieq flixkun ilma, jekk jogħġbok.", "english": "I would like a bottle of water, please." }
+        },
+        {
+          "id": "town-directions",
+          "type": "order-words",
+          "prompt": "Put the direction in order.",
+          "tokens": ["Mur dritt", "u dur", "fuq ix-xellug."],
+          "answer": "Mur dritt u dur fuq ix-xellug.",
+          "explanation": "Start with the forward movement, then add the turn.",
+          "listen": "Mur dritt u dur fuq ix-xellug.",
+          "reviewCard": { "maltese": "Mur dritt u dur fuq ix-xellug.", "english": "Go straight and turn left." }
+        }
+      ]
+    },
+    {
+      "id": "b2-recycling-check",
+      "chapterId": "b2-recycling",
+      "title": "Recycling Quick Check",
+      "passPercent": 67,
+      "items": [
+        {
+          "id": "recycling-materials",
+          "type": "matching",
+          "prompt": "Match the recyclable materials.",
+          "pairs": [
+            { "left": "plastik", "right": "plastic" },
+            { "left": "ħġieġ", "right": "glass" },
+            { "left": "karta", "right": "paper" }
+          ],
+          "explanation": "Recognising the material is the first step in sorting waste.",
+          "reviewCard": { "maltese": "Nissepara l-plastik, il-ħġieġ, u l-karta.", "english": "I separate plastic, glass, and paper." }
+        },
+        {
+          "id": "recycling-glass",
+          "type": "multiple-choice",
+          "prompt": "Where should clean glass go?",
+          "choices": ["fil-kontenitur tal-ħġieġ", "mal-iskart organiku", "fil-kaxxa tal-ħwejjeġ"],
+          "answer": "fil-kontenitur tal-ħġieġ",
+          "explanation": "Clean glass belongs in the glass container.",
+          "listen": "Il-ħġieġ imur fil-kontenitur tal-ħġieġ.",
+          "reviewCard": { "maltese": "Il-ħġieġ imur fil-kontenitur tal-ħġieġ.", "english": "Glass goes in the glass container." }
+        },
+        {
+          "id": "recycling-routine",
+          "type": "fill-blank",
+          "prompt": "Complete: Aħna ___ l-iskart id-dar.",
+          "answer": "nisseparaw",
+          "accepted": ["nisseparaw"],
+          "explanation": "Aħna takes nisseparaw.",
+          "reviewCard": { "maltese": "Aħna nisseparaw l-iskart id-dar.", "english": "We separate waste at home." }
+        }
+      ]
+    }
+  ]
+}

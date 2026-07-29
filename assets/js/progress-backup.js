@@ -13,6 +13,7 @@
     malti_word_builder_seen_words_v1: "array",
     malti_vocabulary_games_sound_v1: "string",
     malti_course_progress_v1: "object",
+    malti_exercise_progress_v1: "object",
     malti_site_theme: "string",
     animalsCompactMode: "string",
     homeCompactMode: "string",

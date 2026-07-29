@@ -124,6 +124,37 @@ async function main() {
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
+    await runTest(context, "course path saves objectives and quick-check progress", async (page) => {
+      await openCleanPage(page, "course_path.html");
+      await page.locator('[data-course-level="b1"]:not([hidden])').waitFor();
+      assert(await page.locator('[data-course-level="b1"] [data-course-chapter]').count() === 7, "B1 chapter count is incomplete.");
+
+      const firstObjective = page.locator('[data-course-chapter="b1-introductions"] [data-objective-key]').first();
+      await firstObjective.check();
+      await page.locator('[data-course-chapter="b1-introductions"] .course-practice > summary').click();
+      const exercise = page.locator('[data-exercise-set="b1-introductions-check"]');
+      await exercise.locator('[data-exercise-item="name-introduction"] input[value="Jien jisimni Lara."]').check();
+      await exercise.locator('[data-exercise-item="complete-name"] input').fill("jisimni");
+      const matching = exercise.locator('[data-exercise-item="adjective-gender"] select');
+      await matching.nth(0).selectOption("ferħana");
+      await matching.nth(1).selectOption("attiva");
+      await matching.nth(2).selectOption("ċajtiera");
+      await exercise.locator('button[type="submit"]').click();
+      assert((await exercise.locator(".exercise-result").textContent()).includes("passed"), "Quick check did not pass.");
+
+      const saved = await page.evaluate(() => ({
+        course: JSON.parse(localStorage.getItem("malti_course_progress_v1")),
+        exercises: JSON.parse(localStorage.getItem("malti_exercise_progress_v1"))
+      }));
+      assert(saved.course.objectives["b1-introductions::identity"] === true, "Course objective was not saved.");
+      assert(saved.exercises["b1-introductions-check"].passed === true, "Exercise result was not saved.");
+
+      await page.locator('[data-course-level-button="b2"]').click();
+      assert(await page.locator('[data-course-level="b2"]:not([hidden]) [data-course-chapter]').count() === 7, "B2 chapter count is incomplete.");
+      await page.reload({ waitUntil: "networkidle" });
+      assert(await page.locator('[data-objective-key="b1-introductions::identity"]').isChecked(), "Course objective was not restored.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());
