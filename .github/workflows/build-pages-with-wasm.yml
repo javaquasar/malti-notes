@@ -33,21 +33,44 @@ jobs:
           cache: "npm"
 
       - name: Install Node dependencies
+        id: node_deps
         run: npm ci
 
       - name: Install Playwright browser
+        id: playwright_browser
         run: npx playwright install --with-deps chromium
 
-      - name: Run quality checks
-        run: |
-          npm run style:lint
-          npm run data:lint
-          npm run content:lint
-          npm run links:lint
-          npm run theme:a11y
-          npm run functional:test
-          npm run visual:smoke
-          npm run visual:ci
+      - name: Lint shared styles
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run style:lint
+
+      - name: Validate data structure
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run data:lint
+
+      - name: Validate learning content
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run content:lint
+
+      - name: Validate links and data bindings
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run links:lint
+
+      - name: Check theme accessibility
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run theme:a11y
+
+      - name: Run visual smoke checks
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run visual:smoke
+
+      - name: Run functional Playwright checks
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run functional:test
+
+      - name: Capture and validate visual matrix
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run visual:ci
 
       - name: Upload visual artifacts
         if: always()
