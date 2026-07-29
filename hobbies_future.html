@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies and Future Plans in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Hobbies and Future Plans</h1>
+                <p class="lead">Leisure activities, preferences, time phrases, and the future marker <code>se</code> for speaking about the next day or weekend.</p>
+                <div class="pill-row">
+                    <span class="pill">B2</span>
+                    <span class="pill">hobbies</span>
+                    <span class="pill">se + verb</span>
+                    <span class="pill">weekend plans</span>
+                </div>
+            </div>
+            <figure class="route-figure">
+                <img src="./assets/img/transport/bicycle.svg" alt="Bicycle representing an outdoor hobby">
+                <figcaption><code>Għada se nirkeb ir-rota.</code> Tomorrow I will ride my bicycle.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#hobbies">Hobby Actions</a></li>
+                <li><a href="#preferences">Likes and Enjoyment</a></li>
+                <li><a href="#time">Future Time</a></li>
+                <li><a href="#future">Future with Se</a></li>
+                <li><a href="#questions">Questions about Plans</a></li>
+                <li><a href="#practice">Quick Check</a></li>
+                <li><a href="#related">Related Pages</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section class="card" id="hobbies">
+                <span class="tag">Vocabulary</span>
+                <h2>Hobby Actions</h2>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Common activities for free time and weekends.</span>
+                </div>
+                <div class="grid-auto" data-hobby-group="hobby-actions"></div>
+            </section>
+
+            <section class="card" id="preferences">
+                <span class="tag">Preferences</span>
+                <h2>Likes and Enjoyment</h2>
+                <div class="formula"><code>inħobb + verb</code> · <code>nieħu gost + verb</code></div>
+                <div data-example-group="hobby-preference-models"></div>
+            </section>
+
+            <section class="card" id="time">
+                <span class="tag">Time Phrases</span>
+                <h2>Future Time</h2>
+                <div class="grid-auto" data-hobby-group="future-time"></div>
+            </section>
+
+            <section class="card" id="future">
+                <span class="tag">Grammar</span>
+                <h2>Future with <code>se</code></h2>
+                <div class="grammar-contrast-grid">
+                    <div class="grammar-contrast-card">
+                        <h3>Regular activity</h3>
+                        <div class="formula"><code>Kull nhar ta' Sibt nilgħab it-tenis.</code></div>
+                        <p class="mini">Every Saturday I play tennis.</p>
+                    </div>
+                    <div class="grammar-contrast-card grammar-contrast-card--right">
+                        <h3>Future plan</h3>
+                        <div class="formula grammar-contrast-formula grammar-contrast-formula--right"><code>Is-Sibt se nilgħab it-tenis.</code></div>
+                        <p class="mini">On Saturday I will play tennis.</p>
+                    </div>
+                </div>
+                <div data-example-group="future-plan-models"></div>
+            </section>
+
+            <section class="card" id="questions">
+                <span class="tag">Conversation</span>
+                <h2>Questions about Plans</h2>
+                <div data-example-group="future-question-models"></div>
+            </section>
+
+            <section class="card" id="practice">
+                <span class="tag">Course Check</span>
+                <h2>Hobbies and Future Quick Check</h2>
+                <div data-exercise-set="b2-hobbies-future-check" data-exercise-src="./assets/data/course_exercises.json"></div>
+            </section>
+
+            <section class="card" id="related">
+                <span class="tag">Related</span>
+                <h2>Related Pages</h2>
+                <div class="grid-3">
+                    <div class="info-card"><strong><a href="./daily_routine.html">Daily Routine</a></strong><span>Contrast regular habits with one future plan.</span></div>
+                    <div class="info-card"><strong><a href="./transport_travel.html">Transport and Travel</a></strong><span>Add destinations and means of transport.</span></div>
+                    <div class="info-card"><strong><a href="./course_path.html">B1/B2 Course Path</a></strong><span>Continue through the B2 sequence.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/hobbies_future.json",
+    sourcePage: "hobbies_future.html",
+    reviewPrefix: "hobbies",
+    groupAttribute: "data-hobby-group",
+    cardClass: "visual-vocab-card",
+    pageToolbarSelector: "#hobbies .toolbar-row",
+    pageBulkLabel: "Add all hobby words",
+    defaultTopic: "Hobbies and Future Plans",
+    examplePrefix: "Jien"
+};
+
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/hobbies_future_examples.json",
+    groupAttribute: "data-example-group",
+    cardClass: "study-card",
+    sourcePage: "hobbies_future.html",
+    defaultTopic: "Hobbies and Future Plans",
+    reviewPrefix: "hobbies",
+    pageToolbarSelector: "#hobbies .toolbar-row",
+    pageBulkLabel: "Add all hobby phrases"
+});
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

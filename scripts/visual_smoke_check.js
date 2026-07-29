@@ -9,10 +9,14 @@ const keyPages = [
   "picture_description.html",
   "collective_nouns.html",
   "course_path.html",
+  "environment_recycling.html",
+  "hobbies_future.html",
+  "introductions_alphabet.html",
   "word_search.html",
   "memory_game.html",
   "word_builder_game.html",
   "shopping_clothes.html",
+  "school_classroom.html",
   "daily_problems.html"
 ];
 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introductions and Alphabet in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Introductions and Alphabet</h1>
+                <p class="lead">Names, countries, places of residence, spelling, and simple personal qualities for a clear first conversation in Maltese.</p>
+                <div class="pill-row">
+                    <span class="pill">B1 foundation</span>
+                    <span class="pill">speaking</span>
+                    <span class="pill">spelling</span>
+                    <span class="pill">adjective agreement</span>
+                </div>
+            </div>
+            <figure class="route-figure">
+                <img src="./assets/img/favicon-option-speech.svg" alt="Speech bubble representing an introduction">
+                <figcaption><code>Bonġu, jien jisimni...</code> begins a useful personal introduction.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#core">Names and Places</a></li>
+                <li><a href="#questions">Useful Questions</a></li>
+                <li><a href="#alphabet">Spelling Names</a></li>
+                <li><a href="#qualities">Personal Qualities</a></li>
+                <li><a href="#models">Introduction Models</a></li>
+                <li><a href="#practice">Quick Check</a></li>
+                <li><a href="#related">Related Pages</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section class="card" id="core">
+                <span class="tag">Vocabulary</span>
+                <h2>Names and Places</h2>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Core phrases for names, origins, and residence.</span>
+                </div>
+                <div class="grid-auto" data-introduction-group="introduction-core"></div>
+            </section>
+
+            <section class="card" id="questions">
+                <span class="tag">Conversation</span>
+                <h2>Useful Questions</h2>
+                <div data-example-group="introduction-questions"></div>
+            </section>
+
+            <section class="card" id="alphabet">
+                <span class="tag">Spelling</span>
+                <h2>Spelling Names</h2>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <strong><code>Kif tispelli ismek?</code></strong>
+                        <span>How do you spell your name?</span>
+                    </div>
+                    <div class="info-card">
+                        <strong><code>Jinkiteb...</code></strong>
+                        <span>It is written...</span>
+                    </div>
+                    <div class="info-card">
+                        <strong><code>Tista' tirrepeti?</code></strong>
+                        <span>Can you repeat?</span>
+                    </div>
+                    <div class="info-card">
+                        <strong><code>B'ittra kbira jew żgħira?</code></strong>
+                        <span>With a capital or small letter?</span>
+                    </div>
+                </div>
+                <div class="formula"><strong>Maltese letters to notice:</strong> <code>ċ · ġ · għ · ħ · ż</code></div>
+            </section>
+
+            <section class="card" id="qualities">
+                <span class="tag">Agreement</span>
+                <h2>Personal Qualities</h2>
+                <div class="grid-auto" data-introduction-group="personal-qualities"></div>
+                <div data-example-group="personality-models"></div>
+            </section>
+
+            <section class="card" id="models">
+                <span class="tag">Ready-Made Lines</span>
+                <h2>Introduction Models</h2>
+                <div data-example-group="introduction-models"></div>
+            </section>
+
+            <section class="card" id="practice">
+                <span class="tag">Course Check</span>
+                <h2>Introductions Quick Check</h2>
+                <div data-exercise-set="b1-introductions-check" data-exercise-src="./assets/data/course_exercises.json"></div>
+            </section>
+
+            <section class="card" id="related">
+                <span class="tag">Related</span>
+                <h2>Related Pages</h2>
+                <div class="grid-3">
+                    <div class="info-card"><strong><a href="./pronouns_possessives.html">Pronouns and Possessives</a></strong><span>Build accurate sentences about yourself and other people.</span></div>
+                    <div class="info-card"><strong><a href="./body_appearance.html">Body and Appearance</a></strong><span>Extend a personal description with appearance vocabulary.</span></div>
+                    <div class="info-card"><strong><a href="./course_path.html">B1/B2 Course Path</a></strong><span>Continue with the next chapter and track progress.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/introductions_alphabet.json",
+    sourcePage: "introductions_alphabet.html",
+    reviewPrefix: "introductions",
+    groupAttribute: "data-introduction-group",
+    cardClass: "visual-vocab-card",
+    pageToolbarSelector: "#core .toolbar-row",
+    pageBulkLabel: "Add all introduction words",
+    defaultTopic: "Introductions and Alphabet",
+    examplePrefix: "Jien"
+};
+
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/introductions_alphabet_examples.json",
+    groupAttribute: "data-example-group",
+    cardClass: "study-card",
+    sourcePage: "introductions_alphabet.html",
+    defaultTopic: "Introductions and Alphabet",
+    reviewPrefix: "introductions",
+    pageToolbarSelector: "#core .toolbar-row",
+    pageBulkLabel: "Add all introduction phrases"
+});
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

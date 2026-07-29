@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School and Classroom in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>School and Classroom</h1>
+                <p class="lead">School-bag objects, classroom places, demonstratives, and everyday instructions for B1 and B2 study tasks.</p>
+                <div class="pill-row">
+                    <span class="pill">B1/B2</span>
+                    <span class="pill">school bag</span>
+                    <span class="pill">classroom</span>
+                    <span class="pill">commands</span>
+                </div>
+            </div>
+            <figure class="route-figure">
+                <img src="./assets/img/home/desk.svg" alt="Desk with study materials">
+                <figcaption><code>Il-ktieb qiegħed fuq il-mejda.</code> The book is on the table.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#bag">In the School Bag</a></li>
+                <li><a href="#classroom">In the Classroom</a></li>
+                <li><a href="#descriptions">Describing Objects</a></li>
+                <li><a href="#commands">Classroom Commands</a></li>
+                <li><a href="#models">Ready-Made Lines</a></li>
+                <li><a href="#practice">Quick Checks</a></li>
+                <li><a href="#related">Related Pages</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section class="card" id="bag">
+                <span class="tag">Vocabulary</span>
+                <h2>In the School Bag</h2>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Core objects with their Maltese articles.</span>
+                </div>
+                <div class="grid-auto" data-school-group="school-bag"></div>
+            </section>
+
+            <section class="card" id="classroom">
+                <span class="tag">Places and Objects</span>
+                <h2>In the Classroom</h2>
+                <div class="grid-auto" data-school-group="classroom-core"></div>
+            </section>
+
+            <section class="card" id="descriptions">
+                <span class="tag">Agreement</span>
+                <h2>Describing Objects</h2>
+                <div class="formula"><code>dan + masculine</code> · <code>din + feminine</code> · <code>dawn + plural</code></div>
+                <div data-example-group="school-description-models"></div>
+            </section>
+
+            <section class="card" id="commands">
+                <span class="tag">Imperative</span>
+                <h2>Classroom Commands</h2>
+                <div class="grid-2">
+                    <div class="info-card"><strong><code>Iftaħ il-ktieb.</code></strong><span>Open the book.</span></div>
+                    <div class="info-card"><strong><code>Agħlaq il-bieb.</code></strong><span>Close the door.</span></div>
+                    <div class="info-card"><strong><code>Ikteb fil-pitazz.</code></strong><span>Write in the copybook.</span></div>
+                    <div class="info-card"><strong><code>Aqra s-sentenza.</code></strong><span>Read the sentence.</span></div>
+                </div>
+                <div data-example-group="school-command-models"></div>
+            </section>
+
+            <section class="card" id="models">
+                <span class="tag">Ready-Made Lines</span>
+                <h2>School Object Models</h2>
+                <div data-example-group="school-object-models"></div>
+            </section>
+
+            <section class="card" id="practice">
+                <span class="tag">Course Checks</span>
+                <h2>School Quick Checks</h2>
+                <div class="example-bank-stack">
+                    <div class="example-bank-section">
+                        <h3>B1 School and Classroom</h3>
+                        <div data-exercise-set="b1-school-check" data-exercise-src="./assets/data/course_exercises.json"></div>
+                    </div>
+                    <div class="example-bank-section">
+                        <h3>B2 School Bag and Description</h3>
+                        <div data-exercise-set="b2-school-bag-check" data-exercise-src="./assets/data/course_exercises.json"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="related">
+                <span class="tag">Related</span>
+                <h2>Related Pages</h2>
+                <div class="grid-3">
+                    <div class="info-card"><strong><a href="./imperative_verbs.html">Imperative Commands</a></strong><span>Practise singular and plural instructions.</span></div>
+                    <div class="info-card"><strong><a href="./prepositions_place.html">Prepositions of Place</a></strong><span>Say where classroom objects are.</span></div>
+                    <div class="info-card"><strong><a href="./course_path.html">B1/B2 Course Path</a></strong><span>Mark the school chapters complete.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/school_classroom.json",
+    sourcePage: "school_classroom.html",
+    reviewPrefix: "school",
+    groupAttribute: "data-school-group",
+    cardClass: "visual-vocab-card",
+    pageToolbarSelector: "#bag .toolbar-row",
+    pageBulkLabel: "Add all school words",
+    defaultTopic: "School and Classroom",
+    examplePrefix: "Il"
+};
+
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/school_classroom_examples.json",
+    groupAttribute: "data-example-group",
+    cardClass: "study-card",
+    sourcePage: "school_classroom.html",
+    defaultTopic: "School and Classroom",
+    reviewPrefix: "school",
+    pageToolbarSelector: "#bag .toolbar-row",
+    pageBulkLabel: "Add all school phrases"
+});
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

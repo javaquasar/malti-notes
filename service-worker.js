@@ -1,14 +1,26 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}v5`;
+const CACHE_NAME = `${CACHE_PREFIX}v6`;
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./all_pages.html",
   "./course_path.html",
+  "./introductions_alphabet.html",
+  "./school_classroom.html",
+  "./hobbies_future.html",
+  "./environment_recycling.html",
   "./manifest.webmanifest",
   "./assets/data/site-map.json",
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",
+  "./assets/data/introductions_alphabet.json",
+  "./assets/data/introductions_alphabet_examples.json",
+  "./assets/data/school_classroom.json",
+  "./assets/data/school_classroom_examples.json",
+  "./assets/data/hobbies_future.json",
+  "./assets/data/hobbies_future_examples.json",
+  "./assets/data/environment_recycling.json",
+  "./assets/data/environment_recycling_examples.json",
   "./assets/img/favicon-option-speech.svg",
   "./assets/css/theme.css",
   "./assets/css/themes/forest.css",

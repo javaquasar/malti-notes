@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment and Recycling in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <h1>Environment and Recycling</h1>
+                <p class="lead">Materials, waste sorting, reusable objects, and practical questions for discussing an everyday recycling routine in Maltese.</p>
+                <div class="pill-row">
+                    <span class="pill">B2</span>
+                    <span class="pill">materials</span>
+                    <span class="pill">recycling</span>
+                    <span class="pill">daily action</span>
+                </div>
+            </div>
+            <figure class="route-figure">
+                <img src="./assets/img/home/garden.svg" alt="Garden representing care for the environment">
+                <figcaption><code>Kuljum nisseparaw l-iskart.</code> Every day we separate the waste.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#materials">Recycling Materials</a></li>
+                <li><a href="#sorting">Sorting Waste</a></li>
+                <li><a href="#actions">Recycling Actions</a></li>
+                <li><a href="#routine">Eco-Routine</a></li>
+                <li><a href="#questions">Useful Questions</a></li>
+                <li><a href="#practice">Quick Check</a></li>
+                <li><a href="#related">Related Pages</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section class="card" id="materials">
+                <span class="tag">Vocabulary</span>
+                <h2>Recycling Materials</h2>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                    <span class="status-chip" data-review-summary>0 saved, 0 due</span>
+                    <span class="mini">Materials and waste categories used in daily sorting.</span>
+                </div>
+                <div class="grid-auto" data-recycling-group="recycling-materials"></div>
+            </section>
+
+            <section class="card" id="sorting">
+                <span class="tag">Sorting</span>
+                <h2>Sorting Waste</h2>
+                <div data-example-group="sorting-models"></div>
+            </section>
+
+            <section class="card" id="actions">
+                <span class="tag">Useful Verbs</span>
+                <h2>Recycling Actions</h2>
+                <div class="grid-auto" data-recycling-group="recycling-actions"></div>
+                <div class="formula"><code>nifred</code> separate · <code>nerġa' nuża</code> reuse · <code>nirriċikla</code> recycle</div>
+            </section>
+
+            <section class="card" id="routine">
+                <span class="tag">Ready-Made Lines</span>
+                <h2>A Practical Eco-Routine</h2>
+                <div data-example-group="eco-routine-models"></div>
+            </section>
+
+            <section class="card" id="questions">
+                <span class="tag">Conversation</span>
+                <h2>Useful Questions</h2>
+                <div data-example-group="recycling-question-models"></div>
+            </section>
+
+            <section class="card" id="practice">
+                <span class="tag">Course Check</span>
+                <h2>Recycling Quick Check</h2>
+                <div data-exercise-set="b2-recycling-check" data-exercise-src="./assets/data/course_exercises.json"></div>
+            </section>
+
+            <section class="card" id="related">
+                <span class="tag">Related</span>
+                <h2>Related Pages</h2>
+                <div class="grid-3">
+                    <div class="info-card"><strong><a href="./home_furniture.html">Home and Furniture</a></strong><span>Describe where containers and reusable objects are kept.</span></div>
+                    <div class="info-card"><strong><a href="./modals_needs.html">Can, Must, Want and Need</a></strong><span>Explain what people should or need to do.</span></div>
+                    <div class="info-card"><strong><a href="./course_path.html">B1/B2 Course Path</a></strong><span>Complete the final B2 chapter check.</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/environment_recycling.json",
+    sourcePage: "environment_recycling.html",
+    reviewPrefix: "recycling",
+    groupAttribute: "data-recycling-group",
+    cardClass: "visual-vocab-card",
+    pageToolbarSelector: "#materials .toolbar-row",
+    pageBulkLabel: "Add all recycling words",
+    defaultTopic: "Environment and Recycling",
+    examplePrefix: "Aħna"
+};
+
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/environment_recycling_examples.json",
+    groupAttribute: "data-example-group",
+    cardClass: "study-card",
+    sourcePage: "environment_recycling.html",
+    defaultTopic: "Environment and Recycling",
+    reviewPrefix: "recycling",
+    pageToolbarSelector: "#materials .toolbar-row",
+    pageBulkLabel: "Add all recycling phrases"
+});
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>
