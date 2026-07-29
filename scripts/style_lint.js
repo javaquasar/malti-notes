@@ -48,7 +48,6 @@ const cssFiles = listFiles(path.join(root, "assets", "css"), ".css")
   .sort();
 const legacyClassTokens = ["box", "item", "pair", "pattern", "phrase-card"];
 
-const legacyMarkupClassTokens = [...legacyClassTokens, "wide-box"];
 const framedGroupClassTokens = [
   "content-group",
   "open-group",
@@ -167,7 +166,7 @@ listFiles(root, ".html")
 
     while ((match = classPattern.exec(text)) !== null) {
       const classes = match[1].split(/\s+/);
-      const legacyToken = legacyMarkupClassTokens.find((token) => classes.includes(token));
+      const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
 
       if (legacyToken) {
         reportLegacyClass(file, text, legacyToken, match.index);
@@ -188,7 +187,7 @@ listFiles(root, ".html")
 
       while ((inlineMatch = pattern.exec(text)) !== null) {
         const classes = inlineMatch[1].split(/\s+/);
-        const legacyToken = legacyMarkupClassTokens.find((token) => classes.includes(token));
+        const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
 
         if (legacyToken) {
           reportLegacyClass(file, text, legacyToken, inlineMatch.index);
@@ -212,7 +211,7 @@ listFiles(path.join(root, "assets", "js"), ".js")
 
       while ((match = pattern.exec(text)) !== null) {
         const classes = match[1].split(/\s+/);
-        const legacyToken = legacyMarkupClassTokens.find((token) => classes.includes(token));
+        const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
 
         if (legacyToken) {
           reportLegacyClass(file, text, legacyToken, match.index);
