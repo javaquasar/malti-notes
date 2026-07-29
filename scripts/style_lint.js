@@ -107,6 +107,22 @@ listFiles(root, ".html")
         reportLegacyClass(file, text, legacyToken, match.index);
       }
     }
+
+    [
+      /className\s*=\s*["']([^"']+)["']/g,
+      /cardClass\s*[:=]\s*["']([^"']+)["']/g
+    ].forEach((pattern) => {
+      let inlineMatch;
+
+      while ((inlineMatch = pattern.exec(text)) !== null) {
+        const classes = inlineMatch[1].split(/\s+/);
+        const legacyToken = legacyClassTokens.find((token) => classes.includes(token));
+
+        if (legacyToken) {
+          reportLegacyClass(file, text, legacyToken, inlineMatch.index);
+        }
+      }
+    });
   });
 
 listFiles(path.join(root, "assets", "js"), ".js")
