@@ -255,6 +255,15 @@
   gap: var(--space-3xl);
 }
 
+.content-group,
+.open-group {
+  min-width: 0;
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--component-panel-radius);
+  padding: var(--space-3xl);
+  background: var(--color-surface-muted);
+}
+
 .grammar-contrast-card {
   border: 1px solid var(--color-accent-border);
   border-radius: var(--component-panel-radius);
