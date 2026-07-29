@@ -8,10 +8,21 @@ const defaultPages = [
   "index.html",
   "verbs_guide.html",
   "word_search.html",
+  "colors_maltese.html",
+  "common_mistakes.html",
+  "comparisons.html",
+  "directions_town.html",
+  "modals_needs.html",
+  "numbers_calendar_time.html",
+  "picture_description.html",
+  "prepositions_place.html",
+  "restaurant_ordering.html",
+  "sentence_builder.html",
+  "shopping_clothes.html",
   "memory_game.html",
   "daily_problems.html"
 ];
-const defaultThemes = ["classic", "contrast"];
+const defaultThemes = ["classic", "forest", "contrast"];
 const viewportCount = 2;
 
 function parseList(value, fallback) {
