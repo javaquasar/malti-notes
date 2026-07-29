@@ -72,6 +72,10 @@ jobs:
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         run: npm run visual:ci
 
+      - name: Compare framed content group baseline
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run visual:groups
+
       - name: Upload visual artifacts
         if: always()
         uses: actions/upload-artifact@v4
