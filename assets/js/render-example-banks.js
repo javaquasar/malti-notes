@@ -1,3 +1,26 @@
+const renderedBankCardClasses = new Set([
+    "demo-box",
+    "dialogue-card",
+    "example-card",
+    "info-card",
+    "pattern-card",
+    "study-card"
+]);
+
+function resolveBankCardClass(value, fallback) {
+    const classes = String(value || fallback)
+        .split(/\s+/)
+        .filter(Boolean);
+    const unsupported = classes.find((className) => !renderedBankCardClasses.has(className));
+
+    if (!classes.length || unsupported) {
+        console.warn(`Unsupported bank card class "${unsupported || value}"; using "${fallback}".`);
+        return fallback;
+    }
+
+    return classes.join(" ");
+}
+
 function applyClassList(element, classNames) {
     if (!element || !classNames) {
         return;
@@ -155,7 +178,7 @@ async function renderExampleBanksFromData(config) {
 
         (group.items || []).forEach((item, index) => {
             const article = document.createElement("article");
-            article.className = group.cardClass || cardClass;
+            article.className = resolveBankCardClass(group.cardClass || cardClass, "study-card");
 
             if (item.origin) {
                 article.dataset.origin = item.origin;
@@ -346,7 +369,7 @@ async function renderQuestionBanksFromData(config) {
 
         (group[listKey] || []).forEach((item, index) => {
             const card = document.createElement("div");
-            card.className = cardClass;
+            card.className = resolveBankCardClass(cardClass, "example-card");
 
             const strong = document.createElement("strong");
             strong.textContent = numbered ? `${index + 1}. ${item.maltese}` : item.maltese;
