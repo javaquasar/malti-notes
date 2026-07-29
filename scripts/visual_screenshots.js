@@ -2,28 +2,19 @@ const fs = require("fs");
 const http = require("http");
 const path = require("path");
 const { chromium } = require("playwright");
+const { fullPageVisualPages } = require("./visual_config");
 
 const root = path.resolve(__dirname, "..");
 const defaultChromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-const chromePath = process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
+const useBundledBrowser = process.env.PLAYWRIGHT_USE_BUNDLED === "1";
+const chromePath = useBundledBrowser ? "" : process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
 const host = "127.0.0.1";
 const port = Number(process.env.VISUAL_PORT || 4173);
 const themes = (process.env.VISUAL_THEMES || "classic,forest,contrast")
   .split(",")
   .map((theme) => theme.trim())
   .filter(Boolean);
-const pages = (process.env.VISUAL_PAGES || [
-  "index.html",
-  "verbs_guide.html",
-  "pronouns_possessives.html",
-  "picture_description.html",
-  "collective_nouns.html",
-  "word_search.html",
-  "memory_game.html",
-  "word_builder_game.html",
-  "shopping_clothes.html",
-  "daily_problems.html"
-].join(","))
+const pages = (process.env.VISUAL_PAGES || fullPageVisualPages.join(","))
   .split(",")
   .map((page) => page.trim())
   .filter(Boolean);

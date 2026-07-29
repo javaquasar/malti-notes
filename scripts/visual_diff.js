@@ -150,7 +150,7 @@ async function main() {
     });
   }
 
-  if (summary.issues.some((issue) => ["missing-current", "missing-baseline", "size-mismatch"].includes(issue.status))) {
+  if (summary.issues.length) {
     process.exit(1);
   }
 }

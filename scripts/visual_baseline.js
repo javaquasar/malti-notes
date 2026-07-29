@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const baselineFolder = path.join(root, "visual-regression", "baseline");
+const defaultBaselineFolder = path.join(root, "visual-regression", "baseline");
 
 function parseArgs(argv) {
   const args = {};
@@ -49,6 +49,7 @@ function assert(condition, message) {
 
 function main() {
   const args = parseArgs(process.argv);
+  const baselineFolder = args.target ? path.resolve(root, args.target) : defaultBaselineFolder;
   const sourceArg = args.from;
   assert(sourceArg, "Missing --from screenshot folder");
 

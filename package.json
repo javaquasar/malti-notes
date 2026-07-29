@@ -9,6 +9,8 @@
     "visual:diff": "node ./scripts/visual_diff.js",
     "visual:baseline": "node ./scripts/visual_baseline.js",
     "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline",
+    "visual:groups": "node ./scripts/framed_group_visual_check.js",
+    "visual:groups:update": "node ./scripts/framed_group_visual_check.js --update",
     "theme:a11y": "node ./scripts/theme_accessibility_check.js",
     "style:lint": "node ./scripts/style_lint.js",
     "data:lint": "node ./scripts/data_lint.js",

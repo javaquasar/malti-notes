@@ -2,27 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
 const { PNG } = require("pngjs");
+const { fullPageVisualPages: defaultPages } = require("./visual_config");
 
 const root = path.resolve(__dirname, "..");
-const defaultPages = [
-  "index.html",
-  "verbs_guide.html",
-  "word_search.html",
-  "colors_maltese.html",
-  "common_mistakes.html",
-  "comparisons.html",
-  "directions_town.html",
-  "modals_needs.html",
-  "numbers_calendar_time.html",
-  "pronouns_possessives.html",
-  "picture_description.html",
-  "prepositions_place.html",
-  "restaurant_ordering.html",
-  "sentence_builder.html",
-  "shopping_clothes.html",
-  "memory_game.html",
-  "daily_problems.html"
-];
 const defaultThemes = ["classic", "forest", "contrast"];
 const viewportCount = 2;
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framed Content Group Visual Fixture</title>
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+    <link rel="stylesheet" href="../../assets/css/site.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <style>
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+            background: var(--color-bg);
+        }
+
+        body {
+            box-sizing: border-box;
+            padding: 32px;
+        }
+
+        .fixture-page {
+            width: min(960px, 100%);
+            margin: 0 auto;
+        }
+
+        .fixture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .fixture-card {
+            box-sizing: border-box;
+            min-height: 128px;
+            display: grid;
+            align-content: start;
+            gap: 16px;
+        }
+
+        .fixture-line {
+            display: block;
+            width: 52%;
+            height: 16px;
+            border-radius: 8px;
+            background: var(--text-accent);
+        }
+
+        .fixture-line + .fixture-line {
+            width: 78%;
+            height: 12px;
+            background: var(--surface-command);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px; }
+            .fixture-grid { grid-template-columns: 1fr; gap: 18px; }
+        }
+    </style>
+</head>
+<body>
+<main class="fixture-page">
+    <div class="fixture-grid">
+        <section class="content-group fixture-card" aria-label="Content group"><span class="fixture-line"></span><span class="fixture-line"></span></section>
+        <section class="open-group fixture-card" aria-label="Open group"><span class="fixture-line"></span><span class="fixture-line"></span></section>
+        <section class="example-bank-section fixture-card" aria-label="Example bank section"><span class="fixture-line"></span><span class="fixture-line"></span></section>
+        <section class="shopping-dialogue-bank fixture-card" aria-label="Shopping dialogue bank"><span class="fixture-line"></span><span class="fixture-line"></span></section>
+        <section class="grammar-contrast-card fixture-card" aria-label="Grammar contrast card"><span class="fixture-line"></span><span class="fixture-line"></span></section>
+        <section class="open-group modals-open-group fixture-card" aria-label="Modal open group"><span class="fixture-line"></span><span class="fixture-line"></span></section>
+    </div>
+</main>
+</body>
+</html>
