@@ -35,11 +35,6 @@
   border-bottom: 1px solid var(--border-default);
 }
 
-.exercise-listen-button {
-  padding: var(--space-xs) var(--space-lg);
-  font-size: 0.9rem;
-}
-
 .exercise-choices {
   display: grid;
   gap: var(--space-sm);
@@ -199,9 +194,5 @@
   .exercise-question-header,
   .exercise-match-row {
     grid-template-columns: 1fr;
-  }
-
-  .exercise-listen-button {
-    justify-self: start;
   }
 }

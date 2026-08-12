@@ -14,7 +14,6 @@
           "choices": ["Jien jisimni Lara.", "Jien noqgħod Lara.", "Jien għandi Lara."],
           "answer": "Jien jisimni Lara.",
           "explanation": "Use jien jisimni followed by the name.",
-          "listen": "Jien jisimni Lara.",
           "reviewCard": { "maltese": "Jien jisimni Lara.", "english": "My name is Lara." }
         },
         {
@@ -53,7 +52,6 @@
           "choices": ["I live in Mosta.", "I work in Mosta.", "I am going to Mosta."],
           "answer": "I live in Mosta.",
           "explanation": "Noqgħod is the jien form used to say where you live.",
-          "listen": "Jien noqgħod il-Mosta.",
           "reviewCard": { "maltese": "Jien noqgħod il-Mosta.", "english": "I live in Mosta." }
         },
         {
@@ -72,7 +70,6 @@
           "tokens": ["Huma", "jiġu", "l-iskola", "bil-karozza."],
           "answer": "Huma jiġu l-iskola bil-karozza.",
           "explanation": "The transport phrase comes after the destination.",
-          "listen": "Huma jiġu l-iskola bil-karozza.",
           "reviewCard": { "maltese": "Huma jiġu l-iskola bil-karozza.", "english": "They come to school by car." }
         }
       ]
@@ -111,7 +108,6 @@
           "choices": ["Il-librerija hija kbira.", "L-librerija hija kbira.", "It-librerija hija kbira."],
           "answer": "Il-librerija hija kbira.",
           "explanation": "Librerija takes il- in this form.",
-          "listen": "Il-librerija hija kbira.",
           "reviewCard": { "maltese": "Il-librerija hija kbira.", "english": "The library is big." }
         }
       ]
@@ -129,7 +125,6 @@
           "choices": ["She has a female cat.", "He sees a cat.", "They like cats."],
           "answer": "She has a female cat.",
           "explanation": "Għandha expresses possession for hi.",
-          "listen": "Għandha qattusa.",
           "reviewCard": { "maltese": "Għandha qattusa.", "english": "She has a female cat." }
         },
         {
@@ -168,7 +163,6 @@
           "choices": ["Din hija karozza ħamra.", "Din hija karozza aħmar.", "Dan huwa karozza ħamra."],
           "answer": "Din hija karozza ħamra.",
           "explanation": "Karozza is feminine, so use din and ħamra.",
-          "listen": "Din hija karozza ħamra.",
           "reviewCard": { "maltese": "Din hija karozza ħamra.", "english": "This is a red car." }
         },
         {
@@ -207,7 +201,6 @@
           "answer": "niekol",
           "accepted": ["niekol"],
           "explanation": "Jien takes niekol.",
-          "listen": "Jien niekol il-ħobż filgħodu.",
           "reviewCard": { "maltese": "Jien niekol il-ħobż filgħodu.", "english": "I eat bread in the morning." }
         },
         {
@@ -225,7 +218,6 @@
           "prompt": "Il-kafè huwa xarba.",
           "answer": true,
           "explanation": "Kafè is a drink, so the statement is true.",
-          "listen": "Il-kafè huwa xarba.",
           "reviewCard": { "maltese": "Il-kafè huwa xarba.", "english": "Coffee is a drink." }
         }
       ]
@@ -264,7 +256,6 @@
           "tokens": ["Nhar il-Ħadd", "immorru", "għand", "in-nanna."],
           "answer": "Nhar il-Ħadd immorru għand in-nanna.",
           "explanation": "The day phrase can introduce the routine.",
-          "listen": "Nhar il-Ħadd immorru għand in-nanna.",
           "reviewCard": { "maltese": "Nhar il-Ħadd immorru għand in-nanna.", "english": "On Sunday we go to grandmother's house." }
         }
       ]
@@ -294,7 +285,6 @@
           "choices": ["Din il-karta hija bajda.", "Dan il-karta huwa abjad.", "Dawn il-karta huma bojod."],
           "answer": "Din il-karta hija bajda.",
           "explanation": "Karta is feminine singular, so use din and bajda.",
-          "listen": "Din il-karta hija bajda.",
           "reviewCard": { "maltese": "Din il-karta hija bajda.", "english": "This paper is white." }
         },
         {
@@ -333,7 +323,6 @@
           "choices": ["Iftħu", "Tiftħu", "Fetaħ"],
           "answer": "Iftħu",
           "explanation": "Iftaħ is singular and iftħu is plural.",
-          "listen": "Iftħu l-kotba.",
           "reviewCard": { "maltese": "Iftħu l-kotba.", "english": "Open the books." }
         },
         {
@@ -360,7 +349,6 @@
           "choices": ["The weather is cloudy.", "The weather is windy.", "The weather is hot."],
           "answer": "The weather is cloudy.",
           "explanation": "Msaħħab describes cloudy weather.",
-          "listen": "It-temp huwa msaħħab.",
           "reviewCard": { "maltese": "It-temp huwa msaħħab.", "english": "The weather is cloudy." }
         },
         {
@@ -378,7 +366,6 @@
           "answer": "jkun",
           "accepted": ["jkun"],
           "explanation": "Se jkun means it will be.",
-          "listen": "Għada se jkun kiesaħ.",
           "reviewCard": { "maltese": "Għada se jkun kiesaħ.", "english": "Tomorrow it will be cold." }
         }
       ]
@@ -408,7 +395,6 @@
           "choices": ["kowt oħxon", "malja tal-għawm", "flokk ħafif"],
           "answer": "kowt oħxon",
           "explanation": "A thick coat is suitable for cold weather.",
-          "listen": "Nilbes kowt oħxon fix-xitwa.",
           "reviewCard": { "maltese": "Nilbes kowt oħxon fix-xitwa.", "english": "I wear a thick coat in winter." }
         },
         {
@@ -435,7 +421,6 @@
           "choices": ["Għada se nilgħab it-tenis.", "Kuljum nilgħab it-tenis.", "Ilbieraħ lgħabt it-tenis."],
           "answer": "Għada se nilgħab it-tenis.",
           "explanation": "Se plus the present-type form creates a simple future statement.",
-          "listen": "Għada se nilgħab it-tenis.",
           "reviewCard": { "maltese": "Għada se nilgħab it-tenis.", "english": "Tomorrow I will play tennis." }
         },
         {
@@ -454,7 +439,6 @@
           "tokens": ["Fi tmiem il-ġimgħa", "se niltaqa'", "mal-ħbieb."],
           "answer": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.",
           "explanation": "The time phrase can introduce the future plan.",
-          "listen": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.",
           "reviewCard": { "maltese": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.", "english": "At the weekend I will meet my friends." }
         }
       ]
@@ -484,7 +468,6 @@
           "choices": ["Nixtieq flixkun ilma, jekk jogħġbok.", "Mur flixkun ilma.", "Fejn flixkun ilma."],
           "answer": "Nixtieq flixkun ilma, jekk jogħġbok.",
           "explanation": "Nixtieq and jekk jogħġbok make the request polite.",
-          "listen": "Nixtieq flixkun ilma, jekk jogħġbok.",
           "reviewCard": { "maltese": "Nixtieq flixkun ilma, jekk jogħġbok.", "english": "I would like a bottle of water, please." }
         },
         {
@@ -494,7 +477,6 @@
           "tokens": ["Mur dritt", "u dur", "fuq ix-xellug."],
           "answer": "Mur dritt u dur fuq ix-xellug.",
           "explanation": "Start with the forward movement, then add the turn.",
-          "listen": "Mur dritt u dur fuq ix-xellug.",
           "reviewCard": { "maltese": "Mur dritt u dur fuq ix-xellug.", "english": "Go straight and turn left." }
         }
       ]
@@ -524,7 +506,6 @@
           "choices": ["fil-kontenitur tal-ħġieġ", "mal-iskart organiku", "fil-kaxxa tal-ħwejjeġ"],
           "answer": "fil-kontenitur tal-ħġieġ",
           "explanation": "Clean glass belongs in the glass container.",
-          "listen": "Il-ħġieġ imur fil-kontenitur tal-ħġieġ.",
           "reviewCard": { "maltese": "Il-ħġieġ imur fil-kontenitur tal-ħġieġ.", "english": "Glass goes in the glass container." }
         },
         {

@@ -42,31 +42,12 @@
     return button;
   };
 
-  const speak = (text) => {
-    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return;
-    const utterance = new SpeechSynthesisUtterance(text);
-    const voices = window.speechSynthesis.getVoices();
-    const malteseVoice = voices.find((voice) => voice.lang.toLowerCase().startsWith("mt"));
-    utterance.lang = malteseVoice?.lang || "mt-MT";
-    if (malteseVoice) utterance.voice = malteseVoice;
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
-  };
-
   const createQuestionHeader = (item) => {
     const header = document.createElement("div");
     const heading = document.createElement("h4");
     header.className = "exercise-question-header";
     heading.textContent = item.prompt;
     header.appendChild(heading);
-
-    if (item.listen) {
-      const listenButton = createButton("Listen", "action-button exercise-listen-button");
-      listenButton.disabled = !("speechSynthesis" in window);
-      listenButton.title = "Listen to the Maltese phrase";
-      listenButton.addEventListener("click", () => speak(item.listen));
-      header.appendChild(listenButton);
-    }
     return header;
   };
 

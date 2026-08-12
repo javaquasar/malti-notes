@@ -123,10 +123,6 @@ function validateCourseFiles({ root, fail }) {
           requireString(exerciseFile, `${itemOwner}.reviewCard`, "english", item.reviewCard.english);
         }
 
-        if (item.listen !== undefined) {
-          requireString(exerciseFile, itemOwner, "listen", item.listen);
-        }
-
         if (item.type === "multiple-choice") {
           if (requireStringArray(exerciseFile, itemOwner, "choices", item.choices, 2)) {
             const choices = new Set(item.choices);

@@ -214,6 +214,14 @@ check("course pages use the shared learning runtime", () => {
   });
 });
 
+check("course avoids browser speech fallback", () => {
+  const runner = read("assets/js/exercise-runner.js");
+  const exercises = read("assets/data/course_exercises.json");
+  assert(!runner.includes("speechSynthesis"), "course runtime must not use browser speech synthesis");
+  assert(!runner.includes("SpeechSynthesisUtterance"), "course runtime contains a browser TTS fallback");
+  assert(!exercises.includes('"listen"'), "course data still contains deferred audio fields");
+});
+
 check("word search stays modular", () => {
   const wordPage = read("word_search.html");
   assert(wordPage.includes("assets/css/word-search.css"), "word_search.html does not load word-search.css");
