@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-08-13",
+  "description": "Persisted B1/B2 book-to-site coverage inventory. Normal coverage checks use this file and do not parse the source PDFs.",
+  "methodology": {
+    "sourceOfTruth": "The text layers of the full PDFs were used because the small PDFs are image-only and some rendered pages are grey.",
+    "coverageRule": "A target is covered when its normalized Maltese token sequence is present in site HTML, learning-data JSON, or the word-search bank.",
+    "knownLimitations": "Coverage confirms presence, not teaching depth, translation quality, or exercise quality. Structural grammar topics were also reviewed manually.",
+    "refreshRule": "Re-extract the books only when a source PDF hash changes or when this inventory is intentionally revised."
+  },
+  "sources": [
+    {
+      "book": "B1",
+      "kind": "small-image-pdf",
+      "fileName": "Maltese B1 small.pdf",
+      "pageCount": 125,
+      "sha256": "6A9E2B2D3F3EEEF19882D25AF68D700712D02C2DE32E5F9E91DAB425CCCFAF3A"
+    },
+    {
+      "book": "B1",
+      "kind": "full-text-pdf",
+      "fileName": "Maltese B1.pdf",
+      "sha256": "5067BD8BD3F058B931B30D450F356242B17DAF40ED527EE5389A67F3DCE273B2"
+    },
+    {
+      "book": "B2",
+      "kind": "small-image-pdf",
+      "fileName": "M B2_small.pdf",
+      "pageCount": 110,
+      "sha256": "8B7731EE8BCE1F02004C60E8E27AC6CA7C505D47CC49FB017D42AF6C4A3B7929"
+    },
+    {
+      "book": "B2",
+      "kind": "full-text-pdf",
+      "fileName": "M B2.pdf",
+      "sha256": "856F7F8629237766ECAFA8873058B10CA45461B3C2642F8C1C517CA51CB5946C"
+    }
+  ],
+  "baseline": {
+    "vocabulary": {
+      "B1": { "requiredUnique": 233, "coveredUnique": 175, "missingUnique": 58, "coveragePercent": 75.1 },
+      "B2": { "requiredUnique": 212, "coveredUnique": 145, "missingUnique": 67, "coveragePercent": 68.4 },
+      "combined": { "requiredUnique": 437, "coveredUnique": 312, "missingUnique": 125, "coveragePercent": 71.4 }
+    },
+    "verbForms": {
+      "B1": { "required": 61, "covered": 48, "missing": 13, "coveragePercent": 78.7 },
+      "B2": { "required": 64, "covered": 31, "missing": 33, "coveragePercent": 48.4 },
+      "combined": { "required": 125, "covered": 79, "missing": 46, "coveragePercent": 63.2 }
+    }
+  },
+  "chapters": [
+    {
+      "id": "b1.1",
+      "courseChapterId": "b1-introductions",
+      "book": "B1",
+      "number": 1,
+      "title": "Jien u Int",
+      "targets": [
+        "annimal", "belt", "ċertifikat", "dentist", "erbgħa", "fenek", "ġemel", "gazzetta", "għajn", "għajnejn", "huma", "ħabel", "ilma", "ieħor", "jott", "kafè", "lemin", "meraq", "negozju", "ors", "pedala", "qawsalla", "rebbiegħa", "serp", "teżor", "uviera", "verità", "waqfa", "xellug", "żiemel", "ziju", "ferħan", "ferħana", "sportiv", "sportiva", "ċajtier", "ċajtiera"
+      ],
+      "baselineMissing": ["ċertifikat", "ħabel", "jott", "pedala", "teżor", "uviera", "verità", "sportiva"]
+    },
+    {
+      "id": "b1.2",
+      "courseChapterId": "b1-residence",
+      "book": "B1",
+      "number": 2,
+      "title": "Fejn Noqgħod",
+      "targets": [
+        "rota", "trakk", "ħelikopter", "vann", "karozza", "karozza tal-linja", "mutur", "vapur", "bil-mixi", "bil-mutur", "bir-rota", "bil-vann", "bil-karozza", "kowċ", "bil-kowċ", "skola", "ħanut", "dar", "bankina", "siġra", "sptar", "ajruplan", "knisja"
+      ],
+      "baselineMissing": ["trakk", "vann", "karozza tal-linja", "bil-vann", "bil-kowċ", "bankina"]
+    },
+    {
+      "id": "b1.3",
+      "courseChapterId": "b1-school",
+      "book": "B1",
+      "number": 3,
+      "title": "L-Iskola",
+      "targets": [
+        "kuritur", "laboratorju", "librerija", "klassi", "klinika", "bitħa", "sala", "uffiċċju", "tojlit", "ċoff", "qmis", "dublett", "ingravata", "kalzetta", "ġlekk", "qalziet", "żarbuna", "uniformi", "ilbies", "kamra tas-sodda", "kamra tal-banju", "kamra tal-ikel", "ġnien", "kċina", "salott", "garaxx"
+      ],
+      "baselineMissing": ["laboratorju", "ċoff", "kalzetta", "żarbuna"]
+    },
+    {
+      "id": "b1.4",
+      "courseChapterId": "b1-animals",
+      "book": "B1",
+      "number": 4,
+      "title": "L-Annimali",
+      "targets": [
+        "kelb", "kelba", "qattus", "qattusa", "għasfur", "fenek", "pappagall", "fekruna", "tiġieġa", "fellus", "baqra", "nagħġa", "ħmara", "ġurdien", "ħanżir", "żiemel", "papra", "emu", "brama", "xadina", "kamaleont", "lampuka", "nemla", "serp", "denfil", "ġemel", "iljunfant"
+      ],
+      "baselineMissing": ["fellus", "ħmara", "emu", "kamaleont", "lampuka", "denfil"]
+    },
+    {
+      "id": "b1.5",
+      "courseChapterId": "b1-colours",
+      "book": "B1",
+      "number": 5,
+      "title": "Il-Kuluri",
+      "targets": [
+        "abjad", "bajda", "aħmar", "ħamra", "isfar", "safra", "aħdar", "ħadra", "griż", "griża", "iswed", "sewda", "kannella", "oranġjo", "roża", "vjola", "blu", "ċirku", "ċrieki", "kaxxa", "kaxxi", "trijanglu", "trijangli", "strixxa", "strixxi", "bandiera", "pajjiż", "Malta", "Italja", "Ingilterra", "Ġermanja", "Spanja", "Franza", "Pakistan", "Ukraina", "Turkija", "Portugall", "Filippini", "Indja", "Ġappun", "Libja", "Awstralja", "Ċina"
+      ],
+      "baselineMissing": ["ċirku", "ċrieki", "kaxxi", "trijanglu", "trijangli", "strixxa", "strixxi", "bandiera", "Italja", "Ingilterra", "Ġermanja", "Franza", "Ukraina", "Portugall", "Filippini", "Indja", "Ġappun", "Awstralja"]
+    },
+    {
+      "id": "b1.6",
+      "courseChapterId": "b1-food",
+      "book": "B1",
+      "number": 6,
+      "title": "L-Ikel",
+      "targets": [
+        "te", "spagetti", "pizza", "kafè", "kuskus", "ilma", "ross", "paella", "luminata", "meraq tal-frott", "żejt", "ħelu", "mandolina", "għanqud", "għeneb", "dulliegħa", "bambinella", "bajtra tax-xewk", "bettieħa", "ċirasa", "tina", "tuffieħa", "kiwi", "banana", "lumi", "lumija", "laħam", "lanġas", "lanġasa", "larinġ", "larinġa", "frawli", "frawla", "dulliegħ", "bettieħ", "tuffieħ", "kejk", "kejkijiet", "insalata", "insalati", "pastizzi", "pasti", "ġelat", "għadma", "ħut", "ċikkulata"
+      ],
+      "baselineMissing": ["spagetti", "kuskus", "paella", "meraq tal-frott", "għanqud", "bambinella", "bajtra tax-xewk", "ċirasa", "tina", "kejkijiet", "insalati", "pasti"]
+    },
+    {
+      "id": "b1.7",
+      "courseChapterId": "b1-family",
+      "book": "B1",
+      "number": 7,
+      "title": "Il-Familja",
+      "targets": [
+        "aħwa", "ħu", "oħt", "ġenituri", "omm", "missier", "nanniet", "nannu", "nanna", "ziju", "zija", "kuġin", "filgħodu", "f'nofsinhar", "waranofsinhar", "filgħaxija", "billejl", "kmieni", "tard", "It-Tnejn", "It-Tlieta", "L-Erbgħa", "Il-Ħamis", "Il-Ġimgħa", "Is-Sibt", "Il-Ħadd", "tmiem il-ġimgħa", "tenis", "passeġġata", "żfin", "pjazza", "restorant", "Bonġu", "Il-waranofsinhar it-tajjeb", "Il-lejla t-tajba", "Kif inti", "Mhux ħażin", "Ħu ħsieb"
+      ],
+      "baselineMissing": ["passeġġata", "Il-waranofsinhar it-tajjeb", "Mhux ħażin", "Ħu ħsieb"]
+    },
+    {
+      "id": "b2.1",
+      "courseChapterId": "b2-school-bag",
+      "book": "B2",
+      "number": 1,
+      "title": "Fil-Basket tal-Iskola",
+      "targets": [
+        "basket tal-iskola", "pokit", "temprina", "kulur", "lapes", "fajl", "ktieb", "marker", "kalkulatur", "kumpass", "imqass", "pitazz", "karta", "kolla", "orarju", "riga", "sabiħ", "sabiħa", "sbieħ", "ikrah", "kerha", "koroh", "kbir", "kbira", "kbar", "żgħir", "żgħira", "żgħar", "ġdid", "ġdida", "ġodda", "qadim", "qadima", "qodma", "modern", "moderna", "moderni", "antik", "antika", "antiki", "ikkulurit", "ikkulurita", "ikkuluriti", "nadif", "nadifa", "nodfa", "maħmuġa"
+      ],
+      "baselineMissing": ["kumpass", "ikrah", "kerha", "koroh", "qodma", "antik", "ikkuluriti"]
+    },
+    {
+      "id": "b2.2",
+      "courseChapterId": "b2-imperative",
+      "book": "B2",
+      "number": 2,
+      "title": "Iftaħ il-Ktieb u Aqra",
+      "targets": [
+        "qum", "qumu", "poġġi", "poġġu", "ikteb", "iktbu", "agħlaq", "agħlqu", "oħroġ", "oħorġu", "idħol", "idħlu", "daħħal", "daħħlu", "aqra", "aqraw", "iftaħ", "iftħu", "isimgħu", "staqsi", "tkellem", "agħmel", "wieħed", "tnejn", "tlieta", "erbgħa", "ħamsa", "sitta", "sebgħa", "tmienja", "disgħa", "għaxra"
+      ],
+      "baselineMissing": ["qum", "qumu", "daħħlu", "staqsi"]
+    },
+    {
+      "id": "b2.3",
+      "courseChapterId": "b2-weather",
+      "book": "B2",
+      "number": 3,
+      "title": "It-Temp",
+      "targets": [
+        "borra", "temperatura", "sajjetti", "sħab", "riħ", "sħana", "kesħa", "maltemp", "istaġun", "staġuni", "rebbiegħa", "sajf", "ħarifa", "xitwa", "xemx", "xita", "ragħad", "bnazzi", "silġ", "xemxi", "imsaħħab", "l-ogħla temperatura", "l-inqas temperatura"
+      ],
+      "baselineMissing": ["temperatura", "sajjetti", "kesħa", "istaġun", "staġuni", "bnazzi", "l-ogħla temperatura", "l-inqas temperatura"]
+    },
+    {
+      "id": "b2.4",
+      "courseChapterId": "b2-clothes",
+      "book": "B2",
+      "number": 4,
+      "title": "Il-Ħwejjeġ",
+      "targets": [
+        "flokk ħafif", "libsa ħafifa", "dublett", "flokk bil-komma qasira", "ġakketta tal-jeans", "flokk ta' taħt", "qalziet ħafif", "flokk biċ-ċingi", "malja", "kappell", "karkur", "flokk tas-suf", "ġakketta", "ġlekk", "qalziet", "boots", "xalpa", "ħdax", "tnax", "tlettax", "erbatax", "ħmistax", "sittax", "sbatax", "tmintax", "dsatax", "għoxrin"
+      ],
+      "baselineMissing": ["libsa ħafifa", "flokk bil-komma qasira", "ġakketta tal-jeans", "flokk ta' taħt", "qalziet ħafif", "flokk biċ-ċingi", "karkur", "flokk tas-suf", "boots"]
+    },
+    {
+      "id": "b2.5",
+      "courseChapterId": "b2-hobbies",
+      "book": "B2",
+      "number": 5,
+      "title": "Xi Nħobb Nagħmel",
+      "targets": [
+        "libes", "ilbes", "ilbsu", "għamel", "agħmel", "agħmlu", "uża", "użaw", "għum", "imxi", "orqod", "qum", "ilgħab", "ara", "oħroġ", "se nilbes", "se mmur", "se norqdu", "se tilgħab", "se naraw", "se jgħumu", "se noħorġu", "se niekol", "se nagħmel"
+      ],
+      "baselineMissing": ["użaw", "qum", "ilgħab", "se norqdu", "se tilgħab", "se naraw", "se jgħumu", "se noħorġu", "se nagħmel"]
+    },
+    {
+      "id": "b2.6",
+      "courseChapterId": "b2-town",
+      "book": "B2",
+      "number": 6,
+      "title": "Fil-Pjazza",
+      "targets": [
+        "kafetterija", "ispiżerija", "furnar", "restorant", "uffiċċju tal-Kunsill Lokali", "knisja", "posta", "zuntier", "pastizz tal-irkotta", "pastizz tal-piżelli", "mediċina", "menu", "appartament", "triq", "sqaq", "numru", "vjal", "pjazza", "lukanda", "indirizz", "Aqsam it-triq", "Dur fuq ix-xellug", "Dur mal-kantuniera", "Ieqaf", "Dur fuq il-lemin", "Imxi dritt", "Itla' 'l fuq", "Inżel 'l isfel"
+      ],
+      "baselineMissing": ["uffiċċju tal-Kunsill Lokali", "zuntier", "pastizz tal-irkotta", "pastizz tal-piżelli", "vjal", "Aqsam it-triq", "Dur mal-kantuniera", "Imxi dritt", "Itla' 'l fuq", "Inżel 'l isfel"]
+    },
+    {
+      "id": "b2.7",
+      "courseChapterId": "b2-recycling",
+      "book": "B2",
+      "number": 7,
+      "title": "Nirriċiklaw l-Iskart",
+      "targets": [
+        "plastik", "karta", "riċiklar", "skart imħallat", "skart riċiklabbli", "nadif", "nadifa", "nodfa", "maħmuġ", "maħmuġa", "maħmuġin", "mimli", "mimlija", "mimlijin", "mormi", "mormija", "mormijin", "jinten", "tinten", "jintnu", "miftuħ", "miftuħa", "miftuħin", "mqatta'", "mqattgħa", "mqattgħin", "skart organiku", "borża", "kontenitur", "armi", "armu", "għażel", "agħżel", "agħżlu", "waddab", "waddbu", "issepara", "isseparaw", "ħareġ", "oħroġ", "oħorġu"
+      ],
+      "baselineMissing": [
+        "riċiklar", "skart imħallat", "skart riċiklabbli", "maħmuġin", "mimlijin", "mormi", "mormija", "mormijin", "jinten", "tinten", "jintnu", "miftuħ", "mqatta'", "mqattgħa", "mqattgħin", "armi", "armu", "waddab", "waddbu", "issepara", "isseparaw"
+      ]
+    }
+  ],
+  "verbParadigms": [
+    {
+      "id": "b1-qaghad",
+      "book": "B1",
+      "lemma": "qagħad / noqgħod",
+      "forms": ["noqgħod", "toqgħod", "joqgħod", "noqogħdu", "toqogħdu", "joqogħdu"],
+      "baselineMissing": ["noqgħod", "toqgħod", "joqgħod", "noqogħdu", "toqogħdu", "joqogħdu"]
+    },
+    {
+      "id": "b1-gie",
+      "book": "B1",
+      "lemma": "ġie",
+      "forms": ["niġi", "tiġi", "jiġi", "niġu", "tiġu", "jiġu"],
+      "baselineMissing": ["niġu", "tiġu"]
+    },
+    {
+      "id": "b1-ra",
+      "book": "B1",
+      "lemma": "ra",
+      "forms": ["nara", "tara", "jara", "naraw", "taraw", "jaraw"],
+      "baselineMissing": ["jara", "taraw"]
+    },
+    {
+      "id": "b1-ghandu",
+      "book": "B1",
+      "lemma": "għandu",
+      "forms": ["għandi", "għandek", "għandu", "għandha", "għandna", "għandkom", "għandhom"],
+      "baselineMissing": ["għandi", "għandek", "għandu", "għandha", "għandna", "għandkom", "għandhom"]
+    },
+    {
+      "id": "b1-kiel",
+      "book": "B1",
+      "lemma": "kiel",
+      "forms": ["niekol", "tiekol", "jiekol", "nieklu", "tieklu", "jieklu"],
+      "baselineMissing": ["niekol", "tiekol", "jiekol", "nieklu", "tieklu", "jieklu"]
+    },
+    {
+      "id": "b1-habb",
+      "book": "B1",
+      "lemma": "ħabb",
+      "forms": ["inħobb", "tħobb", "iħobb", "inħobbu", "tħobbu", "iħobbu"],
+      "baselineMissing": ["inħobbu"]
+    },
+    {
+      "id": "b1-qam",
+      "book": "B1",
+      "lemma": "qam",
+      "forms": ["nqum", "tqum", "jqum", "inqumu", "tqumu", "jqumu"],
+      "baselineMissing": ["jqum", "inqumu", "tqumu", "jqumu"]
+    },
+    {
+      "id": "b1-raqad",
+      "book": "B1",
+      "lemma": "raqad",
+      "forms": ["norqod", "torqod", "jorqod", "norqdu", "torqdu", "jorqdu"],
+      "baselineMissing": ["norqdu", "torqdu", "jorqdu"]
+    },
+    {
+      "id": "b1-laghba",
+      "book": "B1",
+      "lemma": "lagħab",
+      "forms": ["nilgħab", "tilgħab", "jilgħab", "nilagħbu", "tilagħbu", "jilagħbu"],
+      "baselineMissing": ["tilagħbu"]
+    },
+    {
+      "id": "b1-mar",
+      "book": "B1",
+      "lemma": "mar",
+      "forms": ["immur", "tmur", "jmur", "immorru", "tmorru", "jmorru"],
+      "baselineMissing": ["immur", "tmur", "jmur", "immorru", "tmorru", "jmorru"]
+    },
+    {
+      "id": "b2-libes",
+      "book": "B2",
+      "lemma": "libes",
+      "forms": ["nilbes", "tilbes", "jilbes", "nilbsu", "tilbsu", "jilbsu"],
+      "baselineMissing": ["tilbes", "tilbsu", "jilbsu"]
+    },
+    {
+      "id": "b2-ghamel",
+      "book": "B2",
+      "lemma": "għamel",
+      "forms": ["nagħmel", "tagħmel", "jagħmel", "nagħmlu", "tagħmlu", "jagħmlu", "agħmel", "agħmlu"],
+      "baselineMissing": ["nagħmel", "tagħmel", "jagħmel", "nagħmlu", "tagħmlu", "jagħmlu", "agħmel", "agħmlu"]
+    },
+    {
+      "id": "b2-uza",
+      "book": "B2",
+      "lemma": "uża",
+      "forms": ["nuża", "tuża", "juża", "nużaw", "tużaw", "jużaw", "uża", "użaw"],
+      "baselineMissing": ["tużaw", "jużaw", "użaw"]
+    },
+    {
+      "id": "b2-rema",
+      "book": "B2",
+      "lemma": "rema",
+      "forms": ["rema", "narmi", "tarmi", "jarmi", "narmu", "tarmu", "jarmu", "armi", "armu"],
+      "baselineMissing": ["tarmi", "jarmi", "narmu", "tarmu", "jarmu", "armi", "armu"]
+    },
+    {
+      "id": "b2-ghazel",
+      "book": "B2",
+      "lemma": "għażel",
+      "forms": ["għażel", "nagħżel", "tagħżel", "jagħżel", "nagħżlu", "tagħżlu", "jagħżlu", "agħżel", "agħżlu"],
+      "baselineMissing": ["tagħżel", "jagħżel", "nagħżlu", "tagħżlu", "jagħżlu"]
+    },
+    {
+      "id": "b2-waddab",
+      "book": "B2",
+      "lemma": "waddab",
+      "forms": ["nwaddab", "twaddab", "jwaddab", "nwaddbu", "twaddbu", "jwaddbu", "waddab", "waddbu"],
+      "baselineMissing": ["nwaddab", "twaddab", "jwaddab", "nwaddbu", "twaddbu", "jwaddbu", "waddab", "waddbu"]
+    },
+    {
+      "id": "b2-issepara",
+      "book": "B2",
+      "lemma": "issepara",
+      "forms": ["nissepara", "tissepara", "jissepara", "nisseparaw", "tisseparaw", "jisseparaw", "issepara", "isseparaw"],
+      "baselineMissing": ["tissepara", "jissepara", "tisseparaw", "jisseparaw", "issepara", "isseparaw"]
+    },
+    {
+      "id": "b2-hareg",
+      "book": "B2",
+      "lemma": "ħareġ",
+      "forms": ["noħroġ", "toħroġ", "joħroġ", "noħorġu", "toħorġu", "joħorġu", "oħroġ", "oħorġu"],
+      "baselineMissing": ["joħorġu"]
+    }
+  ],
+  "grammarTopics": [
+    {
+      "id": "b1-subject-pronouns",
+      "book": "B1",
+      "topic": "Subject pronouns",
+      "status": "covered",
+      "evidenceTargets": ["jien", "inti", "hu", "hi", "aħna", "intom", "huma"]
+    },
+    {
+      "id": "b1-adjective-gender",
+      "book": "B1",
+      "topic": "Masculine and feminine adjective agreement",
+      "status": "covered"
+    },
+    {
+      "id": "b1-demonstratives",
+      "book": "B1",
+      "topic": "Near and far demonstratives",
+      "status": "covered",
+      "evidenceTargets": ["dan", "din", "dawn", "dak", "dik", "dawk"]
+    },
+    {
+      "id": "b1-possession",
+      "book": "B1",
+      "topic": "Possession with għandu",
+      "status": "covered-as-a-topic",
+      "note": "The concept is present, but the complete seven-form paradigm is a recorded verb-form gap."
+    },
+    {
+      "id": "b1-colour-agreement",
+      "book": "B1",
+      "topic": "Colour adjective agreement",
+      "status": "covered"
+    },
+    {
+      "id": "b1-collective-food-nouns",
+      "book": "B1",
+      "topic": "Unit, collective, and plural food nouns",
+      "status": "covered"
+    },
+    {
+      "id": "b2-definite-article",
+      "book": "B2",
+      "topic": "Definite article and assimilation",
+      "status": "covered"
+    },
+    {
+      "id": "b2-imperative",
+      "book": "B2",
+      "topic": "Singular and plural imperative",
+      "status": "covered-with-vocabulary-gaps"
+    },
+    {
+      "id": "b2-numbers-1-10",
+      "book": "B2",
+      "topic": "Cardinal numbers from one to ten",
+      "status": "covered"
+    },
+    {
+      "id": "b2-numbers-11-20",
+      "book": "B2",
+      "topic": "Cardinal numbers from eleven to twenty",
+      "status": "covered"
+    },
+    {
+      "id": "b2-number-il-rule",
+      "book": "B2",
+      "topic": "Numbers 11-19 with -il and a singular noun",
+      "status": "partial",
+      "note": "The site contains examples such as tnax-il, but the complete rule is not explained as explicitly as in the book."
+    },
+    {
+      "id": "b2-future-se",
+      "book": "B2",
+      "topic": "Future with se plus a present-type verb form",
+      "status": "covered-with-example-gaps"
+    },
+    {
+      "id": "b2-address-directions",
+      "book": "B2",
+      "topic": "Addresses and direction commands",
+      "status": "partial",
+      "note": "The structural topic is present; several exact commands from the book remain absent."
+    },
+    {
+      "id": "b2-recycling-routine",
+      "book": "B2",
+      "topic": "Waste sorting and recycling routine",
+      "status": "covered-with-vocabulary-gaps"
+    }
+  ]
+}

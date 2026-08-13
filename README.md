@@ -14,12 +14,17 @@ The course data validator enforces chapter, page, objective, and exercise-set re
 npm run style:lint
 npm run data:lint
 npm run content:lint
+npm run books:coverage
 npm run links:lint
 npm run theme:a11y
 npm run visual:smoke
 ```
 
 GitHub Actions also runs the Playwright functional and visual suites before publishing the static site.
+
+## Book Coverage Snapshot
+
+The frozen B1/B2 book comparison is documented in `BOOKS_SITE_COVERAGE.md`, with its complete machine-readable inventory in `assets/data/book_coverage_inventory.json`. Run `npm run books:coverage` to compare the current site with that baseline without parsing the PDFs again. The check accepts newly added coverage and fails when previously covered material disappears.
 
 ## Visual Regression Workflow
 
