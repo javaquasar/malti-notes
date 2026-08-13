@@ -1,9 +1,16 @@
 (() => {
   const DATA_URL = "./assets/data/course_path.json";
+  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
 
-  const pageUrl = (page, level, chapter, index, view) => {
+  const hasChapterView = (bindings, chapterId, pageHref) => bindings.targets.some((target) => (
+    target.chapterId === chapterId
+      && target.implementationStatus === "implemented"
+      && target.contentRef?.page === pageHref
+  ));
+
+  const pageUrl = (page, level, chapter, index, bindings, view) => {
     const params = new URLSearchParams({ course: level.id, chapter: chapter.id, step: String(index + 1) });
-    if (page.scopedView === true) params.set("view", view || "chapter");
+    if (hasChapterView(bindings, chapter.id, page.href)) params.set("view", view || "chapter");
     return `./${page.href}?${params.toString()}`;
   };
 
@@ -45,22 +52,23 @@
     return toggle;
   };
 
-  const renderExplicitContext = (section, label, links, match, currentFile, params) => {
+  const renderExplicitContext = (section, label, links, match, currentFile, params, bindings) => {
     const { level, chapter } = match;
     const pageIndex = chapter.pages.findIndex((page) => page.href === currentFile);
     if (pageIndex < 0) return false;
     const page = chapter.pages[pageIndex];
-    const currentView = page.scopedView === true && params.get("view") === "all" ? "all" : "chapter";
+    const scoped = hasChapterView(bindings, chapter.id, page.href);
+    const currentView = scoped && params.get("view") === "all" ? "all" : "chapter";
     label.textContent = `${level.label} · Chapter ${chapter.number}: ${chapter.title}`;
     links.appendChild(createActionLink(`./course_chapter.html?chapter=${encodeURIComponent(chapter.id)}`, "Back to chapter"));
     if (pageIndex < chapter.pages.length - 1) {
       const nextPage = chapter.pages[pageIndex + 1];
-      links.appendChild(createActionLink(pageUrl(nextPage, level, chapter, pageIndex + 1), "Next step"));
+      links.appendChild(createActionLink(pageUrl(nextPage, level, chapter, pageIndex + 1, bindings), "Next step"));
     } else {
       links.appendChild(createActionLink(`./course_chapter.html?chapter=${encodeURIComponent(chapter.id)}#chapter-test`, "Chapter test"));
     }
     section.append(label, links);
-    if (page.scopedView === true) section.appendChild(createViewToggle(currentView));
+    if (scoped) section.appendChild(createViewToggle(currentView));
     section.dataset.courseChapter = chapter.id;
     section.dataset.courseView = currentView;
     return true;
@@ -83,9 +91,9 @@
     const currentFile = window.location.pathname.split("/").pop() || "index.html";
     if (["course_path.html", "course_chapter.html"].includes(currentFile)) return;
 
-    const response = await fetch(DATA_URL);
-    if (!response.ok) return;
-    const data = await response.json();
+    const [courseResponse, bindingResponse] = await Promise.all([fetch(DATA_URL), fetch(BINDINGS_URL)]);
+    if (!courseResponse.ok || !bindingResponse.ok) return;
+    const [data, bindings] = await Promise.all([courseResponse.json(), bindingResponse.json()]);
     const matches = data.levels.flatMap((level) => level.chapters
       .filter((chapter) => chapter.pages.some((page) => page.href === currentFile))
       .map((chapter) => ({ level, chapter })));
@@ -102,7 +110,7 @@
     section.dataset.courseContext = "";
     links.className = "course-context-links";
 
-    if (!explicit || !renderExplicitContext(section, label, links, explicit, currentFile, params)) {
+    if (!explicit || !renderExplicitContext(section, label, links, explicit, currentFile, params, bindings)) {
       renderReferenceContext(section, label, links, matches);
     }
     hero.insertAdjacentElement("afterend", section);

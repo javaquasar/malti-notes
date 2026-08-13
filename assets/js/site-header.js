@@ -1,4 +1,11 @@
 (async () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.has("chapter") && params.has("view") && !document.querySelector('script[src$="/course-topic-view.js"]')) {
+    const courseTopicScript = document.createElement("script");
+    courseTopicScript.src = "./assets/js/course-topic-view.js";
+    document.body.appendChild(courseTopicScript);
+  }
+
   if (!document.querySelector('link[rel="manifest"]')) {
     const manifest = document.createElement("link");
     manifest.rel = "manifest";

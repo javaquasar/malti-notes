@@ -1,5 +1,6 @@
 (() => {
   const DATA_URL = "./assets/data/course_path.json";
+  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
   const STORAGE_KEY = "malti_course_progress_v1";
   const storage = window.MaltiStorage;
 
@@ -17,23 +18,29 @@
 
   const objectiveKey = (chapterId, objectiveId) => `${chapterId}::${objectiveId}`;
 
-  const contextualPageUrl = (page, level, chapter, index) => {
+  const hasChapterView = (bindings, chapterId, pageHref) => bindings.targets.some((target) => (
+    target.chapterId === chapterId
+      && target.implementationStatus === "implemented"
+      && target.contentRef?.page === pageHref
+  ));
+
+  const contextualPageUrl = (page, level, chapter, index, bindings) => {
     const params = new URLSearchParams({
       course: level.id,
       chapter: chapter.id,
       step: String(index + 1)
     });
-    if (page.scopedView === true) params.set("view", "chapter");
+    if (hasChapterView(bindings, chapter.id, page.href)) params.set("view", "chapter");
     return `./${page.href}?${params.toString()}`;
   };
 
-  const createLink = (page, level, chapter, index) => {
+  const createLink = (page, level, chapter, index, bindings) => {
     const article = document.createElement("article");
     const link = document.createElement("a");
     const description = document.createElement("span");
 
     article.className = "course-page-link";
-    link.href = contextualPageUrl(page, level, chapter, index);
+    link.href = contextualPageUrl(page, level, chapter, index, bindings);
     link.textContent = page.label;
     description.textContent = page.focus;
     article.append(link, description);
@@ -63,7 +70,7 @@
     return { completed, total: chapter.objectives.length };
   };
 
-  const createChapter = (level, chapter, progress, onObjectiveChange) => {
+  const createChapter = (level, chapter, progress, onObjectiveChange, bindings) => {
     const article = document.createElement("article");
     const header = document.createElement("header");
     const titleWrap = document.createElement("div");
@@ -101,7 +108,7 @@
     });
     pagesHeading.textContent = "Study pages";
     pages.className = "course-page-links";
-    pages.replaceChildren(...chapter.pages.map((page, index) => createLink(page, level, chapter, index)));
+    pages.replaceChildren(...chapter.pages.map((page, index) => createLink(page, level, chapter, index, bindings)));
     chapterActions.className = "toolbar-row course-chapter-actions";
     chapterLink.className = "action-link";
     chapterLink.href = `./course_chapter.html?chapter=${encodeURIComponent(chapter.id)}`;
@@ -119,7 +126,7 @@
     return article;
   };
 
-  const createLevel = (level, progress, onObjectiveChange) => {
+  const createLevel = (level, progress, onObjectiveChange, bindings) => {
     const section = document.createElement("section");
     const intro = document.createElement("div");
     const title = document.createElement("h2");
@@ -134,7 +141,7 @@
     summary.textContent = level.summary;
     chapters.className = "course-chapter-list";
     chapters.replaceChildren(...level.chapters.map((chapter) => (
-      createChapter(level, chapter, progress, onObjectiveChange)
+      createChapter(level, chapter, progress, onObjectiveChange, bindings)
     )));
     intro.append(title, summary);
     section.append(intro, chapters);
@@ -203,9 +210,10 @@
     const tabs = document.querySelector("[data-course-level-tabs]");
     if (!root || !tabs || !storage) return;
 
-    const response = await fetch(DATA_URL);
-    if (!response.ok) throw new Error(`Could not load course path (${response.status})`);
-    const data = await response.json();
+    const [courseResponse, bindingResponse] = await Promise.all([fetch(DATA_URL), fetch(BINDINGS_URL)]);
+    if (!courseResponse.ok) throw new Error(`Could not load course path (${courseResponse.status})`);
+    if (!bindingResponse.ok) throw new Error(`Could not load course bindings (${bindingResponse.status})`);
+    const [data, bindings] = await Promise.all([courseResponse.json(), bindingResponse.json()]);
     const progress = loadProgress();
     progress.objectives = progress.objectives || {};
 
@@ -221,7 +229,7 @@
       updateSummary(data, progress, activeLevelId);
     };
 
-    root.replaceChildren(...data.levels.map((level) => createLevel(level, progress, onObjectiveChange)));
+    root.replaceChildren(...data.levels.map((level) => createLevel(level, progress, onObjectiveChange, bindings)));
     tabs.replaceChildren(...data.levels.map((level) => {
       const button = document.createElement("button");
       button.type = "button";

@@ -201,6 +201,40 @@ async function main() {
       assert(new URL(page.url()).searchParams.get("view") === "all", "Topic scope was not written to the URL.");
     });
 
+    await runTest(context, "guided chapter scope is derived for every mapped page type", async (page) => {
+      await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "9 / 24", "B2 hobbies mapping is incorrect.");
+      assert(await page.locator(".course-step").count() === 4, "B2 hobbies study steps are incomplete.");
+      const imperativeHref = await page.locator(".course-step a", { hasText: "Imperative Verbs" }).getAttribute("href");
+      assert(imperativeHref.includes("imperative_verbs.html") && imperativeHref.includes("view=chapter"), "Mapped imperative step is not scoped.");
+      const guideHref = await page.locator(".course-step a", { hasText: "Verbs Guide" }).getAttribute("href");
+      assert(!guideHref.includes("view="), "Unmapped verb guide step should keep normal course context.");
+
+      await page.goto(`${baseUrl}/introductions_alphabet.html?course=b1&chapter=b1-introductions&step=1&view=chapter`, { waitUntil: "networkidle" });
+      await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
+      assert(await page.locator("[data-content-id]:visible").count() === 2, "B1 introductions did not keep the two mapped adjective cards.");
+      assert((await page.locator("[data-course-scope-status]").textContent()).includes("4 chapter targets"), "Shared-card target count is missing.");
+      await page.locator('[data-course-view="all"]').click();
+      assert(await page.locator("[data-content-id]:visible").count() === 13, "B1 introductions full view was not restored.");
+
+      await page.goto(`${baseUrl}/numbers_calendar_time.html?course=b2&chapter=b2-imperative&step=2&view=chapter`, { waitUntil: "networkidle" });
+      await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
+      assert(await page.locator('[data-content-id="cardinal-1"]').isVisible(), "Chapter cardinal number is hidden.");
+      assert(await page.locator('[data-content-id="cardinal-11"]').isHidden(), "Extended cardinal number is visible.");
+      assert(await page.locator('[data-content-id="cardinal-30"]').isHidden(), "Unbound tens are visible.");
+      await page.locator('[data-course-view="all"]').click();
+      assert(await page.locator('[data-content-id="cardinal-11"]').isVisible(), "Full number topic did not restore 11.");
+      assert(await page.locator('[data-content-id="cardinal-30"]').isVisible(), "Full number topic did not restore the tens.");
+
+      await page.goto(`${baseUrl}/imperative_verbs.html?course=b2&chapter=b2-hobbies&step=3&view=chapter`, { waitUntil: "networkidle" });
+      await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
+      const coreImperatives = await page.locator('[data-content-id][data-course-role="core"]:visible').evaluateAll((items) => (
+        new Set(items.map((item) => item.dataset.contentId)).size
+      ));
+      assert(coreImperatives === 5, "B2 hobbies imperative scope has the wrong item set.");
+      assert(await page.locator("[data-course-view-toggle]").count() === 1, "Derived imperative scope control is missing.");
+    });
+
     await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {
       for (const config of courseTopicPages) {
         await openCleanPage(page, config.pageName);

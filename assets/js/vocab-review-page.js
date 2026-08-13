@@ -178,6 +178,7 @@
                 if (!container) {
                     return;
                 }
+                container.dataset.courseContentGroup = group.id;
 
                 const words = group.items.map(function (item) {
                     const word = toReviewWord(item, group);

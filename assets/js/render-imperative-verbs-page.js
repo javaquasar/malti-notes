@@ -21,6 +21,7 @@
         var config = getConfig();
         return {
             id: makeReviewId(item, prefixOverride),
+            contentId: item.id || "",
             maltese: item.lemma,
             english: item.english,
             topic: topicOverride || group.title || config.defaultTopic || "Imperative Verbs",
@@ -290,6 +291,7 @@
 
                 var card = document.createElement("div");
                 card.className = "study-card";
+                card.dataset.courseContentGroup = group.id || "";
 
                 var heading = document.createElement("h3");
                 heading.textContent = group.title || "Verb Group";
@@ -317,6 +319,8 @@
 
                 (group.items || []).forEach(function (item) {
                     var row = document.createElement("tr");
+                    row.dataset.contentId = item.id || "";
+                    row.dataset.contentGroup = group.id || "";
 
                     var lemmaCell = document.createElement("td");
                     lemmaCell.appendChild(buildVerbButton(item));
@@ -372,6 +376,9 @@
             }
 
             syncPageButtons();
+            document.dispatchEvent(new CustomEvent("malti-vocab-rendered", {
+                detail: { data: data, config: config }
+            }));
         }
 
         function loadData() {

@@ -106,6 +106,8 @@
         var tbody = document.createElement("tbody");
         (group.items || []).forEach(function (item) {
             var row = document.createElement("tr");
+            row.dataset.contentId = item.id || item.slug || "";
+            row.dataset.contentGroup = group.id || "";
             row.appendChild(createMalteseCell(item.maltese));
             row.appendChild(createCell("td", item.english));
             if (richExamples) {
@@ -119,7 +121,9 @@
 
         table.appendChild(tbody);
         container.innerHTML = "";
+        container.dataset.courseContentGroup = group.id || "";
         container.appendChild(table);
+        document.dispatchEvent(new CustomEvent("malti-vocab-table-rendered", { detail: { group: group } }));
     }
 
     window.MaltiVocabTableRenderer = {

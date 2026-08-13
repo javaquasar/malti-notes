@@ -18,9 +18,11 @@
     return null;
   };
 
-  const contextualPageUrl = (page, level, chapter, index) => {
+  const hasChapterView = (implemented, pageHref) => implemented.some((target) => target.contentRef?.page === pageHref);
+
+  const contextualPageUrl = (page, level, chapter, index, implemented) => {
     const params = new URLSearchParams({ course: level.id, chapter: chapter.id, step: String(index + 1) });
-    if (page.scopedView === true) params.set("view", "chapter");
+    if (hasChapterView(implemented, page.href)) params.set("view", "chapter");
     return `./${page.href}?${params.toString()}`;
   };
 
@@ -76,7 +78,7 @@
     }));
   };
 
-  const renderSteps = (level, chapter) => {
+  const renderSteps = (level, chapter, implemented) => {
     const container = document.querySelector("[data-course-chapter-steps]");
     container.replaceChildren(...chapter.pages.map((page, index) => {
       const article = document.createElement("article");
@@ -88,11 +90,11 @@
       article.className = "course-step";
       number.className = "course-step-number";
       number.textContent = String(index + 1);
-      link.href = contextualPageUrl(page, level, chapter, index);
+      link.href = contextualPageUrl(page, level, chapter, index, implemented);
       link.textContent = page.label;
       focus.textContent = page.focus;
       status.className = "status-chip";
-      status.textContent = page.scopedView === true ? "Chapter view ready" : "Course context";
+      status.textContent = hasChapterView(implemented, page.href) ? "Chapter view ready" : "Course context";
       copy.append(link, focus);
       article.append(number, copy, status);
       return article;
@@ -178,7 +180,7 @@
     pathLink.href = `./course_path.html#${chapterId}`;
     renderNeighbours(course, match);
     renderObjectives(match.chapter);
-    renderSteps(match.level, match.chapter);
+    renderSteps(match.level, match.chapter, implemented);
     renderMissing(inventoryChapter, chapterTargets);
     document.querySelector("[data-course-chapter-empty]").hidden = true;
     document.querySelector("[data-course-chapter-content]").hidden = false;
