@@ -28,6 +28,8 @@
         {
           "id": "adjective-gender",
           "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-introductions-ferhan"],
           "prompt": "Match each masculine adjective to its feminine form.",
           "pairs": [
             { "left": "ferħan", "right": "ferħana" },
@@ -36,6 +38,17 @@
           ],
           "explanation": "These common personal adjectives change form for feminine agreement.",
           "reviewCard": { "maltese": "Jien ferħana u attiva.", "english": "I am happy and active." }
+        },
+        {
+          "id": "personal-happy-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-introductions-ferhan"],
+          "prompt": "Write the masculine Maltese adjective for happy.",
+          "answer": "ferħan",
+          "accepted": ["ferħan"],
+          "explanation": "Ferħan is the masculine form; ferħana is feminine.",
+          "reviewCard": { "maltese": "ferħan / ferħana", "english": "happy (masculine / feminine)" }
         }
       ]
     },
@@ -66,11 +79,24 @@
         {
           "id": "travel-order",
           "type": "order-words",
+          "assessmentMode": "production",
+          "targetIds": ["b1-residence-bil-karozza"],
           "prompt": "Put the travel sentence in the correct order.",
           "tokens": ["Huma", "jiġu", "l-iskola", "bil-karozza."],
           "answer": "Huma jiġu l-iskola bil-karozza.",
           "explanation": "The transport phrase comes after the destination.",
           "reviewCard": { "maltese": "Huma jiġu l-iskola bil-karozza.", "english": "They come to school by car." }
+        },
+        {
+          "id": "travel-car-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-residence-bil-karozza"],
+          "prompt": "What does bil-karozza mean?",
+          "choices": ["by car", "by bicycle", "on foot"],
+          "answer": "by car",
+          "explanation": "Bil-karozza means by car.",
+          "reviewCard": { "maltese": "bil-karozza", "english": "by car" }
         }
       ]
     },
@@ -104,11 +130,24 @@
         {
           "id": "school-article",
           "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-school-librerija"],
           "prompt": "Which sentence uses the correct article?",
           "choices": ["Il-librerija hija kbira.", "L-librerija hija kbira.", "It-librerija hija kbira."],
           "answer": "Il-librerija hija kbira.",
           "explanation": "Librerija takes il- in this form.",
           "reviewCard": { "maltese": "Il-librerija hija kbira.", "english": "The library is big." }
+        },
+        {
+          "id": "school-library-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-school-librerija"],
+          "prompt": "Write the Maltese word for library.",
+          "answer": "librerija",
+          "accepted": ["librerija", "il-librerija"],
+          "explanation": "Librerija means library.",
+          "reviewCard": { "maltese": "librerija", "english": "library" }
         }
       ]
     },
@@ -181,6 +220,17 @@
           "accepted": ["iljunfant"],
           "explanation": "Iljunfant means elephant.",
           "reviewCard": { "maltese": "iljunfant", "english": "elephant" }
+        },
+        {
+          "id": "animal-kelb-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-animals-kelb"],
+          "prompt": "Write the Maltese word for dog.",
+          "answer": "kelb",
+          "accepted": ["kelb"],
+          "explanation": "Kelb means dog.",
+          "reviewCard": { "maltese": "kelb", "english": "dog" }
         }
       ]
     },
@@ -219,6 +269,28 @@
           ],
           "explanation": "Use dan for masculine singular, din for feminine singular, and dawn for plural.",
           "reviewCard": { "maltese": "Dan kelb, din dar, u dawn kotba.", "english": "This dog, this house, and these books." }
+        },
+        {
+          "id": "colour-red-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-colours-ahmar"],
+          "prompt": "What does aħmar mean?",
+          "choices": ["red", "green", "yellow"],
+          "answer": "red",
+          "explanation": "Aħmar is the masculine singular form for red.",
+          "reviewCard": { "maltese": "aħmar", "english": "red" }
+        },
+        {
+          "id": "colour-red-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-colours-ahmar"],
+          "prompt": "Write the masculine Maltese colour red.",
+          "answer": "aħmar",
+          "accepted": ["aħmar"],
+          "explanation": "Use aħmar with a masculine singular noun.",
+          "reviewCard": { "maltese": "aħmar", "english": "red" }
         }
       ]
     },
@@ -249,10 +321,23 @@
         {
           "id": "food-category",
           "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-food-kafe"],
           "prompt": "Il-kafè huwa xarba.",
           "answer": true,
           "explanation": "Kafè is a drink, so the statement is true.",
           "reviewCard": { "maltese": "Il-kafè huwa xarba.", "english": "Coffee is a drink." }
+        },
+        {
+          "id": "food-coffee-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-food-kafe"],
+          "prompt": "Write the Maltese word for coffee.",
+          "answer": "kafè",
+          "accepted": ["kafè", "kafe"],
+          "explanation": "Kafè means coffee.",
+          "reviewCard": { "maltese": "kafè", "english": "coffee" }
         }
       ]
     },
@@ -265,6 +350,8 @@
         {
           "id": "family-members",
           "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-family-omm", "b1-family-missier", "b1-family-oht"],
           "prompt": "Match the family words.",
           "pairs": [
             { "left": "omm", "right": "mother" },
@@ -273,6 +360,17 @@
           ],
           "explanation": "These are core family-member nouns.",
           "reviewCard": { "maltese": "Ommi, missieri, u oħti jgħixu Malta.", "english": "My mother, father, and sister live in Malta." }
+        },
+        {
+          "id": "family-mother-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-family-omm"],
+          "prompt": "Write the Maltese word for mother.",
+          "answer": "omm",
+          "accepted": ["omm"],
+          "explanation": "Omm means mother.",
+          "reviewCard": { "maltese": "omm", "english": "mother" }
         },
         {
           "id": "family-wake",
@@ -303,6 +401,8 @@
         {
           "id": "bag-objects",
           "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-school-bag-kalkulatur", "b2-school-bag-pitazz"],
           "prompt": "Match the school-bag words.",
           "pairs": [
             { "left": "il-kalkulatur", "right": "calculator" },
@@ -311,6 +411,17 @@
           ],
           "explanation": "Keep each object together with its article.",
           "reviewCard": { "maltese": "Fil-basket għandi kalkulatur, pitazz, u bajrow.", "english": "In the bag I have a calculator, a copybook, and a pen." }
+        },
+        {
+          "id": "bag-calculator-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-school-bag-kalkulatur"],
+          "prompt": "Write the Maltese word for calculator.",
+          "answer": "kalkulatur",
+          "accepted": ["kalkulatur", "il-kalkulatur"],
+          "explanation": "Kalkulatur means calculator.",
+          "reviewCard": { "maltese": "kalkulatur", "english": "calculator" }
         },
         {
           "id": "bag-demonstrative",
@@ -353,6 +464,8 @@
         {
           "id": "imperative-open-plural",
           "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-imperative-iftah"],
           "prompt": "What is the plural command corresponding to Iftaħ?",
           "choices": ["Iftħu", "Tiftħu", "Fetaħ"],
           "answer": "Iftħu",
@@ -362,6 +475,8 @@
         {
           "id": "imperative-polite",
           "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-imperative-iftah"],
           "prompt": "Complete: ___ il-ktieb, jekk jogħġbok.",
           "answer": "Iftaħ",
           "accepted": ["iftaħ"],
@@ -388,10 +503,23 @@
         {
           "id": "weather-season",
           "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-weather-xitwa"],
           "prompt": "Fix-xitwa normalment ikun aktar kiesaħ.",
           "answer": true,
           "explanation": "The statement says that winter is normally colder.",
           "reviewCard": { "maltese": "Fix-xitwa normalment ikun aktar kiesaħ.", "english": "In winter it is normally colder." }
+        },
+        {
+          "id": "weather-winter-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-weather-xitwa"],
+          "prompt": "Write the Maltese word for winter.",
+          "answer": "xitwa",
+          "accepted": ["xitwa", "ix-xitwa"],
+          "explanation": "Xitwa means winter.",
+          "reviewCard": { "maltese": "xitwa", "english": "winter" }
         },
         {
           "id": "weather-future",
@@ -439,6 +567,28 @@
           "accepted": ["il"],
           "explanation": "Numbers from eleven to nineteen use the linking element -il.",
           "reviewCard": { "maltese": "Għandi tnax-il flokk.", "english": "I have twelve shirts." }
+        },
+        {
+          "id": "clothes-twelve-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-clothes-tnax"],
+          "prompt": "What number is tnax?",
+          "choices": ["12", "13", "20"],
+          "answer": "12",
+          "explanation": "Tnax means twelve.",
+          "reviewCard": { "maltese": "tnax", "english": "twelve" }
+        },
+        {
+          "id": "clothes-twelve-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-clothes-tnax"],
+          "prompt": "Write twelve in Maltese.",
+          "answer": "tnax",
+          "accepted": ["tnax"],
+          "explanation": "Tnax is the cardinal number twelve.",
+          "reviewCard": { "maltese": "tnax", "english": "twelve" }
         }
       ]
     },
@@ -474,6 +624,28 @@
           "answer": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.",
           "explanation": "The time phrase can introduce the future plan.",
           "reviewCard": { "maltese": "Fi tmiem il-ġimgħa se niltaqa' mal-ħbieb.", "english": "At the weekend I will meet my friends." }
+        },
+        {
+          "id": "hobby-do-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-hobbies-aghmel"],
+          "prompt": "Which singular command means do or make?",
+          "choices": ["agħmel", "ilbes", "orqod"],
+          "answer": "agħmel",
+          "explanation": "Agħmel is the singular command from għamel.",
+          "reviewCard": { "maltese": "agħmel", "english": "do / make (singular command)" }
+        },
+        {
+          "id": "hobby-do-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-hobbies-aghmel"],
+          "prompt": "Write the singular Maltese command for do or make.",
+          "answer": "agħmel",
+          "accepted": ["agħmel"],
+          "explanation": "Agħmel is the singular imperative.",
+          "reviewCard": { "maltese": "agħmel", "english": "do / make (singular command)" }
         }
       ]
     },
@@ -486,6 +658,8 @@
         {
           "id": "town-places",
           "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-town-ispizerija"],
           "prompt": "Match the town places.",
           "pairs": [
             { "left": "l-ispiżerija", "right": "pharmacy" },
@@ -494,6 +668,17 @@
           ],
           "explanation": "These are useful places for practical town tasks.",
           "reviewCard": { "maltese": "L-ispiżerija qiegħda ħdejn il-bank.", "english": "The pharmacy is next to the bank." }
+        },
+        {
+          "id": "town-pharmacy-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-town-ispizerija"],
+          "prompt": "Write the Maltese word for pharmacy.",
+          "answer": "spiżerija",
+          "accepted": ["spiżerija", "ispiżerija", "l-ispiżerija"],
+          "explanation": "Spiżerija means pharmacy; the book inventory records the articulated form ispiżerija.",
+          "reviewCard": { "maltese": "spiżerija", "english": "pharmacy" }
         },
         {
           "id": "town-request",
@@ -524,6 +709,8 @@
         {
           "id": "recycling-materials",
           "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": ["b2-recycling-plastik", "b2-recycling-karta"],
           "prompt": "Match the recyclable materials.",
           "pairs": [
             { "left": "plastik", "right": "plastic" },
@@ -532,6 +719,17 @@
           ],
           "explanation": "Recognising the material is the first step in sorting waste.",
           "reviewCard": { "maltese": "Nissepara l-plastik, il-ħġieġ, u l-karta.", "english": "I separate plastic, glass, and paper." }
+        },
+        {
+          "id": "recycling-plastic-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b2-recycling-plastik"],
+          "prompt": "Write the Maltese word for plastic.",
+          "answer": "plastik",
+          "accepted": ["plastik", "il-plastik"],
+          "explanation": "Plastik means plastic.",
+          "reviewCard": { "maltese": "plastik", "english": "plastic" }
         },
         {
           "id": "recycling-glass",

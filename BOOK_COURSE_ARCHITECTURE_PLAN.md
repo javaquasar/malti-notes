@@ -1,20 +1,21 @@
 # Book Course Architecture Plan
 
-Status: accepted architecture direction, B1 Animals vertical slice implemented.
+Status: accepted architecture implemented across all B1/B2 chapters.
 
-Last updated: 2026-08-13.
+Last updated: 2026-08-14.
 
 ## Implementation Progress
 
-The first reusable vertical slice is complete:
+The reusable course layer now covers the complete 14-chapter route:
 
 - `course_chapter.html` renders any of the 14 chapters from existing course and audit data.
-- B1 Animals has stable bindings for all 27 book requirements: 20 linked to canonical lesson cards, one evidence-only target, and six explicit content gaps.
-- `animals.html` supports `Chapter material` and `Full topic` without duplicating its 60 vocabulary records.
-- The chapter test links recognition and production items to target progress and sends missed answers to shared review.
-- `course:lint`, data lint, Playwright, and visual CI protect the new contracts.
+- All 462 frozen book requirements have stable generated bindings: 174 linked to canonical lesson items, 162 recorded as evidence-only, and 126 retained as explicit content gaps.
+- Scoped chapter views are derived from `contentRef.page` and work with vocabulary cards, vocabulary tables, static number rows, and imperative tables.
+- The guided path adds focused room, imperative, and restaurant steps where the audited material already lives on another topic page.
+- Every chapter has at least one target with recognition and production assessment coverage; missed answers use shared review and spaced successes can advance the target to mastery.
+- `course:bindings:check`, course lint, Playwright, and the visual matrix protect bindings, scoped views, target progress, and responsive rendering.
 
-The remaining phases are the rollout of stable bindings and scoped rendering to the other 13 chapters, broader assessment coverage, entry diagnostics, checkpoints, and enough spaced attempts to expose mastered states in the UI.
+The remaining phases are broader assessment coverage beyond the first mastery-ready target per chapter, entry diagnostics, and section checkpoints. Evidence-only records should be promoted only after a stable lesson item is available; frozen missing records require an intentional book-audit refresh after content is added.
 
 ## Decision Summary
 

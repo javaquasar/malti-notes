@@ -6,12 +6,6 @@ const bindingFile = path.join(root, "assets/data/course_target_bindings.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const course = readJson("assets/data/course_path.json");
 const exercises = readJson("assets/data/course_exercises.json");
-const existing = fs.existsSync(bindingFile) ? JSON.parse(fs.readFileSync(bindingFile, "utf8")) : { targets: [] };
-
-const existingIds = new Map(existing.targets.map((target) => [
-  `${target.chapterId}::${target.sourceRequirement}`,
-  target.id
-]));
 const assessmentIds = new Map();
 
 exercises.sets.forEach((set) => set.items.forEach((item) => {
@@ -52,7 +46,7 @@ function normalize(value) {
 }
 
 function slugify(value) {
-  return normalize(value)
+  return normalize(value).normalize("NFD").replace(/\p{M}/gu, "")
     .replaceAll("għ", "gh")
     .replaceAll("ħ", "h")
     .replaceAll("ġ", "g")
@@ -136,7 +130,7 @@ function targetType(chapterId, requirement) {
 
 function buildTarget(inventoryChapter, candidates, requirement) {
   const key = `${inventoryChapter.courseChapterId}::${requirement}`;
-  const targetId = existingIds.get(key) || `${inventoryChapter.courseChapterId}-${slugify(requirement)}`;
+  const targetId = `${inventoryChapter.courseChapterId}-${slugify(requirement)}`;
   const isMissing = inventoryChapter.baselineMissing.includes(requirement);
   const staticRef = staticContent.get(key);
   const lookup = contentAliases.get(key) || requirement;

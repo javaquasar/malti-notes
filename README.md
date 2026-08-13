@@ -15,6 +15,7 @@ npm run style:lint
 npm run data:lint
 npm run content:lint
 npm run books:coverage
+npm run course:bindings:build
 npm run course:lint
 npm run links:lint
 npm run theme:a11y

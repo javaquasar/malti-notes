@@ -166,6 +166,14 @@ function validateCourseBindings({ root, fail }) {
     if (missing.length || extra.length) {
       fail(bindingFile, `${chapterId} bindings differ from inventory (missing: ${missing.join(", ") || "none"}; extra: ${extra.join(", ") || "none"})`);
     }
+    const masteryReady = bindings.targets.some((target) => {
+      if (target.chapterId !== chapterId || target.implementationStatus !== "implemented") return false;
+      const modes = new Set(target.assessmentIds.map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
+      return modes.has("recognition") && modes.has("production");
+    });
+    if (!masteryReady) {
+      fail(bindingFile, `${chapterId} needs an implemented target with recognition and production assessments`);
+    }
   });
 }
 

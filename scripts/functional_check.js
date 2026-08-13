@@ -168,7 +168,7 @@ async function main() {
       assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "21 / 27", "Frozen animals coverage is incorrect.");
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "20 / 27", "Guided animals coverage is incorrect.");
       assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
-      assert(await page.locator("#chapter-test .exercise-item").count() === 6, "Animals chapter test is incomplete.");
+      assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
       const firstStepHref = await page.locator(".course-step a").first().getAttribute("href");
       assert(firstStepHref.includes("animals.html?course=b1") && firstStepHref.includes("view=chapter"), "Animals step does not open chapter view.");
 
@@ -178,7 +178,7 @@ async function main() {
         review: JSON.parse(localStorage.getItem("malti_review_cards_v2"))
       }));
       assert(Object.values(saved.targets).filter((target) => target.state === "review").length === 3, "Missed target states were not saved.");
-      assert(Object.keys(saved.review).length === 6, "Missed chapter answers were not added to shared review.");
+      assert(Object.keys(saved.review).length === 7, "Missed chapter answers were not added to shared review.");
       assert((await page.locator("[data-course-review-count]").textContent()).trim() === "3", "Chapter review count did not update.");
     });
 
@@ -235,6 +235,29 @@ async function main() {
       assert(await page.locator("[data-course-view-toggle]").count() === 1, "Derived imperative scope control is missing.");
     });
 
+    await runTest(context, "linked chapter checks can advance a target to mastery", async (page) => {
+      await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
+      const exercise = page.locator('[data-exercise-set="b2-hobbies-future-check"]');
+      await exercise.locator('[data-exercise-item="hobby-do-recognition"] input[value="agħmel"]').check();
+      await exercise.locator('[data-exercise-item="hobby-do-production"] input').fill("agħmel");
+      await exercise.locator('button[type="submit"]').click();
+      let target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
+      assert(target.state === "learning" && target.recognitionCorrect && target.productionCorrect, "First mixed attempt did not enter learning state.");
+
+      await page.evaluate(() => {
+        const progress = JSON.parse(localStorage.getItem("malti_course_target_progress_v1"));
+        progress["b2-hobbies-aghmel"].successfulDates = ["2026-08-12"];
+        localStorage.setItem("malti_course_target_progress_v1", JSON.stringify(progress));
+      });
+      await exercise.getByRole("button", { name: "Try again" }).click();
+      await exercise.locator('[data-exercise-item="hobby-do-recognition"] input[value="agħmel"]').check();
+      await exercise.locator('[data-exercise-item="hobby-do-production"] input').fill("agħmel");
+      await exercise.locator('button[type="submit"]').click();
+      target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
+      assert(target.state === "mastered", "Spaced recognition and production did not master the target.");
+      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 9", "Chapter mastery metric did not update.");
+    });
+
     await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {
       for (const config of courseTopicPages) {
         await openCleanPage(page, config.pageName);
@@ -247,7 +270,8 @@ async function main() {
         const exerciseSets = page.locator("[data-exercise-set]");
         await exerciseSets.first().locator(".exercise-item").first().waitFor();
         assert(await exerciseSets.count() === config.exerciseSetCount, `${config.pageName} has an incomplete quick-check set.`);
-        assert(await page.locator(".exercise-item").count() === config.exerciseSetCount * 3, `${config.pageName} has an incomplete exercise item set.`);
+        const incompleteExerciseSets = await exerciseSets.evaluateAll((sets) => sets.filter((set) => set.querySelectorAll(".exercise-item").length < 3).length);
+        assert(incompleteExerciseSets === 0, `${config.pageName} has an incomplete exercise item set.`);
 
         const contextLinks = page.locator("[data-course-context] .action-link");
         await contextLinks.first().waitFor();
