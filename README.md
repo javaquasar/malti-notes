@@ -26,6 +26,8 @@ GitHub Actions also runs the Playwright functional and visual suites before publ
 
 The frozen B1/B2 book comparison is documented in `BOOKS_SITE_COVERAGE.md`, with its complete machine-readable inventory in `assets/data/book_coverage_inventory.json`. Run `npm run books:coverage` to compare the current site with that baseline without parsing the PDFs again. The check accepts newly added coverage and fails when previously covered material disappears.
 
+The planned guided book flow is specified in `BOOK_COURSE_ARCHITECTURE_PLAN.md`. It preserves topic pages as complete content libraries while adding chapter-scoped views, tests, mastery tracking, and a shared review flow.
+
 ## Visual Regression Workflow
 
 Use this workflow after broad CSS, layout, or theme changes.
