@@ -40,7 +40,7 @@ function validateCourseBindings({ root, fail }) {
   const course = read(courseFile);
   const exercises = read(exerciseFile);
   if (!bindings || !inventory || !course || !exercises) return;
-  if (bindings.schemaVersion !== 1) fail(bindingFile, "schemaVersion must be 1");
+  if (bindings.schemaVersion !== 2) fail(bindingFile, "schemaVersion must be 2");
   if (!Array.isArray(bindings.targets)) {
     fail(bindingFile, "targets must be an array");
     return;
@@ -59,7 +59,16 @@ function validateCourseBindings({ root, fail }) {
   const contentIds = (file) => {
     if (!contentCache.has(file)) {
       try {
-        contentCache.set(file, collectContentIds(JSON.parse(fs.readFileSync(path.join(root, file), "utf8"))));
+        const source = fs.readFileSync(path.join(root, file), "utf8");
+        if (file.endsWith(".html")) {
+          const ids = new Set();
+          const pattern = /data-content-id=["']([^"']+)["']/g;
+          let match;
+          while ((match = pattern.exec(source))) ids.add(match[1]);
+          contentCache.set(file, ids);
+        } else {
+          contentCache.set(file, collectContentIds(JSON.parse(source)));
+        }
       } catch (error) {
         contentCache.set(file, null);
       }
@@ -97,6 +106,10 @@ function validateCourseBindings({ root, fail }) {
       if (!isObject(target.contentRef)) {
         fail(bindingFile, `${owner}.contentRef is required for implemented targets`);
       } else {
+        const chapter = chapters.get(target.chapterId);
+        if (typeof target.contentRef.page !== "string" || !chapter?.pages.some((page) => page.href === target.contentRef.page)) {
+          fail(bindingFile, `${owner}.contentRef.page is not a study step in ${target.chapterId}: ${target.contentRef.page}`);
+        }
         const ids = contentIds(target.contentRef.file);
         if (!ids) fail(bindingFile, `${owner}.contentRef.file is missing or invalid: ${target.contentRef.file}`);
         if (ids && !ids.has(target.contentRef.itemId)) fail(bindingFile, `${owner}.contentRef.itemId was not found: ${target.contentRef.itemId}`);
@@ -129,17 +142,29 @@ function validateCourseBindings({ root, fail }) {
       fail(exerciseFile, `${item.id}.assessmentMode must be recognition or production when targetIds are present`);
     }
   });
-  (bindings.pilotChapterIds || []).forEach((chapterId) => {
+  const auditedChapterIds = bindings.fullyAuditedChapterIds || [];
+  if (auditedChapterIds.length !== inventory.chapters.length) {
+    fail(bindingFile, `fullyAuditedChapterIds must contain all ${inventory.chapters.length} inventory chapters`);
+  }
+  if (new Set(auditedChapterIds).size !== auditedChapterIds.length) {
+    fail(bindingFile, "fullyAuditedChapterIds must not contain duplicates");
+  }
+  inventory.chapters.forEach((chapter) => {
+    if (!auditedChapterIds.includes(chapter.courseChapterId)) {
+      fail(bindingFile, `fullyAuditedChapterIds is missing ${chapter.courseChapterId}`);
+    }
+  });
+  auditedChapterIds.forEach((chapterId) => {
     const inventoryChapter = inventoryByChapter.get(chapterId);
     const bound = requirementsByChapter.get(chapterId) || new Set();
     if (!inventoryChapter) {
-      fail(bindingFile, `pilot chapter is absent from the frozen inventory: ${chapterId}`);
+      fail(bindingFile, `audited chapter is absent from the frozen inventory: ${chapterId}`);
       return;
     }
     const missing = inventoryChapter.targets.filter((target) => !bound.has(target));
     const extra = [...bound].filter((target) => !inventoryChapter.targets.includes(target));
     if (missing.length || extra.length) {
-      fail(bindingFile, `${chapterId} pilot bindings differ from inventory (missing: ${missing.join(", ") || "none"}; extra: ${extra.join(", ") || "none"})`);
+      fail(bindingFile, `${chapterId} bindings differ from inventory (missing: ${missing.join(", ") || "none"}; extra: ${extra.join(", ") || "none"})`);
     }
   });
 }

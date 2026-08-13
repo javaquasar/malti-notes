@@ -1,34 +1,5726 @@
 {
-  "schemaVersion": 1,
-  "description": "Runtime bindings between audited book requirements, canonical site content, and assessments. The initial vertical slice covers B1 Animals.",
-  "pilotChapterIds": ["b1-animals"],
+  "schemaVersion": 2,
+  "description": "Audited runtime bindings between all B1/B2 book requirements, canonical site content, and assessments.",
+  "fullyAuditedChapterIds": [
+    "b1-introductions",
+    "b1-residence",
+    "b1-school",
+    "b1-animals",
+    "b1-colours",
+    "b1-food",
+    "b1-family",
+    "b2-school-bag",
+    "b2-imperative",
+    "b2-weather",
+    "b2-clothes",
+    "b2-hobbies",
+    "b2-town",
+    "b2-recycling"
+  ],
   "targets": [
-    { "id": "b1-animals-kelb", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "kelb", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "kelb" }, "assessmentIds": ["animal-kelb-meaning"] },
-    { "id": "b1-animals-kelba", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "kelba", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "kelb" }, "assessmentIds": [] },
-    { "id": "b1-animals-qattus", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "qattus", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "qattus" }, "assessmentIds": ["animal-qattus-production"] },
-    { "id": "b1-animals-qattusa", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "qattusa", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "qattus" }, "assessmentIds": [] },
-    { "id": "b1-animals-ghasfur", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "għasfur", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "g-asfur" }, "assessmentIds": [] },
-    { "id": "b1-animals-fenek", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "fenek", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "fenek" }, "assessmentIds": [] },
-    { "id": "b1-animals-pappagall", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "pappagall", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "pappagall" }, "assessmentIds": [] },
-    { "id": "b1-animals-fekruna", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "fekruna", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "fekruna-tal-art" }, "assessmentIds": [] },
-    { "id": "b1-animals-tiegiega", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "tiġieġa", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "ti-ie-a" }, "assessmentIds": [] },
-    { "id": "b1-animals-fellus", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "fellus", "role": "core", "implementationStatus": "missing", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-baqra", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "baqra", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "baqra" }, "assessmentIds": [] },
-    { "id": "b1-animals-naghga", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "nagħġa", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "nag-a" }, "assessmentIds": [] },
-    { "id": "b1-animals-hmara", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "ħmara", "role": "core", "implementationStatus": "missing", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-gurdien", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "ġurdien", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "urdien" }, "assessmentIds": [] },
-    { "id": "b1-animals-hanzir", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "ħanżir", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "an-ir" }, "assessmentIds": [] },
-    { "id": "b1-animals-ziemel", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "żiemel", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "iemel" }, "assessmentIds": [] },
-    { "id": "b1-animals-papra", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "papra", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "papra" }, "assessmentIds": [] },
-    { "id": "b1-animals-emu", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "emu", "role": "core", "implementationStatus": "missing", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-brama", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "brama", "role": "core", "implementationStatus": "evidence-only", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-xadina", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "xadina", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "xadina" }, "assessmentIds": [] },
-    { "id": "b1-animals-kamaleont", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "kamaleont", "role": "core", "implementationStatus": "missing", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-lampuka", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "lampuka", "role": "core", "implementationStatus": "missing", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-nemla", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "nemla", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "nemla" }, "assessmentIds": [] },
-    { "id": "b1-animals-serp", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "serp", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "serp" }, "assessmentIds": [] },
-    { "id": "b1-animals-denfil", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "denfil", "role": "core", "implementationStatus": "missing", "contentRef": null, "assessmentIds": [] },
-    { "id": "b1-animals-gemel", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "ġemel", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "emel" }, "assessmentIds": [] },
-    { "id": "b1-animals-iljunfant", "book": "B1", "chapterId": "b1-animals", "type": "vocabulary", "sourceRequirement": "iljunfant", "role": "core", "implementationStatus": "implemented", "contentRef": { "file": "assets/data/animals.json", "itemId": "iljunfant" }, "assessmentIds": ["animal-iljunfant-production"] }
+    {
+      "id": "b1-introductions-annimal",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "annimal",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-belt",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "belt",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-certifikat",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ċertifikat",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-dentist",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "dentist",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-erbgha",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "erbgħa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-fenek",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "fenek",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-gemel",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ġemel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-gazzetta",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "gazzetta",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ghajn",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "għajn",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ghajnejn",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "għajnejn",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-huma",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "huma",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "pronouns_possessives.html",
+        "file": "assets/data/pronouns_possessives.json",
+        "itemId": "huma"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-habel",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ħabel",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ilma",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ilma",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-iehor",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ieħor",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-jott",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "jott",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-kaf",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "kafè",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-lemin",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "lemin",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-meraq",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "meraq",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-negozju",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "negozju",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ors",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ors",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-pedala",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "pedala",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-qawsalla",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "qawsalla",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-rebbiegha",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "rebbiegħa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-serp",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "serp",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-tezor",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "teżor",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-uviera",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "uviera",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-verit",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "verità",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-waqfa",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "waqfa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-xellug",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "xellug",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ziemel",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "żiemel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ziju",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ziju",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ferhan",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ferħan",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "introductions_alphabet.html",
+        "file": "assets/data/introductions_alphabet.json",
+        "itemId": "ferhan-ferhana"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-ferhana",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ferħana",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "introductions_alphabet.html",
+        "file": "assets/data/introductions_alphabet.json",
+        "itemId": "ferhan-ferhana"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-sportiv",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "sportiv",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-sportiva",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "sportiva",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-cajtier",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ċajtier",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "introductions_alphabet.html",
+        "file": "assets/data/introductions_alphabet.json",
+        "itemId": "cajtier-cajtiera"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-introductions-cajtiera",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "vocabulary",
+      "sourceRequirement": "ċajtiera",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "introductions_alphabet.html",
+        "file": "assets/data/introductions_alphabet.json",
+        "itemId": "cajtier-cajtiera"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-rota",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "rota",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bir-rota"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-trakk",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "trakk",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-helikopter",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "ħelikopter",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-vann",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "vann",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-karozza",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "karozza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bil-karozza"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-karozza-tal-linja",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "phrase",
+      "sourceRequirement": "karozza tal-linja",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-mutur",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "mutur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "mutur-scooter"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-vapur",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "vapur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "vapur"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bil-mixi",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-mixi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bil-mixi"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bil-mutur",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-mutur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "mutur-scooter"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bir-rota",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bir-rota",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bir-rota"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bil-vann",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-vann",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bil-karozza",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-karozza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bil-karozza"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-kowc",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "kowċ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bil-kowc",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-kowċ",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-skola",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "skola",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "skola"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-hanut",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "ħanut",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "hanut"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-dar",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "dar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "pronouns_possessives.html",
+        "file": "assets/data/pronouns_possessives.json",
+        "itemId": "id-dar-tieghi"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-bankina",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bankina",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-sigra",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "siġra",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-sptar",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "sptar",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-ajruplan",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "ajruplan",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "ajruplan"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-residence-knisja",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "knisja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "knisja"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-kuritur",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "kuritur",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-laboratorju",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "laboratorju",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-librerija",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "librerija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "librerija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-klassi",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "klassi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "klassi"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-klinika",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "klinika",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-bitha",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "bitħa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-sala",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "sala",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-ufficcju",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "uffiċċju",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-tojlit",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "tojlit",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-coff",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ċoff",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-qmis",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "qmis",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-dublett",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "dublett",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-ingravata",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ingravata",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-kalzetta",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "kalzetta",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-glekk",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ġlekk",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-qalziet",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "qalziet",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-zarbuna",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "żarbuna",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-uniformi",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "uniformi",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-ilbies",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ilbies",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-kamra-tas-sodda",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "phrase",
+      "sourceRequirement": "kamra tas-sodda",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-kamra-tal-banju",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "phrase",
+      "sourceRequirement": "kamra tal-banju",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-kamra-tal-ikel",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "phrase",
+      "sourceRequirement": "kamra tal-ikel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-gnien",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ġnien",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-kcina",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "kċina",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-salott",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "salott",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-school-garaxx",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "garaxx",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-kelb",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "kelb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "kelb"
+      },
+      "assessmentIds": [
+        "animal-kelb-meaning"
+      ]
+    },
+    {
+      "id": "b1-animals-kelba",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "kelba",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "kelb"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-qattus",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "qattus",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "qattus"
+      },
+      "assessmentIds": [
+        "animal-qattus-production"
+      ]
+    },
+    {
+      "id": "b1-animals-qattusa",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "qattusa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "qattus"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-ghasfur",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "għasfur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "g-asfur"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-fenek",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "fenek",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "fenek"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-pappagall",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "pappagall",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "pappagall"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-fekruna",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "fekruna",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "fekruna-tal-art"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-tiegiega",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "tiġieġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "ti-ie-a"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-fellus",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "fellus",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-baqra",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "baqra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "baqra"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-naghga",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "nagħġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "nag-a"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-hmara",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ħmara",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-gurdien",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ġurdien",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "urdien"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-hanzir",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ħanżir",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "an-ir"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-ziemel",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "żiemel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "iemel"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-papra",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "papra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "papra"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-emu",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "emu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-brama",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "brama",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-xadina",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "xadina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "xadina"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-kamaleont",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "kamaleont",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-lampuka",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "lampuka",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-nemla",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "nemla",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "nemla"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-serp",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "serp",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "serp"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-denfil",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "denfil",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-gemel",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ġemel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "emel"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-animals-iljunfant",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "iljunfant",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "iljunfant"
+      },
+      "assessmentIds": [
+        "animal-iljunfant-production"
+      ]
+    },
+    {
+      "id": "b1-colours-abjad",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "abjad",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "abjad"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-bajda",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "bajda",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-ahmar",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "aħmar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "ahmar"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-hamra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ħamra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "ahmar"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-isfar",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "isfar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "isfar"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-safra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "safra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "isfar"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-ahdar",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "aħdar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "ahdar"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-hadra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ħadra",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-griz",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "griż",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "griz"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-griza",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "griża",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-iswed",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "iswed",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "iswed"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-sewda",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "sewda",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "iswed"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-kannella",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "kannella",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "kannella"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-orangjo",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "oranġjo",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "orangjo"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-roza",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "roża",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "roza"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-vjola",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "vjola",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "vjola"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-blu",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "blu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "blu"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-cirku",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ċirku",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-crieki",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ċrieki",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-kaxxa",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "kaxxa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-kaxxi",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "kaxxi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-trijanglu",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "trijanglu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-trijangli",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "trijangli",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-strixxa",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "strixxa",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-strixxi",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "strixxi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-bandiera",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "bandiera",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-pajjiz",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "pajjiż",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-malta",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Malta",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-italja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Italja",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-ingilterra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ingilterra",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-germanja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ġermanja",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-spanja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Spanja",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-franza",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Franza",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-pakistan",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Pakistan",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-ukraina",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ukraina",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-turkija",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Turkija",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-portugall",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Portugall",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-filippini",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Filippini",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-indja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Indja",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-gappun",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ġappun",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-libja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Libja",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-awstralja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Awstralja",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-colours-cina",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ċina",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-te",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "te",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "te"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-spagetti",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "spagetti",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-pizza",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "pizza",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-kaf",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kafè",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "kafe"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-kuskus",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kuskus",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-ilma",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ilma",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-ross",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ross",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "ross"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-paella",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "paella",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-luminata",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "luminata",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-meraq-tal-frott",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "phrase",
+      "sourceRequirement": "meraq tal-frott",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-zejt",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "żejt",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-helu",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ħelu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "helwa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-mandolina",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "mandolina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "mandolina"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-ghanqud",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "għanqud",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-gheneb",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "għeneb",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-dulliegha",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "dulliegħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "dulliegha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-bambinella",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "bambinella",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-bajtra-tax-xewk",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "phrase",
+      "sourceRequirement": "bajtra tax-xewk",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-bettieha",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "bettieħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "bettieha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-cirasa",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ċirasa",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-tina",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "tina",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-tuffieha",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "tuffieħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "tuffieha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-kiwi",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kiwi",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-banana",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "banana",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "banana"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-lumi",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lumi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "lumija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-lumija",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lumija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "lumija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-laham",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "laħam",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "laham"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-langas",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lanġas",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "langasa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-langasa",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lanġasa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "langasa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-laring",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "larinġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "laringa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-laringa",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "larinġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "laringa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-frawli",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "frawli",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "kaxxa-frawli"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-frawla",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "frawla",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "frawla"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-dulliegh",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "dulliegħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "dulliegha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-bettieh",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "bettieħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "bettieha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-tuffieh",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "tuffieħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "tuffieha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-kejk",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kejk",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-kejkijiet",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kejkijiet",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-insalata",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "insalata",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-insalati",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "insalati",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-pastizzi",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "pastizzi",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-pasti",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "pasti",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-gelat",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ġelat",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-ghadma",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "għadma",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-hut",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ħut",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "hut"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-food-cikkulata",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ċikkulata",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-ahwa",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "aħwa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-hu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "ħu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "hu-hija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-oht",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "oħt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "oht-ohti"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-genituri",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "ġenituri",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "genituri"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-omm",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "omm",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "omm"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-missier",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "missier",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "missier"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-nanniet",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "nanniet",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-nannu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "nannu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "nannu"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-nanna",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "nanna",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "nanna"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-ziju",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "ziju",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "ziju"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-zija",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "zija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "zija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-kugin",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "kuġin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "kugin"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-filghodu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "filgħodu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "filghodu"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-f-nofsinhar",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "f'nofsinhar",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-waranofsinhar",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "waranofsinhar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "waranofsinhar"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-filghaxija",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "filgħaxija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "filghaxija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-billejl",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "billejl",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "ta-billejl"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-kmieni",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "kmieni",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "ghada"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-tard",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "tard",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-it-tnejn",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "It-Tnejn",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "it-tnejn"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-it-tlieta",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "It-Tlieta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "it-tlieta"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-l-erbgha",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "L-Erbgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "l-erbgha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-il-hamis",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Il-Ħamis",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "il-hamis"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-il-gimgha",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Il-Ġimgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "il-gimgha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-is-sibt",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Is-Sibt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "is-sibt"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-il-hadd",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Il-Ħadd",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "il-hadd"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-tmiem-il-gimgha",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "tmiem il-ġimgħa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-tenis",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "tenis",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-passeggata",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "passeġġata",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-zfin",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "żfin",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-pjazza",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "pjazza",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-restorant",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "restorant",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-bongu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Bonġu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-il-waranofsinhar-it-tajjeb",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Il-waranofsinhar it-tajjeb",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-il-lejla-t-tajba",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Il-lejla t-tajba",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-kif-inti",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Kif inti",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-mhux-hazin",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Mhux ħażin",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b1-family-hu-hsieb",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Ħu ħsieb",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-basket-tal-iskola",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "phrase",
+      "sourceRequirement": "basket tal-iskola",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-pokit",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "pokit",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-temprina",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "temprina",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kulur",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kulur",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-lapes",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "lapes",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "lapes"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-fajl",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "fajl",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "fajl"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-ktieb",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ktieb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "ktieb"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-marker",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "marker",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kalkulatur",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kalkulatur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "kalkulatur"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kumpass",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kumpass",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-imqass",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "imqass",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "imqass"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-pitazz",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "pitazz",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "pitazz"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-karta",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "karta",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kolla",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kolla",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "kolla"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-orarju",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "orarju",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-riga",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "riga",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-sabih",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "sabiħ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-sabiha",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "sabiħa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-sbieh",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "sbieħ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-ikrah",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikrah",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kerha",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kerha",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-koroh",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "koroh",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kbir",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kbir",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kbira",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kbira",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-kbar",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kbar",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-zghir",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "żgħir",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-zghira",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "żgħira",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-zghar",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "żgħar",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-gdid",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ġdid",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-gdida",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ġdida",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-godda",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ġodda",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-qadim",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "qadim",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-qadima",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "qadima",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-qodma",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "qodma",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-modern",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "modern",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-moderna",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "moderna",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-moderni",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "moderni",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-antik",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "antik",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-antika",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "antika",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-antiki",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "antiki",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-ikkulurit",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikkulurit",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-ikkulurita",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikkulurita",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-ikkuluriti",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikkuluriti",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-nadif",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "nadif",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-nadifa",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "nadifa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-nodfa",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "nodfa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-school-bag-mahmuga",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-qum",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "qum",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-qumu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "qumu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-poggi",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "poġġi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-po-a"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-poggu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "poġġu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-po-a"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-ikteb",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "ikteb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-kiteb"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-iktbu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "iktbu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-kiteb"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-aghlaq",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "agħlaq",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-g-alaq"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-aghlqu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "agħlqu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-g-alaq"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-ohrog",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "oħroġ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-ohorgu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "oħorġu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-idhol",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "idħol",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-da-al"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-idhlu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "idħlu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-da-al"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-dahhal",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "daħħal",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-dahhlu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "daħħlu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-aqra",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "aqra",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-aqraw",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "aqraw",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-iftah",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "iftaħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-feta"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-ifthu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "iftħu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-feta"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-isimghu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "isimgħu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-sema"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-staqsi",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "staqsi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-tkellem",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "tkellem",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-aghmel",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "agħmel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-g-amel"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-wiehed",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "wieħed",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-1"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-tnejn",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "tnejn",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-2"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-tlieta",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "tlieta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-3"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-erbgha",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "erbgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-4"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-hamsa",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "ħamsa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-5"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-sitta",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "sitta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-6"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-sebgha",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "sebgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-7"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-tmienja",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "tmienja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-8"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-disgha",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "disgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-9"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-imperative-ghaxra",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "għaxra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-10"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-borra",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "borra",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-temperatura",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "temperatura",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-sajjetti",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sajjetti",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-shab",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sħab",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "shab"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-rih",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "riħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "rih"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-shana",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sħana",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-kesha",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "kesħa",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-maltemp",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "maltemp",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-istagun",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "istaġun",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-staguni",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "staġuni",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-rebbiegha",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "rebbiegħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "rebbiegha"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-sajf",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sajf",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "sajf"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-harifa",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "ħarifa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "harifa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-xitwa",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xitwa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "xitwa"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-xemx",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xemx",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "xemx"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-xita",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xita",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "xita"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-raghad",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "ragħad",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-bnazzi",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "bnazzi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-silg",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "silġ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-xemxi",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xemxi",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-imsahhab",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "imsaħħab",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-l-oghla-temperatura",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "phrase",
+      "sourceRequirement": "l-ogħla temperatura",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-weather-l-inqas-temperatura",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "phrase",
+      "sourceRequirement": "l-inqas temperatura",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-flokk-hafif",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk ħafif",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-libsa-hafifa",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "libsa ħafifa",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-dublett",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "dublett",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-flokk-bil-komma-qasira",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk bil-komma qasira",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-gakketta-tal-jeans",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "ġakketta tal-jeans",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-flokk-ta-taht",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk ta' taħt",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-qalziet-hafif",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "qalziet ħafif",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-flokk-bic-cingi",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk biċ-ċingi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-malja",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "malja",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-kappell",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "kappell",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-karkur",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "karkur",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-flokk-tas-suf",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk tas-suf",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-gakketta",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ġakketta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "shopping_clothes.html",
+        "file": "assets/data/shopping_clothes.json",
+        "itemId": "gakketta"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-glekk",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ġlekk",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-qalziet",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "qalziet",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "shopping_clothes.html",
+        "file": "assets/data/shopping_clothes.json",
+        "itemId": "qalziet"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-boots",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "boots",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-xalpa",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "xalpa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-hdax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ħdax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-11"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-tnax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "tnax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-12"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-tlettax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "tlettax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-13"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-erbatax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "erbatax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-14"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-hmistax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ħmistax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-15"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-sittax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "sittax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-16"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-sbatax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "sbatax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-17"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-tmintax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "tmintax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-18"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-dsatax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "dsatax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-19"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-clothes-ghoxrin",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "għoxrin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-20"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-libes",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "libes",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ilbes",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ilbes",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ilbsu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ilbsu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ghamel",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "għamel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-aghmel",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "agħmel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-aghmlu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "agħmlu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-uza",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "uża",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-uzaw",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "użaw",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ghum",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "għum",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-imxi",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "imxi",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-orqod",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "orqod",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-qum",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "qum",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ilghab",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ilgħab",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ara",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ara",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-ohrog",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "oħroġ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-nilbes",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se nilbes",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-mmur",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se mmur",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-norqdu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se norqdu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-tilghab",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se tilgħab",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-naraw",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se naraw",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-jghumu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se jgħumu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-nohorgu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se noħorġu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-niekol",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se niekol",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-hobbies-se-naghmel",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se nagħmel",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-kafetterija",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "kafetterija",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-ispizerija",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "ispiżerija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "spizerija"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-furnar",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "furnar",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-restorant",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "restorant",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-ufficcju-tal-kunsill-lokali",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "uffiċċju tal-Kunsill Lokali",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-knisja",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "knisja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "knisja"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-posta",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "posta",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-zuntier",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "zuntier",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-pastizz-tal-irkotta",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "pastizz tal-irkotta",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-pastizz-tal-pizelli",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "pastizz tal-piżelli",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-medicina",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "mediċina",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-menu",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "menu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-appartament",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "appartament",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-triq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "triq",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-sqaq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "sqaq",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-numru",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "numru",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-vjal",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "vjal",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-pjazza",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "pjazza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "pjazza"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-lukanda",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "lukanda",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-indirizz",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "indirizz",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-aqsam-it-triq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Aqsam it-triq",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-dur-fuq-ix-xellug",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Dur fuq ix-xellug",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-dur-mal-kantuniera",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Dur mal-kantuniera",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-ieqaf",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "Ieqaf",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-dur-fuq-il-lemin",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Dur fuq il-lemin",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-imxi-dritt",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Imxi dritt",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-itla-l-fuq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Itla' 'l fuq",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-town-inzel-l-isfel",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Inżel 'l isfel",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-plastik",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "plastik",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "plastik"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-karta",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "karta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "karta"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-riciklar",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "riċiklar",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-skart-imhallat",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "phrase",
+      "sourceRequirement": "skart imħallat",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-skart-riciklabbli",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "phrase",
+      "sourceRequirement": "skart riċiklabbli",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-nadif",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "nadif",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-nadifa",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "nadifa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-nodfa",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "nodfa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mahmug",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mahmuga",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mahmugin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġin",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mimli",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mimli",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mimlija",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mimlija",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mimlijin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mimlijin",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mormi",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mormi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mormija",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mormija",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mormijin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mormijin",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-jinten",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "jinten",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-tinten",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "tinten",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-jintnu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "jintnu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-miftuh",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "miftuħ",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-miftuha",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "miftuħa",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-miftuhin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "miftuħin",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mqatta",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mqatta'",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mqattgha",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mqattgħa",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-mqattghin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mqattgħin",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-skart-organiku",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "phrase",
+      "sourceRequirement": "skart organiku",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-borza",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "borża",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "nohrog-il-borza"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-kontenitur",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "kontenitur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "nahsel-il-kontenitur"
+      },
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-armi",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "armi",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-armu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "armu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-ghazel",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "għażel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-aghzel",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "agħżel",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-aghzlu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "agħżlu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-waddab",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "waddab",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-waddbu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "waddbu",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-issepara",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "issepara",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-isseparaw",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "isseparaw",
+      "role": "core",
+      "implementationStatus": "missing",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-hareg",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "ħareġ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-ohrog",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "oħroġ",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    },
+    {
+      "id": "b2-recycling-ohorgu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "oħorġu",
+      "role": "core",
+      "implementationStatus": "evidence-only",
+      "contentRef": null,
+      "assessmentIds": []
+    }
   ]
 }
