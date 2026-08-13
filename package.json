@@ -16,6 +16,7 @@
     "data:lint": "node ./scripts/data_lint.js",
     "content:lint": "node ./scripts/content_lint.js",
     "books:coverage": "node ./scripts/book_coverage_check.js",
+    "course:lint": "node ./scripts/course_lint.js",
     "links:lint": "node ./scripts/links_lint.js",
     "functional:test": "node ./scripts/functional_check.js"
   },

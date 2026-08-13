@@ -117,6 +117,7 @@
       "chapterId": "b1-animals",
       "title": "Animals Quick Check",
       "passPercent": 67,
+      "assessmentKind": "chapter-test",
       "items": [
         {
           "id": "animal-possession",
@@ -147,6 +148,39 @@
           ],
           "explanation": "These frequent animal nouns have forms worth learning as pairs.",
           "reviewCard": { "maltese": "Dawn huma żewġ qtates u tliet klieb.", "english": "These are two cats and three dogs." }
+        },
+        {
+          "id": "animal-kelb-meaning",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": ["b1-animals-kelb"],
+          "prompt": "What does kelb mean?",
+          "choices": ["dog", "cat", "bird"],
+          "answer": "dog",
+          "explanation": "Kelb is the Maltese word for dog.",
+          "reviewCard": { "maltese": "kelb", "english": "dog" }
+        },
+        {
+          "id": "animal-qattus-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-animals-qattus"],
+          "prompt": "Write the Maltese word for cat.",
+          "answer": "qattus",
+          "accepted": ["qattus"],
+          "explanation": "Qattus means cat.",
+          "reviewCard": { "maltese": "qattus", "english": "cat" }
+        },
+        {
+          "id": "animal-iljunfant-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": ["b1-animals-iljunfant"],
+          "prompt": "Write the Maltese word for elephant.",
+          "answer": "iljunfant",
+          "accepted": ["iljunfant"],
+          "explanation": "Iljunfant means elephant.",
+          "reviewCard": { "maltese": "iljunfant", "english": "elephant" }
         }
       ]
     },
