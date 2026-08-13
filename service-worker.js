@@ -48,6 +48,7 @@ const CORE_ASSETS = [
   "./assets/js/course-path.js",
   "./assets/js/course-chapter.js",
   "./assets/js/course-context.js",
+  "./assets/js/course-topic-view.js",
   "./assets/js/exercise-runner.js",
   "./assets/js/review-store.js"
 ];

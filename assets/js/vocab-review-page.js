@@ -46,6 +46,7 @@
         function toReviewWord(item, group) {
             return {
                 id: makeReviewId(item),
+                contentId: item.id || item.slug || "",
                 maltese: item.maltese,
                 english: item.english,
                 topic: group.title || config.defaultTopic || "General",
@@ -129,7 +130,7 @@
             button.dataset.items = JSON.stringify(words);
             button.dataset.bulkLabel = label;
             button.addEventListener("click", function () {
-                addWords(words);
+                addWords(JSON.parse(button.dataset.items || "[]"));
             });
 
             const status = document.createElement("span");
@@ -156,7 +157,7 @@
             button.dataset.items = JSON.stringify(words);
             button.dataset.bulkLabel = config.pageBulkLabel || "Add all words";
             button.addEventListener("click", function () {
-                addWords(words);
+                addWords(JSON.parse(button.dataset.items || "[]"));
             });
 
             toolbar.insertBefore(button, toolbar.children[1] || null);
@@ -199,6 +200,9 @@
 
             injectPageBulkButton(allItems);
             refreshReviewUi();
+            document.dispatchEvent(new CustomEvent("malti-vocab-rendered", {
+                detail: { data: data, config: config }
+            }));
         }
 
         function loadData() {

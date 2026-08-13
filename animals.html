@@ -52,8 +52,8 @@
                 <li><a href="#domestic">Domestic Animals</a></li>
                 <li><a href="#wild">Wild and Zoo Animals</a></li>
                 <li><a href="#lesson-patterns">Lesson 17 Description Patterns</a></li>
-                <li><a href="#domestic-bank">Domestic Descriptions</a></li>
-                <li><a href="#wild-bank">Wild / Zoo Descriptions</a></li>
+                <li data-course-nav-role="extended"><a href="#domestic-bank">Domestic Descriptions</a></li>
+                <li data-course-nav-role="extended"><a href="#wild-bank">Wild / Zoo Descriptions</a></li>
             </ul>
             <p class="mini">The main grammar on this page comes from <code>dan / din / dawn</code>, <code>għandi</code>,
                 <code>għandu / għandha</code>, colours, body parts, and simple present tense.</p>
@@ -131,7 +131,7 @@
                 </div>
             </section>
 
-            <section class="content-card" id="domestic-bank">
+            <section class="content-card" id="domestic-bank" data-course-section-role="extended">
                 <span class="tag">Practice Bank</span>
                 <h2>Domestic Animal Descriptions</h2>
                 <p class="muted-note">Short, course-safe lines for homework and oral practice. The grammar stays simple
@@ -139,7 +139,7 @@
                 <div data-example-group="domestic-bank"></div>
             </section>
 
-            <section class="content-card" id="wild-bank">
+            <section class="content-card" id="wild-bank" data-course-section-role="extended">
                 <span class="tag">Practice Bank</span>
                 <h2>Wild or Zoo Animal Descriptions</h2>
                 <p class="muted-note">Use these lines for zoo pictures, wild animal descriptions, and short speaking
@@ -155,6 +155,7 @@
 <script src="./assets/js/render-vocab-cards.js"></script>
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/animal-compact-toggle.js"></script>
+<script src="./assets/js/course-topic-view.js"></script>
 <script>
 window.MaltiVocabReviewPage = {
     dataUrl: "./assets/data/animals.json",

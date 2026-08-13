@@ -153,6 +153,18 @@
   gap: var(--space-sm);
 }
 
+.course-view-toggle {
+  margin-left: auto;
+}
+
+.course-scope-status {
+  flex: 0 0 auto;
+}
+
+[data-content-id][data-course-role="core"] {
+  border-color: var(--border-strong);
+}
+
 .course-chapter-shell {
   display: grid;
   gap: var(--space-4xl);
@@ -313,5 +325,14 @@
   .course-context-bar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .course-view-toggle {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .course-view-toggle .toggle-chip {
+    flex: 1 1 9rem;
   }
 }

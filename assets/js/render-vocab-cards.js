@@ -41,6 +41,10 @@
     function createFigureCard(item, options) {
         var figure = document.createElement("figure");
         figure.className = options.cardClass || "visual-vocab-card";
+        figure.dataset.contentId = item.id || item.slug || "";
+        if (options.groupId) {
+            figure.dataset.contentGroup = options.groupId;
+        }
 
         var lead = createVisualLead(item, options || {});
         if (lead) {
@@ -70,7 +74,7 @@
     function renderFigureGroup(container, group, options) {
         container.innerHTML = "";
         (group.items || []).forEach(function (item) {
-            container.appendChild(createFigureCard(item, options || {}));
+            container.appendChild(createFigureCard(item, Object.assign({}, options || {}, { groupId: group.id })));
         });
     }
 
