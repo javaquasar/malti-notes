@@ -9,7 +9,7 @@ const inventory = JSON.parse(fs.readFileSync(inventoryPath, "utf8"));
 function listFiles(dir, predicate, files = []) {
   fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
     const absolute = path.join(dir, entry.name);
-    if (entry.isDirectory()) listFiles(absolute, predicate, files);
+    if (entry.isDirectory() && entry.name !== "generated") listFiles(absolute, predicate, files);
     if (entry.isFile() && predicate(absolute)) files.push(absolute);
   });
   return files;

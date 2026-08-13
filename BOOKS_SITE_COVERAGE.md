@@ -16,12 +16,14 @@ Coverage means that the normalized Maltese word or phrase was found in the site'
 | B2 vocabulary | 212 | 145 | 67 | 68.4% |
 | Combined vocabulary | 437 | 312 | 125 | 71.4% |
 | B1 verb-form audit | 61 | 48 | 13 | 78.7% |
-| B2 verb-form audit | 64 | 31 | 33 | 48.4% |
-| Combined verb-form audit | 125 | 79 | 46 | 63.2% |
+| B2 verb-form audit | 64 | 30 | 34 | 46.9% |
+| Combined verb-form audit | 125 | 78 | 47 | 62.4% |
 
 All 14 chapters, seven from B1 and seven from B2, have a corresponding chapter in `assets/data/course_path.json`.
 
 The inventory also preserves the detailed paradigm gap watchlist produced during the audit. It is intentionally kept separately from the aggregate verb-form measurement because the two checks used different scopes: the aggregate measured forms in the chapter teaching surface, while the watchlist records exact paradigm forms worth protecting or adding anywhere in the site.
+
+The original working-tree scan reported 31 B2 forms. Validation in a clean checkout showed that `rema` came only from the ignored generated verb lookup cache, not from published site content. The frozen baseline above records the corrected clean-site result of 30 B2 forms.
 
 ## Vocabulary Gaps
 
