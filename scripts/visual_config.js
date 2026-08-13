@@ -3,6 +3,7 @@ const fullPageVisualPages = [
   "body_appearance.html",
   "collective_nouns.html",
   "course_path.html",
+  "course_chapter.html?chapter=b1-animals",
   "environment_recycling.html",
   "hobbies_future.html",
   "introductions_alphabet.html",

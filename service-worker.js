@@ -1,10 +1,11 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}v7`;
+const CACHE_NAME = `${CACHE_PREFIX}v8`;
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./all_pages.html",
   "./course_path.html",
+  "./course_chapter.html",
   "./introductions_alphabet.html",
   "./school_classroom.html",
   "./hobbies_future.html",
@@ -13,6 +14,8 @@ const CORE_ASSETS = [
   "./assets/data/site-map.json",
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",
+  "./assets/data/course_target_bindings.json",
+  "./assets/data/book_coverage_inventory.json",
   "./assets/data/introductions_alphabet.json",
   "./assets/data/introductions_alphabet_examples.json",
   "./assets/data/school_classroom.json",
@@ -43,6 +46,7 @@ const CORE_ASSETS = [
   "./assets/js/site-header.js",
   "./assets/js/site-map-pages.js",
   "./assets/js/course-path.js",
+  "./assets/js/course-chapter.js",
   "./assets/js/course-context.js",
   "./assets/js/exercise-runner.js",
   "./assets/js/review-store.js"

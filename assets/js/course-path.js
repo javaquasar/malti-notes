@@ -17,13 +17,23 @@
 
   const objectiveKey = (chapterId, objectiveId) => `${chapterId}::${objectiveId}`;
 
-  const createLink = (page) => {
+  const contextualPageUrl = (page, level, chapter, index) => {
+    const params = new URLSearchParams({
+      course: level.id,
+      chapter: chapter.id,
+      step: String(index + 1)
+    });
+    if (page.scopedView === true) params.set("view", "chapter");
+    return `./${page.href}?${params.toString()}`;
+  };
+
+  const createLink = (page, level, chapter, index) => {
     const article = document.createElement("article");
     const link = document.createElement("a");
     const description = document.createElement("span");
 
     article.className = "course-page-link";
-    link.href = `./${page.href}`;
+    link.href = contextualPageUrl(page, level, chapter, index);
     link.textContent = page.label;
     description.textContent = page.focus;
     article.append(link, description);
@@ -69,6 +79,8 @@
     const practiceSummary = document.createElement("summary");
     const practiceContainer = document.createElement("div");
     const stats = chapterObjectiveStats(chapter, progress);
+    const chapterActions = document.createElement("div");
+    const chapterLink = document.createElement("a");
 
     article.className = "course-chapter content-group";
     article.id = chapter.id;
@@ -89,7 +101,12 @@
     });
     pagesHeading.textContent = "Study pages";
     pages.className = "course-page-links";
-    pages.replaceChildren(...chapter.pages.map(createLink));
+    pages.replaceChildren(...chapter.pages.map((page, index) => createLink(page, level, chapter, index)));
+    chapterActions.className = "toolbar-row course-chapter-actions";
+    chapterLink.className = "action-link";
+    chapterLink.href = `./course_chapter.html?chapter=${encodeURIComponent(chapter.id)}`;
+    chapterLink.textContent = "Open chapter";
+    chapterActions.appendChild(chapterLink);
     practice.className = "course-practice";
     practiceSummary.textContent = "Quick check";
     practiceContainer.dataset.exerciseSet = chapter.exerciseSetId;
@@ -98,7 +115,7 @@
 
     titleWrap.append(eyebrow, title);
     header.append(titleWrap, status);
-    article.append(header, summary, objectiveHeading, objectives, pagesHeading, pages, practice);
+    article.append(header, summary, chapterActions, objectiveHeading, objectives, pagesHeading, pages, practice);
     return article;
   };
 
