@@ -31,6 +31,14 @@
     if (element) element.textContent = value;
   };
 
+  const updateLearnerMetrics = (implemented) => {
+    const progress = window.MaltiStorage?.getJson(TARGET_PROGRESS_KEY, {}) || {};
+    const mastered = implemented.filter((target) => progress[target.id]?.state === "mastered").length;
+    const review = implemented.filter((target) => progress[target.id]?.state === "review").length;
+    setText("[data-course-mastery]", `${mastered} / ${implemented.length}`);
+    setText("[data-course-review-count]", String(review));
+  };
+
   const renderNeighbours = (course, match) => {
     const all = course.levels.flatMap((level) => level.chapters.map((chapter) => ({ level, chapter })));
     const current = all.findIndex(({ chapter }) => chapter.id === match.chapter.id);
@@ -136,9 +144,6 @@
     const chapterTargets = bindings.targets.filter((target) => target.chapterId === chapterId && target.role === "core");
     const implemented = chapterTargets.filter((target) => target.implementationStatus === "implemented");
     const assessed = implemented.filter((target) => target.assessmentIds.length > 0);
-    const progress = window.MaltiStorage?.getJson(TARGET_PROGRESS_KEY, {}) || {};
-    const mastered = implemented.filter((target) => progress[target.id]?.state === "mastered").length;
-    const review = implemented.filter((target) => progress[target.id]?.state === "review").length;
     const required = inventoryChapter.targets.length;
     const bookCovered = required - inventoryChapter.baselineMissing.length;
 
@@ -148,8 +153,11 @@
     setText("[data-course-chapter-summary]", match.chapter.summary);
     setText("[data-course-book-coverage]", `${bookCovered} / ${required}`);
     setText("[data-course-guided-coverage]", chapterTargets.length ? `${implemented.length} / ${required}` : "Mapping pending");
-    setText("[data-course-mastery]", chapterTargets.length ? `${mastered} / ${implemented.length}` : "Not available");
-    setText("[data-course-review-count]", String(review));
+    if (chapterTargets.length) updateLearnerMetrics(implemented);
+    else {
+      setText("[data-course-mastery]", "Not available");
+      setText("[data-course-review-count]", "0");
+    }
     setText("[data-course-binding-note]", chapterTargets.length
       ? `${implemented.length} targets are connected to canonical lesson cards. Evidence-only and missing targets stay visible until proper teaching content is added.`
       : "The chapter route is available, while stable target-to-content bindings are still being prepared.");
@@ -174,6 +182,7 @@
     renderMissing(inventoryChapter, chapterTargets);
     document.querySelector("[data-course-chapter-empty]").hidden = true;
     document.querySelector("[data-course-chapter-content]").hidden = false;
+    window.addEventListener("malti-course-target-progress", () => updateLearnerMetrics(implemented));
     await renderExercise(match.chapter);
   };
 

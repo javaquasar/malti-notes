@@ -2,6 +2,7 @@
   if (window.MaltiExerciseRunner) return;
 
   const STORAGE_KEY = "malti_exercise_progress_v1";
+  const TARGET_PROGRESS_KEY = "malti_course_target_progress_v1";
   const DEFAULT_DATA_URL = "./assets/data/course_exercises.json";
   const dataCache = new Map();
   const storage = window.MaltiStorage;
@@ -49,6 +50,48 @@
     heading.textContent = item.prompt;
     header.appendChild(heading);
     return header;
+  };
+
+  const loadTargetProgress = () => {
+    const value = storage?.getJson(TARGET_PROGRESS_KEY, {});
+    return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  };
+
+  const saveTargetProgress = (progress) => {
+    storage?.setJson(TARGET_PROGRESS_KEY, progress);
+    window.dispatchEvent(new CustomEvent("malti-course-target-progress"));
+  };
+
+  const recordTargetResults = (results) => {
+    const progress = loadTargetProgress();
+    const date = new Date().toISOString().slice(0, 10);
+    let changed = false;
+
+    results.forEach(({ item, correct }) => {
+      (item.targetIds || []).forEach((targetId) => {
+        const previous = progress[targetId] || {};
+        const successfulDates = Array.isArray(previous.successfulDates) ? previous.successfulDates.slice() : [];
+        const mode = item.assessmentMode === "production" ? "production" : "recognition";
+        const next = {
+          attempts: (previous.attempts || 0) + 1,
+          recognitionCorrect: previous.recognitionCorrect === true,
+          productionCorrect: previous.productionCorrect === true,
+          successfulDates,
+          lastResult: correct ? "correct" : "incorrect",
+          lastAttemptAt: new Date().toISOString()
+        };
+        if (correct) {
+          next[`${mode}Correct`] = true;
+          if (!successfulDates.includes(date)) successfulDates.push(date);
+        }
+        next.state = correct
+          ? (next.recognitionCorrect && next.productionCorrect && successfulDates.length >= 2 ? "mastered" : "learning")
+          : "review";
+        progress[targetId] = next;
+        changed = true;
+      });
+    });
+    if (changed) saveTargetProgress(progress);
   };
 
   const renderChoices = (item, itemElement, values) => {
@@ -235,7 +278,8 @@
     group: "Course quick checks",
     sourcePage: window.location.pathname.split("/").pop() || "course_path.html",
     prompt: item.reviewCard.maltese,
-    answer: item.reviewCard.english
+    answer: item.reviewCard.english,
+    targetIds: item.targetIds || []
   });
 
   const saveMissedToReview = (set, missedItems) => {
@@ -296,11 +340,13 @@
       event.preventDefault();
       let score = 0;
       const missed = [];
+      const targetResults = [];
 
       set.items.forEach((item) => {
         const itemElement = form.querySelector(`[data-exercise-item="${item.id}"]`);
         const feedback = itemElement.querySelector(".exercise-feedback");
         const correct = isCorrect(item, answerFor(itemElement, item));
+        targetResults.push({ item, correct });
         itemElement.classList.toggle("is-correct", correct);
         itemElement.classList.toggle("is-incorrect", !correct);
         feedback.hidden = false;
@@ -328,15 +374,24 @@
         updatedAt: new Date().toISOString()
       };
       saveProgress(progress);
+      recordTargetResults(targetResults);
       updateBestStatus(best, set);
+
+      const autoSaveMissed = container.dataset.autoSaveMissed === "true";
+      const autoSaved = autoSaveMissed ? saveMissedToReview(set, missed) : 0;
 
       result.textContent = passed
         ? `${score}/${total}. Quick check passed.`
         : `${score}/${total}. Review the feedback and try again.`;
+      if (autoSaveMissed && missed.length) {
+        result.textContent += autoSaved
+          ? ` ${autoSaved} missed answer${autoSaved === 1 ? "" : "s"} saved to review.`
+          : " Missed answers are already in review.";
+      }
       result.dataset.state = passed ? "passed" : "review";
       checkButton.hidden = true;
       retryButton.hidden = false;
-      saveButton.hidden = !missed.some((item) => item.reviewCard) || !window.MaltiReviewStore;
+      saveButton.hidden = autoSaveMissed || !missed.some((item) => item.reviewCard) || !window.MaltiReviewStore;
 
       saveButton.onclick = () => {
         const saved = saveMissedToReview(set, missed);
@@ -366,8 +421,10 @@
 
   window.MaltiExerciseRunner = {
     getProgress: loadProgress,
+    getTargetProgress: loadTargetProgress,
     scan,
-    storageKey: STORAGE_KEY
+    storageKey: STORAGE_KEY,
+    targetStorageKey: TARGET_PROGRESS_KEY
   };
 
   const start = () => scan();

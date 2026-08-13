@@ -124,6 +124,11 @@ function validateCourseBindings({ root, fail }) {
   exerciseItems.forEach(({ item }) => (item.targetIds || []).forEach((targetId) => {
     if (!targetIds.has(targetId)) fail(exerciseFile, `${item.id} references missing target: ${targetId}`);
   }));
+  exerciseItems.forEach(({ item }) => {
+    if ((item.targetIds || []).length && !["recognition", "production"].includes(item.assessmentMode)) {
+      fail(exerciseFile, `${item.id}.assessmentMode must be recognition or production when targetIds are present`);
+    }
+  });
   (bindings.pilotChapterIds || []).forEach((chapterId) => {
     const inventoryChapter = inventoryByChapter.get(chapterId);
     const bound = requirementsByChapter.get(chapterId) || new Set();
