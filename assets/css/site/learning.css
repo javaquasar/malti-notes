@@ -162,7 +162,7 @@
 }
 
 [data-content-id][data-course-role="core"] {
-  border-color: var(--border-strong);
+  border-color: var(--border-panel);
 }
 
 .course-chapter-shell {
@@ -248,7 +248,7 @@
   place-items: center;
   width: var(--space-3xl);
   height: var(--space-3xl);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border-panel);
   border-radius: 50%;
   color: var(--text-brand);
   font-weight: 700;

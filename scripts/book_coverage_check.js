@@ -3,6 +3,7 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const inventoryPath = path.join(root, "assets", "data", "book_coverage_inventory.json");
+const bindingsPath = path.join(root, "assets", "data", "course_target_bindings.json");
 const wordSearchBankPath = path.join(root, "assets", "js", "word-search-bank.js");
 const inventory = JSON.parse(fs.readFileSync(inventoryPath, "utf8"));
 
@@ -85,7 +86,11 @@ function loadCorpus() {
     .forEach((file) => htmlVariants(fs.readFileSync(file, "utf8")).forEach((value) => documents.push(makeDocument(value))));
 
   const dataRoot = path.join(root, "assets", "data");
-  listFiles(dataRoot, (file) => file.endsWith(".json") && path.resolve(file) !== path.resolve(inventoryPath))
+  listFiles(dataRoot, (file) => (
+    file.endsWith(".json") &&
+    path.resolve(file) !== path.resolve(inventoryPath) &&
+    path.resolve(file) !== path.resolve(bindingsPath)
+  ))
     .sort()
     .forEach((file) => {
       const data = JSON.parse(fs.readFileSync(file, "utf8"));

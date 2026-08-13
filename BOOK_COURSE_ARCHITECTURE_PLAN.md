@@ -1,8 +1,20 @@
 # Book Course Architecture Plan
 
-Status: accepted architecture direction, implementation pending.
+Status: accepted architecture direction, B1 Animals vertical slice implemented.
 
 Last updated: 2026-08-13.
+
+## Implementation Progress
+
+The first reusable vertical slice is complete:
+
+- `course_chapter.html` renders any of the 14 chapters from existing course and audit data.
+- B1 Animals has stable bindings for all 27 book requirements: 20 linked to canonical lesson cards, one evidence-only target, and six explicit content gaps.
+- `animals.html` supports `Chapter material` and `Full topic` without duplicating its 60 vocabulary records.
+- The chapter test links recognition and production items to target progress and sends missed answers to shared review.
+- `course:lint`, data lint, Playwright, and visual CI protect the new contracts.
+
+The remaining phases are the rollout of stable bindings and scoped rendering to the other 13 chapters, broader assessment coverage, entry diagnostics, checkpoints, and enough spaced attempts to expose mastered states in the UI.
 
 ## Decision Summary
 

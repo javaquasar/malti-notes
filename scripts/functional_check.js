@@ -127,7 +127,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 38, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 39, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -160,6 +160,45 @@ async function main() {
       assert(await page.locator('[data-course-level="b2"]:not([hidden]) [data-course-chapter]').count() === 7, "B2 chapter count is incomplete.");
       await page.reload({ waitUntil: "networkidle" });
       assert(await page.locator('[data-objective-key="b1-introductions::identity"]').isChecked(), "Course objective was not restored.");
+    });
+
+    await runTest(context, "guided chapter route reports book, mapping, and assessment scope", async (page) => {
+      await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
+      assert((await page.locator("[data-course-chapter-title]").textContent()).trim() === "L-Annimali", "Animals chapter title is missing.");
+      assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "21 / 27", "Frozen animals coverage is incorrect.");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "20 / 27", "Guided animals coverage is incorrect.");
+      assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
+      assert(await page.locator("#chapter-test .exercise-item").count() === 6, "Animals chapter test is incomplete.");
+      const firstStepHref = await page.locator(".course-step a").first().getAttribute("href");
+      assert(firstStepHref.includes("animals.html?course=b1") && firstStepHref.includes("view=chapter"), "Animals step does not open chapter view.");
+
+      await page.locator("#chapter-test button[type=submit]").click();
+      const saved = await page.evaluate(() => ({
+        targets: JSON.parse(localStorage.getItem("malti_course_target_progress_v1")),
+        review: JSON.parse(localStorage.getItem("malti_review_cards_v2"))
+      }));
+      assert(Object.values(saved.targets).filter((target) => target.state === "review").length === 3, "Missed target states were not saved.");
+      assert(Object.keys(saved.review).length === 6, "Missed chapter answers were not added to shared review.");
+      assert((await page.locator("[data-course-review-count]").textContent()).trim() === "3", "Chapter review count did not update.");
+    });
+
+    await runTest(context, "book context scopes a topic without changing its full view", async (page) => {
+      await openCleanPage(page, "animals.html");
+      await page.locator("[data-content-id]").first().waitFor();
+      assert(await page.locator("[data-content-id]:visible").count() === 60, "Normal animals topic is not complete.");
+
+      await page.goto(`${baseUrl}/animals.html?course=b1&chapter=b1-animals&step=1&view=chapter`, { waitUntil: "networkidle" });
+      await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
+      assert(await page.locator("[data-content-id]:visible").count() === 18, "Chapter animals view has the wrong card count.");
+      assert(await page.locator('[data-course-section-role="extended"]:visible').count() === 0, "Extended animal banks are visible in chapter mode.");
+      assert(await page.locator("[data-course-view-toggle]").count() === 1, "Topic scope control is missing.");
+      const chapterBulkCount = await page.locator("[data-page-review-add]").evaluate((button) => JSON.parse(button.dataset.items).length);
+      assert(chapterBulkCount === 18, "Chapter bulk review contains extended animal cards.");
+
+      await page.locator('[data-course-view="all"]').click();
+      assert(await page.locator("[data-content-id]:visible").count() === 60, "Full topic did not restore all animal cards.");
+      assert(await page.locator('[data-course-section-role="extended"]:visible').count() === 2, "Full topic did not restore extended animal banks.");
+      assert(new URL(page.url()).searchParams.get("view") === "all", "Topic scope was not written to the URL.");
     });
 
     await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {
@@ -297,12 +336,14 @@ async function main() {
         window.localStorage.setItem("malti_word_search_seen_words_v1", JSON.stringify(["kelb"]));
         window.localStorage.setItem("malti_course_progress_v1", JSON.stringify({ objectives: { "b1-introductions::identity": true }, activeLevel: "b1" }));
         window.localStorage.setItem("malti_exercise_progress_v1", JSON.stringify({ "b1-introductions-check": { score: 3, total: 3, passed: true } }));
+        window.localStorage.setItem("malti_course_target_progress_v1", JSON.stringify({ "b1-animals-kelb": { state: "learning", attempts: 1 } }));
         const backup = window.MaltiProgressBackup.exportBackup();
         window.MaltiProgressBackup.clearAll();
         const clearedTotal = window.MaltiReviewStore.getStats().total;
         const clearedSeen = window.localStorage.getItem("malti_word_search_seen_words_v1");
         const clearedCourse = window.localStorage.getItem("malti_course_progress_v1");
         const clearedExercises = window.localStorage.getItem("malti_exercise_progress_v1");
+        const clearedTargets = window.localStorage.getItem("malti_course_target_progress_v1");
         const imported = window.MaltiProgressBackup.importBackup(backup, { mode: "replace" });
         return {
           format: backup.format,
@@ -312,19 +353,22 @@ async function main() {
           clearedSeen,
           clearedCourse,
           clearedExercises,
+          clearedTargets,
           restoredTotal: window.MaltiReviewStore.getStats().total,
           restoredSeen: JSON.parse(window.localStorage.getItem("malti_word_search_seen_words_v1")),
           restoredCourse: JSON.parse(window.localStorage.getItem("malti_course_progress_v1")),
-          restoredExercises: JSON.parse(window.localStorage.getItem("malti_exercise_progress_v1"))
+          restoredExercises: JSON.parse(window.localStorage.getItem("malti_exercise_progress_v1")),
+          restoredTargets: JSON.parse(window.localStorage.getItem("malti_course_target_progress_v1"))
         };
       });
 
       assert(result.format === "malti-progress-backup-v1", "Unexpected backup format.");
-      assert(result.exportedKeys >= 4 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");
-      assert(result.clearedTotal === 0 && result.clearedSeen === null && result.clearedCourse === null && result.clearedExercises === null, "Progress was not cleared before import.");
+      assert(result.exportedKeys >= 5 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");
+      assert(result.clearedTotal === 0 && result.clearedSeen === null && result.clearedCourse === null && result.clearedExercises === null && result.clearedTargets === null, "Progress was not cleared before import.");
       assert(result.restoredTotal === 1 && result.restoredSeen[0] === "kelb", "Review and game progress was not restored.");
       assert(result.restoredCourse.objectives["b1-introductions::identity"] === true, "Course progress was not restored.");
       assert(result.restoredExercises["b1-introductions-check"].passed === true, "Exercise progress was not restored.");
+      assert(result.restoredTargets["b1-animals-kelb"].state === "learning", "Course target progress was not restored.");
     });
 
     await runTest(context, "word search creates a playable puzzle", async (page) => {
