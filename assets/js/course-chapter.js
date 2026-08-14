@@ -4,6 +4,7 @@
   const BINDINGS_URL = "./assets/data/course_target_bindings.json";
   const TARGET_ASSESSMENTS_URL = "./assets/data/course_target_assessments.json";
   const SUPPLEMENTAL_CONTENT_URL = "./assets/data/course_supplemental_content.json";
+  const SOURCE_PROVENANCE_URL = "./assets/data/course_source_provenance.json";
   const TARGET_PROGRESS_KEY = "malti_course_target_progress_v1";
 
   const loadJson = async (url) => {
@@ -210,8 +211,8 @@
           maltese: item.maltese,
           english: item.english,
           topic: `${chapter.title} book supplement`,
-          sourcePage: "course_chapter.html",
-          example: item.maltese
+          sourcePage: item.sourceLabel || "course_chapter.html",
+          example: item.example || item.maltese
         });
         sync();
       });
@@ -230,12 +231,13 @@
   const initialize = async () => {
     const chapterId = new URLSearchParams(window.location.search).get("chapter");
     if (!chapterId) return;
-    const [course, inventory, bindings, targetAssessments, supplementalContent] = await Promise.all([
+    const [course, inventory, bindings, targetAssessments, supplementalContent, sourceProvenance] = await Promise.all([
       loadJson(COURSE_URL),
       loadJson(INVENTORY_URL),
       loadJson(BINDINGS_URL),
       loadJson(TARGET_ASSESSMENTS_URL),
-      loadJson(SUPPLEMENTAL_CONTENT_URL)
+      loadJson(SUPPLEMENTAL_CONTENT_URL),
+      loadJson(SOURCE_PROVENANCE_URL)
     ]);
     const match = findChapter(course, chapterId);
     const inventoryChapter = inventory.chapters.find((chapter) => chapter.courseChapterId === chapterId);
@@ -265,8 +267,10 @@
       ? `${assessed.length} of ${implemented.length} guided targets have linked self-tests with recognition and production modes.`
       : "Detailed assessment coverage will appear after this chapter receives stable target bindings.");
 
+    const sourceChapter = (sourceProvenance.chapters || []).find((chapter) => chapter.chapterId === chapterId);
+    const sourceRange = sourceChapter ? `${sourceChapter.book} pp. ${sourceChapter.pageStart}-${sourceChapter.pageEnd}` : "Book source pending";
     const pills = document.querySelector("[data-course-chapter-pills]");
-    [`${required} required targets`, `${match.chapter.pages.length} study steps`, `${chapterTargets.length ? implemented.length : 0} guided targets`]
+    [`${required} required targets`, `${match.chapter.pages.length} study steps`, `${chapterTargets.length ? implemented.length : 0} guided targets`, sourceRange]
       .forEach((label) => {
         const pill = document.createElement("span");
         pill.className = "pill";

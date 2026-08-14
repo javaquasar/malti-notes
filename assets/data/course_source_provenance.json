@@ -1,0 +1,8699 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-14",
+  "description": "Persisted target-to-book provenance. Normal builds validate this file and do not parse source PDFs.",
+  "method": {
+    "pageNumbering": "Printed book pages; printed page 3 is PDF page 4.",
+    "targetMatch": "First exact normalized text hit within the audited chapter; folded OCR match is used only when exact text is absent.",
+    "fallback": "chapter-range means OCR did not expose an exact target token; the audited chapter range remains authoritative.",
+    "refreshRule": "Run the manual refresh only when a full-text source PDF hash changes or the frozen inventory is revised."
+  },
+  "sources": [
+    {
+      "book": "B1",
+      "fileName": "Maltese B1.pdf",
+      "sha256": "5067BD8BD3F058B931B30D450F356242B17DAF40ED527EE5389A67F3DCE273B2",
+      "pdfPageCount": 125,
+      "printedPageOffset": 1
+    },
+    {
+      "book": "B2",
+      "fileName": "M B2.pdf",
+      "sha256": "856F7F8629237766ECAFA8873058B10CA45461B3C2642F8C1C517CA51CB5946C",
+      "pdfPageCount": 110,
+      "printedPageOffset": 1
+    }
+  ],
+  "chapters": [
+    {
+      "chapterId": "b1-introductions",
+      "book": "B1",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageStart": 3,
+      "pageEnd": 14
+    },
+    {
+      "chapterId": "b1-residence",
+      "book": "B1",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageStart": 15,
+      "pageEnd": 31
+    },
+    {
+      "chapterId": "b1-school",
+      "book": "B1",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageStart": 32,
+      "pageEnd": 45
+    },
+    {
+      "chapterId": "b1-animals",
+      "book": "B1",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageStart": 46,
+      "pageEnd": 64
+    },
+    {
+      "chapterId": "b1-colours",
+      "book": "B1",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageStart": 65,
+      "pageEnd": 80
+    },
+    {
+      "chapterId": "b1-food",
+      "book": "B1",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageStart": 81,
+      "pageEnd": 100
+    },
+    {
+      "chapterId": "b1-family",
+      "book": "B1",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageStart": 101,
+      "pageEnd": 123
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "book": "B2",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageStart": 3,
+      "pageEnd": 13
+    },
+    {
+      "chapterId": "b2-imperative",
+      "book": "B2",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageStart": 14,
+      "pageEnd": 26
+    },
+    {
+      "chapterId": "b2-weather",
+      "book": "B2",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageStart": 27,
+      "pageEnd": 36
+    },
+    {
+      "chapterId": "b2-clothes",
+      "book": "B2",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageStart": 37,
+      "pageEnd": 54
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "book": "B2",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageStart": 55,
+      "pageEnd": 73
+    },
+    {
+      "chapterId": "b2-town",
+      "book": "B2",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageStart": 74,
+      "pageEnd": 96
+    },
+    {
+      "chapterId": "b2-recycling",
+      "book": "B2",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageStart": 97,
+      "pageEnd": 108
+    }
+  ],
+  "targets": {
+    "b1-introductions-annimal": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-belt": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-certifikat": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-dentist": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-erbgha": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-fenek": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-gemel": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-gazzetta": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ghajn": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ghajnejn": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-huma": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-habel": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ilma": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-iehor": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-jott": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-introductions-kafe": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-folded"
+    },
+    "b1-introductions-lemin": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-meraq": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-negozju": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ors": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-pedala": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-qawsalla": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-rebbiegha": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-serp": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-tezor": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-uviera": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-verita": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-waqfa": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-xellug": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ziemel": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ziju": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 8,
+      "pages": [
+        8
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ferhan": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 12,
+      "pages": [
+        12,
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-ferhana": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 12,
+      "pages": [
+        12,
+        13,
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-sportiv": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 12,
+      "pages": [
+        12,
+        13,
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-sportiva": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 12,
+      "pages": [
+        12,
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-cajtier": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 12,
+      "pages": [
+        12,
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b1-introductions-cajtiera": {
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "chapterNumber": 1,
+      "chapterTitle": "Jien u Int",
+      "pageRange": [
+        3,
+        14
+      ],
+      "primaryPage": 12,
+      "pages": [
+        12,
+        13,
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-rota": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-trakk": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-helikopter": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-vann": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-karozza": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-karozza-tal-linja": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        25,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-mutur": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-vapur": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-mixi": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-mutur": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bir-rota": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-vann": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-karozza": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-kowc": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-kowc": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-skola": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-hanut": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-dar": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bankina": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-sigra": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-sptar": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-ajruplan": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-knisja": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kuritur": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-laboratorju": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-librerija": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-klassi": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-klinika": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-bitha": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        39,
+        41,
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-sala": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        41,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-ufficcju": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-tojlit": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-coff": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-qmis": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-dublett": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-ingravata": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kalzetta": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-glekk": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 39,
+      "pages": [
+        39,
+        40,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-qalziet": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        40,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-zarbuna": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-uniformi": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        37,
+        39,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-ilbies": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        41,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kamra-tas-sodda": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 42,
+      "pages": [
+        42,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kamra-tal-banju": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 42,
+      "pages": [
+        42,
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kamra-tal-ikel": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-gnien": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kcina": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 45,
+      "pages": [
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-salott": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-garaxx": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 45,
+      "pages": [
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-kelb": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50,
+        54,
+        62
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-kelba": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-qattus": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        54
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-qattusa": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50,
+        55
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-ghasfur": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-fenek": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-pappagall": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        50
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-fekruna": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-tigiega": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-fellus": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-baqra": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-naghga": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-hmara": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 58,
+      "pages": [
+        58,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-gurdien": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-hanzir": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-ziemel": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55,
+        57,
+        58,
+        62
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-papra": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57,
+        58
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-emu": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-brama": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 62,
+      "pages": [
+        62,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-xadina": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 60,
+      "pages": [
+        60,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-kamaleont": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-lampuka": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-nemla": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-animals-serp": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 60,
+      "pages": [
+        60,
+        62,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-denfil": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 62,
+      "pages": [
+        62,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-gemel": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-iljunfant": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-abjad": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-bajda": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ahmar": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-hamra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-isfar": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-safra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ahdar": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-hadra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-griz": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-griza": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-iswed": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-sewda": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-kannella": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-orangjo": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-roza": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-vjola": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-blu": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-cirku": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-crieki": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-kaxxa": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-kaxxi": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-trijanglu": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-trijangli": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-strixxa": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-strixxi": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-bandiera": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67,
+        73,
+        74,
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-pajjiz": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75,
+        78
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-malta": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77,
+        78,
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-italja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77,
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ingilterra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-germanja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-spanja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-franza": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77,
+        79
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-pakistan": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77,
+        78
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ukraina": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-turkija": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-portugall": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-filippini": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77,
+        79
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-indja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-gappun": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        79
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-libja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-awstralja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-cina": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77,
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-te": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81,
+        82,
+        83
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-spagetti": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-pizza": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81,
+        82,
+        83,
+        97,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-kafe": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        100
+      ],
+      "match": "text-folded"
+    },
+    "b1-food-kuskus": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ilma": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81,
+        82,
+        83,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ross": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-paella": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-luminata": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-meraq-tal-frott": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-zejt": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-helu": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        95,
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-mandolina": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ghanqud": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-gheneb": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        88,
+        95,
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-dulliegha": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bambinella": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bajtra-tax-xewk": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bettieha": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-cirasa": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-tina": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-tuffieha": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 87,
+      "pages": [
+        87,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-kiwi": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-banana": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 87,
+      "pages": [
+        87,
+        88,
+        91,
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-lumi": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-lumija": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88,
+        90,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-laham": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        95,
+        97,
+        98,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-langas": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-langasa": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-laring": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-laringa": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 87,
+      "pages": [
+        87,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-frawli": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88,
+        93,
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-frawla": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-dulliegh": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bettieh": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-tuffieh": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-kejk": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-kejkijiet": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-insalata": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        93,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-insalati": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-pastizzi": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-pasti": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-gelat": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ghadma": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 95,
+      "pages": [
+        95,
+        97,
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-hut": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-cikkulata": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-ahwa": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-hu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102,
+        117,
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-oht": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-genituri": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-omm": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-missier": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-nanniet": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-nannu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-nanna": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-ziju": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-zija": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-kugin": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-filghodu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        106,
+        108,
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-f-nofsinhar": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 109,
+      "pages": [
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-waranofsinhar": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 109,
+      "pages": [
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-filghaxija": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        106,
+        108,
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-billejl": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        109,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-kmieni": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        109,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-tard": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-it-tnejn": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-it-tlieta": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-l-erbgha": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-hamis": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-gimgha": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-is-sibt": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-hadd": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-tmiem-il-gimgha": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-tenis": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-passeggata": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-family-zfin": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-pjazza": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-restorant": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-bongu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 119,
+      "pages": [
+        119,
+        120
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-waranofsinhar-it-tajjeb": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-family-il-lejla-t-tajba": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 118,
+      "pages": [
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-kif-inti": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 119,
+      "pages": [
+        119,
+        120
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-mhux-hazin": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 118,
+      "pages": [
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-hu-hsieb": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 117,
+      "pages": [
+        117,
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-basket-tal-iskola": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 5,
+      "pages": [
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-pokit": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-temprina": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-kulur": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-lapes": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-fajl": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5,
+        11,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-ktieb": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5,
+        6
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-marker": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-kalkulatur": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kumpass": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-imqass": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-pitazz": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-karta": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kolla": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-orarju": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        4
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-riga": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-sabih": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-sabiha": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-sbieh": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-ikrah": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kerha": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-koroh": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kbir": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kbira": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kbar": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-zghir": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-zghira": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-zghar": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-gdid": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 5,
+      "pages": [
+        5,
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-gdida": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-godda": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-qadim": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-qadima": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-qodma": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-modern": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-moderna": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-moderni": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-antik": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-antika": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-antiki": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-ikkulurit": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-ikkulurita": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-ikkuluriti": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-nadif": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-nadifa": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-nodfa": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-mahmuga": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-qum": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-qumu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-poggi": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-poggu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ikteb": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-iktbu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aghlaq": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aghlqu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ohrog": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ohorgu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-idhol": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-idhlu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-imperative-dahhal": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-dahhlu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aqra": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18,
+        20,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aqraw": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-imperative-iftah": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        15,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ifthu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-isimghu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-staqsi": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15,
+        17,
+        18,
+        23
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tkellem": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18,
+        19,
+        23
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aghmel": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-wiehed": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        23
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tnejn": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tlieta": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-erbgha": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 21,
+      "pages": [
+        21
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-hamsa": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-sitta": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 21,
+      "pages": [
+        21
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-sebgha": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tmienja": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-disgha": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ghaxra": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-borra": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 31,
+      "pages": [
+        31
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-temperatura": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-sajjetti": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 29,
+      "pages": [
+        29,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-shab": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 29,
+      "pages": [
+        29,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-rih": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        32,
+        33,
+        34
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-shana": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 31,
+      "pages": [
+        31,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-kesha": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        31,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-maltemp": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 29,
+      "pages": [
+        29,
+        31
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-istagun": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-staguni": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 36,
+      "pages": [
+        36
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-rebbiegha": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-weather-sajf": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        32,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-harifa": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xitwa": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        32,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xemx": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        31,
+        32,
+        34
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xita": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        32,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-raghad": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-bnazzi": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-weather-silg": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xemxi": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-imsahhab": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-l-oghla-temperatura": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33,
+        34,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-l-inqas-temperatura": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33,
+        34,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-flokk-hafif": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-libsa-hafifa": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-dublett": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-flokk-bil-komma-qasira": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 38,
+      "pages": [
+        38
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-gakketta-tal-jeans": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-flokk-ta-taht": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-qalziet-hafif": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-flokk-bic-cingi": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 52,
+      "pages": [
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-malja": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 52,
+      "pages": [
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-kappell": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 38,
+      "pages": [
+        38,
+        40,
+        45,
+        51,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-karkur": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 38,
+      "pages": [
+        38,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-flokk-tas-suf": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 52,
+      "pages": [
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-gakketta": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        51,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-glekk": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 40,
+      "pages": [
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-qalziet": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        40,
+        51
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-boots": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-xalpa": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 40,
+      "pages": [
+        40,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-hdax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-tnax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-tlettax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-erbatax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-hmistax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-sittax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-sbatax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-tmintax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-dsatax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-ghoxrin": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-libes": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ilbes": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ilbsu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ghamel": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-aghmel": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-aghmlu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-uza": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-uzaw": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ghum": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-imxi": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-hobbies-orqod": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-qum": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ilghab": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ara": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ohrog": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-nilbes": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-mmur": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-norqdu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-tilghab": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66,
+        71
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-naraw": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-jghumu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-nohorgu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-niekol": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 68,
+      "pages": [
+        68
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-naghmel": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65,
+        68,
+        73
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-kafetterija": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 74,
+      "pages": [
+        74
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-ispizerija": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-town-furnar": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 74,
+      "pages": [
+        74
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-restorant": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-town-ufficcju-tal-kunsill-lokali": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-knisja": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-posta": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75,
+        78
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-zuntier": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-pastizz-tal-irkotta": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 80,
+      "pages": [
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-pastizz-tal-pizelli": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 80,
+      "pages": [
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-medicina": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-menu": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-appartament": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-triq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        85,
+        87,
+        90,
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-sqaq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        85
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-numru": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        85,
+        90
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-vjal": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-pjazza": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 78,
+      "pages": [
+        78,
+        84,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-lukanda": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-indirizz": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 90,
+      "pages": [
+        90,
+        91,
+        96
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-aqsam-it-triq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-dur-fuq-ix-xellug": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-dur-mal-kantuniera": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-ieqaf": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-dur-fuq-il-lemin": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-imxi-dritt": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-itla-l-fuq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-town-inzel-l-isfel": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-plastik": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97,
+        99
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-karta": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97,
+        99
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-riciklar": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-skart-imhallat": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-skart-riciklabbli": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-nadif": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-nadifa": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-nodfa": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mahmug": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mahmuga": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mahmugin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mimli": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mimlija": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mimlijin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mormi": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mormija": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mormijin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-jinten": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-tinten": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-jintnu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-miftuh": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-miftuha": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-miftuhin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mqatta": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mqattgha": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mqattghin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-skart-organiku": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-borza": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97,
+        106
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-kontenitur": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 99,
+      "pages": [
+        99,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-armi": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 100,
+      "pages": [
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-armu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 100,
+      "pages": [
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-ghazel": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-aghzel": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-aghzlu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-waddab": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-waddbu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-issepara": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 103,
+      "pages": [
+        103,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-isseparaw": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 103,
+      "pages": [
+        103
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-hareg": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-ohrog": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-ohorgu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104
+      ],
+      "match": "text-exact"
+    }
+  },
+  "verbParadigms": {
+    "b1-qaghad": {
+      "book": "B1",
+      "lemma": "qagħad / noqgħod",
+      "primaryPage": 15,
+      "pages": [
+        15,
+        16,
+        18,
+        45,
+        80,
+        98,
+        100,
+        109,
+        116
+      ],
+      "chapterId": "b1-residence",
+      "forms": {
+        "noqgħod": {
+          "pages": [
+            15,
+            16,
+            45,
+            100
+          ],
+          "match": "text-exact"
+        },
+        "toqgħod": {
+          "pages": [
+            15,
+            16,
+            45,
+            98,
+            100,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "joqgħod": {
+          "pages": [
+            15,
+            80,
+            98,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "noqogħdu": {
+          "pages": [
+            15,
+            16,
+            100
+          ],
+          "match": "text-exact"
+        },
+        "toqogħdu": {
+          "pages": [
+            15,
+            16
+          ],
+          "match": "text-exact"
+        },
+        "joqogħdu": {
+          "pages": [
+            15,
+            16,
+            18,
+            98
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-gie": {
+      "book": "B1",
+      "lemma": "ġie",
+      "primaryPage": 22,
+      "pages": [
+        22,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        45,
+        75
+      ],
+      "chapterId": "b1-residence",
+      "forms": {
+        "niġi": {
+          "pages": [
+            29,
+            30,
+            45
+          ],
+          "match": "text-exact"
+        },
+        "tiġi": {
+          "pages": [
+            22,
+            24,
+            25,
+            29,
+            30,
+            45,
+            75
+          ],
+          "match": "text-exact"
+        },
+        "jiġi": {
+          "pages": [
+            22,
+            25,
+            29,
+            30
+          ],
+          "match": "text-exact"
+        },
+        "niġu": {
+          "pages": [
+            22,
+            29,
+            30
+          ],
+          "match": "text-exact"
+        },
+        "tiġu": {
+          "pages": [
+            22,
+            29,
+            30
+          ],
+          "match": "text-exact"
+        },
+        "jiġu": {
+          "pages": [
+            22,
+            24,
+            25,
+            26,
+            29,
+            30,
+            31
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-ra": {
+      "book": "B1",
+      "lemma": "ra",
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        30,
+        31,
+        64,
+        120,
+        122
+      ],
+      "chapterId": "b1-residence",
+      "forms": {
+        "nara": {
+          "pages": [
+            27,
+            29,
+            30,
+            31
+          ],
+          "match": "text-exact"
+        },
+        "tara": {
+          "pages": [
+            29,
+            30,
+            120,
+            122
+          ],
+          "match": "text-exact"
+        },
+        "jara": {
+          "pages": [
+            29,
+            30,
+            64
+          ],
+          "match": "text-exact"
+        },
+        "naraw": {
+          "pages": [
+            29,
+            30
+          ],
+          "match": "text-exact"
+        },
+        "taraw": {
+          "pages": [
+            29,
+            30
+          ],
+          "match": "text-exact"
+        },
+        "jaraw": {
+          "pages": [
+            29,
+            30
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-ghandu": {
+      "book": "B1",
+      "lemma": "għandu",
+      "primaryPage": 49,
+      "pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        59,
+        64,
+        73,
+        87,
+        102,
+        123
+      ],
+      "chapterId": "b1-animals",
+      "forms": {
+        "għandi": {
+          "pages": [
+            49,
+            51,
+            54,
+            59,
+            64,
+            73
+          ],
+          "match": "text-exact"
+        },
+        "għandek": {
+          "pages": [
+            49,
+            50,
+            51,
+            54,
+            123
+          ],
+          "match": "text-exact"
+        },
+        "għandu": {
+          "pages": [
+            49,
+            50,
+            51,
+            52,
+            55,
+            87,
+            102
+          ],
+          "match": "text-exact"
+        },
+        "għandha": {
+          "pages": [
+            49,
+            50,
+            51,
+            53,
+            55,
+            87
+          ],
+          "match": "text-exact"
+        },
+        "għandna": {
+          "pages": [
+            49
+          ],
+          "match": "text-exact"
+        },
+        "għandkom": {
+          "pages": [
+            49
+          ],
+          "match": "text-exact"
+        },
+        "għandhom": {
+          "pages": [
+            49,
+            50,
+            59,
+            64,
+            87
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-kiel": {
+      "book": "B1",
+      "lemma": "kiel",
+      "primaryPage": 13,
+      "pages": [
+        13,
+        64,
+        81,
+        92,
+        94,
+        95,
+        97,
+        98,
+        100,
+        109,
+        115,
+        116
+      ],
+      "chapterId": "b1-introductions",
+      "forms": {
+        "niekol": {
+          "pages": [
+            13,
+            81,
+            92,
+            94,
+            95
+          ],
+          "match": "text-exact"
+        },
+        "tiekol": {
+          "pages": [
+            81,
+            92,
+            94,
+            98,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "jiekol": {
+          "pages": [
+            92,
+            94,
+            97,
+            98,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "nieklu": {
+          "pages": [
+            81,
+            92,
+            94,
+            100
+          ],
+          "match": "text-exact"
+        },
+        "tieklu": {
+          "pages": [
+            81,
+            92,
+            94
+          ],
+          "match": "text-exact"
+        },
+        "jieklu": {
+          "pages": [
+            64,
+            81,
+            92,
+            94,
+            98,
+            109,
+            115
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-habb": {
+      "book": "B1",
+      "lemma": "ħabb",
+      "primaryPage": 13,
+      "pages": [
+        13,
+        45,
+        64,
+        81,
+        96,
+        98,
+        100,
+        109
+      ],
+      "chapterId": "b1-introductions",
+      "forms": {
+        "inħobb": {
+          "pages": [
+            13,
+            45,
+            81,
+            96
+          ],
+          "match": "text-exact"
+        },
+        "tħobb": {
+          "pages": [
+            81,
+            96,
+            98,
+            100,
+            109
+          ],
+          "match": "text-exact"
+        },
+        "iħobb": {
+          "pages": [
+            64,
+            109
+          ],
+          "match": "text-exact"
+        },
+        "inħobbu": {
+          "pages": [
+            81
+          ],
+          "match": "text-exact"
+        },
+        "tħobbu": {
+          "pages": [
+            81,
+            96
+          ],
+          "match": "text-exact"
+        },
+        "iħobbu": {
+          "pages": [],
+          "match": "not-found"
+        }
+      }
+    },
+    "b1-qam": {
+      "book": "B1",
+      "lemma": "qam",
+      "primaryPage": 105,
+      "pages": [
+        105,
+        106,
+        109,
+        116
+      ],
+      "chapterId": "b1-family",
+      "forms": {
+        "nqum": {
+          "pages": [],
+          "match": "not-found"
+        },
+        "tqum": {
+          "pages": [
+            105,
+            106,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "jqum": {
+          "pages": [
+            105,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "inqumu": {
+          "pages": [],
+          "match": "not-found"
+        },
+        "tqumu": {
+          "pages": [
+            105
+          ],
+          "match": "text-exact"
+        },
+        "jqumu": {
+          "pages": [
+            105
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-raqad": {
+      "book": "B1",
+      "lemma": "raqad",
+      "primaryPage": 107,
+      "pages": [
+        107,
+        108,
+        109,
+        114,
+        116
+      ],
+      "chapterId": "b1-family",
+      "forms": {
+        "norqod": {
+          "pages": [
+            107
+          ],
+          "match": "text-exact"
+        },
+        "torqod": {
+          "pages": [
+            107,
+            108,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "jorqod": {
+          "pages": [
+            107,
+            109,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "norqdu": {
+          "pages": [
+            107
+          ],
+          "match": "text-exact"
+        },
+        "torqdu": {
+          "pages": [
+            107
+          ],
+          "match": "text-exact"
+        },
+        "jorqdu": {
+          "pages": [
+            107,
+            108,
+            109,
+            114
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-laghba": {
+      "book": "B1",
+      "lemma": "lagħab",
+      "primaryPage": 111,
+      "pages": [
+        111,
+        112,
+        114,
+        116
+      ],
+      "chapterId": "b1-family",
+      "forms": {
+        "nilgħab": {
+          "pages": [
+            111
+          ],
+          "match": "text-exact"
+        },
+        "tilgħab": {
+          "pages": [
+            111
+          ],
+          "match": "text-exact"
+        },
+        "jilgħab": {
+          "pages": [
+            111,
+            112,
+            116
+          ],
+          "match": "text-exact"
+        },
+        "nilagħbu": {
+          "pages": [
+            111
+          ],
+          "match": "text-exact"
+        },
+        "tilagħbu": {
+          "pages": [
+            111
+          ],
+          "match": "text-exact"
+        },
+        "jilagħbu": {
+          "pages": [
+            111,
+            114
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b1-mar": {
+      "book": "B1",
+      "lemma": "mar",
+      "primaryPage": 113,
+      "pages": [
+        113,
+        114,
+        115,
+        121
+      ],
+      "chapterId": "b1-family",
+      "forms": {
+        "immur": {
+          "pages": [
+            113,
+            114
+          ],
+          "match": "text-exact"
+        },
+        "tmur": {
+          "pages": [
+            113
+          ],
+          "match": "text-exact"
+        },
+        "jmur": {
+          "pages": [
+            113
+          ],
+          "match": "text-exact"
+        },
+        "immorru": {
+          "pages": [
+            115
+          ],
+          "match": "text-exact"
+        },
+        "tmorru": {
+          "pages": [
+            113,
+            121
+          ],
+          "match": "text-exact"
+        },
+        "jmorru": {
+          "pages": [
+            113,
+            115
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-libes": {
+      "book": "B2",
+      "lemma": "libes",
+      "primaryPage": 37,
+      "pages": [
+        37,
+        38,
+        39,
+        52,
+        53,
+        55,
+        61,
+        65
+      ],
+      "chapterId": "b2-clothes",
+      "forms": {
+        "nilbes": {
+          "pages": [
+            37,
+            38,
+            39,
+            52,
+            53,
+            55,
+            65
+          ],
+          "match": "text-exact"
+        },
+        "tilbes": {
+          "pages": [
+            53,
+            55,
+            61,
+            65
+          ],
+          "match": "text-exact"
+        },
+        "jilbes": {
+          "pages": [
+            52,
+            55
+          ],
+          "match": "text-exact"
+        },
+        "nilbsu": {
+          "pages": [
+            55
+          ],
+          "match": "text-exact"
+        },
+        "tilbsu": {
+          "pages": [
+            55
+          ],
+          "match": "text-exact"
+        },
+        "jilbsu": {
+          "pages": [
+            55,
+            61
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-ghamel": {
+      "book": "B2",
+      "lemma": "għamel",
+      "primaryPage": 6,
+      "pages": [
+        6,
+        15,
+        17,
+        18,
+        53,
+        55,
+        56,
+        58,
+        59,
+        60,
+        61,
+        65,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "chapterId": "b2-school-bag",
+      "forms": {
+        "nagħmel": {
+          "pages": [
+            53,
+            55,
+            56,
+            58,
+            59,
+            65,
+            68,
+            73
+          ],
+          "match": "text-exact"
+        },
+        "tagħmel": {
+          "pages": [
+            6,
+            56,
+            65,
+            70,
+            71,
+            72
+          ],
+          "match": "text-exact"
+        },
+        "jagħmel": {
+          "pages": [
+            56,
+            61,
+            69,
+            73
+          ],
+          "match": "text-exact"
+        },
+        "nagħmlu": {
+          "pages": [
+            56
+          ],
+          "match": "text-exact"
+        },
+        "tagħmlu": {
+          "pages": [
+            56,
+            68
+          ],
+          "match": "text-exact"
+        },
+        "jagħmlu": {
+          "pages": [
+            6,
+            56,
+            60,
+            69
+          ],
+          "match": "text-exact"
+        },
+        "agħmel": {
+          "pages": [
+            6,
+            15,
+            17,
+            18,
+            56
+          ],
+          "match": "text-exact"
+        },
+        "agħmlu": {
+          "pages": [
+            15,
+            56
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-uza": {
+      "book": "B2",
+      "lemma": "uża",
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5,
+        13,
+        26,
+        54,
+        57,
+        69,
+        105
+      ],
+      "chapterId": "b2-school-bag",
+      "forms": {
+        "nuża": {
+          "pages": [
+            3,
+            13,
+            26,
+            54,
+            57
+          ],
+          "match": "text-exact"
+        },
+        "tuża": {
+          "pages": [
+            5,
+            57
+          ],
+          "match": "text-exact"
+        },
+        "juża": {
+          "pages": [
+            57
+          ],
+          "match": "text-exact"
+        },
+        "nużaw": {
+          "pages": [
+            57
+          ],
+          "match": "text-exact"
+        },
+        "tużaw": {
+          "pages": [
+            57
+          ],
+          "match": "text-exact"
+        },
+        "jużaw": {
+          "pages": [
+            57,
+            69,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "uża": {
+          "pages": [
+            57
+          ],
+          "match": "text-exact"
+        },
+        "użaw": {
+          "pages": [
+            57
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-rema": {
+      "book": "B2",
+      "lemma": "rema",
+      "primaryPage": 99,
+      "pages": [
+        99,
+        100,
+        105
+      ],
+      "chapterId": "b2-recycling",
+      "forms": {
+        "rema": {
+          "pages": [
+            100,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "narmi": {
+          "pages": [
+            99,
+            100
+          ],
+          "match": "text-exact"
+        },
+        "tarmi": {
+          "pages": [
+            100,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "jarmi": {
+          "pages": [
+            100
+          ],
+          "match": "text-exact"
+        },
+        "narmu": {
+          "pages": [
+            100
+          ],
+          "match": "text-exact"
+        },
+        "tarmu": {
+          "pages": [
+            100,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "jarmu": {
+          "pages": [
+            100
+          ],
+          "match": "text-exact"
+        },
+        "armi": {
+          "pages": [
+            100
+          ],
+          "match": "text-exact"
+        },
+        "armu": {
+          "pages": [
+            100
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-ghazel": {
+      "book": "B2",
+      "lemma": "għażel",
+      "primaryPage": 12,
+      "pages": [
+        12,
+        61,
+        87,
+        89,
+        91,
+        101,
+        105
+      ],
+      "chapterId": "b2-school-bag",
+      "forms": {
+        "għażel": {
+          "pages": [
+            101,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "nagħżel": {
+          "pages": [
+            101
+          ],
+          "match": "text-exact"
+        },
+        "tagħżel": {
+          "pages": [
+            91,
+            101
+          ],
+          "match": "text-exact"
+        },
+        "jagħżel": {
+          "pages": [
+            101
+          ],
+          "match": "text-exact"
+        },
+        "nagħżlu": {
+          "pages": [
+            12,
+            101
+          ],
+          "match": "text-exact"
+        },
+        "tagħżlu": {
+          "pages": [
+            101
+          ],
+          "match": "text-exact"
+        },
+        "jagħżlu": {
+          "pages": [
+            101
+          ],
+          "match": "text-exact"
+        },
+        "agħżel": {
+          "pages": [
+            61,
+            87,
+            89,
+            101
+          ],
+          "match": "text-exact"
+        },
+        "agħżlu": {
+          "pages": [
+            101
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-waddab": {
+      "book": "B2",
+      "lemma": "waddab",
+      "primaryPage": 102,
+      "pages": [
+        102,
+        105
+      ],
+      "chapterId": "b2-recycling",
+      "forms": {
+        "nwaddab": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        },
+        "twaddab": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        },
+        "jwaddab": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        },
+        "nwaddbu": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        },
+        "twaddbu": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        },
+        "jwaddbu": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        },
+        "waddab": {
+          "pages": [
+            102,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "waddbu": {
+          "pages": [
+            102
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-issepara": {
+      "book": "B2",
+      "lemma": "issepara",
+      "primaryPage": 103,
+      "pages": [
+        103,
+        105,
+        107
+      ],
+      "chapterId": "b2-recycling",
+      "forms": {
+        "nissepara": {
+          "pages": [
+            103
+          ],
+          "match": "text-exact"
+        },
+        "tissepara": {
+          "pages": [
+            103
+          ],
+          "match": "text-exact"
+        },
+        "jissepara": {
+          "pages": [
+            103
+          ],
+          "match": "text-exact"
+        },
+        "nisseparaw": {
+          "pages": [
+            103,
+            107
+          ],
+          "match": "text-exact"
+        },
+        "tisseparaw": {
+          "pages": [
+            103
+          ],
+          "match": "text-exact"
+        },
+        "jisseparaw": {
+          "pages": [
+            103
+          ],
+          "match": "text-exact"
+        },
+        "issepara": {
+          "pages": [
+            103,
+            105
+          ],
+          "match": "text-exact"
+        },
+        "isseparaw": {
+          "pages": [
+            103
+          ],
+          "match": "text-exact"
+        }
+      }
+    },
+    "b2-hareg": {
+      "book": "B2",
+      "lemma": "ħareġ",
+      "primaryPage": 5,
+      "pages": [
+        5,
+        14,
+        17,
+        18,
+        53,
+        58,
+        64,
+        67,
+        69,
+        71,
+        72,
+        104,
+        106,
+        107
+      ],
+      "chapterId": "b2-school-bag",
+      "forms": {
+        "noħroġ": {
+          "pages": [
+            53,
+            58,
+            104,
+            106,
+            107
+          ],
+          "match": "text-exact"
+        },
+        "toħroġ": {
+          "pages": [
+            67,
+            71,
+            72,
+            104
+          ],
+          "match": "text-exact"
+        },
+        "joħroġ": {
+          "pages": [
+            104
+          ],
+          "match": "text-exact"
+        },
+        "noħorġu": {
+          "pages": [
+            67,
+            104
+          ],
+          "match": "text-exact"
+        },
+        "toħorġu": {
+          "pages": [
+            104
+          ],
+          "match": "text-exact"
+        },
+        "joħorġu": {
+          "pages": [
+            5,
+            69,
+            104
+          ],
+          "match": "text-exact"
+        },
+        "oħroġ": {
+          "pages": [
+            17,
+            18,
+            64,
+            104
+          ],
+          "match": "text-exact"
+        },
+        "oħorġu": {
+          "pages": [
+            14,
+            104
+          ],
+          "match": "text-exact"
+        }
+      }
+    }
+  }
+}

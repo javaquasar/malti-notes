@@ -8,6 +8,7 @@ const course = readJson("assets/data/course_path.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const glosses = readJson("assets/data/course_target_glosses.json").glosses;
 const examples = readJson("assets/data/course_target_examples.json").examples;
+const provenance = readJson("assets/data/course_source_provenance.json").targets;
 const baselineMissingKeys = new Set(inventory.chapters.flatMap((chapter) => (
   chapter.baselineMissing.map((requirement) => `${chapter.courseChapterId}::${requirement}`)
 )));
@@ -30,6 +31,10 @@ function targetItem(target) {
   if (!english) throw new Error(`Missing reviewed gloss for ${key}`);
   const context = examples[key];
   if (!context) throw new Error(`Missing contextual example for ${key}`);
+  const source = provenance[target.id];
+  if (!source) throw new Error(`Missing book provenance for ${target.id}`);
+  const sourcePage = source.primaryPage ? `p. ${source.primaryPage}` : `pp. ${source.pageRange[0]}-${source.pageRange[1]}`;
+  const sourceLabel = `${source.book}, Chapter ${source.chapterNumber}, ${sourcePage}`;
   return {
     id: target.id,
     maltese: target.sourceRequirement,
@@ -38,6 +43,15 @@ function targetItem(target) {
     exampleTranslation: context.english,
     examplePattern: context.pattern,
     exampleReview: context.review,
+    source: {
+      book: source.book,
+      chapter: source.chapterNumber,
+      page: source.primaryPage,
+      pageRange: source.pageRange,
+      match: source.match
+    },
+    sourceLabel,
+    notes: [`Example: ${context.maltese}`, `Translation: ${context.english}`, `Source: ${sourceLabel}`],
     glossReview: "reviewed",
     sourceStatus: baselineMissingKeys.has(key)
       ? "added-from-book"

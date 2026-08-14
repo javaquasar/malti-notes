@@ -124,14 +124,26 @@ function makeForms(paradigm) {
 
 function build() {
   const inventory = JSON.parse(fs.readFileSync(inventoryPath, "utf8"));
-  const paradigms = inventory.verbParadigms.map((paradigm) => ({
-    id: paradigm.id,
-    book: paradigm.book,
-    lemma: paradigm.lemma,
-    meaning: meanings[paradigm.id],
-    sourceInventory: "book_coverage_inventory.json",
-    forms: makeForms(paradigm)
-  }));
+  const sourceProvenance = JSON.parse(fs.readFileSync(path.join(root, "assets", "data", "course_source_provenance.json"), "utf8"));
+  const paradigms = inventory.verbParadigms.map((paradigm) => {
+    const source = sourceProvenance.verbParadigms[paradigm.id];
+    if (!source?.primaryPage) throw new Error(`Missing book source page for ${paradigm.id}`);
+    return {
+      id: paradigm.id,
+      book: paradigm.book,
+      lemma: paradigm.lemma,
+      meaning: meanings[paradigm.id],
+      sourceInventory: "book_coverage_inventory.json",
+      source: {
+        book: source.book,
+        chapterId: source.chapterId,
+        page: source.primaryPage,
+        pages: source.pages
+      },
+      sourceLabel: `${source.book}, p. ${source.primaryPage}`,
+      forms: makeForms(paradigm)
+    };
+  });
 
   const formCount = paradigms.reduce((total, paradigm) => total + paradigm.forms.length, 0);
   if (paradigms.length !== 18 || formCount !== 125) {

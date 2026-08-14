@@ -195,6 +195,7 @@ async function main() {
       assert((await page.locator("[data-course-chapter-title]").textContent()).trim() === "L-Annimali", "Animals chapter title is missing.");
       assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "27 / 27", "Current animals coverage is incorrect.");
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "27 / 27", "Guided animals coverage is incorrect.");
+      assert((await page.locator("[data-course-chapter-pills]").textContent()).includes("B1 pp. 46-64"), "Animals book page range is missing.");
       assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
       assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b1-animals-diagnostic"] .exercise-item').count() === 10, "Animals entry diagnostic is incomplete.");
@@ -208,6 +209,7 @@ async function main() {
       assert((await page.locator("[data-course-missing-targets]").textContent()).includes("All required targets are linked"), "Completed chapter still reports missing targets.");
       const supplementCard = page.locator('[data-course-supplement-grid] [data-content-id="b1-animals-brama"]');
       assert(await supplementCard.count() === 1, "The unlinked animals target was not promoted to a supplemental card.");
+      assert((await supplementCard.textContent()).includes("Source: B1, Chapter 4, p. 62"), "Supplemental target source page is missing.");
       await supplementCard.locator(".review-add-button").click();
       assert(await page.evaluate(() => window.MaltiReviewStore.hasWord("word::course-supplement::b1-animals-brama")), "Supplemental target was not added to shared review.");
       const firstStepHref = await page.locator(".course-step a").first().getAttribute("href");

@@ -22,6 +22,10 @@
 
     const body = document.createElement("div");
     body.className = "course-verb-paradigm-body";
+    const source = document.createElement("p");
+    source.className = "mini muted course-verb-source";
+    source.textContent = `Book source: ${paradigm.sourceLabel}`;
+    body.appendChild(source);
     const tableWrap = document.createElement("div");
     tableWrap.className = "course-verb-table-wrap";
     const table = document.createElement("table");
