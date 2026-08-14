@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "page": "grammar_path.html",
+  "title": "Grammar Path",
+  "description": "Canonical teaching and assessment source for grammar targets that connect the book course with the site's extended grammar material.",
+  "targets": [
+    {
+      "id": "grammar-agreement",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "title": "Gender and number agreement",
+      "sourceRequirement": "Gender and number agreement",
+      "role": "core",
+      "summary": "Match an adjective to a masculine singular, feminine singular, or plural noun.",
+      "rule": "The adjective normally follows the noun and changes with it: masculine singular, feminine singular, or plural.",
+      "pattern": "ktieb ġdid | karozza ġdida | kotba ġodda",
+      "commonMistake": "Do not reuse the masculine singular adjective after a feminine or plural noun.",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": ["b1-adjective-gender", "b1-colour-agreement"],
+        "coverageStatus": "covered"
+      },
+      "examples": [
+        { "id": "grammar-agreement-masculine", "maltese": "Dan ktieb ġdid.", "english": "This is a new book.", "note": "masculine singular" },
+        { "id": "grammar-agreement-feminine", "maltese": "Din karozza ġdida.", "english": "This is a new car.", "note": "feminine singular" },
+        { "id": "grammar-agreement-plural", "maltese": "Dawn kotba ġodda.", "english": "These are new books.", "note": "plural" }
+      ],
+      "masteryLabel": "choose and produce the adjective form that agrees with its noun",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which phrase has correct feminine agreement?",
+          "choices": ["karozza aħmar", "karozza ħamra", "karozza ħomor"],
+          "answer": "karozza ħamra",
+          "explanation": "Karozza is feminine singular, so aħmar changes to ħamra."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the plural adjective: Il-kotba huma _____. (The books are new.)",
+          "answer": "ġodda",
+          "accepted": ["ġodda"],
+          "explanation": "The plural noun kotba takes the plural adjective ġodda."
+        }
+      }
+    },
+    {
+      "id": "grammar-demonstratives",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "title": "Near and far demonstratives",
+      "sourceRequirement": "Near and far demonstratives",
+      "role": "core",
+      "summary": "Choose demonstratives by distance, gender, and number.",
+      "rule": "Use dan, din, dawn for things that are near and dak, dik, dawk for things that are farther away.",
+      "pattern": "dan/dak + masculine | din/dik + feminine | dawn/dawk + plural",
+      "commonMistake": "Distance is not the only choice: singular demonstratives must also agree with the noun's gender.",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": ["b1-demonstratives"],
+        "coverageStatus": "covered"
+      },
+      "examples": [
+        { "id": "grammar-demonstratives-near-m", "maltese": "Dan il-ktieb huwa ġdid.", "english": "This book is new.", "note": "near, masculine" },
+        { "id": "grammar-demonstratives-near-f", "maltese": "Din il-karozza hija ħamra.", "english": "This car is red.", "note": "near, feminine" },
+        { "id": "grammar-demonstratives-far-plural", "maltese": "Dawk il-kotba huma qodma.", "english": "Those books are old.", "note": "far, plural" }
+      ],
+      "masteryLabel": "select a near or far demonstrative with the correct gender and number",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which phrase means “this car”?",
+          "choices": ["dan il-karozza", "din il-karozza", "dawn il-karozza"],
+          "answer": "din il-karozza",
+          "explanation": "Karozza is feminine singular, so the near demonstrative is din."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete with a near plural demonstrative: _____ il-kotba huma ġodda.",
+          "answer": "Dawn",
+          "accepted": ["Dawn", "dawn"],
+          "explanation": "Dawn is used for plural things that are near."
+        }
+      }
+    },
+    {
+      "id": "grammar-possession-ghandu",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "title": "Possession with għandu",
+      "sourceRequirement": "Possession with għandu",
+      "role": "core",
+      "summary": "Use the complete għandu paradigm to say who has something.",
+      "rule": "The form changes with the possessor: għandi, għandek, għandu, għandha, għandna, għandkom, għandhom.",
+      "pattern": "possessor form + possessed noun",
+      "commonMistake": "Choose the form from the owner, not from the gender or number of the possessed object.",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": ["b1-possession"],
+        "coverageStatus": "covered-as-a-topic"
+      },
+      "examples": [
+        { "id": "grammar-possession-first", "maltese": "Jien għandi kelb.", "english": "I have a dog.", "note": "first person singular" },
+        { "id": "grammar-possession-feminine", "maltese": "Hi għandha qattus.", "english": "She has a cat.", "note": "third person feminine" },
+        { "id": "grammar-possession-plural", "maltese": "Huma għandhom karozza.", "english": "They have a car.", "note": "third person plural" }
+      ],
+      "masteryLabel": "choose and produce the correct għandu form for the possessor",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly says “We have a book”?",
+          "choices": ["Aħna għandu ktieb.", "Aħna għandna ktieb.", "Aħna għandhom ktieb."],
+          "answer": "Aħna għandna ktieb.",
+          "explanation": "The aħna form is għandna."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the possession form: Huma _____ karozza.",
+          "answer": "għandhom",
+          "accepted": ["għandhom"],
+          "explanation": "The huma form is għandhom."
+        }
+      }
+    },
+    {
+      "id": "grammar-definite-article",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "title": "Definite article and assimilation",
+      "sourceRequirement": "Definite article and assimilation",
+      "role": "core",
+      "summary": "Apply il-, l-, or an assimilated article before a noun.",
+      "rule": "Use il- before most consonants, l- before vowels and għ or h, and repeat the first sound with ċ, d, n, r, s, t, x, z, or ż.",
+      "pattern": "il-ktieb | l-iskola | id-dar | ix-xemx",
+      "commonMistake": "Do not keep il- unchanged before a consonant that requires assimilation.",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": ["b2-definite-article"],
+        "coverageStatus": "covered"
+      },
+      "examples": [
+        { "id": "grammar-article-regular", "maltese": "il-ktieb", "english": "the book", "note": "regular il-" },
+        { "id": "grammar-article-vowel", "maltese": "l-iskola", "english": "the school", "note": "before a vowel" },
+        { "id": "grammar-article-assimilated", "maltese": "id-dar", "english": "the house", "note": "assimilated before d" }
+      ],
+      "masteryLabel": "apply the regular, reduced, or assimilated definite article",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which form correctly means “the house”?",
+          "choices": ["il-dar", "id-dar", "l-dar"],
+          "answer": "id-dar",
+          "explanation": "Before d, the article assimilates and becomes id-."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the article: _____ tinsab ħdejn l-iskola. (The house is near the school.)",
+          "answer": "Id-dar",
+          "accepted": ["Id-dar", "id-dar"],
+          "explanation": "Dar takes the assimilated article id-."
+        }
+      }
+    },
+    {
+      "id": "grammar-number-il",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "title": "Numbers 11–19 with -il",
+      "sourceRequirement": "Numbers 11–19 with -il and a singular noun",
+      "role": "core",
+      "summary": "Connect the numbers 11–19 to a counted singular noun with -il.",
+      "rule": "Before a counted noun, the numbers 11–19 take -il and the noun stays singular.",
+      "pattern": "tnax-il ktieb | ħmistax-il student",
+      "commonMistake": "Do not omit -il or change the counted noun to a plural form in this pattern.",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": ["b2-number-il-rule"],
+        "coverageStatus": "partial"
+      },
+      "examples": [
+        { "id": "grammar-number-il-twelve", "maltese": "tnax-il ktieb", "english": "twelve books", "note": "number plus singular noun" },
+        { "id": "grammar-number-il-fifteen", "maltese": "ħmistax-il student", "english": "fifteen students", "note": "number plus singular noun" },
+        { "id": "grammar-number-il-nineteen", "maltese": "dsatax-il paġna", "english": "nineteen pages", "note": "number plus singular noun" }
+      ],
+      "masteryLabel": "connect 11–19 to a singular counted noun with -il",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which phrase correctly means “twelve books”?",
+          "choices": ["tnax ktieb", "tnax-il ktieb", "tnax-il kotba"],
+          "answer": "tnax-il ktieb",
+          "explanation": "The number takes -il and the counted noun remains singular."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the number phrase: Hemm _____ student fil-klassi. (There are fifteen students.)",
+          "answer": "ħmistax-il",
+          "accepted": ["ħmistax-il"],
+          "explanation": "Use ħmistax-il before the singular counted noun student."
+        }
+      }
+    },
+    {
+      "id": "grammar-future-se",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "title": "Future with se",
+      "sourceRequirement": "Future with se plus a present-type verb form",
+      "role": "core",
+      "summary": "Build a future plan with se and the present-type form that matches the subject.",
+      "rule": "Place se before the present-type verb form; keep the person marking on the verb.",
+      "pattern": "jien se mmur | hi se tilgħab | aħna se naraw",
+      "commonMistake": "Do not put se before a past-tense form such as mort when describing a future plan.",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": ["b2-future-se"],
+        "coverageStatus": "covered-with-example-gaps"
+      },
+      "examples": [
+        { "id": "grammar-future-first", "maltese": "Għada se mmur il-belt.", "english": "Tomorrow I will go to the city.", "note": "first person singular" },
+        { "id": "grammar-future-feminine", "maltese": "Hi se tilgħab it-tenis.", "english": "She will play tennis.", "note": "third person feminine" },
+        { "id": "grammar-future-plural", "maltese": "Aħna se naraw film.", "english": "We will watch a film.", "note": "first person plural" }
+      ],
+      "masteryLabel": "choose and produce se with the correct present-type verb form",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly describes a future plan?",
+          "choices": ["Għada se mort il-belt.", "Għada se mmur il-belt.", "Għada mort se il-belt."],
+          "answer": "Għada se mmur il-belt.",
+          "explanation": "Use se before the matching present-type form mmur."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the future plan: Għada _____ il-baħar. (Tomorrow I will go to the seaside.)",
+          "answer": "se mmur",
+          "accepted": ["se mmur"],
+          "explanation": "The future phrase is se plus the first-person form mmur."
+        }
+      }
+    },
+    {
+      "id": "grammar-modals",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "title": "Can, must, want, and need",
+      "sourceRequirement": "Modal and need patterns",
+      "role": "core",
+      "summary": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
+      "rule": "Use a modal expression such as nista', irrid, nixtieq, or għandi bżonn before the action form.",
+      "pattern": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
+      "commonMistake": "Keep the action after the modal instead of translating the English pattern word by word.",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "modals_needs.html",
+        "coverageStatus": "extended"
+      },
+      "examples": [
+        { "id": "grammar-modals-can", "maltese": "Nista' mmur.", "english": "I can go.", "note": "ability" },
+        { "id": "grammar-modals-would-like", "maltese": "Nixtieq nixrob kafè.", "english": "I would like to drink coffee.", "note": "polite preference" },
+        { "id": "grammar-modals-need", "maltese": "Għandi bżonn nistrieħ.", "english": "I need to rest.", "note": "need" }
+      ],
+      "masteryLabel": "select and produce a modal expression before an action",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence politely says “I would like to drink coffee”?",
+          "choices": ["Nixtieq nixrob kafè.", "Għandi bżonn kafè nixrob.", "Nista' kafè."],
+          "answer": "Nixtieq nixrob kafè.",
+          "explanation": "Nixtieq followed by the action expresses a polite preference."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the need pattern: _____ nistrieħ. (I need to rest.)",
+          "answer": "Għandi bżonn",
+          "accepted": ["Għandi bżonn", "għandi bżonn"],
+          "explanation": "Għandi bżonn before an action expresses need."
+        }
+      }
+    },
+    {
+      "id": "grammar-comparisons",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "title": "Comparatives with minn",
+      "sourceRequirement": "Comparatives with minn",
+      "role": "core",
+      "summary": "Compare two people, objects, places, or conditions with a comparative and minn.",
+      "rule": "Put the comparative after the first item and introduce the second item with minn, which may combine with an article.",
+      "pattern": "A + comparative + minn + B",
+      "commonMistake": "Do not omit minn when both sides of the comparison are stated.",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "comparisons.html",
+        "coverageStatus": "extended"
+      },
+      "examples": [
+        { "id": "grammar-comparisons-house", "maltese": "Din id-dar akbar minn dik.", "english": "This house is bigger than that one.", "note": "comparison with minn" },
+        { "id": "grammar-comparisons-room", "maltese": "Il-kamra tiegħi iżgħar minn tiegħek.", "english": "My room is smaller than yours.", "note": "comparison with minn" },
+        { "id": "grammar-comparisons-wind", "maltese": "Illum hemm inqas riħ minn ieri.", "english": "Today there is less wind than yesterday.", "note": "quantity comparison" }
+      ],
+      "masteryLabel": "recognize and produce a complete comparison with minn",
+      "assessment": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence makes a complete comparison?",
+          "choices": ["Din id-dar akbar dik.", "Din id-dar akbar minn dik.", "Din id-dar minn akbar dik."],
+          "answer": "Din id-dar akbar minn dik.",
+          "explanation": "The second item in a full comparison is introduced by minn."
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the comparison: Il-kamra tiegħi _____ minn tiegħek. (My room is smaller than yours.)",
+          "answer": "iżgħar",
+          "accepted": ["iżgħar"],
+          "explanation": "Iżgħar means smaller and is followed here by minn."
+        }
+      }
+    }
+  ]
+}

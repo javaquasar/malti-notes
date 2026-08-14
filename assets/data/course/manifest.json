@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "description": "Runtime index for lazy-loaded book-course chapter payloads.",
   "chapterCount": 14,
-  "targetCount": 462,
+  "targetCount": 470,
   "chapters": [
     {
       "id": "b1-introductions",
@@ -11,7 +11,7 @@
       "number": 1,
       "title": "Jien u Int",
       "file": "./assets/data/course/chapters/b1-introductions.json",
-      "bytes": 125286,
+      "bytes": 128995,
       "targetIds": [
         "b1-introductions-annimal",
         "b1-introductions-belt",
@@ -49,13 +49,15 @@
         "b1-introductions-sportiv",
         "b1-introductions-sportiva",
         "b1-introductions-cajtier",
-        "b1-introductions-cajtiera"
+        "b1-introductions-cajtiera",
+        "grammar-agreement"
       ],
-      "implementedCount": 37,
+      "implementedCount": 38,
       "pageHrefs": [
         "course_chapter.html",
         "pronouns_possessives.html",
-        "introductions_alphabet.html"
+        "introductions_alphabet.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b1-introductions-diagnostic",
@@ -101,8 +103,8 @@
         {
           "id": "b1-introductions-checkpoint-7",
           "sequence": 7,
-          "targetCount": 1,
-          "itemCount": 2
+          "targetCount": 2,
+          "itemCount": 5
         }
       ],
       "source": {
@@ -278,7 +280,7 @@
       "number": 4,
       "title": "L-Annimali",
       "file": "./assets/data/course/chapters/b1-animals.json",
-      "bytes": 91234,
+      "bytes": 94262,
       "targetIds": [
         "b1-animals-kelb",
         "b1-animals-kelba",
@@ -306,12 +308,14 @@
         "b1-animals-serp",
         "b1-animals-denfil",
         "b1-animals-gemel",
-        "b1-animals-iljunfant"
+        "b1-animals-iljunfant",
+        "grammar-possession-ghandu"
       ],
-      "implementedCount": 27,
+      "implementedCount": 28,
       "pageHrefs": [
         "animals.html",
-        "course_chapter.html"
+        "course_chapter.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b1-animals-diagnostic",
@@ -345,8 +349,8 @@
         {
           "id": "b1-animals-checkpoint-5",
           "sequence": 5,
-          "targetCount": 3,
-          "itemCount": 7
+          "targetCount": 4,
+          "itemCount": 9
         }
       ],
       "source": {
@@ -362,7 +366,7 @@
       "number": 5,
       "title": "Il-Kuluri",
       "file": "./assets/data/course/chapters/b1-colours.json",
-      "bytes": 140158,
+      "bytes": 143782,
       "targetIds": [
         "b1-colours-abjad",
         "b1-colours-bajda",
@@ -406,12 +410,14 @@
         "b1-colours-gappun",
         "b1-colours-libja",
         "b1-colours-awstralja",
-        "b1-colours-cina"
+        "b1-colours-cina",
+        "grammar-demonstratives"
       ],
-      "implementedCount": 43,
+      "implementedCount": 44,
       "pageHrefs": [
         "colors_maltese.html",
-        "course_chapter.html"
+        "course_chapter.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b1-colours-diagnostic",
@@ -463,8 +469,8 @@
         {
           "id": "b1-colours-checkpoint-8",
           "sequence": 8,
-          "targetCount": 1,
-          "itemCount": 2
+          "targetCount": 2,
+          "itemCount": 5
         }
       ],
       "source": {
@@ -710,7 +716,7 @@
       "number": 1,
       "title": "Fil-Basket tal-Iskola",
       "file": "./assets/data/course/chapters/b2-school-bag.json",
-      "bytes": 158692,
+      "bytes": 161376,
       "targetIds": [
         "b2-school-bag-basket-tal-iskola",
         "b2-school-bag-pokit",
@@ -758,12 +764,14 @@
         "b2-school-bag-nadif",
         "b2-school-bag-nadifa",
         "b2-school-bag-nodfa",
-        "b2-school-bag-mahmuga"
+        "b2-school-bag-mahmuga",
+        "grammar-definite-article"
       ],
-      "implementedCount": 47,
+      "implementedCount": 48,
       "pageHrefs": [
         "course_chapter.html",
-        "school_classroom.html"
+        "school_classroom.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b2-school-bag-diagnostic",
@@ -815,8 +823,8 @@
         {
           "id": "b2-school-bag-checkpoint-8",
           "sequence": 8,
-          "targetCount": 5,
-          "itemCount": 11
+          "targetCount": 6,
+          "itemCount": 13
         }
       ],
       "source": {
@@ -928,7 +936,7 @@
       "number": 3,
       "title": "It-Temp",
       "file": "./assets/data/course/chapters/b2-weather.json",
-      "bytes": 80340,
+      "bytes": 83094,
       "targetIds": [
         "b2-weather-borra",
         "b2-weather-temperatura",
@@ -952,12 +960,14 @@
         "b2-weather-xemxi",
         "b2-weather-imsahhab",
         "b2-weather-l-oghla-temperatura",
-        "b2-weather-l-inqas-temperatura"
+        "b2-weather-l-inqas-temperatura",
+        "grammar-comparisons"
       ],
-      "implementedCount": 23,
+      "implementedCount": 24,
       "pageHrefs": [
         "course_chapter.html",
-        "weather.html"
+        "weather.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b2-weather-diagnostic",
@@ -985,8 +995,8 @@
         {
           "id": "b2-weather-checkpoint-4",
           "sequence": 4,
-          "targetCount": 5,
-          "itemCount": 11
+          "targetCount": 6,
+          "itemCount": 13
         }
       ],
       "source": {
@@ -1002,7 +1012,7 @@
       "number": 4,
       "title": "Il-Ħwejjeġ",
       "file": "./assets/data/course/chapters/b2-clothes.json",
-      "bytes": 94106,
+      "bytes": 97110,
       "targetIds": [
         "b2-clothes-flokk-hafif",
         "b2-clothes-libsa-hafifa",
@@ -1030,13 +1040,15 @@
         "b2-clothes-sbatax",
         "b2-clothes-tmintax",
         "b2-clothes-dsatax",
-        "b2-clothes-ghoxrin"
+        "b2-clothes-ghoxrin",
+        "grammar-number-il"
       ],
-      "implementedCount": 27,
+      "implementedCount": 28,
       "pageHrefs": [
         "course_chapter.html",
         "shopping_clothes.html",
-        "numbers_calendar_time.html"
+        "numbers_calendar_time.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b2-clothes-diagnostic",
@@ -1070,8 +1082,8 @@
         {
           "id": "b2-clothes-checkpoint-5",
           "sequence": 5,
-          "targetCount": 3,
-          "itemCount": 7
+          "targetCount": 4,
+          "itemCount": 9
         }
       ],
       "source": {
@@ -1087,7 +1099,7 @@
       "number": 5,
       "title": "Xi Nħobb Nagħmel",
       "file": "./assets/data/course/chapters/b2-hobbies.json",
-      "bytes": 84239,
+      "bytes": 87417,
       "targetIds": [
         "b2-hobbies-libes",
         "b2-hobbies-ilbes",
@@ -1112,12 +1124,14 @@
         "b2-hobbies-se-jghumu",
         "b2-hobbies-se-nohorgu",
         "b2-hobbies-se-niekol",
-        "b2-hobbies-se-naghmel"
+        "b2-hobbies-se-naghmel",
+        "grammar-future-se"
       ],
-      "implementedCount": 24,
+      "implementedCount": 25,
       "pageHrefs": [
         "imperative_verbs.html",
-        "course_chapter.html"
+        "course_chapter.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b2-hobbies-diagnostic",
@@ -1147,6 +1161,12 @@
           "sequence": 4,
           "targetCount": 6,
           "itemCount": 13
+        },
+        {
+          "id": "b2-hobbies-checkpoint-5",
+          "sequence": 5,
+          "targetCount": 1,
+          "itemCount": 2
         }
       ],
       "source": {
@@ -1162,7 +1182,7 @@
       "number": 6,
       "title": "Fil-Pjazza",
       "file": "./assets/data/course/chapters/b2-town.json",
-      "bytes": 97942,
+      "bytes": 100801,
       "targetIds": [
         "b2-town-kafetterija",
         "b2-town-ispizerija",
@@ -1191,13 +1211,15 @@
         "b2-town-dur-fuq-il-lemin",
         "b2-town-imxi-dritt",
         "b2-town-itla-l-fuq",
-        "b2-town-inzel-l-isfel"
+        "b2-town-inzel-l-isfel",
+        "grammar-modals"
       ],
-      "implementedCount": 28,
+      "implementedCount": 29,
       "pageHrefs": [
         "course_chapter.html",
         "directions_town.html",
-        "restaurant_ordering.html"
+        "restaurant_ordering.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b2-town-diagnostic",
@@ -1231,8 +1253,8 @@
         {
           "id": "b2-town-checkpoint-5",
           "sequence": 5,
-          "targetCount": 4,
-          "itemCount": 9
+          "targetCount": 5,
+          "itemCount": 11
         }
       ],
       "source": {

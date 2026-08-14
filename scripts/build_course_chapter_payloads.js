@@ -43,7 +43,10 @@ course.levels.forEach((level) => level.chapters.forEach((chapter) => {
     .filter((target) => target.chapterId === chapter.id)
     .map((target) => ({ ...target, assessmentIds: assessmentIndex.get(target.id) || [] }));
   const sourceChapter = sourceChapters.get(chapter.id);
-  const targetSources = Object.fromEntries(chapterTargets.map((target) => [target.id, provenance.targets[target.id]]));
+  const targetSources = Object.fromEntries(chapterTargets.map((target) => [
+    target.id,
+    provenance.targets[target.id] || target.sourceRef
+  ]));
   const payload = {
     schemaVersion: 1,
     chapter: {

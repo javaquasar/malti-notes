@@ -212,7 +212,7 @@ function contextualExample(target, gloss) {
 }
 
 function buildExamples() {
-  const targets = readJson(bindingsPath).targets;
+  const targets = readJson(bindingsPath).targets.filter((target) => target.type !== "grammar");
   const glosses = readJson(glossesPath).glosses;
   const examples = {};
   targets.forEach((target) => {
@@ -246,9 +246,9 @@ if (checkOnly) {
     console.error(`Contextual examples are stale: ${errors.join(", ")}. Run npm run course:examples:build.`);
     process.exit(1);
   }
-  console.log("Contextual examples are synchronized: 462 course targets and 60 animal cards.");
+  console.log(`Contextual examples are synchronized: ${Object.keys(JSON.parse(serializedExamples).examples).length} book targets and 60 animal cards.`);
 } else {
   fs.writeFileSync(examplesPath, serializedExamples, "utf8");
   fs.writeFileSync(animalsPath, serializedAnimals, "utf8");
-  console.log("Wrote contextual examples for 462 course targets and 60 animal cards.");
+  console.log(`Wrote contextual examples for ${Object.keys(JSON.parse(serializedExamples).examples).length} book targets and 60 animal cards.`);
 }

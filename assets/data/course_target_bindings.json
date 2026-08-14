@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 3,
-  "description": "Canonical audited registry between all B1/B2 book requirements and teaching content. Assessments are derived downstream.",
+  "schemaVersion": 4,
+  "description": "Canonical registry for audited B1/B2 book requirements and first-class grammar targets. Assessments are derived downstream.",
   "fullyAuditedChapterIds": [
     "b1-introductions",
     "b1-residence",
@@ -6484,6 +6484,171 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-ohorgu"
+      }
+    },
+    {
+      "id": "grammar-agreement",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "grammar",
+      "sourceRequirement": "Gender and number agreement",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-adjective-gender",
+          "b1-colour-agreement"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-agreement"
+      }
+    },
+    {
+      "id": "grammar-demonstratives",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "grammar",
+      "sourceRequirement": "Near and far demonstratives",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-demonstratives"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-demonstratives"
+      }
+    },
+    {
+      "id": "grammar-possession-ghandu",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "grammar",
+      "sourceRequirement": "Possession with għandu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-possession"
+        ],
+        "coverageStatus": "covered-as-a-topic"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-possession-ghandu"
+      }
+    },
+    {
+      "id": "grammar-definite-article",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "grammar",
+      "sourceRequirement": "Definite article and assimilation",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-definite-article"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-definite-article"
+      }
+    },
+    {
+      "id": "grammar-number-il",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "grammar",
+      "sourceRequirement": "Numbers 11–19 with -il and a singular noun",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-number-il-rule"
+        ],
+        "coverageStatus": "partial"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-number-il"
+      }
+    },
+    {
+      "id": "grammar-future-se",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "grammar",
+      "sourceRequirement": "Future with se plus a present-type verb form",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-future-se"
+        ],
+        "coverageStatus": "covered-with-example-gaps"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-future-se"
+      }
+    },
+    {
+      "id": "grammar-modals",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "grammar",
+      "sourceRequirement": "Modal and need patterns",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "modals_needs.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-modals"
+      }
+    },
+    {
+      "id": "grammar-comparisons",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "grammar",
+      "sourceRequirement": "Comparatives with minn",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "comparisons.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-comparisons"
       }
     }
   ]

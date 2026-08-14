@@ -570,7 +570,6 @@
         "itemId": "b2-school-bag-zghir"
       },
       "assessmentIds": [
-        "b2-school-bag-zghir-diagnostic-recognition-true-false",
         "b2-school-bag-zghir-recognition-true-false",
         "b2-school-bag-zghir-production",
         "b2-school-bag-checkpoint-5-matching"
@@ -590,6 +589,7 @@
         "itemId": "b2-school-bag-zghira"
       },
       "assessmentIds": [
+        "b2-school-bag-zghira-diagnostic-recognition-true-false",
         "b2-school-bag-zghira-recognition",
         "b2-school-bag-zghira-production"
       ]
@@ -664,7 +664,6 @@
         "itemId": "b2-school-bag-godda"
       },
       "assessmentIds": [
-        "b2-school-bag-godda-diagnostic-recognition",
         "b2-school-bag-godda-recognition",
         "b2-school-bag-godda-production",
         "b2-school-bag-checkpoint-6-matching"
@@ -684,6 +683,7 @@
         "itemId": "b2-school-bag-qadim"
       },
       "assessmentIds": [
+        "b2-school-bag-qadim-diagnostic-recognition",
         "b2-school-bag-qadim-recognition-true-false",
         "b2-school-bag-qadim-production",
         "b2-school-bag-checkpoint-6-matching"
@@ -759,7 +759,6 @@
         "itemId": "b2-school-bag-moderna"
       },
       "assessmentIds": [
-        "b2-school-bag-moderna-diagnostic-recognition-true-false",
         "b2-school-bag-moderna-recognition-true-false",
         "b2-school-bag-moderna-production"
       ]
@@ -778,6 +777,7 @@
         "itemId": "b2-school-bag-moderni"
       },
       "assessmentIds": [
+        "b2-school-bag-moderni-diagnostic-recognition-true-false",
         "b2-school-bag-moderni-recognition",
         "b2-school-bag-moderni-production",
         "b2-school-bag-checkpoint-7-matching"
@@ -854,7 +854,6 @@
         "itemId": "b2-school-bag-ikkulurit"
       },
       "assessmentIds": [
-        "b2-school-bag-ikkulurit-diagnostic-recognition",
         "b2-school-bag-ikkulurit-recognition",
         "b2-school-bag-ikkulurit-production"
       ]
@@ -873,6 +872,7 @@
         "itemId": "b2-school-bag-ikkulurita"
       },
       "assessmentIds": [
+        "b2-school-bag-ikkulurita-diagnostic-recognition",
         "b2-school-bag-ikkulurita-recognition-true-false",
         "b2-school-bag-ikkulurita-production"
       ]
@@ -967,9 +967,34 @@
         "itemId": "b2-school-bag-mahmuga"
       },
       "assessmentIds": [
-        "b2-school-bag-mahmuga-diagnostic-recognition-true-false",
         "b2-school-bag-mahmuga-recognition",
         "b2-school-bag-mahmuga-production"
+      ]
+    },
+    {
+      "id": "grammar-definite-article",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "grammar",
+      "sourceRequirement": "Definite article and assimilation",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-definite-article"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-definite-article"
+      },
+      "assessmentIds": [
+        "grammar-definite-article-diagnostic-recognition",
+        "grammar-definite-article-recognition",
+        "grammar-definite-article-production"
       ]
     }
   ],
@@ -1689,6 +1714,13 @@
         10
       ],
       "match": "text-exact"
+    },
+    "grammar-definite-article": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b2-definite-article"
+      ],
+      "coverageStatus": "covered"
     }
   },
   "supplementalItems": [
@@ -3250,88 +3282,94 @@
           }
         },
         {
-          "id": "b2-school-bag-zghir-diagnostic-recognition-true-false",
+          "id": "b2-school-bag-zghira-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-zghir"
+            "b2-school-bag-zghira"
           ],
-          "prompt": "True or false: “żgħir” means “book” in this chapter.",
+          "prompt": "True or false: “żgħira” means “book” in this chapter.",
           "answer": false,
-          "explanation": "żgħir means “small”.",
+          "explanation": "żgħira means “small”.",
           "reviewCard": {
-            "maltese": "żgħir",
+            "maltese": "żgħira",
             "english": "small"
           }
         },
         {
-          "id": "b2-school-bag-godda-diagnostic-recognition",
+          "id": "b2-school-bag-qadim-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-godda"
+            "b2-school-bag-qadim"
           ],
-          "prompt": "What is the lesson meaning of “ġodda”?",
+          "prompt": "What is the lesson meaning of “qadim”?",
           "choices": [
-            "new (plural)",
+            "old",
             "marker pen",
             "calculator"
           ],
-          "answer": "new (plural)",
-          "explanation": "ġodda means “new (plural)” in this chapter.",
+          "answer": "old",
+          "explanation": "qadim means “old” in this chapter.",
           "reviewCard": {
-            "maltese": "ġodda",
-            "english": "new (plural)"
+            "maltese": "qadim",
+            "english": "old"
           }
         },
         {
-          "id": "b2-school-bag-moderna-diagnostic-recognition-true-false",
+          "id": "b2-school-bag-moderni-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-moderna"
+            "b2-school-bag-moderni"
           ],
-          "prompt": "True or false: “moderna” means “calculator” in this chapter.",
+          "prompt": "True or false: “moderni” means “calculator” in this chapter.",
           "answer": false,
-          "explanation": "moderna means “modern”.",
+          "explanation": "moderni means “modern (plural)”.",
           "reviewCard": {
-            "maltese": "moderna",
-            "english": "modern"
+            "maltese": "moderni",
+            "english": "modern (plural)"
           }
         },
         {
-          "id": "b2-school-bag-ikkulurit-diagnostic-recognition",
+          "id": "b2-school-bag-ikkulurita-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-ikkulurit"
+            "b2-school-bag-ikkulurita"
           ],
-          "prompt": "What is the lesson meaning of “ikkulurit”?",
+          "prompt": "What is the lesson meaning of “ikkulurita”?",
           "choices": [
             "scissors",
-            "colourful",
+            "colourful (feminine)",
             "compass"
           ],
-          "answer": "colourful",
-          "explanation": "ikkulurit means “colourful” in this chapter.",
+          "answer": "colourful (feminine)",
+          "explanation": "ikkulurita means “colourful (feminine)” in this chapter.",
           "reviewCard": {
-            "maltese": "ikkulurit",
-            "english": "colourful"
+            "maltese": "ikkulurita",
+            "english": "colourful (feminine)"
           }
         },
         {
-          "id": "b2-school-bag-mahmuga-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which form correctly means “the house”?",
+          "choices": [
+            "il-dar",
+            "id-dar",
+            "l-dar"
+          ],
+          "answer": "id-dar",
+          "explanation": "Before d, the article assimilates and becomes id-.",
+          "id": "grammar-definite-article-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-mahmuga"
+            "grammar-definite-article"
           ],
-          "prompt": "True or false: “maħmuġa” means “scissors” in this chapter.",
-          "answer": false,
-          "explanation": "maħmuġa means “dirty (feminine)”.",
           "reviewCard": {
-            "maltese": "maħmuġa",
-            "english": "dirty (feminine)"
+            "maltese": "il-ktieb | l-iskola | id-dar | ix-xemx",
+            "english": "Apply il-, l-, or an assimilated article before a noun.",
+            "example": "il-ktieb"
           }
         }
       ]
@@ -5206,7 +5244,7 @@
       "id": "b2-school-bag-checkpoint-8",
       "kind": "checkpoint",
       "sequence": 8,
-      "targetCount": 5,
+      "targetCount": 6,
       "title": "Fil-Basket tal-Iskola Checkpoint 8",
       "items": [
         {
@@ -5291,7 +5329,7 @@
           ],
           "prompt": "What is the lesson meaning of “nadifa”?",
           "choices": [
-            "school bag",
+            "apply the regular, reduced, or assimilated definite article",
             "clean (feminine)",
             "dirty (feminine)"
           ],
@@ -5328,7 +5366,7 @@
           "targetIds": [
             "b2-school-bag-nodfa"
           ],
-          "prompt": "True or false: “nodfa” means “school bag” in this chapter.",
+          "prompt": "True or false: “nodfa” means “apply the regular, reduced, or assimilated definite article” in this chapter.",
           "answer": false,
           "explanation": "nodfa means “clean (plural)”.",
           "reviewCard": {
@@ -5364,8 +5402,8 @@
           ],
           "prompt": "What is the lesson meaning of “maħmuġa”?",
           "choices": [
+            "school bag",
             "pocket",
-            "pencil sharpener",
             "dirty (feminine)"
           ],
           "answer": "dirty (feminine)",
@@ -5393,6 +5431,47 @@
           "accepted": [
             "maħmuġa"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which form correctly means “the house”?",
+          "choices": [
+            "il-dar",
+            "id-dar",
+            "l-dar"
+          ],
+          "answer": "id-dar",
+          "explanation": "Before d, the article assimilates and becomes id-.",
+          "id": "grammar-definite-article-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-definite-article"
+          ],
+          "reviewCard": {
+            "maltese": "il-ktieb | l-iskola | id-dar | ix-xemx",
+            "english": "Apply il-, l-, or an assimilated article before a noun.",
+            "example": "il-ktieb"
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the article: _____ tinsab ħdejn l-iskola. (The house is near the school.)",
+          "answer": "Id-dar",
+          "accepted": [
+            "Id-dar",
+            "id-dar"
+          ],
+          "explanation": "Dar takes the assimilated article id-.",
+          "id": "grammar-definite-article-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-definite-article"
+          ],
+          "reviewCard": {
+            "maltese": "il-ktieb | l-iskola | id-dar | ix-xemx",
+            "english": "Apply il-, l-, or an assimilated article before a noun.",
+            "example": "il-ktieb"
+          }
         },
         {
           "id": "b2-school-bag-checkpoint-8-matching",

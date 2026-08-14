@@ -210,7 +210,6 @@
         "itemId": "b2-hobbies-uzaw"
       },
       "assessmentIds": [
-        "b2-hobbies-uzaw-diagnostic-recognition-true-false",
         "b2-hobbies-uzaw-recognition-true-false",
         "b2-hobbies-uzaw-production",
         "b2-hobbies-checkpoint-2-matching"
@@ -230,6 +229,7 @@
         "itemId": "imperative-gh-bidu-gham"
       },
       "assessmentIds": [
+        "b2-hobbies-ghum-diagnostic-recognition-true-false",
         "b2-hobbies-ghum-recognition",
         "b2-hobbies-ghum-production",
         "b2-hobbies-checkpoint-2-matching"
@@ -305,7 +305,6 @@
         "itemId": "b2-hobbies-ilghab"
       },
       "assessmentIds": [
-        "b2-hobbies-ilghab-diagnostic-recognition-true-false",
         "b2-hobbies-ilghab-recognition",
         "b2-hobbies-ilghab-production",
         "b2-hobbies-checkpoint-3-matching"
@@ -325,6 +324,7 @@
         "itemId": "imperative-fil-mamma-ra"
       },
       "assessmentIds": [
+        "b2-hobbies-ara-diagnostic-recognition-true-false",
         "b2-hobbies-ara-recognition-true-false",
         "b2-hobbies-ara-production",
         "b2-hobbies-checkpoint-3-matching"
@@ -363,7 +363,6 @@
         "itemId": "b2-hobbies-se-nilbes"
       },
       "assessmentIds": [
-        "b2-hobbies-se-nilbes-diagnostic-recognition",
         "b2-hobbies-se-nilbes-recognition-true-false",
         "b2-hobbies-se-nilbes-production",
         "b2-hobbies-checkpoint-3-matching"
@@ -383,6 +382,7 @@
         "itemId": "b2-hobbies-se-mmur"
       },
       "assessmentIds": [
+        "b2-hobbies-se-mmur-diagnostic-recognition",
         "b2-hobbies-se-mmur-recognition",
         "b2-hobbies-se-mmur-production"
       ]
@@ -401,7 +401,6 @@
         "itemId": "b2-hobbies-se-norqdu"
       },
       "assessmentIds": [
-        "b2-hobbies-se-norqdu-diagnostic-recognition-true-false",
         "b2-hobbies-se-norqdu-recognition-true-false",
         "b2-hobbies-se-norqdu-production"
       ]
@@ -420,6 +419,7 @@
         "itemId": "b2-hobbies-se-tilghab"
       },
       "assessmentIds": [
+        "b2-hobbies-se-tilghab-diagnostic-recognition-true-false",
         "b2-hobbies-se-tilghab-recognition",
         "b2-hobbies-se-tilghab-production",
         "b2-hobbies-checkpoint-4-matching"
@@ -458,7 +458,6 @@
         "itemId": "b2-hobbies-se-jghumu"
       },
       "assessmentIds": [
-        "b2-hobbies-se-jghumu-diagnostic-recognition",
         "b2-hobbies-se-jghumu-recognition",
         "b2-hobbies-se-jghumu-production",
         "b2-hobbies-checkpoint-4-matching"
@@ -478,6 +477,7 @@
         "itemId": "b2-hobbies-se-nohorgu"
       },
       "assessmentIds": [
+        "b2-hobbies-se-nohorgu-diagnostic-recognition",
         "b2-hobbies-se-nohorgu-recognition-true-false",
         "b2-hobbies-se-nohorgu-production",
         "b2-hobbies-checkpoint-4-matching"
@@ -515,9 +515,34 @@
         "itemId": "b2-hobbies-se-naghmel"
       },
       "assessmentIds": [
-        "b2-hobbies-se-naghmel-diagnostic-recognition-true-false",
         "b2-hobbies-se-naghmel-recognition-true-false",
         "b2-hobbies-se-naghmel-production"
+      ]
+    },
+    {
+      "id": "grammar-future-se",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "grammar",
+      "sourceRequirement": "Future with se plus a present-type verb form",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-future-se"
+        ],
+        "coverageStatus": "covered-with-example-gaps"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-future-se"
+      },
+      "assessmentIds": [
+        "grammar-future-se-diagnostic-recognition",
+        "grammar-future-se-recognition",
+        "grammar-future-se-production"
       ]
     }
   ],
@@ -883,6 +908,13 @@
         73
       ],
       "match": "text-exact"
+    },
+    "grammar-future-se": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b2-future-se"
+      ],
+      "coverageStatus": "covered-with-example-gaps"
     }
   },
   "supplementalItems": [
@@ -1696,18 +1728,18 @@
           }
         },
         {
-          "id": "b2-hobbies-uzaw-diagnostic-recognition-true-false",
+          "id": "b2-hobbies-ghum-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-uzaw"
+            "b2-hobbies-ghum"
           ],
-          "prompt": "True or false: “użaw” means “do / make (singular command)” in this chapter.",
+          "prompt": "True or false: “għum” means “do / make (singular command)” in this chapter.",
           "answer": false,
-          "explanation": "użaw means “use (plural command)”.",
+          "explanation": "għum means “swim (singular command)”.",
           "reviewCard": {
-            "maltese": "użaw",
-            "english": "use (plural command)"
+            "maltese": "għum",
+            "english": "swim (singular command)"
           }
         },
         {
@@ -1731,88 +1763,94 @@
           }
         },
         {
-          "id": "b2-hobbies-ilghab-diagnostic-recognition-true-false",
+          "id": "b2-hobbies-ara-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-ilghab"
+            "b2-hobbies-ara"
           ],
-          "prompt": "True or false: “ilgħab” means “use (singular command)” in this chapter.",
+          "prompt": "True or false: “ara” means “use (singular command)” in this chapter.",
           "answer": false,
-          "explanation": "ilgħab means “play (singular command)”.",
+          "explanation": "ara means “see / look (singular command)”.",
           "reviewCard": {
-            "maltese": "ilgħab",
-            "english": "play (singular command)"
+            "maltese": "ara",
+            "english": "see / look (singular command)"
           }
         },
         {
-          "id": "b2-hobbies-se-nilbes-diagnostic-recognition",
+          "id": "b2-hobbies-se-mmur-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-nilbes"
+            "b2-hobbies-se-mmur"
           ],
-          "prompt": "What is the lesson meaning of “se nilbes”?",
+          "prompt": "What is the lesson meaning of “se mmur”?",
           "choices": [
-            "I will wear",
+            "I will go",
             "use (plural command)",
             "swim (singular command)"
           ],
-          "answer": "I will wear",
-          "explanation": "se nilbes means “I will wear” in this chapter.",
+          "answer": "I will go",
+          "explanation": "se mmur means “I will go” in this chapter.",
           "reviewCard": {
-            "maltese": "se nilbes",
-            "english": "I will wear"
+            "maltese": "se mmur",
+            "english": "I will go"
           }
         },
         {
-          "id": "b2-hobbies-se-norqdu-diagnostic-recognition-true-false",
+          "id": "b2-hobbies-se-tilghab-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-norqdu"
+            "b2-hobbies-se-tilghab"
           ],
-          "prompt": "True or false: “se norqdu” means “swim (singular command)” in this chapter.",
+          "prompt": "True or false: “se tilgħab” means “swim (singular command)” in this chapter.",
           "answer": false,
-          "explanation": "se norqdu means “we will sleep”.",
+          "explanation": "se tilgħab means “you will play / she will play”.",
           "reviewCard": {
-            "maltese": "se norqdu",
-            "english": "we will sleep"
+            "maltese": "se tilgħab",
+            "english": "you will play / she will play"
           }
         },
         {
-          "id": "b2-hobbies-se-jghumu-diagnostic-recognition",
+          "id": "b2-hobbies-se-nohorgu-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-jghumu"
+            "b2-hobbies-se-nohorgu"
           ],
-          "prompt": "What is the lesson meaning of “se jgħumu”?",
+          "prompt": "What is the lesson meaning of “se noħorġu”?",
           "choices": [
             "sleep (singular command)",
-            "they will swim",
+            "we will go out",
             "walk (singular command)"
           ],
-          "answer": "they will swim",
-          "explanation": "se jgħumu means “they will swim” in this chapter.",
+          "answer": "we will go out",
+          "explanation": "se noħorġu means “we will go out” in this chapter.",
           "reviewCard": {
-            "maltese": "se jgħumu",
-            "english": "they will swim"
+            "maltese": "se noħorġu",
+            "english": "we will go out"
           }
         },
         {
-          "id": "b2-hobbies-se-naghmel-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly describes a future plan?",
+          "choices": [
+            "Għada se mort il-belt.",
+            "Għada se mmur il-belt.",
+            "Għada mort se il-belt."
+          ],
+          "answer": "Għada se mmur il-belt.",
+          "explanation": "Use se before the matching present-type form mmur.",
+          "id": "grammar-future-se-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-naghmel"
+            "grammar-future-se"
           ],
-          "prompt": "True or false: “se nagħmel” means “sleep (singular command)” in this chapter.",
-          "answer": false,
-          "explanation": "se nagħmel means “I will do”.",
           "reviewCard": {
-            "maltese": "se nagħmel",
-            "english": "I will do"
+            "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
+            "english": "Build a future plan with se and the present-type form that matches the subject.",
+            "example": "Għada se mmur il-belt."
           }
         }
       ]
@@ -2788,7 +2826,7 @@
           "prompt": "What is the lesson meaning of “se niekol”?",
           "choices": [
             "I will do",
-            "wore / got dressed",
+            "choose and produce se with the correct present-type verb form",
             "I will eat"
           ],
           "answer": "I will eat",
@@ -2825,7 +2863,7 @@
           "targetIds": [
             "b2-hobbies-se-naghmel"
           ],
-          "prompt": "True or false: “se nagħmel” means “wore / got dressed” in this chapter.",
+          "prompt": "True or false: “se nagħmel” means “choose and produce se with the correct present-type verb form” in this chapter.",
           "answer": false,
           "explanation": "se nagħmel means “I will do”.",
           "reviewCard": {
@@ -2886,6 +2924,58 @@
           "reviewCard": {
             "maltese": "se tilgħab",
             "english": "you will play / she will play"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 1,
+      "title": "Xi Nħobb Nagħmel Checkpoint 5",
+      "items": [
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly describes a future plan?",
+          "choices": [
+            "Għada se mort il-belt.",
+            "Għada se mmur il-belt.",
+            "Għada mort se il-belt."
+          ],
+          "answer": "Għada se mmur il-belt.",
+          "explanation": "Use se before the matching present-type form mmur.",
+          "id": "grammar-future-se-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-future-se"
+          ],
+          "reviewCard": {
+            "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
+            "english": "Build a future plan with se and the present-type form that matches the subject.",
+            "example": "Għada se mmur il-belt."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the future plan: Għada _____ il-baħar. (Tomorrow I will go to the seaside.)",
+          "answer": "se mmur",
+          "accepted": [
+            "se mmur"
+          ],
+          "explanation": "The future phrase is se plus the first-person form mmur.",
+          "id": "grammar-future-se-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-future-se"
+          ],
+          "reviewCard": {
+            "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
+            "english": "Build a future plan with se and the present-type form that matches the subject.",
+            "example": "Għada se mmur il-belt."
           }
         }
       ]

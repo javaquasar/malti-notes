@@ -444,7 +444,6 @@
         "itemId": "b1-colours-crieki"
       },
       "assessmentIds": [
-        "b1-colours-crieki-diagnostic-recognition",
         "b1-colours-crieki-recognition",
         "b1-colours-crieki-production",
         "b1-colours-checkpoint-4-matching"
@@ -464,6 +463,7 @@
         "itemId": "b1-colours-kaxxa"
       },
       "assessmentIds": [
+        "b1-colours-kaxxa-diagnostic-recognition",
         "b1-colours-kaxxa-recognition-true-false",
         "b1-colours-kaxxa-production",
         "b1-colours-checkpoint-4-matching"
@@ -709,7 +709,6 @@
         "itemId": "b1-colours-franza"
       },
       "assessmentIds": [
-        "b1-colours-franza-diagnostic-recognition-true-false",
         "b1-colours-franza-recognition",
         "b1-colours-franza-production",
         "b1-colours-checkpoint-6-matching"
@@ -729,6 +728,7 @@
         "itemId": "b1-colours-pakistan"
       },
       "assessmentIds": [
+        "b1-colours-pakistan-diagnostic-recognition-true-false",
         "b1-colours-pakistan-recognition-true-false",
         "b1-colours-pakistan-production",
         "b1-colours-checkpoint-6-matching"
@@ -803,7 +803,6 @@
         "itemId": "b1-colours-filippini"
       },
       "assessmentIds": [
-        "b1-colours-filippini-diagnostic-recognition",
         "b1-colours-filippini-recognition-true-false",
         "b1-colours-filippini-production",
         "b1-colours-checkpoint-7-matching"
@@ -823,6 +822,7 @@
         "itemId": "b1-colours-indja"
       },
       "assessmentIds": [
+        "b1-colours-indja-diagnostic-recognition",
         "b1-colours-indja-recognition",
         "b1-colours-indja-production",
         "b1-colours-checkpoint-7-matching"
@@ -897,9 +897,36 @@
         "itemId": "b1-colours-cina"
       },
       "assessmentIds": [
-        "b1-colours-cina-diagnostic-recognition-true-false",
         "b1-colours-cina-recognition",
-        "b1-colours-cina-production"
+        "b1-colours-cina-production",
+        "b1-colours-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "grammar-demonstratives",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "grammar",
+      "sourceRequirement": "Near and far demonstratives",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-demonstratives"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-demonstratives"
+      },
+      "assessmentIds": [
+        "grammar-demonstratives-diagnostic-recognition",
+        "grammar-demonstratives-recognition",
+        "grammar-demonstratives-production",
+        "b1-colours-checkpoint-8-matching"
       ]
     }
   ],
@@ -1593,6 +1620,13 @@
         80
       ],
       "match": "text-exact"
+    },
+    "grammar-demonstratives": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b1-demonstratives"
+      ],
+      "coverageStatus": "covered"
     }
   },
   "supplementalItems": [
@@ -3010,23 +3044,23 @@
           }
         },
         {
-          "id": "b1-colours-crieki-diagnostic-recognition",
+          "id": "b1-colours-kaxxa-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-colours-crieki"
+            "b1-colours-kaxxa"
           ],
-          "prompt": "What is the lesson meaning of “ċrieki”?",
+          "prompt": "What is the lesson meaning of “kaxxa”?",
           "choices": [
             "green",
             "grey",
-            "circles"
+            "box"
           ],
-          "answer": "circles",
-          "explanation": "ċrieki means “circles” in this chapter.",
+          "answer": "box",
+          "explanation": "kaxxa means “box” in this chapter.",
           "reviewCard": {
-            "maltese": "ċrieki",
-            "english": "circles"
+            "maltese": "kaxxa",
+            "english": "box"
           }
         },
         {
@@ -3065,53 +3099,59 @@
           }
         },
         {
-          "id": "b1-colours-franza-diagnostic-recognition-true-false",
+          "id": "b1-colours-pakistan-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-colours-franza"
+            "b1-colours-pakistan"
           ],
-          "prompt": "True or false: “Franza” means “black” in this chapter.",
+          "prompt": "True or false: “Pakistan” means “black” in this chapter.",
           "answer": false,
-          "explanation": "Franza means “France”.",
+          "explanation": "Pakistan means “Pakistan”.",
           "reviewCard": {
-            "maltese": "Franza",
-            "english": "France"
+            "maltese": "Pakistan",
+            "english": "Pakistan"
           }
         },
         {
-          "id": "b1-colours-filippini-diagnostic-recognition",
+          "id": "b1-colours-indja-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-colours-filippini"
+            "b1-colours-indja"
           ],
-          "prompt": "What is the lesson meaning of “Filippini”?",
+          "prompt": "What is the lesson meaning of “Indja”?",
           "choices": [
             "brown",
-            "the Philippines",
+            "India",
             "black (feminine)"
           ],
-          "answer": "the Philippines",
-          "explanation": "Filippini means “the Philippines” in this chapter.",
+          "answer": "India",
+          "explanation": "Indja means “India” in this chapter.",
           "reviewCard": {
-            "maltese": "Filippini",
-            "english": "the Philippines"
+            "maltese": "Indja",
+            "english": "India"
           }
         },
         {
-          "id": "b1-colours-cina-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which phrase means “this car”?",
+          "choices": [
+            "dan il-karozza",
+            "din il-karozza",
+            "dawn il-karozza"
+          ],
+          "answer": "din il-karozza",
+          "explanation": "Karozza is feminine singular, so the near demonstrative is din.",
+          "id": "grammar-demonstratives-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-colours-cina"
+            "grammar-demonstratives"
           ],
-          "prompt": "True or false: “Ċina” means “brown” in this chapter.",
-          "answer": false,
-          "explanation": "Ċina means “China”.",
           "reviewCard": {
-            "maltese": "Ċina",
-            "english": "China"
+            "maltese": "dan/dak + masculine | din/dik + feminine | dawn/dawk + plural",
+            "english": "Choose demonstratives by distance, gender, and number.",
+            "example": "Dan il-ktieb huwa ġdid."
           }
         }
       ]
@@ -4877,8 +4917,8 @@
           ],
           "prompt": "What is the lesson meaning of “Libja”?",
           "choices": [
+            "select a near or far demonstrative with the correct gender and number",
             "white",
-            "white (feminine)",
             "Libya"
           ],
           "answer": "Libya",
@@ -4914,7 +4954,7 @@
           "targetIds": [
             "b1-colours-awstralja"
           ],
-          "prompt": "True or false: “Awstralja” means “white (feminine)” in this chapter.",
+          "prompt": "True or false: “Awstralja” means “white” in this chapter.",
           "answer": false,
           "explanation": "Awstralja means “Australia”.",
           "reviewCard": {
@@ -4985,7 +5025,7 @@
       "id": "b1-colours-checkpoint-8",
       "kind": "checkpoint",
       "sequence": 8,
-      "targetCount": 1,
+      "targetCount": 2,
       "title": "Il-Kuluri Checkpoint 8",
       "items": [
         {
@@ -4998,8 +5038,8 @@
           "prompt": "What is the lesson meaning of “Ċina”?",
           "choices": [
             "China",
-            "red",
-            "red (feminine)"
+            "white (feminine)",
+            "red"
           ],
           "answer": "China",
           "explanation": "Ċina means “China” in this chapter.",
@@ -5026,6 +5066,72 @@
           "accepted": [
             "Ċina"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which phrase means “this car”?",
+          "choices": [
+            "dan il-karozza",
+            "din il-karozza",
+            "dawn il-karozza"
+          ],
+          "answer": "din il-karozza",
+          "explanation": "Karozza is feminine singular, so the near demonstrative is din.",
+          "id": "grammar-demonstratives-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-demonstratives"
+          ],
+          "reviewCard": {
+            "maltese": "dan/dak + masculine | din/dik + feminine | dawn/dawk + plural",
+            "english": "Choose demonstratives by distance, gender, and number.",
+            "example": "Dan il-ktieb huwa ġdid."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete with a near plural demonstrative: _____ il-kotba huma ġodda.",
+          "answer": "Dawn",
+          "accepted": [
+            "Dawn",
+            "dawn"
+          ],
+          "explanation": "Dawn is used for plural things that are near.",
+          "id": "grammar-demonstratives-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-demonstratives"
+          ],
+          "reviewCard": {
+            "maltese": "dan/dak + masculine | din/dik + feminine | dawn/dawk + plural",
+            "english": "Choose demonstratives by distance, gender, and number.",
+            "example": "Dan il-ktieb huwa ġdid."
+          }
+        },
+        {
+          "id": "b1-colours-checkpoint-8-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-cina",
+            "grammar-demonstratives"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Ċina",
+              "right": "China"
+            },
+            {
+              "left": "Near and far demonstratives",
+              "right": "select a near or far demonstrative with the correct gender and number"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China"
+          }
         }
       ]
     }

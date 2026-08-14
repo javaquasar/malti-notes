@@ -8,6 +8,7 @@ const ajv = new Ajv({ allErrors: true, strict: false });
 const checks = [
   ["schemas/site-map.schema.json", ["assets/data/site-map.json"]],
   ["schemas/search-index.schema.json", ["assets/data/search-index.json"]],
+  ["schemas/grammar-targets.schema.json", ["assets/data/grammar_targets.json"]],
   ["schemas/course-manifest.schema.json", ["assets/data/course/manifest.json"]],
   ["schemas/course-chapter.schema.json", fs.readdirSync(path.join(root, "assets/data/course/chapters")).filter((file) => file.endsWith(".json")).sort().map((file) => `assets/data/course/chapters/${file}`)],
   ["schemas/course-milestones.schema.json", ["assets/data/course_milestone_assessments.json"]]

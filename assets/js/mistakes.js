@@ -4,6 +4,7 @@
   if (!store || !root) return;
 
   let filter = "open";
+  let category = "all";
   let current = null;
   let revealed = false;
   const get = (selector) => root.querySelector(selector);
@@ -19,7 +20,10 @@
 
   function renderList(entries) {
     const list = get("[data-mistake-list]");
-    const visible = entries.filter((entry) => filter === "all" || entry.status === filter);
+    const visible = entries.filter((entry) => (
+      (filter === "all" || entry.status === filter)
+      && (category === "all" || entry.category === category)
+    ));
     list.innerHTML = "";
     visible.forEach((entry) => {
       const article = document.createElement("article");
@@ -30,7 +34,10 @@
       article.className = "mistake-entry";
       heading.textContent = entry.prompt;
       meta.className = "mini";
-      meta.textContent = `${entry.topic} | ${entry.status === "resolved" ? "Resolved" : `${entry.correctStreak || 0}/2 correct`} | ${entry.wrongCount} missed`;
+      const categoryLabel = entry.category === "grammar" && entry.ruleId
+        ? `Grammar · ${entry.ruleId.replace(/^grammar-/, "").replaceAll("-", " ")}`
+        : (entry.category || "general").replace(/^./, (letter) => letter.toUpperCase());
+      meta.textContent = `${categoryLabel} | ${entry.topic} | ${entry.status === "resolved" ? "Resolved" : `${entry.correctStreak || 0}/2 correct`} | ${entry.wrongCount} missed`;
       answer.textContent = `Correct answer: ${entry.correctAnswer}`;
       link.className = "action-link";
       link.href = sourceHref(entry);
@@ -42,7 +49,7 @@
   }
 
   function renderPractice(entries) {
-    const open = entries.filter((entry) => entry.status === "open");
+    const open = entries.filter((entry) => entry.status === "open" && (category === "all" || entry.category === category));
     if (!current || !open.some((entry) => entry.id === current.id)) current = open[0] || null;
     revealed = false;
     const revealButton = get("[data-mistake-reveal]");
@@ -65,6 +72,20 @@
     setText("[data-mistake-open]", open.length);
     setText("[data-mistake-resolved]", entries.length - open.length);
     setText("[data-mistake-attempts]", entries.reduce((total, entry) => total + entry.attempts, 0));
+    const categorySelect = get("[data-mistake-category]");
+    const categories = [...new Set(entries.map((entry) => entry.category || "general"))].sort();
+    const options = [
+      ["all", "All categories"],
+      ...categories.map((value) => [value, value.replace(/^./, (letter) => letter.toUpperCase())])
+    ];
+    categorySelect.replaceChildren(...options.map(([value, label]) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      return option;
+    }));
+    if (!options.some(([value]) => value === category)) category = "all";
+    categorySelect.value = category;
     renderList(entries);
     renderPractice(entries);
   }
@@ -90,6 +111,10 @@
     root.querySelectorAll("[data-mistake-filter]").forEach((candidate) => candidate.setAttribute("aria-pressed", String(candidate === button)));
     renderList(store.getAll());
   }));
+  get("[data-mistake-category]").addEventListener("change", (event) => {
+    category = event.target.value;
+    render();
+  });
   get("[data-mistake-clear]").addEventListener("click", () => {
     store.removeResolved();
     render();

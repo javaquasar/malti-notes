@@ -116,7 +116,6 @@
         "itemId": "b2-clothes-dublett"
       },
       "assessmentIds": [
-        "b2-clothes-dublett-diagnostic-recognition-true-false",
         "b2-clothes-dublett-recognition",
         "b2-clothes-dublett-production",
         "b2-clothes-checkpoint-1-matching"
@@ -136,6 +135,7 @@
         "itemId": "b2-clothes-flokk-bil-komma-qasira"
       },
       "assessmentIds": [
+        "b2-clothes-flokk-bil-komma-qasira-diagnostic-recognition-true-false",
         "b2-clothes-flokk-bil-komma-qasira-recognition-true-false",
         "b2-clothes-flokk-bil-komma-qasira-production",
         "b2-clothes-checkpoint-1-matching"
@@ -173,7 +173,6 @@
         "itemId": "b2-clothes-flokk-ta-taht"
       },
       "assessmentIds": [
-        "b2-clothes-flokk-ta-taht-diagnostic-recognition",
         "b2-clothes-flokk-ta-taht-recognition-true-false",
         "b2-clothes-flokk-ta-taht-production"
       ]
@@ -192,6 +191,7 @@
         "itemId": "b2-clothes-qalziet-hafif"
       },
       "assessmentIds": [
+        "b2-clothes-qalziet-hafif-diagnostic-recognition",
         "b2-clothes-qalziet-hafif-recognition",
         "b2-clothes-qalziet-hafif-production",
         "b2-clothes-checkpoint-2-matching"
@@ -230,7 +230,6 @@
         "itemId": "b2-clothes-malja"
       },
       "assessmentIds": [
-        "b2-clothes-malja-diagnostic-recognition-true-false",
         "b2-clothes-malja-recognition",
         "b2-clothes-malja-production",
         "b2-clothes-checkpoint-2-matching"
@@ -250,6 +249,7 @@
         "itemId": "b2-clothes-kappell"
       },
       "assessmentIds": [
+        "b2-clothes-kappell-diagnostic-recognition-true-false",
         "b2-clothes-kappell-recognition-true-false",
         "b2-clothes-kappell-production",
         "b2-clothes-checkpoint-2-matching"
@@ -287,7 +287,6 @@
         "itemId": "b2-clothes-flokk-tas-suf"
       },
       "assessmentIds": [
-        "b2-clothes-flokk-tas-suf-diagnostic-recognition",
         "b2-clothes-flokk-tas-suf-recognition-true-false",
         "b2-clothes-flokk-tas-suf-production"
       ]
@@ -306,6 +305,7 @@
         "itemId": "gakketta"
       },
       "assessmentIds": [
+        "b2-clothes-gakketta-diagnostic-recognition",
         "b2-clothes-gakketta-recognition",
         "b2-clothes-gakketta-production",
         "b2-clothes-checkpoint-3-matching"
@@ -343,7 +343,6 @@
         "itemId": "qalziet"
       },
       "assessmentIds": [
-        "b2-clothes-qalziet-diagnostic-recognition-true-false",
         "b2-clothes-qalziet-recognition",
         "b2-clothes-qalziet-production",
         "b2-clothes-checkpoint-3-matching"
@@ -363,6 +362,7 @@
         "itemId": "b2-clothes-boots"
       },
       "assessmentIds": [
+        "b2-clothes-boots-diagnostic-recognition-true-false",
         "b2-clothes-boots-recognition-true-false",
         "b2-clothes-boots-production",
         "b2-clothes-checkpoint-3-matching"
@@ -401,7 +401,6 @@
         "itemId": "cardinal-11"
       },
       "assessmentIds": [
-        "b2-clothes-hdax-diagnostic-recognition",
         "b2-clothes-hdax-recognition-true-false",
         "b2-clothes-hdax-production"
       ]
@@ -422,6 +421,7 @@
       "assessmentIds": [
         "clothes-twelve-recognition",
         "clothes-twelve-production",
+        "b2-clothes-tnax-diagnostic-recognition",
         "b2-clothes-tnax-recognition",
         "b2-clothes-tnax-production",
         "b2-clothes-checkpoint-4-matching"
@@ -460,7 +460,6 @@
         "itemId": "cardinal-14"
       },
       "assessmentIds": [
-        "b2-clothes-erbatax-diagnostic-recognition-true-false",
         "b2-clothes-erbatax-recognition",
         "b2-clothes-erbatax-production",
         "b2-clothes-checkpoint-4-matching"
@@ -480,6 +479,7 @@
         "itemId": "cardinal-15"
       },
       "assessmentIds": [
+        "b2-clothes-hmistax-diagnostic-recognition-true-false",
         "b2-clothes-hmistax-recognition-true-false",
         "b2-clothes-hmistax-production",
         "b2-clothes-checkpoint-4-matching"
@@ -517,7 +517,6 @@
         "itemId": "cardinal-17"
       },
       "assessmentIds": [
-        "b2-clothes-sbatax-diagnostic-recognition",
         "b2-clothes-sbatax-recognition-true-false",
         "b2-clothes-sbatax-production"
       ]
@@ -536,6 +535,7 @@
         "itemId": "cardinal-18"
       },
       "assessmentIds": [
+        "b2-clothes-tmintax-diagnostic-recognition",
         "b2-clothes-tmintax-recognition",
         "b2-clothes-tmintax-production",
         "b2-clothes-checkpoint-5-matching"
@@ -574,9 +574,35 @@
         "itemId": "cardinal-20"
       },
       "assessmentIds": [
-        "b2-clothes-ghoxrin-diagnostic-recognition-true-false",
         "b2-clothes-ghoxrin-recognition",
         "b2-clothes-ghoxrin-production",
+        "b2-clothes-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "grammar-number-il",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "grammar",
+      "sourceRequirement": "Numbers 11–19 with -il and a singular noun",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-number-il-rule"
+        ],
+        "coverageStatus": "partial"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-number-il"
+      },
+      "assessmentIds": [
+        "grammar-number-il-diagnostic-recognition",
+        "grammar-number-il-recognition",
+        "grammar-number-il-production",
         "b2-clothes-checkpoint-5-matching"
       ]
     }
@@ -989,6 +1015,13 @@
         43
       ],
       "match": "text-exact"
+    },
+    "grammar-number-il": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b2-number-il-rule"
+      ],
+      "coverageStatus": "partial"
     }
   },
   "supplementalItems": [
@@ -1860,158 +1893,164 @@
           }
         },
         {
-          "id": "b2-clothes-dublett-diagnostic-recognition-true-false",
+          "id": "b2-clothes-flokk-bil-komma-qasira-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-dublett"
+            "b2-clothes-flokk-bil-komma-qasira"
           ],
-          "prompt": "True or false: “dublett” means “short-sleeved shirt” in this chapter.",
+          "prompt": "True or false: “flokk bil-komma qasira” means “skirt” in this chapter.",
           "answer": false,
-          "explanation": "dublett means “skirt”.",
+          "explanation": "flokk bil-komma qasira means “short-sleeved shirt”.",
           "reviewCard": {
-            "maltese": "dublett",
-            "english": "skirt"
+            "maltese": "flokk bil-komma qasira",
+            "english": "short-sleeved shirt"
           }
         },
         {
-          "id": "b2-clothes-flokk-ta-taht-diagnostic-recognition",
+          "id": "b2-clothes-qalziet-hafif-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-flokk-ta-taht"
+            "b2-clothes-qalziet-hafif"
           ],
-          "prompt": "What is the lesson meaning of “flokk ta' taħt”?",
+          "prompt": "What is the lesson meaning of “qalziet ħafif”?",
           "choices": [
             "denim jacket",
-            "undershirt",
+            "light trousers",
             "short-sleeved shirt"
           ],
-          "answer": "undershirt",
-          "explanation": "flokk ta' taħt means “undershirt” in this chapter.",
+          "answer": "light trousers",
+          "explanation": "qalziet ħafif means “light trousers” in this chapter.",
           "reviewCard": {
-            "maltese": "flokk ta' taħt",
-            "english": "undershirt"
+            "maltese": "qalziet ħafif",
+            "english": "light trousers"
           }
         },
         {
-          "id": "b2-clothes-malja-diagnostic-recognition-true-false",
+          "id": "b2-clothes-kappell-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-malja"
+            "b2-clothes-kappell"
           ],
-          "prompt": "True or false: “malja” means “denim jacket” in this chapter.",
+          "prompt": "True or false: “kappell” means “denim jacket” in this chapter.",
           "answer": false,
-          "explanation": "malja means “swimsuit”.",
+          "explanation": "kappell means “hat”.",
           "reviewCard": {
-            "maltese": "malja",
-            "english": "swimsuit"
+            "maltese": "kappell",
+            "english": "hat"
           }
         },
         {
-          "id": "b2-clothes-flokk-tas-suf-diagnostic-recognition",
+          "id": "b2-clothes-gakketta-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-flokk-tas-suf"
+            "b2-clothes-gakketta"
           ],
-          "prompt": "What is the lesson meaning of “flokk tas-suf”?",
+          "prompt": "What is the lesson meaning of “ġakketta”?",
           "choices": [
             "undershirt",
             "light trousers",
-            "woollen jumper"
+            "jacket"
           ],
-          "answer": "woollen jumper",
-          "explanation": "flokk tas-suf means “woollen jumper” in this chapter.",
+          "answer": "jacket",
+          "explanation": "ġakketta means “jacket” in this chapter.",
           "reviewCard": {
-            "maltese": "flokk tas-suf",
-            "english": "woollen jumper"
+            "maltese": "ġakketta",
+            "english": "jacket"
           }
         },
         {
-          "id": "b2-clothes-qalziet-diagnostic-recognition-true-false",
+          "id": "b2-clothes-boots-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-qalziet"
+            "b2-clothes-boots"
           ],
-          "prompt": "True or false: “qalziet” means “light trousers” in this chapter.",
+          "prompt": "True or false: “boots” means “light trousers” in this chapter.",
           "answer": false,
-          "explanation": "qalziet means “trousers”.",
+          "explanation": "boots means “boots”.",
           "reviewCard": {
-            "maltese": "qalziet",
-            "english": "trousers"
+            "maltese": "boots",
+            "english": "boots"
           }
         },
         {
-          "id": "b2-clothes-hdax-diagnostic-recognition",
+          "id": "b2-clothes-tnax-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-hdax"
+            "b2-clothes-tnax"
           ],
-          "prompt": "What is the lesson meaning of “ħdax”?",
+          "prompt": "What is the lesson meaning of “tnax”?",
           "choices": [
-            "eleven",
+            "twelve",
             "strappy top",
             "swimsuit"
           ],
-          "answer": "eleven",
-          "explanation": "ħdax means “eleven” in this chapter.",
+          "answer": "twelve",
+          "explanation": "tnax means “twelve” in this chapter.",
           "reviewCard": {
-            "maltese": "ħdax",
-            "english": "eleven"
+            "maltese": "tnax",
+            "english": "twelve"
           }
         },
         {
-          "id": "b2-clothes-erbatax-diagnostic-recognition-true-false",
+          "id": "b2-clothes-hmistax-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-erbatax"
+            "b2-clothes-hmistax"
           ],
-          "prompt": "True or false: “erbatax” means “swimsuit” in this chapter.",
+          "prompt": "True or false: “ħmistax” means “swimsuit” in this chapter.",
           "answer": false,
-          "explanation": "erbatax means “fourteen”.",
+          "explanation": "ħmistax means “fifteen”.",
           "reviewCard": {
-            "maltese": "erbatax",
-            "english": "fourteen"
+            "maltese": "ħmistax",
+            "english": "fifteen"
           }
         },
         {
-          "id": "b2-clothes-sbatax-diagnostic-recognition",
+          "id": "b2-clothes-tmintax-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-sbatax"
+            "b2-clothes-tmintax"
           ],
-          "prompt": "What is the lesson meaning of “sbatax”?",
+          "prompt": "What is the lesson meaning of “tmintax”?",
           "choices": [
             "flip-flop / slipper",
-            "seventeen",
+            "eighteen",
             "hat"
           ],
-          "answer": "seventeen",
-          "explanation": "sbatax means “seventeen” in this chapter.",
+          "answer": "eighteen",
+          "explanation": "tmintax means “eighteen” in this chapter.",
           "reviewCard": {
-            "maltese": "sbatax",
-            "english": "seventeen"
+            "maltese": "tmintax",
+            "english": "eighteen"
           }
         },
         {
-          "id": "b2-clothes-ghoxrin-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which phrase correctly means “twelve books”?",
+          "choices": [
+            "tnax ktieb",
+            "tnax-il ktieb",
+            "tnax-il kotba"
+          ],
+          "answer": "tnax-il ktieb",
+          "explanation": "The number takes -il and the counted noun remains singular.",
+          "id": "grammar-number-il-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-clothes-ghoxrin"
+            "grammar-number-il"
           ],
-          "prompt": "True or false: “għoxrin” means “flip-flop / slipper” in this chapter.",
-          "answer": false,
-          "explanation": "għoxrin means “twenty”.",
           "reviewCard": {
-            "maltese": "għoxrin",
-            "english": "twenty"
+            "maltese": "tnax-il ktieb | ħmistax-il student",
+            "english": "Connect the numbers 11–19 to a counted singular noun with -il.",
+            "example": "tnax-il ktieb"
           }
         }
       ]
@@ -3097,7 +3136,7 @@
       "id": "b2-clothes-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 3,
+      "targetCount": 4,
       "title": "Il-Ħwejjeġ Checkpoint 5",
       "items": [
         {
@@ -3111,7 +3150,7 @@
           "choices": [
             "eighteen",
             "twenty",
-            "light shirt"
+            "connect 11–19 to a singular counted noun with -il"
           ],
           "answer": "eighteen",
           "explanation": "tmintax means “eighteen” in this chapter.",
@@ -3146,7 +3185,7 @@
           "targetIds": [
             "b2-clothes-dsatax"
           ],
-          "prompt": "True or false: “dsatax” means “light shirt” in this chapter.",
+          "prompt": "True or false: “dsatax” means “connect 11–19 to a singular counted noun with -il” in this chapter.",
           "answer": false,
           "explanation": "dsatax means “nineteen”.",
           "reviewCard": {
@@ -3182,9 +3221,9 @@
           ],
           "prompt": "What is the lesson meaning of “għoxrin”?",
           "choices": [
-            "skirt",
+            "light dress",
             "twenty",
-            "light dress"
+            "light shirt"
           ],
           "answer": "twenty",
           "explanation": "għoxrin means “twenty” in this chapter.",
@@ -3213,13 +3252,54 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which phrase correctly means “twelve books”?",
+          "choices": [
+            "tnax ktieb",
+            "tnax-il ktieb",
+            "tnax-il kotba"
+          ],
+          "answer": "tnax-il ktieb",
+          "explanation": "The number takes -il and the counted noun remains singular.",
+          "id": "grammar-number-il-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-number-il"
+          ],
+          "reviewCard": {
+            "maltese": "tnax-il ktieb | ħmistax-il student",
+            "english": "Connect the numbers 11–19 to a counted singular noun with -il.",
+            "example": "tnax-il ktieb"
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the number phrase: Hemm _____ student fil-klassi. (There are fifteen students.)",
+          "answer": "ħmistax-il",
+          "accepted": [
+            "ħmistax-il"
+          ],
+          "explanation": "Use ħmistax-il before the singular counted noun student.",
+          "id": "grammar-number-il-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-number-il"
+          ],
+          "reviewCard": {
+            "maltese": "tnax-il ktieb | ħmistax-il student",
+            "english": "Connect the numbers 11–19 to a counted singular noun with -il.",
+            "example": "tnax-il ktieb"
+          }
+        },
+        {
           "id": "b2-clothes-checkpoint-5-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b2-clothes-tmintax",
             "b2-clothes-dsatax",
-            "b2-clothes-ghoxrin"
+            "b2-clothes-ghoxrin",
+            "grammar-number-il"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -3234,6 +3314,10 @@
             {
               "left": "għoxrin",
               "right": "twenty"
+            },
+            {
+              "left": "Numbers 11–19 with -il and a singular noun",
+              "right": "connect 11–19 to a singular counted noun with -il"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

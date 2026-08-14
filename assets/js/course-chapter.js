@@ -307,34 +307,37 @@
     const inventoryChapter = payload.inventoryChapter;
     if (!match || !inventoryChapter) throw new Error(`Unknown course chapter: ${chapterId}`);
 
-    const chapterTargets = bindings.targets.filter((target) => target.chapterId === chapterId && target.role === "core");
-    const implemented = chapterTargets.filter((target) => target.implementationStatus === "implemented");
+    const allChapterTargets = bindings.targets.filter((target) => target.chapterId === chapterId);
+    const bookTargets = allChapterTargets.filter((target) => target.type !== "grammar" && target.role === "core");
+    const grammarTargets = allChapterTargets.filter((target) => target.type === "grammar");
+    const guidedTargets = [...bookTargets, ...grammarTargets];
+    const implemented = guidedTargets.filter((target) => target.implementationStatus === "implemented");
     const assessed = implemented.filter((target) => target.assessmentIds.length > 0);
     const required = inventoryChapter.targets.length;
-    const bookCovered = chapterTargets.filter((target) => target.implementationStatus !== "missing").length;
+    const bookCovered = bookTargets.filter((target) => target.implementationStatus !== "missing").length;
 
     document.title = `${match.level.label} ${match.chapter.number}: ${match.chapter.title}`;
     setText("[data-course-chapter-label]", `${match.level.label} · Chapter ${match.chapter.number}`);
     setText("[data-course-chapter-title]", match.chapter.title);
     setText("[data-course-chapter-summary]", match.chapter.summary);
     setText("[data-course-book-coverage]", `${bookCovered} / ${required}`);
-    setText("[data-course-guided-coverage]", chapterTargets.length ? `${implemented.length} / ${required}` : "Mapping pending");
-    if (chapterTargets.length) updateLearnerMetrics(implemented);
+    setText("[data-course-guided-coverage]", guidedTargets.length ? `${implemented.length} / ${guidedTargets.length}` : "Mapping pending");
+    if (guidedTargets.length) updateLearnerMetrics(implemented);
     else {
       setText("[data-course-mastery]", "Not available");
       setText("[data-course-review-count]", "0");
     }
-    setText("[data-course-binding-note]", chapterTargets.length
-      ? `${implemented.length} targets are connected to canonical lesson cards; ${required - implemented.length} still need teaching content.`
+    setText("[data-course-binding-note]", guidedTargets.length
+      ? `${bookCovered} book targets and ${grammarTargets.length} grammar target${grammarTargets.length === 1 ? "" : "s"} are connected to canonical teaching content.`
       : "The chapter route is available, while stable target-to-content bindings are still being prepared.");
-    setText("[data-course-assessment-coverage]", chapterTargets.length
+    setText("[data-course-assessment-coverage]", guidedTargets.length
       ? `${assessed.length} of ${implemented.length} guided targets have linked self-tests with recognition and production modes.`
       : "Detailed assessment coverage will appear after this chapter receives stable target bindings.");
 
     const sourceChapter = (sourceProvenance.chapters || []).find((chapter) => chapter.chapterId === chapterId);
     const sourceRange = sourceChapter ? `${sourceChapter.book} pp. ${sourceChapter.pageStart}-${sourceChapter.pageEnd}` : "Book source pending";
     const pills = document.querySelector("[data-course-chapter-pills]");
-    [`${required} required targets`, `${match.chapter.pages.length} study steps`, `${chapterTargets.length ? implemented.length : 0} guided targets`, sourceRange]
+    [`${required} book targets`, `${grammarTargets.length} grammar target${grammarTargets.length === 1 ? "" : "s"}`, `${match.chapter.pages.length} study steps`, sourceRange]
       .forEach((label) => {
         const pill = document.createElement("span");
         pill.className = "pill";
@@ -347,8 +350,8 @@
     renderNeighbours(course, match);
     renderObjectives(match.chapter);
     renderSteps(match.level, match.chapter, implemented);
-    renderMissing(inventoryChapter, chapterTargets);
-    renderSupplements(match.chapter, chapterTargets, supplementalContent);
+    renderMissing(inventoryChapter, bookTargets);
+    renderSupplements(match.chapter, bookTargets, supplementalContent);
     document.querySelector("[data-course-chapter-empty]").hidden = true;
     document.querySelector("[data-course-chapter-content]").hidden = false;
     window.addEventListener("malti-course-target-progress", () => updateLearnerMetrics(implemented));

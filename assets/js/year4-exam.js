@@ -207,7 +207,9 @@
                 explanation: currentWord.example || "",
                 sourcePage: "year4_exam.html",
                 topic: "Year 4 - " + currentWord.groupTitle,
-                type: "spelling"
+                type: "spelling",
+                category: "vocabulary",
+                ruleId: "spelling"
             }, correct);
         }
         feedback.textContent = correct

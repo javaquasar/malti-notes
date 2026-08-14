@@ -595,10 +595,33 @@
         "itemId": "b2-town-inzel-l-isfel"
       },
       "assessmentIds": [
-        "b2-town-inzel-l-isfel-diagnostic-recognition-true-false",
         "b2-town-inzel-l-isfel-recognition-true-false",
         "b2-town-inzel-l-isfel-production",
         "b2-town-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "grammar-modals",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "grammar",
+      "sourceRequirement": "Modal and need patterns",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "modals_needs.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-modals"
+      },
+      "assessmentIds": [
+        "grammar-modals-diagnostic-recognition",
+        "grammar-modals-recognition",
+        "grammar-modals-production"
       ]
     }
   ],
@@ -1026,6 +1049,11 @@
       "primaryPage": null,
       "pages": [],
       "match": "chapter-range"
+    },
+    "grammar-modals": {
+      "kind": "site-extension",
+      "sourcePage": "modals_needs.html",
+      "coverageStatus": "extended"
     }
   },
   "supplementalItems": [
@@ -2068,18 +2096,24 @@
           }
         },
         {
-          "id": "b2-town-inzel-l-isfel-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which sentence politely says “I would like to drink coffee”?",
+          "choices": [
+            "Nixtieq nixrob kafè.",
+            "Għandi bżonn kafè nixrob.",
+            "Nista' kafè."
+          ],
+          "answer": "Nixtieq nixrob kafè.",
+          "explanation": "Nixtieq followed by the action expresses a polite preference.",
+          "id": "grammar-modals-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-inzel-l-isfel"
+            "grammar-modals"
           ],
-          "prompt": "True or false: “Inżel 'l isfel” means “medicine” in this chapter.",
-          "answer": false,
-          "explanation": "Inżel 'l isfel means “Go down”.",
           "reviewCard": {
-            "maltese": "Inżel 'l isfel",
-            "english": "Go down"
+            "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
+            "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
+            "example": "Nista' mmur."
           }
         }
       ]
@@ -3163,7 +3197,7 @@
       "id": "b2-town-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 4,
+      "targetCount": 5,
       "title": "Fil-Pjazza Checkpoint 5",
       "items": [
         {
@@ -3251,7 +3285,7 @@
           ],
           "prompt": "What is the lesson meaning of “Itla' 'l fuq”?",
           "choices": [
-            "cafeteria / cafe",
+            "select and produce a modal expression before an action",
             "Go up",
             "Go down"
           ],
@@ -3290,7 +3324,7 @@
           "targetIds": [
             "b2-town-inzel-l-isfel"
           ],
-          "prompt": "True or false: “Inżel 'l isfel” means “cafeteria / cafe” in this chapter.",
+          "prompt": "True or false: “Inżel 'l isfel” means “select and produce a modal expression before an action” in this chapter.",
           "answer": false,
           "explanation": "Inżel 'l isfel means “Go down”.",
           "reviewCard": {
@@ -3318,6 +3352,47 @@
             "'l",
             "isfel"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence politely says “I would like to drink coffee”?",
+          "choices": [
+            "Nixtieq nixrob kafè.",
+            "Għandi bżonn kafè nixrob.",
+            "Nista' kafè."
+          ],
+          "answer": "Nixtieq nixrob kafè.",
+          "explanation": "Nixtieq followed by the action expresses a polite preference.",
+          "id": "grammar-modals-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-modals"
+          ],
+          "reviewCard": {
+            "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
+            "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
+            "example": "Nista' mmur."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the need pattern: _____ nistrieħ. (I need to rest.)",
+          "answer": "Għandi bżonn",
+          "accepted": [
+            "Għandi bżonn",
+            "għandi bżonn"
+          ],
+          "explanation": "Għandi bżonn before an action expresses need.",
+          "id": "grammar-modals-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-modals"
+          ],
+          "reviewCard": {
+            "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
+            "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
+            "example": "Nista' mmur."
+          }
         },
         {
           "id": "b2-town-checkpoint-5-matching",

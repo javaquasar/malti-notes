@@ -150,7 +150,6 @@
         "itemId": "rih"
       },
       "assessmentIds": [
-        "b2-weather-rih-diagnostic-recognition",
         "b2-weather-rih-recognition",
         "b2-weather-rih-production"
       ]
@@ -169,6 +168,7 @@
         "itemId": "b2-weather-shana"
       },
       "assessmentIds": [
+        "b2-weather-shana-diagnostic-recognition",
         "b2-weather-shana-recognition-true-false",
         "b2-weather-shana-production"
       ]
@@ -245,7 +245,6 @@
         "itemId": "b2-weather-staguni"
       },
       "assessmentIds": [
-        "b2-weather-staguni-diagnostic-recognition",
         "b2-weather-staguni-recognition-true-false",
         "b2-weather-staguni-production",
         "b2-weather-checkpoint-2-matching"
@@ -265,6 +264,7 @@
         "itemId": "rebbiegha"
       },
       "assessmentIds": [
+        "b2-weather-rebbiegha-diagnostic-recognition",
         "b2-weather-rebbiegha-recognition",
         "b2-weather-rebbiegha-production"
       ]
@@ -342,7 +342,6 @@
         "itemId": "xemx"
       },
       "assessmentIds": [
-        "b2-weather-xemx-diagnostic-recognition",
         "b2-weather-xemx-recognition",
         "b2-weather-xemx-production",
         "b2-weather-checkpoint-3-matching"
@@ -362,6 +361,7 @@
         "itemId": "xita"
       },
       "assessmentIds": [
+        "b2-weather-xita-diagnostic-recognition",
         "b2-weather-xita-recognition-true-false",
         "b2-weather-xita-production",
         "b2-weather-checkpoint-3-matching"
@@ -437,7 +437,6 @@
         "itemId": "b2-weather-xemxi"
       },
       "assessmentIds": [
-        "b2-weather-xemxi-diagnostic-recognition",
         "b2-weather-xemxi-recognition-true-false",
         "b2-weather-xemxi-production",
         "b2-weather-checkpoint-4-matching"
@@ -457,6 +456,7 @@
         "itemId": "b2-weather-imsahhab"
       },
       "assessmentIds": [
+        "b2-weather-imsahhab-diagnostic-recognition",
         "b2-weather-imsahhab-recognition",
         "b2-weather-imsahhab-production",
         "b2-weather-checkpoint-4-matching"
@@ -495,9 +495,32 @@
         "itemId": "b2-weather-l-inqas-temperatura"
       },
       "assessmentIds": [
-        "b2-weather-l-inqas-temperatura-diagnostic-recognition-true-false",
         "b2-weather-l-inqas-temperatura-recognition",
         "b2-weather-l-inqas-temperatura-production"
+      ]
+    },
+    {
+      "id": "grammar-comparisons",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "grammar",
+      "sourceRequirement": "Comparatives with minn",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "comparisons.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-comparisons"
+      },
+      "assessmentIds": [
+        "grammar-comparisons-diagnostic-recognition",
+        "grammar-comparisons-recognition",
+        "grammar-comparisons-production"
       ]
     }
   ],
@@ -875,6 +898,11 @@
         35
       ],
       "match": "text-exact"
+    },
+    "grammar-comparisons": {
+      "kind": "site-extension",
+      "sourcePage": "comparisons.html",
+      "coverageStatus": "extended"
     }
   },
   "supplementalItems": [
@@ -1637,23 +1665,23 @@
           }
         },
         {
-          "id": "b2-weather-rih-diagnostic-recognition",
+          "id": "b2-weather-shana-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-rih"
+            "b2-weather-shana"
           ],
-          "prompt": "What is the lesson meaning of “riħ”?",
+          "prompt": "What is the lesson meaning of “sħana”?",
           "choices": [
-            "heat / hot weather",
             "wind",
+            "heat / hot weather",
             "clouds"
           ],
-          "answer": "wind",
-          "explanation": "riħ means “wind” in this chapter.",
+          "answer": "heat / hot weather",
+          "explanation": "sħana means “heat / hot weather” in this chapter.",
           "reviewCard": {
-            "maltese": "riħ",
-            "english": "wind"
+            "maltese": "sħana",
+            "english": "heat / hot weather"
           }
         },
         {
@@ -1672,23 +1700,23 @@
           }
         },
         {
-          "id": "b2-weather-staguni-diagnostic-recognition",
+          "id": "b2-weather-rebbiegha-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-staguni"
+            "b2-weather-rebbiegha"
           ],
-          "prompt": "What is the lesson meaning of “staġuni”?",
+          "prompt": "What is the lesson meaning of “rebbiegħa”?",
           "choices": [
             "heat / hot weather",
             "cold",
-            "seasons"
+            "spring"
           ],
-          "answer": "seasons",
-          "explanation": "staġuni means “seasons” in this chapter.",
+          "answer": "spring",
+          "explanation": "rebbiegħa means “spring” in this chapter.",
           "reviewCard": {
-            "maltese": "staġuni",
-            "english": "seasons"
+            "maltese": "rebbiegħa",
+            "english": "spring"
           }
         },
         {
@@ -1707,23 +1735,23 @@
           }
         },
         {
-          "id": "b2-weather-xemx-diagnostic-recognition",
+          "id": "b2-weather-xita-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-xemx"
+            "b2-weather-xita"
           ],
-          "prompt": "What is the lesson meaning of “xemx”?",
+          "prompt": "What is the lesson meaning of “xita”?",
           "choices": [
-            "sun",
+            "rain",
             "bad weather",
             "season"
           ],
-          "answer": "sun",
-          "explanation": "xemx means “sun” in this chapter.",
+          "answer": "rain",
+          "explanation": "xita means “rain” in this chapter.",
           "reviewCard": {
-            "maltese": "xemx",
-            "english": "sun"
+            "maltese": "xita",
+            "english": "rain"
           }
         },
         {
@@ -1742,38 +1770,44 @@
           }
         },
         {
-          "id": "b2-weather-xemxi-diagnostic-recognition",
+          "id": "b2-weather-imsahhab-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-xemxi"
+            "b2-weather-imsahhab"
           ],
-          "prompt": "What is the lesson meaning of “xemxi”?",
+          "prompt": "What is the lesson meaning of “imsaħħab”?",
           "choices": [
             "spring",
-            "sunny",
+            "cloudy",
             "seasons"
           ],
-          "answer": "sunny",
-          "explanation": "xemxi means “sunny” in this chapter.",
+          "answer": "cloudy",
+          "explanation": "imsaħħab means “cloudy” in this chapter.",
           "reviewCard": {
-            "maltese": "xemxi",
-            "english": "sunny"
+            "maltese": "imsaħħab",
+            "english": "cloudy"
           }
         },
         {
-          "id": "b2-weather-l-inqas-temperatura-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which sentence makes a complete comparison?",
+          "choices": [
+            "Din id-dar akbar dik.",
+            "Din id-dar akbar minn dik.",
+            "Din id-dar minn akbar dik."
+          ],
+          "answer": "Din id-dar akbar minn dik.",
+          "explanation": "The second item in a full comparison is introduced by minn.",
+          "id": "grammar-comparisons-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-l-inqas-temperatura"
+            "grammar-comparisons"
           ],
-          "prompt": "True or false: “l-inqas temperatura” means “spring” in this chapter.",
-          "answer": false,
-          "explanation": "l-inqas temperatura means “the lowest temperature”.",
           "reviewCard": {
-            "maltese": "l-inqas temperatura",
-            "english": "the lowest temperature"
+            "maltese": "A + comparative + minn + B",
+            "english": "Compare two people, objects, places, or conditions with a comparative and minn.",
+            "example": "Din id-dar akbar minn dik."
           }
         }
       ]
@@ -2583,7 +2617,7 @@
       "id": "b2-weather-checkpoint-4",
       "kind": "checkpoint",
       "sequence": 4,
-      "targetCount": 5,
+      "targetCount": 6,
       "title": "It-Temp Checkpoint 4",
       "items": [
         {
@@ -2742,8 +2776,8 @@
           ],
           "prompt": "What is the lesson meaning of “l-inqas temperatura”?",
           "choices": [
+            "recognize and produce a complete comparison with minn",
             "snow",
-            "temperature",
             "the lowest temperature"
           ],
           "answer": "the lowest temperature",
@@ -2772,6 +2806,46 @@
             "l-inqas",
             "temperatura"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence makes a complete comparison?",
+          "choices": [
+            "Din id-dar akbar dik.",
+            "Din id-dar akbar minn dik.",
+            "Din id-dar minn akbar dik."
+          ],
+          "answer": "Din id-dar akbar minn dik.",
+          "explanation": "The second item in a full comparison is introduced by minn.",
+          "id": "grammar-comparisons-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-comparisons"
+          ],
+          "reviewCard": {
+            "maltese": "A + comparative + minn + B",
+            "english": "Compare two people, objects, places, or conditions with a comparative and minn.",
+            "example": "Din id-dar akbar minn dik."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the comparison: Il-kamra tiegħi _____ minn tiegħek. (My room is smaller than yours.)",
+          "answer": "iżgħar",
+          "accepted": [
+            "iżgħar"
+          ],
+          "explanation": "Iżgħar means smaller and is followed here by minn.",
+          "id": "grammar-comparisons-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-comparisons"
+          ],
+          "reviewCard": {
+            "maltese": "A + comparative + minn + B",
+            "english": "Compare two people, objects, places, or conditions with a comparative and minn.",
+            "example": "Din id-dar akbar minn dik."
+          }
         },
         {
           "id": "b2-weather-checkpoint-4-matching",

@@ -141,7 +141,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 43, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 44, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -194,9 +194,9 @@ async function main() {
       assert((await page.locator("[data-progress-mastered]").textContent()).trim() === "1", "Mastered target total is incorrect.");
       assert((await page.locator("[data-progress-learning]").textContent()).trim() === "1", "Learning target total is incorrect.");
       assert((await page.locator("[data-progress-review]").textContent()).trim() === "1", "Review target total is incorrect.");
-      assert((await page.locator("[data-progress-new]").textContent()).trim() === "459", "Not-started target total is incorrect.");
+      assert((await page.locator("[data-progress-new]").textContent()).trim() === "467", "Not-started target total is incorrect.");
       const animals = page.locator('[data-progress-chapter="b1-animals"]');
-      assert((await animals.textContent()).includes("1/27"), "Animals mastery is missing from chapter progress.");
+      assert((await animals.textContent()).includes("1/28"), "Animals mastery is missing from chapter progress.");
       assert((await animals.textContent()).includes("1/5 passed"), "Animals checkpoint progress is incorrect.");
       assert((await animals.locator(".course-progress-action-cell a").textContent()).trim() === "Review 1 due", "Due state did not choose the expected chapter action.");
       await page.locator('[data-progress-filter="b2"]').click();
@@ -258,6 +258,47 @@ async function main() {
       assert((await page.locator("[data-mistake-resolved]").textContent()).trim() === "1", "Resolved mistake count is incorrect.");
     });
 
+    await runTest(context, "grammar path tracks recognition, production, and rule mistakes", async (page) => {
+      await openCleanPage(page, "grammar_path.html");
+      await page.locator(".grammar-target").first().waitFor();
+      assert(await page.locator(".grammar-target").count() === 8, "Grammar path does not contain eight targets.");
+      assert(await page.locator(".grammar-rule-box").count() === 8, "Grammar rules do not share the framed visual contract.");
+
+      await page.locator('[data-grammar-level="B1"]').click();
+      assert(await page.locator(".grammar-target").count() === 3, "B1 grammar filter is incorrect.");
+      await page.locator('[data-grammar-level="B2"]').click();
+      assert(await page.locator(".grammar-target").count() === 5, "B2 grammar filter is incorrect.");
+
+      const future = page.locator("#grammar-future-se");
+      await future.locator(".grammar-practice > summary").click();
+      const practice = future.locator(".exercise-set");
+      await practice.locator(".exercise-item").first().waitFor();
+      await practice.locator('button[type="submit"]').click();
+      let state = await page.evaluate(() => ({
+        target: JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["grammar-future-se"],
+        mistakes: window.MaltiMistakeStore.getAll()
+      }));
+      assert(state.target.state === "review", "Missed grammar target was not scheduled for review.");
+      assert(state.mistakes.length === 2 && state.mistakes.every((entry) => entry.category === "grammar" && entry.ruleId === "grammar-future-se"), "Grammar mistakes lost their rule category.");
+
+      await practice.getByRole("button", { name: "Try again" }).click();
+      await practice.locator('input[value="Għada se mmur il-belt."]').check();
+      await practice.locator('[data-exercise-item="grammar-future-se-focused-production"] input').fill("se mmur");
+      await practice.locator('button[type="submit"]').click();
+      state = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["grammar-future-se"]);
+      assert(state.state === "learning" && state.recognitionCorrect && state.productionCorrect, "Successful grammar practice did not record both mastery modes.");
+
+      await page.goto(`${baseUrl}/mistakes.html`, { waitUntil: "networkidle" });
+      await page.locator('[data-mistake-category] option[value="grammar"]').waitFor({ state: "attached" });
+      await page.locator("[data-mistake-category]").selectOption("grammar");
+      assert(await page.locator(".mistake-entry").count() === 2, "Grammar category filter does not isolate rule mistakes.");
+      assert((await page.locator(".mistake-entry").first().textContent()).includes("future se"), "Grammar mistake does not expose its stable rule label.");
+
+      await page.goto(`${baseUrl}/grammar_path.html?course=b2&chapter=b2-hobbies&step=5&view=chapter`, { waitUntil: "networkidle" });
+      await page.locator("#grammar-future-se").waitFor();
+      assert(await page.locator(".grammar-target:visible").count() === 1, "Chapter grammar view is not scoped to its target.");
+    });
+
     await runTest(context, "milestone tests stay balanced across course chapters", async (page) => {
       await openCleanPage(page, "course_exam.html");
       const stage = page.locator("[data-course-exam-stage]");
@@ -298,10 +339,10 @@ async function main() {
       await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
       assert((await page.locator("[data-course-chapter-title]").textContent()).trim() === "L-Annimali", "Animals chapter title is missing.");
       assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "27 / 27", "Current animals coverage is incorrect.");
-      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "27 / 27", "Guided animals coverage is incorrect.");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "28 / 28", "Guided animals coverage is incorrect.");
       assert((await page.locator("[data-course-chapter-pills]").textContent()).includes("B1 pp. 46-64"), "Animals book page range is missing.");
       assert((await page.locator("[data-course-recommendation-title]").textContent()).trim() === "Start with the entry diagnostic", "New chapter did not recommend its diagnostic.");
-      assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
+      assert(await page.locator(".course-step").count() === 3, "Animals chapter steps are incomplete.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
       assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b1-animals-diagnostic"] .exercise-item').count() === 10, "Animals entry diagnostic is incomplete.");
       const animalCheckpoints = page.locator("[data-course-checkpoints] .course-checkpoint");
@@ -352,10 +393,10 @@ async function main() {
 
     await runTest(context, "guided chapter scope is derived for every mapped page type", async (page) => {
       await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
-      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "24 / 24", "B2 hobbies mapping is incorrect.");
-      assert(await page.locator(".course-step").count() === 4, "B2 hobbies study steps are incomplete.");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "25 / 25", "B2 hobbies mapping is incorrect.");
+      assert(await page.locator(".course-step").count() === 5, "B2 hobbies study steps are incomplete.");
       assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b2-hobbies-diagnostic"] .exercise-item').count() === 10, "B2 hobbies diagnostic is incomplete.");
-      assert(await page.locator("[data-course-checkpoints] .course-checkpoint").count() === 4, "B2 hobbies checkpoints are incomplete.");
+      assert(await page.locator("[data-course-checkpoints] .course-checkpoint").count() === 5, "B2 hobbies checkpoints are incomplete.");
       const imperativeHref = await page.locator(".course-step a", { hasText: "Imperative Verbs" }).getAttribute("href");
       assert(imperativeHref.includes("imperative_verbs.html") && imperativeHref.includes("view=chapter"), "Mapped imperative step is not scoped.");
       const guideHref = await page.locator(".course-step a", { hasText: "Verbs Guide" }).getAttribute("href");
@@ -409,7 +450,7 @@ async function main() {
       target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
       assert(target.state === "mastered", "Spaced recognition and production did not master the target.");
       assert(target.intervalDays === 3 && target.streak === 2, "Repeated success did not expand the review interval.");
-      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 24", "Chapter mastery metric did not update.");
+      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 25", "Chapter mastery metric did not update.");
     });
 
     await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {

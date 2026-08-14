@@ -2,7 +2,7 @@
   if (window.MaltiMistakeStore) return;
 
   const STORAGE_KEY = "malti_mistake_journal_v1";
-  const SCHEMA_VERSION = 1;
+  const SCHEMA_VERSION = 2;
   const storage = window.MaltiStorage;
   const emptyState = () => ({ schemaVersion: SCHEMA_VERSION, entries: {} });
 
@@ -11,7 +11,13 @@
     if (!value || typeof value !== "object" || Array.isArray(value.entries)) return emptyState();
     return {
       schemaVersion: SCHEMA_VERSION,
-      entries: value.entries && typeof value.entries === "object" ? value.entries : {}
+      entries: value.entries && typeof value.entries === "object"
+        ? Object.fromEntries(Object.entries(value.entries).map(([id, entry]) => [id, {
+          ...entry,
+          category: entry.category || "general",
+          ruleId: entry.ruleId || ""
+        }]))
+        : {}
     };
   }
 
@@ -39,6 +45,8 @@
       sourcePage: details.sourcePage || previous?.sourcePage || "",
       topic: details.topic || previous?.topic || "Practice",
       type: details.type || previous?.type || "exercise",
+      category: details.category || previous?.category || "general",
+      ruleId: details.ruleId || previous?.ruleId || "",
       status: correct ? previous.status : "open",
       attempts: (previous?.attempts || 0) + 1,
       wrongCount: (previous?.wrongCount || 0) + (correct ? 0 : 1),

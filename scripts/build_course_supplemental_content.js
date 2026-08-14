@@ -66,7 +66,7 @@ const chapters = course.levels.flatMap((level) => level.chapters).map((chapter) 
   id: chapter.id,
   title: chapter.title,
   items: bindings.targets
-    .filter((target) => target.chapterId === chapter.id)
+    .filter((target) => target.chapterId === chapter.id && target.type !== "grammar")
     .map(targetItem)
 }));
 

@@ -769,9 +769,37 @@
         "itemId": "cajtier-cajtiera"
       },
       "assessmentIds": [
-        "b1-introductions-cajtiera-diagnostic-recognition-true-false",
         "b1-introductions-cajtiera-recognition",
-        "b1-introductions-cajtiera-production"
+        "b1-introductions-cajtiera-production",
+        "b1-introductions-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "grammar-agreement",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "grammar",
+      "sourceRequirement": "Gender and number agreement",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-adjective-gender",
+          "b1-colour-agreement"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-agreement"
+      },
+      "assessmentIds": [
+        "grammar-agreement-diagnostic-recognition",
+        "grammar-agreement-recognition",
+        "grammar-agreement-production",
+        "b1-introductions-checkpoint-7-matching"
       ]
     }
   ],
@@ -1337,6 +1365,14 @@
         14
       ],
       "match": "text-exact"
+    },
+    "grammar-agreement": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b1-adjective-gender",
+        "b1-colour-agreement"
+      ],
+      "coverageStatus": "covered"
     }
   },
   "supplementalItems": [
@@ -2658,18 +2694,24 @@
           }
         },
         {
-          "id": "b1-introductions-cajtiera-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which phrase has correct feminine agreement?",
+          "choices": [
+            "karozza aħmar",
+            "karozza ħamra",
+            "karozza ħomor"
+          ],
+          "answer": "karozza ħamra",
+          "explanation": "Karozza is feminine singular, so aħmar changes to ħamra.",
+          "id": "grammar-agreement-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-cajtiera"
+            "grammar-agreement"
           ],
-          "prompt": "True or false: “ċajtiera” means “they” in this chapter.",
-          "answer": false,
-          "explanation": "ċajtiera means “funny / playful”.",
           "reviewCard": {
-            "maltese": "ċajtiera",
-            "english": "funny / playful"
+            "maltese": "ktieb ġdid | karozza ġdida | kotba ġodda",
+            "english": "Match an adjective to a masculine singular, feminine singular, or plural noun.",
+            "example": "Dan ktieb ġdid."
           }
         }
       ]
@@ -4277,7 +4319,7 @@
       "id": "b1-introductions-checkpoint-7",
       "kind": "checkpoint",
       "sequence": 7,
-      "targetCount": 1,
+      "targetCount": 2,
       "title": "Jien u Int Checkpoint 7",
       "items": [
         {
@@ -4290,8 +4332,8 @@
           "prompt": "What is the lesson meaning of “ċajtiera”?",
           "choices": [
             "funny / playful",
-            "animal",
-            "city"
+            "choose and produce the adjective form that agrees with its noun",
+            "animal"
           ],
           "answer": "funny / playful",
           "explanation": "ċajtiera means “funny / playful” in this chapter.",
@@ -4318,6 +4360,71 @@
           "accepted": [
             "ċajtiera"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which phrase has correct feminine agreement?",
+          "choices": [
+            "karozza aħmar",
+            "karozza ħamra",
+            "karozza ħomor"
+          ],
+          "answer": "karozza ħamra",
+          "explanation": "Karozza is feminine singular, so aħmar changes to ħamra.",
+          "id": "grammar-agreement-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-agreement"
+          ],
+          "reviewCard": {
+            "maltese": "ktieb ġdid | karozza ġdida | kotba ġodda",
+            "english": "Match an adjective to a masculine singular, feminine singular, or plural noun.",
+            "example": "Dan ktieb ġdid."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the plural adjective: Il-kotba huma _____. (The books are new.)",
+          "answer": "ġodda",
+          "accepted": [
+            "ġodda"
+          ],
+          "explanation": "The plural noun kotba takes the plural adjective ġodda.",
+          "id": "grammar-agreement-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-agreement"
+          ],
+          "reviewCard": {
+            "maltese": "ktieb ġdid | karozza ġdida | kotba ġodda",
+            "english": "Match an adjective to a masculine singular, feminine singular, or plural noun.",
+            "example": "Dan ktieb ġdid."
+          }
+        },
+        {
+          "id": "b1-introductions-checkpoint-7-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-cajtiera",
+            "grammar-agreement"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ċajtiera",
+              "right": "funny / playful"
+            },
+            {
+              "left": "Gender and number agreement",
+              "right": "choose and produce the adjective form that agrees with its noun"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ċajtiera",
+            "english": "funny / playful"
+          }
         }
       ]
     }

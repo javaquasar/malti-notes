@@ -8,6 +8,7 @@ const bindings = readJson("assets/data/course_target_bindings.json");
 const course = readJson("assets/data/course_path.json");
 const glosses = readJson("assets/data/course_target_glosses.json").glosses;
 const contextualExamples = readJson("assets/data/course_target_examples.json").examples;
+const grammarTargets = new Map(readJson("assets/data/grammar_targets.json").targets.map((target) => [target.id, target]));
 const requestedLevels = new Set(
   (process.env.COURSE_ASSESSMENT_LEVELS || "B1,B2")
     .split(",")
@@ -16,10 +17,28 @@ const requestedLevels = new Set(
 );
 
 function targetMeaning(target) {
+  if (target.type === "grammar") return grammarTargets.get(target.id)?.masteryLabel;
   const key = `${target.chapterId}::${target.sourceRequirement}`;
   const meaning = glosses[key];
   if (!meaning) throw new Error(`No reviewed assessment meaning for ${target.id}`);
   return meaning;
+}
+
+function grammarAssessmentItem(target, mode, suffix = mode) {
+  const grammarTarget = grammarTargets.get(target.id);
+  const source = grammarTarget?.assessment?.[mode];
+  if (!source) throw new Error(`No ${mode} grammar assessment for ${target.id}`);
+  return {
+    ...source,
+    id: `${target.id}-${suffix}`,
+    assessmentMode: mode,
+    targetIds: [target.id],
+    reviewCard: {
+      maltese: grammarTarget.pattern,
+      english: grammarTarget.summary,
+      example: grammarTarget.examples[0].maltese
+    }
+  };
 }
 
 function rotate(values, offset) {
@@ -60,6 +79,7 @@ function trueFalseItem(entry, index, meanings, suffix = "recognition") {
 }
 
 function recognitionItem(entry, index, meanings, suffix = "recognition") {
+  if (entry.target.type === "grammar") return grammarAssessmentItem(entry.target, "recognition", suffix);
   return index % 2 === 0
     ? multipleChoiceItem(entry, index, meanings, suffix)
     : trueFalseItem(entry, index, meanings, suffix);
@@ -76,6 +96,7 @@ function clozeExample(target) {
 }
 
 function productionItem({ target, meaning }) {
+  if (target.type === "grammar") return grammarAssessmentItem(target, "production");
   const { context, cloze } = clozeExample(target);
   const shared = {
     id: `${target.id}-production`,

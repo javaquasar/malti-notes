@@ -36,7 +36,7 @@ inventoryChapters.forEach((chapter, chapterId) => {
 });
 
 const targetEntries = Object.entries(provenance.targets || {});
-const targetIds = new Set(bindings.targets.map((target) => target.id));
+const targetIds = new Set(bindings.targets.filter((target) => target.type !== "grammar").map((target) => target.id));
 if (targetEntries.length !== targetIds.size) fail(`expected ${targetIds.size} target source records, found ${targetEntries.length}`);
 targetEntries.forEach(([targetId, source]) => {
   const target = bindings.targets.find((item) => item.id === targetId);

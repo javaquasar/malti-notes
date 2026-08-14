@@ -116,7 +116,6 @@
       },
       "assessmentIds": [
         "animal-qattus-production",
-        "b1-animals-qattus-diagnostic-recognition-true-false",
         "b1-animals-qattus-recognition",
         "b1-animals-qattus-production",
         "b1-animals-checkpoint-1-matching"
@@ -136,6 +135,7 @@
         "itemId": "qattus"
       },
       "assessmentIds": [
+        "b1-animals-qattusa-diagnostic-recognition-true-false",
         "b1-animals-qattusa-recognition-true-false",
         "b1-animals-qattusa-production",
         "b1-animals-checkpoint-1-matching"
@@ -173,7 +173,6 @@
         "itemId": "fenek"
       },
       "assessmentIds": [
-        "b1-animals-fenek-diagnostic-recognition",
         "b1-animals-fenek-recognition-true-false",
         "b1-animals-fenek-production"
       ]
@@ -192,6 +191,7 @@
         "itemId": "pappagall"
       },
       "assessmentIds": [
+        "b1-animals-pappagall-diagnostic-recognition",
         "b1-animals-pappagall-recognition",
         "b1-animals-pappagall-production",
         "b1-animals-checkpoint-2-matching"
@@ -230,7 +230,6 @@
         "itemId": "ti-ie-a"
       },
       "assessmentIds": [
-        "b1-animals-tigiega-diagnostic-recognition-true-false",
         "b1-animals-tigiega-recognition",
         "b1-animals-tigiega-production",
         "b1-animals-checkpoint-2-matching"
@@ -250,6 +249,7 @@
         "itemId": "b1-animals-fellus"
       },
       "assessmentIds": [
+        "b1-animals-fellus-diagnostic-recognition-true-false",
         "b1-animals-fellus-recognition-true-false",
         "b1-animals-fellus-production",
         "b1-animals-checkpoint-2-matching"
@@ -287,7 +287,6 @@
         "itemId": "nag-a"
       },
       "assessmentIds": [
-        "b1-animals-naghga-diagnostic-recognition",
         "b1-animals-naghga-recognition-true-false",
         "b1-animals-naghga-production"
       ]
@@ -306,6 +305,7 @@
         "itemId": "b1-animals-hmara"
       },
       "assessmentIds": [
+        "b1-animals-hmara-diagnostic-recognition",
         "b1-animals-hmara-recognition",
         "b1-animals-hmara-production",
         "b1-animals-checkpoint-3-matching"
@@ -344,7 +344,6 @@
         "itemId": "an-ir"
       },
       "assessmentIds": [
-        "b1-animals-hanzir-diagnostic-recognition-true-false",
         "b1-animals-hanzir-recognition",
         "b1-animals-hanzir-production",
         "b1-animals-checkpoint-3-matching"
@@ -364,6 +363,7 @@
         "itemId": "iemel"
       },
       "assessmentIds": [
+        "b1-animals-ziemel-diagnostic-recognition-true-false",
         "b1-animals-ziemel-recognition-true-false",
         "b1-animals-ziemel-production",
         "b1-animals-checkpoint-3-matching"
@@ -401,7 +401,6 @@
         "itemId": "b1-animals-emu"
       },
       "assessmentIds": [
-        "b1-animals-emu-diagnostic-recognition",
         "b1-animals-emu-recognition-true-false",
         "b1-animals-emu-production"
       ]
@@ -420,6 +419,7 @@
         "itemId": "b1-animals-brama"
       },
       "assessmentIds": [
+        "b1-animals-brama-diagnostic-recognition",
         "b1-animals-brama-recognition",
         "b1-animals-brama-production",
         "b1-animals-checkpoint-4-matching"
@@ -458,7 +458,6 @@
         "itemId": "b1-animals-kamaleont"
       },
       "assessmentIds": [
-        "b1-animals-kamaleont-diagnostic-recognition-true-false",
         "b1-animals-kamaleont-recognition",
         "b1-animals-kamaleont-production",
         "b1-animals-checkpoint-4-matching"
@@ -478,6 +477,7 @@
         "itemId": "b1-animals-lampuka"
       },
       "assessmentIds": [
+        "b1-animals-lampuka-diagnostic-recognition-true-false",
         "b1-animals-lampuka-recognition-true-false",
         "b1-animals-lampuka-production",
         "b1-animals-checkpoint-4-matching"
@@ -515,7 +515,6 @@
         "itemId": "serp"
       },
       "assessmentIds": [
-        "b1-animals-serp-diagnostic-recognition",
         "b1-animals-serp-recognition-true-false",
         "b1-animals-serp-production"
       ]
@@ -534,6 +533,7 @@
         "itemId": "b1-animals-denfil"
       },
       "assessmentIds": [
+        "b1-animals-denfil-diagnostic-recognition",
         "b1-animals-denfil-recognition",
         "b1-animals-denfil-production",
         "b1-animals-checkpoint-5-matching"
@@ -573,9 +573,35 @@
       },
       "assessmentIds": [
         "animal-iljunfant-production",
-        "b1-animals-iljunfant-diagnostic-recognition-true-false",
         "b1-animals-iljunfant-recognition",
         "b1-animals-iljunfant-production",
+        "b1-animals-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "grammar-possession-ghandu",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "grammar",
+      "sourceRequirement": "Possession with għandu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-possession"
+        ],
+        "coverageStatus": "covered-as-a-topic"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-possession-ghandu"
+      },
+      "assessmentIds": [
+        "grammar-possession-ghandu-diagnostic-recognition",
+        "grammar-possession-ghandu-recognition",
+        "grammar-possession-ghandu-production",
         "b1-animals-checkpoint-5-matching"
       ]
     }
@@ -1020,6 +1046,13 @@
         64
       ],
       "match": "text-exact"
+    },
+    "grammar-possession-ghandu": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b1-possession"
+      ],
+      "coverageStatus": "covered-as-a-topic"
     }
   },
   "supplementalItems": [
@@ -1891,158 +1924,164 @@
           }
         },
         {
-          "id": "b1-animals-qattus-diagnostic-recognition-true-false",
+          "id": "b1-animals-qattusa-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-qattus"
+            "b1-animals-qattusa"
           ],
-          "prompt": "True or false: “qattus” means “female cat” in this chapter.",
+          "prompt": "True or false: “qattusa” means “cat” in this chapter.",
           "answer": false,
-          "explanation": "qattus means “cat”.",
+          "explanation": "qattusa means “female cat”.",
           "reviewCard": {
-            "maltese": "qattus",
-            "english": "cat"
+            "maltese": "qattusa",
+            "english": "female cat"
           }
         },
         {
-          "id": "b1-animals-fenek-diagnostic-recognition",
+          "id": "b1-animals-pappagall-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-fenek"
+            "b1-animals-pappagall"
           ],
-          "prompt": "What is the lesson meaning of “fenek”?",
+          "prompt": "What is the lesson meaning of “pappagall”?",
           "choices": [
             "bird",
-            "rabbit",
+            "parrot",
             "female cat"
           ],
-          "answer": "rabbit",
-          "explanation": "fenek means “rabbit” in this chapter.",
+          "answer": "parrot",
+          "explanation": "pappagall means “parrot” in this chapter.",
           "reviewCard": {
-            "maltese": "fenek",
-            "english": "rabbit"
+            "maltese": "pappagall",
+            "english": "parrot"
           }
         },
         {
-          "id": "b1-animals-tigiega-diagnostic-recognition-true-false",
+          "id": "b1-animals-fellus-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-tigiega"
+            "b1-animals-fellus"
           ],
-          "prompt": "True or false: “tiġieġa” means “bird” in this chapter.",
+          "prompt": "True or false: “fellus” means “bird” in this chapter.",
           "answer": false,
-          "explanation": "tiġieġa means “hen”.",
+          "explanation": "fellus means “chick”.",
           "reviewCard": {
-            "maltese": "tiġieġa",
-            "english": "hen"
+            "maltese": "fellus",
+            "english": "chick"
           }
         },
         {
-          "id": "b1-animals-naghga-diagnostic-recognition",
+          "id": "b1-animals-hmara-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-naghga"
+            "b1-animals-hmara"
           ],
-          "prompt": "What is the lesson meaning of “nagħġa”?",
+          "prompt": "What is the lesson meaning of “ħmara”?",
           "choices": [
             "rabbit",
             "parrot",
-            "sheep"
+            "female donkey"
           ],
-          "answer": "sheep",
-          "explanation": "nagħġa means “sheep” in this chapter.",
+          "answer": "female donkey",
+          "explanation": "ħmara means “female donkey” in this chapter.",
           "reviewCard": {
-            "maltese": "nagħġa",
-            "english": "sheep"
+            "maltese": "ħmara",
+            "english": "female donkey"
           }
         },
         {
-          "id": "b1-animals-hanzir-diagnostic-recognition-true-false",
+          "id": "b1-animals-ziemel-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-hanzir"
+            "b1-animals-ziemel"
           ],
-          "prompt": "True or false: “ħanżir” means “parrot” in this chapter.",
+          "prompt": "True or false: “żiemel” means “parrot” in this chapter.",
           "answer": false,
-          "explanation": "ħanżir means “pig”.",
+          "explanation": "żiemel means “horse”.",
           "reviewCard": {
-            "maltese": "ħanżir",
-            "english": "pig"
+            "maltese": "żiemel",
+            "english": "horse"
           }
         },
         {
-          "id": "b1-animals-emu-diagnostic-recognition",
+          "id": "b1-animals-brama-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-emu"
+            "b1-animals-brama"
           ],
-          "prompt": "What is the lesson meaning of “emu”?",
+          "prompt": "What is the lesson meaning of “brama”?",
           "choices": [
-            "emu",
+            "bream",
             "turtle",
             "hen"
           ],
-          "answer": "emu",
-          "explanation": "emu means “emu” in this chapter.",
+          "answer": "bream",
+          "explanation": "brama means “bream” in this chapter.",
           "reviewCard": {
-            "maltese": "emu",
-            "english": "emu"
+            "maltese": "brama",
+            "english": "bream"
           }
         },
         {
-          "id": "b1-animals-kamaleont-diagnostic-recognition-true-false",
+          "id": "b1-animals-lampuka-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-kamaleont"
+            "b1-animals-lampuka"
           ],
-          "prompt": "True or false: “kamaleont” means “hen” in this chapter.",
+          "prompt": "True or false: “lampuka” means “hen” in this chapter.",
           "answer": false,
-          "explanation": "kamaleont means “chameleon”.",
+          "explanation": "lampuka means “dolphinfish”.",
           "reviewCard": {
-            "maltese": "kamaleont",
-            "english": "chameleon"
+            "maltese": "lampuka",
+            "english": "dolphinfish"
           }
         },
         {
-          "id": "b1-animals-serp-diagnostic-recognition",
+          "id": "b1-animals-denfil-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-serp"
+            "b1-animals-denfil"
           ],
-          "prompt": "What is the lesson meaning of “serp”?",
+          "prompt": "What is the lesson meaning of “denfil”?",
           "choices": [
             "cow",
-            "snake",
+            "dolphin",
             "chick"
           ],
-          "answer": "snake",
-          "explanation": "serp means “snake” in this chapter.",
+          "answer": "dolphin",
+          "explanation": "denfil means “dolphin” in this chapter.",
           "reviewCard": {
-            "maltese": "serp",
-            "english": "snake"
+            "maltese": "denfil",
+            "english": "dolphin"
           }
         },
         {
-          "id": "b1-animals-iljunfant-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly says “We have a book”?",
+          "choices": [
+            "Aħna għandu ktieb.",
+            "Aħna għandna ktieb.",
+            "Aħna għandhom ktieb."
+          ],
+          "answer": "Aħna għandna ktieb.",
+          "explanation": "The aħna form is għandna.",
+          "id": "grammar-possession-ghandu-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-animals-iljunfant"
+            "grammar-possession-ghandu"
           ],
-          "prompt": "True or false: “iljunfant” means “cow” in this chapter.",
-          "answer": false,
-          "explanation": "iljunfant means “elephant”.",
           "reviewCard": {
-            "maltese": "iljunfant",
-            "english": "elephant"
+            "maltese": "possessor form + possessed noun",
+            "english": "Use the complete għandu paradigm to say who has something.",
+            "example": "Jien għandi kelb."
           }
         }
       ]
@@ -3118,7 +3157,7 @@
       "id": "b1-animals-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 3,
+      "targetCount": 4,
       "title": "L-Annimali Checkpoint 5",
       "items": [
         {
@@ -3203,9 +3242,9 @@
           ],
           "prompt": "What is the lesson meaning of “iljunfant”?",
           "choices": [
-            "female dog",
+            "dog",
             "elephant",
-            "dog"
+            "choose and produce the correct għandu form for the possessor"
           ],
           "answer": "elephant",
           "explanation": "iljunfant means “elephant” in this chapter.",
@@ -3234,13 +3273,54 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly says “We have a book”?",
+          "choices": [
+            "Aħna għandu ktieb.",
+            "Aħna għandna ktieb.",
+            "Aħna għandhom ktieb."
+          ],
+          "answer": "Aħna għandna ktieb.",
+          "explanation": "The aħna form is għandna.",
+          "id": "grammar-possession-ghandu-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-possession-ghandu"
+          ],
+          "reviewCard": {
+            "maltese": "possessor form + possessed noun",
+            "english": "Use the complete għandu paradigm to say who has something.",
+            "example": "Jien għandi kelb."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the possession form: Huma _____ karozza.",
+          "answer": "għandhom",
+          "accepted": [
+            "għandhom"
+          ],
+          "explanation": "The huma form is għandhom.",
+          "id": "grammar-possession-ghandu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-possession-ghandu"
+          ],
+          "reviewCard": {
+            "maltese": "possessor form + possessed noun",
+            "english": "Use the complete għandu paradigm to say who has something.",
+            "example": "Jien għandi kelb."
+          }
+        },
+        {
           "id": "b1-animals-checkpoint-5-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-animals-denfil",
             "b1-animals-gemel",
-            "b1-animals-iljunfant"
+            "b1-animals-iljunfant",
+            "grammar-possession-ghandu"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -3255,6 +3335,10 @@
             {
               "left": "iljunfant",
               "right": "elephant"
+            },
+            {
+              "left": "Possession with għandu",
+              "right": "choose and produce the correct għandu form for the possessor"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, "..");
 const bindingFile = path.join(root, "assets/data/course_target_bindings.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const course = readJson("assets/data/course_path.json");
+const grammar = readJson("assets/data/grammar_targets.json");
 
 const contentAliases = new Map([
   ["b2-town::ispiżerija", "spiżerija"]
@@ -151,15 +152,31 @@ function buildTarget(inventoryChapter, candidates, requirement) {
 }
 
 const courseChapters = new Map(course.levels.flatMap((level) => level.chapters).map((chapter) => [chapter.id, chapter]));
-const targets = inventory.chapters.flatMap((inventoryChapter) => {
+const bookTargets = inventory.chapters.flatMap((inventoryChapter) => {
   const chapter = courseChapters.get(inventoryChapter.courseChapterId);
   if (!chapter) throw new Error(`Missing course chapter: ${inventoryChapter.courseChapterId}`);
   const candidates = chapterCandidates(chapter);
   return inventoryChapter.targets.map((requirement) => buildTarget(inventoryChapter, candidates, requirement));
 });
+const grammarTargets = grammar.targets.map((target) => ({
+  id: target.id,
+  book: target.book,
+  chapterId: target.chapterId,
+  type: "grammar",
+  sourceRequirement: target.sourceRequirement,
+  role: target.role,
+  implementationStatus: "implemented",
+  sourceRef: target.sourceRef,
+  contentRef: {
+    page: grammar.page,
+    file: "assets/data/grammar_targets.json",
+    itemId: target.id
+  }
+}));
+const targets = [...bookTargets, ...grammarTargets];
 const output = {
-  schemaVersion: 3,
-  description: "Canonical audited registry between all B1/B2 book requirements and teaching content. Assessments are derived downstream.",
+  schemaVersion: 4,
+  description: "Canonical registry for audited B1/B2 book requirements and first-class grammar targets. Assessments are derived downstream.",
   fullyAuditedChapterIds: inventory.chapters.map((chapter) => chapter.courseChapterId),
   targets
 };

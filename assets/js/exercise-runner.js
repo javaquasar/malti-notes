@@ -343,19 +343,24 @@
     const mistakeStore = window.MaltiMistakeStore;
     if (!mistakeStore) return;
     const sourcePage = `${window.location.pathname.split("/").pop() || "course_path.html"}${window.location.search}`;
-    results.forEach(({ item, correct, answer }) => mistakeStore.recordAttempt({
-      id: `exercise::${set.id}::${item.id}`,
-      setId: set.id,
-      itemId: item.id,
-      prompt: item.prompt,
-      given: Array.isArray(answer) ? answer.join("; ") : answer,
-      correctAnswer: correctAnswerText(item),
-      explanation: item.explanation || "",
-      targetIds: item.targetIds || [],
-      sourcePage,
-      topic: set.title,
-      type: item.type
-    }, correct));
+    results.forEach(({ item, correct, answer }) => {
+      const grammarTargetId = (item.targetIds || []).find((targetId) => targetId.startsWith("grammar-"));
+      mistakeStore.recordAttempt({
+        id: `exercise::${set.id}::${item.id}`,
+        setId: set.id,
+        itemId: item.id,
+        prompt: item.prompt,
+        given: Array.isArray(answer) ? answer.join("; ") : answer,
+        correctAnswer: correctAnswerText(item),
+        explanation: item.explanation || "",
+        targetIds: item.targetIds || [],
+        sourcePage,
+        topic: set.title,
+        type: item.type,
+        category: item.category || set.category || (grammarTargetId ? "grammar" : "course"),
+        ruleId: item.ruleId || set.ruleId || grammarTargetId || ""
+      }, correct);
+    });
   };
 
   const updateBestStatus = (status, set) => {
@@ -487,6 +492,7 @@
     getProgress: loadProgress,
     getTargetProgress: loadTargetProgress,
     isTargetDue,
+    render: renderSet,
     scan,
     storageKey: STORAGE_KEY,
     targetStorageKey: TARGET_PROGRESS_KEY

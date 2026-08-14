@@ -42,7 +42,7 @@ function validateCourseBindings({ root, fail }) {
   const exercises = read(exerciseFile);
   const targetExercises = read(targetExerciseFile);
   if (!bindings || !inventory || !course || !exercises || !targetExercises) return;
-  if (bindings.schemaVersion !== 3) fail(bindingFile, "schemaVersion must be 3");
+  if (bindings.schemaVersion !== 4) fail(bindingFile, "schemaVersion must be 4");
   if (!Array.isArray(bindings.targets)) {
     fail(bindingFile, "targets must be an array");
     return;
@@ -135,13 +135,19 @@ function validateCourseBindings({ root, fail }) {
     if (typeof target.sourceRequirement !== "string" || !target.sourceRequirement) fail(bindingFile, `${owner}.sourceRequirement is required`);
 
     const inventoryChapter = inventoryByChapter.get(target.chapterId);
-    if (!inventoryChapter || !inventoryChapter.targets.includes(target.sourceRequirement)) {
-      fail(bindingFile, `${owner}.sourceRequirement is not in the frozen chapter inventory: ${target.sourceRequirement}`);
+    if (target.type === "grammar") {
+      if (!isObject(target.sourceRef) || !["book-grammar-topic", "site-extension"].includes(target.sourceRef.kind)) {
+        fail(bindingFile, `${owner}.sourceRef is required for grammar targets`);
+      }
+    } else {
+      if (!inventoryChapter || !inventoryChapter.targets.includes(target.sourceRequirement)) {
+        fail(bindingFile, `${owner}.sourceRequirement is not in the frozen chapter inventory: ${target.sourceRequirement}`);
+      }
+      const requirements = requirementsByChapter.get(target.chapterId) || new Set();
+      if (requirements.has(target.sourceRequirement)) fail(bindingFile, `${target.chapterId} repeats source requirement: ${target.sourceRequirement}`);
+      requirements.add(target.sourceRequirement);
+      requirementsByChapter.set(target.chapterId, requirements);
     }
-    const requirements = requirementsByChapter.get(target.chapterId) || new Set();
-    if (requirements.has(target.sourceRequirement)) fail(bindingFile, `${target.chapterId} repeats source requirement: ${target.sourceRequirement}`);
-    requirements.add(target.sourceRequirement);
-    requirementsByChapter.set(target.chapterId, requirements);
 
     if (target.implementationStatus === "implemented") {
       if (!isObject(target.contentRef)) {
