@@ -60,6 +60,33 @@ function validateCourseBindings({ root, fail }) {
     if (exerciseItems.has(item.id)) fail(file, `exercise item id must be globally unique: ${item.id}`);
     exerciseItems.set(item.id, { set, item, file });
   })));
+  if (targetExercises.schemaVersion !== 1) fail(targetExerciseFile, "schemaVersion must be 1");
+  chapters.forEach((chapter, chapterId) => {
+    const sets = (targetExercises.sets || []).filter((set) => set.chapterId === chapterId);
+    const diagnostics = sets.filter((set) => set.kind === "diagnostic");
+    const checkpoints = sets.filter((set) => set.kind === "checkpoint").sort((a, b) => a.sequence - b.sequence);
+    if (diagnostics.length !== 1) fail(targetExerciseFile, `${chapterId} must have one entry diagnostic`);
+    if (diagnostics[0] && (diagnostics[0].items.length > 10 || diagnostics[0].items.some((item) => item.assessmentMode !== "recognition"))) {
+      fail(targetExerciseFile, `${chapterId} diagnostic must contain at most ten recognition items`);
+    }
+    if (!checkpoints.length) fail(targetExerciseFile, `${chapterId} must have at least one checkpoint`);
+    checkpoints.forEach((set, index) => {
+      if (set.sequence !== index + 1) fail(targetExerciseFile, `${set.id}.sequence must be ${index + 1}`);
+      if (!Number.isInteger(set.targetCount) || set.targetCount < 1 || set.targetCount > 6) {
+        fail(targetExerciseFile, `${set.id}.targetCount must be from 1 to 6`);
+      }
+      if (set.items.length !== set.targetCount * 2) fail(targetExerciseFile, `${set.id} must contain two items per target`);
+      const modesByTarget = new Map();
+      set.items.forEach((item) => (item.targetIds || []).forEach((targetId) => {
+        const modes = modesByTarget.get(targetId) || new Set();
+        modes.add(item.assessmentMode);
+        modesByTarget.set(targetId, modes);
+      }));
+      if (modesByTarget.size !== set.targetCount || [...modesByTarget.values()].some((modes) => !modes.has("recognition") || !modes.has("production"))) {
+        fail(targetExerciseFile, `${set.id} must assess every checkpoint target in recognition and production modes`);
+      }
+    });
+  });
   const contentCache = new Map();
   const contentIds = (file) => {
     if (!contentCache.has(file)) {

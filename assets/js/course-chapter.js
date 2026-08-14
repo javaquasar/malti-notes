@@ -133,16 +133,50 @@
     if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(container.parentElement);
   };
 
-  const renderTargetExercise = async (chapter, targetAssessments) => {
-    const setId = `${chapter.id}-target-check`;
-    if (!(targetAssessments.sets || []).some((set) => set.id === setId)) return;
-    const section = document.querySelector("[data-course-target-test-section]");
-    const container = document.querySelector("[data-course-target-exercise]");
-    section.hidden = false;
+  const exerciseContainer = (setId) => {
+    const container = document.createElement("div");
     container.dataset.exerciseSet = setId;
     container.dataset.exerciseSrc = TARGET_ASSESSMENTS_URL;
     container.dataset.autoSaveMissed = "true";
-    if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(section);
+    return container;
+  };
+
+  const renderAssessmentFlow = async (chapter, targetAssessments) => {
+    const chapterSets = (targetAssessments.sets || []).filter((set) => set.chapterId === chapter.id);
+    const diagnostic = chapterSets.find((set) => set.kind === "diagnostic");
+    const checkpoints = chapterSets.filter((set) => set.kind === "checkpoint").sort((a, b) => a.sequence - b.sequence);
+    if (!diagnostic || !checkpoints.length) return;
+
+    const section = document.querySelector("[data-course-assessment-flow]");
+    const diagnosticRoot = document.querySelector("[data-course-diagnostic]");
+    const checkpointRoot = document.querySelector("[data-course-checkpoints]");
+    const diagnosticContainer = exerciseContainer(diagnostic.id);
+    diagnosticRoot.replaceChildren(diagnosticContainer);
+
+    checkpointRoot.replaceChildren(...checkpoints.map((set) => {
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      const title = document.createElement("strong");
+      const status = document.createElement("span");
+      const container = exerciseContainer(set.id);
+      const updateStatus = () => {
+        const progress = window.MaltiExerciseRunner?.getProgress()?.[set.id];
+        status.textContent = progress ? `Best ${progress.bestScore}/${progress.total}` : `${set.targetCount} targets`;
+      };
+      details.className = "course-checkpoint";
+      title.textContent = `Checkpoint ${set.sequence}`;
+      status.className = "status-chip";
+      summary.append(title, status);
+      details.append(summary, container);
+      details.addEventListener("toggle", () => {
+        if (details.open && window.MaltiExerciseRunner) window.MaltiExerciseRunner.scan(details);
+      });
+      window.addEventListener("malti-exercise-progress", updateStatus);
+      updateStatus();
+      return details;
+    }));
+    section.hidden = false;
+    if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(diagnosticRoot);
   };
 
   const renderSupplements = (chapter, chapterTargets, supplementalContent) => {
@@ -251,7 +285,7 @@
     document.querySelector("[data-course-chapter-content]").hidden = false;
     window.addEventListener("malti-course-target-progress", () => updateLearnerMetrics(implemented));
     await renderExercise(match.chapter);
-    await renderTargetExercise(match.chapter, targetAssessments);
+    await renderAssessmentFlow(match.chapter, targetAssessments);
   };
 
   const start = () => initialize().catch((error) => {

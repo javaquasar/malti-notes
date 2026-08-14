@@ -1,18 +1,230 @@
 {
   "schemaVersion": 1,
-  "description": "Generated recognition and production checks for every implemented book-course target.",
+  "description": "Generated entry diagnostics and small recognition/production checkpoints for every implemented book-course target.",
   "levels": [
     "B1",
     "B2"
   ],
   "sets": [
     {
-      "id": "b1-introductions-target-check",
       "chapterId": "b1-introductions",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "Jien u Int Target Check",
       "passPercent": 75,
+      "id": "b1-introductions-diagnostic",
+      "kind": "diagnostic",
+      "title": "Jien u Int Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-introductions-annimal-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-annimal"
+          ],
+          "prompt": "What is the lesson meaning of “annimal”?",
+          "choices": [
+            "animal",
+            "Today I went to the city.",
+            "certificate"
+          ],
+          "answer": "animal",
+          "explanation": "annimal is linked to “animal” in this chapter.",
+          "reviewCard": {
+            "maltese": "annimal",
+            "english": "animal"
+          }
+        },
+        {
+          "id": "b1-introductions-erbgha-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-erbgha"
+          ],
+          "prompt": "What is the lesson meaning of “erbgħa”?",
+          "choices": [
+            "certificate",
+            "dentist",
+            "four"
+          ],
+          "answer": "four",
+          "explanation": "erbgħa is linked to “four” in this chapter.",
+          "reviewCard": {
+            "maltese": "erbgħa",
+            "english": "four"
+          }
+        },
+        {
+          "id": "b1-introductions-ghajn-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-ghajn"
+          ],
+          "prompt": "What is the lesson meaning of “għajn”?",
+          "choices": [
+            "four",
+            "eye",
+            "dentist"
+          ],
+          "answer": "eye",
+          "explanation": "għajn is linked to “eye” in this chapter.",
+          "reviewCard": {
+            "maltese": "għajn",
+            "english": "eye"
+          }
+        },
+        {
+          "id": "b1-introductions-ilma-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-ilma"
+          ],
+          "prompt": "What is the lesson meaning of “ilma”?",
+          "choices": [
+            "water",
+            "four",
+            "rabbit"
+          ],
+          "answer": "water",
+          "explanation": "ilma is linked to “water” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilma",
+            "english": "water"
+          }
+        },
+        {
+          "id": "b1-introductions-lemin-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-lemin"
+          ],
+          "prompt": "What is the lesson meaning of “lemin”?",
+          "choices": [
+            "rabbit",
+            "camel",
+            "right"
+          ],
+          "answer": "right",
+          "explanation": "lemin is linked to “right” in this chapter.",
+          "reviewCard": {
+            "maltese": "lemin",
+            "english": "right"
+          }
+        },
+        {
+          "id": "b1-introductions-pedala-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-pedala"
+          ],
+          "prompt": "What is the lesson meaning of “pedala”?",
+          "choices": [
+            "newspaper",
+            "pedal",
+            "camel"
+          ],
+          "answer": "pedal",
+          "explanation": "pedala is linked to “pedal” in this chapter.",
+          "reviewCard": {
+            "maltese": "pedala",
+            "english": "pedal"
+          }
+        },
+        {
+          "id": "b1-introductions-tezor-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-tezor"
+          ],
+          "prompt": "What is the lesson meaning of “teżor”?",
+          "choices": [
+            "treasure",
+            "newspaper",
+            "eye"
+          ],
+          "answer": "treasure",
+          "explanation": "teżor is linked to “treasure” in this chapter.",
+          "reviewCard": {
+            "maltese": "teżor",
+            "english": "treasure"
+          }
+        },
+        {
+          "id": "b1-introductions-xellug-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-xellug"
+          ],
+          "prompt": "What is the lesson meaning of “xellug”?",
+          "choices": [
+            "eye",
+            "This dog has brown eyes.",
+            "left"
+          ],
+          "answer": "left",
+          "explanation": "xellug is linked to “left” in this chapter.",
+          "reviewCard": {
+            "maltese": "xellug",
+            "english": "left"
+          }
+        },
+        {
+          "id": "b1-introductions-ferhana-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-ferhana"
+          ],
+          "prompt": "What is the lesson meaning of “ferħana”?",
+          "choices": [
+            "they",
+            "happy (feminine form)",
+            "This dog has brown eyes."
+          ],
+          "answer": "happy (feminine form)",
+          "explanation": "ferħana is linked to “happy (feminine form)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ferħana",
+            "english": "happy (feminine form)"
+          }
+        },
+        {
+          "id": "b1-introductions-cajtiera-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-cajtiera"
+          ],
+          "prompt": "What is the lesson meaning of “ċajtiera”?",
+          "choices": [
+            "funny / playful (feminine form)",
+            "they",
+            "rope"
+          ],
+          "answer": "funny / playful (feminine form)",
+          "explanation": "ċajtiera is linked to “funny / playful (feminine form)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ċajtiera",
+            "english": "funny / playful (feminine form)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Jien u Int Checkpoint 1",
       "items": [
         {
           "id": "b1-introductions-annimal-recognition",
@@ -241,7 +453,19 @@
             "maltese": "fenek",
             "english": "rabbit"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Jien u Int Checkpoint 2",
+      "items": [
         {
           "id": "b1-introductions-gemel-recognition",
           "type": "multiple-choice",
@@ -469,7 +693,19 @@
             "maltese": "ħabel",
             "english": "rope"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Jien u Int Checkpoint 3",
+      "items": [
         {
           "id": "b1-introductions-ilma-recognition",
           "type": "multiple-choice",
@@ -697,7 +933,19 @@
             "maltese": "meraq",
             "english": "juice"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Jien u Int Checkpoint 4",
+      "items": [
         {
           "id": "b1-introductions-negozju-recognition",
           "type": "multiple-choice",
@@ -925,7 +1173,19 @@
             "maltese": "serp",
             "english": "snake"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Jien u Int Checkpoint 5",
+      "items": [
         {
           "id": "b1-introductions-tezor-recognition",
           "type": "multiple-choice",
@@ -1153,7 +1413,19 @@
             "maltese": "żiemel",
             "english": "horse"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Jien u Int Checkpoint 6",
+      "items": [
         {
           "id": "b1-introductions-ziju-recognition",
           "type": "multiple-choice",
@@ -1381,7 +1653,19 @@
             "maltese": "ċajtier",
             "english": "funny / playful (masculine or base form)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-introductions",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-introductions-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 1,
+      "title": "Jien u Int Checkpoint 7",
+      "items": [
         {
           "id": "b1-introductions-cajtiera-recognition",
           "type": "multiple-choice",
@@ -1423,12 +1707,224 @@
       ]
     },
     {
-      "id": "b1-residence-target-check",
       "chapterId": "b1-residence",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "Fejn Noqgħod Target Check",
       "passPercent": 75,
+      "id": "b1-residence-diagnostic",
+      "kind": "diagnostic",
+      "title": "Fejn Noqgħod Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-residence-rota-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-rota"
+          ],
+          "prompt": "What is the lesson meaning of “rota”?",
+          "choices": [
+            "by bicycle",
+            "truck",
+            "helicopter"
+          ],
+          "answer": "by bicycle",
+          "explanation": "rota is linked to “by bicycle” in this chapter.",
+          "reviewCard": {
+            "maltese": "rota",
+            "english": "by bicycle"
+          }
+        },
+        {
+          "id": "b1-residence-helikopter-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-helikopter"
+          ],
+          "prompt": "What is the lesson meaning of “ħelikopter”?",
+          "choices": [
+            "van",
+            "by car",
+            "helicopter"
+          ],
+          "answer": "helicopter",
+          "explanation": "ħelikopter is linked to “helicopter” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħelikopter",
+            "english": "helicopter"
+          }
+        },
+        {
+          "id": "b1-residence-karozza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-karozza"
+          ],
+          "prompt": "What is the lesson meaning of “karozza”?",
+          "choices": [
+            "bus",
+            "by car",
+            "van"
+          ],
+          "answer": "by car",
+          "explanation": "karozza is linked to “by car” in this chapter.",
+          "reviewCard": {
+            "maltese": "karozza",
+            "english": "by car"
+          }
+        },
+        {
+          "id": "b1-residence-vapur-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-vapur"
+          ],
+          "prompt": "What is the lesson meaning of “vapur”?",
+          "choices": [
+            "ship / ferry",
+            "by car",
+            "bus"
+          ],
+          "answer": "ship / ferry",
+          "explanation": "vapur is linked to “ship / ferry” in this chapter.",
+          "reviewCard": {
+            "maltese": "vapur",
+            "english": "ship / ferry"
+          }
+        },
+        {
+          "id": "b1-residence-bil-mutur-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-mutur"
+          ],
+          "prompt": "What is the lesson meaning of “bil-mutur”?",
+          "choices": [
+            "bus",
+            "motorcycle / scooter (masculine or base form)",
+            "motorcycle / scooter"
+          ],
+          "answer": "motorcycle / scooter",
+          "explanation": "bil-mutur is linked to “motorcycle / scooter” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-mutur",
+            "english": "motorcycle / scooter"
+          }
+        },
+        {
+          "id": "b1-residence-bil-karozza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-karozza"
+          ],
+          "prompt": "What is the lesson meaning of “bil-karozza”?",
+          "choices": [
+            "ship / ferry",
+            "by car",
+            "motorcycle / scooter (masculine or base form)"
+          ],
+          "answer": "by car",
+          "explanation": "bil-karozza is linked to “by car” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-karozza",
+            "english": "by car"
+          }
+        },
+        {
+          "id": "b1-residence-bil-kowc-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-kowc"
+          ],
+          "prompt": "What is the lesson meaning of “bil-kowċ”?",
+          "choices": [
+            "by coach",
+            "ship / ferry",
+            "on foot"
+          ],
+          "answer": "by coach",
+          "explanation": "bil-kowċ is linked to “by coach” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-kowċ",
+            "english": "by coach"
+          }
+        },
+        {
+          "id": "b1-residence-dar-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-dar"
+          ],
+          "prompt": "What is the lesson meaning of “dar”?",
+          "choices": [
+            "on foot",
+            "motorcycle / scooter",
+            "my house"
+          ],
+          "answer": "my house",
+          "explanation": "dar is linked to “my house” in this chapter.",
+          "reviewCard": {
+            "maltese": "dar",
+            "english": "my house"
+          }
+        },
+        {
+          "id": "b1-residence-sigra-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-sigra"
+          ],
+          "prompt": "What is the lesson meaning of “siġra”?",
+          "choices": [
+            "by van",
+            "The tree is green.",
+            "motorcycle / scooter"
+          ],
+          "answer": "The tree is green.",
+          "explanation": "siġra is linked to “The tree is green.” in this chapter.",
+          "reviewCard": {
+            "maltese": "siġra",
+            "english": "The tree is green."
+          }
+        },
+        {
+          "id": "b1-residence-knisja-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-knisja"
+          ],
+          "prompt": "What is the lesson meaning of “knisja”?",
+          "choices": [
+            "church",
+            "by van",
+            "coach / bus"
+          ],
+          "answer": "church",
+          "explanation": "knisja is linked to “church” in this chapter.",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Fejn Noqgħod Checkpoint 1",
       "items": [
         {
           "id": "b1-residence-rota-recognition",
@@ -1657,7 +2153,19 @@
             "maltese": "karozza tal-linja",
             "english": "bus"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Fejn Noqgħod Checkpoint 2",
+      "items": [
         {
           "id": "b1-residence-mutur-recognition",
           "type": "multiple-choice",
@@ -1885,7 +2393,19 @@
             "maltese": "bil-vann",
             "english": "by van"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Fejn Noqgħod Checkpoint 3",
+      "items": [
         {
           "id": "b1-residence-bil-karozza-recognition",
           "type": "multiple-choice",
@@ -2113,7 +2633,19 @@
             "maltese": "dar",
             "english": "my house"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 5,
+      "title": "Fejn Noqgħod Checkpoint 4",
+      "items": [
         {
           "id": "b1-residence-bankina-recognition",
           "type": "multiple-choice",
@@ -2307,12 +2839,224 @@
       ]
     },
     {
-      "id": "b1-school-target-check",
       "chapterId": "b1-school",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "L-Iskola Target Check",
       "passPercent": 75,
+      "id": "b1-school-diagnostic",
+      "kind": "diagnostic",
+      "title": "L-Iskola Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-school-kuritur-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kuritur"
+          ],
+          "prompt": "What is the lesson meaning of “kuritur”?",
+          "choices": [
+            "corridor",
+            "laboratory",
+            "library"
+          ],
+          "answer": "corridor",
+          "explanation": "kuritur is linked to “corridor” in this chapter.",
+          "reviewCard": {
+            "maltese": "kuritur",
+            "english": "corridor"
+          }
+        },
+        {
+          "id": "b1-school-librerija-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-librerija"
+          ],
+          "prompt": "What is the lesson meaning of “librerija”?",
+          "choices": [
+            "classroom",
+            "In the picture we can see a clinic.",
+            "library"
+          ],
+          "answer": "library",
+          "explanation": "librerija is linked to “library” in this chapter.",
+          "reviewCard": {
+            "maltese": "librerija",
+            "english": "library"
+          }
+        },
+        {
+          "id": "b1-school-bitha-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-bitha"
+          ],
+          "prompt": "What is the lesson meaning of “bitħa”?",
+          "choices": [
+            "In the picture we can see a clinic.",
+            "school yard / courtyard",
+            "classroom"
+          ],
+          "answer": "school yard / courtyard",
+          "explanation": "bitħa is linked to “school yard / courtyard” in this chapter.",
+          "reviewCard": {
+            "maltese": "bitħa",
+            "english": "school yard / courtyard"
+          }
+        },
+        {
+          "id": "b1-school-tojlit-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-tojlit"
+          ],
+          "prompt": "What is the lesson meaning of “tojlit”?",
+          "choices": [
+            "toilet",
+            "In the picture we can see a clinic.",
+            "school yard / courtyard"
+          ],
+          "answer": "toilet",
+          "explanation": "tojlit is linked to “toilet” in this chapter.",
+          "reviewCard": {
+            "maltese": "tojlit",
+            "english": "toilet"
+          }
+        },
+        {
+          "id": "b1-school-dublett-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-dublett"
+          ],
+          "prompt": "What is the lesson meaning of “dublett”?",
+          "choices": [
+            "school yard / courtyard",
+            "hall",
+            "skirt"
+          ],
+          "answer": "skirt",
+          "explanation": "dublett is linked to “skirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          }
+        },
+        {
+          "id": "b1-school-kalzetta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kalzetta"
+          ],
+          "prompt": "What is the lesson meaning of “kalzetta”?",
+          "choices": [
+            "in an office",
+            "sock",
+            "hall"
+          ],
+          "answer": "sock",
+          "explanation": "kalzetta is linked to “sock” in this chapter.",
+          "reviewCard": {
+            "maltese": "kalzetta",
+            "english": "sock"
+          }
+        },
+        {
+          "id": "b1-school-zarbuna-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-zarbuna"
+          ],
+          "prompt": "What is the lesson meaning of “żarbuna”?",
+          "choices": [
+            "shoe",
+            "in an office",
+            "toilet"
+          ],
+          "answer": "shoe",
+          "explanation": "żarbuna is linked to “shoe” in this chapter.",
+          "reviewCard": {
+            "maltese": "żarbuna",
+            "english": "shoe"
+          }
+        },
+        {
+          "id": "b1-school-kamra-tas-sodda-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kamra-tas-sodda"
+          ],
+          "prompt": "What is the lesson meaning of “kamra tas-sodda”?",
+          "choices": [
+            "toilet",
+            "bow / ribbon",
+            "bedroom"
+          ],
+          "answer": "bedroom",
+          "explanation": "kamra tas-sodda is linked to “bedroom” in this chapter.",
+          "reviewCard": {
+            "maltese": "kamra tas-sodda",
+            "english": "bedroom"
+          }
+        },
+        {
+          "id": "b1-school-gnien-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-gnien"
+          ],
+          "prompt": "What is the lesson meaning of “ġnien”?",
+          "choices": [
+            "shirt",
+            "garden",
+            "bow / ribbon"
+          ],
+          "answer": "garden",
+          "explanation": "ġnien is linked to “garden” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġnien",
+            "english": "garden"
+          }
+        },
+        {
+          "id": "b1-school-garaxx-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-garaxx"
+          ],
+          "prompt": "What is the lesson meaning of “garaxx”?",
+          "choices": [
+            "garage",
+            "shirt",
+            "skirt"
+          ],
+          "answer": "garage",
+          "explanation": "garaxx is linked to “garage” in this chapter.",
+          "reviewCard": {
+            "maltese": "garaxx",
+            "english": "garage"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 1",
       "items": [
         {
           "id": "b1-school-kuritur-recognition",
@@ -2541,7 +3285,19 @@
             "maltese": "bitħa",
             "english": "school yard / courtyard"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 2",
+      "items": [
         {
           "id": "b1-school-sala-recognition",
           "type": "multiple-choice",
@@ -2769,7 +3525,19 @@
             "maltese": "dublett",
             "english": "skirt"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 3",
+      "items": [
         {
           "id": "b1-school-ingravata-recognition",
           "type": "multiple-choice",
@@ -2997,7 +3765,19 @@
             "maltese": "uniformi",
             "english": "uniform"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 4",
+      "items": [
         {
           "id": "b1-school-ilbies-recognition",
           "type": "multiple-choice",
@@ -3225,7 +4005,19 @@
             "maltese": "kċina",
             "english": "kitchen"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 2,
+      "title": "L-Iskola Checkpoint 5",
+      "items": [
         {
           "id": "b1-school-salott-recognition",
           "type": "multiple-choice",
@@ -3305,12 +4097,224 @@
       ]
     },
     {
-      "id": "b1-animals-target-check",
       "chapterId": "b1-animals",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "L-Annimali Target Check",
       "passPercent": 75,
+      "id": "b1-animals-diagnostic",
+      "kind": "diagnostic",
+      "title": "L-Annimali Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-animals-kelb-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kelb"
+          ],
+          "prompt": "What is the lesson meaning of “kelb”?",
+          "choices": [
+            "dog (feminine form)",
+            "cat (feminine form)",
+            "bird (feminine form)"
+          ],
+          "answer": "dog (feminine form)",
+          "explanation": "kelb is linked to “dog (feminine form)” in this chapter.",
+          "reviewCard": {
+            "maltese": "kelb",
+            "english": "dog (feminine form)"
+          }
+        },
+        {
+          "id": "b1-animals-qattus-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-qattus"
+          ],
+          "prompt": "What is the lesson meaning of “qattus”?",
+          "choices": [
+            "bird (feminine form)",
+            "rabbit",
+            "cat (feminine form)"
+          ],
+          "answer": "cat (feminine form)",
+          "explanation": "qattus is linked to “cat (feminine form)” in this chapter.",
+          "reviewCard": {
+            "maltese": "qattus",
+            "english": "cat (feminine form)"
+          }
+        },
+        {
+          "id": "b1-animals-fenek-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fenek"
+          ],
+          "prompt": "What is the lesson meaning of “fenek”?",
+          "choices": [
+            "tortoise",
+            "rabbit",
+            "parrot (plural form)"
+          ],
+          "answer": "rabbit",
+          "explanation": "fenek is linked to “rabbit” in this chapter.",
+          "reviewCard": {
+            "maltese": "fenek",
+            "english": "rabbit"
+          }
+        },
+        {
+          "id": "b1-animals-tigiega-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-tigiega"
+          ],
+          "prompt": "What is the lesson meaning of “tiġieġa”?",
+          "choices": [
+            "hen / rooster",
+            "parrot (plural form)",
+            "tortoise"
+          ],
+          "answer": "hen / rooster",
+          "explanation": "tiġieġa is linked to “hen / rooster” in this chapter.",
+          "reviewCard": {
+            "maltese": "tiġieġa",
+            "english": "hen / rooster"
+          }
+        },
+        {
+          "id": "b1-animals-naghga-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-naghga"
+          ],
+          "prompt": "What is the lesson meaning of “nagħġa”?",
+          "choices": [
+            "tortoise",
+            "hen / rooster",
+            "sheep"
+          ],
+          "answer": "sheep",
+          "explanation": "nagħġa is linked to “sheep” in this chapter.",
+          "reviewCard": {
+            "maltese": "nagħġa",
+            "english": "sheep"
+          }
+        },
+        {
+          "id": "b1-animals-hanzir-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-hanzir"
+          ],
+          "prompt": "What is the lesson meaning of “ħanżir”?",
+          "choices": [
+            "chick",
+            "pig (feminine form)",
+            "hen / rooster"
+          ],
+          "answer": "pig (feminine form)",
+          "explanation": "ħanżir is linked to “pig (feminine form)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħanżir",
+            "english": "pig (feminine form)"
+          }
+        },
+        {
+          "id": "b1-animals-emu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-emu"
+          ],
+          "prompt": "What is the lesson meaning of “emu”?",
+          "choices": [
+            "emu",
+            "chick",
+            "cow / bull"
+          ],
+          "answer": "emu",
+          "explanation": "emu is linked to “emu” in this chapter.",
+          "reviewCard": {
+            "maltese": "emu",
+            "english": "emu"
+          }
+        },
+        {
+          "id": "b1-animals-kamaleont-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kamaleont"
+          ],
+          "prompt": "What is the lesson meaning of “kamaleont”?",
+          "choices": [
+            "cow / bull",
+            "sheep",
+            "chameleon"
+          ],
+          "answer": "chameleon",
+          "explanation": "kamaleont is linked to “chameleon” in this chapter.",
+          "reviewCard": {
+            "maltese": "kamaleont",
+            "english": "chameleon"
+          }
+        },
+        {
+          "id": "b1-animals-serp-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-serp"
+          ],
+          "prompt": "What is the lesson meaning of “serp”?",
+          "choices": [
+            "female donkey",
+            "snake",
+            "sheep"
+          ],
+          "answer": "snake",
+          "explanation": "serp is linked to “snake” in this chapter.",
+          "reviewCard": {
+            "maltese": "serp",
+            "english": "snake"
+          }
+        },
+        {
+          "id": "b1-animals-iljunfant-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-iljunfant"
+          ],
+          "prompt": "What is the lesson meaning of “iljunfant”?",
+          "choices": [
+            "elephant (plural form)",
+            "female donkey",
+            "mouse"
+          ],
+          "answer": "elephant (plural form)",
+          "explanation": "iljunfant is linked to “elephant (plural form)” in this chapter.",
+          "reviewCard": {
+            "maltese": "iljunfant",
+            "english": "elephant (plural form)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 1",
       "items": [
         {
           "id": "b1-animals-kelb-recognition",
@@ -3539,7 +4543,19 @@
             "maltese": "fenek",
             "english": "rabbit"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 2",
+      "items": [
         {
           "id": "b1-animals-pappagall-recognition",
           "type": "multiple-choice",
@@ -3767,7 +4783,19 @@
             "maltese": "nagħġa",
             "english": "sheep"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 3",
+      "items": [
         {
           "id": "b1-animals-hmara-recognition",
           "type": "multiple-choice",
@@ -3995,7 +5023,19 @@
             "maltese": "emu",
             "english": "emu"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 4",
+      "items": [
         {
           "id": "b1-animals-brama-recognition",
           "type": "multiple-choice",
@@ -4223,7 +5263,19 @@
             "maltese": "serp",
             "english": "snake"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 3,
+      "title": "L-Annimali Checkpoint 5",
+      "items": [
         {
           "id": "b1-animals-denfil-recognition",
           "type": "multiple-choice",
@@ -4341,12 +5393,224 @@
       ]
     },
     {
-      "id": "b1-colours-target-check",
       "chapterId": "b1-colours",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "Il-Kuluri Target Check",
       "passPercent": 75,
+      "id": "b1-colours-diagnostic",
+      "kind": "diagnostic",
+      "title": "Il-Kuluri Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-colours-abjad-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-abjad"
+          ],
+          "prompt": "What is the lesson meaning of “abjad”?",
+          "choices": [
+            "white",
+            "egg",
+            "red"
+          ],
+          "answer": "white",
+          "explanation": "abjad is linked to “white” in this chapter.",
+          "reviewCard": {
+            "maltese": "abjad",
+            "english": "white"
+          }
+        },
+        {
+          "id": "b1-colours-isfar-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-isfar"
+          ],
+          "prompt": "What is the lesson meaning of “isfar”?",
+          "choices": [
+            "red",
+            "green",
+            "yellow"
+          ],
+          "answer": "yellow",
+          "explanation": "isfar is linked to “yellow” in this chapter.",
+          "reviewCard": {
+            "maltese": "isfar",
+            "english": "yellow"
+          }
+        },
+        {
+          "id": "b1-colours-griza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-griza"
+          ],
+          "prompt": "What is the lesson meaning of “griża”?",
+          "choices": [
+            "green",
+            "The rhinoceros has grey skin. [overview-based]",
+            "yellow"
+          ],
+          "answer": "The rhinoceros has grey skin. [overview-based]",
+          "explanation": "griża is linked to “The rhinoceros has grey skin. [overview-based]” in this chapter.",
+          "reviewCard": {
+            "maltese": "griża",
+            "english": "The rhinoceros has grey skin. [overview-based]"
+          }
+        },
+        {
+          "id": "b1-colours-roza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-roza"
+          ],
+          "prompt": "What is the lesson meaning of “roża”?",
+          "choices": [
+            "pink",
+            "green",
+            "grey"
+          ],
+          "answer": "pink",
+          "explanation": "roża is linked to “pink” in this chapter.",
+          "reviewCard": {
+            "maltese": "roża",
+            "english": "pink"
+          }
+        },
+        {
+          "id": "b1-colours-crieki-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-crieki"
+          ],
+          "prompt": "What is the lesson meaning of “ċrieki”?",
+          "choices": [
+            "grey",
+            "The rhinoceros has grey skin. [overview-based]",
+            "circles"
+          ],
+          "answer": "circles",
+          "explanation": "ċrieki is linked to “circles” in this chapter.",
+          "reviewCard": {
+            "maltese": "ċrieki",
+            "english": "circles"
+          }
+        },
+        {
+          "id": "b1-colours-strixxa-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-strixxa"
+          ],
+          "prompt": "What is the lesson meaning of “strixxa”?",
+          "choices": [
+            "black",
+            "stripe",
+            "The rhinoceros has grey skin. [overview-based]"
+          ],
+          "answer": "stripe",
+          "explanation": "strixxa is linked to “stripe” in this chapter.",
+          "reviewCard": {
+            "maltese": "strixxa",
+            "english": "stripe"
+          }
+        },
+        {
+          "id": "b1-colours-italja-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-italja"
+          ],
+          "prompt": "What is the lesson meaning of “Italja”?",
+          "choices": [
+            "Italy",
+            "black",
+            "brown"
+          ],
+          "answer": "Italy",
+          "explanation": "Italja is linked to “Italy” in this chapter.",
+          "reviewCard": {
+            "maltese": "Italja",
+            "english": "Italy"
+          }
+        },
+        {
+          "id": "b1-colours-franza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-franza"
+          ],
+          "prompt": "What is the lesson meaning of “Franza”?",
+          "choices": [
+            "brown",
+            "orange",
+            "France"
+          ],
+          "answer": "France",
+          "explanation": "Franza is linked to “France” in this chapter.",
+          "reviewCard": {
+            "maltese": "Franza",
+            "english": "France"
+          }
+        },
+        {
+          "id": "b1-colours-filippini-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-filippini"
+          ],
+          "prompt": "What is the lesson meaning of “Filippini”?",
+          "choices": [
+            "pink",
+            "the Philippines",
+            "orange"
+          ],
+          "answer": "the Philippines",
+          "explanation": "Filippini is linked to “the Philippines” in this chapter.",
+          "reviewCard": {
+            "maltese": "Filippini",
+            "english": "the Philippines"
+          }
+        },
+        {
+          "id": "b1-colours-cina-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-cina"
+          ],
+          "prompt": "What is the lesson meaning of “Ċina”?",
+          "choices": [
+            "China",
+            "pink",
+            "purple"
+          ],
+          "answer": "China",
+          "explanation": "Ċina is linked to “China” in this chapter.",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 1",
       "items": [
         {
           "id": "b1-colours-abjad-recognition",
@@ -4575,7 +5839,19 @@
             "maltese": "safra",
             "english": "yellow"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 2",
+      "items": [
         {
           "id": "b1-colours-ahdar-recognition",
           "type": "multiple-choice",
@@ -4803,7 +6079,19 @@
             "maltese": "sewda",
             "english": "black"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 3",
+      "items": [
         {
           "id": "b1-colours-kannella-recognition",
           "type": "multiple-choice",
@@ -5031,7 +6319,19 @@
             "maltese": "ċirku",
             "english": "circle"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 4",
+      "items": [
         {
           "id": "b1-colours-crieki-recognition",
           "type": "multiple-choice",
@@ -5259,7 +6559,19 @@
             "maltese": "strixxa",
             "english": "stripe"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 5",
+      "items": [
         {
           "id": "b1-colours-strixxi-recognition",
           "type": "multiple-choice",
@@ -5487,7 +6799,19 @@
             "maltese": "Ingilterra",
             "english": "England"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 6",
+      "items": [
         {
           "id": "b1-colours-germanja-recognition",
           "type": "multiple-choice",
@@ -5715,7 +7039,19 @@
             "maltese": "Turkija",
             "english": "Turkey"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 7",
+      "items": [
         {
           "id": "b1-colours-portugall-recognition",
           "type": "multiple-choice",
@@ -5943,7 +7279,19 @@
             "maltese": "Awstralja",
             "english": "Australia"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-8",
+      "kind": "checkpoint",
+      "sequence": 8,
+      "targetCount": 1,
+      "title": "Il-Kuluri Checkpoint 8",
+      "items": [
         {
           "id": "b1-colours-cina-recognition",
           "type": "multiple-choice",
@@ -5985,12 +7333,224 @@
       ]
     },
     {
-      "id": "b1-food-target-check",
       "chapterId": "b1-food",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "L-Ikel Target Check",
       "passPercent": 75,
+      "id": "b1-food-diagnostic",
+      "kind": "diagnostic",
+      "title": "L-Ikel Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-food-te-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-te"
+          ],
+          "prompt": "What is the lesson meaning of “te”?",
+          "choices": [
+            "tea",
+            "spaghetti",
+            "pizza"
+          ],
+          "answer": "tea",
+          "explanation": "te is linked to “tea” in this chapter.",
+          "reviewCard": {
+            "maltese": "te",
+            "english": "tea"
+          }
+        },
+        {
+          "id": "b1-food-ilma-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ilma"
+          ],
+          "prompt": "What is the lesson meaning of “ilma”?",
+          "choices": [
+            "pizza",
+            "coffee",
+            "water"
+          ],
+          "answer": "water",
+          "explanation": "ilma is linked to “water” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilma",
+            "english": "water"
+          }
+        },
+        {
+          "id": "b1-food-zejt-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-zejt"
+          ],
+          "prompt": "What is the lesson meaning of “żejt”?",
+          "choices": [
+            "couscous",
+            "During the break I am going to eat ftira biż-żejt.",
+            "coffee"
+          ],
+          "answer": "During the break I am going to eat ftira biż-żejt.",
+          "explanation": "żejt is linked to “During the break I am going to eat ftira biż-żejt.” in this chapter.",
+          "reviewCard": {
+            "maltese": "żejt",
+            "english": "During the break I am going to eat ftira biż-żejt."
+          }
+        },
+        {
+          "id": "b1-food-dulliegha-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-dulliegha"
+          ],
+          "prompt": "What is the lesson meaning of “dulliegħa”?",
+          "choices": [
+            "watermelon -> watermelons",
+            "couscous",
+            "water"
+          ],
+          "answer": "watermelon -> watermelons",
+          "explanation": "dulliegħa is linked to “watermelon -> watermelons” in this chapter.",
+          "reviewCard": {
+            "maltese": "dulliegħa",
+            "english": "watermelon -> watermelons"
+          }
+        },
+        {
+          "id": "b1-food-tina-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tina"
+          ],
+          "prompt": "What is the lesson meaning of “tina”?",
+          "choices": [
+            "water",
+            "rice",
+            "figs"
+          ],
+          "answer": "figs",
+          "explanation": "tina is linked to “figs” in this chapter.",
+          "reviewCard": {
+            "maltese": "tina",
+            "english": "figs"
+          }
+        },
+        {
+          "id": "b1-food-lumija-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-lumija"
+          ],
+          "prompt": "What is the lesson meaning of “lumija”?",
+          "choices": [
+            "paella",
+            "lemon -> lemons",
+            "rice"
+          ],
+          "answer": "lemon -> lemons",
+          "explanation": "lumija is linked to “lemon -> lemons” in this chapter.",
+          "reviewCard": {
+            "maltese": "lumija",
+            "english": "lemon -> lemons"
+          }
+        },
+        {
+          "id": "b1-food-laringa-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-laringa"
+          ],
+          "prompt": "What is the lesson meaning of “larinġa”?",
+          "choices": [
+            "orange -> oranges",
+            "paella",
+            "lemonade"
+          ],
+          "answer": "orange -> oranges",
+          "explanation": "larinġa is linked to “orange -> oranges” in this chapter.",
+          "reviewCard": {
+            "maltese": "larinġa",
+            "english": "orange -> oranges"
+          }
+        },
+        {
+          "id": "b1-food-tuffieh-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tuffieh"
+          ],
+          "prompt": "What is the lesson meaning of “tuffieħ”?",
+          "choices": [
+            "lemonade",
+            "fruit juice",
+            "apple -> apples / apple fruit"
+          ],
+          "answer": "apple -> apples / apple fruit",
+          "explanation": "tuffieħ is linked to “apple -> apples / apple fruit” in this chapter.",
+          "reviewCard": {
+            "maltese": "tuffieħ",
+            "english": "apple -> apples / apple fruit"
+          }
+        },
+        {
+          "id": "b1-food-pastizzi-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-pastizzi"
+          ],
+          "prompt": "What is the lesson meaning of “pastizzi”?",
+          "choices": [
+            "During the break I am going to eat ftira biż-żejt.",
+            "Yesterday I ate two pastizzi.",
+            "fruit juice"
+          ],
+          "answer": "Yesterday I ate two pastizzi.",
+          "explanation": "pastizzi is linked to “Yesterday I ate two pastizzi.” in this chapter.",
+          "reviewCard": {
+            "maltese": "pastizzi",
+            "english": "Yesterday I ate two pastizzi."
+          }
+        },
+        {
+          "id": "b1-food-cikkulata-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-cikkulata"
+          ],
+          "prompt": "What is the lesson meaning of “ċikkulata”?",
+          "choices": [
+            "In prinjolata there is cream and chocolate.",
+            "During the break I am going to eat ftira biż-żejt.",
+            "sweet -> sweets"
+          ],
+          "answer": "In prinjolata there is cream and chocolate.",
+          "explanation": "ċikkulata is linked to “In prinjolata there is cream and chocolate.” in this chapter.",
+          "reviewCard": {
+            "maltese": "ċikkulata",
+            "english": "In prinjolata there is cream and chocolate."
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 1",
       "items": [
         {
           "id": "b1-food-te-recognition",
@@ -6219,7 +7779,19 @@
             "maltese": "ilma",
             "english": "water"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 2",
+      "items": [
         {
           "id": "b1-food-ross-recognition",
           "type": "multiple-choice",
@@ -6447,7 +8019,19 @@
             "maltese": "ħelu",
             "english": "sweet -> sweets"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 3",
+      "items": [
         {
           "id": "b1-food-mandolina-recognition",
           "type": "multiple-choice",
@@ -6675,7 +8259,19 @@
             "maltese": "bajtra tax-xewk",
             "english": "prickly pear"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 4",
+      "items": [
         {
           "id": "b1-food-bettieha-recognition",
           "type": "multiple-choice",
@@ -6903,7 +8499,19 @@
             "maltese": "banana",
             "english": "banana -> bananas"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 5",
+      "items": [
         {
           "id": "b1-food-lumi-recognition",
           "type": "multiple-choice",
@@ -7131,7 +8739,19 @@
             "maltese": "larinġ",
             "english": "orange -> oranges"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 6",
+      "items": [
         {
           "id": "b1-food-laringa-recognition",
           "type": "multiple-choice",
@@ -7359,7 +8979,19 @@
             "maltese": "tuffieħ",
             "english": "apple -> apples / apple fruit"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 7",
+      "items": [
         {
           "id": "b1-food-kejk-recognition",
           "type": "multiple-choice",
@@ -7587,7 +9219,19 @@
             "maltese": "pasti",
             "english": "pastries"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-8",
+      "kind": "checkpoint",
+      "sequence": 8,
+      "targetCount": 4,
+      "title": "L-Ikel Checkpoint 8",
+      "items": [
         {
           "id": "b1-food-gelat-recognition",
           "type": "multiple-choice",
@@ -7743,12 +9387,224 @@
       ]
     },
     {
-      "id": "b1-family-target-check",
       "chapterId": "b1-family",
       "level": "B1",
-      "kind": "target-coverage",
-      "title": "Il-Familja Target Check",
       "passPercent": 75,
+      "id": "b1-family-diagnostic",
+      "kind": "diagnostic",
+      "title": "Il-Familja Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-family-ahwa-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-ahwa"
+          ],
+          "prompt": "What is the lesson meaning of “aħwa”?",
+          "choices": [
+            "Għandi żewġ aħwa. [UNCERTAIN]",
+            "brother / my brother (masculine or base form)",
+            "sister / my sister (masculine or base form)"
+          ],
+          "answer": "Għandi żewġ aħwa. [UNCERTAIN]",
+          "explanation": "aħwa is linked to “Għandi żewġ aħwa. [UNCERTAIN]” in this chapter.",
+          "reviewCard": {
+            "maltese": "aħwa",
+            "english": "Għandi żewġ aħwa. [UNCERTAIN]"
+          }
+        },
+        {
+          "id": "b1-family-omm-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-omm"
+          ],
+          "prompt": "What is the lesson meaning of “omm”?",
+          "choices": [
+            "sister / my sister (masculine or base form)",
+            "parents",
+            "mother"
+          ],
+          "answer": "mother",
+          "explanation": "omm is linked to “mother” in this chapter.",
+          "reviewCard": {
+            "maltese": "omm",
+            "english": "mother"
+          }
+        },
+        {
+          "id": "b1-family-nanna-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-nanna"
+          ],
+          "prompt": "What is the lesson meaning of “nanna”?",
+          "choices": [
+            "mother",
+            "grandmother",
+            "parents"
+          ],
+          "answer": "grandmother",
+          "explanation": "nanna is linked to “grandmother” in this chapter.",
+          "reviewCard": {
+            "maltese": "nanna",
+            "english": "grandmother"
+          }
+        },
+        {
+          "id": "b1-family-filghodu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-filghodu"
+          ],
+          "prompt": "What is the lesson meaning of “filgħodu”?",
+          "choices": [
+            "in the morning",
+            "mother",
+            "father"
+          ],
+          "answer": "in the morning",
+          "explanation": "filgħodu is linked to “in the morning” in this chapter.",
+          "reviewCard": {
+            "maltese": "filgħodu",
+            "english": "in the morning"
+          }
+        },
+        {
+          "id": "b1-family-billejl-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-billejl"
+          ],
+          "prompt": "What is the lesson meaning of “billejl”?",
+          "choices": [
+            "father",
+            "grandparents",
+            "at night"
+          ],
+          "answer": "at night",
+          "explanation": "billejl is linked to “at night” in this chapter.",
+          "reviewCard": {
+            "maltese": "billejl",
+            "english": "at night"
+          }
+        },
+        {
+          "id": "b1-family-it-tlieta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-it-tlieta"
+          ],
+          "prompt": "What is the lesson meaning of “It-Tlieta”?",
+          "choices": [
+            "grandfather",
+            "Tuesday",
+            "grandparents"
+          ],
+          "answer": "Tuesday",
+          "explanation": "It-Tlieta is linked to “Tuesday” in this chapter.",
+          "reviewCard": {
+            "maltese": "It-Tlieta",
+            "english": "Tuesday"
+          }
+        },
+        {
+          "id": "b1-family-is-sibt-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-is-sibt"
+          ],
+          "prompt": "What is the lesson meaning of “Is-Sibt”?",
+          "choices": [
+            "Saturday",
+            "grandfather",
+            "grandmother"
+          ],
+          "answer": "Saturday",
+          "explanation": "Is-Sibt is linked to “Saturday” in this chapter.",
+          "reviewCard": {
+            "maltese": "Is-Sibt",
+            "english": "Saturday"
+          }
+        },
+        {
+          "id": "b1-family-passeggata-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-passeggata"
+          ],
+          "prompt": "What is the lesson meaning of “passeġġata”?",
+          "choices": [
+            "grandmother",
+            "uncle",
+            "walk / stroll"
+          ],
+          "answer": "walk / stroll",
+          "explanation": "passeġġata is linked to “walk / stroll” in this chapter.",
+          "reviewCard": {
+            "maltese": "passeġġata",
+            "english": "walk / stroll"
+          }
+        },
+        {
+          "id": "b1-family-bongu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-bongu"
+          ],
+          "prompt": "What is the lesson meaning of “Bonġu”?",
+          "choices": [
+            "aunt",
+            "Good morning.",
+            "uncle"
+          ],
+          "answer": "Good morning.",
+          "explanation": "Bonġu is linked to “Good morning.” in this chapter.",
+          "reviewCard": {
+            "maltese": "Bonġu",
+            "english": "Good morning."
+          }
+        },
+        {
+          "id": "b1-family-hu-hsieb-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-hu-hsieb"
+          ],
+          "prompt": "What is the lesson meaning of “Ħu ħsieb”?",
+          "choices": [
+            "Take care",
+            "aunt",
+            "cousin"
+          ],
+          "answer": "Take care",
+          "explanation": "Ħu ħsieb is linked to “Take care” in this chapter.",
+          "reviewCard": {
+            "maltese": "Ħu ħsieb",
+            "english": "Take care"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 1",
       "items": [
         {
           "id": "b1-family-ahwa-recognition",
@@ -7977,7 +9833,19 @@
             "maltese": "missier",
             "english": "father"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 2",
+      "items": [
         {
           "id": "b1-family-nanniet-recognition",
           "type": "multiple-choice",
@@ -8205,7 +10073,19 @@
             "maltese": "kuġin",
             "english": "cousin"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 3",
+      "items": [
         {
           "id": "b1-family-filghodu-recognition",
           "type": "multiple-choice",
@@ -8433,7 +10313,19 @@
             "maltese": "kmieni",
             "english": "tomorrow"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 4",
+      "items": [
         {
           "id": "b1-family-tard-recognition",
           "type": "multiple-choice",
@@ -8661,7 +10553,19 @@
             "maltese": "Il-Ġimgħa",
             "english": "Friday"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 5",
+      "items": [
         {
           "id": "b1-family-is-sibt-recognition",
           "type": "multiple-choice",
@@ -8889,7 +10793,19 @@
             "maltese": "żfin",
             "english": "dancing"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 6",
+      "items": [
         {
           "id": "b1-family-pjazza-recognition",
           "type": "multiple-choice",
@@ -9117,7 +11033,19 @@
             "maltese": "Kif inti",
             "english": "How are you?"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 2,
+      "title": "Il-Familja Checkpoint 7",
+      "items": [
         {
           "id": "b1-family-mhux-hazin-recognition",
           "type": "multiple-choice",
@@ -9197,12 +11125,224 @@
       ]
     },
     {
-      "id": "b2-school-bag-target-check",
       "chapterId": "b2-school-bag",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "Fil-Basket tal-Iskola Target Check",
       "passPercent": 75,
+      "id": "b2-school-bag-diagnostic",
+      "kind": "diagnostic",
+      "title": "Fil-Basket tal-Iskola Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-school-bag-basket-tal-iskola-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-basket-tal-iskola"
+          ],
+          "prompt": "What is the lesson meaning of “basket tal-iskola”?",
+          "choices": [
+            "school bag",
+            "pocket",
+            "pencil sharpener"
+          ],
+          "answer": "school bag",
+          "explanation": "basket tal-iskola is linked to “school bag” in this chapter.",
+          "reviewCard": {
+            "maltese": "basket tal-iskola",
+            "english": "school bag"
+          }
+        },
+        {
+          "id": "b2-school-bag-fajl-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "What is the lesson meaning of “fajl”?",
+          "choices": [
+            "pencil sharpener",
+            "colour",
+            "file"
+          ],
+          "answer": "file",
+          "explanation": "fajl is linked to “file” in this chapter.",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file"
+          }
+        },
+        {
+          "id": "b2-school-bag-imqass-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-imqass"
+          ],
+          "prompt": "What is the lesson meaning of “imqass”?",
+          "choices": [
+            "pencil",
+            "scissors",
+            "colour"
+          ],
+          "answer": "scissors",
+          "explanation": "imqass is linked to “scissors” in this chapter.",
+          "reviewCard": {
+            "maltese": "imqass",
+            "english": "scissors"
+          }
+        },
+        {
+          "id": "b2-school-bag-riga-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-riga"
+          ],
+          "prompt": "What is the lesson meaning of “riga”?",
+          "choices": [
+            "ruler",
+            "pencil",
+            "file"
+          ],
+          "answer": "ruler",
+          "explanation": "riga is linked to “ruler” in this chapter.",
+          "reviewCard": {
+            "maltese": "riga",
+            "english": "ruler"
+          }
+        },
+        {
+          "id": "b2-school-bag-kerha-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kerha"
+          ],
+          "prompt": "What is the lesson meaning of “kerha”?",
+          "choices": [
+            "file",
+            "book",
+            "ugly (feminine)"
+          ],
+          "answer": "ugly (feminine)",
+          "explanation": "kerha is linked to “ugly (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "kerha",
+            "english": "ugly (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-zghir-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-zghir"
+          ],
+          "prompt": "What is the lesson meaning of “żgħir”?",
+          "choices": [
+            "marker pen",
+            "small",
+            "book"
+          ],
+          "answer": "small",
+          "explanation": "żgħir is linked to “small” in this chapter.",
+          "reviewCard": {
+            "maltese": "żgħir",
+            "english": "small"
+          }
+        },
+        {
+          "id": "b2-school-bag-godda-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-godda"
+          ],
+          "prompt": "What is the lesson meaning of “ġodda”?",
+          "choices": [
+            "I need new shoes.",
+            "marker pen",
+            "calculator"
+          ],
+          "answer": "I need new shoes.",
+          "explanation": "ġodda is linked to “I need new shoes.” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġodda",
+            "english": "I need new shoes."
+          }
+        },
+        {
+          "id": "b2-school-bag-moderna-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-moderna"
+          ],
+          "prompt": "What is the lesson meaning of “moderna”?",
+          "choices": [
+            "calculator",
+            "compass",
+            "modern"
+          ],
+          "answer": "modern",
+          "explanation": "moderna is linked to “modern” in this chapter.",
+          "reviewCard": {
+            "maltese": "moderna",
+            "english": "modern"
+          }
+        },
+        {
+          "id": "b2-school-bag-ikkulurit-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkulurit"
+          ],
+          "prompt": "What is the lesson meaning of “ikkulurit”?",
+          "choices": [
+            "scissors",
+            "colourful",
+            "compass"
+          ],
+          "answer": "colourful",
+          "explanation": "ikkulurit is linked to “colourful” in this chapter.",
+          "reviewCard": {
+            "maltese": "ikkulurit",
+            "english": "colourful"
+          }
+        },
+        {
+          "id": "b2-school-bag-mahmuga-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-mahmuga"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġa”?",
+          "choices": [
+            "Dirty fly, but dirty flies.",
+            "scissors",
+            "copybook"
+          ],
+          "answer": "Dirty fly, but dirty flies.",
+          "explanation": "maħmuġa is linked to “Dirty fly, but dirty flies.” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġa",
+            "english": "Dirty fly, but dirty flies."
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 1",
       "items": [
         {
           "id": "b2-school-bag-basket-tal-iskola-recognition",
@@ -9431,7 +11571,19 @@
             "maltese": "fajl",
             "english": "file"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 2",
+      "items": [
         {
           "id": "b2-school-bag-ktieb-recognition",
           "type": "multiple-choice",
@@ -9659,7 +11811,19 @@
             "maltese": "pitazz",
             "english": "copybook"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 3",
+      "items": [
         {
           "id": "b2-school-bag-karta-recognition",
           "type": "multiple-choice",
@@ -9887,7 +12051,19 @@
             "maltese": "sabiħa",
             "english": "The tiger has beautiful skin."
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 4",
+      "items": [
         {
           "id": "b2-school-bag-sbieh-recognition",
           "type": "multiple-choice",
@@ -10115,7 +12291,19 @@
             "maltese": "kbira",
             "english": "big"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 5",
+      "items": [
         {
           "id": "b2-school-bag-kbar-recognition",
           "type": "multiple-choice",
@@ -10343,7 +12531,19 @@
             "maltese": "ġdida",
             "english": "The new car is black."
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 6",
+      "items": [
         {
           "id": "b2-school-bag-godda-recognition",
           "type": "multiple-choice",
@@ -10571,7 +12771,19 @@
             "maltese": "moderna",
             "english": "modern"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 7",
+      "items": [
         {
           "id": "b2-school-bag-moderni-recognition",
           "type": "multiple-choice",
@@ -10799,7 +13011,19 @@
             "maltese": "ikkulurita",
             "english": "The painting is colourful."
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-8",
+      "kind": "checkpoint",
+      "sequence": 8,
+      "targetCount": 5,
+      "title": "Fil-Basket tal-Iskola Checkpoint 8",
+      "items": [
         {
           "id": "b2-school-bag-ikkuluriti-recognition",
           "type": "multiple-choice",
@@ -10993,12 +13217,224 @@
       ]
     },
     {
-      "id": "b2-imperative-target-check",
       "chapterId": "b2-imperative",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "Iftaħ il-Ktieb u Aqra Target Check",
       "passPercent": 75,
+      "id": "b2-imperative-diagnostic",
+      "kind": "diagnostic",
+      "title": "Iftaħ il-Ktieb u Aqra Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-imperative-qum-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-qum"
+          ],
+          "prompt": "What is the lesson meaning of “qum”?",
+          "choices": [
+            "stand up (singular command)",
+            "stand up (plural command)",
+            "to sit down / place (singular command)"
+          ],
+          "answer": "stand up (singular command)",
+          "explanation": "qum is linked to “stand up (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "stand up (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-poggu"
+          ],
+          "prompt": "What is the lesson meaning of “poġġu”?",
+          "choices": [
+            "to sit down / place (singular command)",
+            "to write (singular command)",
+            "to sit down / place (plural command)"
+          ],
+          "answer": "to sit down / place (plural command)",
+          "explanation": "poġġu is linked to “to sit down / place (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "poġġu",
+            "english": "to sit down / place (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlaq-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlaq"
+          ],
+          "prompt": "What is the lesson meaning of “agħlaq”?",
+          "choices": [
+            "to write (singular command)",
+            "to close (singular command)",
+            "to sit down / place (plural command)"
+          ],
+          "answer": "to close (singular command)",
+          "explanation": "agħlaq is linked to “to close (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "to close (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhol-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-idhol"
+          ],
+          "prompt": "What is the lesson meaning of “idħol”?",
+          "choices": [
+            "to come in (singular command)",
+            "to write (singular command)",
+            "to write (plural command)"
+          ],
+          "answer": "to come in (singular command)",
+          "explanation": "idħol is linked to “to come in (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "idħol",
+            "english": "to come in (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-dahhlu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-dahhlu"
+          ],
+          "prompt": "What is the lesson meaning of “daħħlu”?",
+          "choices": [
+            "to write (plural command)",
+            "to close (singular command)",
+            "put inside (plural command)"
+          ],
+          "answer": "put inside (plural command)",
+          "explanation": "daħħlu is linked to “put inside (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "daħħlu",
+            "english": "put inside (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ifthu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ifthu"
+          ],
+          "prompt": "What is the lesson meaning of “iftħu”?",
+          "choices": [
+            "to close (plural command)",
+            "to open (plural command)",
+            "to close (singular command)"
+          ],
+          "answer": "to open (plural command)",
+          "explanation": "iftħu is linked to “to open (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "iftħu",
+            "english": "to open (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-tkellem-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tkellem"
+          ],
+          "prompt": "What is the lesson meaning of “tkellem”?",
+          "choices": [
+            "speak (singular command)",
+            "to close (plural command)",
+            "go out (singular command)"
+          ],
+          "answer": "speak (singular command)",
+          "explanation": "tkellem is linked to “speak (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "tkellem",
+            "english": "speak (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-tlieta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tlieta"
+          ],
+          "prompt": "What is the lesson meaning of “tlieta”?",
+          "choices": [
+            "go out (singular command)",
+            "go out (plural command)",
+            "three"
+          ],
+          "answer": "three",
+          "explanation": "tlieta is linked to “three” in this chapter.",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three"
+          }
+        },
+        {
+          "id": "b2-imperative-sitta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-sitta"
+          ],
+          "prompt": "What is the lesson meaning of “sitta”?",
+          "choices": [
+            "to come in (singular command)",
+            "six",
+            "go out (plural command)"
+          ],
+          "answer": "six",
+          "explanation": "sitta is linked to “six” in this chapter.",
+          "reviewCard": {
+            "maltese": "sitta",
+            "english": "six"
+          }
+        },
+        {
+          "id": "b2-imperative-ghaxra-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "What is the lesson meaning of “għaxra”?",
+          "choices": [
+            "ten",
+            "to come in (singular command)",
+            "to come in (plural command)"
+          ],
+          "answer": "ten",
+          "explanation": "għaxra is linked to “ten” in this chapter.",
+          "reviewCard": {
+            "maltese": "għaxra",
+            "english": "ten"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 1",
       "items": [
         {
           "id": "b2-imperative-qum-recognition",
@@ -11227,7 +13663,19 @@
             "maltese": "iktbu",
             "english": "to write (plural command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 2",
+      "items": [
         {
           "id": "b2-imperative-aghlaq-recognition",
           "type": "multiple-choice",
@@ -11455,7 +13903,19 @@
             "maltese": "idħlu",
             "english": "to come in (plural command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 3",
+      "items": [
         {
           "id": "b2-imperative-dahhal-recognition",
           "type": "multiple-choice",
@@ -11683,7 +14143,19 @@
             "maltese": "iftħu",
             "english": "to open (plural command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 4",
+      "items": [
         {
           "id": "b2-imperative-isimghu-recognition",
           "type": "multiple-choice",
@@ -11911,7 +14383,19 @@
             "maltese": "tnejn",
             "english": "two"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 5",
+      "items": [
         {
           "id": "b2-imperative-tlieta-recognition",
           "type": "multiple-choice",
@@ -12139,7 +14623,19 @@
             "maltese": "tmienja",
             "english": "eight"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 2,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 6",
+      "items": [
         {
           "id": "b2-imperative-disgha-recognition",
           "type": "multiple-choice",
@@ -12219,12 +14715,224 @@
       ]
     },
     {
-      "id": "b2-weather-target-check",
       "chapterId": "b2-weather",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "It-Temp Target Check",
       "passPercent": 75,
+      "id": "b2-weather-diagnostic",
+      "kind": "diagnostic",
+      "title": "It-Temp Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-weather-borra-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-borra"
+          ],
+          "prompt": "What is the lesson meaning of “borra”?",
+          "choices": [
+            "snow",
+            "temperature",
+            "lightning"
+          ],
+          "answer": "snow",
+          "explanation": "borra is linked to “snow” in this chapter.",
+          "reviewCard": {
+            "maltese": "borra",
+            "english": "snow"
+          }
+        },
+        {
+          "id": "b2-weather-sajjetti-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-sajjetti"
+          ],
+          "prompt": "What is the lesson meaning of “sajjetti”?",
+          "choices": [
+            "clouds",
+            "wind",
+            "lightning"
+          ],
+          "answer": "lightning",
+          "explanation": "sajjetti is linked to “lightning” in this chapter.",
+          "reviewCard": {
+            "maltese": "sajjetti",
+            "english": "lightning"
+          }
+        },
+        {
+          "id": "b2-weather-rih-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "What is the lesson meaning of “riħ”?",
+          "choices": [
+            "It is very hot.",
+            "wind",
+            "clouds"
+          ],
+          "answer": "wind",
+          "explanation": "riħ is linked to “wind” in this chapter.",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind"
+          }
+        },
+        {
+          "id": "b2-weather-maltemp-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-maltemp"
+          ],
+          "prompt": "What is the lesson meaning of “maltemp”?",
+          "choices": [
+            "bad weather",
+            "wind",
+            "It is very hot."
+          ],
+          "answer": "bad weather",
+          "explanation": "maltemp is linked to “bad weather” in this chapter.",
+          "reviewCard": {
+            "maltese": "maltemp",
+            "english": "bad weather"
+          }
+        },
+        {
+          "id": "b2-weather-staguni-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-staguni"
+          ],
+          "prompt": "What is the lesson meaning of “staġuni”?",
+          "choices": [
+            "It is very hot.",
+            "cold",
+            "seasons"
+          ],
+          "answer": "seasons",
+          "explanation": "staġuni is linked to “seasons” in this chapter.",
+          "reviewCard": {
+            "maltese": "staġuni",
+            "english": "seasons"
+          }
+        },
+        {
+          "id": "b2-weather-harifa-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-harifa"
+          ],
+          "prompt": "What is the lesson meaning of “ħarifa”?",
+          "choices": [
+            "bad weather",
+            "autumn",
+            "cold"
+          ],
+          "answer": "autumn",
+          "explanation": "ħarifa is linked to “autumn” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn"
+          }
+        },
+        {
+          "id": "b2-weather-xemx-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemx"
+          ],
+          "prompt": "What is the lesson meaning of “xemx”?",
+          "choices": [
+            "sun",
+            "bad weather",
+            "season"
+          ],
+          "answer": "sun",
+          "explanation": "xemx is linked to “sun” in this chapter.",
+          "reviewCard": {
+            "maltese": "xemx",
+            "english": "sun"
+          }
+        },
+        {
+          "id": "b2-weather-bnazzi-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-bnazzi"
+          ],
+          "prompt": "What is the lesson meaning of “bnazzi”?",
+          "choices": [
+            "season",
+            "seasons",
+            "fine / calm weather"
+          ],
+          "answer": "fine / calm weather",
+          "explanation": "bnazzi is linked to “fine / calm weather” in this chapter.",
+          "reviewCard": {
+            "maltese": "bnazzi",
+            "english": "fine / calm weather"
+          }
+        },
+        {
+          "id": "b2-weather-xemxi-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemxi"
+          ],
+          "prompt": "What is the lesson meaning of “xemxi”?",
+          "choices": [
+            "spring",
+            "B: Today it is nice and sunny.",
+            "seasons"
+          ],
+          "answer": "B: Today it is nice and sunny.",
+          "explanation": "xemxi is linked to “B: Today it is nice and sunny.” in this chapter.",
+          "reviewCard": {
+            "maltese": "xemxi",
+            "english": "B: Today it is nice and sunny."
+          }
+        },
+        {
+          "id": "b2-weather-l-inqas-temperatura-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-l-inqas-temperatura"
+          ],
+          "prompt": "What is the lesson meaning of “l-inqas temperatura”?",
+          "choices": [
+            "the lowest temperature",
+            "spring",
+            "summer"
+          ],
+          "answer": "the lowest temperature",
+          "explanation": "l-inqas temperatura is linked to “the lowest temperature” in this chapter.",
+          "reviewCard": {
+            "maltese": "l-inqas temperatura",
+            "english": "the lowest temperature"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "It-Temp Checkpoint 1",
       "items": [
         {
           "id": "b2-weather-borra-recognition",
@@ -12453,7 +15161,19 @@
             "maltese": "sħana",
             "english": "It is very hot."
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "It-Temp Checkpoint 2",
+      "items": [
         {
           "id": "b2-weather-kesha-recognition",
           "type": "multiple-choice",
@@ -12681,7 +15401,19 @@
             "maltese": "sajf",
             "english": "summer"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "It-Temp Checkpoint 3",
+      "items": [
         {
           "id": "b2-weather-harifa-recognition",
           "type": "multiple-choice",
@@ -12909,7 +15641,19 @@
             "maltese": "bnazzi",
             "english": "fine / calm weather"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 5,
+      "title": "It-Temp Checkpoint 4",
+      "items": [
         {
           "id": "b2-weather-silg-recognition",
           "type": "multiple-choice",
@@ -13103,12 +15847,224 @@
       ]
     },
     {
-      "id": "b2-clothes-target-check",
       "chapterId": "b2-clothes",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "Il-Ħwejjeġ Target Check",
       "passPercent": 75,
+      "id": "b2-clothes-diagnostic",
+      "kind": "diagnostic",
+      "title": "Il-Ħwejjeġ Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-clothes-flokk-hafif-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-hafif"
+          ],
+          "prompt": "What is the lesson meaning of “flokk ħafif”?",
+          "choices": [
+            "If it is hot, I wear a light shirt.",
+            "light dress",
+            "skirt"
+          ],
+          "answer": "If it is hot, I wear a light shirt.",
+          "explanation": "flokk ħafif is linked to “If it is hot, I wear a light shirt.” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk ħafif",
+            "english": "If it is hot, I wear a light shirt."
+          }
+        },
+        {
+          "id": "b2-clothes-dublett-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-dublett"
+          ],
+          "prompt": "What is the lesson meaning of “dublett”?",
+          "choices": [
+            "short-sleeved shirt",
+            "denim jacket",
+            "skirt"
+          ],
+          "answer": "skirt",
+          "explanation": "dublett is linked to “skirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-ta-taht-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-ta-taht"
+          ],
+          "prompt": "What is the lesson meaning of “flokk ta' taħt”?",
+          "choices": [
+            "denim jacket",
+            "undershirt",
+            "short-sleeved shirt"
+          ],
+          "answer": "undershirt",
+          "explanation": "flokk ta' taħt is linked to “undershirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk ta' taħt",
+            "english": "undershirt"
+          }
+        },
+        {
+          "id": "b2-clothes-malja-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-malja"
+          ],
+          "prompt": "What is the lesson meaning of “malja”?",
+          "choices": [
+            "swimsuit",
+            "denim jacket",
+            "undershirt"
+          ],
+          "answer": "swimsuit",
+          "explanation": "malja is linked to “swimsuit” in this chapter.",
+          "reviewCard": {
+            "maltese": "malja",
+            "english": "swimsuit"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-tas-suf-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-tas-suf"
+          ],
+          "prompt": "What is the lesson meaning of “flokk tas-suf”?",
+          "choices": [
+            "undershirt",
+            "light trousers",
+            "woollen jumper"
+          ],
+          "answer": "woollen jumper",
+          "explanation": "flokk tas-suf is linked to “woollen jumper” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk tas-suf",
+            "english": "woollen jumper"
+          }
+        },
+        {
+          "id": "b2-clothes-qalziet-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-qalziet"
+          ],
+          "prompt": "What is the lesson meaning of “qalziet”?",
+          "choices": [
+            "strappy top",
+            "trousers",
+            "light trousers"
+          ],
+          "answer": "trousers",
+          "explanation": "qalziet is linked to “trousers” in this chapter.",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers"
+          }
+        },
+        {
+          "id": "b2-clothes-hdax-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "What is the lesson meaning of “ħdax”?",
+          "choices": [
+            "eleven",
+            "strappy top",
+            "swimsuit"
+          ],
+          "answer": "eleven",
+          "explanation": "ħdax is linked to “eleven” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven"
+          }
+        },
+        {
+          "id": "b2-clothes-erbatax-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-erbatax"
+          ],
+          "prompt": "What is the lesson meaning of “erbatax”?",
+          "choices": [
+            "swimsuit",
+            "hat",
+            "fourteen"
+          ],
+          "answer": "fourteen",
+          "explanation": "erbatax is linked to “fourteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "erbatax",
+            "english": "fourteen"
+          }
+        },
+        {
+          "id": "b2-clothes-sbatax-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-sbatax"
+          ],
+          "prompt": "What is the lesson meaning of “sbatax”?",
+          "choices": [
+            "flip-flop / slipper",
+            "seventeen",
+            "hat"
+          ],
+          "answer": "seventeen",
+          "explanation": "sbatax is linked to “seventeen” in this chapter.",
+          "reviewCard": {
+            "maltese": "sbatax",
+            "english": "seventeen"
+          }
+        },
+        {
+          "id": "b2-clothes-ghoxrin-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "What is the lesson meaning of “għoxrin”?",
+          "choices": [
+            "twenty",
+            "flip-flop / slipper",
+            "woollen jumper"
+          ],
+          "answer": "twenty",
+          "explanation": "għoxrin is linked to “twenty” in this chapter.",
+          "reviewCard": {
+            "maltese": "għoxrin",
+            "english": "twenty"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 1",
       "items": [
         {
           "id": "b2-clothes-flokk-hafif-recognition",
@@ -13337,7 +16293,19 @@
             "maltese": "flokk ta' taħt",
             "english": "undershirt"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 2",
+      "items": [
         {
           "id": "b2-clothes-qalziet-hafif-recognition",
           "type": "multiple-choice",
@@ -13565,7 +16533,19 @@
             "maltese": "flokk tas-suf",
             "english": "woollen jumper"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 3",
+      "items": [
         {
           "id": "b2-clothes-gakketta-recognition",
           "type": "multiple-choice",
@@ -13793,7 +16773,19 @@
             "maltese": "ħdax",
             "english": "eleven"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 4",
+      "items": [
         {
           "id": "b2-clothes-tnax-recognition",
           "type": "multiple-choice",
@@ -14021,7 +17013,19 @@
             "maltese": "sbatax",
             "english": "seventeen"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 3,
+      "title": "Il-Ħwejjeġ Checkpoint 5",
+      "items": [
         {
           "id": "b2-clothes-tmintax-recognition",
           "type": "multiple-choice",
@@ -14139,12 +17143,224 @@
       ]
     },
     {
-      "id": "b2-hobbies-target-check",
       "chapterId": "b2-hobbies",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "Xi Nħobb Nagħmel Target Check",
       "passPercent": 75,
+      "id": "b2-hobbies-diagnostic",
+      "kind": "diagnostic",
+      "title": "Xi Nħobb Nagħmel Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-hobbies-libes-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-libes"
+          ],
+          "prompt": "What is the lesson meaning of “libes”?",
+          "choices": [
+            "to dress",
+            "to dress (singular command)",
+            "to dress (plural command)"
+          ],
+          "answer": "to dress",
+          "explanation": "libes is linked to “to dress” in this chapter.",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "to dress"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbsu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "What is the lesson meaning of “ilbsu”?",
+          "choices": [
+            "to do / make",
+            "to do / make (singular command)",
+            "to dress (plural command)"
+          ],
+          "answer": "to dress (plural command)",
+          "explanation": "ilbsu is linked to “to dress (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "to dress (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmlu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-aghmlu"
+          ],
+          "prompt": "What is the lesson meaning of “agħmlu”?",
+          "choices": [
+            "to do / make (singular command)",
+            "to do / make (plural command)",
+            "to do / make"
+          ],
+          "answer": "to do / make (plural command)",
+          "explanation": "agħmlu is linked to “to do / make (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħmlu",
+            "english": "to do / make (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-uzaw-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-uzaw"
+          ],
+          "prompt": "What is the lesson meaning of “użaw”?",
+          "choices": [
+            "use (plural command)",
+            "to do / make (singular command)",
+            "to do / make (plural command)"
+          ],
+          "answer": "use (plural command)",
+          "explanation": "użaw is linked to “use (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "użaw",
+            "english": "use (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-orqod-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-orqod"
+          ],
+          "prompt": "What is the lesson meaning of “orqod”?",
+          "choices": [
+            "to do / make (plural command)",
+            "use (singular command)",
+            "to sleep (singular command)"
+          ],
+          "answer": "to sleep (singular command)",
+          "explanation": "orqod is linked to “to sleep (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "orqod",
+            "english": "to sleep (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilghab-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilghab"
+          ],
+          "prompt": "What is the lesson meaning of “ilgħab”?",
+          "choices": [
+            "use (plural command)",
+            "play (singular command)",
+            "use (singular command)"
+          ],
+          "answer": "play (singular command)",
+          "explanation": "ilgħab is linked to “play (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilgħab",
+            "english": "play (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-nilbes-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-nilbes"
+          ],
+          "prompt": "What is the lesson meaning of “se nilbes”?",
+          "choices": [
+            "I will wear",
+            "use (plural command)",
+            "to swim (singular command)"
+          ],
+          "answer": "I will wear",
+          "explanation": "se nilbes is linked to “I will wear” in this chapter.",
+          "reviewCard": {
+            "maltese": "se nilbes",
+            "english": "I will wear"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-norqdu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-norqdu"
+          ],
+          "prompt": "What is the lesson meaning of “se norqdu”?",
+          "choices": [
+            "to swim (singular command)",
+            "walk",
+            "we will sleep"
+          ],
+          "answer": "we will sleep",
+          "explanation": "se norqdu is linked to “we will sleep” in this chapter.",
+          "reviewCard": {
+            "maltese": "se norqdu",
+            "english": "we will sleep"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-jghumu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-jghumu"
+          ],
+          "prompt": "What is the lesson meaning of “se jgħumu”?",
+          "choices": [
+            "to sleep (singular command)",
+            "they will swim",
+            "walk"
+          ],
+          "answer": "they will swim",
+          "explanation": "se jgħumu is linked to “they will swim” in this chapter.",
+          "reviewCard": {
+            "maltese": "se jgħumu",
+            "english": "they will swim"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-naghmel-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-naghmel"
+          ],
+          "prompt": "What is the lesson meaning of “se nagħmel”?",
+          "choices": [
+            "I will do",
+            "to sleep (singular command)",
+            "get up (singular command)"
+          ],
+          "answer": "I will do",
+          "explanation": "se nagħmel is linked to “I will do” in this chapter.",
+          "reviewCard": {
+            "maltese": "se nagħmel",
+            "english": "I will do"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 1",
       "items": [
         {
           "id": "b2-hobbies-libes-recognition",
@@ -14373,7 +17589,19 @@
             "maltese": "agħmlu",
             "english": "to do / make (plural command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 2",
+      "items": [
         {
           "id": "b2-hobbies-uza-recognition",
           "type": "multiple-choice",
@@ -14601,7 +17829,19 @@
             "maltese": "qum",
             "english": "get up (singular command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 3",
+      "items": [
         {
           "id": "b2-hobbies-ilghab-recognition",
           "type": "multiple-choice",
@@ -14829,7 +18069,19 @@
             "maltese": "se norqdu",
             "english": "we will sleep"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 4",
+      "items": [
         {
           "id": "b2-hobbies-se-tilghab-recognition",
           "type": "multiple-choice",
@@ -15061,12 +18313,224 @@
       ]
     },
     {
-      "id": "b2-town-target-check",
       "chapterId": "b2-town",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "Fil-Pjazza Target Check",
       "passPercent": 75,
+      "id": "b2-town-diagnostic",
+      "kind": "diagnostic",
+      "title": "Fil-Pjazza Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-town-kafetterija-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-kafetterija"
+          ],
+          "prompt": "What is the lesson meaning of “kafetterija”?",
+          "choices": [
+            "The cafeteria is on the right.",
+            "pharmacy",
+            "bakery / baker"
+          ],
+          "answer": "The cafeteria is on the right.",
+          "explanation": "kafetterija is linked to “The cafeteria is on the right.” in this chapter.",
+          "reviewCard": {
+            "maltese": "kafetterija",
+            "english": "The cafeteria is on the right."
+          }
+        },
+        {
+          "id": "b2-town-restorant-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-restorant"
+          ],
+          "prompt": "What is the lesson meaning of “restorant”?",
+          "choices": [
+            "bakery / baker",
+            "Local Council office",
+            "This restaurant is better than that one."
+          ],
+          "answer": "This restaurant is better than that one.",
+          "explanation": "restorant is linked to “This restaurant is better than that one.” in this chapter.",
+          "reviewCard": {
+            "maltese": "restorant",
+            "english": "This restaurant is better than that one."
+          }
+        },
+        {
+          "id": "b2-town-posta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-posta"
+          ],
+          "prompt": "What is the lesson meaning of “posta”?",
+          "choices": [
+            "Local Council office",
+            "post office",
+            "This restaurant is better than that one."
+          ],
+          "answer": "post office",
+          "explanation": "posta is linked to “post office” in this chapter.",
+          "reviewCard": {
+            "maltese": "posta",
+            "english": "post office"
+          }
+        },
+        {
+          "id": "b2-town-pastizz-tal-pizelli-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-pastizz-tal-pizelli"
+          ],
+          "prompt": "What is the lesson meaning of “pastizz tal-piżelli”?",
+          "choices": [
+            "pea pastizz",
+            "Local Council office",
+            "church"
+          ],
+          "answer": "pea pastizz",
+          "explanation": "pastizz tal-piżelli is linked to “pea pastizz” in this chapter.",
+          "reviewCard": {
+            "maltese": "pastizz tal-piżelli",
+            "english": "pea pastizz"
+          }
+        },
+        {
+          "id": "b2-town-appartament-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-appartament"
+          ],
+          "prompt": "What is the lesson meaning of “appartament”?",
+          "choices": [
+            "church",
+            "post office",
+            "apartment"
+          ],
+          "answer": "apartment",
+          "explanation": "appartament is linked to “apartment” in this chapter.",
+          "reviewCard": {
+            "maltese": "appartament",
+            "english": "apartment"
+          }
+        },
+        {
+          "id": "b2-town-numru-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-numru"
+          ],
+          "prompt": "What is the lesson meaning of “numru”?",
+          "choices": [
+            "church parvis / forecourt",
+            "number",
+            "post office"
+          ],
+          "answer": "number",
+          "explanation": "numru is linked to “number” in this chapter.",
+          "reviewCard": {
+            "maltese": "numru",
+            "english": "number"
+          }
+        },
+        {
+          "id": "b2-town-lukanda-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-lukanda"
+          ],
+          "prompt": "What is the lesson meaning of “lukanda”?",
+          "choices": [
+            "hotel",
+            "church parvis / forecourt",
+            "ricotta pastizz"
+          ],
+          "answer": "hotel",
+          "explanation": "lukanda is linked to “hotel” in this chapter.",
+          "reviewCard": {
+            "maltese": "lukanda",
+            "english": "hotel"
+          }
+        },
+        {
+          "id": "b2-town-dur-fuq-ix-xellug-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-ix-xellug"
+          ],
+          "prompt": "What is the lesson meaning of “Dur fuq ix-xellug”?",
+          "choices": [
+            "ricotta pastizz",
+            "pea pastizz",
+            "Turn left"
+          ],
+          "answer": "Turn left",
+          "explanation": "Dur fuq ix-xellug is linked to “Turn left” in this chapter.",
+          "reviewCard": {
+            "maltese": "Dur fuq ix-xellug",
+            "english": "Turn left"
+          }
+        },
+        {
+          "id": "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-il-lemin"
+          ],
+          "prompt": "What is the lesson meaning of “Dur fuq il-lemin”?",
+          "choices": [
+            "I need medicine.",
+            "Walk to the corner and turn right.",
+            "pea pastizz"
+          ],
+          "answer": "Walk to the corner and turn right.",
+          "explanation": "Dur fuq il-lemin is linked to “Walk to the corner and turn right.” in this chapter.",
+          "reviewCard": {
+            "maltese": "Dur fuq il-lemin",
+            "english": "Walk to the corner and turn right."
+          }
+        },
+        {
+          "id": "b2-town-inzel-l-isfel-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-inzel-l-isfel"
+          ],
+          "prompt": "What is the lesson meaning of “Inżel 'l isfel”?",
+          "choices": [
+            "Go down",
+            "I need medicine.",
+            "menu"
+          ],
+          "answer": "Go down",
+          "explanation": "Inżel 'l isfel is linked to “Go down” in this chapter.",
+          "reviewCard": {
+            "maltese": "Inżel 'l isfel",
+            "english": "Go down"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 1",
       "items": [
         {
           "id": "b2-town-kafetterija-recognition",
@@ -15295,7 +18759,19 @@
             "maltese": "knisja",
             "english": "church"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 2",
+      "items": [
         {
           "id": "b2-town-posta-recognition",
           "type": "multiple-choice",
@@ -15523,7 +18999,19 @@
             "maltese": "menu",
             "english": "menu"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 3",
+      "items": [
         {
           "id": "b2-town-appartament-recognition",
           "type": "multiple-choice",
@@ -15751,7 +19239,19 @@
             "maltese": "pjazza",
             "english": "square / piazza"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 4",
+      "items": [
         {
           "id": "b2-town-lukanda-recognition",
           "type": "multiple-choice",
@@ -15979,7 +19479,19 @@
             "maltese": "Ieqaf",
             "english": "to stop"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 4,
+      "title": "Fil-Pjazza Checkpoint 5",
+      "items": [
         {
           "id": "b2-town-dur-fuq-il-lemin-recognition",
           "type": "multiple-choice",
@@ -16135,12 +19647,224 @@
       ]
     },
     {
-      "id": "b2-recycling-target-check",
       "chapterId": "b2-recycling",
       "level": "B2",
-      "kind": "target-coverage",
-      "title": "Nirriċiklaw l-Iskart Target Check",
       "passPercent": 75,
+      "id": "b2-recycling-diagnostic",
+      "kind": "diagnostic",
+      "title": "Nirriċiklaw l-Iskart Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-recycling-plastik-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-plastik"
+          ],
+          "prompt": "What is the lesson meaning of “plastik”?",
+          "choices": [
+            "plastic",
+            "paper",
+            "recycling"
+          ],
+          "answer": "plastic",
+          "explanation": "plastik is linked to “plastic” in this chapter.",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic"
+          }
+        },
+        {
+          "id": "b2-recycling-skart-riciklabbli-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-riciklabbli"
+          ],
+          "prompt": "What is the lesson meaning of “skart riċiklabbli”?",
+          "choices": [
+            "recycling",
+            "mixed waste",
+            "recyclable waste"
+          ],
+          "answer": "recyclable waste",
+          "explanation": "skart riċiklabbli is linked to “recyclable waste” in this chapter.",
+          "reviewCard": {
+            "maltese": "skart riċiklabbli",
+            "english": "recyclable waste"
+          }
+        },
+        {
+          "id": "b2-recycling-mahmug-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mahmug"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġ”?",
+          "choices": [
+            "recyclable waste",
+            "Dirty fly, but dirty flies.",
+            "mixed waste"
+          ],
+          "answer": "Dirty fly, but dirty flies.",
+          "explanation": "maħmuġ is linked to “Dirty fly, but dirty flies.” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġ",
+            "english": "Dirty fly, but dirty flies."
+          }
+        },
+        {
+          "id": "b2-recycling-mimlijin-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mimlijin"
+          ],
+          "prompt": "What is the lesson meaning of “mimlijin”?",
+          "choices": [
+            "full (plural)",
+            "recyclable waste",
+            "The garden is clean and beautiful."
+          ],
+          "answer": "full (plural)",
+          "explanation": "mimlijin is linked to “full (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "mimlijin",
+            "english": "full (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-jinten-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-jinten"
+          ],
+          "prompt": "What is the lesson meaning of “jinten”?",
+          "choices": [
+            "The garden is clean and beautiful.",
+            "The kitchen is clean.",
+            "it stinks (masculine)"
+          ],
+          "answer": "it stinks (masculine)",
+          "explanation": "jinten is linked to “it stinks (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "jinten",
+            "english": "it stinks (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-miftuhin-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-miftuhin"
+          ],
+          "prompt": "What is the lesson meaning of “miftuħin”?",
+          "choices": [
+            "clean (plural)",
+            "The windows are open.",
+            "The kitchen is clean."
+          ],
+          "answer": "The windows are open.",
+          "explanation": "miftuħin is linked to “The windows are open.” in this chapter.",
+          "reviewCard": {
+            "maltese": "miftuħin",
+            "english": "The windows are open."
+          }
+        },
+        {
+          "id": "b2-recycling-skart-organiku-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-organiku"
+          ],
+          "prompt": "What is the lesson meaning of “skart organiku”?",
+          "choices": [
+            "Vegetable peels are organic waste.",
+            "clean (plural)",
+            "Dirty fly, but dirty flies."
+          ],
+          "answer": "Vegetable peels are organic waste.",
+          "explanation": "skart organiku is linked to “Vegetable peels are organic waste.” in this chapter.",
+          "reviewCard": {
+            "maltese": "skart organiku",
+            "english": "Vegetable peels are organic waste."
+          }
+        },
+        {
+          "id": "b2-recycling-ghazel-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ghazel"
+          ],
+          "prompt": "What is the lesson meaning of “għażel”?",
+          "choices": [
+            "Dirty fly, but dirty flies.",
+            "dirty (plural)",
+            "to choose"
+          ],
+          "answer": "to choose",
+          "explanation": "għażel is linked to “to choose” in this chapter.",
+          "reviewCard": {
+            "maltese": "għażel",
+            "english": "to choose"
+          }
+        },
+        {
+          "id": "b2-recycling-waddbu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-waddbu"
+          ],
+          "prompt": "What is the lesson meaning of “waddbu”?",
+          "choices": [
+            "The place looks full of fresh food.",
+            "throw (plural command)",
+            "dirty (plural)"
+          ],
+          "answer": "throw (plural command)",
+          "explanation": "waddbu is linked to “throw (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "waddbu",
+            "english": "throw (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-ohorgu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ohorgu"
+          ],
+          "prompt": "What is the lesson meaning of “oħorġu”?",
+          "choices": [
+            "take out (plural command)",
+            "The place looks full of fresh food.",
+            "full"
+          ],
+          "answer": "take out (plural command)",
+          "explanation": "oħorġu is linked to “take out (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "oħorġu",
+            "english": "take out (plural command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 1",
       "items": [
         {
           "id": "b2-recycling-plastik-recognition",
@@ -16369,7 +20093,19 @@
             "maltese": "nadif",
             "english": "The garden is clean and beautiful."
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 2",
+      "items": [
         {
           "id": "b2-recycling-nadifa-recognition",
           "type": "multiple-choice",
@@ -16597,7 +20333,19 @@
             "maltese": "mimli",
             "english": "The place looks full of fresh food."
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 3",
+      "items": [
         {
           "id": "b2-recycling-mimlija-recognition",
           "type": "multiple-choice",
@@ -16825,7 +20573,19 @@
             "maltese": "jinten",
             "english": "it stinks (masculine)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 4",
+      "items": [
         {
           "id": "b2-recycling-tinten-recognition",
           "type": "multiple-choice",
@@ -17053,7 +20813,19 @@
             "maltese": "mqatta'",
             "english": "cut / torn (masculine)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 5",
+      "items": [
         {
           "id": "b2-recycling-mqattgha-recognition",
           "type": "multiple-choice",
@@ -17281,7 +21053,19 @@
             "maltese": "armi",
             "english": "throw away (singular command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 6",
+      "items": [
         {
           "id": "b2-recycling-armu-recognition",
           "type": "multiple-choice",
@@ -17509,7 +21293,19 @@
             "maltese": "waddbu",
             "english": "throw (plural command)"
           }
-        },
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 5,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 7",
+      "items": [
         {
           "id": "b2-recycling-issepara-recognition",
           "type": "multiple-choice",

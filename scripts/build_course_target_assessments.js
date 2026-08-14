@@ -94,65 +94,90 @@ function rotate(values, offset) {
   return values.map((_, index) => values[(index + offset) % values.length]);
 }
 
-function buildSet(chapter, targets) {
+function recognitionItem(entry, index, meanings, suffix = "recognition") {
+  const { target, meaning } = entry;
+  const distractors = rotate(meanings, index + 1).filter((value) => value !== meaning).slice(0, 2);
+  return {
+    id: `${target.id}-${suffix}`,
+    type: "multiple-choice",
+    assessmentMode: "recognition",
+    targetIds: [target.id],
+    prompt: `What is the lesson meaning of “${target.sourceRequirement}”?`,
+    choices: rotate([meaning, ...distractors], index % 3),
+    answer: meaning,
+    explanation: `${target.sourceRequirement} is linked to “${meaning}” in this chapter.`,
+    reviewCard: { maltese: target.sourceRequirement, english: meaning }
+  };
+}
+
+function productionItem({ target, meaning }) {
+  return {
+    id: `${target.id}-production`,
+    type: "fill-blank",
+    assessmentMode: "production",
+    targetIds: [target.id],
+    prompt: `Write the Maltese ${target.type === "verb-form" ? "form" : "target"} for “${meaning}”.`,
+    answer: target.sourceRequirement,
+    accepted: [target.sourceRequirement],
+    explanation: `The required chapter form is ${target.sourceRequirement}.`,
+    reviewCard: { maltese: target.sourceRequirement, english: meaning }
+  };
+}
+
+function diagnosticEntries(entries, limit = 10) {
+  if (entries.length <= limit) return entries;
+  return Array.from({ length: limit }, (_, index) => entries[Math.floor(index * (entries.length - 1) / (limit - 1))]);
+}
+
+function chunks(values, size) {
+  return Array.from({ length: Math.ceil(values.length / size) }, (_, index) => values.slice(index * size, (index + 1) * size));
+}
+
+function buildSets(chapter, targets) {
   const entries = targets.map((target) => ({ target, meaning: targetMeaning(target) }));
   const meanings = [...new Set(entries.map((entry) => entry.meaning))];
   if (meanings.length < 3) throw new Error(`${chapter.id} needs at least three distinct meanings`);
 
-  const items = entries.flatMap(({ target, meaning }, index) => {
-    const distractors = rotate(meanings, index + 1).filter((value) => value !== meaning).slice(0, 2);
-    const choices = rotate([meaning, ...distractors], index % 3);
-    const reviewCard = { maltese: target.sourceRequirement, english: meaning };
-    return [
-      {
-        id: `${target.id}-recognition`,
-        type: "multiple-choice",
-        assessmentMode: "recognition",
-        targetIds: [target.id],
-        prompt: `What is the lesson meaning of “${target.sourceRequirement}”?`,
-        choices,
-        answer: meaning,
-        explanation: `${target.sourceRequirement} is linked to “${meaning}” in this chapter.`,
-        reviewCard
-      },
-      {
-        id: `${target.id}-production`,
-        type: "fill-blank",
-        assessmentMode: "production",
-        targetIds: [target.id],
-        prompt: `Write the Maltese ${target.type === "verb-form" ? "form" : "target"} for “${meaning}”.`,
-        answer: target.sourceRequirement,
-        accepted: [target.sourceRequirement],
-        explanation: `The required chapter form is ${target.sourceRequirement}.`,
-        reviewCard
-      }
-    ];
-  });
-
-  return {
-    id: `${chapter.id}-target-check`,
+  const shared = {
     chapterId: chapter.id,
     level: chapter.id.startsWith("b1-") ? "B1" : "B2",
-    kind: "target-coverage",
-    title: `${chapter.title} Target Check`,
-    passPercent: 75,
-    items
+    passPercent: 75
   };
+  const diagnostic = {
+    ...shared,
+    id: `${chapter.id}-diagnostic`,
+    kind: "diagnostic",
+    title: `${chapter.title} Entry Diagnostic`,
+    items: diagnosticEntries(entries).map((entry, index) => recognitionItem(entry, index, meanings, "diagnostic-recognition"))
+  };
+  const checkpoints = chunks(entries, 6).map((chunk, checkpointIndex) => ({
+    ...shared,
+    id: `${chapter.id}-checkpoint-${checkpointIndex + 1}`,
+    kind: "checkpoint",
+    sequence: checkpointIndex + 1,
+    targetCount: chunk.length,
+    title: `${chapter.title} Checkpoint ${checkpointIndex + 1}`,
+    items: chunk.flatMap((entry, index) => [
+      recognitionItem(entry, checkpointIndex * 6 + index, meanings),
+      productionItem(entry)
+    ])
+  }));
+  return [diagnostic, ...checkpoints];
 }
 
 const chapters = course.levels.flatMap((level) => level.chapters);
 const sets = chapters
   .filter((chapter) => requestedLevels.has(chapter.id.startsWith("b1-") ? "B1" : "B2"))
-  .map((chapter) => {
+  .flatMap((chapter) => {
     const targets = bindings.targets.filter((target) => (
       target.chapterId === chapter.id && target.implementationStatus === "implemented"
     ));
-    return buildSet(chapter, targets);
+    return buildSets(chapter, targets);
   });
 
 const output = {
   schemaVersion: 1,
-  description: "Generated recognition and production checks for every implemented book-course target.",
+  description: "Generated entry diagnostics and small recognition/production checkpoints for every implemented book-course target.",
   levels: [...requestedLevels].sort(),
   sets
 };

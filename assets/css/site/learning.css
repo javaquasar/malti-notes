@@ -298,6 +298,33 @@
   margin-top: var(--space-xl);
 }
 
+.course-diagnostic {
+  margin-top: var(--space-xl);
+}
+
+.course-checkpoint-list {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.course-checkpoint {
+  border-top: 1px solid var(--border-default);
+}
+
+.course-checkpoint > summary {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) 0;
+  cursor: pointer;
+}
+
+.course-checkpoint[open] > summary {
+  border-bottom: 1px solid var(--border-default);
+}
+
 @media (max-width: 760px) {
   .course-dashboard,
   .course-chapter-header,

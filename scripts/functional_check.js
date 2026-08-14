@@ -169,8 +169,13 @@ async function main() {
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "27 / 27", "Guided animals coverage is incorrect.");
       assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
-      const targetCheck = page.locator('[data-course-target-exercise][data-exercise-set="b1-animals-target-check"]');
-      assert(await targetCheck.locator(".exercise-item").count() === 54, "Animals target check does not cover all implemented targets in both modes.");
+      assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b1-animals-diagnostic"] .exercise-item').count() === 10, "Animals entry diagnostic is incomplete.");
+      const animalCheckpoints = page.locator("[data-course-checkpoints] .course-checkpoint");
+      assert(await animalCheckpoints.count() === 5, "Animals checkpoints do not cover the chapter in small groups.");
+      assert(await animalCheckpoints.locator(".exercise-item").count() === 0, "Closed checkpoints should not render their questions eagerly.");
+      await animalCheckpoints.first().locator("summary").click();
+      await animalCheckpoints.first().locator(".exercise-item").first().waitFor();
+      assert(await animalCheckpoints.first().locator(".exercise-item").count() === 12, "The first animals checkpoint should assess six targets in both modes.");
       assert(await page.locator("[data-course-supplement-grid] .visual-vocab-card").count() === 7, "Animals supplemental vocabulary is incomplete.");
       assert((await page.locator("[data-course-missing-targets]").textContent()).includes("All required targets are linked"), "Completed chapter still reports missing targets.");
       const supplementCard = page.locator('[data-course-supplement-grid] [data-content-id="b1-animals-brama"]');
@@ -213,7 +218,8 @@ async function main() {
       await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "24 / 24", "B2 hobbies mapping is incorrect.");
       assert(await page.locator(".course-step").count() === 4, "B2 hobbies study steps are incomplete.");
-      assert(await page.locator('[data-course-target-exercise][data-exercise-set="b2-hobbies-target-check"] .exercise-item').count() === 48, "B2 hobbies target check is incomplete.");
+      assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b2-hobbies-diagnostic"] .exercise-item').count() === 10, "B2 hobbies diagnostic is incomplete.");
+      assert(await page.locator("[data-course-checkpoints] .course-checkpoint").count() === 4, "B2 hobbies checkpoints are incomplete.");
       const imperativeHref = await page.locator(".course-step a", { hasText: "Imperative Verbs" }).getAttribute("href");
       assert(imperativeHref.includes("imperative_verbs.html") && imperativeHref.includes("view=chapter"), "Mapped imperative step is not scoped.");
       const guideHref = await page.locator(".course-step a", { hasText: "Verbs Guide" }).getAttribute("href");
