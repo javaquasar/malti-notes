@@ -172,6 +172,23 @@
         return saved;
     }
 
+    function addVerbParadigm(paradigm) {
+        return (paradigm.forms || []).map(function (form) {
+            return saveCard({
+                type: "verb-form-card",
+                lemma: paradigm.lemma,
+                translation: paradigm.meaning,
+                tense: form.mode,
+                pronoun: form.person,
+                polarity: "positive",
+                answer: form.form,
+                prompt: form.englishPrompt,
+                topic: paradigm.book + " Book Verb Paradigms",
+                sourcePage: "verbs_guide.html#book-verb-paradigms"
+            });
+        });
+    }
+
     function addVerbTables(details, options) {
         const saved = [];
         const tables = details?.tables || {};
@@ -324,6 +341,7 @@
         addSentence: addSentence,
         addCustomWord: addCustomWord,
         addVerbDrill: addVerbDrill,
+        addVerbParadigm: addVerbParadigm,
         addVerbTables: addVerbTables,
         getAllWords: getAllCards,
         getAllCards: getAllCards,

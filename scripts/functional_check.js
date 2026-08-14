@@ -322,6 +322,20 @@ async function main() {
       }
     });
 
+    await runTest(context, "book verb paradigms render every audited form and save a drill", async (page) => {
+      await openCleanPage(page, "verbs_guide.html");
+      await page.locator("[data-course-verb-paradigms][data-ready='true']").waitFor();
+      assert(await page.locator("[data-course-verb-paradigm]").count() === 18, "Expected 18 book verb paradigms.");
+      assert(await page.locator("[data-course-verb-form]").count() === 125, "Expected 125 audited book verb forms.");
+      await page.locator("[data-course-verb-book='B2']").click();
+      assert(await page.locator("[data-course-verb-list='B2'] [data-course-verb-paradigm]").count() === 8, "Expected 8 B2 paradigms.");
+      const first = page.locator("[data-course-verb-list='B2'] [data-course-verb-paradigm]").first();
+      await first.locator("summary").click();
+      await first.locator(".course-verb-review-button").click();
+      const savedCount = await page.evaluate(() => window.MaltiReviewStore.getStats().total);
+      assert(savedCount > 0, "Book verb paradigm was not added to Review.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

@@ -36,6 +36,81 @@
   font-size: 0.96rem;
 }
 
+.course-verb-book-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(64px, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-panel);
+}
+
+.course-verb-book-toggle button {
+  min-height: 36px;
+  padding: 6px 16px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-verb-book-toggle button.is-active {
+  background: var(--color-surface-ready-strong);
+  box-shadow: inset 0 0 0 1px var(--color-brand-border-strong);
+}
+
+.course-verb-paradigm-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.course-verb-paradigm {
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-strong);
+  overflow: hidden;
+}
+
+.course-verb-paradigm summary {
+  display: grid;
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.course-verb-paradigm-title {
+  font-weight: 800;
+}
+
+.course-verb-paradigm-body {
+  padding: 0 14px 14px;
+}
+
+.course-verb-table-wrap {
+  overflow-x: auto;
+}
+
+.course-verb-table {
+  min-width: 620px;
+}
+
+.course-verb-form {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.course-verb-review-button {
+  margin-top: 12px;
+}
+
 .verb-match-button {
   width: 100%;
   text-align: left;
