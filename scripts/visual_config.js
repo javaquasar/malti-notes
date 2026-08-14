@@ -33,7 +33,8 @@ const fullPageVisualPages = [
   "verbs_guide.html",
   "weather.html",
   "word_builder_game.html",
-  "word_search.html"
+  "word_search.html",
+  "year4_exam.html"
 ];
 
 const framedGroupFixturePage = "scripts/fixtures/framed_content_groups.html";

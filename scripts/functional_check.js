@@ -420,6 +420,23 @@ async function main() {
       assert(checkedCards > 0, "No generated bank cards were checked.");
     });
 
+    await runTest(context, "Year 4 vocabulary uses the shared review store", async (page) => {
+      await openCleanPage(page, "year4_exam.html");
+      await page.locator("#year4-search").fill("fekruna");
+      await page.waitForFunction(() => document.querySelectorAll(".year4-card").length === 1);
+      await page.locator("#year4-add-visible").click();
+      const saved = await page.evaluate(() => ({
+        total: window.MaltiReviewStore.getStats().total,
+        visible: window.MaltiYear4Exam.getVisibleItems().length
+      }));
+      assert(saved.total === 1 && saved.visible === 1, "Year 4 visible word was not saved once.");
+      assert(await page.locator(".year4-card .review-add-button").isDisabled(), "Saved Year 4 card did not update its state.");
+      await page.reload({ waitUntil: "networkidle" });
+      await page.locator("#year4-search").fill("fekruna");
+      await page.waitForFunction(() => document.querySelectorAll(".year4-card").length === 1);
+      assert(await page.locator(".year4-card .review-add-button").isDisabled(), "Year 4 review state did not survive reload.");
+    });
+
     await runTest(context, "framed content groups keep the shared visual contract", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());
