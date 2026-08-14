@@ -1624,6 +1624,16 @@
             });
         }
 
+        var quickParams = new URLSearchParams(window.location.search);
+        if (quickParams.get("quick") === "due") {
+            var requestedLimit = Number(quickParams.get("limit"));
+            var safeLimit = [5, 10, 15].includes(requestedLimit) ? requestedLimit : 10;
+            var dueOnly = byId("review-due-only");
+            if (dueOnly) dueOnly.checked = true;
+            setTypeFilter("");
+            startQuickSession("Today's due cards", safeLimit);
+        }
+
         if (repeatQuick) {
             repeatQuick.addEventListener("click", function () {
                 restartQuickSession();

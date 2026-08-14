@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Today</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <section class="hero today-hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <span class="tag">Daily study</span>
+                <h1>Today</h1>
+                <p class="lead">Continue with the work that is due, useful, and small enough to finish now.</p>
+                <div class="pill-row">
+                    <span class="pill"><strong data-today-ready>0</strong>&nbsp;ready</span>
+                    <span class="pill"><strong data-today-mastered>0</strong>&nbsp;mastered</span>
+                    <span class="pill">saved locally</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Session length</strong></p>
+                <div class="segmented-toggle" data-today-duration aria-label="Choose session length">
+                    <button type="button" data-minutes="10">10 min</button>
+                    <button type="button" data-minutes="20">20 min</button>
+                    <button type="button" data-minutes="30">30 min</button>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section today-shell" data-today-root aria-live="polite">
+        <section class="today-primary">
+            <div>
+                <span class="tag">Next action</span>
+                <h2 data-today-title>Preparing your session...</h2>
+                <p class="muted-note" data-today-detail>Reading saved review and course progress.</p>
+            </div>
+            <a class="action-link" data-today-primary href="./course_path.html">Open learning path</a>
+        </section>
+
+        <section class="today-queue" aria-label="Today study queue">
+            <article class="today-action" data-today-review>
+                <span class="tag">Shared review</span>
+                <h3>Review cards</h3>
+                <strong data-today-review-count>0 due</strong>
+                <p data-today-review-detail>No saved cards are due right now.</p>
+                <a class="action-link" data-today-review-link href="./review_cards.html">Open review</a>
+            </article>
+            <article class="today-action" data-today-course-review>
+                <span class="tag">Course review</span>
+                <h3>Book targets</h3>
+                <strong data-today-target-count>0 due</strong>
+                <p data-today-target-detail>No book targets are due right now.</p>
+                <a class="action-link" data-today-target-link href="./course_progress.html">View progress</a>
+            </article>
+            <article class="today-action" data-today-next>
+                <span class="tag">Continue</span>
+                <h3 data-today-chapter-title>Learning path</h3>
+                <strong data-today-chapter-status>Next chapter</strong>
+                <p data-today-chapter-detail>Choose the next incomplete diagnostic or checkpoint.</p>
+                <a class="action-link" data-today-chapter-link href="./course_path.html">Continue course</a>
+            </article>
+        </section>
+
+        <nav class="course-chapter-nav" aria-label="Daily study navigation">
+            <a class="action-link" href="./course_progress.html">Detailed progress</a>
+            <a class="action-link" href="./course_path.html">Full learning path</a>
+            <a class="action-link" href="./review_cards.html">Manage review cards</a>
+        </nav>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/today.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}f9e98759f098`;
+const CACHE_NAME = `${CACHE_PREFIX}e0f9b1efc8be`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",
@@ -38,6 +38,7 @@ const CORE_ASSETS = [
     "./school_classroom.html",
     "./sentence_builder.html",
     "./shopping_clothes.html",
+    "./today.html",
     "./transport_travel.html",
     "./verbs_guide.html",
     "./weather.html",
@@ -89,6 +90,7 @@ const CORE_ASSETS = [
     "./assets/js/site-header.js",
     "./assets/js/site-map-pages.js",
     "./assets/js/storage.js",
+    "./assets/js/today.js",
     "./assets/js/topic-picker.js",
     "./assets/js/transport-compact-toggle.js",
     "./assets/js/verb-lookup-loader.js",

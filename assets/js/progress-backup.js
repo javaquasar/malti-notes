@@ -16,6 +16,7 @@
     malti_course_progress_v1: "object",
     malti_exercise_progress_v1: "object",
     malti_course_target_progress_v1: "object",
+    malti_today_minutes_v1: "string",
     malti_site_theme: "string",
     animalsCompactMode: "string",
     homeCompactMode: "string",

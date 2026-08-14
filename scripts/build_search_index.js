@@ -62,7 +62,9 @@ function pageFor(fileName, data) {
 }
 
 function buildIndex() {
-  const siteMap = JSON.parse(readText("assets/data/site-map.json"));
+  // Navigation changes must be indexable before their commit while --git-head
+  // continues to protect generated content from unrelated dirty data files.
+  const siteMap = JSON.parse(fs.readFileSync(path.join(root, "assets", "data", "site-map.json"), "utf8"));
   const entries = [];
   const seen = new Set();
   const add = (entry) => {

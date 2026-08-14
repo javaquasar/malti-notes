@@ -141,7 +141,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 40, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 41, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -202,6 +202,32 @@ async function main() {
       await page.locator('[data-progress-filter="b2"]').click();
       assert(await page.locator('[data-progress-level="b2"]:visible').count() === 7, "B2 progress filter is incomplete.");
       assert(await page.locator('[data-progress-level="b1"]:visible').count() === 0, "B1 rows remain visible after selecting B2.");
+    });
+
+    await runTest(context, "Today builds a focused adaptive study queue", async (page) => {
+      await openCleanPage(page, "today.html");
+      await page.evaluate(() => {
+        window.MaltiReviewStore.addCustomWord({
+          maltese: "kelma tal-lum",
+          english: "today word",
+          topic: "Today test"
+        });
+        localStorage.setItem("malti_course_target_progress_v1", JSON.stringify({
+          "b1-animals-kelb": {
+            state: "review",
+            dueAt: new Date(Date.now() - 60000).toISOString()
+          }
+        }));
+      });
+      await page.reload({ waitUntil: "networkidle" });
+      assert((await page.locator("[data-today-review-count]").textContent()).trim() === "1 due", "Today did not count due review cards.");
+      assert((await page.locator("[data-today-target-count]").textContent()).trim() === "1 due", "Today did not count due course targets.");
+      await page.locator('[data-minutes="30"]').click();
+      assert(await page.evaluate(() => localStorage.getItem("malti_today_minutes_v1")) === "30", "Today did not save the selected duration.");
+      const primary = page.locator("[data-today-primary]");
+      assert((await primary.getAttribute("href")).includes("review_cards.html?quick=due&limit=15"), "Today did not adapt the review limit to 30 minutes.");
+      await Promise.all([page.waitForURL(/review_cards\.html\?quick=due&limit=15/), primary.click()]);
+      assert((await page.locator("#review-session-status").textContent()).includes("Today's due cards"), "Due review session did not start from Today.");
     });
 
     await runTest(context, "course runtime loads manifest and one chapter payload", async (page) => {

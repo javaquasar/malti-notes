@@ -4,6 +4,7 @@ const fullPageVisualPages = [
   "collective_nouns.html",
   "course_path.html",
   "course_progress.html",
+  "today.html",
   "course_chapter.html?chapter=b1-animals",
   "course_chapter.html?chapter=b2-hobbies",
   "environment_recycling.html",
