@@ -81,6 +81,8 @@ function targetItem(target) {
     id: target.id,
     maltese: target.sourceRequirement,
     english,
+    example: target.sourceRequirement,
+    exampleTranslation: english,
     sourceStatus: baselineMissingKeys.has(key)
       ? "added-from-book"
       : (target.contentRef?.file === "assets/data/course_supplemental_content.json" || target.implementationStatus === "evidence-only"
@@ -94,7 +96,7 @@ const chapters = course.levels.flatMap((level) => level.chapters).map((chapter) 
   id: chapter.id,
   title: chapter.title,
   items: bindings.targets
-    .filter((target) => target.chapterId === chapter.id && target.implementationStatus !== "missing")
+    .filter((target) => target.chapterId === chapter.id)
     .map(targetItem)
 }));
 

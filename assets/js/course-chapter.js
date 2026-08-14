@@ -211,7 +211,7 @@
     const implemented = chapterTargets.filter((target) => target.implementationStatus === "implemented");
     const assessed = implemented.filter((target) => target.assessmentIds.length > 0);
     const required = inventoryChapter.targets.length;
-    const bookCovered = required - inventoryChapter.baselineMissing.length;
+    const bookCovered = chapterTargets.filter((target) => target.implementationStatus !== "missing").length;
 
     document.title = `${match.level.label} ${match.chapter.number}: ${match.chapter.title}`;
     setText("[data-course-chapter-label]", `${match.level.label} · Chapter ${match.chapter.number}`);
@@ -225,10 +225,10 @@
       setText("[data-course-review-count]", "0");
     }
     setText("[data-course-binding-note]", chapterTargets.length
-      ? `${implemented.length} targets are connected to canonical lesson cards. Evidence-only and missing targets stay visible until proper teaching content is added.`
+      ? `${implemented.length} targets are connected to canonical lesson cards; ${required - implemented.length} still need teaching content.`
       : "The chapter route is available, while stable target-to-content bindings are still being prepared.");
     setText("[data-course-assessment-coverage]", chapterTargets.length
-      ? `${assessed.length} of ${implemented.length} guided targets currently have a linked self-test. Recognition and production coverage will grow independently of the topic page.`
+      ? `${assessed.length} of ${implemented.length} guided targets have linked self-tests with recognition and production modes.`
       : "Detailed assessment coverage will appear after this chapter receives stable target bindings.");
 
     const pills = document.querySelector("[data-course-chapter-pills]");

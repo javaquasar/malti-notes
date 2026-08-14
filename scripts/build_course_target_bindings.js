@@ -150,7 +150,7 @@ function buildTarget(inventoryChapter, candidates, requirement) {
     .map((candidate) => ({ ...candidate, score: itemScore(candidate.item, lookup) }))
     .filter((candidate) => candidate.score > 0)
     .sort((a, b) => b.score - a.score || a.order - b.order)[0];
-  const contentRef = isMissing ? null : (staticRef || (match ? {
+  const contentRef = staticRef || (match ? {
     page: match.page,
     file: match.file,
     itemId: match.itemId
@@ -158,7 +158,7 @@ function buildTarget(inventoryChapter, candidates, requirement) {
     page: "course_chapter.html",
     file: "assets/data/course_supplemental_content.json",
     itemId: targetId
-  } : null)));
+  } : null));
 
   return {
     id: targetId,
@@ -167,7 +167,7 @@ function buildTarget(inventoryChapter, candidates, requirement) {
     type: targetType(inventoryChapter.courseChapterId, requirement),
     sourceRequirement: requirement,
     role: "core",
-    implementationStatus: isMissing ? "missing" : (contentRef ? "implemented" : "evidence-only"),
+    implementationStatus: contentRef ? "implemented" : (isMissing ? "missing" : "evidence-only"),
     contentRef,
     assessmentIds: assessmentIds.get(targetId) || []
   };
