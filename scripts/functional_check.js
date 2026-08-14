@@ -207,6 +207,7 @@ async function main() {
       await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "9 / 24", "B2 hobbies mapping is incorrect.");
       assert(await page.locator(".course-step").count() === 4, "B2 hobbies study steps are incomplete.");
+      assert(await page.locator('[data-course-target-exercise][data-exercise-set="b2-hobbies-target-check"] .exercise-item').count() === 18, "B2 hobbies target check is incomplete.");
       const imperativeHref = await page.locator(".course-step a", { hasText: "Imperative Verbs" }).getAttribute("href");
       assert(imperativeHref.includes("imperative_verbs.html") && imperativeHref.includes("view=chapter"), "Mapped imperative step is not scoped.");
       const guideHref = await page.locator(".course-step a", { hasText: "Verbs Guide" }).getAttribute("href");

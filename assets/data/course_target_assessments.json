@@ -2,7 +2,8 @@
   "schemaVersion": 1,
   "description": "Generated recognition and production checks for every implemented book-course target.",
   "levels": [
-    "B1"
+    "B1",
+    "B2"
   ],
   "sets": [
     {
@@ -4061,6 +4062,2698 @@
           "reviewCard": {
             "maltese": "Il-Ħadd",
             "english": "Sunday"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-school-bag-target-check",
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "Fil-Basket tal-Iskola Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-school-bag-lapes-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-lapes"
+          ],
+          "prompt": "What is the lesson meaning of “lapes”?",
+          "choices": [
+            "pencil",
+            "file",
+            "book"
+          ],
+          "answer": "pencil",
+          "explanation": "lapes is linked to “pencil” in this chapter.",
+          "reviewCard": {
+            "maltese": "lapes",
+            "english": "pencil"
+          }
+        },
+        {
+          "id": "b2-school-bag-lapes-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-lapes"
+          ],
+          "prompt": "Write the Maltese target for “pencil”.",
+          "answer": "lapes",
+          "accepted": [
+            "lapes"
+          ],
+          "explanation": "The required chapter form is lapes.",
+          "reviewCard": {
+            "maltese": "lapes",
+            "english": "pencil"
+          }
+        },
+        {
+          "id": "b2-school-bag-fajl-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "What is the lesson meaning of “fajl”?",
+          "choices": [
+            "book",
+            "calculator",
+            "file"
+          ],
+          "answer": "file",
+          "explanation": "fajl is linked to “file” in this chapter.",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file"
+          }
+        },
+        {
+          "id": "b2-school-bag-fajl-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "Write the Maltese target for “file”.",
+          "answer": "fajl",
+          "accepted": [
+            "fajl"
+          ],
+          "explanation": "The required chapter form is fajl.",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file"
+          }
+        },
+        {
+          "id": "b2-school-bag-ktieb-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ktieb"
+          ],
+          "prompt": "What is the lesson meaning of “ktieb”?",
+          "choices": [
+            "scissors",
+            "book",
+            "calculator"
+          ],
+          "answer": "book",
+          "explanation": "ktieb is linked to “book” in this chapter.",
+          "reviewCard": {
+            "maltese": "ktieb",
+            "english": "book"
+          }
+        },
+        {
+          "id": "b2-school-bag-ktieb-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ktieb"
+          ],
+          "prompt": "Write the Maltese target for “book”.",
+          "answer": "ktieb",
+          "accepted": [
+            "ktieb"
+          ],
+          "explanation": "The required chapter form is ktieb.",
+          "reviewCard": {
+            "maltese": "ktieb",
+            "english": "book"
+          }
+        },
+        {
+          "id": "b2-school-bag-kalkulatur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kalkulatur"
+          ],
+          "prompt": "What is the lesson meaning of “kalkulatur”?",
+          "choices": [
+            "calculator",
+            "scissors",
+            "copybook"
+          ],
+          "answer": "calculator",
+          "explanation": "kalkulatur is linked to “calculator” in this chapter.",
+          "reviewCard": {
+            "maltese": "kalkulatur",
+            "english": "calculator"
+          }
+        },
+        {
+          "id": "b2-school-bag-kalkulatur-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kalkulatur"
+          ],
+          "prompt": "Write the Maltese target for “calculator”.",
+          "answer": "kalkulatur",
+          "accepted": [
+            "kalkulatur"
+          ],
+          "explanation": "The required chapter form is kalkulatur.",
+          "reviewCard": {
+            "maltese": "kalkulatur",
+            "english": "calculator"
+          }
+        },
+        {
+          "id": "b2-school-bag-imqass-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-imqass"
+          ],
+          "prompt": "What is the lesson meaning of “imqass”?",
+          "choices": [
+            "copybook",
+            "glue",
+            "scissors"
+          ],
+          "answer": "scissors",
+          "explanation": "imqass is linked to “scissors” in this chapter.",
+          "reviewCard": {
+            "maltese": "imqass",
+            "english": "scissors"
+          }
+        },
+        {
+          "id": "b2-school-bag-imqass-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-imqass"
+          ],
+          "prompt": "Write the Maltese target for “scissors”.",
+          "answer": "imqass",
+          "accepted": [
+            "imqass"
+          ],
+          "explanation": "The required chapter form is imqass.",
+          "reviewCard": {
+            "maltese": "imqass",
+            "english": "scissors"
+          }
+        },
+        {
+          "id": "b2-school-bag-pitazz-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-pitazz"
+          ],
+          "prompt": "What is the lesson meaning of “pitazz”?",
+          "choices": [
+            "pencil",
+            "copybook",
+            "glue"
+          ],
+          "answer": "copybook",
+          "explanation": "pitazz is linked to “copybook” in this chapter.",
+          "reviewCard": {
+            "maltese": "pitazz",
+            "english": "copybook"
+          }
+        },
+        {
+          "id": "b2-school-bag-pitazz-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-pitazz"
+          ],
+          "prompt": "Write the Maltese target for “copybook”.",
+          "answer": "pitazz",
+          "accepted": [
+            "pitazz"
+          ],
+          "explanation": "The required chapter form is pitazz.",
+          "reviewCard": {
+            "maltese": "pitazz",
+            "english": "copybook"
+          }
+        },
+        {
+          "id": "b2-school-bag-kolla-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kolla"
+          ],
+          "prompt": "What is the lesson meaning of “kolla”?",
+          "choices": [
+            "glue",
+            "pencil",
+            "file"
+          ],
+          "answer": "glue",
+          "explanation": "kolla is linked to “glue” in this chapter.",
+          "reviewCard": {
+            "maltese": "kolla",
+            "english": "glue"
+          }
+        },
+        {
+          "id": "b2-school-bag-kolla-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kolla"
+          ],
+          "prompt": "Write the Maltese target for “glue”.",
+          "answer": "kolla",
+          "accepted": [
+            "kolla"
+          ],
+          "explanation": "The required chapter form is kolla.",
+          "reviewCard": {
+            "maltese": "kolla",
+            "english": "glue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-imperative-target-check",
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "Iftaħ il-Ktieb u Aqra Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-imperative-poggi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-poggi"
+          ],
+          "prompt": "What is the lesson meaning of “poġġi”?",
+          "choices": [
+            "to sit down / place (singular command)",
+            "to sit down / place (plural command)",
+            "to write (singular command)"
+          ],
+          "answer": "to sit down / place (singular command)",
+          "explanation": "poġġi is linked to “to sit down / place (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "poġġi",
+            "english": "to sit down / place (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggi-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-poggi"
+          ],
+          "prompt": "Write the Maltese form for “to sit down / place (singular command)”.",
+          "answer": "poġġi",
+          "accepted": [
+            "poġġi"
+          ],
+          "explanation": "The required chapter form is poġġi.",
+          "reviewCard": {
+            "maltese": "poġġi",
+            "english": "to sit down / place (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-poggu"
+          ],
+          "prompt": "What is the lesson meaning of “poġġu”?",
+          "choices": [
+            "to write (singular command)",
+            "to write (plural command)",
+            "to sit down / place (plural command)"
+          ],
+          "answer": "to sit down / place (plural command)",
+          "explanation": "poġġu is linked to “to sit down / place (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "poġġu",
+            "english": "to sit down / place (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-poggu"
+          ],
+          "prompt": "Write the Maltese form for “to sit down / place (plural command)”.",
+          "answer": "poġġu",
+          "accepted": [
+            "poġġu"
+          ],
+          "explanation": "The required chapter form is poġġu.",
+          "reviewCard": {
+            "maltese": "poġġu",
+            "english": "to sit down / place (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ikteb-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ikteb"
+          ],
+          "prompt": "What is the lesson meaning of “ikteb”?",
+          "choices": [
+            "to close (singular command)",
+            "to write (singular command)",
+            "to write (plural command)"
+          ],
+          "answer": "to write (singular command)",
+          "explanation": "ikteb is linked to “to write (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ikteb",
+            "english": "to write (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ikteb-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ikteb"
+          ],
+          "prompt": "Write the Maltese form for “to write (singular command)”.",
+          "answer": "ikteb",
+          "accepted": [
+            "ikteb"
+          ],
+          "explanation": "The required chapter form is ikteb.",
+          "reviewCard": {
+            "maltese": "ikteb",
+            "english": "to write (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-iktbu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-iktbu"
+          ],
+          "prompt": "What is the lesson meaning of “iktbu”?",
+          "choices": [
+            "to write (plural command)",
+            "to close (singular command)",
+            "to close (plural command)"
+          ],
+          "answer": "to write (plural command)",
+          "explanation": "iktbu is linked to “to write (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "iktbu",
+            "english": "to write (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-iktbu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-iktbu"
+          ],
+          "prompt": "Write the Maltese form for “to write (plural command)”.",
+          "answer": "iktbu",
+          "accepted": [
+            "iktbu"
+          ],
+          "explanation": "The required chapter form is iktbu.",
+          "reviewCard": {
+            "maltese": "iktbu",
+            "english": "to write (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlaq-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlaq"
+          ],
+          "prompt": "What is the lesson meaning of “agħlaq”?",
+          "choices": [
+            "to close (plural command)",
+            "to come in (singular command)",
+            "to close (singular command)"
+          ],
+          "answer": "to close (singular command)",
+          "explanation": "agħlaq is linked to “to close (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "to close (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlaq-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aghlaq"
+          ],
+          "prompt": "Write the Maltese form for “to close (singular command)”.",
+          "answer": "agħlaq",
+          "accepted": [
+            "agħlaq"
+          ],
+          "explanation": "The required chapter form is agħlaq.",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "to close (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlqu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlqu"
+          ],
+          "prompt": "What is the lesson meaning of “agħlqu”?",
+          "choices": [
+            "to come in (plural command)",
+            "to close (plural command)",
+            "to come in (singular command)"
+          ],
+          "answer": "to close (plural command)",
+          "explanation": "agħlqu is linked to “to close (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħlqu",
+            "english": "to close (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlqu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aghlqu"
+          ],
+          "prompt": "Write the Maltese form for “to close (plural command)”.",
+          "answer": "agħlqu",
+          "accepted": [
+            "agħlqu"
+          ],
+          "explanation": "The required chapter form is agħlqu.",
+          "reviewCard": {
+            "maltese": "agħlqu",
+            "english": "to close (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhol-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-idhol"
+          ],
+          "prompt": "What is the lesson meaning of “idħol”?",
+          "choices": [
+            "to come in (singular command)",
+            "to come in (plural command)",
+            "to open (singular command)"
+          ],
+          "answer": "to come in (singular command)",
+          "explanation": "idħol is linked to “to come in (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "idħol",
+            "english": "to come in (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhol-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-idhol"
+          ],
+          "prompt": "Write the Maltese form for “to come in (singular command)”.",
+          "answer": "idħol",
+          "accepted": [
+            "idħol"
+          ],
+          "explanation": "The required chapter form is idħol.",
+          "reviewCard": {
+            "maltese": "idħol",
+            "english": "to come in (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhlu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-idhlu"
+          ],
+          "prompt": "What is the lesson meaning of “idħlu”?",
+          "choices": [
+            "to open (singular command)",
+            "to open (plural command)",
+            "to come in (plural command)"
+          ],
+          "answer": "to come in (plural command)",
+          "explanation": "idħlu is linked to “to come in (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "idħlu",
+            "english": "to come in (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhlu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-idhlu"
+          ],
+          "prompt": "Write the Maltese form for “to come in (plural command)”.",
+          "answer": "idħlu",
+          "accepted": [
+            "idħlu"
+          ],
+          "explanation": "The required chapter form is idħlu.",
+          "reviewCard": {
+            "maltese": "idħlu",
+            "english": "to come in (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-iftah-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-iftah"
+          ],
+          "prompt": "What is the lesson meaning of “iftaħ”?",
+          "choices": [
+            "to listen (plural command)",
+            "to open (singular command)",
+            "to open (plural command)"
+          ],
+          "answer": "to open (singular command)",
+          "explanation": "iftaħ is linked to “to open (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "iftaħ",
+            "english": "to open (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-iftah-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-iftah"
+          ],
+          "prompt": "Write the Maltese form for “to open (singular command)”.",
+          "answer": "iftaħ",
+          "accepted": [
+            "iftaħ"
+          ],
+          "explanation": "The required chapter form is iftaħ.",
+          "reviewCard": {
+            "maltese": "iftaħ",
+            "english": "to open (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ifthu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ifthu"
+          ],
+          "prompt": "What is the lesson meaning of “iftħu”?",
+          "choices": [
+            "to open (plural command)",
+            "to listen (plural command)",
+            "to do / make (singular command)"
+          ],
+          "answer": "to open (plural command)",
+          "explanation": "iftħu is linked to “to open (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "iftħu",
+            "english": "to open (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ifthu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ifthu"
+          ],
+          "prompt": "Write the Maltese form for “to open (plural command)”.",
+          "answer": "iftħu",
+          "accepted": [
+            "iftħu"
+          ],
+          "explanation": "The required chapter form is iftħu.",
+          "reviewCard": {
+            "maltese": "iftħu",
+            "english": "to open (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-isimghu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-isimghu"
+          ],
+          "prompt": "What is the lesson meaning of “isimgħu”?",
+          "choices": [
+            "to do / make (singular command)",
+            "one",
+            "to listen (plural command)"
+          ],
+          "answer": "to listen (plural command)",
+          "explanation": "isimgħu is linked to “to listen (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "isimgħu",
+            "english": "to listen (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-isimghu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-isimghu"
+          ],
+          "prompt": "Write the Maltese form for “to listen (plural command)”.",
+          "answer": "isimgħu",
+          "accepted": [
+            "isimgħu"
+          ],
+          "explanation": "The required chapter form is isimgħu.",
+          "reviewCard": {
+            "maltese": "isimgħu",
+            "english": "to listen (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghmel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghmel"
+          ],
+          "prompt": "What is the lesson meaning of “agħmel”?",
+          "choices": [
+            "two",
+            "to do / make (singular command)",
+            "one"
+          ],
+          "answer": "to do / make (singular command)",
+          "explanation": "agħmel is linked to “to do / make (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "to do / make (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghmel-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aghmel"
+          ],
+          "prompt": "Write the Maltese form for “to do / make (singular command)”.",
+          "answer": "agħmel",
+          "accepted": [
+            "agħmel"
+          ],
+          "explanation": "The required chapter form is agħmel.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "to do / make (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-wiehed-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-wiehed"
+          ],
+          "prompt": "What is the lesson meaning of “wieħed”?",
+          "choices": [
+            "one",
+            "two",
+            "three"
+          ],
+          "answer": "one",
+          "explanation": "wieħed is linked to “one” in this chapter.",
+          "reviewCard": {
+            "maltese": "wieħed",
+            "english": "one"
+          }
+        },
+        {
+          "id": "b2-imperative-wiehed-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-wiehed"
+          ],
+          "prompt": "Write the Maltese target for “one”.",
+          "answer": "wieħed",
+          "accepted": [
+            "wieħed"
+          ],
+          "explanation": "The required chapter form is wieħed.",
+          "reviewCard": {
+            "maltese": "wieħed",
+            "english": "one"
+          }
+        },
+        {
+          "id": "b2-imperative-tnejn-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tnejn"
+          ],
+          "prompt": "What is the lesson meaning of “tnejn”?",
+          "choices": [
+            "three",
+            "four",
+            "two"
+          ],
+          "answer": "two",
+          "explanation": "tnejn is linked to “two” in this chapter.",
+          "reviewCard": {
+            "maltese": "tnejn",
+            "english": "two"
+          }
+        },
+        {
+          "id": "b2-imperative-tnejn-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tnejn"
+          ],
+          "prompt": "Write the Maltese target for “two”.",
+          "answer": "tnejn",
+          "accepted": [
+            "tnejn"
+          ],
+          "explanation": "The required chapter form is tnejn.",
+          "reviewCard": {
+            "maltese": "tnejn",
+            "english": "two"
+          }
+        },
+        {
+          "id": "b2-imperative-tlieta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tlieta"
+          ],
+          "prompt": "What is the lesson meaning of “tlieta”?",
+          "choices": [
+            "five",
+            "three",
+            "four"
+          ],
+          "answer": "three",
+          "explanation": "tlieta is linked to “three” in this chapter.",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three"
+          }
+        },
+        {
+          "id": "b2-imperative-tlieta-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tlieta"
+          ],
+          "prompt": "Write the Maltese target for “three”.",
+          "answer": "tlieta",
+          "accepted": [
+            "tlieta"
+          ],
+          "explanation": "The required chapter form is tlieta.",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three"
+          }
+        },
+        {
+          "id": "b2-imperative-erbgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-erbgha"
+          ],
+          "prompt": "What is the lesson meaning of “erbgħa”?",
+          "choices": [
+            "four",
+            "five",
+            "six"
+          ],
+          "answer": "four",
+          "explanation": "erbgħa is linked to “four” in this chapter.",
+          "reviewCard": {
+            "maltese": "erbgħa",
+            "english": "four"
+          }
+        },
+        {
+          "id": "b2-imperative-erbgha-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-erbgha"
+          ],
+          "prompt": "Write the Maltese target for “four”.",
+          "answer": "erbgħa",
+          "accepted": [
+            "erbgħa"
+          ],
+          "explanation": "The required chapter form is erbgħa.",
+          "reviewCard": {
+            "maltese": "erbgħa",
+            "english": "four"
+          }
+        },
+        {
+          "id": "b2-imperative-hamsa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-hamsa"
+          ],
+          "prompt": "What is the lesson meaning of “ħamsa”?",
+          "choices": [
+            "six",
+            "seven",
+            "five"
+          ],
+          "answer": "five",
+          "explanation": "ħamsa is linked to “five” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħamsa",
+            "english": "five"
+          }
+        },
+        {
+          "id": "b2-imperative-hamsa-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-hamsa"
+          ],
+          "prompt": "Write the Maltese target for “five”.",
+          "answer": "ħamsa",
+          "accepted": [
+            "ħamsa"
+          ],
+          "explanation": "The required chapter form is ħamsa.",
+          "reviewCard": {
+            "maltese": "ħamsa",
+            "english": "five"
+          }
+        },
+        {
+          "id": "b2-imperative-sitta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-sitta"
+          ],
+          "prompt": "What is the lesson meaning of “sitta”?",
+          "choices": [
+            "eight",
+            "six",
+            "seven"
+          ],
+          "answer": "six",
+          "explanation": "sitta is linked to “six” in this chapter.",
+          "reviewCard": {
+            "maltese": "sitta",
+            "english": "six"
+          }
+        },
+        {
+          "id": "b2-imperative-sitta-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-sitta"
+          ],
+          "prompt": "Write the Maltese target for “six”.",
+          "answer": "sitta",
+          "accepted": [
+            "sitta"
+          ],
+          "explanation": "The required chapter form is sitta.",
+          "reviewCard": {
+            "maltese": "sitta",
+            "english": "six"
+          }
+        },
+        {
+          "id": "b2-imperative-sebgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-sebgha"
+          ],
+          "prompt": "What is the lesson meaning of “sebgħa”?",
+          "choices": [
+            "seven",
+            "eight",
+            "nine"
+          ],
+          "answer": "seven",
+          "explanation": "sebgħa is linked to “seven” in this chapter.",
+          "reviewCard": {
+            "maltese": "sebgħa",
+            "english": "seven"
+          }
+        },
+        {
+          "id": "b2-imperative-sebgha-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-sebgha"
+          ],
+          "prompt": "Write the Maltese target for “seven”.",
+          "answer": "sebgħa",
+          "accepted": [
+            "sebgħa"
+          ],
+          "explanation": "The required chapter form is sebgħa.",
+          "reviewCard": {
+            "maltese": "sebgħa",
+            "english": "seven"
+          }
+        },
+        {
+          "id": "b2-imperative-tmienja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tmienja"
+          ],
+          "prompt": "What is the lesson meaning of “tmienja”?",
+          "choices": [
+            "nine",
+            "ten",
+            "eight"
+          ],
+          "answer": "eight",
+          "explanation": "tmienja is linked to “eight” in this chapter.",
+          "reviewCard": {
+            "maltese": "tmienja",
+            "english": "eight"
+          }
+        },
+        {
+          "id": "b2-imperative-tmienja-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tmienja"
+          ],
+          "prompt": "Write the Maltese target for “eight”.",
+          "answer": "tmienja",
+          "accepted": [
+            "tmienja"
+          ],
+          "explanation": "The required chapter form is tmienja.",
+          "reviewCard": {
+            "maltese": "tmienja",
+            "english": "eight"
+          }
+        },
+        {
+          "id": "b2-imperative-disgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-disgha"
+          ],
+          "prompt": "What is the lesson meaning of “disgħa”?",
+          "choices": [
+            "to sit down / place (singular command)",
+            "nine",
+            "ten"
+          ],
+          "answer": "nine",
+          "explanation": "disgħa is linked to “nine” in this chapter.",
+          "reviewCard": {
+            "maltese": "disgħa",
+            "english": "nine"
+          }
+        },
+        {
+          "id": "b2-imperative-disgha-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-disgha"
+          ],
+          "prompt": "Write the Maltese target for “nine”.",
+          "answer": "disgħa",
+          "accepted": [
+            "disgħa"
+          ],
+          "explanation": "The required chapter form is disgħa.",
+          "reviewCard": {
+            "maltese": "disgħa",
+            "english": "nine"
+          }
+        },
+        {
+          "id": "b2-imperative-ghaxra-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "What is the lesson meaning of “għaxra”?",
+          "choices": [
+            "ten",
+            "to sit down / place (singular command)",
+            "to sit down / place (plural command)"
+          ],
+          "answer": "ten",
+          "explanation": "għaxra is linked to “ten” in this chapter.",
+          "reviewCard": {
+            "maltese": "għaxra",
+            "english": "ten"
+          }
+        },
+        {
+          "id": "b2-imperative-ghaxra-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "Write the Maltese target for “ten”.",
+          "answer": "għaxra",
+          "accepted": [
+            "għaxra"
+          ],
+          "explanation": "The required chapter form is għaxra.",
+          "reviewCard": {
+            "maltese": "għaxra",
+            "english": "ten"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-weather-target-check",
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "It-Temp Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-weather-shab-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-shab"
+          ],
+          "prompt": "What is the lesson meaning of “sħab”?",
+          "choices": [
+            "clouds",
+            "wind",
+            "spring"
+          ],
+          "answer": "clouds",
+          "explanation": "sħab is linked to “clouds” in this chapter.",
+          "reviewCard": {
+            "maltese": "sħab",
+            "english": "clouds"
+          }
+        },
+        {
+          "id": "b2-weather-shab-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-shab"
+          ],
+          "prompt": "Write the Maltese target for “clouds”.",
+          "answer": "sħab",
+          "accepted": [
+            "sħab"
+          ],
+          "explanation": "The required chapter form is sħab.",
+          "reviewCard": {
+            "maltese": "sħab",
+            "english": "clouds"
+          }
+        },
+        {
+          "id": "b2-weather-rih-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "What is the lesson meaning of “riħ”?",
+          "choices": [
+            "spring",
+            "summer",
+            "wind"
+          ],
+          "answer": "wind",
+          "explanation": "riħ is linked to “wind” in this chapter.",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind"
+          }
+        },
+        {
+          "id": "b2-weather-rih-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "Write the Maltese target for “wind”.",
+          "answer": "riħ",
+          "accepted": [
+            "riħ"
+          ],
+          "explanation": "The required chapter form is riħ.",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind"
+          }
+        },
+        {
+          "id": "b2-weather-rebbiegha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rebbiegha"
+          ],
+          "prompt": "What is the lesson meaning of “rebbiegħa”?",
+          "choices": [
+            "autumn",
+            "spring",
+            "summer"
+          ],
+          "answer": "spring",
+          "explanation": "rebbiegħa is linked to “spring” in this chapter.",
+          "reviewCard": {
+            "maltese": "rebbiegħa",
+            "english": "spring"
+          }
+        },
+        {
+          "id": "b2-weather-rebbiegha-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-rebbiegha"
+          ],
+          "prompt": "Write the Maltese target for “spring”.",
+          "answer": "rebbiegħa",
+          "accepted": [
+            "rebbiegħa"
+          ],
+          "explanation": "The required chapter form is rebbiegħa.",
+          "reviewCard": {
+            "maltese": "rebbiegħa",
+            "english": "spring"
+          }
+        },
+        {
+          "id": "b2-weather-sajf-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-sajf"
+          ],
+          "prompt": "What is the lesson meaning of “sajf”?",
+          "choices": [
+            "summer",
+            "autumn",
+            "winter"
+          ],
+          "answer": "summer",
+          "explanation": "sajf is linked to “summer” in this chapter.",
+          "reviewCard": {
+            "maltese": "sajf",
+            "english": "summer"
+          }
+        },
+        {
+          "id": "b2-weather-sajf-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-sajf"
+          ],
+          "prompt": "Write the Maltese target for “summer”.",
+          "answer": "sajf",
+          "accepted": [
+            "sajf"
+          ],
+          "explanation": "The required chapter form is sajf.",
+          "reviewCard": {
+            "maltese": "sajf",
+            "english": "summer"
+          }
+        },
+        {
+          "id": "b2-weather-harifa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-harifa"
+          ],
+          "prompt": "What is the lesson meaning of “ħarifa”?",
+          "choices": [
+            "winter",
+            "sun",
+            "autumn"
+          ],
+          "answer": "autumn",
+          "explanation": "ħarifa is linked to “autumn” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn"
+          }
+        },
+        {
+          "id": "b2-weather-harifa-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-harifa"
+          ],
+          "prompt": "Write the Maltese target for “autumn”.",
+          "answer": "ħarifa",
+          "accepted": [
+            "ħarifa"
+          ],
+          "explanation": "The required chapter form is ħarifa.",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn"
+          }
+        },
+        {
+          "id": "b2-weather-xitwa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xitwa"
+          ],
+          "prompt": "What is the lesson meaning of “xitwa”?",
+          "choices": [
+            "rain",
+            "winter",
+            "sun"
+          ],
+          "answer": "winter",
+          "explanation": "xitwa is linked to “winter” in this chapter.",
+          "reviewCard": {
+            "maltese": "xitwa",
+            "english": "winter"
+          }
+        },
+        {
+          "id": "b2-weather-xitwa-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xitwa"
+          ],
+          "prompt": "Write the Maltese target for “winter”.",
+          "answer": "xitwa",
+          "accepted": [
+            "xitwa"
+          ],
+          "explanation": "The required chapter form is xitwa.",
+          "reviewCard": {
+            "maltese": "xitwa",
+            "english": "winter"
+          }
+        },
+        {
+          "id": "b2-weather-xemx-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemx"
+          ],
+          "prompt": "What is the lesson meaning of “xemx”?",
+          "choices": [
+            "sun",
+            "rain",
+            "clouds"
+          ],
+          "answer": "sun",
+          "explanation": "xemx is linked to “sun” in this chapter.",
+          "reviewCard": {
+            "maltese": "xemx",
+            "english": "sun"
+          }
+        },
+        {
+          "id": "b2-weather-xemx-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xemx"
+          ],
+          "prompt": "Write the Maltese target for “sun”.",
+          "answer": "xemx",
+          "accepted": [
+            "xemx"
+          ],
+          "explanation": "The required chapter form is xemx.",
+          "reviewCard": {
+            "maltese": "xemx",
+            "english": "sun"
+          }
+        },
+        {
+          "id": "b2-weather-xita-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xita"
+          ],
+          "prompt": "What is the lesson meaning of “xita”?",
+          "choices": [
+            "clouds",
+            "wind",
+            "rain"
+          ],
+          "answer": "rain",
+          "explanation": "xita is linked to “rain” in this chapter.",
+          "reviewCard": {
+            "maltese": "xita",
+            "english": "rain"
+          }
+        },
+        {
+          "id": "b2-weather-xita-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xita"
+          ],
+          "prompt": "Write the Maltese target for “rain”.",
+          "answer": "xita",
+          "accepted": [
+            "xita"
+          ],
+          "explanation": "The required chapter form is xita.",
+          "reviewCard": {
+            "maltese": "xita",
+            "english": "rain"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-clothes-target-check",
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "Il-Ħwejjeġ Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-clothes-gakketta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-gakketta"
+          ],
+          "prompt": "What is the lesson meaning of “ġakketta”?",
+          "choices": [
+            "jacket",
+            "trousers",
+            "eleven"
+          ],
+          "answer": "jacket",
+          "explanation": "ġakketta is linked to “jacket” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġakketta",
+            "english": "jacket"
+          }
+        },
+        {
+          "id": "b2-clothes-gakketta-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-gakketta"
+          ],
+          "prompt": "Write the Maltese target for “jacket”.",
+          "answer": "ġakketta",
+          "accepted": [
+            "ġakketta"
+          ],
+          "explanation": "The required chapter form is ġakketta.",
+          "reviewCard": {
+            "maltese": "ġakketta",
+            "english": "jacket"
+          }
+        },
+        {
+          "id": "b2-clothes-qalziet-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-qalziet"
+          ],
+          "prompt": "What is the lesson meaning of “qalziet”?",
+          "choices": [
+            "eleven",
+            "twelve",
+            "trousers"
+          ],
+          "answer": "trousers",
+          "explanation": "qalziet is linked to “trousers” in this chapter.",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers"
+          }
+        },
+        {
+          "id": "b2-clothes-qalziet-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-qalziet"
+          ],
+          "prompt": "Write the Maltese target for “trousers”.",
+          "answer": "qalziet",
+          "accepted": [
+            "qalziet"
+          ],
+          "explanation": "The required chapter form is qalziet.",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers"
+          }
+        },
+        {
+          "id": "b2-clothes-hdax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "What is the lesson meaning of “ħdax”?",
+          "choices": [
+            "thirteen",
+            "eleven",
+            "twelve"
+          ],
+          "answer": "eleven",
+          "explanation": "ħdax is linked to “eleven” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven"
+          }
+        },
+        {
+          "id": "b2-clothes-hdax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "Write the Maltese target for “eleven”.",
+          "answer": "ħdax",
+          "accepted": [
+            "ħdax"
+          ],
+          "explanation": "The required chapter form is ħdax.",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven"
+          }
+        },
+        {
+          "id": "b2-clothes-tnax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tnax"
+          ],
+          "prompt": "What is the lesson meaning of “tnax”?",
+          "choices": [
+            "twelve",
+            "thirteen",
+            "fourteen"
+          ],
+          "answer": "twelve",
+          "explanation": "tnax is linked to “twelve” in this chapter.",
+          "reviewCard": {
+            "maltese": "tnax",
+            "english": "twelve"
+          }
+        },
+        {
+          "id": "b2-clothes-tnax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-tnax"
+          ],
+          "prompt": "Write the Maltese target for “twelve”.",
+          "answer": "tnax",
+          "accepted": [
+            "tnax"
+          ],
+          "explanation": "The required chapter form is tnax.",
+          "reviewCard": {
+            "maltese": "tnax",
+            "english": "twelve"
+          }
+        },
+        {
+          "id": "b2-clothes-tlettax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tlettax"
+          ],
+          "prompt": "What is the lesson meaning of “tlettax”?",
+          "choices": [
+            "fourteen",
+            "fifteen",
+            "thirteen"
+          ],
+          "answer": "thirteen",
+          "explanation": "tlettax is linked to “thirteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "tlettax",
+            "english": "thirteen"
+          }
+        },
+        {
+          "id": "b2-clothes-tlettax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-tlettax"
+          ],
+          "prompt": "Write the Maltese target for “thirteen”.",
+          "answer": "tlettax",
+          "accepted": [
+            "tlettax"
+          ],
+          "explanation": "The required chapter form is tlettax.",
+          "reviewCard": {
+            "maltese": "tlettax",
+            "english": "thirteen"
+          }
+        },
+        {
+          "id": "b2-clothes-erbatax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-erbatax"
+          ],
+          "prompt": "What is the lesson meaning of “erbatax”?",
+          "choices": [
+            "sixteen",
+            "fourteen",
+            "fifteen"
+          ],
+          "answer": "fourteen",
+          "explanation": "erbatax is linked to “fourteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "erbatax",
+            "english": "fourteen"
+          }
+        },
+        {
+          "id": "b2-clothes-erbatax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-erbatax"
+          ],
+          "prompt": "Write the Maltese target for “fourteen”.",
+          "answer": "erbatax",
+          "accepted": [
+            "erbatax"
+          ],
+          "explanation": "The required chapter form is erbatax.",
+          "reviewCard": {
+            "maltese": "erbatax",
+            "english": "fourteen"
+          }
+        },
+        {
+          "id": "b2-clothes-hmistax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-hmistax"
+          ],
+          "prompt": "What is the lesson meaning of “ħmistax”?",
+          "choices": [
+            "fifteen",
+            "sixteen",
+            "seventeen"
+          ],
+          "answer": "fifteen",
+          "explanation": "ħmistax is linked to “fifteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħmistax",
+            "english": "fifteen"
+          }
+        },
+        {
+          "id": "b2-clothes-hmistax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-hmistax"
+          ],
+          "prompt": "Write the Maltese target for “fifteen”.",
+          "answer": "ħmistax",
+          "accepted": [
+            "ħmistax"
+          ],
+          "explanation": "The required chapter form is ħmistax.",
+          "reviewCard": {
+            "maltese": "ħmistax",
+            "english": "fifteen"
+          }
+        },
+        {
+          "id": "b2-clothes-sittax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-sittax"
+          ],
+          "prompt": "What is the lesson meaning of “sittax”?",
+          "choices": [
+            "seventeen",
+            "eighteen",
+            "sixteen"
+          ],
+          "answer": "sixteen",
+          "explanation": "sittax is linked to “sixteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "sittax",
+            "english": "sixteen"
+          }
+        },
+        {
+          "id": "b2-clothes-sittax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-sittax"
+          ],
+          "prompt": "Write the Maltese target for “sixteen”.",
+          "answer": "sittax",
+          "accepted": [
+            "sittax"
+          ],
+          "explanation": "The required chapter form is sittax.",
+          "reviewCard": {
+            "maltese": "sittax",
+            "english": "sixteen"
+          }
+        },
+        {
+          "id": "b2-clothes-sbatax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-sbatax"
+          ],
+          "prompt": "What is the lesson meaning of “sbatax”?",
+          "choices": [
+            "nineteen",
+            "seventeen",
+            "eighteen"
+          ],
+          "answer": "seventeen",
+          "explanation": "sbatax is linked to “seventeen” in this chapter.",
+          "reviewCard": {
+            "maltese": "sbatax",
+            "english": "seventeen"
+          }
+        },
+        {
+          "id": "b2-clothes-sbatax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-sbatax"
+          ],
+          "prompt": "Write the Maltese target for “seventeen”.",
+          "answer": "sbatax",
+          "accepted": [
+            "sbatax"
+          ],
+          "explanation": "The required chapter form is sbatax.",
+          "reviewCard": {
+            "maltese": "sbatax",
+            "english": "seventeen"
+          }
+        },
+        {
+          "id": "b2-clothes-tmintax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tmintax"
+          ],
+          "prompt": "What is the lesson meaning of “tmintax”?",
+          "choices": [
+            "eighteen",
+            "nineteen",
+            "twenty"
+          ],
+          "answer": "eighteen",
+          "explanation": "tmintax is linked to “eighteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "tmintax",
+            "english": "eighteen"
+          }
+        },
+        {
+          "id": "b2-clothes-tmintax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-tmintax"
+          ],
+          "prompt": "Write the Maltese target for “eighteen”.",
+          "answer": "tmintax",
+          "accepted": [
+            "tmintax"
+          ],
+          "explanation": "The required chapter form is tmintax.",
+          "reviewCard": {
+            "maltese": "tmintax",
+            "english": "eighteen"
+          }
+        },
+        {
+          "id": "b2-clothes-dsatax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-dsatax"
+          ],
+          "prompt": "What is the lesson meaning of “dsatax”?",
+          "choices": [
+            "twenty",
+            "jacket",
+            "nineteen"
+          ],
+          "answer": "nineteen",
+          "explanation": "dsatax is linked to “nineteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "dsatax",
+            "english": "nineteen"
+          }
+        },
+        {
+          "id": "b2-clothes-dsatax-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-dsatax"
+          ],
+          "prompt": "Write the Maltese target for “nineteen”.",
+          "answer": "dsatax",
+          "accepted": [
+            "dsatax"
+          ],
+          "explanation": "The required chapter form is dsatax.",
+          "reviewCard": {
+            "maltese": "dsatax",
+            "english": "nineteen"
+          }
+        },
+        {
+          "id": "b2-clothes-ghoxrin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "What is the lesson meaning of “għoxrin”?",
+          "choices": [
+            "trousers",
+            "twenty",
+            "jacket"
+          ],
+          "answer": "twenty",
+          "explanation": "għoxrin is linked to “twenty” in this chapter.",
+          "reviewCard": {
+            "maltese": "għoxrin",
+            "english": "twenty"
+          }
+        },
+        {
+          "id": "b2-clothes-ghoxrin-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "Write the Maltese target for “twenty”.",
+          "answer": "għoxrin",
+          "accepted": [
+            "għoxrin"
+          ],
+          "explanation": "The required chapter form is għoxrin.",
+          "reviewCard": {
+            "maltese": "għoxrin",
+            "english": "twenty"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-hobbies-target-check",
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "Xi Nħobb Nagħmel Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-hobbies-libes-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-libes"
+          ],
+          "prompt": "What is the lesson meaning of “libes”?",
+          "choices": [
+            "to dress",
+            "to dress (singular command)",
+            "to dress (plural command)"
+          ],
+          "answer": "to dress",
+          "explanation": "libes is linked to “to dress” in this chapter.",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "to dress"
+          }
+        },
+        {
+          "id": "b2-hobbies-libes-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-libes"
+          ],
+          "prompt": "Write the Maltese form for “to dress”.",
+          "answer": "libes",
+          "accepted": [
+            "libes"
+          ],
+          "explanation": "The required chapter form is libes.",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "to dress"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbes-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbes"
+          ],
+          "prompt": "What is the lesson meaning of “ilbes”?",
+          "choices": [
+            "to dress (plural command)",
+            "to do / make",
+            "to dress (singular command)"
+          ],
+          "answer": "to dress (singular command)",
+          "explanation": "ilbes is linked to “to dress (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilbes",
+            "english": "to dress (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbes-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ilbes"
+          ],
+          "prompt": "Write the Maltese form for “to dress (singular command)”.",
+          "answer": "ilbes",
+          "accepted": [
+            "ilbes"
+          ],
+          "explanation": "The required chapter form is ilbes.",
+          "reviewCard": {
+            "maltese": "ilbes",
+            "english": "to dress (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbsu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "What is the lesson meaning of “ilbsu”?",
+          "choices": [
+            "to do / make (singular command)",
+            "to dress (plural command)",
+            "to do / make"
+          ],
+          "answer": "to dress (plural command)",
+          "explanation": "ilbsu is linked to “to dress (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "to dress (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbsu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "Write the Maltese form for “to dress (plural command)”.",
+          "answer": "ilbsu",
+          "accepted": [
+            "ilbsu"
+          ],
+          "explanation": "The required chapter form is ilbsu.",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "to dress (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ghamel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ghamel"
+          ],
+          "prompt": "What is the lesson meaning of “għamel”?",
+          "choices": [
+            "to do / make",
+            "to do / make (singular command)",
+            "to do / make (plural command)"
+          ],
+          "answer": "to do / make",
+          "explanation": "għamel is linked to “to do / make” in this chapter.",
+          "reviewCard": {
+            "maltese": "għamel",
+            "english": "to do / make"
+          }
+        },
+        {
+          "id": "b2-hobbies-ghamel-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ghamel"
+          ],
+          "prompt": "Write the Maltese form for “to do / make”.",
+          "answer": "għamel",
+          "accepted": [
+            "għamel"
+          ],
+          "explanation": "The required chapter form is għamel.",
+          "reviewCard": {
+            "maltese": "għamel",
+            "english": "to do / make"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-aghmel"
+          ],
+          "prompt": "What is the lesson meaning of “agħmel”?",
+          "choices": [
+            "to do / make (plural command)",
+            "to swim (singular command)",
+            "to do / make (singular command)"
+          ],
+          "answer": "to do / make (singular command)",
+          "explanation": "agħmel is linked to “to do / make (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "to do / make (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmel-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-aghmel"
+          ],
+          "prompt": "Write the Maltese form for “to do / make (singular command)”.",
+          "answer": "agħmel",
+          "accepted": [
+            "agħmel"
+          ],
+          "explanation": "The required chapter form is agħmel.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "to do / make (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmlu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-aghmlu"
+          ],
+          "prompt": "What is the lesson meaning of “agħmlu”?",
+          "choices": [
+            "to sleep (singular command)",
+            "to do / make (plural command)",
+            "to swim (singular command)"
+          ],
+          "answer": "to do / make (plural command)",
+          "explanation": "agħmlu is linked to “to do / make (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħmlu",
+            "english": "to do / make (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmlu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-aghmlu"
+          ],
+          "prompt": "Write the Maltese form for “to do / make (plural command)”.",
+          "answer": "agħmlu",
+          "accepted": [
+            "agħmlu"
+          ],
+          "explanation": "The required chapter form is agħmlu.",
+          "reviewCard": {
+            "maltese": "agħmlu",
+            "english": "to do / make (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ghum-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ghum"
+          ],
+          "prompt": "What is the lesson meaning of “għum”?",
+          "choices": [
+            "to swim (singular command)",
+            "to sleep (singular command)",
+            "to see (singular command)"
+          ],
+          "answer": "to swim (singular command)",
+          "explanation": "għum is linked to “to swim (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "għum",
+            "english": "to swim (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ghum-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ghum"
+          ],
+          "prompt": "Write the Maltese form for “to swim (singular command)”.",
+          "answer": "għum",
+          "accepted": [
+            "għum"
+          ],
+          "explanation": "The required chapter form is għum.",
+          "reviewCard": {
+            "maltese": "għum",
+            "english": "to swim (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-orqod-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-orqod"
+          ],
+          "prompt": "What is the lesson meaning of “orqod”?",
+          "choices": [
+            "to see (singular command)",
+            "to dress",
+            "to sleep (singular command)"
+          ],
+          "answer": "to sleep (singular command)",
+          "explanation": "orqod is linked to “to sleep (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "orqod",
+            "english": "to sleep (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-orqod-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-orqod"
+          ],
+          "prompt": "Write the Maltese form for “to sleep (singular command)”.",
+          "answer": "orqod",
+          "accepted": [
+            "orqod"
+          ],
+          "explanation": "The required chapter form is orqod.",
+          "reviewCard": {
+            "maltese": "orqod",
+            "english": "to sleep (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ara-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ara"
+          ],
+          "prompt": "What is the lesson meaning of “ara”?",
+          "choices": [
+            "to dress (singular command)",
+            "to see (singular command)",
+            "to dress"
+          ],
+          "answer": "to see (singular command)",
+          "explanation": "ara is linked to “to see (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ara",
+            "english": "to see (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ara-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ara"
+          ],
+          "prompt": "Write the Maltese form for “to see (singular command)”.",
+          "answer": "ara",
+          "accepted": [
+            "ara"
+          ],
+          "explanation": "The required chapter form is ara.",
+          "reviewCard": {
+            "maltese": "ara",
+            "english": "to see (singular command)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-town-target-check",
+      "chapterId": "b2-town",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "Fil-Pjazza Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-town-ispizerija-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-ispizerija"
+          ],
+          "prompt": "What is the lesson meaning of “ispiżerija”?",
+          "choices": [
+            "pharmacy",
+            "church",
+            "menu"
+          ],
+          "answer": "pharmacy",
+          "explanation": "ispiżerija is linked to “pharmacy” in this chapter.",
+          "reviewCard": {
+            "maltese": "ispiżerija",
+            "english": "pharmacy"
+          }
+        },
+        {
+          "id": "b2-town-ispizerija-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-ispizerija"
+          ],
+          "prompt": "Write the Maltese target for “pharmacy”.",
+          "answer": "ispiżerija",
+          "accepted": [
+            "ispiżerija"
+          ],
+          "explanation": "The required chapter form is ispiżerija.",
+          "reviewCard": {
+            "maltese": "ispiżerija",
+            "english": "pharmacy"
+          }
+        },
+        {
+          "id": "b2-town-knisja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-knisja"
+          ],
+          "prompt": "What is the lesson meaning of “knisja”?",
+          "choices": [
+            "menu",
+            "square / piazza",
+            "church"
+          ],
+          "answer": "church",
+          "explanation": "knisja is linked to “church” in this chapter.",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church"
+          }
+        },
+        {
+          "id": "b2-town-knisja-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-knisja"
+          ],
+          "prompt": "Write the Maltese target for “church”.",
+          "answer": "knisja",
+          "accepted": [
+            "knisja"
+          ],
+          "explanation": "The required chapter form is knisja.",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church"
+          }
+        },
+        {
+          "id": "b2-town-menu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-menu"
+          ],
+          "prompt": "What is the lesson meaning of “menu”?",
+          "choices": [
+            "pharmacy",
+            "menu",
+            "square / piazza"
+          ],
+          "answer": "menu",
+          "explanation": "menu is linked to “menu” in this chapter.",
+          "reviewCard": {
+            "maltese": "menu",
+            "english": "menu"
+          }
+        },
+        {
+          "id": "b2-town-menu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-menu"
+          ],
+          "prompt": "Write the Maltese target for “menu”.",
+          "answer": "menu",
+          "accepted": [
+            "menu"
+          ],
+          "explanation": "The required chapter form is menu.",
+          "reviewCard": {
+            "maltese": "menu",
+            "english": "menu"
+          }
+        },
+        {
+          "id": "b2-town-pjazza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-pjazza"
+          ],
+          "prompt": "What is the lesson meaning of “pjazza”?",
+          "choices": [
+            "square / piazza",
+            "pharmacy",
+            "church"
+          ],
+          "answer": "square / piazza",
+          "explanation": "pjazza is linked to “square / piazza” in this chapter.",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza"
+          }
+        },
+        {
+          "id": "b2-town-pjazza-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-pjazza"
+          ],
+          "prompt": "Write the Maltese target for “square / piazza”.",
+          "answer": "pjazza",
+          "accepted": [
+            "pjazza"
+          ],
+          "explanation": "The required chapter form is pjazza.",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-recycling-target-check",
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "kind": "target-coverage",
+      "title": "Nirriċiklaw l-Iskart Target Check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b2-recycling-plastik-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-plastik"
+          ],
+          "prompt": "What is the lesson meaning of “plastik”?",
+          "choices": [
+            "plastic",
+            "paper",
+            "I put the bag out"
+          ],
+          "answer": "plastic",
+          "explanation": "plastik is linked to “plastic” in this chapter.",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic"
+          }
+        },
+        {
+          "id": "b2-recycling-plastik-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-plastik"
+          ],
+          "prompt": "Write the Maltese target for “plastic”.",
+          "answer": "plastik",
+          "accepted": [
+            "plastik"
+          ],
+          "explanation": "The required chapter form is plastik.",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic"
+          }
+        },
+        {
+          "id": "b2-recycling-karta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-karta"
+          ],
+          "prompt": "What is the lesson meaning of “karta”?",
+          "choices": [
+            "I put the bag out",
+            "I wash the container",
+            "paper"
+          ],
+          "answer": "paper",
+          "explanation": "karta is linked to “paper” in this chapter.",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper"
+          }
+        },
+        {
+          "id": "b2-recycling-karta-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-karta"
+          ],
+          "prompt": "Write the Maltese target for “paper”.",
+          "answer": "karta",
+          "accepted": [
+            "karta"
+          ],
+          "explanation": "The required chapter form is karta.",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper"
+          }
+        },
+        {
+          "id": "b2-recycling-borza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-borza"
+          ],
+          "prompt": "What is the lesson meaning of “borża”?",
+          "choices": [
+            "to choose",
+            "I put the bag out",
+            "I wash the container"
+          ],
+          "answer": "I put the bag out",
+          "explanation": "borża is linked to “I put the bag out” in this chapter.",
+          "reviewCard": {
+            "maltese": "borża",
+            "english": "I put the bag out"
+          }
+        },
+        {
+          "id": "b2-recycling-borza-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-borza"
+          ],
+          "prompt": "Write the Maltese target for “I put the bag out”.",
+          "answer": "borża",
+          "accepted": [
+            "borża"
+          ],
+          "explanation": "The required chapter form is borża.",
+          "reviewCard": {
+            "maltese": "borża",
+            "english": "I put the bag out"
+          }
+        },
+        {
+          "id": "b2-recycling-kontenitur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-kontenitur"
+          ],
+          "prompt": "What is the lesson meaning of “kontenitur”?",
+          "choices": [
+            "I wash the container",
+            "to choose",
+            "to choose (singular command)"
+          ],
+          "answer": "I wash the container",
+          "explanation": "kontenitur is linked to “I wash the container” in this chapter.",
+          "reviewCard": {
+            "maltese": "kontenitur",
+            "english": "I wash the container"
+          }
+        },
+        {
+          "id": "b2-recycling-kontenitur-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-kontenitur"
+          ],
+          "prompt": "Write the Maltese target for “I wash the container”.",
+          "answer": "kontenitur",
+          "accepted": [
+            "kontenitur"
+          ],
+          "explanation": "The required chapter form is kontenitur.",
+          "reviewCard": {
+            "maltese": "kontenitur",
+            "english": "I wash the container"
+          }
+        },
+        {
+          "id": "b2-recycling-ghazel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ghazel"
+          ],
+          "prompt": "What is the lesson meaning of “għażel”?",
+          "choices": [
+            "to choose (singular command)",
+            "to choose (plural command)",
+            "to choose"
+          ],
+          "answer": "to choose",
+          "explanation": "għażel is linked to “to choose” in this chapter.",
+          "reviewCard": {
+            "maltese": "għażel",
+            "english": "to choose"
+          }
+        },
+        {
+          "id": "b2-recycling-ghazel-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-ghazel"
+          ],
+          "prompt": "Write the Maltese form for “to choose”.",
+          "answer": "għażel",
+          "accepted": [
+            "għażel"
+          ],
+          "explanation": "The required chapter form is għażel.",
+          "reviewCard": {
+            "maltese": "għażel",
+            "english": "to choose"
+          }
+        },
+        {
+          "id": "b2-recycling-aghzel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-aghzel"
+          ],
+          "prompt": "What is the lesson meaning of “agħżel”?",
+          "choices": [
+            "plastic",
+            "to choose (singular command)",
+            "to choose (plural command)"
+          ],
+          "answer": "to choose (singular command)",
+          "explanation": "agħżel is linked to “to choose (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħżel",
+            "english": "to choose (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-aghzel-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-aghzel"
+          ],
+          "prompt": "Write the Maltese form for “to choose (singular command)”.",
+          "answer": "agħżel",
+          "accepted": [
+            "agħżel"
+          ],
+          "explanation": "The required chapter form is agħżel.",
+          "reviewCard": {
+            "maltese": "agħżel",
+            "english": "to choose (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-aghzlu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-aghzlu"
+          ],
+          "prompt": "What is the lesson meaning of “agħżlu”?",
+          "choices": [
+            "to choose (plural command)",
+            "plastic",
+            "paper"
+          ],
+          "answer": "to choose (plural command)",
+          "explanation": "agħżlu is linked to “to choose (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħżlu",
+            "english": "to choose (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-aghzlu-production",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-aghzlu"
+          ],
+          "prompt": "Write the Maltese form for “to choose (plural command)”.",
+          "answer": "agħżlu",
+          "accepted": [
+            "agħżlu"
+          ],
+          "explanation": "The required chapter form is agħżlu.",
+          "reviewCard": {
+            "maltese": "agħżlu",
+            "english": "to choose (plural command)"
           }
         }
       ]

@@ -6,7 +6,7 @@ const outputFile = path.join(root, "assets/data/course_target_assessments.json")
 const bindings = readJson("assets/data/course_target_bindings.json");
 const course = readJson("assets/data/course_path.json");
 const requestedLevels = new Set(
-  (process.env.COURSE_ASSESSMENT_LEVELS || "B1")
+  (process.env.COURSE_ASSESSMENT_LEVELS || "B1,B2")
     .split(",")
     .map((value) => value.trim().toUpperCase())
     .filter(Boolean)

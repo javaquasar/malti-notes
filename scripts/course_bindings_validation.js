@@ -149,7 +149,7 @@ function validateCourseBindings({ root, fail }) {
   });
 
   bindings.targets.forEach((target) => {
-    if (target.book !== "B1" || target.implementationStatus !== "implemented") return;
+    if (target.implementationStatus !== "implemented") return;
     const modes = new Set(target.assessmentIds.map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
     if (!modes.has("recognition") || !modes.has("production")) {
       fail(bindingFile, `${target.id} needs recognition and production assessment coverage`);
