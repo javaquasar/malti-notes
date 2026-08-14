@@ -127,7 +127,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 39, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 40, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -160,6 +160,34 @@ async function main() {
       assert(await page.locator('[data-course-level="b2"]:not([hidden]) [data-course-chapter]').count() === 7, "B2 chapter count is incomplete.");
       await page.reload({ waitUntil: "networkidle" });
       assert(await page.locator('[data-objective-key="b1-introductions::identity"]').isChecked(), "Course objective was not restored.");
+    });
+
+    await runTest(context, "course progress summarizes target states and filters chapters", async (page) => {
+      await openCleanPage(page, "course_progress.html");
+      await page.evaluate(() => {
+        localStorage.setItem("malti_course_target_progress_v1", JSON.stringify({
+          "b1-animals-kelb": { state: "mastered" },
+          "b1-animals-kelba": { state: "learning" },
+          "b1-animals-qattus": { state: "review" }
+        }));
+        localStorage.setItem("malti_exercise_progress_v1", JSON.stringify({
+          "b1-animals-diagnostic": { attempts: 1, bestScore: 8, total: 10, passed: true },
+          "b1-animals-checkpoint-1": { attempts: 1, bestScore: 12, total: 12, passed: true }
+        }));
+      });
+      await page.reload({ waitUntil: "networkidle" });
+      assert(await page.locator("[data-progress-chapter]").count() === 14, "Course progress chapter count is incomplete.");
+      assert((await page.locator("[data-progress-mastered]").textContent()).trim() === "1", "Mastered target total is incorrect.");
+      assert((await page.locator("[data-progress-learning]").textContent()).trim() === "1", "Learning target total is incorrect.");
+      assert((await page.locator("[data-progress-review]").textContent()).trim() === "1", "Review target total is incorrect.");
+      assert((await page.locator("[data-progress-new]").textContent()).trim() === "459", "Not-started target total is incorrect.");
+      const animals = page.locator('[data-progress-chapter="b1-animals"]');
+      assert((await animals.textContent()).includes("1/27"), "Animals mastery is missing from chapter progress.");
+      assert((await animals.textContent()).includes("1/5 passed"), "Animals checkpoint progress is incorrect.");
+      assert((await animals.locator(".course-progress-action-cell a").textContent()).trim() === "Review chapter", "Review state did not choose the expected chapter action.");
+      await page.locator('[data-progress-filter="b2"]').click();
+      assert(await page.locator('[data-progress-level="b2"]:visible').count() === 7, "B2 progress filter is incomplete.");
+      assert(await page.locator('[data-progress-level="b1"]:visible').count() === 0, "B1 rows remain visible after selecting B2.");
     });
 
     await runTest(context, "guided chapter route reports book, mapping, and assessment scope", async (page) => {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Course Progress</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <span class="tag">Learning path</span>
+                <h1>Course Progress</h1>
+                <p class="lead">See what is new, learning, due for review, or mastered across every B1 and B2 chapter.</p>
+                <div class="pill-row">
+                    <span class="pill">462 targets</span>
+                    <span class="pill">14 chapters</span>
+                    <span class="pill">saved locally</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>Mastery rule</strong></p>
+                <p>A target becomes mastered after successful recognition and production on at least two different dates.</p>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section course-progress-shell" data-course-progress-root aria-live="polite">
+        <nav class="course-chapter-nav" aria-label="Course progress navigation">
+            <a class="action-link" href="./course_path.html">Learning path</a>
+            <a class="action-link" href="./review_cards.html">Shared review</a>
+        </nav>
+
+        <section class="course-metric-grid" aria-label="Overall target progress">
+            <article class="course-metric">
+                <span>Mastered</span>
+                <strong data-progress-mastered>0</strong>
+                <small>Spaced recognition and production</small>
+            </article>
+            <article class="course-metric">
+                <span>Learning</span>
+                <strong data-progress-learning>0</strong>
+                <small>Correct work still being reinforced</small>
+            </article>
+            <article class="course-metric">
+                <span>Due for review</span>
+                <strong data-progress-review>0</strong>
+                <small>Most recent linked answer was incorrect</small>
+            </article>
+            <article class="course-metric">
+                <span>Not started</span>
+                <strong data-progress-new>462</strong>
+                <small>No linked assessment attempt yet</small>
+            </article>
+        </section>
+
+        <section class="content-group course-progress-overview">
+            <div class="course-progress-heading">
+                <div>
+                    <span class="tag">Chapter view</span>
+                    <h2>Progress by Chapter</h2>
+                </div>
+                <div class="segmented-toggle" data-progress-filters aria-label="Filter progress by level"></div>
+            </div>
+            <p class="muted-note" data-progress-summary>Loading course progress...</p>
+            <div class="course-progress-table-wrap">
+                <table class="course-progress-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Chapter</th>
+                        <th scope="col">Target mastery</th>
+                        <th scope="col">Current states</th>
+                        <th scope="col">Checkpoints</th>
+                        <th scope="col"><span class="visually-hidden">Action</span></th>
+                    </tr>
+                    </thead>
+                    <tbody data-progress-chapters></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/course-progress.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

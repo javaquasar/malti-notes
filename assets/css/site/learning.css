@@ -153,6 +153,14 @@
   gap: var(--space-sm);
 }
 
+.course-dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .course-view-toggle {
   margin-left: auto;
 }
@@ -325,6 +333,82 @@
   border-bottom: 1px solid var(--border-default);
 }
 
+.course-progress-shell {
+  display: grid;
+  gap: var(--space-4xl);
+}
+
+.course-progress-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  align-items: end;
+  justify-content: space-between;
+}
+
+.course-progress-table-wrap {
+  margin-top: var(--space-xl);
+  overflow-x: auto;
+}
+
+.course-progress-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-progress-table th,
+.course-progress-table td {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-default);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.course-progress-table th {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.course-progress-chapter-cell,
+.course-progress-table td:nth-child(4) {
+  min-width: 11rem;
+}
+
+.course-progress-chapter-cell strong,
+.course-progress-chapter-cell small,
+.course-progress-table td:nth-child(4) strong,
+.course-progress-table td:nth-child(4) small {
+  display: block;
+}
+
+.course-progress-chapter-cell strong {
+  margin: var(--space-xs) 0;
+}
+
+.course-progress-chapter-cell small,
+.course-progress-table td:nth-child(4) small {
+  color: var(--text-muted);
+}
+
+.course-progress-mastery-copy {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: space-between;
+  min-width: 9rem;
+  margin-bottom: var(--space-sm);
+}
+
+.course-progress-state-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  min-width: 13rem;
+}
+
+.course-progress-action-cell {
+  text-align: right;
+}
+
 @media (max-width: 760px) {
   .course-dashboard,
   .course-chapter-header,
@@ -363,6 +447,50 @@
   .course-context-bar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .course-dashboard-actions {
+    justify-content: flex-start;
+  }
+
+  .course-progress-table-wrap {
+    overflow: visible;
+  }
+
+  .course-progress-table thead {
+    display: none;
+  }
+
+  .course-progress-table,
+  .course-progress-table tbody,
+  .course-progress-table tr,
+  .course-progress-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .course-progress-table tr {
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .course-progress-table td {
+    display: grid;
+    grid-template-columns: minmax(7rem, 0.4fr) minmax(0, 1fr);
+    gap: var(--space-lg);
+    padding: var(--space-md) 0;
+    border: 0;
+  }
+
+  .course-progress-table td::before {
+    color: var(--text-muted);
+    content: attr(data-label);
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .course-progress-action-cell {
+    text-align: left;
   }
 
   .course-view-toggle {
