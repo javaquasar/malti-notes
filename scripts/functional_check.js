@@ -117,11 +117,25 @@ async function main() {
       await search.fill("verbs guide");
       const firstResult = page.locator(".site-search-result").first();
       await firstResult.waitFor();
-      assert((await firstResult.getAttribute("href")) === "./verbs_guide.html", "Verb guide was not the first result.");
+      const firstHref = await firstResult.getAttribute("href");
+      assert(firstHref === "./verbs_guide.html", `Verb guide was not the first result (${firstHref}).`);
       await Promise.all([
         page.waitForURL(/\/verbs_guide\.html$/),
         search.press("Enter")
       ]);
+    });
+
+    await runTest(context, "site search finds and reveals learning content", async (page) => {
+      await openCleanPage(page, "index.html");
+      const search = page.locator("[data-site-search]");
+      await search.fill("fekruna");
+      const result = page.locator(".site-search-result").filter({ hasText: "fekruna" }).first();
+      await result.waitFor();
+      const href = await result.getAttribute("href");
+      assert(href.includes("find=fekruna"), "Content result does not carry a reveal target.");
+      await Promise.all([page.waitForURL(/find=fekruna/), result.click()]);
+      await page.locator(".is-search-target").waitFor();
+      assert(String(await page.locator(".is-search-target").first().textContent()).toLowerCase().includes("fekruna"), "Destination content was not revealed.");
     });
 
     await runTest(context, "site directory is generated from the shared map", async (page) => {

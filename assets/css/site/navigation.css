@@ -232,6 +232,11 @@
   display: block;
 }
 
+.is-search-target {
+  outline: 3px solid var(--border-accent);
+  outline-offset: var(--space-2xs);
+}
+
 .site-search-result span {
   margin-top: var(--space-2xs);
   color: var(--text-muted);

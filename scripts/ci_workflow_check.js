@@ -18,6 +18,7 @@ const requiredChecks = [
   "course:lint",
   "links:lint",
   "pwa:check",
+  "search:check",
   "theme:a11y",
   "visual:smoke",
   "functional:test",

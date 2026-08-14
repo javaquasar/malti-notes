@@ -109,7 +109,32 @@
       group.items.map((item) => ({ ...item, group: group.label }))
     )
   ];
-  const normalizeSearch = (value) => String(value || "").trim().toLowerCase();
+  const normalizeSearch = (value) => String(value || "")
+    .toLocaleLowerCase("mt")
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .replace(/[ċ]/g, "c")
+    .replace(/[ġ]/g, "g")
+    .replace(/[ħ]/g, "h")
+    .replace(/[ż]/g, "z")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim();
+  let contentSearchPromise = null;
+  const loadContentSearch = () => {
+    if (!contentSearchPromise) {
+      contentSearchPromise = fetch("./assets/data/search-index.json")
+        .then((response) => {
+          if (!response.ok) throw new Error(`Could not load search index (${response.status})`);
+          return response.json();
+        })
+        .then((data) => data.entries || [])
+        .catch((error) => {
+          console.warn("Full-content search is unavailable.", error);
+          return [];
+        });
+    }
+    return contentSearchPromise;
+  };
 
   const linkHtml = (href, label, extraClass = "") => {
     const current = currentFile === href ? " is-current" : "";
@@ -146,8 +171,8 @@
         ${linkHtml("all_pages.html", "All Pages")}
       </nav>
       <form class="site-search" role="search" data-site-search-form>
-        <input type="search" data-site-search placeholder="Search pages" aria-label="Search pages" autocomplete="off">
-        <div class="site-search-results" data-site-search-results hidden></div>
+        <input type="search" data-site-search placeholder="Search site content" aria-label="Search site content" aria-controls="site-search-results" aria-expanded="false" autocomplete="off">
+        <div class="site-search-results" id="site-search-results" role="listbox" data-site-search-results hidden></div>
       </form>
       <label class="theme-switcher">
         <span>Theme</span>
@@ -192,28 +217,52 @@
     if (!searchResults) return;
     searchResults.hidden = true;
     searchResults.innerHTML = "";
+    searchInput?.setAttribute("aria-expanded", "false");
   };
 
-  const searchMatches = (query) => {
+  const searchMatches = async (query) => {
     const normalized = normalizeSearch(query);
 
     if (!normalized) {
       return [];
     }
 
-    return searchItems
-      .filter((item) => {
-        const haystack = normalizeSearch(
-          `${item.label} ${item.group} ${item.description || ""} ${item.href.replace(/[_-]/g, " ")}`
-        );
-        return haystack.includes(normalized);
-      })
-      .slice(0, 8);
+    const pageEntries = searchItems.map((item) => ({
+      kind: "page",
+      title: item.label,
+      subtitle: item.description || "",
+      group: item.group,
+      href: item.href,
+      find: "",
+      normalized: normalizeSearch(`${item.label} ${item.group} ${item.description || ""} ${item.href.replace(/[_-]/g, " ")}`)
+    }));
+    const contentEntries = normalized.length >= 2 ? await loadContentSearch() : [];
+    const unique = new Map();
+    [...pageEntries, ...contentEntries].forEach((item) => {
+      const title = normalizeSearch(item.title);
+      const haystack = item.normalized || normalizeSearch(`${item.title} ${item.subtitle || ""} ${item.group || ""}`);
+      let score = 0;
+      if (title === normalized) score = 100;
+      else if (title.startsWith(normalized)) score = 80;
+      else if (haystack.split(" ").some((word) => word.startsWith(normalized))) score = 65;
+      else if (haystack.includes(normalized)) score = 45;
+      if (!score) return;
+      if (item.kind === "page") score += 8;
+      const key = `${item.href}::${item.kind}::${title}`;
+      const previous = unique.get(key);
+      if (!previous || previous.score < score) unique.set(key, { ...item, score });
+    });
+    return [...unique.values()]
+      .sort((left, right) => right.score - left.score || left.title.localeCompare(right.title, "mt"))
+      .slice(0, 10);
   };
 
-  const renderSearch = () => {
+  let searchRenderId = 0;
+  const renderSearch = async () => {
     if (!searchInput || !searchResults) return;
-    const matches = searchMatches(searchInput.value);
+    const renderId = ++searchRenderId;
+    const matches = await searchMatches(searchInput.value);
+    if (renderId !== searchRenderId) return;
     searchResults.innerHTML = "";
 
     if (!matches.length) {
@@ -227,15 +276,17 @@
       const meta = document.createElement("span");
 
       link.className = "site-search-result";
-      link.href = `./${item.href}`;
-      title.textContent = item.label;
-      meta.textContent = item.group;
+      link.href = `./${item.href}${item.find ? `?find=${encodeURIComponent(item.find)}` : ""}`;
+      link.setAttribute("role", "option");
+      title.textContent = item.title;
+      meta.textContent = [item.kind === "page" ? "Page" : item.kind, item.group, item.subtitle].filter(Boolean).join(" · ");
       link.appendChild(title);
       link.appendChild(meta);
       searchResults.appendChild(link);
     });
 
     searchResults.hidden = false;
+    searchInput.setAttribute("aria-expanded", "true");
   };
 
   if (toggle && panel) {
@@ -274,6 +325,30 @@
   if (currentFile === "index.html" && currentGroupLabel) {
     header.dataset.currentGroup = currentGroupLabel;
   }
+
+  const revealSearchTarget = () => {
+    const term = normalizeSearch(params.get("find"));
+    if (!term) return;
+    let attempts = 0;
+    const locate = () => {
+      attempts += 1;
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        if (!node.parentElement || node.parentElement.closest("script, style, .site-header, .site-update-notice")) continue;
+        if (!normalizeSearch(node.nodeValue).includes(term)) continue;
+        const target = node.parentElement.closest("article, tr, li, .content-card, section") || node.parentElement;
+        target.classList.add("is-search-target");
+        target.scrollIntoView({ block: "center", behavior: "smooth" });
+        if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+        return;
+      }
+      if (attempts < 20) window.setTimeout(locate, 200);
+    };
+    window.setTimeout(locate, 0);
+  };
+  revealSearchTarget();
 
   const readReviewStats = () => {
     const parsed = storage.getJson(REVIEW_STORAGE_KEY, null);

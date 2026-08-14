@@ -67,6 +67,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run pwa:check
 
+      - name: Validate full-content search index
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run search:check
+
       - name: Check theme accessibility
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run theme:a11y
@@ -124,6 +128,9 @@ jobs:
 
       - name: Build Rust WASM bundle
         run: wasm-pack build wasm-search --target web --out-dir ../assets/wasm --out-name malti_notes_wasm
+
+      - name: Generate full-content search index
+        run: npm run search:build
 
       - name: Generate revisioned offline shell
         run: npm run pwa:build
