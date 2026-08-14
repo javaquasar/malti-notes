@@ -8,10 +8,32 @@ const glossData = read("assets/data/course_target_glosses.json");
 const exampleData = read("assets/data/course_target_examples.json");
 const supplements = read("assets/data/course_supplemental_content.json");
 const assessments = read("assets/data/course_target_assessments.json");
+const grammar = read("assets/data/grammar_targets.json");
 const errors = [];
 const fail = (message) => errors.push(message);
 const normalize = (value) => String(value || "").normalize("NFKC").trim().toLocaleLowerCase("mt");
 const allowedSame = new Set(["dentist", "emu", "malta", "pakistan", "pizza", "paella", "kiwi", "banana", "pastizzi", "boots", "menu"]);
+const grammarTopicIds = new Set((inventory.grammarTopics || []).map((topic) => topic.id));
+const grammarTargetIds = new Set();
+
+(grammar.targets || []).forEach((target) => {
+  if (grammarTargetIds.has(target.id)) fail(`duplicate grammar target id: ${target.id}`);
+  grammarTargetIds.add(target.id);
+  if (target.sourceRef.kind === "book-grammar-topic") {
+    target.sourceRef.inventoryTopicIds.forEach((topicId) => {
+      if (!grammarTopicIds.has(topicId)) fail(`${target.id} references missing inventory grammar topic ${topicId}`);
+    });
+  } else if (!fs.existsSync(path.join(root, target.sourceRef.sourcePage))) {
+    fail(`${target.id} references missing site extension page ${target.sourceRef.sourcePage}`);
+  }
+  if (!target.assessment.recognition.choices.includes(target.assessment.recognition.answer)) {
+    fail(`${target.id} recognition answer is absent from its choices`);
+  }
+  if (!target.assessment.production.prompt.includes("_____")) {
+    fail(`${target.id} production prompt has no cloze`);
+  }
+});
+if (grammarTargetIds.size !== 8) fail(`expected 8 grammar targets, found ${grammarTargetIds.size}`);
 
 const requirements = inventory.chapters.flatMap((chapter) => chapter.targets.map((target) => ({
   key: `${chapter.courseChapterId}::${target}`,
@@ -89,4 +111,4 @@ if (errors.length) {
   errors.forEach((error) => console.error(`fail course quality: ${error}`));
   process.exit(1);
 }
-console.log(`ok checked ${expectedKeys.size} explicit reviewed course glosses and generated dependants`);
+console.log(`ok checked ${expectedKeys.size} explicit reviewed course glosses, ${grammarTargetIds.size} grammar targets, and generated dependants`);

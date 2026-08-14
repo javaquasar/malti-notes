@@ -11,7 +11,7 @@ const axeSource = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8"
 const defaultChromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const useBundledBrowser = process.env.PLAYWRIGHT_USE_BUNDLED === "1";
 const chromePath = useBundledBrowser ? "" : process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
-const defaultPages = ["index.html", "today.html", "course_path.html", "course_exam.html", "mistakes.html", "review_cards.html", "year4_exam.html"];
+const defaultPages = ["index.html", "today.html", "course_path.html", "grammar_path.html", "course_exam.html", "mistakes.html", "review_cards.html", "year4_exam.html"];
 const pages = (process.env.A11Y_PAGES || defaultPages.join(",")).split(",").map((page) => page.trim()).filter(Boolean);
 const allViewports = [
   { name: "desktop", width: 1280, height: 900 },
