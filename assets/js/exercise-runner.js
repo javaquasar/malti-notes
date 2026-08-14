@@ -449,7 +449,7 @@
     const url = container.dataset.exerciseSrc || DEFAULT_DATA_URL;
     const setId = container.dataset.exerciseSet;
     const data = await loadData(url);
-    const set = (data.sets || []).find((item) => item.id === setId);
+    const set = (data.sets || data.assessmentSets || []).find((item) => item.id === setId);
     if (!set) throw new Error(`Exercise set not found: ${setId}`);
     renderSet(container, set);
   };

@@ -1,0 +1,5368 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b1-food",
+    "levelId": "b1",
+    "levelLabel": "B1 Foundation",
+    "number": 6,
+    "title": "L-Ikel"
+  },
+  "inventoryChapter": {
+    "id": "b1.6",
+    "courseChapterId": "b1-food",
+    "book": "B1",
+    "number": 6,
+    "title": "L-Ikel",
+    "targets": [
+      "te",
+      "spagetti",
+      "pizza",
+      "kafè",
+      "kuskus",
+      "ilma",
+      "ross",
+      "paella",
+      "luminata",
+      "meraq tal-frott",
+      "żejt",
+      "ħelu",
+      "mandolina",
+      "għanqud",
+      "għeneb",
+      "dulliegħa",
+      "bambinella",
+      "bajtra tax-xewk",
+      "bettieħa",
+      "ċirasa",
+      "tina",
+      "tuffieħa",
+      "kiwi",
+      "banana",
+      "lumi",
+      "lumija",
+      "laħam",
+      "lanġas",
+      "lanġasa",
+      "larinġ",
+      "larinġa",
+      "frawli",
+      "frawla",
+      "dulliegħ",
+      "bettieħ",
+      "tuffieħ",
+      "kejk",
+      "kejkijiet",
+      "insalata",
+      "insalati",
+      "pastizzi",
+      "pasti",
+      "ġelat",
+      "għadma",
+      "ħut",
+      "ċikkulata"
+    ],
+    "baselineMissing": [
+      "spagetti",
+      "kuskus",
+      "paella",
+      "meraq tal-frott",
+      "għanqud",
+      "bambinella",
+      "bajtra tax-xewk",
+      "ċirasa",
+      "tina",
+      "kejkijiet",
+      "insalati",
+      "pasti"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b1-food",
+    "book": "B1",
+    "chapterNumber": 6,
+    "chapterTitle": "L-Ikel",
+    "pageStart": 81,
+    "pageEnd": 100
+  },
+  "targets": [
+    {
+      "id": "b1-food-te",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "te",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "te"
+      },
+      "assessmentIds": [
+        "b1-food-te-diagnostic-recognition",
+        "b1-food-te-recognition",
+        "b1-food-te-production",
+        "b1-food-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-food-spagetti",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "spagetti",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-spagetti"
+      },
+      "assessmentIds": [
+        "b1-food-spagetti-recognition-true-false",
+        "b1-food-spagetti-production",
+        "b1-food-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-food-pizza",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "pizza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-pizza"
+      },
+      "assessmentIds": [
+        "b1-food-pizza-recognition",
+        "b1-food-pizza-production",
+        "b1-food-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-food-kafe",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kafè",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "kafe"
+      },
+      "assessmentIds": [
+        "food-category",
+        "food-coffee-production",
+        "b1-food-kafe-recognition-true-false",
+        "b1-food-kafe-production",
+        "b1-food-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-food-kuskus",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kuskus",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-kuskus"
+      },
+      "assessmentIds": [
+        "b1-food-kuskus-recognition",
+        "b1-food-kuskus-production"
+      ]
+    },
+    {
+      "id": "b1-food-ilma",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ilma",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-ilma"
+      },
+      "assessmentIds": [
+        "b1-food-ilma-diagnostic-recognition-true-false",
+        "b1-food-ilma-recognition-true-false",
+        "b1-food-ilma-production"
+      ]
+    },
+    {
+      "id": "b1-food-ross",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ross",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "ross"
+      },
+      "assessmentIds": [
+        "b1-food-ross-recognition",
+        "b1-food-ross-production",
+        "b1-food-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-food-paella",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "paella",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-paella"
+      },
+      "assessmentIds": [
+        "b1-food-paella-recognition-true-false",
+        "b1-food-paella-production",
+        "b1-food-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-food-luminata",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "luminata",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-luminata"
+      },
+      "assessmentIds": [
+        "b1-food-luminata-recognition",
+        "b1-food-luminata-production",
+        "b1-food-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-food-meraq-tal-frott",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "phrase",
+      "sourceRequirement": "meraq tal-frott",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-meraq-tal-frott"
+      },
+      "assessmentIds": [
+        "b1-food-meraq-tal-frott-recognition-true-false",
+        "b1-food-meraq-tal-frott-production",
+        "b1-food-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-food-zejt",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "żejt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-zejt"
+      },
+      "assessmentIds": [
+        "b1-food-zejt-diagnostic-recognition",
+        "b1-food-zejt-recognition",
+        "b1-food-zejt-production"
+      ]
+    },
+    {
+      "id": "b1-food-helu",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ħelu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "helwa"
+      },
+      "assessmentIds": [
+        "b1-food-helu-recognition-true-false",
+        "b1-food-helu-production"
+      ]
+    },
+    {
+      "id": "b1-food-mandolina",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "mandolina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "mandolina"
+      },
+      "assessmentIds": [
+        "b1-food-mandolina-recognition",
+        "b1-food-mandolina-production",
+        "b1-food-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-food-ghanqud",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "għanqud",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-ghanqud"
+      },
+      "assessmentIds": [
+        "b1-food-ghanqud-recognition-true-false",
+        "b1-food-ghanqud-production",
+        "b1-food-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-food-gheneb",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "għeneb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-gheneb"
+      },
+      "assessmentIds": [
+        "b1-food-gheneb-recognition",
+        "b1-food-gheneb-production",
+        "b1-food-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-food-dulliegha",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "dulliegħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "dulliegha"
+      },
+      "assessmentIds": [
+        "b1-food-dulliegha-diagnostic-recognition-true-false",
+        "b1-food-dulliegha-recognition-true-false",
+        "b1-food-dulliegha-production",
+        "b1-food-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-food-bambinella",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "bambinella",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-bambinella"
+      },
+      "assessmentIds": [
+        "b1-food-bambinella-recognition",
+        "b1-food-bambinella-production"
+      ]
+    },
+    {
+      "id": "b1-food-bajtra-tax-xewk",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "phrase",
+      "sourceRequirement": "bajtra tax-xewk",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-bajtra-tax-xewk"
+      },
+      "assessmentIds": [
+        "b1-food-bajtra-tax-xewk-recognition-true-false",
+        "b1-food-bajtra-tax-xewk-production"
+      ]
+    },
+    {
+      "id": "b1-food-bettieha",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "bettieħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "bettieha"
+      },
+      "assessmentIds": [
+        "b1-food-bettieha-recognition",
+        "b1-food-bettieha-production",
+        "b1-food-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-food-cirasa",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ċirasa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-cirasa"
+      },
+      "assessmentIds": [
+        "b1-food-cirasa-recognition-true-false",
+        "b1-food-cirasa-production",
+        "b1-food-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-food-tina",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "tina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-tina"
+      },
+      "assessmentIds": [
+        "b1-food-tina-diagnostic-recognition",
+        "b1-food-tina-recognition",
+        "b1-food-tina-production",
+        "b1-food-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-food-tuffieha",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "tuffieħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "tuffieha"
+      },
+      "assessmentIds": [
+        "b1-food-tuffieha-recognition-true-false",
+        "b1-food-tuffieha-production",
+        "b1-food-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-food-kiwi",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kiwi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-kiwi"
+      },
+      "assessmentIds": [
+        "b1-food-kiwi-recognition",
+        "b1-food-kiwi-production"
+      ]
+    },
+    {
+      "id": "b1-food-banana",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "banana",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "banana"
+      },
+      "assessmentIds": [
+        "b1-food-banana-recognition-true-false",
+        "b1-food-banana-production"
+      ]
+    },
+    {
+      "id": "b1-food-lumi",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lumi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "lumija"
+      },
+      "assessmentIds": [
+        "b1-food-lumi-recognition",
+        "b1-food-lumi-production",
+        "b1-food-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-food-lumija",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lumija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "lumija"
+      },
+      "assessmentIds": [
+        "b1-food-lumija-diagnostic-recognition-true-false",
+        "b1-food-lumija-recognition-true-false",
+        "b1-food-lumija-production",
+        "b1-food-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-food-laham",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "laħam",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "laham"
+      },
+      "assessmentIds": [
+        "b1-food-laham-recognition",
+        "b1-food-laham-production",
+        "b1-food-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-food-langas",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lanġas",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "langasa"
+      },
+      "assessmentIds": [
+        "b1-food-langas-recognition-true-false",
+        "b1-food-langas-production",
+        "b1-food-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-food-langasa",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "lanġasa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "langasa"
+      },
+      "assessmentIds": [
+        "b1-food-langasa-recognition",
+        "b1-food-langasa-production"
+      ]
+    },
+    {
+      "id": "b1-food-laring",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "larinġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "laringa"
+      },
+      "assessmentIds": [
+        "b1-food-laring-recognition-true-false",
+        "b1-food-laring-production"
+      ]
+    },
+    {
+      "id": "b1-food-laringa",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "larinġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "laringa"
+      },
+      "assessmentIds": [
+        "b1-food-laringa-diagnostic-recognition",
+        "b1-food-laringa-recognition",
+        "b1-food-laringa-production",
+        "b1-food-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-food-frawli",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "frawli",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "kaxxa-frawli"
+      },
+      "assessmentIds": [
+        "b1-food-frawli-recognition-true-false",
+        "b1-food-frawli-production",
+        "b1-food-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-food-frawla",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "frawla",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "frawla"
+      },
+      "assessmentIds": [
+        "b1-food-frawla-recognition",
+        "b1-food-frawla-production"
+      ]
+    },
+    {
+      "id": "b1-food-dulliegh",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "dulliegħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "dulliegha"
+      },
+      "assessmentIds": [
+        "b1-food-dulliegh-recognition-true-false",
+        "b1-food-dulliegh-production",
+        "b1-food-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-food-bettieh",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "bettieħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "bettieha"
+      },
+      "assessmentIds": [
+        "b1-food-bettieh-recognition",
+        "b1-food-bettieh-production",
+        "b1-food-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-food-tuffieh",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "tuffieħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "collective_nouns.html",
+        "file": "assets/data/collective_nouns.json",
+        "itemId": "tuffieha"
+      },
+      "assessmentIds": [
+        "b1-food-tuffieh-diagnostic-recognition-true-false",
+        "b1-food-tuffieh-recognition-true-false",
+        "b1-food-tuffieh-production"
+      ]
+    },
+    {
+      "id": "b1-food-kejk",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kejk",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-kejk"
+      },
+      "assessmentIds": [
+        "b1-food-kejk-recognition",
+        "b1-food-kejk-production",
+        "b1-food-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-food-kejkijiet",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "kejkijiet",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-kejkijiet"
+      },
+      "assessmentIds": [
+        "b1-food-kejkijiet-recognition-true-false",
+        "b1-food-kejkijiet-production",
+        "b1-food-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-food-insalata",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "insalata",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-insalata"
+      },
+      "assessmentIds": [
+        "b1-food-insalata-recognition",
+        "b1-food-insalata-production",
+        "b1-food-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-food-insalati",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "insalati",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-insalati"
+      },
+      "assessmentIds": [
+        "b1-food-insalati-recognition-true-false",
+        "b1-food-insalati-production",
+        "b1-food-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-food-pastizzi",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "pastizzi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-pastizzi"
+      },
+      "assessmentIds": [
+        "b1-food-pastizzi-diagnostic-recognition",
+        "b1-food-pastizzi-recognition",
+        "b1-food-pastizzi-production"
+      ]
+    },
+    {
+      "id": "b1-food-pasti",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "pasti",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-pasti"
+      },
+      "assessmentIds": [
+        "b1-food-pasti-recognition-true-false",
+        "b1-food-pasti-production"
+      ]
+    },
+    {
+      "id": "b1-food-gelat",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ġelat",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-gelat"
+      },
+      "assessmentIds": [
+        "b1-food-gelat-recognition",
+        "b1-food-gelat-production",
+        "b1-food-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b1-food-ghadma",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "għadma",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-ghadma"
+      },
+      "assessmentIds": [
+        "b1-food-ghadma-recognition-true-false",
+        "b1-food-ghadma-production",
+        "b1-food-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b1-food-hut",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ħut",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "food_preferences.html",
+        "file": "assets/data/food.json",
+        "itemId": "hut"
+      },
+      "assessmentIds": [
+        "b1-food-hut-recognition",
+        "b1-food-hut-production",
+        "b1-food-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b1-food-cikkulata",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "vocabulary",
+      "sourceRequirement": "ċikkulata",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-food-cikkulata"
+      },
+      "assessmentIds": [
+        "b1-food-cikkulata-diagnostic-recognition-true-false",
+        "b1-food-cikkulata-recognition-true-false",
+        "b1-food-cikkulata-production",
+        "b1-food-checkpoint-8-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b1-food-te": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81,
+        82,
+        83
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-spagetti": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-pizza": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81,
+        82,
+        83,
+        97,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-kafe": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        100
+      ],
+      "match": "text-folded"
+    },
+    "b1-food-kuskus": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ilma": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81,
+        82,
+        83,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ross": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-paella": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-luminata": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-meraq-tal-frott": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-zejt": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-helu": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        95,
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-mandolina": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ghanqud": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-gheneb": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        88,
+        95,
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-dulliegha": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bambinella": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bajtra-tax-xewk": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bettieha": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-cirasa": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-tina": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-tuffieha": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 87,
+      "pages": [
+        87,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-kiwi": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 86,
+      "pages": [
+        86,
+        87,
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-banana": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 87,
+      "pages": [
+        87,
+        88,
+        91,
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-lumi": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-lumija": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88,
+        90,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-laham": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        95,
+        97,
+        98,
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-langas": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-langasa": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-laring": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-laringa": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 87,
+      "pages": [
+        87,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-frawli": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88,
+        93,
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-frawla": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88,
+        91
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-dulliegh": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-bettieh": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 88,
+      "pages": [
+        88
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-tuffieh": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-kejk": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-kejkijiet": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-insalata": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        93,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-insalati": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-pastizzi": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-pasti": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-food-gelat": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-ghadma": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 95,
+      "pages": [
+        95,
+        97,
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-hut": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82,
+        83,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b1-food-cikkulata": {
+      "book": "B1",
+      "chapterId": "b1-food",
+      "chapterNumber": 6,
+      "chapterTitle": "L-Ikel",
+      "pageRange": [
+        81,
+        100
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b1-food-te",
+      "maltese": "te",
+      "english": "tea",
+      "example": "Nixtieq te, jekk jogħġbok.",
+      "exampleTranslation": "I would like the tea, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 81",
+      "notes": [
+        "Example: Nixtieq te, jekk jogħġbok.",
+        "Translation: I would like the tea, please.",
+        "Source: B1, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-spagetti",
+      "maltese": "spagetti",
+      "english": "spaghetti",
+      "example": "Nixtieq spagetti, jekk jogħġbok.",
+      "exampleTranslation": "I would like the spaghetti, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq spagetti, jekk jogħġbok.",
+        "Translation: I would like the spaghetti, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-pizza",
+      "maltese": "pizza",
+      "english": "pizza",
+      "example": "Nixtieq pizza, jekk jogħġbok.",
+      "exampleTranslation": "I would like the pizza, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 81",
+      "notes": [
+        "Example: Nixtieq pizza, jekk jogħġbok.",
+        "Translation: I would like the pizza, please.",
+        "Source: B1, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-kafe",
+      "maltese": "kafè",
+      "english": "coffee",
+      "example": "Nixtieq kafè, jekk jogħġbok.",
+      "exampleTranslation": "I would like the coffee, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 82,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-folded"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 82",
+      "notes": [
+        "Example: Nixtieq kafè, jekk jogħġbok.",
+        "Translation: I would like the coffee, please.",
+        "Source: B1, Chapter 6, p. 82"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-kuskus",
+      "maltese": "kuskus",
+      "english": "couscous",
+      "example": "Nixtieq kuskus, jekk jogħġbok.",
+      "exampleTranslation": "I would like the couscous, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 81",
+      "notes": [
+        "Example: Nixtieq kuskus, jekk jogħġbok.",
+        "Translation: I would like the couscous, please.",
+        "Source: B1, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-ilma",
+      "maltese": "ilma",
+      "english": "water",
+      "example": "Nixtieq ilma, jekk jogħġbok.",
+      "exampleTranslation": "I would like the water, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 81",
+      "notes": [
+        "Example: Nixtieq ilma, jekk jogħġbok.",
+        "Translation: I would like the water, please.",
+        "Source: B1, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-ross",
+      "maltese": "ross",
+      "english": "rice",
+      "example": "Nixtieq ross, jekk jogħġbok.",
+      "exampleTranslation": "I would like the rice, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 81",
+      "notes": [
+        "Example: Nixtieq ross, jekk jogħġbok.",
+        "Translation: I would like the rice, please.",
+        "Source: B1, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-paella",
+      "maltese": "paella",
+      "english": "paella",
+      "example": "Nixtieq paella, jekk jogħġbok.",
+      "exampleTranslation": "I would like the paella, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 81",
+      "notes": [
+        "Example: Nixtieq paella, jekk jogħġbok.",
+        "Translation: I would like the paella, please.",
+        "Source: B1, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-luminata",
+      "maltese": "luminata",
+      "english": "lemonade",
+      "example": "Nixtieq luminata, jekk jogħġbok.",
+      "exampleTranslation": "I would like the lemonade, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 82,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 82",
+      "notes": [
+        "Example: Nixtieq luminata, jekk jogħġbok.",
+        "Translation: I would like the lemonade, please.",
+        "Source: B1, Chapter 6, p. 82"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-meraq-tal-frott",
+      "maltese": "meraq tal-frott",
+      "english": "fruit juice",
+      "example": "Nixtieq meraq tal-frott, jekk jogħġbok.",
+      "exampleTranslation": "I would like the fruit juice, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 82,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 82",
+      "notes": [
+        "Example: Nixtieq meraq tal-frott, jekk jogħġbok.",
+        "Translation: I would like the fruit juice, please.",
+        "Source: B1, Chapter 6, p. 82"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-food-zejt",
+      "maltese": "żejt",
+      "english": "oil",
+      "example": "Nixtieq żejt, jekk jogħġbok.",
+      "exampleTranslation": "I would like the oil, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 84",
+      "notes": [
+        "Example: Nixtieq żejt, jekk jogħġbok.",
+        "Translation: I would like the oil, please.",
+        "Source: B1, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-helu",
+      "maltese": "ħelu",
+      "english": "sweets / dessert",
+      "example": "Nixtieq ħelu, jekk jogħġbok.",
+      "exampleTranslation": "I would like the sweets, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 84",
+      "notes": [
+        "Example: Nixtieq ħelu, jekk jogħġbok.",
+        "Translation: I would like the sweets, please.",
+        "Source: B1, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-mandolina",
+      "maltese": "mandolina",
+      "english": "mandarin -> mandarins",
+      "example": "Nixtieq mandolina, jekk jogħġbok.",
+      "exampleTranslation": "I would like the mandarin, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq mandolina, jekk jogħġbok.",
+        "Translation: I would like the mandarin, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-ghanqud",
+      "maltese": "għanqud",
+      "english": "bunch / cluster",
+      "example": "Nixtieq għanqud, jekk jogħġbok.",
+      "exampleTranslation": "I would like the bunch, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq għanqud, jekk jogħġbok.",
+        "Translation: I would like the bunch, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-gheneb",
+      "maltese": "għeneb",
+      "english": "grapes",
+      "example": "Nixtieq għeneb, jekk jogħġbok.",
+      "exampleTranslation": "I would like the grapes, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq għeneb, jekk jogħġbok.",
+        "Translation: I would like the grapes, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-dulliegha",
+      "maltese": "dulliegħa",
+      "english": "watermelon -> watermelons",
+      "example": "Nixtieq dulliegħa, jekk jogħġbok.",
+      "exampleTranslation": "I would like the watermelon, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq dulliegħa, jekk jogħġbok.",
+        "Translation: I would like the watermelon, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-bambinella",
+      "maltese": "bambinella",
+      "english": "small Maltese pear",
+      "example": "Nixtieq bambinella, jekk jogħġbok.",
+      "exampleTranslation": "I would like the small Maltese pear, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq bambinella, jekk jogħġbok.",
+        "Translation: I would like the small Maltese pear, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-bajtra-tax-xewk",
+      "maltese": "bajtra tax-xewk",
+      "english": "prickly pear",
+      "example": "Nixtieq bajtra tax-xewk, jekk jogħġbok.",
+      "exampleTranslation": "I would like the prickly pear, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq bajtra tax-xewk, jekk jogħġbok.",
+        "Translation: I would like the prickly pear, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-food-bettieha",
+      "maltese": "bettieħa",
+      "english": "melon -> melons",
+      "example": "Nixtieq bettieħa, jekk jogħġbok.",
+      "exampleTranslation": "I would like the melon, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq bettieħa, jekk jogħġbok.",
+        "Translation: I would like the melon, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-cirasa",
+      "maltese": "ċirasa",
+      "english": "cherry",
+      "example": "Nixtieq ċirasa, jekk jogħġbok.",
+      "exampleTranslation": "I would like the cherry, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq ċirasa, jekk jogħġbok.",
+        "Translation: I would like the cherry, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-tina",
+      "maltese": "tina",
+      "english": "figs",
+      "example": "Nixtieq tina, jekk jogħġbok.",
+      "exampleTranslation": "I would like the figs, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq tina, jekk jogħġbok.",
+        "Translation: I would like the figs, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-tuffieha",
+      "maltese": "tuffieħa",
+      "english": "apple",
+      "example": "Nixtieq tuffieħa, jekk jogħġbok.",
+      "exampleTranslation": "I would like the apple, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 87,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 87",
+      "notes": [
+        "Example: Nixtieq tuffieħa, jekk jogħġbok.",
+        "Translation: I would like the apple, please.",
+        "Source: B1, Chapter 6, p. 87"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-kiwi",
+      "maltese": "kiwi",
+      "english": "kiwi",
+      "example": "Nixtieq kiwi, jekk jogħġbok.",
+      "exampleTranslation": "I would like the kiwi, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 86,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 86",
+      "notes": [
+        "Example: Nixtieq kiwi, jekk jogħġbok.",
+        "Translation: I would like the kiwi, please.",
+        "Source: B1, Chapter 6, p. 86"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-banana",
+      "maltese": "banana",
+      "english": "banana",
+      "example": "Nixtieq banana, jekk jogħġbok.",
+      "exampleTranslation": "I would like the banana, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 87,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 87",
+      "notes": [
+        "Example: Nixtieq banana, jekk jogħġbok.",
+        "Translation: I would like the banana, please.",
+        "Source: B1, Chapter 6, p. 87"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-lumi",
+      "maltese": "lumi",
+      "english": "lemons",
+      "example": "Nixtieq lumi, jekk jogħġbok.",
+      "exampleTranslation": "I would like the lemons, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq lumi, jekk jogħġbok.",
+        "Translation: I would like the lemons, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-lumija",
+      "maltese": "lumija",
+      "english": "lemon -> lemons",
+      "example": "Nixtieq lumija, jekk jogħġbok.",
+      "exampleTranslation": "I would like the lemon, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq lumija, jekk jogħġbok.",
+        "Translation: I would like the lemon, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-laham",
+      "maltese": "laħam",
+      "english": "meat",
+      "example": "Nixtieq laħam, jekk jogħġbok.",
+      "exampleTranslation": "I would like the meat, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 82,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 82",
+      "notes": [
+        "Example: Nixtieq laħam, jekk jogħġbok.",
+        "Translation: I would like the meat, please.",
+        "Source: B1, Chapter 6, p. 82"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-langas",
+      "maltese": "lanġas",
+      "english": "pears",
+      "example": "Nixtieq lanġas, jekk jogħġbok.",
+      "exampleTranslation": "I would like the pears, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq lanġas, jekk jogħġbok.",
+        "Translation: I would like the pears, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-langasa",
+      "maltese": "lanġasa",
+      "english": "pear -> pears",
+      "example": "Nixtieq lanġasa, jekk jogħġbok.",
+      "exampleTranslation": "I would like the pear, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq lanġasa, jekk jogħġbok.",
+        "Translation: I would like the pear, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-laring",
+      "maltese": "larinġ",
+      "english": "oranges",
+      "example": "Nixtieq larinġ, jekk jogħġbok.",
+      "exampleTranslation": "I would like the oranges, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq larinġ, jekk jogħġbok.",
+        "Translation: I would like the oranges, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-laringa",
+      "maltese": "larinġa",
+      "english": "orange -> oranges",
+      "example": "Nixtieq larinġa, jekk jogħġbok.",
+      "exampleTranslation": "I would like the orange, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 87,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 87",
+      "notes": [
+        "Example: Nixtieq larinġa, jekk jogħġbok.",
+        "Translation: I would like the orange, please.",
+        "Source: B1, Chapter 6, p. 87"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-frawli",
+      "maltese": "frawli",
+      "english": "strawberry -> strawberries",
+      "example": "Nixtieq frawli, jekk jogħġbok.",
+      "exampleTranslation": "I would like the strawberry, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq frawli, jekk jogħġbok.",
+        "Translation: I would like the strawberry, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-frawla",
+      "maltese": "frawla",
+      "english": "strawberry -> strawberries",
+      "example": "Nixtieq frawla, jekk jogħġbok.",
+      "exampleTranslation": "I would like the strawberry, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq frawla, jekk jogħġbok.",
+        "Translation: I would like the strawberry, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-dulliegh",
+      "maltese": "dulliegħ",
+      "english": "watermelons",
+      "example": "Nixtieq dulliegħ, jekk jogħġbok.",
+      "exampleTranslation": "I would like the watermelons, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq dulliegħ, jekk jogħġbok.",
+        "Translation: I would like the watermelons, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-bettieh",
+      "maltese": "bettieħ",
+      "english": "melon -> melons",
+      "example": "Nixtieq bettieħ, jekk jogħġbok.",
+      "exampleTranslation": "I would like the melon, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 88,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 88",
+      "notes": [
+        "Example: Nixtieq bettieħ, jekk jogħġbok.",
+        "Translation: I would like the melon, please.",
+        "Source: B1, Chapter 6, p. 88"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-tuffieh",
+      "maltese": "tuffieħ",
+      "english": "apples",
+      "example": "Nixtieq tuffieħ, jekk jogħġbok.",
+      "exampleTranslation": "I would like the apples, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq tuffieħ, jekk jogħġbok.",
+        "Translation: I would like the apples, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-kejk",
+      "maltese": "kejk",
+      "english": "cake",
+      "example": "Nixtieq kejk, jekk jogħġbok.",
+      "exampleTranslation": "I would like the cake, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 84",
+      "notes": [
+        "Example: Nixtieq kejk, jekk jogħġbok.",
+        "Translation: I would like the cake, please.",
+        "Source: B1, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-kejkijiet",
+      "maltese": "kejkijiet",
+      "english": "cakes",
+      "example": "Nixtieq kejkijiet, jekk jogħġbok.",
+      "exampleTranslation": "I would like the cakes, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq kejkijiet, jekk jogħġbok.",
+        "Translation: I would like the cakes, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-insalata",
+      "maltese": "insalata",
+      "english": "salad",
+      "example": "Nixtieq insalata, jekk jogħġbok.",
+      "exampleTranslation": "I would like the salad, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 84",
+      "notes": [
+        "Example: Nixtieq insalata, jekk jogħġbok.",
+        "Translation: I would like the salad, please.",
+        "Source: B1, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-insalati",
+      "maltese": "insalati",
+      "english": "salads",
+      "example": "Nixtieq insalati, jekk jogħġbok.",
+      "exampleTranslation": "I would like the salads, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq insalati, jekk jogħġbok.",
+        "Translation: I would like the salads, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-pastizzi",
+      "maltese": "pastizzi",
+      "english": "pastizzi",
+      "example": "Nixtieq pastizzi, jekk jogħġbok.",
+      "exampleTranslation": "I would like the pastizzi, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq pastizzi, jekk jogħġbok.",
+        "Translation: I would like the pastizzi, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-pasti",
+      "maltese": "pasti",
+      "english": "pastries",
+      "example": "Nixtieq pasti, jekk jogħġbok.",
+      "exampleTranslation": "I would like the pastries, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 6, pp. 81-100",
+      "notes": [
+        "Example: Nixtieq pasti, jekk jogħġbok.",
+        "Translation: I would like the pastries, please.",
+        "Source: B1, Chapter 6, pp. 81-100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-gelat",
+      "maltese": "ġelat",
+      "english": "ice cream",
+      "example": "Nixtieq ġelat, jekk jogħġbok.",
+      "exampleTranslation": "I would like the ice cream, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 84",
+      "notes": [
+        "Example: Nixtieq ġelat, jekk jogħġbok.",
+        "Translation: I would like the ice cream, please.",
+        "Source: B1, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-ghadma",
+      "maltese": "għadma",
+      "english": "bone",
+      "example": "Nixtieq għadma, jekk jogħġbok.",
+      "exampleTranslation": "I would like the bone, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 95,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 95",
+      "notes": [
+        "Example: Nixtieq għadma, jekk jogħġbok.",
+        "Translation: I would like the bone, please.",
+        "Source: B1, Chapter 6, p. 95"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-hut",
+      "maltese": "ħut",
+      "english": "fish",
+      "example": "Nixtieq ħut, jekk jogħġbok.",
+      "exampleTranslation": "I would like the fish, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 82,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 82",
+      "notes": [
+        "Example: Nixtieq ħut, jekk jogħġbok.",
+        "Translation: I would like the fish, please.",
+        "Source: B1, Chapter 6, p. 82"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-food-cikkulata",
+      "maltese": "ċikkulata",
+      "english": "chocolate",
+      "example": "Nixtieq ċikkulata, jekk jogħġbok.",
+      "exampleTranslation": "I would like the chocolate, please.",
+      "examplePattern": "food-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 6,
+        "page": 97,
+        "pageRange": [
+          81,
+          100
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 6, p. 97",
+      "notes": [
+        "Example: Nixtieq ċikkulata, jekk jogħġbok.",
+        "Translation: I would like the chocolate, please.",
+        "Source: B1, Chapter 6, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-diagnostic",
+      "kind": "diagnostic",
+      "title": "L-Ikel Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-food-te-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-te"
+          ],
+          "prompt": "What is the lesson meaning of “te”?",
+          "choices": [
+            "tea",
+            "spaghetti",
+            "pizza"
+          ],
+          "answer": "tea",
+          "explanation": "te means “tea” in this chapter.",
+          "reviewCard": {
+            "maltese": "te",
+            "english": "tea"
+          }
+        },
+        {
+          "id": "b1-food-ilma-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ilma"
+          ],
+          "prompt": "True or false: “ilma” means “pizza” in this chapter.",
+          "answer": false,
+          "explanation": "ilma means “water”.",
+          "reviewCard": {
+            "maltese": "ilma",
+            "english": "water"
+          }
+        },
+        {
+          "id": "b1-food-zejt-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-zejt"
+          ],
+          "prompt": "What is the lesson meaning of “żejt”?",
+          "choices": [
+            "couscous",
+            "oil",
+            "coffee"
+          ],
+          "answer": "oil",
+          "explanation": "żejt means “oil” in this chapter.",
+          "reviewCard": {
+            "maltese": "żejt",
+            "english": "oil"
+          }
+        },
+        {
+          "id": "b1-food-dulliegha-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-dulliegha"
+          ],
+          "prompt": "True or false: “dulliegħa” means “couscous” in this chapter.",
+          "answer": false,
+          "explanation": "dulliegħa means “watermelon -> watermelons”.",
+          "reviewCard": {
+            "maltese": "dulliegħa",
+            "english": "watermelon -> watermelons"
+          }
+        },
+        {
+          "id": "b1-food-tina-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tina"
+          ],
+          "prompt": "What is the lesson meaning of “tina”?",
+          "choices": [
+            "water",
+            "rice",
+            "figs"
+          ],
+          "answer": "figs",
+          "explanation": "tina means “figs” in this chapter.",
+          "reviewCard": {
+            "maltese": "tina",
+            "english": "figs"
+          }
+        },
+        {
+          "id": "b1-food-lumija-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-lumija"
+          ],
+          "prompt": "True or false: “lumija” means “rice” in this chapter.",
+          "answer": false,
+          "explanation": "lumija means “lemon -> lemons”.",
+          "reviewCard": {
+            "maltese": "lumija",
+            "english": "lemon -> lemons"
+          }
+        },
+        {
+          "id": "b1-food-laringa-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-laringa"
+          ],
+          "prompt": "What is the lesson meaning of “larinġa”?",
+          "choices": [
+            "orange -> oranges",
+            "paella",
+            "lemonade"
+          ],
+          "answer": "orange -> oranges",
+          "explanation": "larinġa means “orange -> oranges” in this chapter.",
+          "reviewCard": {
+            "maltese": "larinġa",
+            "english": "orange -> oranges"
+          }
+        },
+        {
+          "id": "b1-food-tuffieh-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tuffieh"
+          ],
+          "prompt": "True or false: “tuffieħ” means “lemonade” in this chapter.",
+          "answer": false,
+          "explanation": "tuffieħ means “apples”.",
+          "reviewCard": {
+            "maltese": "tuffieħ",
+            "english": "apples"
+          }
+        },
+        {
+          "id": "b1-food-pastizzi-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-pastizzi"
+          ],
+          "prompt": "What is the lesson meaning of “pastizzi”?",
+          "choices": [
+            "oil",
+            "pastizzi",
+            "fruit juice"
+          ],
+          "answer": "pastizzi",
+          "explanation": "pastizzi means “pastizzi” in this chapter.",
+          "reviewCard": {
+            "maltese": "pastizzi",
+            "english": "pastizzi"
+          }
+        },
+        {
+          "id": "b1-food-cikkulata-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-cikkulata"
+          ],
+          "prompt": "True or false: “ċikkulata” means “oil” in this chapter.",
+          "answer": false,
+          "explanation": "ċikkulata means “chocolate”.",
+          "reviewCard": {
+            "maltese": "ċikkulata",
+            "english": "chocolate"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 1",
+      "items": [
+        {
+          "id": "b1-food-te-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-te"
+          ],
+          "prompt": "What is the lesson meaning of “te”?",
+          "choices": [
+            "tea",
+            "spaghetti",
+            "pizza"
+          ],
+          "answer": "tea",
+          "explanation": "te means “tea” in this chapter.",
+          "reviewCard": {
+            "maltese": "te",
+            "english": "tea"
+          }
+        },
+        {
+          "id": "b1-food-te-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-te"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the tea, please.)",
+          "answer": "te",
+          "explanation": "The complete sentence is “Nixtieq te, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "te",
+            "english": "tea",
+            "example": "Nixtieq te, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "te"
+          ]
+        },
+        {
+          "id": "b1-food-spagetti-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-spagetti"
+          ],
+          "prompt": "True or false: “spagetti” means “pizza” in this chapter.",
+          "answer": false,
+          "explanation": "spagetti means “spaghetti”.",
+          "reviewCard": {
+            "maltese": "spagetti",
+            "english": "spaghetti"
+          }
+        },
+        {
+          "id": "b1-food-spagetti-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-spagetti"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the spaghetti, please.)",
+          "answer": "spagetti",
+          "explanation": "The complete sentence is “Nixtieq spagetti, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "spagetti",
+            "english": "spaghetti",
+            "example": "Nixtieq spagetti, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "spagetti"
+          ]
+        },
+        {
+          "id": "b1-food-pizza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-pizza"
+          ],
+          "prompt": "What is the lesson meaning of “pizza”?",
+          "choices": [
+            "couscous",
+            "pizza",
+            "coffee"
+          ],
+          "answer": "pizza",
+          "explanation": "pizza means “pizza” in this chapter.",
+          "reviewCard": {
+            "maltese": "pizza",
+            "english": "pizza"
+          }
+        },
+        {
+          "id": "b1-food-pizza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-pizza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the pizza, please.)",
+          "answer": "pizza",
+          "explanation": "The complete sentence is “Nixtieq pizza, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "pizza",
+            "english": "pizza",
+            "example": "Nixtieq pizza, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pizza"
+          ]
+        },
+        {
+          "id": "b1-food-kafe-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-kafe"
+          ],
+          "prompt": "True or false: “kafè” means “couscous” in this chapter.",
+          "answer": false,
+          "explanation": "kafè means “coffee”.",
+          "reviewCard": {
+            "maltese": "kafè",
+            "english": "coffee"
+          }
+        },
+        {
+          "id": "b1-food-kafe-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-kafe"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the coffee, please.)",
+          "answer": "kafè",
+          "explanation": "The complete sentence is “Nixtieq kafè, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "kafè",
+            "english": "coffee",
+            "example": "Nixtieq kafè, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kafè"
+          ]
+        },
+        {
+          "id": "b1-food-kuskus-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-kuskus"
+          ],
+          "prompt": "What is the lesson meaning of “kuskus”?",
+          "choices": [
+            "water",
+            "rice",
+            "couscous"
+          ],
+          "answer": "couscous",
+          "explanation": "kuskus means “couscous” in this chapter.",
+          "reviewCard": {
+            "maltese": "kuskus",
+            "english": "couscous"
+          }
+        },
+        {
+          "id": "b1-food-kuskus-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-kuskus"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the couscous, please.)",
+          "answer": "kuskus",
+          "explanation": "The complete sentence is “Nixtieq kuskus, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "kuskus",
+            "english": "couscous",
+            "example": "Nixtieq kuskus, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kuskus"
+          ]
+        },
+        {
+          "id": "b1-food-ilma-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ilma"
+          ],
+          "prompt": "True or false: “ilma” means “rice” in this chapter.",
+          "answer": false,
+          "explanation": "ilma means “water”.",
+          "reviewCard": {
+            "maltese": "ilma",
+            "english": "water"
+          }
+        },
+        {
+          "id": "b1-food-ilma-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-ilma"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the water, please.)",
+          "answer": "ilma",
+          "explanation": "The complete sentence is “Nixtieq ilma, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ilma",
+            "english": "water",
+            "example": "Nixtieq ilma, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ilma"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-te",
+            "b1-food-spagetti",
+            "b1-food-pizza",
+            "b1-food-kafe"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "te",
+              "right": "tea"
+            },
+            {
+              "left": "spagetti",
+              "right": "spaghetti"
+            },
+            {
+              "left": "pizza",
+              "right": "pizza"
+            },
+            {
+              "left": "kafè",
+              "right": "coffee"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "te",
+            "english": "tea"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 2",
+      "items": [
+        {
+          "id": "b1-food-ross-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ross"
+          ],
+          "prompt": "What is the lesson meaning of “ross”?",
+          "choices": [
+            "rice",
+            "paella",
+            "lemonade"
+          ],
+          "answer": "rice",
+          "explanation": "ross means “rice” in this chapter.",
+          "reviewCard": {
+            "maltese": "ross",
+            "english": "rice"
+          }
+        },
+        {
+          "id": "b1-food-ross-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-ross"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the rice, please.)",
+          "answer": "ross",
+          "explanation": "The complete sentence is “Nixtieq ross, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ross",
+            "english": "rice",
+            "example": "Nixtieq ross, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ross"
+          ]
+        },
+        {
+          "id": "b1-food-paella-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-paella"
+          ],
+          "prompt": "True or false: “paella” means “lemonade” in this chapter.",
+          "answer": false,
+          "explanation": "paella means “paella”.",
+          "reviewCard": {
+            "maltese": "paella",
+            "english": "paella"
+          }
+        },
+        {
+          "id": "b1-food-paella-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-paella"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the paella, please.)",
+          "answer": "paella",
+          "explanation": "The complete sentence is “Nixtieq paella, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "paella",
+            "english": "paella",
+            "example": "Nixtieq paella, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "paella"
+          ]
+        },
+        {
+          "id": "b1-food-luminata-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-luminata"
+          ],
+          "prompt": "What is the lesson meaning of “luminata”?",
+          "choices": [
+            "oil",
+            "lemonade",
+            "fruit juice"
+          ],
+          "answer": "lemonade",
+          "explanation": "luminata means “lemonade” in this chapter.",
+          "reviewCard": {
+            "maltese": "luminata",
+            "english": "lemonade"
+          }
+        },
+        {
+          "id": "b1-food-luminata-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-luminata"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the lemonade, please.)",
+          "answer": "luminata",
+          "explanation": "The complete sentence is “Nixtieq luminata, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "luminata",
+            "english": "lemonade",
+            "example": "Nixtieq luminata, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "luminata"
+          ]
+        },
+        {
+          "id": "b1-food-meraq-tal-frott-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-meraq-tal-frott"
+          ],
+          "prompt": "True or false: “meraq tal-frott” means “oil” in this chapter.",
+          "answer": false,
+          "explanation": "meraq tal-frott means “fruit juice”.",
+          "reviewCard": {
+            "maltese": "meraq tal-frott",
+            "english": "fruit juice"
+          }
+        },
+        {
+          "id": "b1-food-meraq-tal-frott-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-meraq-tal-frott"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the fruit juice, please.)",
+          "answer": "meraq tal-frott",
+          "explanation": "The complete sentence is “Nixtieq meraq tal-frott, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "meraq tal-frott",
+            "english": "fruit juice",
+            "example": "Nixtieq meraq tal-frott, jekk jogħġbok."
+          },
+          "type": "order-words",
+          "tokens": [
+            "meraq",
+            "tal-frott"
+          ]
+        },
+        {
+          "id": "b1-food-zejt-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-zejt"
+          ],
+          "prompt": "What is the lesson meaning of “żejt”?",
+          "choices": [
+            "sweets / dessert",
+            "mandarin -> mandarins",
+            "oil"
+          ],
+          "answer": "oil",
+          "explanation": "żejt means “oil” in this chapter.",
+          "reviewCard": {
+            "maltese": "żejt",
+            "english": "oil"
+          }
+        },
+        {
+          "id": "b1-food-zejt-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-zejt"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the oil, please.)",
+          "answer": "żejt",
+          "explanation": "The complete sentence is “Nixtieq żejt, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "żejt",
+            "english": "oil",
+            "example": "Nixtieq żejt, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żejt"
+          ]
+        },
+        {
+          "id": "b1-food-helu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-helu"
+          ],
+          "prompt": "True or false: “ħelu” means “mandarin -> mandarins” in this chapter.",
+          "answer": false,
+          "explanation": "ħelu means “sweets / dessert”.",
+          "reviewCard": {
+            "maltese": "ħelu",
+            "english": "sweets / dessert"
+          }
+        },
+        {
+          "id": "b1-food-helu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-helu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the sweets, please.)",
+          "answer": "ħelu",
+          "explanation": "The complete sentence is “Nixtieq ħelu, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ħelu",
+            "english": "sweets / dessert",
+            "example": "Nixtieq ħelu, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħelu"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ross",
+            "b1-food-paella",
+            "b1-food-luminata",
+            "b1-food-meraq-tal-frott"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ross",
+              "right": "rice"
+            },
+            {
+              "left": "paella",
+              "right": "paella"
+            },
+            {
+              "left": "luminata",
+              "right": "lemonade"
+            },
+            {
+              "left": "meraq tal-frott",
+              "right": "fruit juice"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ross",
+            "english": "rice"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 3",
+      "items": [
+        {
+          "id": "b1-food-mandolina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-mandolina"
+          ],
+          "prompt": "What is the lesson meaning of “mandolina”?",
+          "choices": [
+            "mandarin -> mandarins",
+            "bunch / cluster",
+            "grapes"
+          ],
+          "answer": "mandarin -> mandarins",
+          "explanation": "mandolina means “mandarin -> mandarins” in this chapter.",
+          "reviewCard": {
+            "maltese": "mandolina",
+            "english": "mandarin -> mandarins"
+          }
+        },
+        {
+          "id": "b1-food-mandolina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-mandolina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the mandarin, please.)",
+          "answer": "mandolina",
+          "explanation": "The complete sentence is “Nixtieq mandolina, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "mandolina",
+            "english": "mandarin -> mandarins",
+            "example": "Nixtieq mandolina, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mandolina"
+          ]
+        },
+        {
+          "id": "b1-food-ghanqud-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ghanqud"
+          ],
+          "prompt": "True or false: “għanqud” means “grapes” in this chapter.",
+          "answer": false,
+          "explanation": "għanqud means “bunch / cluster”.",
+          "reviewCard": {
+            "maltese": "għanqud",
+            "english": "bunch / cluster"
+          }
+        },
+        {
+          "id": "b1-food-ghanqud-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-ghanqud"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the bunch, please.)",
+          "answer": "għanqud",
+          "explanation": "The complete sentence is “Nixtieq għanqud, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "għanqud",
+            "english": "bunch / cluster",
+            "example": "Nixtieq għanqud, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għanqud"
+          ]
+        },
+        {
+          "id": "b1-food-gheneb-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-gheneb"
+          ],
+          "prompt": "What is the lesson meaning of “għeneb”?",
+          "choices": [
+            "small Maltese pear",
+            "grapes",
+            "watermelon -> watermelons"
+          ],
+          "answer": "grapes",
+          "explanation": "għeneb means “grapes” in this chapter.",
+          "reviewCard": {
+            "maltese": "għeneb",
+            "english": "grapes"
+          }
+        },
+        {
+          "id": "b1-food-gheneb-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-gheneb"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the grapes, please.)",
+          "answer": "għeneb",
+          "explanation": "The complete sentence is “Nixtieq għeneb, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "għeneb",
+            "english": "grapes",
+            "example": "Nixtieq għeneb, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għeneb"
+          ]
+        },
+        {
+          "id": "b1-food-dulliegha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-dulliegha"
+          ],
+          "prompt": "True or false: “dulliegħa” means “small Maltese pear” in this chapter.",
+          "answer": false,
+          "explanation": "dulliegħa means “watermelon -> watermelons”.",
+          "reviewCard": {
+            "maltese": "dulliegħa",
+            "english": "watermelon -> watermelons"
+          }
+        },
+        {
+          "id": "b1-food-dulliegha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-dulliegha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the watermelon, please.)",
+          "answer": "dulliegħa",
+          "explanation": "The complete sentence is “Nixtieq dulliegħa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "dulliegħa",
+            "english": "watermelon -> watermelons",
+            "example": "Nixtieq dulliegħa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dulliegħa"
+          ]
+        },
+        {
+          "id": "b1-food-bambinella-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-bambinella"
+          ],
+          "prompt": "What is the lesson meaning of “bambinella”?",
+          "choices": [
+            "prickly pear",
+            "melon -> melons",
+            "small Maltese pear"
+          ],
+          "answer": "small Maltese pear",
+          "explanation": "bambinella means “small Maltese pear” in this chapter.",
+          "reviewCard": {
+            "maltese": "bambinella",
+            "english": "small Maltese pear"
+          }
+        },
+        {
+          "id": "b1-food-bambinella-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-bambinella"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the small Maltese pear, please.)",
+          "answer": "bambinella",
+          "explanation": "The complete sentence is “Nixtieq bambinella, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "bambinella",
+            "english": "small Maltese pear",
+            "example": "Nixtieq bambinella, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bambinella"
+          ]
+        },
+        {
+          "id": "b1-food-bajtra-tax-xewk-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-bajtra-tax-xewk"
+          ],
+          "prompt": "True or false: “bajtra tax-xewk” means “melon -> melons” in this chapter.",
+          "answer": false,
+          "explanation": "bajtra tax-xewk means “prickly pear”.",
+          "reviewCard": {
+            "maltese": "bajtra tax-xewk",
+            "english": "prickly pear"
+          }
+        },
+        {
+          "id": "b1-food-bajtra-tax-xewk-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-bajtra-tax-xewk"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the prickly pear, please.)",
+          "answer": "bajtra tax-xewk",
+          "explanation": "The complete sentence is “Nixtieq bajtra tax-xewk, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "bajtra tax-xewk",
+            "english": "prickly pear",
+            "example": "Nixtieq bajtra tax-xewk, jekk jogħġbok."
+          },
+          "type": "order-words",
+          "tokens": [
+            "bajtra",
+            "tax-xewk"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-mandolina",
+            "b1-food-ghanqud",
+            "b1-food-gheneb",
+            "b1-food-dulliegha"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "mandolina",
+              "right": "mandarin -> mandarins"
+            },
+            {
+              "left": "għanqud",
+              "right": "bunch / cluster"
+            },
+            {
+              "left": "għeneb",
+              "right": "grapes"
+            },
+            {
+              "left": "dulliegħa",
+              "right": "watermelon -> watermelons"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "mandolina",
+            "english": "mandarin -> mandarins"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 4",
+      "items": [
+        {
+          "id": "b1-food-bettieha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-bettieha"
+          ],
+          "prompt": "What is the lesson meaning of “bettieħa”?",
+          "choices": [
+            "melon -> melons",
+            "cherry",
+            "figs"
+          ],
+          "answer": "melon -> melons",
+          "explanation": "bettieħa means “melon -> melons” in this chapter.",
+          "reviewCard": {
+            "maltese": "bettieħa",
+            "english": "melon -> melons"
+          }
+        },
+        {
+          "id": "b1-food-bettieha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-bettieha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the melon, please.)",
+          "answer": "bettieħa",
+          "explanation": "The complete sentence is “Nixtieq bettieħa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "bettieħa",
+            "english": "melon -> melons",
+            "example": "Nixtieq bettieħa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bettieħa"
+          ]
+        },
+        {
+          "id": "b1-food-cirasa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-cirasa"
+          ],
+          "prompt": "True or false: “ċirasa” means “figs” in this chapter.",
+          "answer": false,
+          "explanation": "ċirasa means “cherry”.",
+          "reviewCard": {
+            "maltese": "ċirasa",
+            "english": "cherry"
+          }
+        },
+        {
+          "id": "b1-food-cirasa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-cirasa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the cherry, please.)",
+          "answer": "ċirasa",
+          "explanation": "The complete sentence is “Nixtieq ċirasa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ċirasa",
+            "english": "cherry",
+            "example": "Nixtieq ċirasa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċirasa"
+          ]
+        },
+        {
+          "id": "b1-food-tina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tina"
+          ],
+          "prompt": "What is the lesson meaning of “tina”?",
+          "choices": [
+            "kiwi",
+            "figs",
+            "apple"
+          ],
+          "answer": "figs",
+          "explanation": "tina means “figs” in this chapter.",
+          "reviewCard": {
+            "maltese": "tina",
+            "english": "figs"
+          }
+        },
+        {
+          "id": "b1-food-tina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-tina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the figs, please.)",
+          "answer": "tina",
+          "explanation": "The complete sentence is “Nixtieq tina, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "tina",
+            "english": "figs",
+            "example": "Nixtieq tina, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tina"
+          ]
+        },
+        {
+          "id": "b1-food-tuffieha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tuffieha"
+          ],
+          "prompt": "True or false: “tuffieħa” means “kiwi” in this chapter.",
+          "answer": false,
+          "explanation": "tuffieħa means “apple”.",
+          "reviewCard": {
+            "maltese": "tuffieħa",
+            "english": "apple"
+          }
+        },
+        {
+          "id": "b1-food-tuffieha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-tuffieha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the apple, please.)",
+          "answer": "tuffieħa",
+          "explanation": "The complete sentence is “Nixtieq tuffieħa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "tuffieħa",
+            "english": "apple",
+            "example": "Nixtieq tuffieħa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tuffieħa"
+          ]
+        },
+        {
+          "id": "b1-food-kiwi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-kiwi"
+          ],
+          "prompt": "What is the lesson meaning of “kiwi”?",
+          "choices": [
+            "banana",
+            "lemons",
+            "kiwi"
+          ],
+          "answer": "kiwi",
+          "explanation": "kiwi means “kiwi” in this chapter.",
+          "reviewCard": {
+            "maltese": "kiwi",
+            "english": "kiwi"
+          }
+        },
+        {
+          "id": "b1-food-kiwi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-kiwi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the kiwi, please.)",
+          "answer": "kiwi",
+          "explanation": "The complete sentence is “Nixtieq kiwi, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "kiwi",
+            "english": "kiwi",
+            "example": "Nixtieq kiwi, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kiwi"
+          ]
+        },
+        {
+          "id": "b1-food-banana-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-banana"
+          ],
+          "prompt": "True or false: “banana” means “lemons” in this chapter.",
+          "answer": false,
+          "explanation": "banana means “banana”.",
+          "reviewCard": {
+            "maltese": "banana",
+            "english": "banana"
+          }
+        },
+        {
+          "id": "b1-food-banana-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-banana"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the banana, please.)",
+          "answer": "banana",
+          "explanation": "The complete sentence is “Nixtieq banana, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "banana",
+            "english": "banana",
+            "example": "Nixtieq banana, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "banana"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-bettieha",
+            "b1-food-cirasa",
+            "b1-food-tina",
+            "b1-food-tuffieha"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "bettieħa",
+              "right": "melon -> melons"
+            },
+            {
+              "left": "ċirasa",
+              "right": "cherry"
+            },
+            {
+              "left": "tina",
+              "right": "figs"
+            },
+            {
+              "left": "tuffieħa",
+              "right": "apple"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "bettieħa",
+            "english": "melon -> melons"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 5",
+      "items": [
+        {
+          "id": "b1-food-lumi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-lumi"
+          ],
+          "prompt": "What is the lesson meaning of “lumi”?",
+          "choices": [
+            "lemons",
+            "lemon -> lemons",
+            "meat"
+          ],
+          "answer": "lemons",
+          "explanation": "lumi means “lemons” in this chapter.",
+          "reviewCard": {
+            "maltese": "lumi",
+            "english": "lemons"
+          }
+        },
+        {
+          "id": "b1-food-lumi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-lumi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the lemons, please.)",
+          "answer": "lumi",
+          "explanation": "The complete sentence is “Nixtieq lumi, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "lumi",
+            "english": "lemons",
+            "example": "Nixtieq lumi, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lumi"
+          ]
+        },
+        {
+          "id": "b1-food-lumija-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-lumija"
+          ],
+          "prompt": "True or false: “lumija” means “meat” in this chapter.",
+          "answer": false,
+          "explanation": "lumija means “lemon -> lemons”.",
+          "reviewCard": {
+            "maltese": "lumija",
+            "english": "lemon -> lemons"
+          }
+        },
+        {
+          "id": "b1-food-lumija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-lumija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the lemon, please.)",
+          "answer": "lumija",
+          "explanation": "The complete sentence is “Nixtieq lumija, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "lumija",
+            "english": "lemon -> lemons",
+            "example": "Nixtieq lumija, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lumija"
+          ]
+        },
+        {
+          "id": "b1-food-laham-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-laham"
+          ],
+          "prompt": "What is the lesson meaning of “laħam”?",
+          "choices": [
+            "pear -> pears",
+            "meat",
+            "pears"
+          ],
+          "answer": "meat",
+          "explanation": "laħam means “meat” in this chapter.",
+          "reviewCard": {
+            "maltese": "laħam",
+            "english": "meat"
+          }
+        },
+        {
+          "id": "b1-food-laham-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-laham"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the meat, please.)",
+          "answer": "laħam",
+          "explanation": "The complete sentence is “Nixtieq laħam, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "laħam",
+            "english": "meat",
+            "example": "Nixtieq laħam, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "laħam"
+          ]
+        },
+        {
+          "id": "b1-food-langas-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-langas"
+          ],
+          "prompt": "True or false: “lanġas” means “pear -> pears” in this chapter.",
+          "answer": false,
+          "explanation": "lanġas means “pears”.",
+          "reviewCard": {
+            "maltese": "lanġas",
+            "english": "pears"
+          }
+        },
+        {
+          "id": "b1-food-langas-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-langas"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the pears, please.)",
+          "answer": "lanġas",
+          "explanation": "The complete sentence is “Nixtieq lanġas, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "lanġas",
+            "english": "pears",
+            "example": "Nixtieq lanġas, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lanġas"
+          ]
+        },
+        {
+          "id": "b1-food-langasa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-langasa"
+          ],
+          "prompt": "What is the lesson meaning of “lanġasa”?",
+          "choices": [
+            "oranges",
+            "orange -> oranges",
+            "pear -> pears"
+          ],
+          "answer": "pear -> pears",
+          "explanation": "lanġasa means “pear -> pears” in this chapter.",
+          "reviewCard": {
+            "maltese": "lanġasa",
+            "english": "pear -> pears"
+          }
+        },
+        {
+          "id": "b1-food-langasa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-langasa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the pear, please.)",
+          "answer": "lanġasa",
+          "explanation": "The complete sentence is “Nixtieq lanġasa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "lanġasa",
+            "english": "pear -> pears",
+            "example": "Nixtieq lanġasa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lanġasa"
+          ]
+        },
+        {
+          "id": "b1-food-laring-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-laring"
+          ],
+          "prompt": "True or false: “larinġ” means “orange -> oranges” in this chapter.",
+          "answer": false,
+          "explanation": "larinġ means “oranges”.",
+          "reviewCard": {
+            "maltese": "larinġ",
+            "english": "oranges"
+          }
+        },
+        {
+          "id": "b1-food-laring-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-laring"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the oranges, please.)",
+          "answer": "larinġ",
+          "explanation": "The complete sentence is “Nixtieq larinġ, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "larinġ",
+            "english": "oranges",
+            "example": "Nixtieq larinġ, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "larinġ"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-lumi",
+            "b1-food-lumija",
+            "b1-food-laham",
+            "b1-food-langas"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "lumi",
+              "right": "lemons"
+            },
+            {
+              "left": "lumija",
+              "right": "lemon -> lemons"
+            },
+            {
+              "left": "laħam",
+              "right": "meat"
+            },
+            {
+              "left": "lanġas",
+              "right": "pears"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "lumi",
+            "english": "lemons"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 6",
+      "items": [
+        {
+          "id": "b1-food-laringa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-laringa"
+          ],
+          "prompt": "What is the lesson meaning of “larinġa”?",
+          "choices": [
+            "orange -> oranges",
+            "strawberry -> strawberries",
+            "watermelons"
+          ],
+          "answer": "orange -> oranges",
+          "explanation": "larinġa means “orange -> oranges” in this chapter.",
+          "reviewCard": {
+            "maltese": "larinġa",
+            "english": "orange -> oranges"
+          }
+        },
+        {
+          "id": "b1-food-laringa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-laringa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the orange, please.)",
+          "answer": "larinġa",
+          "explanation": "The complete sentence is “Nixtieq larinġa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "larinġa",
+            "english": "orange -> oranges",
+            "example": "Nixtieq larinġa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "larinġa"
+          ]
+        },
+        {
+          "id": "b1-food-frawli-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-frawli"
+          ],
+          "prompt": "True or false: “frawli” means “watermelons” in this chapter.",
+          "answer": false,
+          "explanation": "frawli means “strawberry -> strawberries”.",
+          "reviewCard": {
+            "maltese": "frawli",
+            "english": "strawberry -> strawberries"
+          }
+        },
+        {
+          "id": "b1-food-frawli-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-frawli"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the strawberry, please.)",
+          "answer": "frawli",
+          "explanation": "The complete sentence is “Nixtieq frawli, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "frawli",
+            "english": "strawberry -> strawberries",
+            "example": "Nixtieq frawli, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "frawli"
+          ]
+        },
+        {
+          "id": "b1-food-frawla-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-frawla"
+          ],
+          "prompt": "What is the lesson meaning of “frawla”?",
+          "choices": [
+            "cake",
+            "strawberry -> strawberries",
+            "apples"
+          ],
+          "answer": "strawberry -> strawberries",
+          "explanation": "frawla means “strawberry -> strawberries” in this chapter.",
+          "reviewCard": {
+            "maltese": "frawla",
+            "english": "strawberry -> strawberries"
+          }
+        },
+        {
+          "id": "b1-food-frawla-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-frawla"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the strawberry, please.)",
+          "answer": "frawla",
+          "explanation": "The complete sentence is “Nixtieq frawla, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "frawla",
+            "english": "strawberry -> strawberries",
+            "example": "Nixtieq frawla, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "frawla"
+          ]
+        },
+        {
+          "id": "b1-food-dulliegh-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-dulliegh"
+          ],
+          "prompt": "True or false: “dulliegħ” means “cake” in this chapter.",
+          "answer": false,
+          "explanation": "dulliegħ means “watermelons”.",
+          "reviewCard": {
+            "maltese": "dulliegħ",
+            "english": "watermelons"
+          }
+        },
+        {
+          "id": "b1-food-dulliegh-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-dulliegh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the watermelons, please.)",
+          "answer": "dulliegħ",
+          "explanation": "The complete sentence is “Nixtieq dulliegħ, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "dulliegħ",
+            "english": "watermelons",
+            "example": "Nixtieq dulliegħ, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dulliegħ"
+          ]
+        },
+        {
+          "id": "b1-food-bettieh-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-bettieh"
+          ],
+          "prompt": "What is the lesson meaning of “bettieħ”?",
+          "choices": [
+            "cakes",
+            "salad",
+            "melon -> melons"
+          ],
+          "answer": "melon -> melons",
+          "explanation": "bettieħ means “melon -> melons” in this chapter.",
+          "reviewCard": {
+            "maltese": "bettieħ",
+            "english": "melon -> melons"
+          }
+        },
+        {
+          "id": "b1-food-bettieh-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-bettieh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the melon, please.)",
+          "answer": "bettieħ",
+          "explanation": "The complete sentence is “Nixtieq bettieħ, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "bettieħ",
+            "english": "melon -> melons",
+            "example": "Nixtieq bettieħ, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bettieħ"
+          ]
+        },
+        {
+          "id": "b1-food-tuffieh-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-tuffieh"
+          ],
+          "prompt": "True or false: “tuffieħ” means “salad” in this chapter.",
+          "answer": false,
+          "explanation": "tuffieħ means “apples”.",
+          "reviewCard": {
+            "maltese": "tuffieħ",
+            "english": "apples"
+          }
+        },
+        {
+          "id": "b1-food-tuffieh-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-tuffieh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the apples, please.)",
+          "answer": "tuffieħ",
+          "explanation": "The complete sentence is “Nixtieq tuffieħ, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "tuffieħ",
+            "english": "apples",
+            "example": "Nixtieq tuffieħ, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tuffieħ"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-6-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-laringa",
+            "b1-food-frawli",
+            "b1-food-dulliegh",
+            "b1-food-bettieh"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "larinġa",
+              "right": "orange -> oranges"
+            },
+            {
+              "left": "frawli",
+              "right": "strawberry -> strawberries"
+            },
+            {
+              "left": "dulliegħ",
+              "right": "watermelons"
+            },
+            {
+              "left": "bettieħ",
+              "right": "melon -> melons"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "larinġa",
+            "english": "orange -> oranges"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 6,
+      "title": "L-Ikel Checkpoint 7",
+      "items": [
+        {
+          "id": "b1-food-kejk-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-kejk"
+          ],
+          "prompt": "What is the lesson meaning of “kejk”?",
+          "choices": [
+            "cake",
+            "salads",
+            "pastizzi"
+          ],
+          "answer": "cake",
+          "explanation": "kejk means “cake” in this chapter.",
+          "reviewCard": {
+            "maltese": "kejk",
+            "english": "cake"
+          }
+        },
+        {
+          "id": "b1-food-kejk-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-kejk"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the cake, please.)",
+          "answer": "kejk",
+          "explanation": "The complete sentence is “Nixtieq kejk, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "kejk",
+            "english": "cake",
+            "example": "Nixtieq kejk, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kejk"
+          ]
+        },
+        {
+          "id": "b1-food-kejkijiet-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-kejkijiet"
+          ],
+          "prompt": "True or false: “kejkijiet” means “pastizzi” in this chapter.",
+          "answer": false,
+          "explanation": "kejkijiet means “cakes”.",
+          "reviewCard": {
+            "maltese": "kejkijiet",
+            "english": "cakes"
+          }
+        },
+        {
+          "id": "b1-food-kejkijiet-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-kejkijiet"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the cakes, please.)",
+          "answer": "kejkijiet",
+          "explanation": "The complete sentence is “Nixtieq kejkijiet, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "kejkijiet",
+            "english": "cakes",
+            "example": "Nixtieq kejkijiet, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kejkijiet"
+          ]
+        },
+        {
+          "id": "b1-food-insalata-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-insalata"
+          ],
+          "prompt": "What is the lesson meaning of “insalata”?",
+          "choices": [
+            "ice cream",
+            "salad",
+            "pastries"
+          ],
+          "answer": "salad",
+          "explanation": "insalata means “salad” in this chapter.",
+          "reviewCard": {
+            "maltese": "insalata",
+            "english": "salad"
+          }
+        },
+        {
+          "id": "b1-food-insalata-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-insalata"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the salad, please.)",
+          "answer": "insalata",
+          "explanation": "The complete sentence is “Nixtieq insalata, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "insalata",
+            "english": "salad",
+            "example": "Nixtieq insalata, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "insalata"
+          ]
+        },
+        {
+          "id": "b1-food-insalati-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-insalati"
+          ],
+          "prompt": "True or false: “insalati” means “ice cream” in this chapter.",
+          "answer": false,
+          "explanation": "insalati means “salads”.",
+          "reviewCard": {
+            "maltese": "insalati",
+            "english": "salads"
+          }
+        },
+        {
+          "id": "b1-food-insalati-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-insalati"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the salads, please.)",
+          "answer": "insalati",
+          "explanation": "The complete sentence is “Nixtieq insalati, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "insalati",
+            "english": "salads",
+            "example": "Nixtieq insalati, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "insalati"
+          ]
+        },
+        {
+          "id": "b1-food-pastizzi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-pastizzi"
+          ],
+          "prompt": "What is the lesson meaning of “pastizzi”?",
+          "choices": [
+            "bone",
+            "fish",
+            "pastizzi"
+          ],
+          "answer": "pastizzi",
+          "explanation": "pastizzi means “pastizzi” in this chapter.",
+          "reviewCard": {
+            "maltese": "pastizzi",
+            "english": "pastizzi"
+          }
+        },
+        {
+          "id": "b1-food-pastizzi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-pastizzi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the pastizzi, please.)",
+          "answer": "pastizzi",
+          "explanation": "The complete sentence is “Nixtieq pastizzi, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "pastizzi",
+            "english": "pastizzi",
+            "example": "Nixtieq pastizzi, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pastizzi"
+          ]
+        },
+        {
+          "id": "b1-food-pasti-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-pasti"
+          ],
+          "prompt": "True or false: “pasti” means “fish” in this chapter.",
+          "answer": false,
+          "explanation": "pasti means “pastries”.",
+          "reviewCard": {
+            "maltese": "pasti",
+            "english": "pastries"
+          }
+        },
+        {
+          "id": "b1-food-pasti-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-pasti"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the pastries, please.)",
+          "answer": "pasti",
+          "explanation": "The complete sentence is “Nixtieq pasti, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "pasti",
+            "english": "pastries",
+            "example": "Nixtieq pasti, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pasti"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-7-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-kejk",
+            "b1-food-kejkijiet",
+            "b1-food-insalata",
+            "b1-food-insalati"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kejk",
+              "right": "cake"
+            },
+            {
+              "left": "kejkijiet",
+              "right": "cakes"
+            },
+            {
+              "left": "insalata",
+              "right": "salad"
+            },
+            {
+              "left": "insalati",
+              "right": "salads"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kejk",
+            "english": "cake"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-food",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-food-checkpoint-8",
+      "kind": "checkpoint",
+      "sequence": 8,
+      "targetCount": 4,
+      "title": "L-Ikel Checkpoint 8",
+      "items": [
+        {
+          "id": "b1-food-gelat-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-gelat"
+          ],
+          "prompt": "What is the lesson meaning of “ġelat”?",
+          "choices": [
+            "ice cream",
+            "chocolate",
+            "tea"
+          ],
+          "answer": "ice cream",
+          "explanation": "ġelat means “ice cream” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġelat",
+            "english": "ice cream"
+          }
+        },
+        {
+          "id": "b1-food-gelat-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-gelat"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the ice cream, please.)",
+          "answer": "ġelat",
+          "explanation": "The complete sentence is “Nixtieq ġelat, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ġelat",
+            "english": "ice cream",
+            "example": "Nixtieq ġelat, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġelat"
+          ]
+        },
+        {
+          "id": "b1-food-ghadma-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-ghadma"
+          ],
+          "prompt": "True or false: “għadma” means “tea” in this chapter.",
+          "answer": false,
+          "explanation": "għadma means “bone”.",
+          "reviewCard": {
+            "maltese": "għadma",
+            "english": "bone"
+          }
+        },
+        {
+          "id": "b1-food-ghadma-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-ghadma"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the bone, please.)",
+          "answer": "għadma",
+          "explanation": "The complete sentence is “Nixtieq għadma, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "għadma",
+            "english": "bone",
+            "example": "Nixtieq għadma, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għadma"
+          ]
+        },
+        {
+          "id": "b1-food-hut-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-hut"
+          ],
+          "prompt": "What is the lesson meaning of “ħut”?",
+          "choices": [
+            "pizza",
+            "fish",
+            "spaghetti"
+          ],
+          "answer": "fish",
+          "explanation": "ħut means “fish” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħut",
+            "english": "fish"
+          }
+        },
+        {
+          "id": "b1-food-hut-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-hut"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the fish, please.)",
+          "answer": "ħut",
+          "explanation": "The complete sentence is “Nixtieq ħut, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ħut",
+            "english": "fish",
+            "example": "Nixtieq ħut, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħut"
+          ]
+        },
+        {
+          "id": "b1-food-cikkulata-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-cikkulata"
+          ],
+          "prompt": "True or false: “ċikkulata” means “pizza” in this chapter.",
+          "answer": false,
+          "explanation": "ċikkulata means “chocolate”.",
+          "reviewCard": {
+            "maltese": "ċikkulata",
+            "english": "chocolate"
+          }
+        },
+        {
+          "id": "b1-food-cikkulata-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-cikkulata"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the chocolate, please.)",
+          "answer": "ċikkulata",
+          "explanation": "The complete sentence is “Nixtieq ċikkulata, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "ċikkulata",
+            "english": "chocolate",
+            "example": "Nixtieq ċikkulata, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċikkulata"
+          ]
+        },
+        {
+          "id": "b1-food-checkpoint-8-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-gelat",
+            "b1-food-ghadma",
+            "b1-food-hut",
+            "b1-food-cikkulata"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ġelat",
+              "right": "ice cream"
+            },
+            {
+              "left": "għadma",
+              "right": "bone"
+            },
+            {
+              "left": "ħut",
+              "right": "fish"
+            },
+            {
+              "left": "ċikkulata",
+              "right": "chocolate"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ġelat",
+            "english": "ice cream"
+          }
+        }
+      ]
+    }
+  ]
+}

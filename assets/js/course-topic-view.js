@@ -1,5 +1,5 @@
 (() => {
-  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
+  const CHAPTER_PAYLOAD_ROOT = "./assets/data/course/chapters";
   const params = new URLSearchParams(window.location.search);
   const chapterId = params.get("chapter");
   if (!chapterId) return;
@@ -10,9 +10,11 @@
 
   const loadBindings = async () => {
     if (bindings) return bindings;
-    const response = await fetch(BINDINGS_URL);
-    if (!response.ok) throw new Error(`Could not load course bindings (${response.status})`);
-    bindings = await response.json();
+    if (!/^[a-z0-9-]+$/.test(chapterId)) throw new Error(`Invalid course chapter: ${chapterId}`);
+    const response = await fetch(`${CHAPTER_PAYLOAD_ROOT}/${chapterId}.json`);
+    if (!response.ok) throw new Error(`Could not load course chapter payload (${response.status})`);
+    const payload = await response.json();
+    bindings = { targets: payload.targets || [] };
     return bindings;
   };
 

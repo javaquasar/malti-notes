@@ -1,0 +1,4780 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-recycling",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 7,
+    "title": "Nirriċiklaw l-Iskart"
+  },
+  "inventoryChapter": {
+    "id": "b2.7",
+    "courseChapterId": "b2-recycling",
+    "book": "B2",
+    "number": 7,
+    "title": "Nirriċiklaw l-Iskart",
+    "targets": [
+      "plastik",
+      "karta",
+      "riċiklar",
+      "skart imħallat",
+      "skart riċiklabbli",
+      "nadif",
+      "nadifa",
+      "nodfa",
+      "maħmuġ",
+      "maħmuġa",
+      "maħmuġin",
+      "mimli",
+      "mimlija",
+      "mimlijin",
+      "mormi",
+      "mormija",
+      "mormijin",
+      "jinten",
+      "tinten",
+      "jintnu",
+      "miftuħ",
+      "miftuħa",
+      "miftuħin",
+      "mqatta'",
+      "mqattgħa",
+      "mqattgħin",
+      "skart organiku",
+      "borża",
+      "kontenitur",
+      "armi",
+      "armu",
+      "għażel",
+      "agħżel",
+      "agħżlu",
+      "waddab",
+      "waddbu",
+      "issepara",
+      "isseparaw",
+      "ħareġ",
+      "oħroġ",
+      "oħorġu"
+    ],
+    "baselineMissing": [
+      "riċiklar",
+      "skart imħallat",
+      "skart riċiklabbli",
+      "maħmuġin",
+      "mimlijin",
+      "mormi",
+      "mormija",
+      "mormijin",
+      "jinten",
+      "tinten",
+      "jintnu",
+      "miftuħ",
+      "mqatta'",
+      "mqattgħa",
+      "mqattgħin",
+      "armi",
+      "armu",
+      "waddab",
+      "waddbu",
+      "issepara",
+      "isseparaw"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-recycling",
+    "book": "B2",
+    "chapterNumber": 7,
+    "chapterTitle": "Nirriċiklaw l-Iskart",
+    "pageStart": 97,
+    "pageEnd": 108
+  },
+  "targets": [
+    {
+      "id": "b2-recycling-plastik",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "plastik",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "plastik"
+      },
+      "assessmentIds": [
+        "recycling-materials",
+        "recycling-plastic-production",
+        "b2-recycling-plastik-diagnostic-recognition",
+        "b2-recycling-plastik-recognition",
+        "b2-recycling-plastik-production",
+        "b2-recycling-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-karta",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "karta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "karta"
+      },
+      "assessmentIds": [
+        "recycling-materials",
+        "b2-recycling-karta-recognition-true-false",
+        "b2-recycling-karta-production",
+        "b2-recycling-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-riciklar",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "riċiklar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-riciklar"
+      },
+      "assessmentIds": [
+        "b2-recycling-riciklar-recognition",
+        "b2-recycling-riciklar-production",
+        "b2-recycling-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-skart-imhallat",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "phrase",
+      "sourceRequirement": "skart imħallat",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-skart-imhallat"
+      },
+      "assessmentIds": [
+        "b2-recycling-skart-imhallat-recognition-true-false",
+        "b2-recycling-skart-imhallat-production",
+        "b2-recycling-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-skart-riciklabbli",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "phrase",
+      "sourceRequirement": "skart riċiklabbli",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-skart-riciklabbli"
+      },
+      "assessmentIds": [
+        "b2-recycling-skart-riciklabbli-diagnostic-recognition-true-false",
+        "b2-recycling-skart-riciklabbli-recognition",
+        "b2-recycling-skart-riciklabbli-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-nadif",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "nadif",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-nadif"
+      },
+      "assessmentIds": [
+        "b2-recycling-nadif-recognition-true-false",
+        "b2-recycling-nadif-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-nadifa",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "nadifa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-nadifa"
+      },
+      "assessmentIds": [
+        "b2-recycling-nadifa-recognition",
+        "b2-recycling-nadifa-production",
+        "b2-recycling-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-nodfa",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "nodfa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-nodfa"
+      },
+      "assessmentIds": [
+        "b2-recycling-nodfa-recognition-true-false",
+        "b2-recycling-nodfa-production",
+        "b2-recycling-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mahmug",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mahmug"
+      },
+      "assessmentIds": [
+        "b2-recycling-mahmug-diagnostic-recognition",
+        "b2-recycling-mahmug-recognition",
+        "b2-recycling-mahmug-production",
+        "b2-recycling-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mahmuga",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mahmuga"
+      },
+      "assessmentIds": [
+        "b2-recycling-mahmuga-recognition-true-false",
+        "b2-recycling-mahmuga-production",
+        "b2-recycling-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mahmugin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mahmugin"
+      },
+      "assessmentIds": [
+        "b2-recycling-mahmugin-recognition",
+        "b2-recycling-mahmugin-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-mimli",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mimli",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mimli"
+      },
+      "assessmentIds": [
+        "b2-recycling-mimli-recognition-true-false",
+        "b2-recycling-mimli-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-mimlija",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mimlija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mimlija"
+      },
+      "assessmentIds": [
+        "b2-recycling-mimlija-recognition",
+        "b2-recycling-mimlija-production",
+        "b2-recycling-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mimlijin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mimlijin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mimlijin"
+      },
+      "assessmentIds": [
+        "b2-recycling-mimlijin-diagnostic-recognition-true-false",
+        "b2-recycling-mimlijin-recognition-true-false",
+        "b2-recycling-mimlijin-production",
+        "b2-recycling-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mormi",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mormi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mormi"
+      },
+      "assessmentIds": [
+        "b2-recycling-mormi-recognition",
+        "b2-recycling-mormi-production",
+        "b2-recycling-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mormija",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mormija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mormija"
+      },
+      "assessmentIds": [
+        "b2-recycling-mormija-recognition-true-false",
+        "b2-recycling-mormija-production",
+        "b2-recycling-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mormijin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mormijin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mormijin"
+      },
+      "assessmentIds": [
+        "b2-recycling-mormijin-recognition",
+        "b2-recycling-mormijin-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-jinten",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "jinten",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-jinten"
+      },
+      "assessmentIds": [
+        "b2-recycling-jinten-diagnostic-recognition",
+        "b2-recycling-jinten-recognition-true-false",
+        "b2-recycling-jinten-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-tinten",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "tinten",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-tinten"
+      },
+      "assessmentIds": [
+        "b2-recycling-tinten-recognition",
+        "b2-recycling-tinten-production",
+        "b2-recycling-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-jintnu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "jintnu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-jintnu"
+      },
+      "assessmentIds": [
+        "b2-recycling-jintnu-recognition-true-false",
+        "b2-recycling-jintnu-production",
+        "b2-recycling-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-miftuh",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "miftuħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-miftuh"
+      },
+      "assessmentIds": [
+        "b2-recycling-miftuh-recognition",
+        "b2-recycling-miftuh-production",
+        "b2-recycling-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-miftuha",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "miftuħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-miftuha"
+      },
+      "assessmentIds": [
+        "b2-recycling-miftuha-recognition-true-false",
+        "b2-recycling-miftuha-production",
+        "b2-recycling-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-miftuhin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "miftuħin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-miftuhin"
+      },
+      "assessmentIds": [
+        "b2-recycling-miftuhin-diagnostic-recognition-true-false",
+        "b2-recycling-miftuhin-recognition",
+        "b2-recycling-miftuhin-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-mqatta",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mqatta'",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mqatta"
+      },
+      "assessmentIds": [
+        "b2-recycling-mqatta-recognition-true-false",
+        "b2-recycling-mqatta-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-mqattgha",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mqattgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mqattgha"
+      },
+      "assessmentIds": [
+        "b2-recycling-mqattgha-recognition",
+        "b2-recycling-mqattgha-production",
+        "b2-recycling-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-mqattghin",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "mqattgħin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-mqattghin"
+      },
+      "assessmentIds": [
+        "b2-recycling-mqattghin-recognition-true-false",
+        "b2-recycling-mqattghin-production",
+        "b2-recycling-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-skart-organiku",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "phrase",
+      "sourceRequirement": "skart organiku",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-skart-organiku"
+      },
+      "assessmentIds": [
+        "b2-recycling-skart-organiku-diagnostic-recognition",
+        "b2-recycling-skart-organiku-recognition",
+        "b2-recycling-skart-organiku-production",
+        "b2-recycling-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-borza",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "borża",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "nohrog-il-borza"
+      },
+      "assessmentIds": [
+        "b2-recycling-borza-recognition-true-false",
+        "b2-recycling-borza-production",
+        "b2-recycling-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-kontenitur",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "vocabulary",
+      "sourceRequirement": "kontenitur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "environment_recycling.html",
+        "file": "assets/data/environment_recycling.json",
+        "itemId": "nahsel-il-kontenitur"
+      },
+      "assessmentIds": [
+        "b2-recycling-kontenitur-recognition",
+        "b2-recycling-kontenitur-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-armi",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "armi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-armi"
+      },
+      "assessmentIds": [
+        "b2-recycling-armi-recognition-true-false",
+        "b2-recycling-armi-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-armu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "armu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-armu"
+      },
+      "assessmentIds": [
+        "b2-recycling-armu-recognition",
+        "b2-recycling-armu-production",
+        "b2-recycling-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-ghazel",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "għażel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-ghazel"
+      },
+      "assessmentIds": [
+        "b2-recycling-ghazel-diagnostic-recognition-true-false",
+        "b2-recycling-ghazel-recognition-true-false",
+        "b2-recycling-ghazel-production",
+        "b2-recycling-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-aghzel",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "agħżel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-ghazel"
+      },
+      "assessmentIds": [
+        "b2-recycling-aghzel-recognition",
+        "b2-recycling-aghzel-production",
+        "b2-recycling-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-aghzlu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "agħżlu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-ghazel"
+      },
+      "assessmentIds": [
+        "b2-recycling-aghzlu-recognition-true-false",
+        "b2-recycling-aghzlu-production",
+        "b2-recycling-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-waddab",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "waddab",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-waddab"
+      },
+      "assessmentIds": [
+        "b2-recycling-waddab-recognition",
+        "b2-recycling-waddab-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-waddbu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "waddbu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-waddbu"
+      },
+      "assessmentIds": [
+        "b2-recycling-waddbu-diagnostic-recognition",
+        "b2-recycling-waddbu-recognition-true-false",
+        "b2-recycling-waddbu-production"
+      ]
+    },
+    {
+      "id": "b2-recycling-issepara",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "issepara",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-issepara"
+      },
+      "assessmentIds": [
+        "b2-recycling-issepara-recognition",
+        "b2-recycling-issepara-production",
+        "b2-recycling-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-isseparaw",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "isseparaw",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-isseparaw"
+      },
+      "assessmentIds": [
+        "b2-recycling-isseparaw-recognition-true-false",
+        "b2-recycling-isseparaw-production",
+        "b2-recycling-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-hareg",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "ħareġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-hareg"
+      },
+      "assessmentIds": [
+        "b2-recycling-hareg-recognition",
+        "b2-recycling-hareg-production",
+        "b2-recycling-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-ohrog",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "oħroġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-ohrog"
+      },
+      "assessmentIds": [
+        "b2-recycling-ohrog-recognition-true-false",
+        "b2-recycling-ohrog-production",
+        "b2-recycling-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-recycling-ohorgu",
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "type": "verb-form",
+      "sourceRequirement": "oħorġu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-recycling-ohorgu"
+      },
+      "assessmentIds": [
+        "b2-recycling-ohorgu-diagnostic-recognition-true-false",
+        "b2-recycling-ohorgu-recognition",
+        "b2-recycling-ohorgu-production"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-recycling-plastik": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97,
+        99
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-karta": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97,
+        99
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-riciklar": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-skart-imhallat": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-skart-riciklabbli": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-nadif": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-nadifa": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-nodfa": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mahmug": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mahmuga": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mahmugin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mimli": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mimlija": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mimlijin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mormi": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mormija": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mormijin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-jinten": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-tinten": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-jintnu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-miftuh": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-miftuha": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-miftuhin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mqatta": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mqattgha": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-mqattghin": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 98,
+      "pages": [
+        98
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-skart-organiku": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-recycling-borza": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 97,
+      "pages": [
+        97,
+        106
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-kontenitur": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 99,
+      "pages": [
+        99,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-armi": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 100,
+      "pages": [
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-armu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 100,
+      "pages": [
+        100
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-ghazel": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-aghzel": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-aghzlu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-waddab": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-waddbu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-issepara": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 103,
+      "pages": [
+        103,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-isseparaw": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 103,
+      "pages": [
+        103
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-hareg": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        105
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-ohrog": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104
+      ],
+      "match": "text-exact"
+    },
+    "b2-recycling-ohorgu": {
+      "book": "B2",
+      "chapterId": "b2-recycling",
+      "chapterNumber": 7,
+      "chapterTitle": "Nirriċiklaw l-Iskart",
+      "pageRange": [
+        97,
+        108
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-recycling-plastik",
+      "maltese": "plastik",
+      "english": "plastic",
+      "example": "Hemm plastik fil-kontenitur.",
+      "exampleTranslation": "The container contains the plastic.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 97,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 97",
+      "notes": [
+        "Example: Hemm plastik fil-kontenitur.",
+        "Translation: The container contains the plastic.",
+        "Source: B2, Chapter 7, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-karta",
+      "maltese": "karta",
+      "english": "paper / card",
+      "example": "Hemm karta fil-kontenitur.",
+      "exampleTranslation": "The container contains the paper.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 97,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 97",
+      "notes": [
+        "Example: Hemm karta fil-kontenitur.",
+        "Translation: The container contains the paper.",
+        "Source: B2, Chapter 7, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-riciklar",
+      "maltese": "riċiklar",
+      "english": "recycling",
+      "example": "Hemm riċiklar fil-kontenitur.",
+      "exampleTranslation": "The container contains the recycling.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 97,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 97",
+      "notes": [
+        "Example: Hemm riċiklar fil-kontenitur.",
+        "Translation: The container contains the recycling.",
+        "Source: B2, Chapter 7, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-skart-imhallat",
+      "maltese": "skart imħallat",
+      "english": "mixed waste",
+      "example": "Hemm skart imħallat fil-kontenitur.",
+      "exampleTranslation": "The container contains the mixed waste.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": null,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 7, pp. 97-108",
+      "notes": [
+        "Example: Hemm skart imħallat fil-kontenitur.",
+        "Translation: The container contains the mixed waste.",
+        "Source: B2, Chapter 7, pp. 97-108"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-recycling-skart-riciklabbli",
+      "maltese": "skart riċiklabbli",
+      "english": "recyclable waste",
+      "example": "Hemm skart riċiklabbli fil-kontenitur.",
+      "exampleTranslation": "The container contains the recyclable waste.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": null,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 7, pp. 97-108",
+      "notes": [
+        "Example: Hemm skart riċiklabbli fil-kontenitur.",
+        "Translation: The container contains the recyclable waste.",
+        "Source: B2, Chapter 7, pp. 97-108"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-recycling-nadif",
+      "maltese": "nadif",
+      "english": "clean (masculine)",
+      "example": "Il-kontenitur huwa nadif.",
+      "exampleTranslation": "The container is clean.",
+      "examplePattern": "recycling-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": null,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 7, pp. 97-108",
+      "notes": [
+        "Example: Il-kontenitur huwa nadif.",
+        "Translation: The container is clean.",
+        "Source: B2, Chapter 7, pp. 97-108"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-nadifa",
+      "maltese": "nadifa",
+      "english": "clean (feminine)",
+      "example": "Il-borża hija nadifa.",
+      "exampleTranslation": "The bag is clean.",
+      "examplePattern": "recycling-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 97,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 97",
+      "notes": [
+        "Example: Il-borża hija nadifa.",
+        "Translation: The bag is clean.",
+        "Source: B2, Chapter 7, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-nodfa",
+      "maltese": "nodfa",
+      "english": "clean (plural)",
+      "example": "Il-kontenituri huma nodfa.",
+      "exampleTranslation": "The containers are clean.",
+      "examplePattern": "recycling-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 97,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 97",
+      "notes": [
+        "Example: Il-kontenituri huma nodfa.",
+        "Translation: The containers are clean.",
+        "Source: B2, Chapter 7, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mahmug",
+      "maltese": "maħmuġ",
+      "english": "dirty (masculine)",
+      "example": "Il-kontenitur huwa maħmuġ.",
+      "exampleTranslation": "The container is dirty.",
+      "examplePattern": "recycling-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenitur huwa maħmuġ.",
+        "Translation: The container is dirty.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mahmuga",
+      "maltese": "maħmuġa",
+      "english": "dirty (feminine)",
+      "example": "Il-borża hija maħmuġa.",
+      "exampleTranslation": "The bag is dirty.",
+      "examplePattern": "recycling-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-borża hija maħmuġa.",
+        "Translation: The bag is dirty.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mahmugin",
+      "maltese": "maħmuġin",
+      "english": "dirty (plural)",
+      "example": "Il-kontenituri huma maħmuġin.",
+      "exampleTranslation": "The containers are dirty.",
+      "examplePattern": "recycling-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenituri huma maħmuġin.",
+        "Translation: The containers are dirty.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mimli",
+      "maltese": "mimli",
+      "english": "full (masculine)",
+      "example": "Il-kontenitur huwa mimli.",
+      "exampleTranslation": "The container is full.",
+      "examplePattern": "recycling-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenitur huwa mimli.",
+        "Translation: The container is full.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mimlija",
+      "maltese": "mimlija",
+      "english": "full",
+      "example": "Il-borża hija mimlija.",
+      "exampleTranslation": "The bag is full.",
+      "examplePattern": "recycling-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-borża hija mimlija.",
+        "Translation: The bag is full.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mimlijin",
+      "maltese": "mimlijin",
+      "english": "full (plural)",
+      "example": "Il-kontenituri huma mimlijin.",
+      "exampleTranslation": "The containers are full.",
+      "examplePattern": "recycling-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenituri huma mimlijin.",
+        "Translation: The containers are full.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mormi",
+      "maltese": "mormi",
+      "english": "discarded (masculine)",
+      "example": "Il-kontenitur huwa mormi.",
+      "exampleTranslation": "The container is discarded.",
+      "examplePattern": "recycling-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenitur huwa mormi.",
+        "Translation: The container is discarded.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mormija",
+      "maltese": "mormija",
+      "english": "discarded (feminine)",
+      "example": "Il-borża hija mormija.",
+      "exampleTranslation": "The bag is discarded.",
+      "examplePattern": "recycling-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-borża hija mormija.",
+        "Translation: The bag is discarded.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mormijin",
+      "maltese": "mormijin",
+      "english": "discarded (plural)",
+      "example": "Il-kontenituri huma mormijin.",
+      "exampleTranslation": "The containers are discarded.",
+      "examplePattern": "recycling-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenituri huma mormijin.",
+        "Translation: The containers are discarded.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-jinten",
+      "maltese": "jinten",
+      "english": "it stinks (masculine)",
+      "example": "Il-kontenitur jinten.",
+      "exampleTranslation": "The container stinks.",
+      "examplePattern": "recycling-state",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenitur jinten.",
+        "Translation: The container stinks.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-tinten",
+      "maltese": "tinten",
+      "english": "it stinks (feminine)",
+      "example": "Il-borża tinten.",
+      "exampleTranslation": "The bag stinks.",
+      "examplePattern": "recycling-state",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-borża tinten.",
+        "Translation: The bag stinks.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-jintnu",
+      "maltese": "jintnu",
+      "english": "they stink",
+      "example": "Il-kontenituri jintnu.",
+      "exampleTranslation": "The containers stink.",
+      "examplePattern": "recycling-state",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenituri jintnu.",
+        "Translation: The containers stink.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-miftuh",
+      "maltese": "miftuħ",
+      "english": "open (masculine)",
+      "example": "Il-kontenitur huwa miftuħ.",
+      "exampleTranslation": "The container is open.",
+      "examplePattern": "recycling-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenitur huwa miftuħ.",
+        "Translation: The container is open.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-miftuha",
+      "maltese": "miftuħa",
+      "english": "open",
+      "example": "Il-borża hija miftuħa.",
+      "exampleTranslation": "The bag is open.",
+      "examplePattern": "recycling-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-borża hija miftuħa.",
+        "Translation: The bag is open.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-miftuhin",
+      "maltese": "miftuħin",
+      "english": "open (plural)",
+      "example": "Il-kontenituri huma miftuħin.",
+      "exampleTranslation": "The containers are open.",
+      "examplePattern": "recycling-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenituri huma miftuħin.",
+        "Translation: The containers are open.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mqatta",
+      "maltese": "mqatta'",
+      "english": "cut / torn (masculine)",
+      "example": "Il-kontenitur huwa mqatta'.",
+      "exampleTranslation": "The container is cut.",
+      "examplePattern": "recycling-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenitur huwa mqatta'.",
+        "Translation: The container is cut.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mqattgha",
+      "maltese": "mqattgħa",
+      "english": "cut / torn (feminine)",
+      "example": "Il-borża hija mqattgħa.",
+      "exampleTranslation": "The bag is cut.",
+      "examplePattern": "recycling-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-borża hija mqattgħa.",
+        "Translation: The bag is cut.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-mqattghin",
+      "maltese": "mqattgħin",
+      "english": "cut / torn (plural)",
+      "example": "Il-kontenituri huma mqattgħin.",
+      "exampleTranslation": "The containers are cut.",
+      "examplePattern": "recycling-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 98,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 98",
+      "notes": [
+        "Example: Il-kontenituri huma mqattgħin.",
+        "Translation: The containers are cut.",
+        "Source: B2, Chapter 7, p. 98"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-skart-organiku",
+      "maltese": "skart organiku",
+      "english": "organic waste",
+      "example": "Hemm skart organiku fil-kontenitur.",
+      "exampleTranslation": "The container contains the organic waste.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": null,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 7, pp. 97-108",
+      "notes": [
+        "Example: Hemm skart organiku fil-kontenitur.",
+        "Translation: The container contains the organic waste.",
+        "Source: B2, Chapter 7, pp. 97-108"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-recycling-borza",
+      "maltese": "borża",
+      "english": "bag",
+      "example": "Hemm borża fil-kontenitur.",
+      "exampleTranslation": "The container contains the bag.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 97,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 97",
+      "notes": [
+        "Example: Hemm borża fil-kontenitur.",
+        "Translation: The container contains the bag.",
+        "Source: B2, Chapter 7, p. 97"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-kontenitur",
+      "maltese": "kontenitur",
+      "english": "container",
+      "example": "Hemm kontenitur fil-kontenitur.",
+      "exampleTranslation": "The container contains the container.",
+      "examplePattern": "recycling-material",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 99,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 99",
+      "notes": [
+        "Example: Hemm kontenitur fil-kontenitur.",
+        "Translation: The container contains the container.",
+        "Source: B2, Chapter 7, p. 99"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-armi",
+      "maltese": "armi",
+      "english": "throw away (singular command)",
+      "example": "Armi l-karta fil-kontenitur.",
+      "exampleTranslation": "Throw the paper into the container.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 100,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 100",
+      "notes": [
+        "Example: Armi l-karta fil-kontenitur.",
+        "Translation: Throw the paper into the container.",
+        "Source: B2, Chapter 7, p. 100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-armu",
+      "maltese": "armu",
+      "english": "throw away (plural command)",
+      "example": "Armu l-karta fil-kontenitur.",
+      "exampleTranslation": "Throw the paper into the container, everyone.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 100,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 100",
+      "notes": [
+        "Example: Armu l-karta fil-kontenitur.",
+        "Translation: Throw the paper into the container, everyone.",
+        "Source: B2, Chapter 7, p. 100"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-ghazel",
+      "maltese": "għażel",
+      "english": "chose",
+      "example": "Ilbieraħ għażel il-kontenitur it-tajjeb.",
+      "exampleTranslation": "Yesterday he chose the correct container.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 101",
+      "notes": [
+        "Example: Ilbieraħ għażel il-kontenitur it-tajjeb.",
+        "Translation: Yesterday he chose the correct container.",
+        "Source: B2, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-aghzel",
+      "maltese": "agħżel",
+      "english": "choose (singular command)",
+      "example": "Agħżel il-kontenitur it-tajjeb.",
+      "exampleTranslation": "Choose the correct container.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 101",
+      "notes": [
+        "Example: Agħżel il-kontenitur it-tajjeb.",
+        "Translation: Choose the correct container.",
+        "Source: B2, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-aghzlu",
+      "maltese": "agħżlu",
+      "english": "choose (plural command)",
+      "example": "Agħżlu l-kontenitur it-tajjeb.",
+      "exampleTranslation": "Choose the correct container, everyone.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 101",
+      "notes": [
+        "Example: Agħżlu l-kontenitur it-tajjeb.",
+        "Translation: Choose the correct container, everyone.",
+        "Source: B2, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-waddab",
+      "maltese": "waddab",
+      "english": "throw (singular command)",
+      "example": "Waddab il-flixkun fil-kontenitur.",
+      "exampleTranslation": "Throw the bottle into the container.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 102",
+      "notes": [
+        "Example: Waddab il-flixkun fil-kontenitur.",
+        "Translation: Throw the bottle into the container.",
+        "Source: B2, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-waddbu",
+      "maltese": "waddbu",
+      "english": "throw (plural command)",
+      "example": "Waddbu l-fliexken fil-kontenitur.",
+      "exampleTranslation": "Throw the bottles into the container, everyone.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 102",
+      "notes": [
+        "Example: Waddbu l-fliexken fil-kontenitur.",
+        "Translation: Throw the bottles into the container, everyone.",
+        "Source: B2, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-issepara",
+      "maltese": "issepara",
+      "english": "separate (singular command)",
+      "example": "Issepara l-plastik mill-karta.",
+      "exampleTranslation": "Separate the plastic from the paper.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 103,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 103",
+      "notes": [
+        "Example: Issepara l-plastik mill-karta.",
+        "Translation: Separate the plastic from the paper.",
+        "Source: B2, Chapter 7, p. 103"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-isseparaw",
+      "maltese": "isseparaw",
+      "english": "separate (plural command)",
+      "example": "Isseparaw il-plastik mill-karta.",
+      "exampleTranslation": "Separate the plastic from the paper, everyone.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 103,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 103",
+      "notes": [
+        "Example: Isseparaw il-plastik mill-karta.",
+        "Translation: Separate the plastic from the paper, everyone.",
+        "Source: B2, Chapter 7, p. 103"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-hareg",
+      "maltese": "ħareġ",
+      "english": "he took out",
+      "example": "Ħareġ il-borża tal-iskart.",
+      "exampleTranslation": "He took out the rubbish bag.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 104",
+      "notes": [
+        "Example: Ħareġ il-borża tal-iskart.",
+        "Translation: He took out the rubbish bag.",
+        "Source: B2, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-ohrog",
+      "maltese": "oħroġ",
+      "english": "take out (singular command)",
+      "example": "Oħroġ il-borża tal-iskart.",
+      "exampleTranslation": "Take out the rubbish bag.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 104",
+      "notes": [
+        "Example: Oħroġ il-borża tal-iskart.",
+        "Translation: Take out the rubbish bag.",
+        "Source: B2, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-recycling-ohorgu",
+      "maltese": "oħorġu",
+      "english": "take out (plural command)",
+      "example": "Oħorġu l-boroż tal-iskart.",
+      "exampleTranslation": "Take out the rubbish bags, everyone.",
+      "examplePattern": "recycling-action",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          97,
+          108
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 7, p. 104",
+      "notes": [
+        "Example: Oħorġu l-boroż tal-iskart.",
+        "Translation: Take out the rubbish bags, everyone.",
+        "Source: B2, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-diagnostic",
+      "kind": "diagnostic",
+      "title": "Nirriċiklaw l-Iskart Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-recycling-plastik-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-plastik"
+          ],
+          "prompt": "What is the lesson meaning of “plastik”?",
+          "choices": [
+            "plastic",
+            "paper / card",
+            "recycling"
+          ],
+          "answer": "plastic",
+          "explanation": "plastik means “plastic” in this chapter.",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic"
+          }
+        },
+        {
+          "id": "b2-recycling-skart-riciklabbli-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-riciklabbli"
+          ],
+          "prompt": "True or false: “skart riċiklabbli” means “recycling” in this chapter.",
+          "answer": false,
+          "explanation": "skart riċiklabbli means “recyclable waste”.",
+          "reviewCard": {
+            "maltese": "skart riċiklabbli",
+            "english": "recyclable waste"
+          }
+        },
+        {
+          "id": "b2-recycling-mahmug-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mahmug"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġ”?",
+          "choices": [
+            "recyclable waste",
+            "dirty (masculine)",
+            "mixed waste"
+          ],
+          "answer": "dirty (masculine)",
+          "explanation": "maħmuġ means “dirty (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġ",
+            "english": "dirty (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mimlijin-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mimlijin"
+          ],
+          "prompt": "True or false: “mimlijin” means “recyclable waste” in this chapter.",
+          "answer": false,
+          "explanation": "mimlijin means “full (plural)”.",
+          "reviewCard": {
+            "maltese": "mimlijin",
+            "english": "full (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-jinten-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-jinten"
+          ],
+          "prompt": "What is the lesson meaning of “jinten”?",
+          "choices": [
+            "clean (masculine)",
+            "clean (feminine)",
+            "it stinks (masculine)"
+          ],
+          "answer": "it stinks (masculine)",
+          "explanation": "jinten means “it stinks (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "jinten",
+            "english": "it stinks (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-miftuhin-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-miftuhin"
+          ],
+          "prompt": "True or false: “miftuħin” means “clean (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "miftuħin means “open (plural)”.",
+          "reviewCard": {
+            "maltese": "miftuħin",
+            "english": "open (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-skart-organiku-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-organiku"
+          ],
+          "prompt": "What is the lesson meaning of “skart organiku”?",
+          "choices": [
+            "organic waste",
+            "clean (plural)",
+            "dirty (masculine)"
+          ],
+          "answer": "organic waste",
+          "explanation": "skart organiku means “organic waste” in this chapter.",
+          "reviewCard": {
+            "maltese": "skart organiku",
+            "english": "organic waste"
+          }
+        },
+        {
+          "id": "b2-recycling-ghazel-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ghazel"
+          ],
+          "prompt": "True or false: “għażel” means “dirty (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "għażel means “chose”.",
+          "reviewCard": {
+            "maltese": "għażel",
+            "english": "chose"
+          }
+        },
+        {
+          "id": "b2-recycling-waddbu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-waddbu"
+          ],
+          "prompt": "What is the lesson meaning of “waddbu”?",
+          "choices": [
+            "dirty (plural)",
+            "throw (plural command)",
+            "dirty (feminine)"
+          ],
+          "answer": "throw (plural command)",
+          "explanation": "waddbu means “throw (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "waddbu",
+            "english": "throw (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-ohorgu-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ohorgu"
+          ],
+          "prompt": "True or false: “oħorġu” means “dirty (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "oħorġu means “take out (plural command)”.",
+          "reviewCard": {
+            "maltese": "oħorġu",
+            "english": "take out (plural command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-recycling-plastik-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-plastik"
+          ],
+          "prompt": "What is the lesson meaning of “plastik”?",
+          "choices": [
+            "plastic",
+            "paper / card",
+            "recycling"
+          ],
+          "answer": "plastic",
+          "explanation": "plastik means “plastic” in this chapter.",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic"
+          }
+        },
+        {
+          "id": "b2-recycling-plastik-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-plastik"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the plastic.)",
+          "answer": "plastik",
+          "explanation": "The complete sentence is “Hemm plastik fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic",
+            "example": "Hemm plastik fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "plastik"
+          ]
+        },
+        {
+          "id": "b2-recycling-karta-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-karta"
+          ],
+          "prompt": "True or false: “karta” means “recycling” in this chapter.",
+          "answer": false,
+          "explanation": "karta means “paper / card”.",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper / card"
+          }
+        },
+        {
+          "id": "b2-recycling-karta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-karta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the paper.)",
+          "answer": "karta",
+          "explanation": "The complete sentence is “Hemm karta fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper / card",
+            "example": "Hemm karta fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "karta"
+          ]
+        },
+        {
+          "id": "b2-recycling-riciklar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-riciklar"
+          ],
+          "prompt": "What is the lesson meaning of “riċiklar”?",
+          "choices": [
+            "recyclable waste",
+            "recycling",
+            "mixed waste"
+          ],
+          "answer": "recycling",
+          "explanation": "riċiklar means “recycling” in this chapter.",
+          "reviewCard": {
+            "maltese": "riċiklar",
+            "english": "recycling"
+          }
+        },
+        {
+          "id": "b2-recycling-riciklar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-riciklar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the recycling.)",
+          "answer": "riċiklar",
+          "explanation": "The complete sentence is “Hemm riċiklar fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "riċiklar",
+            "english": "recycling",
+            "example": "Hemm riċiklar fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "riċiklar"
+          ]
+        },
+        {
+          "id": "b2-recycling-skart-imhallat-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-imhallat"
+          ],
+          "prompt": "True or false: “skart imħallat” means “recyclable waste” in this chapter.",
+          "answer": false,
+          "explanation": "skart imħallat means “mixed waste”.",
+          "reviewCard": {
+            "maltese": "skart imħallat",
+            "english": "mixed waste"
+          }
+        },
+        {
+          "id": "b2-recycling-skart-imhallat-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-skart-imhallat"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the mixed waste.)",
+          "answer": "skart imħallat",
+          "explanation": "The complete sentence is “Hemm skart imħallat fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "skart imħallat",
+            "english": "mixed waste",
+            "example": "Hemm skart imħallat fil-kontenitur."
+          },
+          "type": "order-words",
+          "tokens": [
+            "skart",
+            "imħallat"
+          ]
+        },
+        {
+          "id": "b2-recycling-skart-riciklabbli-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-riciklabbli"
+          ],
+          "prompt": "What is the lesson meaning of “skart riċiklabbli”?",
+          "choices": [
+            "clean (masculine)",
+            "clean (feminine)",
+            "recyclable waste"
+          ],
+          "answer": "recyclable waste",
+          "explanation": "skart riċiklabbli means “recyclable waste” in this chapter.",
+          "reviewCard": {
+            "maltese": "skart riċiklabbli",
+            "english": "recyclable waste"
+          }
+        },
+        {
+          "id": "b2-recycling-skart-riciklabbli-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-skart-riciklabbli"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the recyclable waste.)",
+          "answer": "skart riċiklabbli",
+          "explanation": "The complete sentence is “Hemm skart riċiklabbli fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "skart riċiklabbli",
+            "english": "recyclable waste",
+            "example": "Hemm skart riċiklabbli fil-kontenitur."
+          },
+          "type": "order-words",
+          "tokens": [
+            "skart",
+            "riċiklabbli"
+          ]
+        },
+        {
+          "id": "b2-recycling-nadif-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-nadif"
+          ],
+          "prompt": "True or false: “nadif” means “clean (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "nadif means “clean (masculine)”.",
+          "reviewCard": {
+            "maltese": "nadif",
+            "english": "clean (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-nadif-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-nadif"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is clean.)",
+          "answer": "nadif",
+          "explanation": "The complete sentence is “Il-kontenitur huwa nadif.”",
+          "reviewCard": {
+            "maltese": "nadif",
+            "english": "clean (masculine)",
+            "example": "Il-kontenitur huwa nadif."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nadif"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-plastik",
+            "b2-recycling-karta",
+            "b2-recycling-riciklar",
+            "b2-recycling-skart-imhallat"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "plastik",
+              "right": "plastic"
+            },
+            {
+              "left": "karta",
+              "right": "paper / card"
+            },
+            {
+              "left": "riċiklar",
+              "right": "recycling"
+            },
+            {
+              "left": "skart imħallat",
+              "right": "mixed waste"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "plastik",
+            "english": "plastic"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-recycling-nadifa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-nadifa"
+          ],
+          "prompt": "What is the lesson meaning of “nadifa”?",
+          "choices": [
+            "clean (feminine)",
+            "clean (plural)",
+            "dirty (masculine)"
+          ],
+          "answer": "clean (feminine)",
+          "explanation": "nadifa means “clean (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "nadifa",
+            "english": "clean (feminine)"
+          }
+        },
+        {
+          "id": "b2-recycling-nadifa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-nadifa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is clean.)",
+          "answer": "nadifa",
+          "explanation": "The complete sentence is “Il-borża hija nadifa.”",
+          "reviewCard": {
+            "maltese": "nadifa",
+            "english": "clean (feminine)",
+            "example": "Il-borża hija nadifa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nadifa"
+          ]
+        },
+        {
+          "id": "b2-recycling-nodfa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-nodfa"
+          ],
+          "prompt": "True or false: “nodfa” means “dirty (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "nodfa means “clean (plural)”.",
+          "reviewCard": {
+            "maltese": "nodfa",
+            "english": "clean (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-nodfa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-nodfa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are clean.)",
+          "answer": "nodfa",
+          "explanation": "The complete sentence is “Il-kontenituri huma nodfa.”",
+          "reviewCard": {
+            "maltese": "nodfa",
+            "english": "clean (plural)",
+            "example": "Il-kontenituri huma nodfa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nodfa"
+          ]
+        },
+        {
+          "id": "b2-recycling-mahmug-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mahmug"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġ”?",
+          "choices": [
+            "dirty (plural)",
+            "dirty (masculine)",
+            "dirty (feminine)"
+          ],
+          "answer": "dirty (masculine)",
+          "explanation": "maħmuġ means “dirty (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġ",
+            "english": "dirty (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mahmug-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mahmug"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is dirty.)",
+          "answer": "maħmuġ",
+          "explanation": "The complete sentence is “Il-kontenitur huwa maħmuġ.”",
+          "reviewCard": {
+            "maltese": "maħmuġ",
+            "english": "dirty (masculine)",
+            "example": "Il-kontenitur huwa maħmuġ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "maħmuġ"
+          ]
+        },
+        {
+          "id": "b2-recycling-mahmuga-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mahmuga"
+          ],
+          "prompt": "True or false: “maħmuġa” means “dirty (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "maħmuġa means “dirty (feminine)”.",
+          "reviewCard": {
+            "maltese": "maħmuġa",
+            "english": "dirty (feminine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mahmuga-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mahmuga"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is dirty.)",
+          "answer": "maħmuġa",
+          "explanation": "The complete sentence is “Il-borża hija maħmuġa.”",
+          "reviewCard": {
+            "maltese": "maħmuġa",
+            "english": "dirty (feminine)",
+            "example": "Il-borża hija maħmuġa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "maħmuġa"
+          ]
+        },
+        {
+          "id": "b2-recycling-mahmugin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mahmugin"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġin”?",
+          "choices": [
+            "full (masculine)",
+            "full",
+            "dirty (plural)"
+          ],
+          "answer": "dirty (plural)",
+          "explanation": "maħmuġin means “dirty (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġin",
+            "english": "dirty (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-mahmugin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mahmugin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are dirty.)",
+          "answer": "maħmuġin",
+          "explanation": "The complete sentence is “Il-kontenituri huma maħmuġin.”",
+          "reviewCard": {
+            "maltese": "maħmuġin",
+            "english": "dirty (plural)",
+            "example": "Il-kontenituri huma maħmuġin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "maħmuġin"
+          ]
+        },
+        {
+          "id": "b2-recycling-mimli-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mimli"
+          ],
+          "prompt": "True or false: “mimli” means “full” in this chapter.",
+          "answer": false,
+          "explanation": "mimli means “full (masculine)”.",
+          "reviewCard": {
+            "maltese": "mimli",
+            "english": "full (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mimli-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mimli"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is full.)",
+          "answer": "mimli",
+          "explanation": "The complete sentence is “Il-kontenitur huwa mimli.”",
+          "reviewCard": {
+            "maltese": "mimli",
+            "english": "full (masculine)",
+            "example": "Il-kontenitur huwa mimli."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mimli"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-nadifa",
+            "b2-recycling-nodfa",
+            "b2-recycling-mahmug",
+            "b2-recycling-mahmuga"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "nadifa",
+              "right": "clean (feminine)"
+            },
+            {
+              "left": "nodfa",
+              "right": "clean (plural)"
+            },
+            {
+              "left": "maħmuġ",
+              "right": "dirty (masculine)"
+            },
+            {
+              "left": "maħmuġa",
+              "right": "dirty (feminine)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "nadifa",
+            "english": "clean (feminine)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-recycling-mimlija-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mimlija"
+          ],
+          "prompt": "What is the lesson meaning of “mimlija”?",
+          "choices": [
+            "full",
+            "full (plural)",
+            "discarded (masculine)"
+          ],
+          "answer": "full",
+          "explanation": "mimlija means “full” in this chapter.",
+          "reviewCard": {
+            "maltese": "mimlija",
+            "english": "full"
+          }
+        },
+        {
+          "id": "b2-recycling-mimlija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mimlija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is full.)",
+          "answer": "mimlija",
+          "explanation": "The complete sentence is “Il-borża hija mimlija.”",
+          "reviewCard": {
+            "maltese": "mimlija",
+            "english": "full",
+            "example": "Il-borża hija mimlija."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mimlija"
+          ]
+        },
+        {
+          "id": "b2-recycling-mimlijin-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mimlijin"
+          ],
+          "prompt": "True or false: “mimlijin” means “discarded (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "mimlijin means “full (plural)”.",
+          "reviewCard": {
+            "maltese": "mimlijin",
+            "english": "full (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-mimlijin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mimlijin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are full.)",
+          "answer": "mimlijin",
+          "explanation": "The complete sentence is “Il-kontenituri huma mimlijin.”",
+          "reviewCard": {
+            "maltese": "mimlijin",
+            "english": "full (plural)",
+            "example": "Il-kontenituri huma mimlijin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mimlijin"
+          ]
+        },
+        {
+          "id": "b2-recycling-mormi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mormi"
+          ],
+          "prompt": "What is the lesson meaning of “mormi”?",
+          "choices": [
+            "discarded (plural)",
+            "discarded (masculine)",
+            "discarded (feminine)"
+          ],
+          "answer": "discarded (masculine)",
+          "explanation": "mormi means “discarded (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "mormi",
+            "english": "discarded (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mormi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mormi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is discarded.)",
+          "answer": "mormi",
+          "explanation": "The complete sentence is “Il-kontenitur huwa mormi.”",
+          "reviewCard": {
+            "maltese": "mormi",
+            "english": "discarded (masculine)",
+            "example": "Il-kontenitur huwa mormi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mormi"
+          ]
+        },
+        {
+          "id": "b2-recycling-mormija-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mormija"
+          ],
+          "prompt": "True or false: “mormija” means “discarded (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "mormija means “discarded (feminine)”.",
+          "reviewCard": {
+            "maltese": "mormija",
+            "english": "discarded (feminine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mormija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mormija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is discarded.)",
+          "answer": "mormija",
+          "explanation": "The complete sentence is “Il-borża hija mormija.”",
+          "reviewCard": {
+            "maltese": "mormija",
+            "english": "discarded (feminine)",
+            "example": "Il-borża hija mormija."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mormija"
+          ]
+        },
+        {
+          "id": "b2-recycling-mormijin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mormijin"
+          ],
+          "prompt": "What is the lesson meaning of “mormijin”?",
+          "choices": [
+            "it stinks (masculine)",
+            "it stinks (feminine)",
+            "discarded (plural)"
+          ],
+          "answer": "discarded (plural)",
+          "explanation": "mormijin means “discarded (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "mormijin",
+            "english": "discarded (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-mormijin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mormijin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are discarded.)",
+          "answer": "mormijin",
+          "explanation": "The complete sentence is “Il-kontenituri huma mormijin.”",
+          "reviewCard": {
+            "maltese": "mormijin",
+            "english": "discarded (plural)",
+            "example": "Il-kontenituri huma mormijin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mormijin"
+          ]
+        },
+        {
+          "id": "b2-recycling-jinten-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-jinten"
+          ],
+          "prompt": "True or false: “jinten” means “it stinks (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "jinten means “it stinks (masculine)”.",
+          "reviewCard": {
+            "maltese": "jinten",
+            "english": "it stinks (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-jinten-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-jinten"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur _____.” (The container stinks.)",
+          "answer": "jinten",
+          "explanation": "The complete sentence is “Il-kontenitur jinten.”",
+          "reviewCard": {
+            "maltese": "jinten",
+            "english": "it stinks (masculine)",
+            "example": "Il-kontenitur jinten."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "jinten"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mimlija",
+            "b2-recycling-mimlijin",
+            "b2-recycling-mormi",
+            "b2-recycling-mormija"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "mimlija",
+              "right": "full"
+            },
+            {
+              "left": "mimlijin",
+              "right": "full (plural)"
+            },
+            {
+              "left": "mormi",
+              "right": "discarded (masculine)"
+            },
+            {
+              "left": "mormija",
+              "right": "discarded (feminine)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "mimlija",
+            "english": "full"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-recycling-tinten-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-tinten"
+          ],
+          "prompt": "What is the lesson meaning of “tinten”?",
+          "choices": [
+            "it stinks (feminine)",
+            "they stink",
+            "open (masculine)"
+          ],
+          "answer": "it stinks (feminine)",
+          "explanation": "tinten means “it stinks (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "tinten",
+            "english": "it stinks (feminine)"
+          }
+        },
+        {
+          "id": "b2-recycling-tinten-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-tinten"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża _____.” (The bag stinks.)",
+          "answer": "tinten",
+          "explanation": "The complete sentence is “Il-borża tinten.”",
+          "reviewCard": {
+            "maltese": "tinten",
+            "english": "it stinks (feminine)",
+            "example": "Il-borża tinten."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tinten"
+          ]
+        },
+        {
+          "id": "b2-recycling-jintnu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-jintnu"
+          ],
+          "prompt": "True or false: “jintnu” means “open (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "jintnu means “they stink”.",
+          "reviewCard": {
+            "maltese": "jintnu",
+            "english": "they stink"
+          }
+        },
+        {
+          "id": "b2-recycling-jintnu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-jintnu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri _____.” (The containers stink.)",
+          "answer": "jintnu",
+          "explanation": "The complete sentence is “Il-kontenituri jintnu.”",
+          "reviewCard": {
+            "maltese": "jintnu",
+            "english": "they stink",
+            "example": "Il-kontenituri jintnu."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "jintnu"
+          ]
+        },
+        {
+          "id": "b2-recycling-miftuh-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-miftuh"
+          ],
+          "prompt": "What is the lesson meaning of “miftuħ”?",
+          "choices": [
+            "open (plural)",
+            "open (masculine)",
+            "open"
+          ],
+          "answer": "open (masculine)",
+          "explanation": "miftuħ means “open (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "miftuħ",
+            "english": "open (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-miftuh-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-miftuh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is open.)",
+          "answer": "miftuħ",
+          "explanation": "The complete sentence is “Il-kontenitur huwa miftuħ.”",
+          "reviewCard": {
+            "maltese": "miftuħ",
+            "english": "open (masculine)",
+            "example": "Il-kontenitur huwa miftuħ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "miftuħ"
+          ]
+        },
+        {
+          "id": "b2-recycling-miftuha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-miftuha"
+          ],
+          "prompt": "True or false: “miftuħa” means “open (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "miftuħa means “open”.",
+          "reviewCard": {
+            "maltese": "miftuħa",
+            "english": "open"
+          }
+        },
+        {
+          "id": "b2-recycling-miftuha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-miftuha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is open.)",
+          "answer": "miftuħa",
+          "explanation": "The complete sentence is “Il-borża hija miftuħa.”",
+          "reviewCard": {
+            "maltese": "miftuħa",
+            "english": "open",
+            "example": "Il-borża hija miftuħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "miftuħa"
+          ]
+        },
+        {
+          "id": "b2-recycling-miftuhin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-miftuhin"
+          ],
+          "prompt": "What is the lesson meaning of “miftuħin”?",
+          "choices": [
+            "cut / torn (masculine)",
+            "cut / torn (feminine)",
+            "open (plural)"
+          ],
+          "answer": "open (plural)",
+          "explanation": "miftuħin means “open (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "miftuħin",
+            "english": "open (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-miftuhin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-miftuhin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are open.)",
+          "answer": "miftuħin",
+          "explanation": "The complete sentence is “Il-kontenituri huma miftuħin.”",
+          "reviewCard": {
+            "maltese": "miftuħin",
+            "english": "open (plural)",
+            "example": "Il-kontenituri huma miftuħin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "miftuħin"
+          ]
+        },
+        {
+          "id": "b2-recycling-mqatta-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mqatta"
+          ],
+          "prompt": "True or false: “mqatta'” means “cut / torn (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "mqatta' means “cut / torn (masculine)”.",
+          "reviewCard": {
+            "maltese": "mqatta'",
+            "english": "cut / torn (masculine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mqatta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mqatta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is cut.)",
+          "answer": "mqatta'",
+          "explanation": "The complete sentence is “Il-kontenitur huwa mqatta'.”",
+          "reviewCard": {
+            "maltese": "mqatta'",
+            "english": "cut / torn (masculine)",
+            "example": "Il-kontenitur huwa mqatta'."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mqatta'"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-tinten",
+            "b2-recycling-jintnu",
+            "b2-recycling-miftuh",
+            "b2-recycling-miftuha"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "tinten",
+              "right": "it stinks (feminine)"
+            },
+            {
+              "left": "jintnu",
+              "right": "they stink"
+            },
+            {
+              "left": "miftuħ",
+              "right": "open (masculine)"
+            },
+            {
+              "left": "miftuħa",
+              "right": "open"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "tinten",
+            "english": "it stinks (feminine)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 5",
+      "items": [
+        {
+          "id": "b2-recycling-mqattgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mqattgha"
+          ],
+          "prompt": "What is the lesson meaning of “mqattgħa”?",
+          "choices": [
+            "cut / torn (feminine)",
+            "cut / torn (plural)",
+            "organic waste"
+          ],
+          "answer": "cut / torn (feminine)",
+          "explanation": "mqattgħa means “cut / torn (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "mqattgħa",
+            "english": "cut / torn (feminine)"
+          }
+        },
+        {
+          "id": "b2-recycling-mqattgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mqattgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is cut.)",
+          "answer": "mqattgħa",
+          "explanation": "The complete sentence is “Il-borża hija mqattgħa.”",
+          "reviewCard": {
+            "maltese": "mqattgħa",
+            "english": "cut / torn (feminine)",
+            "example": "Il-borża hija mqattgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mqattgħa"
+          ]
+        },
+        {
+          "id": "b2-recycling-mqattghin-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mqattghin"
+          ],
+          "prompt": "True or false: “mqattgħin” means “organic waste” in this chapter.",
+          "answer": false,
+          "explanation": "mqattgħin means “cut / torn (plural)”.",
+          "reviewCard": {
+            "maltese": "mqattgħin",
+            "english": "cut / torn (plural)"
+          }
+        },
+        {
+          "id": "b2-recycling-mqattghin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-mqattghin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are cut.)",
+          "answer": "mqattgħin",
+          "explanation": "The complete sentence is “Il-kontenituri huma mqattgħin.”",
+          "reviewCard": {
+            "maltese": "mqattgħin",
+            "english": "cut / torn (plural)",
+            "example": "Il-kontenituri huma mqattgħin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mqattgħin"
+          ]
+        },
+        {
+          "id": "b2-recycling-skart-organiku-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-skart-organiku"
+          ],
+          "prompt": "What is the lesson meaning of “skart organiku”?",
+          "choices": [
+            "container",
+            "organic waste",
+            "bag"
+          ],
+          "answer": "organic waste",
+          "explanation": "skart organiku means “organic waste” in this chapter.",
+          "reviewCard": {
+            "maltese": "skart organiku",
+            "english": "organic waste"
+          }
+        },
+        {
+          "id": "b2-recycling-skart-organiku-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-skart-organiku"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the organic waste.)",
+          "answer": "skart organiku",
+          "explanation": "The complete sentence is “Hemm skart organiku fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "skart organiku",
+            "english": "organic waste",
+            "example": "Hemm skart organiku fil-kontenitur."
+          },
+          "type": "order-words",
+          "tokens": [
+            "skart",
+            "organiku"
+          ]
+        },
+        {
+          "id": "b2-recycling-borza-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-borza"
+          ],
+          "prompt": "True or false: “borża” means “container” in this chapter.",
+          "answer": false,
+          "explanation": "borża means “bag”.",
+          "reviewCard": {
+            "maltese": "borża",
+            "english": "bag"
+          }
+        },
+        {
+          "id": "b2-recycling-borza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-borza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the bag.)",
+          "answer": "borża",
+          "explanation": "The complete sentence is “Hemm borża fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "borża",
+            "english": "bag",
+            "example": "Hemm borża fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "borża"
+          ]
+        },
+        {
+          "id": "b2-recycling-kontenitur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-kontenitur"
+          ],
+          "prompt": "What is the lesson meaning of “kontenitur”?",
+          "choices": [
+            "throw away (singular command)",
+            "throw away (plural command)",
+            "container"
+          ],
+          "answer": "container",
+          "explanation": "kontenitur means “container” in this chapter.",
+          "reviewCard": {
+            "maltese": "kontenitur",
+            "english": "container"
+          }
+        },
+        {
+          "id": "b2-recycling-kontenitur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-kontenitur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the container.)",
+          "answer": "kontenitur",
+          "explanation": "The complete sentence is “Hemm kontenitur fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "kontenitur",
+            "english": "container",
+            "example": "Hemm kontenitur fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kontenitur"
+          ]
+        },
+        {
+          "id": "b2-recycling-armi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-armi"
+          ],
+          "prompt": "True or false: “armi” means “throw away (plural command)” in this chapter.",
+          "answer": false,
+          "explanation": "armi means “throw away (singular command)”.",
+          "reviewCard": {
+            "maltese": "armi",
+            "english": "throw away (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-armi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-armi"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-karta fil-kontenitur.” (Throw the paper into the container.)",
+          "answer": "armi",
+          "explanation": "The complete sentence is “Armi l-karta fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "armi",
+            "english": "throw away (singular command)",
+            "example": "Armi l-karta fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "armi"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mqattgha",
+            "b2-recycling-mqattghin",
+            "b2-recycling-skart-organiku",
+            "b2-recycling-borza"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "mqattgħa",
+              "right": "cut / torn (feminine)"
+            },
+            {
+              "left": "mqattgħin",
+              "right": "cut / torn (plural)"
+            },
+            {
+              "left": "skart organiku",
+              "right": "organic waste"
+            },
+            {
+              "left": "borża",
+              "right": "bag"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "mqattgħa",
+            "english": "cut / torn (feminine)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 6",
+      "items": [
+        {
+          "id": "b2-recycling-armu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-armu"
+          ],
+          "prompt": "What is the lesson meaning of “armu”?",
+          "choices": [
+            "throw away (plural command)",
+            "chose",
+            "choose (singular command)"
+          ],
+          "answer": "throw away (plural command)",
+          "explanation": "armu means “throw away (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "armu",
+            "english": "throw away (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-armu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-armu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-karta fil-kontenitur.” (Throw the paper into the container, everyone.)",
+          "answer": "armu",
+          "explanation": "The complete sentence is “Armu l-karta fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "armu",
+            "english": "throw away (plural command)",
+            "example": "Armu l-karta fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "armu"
+          ]
+        },
+        {
+          "id": "b2-recycling-ghazel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ghazel"
+          ],
+          "prompt": "True or false: “għażel” means “choose (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "għażel means “chose”.",
+          "reviewCard": {
+            "maltese": "għażel",
+            "english": "chose"
+          }
+        },
+        {
+          "id": "b2-recycling-ghazel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-ghazel"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ilbieraħ _____ il-kontenitur it-tajjeb.” (Yesterday he chose the correct container.)",
+          "answer": "għażel",
+          "explanation": "The complete sentence is “Ilbieraħ għażel il-kontenitur it-tajjeb.”",
+          "reviewCard": {
+            "maltese": "għażel",
+            "english": "chose",
+            "example": "Ilbieraħ għażel il-kontenitur it-tajjeb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għażel"
+          ]
+        },
+        {
+          "id": "b2-recycling-aghzel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-aghzel"
+          ],
+          "prompt": "What is the lesson meaning of “agħżel”?",
+          "choices": [
+            "throw (singular command)",
+            "choose (singular command)",
+            "choose (plural command)"
+          ],
+          "answer": "choose (singular command)",
+          "explanation": "agħżel means “choose (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħżel",
+            "english": "choose (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-aghzel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-aghzel"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-kontenitur it-tajjeb.” (Choose the correct container.)",
+          "answer": "agħżel",
+          "explanation": "The complete sentence is “Agħżel il-kontenitur it-tajjeb.”",
+          "reviewCard": {
+            "maltese": "agħżel",
+            "english": "choose (singular command)",
+            "example": "Agħżel il-kontenitur it-tajjeb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħżel"
+          ]
+        },
+        {
+          "id": "b2-recycling-aghzlu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-aghzlu"
+          ],
+          "prompt": "True or false: “agħżlu” means “throw (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "agħżlu means “choose (plural command)”.",
+          "reviewCard": {
+            "maltese": "agħżlu",
+            "english": "choose (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-aghzlu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-aghzlu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-kontenitur it-tajjeb.” (Choose the correct container, everyone.)",
+          "answer": "agħżlu",
+          "explanation": "The complete sentence is “Agħżlu l-kontenitur it-tajjeb.”",
+          "reviewCard": {
+            "maltese": "agħżlu",
+            "english": "choose (plural command)",
+            "example": "Agħżlu l-kontenitur it-tajjeb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħżlu"
+          ]
+        },
+        {
+          "id": "b2-recycling-waddab-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-waddab"
+          ],
+          "prompt": "What is the lesson meaning of “waddab”?",
+          "choices": [
+            "throw (plural command)",
+            "separate (singular command)",
+            "throw (singular command)"
+          ],
+          "answer": "throw (singular command)",
+          "explanation": "waddab means “throw (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "waddab",
+            "english": "throw (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-waddab-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-waddab"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-flixkun fil-kontenitur.” (Throw the bottle into the container.)",
+          "answer": "waddab",
+          "explanation": "The complete sentence is “Waddab il-flixkun fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "waddab",
+            "english": "throw (singular command)",
+            "example": "Waddab il-flixkun fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "waddab"
+          ]
+        },
+        {
+          "id": "b2-recycling-waddbu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-waddbu"
+          ],
+          "prompt": "True or false: “waddbu” means “separate (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "waddbu means “throw (plural command)”.",
+          "reviewCard": {
+            "maltese": "waddbu",
+            "english": "throw (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-waddbu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-waddbu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-fliexken fil-kontenitur.” (Throw the bottles into the container, everyone.)",
+          "answer": "waddbu",
+          "explanation": "The complete sentence is “Waddbu l-fliexken fil-kontenitur.”",
+          "reviewCard": {
+            "maltese": "waddbu",
+            "english": "throw (plural command)",
+            "example": "Waddbu l-fliexken fil-kontenitur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "waddbu"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-6-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-armu",
+            "b2-recycling-ghazel",
+            "b2-recycling-aghzel",
+            "b2-recycling-aghzlu"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "armu",
+              "right": "throw away (plural command)"
+            },
+            {
+              "left": "għażel",
+              "right": "chose"
+            },
+            {
+              "left": "agħżel",
+              "right": "choose (singular command)"
+            },
+            {
+              "left": "agħżlu",
+              "right": "choose (plural command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "armu",
+            "english": "throw away (plural command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-recycling",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-recycling-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 5,
+      "title": "Nirriċiklaw l-Iskart Checkpoint 7",
+      "items": [
+        {
+          "id": "b2-recycling-issepara-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-issepara"
+          ],
+          "prompt": "What is the lesson meaning of “issepara”?",
+          "choices": [
+            "separate (singular command)",
+            "separate (plural command)",
+            "he took out"
+          ],
+          "answer": "separate (singular command)",
+          "explanation": "issepara means “separate (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "issepara",
+            "english": "separate (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-issepara-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-issepara"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-plastik mill-karta.” (Separate the plastic from the paper.)",
+          "answer": "issepara",
+          "explanation": "The complete sentence is “Issepara l-plastik mill-karta.”",
+          "reviewCard": {
+            "maltese": "issepara",
+            "english": "separate (singular command)",
+            "example": "Issepara l-plastik mill-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "issepara"
+          ]
+        },
+        {
+          "id": "b2-recycling-isseparaw-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-isseparaw"
+          ],
+          "prompt": "True or false: “isseparaw” means “he took out” in this chapter.",
+          "answer": false,
+          "explanation": "isseparaw means “separate (plural command)”.",
+          "reviewCard": {
+            "maltese": "isseparaw",
+            "english": "separate (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-isseparaw-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-isseparaw"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-plastik mill-karta.” (Separate the plastic from the paper, everyone.)",
+          "answer": "isseparaw",
+          "explanation": "The complete sentence is “Isseparaw il-plastik mill-karta.”",
+          "reviewCard": {
+            "maltese": "isseparaw",
+            "english": "separate (plural command)",
+            "example": "Isseparaw il-plastik mill-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "isseparaw"
+          ]
+        },
+        {
+          "id": "b2-recycling-hareg-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-hareg"
+          ],
+          "prompt": "What is the lesson meaning of “ħareġ”?",
+          "choices": [
+            "take out (plural command)",
+            "he took out",
+            "take out (singular command)"
+          ],
+          "answer": "he took out",
+          "explanation": "ħareġ means “he took out” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħareġ",
+            "english": "he took out"
+          }
+        },
+        {
+          "id": "b2-recycling-hareg-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-hareg"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-borża tal-iskart.” (He took out the rubbish bag.)",
+          "answer": "ħareġ",
+          "explanation": "The complete sentence is “Ħareġ il-borża tal-iskart.”",
+          "reviewCard": {
+            "maltese": "ħareġ",
+            "english": "he took out",
+            "example": "Ħareġ il-borża tal-iskart."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħareġ"
+          ]
+        },
+        {
+          "id": "b2-recycling-ohrog-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ohrog"
+          ],
+          "prompt": "True or false: “oħroġ” means “take out (plural command)” in this chapter.",
+          "answer": false,
+          "explanation": "oħroġ means “take out (singular command)”.",
+          "reviewCard": {
+            "maltese": "oħroġ",
+            "english": "take out (singular command)"
+          }
+        },
+        {
+          "id": "b2-recycling-ohrog-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-ohrog"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-borża tal-iskart.” (Take out the rubbish bag.)",
+          "answer": "oħroġ",
+          "explanation": "The complete sentence is “Oħroġ il-borża tal-iskart.”",
+          "reviewCard": {
+            "maltese": "oħroġ",
+            "english": "take out (singular command)",
+            "example": "Oħroġ il-borża tal-iskart."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oħroġ"
+          ]
+        },
+        {
+          "id": "b2-recycling-ohorgu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-ohorgu"
+          ],
+          "prompt": "What is the lesson meaning of “oħorġu”?",
+          "choices": [
+            "plastic",
+            "paper / card",
+            "take out (plural command)"
+          ],
+          "answer": "take out (plural command)",
+          "explanation": "oħorġu means “take out (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "oħorġu",
+            "english": "take out (plural command)"
+          }
+        },
+        {
+          "id": "b2-recycling-ohorgu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-ohorgu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-boroż tal-iskart.” (Take out the rubbish bags, everyone.)",
+          "answer": "oħorġu",
+          "explanation": "The complete sentence is “Oħorġu l-boroż tal-iskart.”",
+          "reviewCard": {
+            "maltese": "oħorġu",
+            "english": "take out (plural command)",
+            "example": "Oħorġu l-boroż tal-iskart."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oħorġu"
+          ]
+        },
+        {
+          "id": "b2-recycling-checkpoint-7-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-issepara",
+            "b2-recycling-isseparaw",
+            "b2-recycling-hareg",
+            "b2-recycling-ohrog"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "issepara",
+              "right": "separate (singular command)"
+            },
+            {
+              "left": "isseparaw",
+              "right": "separate (plural command)"
+            },
+            {
+              "left": "ħareġ",
+              "right": "he took out"
+            },
+            {
+              "left": "oħroġ",
+              "right": "take out (singular command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "issepara",
+            "english": "separate (singular command)"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2841 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b1-residence",
+    "levelId": "b1",
+    "levelLabel": "B1 Foundation",
+    "number": 2,
+    "title": "Fejn Noqgħod"
+  },
+  "inventoryChapter": {
+    "id": "b1.2",
+    "courseChapterId": "b1-residence",
+    "book": "B1",
+    "number": 2,
+    "title": "Fejn Noqgħod",
+    "targets": [
+      "rota",
+      "trakk",
+      "ħelikopter",
+      "vann",
+      "karozza",
+      "karozza tal-linja",
+      "mutur",
+      "vapur",
+      "bil-mixi",
+      "bil-mutur",
+      "bir-rota",
+      "bil-vann",
+      "bil-karozza",
+      "kowċ",
+      "bil-kowċ",
+      "skola",
+      "ħanut",
+      "dar",
+      "bankina",
+      "siġra",
+      "sptar",
+      "ajruplan",
+      "knisja"
+    ],
+    "baselineMissing": [
+      "trakk",
+      "vann",
+      "karozza tal-linja",
+      "bil-vann",
+      "bil-kowċ",
+      "bankina"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b1-residence",
+    "book": "B1",
+    "chapterNumber": 2,
+    "chapterTitle": "Fejn Noqgħod",
+    "pageStart": 15,
+    "pageEnd": 31
+  },
+  "targets": [
+    {
+      "id": "b1-residence-rota",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "rota",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bir-rota"
+      },
+      "assessmentIds": [
+        "b1-residence-rota-diagnostic-recognition",
+        "b1-residence-rota-recognition",
+        "b1-residence-rota-production",
+        "b1-residence-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-trakk",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "trakk",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-trakk"
+      },
+      "assessmentIds": [
+        "b1-residence-trakk-recognition-true-false",
+        "b1-residence-trakk-production",
+        "b1-residence-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-helikopter",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "ħelikopter",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-helikopter"
+      },
+      "assessmentIds": [
+        "b1-residence-helikopter-diagnostic-recognition-true-false",
+        "b1-residence-helikopter-recognition",
+        "b1-residence-helikopter-production",
+        "b1-residence-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-vann",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "vann",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-vann"
+      },
+      "assessmentIds": [
+        "b1-residence-vann-recognition-true-false",
+        "b1-residence-vann-production",
+        "b1-residence-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-karozza",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "karozza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bil-karozza"
+      },
+      "assessmentIds": [
+        "b1-residence-karozza-diagnostic-recognition",
+        "b1-residence-karozza-recognition",
+        "b1-residence-karozza-production"
+      ]
+    },
+    {
+      "id": "b1-residence-karozza-tal-linja",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "phrase",
+      "sourceRequirement": "karozza tal-linja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-karozza-tal-linja"
+      },
+      "assessmentIds": [
+        "b1-residence-karozza-tal-linja-recognition-true-false",
+        "b1-residence-karozza-tal-linja-production"
+      ]
+    },
+    {
+      "id": "b1-residence-mutur",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "mutur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "mutur-scooter"
+      },
+      "assessmentIds": [
+        "b1-residence-mutur-recognition",
+        "b1-residence-mutur-production",
+        "b1-residence-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-vapur",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "vapur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "vapur"
+      },
+      "assessmentIds": [
+        "b1-residence-vapur-diagnostic-recognition-true-false",
+        "b1-residence-vapur-recognition-true-false",
+        "b1-residence-vapur-production",
+        "b1-residence-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-bil-mixi",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-mixi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bil-mixi"
+      },
+      "assessmentIds": [
+        "b1-residence-bil-mixi-recognition",
+        "b1-residence-bil-mixi-production",
+        "b1-residence-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-bil-mutur",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-mutur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "mutur-scooter"
+      },
+      "assessmentIds": [
+        "b1-residence-bil-mutur-diagnostic-recognition",
+        "b1-residence-bil-mutur-recognition-true-false",
+        "b1-residence-bil-mutur-production",
+        "b1-residence-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-bir-rota",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bir-rota",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bir-rota"
+      },
+      "assessmentIds": [
+        "b1-residence-bir-rota-recognition",
+        "b1-residence-bir-rota-production"
+      ]
+    },
+    {
+      "id": "b1-residence-bil-vann",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-vann",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-bil-vann"
+      },
+      "assessmentIds": [
+        "b1-residence-bil-vann-recognition-true-false",
+        "b1-residence-bil-vann-production"
+      ]
+    },
+    {
+      "id": "b1-residence-bil-karozza",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-karozza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "bil-karozza"
+      },
+      "assessmentIds": [
+        "travel-order",
+        "travel-car-recognition",
+        "b1-residence-bil-karozza-diagnostic-recognition-true-false",
+        "b1-residence-bil-karozza-recognition",
+        "b1-residence-bil-karozza-production",
+        "b1-residence-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-kowc",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "kowċ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-kowc"
+      },
+      "assessmentIds": [
+        "b1-residence-kowc-recognition-true-false",
+        "b1-residence-kowc-production",
+        "b1-residence-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-bil-kowc",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bil-kowċ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-bil-kowc"
+      },
+      "assessmentIds": [
+        "b1-residence-bil-kowc-diagnostic-recognition",
+        "b1-residence-bil-kowc-recognition",
+        "b1-residence-bil-kowc-production",
+        "b1-residence-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-skola",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "skola",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "skola"
+      },
+      "assessmentIds": [
+        "b1-residence-skola-recognition-true-false",
+        "b1-residence-skola-production",
+        "b1-residence-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-hanut",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "ħanut",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "hanut"
+      },
+      "assessmentIds": [
+        "b1-residence-hanut-recognition",
+        "b1-residence-hanut-production"
+      ]
+    },
+    {
+      "id": "b1-residence-dar",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "dar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "pronouns_possessives.html",
+        "file": "assets/data/pronouns_possessives.json",
+        "itemId": "id-dar-tieghi"
+      },
+      "assessmentIds": [
+        "b1-residence-dar-diagnostic-recognition-true-false",
+        "b1-residence-dar-recognition-true-false",
+        "b1-residence-dar-production"
+      ]
+    },
+    {
+      "id": "b1-residence-bankina",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "bankina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-bankina"
+      },
+      "assessmentIds": [
+        "b1-residence-bankina-recognition",
+        "b1-residence-bankina-production",
+        "b1-residence-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-sigra",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "siġra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-sigra"
+      },
+      "assessmentIds": [
+        "b1-residence-sigra-diagnostic-recognition",
+        "b1-residence-sigra-recognition-true-false",
+        "b1-residence-sigra-production",
+        "b1-residence-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-sptar",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "sptar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-residence-sptar"
+      },
+      "assessmentIds": [
+        "b1-residence-sptar-recognition",
+        "b1-residence-sptar-production",
+        "b1-residence-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-ajruplan",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "ajruplan",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "transport_travel.html",
+        "file": "assets/data/transport.json",
+        "itemId": "ajruplan"
+      },
+      "assessmentIds": [
+        "b1-residence-ajruplan-recognition-true-false",
+        "b1-residence-ajruplan-production",
+        "b1-residence-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-residence-knisja",
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "type": "vocabulary",
+      "sourceRequirement": "knisja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "knisja"
+      },
+      "assessmentIds": [
+        "b1-residence-knisja-diagnostic-recognition-true-false",
+        "b1-residence-knisja-recognition",
+        "b1-residence-knisja-production"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b1-residence-rota": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-trakk": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-helikopter": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-vann": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-karozza": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-karozza-tal-linja": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        25,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-mutur": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        23,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-vapur": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-mixi": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-mutur": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bir-rota": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-vann": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-karozza": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-kowc": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bil-kowc": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 23,
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-skola": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-hanut": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-dar": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-bankina": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-sigra": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-sptar": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-ajruplan": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 19,
+      "pages": [
+        19,
+        20,
+        29
+      ],
+      "match": "text-exact"
+    },
+    "b1-residence-knisja": {
+      "book": "B1",
+      "chapterId": "b1-residence",
+      "chapterNumber": 2,
+      "chapterTitle": "Fejn Noqgħod",
+      "pageRange": [
+        15,
+        31
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b1-residence-rota",
+      "maltese": "rota",
+      "english": "bicycle",
+      "example": "Nara rota fit-triq.",
+      "exampleTranslation": "I see the bicycle in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 20",
+      "notes": [
+        "Example: Nara rota fit-triq.",
+        "Translation: I see the bicycle in the street.",
+        "Source: B1, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-trakk",
+      "maltese": "trakk",
+      "english": "truck",
+      "example": "Nara trakk fit-triq.",
+      "exampleTranslation": "I see the truck in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 20",
+      "notes": [
+        "Example: Nara trakk fit-triq.",
+        "Translation: I see the truck in the street.",
+        "Source: B1, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-helikopter",
+      "maltese": "ħelikopter",
+      "english": "helicopter",
+      "example": "Nara ħelikopter fit-triq.",
+      "exampleTranslation": "I see the helicopter in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara ħelikopter fit-triq.",
+        "Translation: I see the helicopter in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-vann",
+      "maltese": "vann",
+      "english": "van",
+      "example": "Nara vann fit-triq.",
+      "exampleTranslation": "I see the van in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara vann fit-triq.",
+        "Translation: I see the van in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-karozza",
+      "maltese": "karozza",
+      "english": "car",
+      "example": "Nara karozza fit-triq.",
+      "exampleTranslation": "I see the car in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara karozza fit-triq.",
+        "Translation: I see the car in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-karozza-tal-linja",
+      "maltese": "karozza tal-linja",
+      "english": "bus",
+      "example": "Nara karozza tal-linja fit-triq.",
+      "exampleTranslation": "I see the bus in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara karozza tal-linja fit-triq.",
+        "Translation: I see the bus in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-residence-mutur",
+      "maltese": "mutur",
+      "english": "motorcycle / scooter",
+      "example": "Nara mutur fit-triq.",
+      "exampleTranslation": "I see the motorcycle in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara mutur fit-triq.",
+        "Translation: I see the motorcycle in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-vapur",
+      "maltese": "vapur",
+      "english": "ship / ferry",
+      "example": "Nara vapur fit-triq.",
+      "exampleTranslation": "I see the ship in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara vapur fit-triq.",
+        "Translation: I see the ship in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bil-mixi",
+      "maltese": "bil-mixi",
+      "english": "on foot",
+      "example": "Immur ix-xogħol bil-mixi.",
+      "exampleTranslation": "I go to work on foot.",
+      "examplePattern": "transport-method",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Immur ix-xogħol bil-mixi.",
+        "Translation: I go to work on foot.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bil-mutur",
+      "maltese": "bil-mutur",
+      "english": "by motorcycle / scooter",
+      "example": "Immur ix-xogħol bil-mutur.",
+      "exampleTranslation": "I go to work by motorcycle.",
+      "examplePattern": "transport-method",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Immur ix-xogħol bil-mutur.",
+        "Translation: I go to work by motorcycle.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bir-rota",
+      "maltese": "bir-rota",
+      "english": "by bicycle",
+      "example": "Immur ix-xogħol bir-rota.",
+      "exampleTranslation": "I go to work by bicycle.",
+      "examplePattern": "transport-method",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Immur ix-xogħol bir-rota.",
+        "Translation: I go to work by bicycle.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bil-vann",
+      "maltese": "bil-vann",
+      "english": "by van",
+      "example": "Immur ix-xogħol bil-vann.",
+      "exampleTranslation": "I go to work by van.",
+      "examplePattern": "transport-method",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Immur ix-xogħol bil-vann.",
+        "Translation: I go to work by van.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bil-karozza",
+      "maltese": "bil-karozza",
+      "english": "by car",
+      "example": "Immur ix-xogħol bil-karozza.",
+      "exampleTranslation": "I go to work by car.",
+      "examplePattern": "transport-method",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Immur ix-xogħol bil-karozza.",
+        "Translation: I go to work by car.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-kowc",
+      "maltese": "kowċ",
+      "english": "coach / bus",
+      "example": "Nara kowċ fit-triq.",
+      "exampleTranslation": "I see the coach in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Nara kowċ fit-triq.",
+        "Translation: I see the coach in the street.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bil-kowc",
+      "maltese": "bil-kowċ",
+      "english": "by coach",
+      "example": "Immur ix-xogħol bil-kowċ.",
+      "exampleTranslation": "I go to work by coach.",
+      "examplePattern": "transport-method",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 23,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 23",
+      "notes": [
+        "Example: Immur ix-xogħol bil-kowċ.",
+        "Translation: I go to work by coach.",
+        "Source: B1, Chapter 2, p. 23"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-skola",
+      "maltese": "skola",
+      "english": "school",
+      "example": "Hemm skola qrib id-dar.",
+      "exampleTranslation": "The school is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 28,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 28",
+      "notes": [
+        "Example: Hemm skola qrib id-dar.",
+        "Translation: The school is near the house.",
+        "Source: B1, Chapter 2, p. 28"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-hanut",
+      "maltese": "ħanut",
+      "english": "shop",
+      "example": "Hemm ħanut qrib id-dar.",
+      "exampleTranslation": "The shop is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 28,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 28",
+      "notes": [
+        "Example: Hemm ħanut qrib id-dar.",
+        "Translation: The shop is near the house.",
+        "Source: B1, Chapter 2, p. 28"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-dar",
+      "maltese": "dar",
+      "english": "house / home",
+      "example": "Hemm dar qrib id-dar.",
+      "exampleTranslation": "The house is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 27,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 27",
+      "notes": [
+        "Example: Hemm dar qrib id-dar.",
+        "Translation: The house is near the house.",
+        "Source: B1, Chapter 2, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-bankina",
+      "maltese": "bankina",
+      "english": "pavement / sidewalk",
+      "example": "Hemm bankina qrib id-dar.",
+      "exampleTranslation": "The pavement is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 27,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 27",
+      "notes": [
+        "Example: Hemm bankina qrib id-dar.",
+        "Translation: The pavement is near the house.",
+        "Source: B1, Chapter 2, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-sigra",
+      "maltese": "siġra",
+      "english": "tree",
+      "example": "Hemm siġra qrib id-dar.",
+      "exampleTranslation": "The tree is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 27,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 27",
+      "notes": [
+        "Example: Hemm siġra qrib id-dar.",
+        "Translation: The tree is near the house.",
+        "Source: B1, Chapter 2, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-sptar",
+      "maltese": "sptar",
+      "english": "hospital",
+      "example": "Hemm sptar qrib id-dar.",
+      "exampleTranslation": "The hospital is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 27,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 27",
+      "notes": [
+        "Example: Hemm sptar qrib id-dar.",
+        "Translation: The hospital is near the house.",
+        "Source: B1, Chapter 2, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-ajruplan",
+      "maltese": "ajruplan",
+      "english": "airplane",
+      "example": "Nara ajruplan fit-triq.",
+      "exampleTranslation": "I see the airplane in the street.",
+      "examplePattern": "transport-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 19,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 19",
+      "notes": [
+        "Example: Nara ajruplan fit-triq.",
+        "Translation: I see the airplane in the street.",
+        "Source: B1, Chapter 2, p. 19"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-residence-knisja",
+      "maltese": "knisja",
+      "english": "church",
+      "example": "Hemm knisja qrib id-dar.",
+      "exampleTranslation": "The church is near the house.",
+      "examplePattern": "place-near-home",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 2,
+        "page": 27,
+        "pageRange": [
+          15,
+          31
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 2, p. 27",
+      "notes": [
+        "Example: Hemm knisja qrib id-dar.",
+        "Translation: The church is near the house.",
+        "Source: B1, Chapter 2, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-diagnostic",
+      "kind": "diagnostic",
+      "title": "Fejn Noqgħod Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-residence-rota-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-rota"
+          ],
+          "prompt": "What is the lesson meaning of “rota”?",
+          "choices": [
+            "bicycle",
+            "truck",
+            "helicopter"
+          ],
+          "answer": "bicycle",
+          "explanation": "rota means “bicycle” in this chapter.",
+          "reviewCard": {
+            "maltese": "rota",
+            "english": "bicycle"
+          }
+        },
+        {
+          "id": "b1-residence-helikopter-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-helikopter"
+          ],
+          "prompt": "True or false: “ħelikopter” means “van” in this chapter.",
+          "answer": false,
+          "explanation": "ħelikopter means “helicopter”.",
+          "reviewCard": {
+            "maltese": "ħelikopter",
+            "english": "helicopter"
+          }
+        },
+        {
+          "id": "b1-residence-karozza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-karozza"
+          ],
+          "prompt": "What is the lesson meaning of “karozza”?",
+          "choices": [
+            "bus",
+            "car",
+            "van"
+          ],
+          "answer": "car",
+          "explanation": "karozza means “car” in this chapter.",
+          "reviewCard": {
+            "maltese": "karozza",
+            "english": "car"
+          }
+        },
+        {
+          "id": "b1-residence-vapur-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-vapur"
+          ],
+          "prompt": "True or false: “vapur” means “car” in this chapter.",
+          "answer": false,
+          "explanation": "vapur means “ship / ferry”.",
+          "reviewCard": {
+            "maltese": "vapur",
+            "english": "ship / ferry"
+          }
+        },
+        {
+          "id": "b1-residence-bil-mutur-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-mutur"
+          ],
+          "prompt": "What is the lesson meaning of “bil-mutur”?",
+          "choices": [
+            "bus",
+            "motorcycle / scooter",
+            "by motorcycle / scooter"
+          ],
+          "answer": "by motorcycle / scooter",
+          "explanation": "bil-mutur means “by motorcycle / scooter” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-mutur",
+            "english": "by motorcycle / scooter"
+          }
+        },
+        {
+          "id": "b1-residence-bil-karozza-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-karozza"
+          ],
+          "prompt": "True or false: “bil-karozza” means “motorcycle / scooter” in this chapter.",
+          "answer": false,
+          "explanation": "bil-karozza means “by car”.",
+          "reviewCard": {
+            "maltese": "bil-karozza",
+            "english": "by car"
+          }
+        },
+        {
+          "id": "b1-residence-bil-kowc-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-kowc"
+          ],
+          "prompt": "What is the lesson meaning of “bil-kowċ”?",
+          "choices": [
+            "by coach",
+            "ship / ferry",
+            "on foot"
+          ],
+          "answer": "by coach",
+          "explanation": "bil-kowċ means “by coach” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-kowċ",
+            "english": "by coach"
+          }
+        },
+        {
+          "id": "b1-residence-dar-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-dar"
+          ],
+          "prompt": "True or false: “dar” means “on foot” in this chapter.",
+          "answer": false,
+          "explanation": "dar means “house / home”.",
+          "reviewCard": {
+            "maltese": "dar",
+            "english": "house / home"
+          }
+        },
+        {
+          "id": "b1-residence-sigra-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-sigra"
+          ],
+          "prompt": "What is the lesson meaning of “siġra”?",
+          "choices": [
+            "by bicycle",
+            "tree",
+            "by motorcycle / scooter"
+          ],
+          "answer": "tree",
+          "explanation": "siġra means “tree” in this chapter.",
+          "reviewCard": {
+            "maltese": "siġra",
+            "english": "tree"
+          }
+        },
+        {
+          "id": "b1-residence-knisja-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-knisja"
+          ],
+          "prompt": "True or false: “knisja” means “by bicycle” in this chapter.",
+          "answer": false,
+          "explanation": "knisja means “church”.",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Fejn Noqgħod Checkpoint 1",
+      "items": [
+        {
+          "id": "b1-residence-rota-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-rota"
+          ],
+          "prompt": "What is the lesson meaning of “rota”?",
+          "choices": [
+            "bicycle",
+            "truck",
+            "helicopter"
+          ],
+          "answer": "bicycle",
+          "explanation": "rota means “bicycle” in this chapter.",
+          "reviewCard": {
+            "maltese": "rota",
+            "english": "bicycle"
+          }
+        },
+        {
+          "id": "b1-residence-rota-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-rota"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the bicycle in the street.)",
+          "answer": "rota",
+          "explanation": "The complete sentence is “Nara rota fit-triq.”",
+          "reviewCard": {
+            "maltese": "rota",
+            "english": "bicycle",
+            "example": "Nara rota fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "rota"
+          ]
+        },
+        {
+          "id": "b1-residence-trakk-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-trakk"
+          ],
+          "prompt": "True or false: “trakk” means “helicopter” in this chapter.",
+          "answer": false,
+          "explanation": "trakk means “truck”.",
+          "reviewCard": {
+            "maltese": "trakk",
+            "english": "truck"
+          }
+        },
+        {
+          "id": "b1-residence-trakk-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-trakk"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the truck in the street.)",
+          "answer": "trakk",
+          "explanation": "The complete sentence is “Nara trakk fit-triq.”",
+          "reviewCard": {
+            "maltese": "trakk",
+            "english": "truck",
+            "example": "Nara trakk fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "trakk"
+          ]
+        },
+        {
+          "id": "b1-residence-helikopter-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-helikopter"
+          ],
+          "prompt": "What is the lesson meaning of “ħelikopter”?",
+          "choices": [
+            "car",
+            "helicopter",
+            "van"
+          ],
+          "answer": "helicopter",
+          "explanation": "ħelikopter means “helicopter” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħelikopter",
+            "english": "helicopter"
+          }
+        },
+        {
+          "id": "b1-residence-helikopter-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-helikopter"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the helicopter in the street.)",
+          "answer": "ħelikopter",
+          "explanation": "The complete sentence is “Nara ħelikopter fit-triq.”",
+          "reviewCard": {
+            "maltese": "ħelikopter",
+            "english": "helicopter",
+            "example": "Nara ħelikopter fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħelikopter"
+          ]
+        },
+        {
+          "id": "b1-residence-vann-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-vann"
+          ],
+          "prompt": "True or false: “vann” means “car” in this chapter.",
+          "answer": false,
+          "explanation": "vann means “van”.",
+          "reviewCard": {
+            "maltese": "vann",
+            "english": "van"
+          }
+        },
+        {
+          "id": "b1-residence-vann-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-vann"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the van in the street.)",
+          "answer": "vann",
+          "explanation": "The complete sentence is “Nara vann fit-triq.”",
+          "reviewCard": {
+            "maltese": "vann",
+            "english": "van",
+            "example": "Nara vann fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "vann"
+          ]
+        },
+        {
+          "id": "b1-residence-karozza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-karozza"
+          ],
+          "prompt": "What is the lesson meaning of “karozza”?",
+          "choices": [
+            "bus",
+            "motorcycle / scooter",
+            "car"
+          ],
+          "answer": "car",
+          "explanation": "karozza means “car” in this chapter.",
+          "reviewCard": {
+            "maltese": "karozza",
+            "english": "car"
+          }
+        },
+        {
+          "id": "b1-residence-karozza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-karozza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the car in the street.)",
+          "answer": "karozza",
+          "explanation": "The complete sentence is “Nara karozza fit-triq.”",
+          "reviewCard": {
+            "maltese": "karozza",
+            "english": "car",
+            "example": "Nara karozza fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "karozza"
+          ]
+        },
+        {
+          "id": "b1-residence-karozza-tal-linja-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-karozza-tal-linja"
+          ],
+          "prompt": "True or false: “karozza tal-linja” means “motorcycle / scooter” in this chapter.",
+          "answer": false,
+          "explanation": "karozza tal-linja means “bus”.",
+          "reviewCard": {
+            "maltese": "karozza tal-linja",
+            "english": "bus"
+          }
+        },
+        {
+          "id": "b1-residence-karozza-tal-linja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-karozza-tal-linja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the bus in the street.)",
+          "answer": "karozza tal-linja",
+          "explanation": "The complete sentence is “Nara karozza tal-linja fit-triq.”",
+          "reviewCard": {
+            "maltese": "karozza tal-linja",
+            "english": "bus",
+            "example": "Nara karozza tal-linja fit-triq."
+          },
+          "type": "order-words",
+          "tokens": [
+            "karozza",
+            "tal-linja"
+          ]
+        },
+        {
+          "id": "b1-residence-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-rota",
+            "b1-residence-trakk",
+            "b1-residence-helikopter",
+            "b1-residence-vann"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "rota",
+              "right": "bicycle"
+            },
+            {
+              "left": "trakk",
+              "right": "truck"
+            },
+            {
+              "left": "ħelikopter",
+              "right": "helicopter"
+            },
+            {
+              "left": "vann",
+              "right": "van"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "rota",
+            "english": "bicycle"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Fejn Noqgħod Checkpoint 2",
+      "items": [
+        {
+          "id": "b1-residence-mutur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-mutur"
+          ],
+          "prompt": "What is the lesson meaning of “mutur”?",
+          "choices": [
+            "motorcycle / scooter",
+            "ship / ferry",
+            "on foot"
+          ],
+          "answer": "motorcycle / scooter",
+          "explanation": "mutur means “motorcycle / scooter” in this chapter.",
+          "reviewCard": {
+            "maltese": "mutur",
+            "english": "motorcycle / scooter"
+          }
+        },
+        {
+          "id": "b1-residence-mutur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-mutur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the motorcycle in the street.)",
+          "answer": "mutur",
+          "explanation": "The complete sentence is “Nara mutur fit-triq.”",
+          "reviewCard": {
+            "maltese": "mutur",
+            "english": "motorcycle / scooter",
+            "example": "Nara mutur fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mutur"
+          ]
+        },
+        {
+          "id": "b1-residence-vapur-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-vapur"
+          ],
+          "prompt": "True or false: “vapur” means “on foot” in this chapter.",
+          "answer": false,
+          "explanation": "vapur means “ship / ferry”.",
+          "reviewCard": {
+            "maltese": "vapur",
+            "english": "ship / ferry"
+          }
+        },
+        {
+          "id": "b1-residence-vapur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-vapur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the ship in the street.)",
+          "answer": "vapur",
+          "explanation": "The complete sentence is “Nara vapur fit-triq.”",
+          "reviewCard": {
+            "maltese": "vapur",
+            "english": "ship / ferry",
+            "example": "Nara vapur fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "vapur"
+          ]
+        },
+        {
+          "id": "b1-residence-bil-mixi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-mixi"
+          ],
+          "prompt": "What is the lesson meaning of “bil-mixi”?",
+          "choices": [
+            "by bicycle",
+            "on foot",
+            "by motorcycle / scooter"
+          ],
+          "answer": "on foot",
+          "explanation": "bil-mixi means “on foot” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-mixi",
+            "english": "on foot"
+          }
+        },
+        {
+          "id": "b1-residence-bil-mixi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-mixi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work on foot.)",
+          "answer": "bil-mixi",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-mixi.”",
+          "reviewCard": {
+            "maltese": "bil-mixi",
+            "english": "on foot",
+            "example": "Immur ix-xogħol bil-mixi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-mixi"
+          ]
+        },
+        {
+          "id": "b1-residence-bil-mutur-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-mutur"
+          ],
+          "prompt": "True or false: “bil-mutur” means “by bicycle” in this chapter.",
+          "answer": false,
+          "explanation": "bil-mutur means “by motorcycle / scooter”.",
+          "reviewCard": {
+            "maltese": "bil-mutur",
+            "english": "by motorcycle / scooter"
+          }
+        },
+        {
+          "id": "b1-residence-bil-mutur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-mutur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work by motorcycle.)",
+          "answer": "bil-mutur",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-mutur.”",
+          "reviewCard": {
+            "maltese": "bil-mutur",
+            "english": "by motorcycle / scooter",
+            "example": "Immur ix-xogħol bil-mutur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-mutur"
+          ]
+        },
+        {
+          "id": "b1-residence-bir-rota-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bir-rota"
+          ],
+          "prompt": "What is the lesson meaning of “bir-rota”?",
+          "choices": [
+            "by van",
+            "by car",
+            "by bicycle"
+          ],
+          "answer": "by bicycle",
+          "explanation": "bir-rota means “by bicycle” in this chapter.",
+          "reviewCard": {
+            "maltese": "bir-rota",
+            "english": "by bicycle"
+          }
+        },
+        {
+          "id": "b1-residence-bir-rota-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bir-rota"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work by bicycle.)",
+          "answer": "bir-rota",
+          "explanation": "The complete sentence is “Immur ix-xogħol bir-rota.”",
+          "reviewCard": {
+            "maltese": "bir-rota",
+            "english": "by bicycle",
+            "example": "Immur ix-xogħol bir-rota."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bir-rota"
+          ]
+        },
+        {
+          "id": "b1-residence-bil-vann-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-vann"
+          ],
+          "prompt": "True or false: “bil-vann” means “by car” in this chapter.",
+          "answer": false,
+          "explanation": "bil-vann means “by van”.",
+          "reviewCard": {
+            "maltese": "bil-vann",
+            "english": "by van"
+          }
+        },
+        {
+          "id": "b1-residence-bil-vann-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-vann"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work by van.)",
+          "answer": "bil-vann",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-vann.”",
+          "reviewCard": {
+            "maltese": "bil-vann",
+            "english": "by van",
+            "example": "Immur ix-xogħol bil-vann."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-vann"
+          ]
+        },
+        {
+          "id": "b1-residence-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-mutur",
+            "b1-residence-vapur",
+            "b1-residence-bil-mixi",
+            "b1-residence-bil-mutur"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "mutur",
+              "right": "motorcycle / scooter"
+            },
+            {
+              "left": "vapur",
+              "right": "ship / ferry"
+            },
+            {
+              "left": "bil-mixi",
+              "right": "on foot"
+            },
+            {
+              "left": "bil-mutur",
+              "right": "by motorcycle / scooter"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "mutur",
+            "english": "motorcycle / scooter"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Fejn Noqgħod Checkpoint 3",
+      "items": [
+        {
+          "id": "b1-residence-bil-karozza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-karozza"
+          ],
+          "prompt": "What is the lesson meaning of “bil-karozza”?",
+          "choices": [
+            "by car",
+            "coach / bus",
+            "by coach"
+          ],
+          "answer": "by car",
+          "explanation": "bil-karozza means “by car” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-karozza",
+            "english": "by car"
+          }
+        },
+        {
+          "id": "b1-residence-bil-karozza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-karozza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work by car.)",
+          "answer": "bil-karozza",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-karozza.”",
+          "reviewCard": {
+            "maltese": "bil-karozza",
+            "english": "by car",
+            "example": "Immur ix-xogħol bil-karozza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-karozza"
+          ]
+        },
+        {
+          "id": "b1-residence-kowc-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-kowc"
+          ],
+          "prompt": "True or false: “kowċ” means “by coach” in this chapter.",
+          "answer": false,
+          "explanation": "kowċ means “coach / bus”.",
+          "reviewCard": {
+            "maltese": "kowċ",
+            "english": "coach / bus"
+          }
+        },
+        {
+          "id": "b1-residence-kowc-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-kowc"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the coach in the street.)",
+          "answer": "kowċ",
+          "explanation": "The complete sentence is “Nara kowċ fit-triq.”",
+          "reviewCard": {
+            "maltese": "kowċ",
+            "english": "coach / bus",
+            "example": "Nara kowċ fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kowċ"
+          ]
+        },
+        {
+          "id": "b1-residence-bil-kowc-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-kowc"
+          ],
+          "prompt": "What is the lesson meaning of “bil-kowċ”?",
+          "choices": [
+            "shop",
+            "by coach",
+            "school"
+          ],
+          "answer": "by coach",
+          "explanation": "bil-kowċ means “by coach” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-kowċ",
+            "english": "by coach"
+          }
+        },
+        {
+          "id": "b1-residence-bil-kowc-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-kowc"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work by coach.)",
+          "answer": "bil-kowċ",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-kowċ.”",
+          "reviewCard": {
+            "maltese": "bil-kowċ",
+            "english": "by coach",
+            "example": "Immur ix-xogħol bil-kowċ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-kowċ"
+          ]
+        },
+        {
+          "id": "b1-residence-skola-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-skola"
+          ],
+          "prompt": "True or false: “skola” means “shop” in this chapter.",
+          "answer": false,
+          "explanation": "skola means “school”.",
+          "reviewCard": {
+            "maltese": "skola",
+            "english": "school"
+          }
+        },
+        {
+          "id": "b1-residence-skola-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-skola"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The school is near the house.)",
+          "answer": "skola",
+          "explanation": "The complete sentence is “Hemm skola qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "skola",
+            "english": "school",
+            "example": "Hemm skola qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "skola"
+          ]
+        },
+        {
+          "id": "b1-residence-hanut-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-hanut"
+          ],
+          "prompt": "What is the lesson meaning of “ħanut”?",
+          "choices": [
+            "house / home",
+            "pavement / sidewalk",
+            "shop"
+          ],
+          "answer": "shop",
+          "explanation": "ħanut means “shop” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħanut",
+            "english": "shop"
+          }
+        },
+        {
+          "id": "b1-residence-hanut-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-hanut"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The shop is near the house.)",
+          "answer": "ħanut",
+          "explanation": "The complete sentence is “Hemm ħanut qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "ħanut",
+            "english": "shop",
+            "example": "Hemm ħanut qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħanut"
+          ]
+        },
+        {
+          "id": "b1-residence-dar-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-dar"
+          ],
+          "prompt": "True or false: “dar” means “pavement / sidewalk” in this chapter.",
+          "answer": false,
+          "explanation": "dar means “house / home”.",
+          "reviewCard": {
+            "maltese": "dar",
+            "english": "house / home"
+          }
+        },
+        {
+          "id": "b1-residence-dar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-dar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The house is near the house.)",
+          "answer": "dar",
+          "explanation": "The complete sentence is “Hemm dar qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "dar",
+            "english": "house / home",
+            "example": "Hemm dar qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dar"
+          ]
+        },
+        {
+          "id": "b1-residence-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-karozza",
+            "b1-residence-kowc",
+            "b1-residence-bil-kowc",
+            "b1-residence-skola"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "bil-karozza",
+              "right": "by car"
+            },
+            {
+              "left": "kowċ",
+              "right": "coach / bus"
+            },
+            {
+              "left": "bil-kowċ",
+              "right": "by coach"
+            },
+            {
+              "left": "skola",
+              "right": "school"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "bil-karozza",
+            "english": "by car"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-residence",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-residence-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 5,
+      "title": "Fejn Noqgħod Checkpoint 4",
+      "items": [
+        {
+          "id": "b1-residence-bankina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bankina"
+          ],
+          "prompt": "What is the lesson meaning of “bankina”?",
+          "choices": [
+            "pavement / sidewalk",
+            "tree",
+            "hospital"
+          ],
+          "answer": "pavement / sidewalk",
+          "explanation": "bankina means “pavement / sidewalk” in this chapter.",
+          "reviewCard": {
+            "maltese": "bankina",
+            "english": "pavement / sidewalk"
+          }
+        },
+        {
+          "id": "b1-residence-bankina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bankina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The pavement is near the house.)",
+          "answer": "bankina",
+          "explanation": "The complete sentence is “Hemm bankina qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "bankina",
+            "english": "pavement / sidewalk",
+            "example": "Hemm bankina qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bankina"
+          ]
+        },
+        {
+          "id": "b1-residence-sigra-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-sigra"
+          ],
+          "prompt": "True or false: “siġra” means “hospital” in this chapter.",
+          "answer": false,
+          "explanation": "siġra means “tree”.",
+          "reviewCard": {
+            "maltese": "siġra",
+            "english": "tree"
+          }
+        },
+        {
+          "id": "b1-residence-sigra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-sigra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The tree is near the house.)",
+          "answer": "siġra",
+          "explanation": "The complete sentence is “Hemm siġra qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "siġra",
+            "english": "tree",
+            "example": "Hemm siġra qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "siġra"
+          ]
+        },
+        {
+          "id": "b1-residence-sptar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-sptar"
+          ],
+          "prompt": "What is the lesson meaning of “sptar”?",
+          "choices": [
+            "church",
+            "hospital",
+            "airplane"
+          ],
+          "answer": "hospital",
+          "explanation": "sptar means “hospital” in this chapter.",
+          "reviewCard": {
+            "maltese": "sptar",
+            "english": "hospital"
+          }
+        },
+        {
+          "id": "b1-residence-sptar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-sptar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The hospital is near the house.)",
+          "answer": "sptar",
+          "explanation": "The complete sentence is “Hemm sptar qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "sptar",
+            "english": "hospital",
+            "example": "Hemm sptar qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sptar"
+          ]
+        },
+        {
+          "id": "b1-residence-ajruplan-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-ajruplan"
+          ],
+          "prompt": "True or false: “ajruplan” means “church” in this chapter.",
+          "answer": false,
+          "explanation": "ajruplan means “airplane”.",
+          "reviewCard": {
+            "maltese": "ajruplan",
+            "english": "airplane"
+          }
+        },
+        {
+          "id": "b1-residence-ajruplan-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-ajruplan"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fit-triq.” (I see the airplane in the street.)",
+          "answer": "ajruplan",
+          "explanation": "The complete sentence is “Nara ajruplan fit-triq.”",
+          "reviewCard": {
+            "maltese": "ajruplan",
+            "english": "airplane",
+            "example": "Nara ajruplan fit-triq."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ajruplan"
+          ]
+        },
+        {
+          "id": "b1-residence-knisja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-knisja"
+          ],
+          "prompt": "What is the lesson meaning of “knisja”?",
+          "choices": [
+            "bicycle",
+            "truck",
+            "church"
+          ],
+          "answer": "church",
+          "explanation": "knisja means “church” in this chapter.",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church"
+          }
+        },
+        {
+          "id": "b1-residence-knisja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-knisja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The church is near the house.)",
+          "answer": "knisja",
+          "explanation": "The complete sentence is “Hemm knisja qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church",
+            "example": "Hemm knisja qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "knisja"
+          ]
+        },
+        {
+          "id": "b1-residence-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bankina",
+            "b1-residence-sigra",
+            "b1-residence-sptar",
+            "b1-residence-ajruplan"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "bankina",
+              "right": "pavement / sidewalk"
+            },
+            {
+              "left": "siġra",
+              "right": "tree"
+            },
+            {
+              "left": "sptar",
+              "right": "hospital"
+            },
+            {
+              "left": "ajruplan",
+              "right": "airplane"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "bankina",
+            "english": "pavement / sidewalk"
+          }
+        }
+      ]
+    }
+  ]
+}

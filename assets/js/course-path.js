@@ -1,6 +1,6 @@
 (() => {
   const DATA_URL = "./assets/data/course_path.json";
-  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
+  const BINDINGS_URL = "./assets/data/course/manifest.json";
   const STORAGE_KEY = "malti_course_progress_v1";
   const storage = window.MaltiStorage;
 
@@ -18,11 +18,9 @@
 
   const objectiveKey = (chapterId, objectiveId) => `${chapterId}::${objectiveId}`;
 
-  const hasChapterView = (bindings, chapterId, pageHref) => bindings.targets.some((target) => (
-    target.chapterId === chapterId
-      && target.implementationStatus === "implemented"
-      && target.contentRef?.page === pageHref
-  ));
+  const hasChapterView = (bindings, chapterId, pageHref) => (
+    bindings.chapters.find((chapter) => chapter.id === chapterId)?.pageHrefs.includes(pageHref) === true
+  );
 
   const contextualPageUrl = (page, level, chapter, index, bindings) => {
     const params = new URLSearchParams({
@@ -212,7 +210,7 @@
 
     const [courseResponse, bindingResponse] = await Promise.all([fetch(DATA_URL), fetch(BINDINGS_URL)]);
     if (!courseResponse.ok) throw new Error(`Could not load course path (${courseResponse.status})`);
-    if (!bindingResponse.ok) throw new Error(`Could not load course bindings (${bindingResponse.status})`);
+    if (!bindingResponse.ok) throw new Error(`Could not load course manifest (${bindingResponse.status})`);
     const [data, bindings] = await Promise.all([courseResponse.json(), bindingResponse.json()]);
     const progress = loadProgress();
     progress.objectives = progress.objectives || {};

@@ -27,8 +27,11 @@
     "course:examples:build": "node ./scripts/build_course_contextual_examples.js && npm run course:supplements:build",
     "course:examples:check": "node ./scripts/build_course_contextual_examples.js --check",
     "course:provenance:check": "node ./scripts/course_source_provenance_check.js",
+    "course:payloads:build": "node ./scripts/build_course_chapter_payloads.js",
+    "course:payloads:check": "node ./scripts/build_course_chapter_payloads.js --check",
+    "course:payloads:budget": "node ./scripts/course_payload_budget_check.js",
     "course:quality": "node ./scripts/course_content_quality_check.js",
-    "course:lint": "npm run course:provenance:check && npm run course:examples:check && npm run course:supplements:check && npm run course:assessments:check && npm run course:bindings:check && npm run course:verbs:check && npm run course:quality && node ./scripts/course_lint.js",
+    "course:lint": "npm run course:provenance:check && npm run course:examples:check && npm run course:supplements:check && npm run course:assessments:check && npm run course:bindings:check && npm run course:verbs:check && npm run course:payloads:check && npm run course:payloads:budget && npm run course:quality && node ./scripts/course_lint.js",
     "links:lint": "node ./scripts/links_lint.js",
     "functional:test": "node ./scripts/functional_check.js"
   },

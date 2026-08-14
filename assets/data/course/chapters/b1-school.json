@@ -1,0 +1,3174 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b1-school",
+    "levelId": "b1",
+    "levelLabel": "B1 Foundation",
+    "number": 3,
+    "title": "L-Iskola"
+  },
+  "inventoryChapter": {
+    "id": "b1.3",
+    "courseChapterId": "b1-school",
+    "book": "B1",
+    "number": 3,
+    "title": "L-Iskola",
+    "targets": [
+      "kuritur",
+      "laboratorju",
+      "librerija",
+      "klassi",
+      "klinika",
+      "bitħa",
+      "sala",
+      "uffiċċju",
+      "tojlit",
+      "ċoff",
+      "qmis",
+      "dublett",
+      "ingravata",
+      "kalzetta",
+      "ġlekk",
+      "qalziet",
+      "żarbuna",
+      "uniformi",
+      "ilbies",
+      "kamra tas-sodda",
+      "kamra tal-banju",
+      "kamra tal-ikel",
+      "ġnien",
+      "kċina",
+      "salott",
+      "garaxx"
+    ],
+    "baselineMissing": [
+      "laboratorju",
+      "ċoff",
+      "kalzetta",
+      "żarbuna"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b1-school",
+    "book": "B1",
+    "chapterNumber": 3,
+    "chapterTitle": "L-Iskola",
+    "pageStart": 32,
+    "pageEnd": 45
+  },
+  "targets": [
+    {
+      "id": "b1-school-kuritur",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "kuritur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-kuritur"
+      },
+      "assessmentIds": [
+        "b1-school-kuritur-diagnostic-recognition",
+        "b1-school-kuritur-recognition",
+        "b1-school-kuritur-production",
+        "b1-school-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-school-laboratorju",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "laboratorju",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-laboratorju"
+      },
+      "assessmentIds": [
+        "b1-school-laboratorju-recognition-true-false",
+        "b1-school-laboratorju-production",
+        "b1-school-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-school-librerija",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "librerija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "librerija"
+      },
+      "assessmentIds": [
+        "school-article",
+        "school-library-production",
+        "b1-school-librerija-diagnostic-recognition-true-false",
+        "b1-school-librerija-recognition",
+        "b1-school-librerija-production",
+        "b1-school-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-school-klassi",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "klassi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "klassi"
+      },
+      "assessmentIds": [
+        "b1-school-klassi-recognition-true-false",
+        "b1-school-klassi-production",
+        "b1-school-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-school-klinika",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "klinika",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-klinika"
+      },
+      "assessmentIds": [
+        "b1-school-klinika-recognition",
+        "b1-school-klinika-production"
+      ]
+    },
+    {
+      "id": "b1-school-bitha",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "bitħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-bitha"
+      },
+      "assessmentIds": [
+        "b1-school-bitha-diagnostic-recognition",
+        "b1-school-bitha-recognition-true-false",
+        "b1-school-bitha-production"
+      ]
+    },
+    {
+      "id": "b1-school-sala",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "sala",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-sala"
+      },
+      "assessmentIds": [
+        "b1-school-sala-recognition",
+        "b1-school-sala-production",
+        "b1-school-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-school-ufficcju",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "uffiċċju",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-ufficcju"
+      },
+      "assessmentIds": [
+        "b1-school-ufficcju-recognition-true-false",
+        "b1-school-ufficcju-production",
+        "b1-school-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-school-tojlit",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "tojlit",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-tojlit"
+      },
+      "assessmentIds": [
+        "b1-school-tojlit-diagnostic-recognition-true-false",
+        "b1-school-tojlit-recognition",
+        "b1-school-tojlit-production",
+        "b1-school-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-school-coff",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ċoff",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-coff"
+      },
+      "assessmentIds": [
+        "b1-school-coff-recognition-true-false",
+        "b1-school-coff-production",
+        "b1-school-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-school-qmis",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "qmis",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-qmis"
+      },
+      "assessmentIds": [
+        "b1-school-qmis-recognition",
+        "b1-school-qmis-production"
+      ]
+    },
+    {
+      "id": "b1-school-dublett",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "dublett",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-dublett"
+      },
+      "assessmentIds": [
+        "b1-school-dublett-diagnostic-recognition",
+        "b1-school-dublett-recognition-true-false",
+        "b1-school-dublett-production"
+      ]
+    },
+    {
+      "id": "b1-school-ingravata",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ingravata",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-ingravata"
+      },
+      "assessmentIds": [
+        "b1-school-ingravata-recognition",
+        "b1-school-ingravata-production",
+        "b1-school-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-school-kalzetta",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "kalzetta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-kalzetta"
+      },
+      "assessmentIds": [
+        "b1-school-kalzetta-diagnostic-recognition-true-false",
+        "b1-school-kalzetta-recognition-true-false",
+        "b1-school-kalzetta-production",
+        "b1-school-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-school-glekk",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ġlekk",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-glekk"
+      },
+      "assessmentIds": [
+        "b1-school-glekk-recognition",
+        "b1-school-glekk-production",
+        "b1-school-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-school-qalziet",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "qalziet",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-qalziet"
+      },
+      "assessmentIds": [
+        "b1-school-qalziet-recognition-true-false",
+        "b1-school-qalziet-production",
+        "b1-school-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-school-zarbuna",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "żarbuna",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-zarbuna"
+      },
+      "assessmentIds": [
+        "b1-school-zarbuna-diagnostic-recognition",
+        "b1-school-zarbuna-recognition",
+        "b1-school-zarbuna-production"
+      ]
+    },
+    {
+      "id": "b1-school-uniformi",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "uniformi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-uniformi"
+      },
+      "assessmentIds": [
+        "b1-school-uniformi-recognition-true-false",
+        "b1-school-uniformi-production"
+      ]
+    },
+    {
+      "id": "b1-school-ilbies",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ilbies",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-school-ilbies"
+      },
+      "assessmentIds": [
+        "b1-school-ilbies-recognition",
+        "b1-school-ilbies-production",
+        "b1-school-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-school-kamra-tas-sodda",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "phrase",
+      "sourceRequirement": "kamra tas-sodda",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "kamra-tas-sodda"
+      },
+      "assessmentIds": [
+        "b1-school-kamra-tas-sodda-diagnostic-recognition-true-false",
+        "b1-school-kamra-tas-sodda-recognition-true-false",
+        "b1-school-kamra-tas-sodda-production",
+        "b1-school-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-school-kamra-tal-banju",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "phrase",
+      "sourceRequirement": "kamra tal-banju",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "kamra-tal-banju"
+      },
+      "assessmentIds": [
+        "b1-school-kamra-tal-banju-recognition",
+        "b1-school-kamra-tal-banju-production",
+        "b1-school-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-school-kamra-tal-ikel",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "phrase",
+      "sourceRequirement": "kamra tal-ikel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "kamra-tal-ikel"
+      },
+      "assessmentIds": [
+        "b1-school-kamra-tal-ikel-recognition-true-false",
+        "b1-school-kamra-tal-ikel-production",
+        "b1-school-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-school-gnien",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "ġnien",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "gnien"
+      },
+      "assessmentIds": [
+        "b1-school-gnien-diagnostic-recognition",
+        "b1-school-gnien-recognition",
+        "b1-school-gnien-production"
+      ]
+    },
+    {
+      "id": "b1-school-kcina",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "kċina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "kcina"
+      },
+      "assessmentIds": [
+        "b1-school-kcina-recognition-true-false",
+        "b1-school-kcina-production"
+      ]
+    },
+    {
+      "id": "b1-school-salott",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "salott",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "salott"
+      },
+      "assessmentIds": [
+        "b1-school-salott-recognition",
+        "b1-school-salott-production",
+        "b1-school-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-school-garaxx",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "vocabulary",
+      "sourceRequirement": "garaxx",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "home_furniture.html",
+        "file": "assets/data/home_furniture.json",
+        "itemId": "garaxx"
+      },
+      "assessmentIds": [
+        "b1-school-garaxx-diagnostic-recognition-true-false",
+        "b1-school-garaxx-recognition-true-false",
+        "b1-school-garaxx-production",
+        "b1-school-checkpoint-5-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b1-school-kuritur": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-laboratorju": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-librerija": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-klassi": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-klinika": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-bitha": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        39,
+        41,
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-sala": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        41,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-ufficcju": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-tojlit": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32,
+        33,
+        34,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-coff": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-qmis": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-dublett": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-ingravata": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kalzetta": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-glekk": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 39,
+      "pages": [
+        39,
+        40,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-qalziet": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        40,
+        41
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-zarbuna": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        39,
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-uniformi": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        37,
+        39,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-ilbies": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 35,
+      "pages": [
+        35,
+        41,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kamra-tas-sodda": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 42,
+      "pages": [
+        42,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kamra-tal-banju": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 42,
+      "pages": [
+        42,
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kamra-tal-ikel": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-gnien": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-kcina": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 45,
+      "pages": [
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-salott": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b1-school-garaxx": {
+      "book": "B1",
+      "chapterId": "b1-school",
+      "chapterNumber": 3,
+      "chapterTitle": "L-Iskola",
+      "pageRange": [
+        32,
+        45
+      ],
+      "primaryPage": 45,
+      "pages": [
+        45
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b1-school-kuritur",
+      "maltese": "kuritur",
+      "english": "corridor",
+      "example": "Hemm kuritur fil-bini.",
+      "exampleTranslation": "The corridor is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm kuritur fil-bini.",
+        "Translation: The corridor is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-laboratorju",
+      "maltese": "laboratorju",
+      "english": "laboratory",
+      "example": "Hemm laboratorju fil-bini.",
+      "exampleTranslation": "The laboratory is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm laboratorju fil-bini.",
+        "Translation: The laboratory is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-librerija",
+      "maltese": "librerija",
+      "english": "library",
+      "example": "Hemm librerija fil-bini.",
+      "exampleTranslation": "The library is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm librerija fil-bini.",
+        "Translation: The library is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-klassi",
+      "maltese": "klassi",
+      "english": "class",
+      "example": "Hemm klassi fil-bini.",
+      "exampleTranslation": "The class is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm klassi fil-bini.",
+        "Translation: The class is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-klinika",
+      "maltese": "klinika",
+      "english": "clinic",
+      "example": "Hemm klinika fil-bini.",
+      "exampleTranslation": "The clinic is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm klinika fil-bini.",
+        "Translation: The clinic is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-bitha",
+      "maltese": "bitħa",
+      "english": "school yard / courtyard",
+      "example": "Hemm bitħa fil-bini.",
+      "exampleTranslation": "The school yard is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm bitħa fil-bini.",
+        "Translation: The school yard is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-sala",
+      "maltese": "sala",
+      "english": "hall",
+      "example": "Hemm sala fil-bini.",
+      "exampleTranslation": "The hall is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm sala fil-bini.",
+        "Translation: The hall is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-ufficcju",
+      "maltese": "uffiċċju",
+      "english": "office",
+      "example": "Hemm uffiċċju fil-bini.",
+      "exampleTranslation": "The office is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm uffiċċju fil-bini.",
+        "Translation: The office is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-tojlit",
+      "maltese": "tojlit",
+      "english": "toilet",
+      "example": "Hemm tojlit fil-bini.",
+      "exampleTranslation": "The toilet is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 32",
+      "notes": [
+        "Example: Hemm tojlit fil-bini.",
+        "Translation: The toilet is in the building.",
+        "Source: B1, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-coff",
+      "maltese": "ċoff",
+      "english": "bow / ribbon",
+      "example": "Nilbes ċoff l-iskola.",
+      "exampleTranslation": "I wear bow at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes ċoff l-iskola.",
+        "Translation: I wear bow at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-qmis",
+      "maltese": "qmis",
+      "english": "shirt",
+      "example": "Nilbes qmis l-iskola.",
+      "exampleTranslation": "I wear shirt at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes qmis l-iskola.",
+        "Translation: I wear shirt at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-dublett",
+      "maltese": "dublett",
+      "english": "skirt",
+      "example": "Nilbes dublett l-iskola.",
+      "exampleTranslation": "I wear skirt at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes dublett l-iskola.",
+        "Translation: I wear skirt at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-ingravata",
+      "maltese": "ingravata",
+      "english": "tie",
+      "example": "Nilbes ingravata l-iskola.",
+      "exampleTranslation": "I wear tie at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes ingravata l-iskola.",
+        "Translation: I wear tie at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-kalzetta",
+      "maltese": "kalzetta",
+      "english": "sock",
+      "example": "Nilbes kalzetta l-iskola.",
+      "exampleTranslation": "I wear sock at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes kalzetta l-iskola.",
+        "Translation: I wear sock at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-glekk",
+      "maltese": "ġlekk",
+      "english": "jacket",
+      "example": "Nilbes ġlekk l-iskola.",
+      "exampleTranslation": "I wear jacket at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 39,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 39",
+      "notes": [
+        "Example: Nilbes ġlekk l-iskola.",
+        "Translation: I wear jacket at school.",
+        "Source: B1, Chapter 3, p. 39"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-qalziet",
+      "maltese": "qalziet",
+      "english": "trousers",
+      "example": "Nilbes qalziet l-iskola.",
+      "exampleTranslation": "I wear trousers at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes qalziet l-iskola.",
+        "Translation: I wear trousers at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-zarbuna",
+      "maltese": "żarbuna",
+      "english": "shoe",
+      "example": "Nilbes żarbuna l-iskola.",
+      "exampleTranslation": "I wear shoe at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes żarbuna l-iskola.",
+        "Translation: I wear shoe at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-uniformi",
+      "maltese": "uniformi",
+      "english": "uniform",
+      "example": "Nilbes uniformi l-iskola.",
+      "exampleTranslation": "I wear uniform at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes uniformi l-iskola.",
+        "Translation: I wear uniform at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-ilbies",
+      "maltese": "ilbies",
+      "english": "clothing",
+      "example": "Nilbes ilbies l-iskola.",
+      "exampleTranslation": "I wear clothing at school.",
+      "examplePattern": "school-clothing",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 35,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 35",
+      "notes": [
+        "Example: Nilbes ilbies l-iskola.",
+        "Translation: I wear clothing at school.",
+        "Source: B1, Chapter 3, p. 35"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-kamra-tas-sodda",
+      "maltese": "kamra tas-sodda",
+      "english": "bedroom",
+      "example": "Hemm kamra tas-sodda fil-bini.",
+      "exampleTranslation": "The bedroom is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 42,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 42",
+      "notes": [
+        "Example: Hemm kamra tas-sodda fil-bini.",
+        "Translation: The bedroom is in the building.",
+        "Source: B1, Chapter 3, p. 42"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-school-kamra-tal-banju",
+      "maltese": "kamra tal-banju",
+      "english": "bathroom",
+      "example": "Hemm kamra tal-banju fil-bini.",
+      "exampleTranslation": "The bathroom is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 42,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 42",
+      "notes": [
+        "Example: Hemm kamra tal-banju fil-bini.",
+        "Translation: The bathroom is in the building.",
+        "Source: B1, Chapter 3, p. 42"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-school-kamra-tal-ikel",
+      "maltese": "kamra tal-ikel",
+      "english": "dining room",
+      "example": "Hemm kamra tal-ikel fil-bini.",
+      "exampleTranslation": "The dining room is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 43,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 43",
+      "notes": [
+        "Example: Hemm kamra tal-ikel fil-bini.",
+        "Translation: The dining room is in the building.",
+        "Source: B1, Chapter 3, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-school-gnien",
+      "maltese": "ġnien",
+      "english": "garden",
+      "example": "Hemm ġnien fil-bini.",
+      "exampleTranslation": "The garden is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 43,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 43",
+      "notes": [
+        "Example: Hemm ġnien fil-bini.",
+        "Translation: The garden is in the building.",
+        "Source: B1, Chapter 3, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-kcina",
+      "maltese": "kċina",
+      "english": "kitchen",
+      "example": "Hemm kċina fil-bini.",
+      "exampleTranslation": "The kitchen is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 45,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 45",
+      "notes": [
+        "Example: Hemm kċina fil-bini.",
+        "Translation: The kitchen is in the building.",
+        "Source: B1, Chapter 3, p. 45"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-salott",
+      "maltese": "salott",
+      "english": "living room",
+      "example": "Hemm salott fil-bini.",
+      "exampleTranslation": "The living room is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 43,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 43",
+      "notes": [
+        "Example: Hemm salott fil-bini.",
+        "Translation: The living room is in the building.",
+        "Source: B1, Chapter 3, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-school-garaxx",
+      "maltese": "garaxx",
+      "english": "garage",
+      "example": "Hemm garaxx fil-bini.",
+      "exampleTranslation": "The garage is in the building.",
+      "examplePattern": "school-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 3,
+        "page": 45,
+        "pageRange": [
+          32,
+          45
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 3, p. 45",
+      "notes": [
+        "Example: Hemm garaxx fil-bini.",
+        "Translation: The garage is in the building.",
+        "Source: B1, Chapter 3, p. 45"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-diagnostic",
+      "kind": "diagnostic",
+      "title": "L-Iskola Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-school-kuritur-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kuritur"
+          ],
+          "prompt": "What is the lesson meaning of “kuritur”?",
+          "choices": [
+            "corridor",
+            "laboratory",
+            "library"
+          ],
+          "answer": "corridor",
+          "explanation": "kuritur means “corridor” in this chapter.",
+          "reviewCard": {
+            "maltese": "kuritur",
+            "english": "corridor"
+          }
+        },
+        {
+          "id": "b1-school-librerija-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-librerija"
+          ],
+          "prompt": "True or false: “librerija” means “class” in this chapter.",
+          "answer": false,
+          "explanation": "librerija means “library”.",
+          "reviewCard": {
+            "maltese": "librerija",
+            "english": "library"
+          }
+        },
+        {
+          "id": "b1-school-bitha-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-bitha"
+          ],
+          "prompt": "What is the lesson meaning of “bitħa”?",
+          "choices": [
+            "clinic",
+            "school yard / courtyard",
+            "class"
+          ],
+          "answer": "school yard / courtyard",
+          "explanation": "bitħa means “school yard / courtyard” in this chapter.",
+          "reviewCard": {
+            "maltese": "bitħa",
+            "english": "school yard / courtyard"
+          }
+        },
+        {
+          "id": "b1-school-tojlit-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-tojlit"
+          ],
+          "prompt": "True or false: “tojlit” means “clinic” in this chapter.",
+          "answer": false,
+          "explanation": "tojlit means “toilet”.",
+          "reviewCard": {
+            "maltese": "tojlit",
+            "english": "toilet"
+          }
+        },
+        {
+          "id": "b1-school-dublett-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-dublett"
+          ],
+          "prompt": "What is the lesson meaning of “dublett”?",
+          "choices": [
+            "school yard / courtyard",
+            "hall",
+            "skirt"
+          ],
+          "answer": "skirt",
+          "explanation": "dublett means “skirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          }
+        },
+        {
+          "id": "b1-school-kalzetta-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kalzetta"
+          ],
+          "prompt": "True or false: “kalzetta” means “hall” in this chapter.",
+          "answer": false,
+          "explanation": "kalzetta means “sock”.",
+          "reviewCard": {
+            "maltese": "kalzetta",
+            "english": "sock"
+          }
+        },
+        {
+          "id": "b1-school-zarbuna-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-zarbuna"
+          ],
+          "prompt": "What is the lesson meaning of “żarbuna”?",
+          "choices": [
+            "shoe",
+            "office",
+            "toilet"
+          ],
+          "answer": "shoe",
+          "explanation": "żarbuna means “shoe” in this chapter.",
+          "reviewCard": {
+            "maltese": "żarbuna",
+            "english": "shoe"
+          }
+        },
+        {
+          "id": "b1-school-kamra-tas-sodda-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kamra-tas-sodda"
+          ],
+          "prompt": "True or false: “kamra tas-sodda” means “toilet” in this chapter.",
+          "answer": false,
+          "explanation": "kamra tas-sodda means “bedroom”.",
+          "reviewCard": {
+            "maltese": "kamra tas-sodda",
+            "english": "bedroom"
+          }
+        },
+        {
+          "id": "b1-school-gnien-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-gnien"
+          ],
+          "prompt": "What is the lesson meaning of “ġnien”?",
+          "choices": [
+            "shirt",
+            "garden",
+            "bow / ribbon"
+          ],
+          "answer": "garden",
+          "explanation": "ġnien means “garden” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġnien",
+            "english": "garden"
+          }
+        },
+        {
+          "id": "b1-school-garaxx-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-garaxx"
+          ],
+          "prompt": "True or false: “garaxx” means “shirt” in this chapter.",
+          "answer": false,
+          "explanation": "garaxx means “garage”.",
+          "reviewCard": {
+            "maltese": "garaxx",
+            "english": "garage"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 1",
+      "items": [
+        {
+          "id": "b1-school-kuritur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kuritur"
+          ],
+          "prompt": "What is the lesson meaning of “kuritur”?",
+          "choices": [
+            "corridor",
+            "laboratory",
+            "library"
+          ],
+          "answer": "corridor",
+          "explanation": "kuritur means “corridor” in this chapter.",
+          "reviewCard": {
+            "maltese": "kuritur",
+            "english": "corridor"
+          }
+        },
+        {
+          "id": "b1-school-kuritur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-kuritur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The corridor is in the building.)",
+          "answer": "kuritur",
+          "explanation": "The complete sentence is “Hemm kuritur fil-bini.”",
+          "reviewCard": {
+            "maltese": "kuritur",
+            "english": "corridor",
+            "example": "Hemm kuritur fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kuritur"
+          ]
+        },
+        {
+          "id": "b1-school-laboratorju-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-laboratorju"
+          ],
+          "prompt": "True or false: “laboratorju” means “library” in this chapter.",
+          "answer": false,
+          "explanation": "laboratorju means “laboratory”.",
+          "reviewCard": {
+            "maltese": "laboratorju",
+            "english": "laboratory"
+          }
+        },
+        {
+          "id": "b1-school-laboratorju-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-laboratorju"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The laboratory is in the building.)",
+          "answer": "laboratorju",
+          "explanation": "The complete sentence is “Hemm laboratorju fil-bini.”",
+          "reviewCard": {
+            "maltese": "laboratorju",
+            "english": "laboratory",
+            "example": "Hemm laboratorju fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "laboratorju"
+          ]
+        },
+        {
+          "id": "b1-school-librerija-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-librerija"
+          ],
+          "prompt": "What is the lesson meaning of “librerija”?",
+          "choices": [
+            "clinic",
+            "library",
+            "class"
+          ],
+          "answer": "library",
+          "explanation": "librerija means “library” in this chapter.",
+          "reviewCard": {
+            "maltese": "librerija",
+            "english": "library"
+          }
+        },
+        {
+          "id": "b1-school-librerija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-librerija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The library is in the building.)",
+          "answer": "librerija",
+          "explanation": "The complete sentence is “Hemm librerija fil-bini.”",
+          "reviewCard": {
+            "maltese": "librerija",
+            "english": "library",
+            "example": "Hemm librerija fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "librerija"
+          ]
+        },
+        {
+          "id": "b1-school-klassi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-klassi"
+          ],
+          "prompt": "True or false: “klassi” means “clinic” in this chapter.",
+          "answer": false,
+          "explanation": "klassi means “class”.",
+          "reviewCard": {
+            "maltese": "klassi",
+            "english": "class"
+          }
+        },
+        {
+          "id": "b1-school-klassi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-klassi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The class is in the building.)",
+          "answer": "klassi",
+          "explanation": "The complete sentence is “Hemm klassi fil-bini.”",
+          "reviewCard": {
+            "maltese": "klassi",
+            "english": "class",
+            "example": "Hemm klassi fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "klassi"
+          ]
+        },
+        {
+          "id": "b1-school-klinika-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-klinika"
+          ],
+          "prompt": "What is the lesson meaning of “klinika”?",
+          "choices": [
+            "school yard / courtyard",
+            "hall",
+            "clinic"
+          ],
+          "answer": "clinic",
+          "explanation": "klinika means “clinic” in this chapter.",
+          "reviewCard": {
+            "maltese": "klinika",
+            "english": "clinic"
+          }
+        },
+        {
+          "id": "b1-school-klinika-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-klinika"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The clinic is in the building.)",
+          "answer": "klinika",
+          "explanation": "The complete sentence is “Hemm klinika fil-bini.”",
+          "reviewCard": {
+            "maltese": "klinika",
+            "english": "clinic",
+            "example": "Hemm klinika fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "klinika"
+          ]
+        },
+        {
+          "id": "b1-school-bitha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-bitha"
+          ],
+          "prompt": "True or false: “bitħa” means “hall” in this chapter.",
+          "answer": false,
+          "explanation": "bitħa means “school yard / courtyard”.",
+          "reviewCard": {
+            "maltese": "bitħa",
+            "english": "school yard / courtyard"
+          }
+        },
+        {
+          "id": "b1-school-bitha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-bitha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The school yard is in the building.)",
+          "answer": "bitħa",
+          "explanation": "The complete sentence is “Hemm bitħa fil-bini.”",
+          "reviewCard": {
+            "maltese": "bitħa",
+            "english": "school yard / courtyard",
+            "example": "Hemm bitħa fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bitħa"
+          ]
+        },
+        {
+          "id": "b1-school-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kuritur",
+            "b1-school-laboratorju",
+            "b1-school-librerija",
+            "b1-school-klassi"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kuritur",
+              "right": "corridor"
+            },
+            {
+              "left": "laboratorju",
+              "right": "laboratory"
+            },
+            {
+              "left": "librerija",
+              "right": "library"
+            },
+            {
+              "left": "klassi",
+              "right": "class"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kuritur",
+            "english": "corridor"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 2",
+      "items": [
+        {
+          "id": "b1-school-sala-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-sala"
+          ],
+          "prompt": "What is the lesson meaning of “sala”?",
+          "choices": [
+            "hall",
+            "office",
+            "toilet"
+          ],
+          "answer": "hall",
+          "explanation": "sala means “hall” in this chapter.",
+          "reviewCard": {
+            "maltese": "sala",
+            "english": "hall"
+          }
+        },
+        {
+          "id": "b1-school-sala-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-sala"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The hall is in the building.)",
+          "answer": "sala",
+          "explanation": "The complete sentence is “Hemm sala fil-bini.”",
+          "reviewCard": {
+            "maltese": "sala",
+            "english": "hall",
+            "example": "Hemm sala fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sala"
+          ]
+        },
+        {
+          "id": "b1-school-ufficcju-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-ufficcju"
+          ],
+          "prompt": "True or false: “uffiċċju” means “toilet” in this chapter.",
+          "answer": false,
+          "explanation": "uffiċċju means “office”.",
+          "reviewCard": {
+            "maltese": "uffiċċju",
+            "english": "office"
+          }
+        },
+        {
+          "id": "b1-school-ufficcju-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-ufficcju"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The office is in the building.)",
+          "answer": "uffiċċju",
+          "explanation": "The complete sentence is “Hemm uffiċċju fil-bini.”",
+          "reviewCard": {
+            "maltese": "uffiċċju",
+            "english": "office",
+            "example": "Hemm uffiċċju fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "uffiċċju"
+          ]
+        },
+        {
+          "id": "b1-school-tojlit-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-tojlit"
+          ],
+          "prompt": "What is the lesson meaning of “tojlit”?",
+          "choices": [
+            "shirt",
+            "toilet",
+            "bow / ribbon"
+          ],
+          "answer": "toilet",
+          "explanation": "tojlit means “toilet” in this chapter.",
+          "reviewCard": {
+            "maltese": "tojlit",
+            "english": "toilet"
+          }
+        },
+        {
+          "id": "b1-school-tojlit-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-tojlit"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The toilet is in the building.)",
+          "answer": "tojlit",
+          "explanation": "The complete sentence is “Hemm tojlit fil-bini.”",
+          "reviewCard": {
+            "maltese": "tojlit",
+            "english": "toilet",
+            "example": "Hemm tojlit fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tojlit"
+          ]
+        },
+        {
+          "id": "b1-school-coff-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-coff"
+          ],
+          "prompt": "True or false: “ċoff” means “shirt” in this chapter.",
+          "answer": false,
+          "explanation": "ċoff means “bow / ribbon”.",
+          "reviewCard": {
+            "maltese": "ċoff",
+            "english": "bow / ribbon"
+          }
+        },
+        {
+          "id": "b1-school-coff-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-coff"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear bow at school.)",
+          "answer": "ċoff",
+          "explanation": "The complete sentence is “Nilbes ċoff l-iskola.”",
+          "reviewCard": {
+            "maltese": "ċoff",
+            "english": "bow / ribbon",
+            "example": "Nilbes ċoff l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċoff"
+          ]
+        },
+        {
+          "id": "b1-school-qmis-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-qmis"
+          ],
+          "prompt": "What is the lesson meaning of “qmis”?",
+          "choices": [
+            "skirt",
+            "tie",
+            "shirt"
+          ],
+          "answer": "shirt",
+          "explanation": "qmis means “shirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "qmis",
+            "english": "shirt"
+          }
+        },
+        {
+          "id": "b1-school-qmis-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-qmis"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear shirt at school.)",
+          "answer": "qmis",
+          "explanation": "The complete sentence is “Nilbes qmis l-iskola.”",
+          "reviewCard": {
+            "maltese": "qmis",
+            "english": "shirt",
+            "example": "Nilbes qmis l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qmis"
+          ]
+        },
+        {
+          "id": "b1-school-dublett-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-dublett"
+          ],
+          "prompt": "True or false: “dublett” means “tie” in this chapter.",
+          "answer": false,
+          "explanation": "dublett means “skirt”.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          }
+        },
+        {
+          "id": "b1-school-dublett-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-dublett"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear skirt at school.)",
+          "answer": "dublett",
+          "explanation": "The complete sentence is “Nilbes dublett l-iskola.”",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt",
+            "example": "Nilbes dublett l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dublett"
+          ]
+        },
+        {
+          "id": "b1-school-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-sala",
+            "b1-school-ufficcju",
+            "b1-school-tojlit",
+            "b1-school-coff"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "sala",
+              "right": "hall"
+            },
+            {
+              "left": "uffiċċju",
+              "right": "office"
+            },
+            {
+              "left": "tojlit",
+              "right": "toilet"
+            },
+            {
+              "left": "ċoff",
+              "right": "bow / ribbon"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "sala",
+            "english": "hall"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 3",
+      "items": [
+        {
+          "id": "b1-school-ingravata-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-ingravata"
+          ],
+          "prompt": "What is the lesson meaning of “ingravata”?",
+          "choices": [
+            "tie",
+            "sock",
+            "jacket"
+          ],
+          "answer": "tie",
+          "explanation": "ingravata means “tie” in this chapter.",
+          "reviewCard": {
+            "maltese": "ingravata",
+            "english": "tie"
+          }
+        },
+        {
+          "id": "b1-school-ingravata-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-ingravata"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear tie at school.)",
+          "answer": "ingravata",
+          "explanation": "The complete sentence is “Nilbes ingravata l-iskola.”",
+          "reviewCard": {
+            "maltese": "ingravata",
+            "english": "tie",
+            "example": "Nilbes ingravata l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ingravata"
+          ]
+        },
+        {
+          "id": "b1-school-kalzetta-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kalzetta"
+          ],
+          "prompt": "True or false: “kalzetta” means “jacket” in this chapter.",
+          "answer": false,
+          "explanation": "kalzetta means “sock”.",
+          "reviewCard": {
+            "maltese": "kalzetta",
+            "english": "sock"
+          }
+        },
+        {
+          "id": "b1-school-kalzetta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-kalzetta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear sock at school.)",
+          "answer": "kalzetta",
+          "explanation": "The complete sentence is “Nilbes kalzetta l-iskola.”",
+          "reviewCard": {
+            "maltese": "kalzetta",
+            "english": "sock",
+            "example": "Nilbes kalzetta l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kalzetta"
+          ]
+        },
+        {
+          "id": "b1-school-glekk-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-glekk"
+          ],
+          "prompt": "What is the lesson meaning of “ġlekk”?",
+          "choices": [
+            "shoe",
+            "jacket",
+            "trousers"
+          ],
+          "answer": "jacket",
+          "explanation": "ġlekk means “jacket” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket"
+          }
+        },
+        {
+          "id": "b1-school-glekk-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-glekk"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear jacket at school.)",
+          "answer": "ġlekk",
+          "explanation": "The complete sentence is “Nilbes ġlekk l-iskola.”",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket",
+            "example": "Nilbes ġlekk l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġlekk"
+          ]
+        },
+        {
+          "id": "b1-school-qalziet-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-qalziet"
+          ],
+          "prompt": "True or false: “qalziet” means “shoe” in this chapter.",
+          "answer": false,
+          "explanation": "qalziet means “trousers”.",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers"
+          }
+        },
+        {
+          "id": "b1-school-qalziet-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-qalziet"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear trousers at school.)",
+          "answer": "qalziet",
+          "explanation": "The complete sentence is “Nilbes qalziet l-iskola.”",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers",
+            "example": "Nilbes qalziet l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qalziet"
+          ]
+        },
+        {
+          "id": "b1-school-zarbuna-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-zarbuna"
+          ],
+          "prompt": "What is the lesson meaning of “żarbuna”?",
+          "choices": [
+            "uniform",
+            "clothing",
+            "shoe"
+          ],
+          "answer": "shoe",
+          "explanation": "żarbuna means “shoe” in this chapter.",
+          "reviewCard": {
+            "maltese": "żarbuna",
+            "english": "shoe"
+          }
+        },
+        {
+          "id": "b1-school-zarbuna-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-zarbuna"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear shoe at school.)",
+          "answer": "żarbuna",
+          "explanation": "The complete sentence is “Nilbes żarbuna l-iskola.”",
+          "reviewCard": {
+            "maltese": "żarbuna",
+            "english": "shoe",
+            "example": "Nilbes żarbuna l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żarbuna"
+          ]
+        },
+        {
+          "id": "b1-school-uniformi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-uniformi"
+          ],
+          "prompt": "True or false: “uniformi” means “clothing” in this chapter.",
+          "answer": false,
+          "explanation": "uniformi means “uniform”.",
+          "reviewCard": {
+            "maltese": "uniformi",
+            "english": "uniform"
+          }
+        },
+        {
+          "id": "b1-school-uniformi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-uniformi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear uniform at school.)",
+          "answer": "uniformi",
+          "explanation": "The complete sentence is “Nilbes uniformi l-iskola.”",
+          "reviewCard": {
+            "maltese": "uniformi",
+            "english": "uniform",
+            "example": "Nilbes uniformi l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "uniformi"
+          ]
+        },
+        {
+          "id": "b1-school-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-ingravata",
+            "b1-school-kalzetta",
+            "b1-school-glekk",
+            "b1-school-qalziet"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ingravata",
+              "right": "tie"
+            },
+            {
+              "left": "kalzetta",
+              "right": "sock"
+            },
+            {
+              "left": "ġlekk",
+              "right": "jacket"
+            },
+            {
+              "left": "qalziet",
+              "right": "trousers"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ingravata",
+            "english": "tie"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "L-Iskola Checkpoint 4",
+      "items": [
+        {
+          "id": "b1-school-ilbies-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-ilbies"
+          ],
+          "prompt": "What is the lesson meaning of “ilbies”?",
+          "choices": [
+            "clothing",
+            "bedroom",
+            "bathroom"
+          ],
+          "answer": "clothing",
+          "explanation": "ilbies means “clothing” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilbies",
+            "english": "clothing"
+          }
+        },
+        {
+          "id": "b1-school-ilbies-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-ilbies"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear clothing at school.)",
+          "answer": "ilbies",
+          "explanation": "The complete sentence is “Nilbes ilbies l-iskola.”",
+          "reviewCard": {
+            "maltese": "ilbies",
+            "english": "clothing",
+            "example": "Nilbes ilbies l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ilbies"
+          ]
+        },
+        {
+          "id": "b1-school-kamra-tas-sodda-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kamra-tas-sodda"
+          ],
+          "prompt": "True or false: “kamra tas-sodda” means “bathroom” in this chapter.",
+          "answer": false,
+          "explanation": "kamra tas-sodda means “bedroom”.",
+          "reviewCard": {
+            "maltese": "kamra tas-sodda",
+            "english": "bedroom"
+          }
+        },
+        {
+          "id": "b1-school-kamra-tas-sodda-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-kamra-tas-sodda"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The bedroom is in the building.)",
+          "answer": "kamra tas-sodda",
+          "explanation": "The complete sentence is “Hemm kamra tas-sodda fil-bini.”",
+          "reviewCard": {
+            "maltese": "kamra tas-sodda",
+            "english": "bedroom",
+            "example": "Hemm kamra tas-sodda fil-bini."
+          },
+          "type": "order-words",
+          "tokens": [
+            "kamra",
+            "tas-sodda"
+          ]
+        },
+        {
+          "id": "b1-school-kamra-tal-banju-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kamra-tal-banju"
+          ],
+          "prompt": "What is the lesson meaning of “kamra tal-banju”?",
+          "choices": [
+            "garden",
+            "bathroom",
+            "dining room"
+          ],
+          "answer": "bathroom",
+          "explanation": "kamra tal-banju means “bathroom” in this chapter.",
+          "reviewCard": {
+            "maltese": "kamra tal-banju",
+            "english": "bathroom"
+          }
+        },
+        {
+          "id": "b1-school-kamra-tal-banju-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-kamra-tal-banju"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The bathroom is in the building.)",
+          "answer": "kamra tal-banju",
+          "explanation": "The complete sentence is “Hemm kamra tal-banju fil-bini.”",
+          "reviewCard": {
+            "maltese": "kamra tal-banju",
+            "english": "bathroom",
+            "example": "Hemm kamra tal-banju fil-bini."
+          },
+          "type": "order-words",
+          "tokens": [
+            "kamra",
+            "tal-banju"
+          ]
+        },
+        {
+          "id": "b1-school-kamra-tal-ikel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kamra-tal-ikel"
+          ],
+          "prompt": "True or false: “kamra tal-ikel” means “garden” in this chapter.",
+          "answer": false,
+          "explanation": "kamra tal-ikel means “dining room”.",
+          "reviewCard": {
+            "maltese": "kamra tal-ikel",
+            "english": "dining room"
+          }
+        },
+        {
+          "id": "b1-school-kamra-tal-ikel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-kamra-tal-ikel"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The dining room is in the building.)",
+          "answer": "kamra tal-ikel",
+          "explanation": "The complete sentence is “Hemm kamra tal-ikel fil-bini.”",
+          "reviewCard": {
+            "maltese": "kamra tal-ikel",
+            "english": "dining room",
+            "example": "Hemm kamra tal-ikel fil-bini."
+          },
+          "type": "order-words",
+          "tokens": [
+            "kamra",
+            "tal-ikel"
+          ]
+        },
+        {
+          "id": "b1-school-gnien-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-gnien"
+          ],
+          "prompt": "What is the lesson meaning of “ġnien”?",
+          "choices": [
+            "kitchen",
+            "living room",
+            "garden"
+          ],
+          "answer": "garden",
+          "explanation": "ġnien means “garden” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġnien",
+            "english": "garden"
+          }
+        },
+        {
+          "id": "b1-school-gnien-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-gnien"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The garden is in the building.)",
+          "answer": "ġnien",
+          "explanation": "The complete sentence is “Hemm ġnien fil-bini.”",
+          "reviewCard": {
+            "maltese": "ġnien",
+            "english": "garden",
+            "example": "Hemm ġnien fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġnien"
+          ]
+        },
+        {
+          "id": "b1-school-kcina-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-kcina"
+          ],
+          "prompt": "True or false: “kċina” means “living room” in this chapter.",
+          "answer": false,
+          "explanation": "kċina means “kitchen”.",
+          "reviewCard": {
+            "maltese": "kċina",
+            "english": "kitchen"
+          }
+        },
+        {
+          "id": "b1-school-kcina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-kcina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The kitchen is in the building.)",
+          "answer": "kċina",
+          "explanation": "The complete sentence is “Hemm kċina fil-bini.”",
+          "reviewCard": {
+            "maltese": "kċina",
+            "english": "kitchen",
+            "example": "Hemm kċina fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kċina"
+          ]
+        },
+        {
+          "id": "b1-school-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-ilbies",
+            "b1-school-kamra-tas-sodda",
+            "b1-school-kamra-tal-banju",
+            "b1-school-kamra-tal-ikel"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ilbies",
+              "right": "clothing"
+            },
+            {
+              "left": "kamra tas-sodda",
+              "right": "bedroom"
+            },
+            {
+              "left": "kamra tal-banju",
+              "right": "bathroom"
+            },
+            {
+              "left": "kamra tal-ikel",
+              "right": "dining room"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ilbies",
+            "english": "clothing"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-school",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-school-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 2,
+      "title": "L-Iskola Checkpoint 5",
+      "items": [
+        {
+          "id": "b1-school-salott-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-salott"
+          ],
+          "prompt": "What is the lesson meaning of “salott”?",
+          "choices": [
+            "living room",
+            "garage",
+            "corridor"
+          ],
+          "answer": "living room",
+          "explanation": "salott means “living room” in this chapter.",
+          "reviewCard": {
+            "maltese": "salott",
+            "english": "living room"
+          }
+        },
+        {
+          "id": "b1-school-salott-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-salott"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The living room is in the building.)",
+          "answer": "salott",
+          "explanation": "The complete sentence is “Hemm salott fil-bini.”",
+          "reviewCard": {
+            "maltese": "salott",
+            "english": "living room",
+            "example": "Hemm salott fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "salott"
+          ]
+        },
+        {
+          "id": "b1-school-garaxx-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-garaxx"
+          ],
+          "prompt": "True or false: “garaxx” means “corridor” in this chapter.",
+          "answer": false,
+          "explanation": "garaxx means “garage”.",
+          "reviewCard": {
+            "maltese": "garaxx",
+            "english": "garage"
+          }
+        },
+        {
+          "id": "b1-school-garaxx-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-garaxx"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The garage is in the building.)",
+          "answer": "garaxx",
+          "explanation": "The complete sentence is “Hemm garaxx fil-bini.”",
+          "reviewCard": {
+            "maltese": "garaxx",
+            "english": "garage",
+            "example": "Hemm garaxx fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "garaxx"
+          ]
+        },
+        {
+          "id": "b1-school-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-salott",
+            "b1-school-garaxx"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "salott",
+              "right": "living room"
+            },
+            {
+              "left": "garaxx",
+              "right": "garage"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "salott",
+            "english": "living room"
+          }
+        }
+      ]
+    }
+  ]
+}

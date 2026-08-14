@@ -1,0 +1,3823 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-imperative",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 2,
+    "title": "Iftaħ il-Ktieb u Aqra"
+  },
+  "inventoryChapter": {
+    "id": "b2.2",
+    "courseChapterId": "b2-imperative",
+    "book": "B2",
+    "number": 2,
+    "title": "Iftaħ il-Ktieb u Aqra",
+    "targets": [
+      "qum",
+      "qumu",
+      "poġġi",
+      "poġġu",
+      "ikteb",
+      "iktbu",
+      "agħlaq",
+      "agħlqu",
+      "oħroġ",
+      "oħorġu",
+      "idħol",
+      "idħlu",
+      "daħħal",
+      "daħħlu",
+      "aqra",
+      "aqraw",
+      "iftaħ",
+      "iftħu",
+      "isimgħu",
+      "staqsi",
+      "tkellem",
+      "agħmel",
+      "wieħed",
+      "tnejn",
+      "tlieta",
+      "erbgħa",
+      "ħamsa",
+      "sitta",
+      "sebgħa",
+      "tmienja",
+      "disgħa",
+      "għaxra"
+    ],
+    "baselineMissing": [
+      "qum",
+      "qumu",
+      "daħħlu",
+      "staqsi"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-imperative",
+    "book": "B2",
+    "chapterNumber": 2,
+    "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+    "pageStart": 14,
+    "pageEnd": 26
+  },
+  "targets": [
+    {
+      "id": "b2-imperative-qum",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "qum",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-qum"
+      },
+      "assessmentIds": [
+        "b2-imperative-qum-diagnostic-recognition",
+        "b2-imperative-qum-recognition",
+        "b2-imperative-qum-production",
+        "b2-imperative-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-qumu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "qumu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-qumu"
+      },
+      "assessmentIds": [
+        "b2-imperative-qumu-recognition-true-false",
+        "b2-imperative-qumu-production",
+        "b2-imperative-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-poggi",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "poġġi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-pogga"
+      },
+      "assessmentIds": [
+        "b2-imperative-poggi-recognition",
+        "b2-imperative-poggi-production",
+        "b2-imperative-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-poggu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "poġġu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-pogga"
+      },
+      "assessmentIds": [
+        "b2-imperative-poggu-diagnostic-recognition-true-false",
+        "b2-imperative-poggu-recognition-true-false",
+        "b2-imperative-poggu-production",
+        "b2-imperative-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-ikteb",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "ikteb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-kiteb"
+      },
+      "assessmentIds": [
+        "b2-imperative-ikteb-recognition",
+        "b2-imperative-ikteb-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-iktbu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "iktbu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-kiteb"
+      },
+      "assessmentIds": [
+        "b2-imperative-iktbu-recognition-true-false",
+        "b2-imperative-iktbu-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-aghlaq",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "agħlaq",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-ghalaq"
+      },
+      "assessmentIds": [
+        "b2-imperative-aghlaq-diagnostic-recognition",
+        "b2-imperative-aghlaq-recognition",
+        "b2-imperative-aghlaq-production",
+        "b2-imperative-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-aghlqu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "agħlqu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-ghalaq"
+      },
+      "assessmentIds": [
+        "b2-imperative-aghlqu-recognition-true-false",
+        "b2-imperative-aghlqu-production",
+        "b2-imperative-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-ohrog",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "oħroġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-ohrog"
+      },
+      "assessmentIds": [
+        "b2-imperative-ohrog-recognition",
+        "b2-imperative-ohrog-production",
+        "b2-imperative-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-ohorgu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "oħorġu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-ohorgu"
+      },
+      "assessmentIds": [
+        "b2-imperative-ohorgu-recognition-true-false",
+        "b2-imperative-ohorgu-production",
+        "b2-imperative-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-idhol",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "idħol",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-dahal"
+      },
+      "assessmentIds": [
+        "b2-imperative-idhol-diagnostic-recognition-true-false",
+        "b2-imperative-idhol-recognition",
+        "b2-imperative-idhol-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-idhlu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "idħlu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-dahal"
+      },
+      "assessmentIds": [
+        "b2-imperative-idhlu-recognition-true-false",
+        "b2-imperative-idhlu-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-dahhal",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "daħħal",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-dahhal"
+      },
+      "assessmentIds": [
+        "b2-imperative-dahhal-recognition",
+        "b2-imperative-dahhal-production",
+        "b2-imperative-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-dahhlu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "daħħlu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-dahhlu"
+      },
+      "assessmentIds": [
+        "b2-imperative-dahhlu-diagnostic-recognition",
+        "b2-imperative-dahhlu-recognition-true-false",
+        "b2-imperative-dahhlu-production",
+        "b2-imperative-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-aqra",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "aqra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-aqra"
+      },
+      "assessmentIds": [
+        "b2-imperative-aqra-recognition",
+        "b2-imperative-aqra-production",
+        "b2-imperative-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-aqraw",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "aqraw",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-aqraw"
+      },
+      "assessmentIds": [
+        "b2-imperative-aqraw-recognition-true-false",
+        "b2-imperative-aqraw-production",
+        "b2-imperative-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-iftah",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "iftaħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-fetah"
+      },
+      "assessmentIds": [
+        "imperative-open-plural",
+        "imperative-polite",
+        "b2-imperative-iftah-recognition",
+        "b2-imperative-iftah-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-ifthu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "iftħu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-fetah"
+      },
+      "assessmentIds": [
+        "b2-imperative-ifthu-diagnostic-recognition-true-false",
+        "b2-imperative-ifthu-recognition-true-false",
+        "b2-imperative-ifthu-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-isimghu",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "isimgħu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-sema"
+      },
+      "assessmentIds": [
+        "b2-imperative-isimghu-recognition",
+        "b2-imperative-isimghu-production",
+        "b2-imperative-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-staqsi",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "staqsi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-staqsi"
+      },
+      "assessmentIds": [
+        "b2-imperative-staqsi-recognition-true-false",
+        "b2-imperative-staqsi-production",
+        "b2-imperative-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-tkellem",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "tkellem",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-imperative-tkellem"
+      },
+      "assessmentIds": [
+        "b2-imperative-tkellem-diagnostic-recognition",
+        "b2-imperative-tkellem-recognition",
+        "b2-imperative-tkellem-production",
+        "b2-imperative-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-aghmel",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "verb-form",
+      "sourceRequirement": "agħmel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-ghamel"
+      },
+      "assessmentIds": [
+        "b2-imperative-aghmel-recognition-true-false",
+        "b2-imperative-aghmel-production",
+        "b2-imperative-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-wiehed",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "wieħed",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-1"
+      },
+      "assessmentIds": [
+        "b2-imperative-wiehed-recognition",
+        "b2-imperative-wiehed-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-tnejn",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "tnejn",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-2"
+      },
+      "assessmentIds": [
+        "b2-imperative-tnejn-recognition-true-false",
+        "b2-imperative-tnejn-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-tlieta",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "tlieta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-3"
+      },
+      "assessmentIds": [
+        "b2-imperative-tlieta-diagnostic-recognition-true-false",
+        "b2-imperative-tlieta-recognition",
+        "b2-imperative-tlieta-production",
+        "b2-imperative-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-erbgha",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "erbgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-4"
+      },
+      "assessmentIds": [
+        "b2-imperative-erbgha-recognition-true-false",
+        "b2-imperative-erbgha-production",
+        "b2-imperative-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-hamsa",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "ħamsa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-5"
+      },
+      "assessmentIds": [
+        "b2-imperative-hamsa-recognition",
+        "b2-imperative-hamsa-production",
+        "b2-imperative-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-sitta",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "sitta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-6"
+      },
+      "assessmentIds": [
+        "b2-imperative-sitta-diagnostic-recognition",
+        "b2-imperative-sitta-recognition-true-false",
+        "b2-imperative-sitta-production",
+        "b2-imperative-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-sebgha",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "sebgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-7"
+      },
+      "assessmentIds": [
+        "b2-imperative-sebgha-recognition",
+        "b2-imperative-sebgha-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-tmienja",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "tmienja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-8"
+      },
+      "assessmentIds": [
+        "b2-imperative-tmienja-recognition-true-false",
+        "b2-imperative-tmienja-production"
+      ]
+    },
+    {
+      "id": "b2-imperative-disgha",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "disgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-9"
+      },
+      "assessmentIds": [
+        "b2-imperative-disgha-recognition",
+        "b2-imperative-disgha-production",
+        "b2-imperative-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-imperative-ghaxra",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "vocabulary",
+      "sourceRequirement": "għaxra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-10"
+      },
+      "assessmentIds": [
+        "b2-imperative-ghaxra-diagnostic-recognition-true-false",
+        "b2-imperative-ghaxra-recognition-true-false",
+        "b2-imperative-ghaxra-production",
+        "b2-imperative-checkpoint-6-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-imperative-qum": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-qumu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-poggi": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-poggu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ikteb": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-iktbu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aghlaq": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aghlqu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ohrog": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ohorgu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-idhol": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-idhlu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-imperative-dahhal": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-dahhlu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aqra": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        17,
+        18,
+        20,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aqraw": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-imperative-iftah": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 14,
+      "pages": [
+        14,
+        15,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ifthu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-isimghu": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-staqsi": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15,
+        17,
+        18,
+        23
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tkellem": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 17,
+      "pages": [
+        17,
+        18,
+        19,
+        23
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-aghmel": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 15,
+      "pages": [
+        15,
+        17,
+        18
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-wiehed": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        23
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tnejn": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tlieta": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-erbgha": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 21,
+      "pages": [
+        21
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-hamsa": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-sitta": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 21,
+      "pages": [
+        21
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-sebgha": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-tmienja": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-disgha": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    },
+    "b2-imperative-ghaxra": {
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "chapterNumber": 2,
+      "chapterTitle": "Iftaħ il-Ktieb u Aqra",
+      "pageRange": [
+        14,
+        26
+      ],
+      "primaryPage": 20,
+      "pages": [
+        20,
+        21,
+        24
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-imperative-qum",
+      "maltese": "qum",
+      "english": "stand up (singular command)",
+      "example": "Qum kmieni.",
+      "exampleTranslation": "Get up early.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 17,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 17",
+      "notes": [
+        "Example: Qum kmieni.",
+        "Translation: Get up early.",
+        "Source: B2, Chapter 2, p. 17"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-qumu",
+      "maltese": "qumu",
+      "english": "stand up (plural command)",
+      "example": "Qumu kmieni.",
+      "exampleTranslation": "Get up early, everyone.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Qumu kmieni.",
+        "Translation: Get up early, everyone.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-poggi",
+      "maltese": "poġġi",
+      "english": "sit down / place (singular command)",
+      "example": "Poġġi bilqiegħda.",
+      "exampleTranslation": "Sit down.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Poġġi bilqiegħda.",
+        "Translation: Sit down.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-poggu",
+      "maltese": "poġġu",
+      "english": "sit down / place (plural command)",
+      "example": "Poġġu bilqiegħda.",
+      "exampleTranslation": "Sit down, everyone.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Poġġu bilqiegħda.",
+        "Translation: Sit down, everyone.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-ikteb",
+      "maltese": "ikteb",
+      "english": "write (singular command)",
+      "example": "Ikteb ismek.",
+      "exampleTranslation": "Write your name.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Ikteb ismek.",
+        "Translation: Write your name.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-iktbu",
+      "maltese": "iktbu",
+      "english": "write (plural command)",
+      "example": "Iktbu isimkom.",
+      "exampleTranslation": "Write your names.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Iktbu isimkom.",
+        "Translation: Write your names.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-aghlaq",
+      "maltese": "agħlaq",
+      "english": "close (singular command)",
+      "example": "Agħlaq il-bieb.",
+      "exampleTranslation": "Close the door.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Agħlaq il-bieb.",
+        "Translation: Close the door.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-aghlqu",
+      "maltese": "agħlqu",
+      "english": "close (plural command)",
+      "example": "Agħlqu l-bieb.",
+      "exampleTranslation": "Close the door, everyone.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Agħlqu l-bieb.",
+        "Translation: Close the door, everyone.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-ohrog",
+      "maltese": "oħroġ",
+      "english": "go out (singular command)",
+      "example": "Oħroġ barra.",
+      "exampleTranslation": "Go outside.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 17,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 17",
+      "notes": [
+        "Example: Oħroġ barra.",
+        "Translation: Go outside.",
+        "Source: B2, Chapter 2, p. 17"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-ohorgu",
+      "maltese": "oħorġu",
+      "english": "go out (plural command)",
+      "example": "Oħorġu barra.",
+      "exampleTranslation": "Go outside, everyone.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Oħorġu barra.",
+        "Translation: Go outside, everyone.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-idhol",
+      "maltese": "idħol",
+      "english": "enter (singular command)",
+      "example": "Idħol fil-klassi.",
+      "exampleTranslation": "Enter the classroom.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Idħol fil-klassi.",
+        "Translation: Enter the classroom.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-idhlu",
+      "maltese": "idħlu",
+      "english": "enter (plural command)",
+      "example": "Idħlu fil-klassi.",
+      "exampleTranslation": "Enter the classroom, everyone.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": null,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 2, pp. 14-26",
+      "notes": [
+        "Example: Idħlu fil-klassi.",
+        "Translation: Enter the classroom, everyone.",
+        "Source: B2, Chapter 2, pp. 14-26"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-dahhal",
+      "maltese": "daħħal",
+      "english": "put inside (singular command)",
+      "example": "Daħħal il-ktieb fil-basket.",
+      "exampleTranslation": "Put the book in the bag.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 17,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 17",
+      "notes": [
+        "Example: Daħħal il-ktieb fil-basket.",
+        "Translation: Put the book in the bag.",
+        "Source: B2, Chapter 2, p. 17"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-dahhlu",
+      "maltese": "daħħlu",
+      "english": "put inside (plural command)",
+      "example": "Daħħlu l-kotba fil-basket.",
+      "exampleTranslation": "Put the books in the bag.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Daħħlu l-kotba fil-basket.",
+        "Translation: Put the books in the bag.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-aqra",
+      "maltese": "aqra",
+      "english": "read (singular command)",
+      "example": "Aqra l-paġna.",
+      "exampleTranslation": "Read the page.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Aqra l-paġna.",
+        "Translation: Read the page.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-aqraw",
+      "maltese": "aqraw",
+      "english": "read (plural command)",
+      "example": "Aqraw il-paġna.",
+      "exampleTranslation": "Read the page, everyone.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": null,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 2, pp. 14-26",
+      "notes": [
+        "Example: Aqraw il-paġna.",
+        "Translation: Read the page, everyone.",
+        "Source: B2, Chapter 2, pp. 14-26"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-iftah",
+      "maltese": "iftaħ",
+      "english": "open (singular command)",
+      "example": "Iftaħ il-ktieb.",
+      "exampleTranslation": "Open the book.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 14,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 14",
+      "notes": [
+        "Example: Iftaħ il-ktieb.",
+        "Translation: Open the book.",
+        "Source: B2, Chapter 2, p. 14"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-ifthu",
+      "maltese": "iftħu",
+      "english": "open (plural command)",
+      "example": "Iftħu l-kotba.",
+      "exampleTranslation": "Open the books.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 15,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 15",
+      "notes": [
+        "Example: Iftħu l-kotba.",
+        "Translation: Open the books.",
+        "Source: B2, Chapter 2, p. 15"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-isimghu",
+      "maltese": "isimgħu",
+      "english": "listen (plural command)",
+      "example": "Isimgħu lill-għalliem.",
+      "exampleTranslation": "Listen to the teacher.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 15,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 15",
+      "notes": [
+        "Example: Isimgħu lill-għalliem.",
+        "Translation: Listen to the teacher.",
+        "Source: B2, Chapter 2, p. 15"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-staqsi",
+      "maltese": "staqsi",
+      "english": "ask (singular command)",
+      "example": "Staqsi mistoqsija.",
+      "exampleTranslation": "Ask a question.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 15,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 15",
+      "notes": [
+        "Example: Staqsi mistoqsija.",
+        "Translation: Ask a question.",
+        "Source: B2, Chapter 2, p. 15"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-tkellem",
+      "maltese": "tkellem",
+      "english": "speak (singular command)",
+      "example": "Tkellem bil-mod.",
+      "exampleTranslation": "Speak slowly.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 17,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 17",
+      "notes": [
+        "Example: Tkellem bil-mod.",
+        "Translation: Speak slowly.",
+        "Source: B2, Chapter 2, p. 17"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-aghmel",
+      "maltese": "agħmel",
+      "english": "do / make (singular command)",
+      "example": "Agħmel l-eżerċizzju.",
+      "exampleTranslation": "Do the exercise.",
+      "examplePattern": "classroom-command",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 15,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 15",
+      "notes": [
+        "Example: Agħmel l-eżerċizzju.",
+        "Translation: Do the exercise.",
+        "Source: B2, Chapter 2, p. 15"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-wiehed",
+      "maltese": "wieħed",
+      "english": "one",
+      "example": "In-numru huwa wieħed.",
+      "exampleTranslation": "The number is one.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa wieħed.",
+        "Translation: The number is one.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-tnejn",
+      "maltese": "tnejn",
+      "english": "two",
+      "example": "In-numru huwa tnejn.",
+      "exampleTranslation": "The number is two.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa tnejn.",
+        "Translation: The number is two.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-tlieta",
+      "maltese": "tlieta",
+      "english": "three",
+      "example": "In-numru huwa tlieta.",
+      "exampleTranslation": "The number is three.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa tlieta.",
+        "Translation: The number is three.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-erbgha",
+      "maltese": "erbgħa",
+      "english": "four",
+      "example": "In-numru huwa erbgħa.",
+      "exampleTranslation": "The number is four.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 21,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 21",
+      "notes": [
+        "Example: In-numru huwa erbgħa.",
+        "Translation: The number is four.",
+        "Source: B2, Chapter 2, p. 21"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-hamsa",
+      "maltese": "ħamsa",
+      "english": "five",
+      "example": "In-numru huwa ħamsa.",
+      "exampleTranslation": "The number is five.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa ħamsa.",
+        "Translation: The number is five.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-sitta",
+      "maltese": "sitta",
+      "english": "six",
+      "example": "In-numru huwa sitta.",
+      "exampleTranslation": "The number is six.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 21,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 21",
+      "notes": [
+        "Example: In-numru huwa sitta.",
+        "Translation: The number is six.",
+        "Source: B2, Chapter 2, p. 21"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-sebgha",
+      "maltese": "sebgħa",
+      "english": "seven",
+      "example": "In-numru huwa sebgħa.",
+      "exampleTranslation": "The number is seven.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa sebgħa.",
+        "Translation: The number is seven.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-tmienja",
+      "maltese": "tmienja",
+      "english": "eight",
+      "example": "In-numru huwa tmienja.",
+      "exampleTranslation": "The number is eight.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa tmienja.",
+        "Translation: The number is eight.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-disgha",
+      "maltese": "disgħa",
+      "english": "nine",
+      "example": "In-numru huwa disgħa.",
+      "exampleTranslation": "The number is nine.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa disgħa.",
+        "Translation: The number is nine.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-imperative-ghaxra",
+      "maltese": "għaxra",
+      "english": "ten",
+      "example": "In-numru huwa għaxra.",
+      "exampleTranslation": "The number is ten.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 2,
+        "page": 20,
+        "pageRange": [
+          14,
+          26
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 2, p. 20",
+      "notes": [
+        "Example: In-numru huwa għaxra.",
+        "Translation: The number is ten.",
+        "Source: B2, Chapter 2, p. 20"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-diagnostic",
+      "kind": "diagnostic",
+      "title": "Iftaħ il-Ktieb u Aqra Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-imperative-qum-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-qum"
+          ],
+          "prompt": "What is the lesson meaning of “qum”?",
+          "choices": [
+            "stand up (singular command)",
+            "stand up (plural command)",
+            "sit down / place (singular command)"
+          ],
+          "answer": "stand up (singular command)",
+          "explanation": "qum means “stand up (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "stand up (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggu-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-poggu"
+          ],
+          "prompt": "True or false: “poġġu” means “sit down / place (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "poġġu means “sit down / place (plural command)”.",
+          "reviewCard": {
+            "maltese": "poġġu",
+            "english": "sit down / place (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlaq-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlaq"
+          ],
+          "prompt": "What is the lesson meaning of “agħlaq”?",
+          "choices": [
+            "write (singular command)",
+            "close (singular command)",
+            "sit down / place (plural command)"
+          ],
+          "answer": "close (singular command)",
+          "explanation": "agħlaq means “close (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "close (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhol-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-idhol"
+          ],
+          "prompt": "True or false: “idħol” means “write (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "idħol means “enter (singular command)”.",
+          "reviewCard": {
+            "maltese": "idħol",
+            "english": "enter (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-dahhlu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-dahhlu"
+          ],
+          "prompt": "What is the lesson meaning of “daħħlu”?",
+          "choices": [
+            "write (plural command)",
+            "close (singular command)",
+            "put inside (plural command)"
+          ],
+          "answer": "put inside (plural command)",
+          "explanation": "daħħlu means “put inside (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "daħħlu",
+            "english": "put inside (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ifthu-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ifthu"
+          ],
+          "prompt": "True or false: “iftħu” means “close (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "iftħu means “open (plural command)”.",
+          "reviewCard": {
+            "maltese": "iftħu",
+            "english": "open (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-tkellem-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tkellem"
+          ],
+          "prompt": "What is the lesson meaning of “tkellem”?",
+          "choices": [
+            "speak (singular command)",
+            "close (plural command)",
+            "go out (singular command)"
+          ],
+          "answer": "speak (singular command)",
+          "explanation": "tkellem means “speak (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "tkellem",
+            "english": "speak (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-tlieta-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tlieta"
+          ],
+          "prompt": "True or false: “tlieta” means “go out (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "tlieta means “three”.",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three"
+          }
+        },
+        {
+          "id": "b2-imperative-sitta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-sitta"
+          ],
+          "prompt": "What is the lesson meaning of “sitta”?",
+          "choices": [
+            "enter (singular command)",
+            "six",
+            "go out (plural command)"
+          ],
+          "answer": "six",
+          "explanation": "sitta means “six” in this chapter.",
+          "reviewCard": {
+            "maltese": "sitta",
+            "english": "six"
+          }
+        },
+        {
+          "id": "b2-imperative-ghaxra-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "True or false: “għaxra” means “enter (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "għaxra means “ten”.",
+          "reviewCard": {
+            "maltese": "għaxra",
+            "english": "ten"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-imperative-qum-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-qum"
+          ],
+          "prompt": "What is the lesson meaning of “qum”?",
+          "choices": [
+            "stand up (singular command)",
+            "stand up (plural command)",
+            "sit down / place (singular command)"
+          ],
+          "answer": "stand up (singular command)",
+          "explanation": "qum means “stand up (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "stand up (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-qum-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-qum"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ kmieni.” (Get up early.)",
+          "answer": "qum",
+          "explanation": "The complete sentence is “Qum kmieni.”",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "stand up (singular command)",
+            "example": "Qum kmieni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qum"
+          ]
+        },
+        {
+          "id": "b2-imperative-qumu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-qumu"
+          ],
+          "prompt": "True or false: “qumu” means “sit down / place (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "qumu means “stand up (plural command)”.",
+          "reviewCard": {
+            "maltese": "qumu",
+            "english": "stand up (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-qumu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-qumu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ kmieni.” (Get up early, everyone.)",
+          "answer": "qumu",
+          "explanation": "The complete sentence is “Qumu kmieni.”",
+          "reviewCard": {
+            "maltese": "qumu",
+            "english": "stand up (plural command)",
+            "example": "Qumu kmieni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qumu"
+          ]
+        },
+        {
+          "id": "b2-imperative-poggi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-poggi"
+          ],
+          "prompt": "What is the lesson meaning of “poġġi”?",
+          "choices": [
+            "write (singular command)",
+            "sit down / place (singular command)",
+            "sit down / place (plural command)"
+          ],
+          "answer": "sit down / place (singular command)",
+          "explanation": "poġġi means “sit down / place (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "poġġi",
+            "english": "sit down / place (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-poggi"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ bilqiegħda.” (Sit down.)",
+          "answer": "poġġi",
+          "explanation": "The complete sentence is “Poġġi bilqiegħda.”",
+          "reviewCard": {
+            "maltese": "poġġi",
+            "english": "sit down / place (singular command)",
+            "example": "Poġġi bilqiegħda."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "poġġi"
+          ]
+        },
+        {
+          "id": "b2-imperative-poggu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-poggu"
+          ],
+          "prompt": "True or false: “poġġu” means “write (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "poġġu means “sit down / place (plural command)”.",
+          "reviewCard": {
+            "maltese": "poġġu",
+            "english": "sit down / place (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-poggu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-poggu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ bilqiegħda.” (Sit down, everyone.)",
+          "answer": "poġġu",
+          "explanation": "The complete sentence is “Poġġu bilqiegħda.”",
+          "reviewCard": {
+            "maltese": "poġġu",
+            "english": "sit down / place (plural command)",
+            "example": "Poġġu bilqiegħda."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "poġġu"
+          ]
+        },
+        {
+          "id": "b2-imperative-ikteb-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ikteb"
+          ],
+          "prompt": "What is the lesson meaning of “ikteb”?",
+          "choices": [
+            "write (plural command)",
+            "close (singular command)",
+            "write (singular command)"
+          ],
+          "answer": "write (singular command)",
+          "explanation": "ikteb means “write (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ikteb",
+            "english": "write (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ikteb-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ikteb"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ ismek.” (Write your name.)",
+          "answer": "ikteb",
+          "explanation": "The complete sentence is “Ikteb ismek.”",
+          "reviewCard": {
+            "maltese": "ikteb",
+            "english": "write (singular command)",
+            "example": "Ikteb ismek."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ikteb"
+          ]
+        },
+        {
+          "id": "b2-imperative-iktbu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-iktbu"
+          ],
+          "prompt": "True or false: “iktbu” means “close (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "iktbu means “write (plural command)”.",
+          "reviewCard": {
+            "maltese": "iktbu",
+            "english": "write (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-iktbu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-iktbu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ isimkom.” (Write your names.)",
+          "answer": "iktbu",
+          "explanation": "The complete sentence is “Iktbu isimkom.”",
+          "reviewCard": {
+            "maltese": "iktbu",
+            "english": "write (plural command)",
+            "example": "Iktbu isimkom."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "iktbu"
+          ]
+        },
+        {
+          "id": "b2-imperative-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-qum",
+            "b2-imperative-qumu",
+            "b2-imperative-poggi",
+            "b2-imperative-poggu"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "qum",
+              "right": "stand up (singular command)"
+            },
+            {
+              "left": "qumu",
+              "right": "stand up (plural command)"
+            },
+            {
+              "left": "poġġi",
+              "right": "sit down / place (singular command)"
+            },
+            {
+              "left": "poġġu",
+              "right": "sit down / place (plural command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "stand up (singular command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-imperative-aghlaq-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlaq"
+          ],
+          "prompt": "What is the lesson meaning of “agħlaq”?",
+          "choices": [
+            "close (singular command)",
+            "close (plural command)",
+            "go out (singular command)"
+          ],
+          "answer": "close (singular command)",
+          "explanation": "agħlaq means “close (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "close (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlaq-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aghlaq"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-bieb.” (Close the door.)",
+          "answer": "agħlaq",
+          "explanation": "The complete sentence is “Agħlaq il-bieb.”",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "close (singular command)",
+            "example": "Agħlaq il-bieb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħlaq"
+          ]
+        },
+        {
+          "id": "b2-imperative-aghlqu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlqu"
+          ],
+          "prompt": "True or false: “agħlqu” means “go out (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "agħlqu means “close (plural command)”.",
+          "reviewCard": {
+            "maltese": "agħlqu",
+            "english": "close (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghlqu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aghlqu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-bieb.” (Close the door, everyone.)",
+          "answer": "agħlqu",
+          "explanation": "The complete sentence is “Agħlqu l-bieb.”",
+          "reviewCard": {
+            "maltese": "agħlqu",
+            "english": "close (plural command)",
+            "example": "Agħlqu l-bieb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħlqu"
+          ]
+        },
+        {
+          "id": "b2-imperative-ohrog-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ohrog"
+          ],
+          "prompt": "What is the lesson meaning of “oħroġ”?",
+          "choices": [
+            "enter (singular command)",
+            "go out (singular command)",
+            "go out (plural command)"
+          ],
+          "answer": "go out (singular command)",
+          "explanation": "oħroġ means “go out (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "oħroġ",
+            "english": "go out (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ohrog-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ohrog"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ barra.” (Go outside.)",
+          "answer": "oħroġ",
+          "explanation": "The complete sentence is “Oħroġ barra.”",
+          "reviewCard": {
+            "maltese": "oħroġ",
+            "english": "go out (singular command)",
+            "example": "Oħroġ barra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oħroġ"
+          ]
+        },
+        {
+          "id": "b2-imperative-ohorgu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ohorgu"
+          ],
+          "prompt": "True or false: “oħorġu” means “enter (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "oħorġu means “go out (plural command)”.",
+          "reviewCard": {
+            "maltese": "oħorġu",
+            "english": "go out (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ohorgu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ohorgu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ barra.” (Go outside, everyone.)",
+          "answer": "oħorġu",
+          "explanation": "The complete sentence is “Oħorġu barra.”",
+          "reviewCard": {
+            "maltese": "oħorġu",
+            "english": "go out (plural command)",
+            "example": "Oħorġu barra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oħorġu"
+          ]
+        },
+        {
+          "id": "b2-imperative-idhol-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-idhol"
+          ],
+          "prompt": "What is the lesson meaning of “idħol”?",
+          "choices": [
+            "enter (plural command)",
+            "put inside (singular command)",
+            "enter (singular command)"
+          ],
+          "answer": "enter (singular command)",
+          "explanation": "idħol means “enter (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "idħol",
+            "english": "enter (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhol-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-idhol"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ fil-klassi.” (Enter the classroom.)",
+          "answer": "idħol",
+          "explanation": "The complete sentence is “Idħol fil-klassi.”",
+          "reviewCard": {
+            "maltese": "idħol",
+            "english": "enter (singular command)",
+            "example": "Idħol fil-klassi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "idħol"
+          ]
+        },
+        {
+          "id": "b2-imperative-idhlu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-idhlu"
+          ],
+          "prompt": "True or false: “idħlu” means “put inside (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "idħlu means “enter (plural command)”.",
+          "reviewCard": {
+            "maltese": "idħlu",
+            "english": "enter (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-idhlu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-idhlu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ fil-klassi.” (Enter the classroom, everyone.)",
+          "answer": "idħlu",
+          "explanation": "The complete sentence is “Idħlu fil-klassi.”",
+          "reviewCard": {
+            "maltese": "idħlu",
+            "english": "enter (plural command)",
+            "example": "Idħlu fil-klassi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "idħlu"
+          ]
+        },
+        {
+          "id": "b2-imperative-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghlaq",
+            "b2-imperative-aghlqu",
+            "b2-imperative-ohrog",
+            "b2-imperative-ohorgu"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "agħlaq",
+              "right": "close (singular command)"
+            },
+            {
+              "left": "agħlqu",
+              "right": "close (plural command)"
+            },
+            {
+              "left": "oħroġ",
+              "right": "go out (singular command)"
+            },
+            {
+              "left": "oħorġu",
+              "right": "go out (plural command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "agħlaq",
+            "english": "close (singular command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-imperative-dahhal-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-dahhal"
+          ],
+          "prompt": "What is the lesson meaning of “daħħal”?",
+          "choices": [
+            "put inside (singular command)",
+            "put inside (plural command)",
+            "read (singular command)"
+          ],
+          "answer": "put inside (singular command)",
+          "explanation": "daħħal means “put inside (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "daħħal",
+            "english": "put inside (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-dahhal-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-dahhal"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-ktieb fil-basket.” (Put the book in the bag.)",
+          "answer": "daħħal",
+          "explanation": "The complete sentence is “Daħħal il-ktieb fil-basket.”",
+          "reviewCard": {
+            "maltese": "daħħal",
+            "english": "put inside (singular command)",
+            "example": "Daħħal il-ktieb fil-basket."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "daħħal"
+          ]
+        },
+        {
+          "id": "b2-imperative-dahhlu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-dahhlu"
+          ],
+          "prompt": "True or false: “daħħlu” means “read (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "daħħlu means “put inside (plural command)”.",
+          "reviewCard": {
+            "maltese": "daħħlu",
+            "english": "put inside (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-dahhlu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-dahhlu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-kotba fil-basket.” (Put the books in the bag.)",
+          "answer": "daħħlu",
+          "explanation": "The complete sentence is “Daħħlu l-kotba fil-basket.”",
+          "reviewCard": {
+            "maltese": "daħħlu",
+            "english": "put inside (plural command)",
+            "example": "Daħħlu l-kotba fil-basket."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "daħħlu"
+          ]
+        },
+        {
+          "id": "b2-imperative-aqra-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aqra"
+          ],
+          "prompt": "What is the lesson meaning of “aqra”?",
+          "choices": [
+            "open (singular command)",
+            "read (singular command)",
+            "read (plural command)"
+          ],
+          "answer": "read (singular command)",
+          "explanation": "aqra means “read (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "aqra",
+            "english": "read (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aqra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aqra"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-paġna.” (Read the page.)",
+          "answer": "aqra",
+          "explanation": "The complete sentence is “Aqra l-paġna.”",
+          "reviewCard": {
+            "maltese": "aqra",
+            "english": "read (singular command)",
+            "example": "Aqra l-paġna."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "aqra"
+          ]
+        },
+        {
+          "id": "b2-imperative-aqraw-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aqraw"
+          ],
+          "prompt": "True or false: “aqraw” means “open (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "aqraw means “read (plural command)”.",
+          "reviewCard": {
+            "maltese": "aqraw",
+            "english": "read (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aqraw-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aqraw"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-paġna.” (Read the page, everyone.)",
+          "answer": "aqraw",
+          "explanation": "The complete sentence is “Aqraw il-paġna.”",
+          "reviewCard": {
+            "maltese": "aqraw",
+            "english": "read (plural command)",
+            "example": "Aqraw il-paġna."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "aqraw"
+          ]
+        },
+        {
+          "id": "b2-imperative-iftah-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-iftah"
+          ],
+          "prompt": "What is the lesson meaning of “iftaħ”?",
+          "choices": [
+            "open (plural command)",
+            "listen (plural command)",
+            "open (singular command)"
+          ],
+          "answer": "open (singular command)",
+          "explanation": "iftaħ means “open (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "iftaħ",
+            "english": "open (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-iftah-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-iftah"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-ktieb.” (Open the book.)",
+          "answer": "iftaħ",
+          "explanation": "The complete sentence is “Iftaħ il-ktieb.”",
+          "reviewCard": {
+            "maltese": "iftaħ",
+            "english": "open (singular command)",
+            "example": "Iftaħ il-ktieb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "iftaħ"
+          ]
+        },
+        {
+          "id": "b2-imperative-ifthu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ifthu"
+          ],
+          "prompt": "True or false: “iftħu” means “listen (plural command)” in this chapter.",
+          "answer": false,
+          "explanation": "iftħu means “open (plural command)”.",
+          "reviewCard": {
+            "maltese": "iftħu",
+            "english": "open (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-ifthu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ifthu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-kotba.” (Open the books.)",
+          "answer": "iftħu",
+          "explanation": "The complete sentence is “Iftħu l-kotba.”",
+          "reviewCard": {
+            "maltese": "iftħu",
+            "english": "open (plural command)",
+            "example": "Iftħu l-kotba."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "iftħu"
+          ]
+        },
+        {
+          "id": "b2-imperative-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-dahhal",
+            "b2-imperative-dahhlu",
+            "b2-imperative-aqra",
+            "b2-imperative-aqraw"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "daħħal",
+              "right": "put inside (singular command)"
+            },
+            {
+              "left": "daħħlu",
+              "right": "put inside (plural command)"
+            },
+            {
+              "left": "aqra",
+              "right": "read (singular command)"
+            },
+            {
+              "left": "aqraw",
+              "right": "read (plural command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "daħħal",
+            "english": "put inside (singular command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-imperative-isimghu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-isimghu"
+          ],
+          "prompt": "What is the lesson meaning of “isimgħu”?",
+          "choices": [
+            "listen (plural command)",
+            "ask (singular command)",
+            "speak (singular command)"
+          ],
+          "answer": "listen (plural command)",
+          "explanation": "isimgħu means “listen (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "isimgħu",
+            "english": "listen (plural command)"
+          }
+        },
+        {
+          "id": "b2-imperative-isimghu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-isimghu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ lill-għalliem.” (Listen to the teacher.)",
+          "answer": "isimgħu",
+          "explanation": "The complete sentence is “Isimgħu lill-għalliem.”",
+          "reviewCard": {
+            "maltese": "isimgħu",
+            "english": "listen (plural command)",
+            "example": "Isimgħu lill-għalliem."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "isimgħu"
+          ]
+        },
+        {
+          "id": "b2-imperative-staqsi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-staqsi"
+          ],
+          "prompt": "True or false: “staqsi” means “speak (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "staqsi means “ask (singular command)”.",
+          "reviewCard": {
+            "maltese": "staqsi",
+            "english": "ask (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-staqsi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-staqsi"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ mistoqsija.” (Ask a question.)",
+          "answer": "staqsi",
+          "explanation": "The complete sentence is “Staqsi mistoqsija.”",
+          "reviewCard": {
+            "maltese": "staqsi",
+            "english": "ask (singular command)",
+            "example": "Staqsi mistoqsija."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "staqsi"
+          ]
+        },
+        {
+          "id": "b2-imperative-tkellem-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tkellem"
+          ],
+          "prompt": "What is the lesson meaning of “tkellem”?",
+          "choices": [
+            "one",
+            "speak (singular command)",
+            "do / make (singular command)"
+          ],
+          "answer": "speak (singular command)",
+          "explanation": "tkellem means “speak (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "tkellem",
+            "english": "speak (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-tkellem-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tkellem"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ bil-mod.” (Speak slowly.)",
+          "answer": "tkellem",
+          "explanation": "The complete sentence is “Tkellem bil-mod.”",
+          "reviewCard": {
+            "maltese": "tkellem",
+            "english": "speak (singular command)",
+            "example": "Tkellem bil-mod."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tkellem"
+          ]
+        },
+        {
+          "id": "b2-imperative-aghmel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghmel"
+          ],
+          "prompt": "True or false: “agħmel” means “one” in this chapter.",
+          "answer": false,
+          "explanation": "agħmel means “do / make (singular command)”.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "do / make (singular command)"
+          }
+        },
+        {
+          "id": "b2-imperative-aghmel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aghmel"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-eżerċizzju.” (Do the exercise.)",
+          "answer": "agħmel",
+          "explanation": "The complete sentence is “Agħmel l-eżerċizzju.”",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "do / make (singular command)",
+            "example": "Agħmel l-eżerċizzju."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħmel"
+          ]
+        },
+        {
+          "id": "b2-imperative-wiehed-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-wiehed"
+          ],
+          "prompt": "What is the lesson meaning of “wieħed”?",
+          "choices": [
+            "two",
+            "three",
+            "one"
+          ],
+          "answer": "one",
+          "explanation": "wieħed means “one” in this chapter.",
+          "reviewCard": {
+            "maltese": "wieħed",
+            "english": "one"
+          }
+        },
+        {
+          "id": "b2-imperative-wiehed-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-wiehed"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is one.)",
+          "answer": "wieħed",
+          "explanation": "The complete sentence is “In-numru huwa wieħed.”",
+          "reviewCard": {
+            "maltese": "wieħed",
+            "english": "one",
+            "example": "In-numru huwa wieħed."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "wieħed"
+          ]
+        },
+        {
+          "id": "b2-imperative-tnejn-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tnejn"
+          ],
+          "prompt": "True or false: “tnejn” means “three” in this chapter.",
+          "answer": false,
+          "explanation": "tnejn means “two”.",
+          "reviewCard": {
+            "maltese": "tnejn",
+            "english": "two"
+          }
+        },
+        {
+          "id": "b2-imperative-tnejn-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tnejn"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is two.)",
+          "answer": "tnejn",
+          "explanation": "The complete sentence is “In-numru huwa tnejn.”",
+          "reviewCard": {
+            "maltese": "tnejn",
+            "english": "two",
+            "example": "In-numru huwa tnejn."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tnejn"
+          ]
+        },
+        {
+          "id": "b2-imperative-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-isimghu",
+            "b2-imperative-staqsi",
+            "b2-imperative-tkellem",
+            "b2-imperative-aghmel"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "isimgħu",
+              "right": "listen (plural command)"
+            },
+            {
+              "left": "staqsi",
+              "right": "ask (singular command)"
+            },
+            {
+              "left": "tkellem",
+              "right": "speak (singular command)"
+            },
+            {
+              "left": "agħmel",
+              "right": "do / make (singular command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "isimgħu",
+            "english": "listen (plural command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 5",
+      "items": [
+        {
+          "id": "b2-imperative-tlieta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tlieta"
+          ],
+          "prompt": "What is the lesson meaning of “tlieta”?",
+          "choices": [
+            "three",
+            "four",
+            "five"
+          ],
+          "answer": "three",
+          "explanation": "tlieta means “three” in this chapter.",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three"
+          }
+        },
+        {
+          "id": "b2-imperative-tlieta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tlieta"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is three.)",
+          "answer": "tlieta",
+          "explanation": "The complete sentence is “In-numru huwa tlieta.”",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three",
+            "example": "In-numru huwa tlieta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tlieta"
+          ]
+        },
+        {
+          "id": "b2-imperative-erbgha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-erbgha"
+          ],
+          "prompt": "True or false: “erbgħa” means “five” in this chapter.",
+          "answer": false,
+          "explanation": "erbgħa means “four”.",
+          "reviewCard": {
+            "maltese": "erbgħa",
+            "english": "four"
+          }
+        },
+        {
+          "id": "b2-imperative-erbgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-erbgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is four.)",
+          "answer": "erbgħa",
+          "explanation": "The complete sentence is “In-numru huwa erbgħa.”",
+          "reviewCard": {
+            "maltese": "erbgħa",
+            "english": "four",
+            "example": "In-numru huwa erbgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "erbgħa"
+          ]
+        },
+        {
+          "id": "b2-imperative-hamsa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-hamsa"
+          ],
+          "prompt": "What is the lesson meaning of “ħamsa”?",
+          "choices": [
+            "seven",
+            "five",
+            "six"
+          ],
+          "answer": "five",
+          "explanation": "ħamsa means “five” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħamsa",
+            "english": "five"
+          }
+        },
+        {
+          "id": "b2-imperative-hamsa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-hamsa"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is five.)",
+          "answer": "ħamsa",
+          "explanation": "The complete sentence is “In-numru huwa ħamsa.”",
+          "reviewCard": {
+            "maltese": "ħamsa",
+            "english": "five",
+            "example": "In-numru huwa ħamsa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħamsa"
+          ]
+        },
+        {
+          "id": "b2-imperative-sitta-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-sitta"
+          ],
+          "prompt": "True or false: “sitta” means “seven” in this chapter.",
+          "answer": false,
+          "explanation": "sitta means “six”.",
+          "reviewCard": {
+            "maltese": "sitta",
+            "english": "six"
+          }
+        },
+        {
+          "id": "b2-imperative-sitta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-sitta"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is six.)",
+          "answer": "sitta",
+          "explanation": "The complete sentence is “In-numru huwa sitta.”",
+          "reviewCard": {
+            "maltese": "sitta",
+            "english": "six",
+            "example": "In-numru huwa sitta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sitta"
+          ]
+        },
+        {
+          "id": "b2-imperative-sebgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-sebgha"
+          ],
+          "prompt": "What is the lesson meaning of “sebgħa”?",
+          "choices": [
+            "eight",
+            "nine",
+            "seven"
+          ],
+          "answer": "seven",
+          "explanation": "sebgħa means “seven” in this chapter.",
+          "reviewCard": {
+            "maltese": "sebgħa",
+            "english": "seven"
+          }
+        },
+        {
+          "id": "b2-imperative-sebgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-sebgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is seven.)",
+          "answer": "sebgħa",
+          "explanation": "The complete sentence is “In-numru huwa sebgħa.”",
+          "reviewCard": {
+            "maltese": "sebgħa",
+            "english": "seven",
+            "example": "In-numru huwa sebgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sebgħa"
+          ]
+        },
+        {
+          "id": "b2-imperative-tmienja-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tmienja"
+          ],
+          "prompt": "True or false: “tmienja” means “nine” in this chapter.",
+          "answer": false,
+          "explanation": "tmienja means “eight”.",
+          "reviewCard": {
+            "maltese": "tmienja",
+            "english": "eight"
+          }
+        },
+        {
+          "id": "b2-imperative-tmienja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-tmienja"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is eight.)",
+          "answer": "tmienja",
+          "explanation": "The complete sentence is “In-numru huwa tmienja.”",
+          "reviewCard": {
+            "maltese": "tmienja",
+            "english": "eight",
+            "example": "In-numru huwa tmienja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tmienja"
+          ]
+        },
+        {
+          "id": "b2-imperative-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-tlieta",
+            "b2-imperative-erbgha",
+            "b2-imperative-hamsa",
+            "b2-imperative-sitta"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "tlieta",
+              "right": "three"
+            },
+            {
+              "left": "erbgħa",
+              "right": "four"
+            },
+            {
+              "left": "ħamsa",
+              "right": "five"
+            },
+            {
+              "left": "sitta",
+              "right": "six"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "tlieta",
+            "english": "three"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-imperative",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-imperative-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 2,
+      "title": "Iftaħ il-Ktieb u Aqra Checkpoint 6",
+      "items": [
+        {
+          "id": "b2-imperative-disgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-disgha"
+          ],
+          "prompt": "What is the lesson meaning of “disgħa”?",
+          "choices": [
+            "nine",
+            "ten",
+            "stand up (singular command)"
+          ],
+          "answer": "nine",
+          "explanation": "disgħa means “nine” in this chapter.",
+          "reviewCard": {
+            "maltese": "disgħa",
+            "english": "nine"
+          }
+        },
+        {
+          "id": "b2-imperative-disgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-disgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is nine.)",
+          "answer": "disgħa",
+          "explanation": "The complete sentence is “In-numru huwa disgħa.”",
+          "reviewCard": {
+            "maltese": "disgħa",
+            "english": "nine",
+            "example": "In-numru huwa disgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "disgħa"
+          ]
+        },
+        {
+          "id": "b2-imperative-ghaxra-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "True or false: “għaxra” means “stand up (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "għaxra means “ten”.",
+          "reviewCard": {
+            "maltese": "għaxra",
+            "english": "ten"
+          }
+        },
+        {
+          "id": "b2-imperative-ghaxra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is ten.)",
+          "answer": "għaxra",
+          "explanation": "The complete sentence is “In-numru huwa għaxra.”",
+          "reviewCard": {
+            "maltese": "għaxra",
+            "english": "ten",
+            "example": "In-numru huwa għaxra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għaxra"
+          ]
+        },
+        {
+          "id": "b2-imperative-checkpoint-6-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-disgha",
+            "b2-imperative-ghaxra"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "disgħa",
+              "right": "nine"
+            },
+            {
+              "left": "għaxra",
+              "right": "ten"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "disgħa",
+            "english": "nine"
+          }
+        }
+      ]
+    }
+  ]
+}

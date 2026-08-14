@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}v18`;
+const CACHE_NAME = `${CACHE_PREFIX}v19`;
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -15,13 +15,7 @@ const CORE_ASSETS = [
   "./assets/data/site-map.json",
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",
-  "./assets/data/course_target_assessments.json",
-  "./assets/data/course_target_bindings.json",
-  "./assets/data/course_supplemental_content.json",
-  "./assets/data/course_target_glosses.json",
-  "./assets/data/course_target_examples.json",
-  "./assets/data/course_source_provenance.json",
-  "./assets/data/book_coverage_inventory.json",
+  "./assets/data/course/manifest.json",
   "./assets/data/course_verb_paradigms.json",
   "./assets/data/introductions_alphabet.json",
   "./assets/data/introductions_alphabet_examples.json",

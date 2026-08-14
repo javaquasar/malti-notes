@@ -1,0 +1,4482 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b1-family",
+    "levelId": "b1",
+    "levelLabel": "B1 Foundation",
+    "number": 7,
+    "title": "Il-Familja"
+  },
+  "inventoryChapter": {
+    "id": "b1.7",
+    "courseChapterId": "b1-family",
+    "book": "B1",
+    "number": 7,
+    "title": "Il-Familja",
+    "targets": [
+      "aħwa",
+      "ħu",
+      "oħt",
+      "ġenituri",
+      "omm",
+      "missier",
+      "nanniet",
+      "nannu",
+      "nanna",
+      "ziju",
+      "zija",
+      "kuġin",
+      "filgħodu",
+      "f'nofsinhar",
+      "waranofsinhar",
+      "filgħaxija",
+      "billejl",
+      "kmieni",
+      "tard",
+      "It-Tnejn",
+      "It-Tlieta",
+      "L-Erbgħa",
+      "Il-Ħamis",
+      "Il-Ġimgħa",
+      "Is-Sibt",
+      "Il-Ħadd",
+      "tmiem il-ġimgħa",
+      "tenis",
+      "passeġġata",
+      "żfin",
+      "pjazza",
+      "restorant",
+      "Bonġu",
+      "Il-waranofsinhar it-tajjeb",
+      "Il-lejla t-tajba",
+      "Kif inti",
+      "Mhux ħażin",
+      "Ħu ħsieb"
+    ],
+    "baselineMissing": [
+      "passeġġata",
+      "Il-waranofsinhar it-tajjeb",
+      "Mhux ħażin",
+      "Ħu ħsieb"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b1-family",
+    "book": "B1",
+    "chapterNumber": 7,
+    "chapterTitle": "Il-Familja",
+    "pageStart": 101,
+    "pageEnd": 123
+  },
+  "targets": [
+    {
+      "id": "b1-family-ahwa",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "aħwa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-ahwa"
+      },
+      "assessmentIds": [
+        "b1-family-ahwa-diagnostic-recognition",
+        "b1-family-ahwa-recognition",
+        "b1-family-ahwa-production",
+        "b1-family-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-family-hu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "ħu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "hu-hija"
+      },
+      "assessmentIds": [
+        "b1-family-hu-recognition-true-false",
+        "b1-family-hu-production",
+        "b1-family-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-family-oht",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "oħt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "oht-ohti"
+      },
+      "assessmentIds": [
+        "family-members",
+        "b1-family-oht-recognition",
+        "b1-family-oht-production",
+        "b1-family-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-family-genituri",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "ġenituri",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "genituri"
+      },
+      "assessmentIds": [
+        "b1-family-genituri-recognition-true-false",
+        "b1-family-genituri-production",
+        "b1-family-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-family-omm",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "omm",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "omm"
+      },
+      "assessmentIds": [
+        "family-members",
+        "family-mother-production",
+        "b1-family-omm-diagnostic-recognition-true-false",
+        "b1-family-omm-recognition",
+        "b1-family-omm-production"
+      ]
+    },
+    {
+      "id": "b1-family-missier",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "missier",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "missier"
+      },
+      "assessmentIds": [
+        "family-members",
+        "b1-family-missier-recognition-true-false",
+        "b1-family-missier-production"
+      ]
+    },
+    {
+      "id": "b1-family-nanniet",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "nanniet",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-nanniet"
+      },
+      "assessmentIds": [
+        "b1-family-nanniet-recognition",
+        "b1-family-nanniet-production",
+        "b1-family-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-family-nannu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "nannu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "nannu"
+      },
+      "assessmentIds": [
+        "b1-family-nannu-recognition-true-false",
+        "b1-family-nannu-production",
+        "b1-family-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-family-nanna",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "nanna",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "nanna"
+      },
+      "assessmentIds": [
+        "b1-family-nanna-diagnostic-recognition",
+        "b1-family-nanna-recognition",
+        "b1-family-nanna-production",
+        "b1-family-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-family-ziju",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "ziju",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "ziju"
+      },
+      "assessmentIds": [
+        "b1-family-ziju-recognition-true-false",
+        "b1-family-ziju-production",
+        "b1-family-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-family-zija",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "zija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "zija"
+      },
+      "assessmentIds": [
+        "b1-family-zija-recognition",
+        "b1-family-zija-production"
+      ]
+    },
+    {
+      "id": "b1-family-kugin",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "kuġin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "family_home_food.html",
+        "file": "assets/data/family_home_food.json",
+        "itemId": "kugin"
+      },
+      "assessmentIds": [
+        "b1-family-kugin-recognition-true-false",
+        "b1-family-kugin-production"
+      ]
+    },
+    {
+      "id": "b1-family-filghodu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "filgħodu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "filghodu"
+      },
+      "assessmentIds": [
+        "b1-family-filghodu-diagnostic-recognition-true-false",
+        "b1-family-filghodu-recognition",
+        "b1-family-filghodu-production",
+        "b1-family-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-family-f-nofsinhar",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "f'nofsinhar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-f-nofsinhar"
+      },
+      "assessmentIds": [
+        "b1-family-f-nofsinhar-recognition-true-false",
+        "b1-family-f-nofsinhar-production",
+        "b1-family-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-family-waranofsinhar",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "waranofsinhar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "waranofsinhar"
+      },
+      "assessmentIds": [
+        "b1-family-waranofsinhar-recognition",
+        "b1-family-waranofsinhar-production",
+        "b1-family-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-family-filghaxija",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "filgħaxija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "filghaxija"
+      },
+      "assessmentIds": [
+        "b1-family-filghaxija-recognition-true-false",
+        "b1-family-filghaxija-production",
+        "b1-family-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-family-billejl",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "billejl",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "ta-billejl"
+      },
+      "assessmentIds": [
+        "b1-family-billejl-diagnostic-recognition",
+        "b1-family-billejl-recognition",
+        "b1-family-billejl-production"
+      ]
+    },
+    {
+      "id": "b1-family-kmieni",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "kmieni",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "ghada"
+      },
+      "assessmentIds": [
+        "b1-family-kmieni-recognition-true-false",
+        "b1-family-kmieni-production"
+      ]
+    },
+    {
+      "id": "b1-family-tard",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "tard",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-tard"
+      },
+      "assessmentIds": [
+        "b1-family-tard-recognition",
+        "b1-family-tard-production",
+        "b1-family-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-family-it-tnejn",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "It-Tnejn",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "it-tnejn"
+      },
+      "assessmentIds": [
+        "b1-family-it-tnejn-recognition-true-false",
+        "b1-family-it-tnejn-production",
+        "b1-family-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-family-it-tlieta",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "It-Tlieta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "it-tlieta"
+      },
+      "assessmentIds": [
+        "b1-family-it-tlieta-diagnostic-recognition-true-false",
+        "b1-family-it-tlieta-recognition",
+        "b1-family-it-tlieta-production",
+        "b1-family-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-family-l-erbgha",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "L-Erbgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "l-erbgha"
+      },
+      "assessmentIds": [
+        "b1-family-l-erbgha-recognition-true-false",
+        "b1-family-l-erbgha-production",
+        "b1-family-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-family-il-hamis",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Il-Ħamis",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "il-hamis"
+      },
+      "assessmentIds": [
+        "b1-family-il-hamis-recognition",
+        "b1-family-il-hamis-production"
+      ]
+    },
+    {
+      "id": "b1-family-il-gimgha",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Il-Ġimgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "il-gimgha"
+      },
+      "assessmentIds": [
+        "b1-family-il-gimgha-recognition-true-false",
+        "b1-family-il-gimgha-production"
+      ]
+    },
+    {
+      "id": "b1-family-is-sibt",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Is-Sibt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "is-sibt"
+      },
+      "assessmentIds": [
+        "b1-family-is-sibt-diagnostic-recognition",
+        "b1-family-is-sibt-recognition",
+        "b1-family-is-sibt-production",
+        "b1-family-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-family-il-hadd",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Il-Ħadd",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "assets/data/numbers_calendar_time.json",
+        "itemId": "il-hadd"
+      },
+      "assessmentIds": [
+        "b1-family-il-hadd-recognition-true-false",
+        "b1-family-il-hadd-production",
+        "b1-family-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-family-tmiem-il-gimgha",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "tmiem il-ġimgħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-tmiem-il-gimgha"
+      },
+      "assessmentIds": [
+        "b1-family-tmiem-il-gimgha-recognition",
+        "b1-family-tmiem-il-gimgha-production",
+        "b1-family-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-family-tenis",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "tenis",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-tenis"
+      },
+      "assessmentIds": [
+        "b1-family-tenis-recognition-true-false",
+        "b1-family-tenis-production",
+        "b1-family-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-family-passeggata",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "passeġġata",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-passeggata"
+      },
+      "assessmentIds": [
+        "b1-family-passeggata-diagnostic-recognition-true-false",
+        "b1-family-passeggata-recognition",
+        "b1-family-passeggata-production"
+      ]
+    },
+    {
+      "id": "b1-family-zfin",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "żfin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-zfin"
+      },
+      "assessmentIds": [
+        "b1-family-zfin-recognition-true-false",
+        "b1-family-zfin-production"
+      ]
+    },
+    {
+      "id": "b1-family-pjazza",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "pjazza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-pjazza"
+      },
+      "assessmentIds": [
+        "b1-family-pjazza-recognition",
+        "b1-family-pjazza-production",
+        "b1-family-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-family-restorant",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "restorant",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-restorant"
+      },
+      "assessmentIds": [
+        "b1-family-restorant-recognition-true-false",
+        "b1-family-restorant-production",
+        "b1-family-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-family-bongu",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "vocabulary",
+      "sourceRequirement": "Bonġu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-bongu"
+      },
+      "assessmentIds": [
+        "b1-family-bongu-diagnostic-recognition",
+        "b1-family-bongu-recognition",
+        "b1-family-bongu-production",
+        "b1-family-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-family-il-waranofsinhar-it-tajjeb",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Il-waranofsinhar it-tajjeb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-il-waranofsinhar-it-tajjeb"
+      },
+      "assessmentIds": [
+        "b1-family-il-waranofsinhar-it-tajjeb-recognition-true-false",
+        "b1-family-il-waranofsinhar-it-tajjeb-production",
+        "b1-family-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-family-il-lejla-t-tajba",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Il-lejla t-tajba",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-il-lejla-t-tajba"
+      },
+      "assessmentIds": [
+        "b1-family-il-lejla-t-tajba-recognition",
+        "b1-family-il-lejla-t-tajba-production"
+      ]
+    },
+    {
+      "id": "b1-family-kif-inti",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Kif inti",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-kif-inti"
+      },
+      "assessmentIds": [
+        "b1-family-kif-inti-recognition-true-false",
+        "b1-family-kif-inti-production"
+      ]
+    },
+    {
+      "id": "b1-family-mhux-hazin",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Mhux ħażin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-mhux-hazin"
+      },
+      "assessmentIds": [
+        "b1-family-mhux-hazin-recognition",
+        "b1-family-mhux-hazin-production",
+        "b1-family-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-family-hu-hsieb",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "phrase",
+      "sourceRequirement": "Ħu ħsieb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-family-hu-hsieb"
+      },
+      "assessmentIds": [
+        "b1-family-hu-hsieb-diagnostic-recognition-true-false",
+        "b1-family-hu-hsieb-recognition-true-false",
+        "b1-family-hu-hsieb-production",
+        "b1-family-checkpoint-7-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b1-family-ahwa": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-hu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102,
+        117,
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-oht": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-genituri": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-omm": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-missier": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-nanniet": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 102,
+      "pages": [
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-nannu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-nanna": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-ziju": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-zija": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-kugin": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 101,
+      "pages": [
+        101,
+        102
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-filghodu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        106,
+        108,
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-f-nofsinhar": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 109,
+      "pages": [
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-waranofsinhar": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 109,
+      "pages": [
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-filghaxija": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        106,
+        108,
+        109,
+        114,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-billejl": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        109,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-kmieni": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        109,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-tard": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 104,
+      "pages": [
+        104,
+        116
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-it-tnejn": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-it-tlieta": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-l-erbgha": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-hamis": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-gimgha": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-is-sibt": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-hadd": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110,
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-tmiem-il-gimgha": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 110,
+      "pages": [
+        110
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-tenis": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-passeggata": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-family-zfin": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-pjazza": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-restorant": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 115,
+      "pages": [
+        115
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-bongu": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 119,
+      "pages": [
+        119,
+        120
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-il-waranofsinhar-it-tajjeb": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-family-il-lejla-t-tajba": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 118,
+      "pages": [
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-kif-inti": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 119,
+      "pages": [
+        119,
+        120
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-mhux-hazin": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 118,
+      "pages": [
+        118
+      ],
+      "match": "text-exact"
+    },
+    "b1-family-hu-hsieb": {
+      "book": "B1",
+      "chapterId": "b1-family",
+      "chapterNumber": 7,
+      "chapterTitle": "Il-Familja",
+      "pageRange": [
+        101,
+        123
+      ],
+      "primaryPage": 117,
+      "pages": [
+        117,
+        118
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b1-family-ahwa",
+      "maltese": "aħwa",
+      "english": "siblings",
+      "example": "Għandi aħwa fil-familja.",
+      "exampleTranslation": "My family includes the siblings.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi aħwa fil-familja.",
+        "Translation: My family includes the siblings.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-hu",
+      "maltese": "ħu",
+      "english": "brother",
+      "example": "Għandi ħu fil-familja.",
+      "exampleTranslation": "My family includes the brother.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi ħu fil-familja.",
+        "Translation: My family includes the brother.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-oht",
+      "maltese": "oħt",
+      "english": "sister",
+      "example": "Għandi oħt fil-familja.",
+      "exampleTranslation": "My family includes the sister.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi oħt fil-familja.",
+        "Translation: My family includes the sister.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-genituri",
+      "maltese": "ġenituri",
+      "english": "parents",
+      "example": "Għandi ġenituri fil-familja.",
+      "exampleTranslation": "My family includes the parents.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi ġenituri fil-familja.",
+        "Translation: My family includes the parents.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-omm",
+      "maltese": "omm",
+      "english": "mother",
+      "example": "Għandi omm fil-familja.",
+      "exampleTranslation": "My family includes the mother.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi omm fil-familja.",
+        "Translation: My family includes the mother.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-missier",
+      "maltese": "missier",
+      "english": "father",
+      "example": "Għandi missier fil-familja.",
+      "exampleTranslation": "My family includes the father.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi missier fil-familja.",
+        "Translation: My family includes the father.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-nanniet",
+      "maltese": "nanniet",
+      "english": "grandparents",
+      "example": "Għandi nanniet fil-familja.",
+      "exampleTranslation": "My family includes the grandparents.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 102,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 102",
+      "notes": [
+        "Example: Għandi nanniet fil-familja.",
+        "Translation: My family includes the grandparents.",
+        "Source: B1, Chapter 7, p. 102"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-nannu",
+      "maltese": "nannu",
+      "english": "grandfather",
+      "example": "Għandi nannu fil-familja.",
+      "exampleTranslation": "My family includes the grandfather.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 101",
+      "notes": [
+        "Example: Għandi nannu fil-familja.",
+        "Translation: My family includes the grandfather.",
+        "Source: B1, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-nanna",
+      "maltese": "nanna",
+      "english": "grandmother",
+      "example": "Għandi nanna fil-familja.",
+      "exampleTranslation": "My family includes the grandmother.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 101",
+      "notes": [
+        "Example: Għandi nanna fil-familja.",
+        "Translation: My family includes the grandmother.",
+        "Source: B1, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-ziju",
+      "maltese": "ziju",
+      "english": "uncle",
+      "example": "Għandi ziju fil-familja.",
+      "exampleTranslation": "My family includes the uncle.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 101",
+      "notes": [
+        "Example: Għandi ziju fil-familja.",
+        "Translation: My family includes the uncle.",
+        "Source: B1, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-zija",
+      "maltese": "zija",
+      "english": "aunt",
+      "example": "Għandi zija fil-familja.",
+      "exampleTranslation": "My family includes the aunt.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 101",
+      "notes": [
+        "Example: Għandi zija fil-familja.",
+        "Translation: My family includes the aunt.",
+        "Source: B1, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-kugin",
+      "maltese": "kuġin",
+      "english": "cousin",
+      "example": "Għandi kuġin fil-familja.",
+      "exampleTranslation": "My family includes the cousin.",
+      "examplePattern": "family-member",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 101,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 101",
+      "notes": [
+        "Example: Għandi kuġin fil-familja.",
+        "Translation: My family includes the cousin.",
+        "Source: B1, Chapter 7, p. 101"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-filghodu",
+      "maltese": "filgħodu",
+      "english": "in the morning",
+      "example": "Naħdem filgħodu.",
+      "exampleTranslation": "I work in the morning.",
+      "examplePattern": "daily-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 104",
+      "notes": [
+        "Example: Naħdem filgħodu.",
+        "Translation: I work in the morning.",
+        "Source: B1, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-f-nofsinhar",
+      "maltese": "f'nofsinhar",
+      "english": "at midday",
+      "example": "Naħdem f'nofsinhar.",
+      "exampleTranslation": "I work at midday.",
+      "examplePattern": "daily-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 109,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 109",
+      "notes": [
+        "Example: Naħdem f'nofsinhar.",
+        "Translation: I work at midday.",
+        "Source: B1, Chapter 7, p. 109"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-waranofsinhar",
+      "maltese": "waranofsinhar",
+      "english": "in the afternoon",
+      "example": "Naħdem waranofsinhar.",
+      "exampleTranslation": "I work in the afternoon.",
+      "examplePattern": "daily-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 109,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 109",
+      "notes": [
+        "Example: Naħdem waranofsinhar.",
+        "Translation: I work in the afternoon.",
+        "Source: B1, Chapter 7, p. 109"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-filghaxija",
+      "maltese": "filgħaxija",
+      "english": "in the evening",
+      "example": "Naħdem filgħaxija.",
+      "exampleTranslation": "I work in the evening.",
+      "examplePattern": "daily-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 104",
+      "notes": [
+        "Example: Naħdem filgħaxija.",
+        "Translation: I work in the evening.",
+        "Source: B1, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-billejl",
+      "maltese": "billejl",
+      "english": "at night",
+      "example": "Naħdem billejl.",
+      "exampleTranslation": "I work at night.",
+      "examplePattern": "daily-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 104",
+      "notes": [
+        "Example: Naħdem billejl.",
+        "Translation: I work at night.",
+        "Source: B1, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-kmieni",
+      "maltese": "kmieni",
+      "english": "early",
+      "example": "Inqum kmieni.",
+      "exampleTranslation": "I get up early.",
+      "examplePattern": "routine-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 104",
+      "notes": [
+        "Example: Inqum kmieni.",
+        "Translation: I get up early.",
+        "Source: B1, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-tard",
+      "maltese": "tard",
+      "english": "late",
+      "example": "Inqum tard.",
+      "exampleTranslation": "I get up late.",
+      "examplePattern": "routine-time",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 104,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 104",
+      "notes": [
+        "Example: Inqum tard.",
+        "Translation: I get up late.",
+        "Source: B1, Chapter 7, p. 104"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-it-tnejn",
+      "maltese": "It-Tnejn",
+      "english": "Monday",
+      "example": "Il-jum huwa It-Tnejn.",
+      "exampleTranslation": "The day is Monday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa It-Tnejn.",
+        "Translation: The day is Monday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-it-tlieta",
+      "maltese": "It-Tlieta",
+      "english": "Tuesday",
+      "example": "Il-jum huwa It-Tlieta.",
+      "exampleTranslation": "The day is Tuesday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa It-Tlieta.",
+        "Translation: The day is Tuesday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-l-erbgha",
+      "maltese": "L-Erbgħa",
+      "english": "Wednesday",
+      "example": "Il-jum huwa L-Erbgħa.",
+      "exampleTranslation": "The day is Wednesday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa L-Erbgħa.",
+        "Translation: The day is Wednesday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-il-hamis",
+      "maltese": "Il-Ħamis",
+      "english": "Thursday",
+      "example": "Il-jum huwa Il-Ħamis.",
+      "exampleTranslation": "The day is Thursday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa Il-Ħamis.",
+        "Translation: The day is Thursday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-il-gimgha",
+      "maltese": "Il-Ġimgħa",
+      "english": "Friday",
+      "example": "Il-jum huwa Il-Ġimgħa.",
+      "exampleTranslation": "The day is Friday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa Il-Ġimgħa.",
+        "Translation: The day is Friday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-is-sibt",
+      "maltese": "Is-Sibt",
+      "english": "Saturday",
+      "example": "Il-jum huwa Is-Sibt.",
+      "exampleTranslation": "The day is Saturday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa Is-Sibt.",
+        "Translation: The day is Saturday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-il-hadd",
+      "maltese": "Il-Ħadd",
+      "english": "Sunday",
+      "example": "Il-jum huwa Il-Ħadd.",
+      "exampleTranslation": "The day is Sunday.",
+      "examplePattern": "weekday",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Il-jum huwa Il-Ħadd.",
+        "Translation: The day is Sunday.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-tmiem-il-gimgha",
+      "maltese": "tmiem il-ġimgħa",
+      "english": "weekend",
+      "example": "Nistrieħ fi tmiem il-ġimgħa.",
+      "exampleTranslation": "I rest at the weekend.",
+      "examplePattern": "weekend",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 110,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 110",
+      "notes": [
+        "Example: Nistrieħ fi tmiem il-ġimgħa.",
+        "Translation: I rest at the weekend.",
+        "Source: B1, Chapter 7, p. 110"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-family-tenis",
+      "maltese": "tenis",
+      "english": "tennis",
+      "example": "Inħobb tenis.",
+      "exampleTranslation": "I like tennis.",
+      "examplePattern": "family-activity",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 115,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 115",
+      "notes": [
+        "Example: Inħobb tenis.",
+        "Translation: I like tennis.",
+        "Source: B1, Chapter 7, p. 115"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-passeggata",
+      "maltese": "passeġġata",
+      "english": "walk / stroll",
+      "example": "Inħobb passeġġata.",
+      "exampleTranslation": "I like walk.",
+      "examplePattern": "family-activity",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": null,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 7, pp. 101-123",
+      "notes": [
+        "Example: Inħobb passeġġata.",
+        "Translation: I like walk.",
+        "Source: B1, Chapter 7, pp. 101-123"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-zfin",
+      "maltese": "żfin",
+      "english": "dancing",
+      "example": "Inħobb żfin.",
+      "exampleTranslation": "I like dancing.",
+      "examplePattern": "family-activity",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 115,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 115",
+      "notes": [
+        "Example: Inħobb żfin.",
+        "Translation: I like dancing.",
+        "Source: B1, Chapter 7, p. 115"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-pjazza",
+      "maltese": "pjazza",
+      "english": "square / piazza",
+      "example": "Hemm pjazza qrib id-dar.",
+      "exampleTranslation": "The square is near the house.",
+      "examplePattern": "family-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 115,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 115",
+      "notes": [
+        "Example: Hemm pjazza qrib id-dar.",
+        "Translation: The square is near the house.",
+        "Source: B1, Chapter 7, p. 115"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-restorant",
+      "maltese": "restorant",
+      "english": "restaurant",
+      "example": "Hemm restorant qrib id-dar.",
+      "exampleTranslation": "The restaurant is near the house.",
+      "examplePattern": "family-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 115,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 115",
+      "notes": [
+        "Example: Hemm restorant qrib id-dar.",
+        "Translation: The restaurant is near the house.",
+        "Source: B1, Chapter 7, p. 115"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-bongu",
+      "maltese": "Bonġu",
+      "english": "Good morning.",
+      "example": "Ngħid: “Bonġu”",
+      "exampleTranslation": "I say: “Good morning”",
+      "examplePattern": "greeting",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 119,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 119",
+      "notes": [
+        "Example: Ngħid: “Bonġu”",
+        "Translation: I say: “Good morning”",
+        "Source: B1, Chapter 7, p. 119"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-family-il-waranofsinhar-it-tajjeb",
+      "maltese": "Il-waranofsinhar it-tajjeb",
+      "english": "Good afternoon",
+      "example": "Ngħid: “Il-waranofsinhar it-tajjeb”",
+      "exampleTranslation": "I say: “Good afternoon”",
+      "examplePattern": "greeting",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": null,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 7, pp. 101-123",
+      "notes": [
+        "Example: Ngħid: “Il-waranofsinhar it-tajjeb”",
+        "Translation: I say: “Good afternoon”",
+        "Source: B1, Chapter 7, pp. 101-123"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-family-il-lejla-t-tajba",
+      "maltese": "Il-lejla t-tajba",
+      "english": "Good evening.",
+      "example": "Ngħid: “Il-lejla t-tajba”",
+      "exampleTranslation": "I say: “Good evening”",
+      "examplePattern": "greeting",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 118,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 118",
+      "notes": [
+        "Example: Ngħid: “Il-lejla t-tajba”",
+        "Translation: I say: “Good evening”",
+        "Source: B1, Chapter 7, p. 118"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-family-kif-inti",
+      "maltese": "Kif inti",
+      "english": "How are you?",
+      "example": "Ngħid: “Kif inti”",
+      "exampleTranslation": "I say: “How are you?”",
+      "examplePattern": "greeting",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 119,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 119",
+      "notes": [
+        "Example: Ngħid: “Kif inti”",
+        "Translation: I say: “How are you?”",
+        "Source: B1, Chapter 7, p. 119"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-family-mhux-hazin",
+      "maltese": "Mhux ħażin",
+      "english": "Not bad",
+      "example": "Ngħid: “Mhux ħażin”",
+      "exampleTranslation": "I say: “Not bad”",
+      "examplePattern": "greeting",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 118,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 118",
+      "notes": [
+        "Example: Ngħid: “Mhux ħażin”",
+        "Translation: I say: “Not bad”",
+        "Source: B1, Chapter 7, p. 118"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b1-family-hu-hsieb",
+      "maltese": "Ħu ħsieb",
+      "english": "Take care",
+      "example": "Ngħid: “Ħu ħsieb”",
+      "exampleTranslation": "I say: “Take care”",
+      "examplePattern": "greeting",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 7,
+        "page": 117,
+        "pageRange": [
+          101,
+          123
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 7, p. 117",
+      "notes": [
+        "Example: Ngħid: “Ħu ħsieb”",
+        "Translation: I say: “Take care”",
+        "Source: B1, Chapter 7, p. 117"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-diagnostic",
+      "kind": "diagnostic",
+      "title": "Il-Familja Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-family-ahwa-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-ahwa"
+          ],
+          "prompt": "What is the lesson meaning of “aħwa”?",
+          "choices": [
+            "siblings",
+            "brother",
+            "sister"
+          ],
+          "answer": "siblings",
+          "explanation": "aħwa means “siblings” in this chapter.",
+          "reviewCard": {
+            "maltese": "aħwa",
+            "english": "siblings"
+          }
+        },
+        {
+          "id": "b1-family-omm-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-omm"
+          ],
+          "prompt": "True or false: “omm” means “sister” in this chapter.",
+          "answer": false,
+          "explanation": "omm means “mother”.",
+          "reviewCard": {
+            "maltese": "omm",
+            "english": "mother"
+          }
+        },
+        {
+          "id": "b1-family-nanna-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-nanna"
+          ],
+          "prompt": "What is the lesson meaning of “nanna”?",
+          "choices": [
+            "mother",
+            "grandmother",
+            "parents"
+          ],
+          "answer": "grandmother",
+          "explanation": "nanna means “grandmother” in this chapter.",
+          "reviewCard": {
+            "maltese": "nanna",
+            "english": "grandmother"
+          }
+        },
+        {
+          "id": "b1-family-filghodu-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-filghodu"
+          ],
+          "prompt": "True or false: “filgħodu” means “mother” in this chapter.",
+          "answer": false,
+          "explanation": "filgħodu means “in the morning”.",
+          "reviewCard": {
+            "maltese": "filgħodu",
+            "english": "in the morning"
+          }
+        },
+        {
+          "id": "b1-family-billejl-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-billejl"
+          ],
+          "prompt": "What is the lesson meaning of “billejl”?",
+          "choices": [
+            "father",
+            "grandparents",
+            "at night"
+          ],
+          "answer": "at night",
+          "explanation": "billejl means “at night” in this chapter.",
+          "reviewCard": {
+            "maltese": "billejl",
+            "english": "at night"
+          }
+        },
+        {
+          "id": "b1-family-it-tlieta-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-it-tlieta"
+          ],
+          "prompt": "True or false: “It-Tlieta” means “grandparents” in this chapter.",
+          "answer": false,
+          "explanation": "It-Tlieta means “Tuesday”.",
+          "reviewCard": {
+            "maltese": "It-Tlieta",
+            "english": "Tuesday"
+          }
+        },
+        {
+          "id": "b1-family-is-sibt-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-is-sibt"
+          ],
+          "prompt": "What is the lesson meaning of “Is-Sibt”?",
+          "choices": [
+            "Saturday",
+            "grandfather",
+            "grandmother"
+          ],
+          "answer": "Saturday",
+          "explanation": "Is-Sibt means “Saturday” in this chapter.",
+          "reviewCard": {
+            "maltese": "Is-Sibt",
+            "english": "Saturday"
+          }
+        },
+        {
+          "id": "b1-family-passeggata-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-passeggata"
+          ],
+          "prompt": "True or false: “passeġġata” means “grandmother” in this chapter.",
+          "answer": false,
+          "explanation": "passeġġata means “walk / stroll”.",
+          "reviewCard": {
+            "maltese": "passeġġata",
+            "english": "walk / stroll"
+          }
+        },
+        {
+          "id": "b1-family-bongu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-bongu"
+          ],
+          "prompt": "What is the lesson meaning of “Bonġu”?",
+          "choices": [
+            "aunt",
+            "Good morning.",
+            "uncle"
+          ],
+          "answer": "Good morning.",
+          "explanation": "Bonġu means “Good morning.” in this chapter.",
+          "reviewCard": {
+            "maltese": "Bonġu",
+            "english": "Good morning."
+          }
+        },
+        {
+          "id": "b1-family-hu-hsieb-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-hu-hsieb"
+          ],
+          "prompt": "True or false: “Ħu ħsieb” means “aunt” in this chapter.",
+          "answer": false,
+          "explanation": "Ħu ħsieb means “Take care”.",
+          "reviewCard": {
+            "maltese": "Ħu ħsieb",
+            "english": "Take care"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 1",
+      "items": [
+        {
+          "id": "b1-family-ahwa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-ahwa"
+          ],
+          "prompt": "What is the lesson meaning of “aħwa”?",
+          "choices": [
+            "siblings",
+            "brother",
+            "sister"
+          ],
+          "answer": "siblings",
+          "explanation": "aħwa means “siblings” in this chapter.",
+          "reviewCard": {
+            "maltese": "aħwa",
+            "english": "siblings"
+          }
+        },
+        {
+          "id": "b1-family-ahwa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-ahwa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the siblings.)",
+          "answer": "aħwa",
+          "explanation": "The complete sentence is “Għandi aħwa fil-familja.”",
+          "reviewCard": {
+            "maltese": "aħwa",
+            "english": "siblings",
+            "example": "Għandi aħwa fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "aħwa"
+          ]
+        },
+        {
+          "id": "b1-family-hu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-hu"
+          ],
+          "prompt": "True or false: “ħu” means “sister” in this chapter.",
+          "answer": false,
+          "explanation": "ħu means “brother”.",
+          "reviewCard": {
+            "maltese": "ħu",
+            "english": "brother"
+          }
+        },
+        {
+          "id": "b1-family-hu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-hu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the brother.)",
+          "answer": "ħu",
+          "explanation": "The complete sentence is “Għandi ħu fil-familja.”",
+          "reviewCard": {
+            "maltese": "ħu",
+            "english": "brother",
+            "example": "Għandi ħu fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħu"
+          ]
+        },
+        {
+          "id": "b1-family-oht-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-oht"
+          ],
+          "prompt": "What is the lesson meaning of “oħt”?",
+          "choices": [
+            "mother",
+            "sister",
+            "parents"
+          ],
+          "answer": "sister",
+          "explanation": "oħt means “sister” in this chapter.",
+          "reviewCard": {
+            "maltese": "oħt",
+            "english": "sister"
+          }
+        },
+        {
+          "id": "b1-family-oht-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-oht"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the sister.)",
+          "answer": "oħt",
+          "explanation": "The complete sentence is “Għandi oħt fil-familja.”",
+          "reviewCard": {
+            "maltese": "oħt",
+            "english": "sister",
+            "example": "Għandi oħt fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oħt"
+          ]
+        },
+        {
+          "id": "b1-family-genituri-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-genituri"
+          ],
+          "prompt": "True or false: “ġenituri” means “mother” in this chapter.",
+          "answer": false,
+          "explanation": "ġenituri means “parents”.",
+          "reviewCard": {
+            "maltese": "ġenituri",
+            "english": "parents"
+          }
+        },
+        {
+          "id": "b1-family-genituri-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-genituri"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the parents.)",
+          "answer": "ġenituri",
+          "explanation": "The complete sentence is “Għandi ġenituri fil-familja.”",
+          "reviewCard": {
+            "maltese": "ġenituri",
+            "english": "parents",
+            "example": "Għandi ġenituri fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġenituri"
+          ]
+        },
+        {
+          "id": "b1-family-omm-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-omm"
+          ],
+          "prompt": "What is the lesson meaning of “omm”?",
+          "choices": [
+            "father",
+            "grandparents",
+            "mother"
+          ],
+          "answer": "mother",
+          "explanation": "omm means “mother” in this chapter.",
+          "reviewCard": {
+            "maltese": "omm",
+            "english": "mother"
+          }
+        },
+        {
+          "id": "b1-family-omm-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-omm"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the mother.)",
+          "answer": "omm",
+          "explanation": "The complete sentence is “Għandi omm fil-familja.”",
+          "reviewCard": {
+            "maltese": "omm",
+            "english": "mother",
+            "example": "Għandi omm fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "omm"
+          ]
+        },
+        {
+          "id": "b1-family-missier-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-missier"
+          ],
+          "prompt": "True or false: “missier” means “grandparents” in this chapter.",
+          "answer": false,
+          "explanation": "missier means “father”.",
+          "reviewCard": {
+            "maltese": "missier",
+            "english": "father"
+          }
+        },
+        {
+          "id": "b1-family-missier-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-missier"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the father.)",
+          "answer": "missier",
+          "explanation": "The complete sentence is “Għandi missier fil-familja.”",
+          "reviewCard": {
+            "maltese": "missier",
+            "english": "father",
+            "example": "Għandi missier fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "missier"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-ahwa",
+            "b1-family-hu",
+            "b1-family-oht",
+            "b1-family-genituri"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "aħwa",
+              "right": "siblings"
+            },
+            {
+              "left": "ħu",
+              "right": "brother"
+            },
+            {
+              "left": "oħt",
+              "right": "sister"
+            },
+            {
+              "left": "ġenituri",
+              "right": "parents"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "aħwa",
+            "english": "siblings"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 2",
+      "items": [
+        {
+          "id": "b1-family-nanniet-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-nanniet"
+          ],
+          "prompt": "What is the lesson meaning of “nanniet”?",
+          "choices": [
+            "grandparents",
+            "grandfather",
+            "grandmother"
+          ],
+          "answer": "grandparents",
+          "explanation": "nanniet means “grandparents” in this chapter.",
+          "reviewCard": {
+            "maltese": "nanniet",
+            "english": "grandparents"
+          }
+        },
+        {
+          "id": "b1-family-nanniet-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-nanniet"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the grandparents.)",
+          "answer": "nanniet",
+          "explanation": "The complete sentence is “Għandi nanniet fil-familja.”",
+          "reviewCard": {
+            "maltese": "nanniet",
+            "english": "grandparents",
+            "example": "Għandi nanniet fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nanniet"
+          ]
+        },
+        {
+          "id": "b1-family-nannu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-nannu"
+          ],
+          "prompt": "True or false: “nannu” means “grandmother” in this chapter.",
+          "answer": false,
+          "explanation": "nannu means “grandfather”.",
+          "reviewCard": {
+            "maltese": "nannu",
+            "english": "grandfather"
+          }
+        },
+        {
+          "id": "b1-family-nannu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-nannu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the grandfather.)",
+          "answer": "nannu",
+          "explanation": "The complete sentence is “Għandi nannu fil-familja.”",
+          "reviewCard": {
+            "maltese": "nannu",
+            "english": "grandfather",
+            "example": "Għandi nannu fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nannu"
+          ]
+        },
+        {
+          "id": "b1-family-nanna-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-nanna"
+          ],
+          "prompt": "What is the lesson meaning of “nanna”?",
+          "choices": [
+            "aunt",
+            "grandmother",
+            "uncle"
+          ],
+          "answer": "grandmother",
+          "explanation": "nanna means “grandmother” in this chapter.",
+          "reviewCard": {
+            "maltese": "nanna",
+            "english": "grandmother"
+          }
+        },
+        {
+          "id": "b1-family-nanna-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-nanna"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the grandmother.)",
+          "answer": "nanna",
+          "explanation": "The complete sentence is “Għandi nanna fil-familja.”",
+          "reviewCard": {
+            "maltese": "nanna",
+            "english": "grandmother",
+            "example": "Għandi nanna fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nanna"
+          ]
+        },
+        {
+          "id": "b1-family-ziju-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-ziju"
+          ],
+          "prompt": "True or false: “ziju” means “aunt” in this chapter.",
+          "answer": false,
+          "explanation": "ziju means “uncle”.",
+          "reviewCard": {
+            "maltese": "ziju",
+            "english": "uncle"
+          }
+        },
+        {
+          "id": "b1-family-ziju-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-ziju"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the uncle.)",
+          "answer": "ziju",
+          "explanation": "The complete sentence is “Għandi ziju fil-familja.”",
+          "reviewCard": {
+            "maltese": "ziju",
+            "english": "uncle",
+            "example": "Għandi ziju fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ziju"
+          ]
+        },
+        {
+          "id": "b1-family-zija-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-zija"
+          ],
+          "prompt": "What is the lesson meaning of “zija”?",
+          "choices": [
+            "cousin",
+            "in the morning",
+            "aunt"
+          ],
+          "answer": "aunt",
+          "explanation": "zija means “aunt” in this chapter.",
+          "reviewCard": {
+            "maltese": "zija",
+            "english": "aunt"
+          }
+        },
+        {
+          "id": "b1-family-zija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-zija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the aunt.)",
+          "answer": "zija",
+          "explanation": "The complete sentence is “Għandi zija fil-familja.”",
+          "reviewCard": {
+            "maltese": "zija",
+            "english": "aunt",
+            "example": "Għandi zija fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "zija"
+          ]
+        },
+        {
+          "id": "b1-family-kugin-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-kugin"
+          ],
+          "prompt": "True or false: “kuġin” means “in the morning” in this chapter.",
+          "answer": false,
+          "explanation": "kuġin means “cousin”.",
+          "reviewCard": {
+            "maltese": "kuġin",
+            "english": "cousin"
+          }
+        },
+        {
+          "id": "b1-family-kugin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-kugin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the cousin.)",
+          "answer": "kuġin",
+          "explanation": "The complete sentence is “Għandi kuġin fil-familja.”",
+          "reviewCard": {
+            "maltese": "kuġin",
+            "english": "cousin",
+            "example": "Għandi kuġin fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kuġin"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-nanniet",
+            "b1-family-nannu",
+            "b1-family-nanna",
+            "b1-family-ziju"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "nanniet",
+              "right": "grandparents"
+            },
+            {
+              "left": "nannu",
+              "right": "grandfather"
+            },
+            {
+              "left": "nanna",
+              "right": "grandmother"
+            },
+            {
+              "left": "ziju",
+              "right": "uncle"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "nanniet",
+            "english": "grandparents"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 3",
+      "items": [
+        {
+          "id": "b1-family-filghodu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-filghodu"
+          ],
+          "prompt": "What is the lesson meaning of “filgħodu”?",
+          "choices": [
+            "in the morning",
+            "at midday",
+            "in the afternoon"
+          ],
+          "answer": "in the morning",
+          "explanation": "filgħodu means “in the morning” in this chapter.",
+          "reviewCard": {
+            "maltese": "filgħodu",
+            "english": "in the morning"
+          }
+        },
+        {
+          "id": "b1-family-filghodu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-filghodu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Naħdem _____.” (I work in the morning.)",
+          "answer": "filgħodu",
+          "explanation": "The complete sentence is “Naħdem filgħodu.”",
+          "reviewCard": {
+            "maltese": "filgħodu",
+            "english": "in the morning",
+            "example": "Naħdem filgħodu."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "filgħodu"
+          ]
+        },
+        {
+          "id": "b1-family-f-nofsinhar-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-f-nofsinhar"
+          ],
+          "prompt": "True or false: “f'nofsinhar” means “in the afternoon” in this chapter.",
+          "answer": false,
+          "explanation": "f'nofsinhar means “at midday”.",
+          "reviewCard": {
+            "maltese": "f'nofsinhar",
+            "english": "at midday"
+          }
+        },
+        {
+          "id": "b1-family-f-nofsinhar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-f-nofsinhar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Naħdem _____.” (I work at midday.)",
+          "answer": "f'nofsinhar",
+          "explanation": "The complete sentence is “Naħdem f'nofsinhar.”",
+          "reviewCard": {
+            "maltese": "f'nofsinhar",
+            "english": "at midday",
+            "example": "Naħdem f'nofsinhar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "f'nofsinhar"
+          ]
+        },
+        {
+          "id": "b1-family-waranofsinhar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-waranofsinhar"
+          ],
+          "prompt": "What is the lesson meaning of “waranofsinhar”?",
+          "choices": [
+            "at night",
+            "in the afternoon",
+            "in the evening"
+          ],
+          "answer": "in the afternoon",
+          "explanation": "waranofsinhar means “in the afternoon” in this chapter.",
+          "reviewCard": {
+            "maltese": "waranofsinhar",
+            "english": "in the afternoon"
+          }
+        },
+        {
+          "id": "b1-family-waranofsinhar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-waranofsinhar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Naħdem _____.” (I work in the afternoon.)",
+          "answer": "waranofsinhar",
+          "explanation": "The complete sentence is “Naħdem waranofsinhar.”",
+          "reviewCard": {
+            "maltese": "waranofsinhar",
+            "english": "in the afternoon",
+            "example": "Naħdem waranofsinhar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "waranofsinhar"
+          ]
+        },
+        {
+          "id": "b1-family-filghaxija-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-filghaxija"
+          ],
+          "prompt": "True or false: “filgħaxija” means “at night” in this chapter.",
+          "answer": false,
+          "explanation": "filgħaxija means “in the evening”.",
+          "reviewCard": {
+            "maltese": "filgħaxija",
+            "english": "in the evening"
+          }
+        },
+        {
+          "id": "b1-family-filghaxija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-filghaxija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Naħdem _____.” (I work in the evening.)",
+          "answer": "filgħaxija",
+          "explanation": "The complete sentence is “Naħdem filgħaxija.”",
+          "reviewCard": {
+            "maltese": "filgħaxija",
+            "english": "in the evening",
+            "example": "Naħdem filgħaxija."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "filgħaxija"
+          ]
+        },
+        {
+          "id": "b1-family-billejl-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-billejl"
+          ],
+          "prompt": "What is the lesson meaning of “billejl”?",
+          "choices": [
+            "early",
+            "late",
+            "at night"
+          ],
+          "answer": "at night",
+          "explanation": "billejl means “at night” in this chapter.",
+          "reviewCard": {
+            "maltese": "billejl",
+            "english": "at night"
+          }
+        },
+        {
+          "id": "b1-family-billejl-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-billejl"
+          ],
+          "prompt": "Complete the Maltese sentence: “Naħdem _____.” (I work at night.)",
+          "answer": "billejl",
+          "explanation": "The complete sentence is “Naħdem billejl.”",
+          "reviewCard": {
+            "maltese": "billejl",
+            "english": "at night",
+            "example": "Naħdem billejl."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "billejl"
+          ]
+        },
+        {
+          "id": "b1-family-kmieni-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-kmieni"
+          ],
+          "prompt": "True or false: “kmieni” means “late” in this chapter.",
+          "answer": false,
+          "explanation": "kmieni means “early”.",
+          "reviewCard": {
+            "maltese": "kmieni",
+            "english": "early"
+          }
+        },
+        {
+          "id": "b1-family-kmieni-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-kmieni"
+          ],
+          "prompt": "Complete the Maltese sentence: “Inqum _____.” (I get up early.)",
+          "answer": "kmieni",
+          "explanation": "The complete sentence is “Inqum kmieni.”",
+          "reviewCard": {
+            "maltese": "kmieni",
+            "english": "early",
+            "example": "Inqum kmieni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kmieni"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-filghodu",
+            "b1-family-f-nofsinhar",
+            "b1-family-waranofsinhar",
+            "b1-family-filghaxija"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "filgħodu",
+              "right": "in the morning"
+            },
+            {
+              "left": "f'nofsinhar",
+              "right": "at midday"
+            },
+            {
+              "left": "waranofsinhar",
+              "right": "in the afternoon"
+            },
+            {
+              "left": "filgħaxija",
+              "right": "in the evening"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "filgħodu",
+            "english": "in the morning"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 4",
+      "items": [
+        {
+          "id": "b1-family-tard-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-tard"
+          ],
+          "prompt": "What is the lesson meaning of “tard”?",
+          "choices": [
+            "late",
+            "Monday",
+            "Tuesday"
+          ],
+          "answer": "late",
+          "explanation": "tard means “late” in this chapter.",
+          "reviewCard": {
+            "maltese": "tard",
+            "english": "late"
+          }
+        },
+        {
+          "id": "b1-family-tard-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-tard"
+          ],
+          "prompt": "Complete the Maltese sentence: “Inqum _____.” (I get up late.)",
+          "answer": "tard",
+          "explanation": "The complete sentence is “Inqum tard.”",
+          "reviewCard": {
+            "maltese": "tard",
+            "english": "late",
+            "example": "Inqum tard."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tard"
+          ]
+        },
+        {
+          "id": "b1-family-it-tnejn-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-it-tnejn"
+          ],
+          "prompt": "True or false: “It-Tnejn” means “Tuesday” in this chapter.",
+          "answer": false,
+          "explanation": "It-Tnejn means “Monday”.",
+          "reviewCard": {
+            "maltese": "It-Tnejn",
+            "english": "Monday"
+          }
+        },
+        {
+          "id": "b1-family-it-tnejn-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-it-tnejn"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Monday.)",
+          "answer": "It-Tnejn",
+          "explanation": "The complete sentence is “Il-jum huwa It-Tnejn.”",
+          "reviewCard": {
+            "maltese": "It-Tnejn",
+            "english": "Monday",
+            "example": "Il-jum huwa It-Tnejn."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "It-Tnejn"
+          ]
+        },
+        {
+          "id": "b1-family-it-tlieta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-it-tlieta"
+          ],
+          "prompt": "What is the lesson meaning of “It-Tlieta”?",
+          "choices": [
+            "Thursday",
+            "Tuesday",
+            "Wednesday"
+          ],
+          "answer": "Tuesday",
+          "explanation": "It-Tlieta means “Tuesday” in this chapter.",
+          "reviewCard": {
+            "maltese": "It-Tlieta",
+            "english": "Tuesday"
+          }
+        },
+        {
+          "id": "b1-family-it-tlieta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-it-tlieta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Tuesday.)",
+          "answer": "It-Tlieta",
+          "explanation": "The complete sentence is “Il-jum huwa It-Tlieta.”",
+          "reviewCard": {
+            "maltese": "It-Tlieta",
+            "english": "Tuesday",
+            "example": "Il-jum huwa It-Tlieta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "It-Tlieta"
+          ]
+        },
+        {
+          "id": "b1-family-l-erbgha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-l-erbgha"
+          ],
+          "prompt": "True or false: “L-Erbgħa” means “Thursday” in this chapter.",
+          "answer": false,
+          "explanation": "L-Erbgħa means “Wednesday”.",
+          "reviewCard": {
+            "maltese": "L-Erbgħa",
+            "english": "Wednesday"
+          }
+        },
+        {
+          "id": "b1-family-l-erbgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-l-erbgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Wednesday.)",
+          "answer": "L-Erbgħa",
+          "explanation": "The complete sentence is “Il-jum huwa L-Erbgħa.”",
+          "reviewCard": {
+            "maltese": "L-Erbgħa",
+            "english": "Wednesday",
+            "example": "Il-jum huwa L-Erbgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "L-Erbgħa"
+          ]
+        },
+        {
+          "id": "b1-family-il-hamis-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-il-hamis"
+          ],
+          "prompt": "What is the lesson meaning of “Il-Ħamis”?",
+          "choices": [
+            "Friday",
+            "Saturday",
+            "Thursday"
+          ],
+          "answer": "Thursday",
+          "explanation": "Il-Ħamis means “Thursday” in this chapter.",
+          "reviewCard": {
+            "maltese": "Il-Ħamis",
+            "english": "Thursday"
+          }
+        },
+        {
+          "id": "b1-family-il-hamis-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-hamis"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Thursday.)",
+          "answer": "Il-Ħamis",
+          "explanation": "The complete sentence is “Il-jum huwa Il-Ħamis.”",
+          "reviewCard": {
+            "maltese": "Il-Ħamis",
+            "english": "Thursday",
+            "example": "Il-jum huwa Il-Ħamis."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Il-Ħamis"
+          ]
+        },
+        {
+          "id": "b1-family-il-gimgha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-il-gimgha"
+          ],
+          "prompt": "True or false: “Il-Ġimgħa” means “Saturday” in this chapter.",
+          "answer": false,
+          "explanation": "Il-Ġimgħa means “Friday”.",
+          "reviewCard": {
+            "maltese": "Il-Ġimgħa",
+            "english": "Friday"
+          }
+        },
+        {
+          "id": "b1-family-il-gimgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-gimgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Friday.)",
+          "answer": "Il-Ġimgħa",
+          "explanation": "The complete sentence is “Il-jum huwa Il-Ġimgħa.”",
+          "reviewCard": {
+            "maltese": "Il-Ġimgħa",
+            "english": "Friday",
+            "example": "Il-jum huwa Il-Ġimgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Il-Ġimgħa"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-tard",
+            "b1-family-it-tnejn",
+            "b1-family-it-tlieta",
+            "b1-family-l-erbgha"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "tard",
+              "right": "late"
+            },
+            {
+              "left": "It-Tnejn",
+              "right": "Monday"
+            },
+            {
+              "left": "It-Tlieta",
+              "right": "Tuesday"
+            },
+            {
+              "left": "L-Erbgħa",
+              "right": "Wednesday"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "tard",
+            "english": "late"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 5",
+      "items": [
+        {
+          "id": "b1-family-is-sibt-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-is-sibt"
+          ],
+          "prompt": "What is the lesson meaning of “Is-Sibt”?",
+          "choices": [
+            "Saturday",
+            "Sunday",
+            "weekend"
+          ],
+          "answer": "Saturday",
+          "explanation": "Is-Sibt means “Saturday” in this chapter.",
+          "reviewCard": {
+            "maltese": "Is-Sibt",
+            "english": "Saturday"
+          }
+        },
+        {
+          "id": "b1-family-is-sibt-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-is-sibt"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Saturday.)",
+          "answer": "Is-Sibt",
+          "explanation": "The complete sentence is “Il-jum huwa Is-Sibt.”",
+          "reviewCard": {
+            "maltese": "Is-Sibt",
+            "english": "Saturday",
+            "example": "Il-jum huwa Is-Sibt."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Is-Sibt"
+          ]
+        },
+        {
+          "id": "b1-family-il-hadd-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-il-hadd"
+          ],
+          "prompt": "True or false: “Il-Ħadd” means “weekend” in this chapter.",
+          "answer": false,
+          "explanation": "Il-Ħadd means “Sunday”.",
+          "reviewCard": {
+            "maltese": "Il-Ħadd",
+            "english": "Sunday"
+          }
+        },
+        {
+          "id": "b1-family-il-hadd-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-hadd"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Sunday.)",
+          "answer": "Il-Ħadd",
+          "explanation": "The complete sentence is “Il-jum huwa Il-Ħadd.”",
+          "reviewCard": {
+            "maltese": "Il-Ħadd",
+            "english": "Sunday",
+            "example": "Il-jum huwa Il-Ħadd."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Il-Ħadd"
+          ]
+        },
+        {
+          "id": "b1-family-tmiem-il-gimgha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-tmiem-il-gimgha"
+          ],
+          "prompt": "What is the lesson meaning of “tmiem il-ġimgħa”?",
+          "choices": [
+            "walk / stroll",
+            "weekend",
+            "tennis"
+          ],
+          "answer": "weekend",
+          "explanation": "tmiem il-ġimgħa means “weekend” in this chapter.",
+          "reviewCard": {
+            "maltese": "tmiem il-ġimgħa",
+            "english": "weekend"
+          }
+        },
+        {
+          "id": "b1-family-tmiem-il-gimgha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-tmiem-il-gimgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nistrieħ fi _____.” (I rest at the weekend.)",
+          "answer": "tmiem il-ġimgħa",
+          "explanation": "The complete sentence is “Nistrieħ fi tmiem il-ġimgħa.”",
+          "reviewCard": {
+            "maltese": "tmiem il-ġimgħa",
+            "english": "weekend",
+            "example": "Nistrieħ fi tmiem il-ġimgħa."
+          },
+          "type": "order-words",
+          "tokens": [
+            "tmiem",
+            "il-ġimgħa"
+          ]
+        },
+        {
+          "id": "b1-family-tenis-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-tenis"
+          ],
+          "prompt": "True or false: “tenis” means “walk / stroll” in this chapter.",
+          "answer": false,
+          "explanation": "tenis means “tennis”.",
+          "reviewCard": {
+            "maltese": "tenis",
+            "english": "tennis"
+          }
+        },
+        {
+          "id": "b1-family-tenis-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-tenis"
+          ],
+          "prompt": "Complete the Maltese sentence: “Inħobb _____.” (I like tennis.)",
+          "answer": "tenis",
+          "explanation": "The complete sentence is “Inħobb tenis.”",
+          "reviewCard": {
+            "maltese": "tenis",
+            "english": "tennis",
+            "example": "Inħobb tenis."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tenis"
+          ]
+        },
+        {
+          "id": "b1-family-passeggata-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-passeggata"
+          ],
+          "prompt": "What is the lesson meaning of “passeġġata”?",
+          "choices": [
+            "dancing",
+            "square / piazza",
+            "walk / stroll"
+          ],
+          "answer": "walk / stroll",
+          "explanation": "passeġġata means “walk / stroll” in this chapter.",
+          "reviewCard": {
+            "maltese": "passeġġata",
+            "english": "walk / stroll"
+          }
+        },
+        {
+          "id": "b1-family-passeggata-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-passeggata"
+          ],
+          "prompt": "Complete the Maltese sentence: “Inħobb _____.” (I like walk.)",
+          "answer": "passeġġata",
+          "explanation": "The complete sentence is “Inħobb passeġġata.”",
+          "reviewCard": {
+            "maltese": "passeġġata",
+            "english": "walk / stroll",
+            "example": "Inħobb passeġġata."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "passeġġata"
+          ]
+        },
+        {
+          "id": "b1-family-zfin-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-zfin"
+          ],
+          "prompt": "True or false: “żfin” means “square / piazza” in this chapter.",
+          "answer": false,
+          "explanation": "żfin means “dancing”.",
+          "reviewCard": {
+            "maltese": "żfin",
+            "english": "dancing"
+          }
+        },
+        {
+          "id": "b1-family-zfin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-zfin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Inħobb _____.” (I like dancing.)",
+          "answer": "żfin",
+          "explanation": "The complete sentence is “Inħobb żfin.”",
+          "reviewCard": {
+            "maltese": "żfin",
+            "english": "dancing",
+            "example": "Inħobb żfin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żfin"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-is-sibt",
+            "b1-family-il-hadd",
+            "b1-family-tmiem-il-gimgha",
+            "b1-family-tenis"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Is-Sibt",
+              "right": "Saturday"
+            },
+            {
+              "left": "Il-Ħadd",
+              "right": "Sunday"
+            },
+            {
+              "left": "tmiem il-ġimgħa",
+              "right": "weekend"
+            },
+            {
+              "left": "tenis",
+              "right": "tennis"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Is-Sibt",
+            "english": "Saturday"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Il-Familja Checkpoint 6",
+      "items": [
+        {
+          "id": "b1-family-pjazza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-pjazza"
+          ],
+          "prompt": "What is the lesson meaning of “pjazza”?",
+          "choices": [
+            "square / piazza",
+            "restaurant",
+            "Good morning."
+          ],
+          "answer": "square / piazza",
+          "explanation": "pjazza means “square / piazza” in this chapter.",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza"
+          }
+        },
+        {
+          "id": "b1-family-pjazza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-pjazza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The square is near the house.)",
+          "answer": "pjazza",
+          "explanation": "The complete sentence is “Hemm pjazza qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza",
+            "example": "Hemm pjazza qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pjazza"
+          ]
+        },
+        {
+          "id": "b1-family-restorant-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-restorant"
+          ],
+          "prompt": "True or false: “restorant” means “Good morning.” in this chapter.",
+          "answer": false,
+          "explanation": "restorant means “restaurant”.",
+          "reviewCard": {
+            "maltese": "restorant",
+            "english": "restaurant"
+          }
+        },
+        {
+          "id": "b1-family-restorant-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-restorant"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The restaurant is near the house.)",
+          "answer": "restorant",
+          "explanation": "The complete sentence is “Hemm restorant qrib id-dar.”",
+          "reviewCard": {
+            "maltese": "restorant",
+            "english": "restaurant",
+            "example": "Hemm restorant qrib id-dar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "restorant"
+          ]
+        },
+        {
+          "id": "b1-family-bongu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-bongu"
+          ],
+          "prompt": "What is the lesson meaning of “Bonġu”?",
+          "choices": [
+            "Good evening.",
+            "Good morning.",
+            "Good afternoon"
+          ],
+          "answer": "Good morning.",
+          "explanation": "Bonġu means “Good morning.” in this chapter.",
+          "reviewCard": {
+            "maltese": "Bonġu",
+            "english": "Good morning."
+          }
+        },
+        {
+          "id": "b1-family-bongu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-bongu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ngħid: “_____”” (I say: “Good morning”)",
+          "answer": "Bonġu",
+          "explanation": "The complete sentence is “Ngħid: “Bonġu””",
+          "reviewCard": {
+            "maltese": "Bonġu",
+            "english": "Good morning.",
+            "example": "Ngħid: “Bonġu”"
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Bonġu"
+          ]
+        },
+        {
+          "id": "b1-family-il-waranofsinhar-it-tajjeb-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-il-waranofsinhar-it-tajjeb"
+          ],
+          "prompt": "True or false: “Il-waranofsinhar it-tajjeb” means “Good evening.” in this chapter.",
+          "answer": false,
+          "explanation": "Il-waranofsinhar it-tajjeb means “Good afternoon”.",
+          "reviewCard": {
+            "maltese": "Il-waranofsinhar it-tajjeb",
+            "english": "Good afternoon"
+          }
+        },
+        {
+          "id": "b1-family-il-waranofsinhar-it-tajjeb-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-waranofsinhar-it-tajjeb"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ngħid: “_____”” (I say: “Good afternoon”)",
+          "answer": "Il-waranofsinhar it-tajjeb",
+          "explanation": "The complete sentence is “Ngħid: “Il-waranofsinhar it-tajjeb””",
+          "reviewCard": {
+            "maltese": "Il-waranofsinhar it-tajjeb",
+            "english": "Good afternoon",
+            "example": "Ngħid: “Il-waranofsinhar it-tajjeb”"
+          },
+          "type": "order-words",
+          "tokens": [
+            "Il-waranofsinhar",
+            "it-tajjeb"
+          ]
+        },
+        {
+          "id": "b1-family-il-lejla-t-tajba-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-il-lejla-t-tajba"
+          ],
+          "prompt": "What is the lesson meaning of “Il-lejla t-tajba”?",
+          "choices": [
+            "How are you?",
+            "Not bad",
+            "Good evening."
+          ],
+          "answer": "Good evening.",
+          "explanation": "Il-lejla t-tajba means “Good evening.” in this chapter.",
+          "reviewCard": {
+            "maltese": "Il-lejla t-tajba",
+            "english": "Good evening."
+          }
+        },
+        {
+          "id": "b1-family-il-lejla-t-tajba-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-lejla-t-tajba"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ngħid: “_____”” (I say: “Good evening”)",
+          "answer": "Il-lejla t-tajba",
+          "explanation": "The complete sentence is “Ngħid: “Il-lejla t-tajba””",
+          "reviewCard": {
+            "maltese": "Il-lejla t-tajba",
+            "english": "Good evening.",
+            "example": "Ngħid: “Il-lejla t-tajba”"
+          },
+          "type": "order-words",
+          "tokens": [
+            "Il-lejla",
+            "t-tajba"
+          ]
+        },
+        {
+          "id": "b1-family-kif-inti-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-kif-inti"
+          ],
+          "prompt": "True or false: “Kif inti” means “Not bad” in this chapter.",
+          "answer": false,
+          "explanation": "Kif inti means “How are you?”.",
+          "reviewCard": {
+            "maltese": "Kif inti",
+            "english": "How are you?"
+          }
+        },
+        {
+          "id": "b1-family-kif-inti-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-kif-inti"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ngħid: “_____”” (I say: “How are you?”)",
+          "answer": "Kif inti",
+          "explanation": "The complete sentence is “Ngħid: “Kif inti””",
+          "reviewCard": {
+            "maltese": "Kif inti",
+            "english": "How are you?",
+            "example": "Ngħid: “Kif inti”"
+          },
+          "type": "order-words",
+          "tokens": [
+            "Kif",
+            "inti"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-6-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-pjazza",
+            "b1-family-restorant",
+            "b1-family-bongu",
+            "b1-family-il-waranofsinhar-it-tajjeb"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "pjazza",
+              "right": "square / piazza"
+            },
+            {
+              "left": "restorant",
+              "right": "restaurant"
+            },
+            {
+              "left": "Bonġu",
+              "right": "Good morning."
+            },
+            {
+              "left": "Il-waranofsinhar it-tajjeb",
+              "right": "Good afternoon"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-family",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-family-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 2,
+      "title": "Il-Familja Checkpoint 7",
+      "items": [
+        {
+          "id": "b1-family-mhux-hazin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-mhux-hazin"
+          ],
+          "prompt": "What is the lesson meaning of “Mhux ħażin”?",
+          "choices": [
+            "Not bad",
+            "Take care",
+            "siblings"
+          ],
+          "answer": "Not bad",
+          "explanation": "Mhux ħażin means “Not bad” in this chapter.",
+          "reviewCard": {
+            "maltese": "Mhux ħażin",
+            "english": "Not bad"
+          }
+        },
+        {
+          "id": "b1-family-mhux-hazin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-mhux-hazin"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ngħid: “_____”” (I say: “Not bad”)",
+          "answer": "Mhux ħażin",
+          "explanation": "The complete sentence is “Ngħid: “Mhux ħażin””",
+          "reviewCard": {
+            "maltese": "Mhux ħażin",
+            "english": "Not bad",
+            "example": "Ngħid: “Mhux ħażin”"
+          },
+          "type": "order-words",
+          "tokens": [
+            "Mhux",
+            "ħażin"
+          ]
+        },
+        {
+          "id": "b1-family-hu-hsieb-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-hu-hsieb"
+          ],
+          "prompt": "True or false: “Ħu ħsieb” means “siblings” in this chapter.",
+          "answer": false,
+          "explanation": "Ħu ħsieb means “Take care”.",
+          "reviewCard": {
+            "maltese": "Ħu ħsieb",
+            "english": "Take care"
+          }
+        },
+        {
+          "id": "b1-family-hu-hsieb-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-hu-hsieb"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ngħid: “_____”” (I say: “Take care”)",
+          "answer": "Ħu ħsieb",
+          "explanation": "The complete sentence is “Ngħid: “Ħu ħsieb””",
+          "reviewCard": {
+            "maltese": "Ħu ħsieb",
+            "english": "Take care",
+            "example": "Ngħid: “Ħu ħsieb”"
+          },
+          "type": "order-words",
+          "tokens": [
+            "Ħu",
+            "ħsieb"
+          ]
+        },
+        {
+          "id": "b1-family-checkpoint-7-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-mhux-hazin",
+            "b1-family-hu-hsieb"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Mhux ħażin",
+              "right": "Not bad"
+            },
+            {
+              "left": "Ħu ħsieb",
+              "right": "Take care"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Mhux ħażin",
+            "english": "Not bad"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5033 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b1-colours",
+    "levelId": "b1",
+    "levelLabel": "B1 Foundation",
+    "number": 5,
+    "title": "Il-Kuluri"
+  },
+  "inventoryChapter": {
+    "id": "b1.5",
+    "courseChapterId": "b1-colours",
+    "book": "B1",
+    "number": 5,
+    "title": "Il-Kuluri",
+    "targets": [
+      "abjad",
+      "bajda",
+      "aħmar",
+      "ħamra",
+      "isfar",
+      "safra",
+      "aħdar",
+      "ħadra",
+      "griż",
+      "griża",
+      "iswed",
+      "sewda",
+      "kannella",
+      "oranġjo",
+      "roża",
+      "vjola",
+      "blu",
+      "ċirku",
+      "ċrieki",
+      "kaxxa",
+      "kaxxi",
+      "trijanglu",
+      "trijangli",
+      "strixxa",
+      "strixxi",
+      "bandiera",
+      "pajjiż",
+      "Malta",
+      "Italja",
+      "Ingilterra",
+      "Ġermanja",
+      "Spanja",
+      "Franza",
+      "Pakistan",
+      "Ukraina",
+      "Turkija",
+      "Portugall",
+      "Filippini",
+      "Indja",
+      "Ġappun",
+      "Libja",
+      "Awstralja",
+      "Ċina"
+    ],
+    "baselineMissing": [
+      "ċirku",
+      "ċrieki",
+      "kaxxi",
+      "trijanglu",
+      "trijangli",
+      "strixxa",
+      "strixxi",
+      "bandiera",
+      "Italja",
+      "Ingilterra",
+      "Ġermanja",
+      "Franza",
+      "Ukraina",
+      "Portugall",
+      "Filippini",
+      "Indja",
+      "Ġappun",
+      "Awstralja"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b1-colours",
+    "book": "B1",
+    "chapterNumber": 5,
+    "chapterTitle": "Il-Kuluri",
+    "pageStart": 65,
+    "pageEnd": 80
+  },
+  "targets": [
+    {
+      "id": "b1-colours-abjad",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "abjad",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "abjad"
+      },
+      "assessmentIds": [
+        "b1-colours-abjad-diagnostic-recognition",
+        "b1-colours-abjad-recognition",
+        "b1-colours-abjad-production",
+        "b1-colours-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-bajda",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "bajda",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-bajda"
+      },
+      "assessmentIds": [
+        "b1-colours-bajda-recognition-true-false",
+        "b1-colours-bajda-production",
+        "b1-colours-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-ahmar",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "aħmar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "ahmar"
+      },
+      "assessmentIds": [
+        "colour-red-recognition",
+        "colour-red-production",
+        "b1-colours-ahmar-recognition",
+        "b1-colours-ahmar-production",
+        "b1-colours-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-hamra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ħamra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "ahmar"
+      },
+      "assessmentIds": [
+        "b1-colours-hamra-recognition-true-false",
+        "b1-colours-hamra-production",
+        "b1-colours-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-isfar",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "isfar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "isfar"
+      },
+      "assessmentIds": [
+        "b1-colours-isfar-diagnostic-recognition-true-false",
+        "b1-colours-isfar-recognition",
+        "b1-colours-isfar-production"
+      ]
+    },
+    {
+      "id": "b1-colours-safra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "safra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "isfar"
+      },
+      "assessmentIds": [
+        "b1-colours-safra-recognition-true-false",
+        "b1-colours-safra-production"
+      ]
+    },
+    {
+      "id": "b1-colours-ahdar",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "aħdar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "ahdar"
+      },
+      "assessmentIds": [
+        "b1-colours-ahdar-recognition",
+        "b1-colours-ahdar-production",
+        "b1-colours-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-hadra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ħadra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-hadra"
+      },
+      "assessmentIds": [
+        "b1-colours-hadra-recognition-true-false",
+        "b1-colours-hadra-production"
+      ]
+    },
+    {
+      "id": "b1-colours-griz",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "griż",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "griz"
+      },
+      "assessmentIds": [
+        "b1-colours-griz-recognition",
+        "b1-colours-griz-production",
+        "b1-colours-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-griza",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "griża",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-griza"
+      },
+      "assessmentIds": [
+        "b1-colours-griza-diagnostic-recognition",
+        "b1-colours-griza-recognition-true-false",
+        "b1-colours-griza-production",
+        "b1-colours-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-iswed",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "iswed",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "iswed"
+      },
+      "assessmentIds": [
+        "b1-colours-iswed-recognition",
+        "b1-colours-iswed-production",
+        "b1-colours-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-sewda",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "sewda",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "iswed"
+      },
+      "assessmentIds": [
+        "b1-colours-sewda-recognition-true-false",
+        "b1-colours-sewda-production"
+      ]
+    },
+    {
+      "id": "b1-colours-kannella",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "kannella",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "kannella"
+      },
+      "assessmentIds": [
+        "b1-colours-kannella-recognition",
+        "b1-colours-kannella-production",
+        "b1-colours-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-orangjo",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "oranġjo",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "orangjo"
+      },
+      "assessmentIds": [
+        "b1-colours-orangjo-recognition-true-false",
+        "b1-colours-orangjo-production",
+        "b1-colours-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-roza",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "roża",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "roza"
+      },
+      "assessmentIds": [
+        "b1-colours-roza-diagnostic-recognition-true-false",
+        "b1-colours-roza-recognition",
+        "b1-colours-roza-production",
+        "b1-colours-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-vjola",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "vjola",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "vjola"
+      },
+      "assessmentIds": [
+        "b1-colours-vjola-recognition-true-false",
+        "b1-colours-vjola-production",
+        "b1-colours-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-blu",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "blu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "colors_maltese.html",
+        "file": "assets/data/colors.json",
+        "itemId": "blu"
+      },
+      "assessmentIds": [
+        "b1-colours-blu-recognition",
+        "b1-colours-blu-production"
+      ]
+    },
+    {
+      "id": "b1-colours-cirku",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ċirku",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-cirku"
+      },
+      "assessmentIds": [
+        "b1-colours-cirku-recognition-true-false",
+        "b1-colours-cirku-production"
+      ]
+    },
+    {
+      "id": "b1-colours-crieki",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "ċrieki",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-crieki"
+      },
+      "assessmentIds": [
+        "b1-colours-crieki-diagnostic-recognition",
+        "b1-colours-crieki-recognition",
+        "b1-colours-crieki-production",
+        "b1-colours-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-kaxxa",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "kaxxa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-kaxxa"
+      },
+      "assessmentIds": [
+        "b1-colours-kaxxa-recognition-true-false",
+        "b1-colours-kaxxa-production",
+        "b1-colours-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-kaxxi",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "kaxxi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-kaxxi"
+      },
+      "assessmentIds": [
+        "b1-colours-kaxxi-recognition",
+        "b1-colours-kaxxi-production",
+        "b1-colours-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-trijanglu",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "trijanglu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-trijanglu"
+      },
+      "assessmentIds": [
+        "b1-colours-trijanglu-recognition-true-false",
+        "b1-colours-trijanglu-production",
+        "b1-colours-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-trijangli",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "trijangli",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-trijangli"
+      },
+      "assessmentIds": [
+        "b1-colours-trijangli-recognition",
+        "b1-colours-trijangli-production"
+      ]
+    },
+    {
+      "id": "b1-colours-strixxa",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "strixxa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-strixxa"
+      },
+      "assessmentIds": [
+        "b1-colours-strixxa-diagnostic-recognition-true-false",
+        "b1-colours-strixxa-recognition-true-false",
+        "b1-colours-strixxa-production"
+      ]
+    },
+    {
+      "id": "b1-colours-strixxi",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "strixxi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-strixxi"
+      },
+      "assessmentIds": [
+        "b1-colours-strixxi-recognition",
+        "b1-colours-strixxi-production",
+        "b1-colours-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-bandiera",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "bandiera",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-bandiera"
+      },
+      "assessmentIds": [
+        "b1-colours-bandiera-recognition-true-false",
+        "b1-colours-bandiera-production",
+        "b1-colours-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-pajjiz",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "pajjiż",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-pajjiz"
+      },
+      "assessmentIds": [
+        "b1-colours-pajjiz-recognition",
+        "b1-colours-pajjiz-production",
+        "b1-colours-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-malta",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Malta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-malta"
+      },
+      "assessmentIds": [
+        "b1-colours-malta-recognition-true-false",
+        "b1-colours-malta-production",
+        "b1-colours-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-italja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Italja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-italja"
+      },
+      "assessmentIds": [
+        "b1-colours-italja-diagnostic-recognition",
+        "b1-colours-italja-recognition",
+        "b1-colours-italja-production"
+      ]
+    },
+    {
+      "id": "b1-colours-ingilterra",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ingilterra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-ingilterra"
+      },
+      "assessmentIds": [
+        "b1-colours-ingilterra-recognition-true-false",
+        "b1-colours-ingilterra-production"
+      ]
+    },
+    {
+      "id": "b1-colours-germanja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ġermanja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-germanja"
+      },
+      "assessmentIds": [
+        "b1-colours-germanja-recognition",
+        "b1-colours-germanja-production",
+        "b1-colours-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-spanja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Spanja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-spanja"
+      },
+      "assessmentIds": [
+        "b1-colours-spanja-recognition-true-false",
+        "b1-colours-spanja-production",
+        "b1-colours-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-franza",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Franza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-franza"
+      },
+      "assessmentIds": [
+        "b1-colours-franza-diagnostic-recognition-true-false",
+        "b1-colours-franza-recognition",
+        "b1-colours-franza-production",
+        "b1-colours-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-pakistan",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Pakistan",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-pakistan"
+      },
+      "assessmentIds": [
+        "b1-colours-pakistan-recognition-true-false",
+        "b1-colours-pakistan-production",
+        "b1-colours-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-ukraina",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ukraina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-ukraina"
+      },
+      "assessmentIds": [
+        "b1-colours-ukraina-recognition",
+        "b1-colours-ukraina-production"
+      ]
+    },
+    {
+      "id": "b1-colours-turkija",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Turkija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-turkija"
+      },
+      "assessmentIds": [
+        "b1-colours-turkija-recognition-true-false",
+        "b1-colours-turkija-production"
+      ]
+    },
+    {
+      "id": "b1-colours-portugall",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Portugall",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-portugall"
+      },
+      "assessmentIds": [
+        "b1-colours-portugall-recognition",
+        "b1-colours-portugall-production",
+        "b1-colours-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-filippini",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Filippini",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-filippini"
+      },
+      "assessmentIds": [
+        "b1-colours-filippini-diagnostic-recognition",
+        "b1-colours-filippini-recognition-true-false",
+        "b1-colours-filippini-production",
+        "b1-colours-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-indja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Indja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-indja"
+      },
+      "assessmentIds": [
+        "b1-colours-indja-recognition",
+        "b1-colours-indja-production",
+        "b1-colours-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-gappun",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ġappun",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-gappun"
+      },
+      "assessmentIds": [
+        "b1-colours-gappun-recognition-true-false",
+        "b1-colours-gappun-production",
+        "b1-colours-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b1-colours-libja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Libja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-libja"
+      },
+      "assessmentIds": [
+        "b1-colours-libja-recognition",
+        "b1-colours-libja-production"
+      ]
+    },
+    {
+      "id": "b1-colours-awstralja",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Awstralja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-awstralja"
+      },
+      "assessmentIds": [
+        "b1-colours-awstralja-recognition-true-false",
+        "b1-colours-awstralja-production"
+      ]
+    },
+    {
+      "id": "b1-colours-cina",
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "type": "vocabulary",
+      "sourceRequirement": "Ċina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-colours-cina"
+      },
+      "assessmentIds": [
+        "b1-colours-cina-diagnostic-recognition-true-false",
+        "b1-colours-cina-recognition",
+        "b1-colours-cina-production"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b1-colours-abjad": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-bajda": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ahmar": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-hamra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-isfar": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-safra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ahdar": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-hadra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-griz": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-griza": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-iswed": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-sewda": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-kannella": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-orangjo": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-roza": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-vjola": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-blu": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-cirku": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-crieki": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-kaxxa": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-kaxxi": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-trijanglu": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-trijangli": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-strixxa": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-strixxi": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 69,
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-bandiera": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67,
+        73,
+        74,
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-pajjiz": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75,
+        78
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-malta": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77,
+        78,
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-italja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77,
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ingilterra": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-germanja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-spanja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-franza": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77,
+        79
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-pakistan": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        77,
+        78
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-ukraina": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-turkija": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-portugall": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-filippini": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77,
+        79
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-indja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-gappun": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76,
+        79
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-libja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-awstralja": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 73,
+      "pages": [
+        73,
+        76
+      ],
+      "match": "text-exact"
+    },
+    "b1-colours-cina": {
+      "book": "B1",
+      "chapterId": "b1-colours",
+      "chapterNumber": 5,
+      "chapterTitle": "Il-Kuluri",
+      "pageRange": [
+        65,
+        80
+      ],
+      "primaryPage": 76,
+      "pages": [
+        76,
+        77,
+        80
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b1-colours-abjad",
+      "maltese": "abjad",
+      "english": "white",
+      "example": "Il-flokk huwa abjad.",
+      "exampleTranslation": "The shirt is white.",
+      "examplePattern": "colour-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-flokk huwa abjad.",
+        "Translation: The shirt is white.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-bajda",
+      "maltese": "bajda",
+      "english": "white (feminine)",
+      "example": "Il-kaxxa hija bajda.",
+      "exampleTranslation": "The box is white.",
+      "examplePattern": "colour-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-kaxxa hija bajda.",
+        "Translation: The box is white.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-ahmar",
+      "maltese": "aħmar",
+      "english": "red",
+      "example": "Il-flokk huwa aħmar.",
+      "exampleTranslation": "The shirt is red.",
+      "examplePattern": "colour-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-flokk huwa aħmar.",
+        "Translation: The shirt is red.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-hamra",
+      "maltese": "ħamra",
+      "english": "red (feminine)",
+      "example": "Il-kaxxa hija ħamra.",
+      "exampleTranslation": "The box is red.",
+      "examplePattern": "colour-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-kaxxa hija ħamra.",
+        "Translation: The box is red.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-isfar",
+      "maltese": "isfar",
+      "english": "yellow",
+      "example": "Il-flokk huwa isfar.",
+      "exampleTranslation": "The shirt is yellow.",
+      "examplePattern": "colour-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-flokk huwa isfar.",
+        "Translation: The shirt is yellow.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-safra",
+      "maltese": "safra",
+      "english": "yellow",
+      "example": "Il-kaxxa hija safra.",
+      "exampleTranslation": "The box is yellow.",
+      "examplePattern": "colour-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-kaxxa hija safra.",
+        "Translation: The box is yellow.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-ahdar",
+      "maltese": "aħdar",
+      "english": "green",
+      "example": "Il-flokk huwa aħdar.",
+      "exampleTranslation": "The shirt is green.",
+      "examplePattern": "colour-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-flokk huwa aħdar.",
+        "Translation: The shirt is green.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-hadra",
+      "maltese": "ħadra",
+      "english": "green",
+      "example": "Il-kaxxa hija ħadra.",
+      "exampleTranslation": "The box is green.",
+      "examplePattern": "colour-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-kaxxa hija ħadra.",
+        "Translation: The box is green.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-griz",
+      "maltese": "griż",
+      "english": "grey",
+      "example": "Il-flokk huwa griż.",
+      "exampleTranslation": "The shirt is grey.",
+      "examplePattern": "colour-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-flokk huwa griż.",
+        "Translation: The shirt is grey.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-griza",
+      "maltese": "griża",
+      "english": "grey (feminine)",
+      "example": "Il-kaxxa hija griża.",
+      "exampleTranslation": "The box is grey.",
+      "examplePattern": "colour-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-kaxxa hija griża.",
+        "Translation: The box is grey.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-iswed",
+      "maltese": "iswed",
+      "english": "black",
+      "example": "Il-flokk huwa iswed.",
+      "exampleTranslation": "The shirt is black.",
+      "examplePattern": "colour-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-flokk huwa iswed.",
+        "Translation: The shirt is black.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-sewda",
+      "maltese": "sewda",
+      "english": "black (feminine)",
+      "example": "Il-kaxxa hija sewda.",
+      "exampleTranslation": "The box is black.",
+      "examplePattern": "colour-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 65",
+      "notes": [
+        "Example: Il-kaxxa hija sewda.",
+        "Translation: The box is black.",
+        "Source: B1, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-kannella",
+      "maltese": "kannella",
+      "english": "brown",
+      "example": "Il-basket huwa kannella.",
+      "exampleTranslation": "The bag is brown.",
+      "examplePattern": "colour-invariant",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 66",
+      "notes": [
+        "Example: Il-basket huwa kannella.",
+        "Translation: The bag is brown.",
+        "Source: B1, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-orangjo",
+      "maltese": "oranġjo",
+      "english": "orange",
+      "example": "Il-basket huwa oranġjo.",
+      "exampleTranslation": "The bag is orange.",
+      "examplePattern": "colour-invariant",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 66",
+      "notes": [
+        "Example: Il-basket huwa oranġjo.",
+        "Translation: The bag is orange.",
+        "Source: B1, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-roza",
+      "maltese": "roża",
+      "english": "pink",
+      "example": "Il-basket huwa roża.",
+      "exampleTranslation": "The bag is pink.",
+      "examplePattern": "colour-invariant",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 66",
+      "notes": [
+        "Example: Il-basket huwa roża.",
+        "Translation: The bag is pink.",
+        "Source: B1, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-vjola",
+      "maltese": "vjola",
+      "english": "purple",
+      "example": "Il-basket huwa vjola.",
+      "exampleTranslation": "The bag is purple.",
+      "examplePattern": "colour-invariant",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 66",
+      "notes": [
+        "Example: Il-basket huwa vjola.",
+        "Translation: The bag is purple.",
+        "Source: B1, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-blu",
+      "maltese": "blu",
+      "english": "blue",
+      "example": "Il-basket huwa blu.",
+      "exampleTranslation": "The bag is blue.",
+      "examplePattern": "colour-invariant",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 66",
+      "notes": [
+        "Example: Il-basket huwa blu.",
+        "Translation: The bag is blue.",
+        "Source: B1, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-cirku",
+      "maltese": "ċirku",
+      "english": "circle",
+      "example": "Nara ċirku fuq il-karta.",
+      "exampleTranslation": "I see the circle on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara ċirku fuq il-karta.",
+        "Translation: I see the circle on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-crieki",
+      "maltese": "ċrieki",
+      "english": "circles",
+      "example": "Nara ċrieki fuq il-karta.",
+      "exampleTranslation": "I see the circles on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara ċrieki fuq il-karta.",
+        "Translation: I see the circles on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-kaxxa",
+      "maltese": "kaxxa",
+      "english": "box",
+      "example": "Nara kaxxa fuq il-karta.",
+      "exampleTranslation": "I see the box on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara kaxxa fuq il-karta.",
+        "Translation: I see the box on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-kaxxi",
+      "maltese": "kaxxi",
+      "english": "boxes",
+      "example": "Nara kaxxi fuq il-karta.",
+      "exampleTranslation": "I see the boxes on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara kaxxi fuq il-karta.",
+        "Translation: I see the boxes on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-trijanglu",
+      "maltese": "trijanglu",
+      "english": "triangle",
+      "example": "Nara trijanglu fuq il-karta.",
+      "exampleTranslation": "I see the triangle on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara trijanglu fuq il-karta.",
+        "Translation: I see the triangle on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-trijangli",
+      "maltese": "trijangli",
+      "english": "triangles",
+      "example": "Nara trijangli fuq il-karta.",
+      "exampleTranslation": "I see the triangles on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara trijangli fuq il-karta.",
+        "Translation: I see the triangles on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-strixxa",
+      "maltese": "strixxa",
+      "english": "stripe",
+      "example": "Nara strixxa fuq il-karta.",
+      "exampleTranslation": "I see the stripe on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara strixxa fuq il-karta.",
+        "Translation: I see the stripe on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-strixxi",
+      "maltese": "strixxi",
+      "english": "stripes",
+      "example": "Nara strixxi fuq il-karta.",
+      "exampleTranslation": "I see the stripes on the paper.",
+      "examplePattern": "shape-on-paper",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 69,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 69",
+      "notes": [
+        "Example: Nara strixxi fuq il-karta.",
+        "Translation: I see the stripes on the paper.",
+        "Source: B1, Chapter 5, p. 69"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-bandiera",
+      "maltese": "bandiera",
+      "english": "flag",
+      "example": "Din hija bandiera.",
+      "exampleTranslation": "This is a flag.",
+      "examplePattern": "shape-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 67,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 67",
+      "notes": [
+        "Example: Din hija bandiera.",
+        "Translation: This is a flag.",
+        "Source: B1, Chapter 5, p. 67"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-pajjiz",
+      "maltese": "pajjiż",
+      "english": "country",
+      "example": "Dan huwa pajjiż żgħir.",
+      "exampleTranslation": "This is a small country.",
+      "examplePattern": "shape-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 75,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 75",
+      "notes": [
+        "Example: Dan huwa pajjiż żgħir.",
+        "Translation: This is a small country.",
+        "Source: B1, Chapter 5, p. 75"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-malta",
+      "maltese": "Malta",
+      "english": "Malta",
+      "example": "Nitkellmu dwar Malta.",
+      "exampleTranslation": "We are talking about Malta.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Malta.",
+        "Translation: We are talking about Malta.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-italja",
+      "maltese": "Italja",
+      "english": "Italy",
+      "example": "Nitkellmu dwar Italja.",
+      "exampleTranslation": "We are talking about Italy.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Italja.",
+        "Translation: We are talking about Italy.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-ingilterra",
+      "maltese": "Ingilterra",
+      "english": "England",
+      "example": "Nitkellmu dwar Ingilterra.",
+      "exampleTranslation": "We are talking about England.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Ingilterra.",
+        "Translation: We are talking about England.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-germanja",
+      "maltese": "Ġermanja",
+      "english": "Germany",
+      "example": "Nitkellmu dwar Ġermanja.",
+      "exampleTranslation": "We are talking about Germany.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Ġermanja.",
+        "Translation: We are talking about Germany.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-spanja",
+      "maltese": "Spanja",
+      "english": "Spain",
+      "example": "Nitkellmu dwar Spanja.",
+      "exampleTranslation": "We are talking about Spain.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Spanja.",
+        "Translation: We are talking about Spain.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-franza",
+      "maltese": "Franza",
+      "english": "France",
+      "example": "Nitkellmu dwar Franza.",
+      "exampleTranslation": "We are talking about France.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Franza.",
+        "Translation: We are talking about France.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-pakistan",
+      "maltese": "Pakistan",
+      "english": "Pakistan",
+      "example": "Nitkellmu dwar Pakistan.",
+      "exampleTranslation": "We are talking about Pakistan.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Pakistan.",
+        "Translation: We are talking about Pakistan.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-ukraina",
+      "maltese": "Ukraina",
+      "english": "Ukraine",
+      "example": "Nitkellmu dwar Ukraina.",
+      "exampleTranslation": "We are talking about Ukraine.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Ukraina.",
+        "Translation: We are talking about Ukraine.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-turkija",
+      "maltese": "Turkija",
+      "english": "Turkey",
+      "example": "Nitkellmu dwar Turkija.",
+      "exampleTranslation": "We are talking about Turkey.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Turkija.",
+        "Translation: We are talking about Turkey.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-portugall",
+      "maltese": "Portugall",
+      "english": "Portugal",
+      "example": "Nitkellmu dwar Portugall.",
+      "exampleTranslation": "We are talking about Portugal.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Portugall.",
+        "Translation: We are talking about Portugal.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-filippini",
+      "maltese": "Filippini",
+      "english": "the Philippines",
+      "example": "Nitkellmu dwar Filippini.",
+      "exampleTranslation": "We are talking about the Philippines.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Filippini.",
+        "Translation: We are talking about the Philippines.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-indja",
+      "maltese": "Indja",
+      "english": "India",
+      "example": "Nitkellmu dwar Indja.",
+      "exampleTranslation": "We are talking about India.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Indja.",
+        "Translation: We are talking about India.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-gappun",
+      "maltese": "Ġappun",
+      "english": "Japan",
+      "example": "Nitkellmu dwar Ġappun.",
+      "exampleTranslation": "We are talking about Japan.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Ġappun.",
+        "Translation: We are talking about Japan.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-libja",
+      "maltese": "Libja",
+      "english": "Libya",
+      "example": "Nitkellmu dwar Libja.",
+      "exampleTranslation": "We are talking about Libya.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Libja.",
+        "Translation: We are talking about Libya.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-awstralja",
+      "maltese": "Awstralja",
+      "english": "Australia",
+      "example": "Nitkellmu dwar Awstralja.",
+      "exampleTranslation": "We are talking about Australia.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 73,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 73",
+      "notes": [
+        "Example: Nitkellmu dwar Awstralja.",
+        "Translation: We are talking about Australia.",
+        "Source: B1, Chapter 5, p. 73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-colours-cina",
+      "maltese": "Ċina",
+      "english": "China",
+      "example": "Nitkellmu dwar Ċina.",
+      "exampleTranslation": "We are talking about China.",
+      "examplePattern": "country",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 5,
+        "page": 76,
+        "pageRange": [
+          65,
+          80
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 5, p. 76",
+      "notes": [
+        "Example: Nitkellmu dwar Ċina.",
+        "Translation: We are talking about China.",
+        "Source: B1, Chapter 5, p. 76"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-diagnostic",
+      "kind": "diagnostic",
+      "title": "Il-Kuluri Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-colours-abjad-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-abjad"
+          ],
+          "prompt": "What is the lesson meaning of “abjad”?",
+          "choices": [
+            "white",
+            "white (feminine)",
+            "red"
+          ],
+          "answer": "white",
+          "explanation": "abjad means “white” in this chapter.",
+          "reviewCard": {
+            "maltese": "abjad",
+            "english": "white"
+          }
+        },
+        {
+          "id": "b1-colours-isfar-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-isfar"
+          ],
+          "prompt": "True or false: “isfar” means “red” in this chapter.",
+          "answer": false,
+          "explanation": "isfar means “yellow”.",
+          "reviewCard": {
+            "maltese": "isfar",
+            "english": "yellow"
+          }
+        },
+        {
+          "id": "b1-colours-griza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-griza"
+          ],
+          "prompt": "What is the lesson meaning of “griża”?",
+          "choices": [
+            "yellow",
+            "grey (feminine)",
+            "red (feminine)"
+          ],
+          "answer": "grey (feminine)",
+          "explanation": "griża means “grey (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "griża",
+            "english": "grey (feminine)"
+          }
+        },
+        {
+          "id": "b1-colours-roza-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-roza"
+          ],
+          "prompt": "True or false: “roża” means “yellow” in this chapter.",
+          "answer": false,
+          "explanation": "roża means “pink”.",
+          "reviewCard": {
+            "maltese": "roża",
+            "english": "pink"
+          }
+        },
+        {
+          "id": "b1-colours-crieki-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-crieki"
+          ],
+          "prompt": "What is the lesson meaning of “ċrieki”?",
+          "choices": [
+            "green",
+            "grey",
+            "circles"
+          ],
+          "answer": "circles",
+          "explanation": "ċrieki means “circles” in this chapter.",
+          "reviewCard": {
+            "maltese": "ċrieki",
+            "english": "circles"
+          }
+        },
+        {
+          "id": "b1-colours-strixxa-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-strixxa"
+          ],
+          "prompt": "True or false: “strixxa” means “grey” in this chapter.",
+          "answer": false,
+          "explanation": "strixxa means “stripe”.",
+          "reviewCard": {
+            "maltese": "strixxa",
+            "english": "stripe"
+          }
+        },
+        {
+          "id": "b1-colours-italja-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-italja"
+          ],
+          "prompt": "What is the lesson meaning of “Italja”?",
+          "choices": [
+            "Italy",
+            "grey (feminine)",
+            "black"
+          ],
+          "answer": "Italy",
+          "explanation": "Italja means “Italy” in this chapter.",
+          "reviewCard": {
+            "maltese": "Italja",
+            "english": "Italy"
+          }
+        },
+        {
+          "id": "b1-colours-franza-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-franza"
+          ],
+          "prompt": "True or false: “Franza” means “black” in this chapter.",
+          "answer": false,
+          "explanation": "Franza means “France”.",
+          "reviewCard": {
+            "maltese": "Franza",
+            "english": "France"
+          }
+        },
+        {
+          "id": "b1-colours-filippini-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-filippini"
+          ],
+          "prompt": "What is the lesson meaning of “Filippini”?",
+          "choices": [
+            "brown",
+            "the Philippines",
+            "black (feminine)"
+          ],
+          "answer": "the Philippines",
+          "explanation": "Filippini means “the Philippines” in this chapter.",
+          "reviewCard": {
+            "maltese": "Filippini",
+            "english": "the Philippines"
+          }
+        },
+        {
+          "id": "b1-colours-cina-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-cina"
+          ],
+          "prompt": "True or false: “Ċina” means “brown” in this chapter.",
+          "answer": false,
+          "explanation": "Ċina means “China”.",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 1",
+      "items": [
+        {
+          "id": "b1-colours-abjad-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-abjad"
+          ],
+          "prompt": "What is the lesson meaning of “abjad”?",
+          "choices": [
+            "white",
+            "white (feminine)",
+            "red"
+          ],
+          "answer": "white",
+          "explanation": "abjad means “white” in this chapter.",
+          "reviewCard": {
+            "maltese": "abjad",
+            "english": "white"
+          }
+        },
+        {
+          "id": "b1-colours-abjad-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-abjad"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-flokk huwa _____.” (The shirt is white.)",
+          "answer": "abjad",
+          "explanation": "The complete sentence is “Il-flokk huwa abjad.”",
+          "reviewCard": {
+            "maltese": "abjad",
+            "english": "white",
+            "example": "Il-flokk huwa abjad."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "abjad"
+          ]
+        },
+        {
+          "id": "b1-colours-bajda-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-bajda"
+          ],
+          "prompt": "True or false: “bajda” means “red” in this chapter.",
+          "answer": false,
+          "explanation": "bajda means “white (feminine)”.",
+          "reviewCard": {
+            "maltese": "bajda",
+            "english": "white (feminine)"
+          }
+        },
+        {
+          "id": "b1-colours-bajda-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-bajda"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kaxxa hija _____.” (The box is white.)",
+          "answer": "bajda",
+          "explanation": "The complete sentence is “Il-kaxxa hija bajda.”",
+          "reviewCard": {
+            "maltese": "bajda",
+            "english": "white (feminine)",
+            "example": "Il-kaxxa hija bajda."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bajda"
+          ]
+        },
+        {
+          "id": "b1-colours-ahmar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-ahmar"
+          ],
+          "prompt": "What is the lesson meaning of “aħmar”?",
+          "choices": [
+            "yellow",
+            "red",
+            "red (feminine)"
+          ],
+          "answer": "red",
+          "explanation": "aħmar means “red” in this chapter.",
+          "reviewCard": {
+            "maltese": "aħmar",
+            "english": "red"
+          }
+        },
+        {
+          "id": "b1-colours-ahmar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-ahmar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-flokk huwa _____.” (The shirt is red.)",
+          "answer": "aħmar",
+          "explanation": "The complete sentence is “Il-flokk huwa aħmar.”",
+          "reviewCard": {
+            "maltese": "aħmar",
+            "english": "red",
+            "example": "Il-flokk huwa aħmar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "aħmar"
+          ]
+        },
+        {
+          "id": "b1-colours-hamra-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-hamra"
+          ],
+          "prompt": "True or false: “ħamra” means “yellow” in this chapter.",
+          "answer": false,
+          "explanation": "ħamra means “red (feminine)”.",
+          "reviewCard": {
+            "maltese": "ħamra",
+            "english": "red (feminine)"
+          }
+        },
+        {
+          "id": "b1-colours-hamra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-hamra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kaxxa hija _____.” (The box is red.)",
+          "answer": "ħamra",
+          "explanation": "The complete sentence is “Il-kaxxa hija ħamra.”",
+          "reviewCard": {
+            "maltese": "ħamra",
+            "english": "red (feminine)",
+            "example": "Il-kaxxa hija ħamra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħamra"
+          ]
+        },
+        {
+          "id": "b1-colours-isfar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-isfar"
+          ],
+          "prompt": "What is the lesson meaning of “isfar”?",
+          "choices": [
+            "green",
+            "grey",
+            "yellow"
+          ],
+          "answer": "yellow",
+          "explanation": "isfar means “yellow” in this chapter.",
+          "reviewCard": {
+            "maltese": "isfar",
+            "english": "yellow"
+          }
+        },
+        {
+          "id": "b1-colours-isfar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-isfar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-flokk huwa _____.” (The shirt is yellow.)",
+          "answer": "isfar",
+          "explanation": "The complete sentence is “Il-flokk huwa isfar.”",
+          "reviewCard": {
+            "maltese": "isfar",
+            "english": "yellow",
+            "example": "Il-flokk huwa isfar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "isfar"
+          ]
+        },
+        {
+          "id": "b1-colours-safra-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-safra"
+          ],
+          "prompt": "True or false: “safra” means “grey” in this chapter.",
+          "answer": false,
+          "explanation": "safra means “yellow”.",
+          "reviewCard": {
+            "maltese": "safra",
+            "english": "yellow"
+          }
+        },
+        {
+          "id": "b1-colours-safra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-safra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kaxxa hija _____.” (The box is yellow.)",
+          "answer": "safra",
+          "explanation": "The complete sentence is “Il-kaxxa hija safra.”",
+          "reviewCard": {
+            "maltese": "safra",
+            "english": "yellow",
+            "example": "Il-kaxxa hija safra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "safra"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-abjad",
+            "b1-colours-bajda",
+            "b1-colours-ahmar",
+            "b1-colours-hamra"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "abjad",
+              "right": "white"
+            },
+            {
+              "left": "bajda",
+              "right": "white (feminine)"
+            },
+            {
+              "left": "aħmar",
+              "right": "red"
+            },
+            {
+              "left": "ħamra",
+              "right": "red (feminine)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "abjad",
+            "english": "white"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 2",
+      "items": [
+        {
+          "id": "b1-colours-ahdar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-ahdar"
+          ],
+          "prompt": "What is the lesson meaning of “aħdar”?",
+          "choices": [
+            "green",
+            "grey (feminine)",
+            "black"
+          ],
+          "answer": "green",
+          "explanation": "aħdar means “green” in this chapter.",
+          "reviewCard": {
+            "maltese": "aħdar",
+            "english": "green"
+          }
+        },
+        {
+          "id": "b1-colours-ahdar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-ahdar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-flokk huwa _____.” (The shirt is green.)",
+          "answer": "aħdar",
+          "explanation": "The complete sentence is “Il-flokk huwa aħdar.”",
+          "reviewCard": {
+            "maltese": "aħdar",
+            "english": "green",
+            "example": "Il-flokk huwa aħdar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "aħdar"
+          ]
+        },
+        {
+          "id": "b1-colours-hadra-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-hadra"
+          ],
+          "prompt": "True or false: “ħadra” means “black” in this chapter.",
+          "answer": false,
+          "explanation": "ħadra means “green”.",
+          "reviewCard": {
+            "maltese": "ħadra",
+            "english": "green"
+          }
+        },
+        {
+          "id": "b1-colours-hadra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-hadra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kaxxa hija _____.” (The box is green.)",
+          "answer": "ħadra",
+          "explanation": "The complete sentence is “Il-kaxxa hija ħadra.”",
+          "reviewCard": {
+            "maltese": "ħadra",
+            "english": "green",
+            "example": "Il-kaxxa hija ħadra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħadra"
+          ]
+        },
+        {
+          "id": "b1-colours-griz-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-griz"
+          ],
+          "prompt": "What is the lesson meaning of “griż”?",
+          "choices": [
+            "brown",
+            "grey",
+            "black (feminine)"
+          ],
+          "answer": "grey",
+          "explanation": "griż means “grey” in this chapter.",
+          "reviewCard": {
+            "maltese": "griż",
+            "english": "grey"
+          }
+        },
+        {
+          "id": "b1-colours-griz-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-griz"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-flokk huwa _____.” (The shirt is grey.)",
+          "answer": "griż",
+          "explanation": "The complete sentence is “Il-flokk huwa griż.”",
+          "reviewCard": {
+            "maltese": "griż",
+            "english": "grey",
+            "example": "Il-flokk huwa griż."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "griż"
+          ]
+        },
+        {
+          "id": "b1-colours-griza-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-griza"
+          ],
+          "prompt": "True or false: “griża” means “brown” in this chapter.",
+          "answer": false,
+          "explanation": "griża means “grey (feminine)”.",
+          "reviewCard": {
+            "maltese": "griża",
+            "english": "grey (feminine)"
+          }
+        },
+        {
+          "id": "b1-colours-griza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-griza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kaxxa hija _____.” (The box is grey.)",
+          "answer": "griża",
+          "explanation": "The complete sentence is “Il-kaxxa hija griża.”",
+          "reviewCard": {
+            "maltese": "griża",
+            "english": "grey (feminine)",
+            "example": "Il-kaxxa hija griża."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "griża"
+          ]
+        },
+        {
+          "id": "b1-colours-iswed-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-iswed"
+          ],
+          "prompt": "What is the lesson meaning of “iswed”?",
+          "choices": [
+            "orange",
+            "pink",
+            "black"
+          ],
+          "answer": "black",
+          "explanation": "iswed means “black” in this chapter.",
+          "reviewCard": {
+            "maltese": "iswed",
+            "english": "black"
+          }
+        },
+        {
+          "id": "b1-colours-iswed-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-iswed"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-flokk huwa _____.” (The shirt is black.)",
+          "answer": "iswed",
+          "explanation": "The complete sentence is “Il-flokk huwa iswed.”",
+          "reviewCard": {
+            "maltese": "iswed",
+            "english": "black",
+            "example": "Il-flokk huwa iswed."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "iswed"
+          ]
+        },
+        {
+          "id": "b1-colours-sewda-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-sewda"
+          ],
+          "prompt": "True or false: “sewda” means “pink” in this chapter.",
+          "answer": false,
+          "explanation": "sewda means “black (feminine)”.",
+          "reviewCard": {
+            "maltese": "sewda",
+            "english": "black (feminine)"
+          }
+        },
+        {
+          "id": "b1-colours-sewda-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-sewda"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kaxxa hija _____.” (The box is black.)",
+          "answer": "sewda",
+          "explanation": "The complete sentence is “Il-kaxxa hija sewda.”",
+          "reviewCard": {
+            "maltese": "sewda",
+            "english": "black (feminine)",
+            "example": "Il-kaxxa hija sewda."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sewda"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-ahdar",
+            "b1-colours-griz",
+            "b1-colours-griza",
+            "b1-colours-iswed"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "aħdar",
+              "right": "green"
+            },
+            {
+              "left": "griż",
+              "right": "grey"
+            },
+            {
+              "left": "griża",
+              "right": "grey (feminine)"
+            },
+            {
+              "left": "iswed",
+              "right": "black"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "aħdar",
+            "english": "green"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 3",
+      "items": [
+        {
+          "id": "b1-colours-kannella-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-kannella"
+          ],
+          "prompt": "What is the lesson meaning of “kannella”?",
+          "choices": [
+            "brown",
+            "purple",
+            "blue"
+          ],
+          "answer": "brown",
+          "explanation": "kannella means “brown” in this chapter.",
+          "reviewCard": {
+            "maltese": "kannella",
+            "english": "brown"
+          }
+        },
+        {
+          "id": "b1-colours-kannella-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-kannella"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-basket huwa _____.” (The bag is brown.)",
+          "answer": "kannella",
+          "explanation": "The complete sentence is “Il-basket huwa kannella.”",
+          "reviewCard": {
+            "maltese": "kannella",
+            "english": "brown",
+            "example": "Il-basket huwa kannella."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kannella"
+          ]
+        },
+        {
+          "id": "b1-colours-orangjo-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-orangjo"
+          ],
+          "prompt": "True or false: “oranġjo” means “blue” in this chapter.",
+          "answer": false,
+          "explanation": "oranġjo means “orange”.",
+          "reviewCard": {
+            "maltese": "oranġjo",
+            "english": "orange"
+          }
+        },
+        {
+          "id": "b1-colours-orangjo-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-orangjo"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-basket huwa _____.” (The bag is orange.)",
+          "answer": "oranġjo",
+          "explanation": "The complete sentence is “Il-basket huwa oranġjo.”",
+          "reviewCard": {
+            "maltese": "oranġjo",
+            "english": "orange",
+            "example": "Il-basket huwa oranġjo."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oranġjo"
+          ]
+        },
+        {
+          "id": "b1-colours-roza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-roza"
+          ],
+          "prompt": "What is the lesson meaning of “roża”?",
+          "choices": [
+            "circles",
+            "pink",
+            "circle"
+          ],
+          "answer": "pink",
+          "explanation": "roża means “pink” in this chapter.",
+          "reviewCard": {
+            "maltese": "roża",
+            "english": "pink"
+          }
+        },
+        {
+          "id": "b1-colours-roza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-roza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-basket huwa _____.” (The bag is pink.)",
+          "answer": "roża",
+          "explanation": "The complete sentence is “Il-basket huwa roża.”",
+          "reviewCard": {
+            "maltese": "roża",
+            "english": "pink",
+            "example": "Il-basket huwa roża."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "roża"
+          ]
+        },
+        {
+          "id": "b1-colours-vjola-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-vjola"
+          ],
+          "prompt": "True or false: “vjola” means “circles” in this chapter.",
+          "answer": false,
+          "explanation": "vjola means “purple”.",
+          "reviewCard": {
+            "maltese": "vjola",
+            "english": "purple"
+          }
+        },
+        {
+          "id": "b1-colours-vjola-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-vjola"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-basket huwa _____.” (The bag is purple.)",
+          "answer": "vjola",
+          "explanation": "The complete sentence is “Il-basket huwa vjola.”",
+          "reviewCard": {
+            "maltese": "vjola",
+            "english": "purple",
+            "example": "Il-basket huwa vjola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "vjola"
+          ]
+        },
+        {
+          "id": "b1-colours-blu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-blu"
+          ],
+          "prompt": "What is the lesson meaning of “blu”?",
+          "choices": [
+            "box",
+            "boxes",
+            "blue"
+          ],
+          "answer": "blue",
+          "explanation": "blu means “blue” in this chapter.",
+          "reviewCard": {
+            "maltese": "blu",
+            "english": "blue"
+          }
+        },
+        {
+          "id": "b1-colours-blu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-blu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-basket huwa _____.” (The bag is blue.)",
+          "answer": "blu",
+          "explanation": "The complete sentence is “Il-basket huwa blu.”",
+          "reviewCard": {
+            "maltese": "blu",
+            "english": "blue",
+            "example": "Il-basket huwa blu."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "blu"
+          ]
+        },
+        {
+          "id": "b1-colours-cirku-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-cirku"
+          ],
+          "prompt": "True or false: “ċirku” means “boxes” in this chapter.",
+          "answer": false,
+          "explanation": "ċirku means “circle”.",
+          "reviewCard": {
+            "maltese": "ċirku",
+            "english": "circle"
+          }
+        },
+        {
+          "id": "b1-colours-cirku-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-cirku"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the circle on the paper.)",
+          "answer": "ċirku",
+          "explanation": "The complete sentence is “Nara ċirku fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "ċirku",
+            "english": "circle",
+            "example": "Nara ċirku fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċirku"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-kannella",
+            "b1-colours-orangjo",
+            "b1-colours-roza",
+            "b1-colours-vjola"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kannella",
+              "right": "brown"
+            },
+            {
+              "left": "oranġjo",
+              "right": "orange"
+            },
+            {
+              "left": "roża",
+              "right": "pink"
+            },
+            {
+              "left": "vjola",
+              "right": "purple"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kannella",
+            "english": "brown"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 4",
+      "items": [
+        {
+          "id": "b1-colours-crieki-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-crieki"
+          ],
+          "prompt": "What is the lesson meaning of “ċrieki”?",
+          "choices": [
+            "circles",
+            "triangle",
+            "triangles"
+          ],
+          "answer": "circles",
+          "explanation": "ċrieki means “circles” in this chapter.",
+          "reviewCard": {
+            "maltese": "ċrieki",
+            "english": "circles"
+          }
+        },
+        {
+          "id": "b1-colours-crieki-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-crieki"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the circles on the paper.)",
+          "answer": "ċrieki",
+          "explanation": "The complete sentence is “Nara ċrieki fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "ċrieki",
+            "english": "circles",
+            "example": "Nara ċrieki fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċrieki"
+          ]
+        },
+        {
+          "id": "b1-colours-kaxxa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-kaxxa"
+          ],
+          "prompt": "True or false: “kaxxa” means “triangles” in this chapter.",
+          "answer": false,
+          "explanation": "kaxxa means “box”.",
+          "reviewCard": {
+            "maltese": "kaxxa",
+            "english": "box"
+          }
+        },
+        {
+          "id": "b1-colours-kaxxa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-kaxxa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the box on the paper.)",
+          "answer": "kaxxa",
+          "explanation": "The complete sentence is “Nara kaxxa fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "kaxxa",
+            "english": "box",
+            "example": "Nara kaxxa fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kaxxa"
+          ]
+        },
+        {
+          "id": "b1-colours-kaxxi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-kaxxi"
+          ],
+          "prompt": "What is the lesson meaning of “kaxxi”?",
+          "choices": [
+            "stripes",
+            "boxes",
+            "stripe"
+          ],
+          "answer": "boxes",
+          "explanation": "kaxxi means “boxes” in this chapter.",
+          "reviewCard": {
+            "maltese": "kaxxi",
+            "english": "boxes"
+          }
+        },
+        {
+          "id": "b1-colours-kaxxi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-kaxxi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the boxes on the paper.)",
+          "answer": "kaxxi",
+          "explanation": "The complete sentence is “Nara kaxxi fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "kaxxi",
+            "english": "boxes",
+            "example": "Nara kaxxi fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kaxxi"
+          ]
+        },
+        {
+          "id": "b1-colours-trijanglu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-trijanglu"
+          ],
+          "prompt": "True or false: “trijanglu” means “stripes” in this chapter.",
+          "answer": false,
+          "explanation": "trijanglu means “triangle”.",
+          "reviewCard": {
+            "maltese": "trijanglu",
+            "english": "triangle"
+          }
+        },
+        {
+          "id": "b1-colours-trijanglu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-trijanglu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the triangle on the paper.)",
+          "answer": "trijanglu",
+          "explanation": "The complete sentence is “Nara trijanglu fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "trijanglu",
+            "english": "triangle",
+            "example": "Nara trijanglu fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "trijanglu"
+          ]
+        },
+        {
+          "id": "b1-colours-trijangli-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-trijangli"
+          ],
+          "prompt": "What is the lesson meaning of “trijangli”?",
+          "choices": [
+            "flag",
+            "country",
+            "triangles"
+          ],
+          "answer": "triangles",
+          "explanation": "trijangli means “triangles” in this chapter.",
+          "reviewCard": {
+            "maltese": "trijangli",
+            "english": "triangles"
+          }
+        },
+        {
+          "id": "b1-colours-trijangli-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-trijangli"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the triangles on the paper.)",
+          "answer": "trijangli",
+          "explanation": "The complete sentence is “Nara trijangli fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "trijangli",
+            "english": "triangles",
+            "example": "Nara trijangli fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "trijangli"
+          ]
+        },
+        {
+          "id": "b1-colours-strixxa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-strixxa"
+          ],
+          "prompt": "True or false: “strixxa” means “country” in this chapter.",
+          "answer": false,
+          "explanation": "strixxa means “stripe”.",
+          "reviewCard": {
+            "maltese": "strixxa",
+            "english": "stripe"
+          }
+        },
+        {
+          "id": "b1-colours-strixxa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-strixxa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the stripe on the paper.)",
+          "answer": "strixxa",
+          "explanation": "The complete sentence is “Nara strixxa fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "strixxa",
+            "english": "stripe",
+            "example": "Nara strixxa fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "strixxa"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-crieki",
+            "b1-colours-kaxxa",
+            "b1-colours-kaxxi",
+            "b1-colours-trijanglu"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ċrieki",
+              "right": "circles"
+            },
+            {
+              "left": "kaxxa",
+              "right": "box"
+            },
+            {
+              "left": "kaxxi",
+              "right": "boxes"
+            },
+            {
+              "left": "trijanglu",
+              "right": "triangle"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ċrieki",
+            "english": "circles"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 5",
+      "items": [
+        {
+          "id": "b1-colours-strixxi-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-strixxi"
+          ],
+          "prompt": "What is the lesson meaning of “strixxi”?",
+          "choices": [
+            "stripes",
+            "Malta",
+            "Italy"
+          ],
+          "answer": "stripes",
+          "explanation": "strixxi means “stripes” in this chapter.",
+          "reviewCard": {
+            "maltese": "strixxi",
+            "english": "stripes"
+          }
+        },
+        {
+          "id": "b1-colours-strixxi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-strixxi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fuq il-karta.” (I see the stripes on the paper.)",
+          "answer": "strixxi",
+          "explanation": "The complete sentence is “Nara strixxi fuq il-karta.”",
+          "reviewCard": {
+            "maltese": "strixxi",
+            "english": "stripes",
+            "example": "Nara strixxi fuq il-karta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "strixxi"
+          ]
+        },
+        {
+          "id": "b1-colours-bandiera-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-bandiera"
+          ],
+          "prompt": "True or false: “bandiera” means “Italy” in this chapter.",
+          "answer": false,
+          "explanation": "bandiera means “flag”.",
+          "reviewCard": {
+            "maltese": "bandiera",
+            "english": "flag"
+          }
+        },
+        {
+          "id": "b1-colours-bandiera-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-bandiera"
+          ],
+          "prompt": "Complete the Maltese sentence: “Din hija _____.” (This is a flag.)",
+          "answer": "bandiera",
+          "explanation": "The complete sentence is “Din hija bandiera.”",
+          "reviewCard": {
+            "maltese": "bandiera",
+            "english": "flag",
+            "example": "Din hija bandiera."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bandiera"
+          ]
+        },
+        {
+          "id": "b1-colours-pajjiz-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-pajjiz"
+          ],
+          "prompt": "What is the lesson meaning of “pajjiż”?",
+          "choices": [
+            "Germany",
+            "country",
+            "England"
+          ],
+          "answer": "country",
+          "explanation": "pajjiż means “country” in this chapter.",
+          "reviewCard": {
+            "maltese": "pajjiż",
+            "english": "country"
+          }
+        },
+        {
+          "id": "b1-colours-pajjiz-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-pajjiz"
+          ],
+          "prompt": "Complete the Maltese sentence: “Dan huwa _____ żgħir.” (This is a small country.)",
+          "answer": "pajjiż",
+          "explanation": "The complete sentence is “Dan huwa pajjiż żgħir.”",
+          "reviewCard": {
+            "maltese": "pajjiż",
+            "english": "country",
+            "example": "Dan huwa pajjiż żgħir."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pajjiż"
+          ]
+        },
+        {
+          "id": "b1-colours-malta-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-malta"
+          ],
+          "prompt": "True or false: “Malta” means “Germany” in this chapter.",
+          "answer": false,
+          "explanation": "Malta means “Malta”.",
+          "reviewCard": {
+            "maltese": "Malta",
+            "english": "Malta"
+          }
+        },
+        {
+          "id": "b1-colours-malta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-malta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Malta.)",
+          "answer": "Malta",
+          "explanation": "The complete sentence is “Nitkellmu dwar Malta.”",
+          "reviewCard": {
+            "maltese": "Malta",
+            "english": "Malta",
+            "example": "Nitkellmu dwar Malta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Malta"
+          ]
+        },
+        {
+          "id": "b1-colours-italja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-italja"
+          ],
+          "prompt": "What is the lesson meaning of “Italja”?",
+          "choices": [
+            "Spain",
+            "France",
+            "Italy"
+          ],
+          "answer": "Italy",
+          "explanation": "Italja means “Italy” in this chapter.",
+          "reviewCard": {
+            "maltese": "Italja",
+            "english": "Italy"
+          }
+        },
+        {
+          "id": "b1-colours-italja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-italja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Italy.)",
+          "answer": "Italja",
+          "explanation": "The complete sentence is “Nitkellmu dwar Italja.”",
+          "reviewCard": {
+            "maltese": "Italja",
+            "english": "Italy",
+            "example": "Nitkellmu dwar Italja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Italja"
+          ]
+        },
+        {
+          "id": "b1-colours-ingilterra-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-ingilterra"
+          ],
+          "prompt": "True or false: “Ingilterra” means “France” in this chapter.",
+          "answer": false,
+          "explanation": "Ingilterra means “England”.",
+          "reviewCard": {
+            "maltese": "Ingilterra",
+            "english": "England"
+          }
+        },
+        {
+          "id": "b1-colours-ingilterra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-ingilterra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about England.)",
+          "answer": "Ingilterra",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ingilterra.”",
+          "reviewCard": {
+            "maltese": "Ingilterra",
+            "english": "England",
+            "example": "Nitkellmu dwar Ingilterra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ingilterra"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-strixxi",
+            "b1-colours-bandiera",
+            "b1-colours-pajjiz",
+            "b1-colours-malta"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "strixxi",
+              "right": "stripes"
+            },
+            {
+              "left": "bandiera",
+              "right": "flag"
+            },
+            {
+              "left": "pajjiż",
+              "right": "country"
+            },
+            {
+              "left": "Malta",
+              "right": "Malta"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "strixxi",
+            "english": "stripes"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 6",
+      "items": [
+        {
+          "id": "b1-colours-germanja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-germanja"
+          ],
+          "prompt": "What is the lesson meaning of “Ġermanja”?",
+          "choices": [
+            "Germany",
+            "Pakistan",
+            "Ukraine"
+          ],
+          "answer": "Germany",
+          "explanation": "Ġermanja means “Germany” in this chapter.",
+          "reviewCard": {
+            "maltese": "Ġermanja",
+            "english": "Germany"
+          }
+        },
+        {
+          "id": "b1-colours-germanja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-germanja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Germany.)",
+          "answer": "Ġermanja",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ġermanja.”",
+          "reviewCard": {
+            "maltese": "Ġermanja",
+            "english": "Germany",
+            "example": "Nitkellmu dwar Ġermanja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ġermanja"
+          ]
+        },
+        {
+          "id": "b1-colours-spanja-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-spanja"
+          ],
+          "prompt": "True or false: “Spanja” means “Ukraine” in this chapter.",
+          "answer": false,
+          "explanation": "Spanja means “Spain”.",
+          "reviewCard": {
+            "maltese": "Spanja",
+            "english": "Spain"
+          }
+        },
+        {
+          "id": "b1-colours-spanja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-spanja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Spain.)",
+          "answer": "Spanja",
+          "explanation": "The complete sentence is “Nitkellmu dwar Spanja.”",
+          "reviewCard": {
+            "maltese": "Spanja",
+            "english": "Spain",
+            "example": "Nitkellmu dwar Spanja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Spanja"
+          ]
+        },
+        {
+          "id": "b1-colours-franza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-franza"
+          ],
+          "prompt": "What is the lesson meaning of “Franza”?",
+          "choices": [
+            "Portugal",
+            "France",
+            "Turkey"
+          ],
+          "answer": "France",
+          "explanation": "Franza means “France” in this chapter.",
+          "reviewCard": {
+            "maltese": "Franza",
+            "english": "France"
+          }
+        },
+        {
+          "id": "b1-colours-franza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-franza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about France.)",
+          "answer": "Franza",
+          "explanation": "The complete sentence is “Nitkellmu dwar Franza.”",
+          "reviewCard": {
+            "maltese": "Franza",
+            "english": "France",
+            "example": "Nitkellmu dwar Franza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Franza"
+          ]
+        },
+        {
+          "id": "b1-colours-pakistan-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-pakistan"
+          ],
+          "prompt": "True or false: “Pakistan” means “Portugal” in this chapter.",
+          "answer": false,
+          "explanation": "Pakistan means “Pakistan”.",
+          "reviewCard": {
+            "maltese": "Pakistan",
+            "english": "Pakistan"
+          }
+        },
+        {
+          "id": "b1-colours-pakistan-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-pakistan"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Pakistan.)",
+          "answer": "Pakistan",
+          "explanation": "The complete sentence is “Nitkellmu dwar Pakistan.”",
+          "reviewCard": {
+            "maltese": "Pakistan",
+            "english": "Pakistan",
+            "example": "Nitkellmu dwar Pakistan."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Pakistan"
+          ]
+        },
+        {
+          "id": "b1-colours-ukraina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-ukraina"
+          ],
+          "prompt": "What is the lesson meaning of “Ukraina”?",
+          "choices": [
+            "the Philippines",
+            "India",
+            "Ukraine"
+          ],
+          "answer": "Ukraine",
+          "explanation": "Ukraina means “Ukraine” in this chapter.",
+          "reviewCard": {
+            "maltese": "Ukraina",
+            "english": "Ukraine"
+          }
+        },
+        {
+          "id": "b1-colours-ukraina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-ukraina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Ukraine.)",
+          "answer": "Ukraina",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ukraina.”",
+          "reviewCard": {
+            "maltese": "Ukraina",
+            "english": "Ukraine",
+            "example": "Nitkellmu dwar Ukraina."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ukraina"
+          ]
+        },
+        {
+          "id": "b1-colours-turkija-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-turkija"
+          ],
+          "prompt": "True or false: “Turkija” means “India” in this chapter.",
+          "answer": false,
+          "explanation": "Turkija means “Turkey”.",
+          "reviewCard": {
+            "maltese": "Turkija",
+            "english": "Turkey"
+          }
+        },
+        {
+          "id": "b1-colours-turkija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-turkija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Turkey.)",
+          "answer": "Turkija",
+          "explanation": "The complete sentence is “Nitkellmu dwar Turkija.”",
+          "reviewCard": {
+            "maltese": "Turkija",
+            "english": "Turkey",
+            "example": "Nitkellmu dwar Turkija."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Turkija"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-6-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-germanja",
+            "b1-colours-spanja",
+            "b1-colours-franza",
+            "b1-colours-pakistan"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Ġermanja",
+              "right": "Germany"
+            },
+            {
+              "left": "Spanja",
+              "right": "Spain"
+            },
+            {
+              "left": "Franza",
+              "right": "France"
+            },
+            {
+              "left": "Pakistan",
+              "right": "Pakistan"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Ġermanja",
+            "english": "Germany"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 6,
+      "title": "Il-Kuluri Checkpoint 7",
+      "items": [
+        {
+          "id": "b1-colours-portugall-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-portugall"
+          ],
+          "prompt": "What is the lesson meaning of “Portugall”?",
+          "choices": [
+            "Portugal",
+            "Japan",
+            "Libya"
+          ],
+          "answer": "Portugal",
+          "explanation": "Portugall means “Portugal” in this chapter.",
+          "reviewCard": {
+            "maltese": "Portugall",
+            "english": "Portugal"
+          }
+        },
+        {
+          "id": "b1-colours-portugall-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-portugall"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Portugal.)",
+          "answer": "Portugall",
+          "explanation": "The complete sentence is “Nitkellmu dwar Portugall.”",
+          "reviewCard": {
+            "maltese": "Portugall",
+            "english": "Portugal",
+            "example": "Nitkellmu dwar Portugall."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Portugall"
+          ]
+        },
+        {
+          "id": "b1-colours-filippini-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-filippini"
+          ],
+          "prompt": "True or false: “Filippini” means “Libya” in this chapter.",
+          "answer": false,
+          "explanation": "Filippini means “the Philippines”.",
+          "reviewCard": {
+            "maltese": "Filippini",
+            "english": "the Philippines"
+          }
+        },
+        {
+          "id": "b1-colours-filippini-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-filippini"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about the Philippines.)",
+          "answer": "Filippini",
+          "explanation": "The complete sentence is “Nitkellmu dwar Filippini.”",
+          "reviewCard": {
+            "maltese": "Filippini",
+            "english": "the Philippines",
+            "example": "Nitkellmu dwar Filippini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Filippini"
+          ]
+        },
+        {
+          "id": "b1-colours-indja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-indja"
+          ],
+          "prompt": "What is the lesson meaning of “Indja”?",
+          "choices": [
+            "China",
+            "India",
+            "Australia"
+          ],
+          "answer": "India",
+          "explanation": "Indja means “India” in this chapter.",
+          "reviewCard": {
+            "maltese": "Indja",
+            "english": "India"
+          }
+        },
+        {
+          "id": "b1-colours-indja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-indja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about India.)",
+          "answer": "Indja",
+          "explanation": "The complete sentence is “Nitkellmu dwar Indja.”",
+          "reviewCard": {
+            "maltese": "Indja",
+            "english": "India",
+            "example": "Nitkellmu dwar Indja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Indja"
+          ]
+        },
+        {
+          "id": "b1-colours-gappun-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-gappun"
+          ],
+          "prompt": "True or false: “Ġappun” means “China” in this chapter.",
+          "answer": false,
+          "explanation": "Ġappun means “Japan”.",
+          "reviewCard": {
+            "maltese": "Ġappun",
+            "english": "Japan"
+          }
+        },
+        {
+          "id": "b1-colours-gappun-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-gappun"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Japan.)",
+          "answer": "Ġappun",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ġappun.”",
+          "reviewCard": {
+            "maltese": "Ġappun",
+            "english": "Japan",
+            "example": "Nitkellmu dwar Ġappun."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ġappun"
+          ]
+        },
+        {
+          "id": "b1-colours-libja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-libja"
+          ],
+          "prompt": "What is the lesson meaning of “Libja”?",
+          "choices": [
+            "white",
+            "white (feminine)",
+            "Libya"
+          ],
+          "answer": "Libya",
+          "explanation": "Libja means “Libya” in this chapter.",
+          "reviewCard": {
+            "maltese": "Libja",
+            "english": "Libya"
+          }
+        },
+        {
+          "id": "b1-colours-libja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-libja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Libya.)",
+          "answer": "Libja",
+          "explanation": "The complete sentence is “Nitkellmu dwar Libja.”",
+          "reviewCard": {
+            "maltese": "Libja",
+            "english": "Libya",
+            "example": "Nitkellmu dwar Libja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Libja"
+          ]
+        },
+        {
+          "id": "b1-colours-awstralja-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-awstralja"
+          ],
+          "prompt": "True or false: “Awstralja” means “white (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "Awstralja means “Australia”.",
+          "reviewCard": {
+            "maltese": "Awstralja",
+            "english": "Australia"
+          }
+        },
+        {
+          "id": "b1-colours-awstralja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-awstralja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about Australia.)",
+          "answer": "Awstralja",
+          "explanation": "The complete sentence is “Nitkellmu dwar Awstralja.”",
+          "reviewCard": {
+            "maltese": "Awstralja",
+            "english": "Australia",
+            "example": "Nitkellmu dwar Awstralja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Awstralja"
+          ]
+        },
+        {
+          "id": "b1-colours-checkpoint-7-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-portugall",
+            "b1-colours-filippini",
+            "b1-colours-indja",
+            "b1-colours-gappun"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Portugall",
+              "right": "Portugal"
+            },
+            {
+              "left": "Filippini",
+              "right": "the Philippines"
+            },
+            {
+              "left": "Indja",
+              "right": "India"
+            },
+            {
+              "left": "Ġappun",
+              "right": "Japan"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Portugall",
+            "english": "Portugal"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-colours",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-colours-checkpoint-8",
+      "kind": "checkpoint",
+      "sequence": 8,
+      "targetCount": 1,
+      "title": "Il-Kuluri Checkpoint 8",
+      "items": [
+        {
+          "id": "b1-colours-cina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-cina"
+          ],
+          "prompt": "What is the lesson meaning of “Ċina”?",
+          "choices": [
+            "China",
+            "red",
+            "red (feminine)"
+          ],
+          "answer": "China",
+          "explanation": "Ċina means “China” in this chapter.",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China"
+          }
+        },
+        {
+          "id": "b1-colours-cina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-cina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about China.)",
+          "answer": "Ċina",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ċina.”",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China",
+            "example": "Nitkellmu dwar Ċina."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ċina"
+          ]
+        }
+      ]
+    }
+  ]
+}

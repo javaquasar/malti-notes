@@ -1,11 +1,8 @@
 (() => {
   const COURSE_URL = "./assets/data/course_path.json";
-  const INVENTORY_URL = "./assets/data/book_coverage_inventory.json";
-  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
-  const TARGET_ASSESSMENTS_URL = "./assets/data/course_target_assessments.json";
-  const SUPPLEMENTAL_CONTENT_URL = "./assets/data/course_supplemental_content.json";
-  const SOURCE_PROVENANCE_URL = "./assets/data/course_source_provenance.json";
+  const CHAPTER_PAYLOAD_ROOT = "./assets/data/course/chapters";
   const TARGET_PROGRESS_KEY = "malti_course_target_progress_v1";
+  let targetAssessmentsUrl = "";
 
   const loadJson = async (url) => {
     const response = await fetch(url);
@@ -139,7 +136,7 @@
   const exerciseContainer = (setId) => {
     const container = document.createElement("div");
     container.dataset.exerciseSet = setId;
-    container.dataset.exerciseSrc = TARGET_ASSESSMENTS_URL;
+    container.dataset.exerciseSrc = targetAssessmentsUrl;
     container.dataset.autoSaveMissed = "true";
     return container;
   };
@@ -296,16 +293,18 @@
   const initialize = async () => {
     const chapterId = new URLSearchParams(window.location.search).get("chapter");
     if (!chapterId) return;
-    const [course, inventory, bindings, targetAssessments, supplementalContent, sourceProvenance] = await Promise.all([
+    if (!/^[a-z0-9-]+$/.test(chapterId)) throw new Error(`Invalid course chapter: ${chapterId}`);
+    targetAssessmentsUrl = `${CHAPTER_PAYLOAD_ROOT}/${chapterId}.json`;
+    const [course, payload] = await Promise.all([
       loadJson(COURSE_URL),
-      loadJson(INVENTORY_URL),
-      loadJson(BINDINGS_URL),
-      loadJson(TARGET_ASSESSMENTS_URL),
-      loadJson(SUPPLEMENTAL_CONTENT_URL),
-      loadJson(SOURCE_PROVENANCE_URL)
+      loadJson(targetAssessmentsUrl)
     ]);
+    const bindings = { targets: payload.targets || [] };
+    const targetAssessments = { sets: payload.assessmentSets || [] };
+    const supplementalContent = { chapters: [{ id: chapterId, items: payload.supplementalItems || [] }] };
+    const sourceProvenance = { chapters: [payload.sourceChapter] };
     const match = findChapter(course, chapterId);
-    const inventoryChapter = inventory.chapters.find((chapter) => chapter.courseChapterId === chapterId);
+    const inventoryChapter = payload.inventoryChapter;
     if (!match || !inventoryChapter) throw new Error(`Unknown course chapter: ${chapterId}`);
 
     const chapterTargets = bindings.targets.filter((target) => target.chapterId === chapterId && target.role === "core");

@@ -190,6 +190,22 @@ async function main() {
       assert(await page.locator('[data-progress-level="b1"]:visible').count() === 0, "B1 rows remain visible after selecting B2.");
     });
 
+    await runTest(context, "course runtime loads manifest and one chapter payload", async (page) => {
+      const requested = [];
+      page.on("request", (request) => requested.push(new URL(request.url()).pathname));
+      await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
+      await page.locator("[data-course-chapter-title]").getByText("L-Annimali").waitFor();
+      assert(requested.some((url) => url.endsWith("/assets/data/course/chapters/b1-animals.json")), "Chapter payload was not requested.");
+      ["course_target_bindings.json", "course_target_assessments.json", "course_supplemental_content.json", "course_source_provenance.json"].forEach((file) => {
+        assert(!requested.some((url) => url.endsWith(`/assets/data/${file}`)), `${file} was loaded by the chapter runtime.`);
+      });
+
+      requested.length = 0;
+      await page.goto(`${baseUrl}/course_progress.html`, { waitUntil: "networkidle" });
+      assert(requested.some((url) => url.endsWith("/assets/data/course/manifest.json")), "Progress screen did not request the course manifest.");
+      assert(!requested.some((url) => url.includes("/assets/data/course/chapters/")), "Progress screen eagerly loaded chapter payloads.");
+    });
+
     await runTest(context, "guided chapter route reports book, mapping, and assessment scope", async (page) => {
       await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
       assert((await page.locator("[data-course-chapter-title]").textContent()).trim() === "L-Annimali", "Animals chapter title is missing.");
@@ -540,6 +556,20 @@ async function main() {
       assert(result.name === "Maltese Study Site", "Web manifest was not loaded.");
       assert(result.startUrl === "./index.html", "Web manifest has an unexpected start URL.");
       assert(result.hasActiveWorker, "Service worker did not become active.");
+    });
+
+    await runTest(context, "visited course chapter remains available offline", async (page) => {
+      await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
+      await page.locator("[data-course-chapter-title]").getByText("L-Annimali").waitFor();
+      await page.evaluate(() => navigator.serviceWorker.ready);
+      await page.context().setOffline(true);
+      try {
+        await page.reload({ waitUntil: "domcontentloaded" });
+        await page.locator("[data-course-chapter-title]").getByText("L-Annimali").waitFor();
+        assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "27 / 27", "Offline chapter payload was incomplete.");
+      } finally {
+        await page.context().setOffline(false);
+      }
     });
 
     await context.close();

@@ -1,0 +1,2894 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-hobbies",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 5,
+    "title": "Xi Nħobb Nagħmel"
+  },
+  "inventoryChapter": {
+    "id": "b2.5",
+    "courseChapterId": "b2-hobbies",
+    "book": "B2",
+    "number": 5,
+    "title": "Xi Nħobb Nagħmel",
+    "targets": [
+      "libes",
+      "ilbes",
+      "ilbsu",
+      "għamel",
+      "agħmel",
+      "agħmlu",
+      "uża",
+      "użaw",
+      "għum",
+      "imxi",
+      "orqod",
+      "qum",
+      "ilgħab",
+      "ara",
+      "oħroġ",
+      "se nilbes",
+      "se mmur",
+      "se norqdu",
+      "se tilgħab",
+      "se naraw",
+      "se jgħumu",
+      "se noħorġu",
+      "se niekol",
+      "se nagħmel"
+    ],
+    "baselineMissing": [
+      "użaw",
+      "qum",
+      "ilgħab",
+      "se norqdu",
+      "se tilgħab",
+      "se naraw",
+      "se jgħumu",
+      "se noħorġu",
+      "se nagħmel"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-hobbies",
+    "book": "B2",
+    "chapterNumber": 5,
+    "chapterTitle": "Xi Nħobb Nagħmel",
+    "pageStart": 55,
+    "pageEnd": 73
+  },
+  "targets": [
+    {
+      "id": "b2-hobbies-libes",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "libes",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-libes"
+      },
+      "assessmentIds": [
+        "b2-hobbies-libes-diagnostic-recognition",
+        "b2-hobbies-libes-recognition",
+        "b2-hobbies-libes-production",
+        "b2-hobbies-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ilbes",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ilbes",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-libes"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ilbes-recognition-true-false",
+        "b2-hobbies-ilbes-production",
+        "b2-hobbies-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ilbsu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ilbsu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-libes"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ilbsu-diagnostic-recognition-true-false",
+        "b2-hobbies-ilbsu-recognition",
+        "b2-hobbies-ilbsu-production",
+        "b2-hobbies-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ghamel",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "għamel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-ghamel"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ghamel-recognition-true-false",
+        "b2-hobbies-ghamel-production",
+        "b2-hobbies-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-aghmel",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "agħmel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-ghamel"
+      },
+      "assessmentIds": [
+        "hobby-do-recognition",
+        "hobby-do-production",
+        "b2-hobbies-aghmel-recognition",
+        "b2-hobbies-aghmel-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-aghmlu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "agħmlu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-common-lesson25-ghamel"
+      },
+      "assessmentIds": [
+        "b2-hobbies-aghmlu-diagnostic-recognition",
+        "b2-hobbies-aghmlu-recognition-true-false",
+        "b2-hobbies-aghmlu-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-uza",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "uża",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-uza"
+      },
+      "assessmentIds": [
+        "b2-hobbies-uza-recognition",
+        "b2-hobbies-uza-production",
+        "b2-hobbies-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-uzaw",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "użaw",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-uzaw"
+      },
+      "assessmentIds": [
+        "b2-hobbies-uzaw-diagnostic-recognition-true-false",
+        "b2-hobbies-uzaw-recognition-true-false",
+        "b2-hobbies-uzaw-production",
+        "b2-hobbies-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ghum",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "għum",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-gh-bidu-gham"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ghum-recognition",
+        "b2-hobbies-ghum-production",
+        "b2-hobbies-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-imxi",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "imxi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-imxi"
+      },
+      "assessmentIds": [
+        "b2-hobbies-imxi-recognition-true-false",
+        "b2-hobbies-imxi-production",
+        "b2-hobbies-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-orqod",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "orqod",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-raqad"
+      },
+      "assessmentIds": [
+        "b2-hobbies-orqod-diagnostic-recognition",
+        "b2-hobbies-orqod-recognition",
+        "b2-hobbies-orqod-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-qum",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "qum",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-qum"
+      },
+      "assessmentIds": [
+        "b2-hobbies-qum-recognition-true-false",
+        "b2-hobbies-qum-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ilghab",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ilgħab",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-ilghab"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ilghab-diagnostic-recognition-true-false",
+        "b2-hobbies-ilghab-recognition",
+        "b2-hobbies-ilghab-production",
+        "b2-hobbies-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ara",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "ara",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "imperative_verbs.html",
+        "file": "assets/data/imperative_verbs.json",
+        "itemId": "imperative-fil-mamma-ra"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ara-recognition-true-false",
+        "b2-hobbies-ara-production",
+        "b2-hobbies-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-ohrog",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "verb-form",
+      "sourceRequirement": "oħroġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-ohrog"
+      },
+      "assessmentIds": [
+        "b2-hobbies-ohrog-recognition",
+        "b2-hobbies-ohrog-production",
+        "b2-hobbies-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-nilbes",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se nilbes",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-nilbes"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-nilbes-diagnostic-recognition",
+        "b2-hobbies-se-nilbes-recognition-true-false",
+        "b2-hobbies-se-nilbes-production",
+        "b2-hobbies-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-mmur",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se mmur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-mmur"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-mmur-recognition",
+        "b2-hobbies-se-mmur-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-norqdu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se norqdu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-norqdu"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-norqdu-diagnostic-recognition-true-false",
+        "b2-hobbies-se-norqdu-recognition-true-false",
+        "b2-hobbies-se-norqdu-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-tilghab",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se tilgħab",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-tilghab"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-tilghab-recognition",
+        "b2-hobbies-se-tilghab-production",
+        "b2-hobbies-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-naraw",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se naraw",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-naraw"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-naraw-recognition-true-false",
+        "b2-hobbies-se-naraw-production",
+        "b2-hobbies-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-jghumu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se jgħumu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-jghumu"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-jghumu-diagnostic-recognition",
+        "b2-hobbies-se-jghumu-recognition",
+        "b2-hobbies-se-jghumu-production",
+        "b2-hobbies-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-nohorgu",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se noħorġu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-nohorgu"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-nohorgu-recognition-true-false",
+        "b2-hobbies-se-nohorgu-production",
+        "b2-hobbies-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-niekol",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se niekol",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-niekol"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-niekol-recognition",
+        "b2-hobbies-se-niekol-production"
+      ]
+    },
+    {
+      "id": "b2-hobbies-se-naghmel",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "phrase",
+      "sourceRequirement": "se nagħmel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-hobbies-se-naghmel"
+      },
+      "assessmentIds": [
+        "b2-hobbies-se-naghmel-diagnostic-recognition-true-false",
+        "b2-hobbies-se-naghmel-recognition-true-false",
+        "b2-hobbies-se-naghmel-production"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-hobbies-libes": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ilbes": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ilbsu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ghamel": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-aghmel": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-aghmlu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-uza": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-uzaw": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ghum": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-imxi": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-hobbies-orqod": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-qum": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ilghab": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ara": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-ohrog": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-nilbes": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-mmur": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-norqdu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-tilghab": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 66,
+      "pages": [
+        66,
+        71
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-naraw": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-jghumu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-nohorgu": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 67,
+      "pages": [
+        67
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-niekol": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 68,
+      "pages": [
+        68
+      ],
+      "match": "text-exact"
+    },
+    "b2-hobbies-se-naghmel": {
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "chapterNumber": 5,
+      "chapterTitle": "Xi Nħobb Nagħmel",
+      "pageRange": [
+        55,
+        73
+      ],
+      "primaryPage": 65,
+      "pages": [
+        65,
+        68,
+        73
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-hobbies-libes",
+      "maltese": "libes",
+      "english": "wore / got dressed",
+      "example": "Ilbieraħ libes ġakketta.",
+      "exampleTranslation": "Yesterday he wore a jacket.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 55,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 55",
+      "notes": [
+        "Example: Ilbieraħ libes ġakketta.",
+        "Translation: Yesterday he wore a jacket.",
+        "Source: B2, Chapter 5, p. 55"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ilbes",
+      "maltese": "ilbes",
+      "english": "wear / get dressed (singular command)",
+      "example": "Ilbes ġakketta.",
+      "exampleTranslation": "Wear a jacket.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 55,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 55",
+      "notes": [
+        "Example: Ilbes ġakketta.",
+        "Translation: Wear a jacket.",
+        "Source: B2, Chapter 5, p. 55"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ilbsu",
+      "maltese": "ilbsu",
+      "english": "wear / get dressed (plural command)",
+      "example": "Ilbsu l-ġkieket.",
+      "exampleTranslation": "Wear the jackets, everyone.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 55,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 55",
+      "notes": [
+        "Example: Ilbsu l-ġkieket.",
+        "Translation: Wear the jackets, everyone.",
+        "Source: B2, Chapter 5, p. 55"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ghamel",
+      "maltese": "għamel",
+      "english": "did / made",
+      "example": "Ilbieraħ għamel l-eżerċizzju.",
+      "exampleTranslation": "Yesterday he did the exercise.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 56,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 56",
+      "notes": [
+        "Example: Ilbieraħ għamel l-eżerċizzju.",
+        "Translation: Yesterday he did the exercise.",
+        "Source: B2, Chapter 5, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-aghmel",
+      "maltese": "agħmel",
+      "english": "do / make (singular command)",
+      "example": "Agħmel l-eżerċizzju.",
+      "exampleTranslation": "Do the exercise.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 56,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 56",
+      "notes": [
+        "Example: Agħmel l-eżerċizzju.",
+        "Translation: Do the exercise.",
+        "Source: B2, Chapter 5, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-aghmlu",
+      "maltese": "agħmlu",
+      "english": "do / make (plural command)",
+      "example": "Agħmlu l-eżerċizzju.",
+      "exampleTranslation": "Do the exercise, everyone.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 56,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 56",
+      "notes": [
+        "Example: Agħmlu l-eżerċizzju.",
+        "Translation: Do the exercise, everyone.",
+        "Source: B2, Chapter 5, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-uza",
+      "maltese": "uża",
+      "english": "use (singular command)",
+      "example": "Uża l-kalkulatur.",
+      "exampleTranslation": "Use the calculator.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 57,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 57",
+      "notes": [
+        "Example: Uża l-kalkulatur.",
+        "Translation: Use the calculator.",
+        "Source: B2, Chapter 5, p. 57"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-uzaw",
+      "maltese": "użaw",
+      "english": "use (plural command)",
+      "example": "Użaw il-kalkulatur.",
+      "exampleTranslation": "Use the calculator, everyone.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 57,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 57",
+      "notes": [
+        "Example: Użaw il-kalkulatur.",
+        "Translation: Use the calculator, everyone.",
+        "Source: B2, Chapter 5, p. 57"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ghum",
+      "maltese": "għum",
+      "english": "swim (singular command)",
+      "example": "Għum fil-pixxina.",
+      "exampleTranslation": "Swim in the pool.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 64,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 64",
+      "notes": [
+        "Example: Għum fil-pixxina.",
+        "Translation: Swim in the pool.",
+        "Source: B2, Chapter 5, p. 64"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-imxi",
+      "maltese": "imxi",
+      "english": "walk (singular command)",
+      "example": "Imxi sal-pjazza.",
+      "exampleTranslation": "Walk to the square.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": null,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 5, pp. 55-73",
+      "notes": [
+        "Example: Imxi sal-pjazza.",
+        "Translation: Walk to the square.",
+        "Source: B2, Chapter 5, pp. 55-73"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-orqod",
+      "maltese": "orqod",
+      "english": "sleep (singular command)",
+      "example": "Orqod kmieni.",
+      "exampleTranslation": "Sleep early.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 63,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 63",
+      "notes": [
+        "Example: Orqod kmieni.",
+        "Translation: Sleep early.",
+        "Source: B2, Chapter 5, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-qum",
+      "maltese": "qum",
+      "english": "get up (singular command)",
+      "example": "Qum kmieni.",
+      "exampleTranslation": "Get up early.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 63,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 63",
+      "notes": [
+        "Example: Qum kmieni.",
+        "Translation: Get up early.",
+        "Source: B2, Chapter 5, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ilghab",
+      "maltese": "ilgħab",
+      "english": "play (singular command)",
+      "example": "Ilgħab it-tenis.",
+      "exampleTranslation": "Play tennis.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 63,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 63",
+      "notes": [
+        "Example: Ilgħab it-tenis.",
+        "Translation: Play tennis.",
+        "Source: B2, Chapter 5, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ara",
+      "maltese": "ara",
+      "english": "see / look (singular command)",
+      "example": "Ara dan il-film.",
+      "exampleTranslation": "Watch this film.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 64,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 64",
+      "notes": [
+        "Example: Ara dan il-film.",
+        "Translation: Watch this film.",
+        "Source: B2, Chapter 5, p. 64"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-ohrog",
+      "maltese": "oħroġ",
+      "english": "go out (singular command)",
+      "example": "Oħroġ mal-ħbieb.",
+      "exampleTranslation": "Go out with friends.",
+      "examplePattern": "hobby-verb",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 64,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 64",
+      "notes": [
+        "Example: Oħroġ mal-ħbieb.",
+        "Translation: Go out with friends.",
+        "Source: B2, Chapter 5, p. 64"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-nilbes",
+      "maltese": "se nilbes",
+      "english": "I will wear",
+      "example": "Se nilbes għada.",
+      "exampleTranslation": "I will wear tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 65",
+      "notes": [
+        "Example: Se nilbes għada.",
+        "Translation: I will wear tomorrow.",
+        "Source: B2, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-mmur",
+      "maltese": "se mmur",
+      "english": "I will go",
+      "example": "Se mmur għada.",
+      "exampleTranslation": "I will go tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 65",
+      "notes": [
+        "Example: Se mmur għada.",
+        "Translation: I will go tomorrow.",
+        "Source: B2, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-norqdu",
+      "maltese": "se norqdu",
+      "english": "we will sleep",
+      "example": "Se norqdu għada.",
+      "exampleTranslation": "We will sleep tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 66",
+      "notes": [
+        "Example: Se norqdu għada.",
+        "Translation: We will sleep tomorrow.",
+        "Source: B2, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-tilghab",
+      "maltese": "se tilgħab",
+      "english": "you will play / she will play",
+      "example": "Se tilgħab għada.",
+      "exampleTranslation": "You will play tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 66,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 66",
+      "notes": [
+        "Example: Se tilgħab għada.",
+        "Translation: You will play tomorrow.",
+        "Source: B2, Chapter 5, p. 66"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-naraw",
+      "maltese": "se naraw",
+      "english": "we will see / watch",
+      "example": "Se naraw għada.",
+      "exampleTranslation": "We will see tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 67,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 67",
+      "notes": [
+        "Example: Se naraw għada.",
+        "Translation: We will see tomorrow.",
+        "Source: B2, Chapter 5, p. 67"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-jghumu",
+      "maltese": "se jgħumu",
+      "english": "they will swim",
+      "example": "Se jgħumu għada.",
+      "exampleTranslation": "They will swim tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 67,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 67",
+      "notes": [
+        "Example: Se jgħumu għada.",
+        "Translation: They will swim tomorrow.",
+        "Source: B2, Chapter 5, p. 67"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-nohorgu",
+      "maltese": "se noħorġu",
+      "english": "we will go out",
+      "example": "Se noħorġu għada.",
+      "exampleTranslation": "We will go out tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 67,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 67",
+      "notes": [
+        "Example: Se noħorġu għada.",
+        "Translation: We will go out tomorrow.",
+        "Source: B2, Chapter 5, p. 67"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-niekol",
+      "maltese": "se niekol",
+      "english": "I will eat",
+      "example": "Se niekol għada.",
+      "exampleTranslation": "I will eat tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 68,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 68",
+      "notes": [
+        "Example: Se niekol għada.",
+        "Translation: I will eat tomorrow.",
+        "Source: B2, Chapter 5, p. 68"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-hobbies-se-naghmel",
+      "maltese": "se nagħmel",
+      "english": "I will do",
+      "example": "Se nagħmel għada.",
+      "exampleTranslation": "I will do tomorrow.",
+      "examplePattern": "future-plan",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 5,
+        "page": 65,
+        "pageRange": [
+          55,
+          73
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 5, p. 65",
+      "notes": [
+        "Example: Se nagħmel għada.",
+        "Translation: I will do tomorrow.",
+        "Source: B2, Chapter 5, p. 65"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-diagnostic",
+      "kind": "diagnostic",
+      "title": "Xi Nħobb Nagħmel Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-hobbies-libes-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-libes"
+          ],
+          "prompt": "What is the lesson meaning of “libes”?",
+          "choices": [
+            "wore / got dressed",
+            "wear / get dressed (singular command)",
+            "wear / get dressed (plural command)"
+          ],
+          "answer": "wore / got dressed",
+          "explanation": "libes means “wore / got dressed” in this chapter.",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "wore / got dressed"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbsu-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "True or false: “ilbsu” means “did / made” in this chapter.",
+          "answer": false,
+          "explanation": "ilbsu means “wear / get dressed (plural command)”.",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "wear / get dressed (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmlu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-aghmlu"
+          ],
+          "prompt": "What is the lesson meaning of “agħmlu”?",
+          "choices": [
+            "do / make (singular command)",
+            "do / make (plural command)",
+            "did / made"
+          ],
+          "answer": "do / make (plural command)",
+          "explanation": "agħmlu means “do / make (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħmlu",
+            "english": "do / make (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-uzaw-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-uzaw"
+          ],
+          "prompt": "True or false: “użaw” means “do / make (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "użaw means “use (plural command)”.",
+          "reviewCard": {
+            "maltese": "użaw",
+            "english": "use (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-orqod-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-orqod"
+          ],
+          "prompt": "What is the lesson meaning of “orqod”?",
+          "choices": [
+            "do / make (plural command)",
+            "use (singular command)",
+            "sleep (singular command)"
+          ],
+          "answer": "sleep (singular command)",
+          "explanation": "orqod means “sleep (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "orqod",
+            "english": "sleep (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilghab-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilghab"
+          ],
+          "prompt": "True or false: “ilgħab” means “use (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "ilgħab means “play (singular command)”.",
+          "reviewCard": {
+            "maltese": "ilgħab",
+            "english": "play (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-nilbes-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-nilbes"
+          ],
+          "prompt": "What is the lesson meaning of “se nilbes”?",
+          "choices": [
+            "I will wear",
+            "use (plural command)",
+            "swim (singular command)"
+          ],
+          "answer": "I will wear",
+          "explanation": "se nilbes means “I will wear” in this chapter.",
+          "reviewCard": {
+            "maltese": "se nilbes",
+            "english": "I will wear"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-norqdu-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-norqdu"
+          ],
+          "prompt": "True or false: “se norqdu” means “swim (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "se norqdu means “we will sleep”.",
+          "reviewCard": {
+            "maltese": "se norqdu",
+            "english": "we will sleep"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-jghumu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-jghumu"
+          ],
+          "prompt": "What is the lesson meaning of “se jgħumu”?",
+          "choices": [
+            "sleep (singular command)",
+            "they will swim",
+            "walk (singular command)"
+          ],
+          "answer": "they will swim",
+          "explanation": "se jgħumu means “they will swim” in this chapter.",
+          "reviewCard": {
+            "maltese": "se jgħumu",
+            "english": "they will swim"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-naghmel-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-naghmel"
+          ],
+          "prompt": "True or false: “se nagħmel” means “sleep (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "se nagħmel means “I will do”.",
+          "reviewCard": {
+            "maltese": "se nagħmel",
+            "english": "I will do"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-hobbies-libes-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-libes"
+          ],
+          "prompt": "What is the lesson meaning of “libes”?",
+          "choices": [
+            "wore / got dressed",
+            "wear / get dressed (singular command)",
+            "wear / get dressed (plural command)"
+          ],
+          "answer": "wore / got dressed",
+          "explanation": "libes means “wore / got dressed” in this chapter.",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "wore / got dressed"
+          }
+        },
+        {
+          "id": "b2-hobbies-libes-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-libes"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ilbieraħ _____ ġakketta.” (Yesterday he wore a jacket.)",
+          "answer": "libes",
+          "explanation": "The complete sentence is “Ilbieraħ libes ġakketta.”",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "wore / got dressed",
+            "example": "Ilbieraħ libes ġakketta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "libes"
+          ]
+        },
+        {
+          "id": "b2-hobbies-ilbes-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbes"
+          ],
+          "prompt": "True or false: “ilbes” means “wear / get dressed (plural command)” in this chapter.",
+          "answer": false,
+          "explanation": "ilbes means “wear / get dressed (singular command)”.",
+          "reviewCard": {
+            "maltese": "ilbes",
+            "english": "wear / get dressed (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbes-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ilbes"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ ġakketta.” (Wear a jacket.)",
+          "answer": "ilbes",
+          "explanation": "The complete sentence is “Ilbes ġakketta.”",
+          "reviewCard": {
+            "maltese": "ilbes",
+            "english": "wear / get dressed (singular command)",
+            "example": "Ilbes ġakketta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ilbes"
+          ]
+        },
+        {
+          "id": "b2-hobbies-ilbsu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "What is the lesson meaning of “ilbsu”?",
+          "choices": [
+            "do / make (singular command)",
+            "wear / get dressed (plural command)",
+            "did / made"
+          ],
+          "answer": "wear / get dressed (plural command)",
+          "explanation": "ilbsu means “wear / get dressed (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "wear / get dressed (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilbsu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-ġkieket.” (Wear the jackets, everyone.)",
+          "answer": "ilbsu",
+          "explanation": "The complete sentence is “Ilbsu l-ġkieket.”",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "wear / get dressed (plural command)",
+            "example": "Ilbsu l-ġkieket."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ilbsu"
+          ]
+        },
+        {
+          "id": "b2-hobbies-ghamel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ghamel"
+          ],
+          "prompt": "True or false: “għamel” means “do / make (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "għamel means “did / made”.",
+          "reviewCard": {
+            "maltese": "għamel",
+            "english": "did / made"
+          }
+        },
+        {
+          "id": "b2-hobbies-ghamel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ghamel"
+          ],
+          "prompt": "Complete the Maltese sentence: “Ilbieraħ _____ l-eżerċizzju.” (Yesterday he did the exercise.)",
+          "answer": "għamel",
+          "explanation": "The complete sentence is “Ilbieraħ għamel l-eżerċizzju.”",
+          "reviewCard": {
+            "maltese": "għamel",
+            "english": "did / made",
+            "example": "Ilbieraħ għamel l-eżerċizzju."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għamel"
+          ]
+        },
+        {
+          "id": "b2-hobbies-aghmel-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-aghmel"
+          ],
+          "prompt": "What is the lesson meaning of “agħmel”?",
+          "choices": [
+            "do / make (plural command)",
+            "use (singular command)",
+            "do / make (singular command)"
+          ],
+          "answer": "do / make (singular command)",
+          "explanation": "agħmel means “do / make (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "do / make (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-aghmel"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-eżerċizzju.” (Do the exercise.)",
+          "answer": "agħmel",
+          "explanation": "The complete sentence is “Agħmel l-eżerċizzju.”",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "do / make (singular command)",
+            "example": "Agħmel l-eżerċizzju."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħmel"
+          ]
+        },
+        {
+          "id": "b2-hobbies-aghmlu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-aghmlu"
+          ],
+          "prompt": "True or false: “agħmlu” means “use (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "agħmlu means “do / make (plural command)”.",
+          "reviewCard": {
+            "maltese": "agħmlu",
+            "english": "do / make (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-aghmlu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-aghmlu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-eżerċizzju.” (Do the exercise, everyone.)",
+          "answer": "agħmlu",
+          "explanation": "The complete sentence is “Agħmlu l-eżerċizzju.”",
+          "reviewCard": {
+            "maltese": "agħmlu",
+            "english": "do / make (plural command)",
+            "example": "Agħmlu l-eżerċizzju."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "agħmlu"
+          ]
+        },
+        {
+          "id": "b2-hobbies-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-libes",
+            "b2-hobbies-ilbes",
+            "b2-hobbies-ilbsu",
+            "b2-hobbies-ghamel"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "libes",
+              "right": "wore / got dressed"
+            },
+            {
+              "left": "ilbes",
+              "right": "wear / get dressed (singular command)"
+            },
+            {
+              "left": "ilbsu",
+              "right": "wear / get dressed (plural command)"
+            },
+            {
+              "left": "għamel",
+              "right": "did / made"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "libes",
+            "english": "wore / got dressed"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-hobbies-uza-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-uza"
+          ],
+          "prompt": "What is the lesson meaning of “uża”?",
+          "choices": [
+            "use (singular command)",
+            "use (plural command)",
+            "swim (singular command)"
+          ],
+          "answer": "use (singular command)",
+          "explanation": "uża means “use (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "uża",
+            "english": "use (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-uza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-uza"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ l-kalkulatur.” (Use the calculator.)",
+          "answer": "uża",
+          "explanation": "The complete sentence is “Uża l-kalkulatur.”",
+          "reviewCard": {
+            "maltese": "uża",
+            "english": "use (singular command)",
+            "example": "Uża l-kalkulatur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "uża"
+          ]
+        },
+        {
+          "id": "b2-hobbies-uzaw-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-uzaw"
+          ],
+          "prompt": "True or false: “użaw” means “swim (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "użaw means “use (plural command)”.",
+          "reviewCard": {
+            "maltese": "użaw",
+            "english": "use (plural command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-uzaw-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-uzaw"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-kalkulatur.” (Use the calculator, everyone.)",
+          "answer": "użaw",
+          "explanation": "The complete sentence is “Użaw il-kalkulatur.”",
+          "reviewCard": {
+            "maltese": "użaw",
+            "english": "use (plural command)",
+            "example": "Użaw il-kalkulatur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "użaw"
+          ]
+        },
+        {
+          "id": "b2-hobbies-ghum-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ghum"
+          ],
+          "prompt": "What is the lesson meaning of “għum”?",
+          "choices": [
+            "sleep (singular command)",
+            "swim (singular command)",
+            "walk (singular command)"
+          ],
+          "answer": "swim (singular command)",
+          "explanation": "għum means “swim (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "għum",
+            "english": "swim (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ghum-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ghum"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ fil-pixxina.” (Swim in the pool.)",
+          "answer": "għum",
+          "explanation": "The complete sentence is “Għum fil-pixxina.”",
+          "reviewCard": {
+            "maltese": "għum",
+            "english": "swim (singular command)",
+            "example": "Għum fil-pixxina."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għum"
+          ]
+        },
+        {
+          "id": "b2-hobbies-imxi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-imxi"
+          ],
+          "prompt": "True or false: “imxi” means “sleep (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "imxi means “walk (singular command)”.",
+          "reviewCard": {
+            "maltese": "imxi",
+            "english": "walk (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-imxi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-imxi"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ sal-pjazza.” (Walk to the square.)",
+          "answer": "imxi",
+          "explanation": "The complete sentence is “Imxi sal-pjazza.”",
+          "reviewCard": {
+            "maltese": "imxi",
+            "english": "walk (singular command)",
+            "example": "Imxi sal-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "imxi"
+          ]
+        },
+        {
+          "id": "b2-hobbies-orqod-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-orqod"
+          ],
+          "prompt": "What is the lesson meaning of “orqod”?",
+          "choices": [
+            "get up (singular command)",
+            "play (singular command)",
+            "sleep (singular command)"
+          ],
+          "answer": "sleep (singular command)",
+          "explanation": "orqod means “sleep (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "orqod",
+            "english": "sleep (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-orqod-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-orqod"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ kmieni.” (Sleep early.)",
+          "answer": "orqod",
+          "explanation": "The complete sentence is “Orqod kmieni.”",
+          "reviewCard": {
+            "maltese": "orqod",
+            "english": "sleep (singular command)",
+            "example": "Orqod kmieni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "orqod"
+          ]
+        },
+        {
+          "id": "b2-hobbies-qum-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-qum"
+          ],
+          "prompt": "True or false: “qum” means “play (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "qum means “get up (singular command)”.",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "get up (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-qum-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-qum"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ kmieni.” (Get up early.)",
+          "answer": "qum",
+          "explanation": "The complete sentence is “Qum kmieni.”",
+          "reviewCard": {
+            "maltese": "qum",
+            "english": "get up (singular command)",
+            "example": "Qum kmieni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qum"
+          ]
+        },
+        {
+          "id": "b2-hobbies-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-uza",
+            "b2-hobbies-uzaw",
+            "b2-hobbies-ghum",
+            "b2-hobbies-imxi"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "uża",
+              "right": "use (singular command)"
+            },
+            {
+              "left": "użaw",
+              "right": "use (plural command)"
+            },
+            {
+              "left": "għum",
+              "right": "swim (singular command)"
+            },
+            {
+              "left": "imxi",
+              "right": "walk (singular command)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "uża",
+            "english": "use (singular command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-hobbies-ilghab-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilghab"
+          ],
+          "prompt": "What is the lesson meaning of “ilgħab”?",
+          "choices": [
+            "play (singular command)",
+            "see / look (singular command)",
+            "go out (singular command)"
+          ],
+          "answer": "play (singular command)",
+          "explanation": "ilgħab means “play (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilgħab",
+            "english": "play (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ilghab-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ilghab"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ it-tenis.” (Play tennis.)",
+          "answer": "ilgħab",
+          "explanation": "The complete sentence is “Ilgħab it-tenis.”",
+          "reviewCard": {
+            "maltese": "ilgħab",
+            "english": "play (singular command)",
+            "example": "Ilgħab it-tenis."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ilgħab"
+          ]
+        },
+        {
+          "id": "b2-hobbies-ara-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ara"
+          ],
+          "prompt": "True or false: “ara” means “go out (singular command)” in this chapter.",
+          "answer": false,
+          "explanation": "ara means “see / look (singular command)”.",
+          "reviewCard": {
+            "maltese": "ara",
+            "english": "see / look (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ara-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ara"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ dan il-film.” (Watch this film.)",
+          "answer": "ara",
+          "explanation": "The complete sentence is “Ara dan il-film.”",
+          "reviewCard": {
+            "maltese": "ara",
+            "english": "see / look (singular command)",
+            "example": "Ara dan il-film."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ara"
+          ]
+        },
+        {
+          "id": "b2-hobbies-ohrog-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ohrog"
+          ],
+          "prompt": "What is the lesson meaning of “oħroġ”?",
+          "choices": [
+            "I will go",
+            "go out (singular command)",
+            "I will wear"
+          ],
+          "answer": "go out (singular command)",
+          "explanation": "oħroġ means “go out (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "oħroġ",
+            "english": "go out (singular command)"
+          }
+        },
+        {
+          "id": "b2-hobbies-ohrog-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ohrog"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ mal-ħbieb.” (Go out with friends.)",
+          "answer": "oħroġ",
+          "explanation": "The complete sentence is “Oħroġ mal-ħbieb.”",
+          "reviewCard": {
+            "maltese": "oħroġ",
+            "english": "go out (singular command)",
+            "example": "Oħroġ mal-ħbieb."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "oħroġ"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-nilbes-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-nilbes"
+          ],
+          "prompt": "True or false: “se nilbes” means “I will go” in this chapter.",
+          "answer": false,
+          "explanation": "se nilbes means “I will wear”.",
+          "reviewCard": {
+            "maltese": "se nilbes",
+            "english": "I will wear"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-nilbes-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-nilbes"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (I will wear tomorrow.)",
+          "answer": "se nilbes",
+          "explanation": "The complete sentence is “Se nilbes għada.”",
+          "reviewCard": {
+            "maltese": "se nilbes",
+            "english": "I will wear",
+            "example": "Se nilbes għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "nilbes"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-mmur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-mmur"
+          ],
+          "prompt": "What is the lesson meaning of “se mmur”?",
+          "choices": [
+            "we will sleep",
+            "you will play / she will play",
+            "I will go"
+          ],
+          "answer": "I will go",
+          "explanation": "se mmur means “I will go” in this chapter.",
+          "reviewCard": {
+            "maltese": "se mmur",
+            "english": "I will go"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-mmur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-mmur"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (I will go tomorrow.)",
+          "answer": "se mmur",
+          "explanation": "The complete sentence is “Se mmur għada.”",
+          "reviewCard": {
+            "maltese": "se mmur",
+            "english": "I will go",
+            "example": "Se mmur għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "mmur"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-norqdu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-norqdu"
+          ],
+          "prompt": "True or false: “se norqdu” means “you will play / she will play” in this chapter.",
+          "answer": false,
+          "explanation": "se norqdu means “we will sleep”.",
+          "reviewCard": {
+            "maltese": "se norqdu",
+            "english": "we will sleep"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-norqdu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-norqdu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (We will sleep tomorrow.)",
+          "answer": "se norqdu",
+          "explanation": "The complete sentence is “Se norqdu għada.”",
+          "reviewCard": {
+            "maltese": "se norqdu",
+            "english": "we will sleep",
+            "example": "Se norqdu għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "norqdu"
+          ]
+        },
+        {
+          "id": "b2-hobbies-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilghab",
+            "b2-hobbies-ara",
+            "b2-hobbies-ohrog",
+            "b2-hobbies-se-nilbes"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ilgħab",
+              "right": "play (singular command)"
+            },
+            {
+              "left": "ara",
+              "right": "see / look (singular command)"
+            },
+            {
+              "left": "oħroġ",
+              "right": "go out (singular command)"
+            },
+            {
+              "left": "se nilbes",
+              "right": "I will wear"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ilgħab",
+            "english": "play (singular command)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-hobbies",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-hobbies-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Xi Nħobb Nagħmel Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-hobbies-se-tilghab-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-tilghab"
+          ],
+          "prompt": "What is the lesson meaning of “se tilgħab”?",
+          "choices": [
+            "you will play / she will play",
+            "we will see / watch",
+            "they will swim"
+          ],
+          "answer": "you will play / she will play",
+          "explanation": "se tilgħab means “you will play / she will play” in this chapter.",
+          "reviewCard": {
+            "maltese": "se tilgħab",
+            "english": "you will play / she will play"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-tilghab-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-tilghab"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (You will play tomorrow.)",
+          "answer": "se tilgħab",
+          "explanation": "The complete sentence is “Se tilgħab għada.”",
+          "reviewCard": {
+            "maltese": "se tilgħab",
+            "english": "you will play / she will play",
+            "example": "Se tilgħab għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "tilgħab"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-naraw-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-naraw"
+          ],
+          "prompt": "True or false: “se naraw” means “they will swim” in this chapter.",
+          "answer": false,
+          "explanation": "se naraw means “we will see / watch”.",
+          "reviewCard": {
+            "maltese": "se naraw",
+            "english": "we will see / watch"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-naraw-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-naraw"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (We will see tomorrow.)",
+          "answer": "se naraw",
+          "explanation": "The complete sentence is “Se naraw għada.”",
+          "reviewCard": {
+            "maltese": "se naraw",
+            "english": "we will see / watch",
+            "example": "Se naraw għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "naraw"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-jghumu-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-jghumu"
+          ],
+          "prompt": "What is the lesson meaning of “se jgħumu”?",
+          "choices": [
+            "I will eat",
+            "they will swim",
+            "we will go out"
+          ],
+          "answer": "they will swim",
+          "explanation": "se jgħumu means “they will swim” in this chapter.",
+          "reviewCard": {
+            "maltese": "se jgħumu",
+            "english": "they will swim"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-jghumu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-jghumu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (They will swim tomorrow.)",
+          "answer": "se jgħumu",
+          "explanation": "The complete sentence is “Se jgħumu għada.”",
+          "reviewCard": {
+            "maltese": "se jgħumu",
+            "english": "they will swim",
+            "example": "Se jgħumu għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "jgħumu"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-nohorgu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-nohorgu"
+          ],
+          "prompt": "True or false: “se noħorġu” means “I will eat” in this chapter.",
+          "answer": false,
+          "explanation": "se noħorġu means “we will go out”.",
+          "reviewCard": {
+            "maltese": "se noħorġu",
+            "english": "we will go out"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-nohorgu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-nohorgu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (We will go out tomorrow.)",
+          "answer": "se noħorġu",
+          "explanation": "The complete sentence is “Se noħorġu għada.”",
+          "reviewCard": {
+            "maltese": "se noħorġu",
+            "english": "we will go out",
+            "example": "Se noħorġu għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "noħorġu"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-niekol-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-niekol"
+          ],
+          "prompt": "What is the lesson meaning of “se niekol”?",
+          "choices": [
+            "I will do",
+            "wore / got dressed",
+            "I will eat"
+          ],
+          "answer": "I will eat",
+          "explanation": "se niekol means “I will eat” in this chapter.",
+          "reviewCard": {
+            "maltese": "se niekol",
+            "english": "I will eat"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-niekol-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-niekol"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (I will eat tomorrow.)",
+          "answer": "se niekol",
+          "explanation": "The complete sentence is “Se niekol għada.”",
+          "reviewCard": {
+            "maltese": "se niekol",
+            "english": "I will eat",
+            "example": "Se niekol għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "niekol"
+          ]
+        },
+        {
+          "id": "b2-hobbies-se-naghmel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-naghmel"
+          ],
+          "prompt": "True or false: “se nagħmel” means “wore / got dressed” in this chapter.",
+          "answer": false,
+          "explanation": "se nagħmel means “I will do”.",
+          "reviewCard": {
+            "maltese": "se nagħmel",
+            "english": "I will do"
+          }
+        },
+        {
+          "id": "b2-hobbies-se-naghmel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-naghmel"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (I will do tomorrow.)",
+          "answer": "se nagħmel",
+          "explanation": "The complete sentence is “Se nagħmel għada.”",
+          "reviewCard": {
+            "maltese": "se nagħmel",
+            "english": "I will do",
+            "example": "Se nagħmel għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "nagħmel"
+          ]
+        },
+        {
+          "id": "b2-hobbies-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-tilghab",
+            "b2-hobbies-se-naraw",
+            "b2-hobbies-se-jghumu",
+            "b2-hobbies-se-nohorgu"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "se tilgħab",
+              "right": "you will play / she will play"
+            },
+            {
+              "left": "se naraw",
+              "right": "we will see / watch"
+            },
+            {
+              "left": "se jgħumu",
+              "right": "they will swim"
+            },
+            {
+              "left": "se noħorġu",
+              "right": "we will go out"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "se tilgħab",
+            "english": "you will play / she will play"
+          }
+        }
+      ]
+    }
+  ]
+}

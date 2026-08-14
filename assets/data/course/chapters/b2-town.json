@@ -1,0 +1,3360 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-town",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 6,
+    "title": "Fil-Pjazza"
+  },
+  "inventoryChapter": {
+    "id": "b2.6",
+    "courseChapterId": "b2-town",
+    "book": "B2",
+    "number": 6,
+    "title": "Fil-Pjazza",
+    "targets": [
+      "kafetterija",
+      "ispiżerija",
+      "furnar",
+      "restorant",
+      "uffiċċju tal-Kunsill Lokali",
+      "knisja",
+      "posta",
+      "zuntier",
+      "pastizz tal-irkotta",
+      "pastizz tal-piżelli",
+      "mediċina",
+      "menu",
+      "appartament",
+      "triq",
+      "sqaq",
+      "numru",
+      "vjal",
+      "pjazza",
+      "lukanda",
+      "indirizz",
+      "Aqsam it-triq",
+      "Dur fuq ix-xellug",
+      "Dur mal-kantuniera",
+      "Ieqaf",
+      "Dur fuq il-lemin",
+      "Imxi dritt",
+      "Itla' 'l fuq",
+      "Inżel 'l isfel"
+    ],
+    "baselineMissing": [
+      "uffiċċju tal-Kunsill Lokali",
+      "zuntier",
+      "pastizz tal-irkotta",
+      "pastizz tal-piżelli",
+      "vjal",
+      "Aqsam it-triq",
+      "Dur mal-kantuniera",
+      "Imxi dritt",
+      "Itla' 'l fuq",
+      "Inżel 'l isfel"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-town",
+    "book": "B2",
+    "chapterNumber": 6,
+    "chapterTitle": "Fil-Pjazza",
+    "pageStart": 74,
+    "pageEnd": 96
+  },
+  "targets": [
+    {
+      "id": "b2-town-kafetterija",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "kafetterija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-kafetterija"
+      },
+      "assessmentIds": [
+        "b2-town-kafetterija-diagnostic-recognition",
+        "b2-town-kafetterija-recognition",
+        "b2-town-kafetterija-production",
+        "b2-town-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-town-ispizerija",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "ispiżerija",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "spizerija"
+      },
+      "assessmentIds": [
+        "town-places",
+        "town-pharmacy-production",
+        "b2-town-ispizerija-recognition-true-false",
+        "b2-town-ispizerija-production",
+        "b2-town-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-town-furnar",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "furnar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-furnar"
+      },
+      "assessmentIds": [
+        "b2-town-furnar-recognition",
+        "b2-town-furnar-production",
+        "b2-town-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-town-restorant",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "restorant",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-restorant"
+      },
+      "assessmentIds": [
+        "b2-town-restorant-diagnostic-recognition-true-false",
+        "b2-town-restorant-recognition-true-false",
+        "b2-town-restorant-production",
+        "b2-town-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-town-ufficcju-tal-kunsill-lokali",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "uffiċċju tal-Kunsill Lokali",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-ufficcju-tal-kunsill-lokali"
+      },
+      "assessmentIds": [
+        "b2-town-ufficcju-tal-kunsill-lokali-recognition",
+        "b2-town-ufficcju-tal-kunsill-lokali-production"
+      ]
+    },
+    {
+      "id": "b2-town-knisja",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "knisja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "knisja"
+      },
+      "assessmentIds": [
+        "b2-town-knisja-recognition-true-false",
+        "b2-town-knisja-production"
+      ]
+    },
+    {
+      "id": "b2-town-posta",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "posta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-posta"
+      },
+      "assessmentIds": [
+        "b2-town-posta-diagnostic-recognition",
+        "b2-town-posta-recognition",
+        "b2-town-posta-production",
+        "b2-town-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-town-zuntier",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "zuntier",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-zuntier"
+      },
+      "assessmentIds": [
+        "b2-town-zuntier-recognition-true-false",
+        "b2-town-zuntier-production",
+        "b2-town-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-town-pastizz-tal-irkotta",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "pastizz tal-irkotta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-pastizz-tal-irkotta"
+      },
+      "assessmentIds": [
+        "b2-town-pastizz-tal-irkotta-recognition",
+        "b2-town-pastizz-tal-irkotta-production",
+        "b2-town-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-town-pastizz-tal-pizelli",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "pastizz tal-piżelli",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-pastizz-tal-pizelli"
+      },
+      "assessmentIds": [
+        "b2-town-pastizz-tal-pizelli-diagnostic-recognition-true-false",
+        "b2-town-pastizz-tal-pizelli-recognition-true-false",
+        "b2-town-pastizz-tal-pizelli-production",
+        "b2-town-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-town-medicina",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "mediċina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-medicina"
+      },
+      "assessmentIds": [
+        "b2-town-medicina-recognition",
+        "b2-town-medicina-production"
+      ]
+    },
+    {
+      "id": "b2-town-menu",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "menu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "restaurant_ordering.html",
+        "file": "assets/data/restaurant_ordering.json",
+        "itemId": "menu"
+      },
+      "assessmentIds": [
+        "b2-town-menu-recognition-true-false",
+        "b2-town-menu-production"
+      ]
+    },
+    {
+      "id": "b2-town-appartament",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "appartament",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-appartament"
+      },
+      "assessmentIds": [
+        "b2-town-appartament-diagnostic-recognition",
+        "b2-town-appartament-recognition",
+        "b2-town-appartament-production",
+        "b2-town-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-town-triq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "triq",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-triq"
+      },
+      "assessmentIds": [
+        "b2-town-triq-recognition-true-false",
+        "b2-town-triq-production",
+        "b2-town-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-town-sqaq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "sqaq",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-sqaq"
+      },
+      "assessmentIds": [
+        "b2-town-sqaq-recognition",
+        "b2-town-sqaq-production",
+        "b2-town-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-town-numru",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "numru",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-numru"
+      },
+      "assessmentIds": [
+        "b2-town-numru-diagnostic-recognition-true-false",
+        "b2-town-numru-recognition-true-false",
+        "b2-town-numru-production",
+        "b2-town-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-town-vjal",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "vjal",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-vjal"
+      },
+      "assessmentIds": [
+        "b2-town-vjal-recognition",
+        "b2-town-vjal-production"
+      ]
+    },
+    {
+      "id": "b2-town-pjazza",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "pjazza",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "directions_town.html",
+        "file": "assets/data/directions_town.json",
+        "itemId": "pjazza"
+      },
+      "assessmentIds": [
+        "b2-town-pjazza-recognition-true-false",
+        "b2-town-pjazza-production"
+      ]
+    },
+    {
+      "id": "b2-town-lukanda",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "lukanda",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-lukanda"
+      },
+      "assessmentIds": [
+        "b2-town-lukanda-diagnostic-recognition",
+        "b2-town-lukanda-recognition",
+        "b2-town-lukanda-production",
+        "b2-town-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-town-indirizz",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "indirizz",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-indirizz"
+      },
+      "assessmentIds": [
+        "b2-town-indirizz-recognition-true-false",
+        "b2-town-indirizz-production",
+        "b2-town-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-town-aqsam-it-triq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Aqsam it-triq",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-aqsam-it-triq"
+      },
+      "assessmentIds": [
+        "b2-town-aqsam-it-triq-recognition",
+        "b2-town-aqsam-it-triq-production",
+        "b2-town-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-town-dur-fuq-ix-xellug",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Dur fuq ix-xellug",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-dur-fuq-ix-xellug"
+      },
+      "assessmentIds": [
+        "b2-town-dur-fuq-ix-xellug-diagnostic-recognition-true-false",
+        "b2-town-dur-fuq-ix-xellug-recognition-true-false",
+        "b2-town-dur-fuq-ix-xellug-production",
+        "b2-town-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-town-dur-mal-kantuniera",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Dur mal-kantuniera",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-dur-mal-kantuniera"
+      },
+      "assessmentIds": [
+        "b2-town-dur-mal-kantuniera-recognition",
+        "b2-town-dur-mal-kantuniera-production"
+      ]
+    },
+    {
+      "id": "b2-town-ieqaf",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "vocabulary",
+      "sourceRequirement": "Ieqaf",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-ieqaf"
+      },
+      "assessmentIds": [
+        "b2-town-ieqaf-recognition-true-false",
+        "b2-town-ieqaf-production"
+      ]
+    },
+    {
+      "id": "b2-town-dur-fuq-il-lemin",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Dur fuq il-lemin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-dur-fuq-il-lemin"
+      },
+      "assessmentIds": [
+        "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
+        "b2-town-dur-fuq-il-lemin-recognition",
+        "b2-town-dur-fuq-il-lemin-production",
+        "b2-town-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-town-imxi-dritt",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Imxi dritt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-imxi-dritt"
+      },
+      "assessmentIds": [
+        "b2-town-imxi-dritt-recognition-true-false",
+        "b2-town-imxi-dritt-production",
+        "b2-town-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-town-itla-l-fuq",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Itla' 'l fuq",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-itla-l-fuq"
+      },
+      "assessmentIds": [
+        "b2-town-itla-l-fuq-recognition",
+        "b2-town-itla-l-fuq-production",
+        "b2-town-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-town-inzel-l-isfel",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "phrase",
+      "sourceRequirement": "Inżel 'l isfel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-town-inzel-l-isfel"
+      },
+      "assessmentIds": [
+        "b2-town-inzel-l-isfel-diagnostic-recognition-true-false",
+        "b2-town-inzel-l-isfel-recognition-true-false",
+        "b2-town-inzel-l-isfel-production",
+        "b2-town-checkpoint-5-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-town-kafetterija": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 74,
+      "pages": [
+        74
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-ispizerija": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-town-furnar": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 74,
+      "pages": [
+        74
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-restorant": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-town-ufficcju-tal-kunsill-lokali": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-knisja": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-posta": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75,
+        78
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-zuntier": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 75,
+      "pages": [
+        75
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-pastizz-tal-irkotta": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 80,
+      "pages": [
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-pastizz-tal-pizelli": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 80,
+      "pages": [
+        80
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-medicina": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 81,
+      "pages": [
+        81
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-menu": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 82,
+      "pages": [
+        82
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-appartament": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-triq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        85,
+        87,
+        90,
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-sqaq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        85
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-numru": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84,
+        85,
+        90
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-vjal": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-pjazza": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 78,
+      "pages": [
+        78,
+        84,
+        95
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-lukanda": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 84,
+      "pages": [
+        84
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-indirizz": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 90,
+      "pages": [
+        90,
+        91,
+        96
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-aqsam-it-triq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-dur-fuq-ix-xellug": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-dur-mal-kantuniera": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-ieqaf": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-dur-fuq-il-lemin": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-imxi-dritt": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": 93,
+      "pages": [
+        93
+      ],
+      "match": "text-exact"
+    },
+    "b2-town-itla-l-fuq": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-town-inzel-l-isfel": {
+      "book": "B2",
+      "chapterId": "b2-town",
+      "chapterNumber": 6,
+      "chapterTitle": "Fil-Pjazza",
+      "pageRange": [
+        74,
+        96
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-town-kafetterija",
+      "maltese": "kafetterija",
+      "english": "cafeteria / cafe",
+      "example": "Hemm kafetterija fil-pjazza.",
+      "exampleTranslation": "The cafeteria is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 74,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 74",
+      "notes": [
+        "Example: Hemm kafetterija fil-pjazza.",
+        "Translation: The cafeteria is in the square.",
+        "Source: B2, Chapter 6, p. 74"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-ispizerija",
+      "maltese": "ispiżerija",
+      "english": "pharmacy",
+      "example": "Hemm ispiżerija fil-pjazza.",
+      "exampleTranslation": "The pharmacy is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 6, pp. 74-96",
+      "notes": [
+        "Example: Hemm ispiżerija fil-pjazza.",
+        "Translation: The pharmacy is in the square.",
+        "Source: B2, Chapter 6, pp. 74-96"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-furnar",
+      "maltese": "furnar",
+      "english": "bakery / baker",
+      "example": "Hemm furnar fil-pjazza.",
+      "exampleTranslation": "The bakery is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 74,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 74",
+      "notes": [
+        "Example: Hemm furnar fil-pjazza.",
+        "Translation: The bakery is in the square.",
+        "Source: B2, Chapter 6, p. 74"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-restorant",
+      "maltese": "restorant",
+      "english": "restaurant",
+      "example": "Hemm restorant fil-pjazza.",
+      "exampleTranslation": "The restaurant is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 6, pp. 74-96",
+      "notes": [
+        "Example: Hemm restorant fil-pjazza.",
+        "Translation: The restaurant is in the square.",
+        "Source: B2, Chapter 6, pp. 74-96"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-ufficcju-tal-kunsill-lokali",
+      "maltese": "uffiċċju tal-Kunsill Lokali",
+      "english": "Local Council office",
+      "example": "Hemm uffiċċju tal-Kunsill Lokali fil-pjazza.",
+      "exampleTranslation": "The Local Council office is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 75,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 75",
+      "notes": [
+        "Example: Hemm uffiċċju tal-Kunsill Lokali fil-pjazza.",
+        "Translation: The Local Council office is in the square.",
+        "Source: B2, Chapter 6, p. 75"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-knisja",
+      "maltese": "knisja",
+      "english": "church",
+      "example": "Hemm knisja fil-pjazza.",
+      "exampleTranslation": "The church is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 75,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 75",
+      "notes": [
+        "Example: Hemm knisja fil-pjazza.",
+        "Translation: The church is in the square.",
+        "Source: B2, Chapter 6, p. 75"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-posta",
+      "maltese": "posta",
+      "english": "post office",
+      "example": "Hemm posta fil-pjazza.",
+      "exampleTranslation": "The post office is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 75,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 75",
+      "notes": [
+        "Example: Hemm posta fil-pjazza.",
+        "Translation: The post office is in the square.",
+        "Source: B2, Chapter 6, p. 75"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-zuntier",
+      "maltese": "zuntier",
+      "english": "church parvis / forecourt",
+      "example": "Hemm zuntier fil-pjazza.",
+      "exampleTranslation": "The church parvis is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 75,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 75",
+      "notes": [
+        "Example: Hemm zuntier fil-pjazza.",
+        "Translation: The church parvis is in the square.",
+        "Source: B2, Chapter 6, p. 75"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-pastizz-tal-irkotta",
+      "maltese": "pastizz tal-irkotta",
+      "english": "ricotta pastizz",
+      "example": "Nixtieq pastizz tal-irkotta, jekk jogħġbok.",
+      "exampleTranslation": "I would like the ricotta pastizz, please.",
+      "examplePattern": "town-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 80,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 80",
+      "notes": [
+        "Example: Nixtieq pastizz tal-irkotta, jekk jogħġbok.",
+        "Translation: I would like the ricotta pastizz, please.",
+        "Source: B2, Chapter 6, p. 80"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-pastizz-tal-pizelli",
+      "maltese": "pastizz tal-piżelli",
+      "english": "pea pastizz",
+      "example": "Nixtieq pastizz tal-piżelli, jekk jogħġbok.",
+      "exampleTranslation": "I would like the pea pastizz, please.",
+      "examplePattern": "town-order",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 80,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 80",
+      "notes": [
+        "Example: Nixtieq pastizz tal-piżelli, jekk jogħġbok.",
+        "Translation: I would like the pea pastizz, please.",
+        "Source: B2, Chapter 6, p. 80"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-medicina",
+      "maltese": "mediċina",
+      "english": "medicine",
+      "example": "Hemm mediċina fil-pjazza.",
+      "exampleTranslation": "The medicine is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 81,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 81",
+      "notes": [
+        "Example: Hemm mediċina fil-pjazza.",
+        "Translation: The medicine is in the square.",
+        "Source: B2, Chapter 6, p. 81"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-menu",
+      "maltese": "menu",
+      "english": "menu",
+      "example": "Hemm menu fil-pjazza.",
+      "exampleTranslation": "The menu is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 82,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 82",
+      "notes": [
+        "Example: Hemm menu fil-pjazza.",
+        "Translation: The menu is in the square.",
+        "Source: B2, Chapter 6, p. 82"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-appartament",
+      "maltese": "appartament",
+      "english": "apartment",
+      "example": "Hemm appartament fil-pjazza.",
+      "exampleTranslation": "The apartment is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 84",
+      "notes": [
+        "Example: Hemm appartament fil-pjazza.",
+        "Translation: The apartment is in the square.",
+        "Source: B2, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-triq",
+      "maltese": "triq",
+      "english": "street / road",
+      "example": "Hemm triq fil-pjazza.",
+      "exampleTranslation": "The street is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 84",
+      "notes": [
+        "Example: Hemm triq fil-pjazza.",
+        "Translation: The street is in the square.",
+        "Source: B2, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-sqaq",
+      "maltese": "sqaq",
+      "english": "alley",
+      "example": "Hemm sqaq fil-pjazza.",
+      "exampleTranslation": "The alley is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 84",
+      "notes": [
+        "Example: Hemm sqaq fil-pjazza.",
+        "Translation: The alley is in the square.",
+        "Source: B2, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-numru",
+      "maltese": "numru",
+      "english": "number",
+      "example": "Hemm numru fil-pjazza.",
+      "exampleTranslation": "The number is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 84",
+      "notes": [
+        "Example: Hemm numru fil-pjazza.",
+        "Translation: The number is in the square.",
+        "Source: B2, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-vjal",
+      "maltese": "vjal",
+      "english": "avenue",
+      "example": "Hemm vjal fil-pjazza.",
+      "exampleTranslation": "The avenue is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 84",
+      "notes": [
+        "Example: Hemm vjal fil-pjazza.",
+        "Translation: The avenue is in the square.",
+        "Source: B2, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-pjazza",
+      "maltese": "pjazza",
+      "english": "square / piazza",
+      "example": "Hemm pjazza fil-pjazza.",
+      "exampleTranslation": "The square is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 78,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 78",
+      "notes": [
+        "Example: Hemm pjazza fil-pjazza.",
+        "Translation: The square is in the square.",
+        "Source: B2, Chapter 6, p. 78"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-lukanda",
+      "maltese": "lukanda",
+      "english": "hotel",
+      "example": "Hemm lukanda fil-pjazza.",
+      "exampleTranslation": "The hotel is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 84,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 84",
+      "notes": [
+        "Example: Hemm lukanda fil-pjazza.",
+        "Translation: The hotel is in the square.",
+        "Source: B2, Chapter 6, p. 84"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-indirizz",
+      "maltese": "indirizz",
+      "english": "address",
+      "example": "Hemm indirizz fil-pjazza.",
+      "exampleTranslation": "The address is in the square.",
+      "examplePattern": "town-place",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 90,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 90",
+      "notes": [
+        "Example: Hemm indirizz fil-pjazza.",
+        "Translation: The address is in the square.",
+        "Source: B2, Chapter 6, p. 90"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-aqsam-it-triq",
+      "maltese": "Aqsam it-triq",
+      "english": "Cross the road",
+      "example": "Aqsam it-triq bir-reqqa.",
+      "exampleTranslation": "Cross the road carefully.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 93,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 93",
+      "notes": [
+        "Example: Aqsam it-triq bir-reqqa.",
+        "Translation: Cross the road carefully.",
+        "Source: B2, Chapter 6, p. 93"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-dur-fuq-ix-xellug",
+      "maltese": "Dur fuq ix-xellug",
+      "english": "Turn left",
+      "example": "Dur fuq ix-xellug ħdejn il-knisja.",
+      "exampleTranslation": "Turn left by the church.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 93,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 93",
+      "notes": [
+        "Example: Dur fuq ix-xellug ħdejn il-knisja.",
+        "Translation: Turn left by the church.",
+        "Source: B2, Chapter 6, p. 93"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-dur-mal-kantuniera",
+      "maltese": "Dur mal-kantuniera",
+      "english": "Turn around the corner",
+      "example": "Dur mal-kantuniera u kompli miexi.",
+      "exampleTranslation": "Turn around the corner and keep walking.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 93,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 93",
+      "notes": [
+        "Example: Dur mal-kantuniera u kompli miexi.",
+        "Translation: Turn around the corner and keep walking.",
+        "Source: B2, Chapter 6, p. 93"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-ieqaf",
+      "maltese": "Ieqaf",
+      "english": "stop (singular command)",
+      "example": "Ieqaf ħdejn il-pjazza.",
+      "exampleTranslation": "Stop by the square.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 93,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 93",
+      "notes": [
+        "Example: Ieqaf ħdejn il-pjazza.",
+        "Translation: Stop by the square.",
+        "Source: B2, Chapter 6, p. 93"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-town-dur-fuq-il-lemin",
+      "maltese": "Dur fuq il-lemin",
+      "english": "Turn right",
+      "example": "Dur fuq il-lemin ħdejn il-lukanda.",
+      "exampleTranslation": "Turn right by the hotel.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 93,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 93",
+      "notes": [
+        "Example: Dur fuq il-lemin ħdejn il-lukanda.",
+        "Translation: Turn right by the hotel.",
+        "Source: B2, Chapter 6, p. 93"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-imxi-dritt",
+      "maltese": "Imxi dritt",
+      "english": "Go straight",
+      "example": "Imxi dritt sal-pjazza.",
+      "exampleTranslation": "Go straight to the square.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": 93,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 6, p. 93",
+      "notes": [
+        "Example: Imxi dritt sal-pjazza.",
+        "Translation: Go straight to the square.",
+        "Source: B2, Chapter 6, p. 93"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-itla-l-fuq",
+      "maltese": "Itla' 'l fuq",
+      "english": "Go up",
+      "example": "Itla' 'l fuq sat-tieni sular.",
+      "exampleTranslation": "Go up to the second floor.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 6, pp. 74-96",
+      "notes": [
+        "Example: Itla' 'l fuq sat-tieni sular.",
+        "Translation: Go up to the second floor.",
+        "Source: B2, Chapter 6, pp. 74-96"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-town-inzel-l-isfel",
+      "maltese": "Inżel 'l isfel",
+      "english": "Go down",
+      "example": "Inżel 'l isfel sal-pjan terran.",
+      "exampleTranslation": "Go down to the ground floor.",
+      "examplePattern": "town-direction",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 6,
+        "page": null,
+        "pageRange": [
+          74,
+          96
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 6, pp. 74-96",
+      "notes": [
+        "Example: Inżel 'l isfel sal-pjan terran.",
+        "Translation: Go down to the ground floor.",
+        "Source: B2, Chapter 6, pp. 74-96"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-diagnostic",
+      "kind": "diagnostic",
+      "title": "Fil-Pjazza Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-town-kafetterija-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-kafetterija"
+          ],
+          "prompt": "What is the lesson meaning of “kafetterija”?",
+          "choices": [
+            "cafeteria / cafe",
+            "pharmacy",
+            "bakery / baker"
+          ],
+          "answer": "cafeteria / cafe",
+          "explanation": "kafetterija means “cafeteria / cafe” in this chapter.",
+          "reviewCard": {
+            "maltese": "kafetterija",
+            "english": "cafeteria / cafe"
+          }
+        },
+        {
+          "id": "b2-town-restorant-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-restorant"
+          ],
+          "prompt": "True or false: “restorant” means “bakery / baker” in this chapter.",
+          "answer": false,
+          "explanation": "restorant means “restaurant”.",
+          "reviewCard": {
+            "maltese": "restorant",
+            "english": "restaurant"
+          }
+        },
+        {
+          "id": "b2-town-posta-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-posta"
+          ],
+          "prompt": "What is the lesson meaning of “posta”?",
+          "choices": [
+            "Local Council office",
+            "post office",
+            "restaurant"
+          ],
+          "answer": "post office",
+          "explanation": "posta means “post office” in this chapter.",
+          "reviewCard": {
+            "maltese": "posta",
+            "english": "post office"
+          }
+        },
+        {
+          "id": "b2-town-pastizz-tal-pizelli-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-pastizz-tal-pizelli"
+          ],
+          "prompt": "True or false: “pastizz tal-piżelli” means “Local Council office” in this chapter.",
+          "answer": false,
+          "explanation": "pastizz tal-piżelli means “pea pastizz”.",
+          "reviewCard": {
+            "maltese": "pastizz tal-piżelli",
+            "english": "pea pastizz"
+          }
+        },
+        {
+          "id": "b2-town-appartament-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-appartament"
+          ],
+          "prompt": "What is the lesson meaning of “appartament”?",
+          "choices": [
+            "church",
+            "post office",
+            "apartment"
+          ],
+          "answer": "apartment",
+          "explanation": "appartament means “apartment” in this chapter.",
+          "reviewCard": {
+            "maltese": "appartament",
+            "english": "apartment"
+          }
+        },
+        {
+          "id": "b2-town-numru-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-numru"
+          ],
+          "prompt": "True or false: “numru” means “post office” in this chapter.",
+          "answer": false,
+          "explanation": "numru means “number”.",
+          "reviewCard": {
+            "maltese": "numru",
+            "english": "number"
+          }
+        },
+        {
+          "id": "b2-town-lukanda-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-lukanda"
+          ],
+          "prompt": "What is the lesson meaning of “lukanda”?",
+          "choices": [
+            "hotel",
+            "church parvis / forecourt",
+            "ricotta pastizz"
+          ],
+          "answer": "hotel",
+          "explanation": "lukanda means “hotel” in this chapter.",
+          "reviewCard": {
+            "maltese": "lukanda",
+            "english": "hotel"
+          }
+        },
+        {
+          "id": "b2-town-dur-fuq-ix-xellug-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-ix-xellug"
+          ],
+          "prompt": "True or false: “Dur fuq ix-xellug” means “ricotta pastizz” in this chapter.",
+          "answer": false,
+          "explanation": "Dur fuq ix-xellug means “Turn left”.",
+          "reviewCard": {
+            "maltese": "Dur fuq ix-xellug",
+            "english": "Turn left"
+          }
+        },
+        {
+          "id": "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-il-lemin"
+          ],
+          "prompt": "What is the lesson meaning of “Dur fuq il-lemin”?",
+          "choices": [
+            "medicine",
+            "Turn right",
+            "pea pastizz"
+          ],
+          "answer": "Turn right",
+          "explanation": "Dur fuq il-lemin means “Turn right” in this chapter.",
+          "reviewCard": {
+            "maltese": "Dur fuq il-lemin",
+            "english": "Turn right"
+          }
+        },
+        {
+          "id": "b2-town-inzel-l-isfel-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-inzel-l-isfel"
+          ],
+          "prompt": "True or false: “Inżel 'l isfel” means “medicine” in this chapter.",
+          "answer": false,
+          "explanation": "Inżel 'l isfel means “Go down”.",
+          "reviewCard": {
+            "maltese": "Inżel 'l isfel",
+            "english": "Go down"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-town-kafetterija-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-kafetterija"
+          ],
+          "prompt": "What is the lesson meaning of “kafetterija”?",
+          "choices": [
+            "cafeteria / cafe",
+            "pharmacy",
+            "bakery / baker"
+          ],
+          "answer": "cafeteria / cafe",
+          "explanation": "kafetterija means “cafeteria / cafe” in this chapter.",
+          "reviewCard": {
+            "maltese": "kafetterija",
+            "english": "cafeteria / cafe"
+          }
+        },
+        {
+          "id": "b2-town-kafetterija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-kafetterija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The cafeteria is in the square.)",
+          "answer": "kafetterija",
+          "explanation": "The complete sentence is “Hemm kafetterija fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "kafetterija",
+            "english": "cafeteria / cafe",
+            "example": "Hemm kafetterija fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kafetterija"
+          ]
+        },
+        {
+          "id": "b2-town-ispizerija-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-ispizerija"
+          ],
+          "prompt": "True or false: “ispiżerija” means “bakery / baker” in this chapter.",
+          "answer": false,
+          "explanation": "ispiżerija means “pharmacy”.",
+          "reviewCard": {
+            "maltese": "ispiżerija",
+            "english": "pharmacy"
+          }
+        },
+        {
+          "id": "b2-town-ispizerija-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-ispizerija"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The pharmacy is in the square.)",
+          "answer": "ispiżerija",
+          "explanation": "The complete sentence is “Hemm ispiżerija fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "ispiżerija",
+            "english": "pharmacy",
+            "example": "Hemm ispiżerija fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ispiżerija"
+          ]
+        },
+        {
+          "id": "b2-town-furnar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-furnar"
+          ],
+          "prompt": "What is the lesson meaning of “furnar”?",
+          "choices": [
+            "Local Council office",
+            "bakery / baker",
+            "restaurant"
+          ],
+          "answer": "bakery / baker",
+          "explanation": "furnar means “bakery / baker” in this chapter.",
+          "reviewCard": {
+            "maltese": "furnar",
+            "english": "bakery / baker"
+          }
+        },
+        {
+          "id": "b2-town-furnar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-furnar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The bakery is in the square.)",
+          "answer": "furnar",
+          "explanation": "The complete sentence is “Hemm furnar fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "furnar",
+            "english": "bakery / baker",
+            "example": "Hemm furnar fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "furnar"
+          ]
+        },
+        {
+          "id": "b2-town-restorant-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-restorant"
+          ],
+          "prompt": "True or false: “restorant” means “Local Council office” in this chapter.",
+          "answer": false,
+          "explanation": "restorant means “restaurant”.",
+          "reviewCard": {
+            "maltese": "restorant",
+            "english": "restaurant"
+          }
+        },
+        {
+          "id": "b2-town-restorant-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-restorant"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The restaurant is in the square.)",
+          "answer": "restorant",
+          "explanation": "The complete sentence is “Hemm restorant fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "restorant",
+            "english": "restaurant",
+            "example": "Hemm restorant fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "restorant"
+          ]
+        },
+        {
+          "id": "b2-town-ufficcju-tal-kunsill-lokali-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-ufficcju-tal-kunsill-lokali"
+          ],
+          "prompt": "What is the lesson meaning of “uffiċċju tal-Kunsill Lokali”?",
+          "choices": [
+            "church",
+            "post office",
+            "Local Council office"
+          ],
+          "answer": "Local Council office",
+          "explanation": "uffiċċju tal-Kunsill Lokali means “Local Council office” in this chapter.",
+          "reviewCard": {
+            "maltese": "uffiċċju tal-Kunsill Lokali",
+            "english": "Local Council office"
+          }
+        },
+        {
+          "id": "b2-town-ufficcju-tal-kunsill-lokali-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-ufficcju-tal-kunsill-lokali"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The Local Council office is in the square.)",
+          "answer": "uffiċċju tal-Kunsill Lokali",
+          "explanation": "The complete sentence is “Hemm uffiċċju tal-Kunsill Lokali fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "uffiċċju tal-Kunsill Lokali",
+            "english": "Local Council office",
+            "example": "Hemm uffiċċju tal-Kunsill Lokali fil-pjazza."
+          },
+          "type": "order-words",
+          "tokens": [
+            "uffiċċju",
+            "tal-Kunsill",
+            "Lokali"
+          ]
+        },
+        {
+          "id": "b2-town-knisja-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-knisja"
+          ],
+          "prompt": "True or false: “knisja” means “post office” in this chapter.",
+          "answer": false,
+          "explanation": "knisja means “church”.",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church"
+          }
+        },
+        {
+          "id": "b2-town-knisja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-knisja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The church is in the square.)",
+          "answer": "knisja",
+          "explanation": "The complete sentence is “Hemm knisja fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "knisja",
+            "english": "church",
+            "example": "Hemm knisja fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "knisja"
+          ]
+        },
+        {
+          "id": "b2-town-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-kafetterija",
+            "b2-town-ispizerija",
+            "b2-town-furnar",
+            "b2-town-restorant"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kafetterija",
+              "right": "cafeteria / cafe"
+            },
+            {
+              "left": "ispiżerija",
+              "right": "pharmacy"
+            },
+            {
+              "left": "furnar",
+              "right": "bakery / baker"
+            },
+            {
+              "left": "restorant",
+              "right": "restaurant"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kafetterija",
+            "english": "cafeteria / cafe"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-town-posta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-posta"
+          ],
+          "prompt": "What is the lesson meaning of “posta”?",
+          "choices": [
+            "post office",
+            "church parvis / forecourt",
+            "ricotta pastizz"
+          ],
+          "answer": "post office",
+          "explanation": "posta means “post office” in this chapter.",
+          "reviewCard": {
+            "maltese": "posta",
+            "english": "post office"
+          }
+        },
+        {
+          "id": "b2-town-posta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-posta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The post office is in the square.)",
+          "answer": "posta",
+          "explanation": "The complete sentence is “Hemm posta fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "posta",
+            "english": "post office",
+            "example": "Hemm posta fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "posta"
+          ]
+        },
+        {
+          "id": "b2-town-zuntier-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-zuntier"
+          ],
+          "prompt": "True or false: “zuntier” means “ricotta pastizz” in this chapter.",
+          "answer": false,
+          "explanation": "zuntier means “church parvis / forecourt”.",
+          "reviewCard": {
+            "maltese": "zuntier",
+            "english": "church parvis / forecourt"
+          }
+        },
+        {
+          "id": "b2-town-zuntier-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-zuntier"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The church parvis is in the square.)",
+          "answer": "zuntier",
+          "explanation": "The complete sentence is “Hemm zuntier fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "zuntier",
+            "english": "church parvis / forecourt",
+            "example": "Hemm zuntier fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "zuntier"
+          ]
+        },
+        {
+          "id": "b2-town-pastizz-tal-irkotta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-pastizz-tal-irkotta"
+          ],
+          "prompt": "What is the lesson meaning of “pastizz tal-irkotta”?",
+          "choices": [
+            "medicine",
+            "ricotta pastizz",
+            "pea pastizz"
+          ],
+          "answer": "ricotta pastizz",
+          "explanation": "pastizz tal-irkotta means “ricotta pastizz” in this chapter.",
+          "reviewCard": {
+            "maltese": "pastizz tal-irkotta",
+            "english": "ricotta pastizz"
+          }
+        },
+        {
+          "id": "b2-town-pastizz-tal-irkotta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-pastizz-tal-irkotta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the ricotta pastizz, please.)",
+          "answer": "pastizz tal-irkotta",
+          "explanation": "The complete sentence is “Nixtieq pastizz tal-irkotta, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "pastizz tal-irkotta",
+            "english": "ricotta pastizz",
+            "example": "Nixtieq pastizz tal-irkotta, jekk jogħġbok."
+          },
+          "type": "order-words",
+          "tokens": [
+            "pastizz",
+            "tal-irkotta"
+          ]
+        },
+        {
+          "id": "b2-town-pastizz-tal-pizelli-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-pastizz-tal-pizelli"
+          ],
+          "prompt": "True or false: “pastizz tal-piżelli” means “medicine” in this chapter.",
+          "answer": false,
+          "explanation": "pastizz tal-piżelli means “pea pastizz”.",
+          "reviewCard": {
+            "maltese": "pastizz tal-piżelli",
+            "english": "pea pastizz"
+          }
+        },
+        {
+          "id": "b2-town-pastizz-tal-pizelli-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-pastizz-tal-pizelli"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the pea pastizz, please.)",
+          "answer": "pastizz tal-piżelli",
+          "explanation": "The complete sentence is “Nixtieq pastizz tal-piżelli, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "pastizz tal-piżelli",
+            "english": "pea pastizz",
+            "example": "Nixtieq pastizz tal-piżelli, jekk jogħġbok."
+          },
+          "type": "order-words",
+          "tokens": [
+            "pastizz",
+            "tal-piżelli"
+          ]
+        },
+        {
+          "id": "b2-town-medicina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-medicina"
+          ],
+          "prompt": "What is the lesson meaning of “mediċina”?",
+          "choices": [
+            "menu",
+            "apartment",
+            "medicine"
+          ],
+          "answer": "medicine",
+          "explanation": "mediċina means “medicine” in this chapter.",
+          "reviewCard": {
+            "maltese": "mediċina",
+            "english": "medicine"
+          }
+        },
+        {
+          "id": "b2-town-medicina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-medicina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The medicine is in the square.)",
+          "answer": "mediċina",
+          "explanation": "The complete sentence is “Hemm mediċina fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "mediċina",
+            "english": "medicine",
+            "example": "Hemm mediċina fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mediċina"
+          ]
+        },
+        {
+          "id": "b2-town-menu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-menu"
+          ],
+          "prompt": "True or false: “menu” means “apartment” in this chapter.",
+          "answer": false,
+          "explanation": "menu means “menu”.",
+          "reviewCard": {
+            "maltese": "menu",
+            "english": "menu"
+          }
+        },
+        {
+          "id": "b2-town-menu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-menu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The menu is in the square.)",
+          "answer": "menu",
+          "explanation": "The complete sentence is “Hemm menu fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "menu",
+            "english": "menu",
+            "example": "Hemm menu fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "menu"
+          ]
+        },
+        {
+          "id": "b2-town-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-posta",
+            "b2-town-zuntier",
+            "b2-town-pastizz-tal-irkotta",
+            "b2-town-pastizz-tal-pizelli"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "posta",
+              "right": "post office"
+            },
+            {
+              "left": "zuntier",
+              "right": "church parvis / forecourt"
+            },
+            {
+              "left": "pastizz tal-irkotta",
+              "right": "ricotta pastizz"
+            },
+            {
+              "left": "pastizz tal-piżelli",
+              "right": "pea pastizz"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "posta",
+            "english": "post office"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-town-appartament-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-appartament"
+          ],
+          "prompt": "What is the lesson meaning of “appartament”?",
+          "choices": [
+            "apartment",
+            "street / road",
+            "alley"
+          ],
+          "answer": "apartment",
+          "explanation": "appartament means “apartment” in this chapter.",
+          "reviewCard": {
+            "maltese": "appartament",
+            "english": "apartment"
+          }
+        },
+        {
+          "id": "b2-town-appartament-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-appartament"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The apartment is in the square.)",
+          "answer": "appartament",
+          "explanation": "The complete sentence is “Hemm appartament fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "appartament",
+            "english": "apartment",
+            "example": "Hemm appartament fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "appartament"
+          ]
+        },
+        {
+          "id": "b2-town-triq-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-triq"
+          ],
+          "prompt": "True or false: “triq” means “alley” in this chapter.",
+          "answer": false,
+          "explanation": "triq means “street / road”.",
+          "reviewCard": {
+            "maltese": "triq",
+            "english": "street / road"
+          }
+        },
+        {
+          "id": "b2-town-triq-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-triq"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The street is in the square.)",
+          "answer": "triq",
+          "explanation": "The complete sentence is “Hemm triq fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "triq",
+            "english": "street / road",
+            "example": "Hemm triq fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "triq"
+          ]
+        },
+        {
+          "id": "b2-town-sqaq-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-sqaq"
+          ],
+          "prompt": "What is the lesson meaning of “sqaq”?",
+          "choices": [
+            "avenue",
+            "alley",
+            "number"
+          ],
+          "answer": "alley",
+          "explanation": "sqaq means “alley” in this chapter.",
+          "reviewCard": {
+            "maltese": "sqaq",
+            "english": "alley"
+          }
+        },
+        {
+          "id": "b2-town-sqaq-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-sqaq"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The alley is in the square.)",
+          "answer": "sqaq",
+          "explanation": "The complete sentence is “Hemm sqaq fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "sqaq",
+            "english": "alley",
+            "example": "Hemm sqaq fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sqaq"
+          ]
+        },
+        {
+          "id": "b2-town-numru-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-numru"
+          ],
+          "prompt": "True or false: “numru” means “avenue” in this chapter.",
+          "answer": false,
+          "explanation": "numru means “number”.",
+          "reviewCard": {
+            "maltese": "numru",
+            "english": "number"
+          }
+        },
+        {
+          "id": "b2-town-numru-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-numru"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The number is in the square.)",
+          "answer": "numru",
+          "explanation": "The complete sentence is “Hemm numru fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "numru",
+            "english": "number",
+            "example": "Hemm numru fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "numru"
+          ]
+        },
+        {
+          "id": "b2-town-vjal-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-vjal"
+          ],
+          "prompt": "What is the lesson meaning of “vjal”?",
+          "choices": [
+            "square / piazza",
+            "hotel",
+            "avenue"
+          ],
+          "answer": "avenue",
+          "explanation": "vjal means “avenue” in this chapter.",
+          "reviewCard": {
+            "maltese": "vjal",
+            "english": "avenue"
+          }
+        },
+        {
+          "id": "b2-town-vjal-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-vjal"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The avenue is in the square.)",
+          "answer": "vjal",
+          "explanation": "The complete sentence is “Hemm vjal fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "vjal",
+            "english": "avenue",
+            "example": "Hemm vjal fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "vjal"
+          ]
+        },
+        {
+          "id": "b2-town-pjazza-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-pjazza"
+          ],
+          "prompt": "True or false: “pjazza” means “hotel” in this chapter.",
+          "answer": false,
+          "explanation": "pjazza means “square / piazza”.",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza"
+          }
+        },
+        {
+          "id": "b2-town-pjazza-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-pjazza"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The square is in the square.)",
+          "answer": "pjazza",
+          "explanation": "The complete sentence is “Hemm pjazza fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "pjazza",
+            "english": "square / piazza",
+            "example": "Hemm pjazza fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pjazza"
+          ]
+        },
+        {
+          "id": "b2-town-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-appartament",
+            "b2-town-triq",
+            "b2-town-sqaq",
+            "b2-town-numru"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "appartament",
+              "right": "apartment"
+            },
+            {
+              "left": "triq",
+              "right": "street / road"
+            },
+            {
+              "left": "sqaq",
+              "right": "alley"
+            },
+            {
+              "left": "numru",
+              "right": "number"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "appartament",
+            "english": "apartment"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Fil-Pjazza Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-town-lukanda-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-lukanda"
+          ],
+          "prompt": "What is the lesson meaning of “lukanda”?",
+          "choices": [
+            "hotel",
+            "address",
+            "Cross the road"
+          ],
+          "answer": "hotel",
+          "explanation": "lukanda means “hotel” in this chapter.",
+          "reviewCard": {
+            "maltese": "lukanda",
+            "english": "hotel"
+          }
+        },
+        {
+          "id": "b2-town-lukanda-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-lukanda"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The hotel is in the square.)",
+          "answer": "lukanda",
+          "explanation": "The complete sentence is “Hemm lukanda fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "lukanda",
+            "english": "hotel",
+            "example": "Hemm lukanda fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lukanda"
+          ]
+        },
+        {
+          "id": "b2-town-indirizz-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-indirizz"
+          ],
+          "prompt": "True or false: “indirizz” means “Cross the road” in this chapter.",
+          "answer": false,
+          "explanation": "indirizz means “address”.",
+          "reviewCard": {
+            "maltese": "indirizz",
+            "english": "address"
+          }
+        },
+        {
+          "id": "b2-town-indirizz-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-indirizz"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The address is in the square.)",
+          "answer": "indirizz",
+          "explanation": "The complete sentence is “Hemm indirizz fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "indirizz",
+            "english": "address",
+            "example": "Hemm indirizz fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "indirizz"
+          ]
+        },
+        {
+          "id": "b2-town-aqsam-it-triq-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-aqsam-it-triq"
+          ],
+          "prompt": "What is the lesson meaning of “Aqsam it-triq”?",
+          "choices": [
+            "Turn around the corner",
+            "Cross the road",
+            "Turn left"
+          ],
+          "answer": "Cross the road",
+          "explanation": "Aqsam it-triq means “Cross the road” in this chapter.",
+          "reviewCard": {
+            "maltese": "Aqsam it-triq",
+            "english": "Cross the road"
+          }
+        },
+        {
+          "id": "b2-town-aqsam-it-triq-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-aqsam-it-triq"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ bir-reqqa.” (Cross the road carefully.)",
+          "answer": "Aqsam it-triq",
+          "explanation": "The complete sentence is “Aqsam it-triq bir-reqqa.”",
+          "reviewCard": {
+            "maltese": "Aqsam it-triq",
+            "english": "Cross the road",
+            "example": "Aqsam it-triq bir-reqqa."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Aqsam",
+            "it-triq"
+          ]
+        },
+        {
+          "id": "b2-town-dur-fuq-ix-xellug-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-ix-xellug"
+          ],
+          "prompt": "True or false: “Dur fuq ix-xellug” means “Turn around the corner” in this chapter.",
+          "answer": false,
+          "explanation": "Dur fuq ix-xellug means “Turn left”.",
+          "reviewCard": {
+            "maltese": "Dur fuq ix-xellug",
+            "english": "Turn left"
+          }
+        },
+        {
+          "id": "b2-town-dur-fuq-ix-xellug-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-dur-fuq-ix-xellug"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ ħdejn il-knisja.” (Turn left by the church.)",
+          "answer": "Dur fuq ix-xellug",
+          "explanation": "The complete sentence is “Dur fuq ix-xellug ħdejn il-knisja.”",
+          "reviewCard": {
+            "maltese": "Dur fuq ix-xellug",
+            "english": "Turn left",
+            "example": "Dur fuq ix-xellug ħdejn il-knisja."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Dur",
+            "fuq",
+            "ix-xellug"
+          ]
+        },
+        {
+          "id": "b2-town-dur-mal-kantuniera-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-mal-kantuniera"
+          ],
+          "prompt": "What is the lesson meaning of “Dur mal-kantuniera”?",
+          "choices": [
+            "stop (singular command)",
+            "Turn right",
+            "Turn around the corner"
+          ],
+          "answer": "Turn around the corner",
+          "explanation": "Dur mal-kantuniera means “Turn around the corner” in this chapter.",
+          "reviewCard": {
+            "maltese": "Dur mal-kantuniera",
+            "english": "Turn around the corner"
+          }
+        },
+        {
+          "id": "b2-town-dur-mal-kantuniera-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-dur-mal-kantuniera"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ u kompli miexi.” (Turn around the corner and keep walking.)",
+          "answer": "Dur mal-kantuniera",
+          "explanation": "The complete sentence is “Dur mal-kantuniera u kompli miexi.”",
+          "reviewCard": {
+            "maltese": "Dur mal-kantuniera",
+            "english": "Turn around the corner",
+            "example": "Dur mal-kantuniera u kompli miexi."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Dur",
+            "mal-kantuniera"
+          ]
+        },
+        {
+          "id": "b2-town-ieqaf-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-ieqaf"
+          ],
+          "prompt": "True or false: “Ieqaf” means “Turn right” in this chapter.",
+          "answer": false,
+          "explanation": "Ieqaf means “stop (singular command)”.",
+          "reviewCard": {
+            "maltese": "Ieqaf",
+            "english": "stop (singular command)"
+          }
+        },
+        {
+          "id": "b2-town-ieqaf-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-ieqaf"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ ħdejn il-pjazza.” (Stop by the square.)",
+          "answer": "Ieqaf",
+          "explanation": "The complete sentence is “Ieqaf ħdejn il-pjazza.”",
+          "reviewCard": {
+            "maltese": "Ieqaf",
+            "english": "stop (singular command)",
+            "example": "Ieqaf ħdejn il-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ieqaf"
+          ]
+        },
+        {
+          "id": "b2-town-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-lukanda",
+            "b2-town-indirizz",
+            "b2-town-aqsam-it-triq",
+            "b2-town-dur-fuq-ix-xellug"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "lukanda",
+              "right": "hotel"
+            },
+            {
+              "left": "indirizz",
+              "right": "address"
+            },
+            {
+              "left": "Aqsam it-triq",
+              "right": "Cross the road"
+            },
+            {
+              "left": "Dur fuq ix-xellug",
+              "right": "Turn left"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "lukanda",
+            "english": "hotel"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-town",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-town-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 4,
+      "title": "Fil-Pjazza Checkpoint 5",
+      "items": [
+        {
+          "id": "b2-town-dur-fuq-il-lemin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-il-lemin"
+          ],
+          "prompt": "What is the lesson meaning of “Dur fuq il-lemin”?",
+          "choices": [
+            "Turn right",
+            "Go straight",
+            "Go up"
+          ],
+          "answer": "Turn right",
+          "explanation": "Dur fuq il-lemin means “Turn right” in this chapter.",
+          "reviewCard": {
+            "maltese": "Dur fuq il-lemin",
+            "english": "Turn right"
+          }
+        },
+        {
+          "id": "b2-town-dur-fuq-il-lemin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-dur-fuq-il-lemin"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ ħdejn il-lukanda.” (Turn right by the hotel.)",
+          "answer": "Dur fuq il-lemin",
+          "explanation": "The complete sentence is “Dur fuq il-lemin ħdejn il-lukanda.”",
+          "reviewCard": {
+            "maltese": "Dur fuq il-lemin",
+            "english": "Turn right",
+            "example": "Dur fuq il-lemin ħdejn il-lukanda."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Dur",
+            "fuq",
+            "il-lemin"
+          ]
+        },
+        {
+          "id": "b2-town-imxi-dritt-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-imxi-dritt"
+          ],
+          "prompt": "True or false: “Imxi dritt” means “Go up” in this chapter.",
+          "answer": false,
+          "explanation": "Imxi dritt means “Go straight”.",
+          "reviewCard": {
+            "maltese": "Imxi dritt",
+            "english": "Go straight"
+          }
+        },
+        {
+          "id": "b2-town-imxi-dritt-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-imxi-dritt"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ sal-pjazza.” (Go straight to the square.)",
+          "answer": "Imxi dritt",
+          "explanation": "The complete sentence is “Imxi dritt sal-pjazza.”",
+          "reviewCard": {
+            "maltese": "Imxi dritt",
+            "english": "Go straight",
+            "example": "Imxi dritt sal-pjazza."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Imxi",
+            "dritt"
+          ]
+        },
+        {
+          "id": "b2-town-itla-l-fuq-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-itla-l-fuq"
+          ],
+          "prompt": "What is the lesson meaning of “Itla' 'l fuq”?",
+          "choices": [
+            "cafeteria / cafe",
+            "Go up",
+            "Go down"
+          ],
+          "answer": "Go up",
+          "explanation": "Itla' 'l fuq means “Go up” in this chapter.",
+          "reviewCard": {
+            "maltese": "Itla' 'l fuq",
+            "english": "Go up"
+          }
+        },
+        {
+          "id": "b2-town-itla-l-fuq-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-itla-l-fuq"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ sat-tieni sular.” (Go up to the second floor.)",
+          "answer": "Itla' 'l fuq",
+          "explanation": "The complete sentence is “Itla' 'l fuq sat-tieni sular.”",
+          "reviewCard": {
+            "maltese": "Itla' 'l fuq",
+            "english": "Go up",
+            "example": "Itla' 'l fuq sat-tieni sular."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Itla'",
+            "'l",
+            "fuq"
+          ]
+        },
+        {
+          "id": "b2-town-inzel-l-isfel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-inzel-l-isfel"
+          ],
+          "prompt": "True or false: “Inżel 'l isfel” means “cafeteria / cafe” in this chapter.",
+          "answer": false,
+          "explanation": "Inżel 'l isfel means “Go down”.",
+          "reviewCard": {
+            "maltese": "Inżel 'l isfel",
+            "english": "Go down"
+          }
+        },
+        {
+          "id": "b2-town-inzel-l-isfel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-inzel-l-isfel"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ sal-pjan terran.” (Go down to the ground floor.)",
+          "answer": "Inżel 'l isfel",
+          "explanation": "The complete sentence is “Inżel 'l isfel sal-pjan terran.”",
+          "reviewCard": {
+            "maltese": "Inżel 'l isfel",
+            "english": "Go down",
+            "example": "Inżel 'l isfel sal-pjan terran."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Inżel",
+            "'l",
+            "isfel"
+          ]
+        },
+        {
+          "id": "b2-town-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-dur-fuq-il-lemin",
+            "b2-town-imxi-dritt",
+            "b2-town-itla-l-fuq",
+            "b2-town-inzel-l-isfel"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Dur fuq il-lemin",
+              "right": "Turn right"
+            },
+            {
+              "left": "Imxi dritt",
+              "right": "Go straight"
+            },
+            {
+              "left": "Itla' 'l fuq",
+              "right": "Go up"
+            },
+            {
+              "left": "Inżel 'l isfel",
+              "right": "Go down"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Dur fuq il-lemin",
+            "english": "Turn right"
+          }
+        }
+      ]
+    }
+  ]
+}

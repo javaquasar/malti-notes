@@ -1,0 +1,3269 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b1-animals",
+    "levelId": "b1",
+    "levelLabel": "B1 Foundation",
+    "number": 4,
+    "title": "L-Annimali"
+  },
+  "inventoryChapter": {
+    "id": "b1.4",
+    "courseChapterId": "b1-animals",
+    "book": "B1",
+    "number": 4,
+    "title": "L-Annimali",
+    "targets": [
+      "kelb",
+      "kelba",
+      "qattus",
+      "qattusa",
+      "għasfur",
+      "fenek",
+      "pappagall",
+      "fekruna",
+      "tiġieġa",
+      "fellus",
+      "baqra",
+      "nagħġa",
+      "ħmara",
+      "ġurdien",
+      "ħanżir",
+      "żiemel",
+      "papra",
+      "emu",
+      "brama",
+      "xadina",
+      "kamaleont",
+      "lampuka",
+      "nemla",
+      "serp",
+      "denfil",
+      "ġemel",
+      "iljunfant"
+    ],
+    "baselineMissing": [
+      "fellus",
+      "ħmara",
+      "emu",
+      "kamaleont",
+      "lampuka",
+      "denfil"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b1-animals",
+    "book": "B1",
+    "chapterNumber": 4,
+    "chapterTitle": "L-Annimali",
+    "pageStart": 46,
+    "pageEnd": 64
+  },
+  "targets": [
+    {
+      "id": "b1-animals-kelb",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "kelb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "kelb"
+      },
+      "assessmentIds": [
+        "animal-kelb-meaning",
+        "animal-kelb-production",
+        "b1-animals-kelb-diagnostic-recognition",
+        "b1-animals-kelb-recognition",
+        "b1-animals-kelb-production",
+        "b1-animals-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-kelba",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "kelba",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "kelb"
+      },
+      "assessmentIds": [
+        "b1-animals-kelba-recognition-true-false",
+        "b1-animals-kelba-production",
+        "b1-animals-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-qattus",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "qattus",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "qattus"
+      },
+      "assessmentIds": [
+        "animal-qattus-production",
+        "b1-animals-qattus-diagnostic-recognition-true-false",
+        "b1-animals-qattus-recognition",
+        "b1-animals-qattus-production",
+        "b1-animals-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-qattusa",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "qattusa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "qattus"
+      },
+      "assessmentIds": [
+        "b1-animals-qattusa-recognition-true-false",
+        "b1-animals-qattusa-production",
+        "b1-animals-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-ghasfur",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "għasfur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "g-asfur"
+      },
+      "assessmentIds": [
+        "b1-animals-ghasfur-recognition",
+        "b1-animals-ghasfur-production"
+      ]
+    },
+    {
+      "id": "b1-animals-fenek",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "fenek",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "fenek"
+      },
+      "assessmentIds": [
+        "b1-animals-fenek-diagnostic-recognition",
+        "b1-animals-fenek-recognition-true-false",
+        "b1-animals-fenek-production"
+      ]
+    },
+    {
+      "id": "b1-animals-pappagall",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "pappagall",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "pappagall"
+      },
+      "assessmentIds": [
+        "b1-animals-pappagall-recognition",
+        "b1-animals-pappagall-production",
+        "b1-animals-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-fekruna",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "fekruna",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "fekruna-tal-art"
+      },
+      "assessmentIds": [
+        "b1-animals-fekruna-recognition-true-false",
+        "b1-animals-fekruna-production",
+        "b1-animals-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-tigiega",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "tiġieġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "ti-ie-a"
+      },
+      "assessmentIds": [
+        "b1-animals-tigiega-diagnostic-recognition-true-false",
+        "b1-animals-tigiega-recognition",
+        "b1-animals-tigiega-production",
+        "b1-animals-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-fellus",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "fellus",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-fellus"
+      },
+      "assessmentIds": [
+        "b1-animals-fellus-recognition-true-false",
+        "b1-animals-fellus-production",
+        "b1-animals-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-baqra",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "baqra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "baqra"
+      },
+      "assessmentIds": [
+        "b1-animals-baqra-recognition",
+        "b1-animals-baqra-production"
+      ]
+    },
+    {
+      "id": "b1-animals-naghga",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "nagħġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "nag-a"
+      },
+      "assessmentIds": [
+        "b1-animals-naghga-diagnostic-recognition",
+        "b1-animals-naghga-recognition-true-false",
+        "b1-animals-naghga-production"
+      ]
+    },
+    {
+      "id": "b1-animals-hmara",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ħmara",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-hmara"
+      },
+      "assessmentIds": [
+        "b1-animals-hmara-recognition",
+        "b1-animals-hmara-production",
+        "b1-animals-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-gurdien",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ġurdien",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "urdien"
+      },
+      "assessmentIds": [
+        "b1-animals-gurdien-recognition-true-false",
+        "b1-animals-gurdien-production",
+        "b1-animals-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-hanzir",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ħanżir",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "an-ir"
+      },
+      "assessmentIds": [
+        "b1-animals-hanzir-diagnostic-recognition-true-false",
+        "b1-animals-hanzir-recognition",
+        "b1-animals-hanzir-production",
+        "b1-animals-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-ziemel",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "żiemel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "iemel"
+      },
+      "assessmentIds": [
+        "b1-animals-ziemel-recognition-true-false",
+        "b1-animals-ziemel-production",
+        "b1-animals-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-papra",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "papra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "papra"
+      },
+      "assessmentIds": [
+        "b1-animals-papra-recognition",
+        "b1-animals-papra-production"
+      ]
+    },
+    {
+      "id": "b1-animals-emu",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "emu",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-emu"
+      },
+      "assessmentIds": [
+        "b1-animals-emu-diagnostic-recognition",
+        "b1-animals-emu-recognition-true-false",
+        "b1-animals-emu-production"
+      ]
+    },
+    {
+      "id": "b1-animals-brama",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "brama",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-brama"
+      },
+      "assessmentIds": [
+        "b1-animals-brama-recognition",
+        "b1-animals-brama-production",
+        "b1-animals-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-xadina",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "xadina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "xadina"
+      },
+      "assessmentIds": [
+        "b1-animals-xadina-recognition-true-false",
+        "b1-animals-xadina-production",
+        "b1-animals-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-kamaleont",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "kamaleont",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-kamaleont"
+      },
+      "assessmentIds": [
+        "b1-animals-kamaleont-diagnostic-recognition-true-false",
+        "b1-animals-kamaleont-recognition",
+        "b1-animals-kamaleont-production",
+        "b1-animals-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-lampuka",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "lampuka",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-lampuka"
+      },
+      "assessmentIds": [
+        "b1-animals-lampuka-recognition-true-false",
+        "b1-animals-lampuka-production",
+        "b1-animals-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-nemla",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "nemla",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "nemla"
+      },
+      "assessmentIds": [
+        "b1-animals-nemla-recognition",
+        "b1-animals-nemla-production"
+      ]
+    },
+    {
+      "id": "b1-animals-serp",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "serp",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "serp"
+      },
+      "assessmentIds": [
+        "b1-animals-serp-diagnostic-recognition",
+        "b1-animals-serp-recognition-true-false",
+        "b1-animals-serp-production"
+      ]
+    },
+    {
+      "id": "b1-animals-denfil",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "denfil",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b1-animals-denfil"
+      },
+      "assessmentIds": [
+        "b1-animals-denfil-recognition",
+        "b1-animals-denfil-production",
+        "b1-animals-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-gemel",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "ġemel",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "emel"
+      },
+      "assessmentIds": [
+        "b1-animals-gemel-recognition-true-false",
+        "b1-animals-gemel-production",
+        "b1-animals-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b1-animals-iljunfant",
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "type": "vocabulary",
+      "sourceRequirement": "iljunfant",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "animals.html",
+        "file": "assets/data/animals.json",
+        "itemId": "iljunfant"
+      },
+      "assessmentIds": [
+        "animal-iljunfant-production",
+        "b1-animals-iljunfant-diagnostic-recognition-true-false",
+        "b1-animals-iljunfant-recognition",
+        "b1-animals-iljunfant-production",
+        "b1-animals-checkpoint-5-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b1-animals-kelb": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50,
+        54,
+        62
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-kelba": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-qattus": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        54
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-qattusa": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50,
+        55
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-ghasfur": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-fenek": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-pappagall": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        50
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-fekruna": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 46,
+      "pages": [
+        46,
+        48,
+        50
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-tigiega": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-fellus": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-baqra": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-naghga": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 56,
+      "pages": [
+        56,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-hmara": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 58,
+      "pages": [
+        58,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-gurdien": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-hanzir": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57,
+        58,
+        59
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-ziemel": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 55,
+      "pages": [
+        55,
+        57,
+        58,
+        62
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-papra": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 57,
+      "pages": [
+        57,
+        58
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-emu": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-brama": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 62,
+      "pages": [
+        62,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-xadina": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 60,
+      "pages": [
+        60,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-kamaleont": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-lampuka": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-nemla": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b1-animals-serp": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 60,
+      "pages": [
+        60,
+        62,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-denfil": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 62,
+      "pages": [
+        62,
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-gemel": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 63,
+      "pages": [
+        63
+      ],
+      "match": "text-exact"
+    },
+    "b1-animals-iljunfant": {
+      "book": "B1",
+      "chapterId": "b1-animals",
+      "chapterNumber": 4,
+      "chapterTitle": "L-Annimali",
+      "pageRange": [
+        46,
+        64
+      ],
+      "primaryPage": 64,
+      "pages": [
+        64
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b1-animals-kelb",
+      "maltese": "kelb",
+      "english": "dog",
+      "example": "Nara kelb fil-ġnien.",
+      "exampleTranslation": "I see the dog in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara kelb fil-ġnien.",
+        "Translation: I see the dog in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-kelba",
+      "maltese": "kelba",
+      "english": "female dog",
+      "example": "Nara kelba fil-ġnien.",
+      "exampleTranslation": "I see the female dog in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara kelba fil-ġnien.",
+        "Translation: I see the female dog in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-qattus",
+      "maltese": "qattus",
+      "english": "cat",
+      "example": "Nara qattus fil-ġnien.",
+      "exampleTranslation": "I see the cat in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara qattus fil-ġnien.",
+        "Translation: I see the cat in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-qattusa",
+      "maltese": "qattusa",
+      "english": "female cat",
+      "example": "Nara qattusa fil-ġnien.",
+      "exampleTranslation": "I see the female cat in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara qattusa fil-ġnien.",
+        "Translation: I see the female cat in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-ghasfur",
+      "maltese": "għasfur",
+      "english": "bird",
+      "example": "Nara għasfur fil-ġnien.",
+      "exampleTranslation": "I see the bird in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara għasfur fil-ġnien.",
+        "Translation: I see the bird in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-fenek",
+      "maltese": "fenek",
+      "english": "rabbit",
+      "example": "Nara fenek fil-ġnien.",
+      "exampleTranslation": "I see the rabbit in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara fenek fil-ġnien.",
+        "Translation: I see the rabbit in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-pappagall",
+      "maltese": "pappagall",
+      "english": "parrot",
+      "example": "Nara pappagall fil-ġnien.",
+      "exampleTranslation": "I see the parrot in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara pappagall fil-ġnien.",
+        "Translation: I see the parrot in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-fekruna",
+      "maltese": "fekruna",
+      "english": "turtle",
+      "example": "Nara fekruna fil-ġnien.",
+      "exampleTranslation": "I see the turtle in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 46,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 46",
+      "notes": [
+        "Example: Nara fekruna fil-ġnien.",
+        "Translation: I see the turtle in the garden.",
+        "Source: B1, Chapter 4, p. 46"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-tigiega",
+      "maltese": "tiġieġa",
+      "english": "hen",
+      "example": "Nara tiġieġa fil-ġnien.",
+      "exampleTranslation": "I see the hen in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 56,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 56",
+      "notes": [
+        "Example: Nara tiġieġa fil-ġnien.",
+        "Translation: I see the hen in the garden.",
+        "Source: B1, Chapter 4, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-fellus",
+      "maltese": "fellus",
+      "english": "chick",
+      "example": "Nara fellus fil-ġnien.",
+      "exampleTranslation": "I see the chick in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 56,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 56",
+      "notes": [
+        "Example: Nara fellus fil-ġnien.",
+        "Translation: I see the chick in the garden.",
+        "Source: B1, Chapter 4, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-baqra",
+      "maltese": "baqra",
+      "english": "cow",
+      "example": "Nara baqra fil-ġnien.",
+      "exampleTranslation": "I see the cow in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 56,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 56",
+      "notes": [
+        "Example: Nara baqra fil-ġnien.",
+        "Translation: I see the cow in the garden.",
+        "Source: B1, Chapter 4, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-naghga",
+      "maltese": "nagħġa",
+      "english": "sheep",
+      "example": "Nara nagħġa fil-ġnien.",
+      "exampleTranslation": "I see the sheep in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 56,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 56",
+      "notes": [
+        "Example: Nara nagħġa fil-ġnien.",
+        "Translation: I see the sheep in the garden.",
+        "Source: B1, Chapter 4, p. 56"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-hmara",
+      "maltese": "ħmara",
+      "english": "female donkey",
+      "example": "Nara ħmara fil-ġnien.",
+      "exampleTranslation": "I see the female donkey in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 58,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 58",
+      "notes": [
+        "Example: Nara ħmara fil-ġnien.",
+        "Translation: I see the female donkey in the garden.",
+        "Source: B1, Chapter 4, p. 58"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-gurdien",
+      "maltese": "ġurdien",
+      "english": "mouse",
+      "example": "Nara ġurdien fil-ġnien.",
+      "exampleTranslation": "I see the mouse in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 57,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 57",
+      "notes": [
+        "Example: Nara ġurdien fil-ġnien.",
+        "Translation: I see the mouse in the garden.",
+        "Source: B1, Chapter 4, p. 57"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-hanzir",
+      "maltese": "ħanżir",
+      "english": "pig",
+      "example": "Nara ħanżir fil-ġnien.",
+      "exampleTranslation": "I see the pig in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 57,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 57",
+      "notes": [
+        "Example: Nara ħanżir fil-ġnien.",
+        "Translation: I see the pig in the garden.",
+        "Source: B1, Chapter 4, p. 57"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-ziemel",
+      "maltese": "żiemel",
+      "english": "horse",
+      "example": "Nara żiemel fil-ġnien.",
+      "exampleTranslation": "I see the horse in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 55,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 55",
+      "notes": [
+        "Example: Nara żiemel fil-ġnien.",
+        "Translation: I see the horse in the garden.",
+        "Source: B1, Chapter 4, p. 55"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-papra",
+      "maltese": "papra",
+      "english": "duck",
+      "example": "Nara papra fil-ġnien.",
+      "exampleTranslation": "I see the duck in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 57,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 57",
+      "notes": [
+        "Example: Nara papra fil-ġnien.",
+        "Translation: I see the duck in the garden.",
+        "Source: B1, Chapter 4, p. 57"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-emu",
+      "maltese": "emu",
+      "english": "emu",
+      "example": "Nara emu fil-ġnien.",
+      "exampleTranslation": "I see the emu in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 63,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 63",
+      "notes": [
+        "Example: Nara emu fil-ġnien.",
+        "Translation: I see the emu in the garden.",
+        "Source: B1, Chapter 4, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-brama",
+      "maltese": "brama",
+      "english": "bream",
+      "example": "Nara brama fil-ġnien.",
+      "exampleTranslation": "I see the bream in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 62,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 62",
+      "notes": [
+        "Example: Nara brama fil-ġnien.",
+        "Translation: I see the bream in the garden.",
+        "Source: B1, Chapter 4, p. 62"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-xadina",
+      "maltese": "xadina",
+      "english": "monkey",
+      "example": "Nara xadina fil-ġnien.",
+      "exampleTranslation": "I see the monkey in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 60,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 60",
+      "notes": [
+        "Example: Nara xadina fil-ġnien.",
+        "Translation: I see the monkey in the garden.",
+        "Source: B1, Chapter 4, p. 60"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-kamaleont",
+      "maltese": "kamaleont",
+      "english": "chameleon",
+      "example": "Nara kamaleont fil-ġnien.",
+      "exampleTranslation": "I see the chameleon in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 63,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 63",
+      "notes": [
+        "Example: Nara kamaleont fil-ġnien.",
+        "Translation: I see the chameleon in the garden.",
+        "Source: B1, Chapter 4, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-lampuka",
+      "maltese": "lampuka",
+      "english": "dolphinfish",
+      "example": "Nara lampuka fil-ġnien.",
+      "exampleTranslation": "I see the dolphinfish in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 63,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 63",
+      "notes": [
+        "Example: Nara lampuka fil-ġnien.",
+        "Translation: I see the dolphinfish in the garden.",
+        "Source: B1, Chapter 4, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-nemla",
+      "maltese": "nemla",
+      "english": "ant",
+      "example": "Nara nemla fil-ġnien.",
+      "exampleTranslation": "I see the ant in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": null,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B1, Chapter 4, pp. 46-64",
+      "notes": [
+        "Example: Nara nemla fil-ġnien.",
+        "Translation: I see the ant in the garden.",
+        "Source: B1, Chapter 4, pp. 46-64"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-serp",
+      "maltese": "serp",
+      "english": "snake",
+      "example": "Nara serp fil-ġnien.",
+      "exampleTranslation": "I see the snake in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 60,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 60",
+      "notes": [
+        "Example: Nara serp fil-ġnien.",
+        "Translation: I see the snake in the garden.",
+        "Source: B1, Chapter 4, p. 60"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-denfil",
+      "maltese": "denfil",
+      "english": "dolphin",
+      "example": "Nara denfil fil-ġnien.",
+      "exampleTranslation": "I see the dolphin in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 62,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 62",
+      "notes": [
+        "Example: Nara denfil fil-ġnien.",
+        "Translation: I see the dolphin in the garden.",
+        "Source: B1, Chapter 4, p. 62"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-gemel",
+      "maltese": "ġemel",
+      "english": "camel",
+      "example": "Nara ġemel fil-ġnien.",
+      "exampleTranslation": "I see the camel in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 63,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 63",
+      "notes": [
+        "Example: Nara ġemel fil-ġnien.",
+        "Translation: I see the camel in the garden.",
+        "Source: B1, Chapter 4, p. 63"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b1-animals-iljunfant",
+      "maltese": "iljunfant",
+      "english": "elephant",
+      "example": "Nara iljunfant fil-ġnien.",
+      "exampleTranslation": "I see the elephant in the garden.",
+      "examplePattern": "animal-in-garden",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B1",
+        "chapter": 4,
+        "page": 64,
+        "pageRange": [
+          46,
+          64
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B1, Chapter 4, p. 64",
+      "notes": [
+        "Example: Nara iljunfant fil-ġnien.",
+        "Translation: I see the elephant in the garden.",
+        "Source: B1, Chapter 4, p. 64"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-diagnostic",
+      "kind": "diagnostic",
+      "title": "L-Annimali Entry Diagnostic",
+      "items": [
+        {
+          "id": "b1-animals-kelb-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kelb"
+          ],
+          "prompt": "What is the lesson meaning of “kelb”?",
+          "choices": [
+            "dog",
+            "female dog",
+            "cat"
+          ],
+          "answer": "dog",
+          "explanation": "kelb means “dog” in this chapter.",
+          "reviewCard": {
+            "maltese": "kelb",
+            "english": "dog"
+          }
+        },
+        {
+          "id": "b1-animals-qattus-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-qattus"
+          ],
+          "prompt": "True or false: “qattus” means “female cat” in this chapter.",
+          "answer": false,
+          "explanation": "qattus means “cat”.",
+          "reviewCard": {
+            "maltese": "qattus",
+            "english": "cat"
+          }
+        },
+        {
+          "id": "b1-animals-fenek-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fenek"
+          ],
+          "prompt": "What is the lesson meaning of “fenek”?",
+          "choices": [
+            "bird",
+            "rabbit",
+            "female cat"
+          ],
+          "answer": "rabbit",
+          "explanation": "fenek means “rabbit” in this chapter.",
+          "reviewCard": {
+            "maltese": "fenek",
+            "english": "rabbit"
+          }
+        },
+        {
+          "id": "b1-animals-tigiega-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-tigiega"
+          ],
+          "prompt": "True or false: “tiġieġa” means “bird” in this chapter.",
+          "answer": false,
+          "explanation": "tiġieġa means “hen”.",
+          "reviewCard": {
+            "maltese": "tiġieġa",
+            "english": "hen"
+          }
+        },
+        {
+          "id": "b1-animals-naghga-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-naghga"
+          ],
+          "prompt": "What is the lesson meaning of “nagħġa”?",
+          "choices": [
+            "rabbit",
+            "parrot",
+            "sheep"
+          ],
+          "answer": "sheep",
+          "explanation": "nagħġa means “sheep” in this chapter.",
+          "reviewCard": {
+            "maltese": "nagħġa",
+            "english": "sheep"
+          }
+        },
+        {
+          "id": "b1-animals-hanzir-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-hanzir"
+          ],
+          "prompt": "True or false: “ħanżir” means “parrot” in this chapter.",
+          "answer": false,
+          "explanation": "ħanżir means “pig”.",
+          "reviewCard": {
+            "maltese": "ħanżir",
+            "english": "pig"
+          }
+        },
+        {
+          "id": "b1-animals-emu-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-emu"
+          ],
+          "prompt": "What is the lesson meaning of “emu”?",
+          "choices": [
+            "emu",
+            "turtle",
+            "hen"
+          ],
+          "answer": "emu",
+          "explanation": "emu means “emu” in this chapter.",
+          "reviewCard": {
+            "maltese": "emu",
+            "english": "emu"
+          }
+        },
+        {
+          "id": "b1-animals-kamaleont-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kamaleont"
+          ],
+          "prompt": "True or false: “kamaleont” means “hen” in this chapter.",
+          "answer": false,
+          "explanation": "kamaleont means “chameleon”.",
+          "reviewCard": {
+            "maltese": "kamaleont",
+            "english": "chameleon"
+          }
+        },
+        {
+          "id": "b1-animals-serp-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-serp"
+          ],
+          "prompt": "What is the lesson meaning of “serp”?",
+          "choices": [
+            "cow",
+            "snake",
+            "chick"
+          ],
+          "answer": "snake",
+          "explanation": "serp means “snake” in this chapter.",
+          "reviewCard": {
+            "maltese": "serp",
+            "english": "snake"
+          }
+        },
+        {
+          "id": "b1-animals-iljunfant-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-iljunfant"
+          ],
+          "prompt": "True or false: “iljunfant” means “cow” in this chapter.",
+          "answer": false,
+          "explanation": "iljunfant means “elephant”.",
+          "reviewCard": {
+            "maltese": "iljunfant",
+            "english": "elephant"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 1",
+      "items": [
+        {
+          "id": "b1-animals-kelb-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kelb"
+          ],
+          "prompt": "What is the lesson meaning of “kelb”?",
+          "choices": [
+            "dog",
+            "female dog",
+            "cat"
+          ],
+          "answer": "dog",
+          "explanation": "kelb means “dog” in this chapter.",
+          "reviewCard": {
+            "maltese": "kelb",
+            "english": "dog"
+          }
+        },
+        {
+          "id": "b1-animals-kelb-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-kelb"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the dog in the garden.)",
+          "answer": "kelb",
+          "explanation": "The complete sentence is “Nara kelb fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "kelb",
+            "english": "dog",
+            "example": "Nara kelb fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kelb"
+          ]
+        },
+        {
+          "id": "b1-animals-kelba-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kelba"
+          ],
+          "prompt": "True or false: “kelba” means “cat” in this chapter.",
+          "answer": false,
+          "explanation": "kelba means “female dog”.",
+          "reviewCard": {
+            "maltese": "kelba",
+            "english": "female dog"
+          }
+        },
+        {
+          "id": "b1-animals-kelba-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-kelba"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the female dog in the garden.)",
+          "answer": "kelba",
+          "explanation": "The complete sentence is “Nara kelba fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "kelba",
+            "english": "female dog",
+            "example": "Nara kelba fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kelba"
+          ]
+        },
+        {
+          "id": "b1-animals-qattus-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-qattus"
+          ],
+          "prompt": "What is the lesson meaning of “qattus”?",
+          "choices": [
+            "bird",
+            "cat",
+            "female cat"
+          ],
+          "answer": "cat",
+          "explanation": "qattus means “cat” in this chapter.",
+          "reviewCard": {
+            "maltese": "qattus",
+            "english": "cat"
+          }
+        },
+        {
+          "id": "b1-animals-qattus-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-qattus"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the cat in the garden.)",
+          "answer": "qattus",
+          "explanation": "The complete sentence is “Nara qattus fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "qattus",
+            "english": "cat",
+            "example": "Nara qattus fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qattus"
+          ]
+        },
+        {
+          "id": "b1-animals-qattusa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-qattusa"
+          ],
+          "prompt": "True or false: “qattusa” means “bird” in this chapter.",
+          "answer": false,
+          "explanation": "qattusa means “female cat”.",
+          "reviewCard": {
+            "maltese": "qattusa",
+            "english": "female cat"
+          }
+        },
+        {
+          "id": "b1-animals-qattusa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-qattusa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the female cat in the garden.)",
+          "answer": "qattusa",
+          "explanation": "The complete sentence is “Nara qattusa fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "qattusa",
+            "english": "female cat",
+            "example": "Nara qattusa fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qattusa"
+          ]
+        },
+        {
+          "id": "b1-animals-ghasfur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-ghasfur"
+          ],
+          "prompt": "What is the lesson meaning of “għasfur”?",
+          "choices": [
+            "rabbit",
+            "parrot",
+            "bird"
+          ],
+          "answer": "bird",
+          "explanation": "għasfur means “bird” in this chapter.",
+          "reviewCard": {
+            "maltese": "għasfur",
+            "english": "bird"
+          }
+        },
+        {
+          "id": "b1-animals-ghasfur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-ghasfur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the bird in the garden.)",
+          "answer": "għasfur",
+          "explanation": "The complete sentence is “Nara għasfur fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "għasfur",
+            "english": "bird",
+            "example": "Nara għasfur fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għasfur"
+          ]
+        },
+        {
+          "id": "b1-animals-fenek-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fenek"
+          ],
+          "prompt": "True or false: “fenek” means “parrot” in this chapter.",
+          "answer": false,
+          "explanation": "fenek means “rabbit”.",
+          "reviewCard": {
+            "maltese": "fenek",
+            "english": "rabbit"
+          }
+        },
+        {
+          "id": "b1-animals-fenek-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-fenek"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the rabbit in the garden.)",
+          "answer": "fenek",
+          "explanation": "The complete sentence is “Nara fenek fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "fenek",
+            "english": "rabbit",
+            "example": "Nara fenek fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fenek"
+          ]
+        },
+        {
+          "id": "b1-animals-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kelb",
+            "b1-animals-kelba",
+            "b1-animals-qattus",
+            "b1-animals-qattusa"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kelb",
+              "right": "dog"
+            },
+            {
+              "left": "kelba",
+              "right": "female dog"
+            },
+            {
+              "left": "qattus",
+              "right": "cat"
+            },
+            {
+              "left": "qattusa",
+              "right": "female cat"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kelb",
+            "english": "dog"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 2",
+      "items": [
+        {
+          "id": "b1-animals-pappagall-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-pappagall"
+          ],
+          "prompt": "What is the lesson meaning of “pappagall”?",
+          "choices": [
+            "parrot",
+            "turtle",
+            "hen"
+          ],
+          "answer": "parrot",
+          "explanation": "pappagall means “parrot” in this chapter.",
+          "reviewCard": {
+            "maltese": "pappagall",
+            "english": "parrot"
+          }
+        },
+        {
+          "id": "b1-animals-pappagall-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-pappagall"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the parrot in the garden.)",
+          "answer": "pappagall",
+          "explanation": "The complete sentence is “Nara pappagall fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "pappagall",
+            "english": "parrot",
+            "example": "Nara pappagall fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pappagall"
+          ]
+        },
+        {
+          "id": "b1-animals-fekruna-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fekruna"
+          ],
+          "prompt": "True or false: “fekruna” means “hen” in this chapter.",
+          "answer": false,
+          "explanation": "fekruna means “turtle”.",
+          "reviewCard": {
+            "maltese": "fekruna",
+            "english": "turtle"
+          }
+        },
+        {
+          "id": "b1-animals-fekruna-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-fekruna"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the turtle in the garden.)",
+          "answer": "fekruna",
+          "explanation": "The complete sentence is “Nara fekruna fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "fekruna",
+            "english": "turtle",
+            "example": "Nara fekruna fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fekruna"
+          ]
+        },
+        {
+          "id": "b1-animals-tigiega-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-tigiega"
+          ],
+          "prompt": "What is the lesson meaning of “tiġieġa”?",
+          "choices": [
+            "cow",
+            "hen",
+            "chick"
+          ],
+          "answer": "hen",
+          "explanation": "tiġieġa means “hen” in this chapter.",
+          "reviewCard": {
+            "maltese": "tiġieġa",
+            "english": "hen"
+          }
+        },
+        {
+          "id": "b1-animals-tigiega-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-tigiega"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the hen in the garden.)",
+          "answer": "tiġieġa",
+          "explanation": "The complete sentence is “Nara tiġieġa fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "tiġieġa",
+            "english": "hen",
+            "example": "Nara tiġieġa fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tiġieġa"
+          ]
+        },
+        {
+          "id": "b1-animals-fellus-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fellus"
+          ],
+          "prompt": "True or false: “fellus” means “cow” in this chapter.",
+          "answer": false,
+          "explanation": "fellus means “chick”.",
+          "reviewCard": {
+            "maltese": "fellus",
+            "english": "chick"
+          }
+        },
+        {
+          "id": "b1-animals-fellus-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-fellus"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the chick in the garden.)",
+          "answer": "fellus",
+          "explanation": "The complete sentence is “Nara fellus fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "fellus",
+            "english": "chick",
+            "example": "Nara fellus fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fellus"
+          ]
+        },
+        {
+          "id": "b1-animals-baqra-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-baqra"
+          ],
+          "prompt": "What is the lesson meaning of “baqra”?",
+          "choices": [
+            "sheep",
+            "female donkey",
+            "cow"
+          ],
+          "answer": "cow",
+          "explanation": "baqra means “cow” in this chapter.",
+          "reviewCard": {
+            "maltese": "baqra",
+            "english": "cow"
+          }
+        },
+        {
+          "id": "b1-animals-baqra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-baqra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the cow in the garden.)",
+          "answer": "baqra",
+          "explanation": "The complete sentence is “Nara baqra fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "baqra",
+            "english": "cow",
+            "example": "Nara baqra fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "baqra"
+          ]
+        },
+        {
+          "id": "b1-animals-naghga-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-naghga"
+          ],
+          "prompt": "True or false: “nagħġa” means “female donkey” in this chapter.",
+          "answer": false,
+          "explanation": "nagħġa means “sheep”.",
+          "reviewCard": {
+            "maltese": "nagħġa",
+            "english": "sheep"
+          }
+        },
+        {
+          "id": "b1-animals-naghga-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-naghga"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the sheep in the garden.)",
+          "answer": "nagħġa",
+          "explanation": "The complete sentence is “Nara nagħġa fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "nagħġa",
+            "english": "sheep",
+            "example": "Nara nagħġa fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nagħġa"
+          ]
+        },
+        {
+          "id": "b1-animals-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-pappagall",
+            "b1-animals-fekruna",
+            "b1-animals-tigiega",
+            "b1-animals-fellus"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "pappagall",
+              "right": "parrot"
+            },
+            {
+              "left": "fekruna",
+              "right": "turtle"
+            },
+            {
+              "left": "tiġieġa",
+              "right": "hen"
+            },
+            {
+              "left": "fellus",
+              "right": "chick"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "pappagall",
+            "english": "parrot"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 3",
+      "items": [
+        {
+          "id": "b1-animals-hmara-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-hmara"
+          ],
+          "prompt": "What is the lesson meaning of “ħmara”?",
+          "choices": [
+            "female donkey",
+            "mouse",
+            "pig"
+          ],
+          "answer": "female donkey",
+          "explanation": "ħmara means “female donkey” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħmara",
+            "english": "female donkey"
+          }
+        },
+        {
+          "id": "b1-animals-hmara-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-hmara"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the female donkey in the garden.)",
+          "answer": "ħmara",
+          "explanation": "The complete sentence is “Nara ħmara fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "ħmara",
+            "english": "female donkey",
+            "example": "Nara ħmara fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħmara"
+          ]
+        },
+        {
+          "id": "b1-animals-gurdien-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-gurdien"
+          ],
+          "prompt": "True or false: “ġurdien” means “pig” in this chapter.",
+          "answer": false,
+          "explanation": "ġurdien means “mouse”.",
+          "reviewCard": {
+            "maltese": "ġurdien",
+            "english": "mouse"
+          }
+        },
+        {
+          "id": "b1-animals-gurdien-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-gurdien"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the mouse in the garden.)",
+          "answer": "ġurdien",
+          "explanation": "The complete sentence is “Nara ġurdien fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "ġurdien",
+            "english": "mouse",
+            "example": "Nara ġurdien fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġurdien"
+          ]
+        },
+        {
+          "id": "b1-animals-hanzir-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-hanzir"
+          ],
+          "prompt": "What is the lesson meaning of “ħanżir”?",
+          "choices": [
+            "duck",
+            "pig",
+            "horse"
+          ],
+          "answer": "pig",
+          "explanation": "ħanżir means “pig” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħanżir",
+            "english": "pig"
+          }
+        },
+        {
+          "id": "b1-animals-hanzir-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-hanzir"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the pig in the garden.)",
+          "answer": "ħanżir",
+          "explanation": "The complete sentence is “Nara ħanżir fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "ħanżir",
+            "english": "pig",
+            "example": "Nara ħanżir fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħanżir"
+          ]
+        },
+        {
+          "id": "b1-animals-ziemel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-ziemel"
+          ],
+          "prompt": "True or false: “żiemel” means “duck” in this chapter.",
+          "answer": false,
+          "explanation": "żiemel means “horse”.",
+          "reviewCard": {
+            "maltese": "żiemel",
+            "english": "horse"
+          }
+        },
+        {
+          "id": "b1-animals-ziemel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-ziemel"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the horse in the garden.)",
+          "answer": "żiemel",
+          "explanation": "The complete sentence is “Nara żiemel fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "żiemel",
+            "english": "horse",
+            "example": "Nara żiemel fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żiemel"
+          ]
+        },
+        {
+          "id": "b1-animals-papra-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-papra"
+          ],
+          "prompt": "What is the lesson meaning of “papra”?",
+          "choices": [
+            "emu",
+            "bream",
+            "duck"
+          ],
+          "answer": "duck",
+          "explanation": "papra means “duck” in this chapter.",
+          "reviewCard": {
+            "maltese": "papra",
+            "english": "duck"
+          }
+        },
+        {
+          "id": "b1-animals-papra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-papra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the duck in the garden.)",
+          "answer": "papra",
+          "explanation": "The complete sentence is “Nara papra fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "papra",
+            "english": "duck",
+            "example": "Nara papra fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "papra"
+          ]
+        },
+        {
+          "id": "b1-animals-emu-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-emu"
+          ],
+          "prompt": "True or false: “emu” means “bream” in this chapter.",
+          "answer": false,
+          "explanation": "emu means “emu”.",
+          "reviewCard": {
+            "maltese": "emu",
+            "english": "emu"
+          }
+        },
+        {
+          "id": "b1-animals-emu-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-emu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the emu in the garden.)",
+          "answer": "emu",
+          "explanation": "The complete sentence is “Nara emu fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "emu",
+            "english": "emu",
+            "example": "Nara emu fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "emu"
+          ]
+        },
+        {
+          "id": "b1-animals-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-hmara",
+            "b1-animals-gurdien",
+            "b1-animals-hanzir",
+            "b1-animals-ziemel"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ħmara",
+              "right": "female donkey"
+            },
+            {
+              "left": "ġurdien",
+              "right": "mouse"
+            },
+            {
+              "left": "ħanżir",
+              "right": "pig"
+            },
+            {
+              "left": "żiemel",
+              "right": "horse"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ħmara",
+            "english": "female donkey"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "L-Annimali Checkpoint 4",
+      "items": [
+        {
+          "id": "b1-animals-brama-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-brama"
+          ],
+          "prompt": "What is the lesson meaning of “brama”?",
+          "choices": [
+            "bream",
+            "monkey",
+            "chameleon"
+          ],
+          "answer": "bream",
+          "explanation": "brama means “bream” in this chapter.",
+          "reviewCard": {
+            "maltese": "brama",
+            "english": "bream"
+          }
+        },
+        {
+          "id": "b1-animals-brama-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-brama"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the bream in the garden.)",
+          "answer": "brama",
+          "explanation": "The complete sentence is “Nara brama fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "brama",
+            "english": "bream",
+            "example": "Nara brama fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "brama"
+          ]
+        },
+        {
+          "id": "b1-animals-xadina-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-xadina"
+          ],
+          "prompt": "True or false: “xadina” means “chameleon” in this chapter.",
+          "answer": false,
+          "explanation": "xadina means “monkey”.",
+          "reviewCard": {
+            "maltese": "xadina",
+            "english": "monkey"
+          }
+        },
+        {
+          "id": "b1-animals-xadina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-xadina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the monkey in the garden.)",
+          "answer": "xadina",
+          "explanation": "The complete sentence is “Nara xadina fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "xadina",
+            "english": "monkey",
+            "example": "Nara xadina fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "xadina"
+          ]
+        },
+        {
+          "id": "b1-animals-kamaleont-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-kamaleont"
+          ],
+          "prompt": "What is the lesson meaning of “kamaleont”?",
+          "choices": [
+            "ant",
+            "chameleon",
+            "dolphinfish"
+          ],
+          "answer": "chameleon",
+          "explanation": "kamaleont means “chameleon” in this chapter.",
+          "reviewCard": {
+            "maltese": "kamaleont",
+            "english": "chameleon"
+          }
+        },
+        {
+          "id": "b1-animals-kamaleont-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-kamaleont"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the chameleon in the garden.)",
+          "answer": "kamaleont",
+          "explanation": "The complete sentence is “Nara kamaleont fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "kamaleont",
+            "english": "chameleon",
+            "example": "Nara kamaleont fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kamaleont"
+          ]
+        },
+        {
+          "id": "b1-animals-lampuka-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-lampuka"
+          ],
+          "prompt": "True or false: “lampuka” means “ant” in this chapter.",
+          "answer": false,
+          "explanation": "lampuka means “dolphinfish”.",
+          "reviewCard": {
+            "maltese": "lampuka",
+            "english": "dolphinfish"
+          }
+        },
+        {
+          "id": "b1-animals-lampuka-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-lampuka"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the dolphinfish in the garden.)",
+          "answer": "lampuka",
+          "explanation": "The complete sentence is “Nara lampuka fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "lampuka",
+            "english": "dolphinfish",
+            "example": "Nara lampuka fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lampuka"
+          ]
+        },
+        {
+          "id": "b1-animals-nemla-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-nemla"
+          ],
+          "prompt": "What is the lesson meaning of “nemla”?",
+          "choices": [
+            "snake",
+            "dolphin",
+            "ant"
+          ],
+          "answer": "ant",
+          "explanation": "nemla means “ant” in this chapter.",
+          "reviewCard": {
+            "maltese": "nemla",
+            "english": "ant"
+          }
+        },
+        {
+          "id": "b1-animals-nemla-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-nemla"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the ant in the garden.)",
+          "answer": "nemla",
+          "explanation": "The complete sentence is “Nara nemla fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "nemla",
+            "english": "ant",
+            "example": "Nara nemla fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nemla"
+          ]
+        },
+        {
+          "id": "b1-animals-serp-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-serp"
+          ],
+          "prompt": "True or false: “serp” means “dolphin” in this chapter.",
+          "answer": false,
+          "explanation": "serp means “snake”.",
+          "reviewCard": {
+            "maltese": "serp",
+            "english": "snake"
+          }
+        },
+        {
+          "id": "b1-animals-serp-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-serp"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the snake in the garden.)",
+          "answer": "serp",
+          "explanation": "The complete sentence is “Nara serp fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "serp",
+            "english": "snake",
+            "example": "Nara serp fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "serp"
+          ]
+        },
+        {
+          "id": "b1-animals-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-brama",
+            "b1-animals-xadina",
+            "b1-animals-kamaleont",
+            "b1-animals-lampuka"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "brama",
+              "right": "bream"
+            },
+            {
+              "left": "xadina",
+              "right": "monkey"
+            },
+            {
+              "left": "kamaleont",
+              "right": "chameleon"
+            },
+            {
+              "left": "lampuka",
+              "right": "dolphinfish"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "brama",
+            "english": "bream"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b1-animals",
+      "level": "B1",
+      "passPercent": 75,
+      "id": "b1-animals-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 3,
+      "title": "L-Annimali Checkpoint 5",
+      "items": [
+        {
+          "id": "b1-animals-denfil-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-denfil"
+          ],
+          "prompt": "What is the lesson meaning of “denfil”?",
+          "choices": [
+            "dolphin",
+            "camel",
+            "elephant"
+          ],
+          "answer": "dolphin",
+          "explanation": "denfil means “dolphin” in this chapter.",
+          "reviewCard": {
+            "maltese": "denfil",
+            "english": "dolphin"
+          }
+        },
+        {
+          "id": "b1-animals-denfil-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-denfil"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the dolphin in the garden.)",
+          "answer": "denfil",
+          "explanation": "The complete sentence is “Nara denfil fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "denfil",
+            "english": "dolphin",
+            "example": "Nara denfil fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "denfil"
+          ]
+        },
+        {
+          "id": "b1-animals-gemel-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-gemel"
+          ],
+          "prompt": "True or false: “ġemel” means “elephant” in this chapter.",
+          "answer": false,
+          "explanation": "ġemel means “camel”.",
+          "reviewCard": {
+            "maltese": "ġemel",
+            "english": "camel"
+          }
+        },
+        {
+          "id": "b1-animals-gemel-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-gemel"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the camel in the garden.)",
+          "answer": "ġemel",
+          "explanation": "The complete sentence is “Nara ġemel fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "ġemel",
+            "english": "camel",
+            "example": "Nara ġemel fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġemel"
+          ]
+        },
+        {
+          "id": "b1-animals-iljunfant-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-iljunfant"
+          ],
+          "prompt": "What is the lesson meaning of “iljunfant”?",
+          "choices": [
+            "female dog",
+            "elephant",
+            "dog"
+          ],
+          "answer": "elephant",
+          "explanation": "iljunfant means “elephant” in this chapter.",
+          "reviewCard": {
+            "maltese": "iljunfant",
+            "english": "elephant"
+          }
+        },
+        {
+          "id": "b1-animals-iljunfant-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-iljunfant"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the elephant in the garden.)",
+          "answer": "iljunfant",
+          "explanation": "The complete sentence is “Nara iljunfant fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "iljunfant",
+            "english": "elephant",
+            "example": "Nara iljunfant fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "iljunfant"
+          ]
+        },
+        {
+          "id": "b1-animals-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-denfil",
+            "b1-animals-gemel",
+            "b1-animals-iljunfant"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "denfil",
+              "right": "dolphin"
+            },
+            {
+              "left": "ġemel",
+              "right": "camel"
+            },
+            {
+              "left": "iljunfant",
+              "right": "elephant"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "denfil",
+            "english": "dolphin"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3248 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-clothes",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 4,
+    "title": "Il-Ħwejjeġ"
+  },
+  "inventoryChapter": {
+    "id": "b2.4",
+    "courseChapterId": "b2-clothes",
+    "book": "B2",
+    "number": 4,
+    "title": "Il-Ħwejjeġ",
+    "targets": [
+      "flokk ħafif",
+      "libsa ħafifa",
+      "dublett",
+      "flokk bil-komma qasira",
+      "ġakketta tal-jeans",
+      "flokk ta' taħt",
+      "qalziet ħafif",
+      "flokk biċ-ċingi",
+      "malja",
+      "kappell",
+      "karkur",
+      "flokk tas-suf",
+      "ġakketta",
+      "ġlekk",
+      "qalziet",
+      "boots",
+      "xalpa",
+      "ħdax",
+      "tnax",
+      "tlettax",
+      "erbatax",
+      "ħmistax",
+      "sittax",
+      "sbatax",
+      "tmintax",
+      "dsatax",
+      "għoxrin"
+    ],
+    "baselineMissing": [
+      "libsa ħafifa",
+      "flokk bil-komma qasira",
+      "ġakketta tal-jeans",
+      "flokk ta' taħt",
+      "qalziet ħafif",
+      "flokk biċ-ċingi",
+      "karkur",
+      "flokk tas-suf",
+      "boots"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-clothes",
+    "book": "B2",
+    "chapterNumber": 4,
+    "chapterTitle": "Il-Ħwejjeġ",
+    "pageStart": 37,
+    "pageEnd": 54
+  },
+  "targets": [
+    {
+      "id": "b2-clothes-flokk-hafif",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk ħafif",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-flokk-hafif"
+      },
+      "assessmentIds": [
+        "b2-clothes-flokk-hafif-diagnostic-recognition",
+        "b2-clothes-flokk-hafif-recognition",
+        "b2-clothes-flokk-hafif-production",
+        "b2-clothes-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-libsa-hafifa",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "libsa ħafifa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-libsa-hafifa"
+      },
+      "assessmentIds": [
+        "b2-clothes-libsa-hafifa-recognition-true-false",
+        "b2-clothes-libsa-hafifa-production",
+        "b2-clothes-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-dublett",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "dublett",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-dublett"
+      },
+      "assessmentIds": [
+        "b2-clothes-dublett-diagnostic-recognition-true-false",
+        "b2-clothes-dublett-recognition",
+        "b2-clothes-dublett-production",
+        "b2-clothes-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-flokk-bil-komma-qasira",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk bil-komma qasira",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-flokk-bil-komma-qasira"
+      },
+      "assessmentIds": [
+        "b2-clothes-flokk-bil-komma-qasira-recognition-true-false",
+        "b2-clothes-flokk-bil-komma-qasira-production",
+        "b2-clothes-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-gakketta-tal-jeans",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "ġakketta tal-jeans",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-gakketta-tal-jeans"
+      },
+      "assessmentIds": [
+        "b2-clothes-gakketta-tal-jeans-recognition",
+        "b2-clothes-gakketta-tal-jeans-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-flokk-ta-taht",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk ta' taħt",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-flokk-ta-taht"
+      },
+      "assessmentIds": [
+        "b2-clothes-flokk-ta-taht-diagnostic-recognition",
+        "b2-clothes-flokk-ta-taht-recognition-true-false",
+        "b2-clothes-flokk-ta-taht-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-qalziet-hafif",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "qalziet ħafif",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-qalziet-hafif"
+      },
+      "assessmentIds": [
+        "b2-clothes-qalziet-hafif-recognition",
+        "b2-clothes-qalziet-hafif-production",
+        "b2-clothes-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-flokk-bic-cingi",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk biċ-ċingi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-flokk-bic-cingi"
+      },
+      "assessmentIds": [
+        "b2-clothes-flokk-bic-cingi-recognition-true-false",
+        "b2-clothes-flokk-bic-cingi-production",
+        "b2-clothes-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-malja",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "malja",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-malja"
+      },
+      "assessmentIds": [
+        "b2-clothes-malja-diagnostic-recognition-true-false",
+        "b2-clothes-malja-recognition",
+        "b2-clothes-malja-production",
+        "b2-clothes-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-kappell",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "kappell",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-kappell"
+      },
+      "assessmentIds": [
+        "b2-clothes-kappell-recognition-true-false",
+        "b2-clothes-kappell-production",
+        "b2-clothes-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-karkur",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "karkur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-karkur"
+      },
+      "assessmentIds": [
+        "b2-clothes-karkur-recognition",
+        "b2-clothes-karkur-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-flokk-tas-suf",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "phrase",
+      "sourceRequirement": "flokk tas-suf",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-flokk-tas-suf"
+      },
+      "assessmentIds": [
+        "b2-clothes-flokk-tas-suf-diagnostic-recognition",
+        "b2-clothes-flokk-tas-suf-recognition-true-false",
+        "b2-clothes-flokk-tas-suf-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-gakketta",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ġakketta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "shopping_clothes.html",
+        "file": "assets/data/shopping_clothes.json",
+        "itemId": "gakketta"
+      },
+      "assessmentIds": [
+        "b2-clothes-gakketta-recognition",
+        "b2-clothes-gakketta-production",
+        "b2-clothes-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-glekk",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ġlekk",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-glekk"
+      },
+      "assessmentIds": [
+        "b2-clothes-glekk-recognition-true-false",
+        "b2-clothes-glekk-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-qalziet",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "qalziet",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "shopping_clothes.html",
+        "file": "assets/data/shopping_clothes.json",
+        "itemId": "qalziet"
+      },
+      "assessmentIds": [
+        "b2-clothes-qalziet-diagnostic-recognition-true-false",
+        "b2-clothes-qalziet-recognition",
+        "b2-clothes-qalziet-production",
+        "b2-clothes-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-boots",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "boots",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-boots"
+      },
+      "assessmentIds": [
+        "b2-clothes-boots-recognition-true-false",
+        "b2-clothes-boots-production",
+        "b2-clothes-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-xalpa",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "xalpa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-clothes-xalpa"
+      },
+      "assessmentIds": [
+        "b2-clothes-xalpa-recognition",
+        "b2-clothes-xalpa-production",
+        "b2-clothes-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-hdax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ħdax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-11"
+      },
+      "assessmentIds": [
+        "b2-clothes-hdax-diagnostic-recognition",
+        "b2-clothes-hdax-recognition-true-false",
+        "b2-clothes-hdax-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-tnax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "tnax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-12"
+      },
+      "assessmentIds": [
+        "clothes-twelve-recognition",
+        "clothes-twelve-production",
+        "b2-clothes-tnax-recognition",
+        "b2-clothes-tnax-production",
+        "b2-clothes-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-tlettax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "tlettax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-13"
+      },
+      "assessmentIds": [
+        "b2-clothes-tlettax-recognition-true-false",
+        "b2-clothes-tlettax-production",
+        "b2-clothes-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-erbatax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "erbatax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-14"
+      },
+      "assessmentIds": [
+        "b2-clothes-erbatax-diagnostic-recognition-true-false",
+        "b2-clothes-erbatax-recognition",
+        "b2-clothes-erbatax-production",
+        "b2-clothes-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-hmistax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "ħmistax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-15"
+      },
+      "assessmentIds": [
+        "b2-clothes-hmistax-recognition-true-false",
+        "b2-clothes-hmistax-production",
+        "b2-clothes-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-sittax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "sittax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-16"
+      },
+      "assessmentIds": [
+        "b2-clothes-sittax-recognition",
+        "b2-clothes-sittax-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-sbatax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "sbatax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-17"
+      },
+      "assessmentIds": [
+        "b2-clothes-sbatax-diagnostic-recognition",
+        "b2-clothes-sbatax-recognition-true-false",
+        "b2-clothes-sbatax-production"
+      ]
+    },
+    {
+      "id": "b2-clothes-tmintax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "tmintax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-18"
+      },
+      "assessmentIds": [
+        "b2-clothes-tmintax-recognition",
+        "b2-clothes-tmintax-production",
+        "b2-clothes-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-dsatax",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "dsatax",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-19"
+      },
+      "assessmentIds": [
+        "b2-clothes-dsatax-recognition-true-false",
+        "b2-clothes-dsatax-production",
+        "b2-clothes-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-clothes-ghoxrin",
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "type": "vocabulary",
+      "sourceRequirement": "għoxrin",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "numbers_calendar_time.html",
+        "file": "numbers_calendar_time.html",
+        "itemId": "cardinal-20"
+      },
+      "assessmentIds": [
+        "b2-clothes-ghoxrin-diagnostic-recognition-true-false",
+        "b2-clothes-ghoxrin-recognition",
+        "b2-clothes-ghoxrin-production",
+        "b2-clothes-checkpoint-5-matching"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-clothes-flokk-hafif": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-libsa-hafifa": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-dublett": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-flokk-bil-komma-qasira": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 38,
+      "pages": [
+        38
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-gakketta-tal-jeans": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-flokk-ta-taht": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-qalziet-hafif": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-flokk-bic-cingi": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 52,
+      "pages": [
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-malja": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 52,
+      "pages": [
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-kappell": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 38,
+      "pages": [
+        38,
+        40,
+        45,
+        51,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-karkur": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 38,
+      "pages": [
+        38,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-flokk-tas-suf": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 52,
+      "pages": [
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-gakketta": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        51,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-glekk": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 40,
+      "pages": [
+        40
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-qalziet": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 37,
+      "pages": [
+        37,
+        40,
+        51
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-boots": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-xalpa": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 40,
+      "pages": [
+        40,
+        52
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-hdax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-tnax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43,
+        45
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-tlettax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-erbatax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-hmistax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-sittax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-sbatax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    },
+    "b2-clothes-tmintax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-dsatax": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-clothes-ghoxrin": {
+      "book": "B2",
+      "chapterId": "b2-clothes",
+      "chapterNumber": 4,
+      "chapterTitle": "Il-Ħwejjeġ",
+      "pageRange": [
+        37,
+        54
+      ],
+      "primaryPage": 43,
+      "pages": [
+        43
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-clothes-flokk-hafif",
+      "maltese": "flokk ħafif",
+      "english": "light shirt",
+      "example": "Illum se nilbes flokk ħafif.",
+      "exampleTranslation": "Today I will wear the light shirt.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 37,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 37",
+      "notes": [
+        "Example: Illum se nilbes flokk ħafif.",
+        "Translation: Today I will wear the light shirt.",
+        "Source: B2, Chapter 4, p. 37"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-libsa-hafifa",
+      "maltese": "libsa ħafifa",
+      "english": "light dress",
+      "example": "Illum se nilbes libsa ħafifa.",
+      "exampleTranslation": "Today I will wear the light dress.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 37,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 37",
+      "notes": [
+        "Example: Illum se nilbes libsa ħafifa.",
+        "Translation: Today I will wear the light dress.",
+        "Source: B2, Chapter 4, p. 37"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-dublett",
+      "maltese": "dublett",
+      "english": "skirt",
+      "example": "Illum se nilbes dublett.",
+      "exampleTranslation": "Today I will wear the skirt.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 37,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 37",
+      "notes": [
+        "Example: Illum se nilbes dublett.",
+        "Translation: Today I will wear the skirt.",
+        "Source: B2, Chapter 4, p. 37"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-flokk-bil-komma-qasira",
+      "maltese": "flokk bil-komma qasira",
+      "english": "short-sleeved shirt",
+      "example": "Illum se nilbes flokk bil-komma qasira.",
+      "exampleTranslation": "Today I will wear the short-sleeved shirt.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 38,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 38",
+      "notes": [
+        "Example: Illum se nilbes flokk bil-komma qasira.",
+        "Translation: Today I will wear the short-sleeved shirt.",
+        "Source: B2, Chapter 4, p. 38"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-gakketta-tal-jeans",
+      "maltese": "ġakketta tal-jeans",
+      "english": "denim jacket",
+      "example": "Illum se nilbes ġakketta tal-jeans.",
+      "exampleTranslation": "Today I will wear the denim jacket.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": null,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 4, pp. 37-54",
+      "notes": [
+        "Example: Illum se nilbes ġakketta tal-jeans.",
+        "Translation: Today I will wear the denim jacket.",
+        "Source: B2, Chapter 4, pp. 37-54"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-flokk-ta-taht",
+      "maltese": "flokk ta' taħt",
+      "english": "undershirt",
+      "example": "Illum se nilbes flokk ta' taħt.",
+      "exampleTranslation": "Today I will wear the undershirt.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 37,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 37",
+      "notes": [
+        "Example: Illum se nilbes flokk ta' taħt.",
+        "Translation: Today I will wear the undershirt.",
+        "Source: B2, Chapter 4, p. 37"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-qalziet-hafif",
+      "maltese": "qalziet ħafif",
+      "english": "light trousers",
+      "example": "Illum se nilbes qalziet ħafif.",
+      "exampleTranslation": "Today I will wear the light trousers.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": null,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 4, pp. 37-54",
+      "notes": [
+        "Example: Illum se nilbes qalziet ħafif.",
+        "Translation: Today I will wear the light trousers.",
+        "Source: B2, Chapter 4, pp. 37-54"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-flokk-bic-cingi",
+      "maltese": "flokk biċ-ċingi",
+      "english": "strappy top",
+      "example": "Illum se nilbes flokk biċ-ċingi.",
+      "exampleTranslation": "Today I will wear the strappy top.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 52,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 52",
+      "notes": [
+        "Example: Illum se nilbes flokk biċ-ċingi.",
+        "Translation: Today I will wear the strappy top.",
+        "Source: B2, Chapter 4, p. 52"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-malja",
+      "maltese": "malja",
+      "english": "swimsuit",
+      "example": "Illum se nilbes malja.",
+      "exampleTranslation": "Today I will wear the swimsuit.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 52,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 52",
+      "notes": [
+        "Example: Illum se nilbes malja.",
+        "Translation: Today I will wear the swimsuit.",
+        "Source: B2, Chapter 4, p. 52"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-kappell",
+      "maltese": "kappell",
+      "english": "hat",
+      "example": "Illum se nilbes kappell.",
+      "exampleTranslation": "Today I will wear the hat.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 38,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 38",
+      "notes": [
+        "Example: Illum se nilbes kappell.",
+        "Translation: Today I will wear the hat.",
+        "Source: B2, Chapter 4, p. 38"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-karkur",
+      "maltese": "karkur",
+      "english": "flip-flop / slipper",
+      "example": "Illum se nilbes karkur.",
+      "exampleTranslation": "Today I will wear the flip-flop.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 38,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 38",
+      "notes": [
+        "Example: Illum se nilbes karkur.",
+        "Translation: Today I will wear the flip-flop.",
+        "Source: B2, Chapter 4, p. 38"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-flokk-tas-suf",
+      "maltese": "flokk tas-suf",
+      "english": "woollen jumper",
+      "example": "Illum se nilbes flokk tas-suf.",
+      "exampleTranslation": "Today I will wear the woollen jumper.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 52,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 52",
+      "notes": [
+        "Example: Illum se nilbes flokk tas-suf.",
+        "Translation: Today I will wear the woollen jumper.",
+        "Source: B2, Chapter 4, p. 52"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-clothes-gakketta",
+      "maltese": "ġakketta",
+      "english": "jacket",
+      "example": "Illum se nilbes ġakketta.",
+      "exampleTranslation": "Today I will wear the jacket.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 37,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 37",
+      "notes": [
+        "Example: Illum se nilbes ġakketta.",
+        "Translation: Today I will wear the jacket.",
+        "Source: B2, Chapter 4, p. 37"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-glekk",
+      "maltese": "ġlekk",
+      "english": "jacket",
+      "example": "Illum se nilbes ġlekk.",
+      "exampleTranslation": "Today I will wear the jacket.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 40,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 40",
+      "notes": [
+        "Example: Illum se nilbes ġlekk.",
+        "Translation: Today I will wear the jacket.",
+        "Source: B2, Chapter 4, p. 40"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-qalziet",
+      "maltese": "qalziet",
+      "english": "trousers",
+      "example": "Illum se nilbes qalziet.",
+      "exampleTranslation": "Today I will wear the trousers.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 37,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 37",
+      "notes": [
+        "Example: Illum se nilbes qalziet.",
+        "Translation: Today I will wear the trousers.",
+        "Source: B2, Chapter 4, p. 37"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-boots",
+      "maltese": "boots",
+      "english": "boots",
+      "example": "Illum se nilbes boots.",
+      "exampleTranslation": "Today I will wear the boots.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": null,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 4, pp. 37-54",
+      "notes": [
+        "Example: Illum se nilbes boots.",
+        "Translation: Today I will wear the boots.",
+        "Source: B2, Chapter 4, pp. 37-54"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-xalpa",
+      "maltese": "xalpa",
+      "english": "scarf",
+      "example": "Illum se nilbes xalpa.",
+      "exampleTranslation": "Today I will wear the scarf.",
+      "examplePattern": "clothing-choice",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 40,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 40",
+      "notes": [
+        "Example: Illum se nilbes xalpa.",
+        "Translation: Today I will wear the scarf.",
+        "Source: B2, Chapter 4, p. 40"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-hdax",
+      "maltese": "ħdax",
+      "english": "eleven",
+      "example": "In-numru huwa ħdax.",
+      "exampleTranslation": "The number is eleven.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa ħdax.",
+        "Translation: The number is eleven.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-tnax",
+      "maltese": "tnax",
+      "english": "twelve",
+      "example": "In-numru huwa tnax.",
+      "exampleTranslation": "The number is twelve.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa tnax.",
+        "Translation: The number is twelve.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-tlettax",
+      "maltese": "tlettax",
+      "english": "thirteen",
+      "example": "In-numru huwa tlettax.",
+      "exampleTranslation": "The number is thirteen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa tlettax.",
+        "Translation: The number is thirteen.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-erbatax",
+      "maltese": "erbatax",
+      "english": "fourteen",
+      "example": "In-numru huwa erbatax.",
+      "exampleTranslation": "The number is fourteen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa erbatax.",
+        "Translation: The number is fourteen.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-hmistax",
+      "maltese": "ħmistax",
+      "english": "fifteen",
+      "example": "In-numru huwa ħmistax.",
+      "exampleTranslation": "The number is fifteen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa ħmistax.",
+        "Translation: The number is fifteen.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-sittax",
+      "maltese": "sittax",
+      "english": "sixteen",
+      "example": "In-numru huwa sittax.",
+      "exampleTranslation": "The number is sixteen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa sittax.",
+        "Translation: The number is sixteen.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-sbatax",
+      "maltese": "sbatax",
+      "english": "seventeen",
+      "example": "In-numru huwa sbatax.",
+      "exampleTranslation": "The number is seventeen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa sbatax.",
+        "Translation: The number is seventeen.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-tmintax",
+      "maltese": "tmintax",
+      "english": "eighteen",
+      "example": "In-numru huwa tmintax.",
+      "exampleTranslation": "The number is eighteen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": null,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 4, pp. 37-54",
+      "notes": [
+        "Example: In-numru huwa tmintax.",
+        "Translation: The number is eighteen.",
+        "Source: B2, Chapter 4, pp. 37-54"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-dsatax",
+      "maltese": "dsatax",
+      "english": "nineteen",
+      "example": "In-numru huwa dsatax.",
+      "exampleTranslation": "The number is nineteen.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": null,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 4, pp. 37-54",
+      "notes": [
+        "Example: In-numru huwa dsatax.",
+        "Translation: The number is nineteen.",
+        "Source: B2, Chapter 4, pp. 37-54"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-clothes-ghoxrin",
+      "maltese": "għoxrin",
+      "english": "twenty",
+      "example": "In-numru huwa għoxrin.",
+      "exampleTranslation": "The number is twenty.",
+      "examplePattern": "number",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 4,
+        "page": 43,
+        "pageRange": [
+          37,
+          54
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 4, p. 43",
+      "notes": [
+        "Example: In-numru huwa għoxrin.",
+        "Translation: The number is twenty.",
+        "Source: B2, Chapter 4, p. 43"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-diagnostic",
+      "kind": "diagnostic",
+      "title": "Il-Ħwejjeġ Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-clothes-flokk-hafif-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-hafif"
+          ],
+          "prompt": "What is the lesson meaning of “flokk ħafif”?",
+          "choices": [
+            "light shirt",
+            "light dress",
+            "skirt"
+          ],
+          "answer": "light shirt",
+          "explanation": "flokk ħafif means “light shirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk ħafif",
+            "english": "light shirt"
+          }
+        },
+        {
+          "id": "b2-clothes-dublett-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-dublett"
+          ],
+          "prompt": "True or false: “dublett” means “short-sleeved shirt” in this chapter.",
+          "answer": false,
+          "explanation": "dublett means “skirt”.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-ta-taht-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-ta-taht"
+          ],
+          "prompt": "What is the lesson meaning of “flokk ta' taħt”?",
+          "choices": [
+            "denim jacket",
+            "undershirt",
+            "short-sleeved shirt"
+          ],
+          "answer": "undershirt",
+          "explanation": "flokk ta' taħt means “undershirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk ta' taħt",
+            "english": "undershirt"
+          }
+        },
+        {
+          "id": "b2-clothes-malja-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-malja"
+          ],
+          "prompt": "True or false: “malja” means “denim jacket” in this chapter.",
+          "answer": false,
+          "explanation": "malja means “swimsuit”.",
+          "reviewCard": {
+            "maltese": "malja",
+            "english": "swimsuit"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-tas-suf-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-tas-suf"
+          ],
+          "prompt": "What is the lesson meaning of “flokk tas-suf”?",
+          "choices": [
+            "undershirt",
+            "light trousers",
+            "woollen jumper"
+          ],
+          "answer": "woollen jumper",
+          "explanation": "flokk tas-suf means “woollen jumper” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk tas-suf",
+            "english": "woollen jumper"
+          }
+        },
+        {
+          "id": "b2-clothes-qalziet-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-qalziet"
+          ],
+          "prompt": "True or false: “qalziet” means “light trousers” in this chapter.",
+          "answer": false,
+          "explanation": "qalziet means “trousers”.",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers"
+          }
+        },
+        {
+          "id": "b2-clothes-hdax-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "What is the lesson meaning of “ħdax”?",
+          "choices": [
+            "eleven",
+            "strappy top",
+            "swimsuit"
+          ],
+          "answer": "eleven",
+          "explanation": "ħdax means “eleven” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven"
+          }
+        },
+        {
+          "id": "b2-clothes-erbatax-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-erbatax"
+          ],
+          "prompt": "True or false: “erbatax” means “swimsuit” in this chapter.",
+          "answer": false,
+          "explanation": "erbatax means “fourteen”.",
+          "reviewCard": {
+            "maltese": "erbatax",
+            "english": "fourteen"
+          }
+        },
+        {
+          "id": "b2-clothes-sbatax-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-sbatax"
+          ],
+          "prompt": "What is the lesson meaning of “sbatax”?",
+          "choices": [
+            "flip-flop / slipper",
+            "seventeen",
+            "hat"
+          ],
+          "answer": "seventeen",
+          "explanation": "sbatax means “seventeen” in this chapter.",
+          "reviewCard": {
+            "maltese": "sbatax",
+            "english": "seventeen"
+          }
+        },
+        {
+          "id": "b2-clothes-ghoxrin-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "True or false: “għoxrin” means “flip-flop / slipper” in this chapter.",
+          "answer": false,
+          "explanation": "għoxrin means “twenty”.",
+          "reviewCard": {
+            "maltese": "għoxrin",
+            "english": "twenty"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-clothes-flokk-hafif-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-hafif"
+          ],
+          "prompt": "What is the lesson meaning of “flokk ħafif”?",
+          "choices": [
+            "light shirt",
+            "light dress",
+            "skirt"
+          ],
+          "answer": "light shirt",
+          "explanation": "flokk ħafif means “light shirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "flokk ħafif",
+            "english": "light shirt"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-hafif-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-hafif"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the light shirt.)",
+          "answer": "flokk ħafif",
+          "explanation": "The complete sentence is “Illum se nilbes flokk ħafif.”",
+          "reviewCard": {
+            "maltese": "flokk ħafif",
+            "english": "light shirt",
+            "example": "Illum se nilbes flokk ħafif."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "ħafif"
+          ]
+        },
+        {
+          "id": "b2-clothes-libsa-hafifa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-libsa-hafifa"
+          ],
+          "prompt": "True or false: “libsa ħafifa” means “skirt” in this chapter.",
+          "answer": false,
+          "explanation": "libsa ħafifa means “light dress”.",
+          "reviewCard": {
+            "maltese": "libsa ħafifa",
+            "english": "light dress"
+          }
+        },
+        {
+          "id": "b2-clothes-libsa-hafifa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-libsa-hafifa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the light dress.)",
+          "answer": "libsa ħafifa",
+          "explanation": "The complete sentence is “Illum se nilbes libsa ħafifa.”",
+          "reviewCard": {
+            "maltese": "libsa ħafifa",
+            "english": "light dress",
+            "example": "Illum se nilbes libsa ħafifa."
+          },
+          "type": "order-words",
+          "tokens": [
+            "libsa",
+            "ħafifa"
+          ]
+        },
+        {
+          "id": "b2-clothes-dublett-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-dublett"
+          ],
+          "prompt": "What is the lesson meaning of “dublett”?",
+          "choices": [
+            "denim jacket",
+            "skirt",
+            "short-sleeved shirt"
+          ],
+          "answer": "skirt",
+          "explanation": "dublett means “skirt” in this chapter.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          }
+        },
+        {
+          "id": "b2-clothes-dublett-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-dublett"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the skirt.)",
+          "answer": "dublett",
+          "explanation": "The complete sentence is “Illum se nilbes dublett.”",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt",
+            "example": "Illum se nilbes dublett."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dublett"
+          ]
+        },
+        {
+          "id": "b2-clothes-flokk-bil-komma-qasira-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-bil-komma-qasira"
+          ],
+          "prompt": "True or false: “flokk bil-komma qasira” means “denim jacket” in this chapter.",
+          "answer": false,
+          "explanation": "flokk bil-komma qasira means “short-sleeved shirt”.",
+          "reviewCard": {
+            "maltese": "flokk bil-komma qasira",
+            "english": "short-sleeved shirt"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-bil-komma-qasira-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-bil-komma-qasira"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the short-sleeved shirt.)",
+          "answer": "flokk bil-komma qasira",
+          "explanation": "The complete sentence is “Illum se nilbes flokk bil-komma qasira.”",
+          "reviewCard": {
+            "maltese": "flokk bil-komma qasira",
+            "english": "short-sleeved shirt",
+            "example": "Illum se nilbes flokk bil-komma qasira."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "bil-komma",
+            "qasira"
+          ]
+        },
+        {
+          "id": "b2-clothes-gakketta-tal-jeans-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-gakketta-tal-jeans"
+          ],
+          "prompt": "What is the lesson meaning of “ġakketta tal-jeans”?",
+          "choices": [
+            "undershirt",
+            "light trousers",
+            "denim jacket"
+          ],
+          "answer": "denim jacket",
+          "explanation": "ġakketta tal-jeans means “denim jacket” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġakketta tal-jeans",
+            "english": "denim jacket"
+          }
+        },
+        {
+          "id": "b2-clothes-gakketta-tal-jeans-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-gakketta-tal-jeans"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the denim jacket.)",
+          "answer": "ġakketta tal-jeans",
+          "explanation": "The complete sentence is “Illum se nilbes ġakketta tal-jeans.”",
+          "reviewCard": {
+            "maltese": "ġakketta tal-jeans",
+            "english": "denim jacket",
+            "example": "Illum se nilbes ġakketta tal-jeans."
+          },
+          "type": "order-words",
+          "tokens": [
+            "ġakketta",
+            "tal-jeans"
+          ]
+        },
+        {
+          "id": "b2-clothes-flokk-ta-taht-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-ta-taht"
+          ],
+          "prompt": "True or false: “flokk ta' taħt” means “light trousers” in this chapter.",
+          "answer": false,
+          "explanation": "flokk ta' taħt means “undershirt”.",
+          "reviewCard": {
+            "maltese": "flokk ta' taħt",
+            "english": "undershirt"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-ta-taht-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-ta-taht"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the undershirt.)",
+          "answer": "flokk ta' taħt",
+          "explanation": "The complete sentence is “Illum se nilbes flokk ta' taħt.”",
+          "reviewCard": {
+            "maltese": "flokk ta' taħt",
+            "english": "undershirt",
+            "example": "Illum se nilbes flokk ta' taħt."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "ta'",
+            "taħt"
+          ]
+        },
+        {
+          "id": "b2-clothes-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-hafif",
+            "b2-clothes-libsa-hafifa",
+            "b2-clothes-dublett",
+            "b2-clothes-flokk-bil-komma-qasira"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "flokk ħafif",
+              "right": "light shirt"
+            },
+            {
+              "left": "libsa ħafifa",
+              "right": "light dress"
+            },
+            {
+              "left": "dublett",
+              "right": "skirt"
+            },
+            {
+              "left": "flokk bil-komma qasira",
+              "right": "short-sleeved shirt"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "flokk ħafif",
+            "english": "light shirt"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-clothes-qalziet-hafif-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-qalziet-hafif"
+          ],
+          "prompt": "What is the lesson meaning of “qalziet ħafif”?",
+          "choices": [
+            "light trousers",
+            "strappy top",
+            "swimsuit"
+          ],
+          "answer": "light trousers",
+          "explanation": "qalziet ħafif means “light trousers” in this chapter.",
+          "reviewCard": {
+            "maltese": "qalziet ħafif",
+            "english": "light trousers"
+          }
+        },
+        {
+          "id": "b2-clothes-qalziet-hafif-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-qalziet-hafif"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the light trousers.)",
+          "answer": "qalziet ħafif",
+          "explanation": "The complete sentence is “Illum se nilbes qalziet ħafif.”",
+          "reviewCard": {
+            "maltese": "qalziet ħafif",
+            "english": "light trousers",
+            "example": "Illum se nilbes qalziet ħafif."
+          },
+          "type": "order-words",
+          "tokens": [
+            "qalziet",
+            "ħafif"
+          ]
+        },
+        {
+          "id": "b2-clothes-flokk-bic-cingi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-bic-cingi"
+          ],
+          "prompt": "True or false: “flokk biċ-ċingi” means “swimsuit” in this chapter.",
+          "answer": false,
+          "explanation": "flokk biċ-ċingi means “strappy top”.",
+          "reviewCard": {
+            "maltese": "flokk biċ-ċingi",
+            "english": "strappy top"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-bic-cingi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-bic-cingi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the strappy top.)",
+          "answer": "flokk biċ-ċingi",
+          "explanation": "The complete sentence is “Illum se nilbes flokk biċ-ċingi.”",
+          "reviewCard": {
+            "maltese": "flokk biċ-ċingi",
+            "english": "strappy top",
+            "example": "Illum se nilbes flokk biċ-ċingi."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "biċ-ċingi"
+          ]
+        },
+        {
+          "id": "b2-clothes-malja-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-malja"
+          ],
+          "prompt": "What is the lesson meaning of “malja”?",
+          "choices": [
+            "flip-flop / slipper",
+            "swimsuit",
+            "hat"
+          ],
+          "answer": "swimsuit",
+          "explanation": "malja means “swimsuit” in this chapter.",
+          "reviewCard": {
+            "maltese": "malja",
+            "english": "swimsuit"
+          }
+        },
+        {
+          "id": "b2-clothes-malja-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-malja"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the swimsuit.)",
+          "answer": "malja",
+          "explanation": "The complete sentence is “Illum se nilbes malja.”",
+          "reviewCard": {
+            "maltese": "malja",
+            "english": "swimsuit",
+            "example": "Illum se nilbes malja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "malja"
+          ]
+        },
+        {
+          "id": "b2-clothes-kappell-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-kappell"
+          ],
+          "prompt": "True or false: “kappell” means “flip-flop / slipper” in this chapter.",
+          "answer": false,
+          "explanation": "kappell means “hat”.",
+          "reviewCard": {
+            "maltese": "kappell",
+            "english": "hat"
+          }
+        },
+        {
+          "id": "b2-clothes-kappell-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-kappell"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the hat.)",
+          "answer": "kappell",
+          "explanation": "The complete sentence is “Illum se nilbes kappell.”",
+          "reviewCard": {
+            "maltese": "kappell",
+            "english": "hat",
+            "example": "Illum se nilbes kappell."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kappell"
+          ]
+        },
+        {
+          "id": "b2-clothes-karkur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-karkur"
+          ],
+          "prompt": "What is the lesson meaning of “karkur”?",
+          "choices": [
+            "woollen jumper",
+            "jacket",
+            "flip-flop / slipper"
+          ],
+          "answer": "flip-flop / slipper",
+          "explanation": "karkur means “flip-flop / slipper” in this chapter.",
+          "reviewCard": {
+            "maltese": "karkur",
+            "english": "flip-flop / slipper"
+          }
+        },
+        {
+          "id": "b2-clothes-karkur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-karkur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the flip-flop.)",
+          "answer": "karkur",
+          "explanation": "The complete sentence is “Illum se nilbes karkur.”",
+          "reviewCard": {
+            "maltese": "karkur",
+            "english": "flip-flop / slipper",
+            "example": "Illum se nilbes karkur."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "karkur"
+          ]
+        },
+        {
+          "id": "b2-clothes-flokk-tas-suf-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-tas-suf"
+          ],
+          "prompt": "True or false: “flokk tas-suf” means “jacket” in this chapter.",
+          "answer": false,
+          "explanation": "flokk tas-suf means “woollen jumper”.",
+          "reviewCard": {
+            "maltese": "flokk tas-suf",
+            "english": "woollen jumper"
+          }
+        },
+        {
+          "id": "b2-clothes-flokk-tas-suf-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-tas-suf"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the woollen jumper.)",
+          "answer": "flokk tas-suf",
+          "explanation": "The complete sentence is “Illum se nilbes flokk tas-suf.”",
+          "reviewCard": {
+            "maltese": "flokk tas-suf",
+            "english": "woollen jumper",
+            "example": "Illum se nilbes flokk tas-suf."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "tas-suf"
+          ]
+        },
+        {
+          "id": "b2-clothes-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-qalziet-hafif",
+            "b2-clothes-flokk-bic-cingi",
+            "b2-clothes-malja",
+            "b2-clothes-kappell"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "qalziet ħafif",
+              "right": "light trousers"
+            },
+            {
+              "left": "flokk biċ-ċingi",
+              "right": "strappy top"
+            },
+            {
+              "left": "malja",
+              "right": "swimsuit"
+            },
+            {
+              "left": "kappell",
+              "right": "hat"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "qalziet ħafif",
+            "english": "light trousers"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-clothes-gakketta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-gakketta"
+          ],
+          "prompt": "What is the lesson meaning of “ġakketta”?",
+          "choices": [
+            "jacket",
+            "trousers",
+            "boots"
+          ],
+          "answer": "jacket",
+          "explanation": "ġakketta means “jacket” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġakketta",
+            "english": "jacket"
+          }
+        },
+        {
+          "id": "b2-clothes-gakketta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-gakketta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the jacket.)",
+          "answer": "ġakketta",
+          "explanation": "The complete sentence is “Illum se nilbes ġakketta.”",
+          "reviewCard": {
+            "maltese": "ġakketta",
+            "english": "jacket",
+            "example": "Illum se nilbes ġakketta."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġakketta"
+          ]
+        },
+        {
+          "id": "b2-clothes-glekk-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-glekk"
+          ],
+          "prompt": "True or false: “ġlekk” means “boots” in this chapter.",
+          "answer": false,
+          "explanation": "ġlekk means “jacket”.",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket"
+          }
+        },
+        {
+          "id": "b2-clothes-glekk-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-glekk"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the jacket.)",
+          "answer": "ġlekk",
+          "explanation": "The complete sentence is “Illum se nilbes ġlekk.”",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket",
+            "example": "Illum se nilbes ġlekk."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġlekk"
+          ]
+        },
+        {
+          "id": "b2-clothes-qalziet-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-qalziet"
+          ],
+          "prompt": "What is the lesson meaning of “qalziet”?",
+          "choices": [
+            "eleven",
+            "trousers",
+            "scarf"
+          ],
+          "answer": "trousers",
+          "explanation": "qalziet means “trousers” in this chapter.",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers"
+          }
+        },
+        {
+          "id": "b2-clothes-qalziet-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-qalziet"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the trousers.)",
+          "answer": "qalziet",
+          "explanation": "The complete sentence is “Illum se nilbes qalziet.”",
+          "reviewCard": {
+            "maltese": "qalziet",
+            "english": "trousers",
+            "example": "Illum se nilbes qalziet."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qalziet"
+          ]
+        },
+        {
+          "id": "b2-clothes-boots-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-boots"
+          ],
+          "prompt": "True or false: “boots” means “eleven” in this chapter.",
+          "answer": false,
+          "explanation": "boots means “boots”.",
+          "reviewCard": {
+            "maltese": "boots",
+            "english": "boots"
+          }
+        },
+        {
+          "id": "b2-clothes-boots-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-boots"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the boots.)",
+          "answer": "boots",
+          "explanation": "The complete sentence is “Illum se nilbes boots.”",
+          "reviewCard": {
+            "maltese": "boots",
+            "english": "boots",
+            "example": "Illum se nilbes boots."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "boots"
+          ]
+        },
+        {
+          "id": "b2-clothes-xalpa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-xalpa"
+          ],
+          "prompt": "What is the lesson meaning of “xalpa”?",
+          "choices": [
+            "twelve",
+            "thirteen",
+            "scarf"
+          ],
+          "answer": "scarf",
+          "explanation": "xalpa means “scarf” in this chapter.",
+          "reviewCard": {
+            "maltese": "xalpa",
+            "english": "scarf"
+          }
+        },
+        {
+          "id": "b2-clothes-xalpa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-xalpa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the scarf.)",
+          "answer": "xalpa",
+          "explanation": "The complete sentence is “Illum se nilbes xalpa.”",
+          "reviewCard": {
+            "maltese": "xalpa",
+            "english": "scarf",
+            "example": "Illum se nilbes xalpa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "xalpa"
+          ]
+        },
+        {
+          "id": "b2-clothes-hdax-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "True or false: “ħdax” means “thirteen” in this chapter.",
+          "answer": false,
+          "explanation": "ħdax means “eleven”.",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven"
+          }
+        },
+        {
+          "id": "b2-clothes-hdax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is eleven.)",
+          "answer": "ħdax",
+          "explanation": "The complete sentence is “In-numru huwa ħdax.”",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven",
+            "example": "In-numru huwa ħdax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħdax"
+          ]
+        },
+        {
+          "id": "b2-clothes-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-gakketta",
+            "b2-clothes-qalziet",
+            "b2-clothes-boots",
+            "b2-clothes-xalpa"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ġakketta",
+              "right": "jacket"
+            },
+            {
+              "left": "qalziet",
+              "right": "trousers"
+            },
+            {
+              "left": "boots",
+              "right": "boots"
+            },
+            {
+              "left": "xalpa",
+              "right": "scarf"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ġakketta",
+            "english": "jacket"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Il-Ħwejjeġ Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-clothes-tnax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tnax"
+          ],
+          "prompt": "What is the lesson meaning of “tnax”?",
+          "choices": [
+            "twelve",
+            "fourteen",
+            "fifteen"
+          ],
+          "answer": "twelve",
+          "explanation": "tnax means “twelve” in this chapter.",
+          "reviewCard": {
+            "maltese": "tnax",
+            "english": "twelve"
+          }
+        },
+        {
+          "id": "b2-clothes-tnax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-tnax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is twelve.)",
+          "answer": "tnax",
+          "explanation": "The complete sentence is “In-numru huwa tnax.”",
+          "reviewCard": {
+            "maltese": "tnax",
+            "english": "twelve",
+            "example": "In-numru huwa tnax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tnax"
+          ]
+        },
+        {
+          "id": "b2-clothes-tlettax-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tlettax"
+          ],
+          "prompt": "True or false: “tlettax” means “fifteen” in this chapter.",
+          "answer": false,
+          "explanation": "tlettax means “thirteen”.",
+          "reviewCard": {
+            "maltese": "tlettax",
+            "english": "thirteen"
+          }
+        },
+        {
+          "id": "b2-clothes-tlettax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-tlettax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is thirteen.)",
+          "answer": "tlettax",
+          "explanation": "The complete sentence is “In-numru huwa tlettax.”",
+          "reviewCard": {
+            "maltese": "tlettax",
+            "english": "thirteen",
+            "example": "In-numru huwa tlettax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tlettax"
+          ]
+        },
+        {
+          "id": "b2-clothes-erbatax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-erbatax"
+          ],
+          "prompt": "What is the lesson meaning of “erbatax”?",
+          "choices": [
+            "seventeen",
+            "fourteen",
+            "sixteen"
+          ],
+          "answer": "fourteen",
+          "explanation": "erbatax means “fourteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "erbatax",
+            "english": "fourteen"
+          }
+        },
+        {
+          "id": "b2-clothes-erbatax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-erbatax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is fourteen.)",
+          "answer": "erbatax",
+          "explanation": "The complete sentence is “In-numru huwa erbatax.”",
+          "reviewCard": {
+            "maltese": "erbatax",
+            "english": "fourteen",
+            "example": "In-numru huwa erbatax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "erbatax"
+          ]
+        },
+        {
+          "id": "b2-clothes-hmistax-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-hmistax"
+          ],
+          "prompt": "True or false: “ħmistax” means “seventeen” in this chapter.",
+          "answer": false,
+          "explanation": "ħmistax means “fifteen”.",
+          "reviewCard": {
+            "maltese": "ħmistax",
+            "english": "fifteen"
+          }
+        },
+        {
+          "id": "b2-clothes-hmistax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-hmistax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is fifteen.)",
+          "answer": "ħmistax",
+          "explanation": "The complete sentence is “In-numru huwa ħmistax.”",
+          "reviewCard": {
+            "maltese": "ħmistax",
+            "english": "fifteen",
+            "example": "In-numru huwa ħmistax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħmistax"
+          ]
+        },
+        {
+          "id": "b2-clothes-sittax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-sittax"
+          ],
+          "prompt": "What is the lesson meaning of “sittax”?",
+          "choices": [
+            "eighteen",
+            "nineteen",
+            "sixteen"
+          ],
+          "answer": "sixteen",
+          "explanation": "sittax means “sixteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "sittax",
+            "english": "sixteen"
+          }
+        },
+        {
+          "id": "b2-clothes-sittax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-sittax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is sixteen.)",
+          "answer": "sittax",
+          "explanation": "The complete sentence is “In-numru huwa sittax.”",
+          "reviewCard": {
+            "maltese": "sittax",
+            "english": "sixteen",
+            "example": "In-numru huwa sittax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sittax"
+          ]
+        },
+        {
+          "id": "b2-clothes-sbatax-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-sbatax"
+          ],
+          "prompt": "True or false: “sbatax” means “nineteen” in this chapter.",
+          "answer": false,
+          "explanation": "sbatax means “seventeen”.",
+          "reviewCard": {
+            "maltese": "sbatax",
+            "english": "seventeen"
+          }
+        },
+        {
+          "id": "b2-clothes-sbatax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-sbatax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is seventeen.)",
+          "answer": "sbatax",
+          "explanation": "The complete sentence is “In-numru huwa sbatax.”",
+          "reviewCard": {
+            "maltese": "sbatax",
+            "english": "seventeen",
+            "example": "In-numru huwa sbatax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sbatax"
+          ]
+        },
+        {
+          "id": "b2-clothes-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tnax",
+            "b2-clothes-tlettax",
+            "b2-clothes-erbatax",
+            "b2-clothes-hmistax"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "tnax",
+              "right": "twelve"
+            },
+            {
+              "left": "tlettax",
+              "right": "thirteen"
+            },
+            {
+              "left": "erbatax",
+              "right": "fourteen"
+            },
+            {
+              "left": "ħmistax",
+              "right": "fifteen"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "tnax",
+            "english": "twelve"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-clothes",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-clothes-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 3,
+      "title": "Il-Ħwejjeġ Checkpoint 5",
+      "items": [
+        {
+          "id": "b2-clothes-tmintax-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tmintax"
+          ],
+          "prompt": "What is the lesson meaning of “tmintax”?",
+          "choices": [
+            "eighteen",
+            "twenty",
+            "light shirt"
+          ],
+          "answer": "eighteen",
+          "explanation": "tmintax means “eighteen” in this chapter.",
+          "reviewCard": {
+            "maltese": "tmintax",
+            "english": "eighteen"
+          }
+        },
+        {
+          "id": "b2-clothes-tmintax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-tmintax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is eighteen.)",
+          "answer": "tmintax",
+          "explanation": "The complete sentence is “In-numru huwa tmintax.”",
+          "reviewCard": {
+            "maltese": "tmintax",
+            "english": "eighteen",
+            "example": "In-numru huwa tmintax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "tmintax"
+          ]
+        },
+        {
+          "id": "b2-clothes-dsatax-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-dsatax"
+          ],
+          "prompt": "True or false: “dsatax” means “light shirt” in this chapter.",
+          "answer": false,
+          "explanation": "dsatax means “nineteen”.",
+          "reviewCard": {
+            "maltese": "dsatax",
+            "english": "nineteen"
+          }
+        },
+        {
+          "id": "b2-clothes-dsatax-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-dsatax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is nineteen.)",
+          "answer": "dsatax",
+          "explanation": "The complete sentence is “In-numru huwa dsatax.”",
+          "reviewCard": {
+            "maltese": "dsatax",
+            "english": "nineteen",
+            "example": "In-numru huwa dsatax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dsatax"
+          ]
+        },
+        {
+          "id": "b2-clothes-ghoxrin-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "What is the lesson meaning of “għoxrin”?",
+          "choices": [
+            "skirt",
+            "twenty",
+            "light dress"
+          ],
+          "answer": "twenty",
+          "explanation": "għoxrin means “twenty” in this chapter.",
+          "reviewCard": {
+            "maltese": "għoxrin",
+            "english": "twenty"
+          }
+        },
+        {
+          "id": "b2-clothes-ghoxrin-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is twenty.)",
+          "answer": "għoxrin",
+          "explanation": "The complete sentence is “In-numru huwa għoxrin.”",
+          "reviewCard": {
+            "maltese": "għoxrin",
+            "english": "twenty",
+            "example": "In-numru huwa għoxrin."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "għoxrin"
+          ]
+        },
+        {
+          "id": "b2-clothes-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-tmintax",
+            "b2-clothes-dsatax",
+            "b2-clothes-ghoxrin"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "tmintax",
+              "right": "eighteen"
+            },
+            {
+              "left": "dsatax",
+              "right": "nineteen"
+            },
+            {
+              "left": "għoxrin",
+              "right": "twenty"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "tmintax",
+            "english": "eighteen"
+          }
+        }
+      ]
+    }
+  ]
+}

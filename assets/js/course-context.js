@@ -1,12 +1,10 @@
 (() => {
   const DATA_URL = "./assets/data/course_path.json";
-  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
+  const BINDINGS_URL = "./assets/data/course/manifest.json";
 
-  const hasChapterView = (bindings, chapterId, pageHref) => bindings.targets.some((target) => (
-    target.chapterId === chapterId
-      && target.implementationStatus === "implemented"
-      && target.contentRef?.page === pageHref
-  ));
+  const hasChapterView = (bindings, chapterId, pageHref) => (
+    bindings.chapters.find((chapter) => chapter.id === chapterId)?.pageHrefs.includes(pageHref) === true
+  );
 
   const pageUrl = (page, level, chapter, index, bindings, view) => {
     const params = new URLSearchParams({ course: level.id, chapter: chapter.id, step: String(index + 1) });

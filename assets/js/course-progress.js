@@ -1,7 +1,6 @@
 (() => {
   const COURSE_URL = "./assets/data/course_path.json";
-  const BINDINGS_URL = "./assets/data/course_target_bindings.json";
-  const ASSESSMENTS_URL = "./assets/data/course_target_assessments.json";
+  const MANIFEST_URL = "./assets/data/course/manifest.json";
   const COURSE_PROGRESS_KEY = "malti_course_progress_v1";
   const storage = window.MaltiStorage;
 
@@ -109,13 +108,21 @@
 
   const initialize = async () => {
     if (!storage) return;
-    const [course, bindings, assessments] = await Promise.all([
-      loadJson(COURSE_URL), loadJson(BINDINGS_URL), loadJson(ASSESSMENTS_URL)
+    const [course, manifest] = await Promise.all([
+      loadJson(COURSE_URL), loadJson(MANIFEST_URL)
     ]);
     const targetProgress = window.MaltiExerciseRunner?.getTargetProgress?.() || {};
     const exerciseProgress = window.MaltiExerciseRunner?.getProgress?.() || {};
     const objectiveProgress = storage.getJson(COURSE_PROGRESS_KEY, {}) || {};
-    const allTargets = bindings.targets.filter((target) => target.implementationStatus === "implemented");
+    const allTargets = manifest.chapters.flatMap((chapter) => chapter.targetIds.map((id) => ({
+      id,
+      chapterId: chapter.id,
+      implementationStatus: "implemented"
+    })));
+    const assessmentSets = manifest.chapters.flatMap((chapter) => [
+      ...(chapter.diagnostic ? [{ ...chapter.diagnostic, chapterId: chapter.id, kind: "diagnostic" }] : []),
+      ...chapter.checkpoints.map((set) => ({ ...set, chapterId: chapter.id, kind: "checkpoint" }))
+    ]);
     const totals = stateCounts(allTargets, targetProgress);
     const dueTotal = allTargets.filter((target) => isDue(targetProgress[target.id])).length;
     setText("[data-progress-mastered]", totals.mastered);
@@ -132,7 +139,7 @@
       targets: allTargets.filter((target) => target.chapterId === chapter.id),
       targetProgress,
       exerciseProgress,
-      assessmentSets: assessments.sets || [],
+      assessmentSets,
       objectiveProgress
     })));
 

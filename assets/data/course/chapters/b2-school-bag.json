@@ -1,0 +1,5435 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-school-bag",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 1,
+    "title": "Fil-Basket tal-Iskola"
+  },
+  "inventoryChapter": {
+    "id": "b2.1",
+    "courseChapterId": "b2-school-bag",
+    "book": "B2",
+    "number": 1,
+    "title": "Fil-Basket tal-Iskola",
+    "targets": [
+      "basket tal-iskola",
+      "pokit",
+      "temprina",
+      "kulur",
+      "lapes",
+      "fajl",
+      "ktieb",
+      "marker",
+      "kalkulatur",
+      "kumpass",
+      "imqass",
+      "pitazz",
+      "karta",
+      "kolla",
+      "orarju",
+      "riga",
+      "sabiħ",
+      "sabiħa",
+      "sbieħ",
+      "ikrah",
+      "kerha",
+      "koroh",
+      "kbir",
+      "kbira",
+      "kbar",
+      "żgħir",
+      "żgħira",
+      "żgħar",
+      "ġdid",
+      "ġdida",
+      "ġodda",
+      "qadim",
+      "qadima",
+      "qodma",
+      "modern",
+      "moderna",
+      "moderni",
+      "antik",
+      "antika",
+      "antiki",
+      "ikkulurit",
+      "ikkulurita",
+      "ikkuluriti",
+      "nadif",
+      "nadifa",
+      "nodfa",
+      "maħmuġa"
+    ],
+    "baselineMissing": [
+      "kumpass",
+      "ikrah",
+      "kerha",
+      "koroh",
+      "qodma",
+      "antik",
+      "ikkuluriti"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-school-bag",
+    "book": "B2",
+    "chapterNumber": 1,
+    "chapterTitle": "Fil-Basket tal-Iskola",
+    "pageStart": 3,
+    "pageEnd": 13
+  },
+  "targets": [
+    {
+      "id": "b2-school-bag-basket-tal-iskola",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "phrase",
+      "sourceRequirement": "basket tal-iskola",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-basket-tal-iskola"
+      },
+      "assessmentIds": [
+        "b2-school-bag-basket-tal-iskola-diagnostic-recognition",
+        "b2-school-bag-basket-tal-iskola-recognition",
+        "b2-school-bag-basket-tal-iskola-production",
+        "b2-school-bag-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-pokit",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "pokit",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-pokit"
+      },
+      "assessmentIds": [
+        "b2-school-bag-pokit-recognition-true-false",
+        "b2-school-bag-pokit-production",
+        "b2-school-bag-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-temprina",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "temprina",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-temprina"
+      },
+      "assessmentIds": [
+        "b2-school-bag-temprina-recognition",
+        "b2-school-bag-temprina-production",
+        "b2-school-bag-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kulur",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kulur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-kulur"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kulur-recognition-true-false",
+        "b2-school-bag-kulur-production",
+        "b2-school-bag-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-lapes",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "lapes",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "lapes"
+      },
+      "assessmentIds": [
+        "b2-school-bag-lapes-recognition",
+        "b2-school-bag-lapes-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-fajl",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "fajl",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "fajl"
+      },
+      "assessmentIds": [
+        "b2-school-bag-fajl-diagnostic-recognition-true-false",
+        "b2-school-bag-fajl-recognition-true-false",
+        "b2-school-bag-fajl-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-ktieb",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ktieb",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "ktieb"
+      },
+      "assessmentIds": [
+        "b2-school-bag-ktieb-recognition",
+        "b2-school-bag-ktieb-production",
+        "b2-school-bag-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-marker",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "marker",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-marker"
+      },
+      "assessmentIds": [
+        "b2-school-bag-marker-recognition-true-false",
+        "b2-school-bag-marker-production",
+        "b2-school-bag-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kalkulatur",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kalkulatur",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "kalkulatur"
+      },
+      "assessmentIds": [
+        "bag-objects",
+        "bag-calculator-production",
+        "b2-school-bag-kalkulatur-recognition",
+        "b2-school-bag-kalkulatur-production",
+        "b2-school-bag-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kumpass",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kumpass",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-kumpass"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kumpass-recognition-true-false",
+        "b2-school-bag-kumpass-production",
+        "b2-school-bag-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-imqass",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "imqass",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "imqass"
+      },
+      "assessmentIds": [
+        "b2-school-bag-imqass-diagnostic-recognition",
+        "b2-school-bag-imqass-recognition",
+        "b2-school-bag-imqass-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-pitazz",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "pitazz",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "pitazz"
+      },
+      "assessmentIds": [
+        "bag-objects",
+        "b2-school-bag-pitazz-recognition-true-false",
+        "b2-school-bag-pitazz-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-karta",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "karta",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-karta"
+      },
+      "assessmentIds": [
+        "b2-school-bag-karta-recognition",
+        "b2-school-bag-karta-production",
+        "b2-school-bag-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kolla",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kolla",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "school_classroom.html",
+        "file": "assets/data/school_classroom.json",
+        "itemId": "kolla"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kolla-recognition-true-false",
+        "b2-school-bag-kolla-production",
+        "b2-school-bag-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-orarju",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "orarju",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-orarju"
+      },
+      "assessmentIds": [
+        "b2-school-bag-orarju-recognition",
+        "b2-school-bag-orarju-production",
+        "b2-school-bag-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-riga",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "riga",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-riga"
+      },
+      "assessmentIds": [
+        "b2-school-bag-riga-diagnostic-recognition-true-false",
+        "b2-school-bag-riga-recognition-true-false",
+        "b2-school-bag-riga-production",
+        "b2-school-bag-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-sabih",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "sabiħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-sabih"
+      },
+      "assessmentIds": [
+        "b2-school-bag-sabih-recognition",
+        "b2-school-bag-sabih-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-sabiha",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "sabiħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-sabiha"
+      },
+      "assessmentIds": [
+        "b2-school-bag-sabiha-recognition-true-false",
+        "b2-school-bag-sabiha-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-sbieh",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "sbieħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-sbieh"
+      },
+      "assessmentIds": [
+        "b2-school-bag-sbieh-recognition",
+        "b2-school-bag-sbieh-production",
+        "b2-school-bag-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-ikrah",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikrah",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-ikrah"
+      },
+      "assessmentIds": [
+        "b2-school-bag-ikrah-recognition-true-false",
+        "b2-school-bag-ikrah-production",
+        "b2-school-bag-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kerha",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kerha",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-kerha"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kerha-diagnostic-recognition",
+        "b2-school-bag-kerha-recognition",
+        "b2-school-bag-kerha-production",
+        "b2-school-bag-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-koroh",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "koroh",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-koroh"
+      },
+      "assessmentIds": [
+        "b2-school-bag-koroh-recognition-true-false",
+        "b2-school-bag-koroh-production",
+        "b2-school-bag-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kbir",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kbir",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-kbir"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kbir-recognition",
+        "b2-school-bag-kbir-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kbira",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kbira",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-kbira"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kbira-recognition-true-false",
+        "b2-school-bag-kbira-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-kbar",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "kbar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-kbar"
+      },
+      "assessmentIds": [
+        "b2-school-bag-kbar-recognition",
+        "b2-school-bag-kbar-production",
+        "b2-school-bag-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-zghir",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "żgħir",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-zghir"
+      },
+      "assessmentIds": [
+        "b2-school-bag-zghir-diagnostic-recognition-true-false",
+        "b2-school-bag-zghir-recognition-true-false",
+        "b2-school-bag-zghir-production",
+        "b2-school-bag-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-zghira",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "żgħira",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-zghira"
+      },
+      "assessmentIds": [
+        "b2-school-bag-zghira-recognition",
+        "b2-school-bag-zghira-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-zghar",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "żgħar",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-zghar"
+      },
+      "assessmentIds": [
+        "b2-school-bag-zghar-recognition-true-false",
+        "b2-school-bag-zghar-production",
+        "b2-school-bag-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-gdid",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ġdid",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-gdid"
+      },
+      "assessmentIds": [
+        "b2-school-bag-gdid-recognition",
+        "b2-school-bag-gdid-production",
+        "b2-school-bag-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-gdida",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ġdida",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-gdida"
+      },
+      "assessmentIds": [
+        "b2-school-bag-gdida-recognition-true-false",
+        "b2-school-bag-gdida-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-godda",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ġodda",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-godda"
+      },
+      "assessmentIds": [
+        "b2-school-bag-godda-diagnostic-recognition",
+        "b2-school-bag-godda-recognition",
+        "b2-school-bag-godda-production",
+        "b2-school-bag-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-qadim",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "qadim",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-qadim"
+      },
+      "assessmentIds": [
+        "b2-school-bag-qadim-recognition-true-false",
+        "b2-school-bag-qadim-production",
+        "b2-school-bag-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-qadima",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "qadima",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-qadima"
+      },
+      "assessmentIds": [
+        "b2-school-bag-qadima-recognition",
+        "b2-school-bag-qadima-production",
+        "b2-school-bag-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-qodma",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "qodma",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-qodma"
+      },
+      "assessmentIds": [
+        "b2-school-bag-qodma-recognition-true-false",
+        "b2-school-bag-qodma-production",
+        "b2-school-bag-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-modern",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "modern",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-modern"
+      },
+      "assessmentIds": [
+        "b2-school-bag-modern-recognition",
+        "b2-school-bag-modern-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-moderna",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "moderna",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-moderna"
+      },
+      "assessmentIds": [
+        "b2-school-bag-moderna-diagnostic-recognition-true-false",
+        "b2-school-bag-moderna-recognition-true-false",
+        "b2-school-bag-moderna-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-moderni",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "moderni",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-moderni"
+      },
+      "assessmentIds": [
+        "b2-school-bag-moderni-recognition",
+        "b2-school-bag-moderni-production",
+        "b2-school-bag-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-antik",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "antik",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-antik"
+      },
+      "assessmentIds": [
+        "b2-school-bag-antik-recognition-true-false",
+        "b2-school-bag-antik-production",
+        "b2-school-bag-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-antika",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "antika",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-antika"
+      },
+      "assessmentIds": [
+        "b2-school-bag-antika-recognition",
+        "b2-school-bag-antika-production",
+        "b2-school-bag-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-antiki",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "antiki",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-antiki"
+      },
+      "assessmentIds": [
+        "b2-school-bag-antiki-recognition-true-false",
+        "b2-school-bag-antiki-production",
+        "b2-school-bag-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-ikkulurit",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikkulurit",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-ikkulurit"
+      },
+      "assessmentIds": [
+        "b2-school-bag-ikkulurit-diagnostic-recognition",
+        "b2-school-bag-ikkulurit-recognition",
+        "b2-school-bag-ikkulurit-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-ikkulurita",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikkulurita",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-ikkulurita"
+      },
+      "assessmentIds": [
+        "b2-school-bag-ikkulurita-recognition-true-false",
+        "b2-school-bag-ikkulurita-production"
+      ]
+    },
+    {
+      "id": "b2-school-bag-ikkuluriti",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "ikkuluriti",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-ikkuluriti"
+      },
+      "assessmentIds": [
+        "b2-school-bag-ikkuluriti-recognition",
+        "b2-school-bag-ikkuluriti-production",
+        "b2-school-bag-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-nadif",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "nadif",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-nadif"
+      },
+      "assessmentIds": [
+        "b2-school-bag-nadif-recognition-true-false",
+        "b2-school-bag-nadif-production",
+        "b2-school-bag-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-nadifa",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "nadifa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-nadifa"
+      },
+      "assessmentIds": [
+        "b2-school-bag-nadifa-recognition",
+        "b2-school-bag-nadifa-production",
+        "b2-school-bag-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-nodfa",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "nodfa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-nodfa"
+      },
+      "assessmentIds": [
+        "b2-school-bag-nodfa-recognition-true-false",
+        "b2-school-bag-nodfa-production",
+        "b2-school-bag-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "b2-school-bag-mahmuga",
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "type": "vocabulary",
+      "sourceRequirement": "maħmuġa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-school-bag-mahmuga"
+      },
+      "assessmentIds": [
+        "b2-school-bag-mahmuga-diagnostic-recognition-true-false",
+        "b2-school-bag-mahmuga-recognition",
+        "b2-school-bag-mahmuga-production"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-school-bag-basket-tal-iskola": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 5,
+      "pages": [
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-pokit": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-temprina": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-kulur": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-lapes": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-fajl": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5,
+        11,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-ktieb": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5,
+        6
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-marker": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-kalkulatur": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kumpass": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-imqass": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-pitazz": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        5
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-karta": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kolla": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-orarju": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3,
+        4
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-riga": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 3,
+      "pages": [
+        3
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-sabih": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-sabiha": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-sbieh": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-ikrah": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kerha": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-koroh": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kbir": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kbira": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-kbar": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-zghir": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-zghira": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-zghar": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-gdid": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 5,
+      "pages": [
+        5,
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-gdida": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-godda": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-qadim": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-qadima": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-qodma": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-modern": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-moderna": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-moderni": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-antik": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-antika": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-antiki": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        12
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-ikkulurit": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-ikkulurita": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-ikkuluriti": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-school-bag-nadif": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-nadifa": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10,
+        11
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-nodfa": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    },
+    "b2-school-bag-mahmuga": {
+      "book": "B2",
+      "chapterId": "b2-school-bag",
+      "chapterNumber": 1,
+      "chapterTitle": "Fil-Basket tal-Iskola",
+      "pageRange": [
+        3,
+        13
+      ],
+      "primaryPage": 10,
+      "pages": [
+        10
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-school-bag-basket-tal-iskola",
+      "maltese": "basket tal-iskola",
+      "english": "school bag",
+      "example": "Hemm basket tal-iskola fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the school bag.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 5,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 5",
+      "notes": [
+        "Example: Hemm basket tal-iskola fil-basket tal-iskola.",
+        "Translation: The school bag contains the school bag.",
+        "Source: B2, Chapter 1, p. 5"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-school-bag-pokit",
+      "maltese": "pokit",
+      "english": "pocket",
+      "example": "Hemm pokit fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the pocket.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm pokit fil-basket tal-iskola.",
+        "Translation: The school bag contains the pocket.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-temprina",
+      "maltese": "temprina",
+      "english": "pencil sharpener",
+      "example": "Hemm temprina fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the pencil sharpener.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": null,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 1, pp. 3-13",
+      "notes": [
+        "Example: Hemm temprina fil-basket tal-iskola.",
+        "Translation: The school bag contains the pencil sharpener.",
+        "Source: B2, Chapter 1, pp. 3-13"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kulur",
+      "maltese": "kulur",
+      "english": "colour",
+      "example": "Hemm kulur fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the colour.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm kulur fil-basket tal-iskola.",
+        "Translation: The school bag contains the colour.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-lapes",
+      "maltese": "lapes",
+      "english": "pencil",
+      "example": "Hemm lapes fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the pencil.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm lapes fil-basket tal-iskola.",
+        "Translation: The school bag contains the pencil.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-fajl",
+      "maltese": "fajl",
+      "english": "file",
+      "example": "Hemm fajl fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the file.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm fajl fil-basket tal-iskola.",
+        "Translation: The school bag contains the file.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-ktieb",
+      "maltese": "ktieb",
+      "english": "book",
+      "example": "Hemm ktieb fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the book.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm ktieb fil-basket tal-iskola.",
+        "Translation: The school bag contains the book.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-marker",
+      "maltese": "marker",
+      "english": "marker pen",
+      "example": "Hemm marker fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the marker pen.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": null,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 1, pp. 3-13",
+      "notes": [
+        "Example: Hemm marker fil-basket tal-iskola.",
+        "Translation: The school bag contains the marker pen.",
+        "Source: B2, Chapter 1, pp. 3-13"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kalkulatur",
+      "maltese": "kalkulatur",
+      "english": "calculator",
+      "example": "Hemm kalkulatur fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the calculator.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm kalkulatur fil-basket tal-iskola.",
+        "Translation: The school bag contains the calculator.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kumpass",
+      "maltese": "kumpass",
+      "english": "compass",
+      "example": "Hemm kumpass fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the compass.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm kumpass fil-basket tal-iskola.",
+        "Translation: The school bag contains the compass.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-imqass",
+      "maltese": "imqass",
+      "english": "scissors",
+      "example": "Hemm imqass fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the scissors.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm imqass fil-basket tal-iskola.",
+        "Translation: The school bag contains the scissors.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-pitazz",
+      "maltese": "pitazz",
+      "english": "copybook / notebook",
+      "example": "Hemm pitazz fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the copybook.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm pitazz fil-basket tal-iskola.",
+        "Translation: The school bag contains the copybook.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-karta",
+      "maltese": "karta",
+      "english": "paper / card",
+      "example": "Hemm karta fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the paper.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm karta fil-basket tal-iskola.",
+        "Translation: The school bag contains the paper.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kolla",
+      "maltese": "kolla",
+      "english": "glue",
+      "example": "Hemm kolla fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the glue.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm kolla fil-basket tal-iskola.",
+        "Translation: The school bag contains the glue.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-orarju",
+      "maltese": "orarju",
+      "english": "timetable",
+      "example": "Hemm orarju fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the timetable.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm orarju fil-basket tal-iskola.",
+        "Translation: The school bag contains the timetable.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-riga",
+      "maltese": "riga",
+      "english": "ruler",
+      "example": "Hemm riga fil-basket tal-iskola.",
+      "exampleTranslation": "The school bag contains the ruler.",
+      "examplePattern": "school-bag-object",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 3,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 3",
+      "notes": [
+        "Example: Hemm riga fil-basket tal-iskola.",
+        "Translation: The school bag contains the ruler.",
+        "Source: B2, Chapter 1, p. 3"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-sabih",
+      "maltese": "sabiħ",
+      "english": "beautiful / nice (masculine)",
+      "example": "Il-ktieb huwa sabiħ.",
+      "exampleTranslation": "The book is beautiful.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa sabiħ.",
+        "Translation: The book is beautiful.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-sabiha",
+      "maltese": "sabiħa",
+      "english": "beautiful / nice (feminine)",
+      "example": "Il-karta hija sabiħa.",
+      "exampleTranslation": "The paper is beautiful.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija sabiħa.",
+        "Translation: The paper is beautiful.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-sbieh",
+      "maltese": "sbieħ",
+      "english": "beautiful / nice (plural)",
+      "example": "Il-kotba huma sbieħ.",
+      "exampleTranslation": "The books are beautiful.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma sbieħ.",
+        "Translation: The books are beautiful.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-ikrah",
+      "maltese": "ikrah",
+      "english": "ugly (masculine)",
+      "example": "Il-ktieb huwa ikrah.",
+      "exampleTranslation": "The book is ugly.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa ikrah.",
+        "Translation: The book is ugly.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kerha",
+      "maltese": "kerha",
+      "english": "ugly (feminine)",
+      "example": "Il-karta hija kerha.",
+      "exampleTranslation": "The paper is ugly.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija kerha.",
+        "Translation: The paper is ugly.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-koroh",
+      "maltese": "koroh",
+      "english": "ugly (plural)",
+      "example": "Il-kotba huma koroh.",
+      "exampleTranslation": "The books are ugly.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma koroh.",
+        "Translation: The books are ugly.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kbir",
+      "maltese": "kbir",
+      "english": "large",
+      "example": "Il-ktieb huwa kbir.",
+      "exampleTranslation": "The book is large.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa kbir.",
+        "Translation: The book is large.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kbira",
+      "maltese": "kbira",
+      "english": "big",
+      "example": "Il-karta hija kbira.",
+      "exampleTranslation": "The paper is big.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija kbira.",
+        "Translation: The paper is big.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-kbar",
+      "maltese": "kbar",
+      "english": "big / large (plural)",
+      "example": "Il-kotba huma kbar.",
+      "exampleTranslation": "The books are big.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma kbar.",
+        "Translation: The books are big.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-zghir",
+      "maltese": "żgħir",
+      "english": "small",
+      "example": "Il-ktieb huwa żgħir.",
+      "exampleTranslation": "The book is small.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa żgħir.",
+        "Translation: The book is small.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-zghira",
+      "maltese": "żgħira",
+      "english": "small",
+      "example": "Il-karta hija żgħira.",
+      "exampleTranslation": "The paper is small.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija żgħira.",
+        "Translation: The paper is small.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-zghar",
+      "maltese": "żgħar",
+      "english": "small (plural)",
+      "example": "Il-kotba huma żgħar.",
+      "exampleTranslation": "The books are small.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma żgħar.",
+        "Translation: The books are small.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-gdid",
+      "maltese": "ġdid",
+      "english": "new (masculine)",
+      "example": "Il-ktieb huwa ġdid.",
+      "exampleTranslation": "The book is new.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 5,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 5",
+      "notes": [
+        "Example: Il-ktieb huwa ġdid.",
+        "Translation: The book is new.",
+        "Source: B2, Chapter 1, p. 5"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-gdida",
+      "maltese": "ġdida",
+      "english": "new (feminine)",
+      "example": "Il-karta hija ġdida.",
+      "exampleTranslation": "The paper is new.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija ġdida.",
+        "Translation: The paper is new.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-godda",
+      "maltese": "ġodda",
+      "english": "new (plural)",
+      "example": "Il-kotba huma ġodda.",
+      "exampleTranslation": "The books are new.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma ġodda.",
+        "Translation: The books are new.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-qadim",
+      "maltese": "qadim",
+      "english": "old",
+      "example": "Il-ktieb huwa qadim.",
+      "exampleTranslation": "The book is old.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa qadim.",
+        "Translation: The book is old.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-qadima",
+      "maltese": "qadima",
+      "english": "old (feminine)",
+      "example": "Il-karta hija qadima.",
+      "exampleTranslation": "The paper is old.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija qadima.",
+        "Translation: The paper is old.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-qodma",
+      "maltese": "qodma",
+      "english": "old (plural)",
+      "example": "Il-kotba huma qodma.",
+      "exampleTranslation": "The books are old.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma qodma.",
+        "Translation: The books are old.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-modern",
+      "maltese": "modern",
+      "english": "modern (masculine)",
+      "example": "Il-ktieb huwa modern.",
+      "exampleTranslation": "The book is modern.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa modern.",
+        "Translation: The book is modern.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-moderna",
+      "maltese": "moderna",
+      "english": "modern",
+      "example": "Il-karta hija moderna.",
+      "exampleTranslation": "The paper is modern.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija moderna.",
+        "Translation: The paper is modern.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-moderni",
+      "maltese": "moderni",
+      "english": "modern (plural)",
+      "example": "Il-kotba huma moderni.",
+      "exampleTranslation": "The books are modern.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma moderni.",
+        "Translation: The books are modern.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-antik",
+      "maltese": "antik",
+      "english": "antique / old (masculine)",
+      "example": "Il-ktieb huwa antik.",
+      "exampleTranslation": "The book is antique.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa antik.",
+        "Translation: The book is antique.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-antika",
+      "maltese": "antika",
+      "english": "antique / old (feminine)",
+      "example": "Il-karta hija antika.",
+      "exampleTranslation": "The paper is antique.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija antika.",
+        "Translation: The paper is antique.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-antiki",
+      "maltese": "antiki",
+      "english": "antique / old (plural)",
+      "example": "Il-kotba huma antiki.",
+      "exampleTranslation": "The books are antique.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma antiki.",
+        "Translation: The books are antique.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-ikkulurit",
+      "maltese": "ikkulurit",
+      "english": "colourful",
+      "example": "Il-ktieb huwa ikkulurit.",
+      "exampleTranslation": "The book is colourful.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": null,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 1, pp. 3-13",
+      "notes": [
+        "Example: Il-ktieb huwa ikkulurit.",
+        "Translation: The book is colourful.",
+        "Source: B2, Chapter 1, pp. 3-13"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-ikkulurita",
+      "maltese": "ikkulurita",
+      "english": "colourful (feminine)",
+      "example": "Il-karta hija ikkulurita.",
+      "exampleTranslation": "The paper is colourful.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": null,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 1, pp. 3-13",
+      "notes": [
+        "Example: Il-karta hija ikkulurita.",
+        "Translation: The paper is colourful.",
+        "Source: B2, Chapter 1, pp. 3-13"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-ikkuluriti",
+      "maltese": "ikkuluriti",
+      "english": "colourful (plural)",
+      "example": "Il-kotba huma ikkuluriti.",
+      "exampleTranslation": "The books are colourful.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": null,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 1, pp. 3-13",
+      "notes": [
+        "Example: Il-kotba huma ikkuluriti.",
+        "Translation: The books are colourful.",
+        "Source: B2, Chapter 1, pp. 3-13"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-nadif",
+      "maltese": "nadif",
+      "english": "clean (masculine)",
+      "example": "Il-ktieb huwa nadif.",
+      "exampleTranslation": "The book is clean.",
+      "examplePattern": "object-adjective-masculine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-ktieb huwa nadif.",
+        "Translation: The book is clean.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-nadifa",
+      "maltese": "nadifa",
+      "english": "clean (feminine)",
+      "example": "Il-karta hija nadifa.",
+      "exampleTranslation": "The paper is clean.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija nadifa.",
+        "Translation: The paper is clean.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-nodfa",
+      "maltese": "nodfa",
+      "english": "clean (plural)",
+      "example": "Il-kotba huma nodfa.",
+      "exampleTranslation": "The books are clean.",
+      "examplePattern": "object-adjective-plural",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-kotba huma nodfa.",
+        "Translation: The books are clean.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-school-bag-mahmuga",
+      "maltese": "maħmuġa",
+      "english": "dirty (feminine)",
+      "example": "Il-karta hija maħmuġa.",
+      "exampleTranslation": "The paper is dirty.",
+      "examplePattern": "object-adjective-feminine",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 1,
+        "page": 10,
+        "pageRange": [
+          3,
+          13
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 1, p. 10",
+      "notes": [
+        "Example: Il-karta hija maħmuġa.",
+        "Translation: The paper is dirty.",
+        "Source: B2, Chapter 1, p. 10"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-diagnostic",
+      "kind": "diagnostic",
+      "title": "Fil-Basket tal-Iskola Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-school-bag-basket-tal-iskola-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-basket-tal-iskola"
+          ],
+          "prompt": "What is the lesson meaning of “basket tal-iskola”?",
+          "choices": [
+            "school bag",
+            "pocket",
+            "pencil sharpener"
+          ],
+          "answer": "school bag",
+          "explanation": "basket tal-iskola means “school bag” in this chapter.",
+          "reviewCard": {
+            "maltese": "basket tal-iskola",
+            "english": "school bag"
+          }
+        },
+        {
+          "id": "b2-school-bag-fajl-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "True or false: “fajl” means “pencil sharpener” in this chapter.",
+          "answer": false,
+          "explanation": "fajl means “file”.",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file"
+          }
+        },
+        {
+          "id": "b2-school-bag-imqass-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-imqass"
+          ],
+          "prompt": "What is the lesson meaning of “imqass”?",
+          "choices": [
+            "pencil",
+            "scissors",
+            "colour"
+          ],
+          "answer": "scissors",
+          "explanation": "imqass means “scissors” in this chapter.",
+          "reviewCard": {
+            "maltese": "imqass",
+            "english": "scissors"
+          }
+        },
+        {
+          "id": "b2-school-bag-riga-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-riga"
+          ],
+          "prompt": "True or false: “riga” means “pencil” in this chapter.",
+          "answer": false,
+          "explanation": "riga means “ruler”.",
+          "reviewCard": {
+            "maltese": "riga",
+            "english": "ruler"
+          }
+        },
+        {
+          "id": "b2-school-bag-kerha-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kerha"
+          ],
+          "prompt": "What is the lesson meaning of “kerha”?",
+          "choices": [
+            "file",
+            "book",
+            "ugly (feminine)"
+          ],
+          "answer": "ugly (feminine)",
+          "explanation": "kerha means “ugly (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "kerha",
+            "english": "ugly (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-zghir-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-zghir"
+          ],
+          "prompt": "True or false: “żgħir” means “book” in this chapter.",
+          "answer": false,
+          "explanation": "żgħir means “small”.",
+          "reviewCard": {
+            "maltese": "żgħir",
+            "english": "small"
+          }
+        },
+        {
+          "id": "b2-school-bag-godda-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-godda"
+          ],
+          "prompt": "What is the lesson meaning of “ġodda”?",
+          "choices": [
+            "new (plural)",
+            "marker pen",
+            "calculator"
+          ],
+          "answer": "new (plural)",
+          "explanation": "ġodda means “new (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġodda",
+            "english": "new (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-moderna-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-moderna"
+          ],
+          "prompt": "True or false: “moderna” means “calculator” in this chapter.",
+          "answer": false,
+          "explanation": "moderna means “modern”.",
+          "reviewCard": {
+            "maltese": "moderna",
+            "english": "modern"
+          }
+        },
+        {
+          "id": "b2-school-bag-ikkulurit-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkulurit"
+          ],
+          "prompt": "What is the lesson meaning of “ikkulurit”?",
+          "choices": [
+            "scissors",
+            "colourful",
+            "compass"
+          ],
+          "answer": "colourful",
+          "explanation": "ikkulurit means “colourful” in this chapter.",
+          "reviewCard": {
+            "maltese": "ikkulurit",
+            "english": "colourful"
+          }
+        },
+        {
+          "id": "b2-school-bag-mahmuga-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-mahmuga"
+          ],
+          "prompt": "True or false: “maħmuġa” means “scissors” in this chapter.",
+          "answer": false,
+          "explanation": "maħmuġa means “dirty (feminine)”.",
+          "reviewCard": {
+            "maltese": "maħmuġa",
+            "english": "dirty (feminine)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-school-bag-basket-tal-iskola-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-basket-tal-iskola"
+          ],
+          "prompt": "What is the lesson meaning of “basket tal-iskola”?",
+          "choices": [
+            "school bag",
+            "pocket",
+            "pencil sharpener"
+          ],
+          "answer": "school bag",
+          "explanation": "basket tal-iskola means “school bag” in this chapter.",
+          "reviewCard": {
+            "maltese": "basket tal-iskola",
+            "english": "school bag"
+          }
+        },
+        {
+          "id": "b2-school-bag-basket-tal-iskola-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-basket-tal-iskola"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the school bag.)",
+          "answer": "basket tal-iskola",
+          "explanation": "The complete sentence is “Hemm basket tal-iskola fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "basket tal-iskola",
+            "english": "school bag",
+            "example": "Hemm basket tal-iskola fil-basket tal-iskola."
+          },
+          "type": "order-words",
+          "tokens": [
+            "basket",
+            "tal-iskola"
+          ]
+        },
+        {
+          "id": "b2-school-bag-pokit-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-pokit"
+          ],
+          "prompt": "True or false: “pokit” means “pencil sharpener” in this chapter.",
+          "answer": false,
+          "explanation": "pokit means “pocket”.",
+          "reviewCard": {
+            "maltese": "pokit",
+            "english": "pocket"
+          }
+        },
+        {
+          "id": "b2-school-bag-pokit-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-pokit"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the pocket.)",
+          "answer": "pokit",
+          "explanation": "The complete sentence is “Hemm pokit fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "pokit",
+            "english": "pocket",
+            "example": "Hemm pokit fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pokit"
+          ]
+        },
+        {
+          "id": "b2-school-bag-temprina-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-temprina"
+          ],
+          "prompt": "What is the lesson meaning of “temprina”?",
+          "choices": [
+            "pencil",
+            "pencil sharpener",
+            "colour"
+          ],
+          "answer": "pencil sharpener",
+          "explanation": "temprina means “pencil sharpener” in this chapter.",
+          "reviewCard": {
+            "maltese": "temprina",
+            "english": "pencil sharpener"
+          }
+        },
+        {
+          "id": "b2-school-bag-temprina-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-temprina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the pencil sharpener.)",
+          "answer": "temprina",
+          "explanation": "The complete sentence is “Hemm temprina fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "temprina",
+            "english": "pencil sharpener",
+            "example": "Hemm temprina fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "temprina"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kulur-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kulur"
+          ],
+          "prompt": "True or false: “kulur” means “pencil” in this chapter.",
+          "answer": false,
+          "explanation": "kulur means “colour”.",
+          "reviewCard": {
+            "maltese": "kulur",
+            "english": "colour"
+          }
+        },
+        {
+          "id": "b2-school-bag-kulur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kulur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the colour.)",
+          "answer": "kulur",
+          "explanation": "The complete sentence is “Hemm kulur fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "kulur",
+            "english": "colour",
+            "example": "Hemm kulur fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kulur"
+          ]
+        },
+        {
+          "id": "b2-school-bag-lapes-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-lapes"
+          ],
+          "prompt": "What is the lesson meaning of “lapes”?",
+          "choices": [
+            "file",
+            "book",
+            "pencil"
+          ],
+          "answer": "pencil",
+          "explanation": "lapes means “pencil” in this chapter.",
+          "reviewCard": {
+            "maltese": "lapes",
+            "english": "pencil"
+          }
+        },
+        {
+          "id": "b2-school-bag-lapes-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-lapes"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the pencil.)",
+          "answer": "lapes",
+          "explanation": "The complete sentence is “Hemm lapes fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "lapes",
+            "english": "pencil",
+            "example": "Hemm lapes fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "lapes"
+          ]
+        },
+        {
+          "id": "b2-school-bag-fajl-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "True or false: “fajl” means “book” in this chapter.",
+          "answer": false,
+          "explanation": "fajl means “file”.",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file"
+          }
+        },
+        {
+          "id": "b2-school-bag-fajl-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the file.)",
+          "answer": "fajl",
+          "explanation": "The complete sentence is “Hemm fajl fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file",
+            "example": "Hemm fajl fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fajl"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-basket-tal-iskola",
+            "b2-school-bag-pokit",
+            "b2-school-bag-temprina",
+            "b2-school-bag-kulur"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "basket tal-iskola",
+              "right": "school bag"
+            },
+            {
+              "left": "pokit",
+              "right": "pocket"
+            },
+            {
+              "left": "temprina",
+              "right": "pencil sharpener"
+            },
+            {
+              "left": "kulur",
+              "right": "colour"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "basket tal-iskola",
+            "english": "school bag"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-school-bag-ktieb-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ktieb"
+          ],
+          "prompt": "What is the lesson meaning of “ktieb”?",
+          "choices": [
+            "book",
+            "marker pen",
+            "calculator"
+          ],
+          "answer": "book",
+          "explanation": "ktieb means “book” in this chapter.",
+          "reviewCard": {
+            "maltese": "ktieb",
+            "english": "book"
+          }
+        },
+        {
+          "id": "b2-school-bag-ktieb-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ktieb"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the book.)",
+          "answer": "ktieb",
+          "explanation": "The complete sentence is “Hemm ktieb fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "ktieb",
+            "english": "book",
+            "example": "Hemm ktieb fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ktieb"
+          ]
+        },
+        {
+          "id": "b2-school-bag-marker-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-marker"
+          ],
+          "prompt": "True or false: “marker” means “calculator” in this chapter.",
+          "answer": false,
+          "explanation": "marker means “marker pen”.",
+          "reviewCard": {
+            "maltese": "marker",
+            "english": "marker pen"
+          }
+        },
+        {
+          "id": "b2-school-bag-marker-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-marker"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the marker pen.)",
+          "answer": "marker",
+          "explanation": "The complete sentence is “Hemm marker fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "marker",
+            "english": "marker pen",
+            "example": "Hemm marker fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "marker"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kalkulatur-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kalkulatur"
+          ],
+          "prompt": "What is the lesson meaning of “kalkulatur”?",
+          "choices": [
+            "scissors",
+            "calculator",
+            "compass"
+          ],
+          "answer": "calculator",
+          "explanation": "kalkulatur means “calculator” in this chapter.",
+          "reviewCard": {
+            "maltese": "kalkulatur",
+            "english": "calculator"
+          }
+        },
+        {
+          "id": "b2-school-bag-kalkulatur-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kalkulatur"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the calculator.)",
+          "answer": "kalkulatur",
+          "explanation": "The complete sentence is “Hemm kalkulatur fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "kalkulatur",
+            "english": "calculator",
+            "example": "Hemm kalkulatur fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kalkulatur"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kumpass-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kumpass"
+          ],
+          "prompt": "True or false: “kumpass” means “scissors” in this chapter.",
+          "answer": false,
+          "explanation": "kumpass means “compass”.",
+          "reviewCard": {
+            "maltese": "kumpass",
+            "english": "compass"
+          }
+        },
+        {
+          "id": "b2-school-bag-kumpass-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kumpass"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the compass.)",
+          "answer": "kumpass",
+          "explanation": "The complete sentence is “Hemm kumpass fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "kumpass",
+            "english": "compass",
+            "example": "Hemm kumpass fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kumpass"
+          ]
+        },
+        {
+          "id": "b2-school-bag-imqass-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-imqass"
+          ],
+          "prompt": "What is the lesson meaning of “imqass”?",
+          "choices": [
+            "copybook / notebook",
+            "paper / card",
+            "scissors"
+          ],
+          "answer": "scissors",
+          "explanation": "imqass means “scissors” in this chapter.",
+          "reviewCard": {
+            "maltese": "imqass",
+            "english": "scissors"
+          }
+        },
+        {
+          "id": "b2-school-bag-imqass-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-imqass"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the scissors.)",
+          "answer": "imqass",
+          "explanation": "The complete sentence is “Hemm imqass fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "imqass",
+            "english": "scissors",
+            "example": "Hemm imqass fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "imqass"
+          ]
+        },
+        {
+          "id": "b2-school-bag-pitazz-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-pitazz"
+          ],
+          "prompt": "True or false: “pitazz” means “paper / card” in this chapter.",
+          "answer": false,
+          "explanation": "pitazz means “copybook / notebook”.",
+          "reviewCard": {
+            "maltese": "pitazz",
+            "english": "copybook / notebook"
+          }
+        },
+        {
+          "id": "b2-school-bag-pitazz-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-pitazz"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the copybook.)",
+          "answer": "pitazz",
+          "explanation": "The complete sentence is “Hemm pitazz fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "pitazz",
+            "english": "copybook / notebook",
+            "example": "Hemm pitazz fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "pitazz"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ktieb",
+            "b2-school-bag-marker",
+            "b2-school-bag-kalkulatur",
+            "b2-school-bag-kumpass"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ktieb",
+              "right": "book"
+            },
+            {
+              "left": "marker",
+              "right": "marker pen"
+            },
+            {
+              "left": "kalkulatur",
+              "right": "calculator"
+            },
+            {
+              "left": "kumpass",
+              "right": "compass"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ktieb",
+            "english": "book"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-school-bag-karta-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-karta"
+          ],
+          "prompt": "What is the lesson meaning of “karta”?",
+          "choices": [
+            "paper / card",
+            "glue",
+            "timetable"
+          ],
+          "answer": "paper / card",
+          "explanation": "karta means “paper / card” in this chapter.",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper / card"
+          }
+        },
+        {
+          "id": "b2-school-bag-karta-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-karta"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the paper.)",
+          "answer": "karta",
+          "explanation": "The complete sentence is “Hemm karta fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper / card",
+            "example": "Hemm karta fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "karta"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kolla-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kolla"
+          ],
+          "prompt": "True or false: “kolla” means “timetable” in this chapter.",
+          "answer": false,
+          "explanation": "kolla means “glue”.",
+          "reviewCard": {
+            "maltese": "kolla",
+            "english": "glue"
+          }
+        },
+        {
+          "id": "b2-school-bag-kolla-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kolla"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the glue.)",
+          "answer": "kolla",
+          "explanation": "The complete sentence is “Hemm kolla fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "kolla",
+            "english": "glue",
+            "example": "Hemm kolla fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kolla"
+          ]
+        },
+        {
+          "id": "b2-school-bag-orarju-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-orarju"
+          ],
+          "prompt": "What is the lesson meaning of “orarju”?",
+          "choices": [
+            "beautiful / nice (masculine)",
+            "timetable",
+            "ruler"
+          ],
+          "answer": "timetable",
+          "explanation": "orarju means “timetable” in this chapter.",
+          "reviewCard": {
+            "maltese": "orarju",
+            "english": "timetable"
+          }
+        },
+        {
+          "id": "b2-school-bag-orarju-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-orarju"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the timetable.)",
+          "answer": "orarju",
+          "explanation": "The complete sentence is “Hemm orarju fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "orarju",
+            "english": "timetable",
+            "example": "Hemm orarju fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "orarju"
+          ]
+        },
+        {
+          "id": "b2-school-bag-riga-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-riga"
+          ],
+          "prompt": "True or false: “riga” means “beautiful / nice (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "riga means “ruler”.",
+          "reviewCard": {
+            "maltese": "riga",
+            "english": "ruler"
+          }
+        },
+        {
+          "id": "b2-school-bag-riga-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-riga"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the ruler.)",
+          "answer": "riga",
+          "explanation": "The complete sentence is “Hemm riga fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "riga",
+            "english": "ruler",
+            "example": "Hemm riga fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "riga"
+          ]
+        },
+        {
+          "id": "b2-school-bag-sabih-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-sabih"
+          ],
+          "prompt": "What is the lesson meaning of “sabiħ”?",
+          "choices": [
+            "beautiful / nice (feminine)",
+            "beautiful / nice (plural)",
+            "beautiful / nice (masculine)"
+          ],
+          "answer": "beautiful / nice (masculine)",
+          "explanation": "sabiħ means “beautiful / nice (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "sabiħ",
+            "english": "beautiful / nice (masculine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-sabih-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-sabih"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is beautiful.)",
+          "answer": "sabiħ",
+          "explanation": "The complete sentence is “Il-ktieb huwa sabiħ.”",
+          "reviewCard": {
+            "maltese": "sabiħ",
+            "english": "beautiful / nice (masculine)",
+            "example": "Il-ktieb huwa sabiħ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sabiħ"
+          ]
+        },
+        {
+          "id": "b2-school-bag-sabiha-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-sabiha"
+          ],
+          "prompt": "True or false: “sabiħa” means “beautiful / nice (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "sabiħa means “beautiful / nice (feminine)”.",
+          "reviewCard": {
+            "maltese": "sabiħa",
+            "english": "beautiful / nice (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-sabiha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-sabiha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is beautiful.)",
+          "answer": "sabiħa",
+          "explanation": "The complete sentence is “Il-karta hija sabiħa.”",
+          "reviewCard": {
+            "maltese": "sabiħa",
+            "english": "beautiful / nice (feminine)",
+            "example": "Il-karta hija sabiħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sabiħa"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-karta",
+            "b2-school-bag-kolla",
+            "b2-school-bag-orarju",
+            "b2-school-bag-riga"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "karta",
+              "right": "paper / card"
+            },
+            {
+              "left": "kolla",
+              "right": "glue"
+            },
+            {
+              "left": "orarju",
+              "right": "timetable"
+            },
+            {
+              "left": "riga",
+              "right": "ruler"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "karta",
+            "english": "paper / card"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-school-bag-sbieh-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-sbieh"
+          ],
+          "prompt": "What is the lesson meaning of “sbieħ”?",
+          "choices": [
+            "beautiful / nice (plural)",
+            "ugly (masculine)",
+            "ugly (feminine)"
+          ],
+          "answer": "beautiful / nice (plural)",
+          "explanation": "sbieħ means “beautiful / nice (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "sbieħ",
+            "english": "beautiful / nice (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-sbieh-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-sbieh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are beautiful.)",
+          "answer": "sbieħ",
+          "explanation": "The complete sentence is “Il-kotba huma sbieħ.”",
+          "reviewCard": {
+            "maltese": "sbieħ",
+            "english": "beautiful / nice (plural)",
+            "example": "Il-kotba huma sbieħ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sbieħ"
+          ]
+        },
+        {
+          "id": "b2-school-bag-ikrah-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikrah"
+          ],
+          "prompt": "True or false: “ikrah” means “ugly (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "ikrah means “ugly (masculine)”.",
+          "reviewCard": {
+            "maltese": "ikrah",
+            "english": "ugly (masculine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-ikrah-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ikrah"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is ugly.)",
+          "answer": "ikrah",
+          "explanation": "The complete sentence is “Il-ktieb huwa ikrah.”",
+          "reviewCard": {
+            "maltese": "ikrah",
+            "english": "ugly (masculine)",
+            "example": "Il-ktieb huwa ikrah."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ikrah"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kerha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kerha"
+          ],
+          "prompt": "What is the lesson meaning of “kerha”?",
+          "choices": [
+            "large",
+            "ugly (feminine)",
+            "ugly (plural)"
+          ],
+          "answer": "ugly (feminine)",
+          "explanation": "kerha means “ugly (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "kerha",
+            "english": "ugly (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-kerha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kerha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is ugly.)",
+          "answer": "kerha",
+          "explanation": "The complete sentence is “Il-karta hija kerha.”",
+          "reviewCard": {
+            "maltese": "kerha",
+            "english": "ugly (feminine)",
+            "example": "Il-karta hija kerha."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kerha"
+          ]
+        },
+        {
+          "id": "b2-school-bag-koroh-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-koroh"
+          ],
+          "prompt": "True or false: “koroh” means “large” in this chapter.",
+          "answer": false,
+          "explanation": "koroh means “ugly (plural)”.",
+          "reviewCard": {
+            "maltese": "koroh",
+            "english": "ugly (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-koroh-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-koroh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are ugly.)",
+          "answer": "koroh",
+          "explanation": "The complete sentence is “Il-kotba huma koroh.”",
+          "reviewCard": {
+            "maltese": "koroh",
+            "english": "ugly (plural)",
+            "example": "Il-kotba huma koroh."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "koroh"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kbir-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kbir"
+          ],
+          "prompt": "What is the lesson meaning of “kbir”?",
+          "choices": [
+            "big",
+            "big / large (plural)",
+            "large"
+          ],
+          "answer": "large",
+          "explanation": "kbir means “large” in this chapter.",
+          "reviewCard": {
+            "maltese": "kbir",
+            "english": "large"
+          }
+        },
+        {
+          "id": "b2-school-bag-kbir-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kbir"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is large.)",
+          "answer": "kbir",
+          "explanation": "The complete sentence is “Il-ktieb huwa kbir.”",
+          "reviewCard": {
+            "maltese": "kbir",
+            "english": "large",
+            "example": "Il-ktieb huwa kbir."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kbir"
+          ]
+        },
+        {
+          "id": "b2-school-bag-kbira-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kbira"
+          ],
+          "prompt": "True or false: “kbira” means “big / large (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "kbira means “big”.",
+          "reviewCard": {
+            "maltese": "kbira",
+            "english": "big"
+          }
+        },
+        {
+          "id": "b2-school-bag-kbira-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kbira"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is big.)",
+          "answer": "kbira",
+          "explanation": "The complete sentence is “Il-karta hija kbira.”",
+          "reviewCard": {
+            "maltese": "kbira",
+            "english": "big",
+            "example": "Il-karta hija kbira."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kbira"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-sbieh",
+            "b2-school-bag-ikrah",
+            "b2-school-bag-kerha",
+            "b2-school-bag-koroh"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "sbieħ",
+              "right": "beautiful / nice (plural)"
+            },
+            {
+              "left": "ikrah",
+              "right": "ugly (masculine)"
+            },
+            {
+              "left": "kerha",
+              "right": "ugly (feminine)"
+            },
+            {
+              "left": "koroh",
+              "right": "ugly (plural)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "sbieħ",
+            "english": "beautiful / nice (plural)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 5",
+      "items": [
+        {
+          "id": "b2-school-bag-kbar-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kbar"
+          ],
+          "prompt": "What is the lesson meaning of “kbar”?",
+          "choices": [
+            "big / large (plural)",
+            "small",
+            "small (plural)"
+          ],
+          "answer": "big / large (plural)",
+          "explanation": "kbar means “big / large (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "kbar",
+            "english": "big / large (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-kbar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-kbar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are big.)",
+          "answer": "kbar",
+          "explanation": "The complete sentence is “Il-kotba huma kbar.”",
+          "reviewCard": {
+            "maltese": "kbar",
+            "english": "big / large (plural)",
+            "example": "Il-kotba huma kbar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kbar"
+          ]
+        },
+        {
+          "id": "b2-school-bag-zghir-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-zghir"
+          ],
+          "prompt": "True or false: “żgħir” means “small (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "żgħir means “small”.",
+          "reviewCard": {
+            "maltese": "żgħir",
+            "english": "small"
+          }
+        },
+        {
+          "id": "b2-school-bag-zghir-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-zghir"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is small.)",
+          "answer": "żgħir",
+          "explanation": "The complete sentence is “Il-ktieb huwa żgħir.”",
+          "reviewCard": {
+            "maltese": "żgħir",
+            "english": "small",
+            "example": "Il-ktieb huwa żgħir."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żgħir"
+          ]
+        },
+        {
+          "id": "b2-school-bag-zghira-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-zghira"
+          ],
+          "prompt": "What is the lesson meaning of “żgħira”?",
+          "choices": [
+            "new (feminine)",
+            "small",
+            "new (masculine)"
+          ],
+          "answer": "small",
+          "explanation": "żgħira means “small” in this chapter.",
+          "reviewCard": {
+            "maltese": "żgħira",
+            "english": "small"
+          }
+        },
+        {
+          "id": "b2-school-bag-zghira-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-zghira"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is small.)",
+          "answer": "żgħira",
+          "explanation": "The complete sentence is “Il-karta hija żgħira.”",
+          "reviewCard": {
+            "maltese": "żgħira",
+            "english": "small",
+            "example": "Il-karta hija żgħira."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żgħira"
+          ]
+        },
+        {
+          "id": "b2-school-bag-zghar-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-zghar"
+          ],
+          "prompt": "True or false: “żgħar” means “new (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "żgħar means “small (plural)”.",
+          "reviewCard": {
+            "maltese": "żgħar",
+            "english": "small (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-zghar-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-zghar"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are small.)",
+          "answer": "żgħar",
+          "explanation": "The complete sentence is “Il-kotba huma żgħar.”",
+          "reviewCard": {
+            "maltese": "żgħar",
+            "english": "small (plural)",
+            "example": "Il-kotba huma żgħar."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "żgħar"
+          ]
+        },
+        {
+          "id": "b2-school-bag-gdid-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-gdid"
+          ],
+          "prompt": "What is the lesson meaning of “ġdid”?",
+          "choices": [
+            "new (plural)",
+            "old",
+            "new (masculine)"
+          ],
+          "answer": "new (masculine)",
+          "explanation": "ġdid means “new (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġdid",
+            "english": "new (masculine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-gdid-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-gdid"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is new.)",
+          "answer": "ġdid",
+          "explanation": "The complete sentence is “Il-ktieb huwa ġdid.”",
+          "reviewCard": {
+            "maltese": "ġdid",
+            "english": "new (masculine)",
+            "example": "Il-ktieb huwa ġdid."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġdid"
+          ]
+        },
+        {
+          "id": "b2-school-bag-gdida-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-gdida"
+          ],
+          "prompt": "True or false: “ġdida” means “old” in this chapter.",
+          "answer": false,
+          "explanation": "ġdida means “new (feminine)”.",
+          "reviewCard": {
+            "maltese": "ġdida",
+            "english": "new (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-gdida-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-gdida"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is new.)",
+          "answer": "ġdida",
+          "explanation": "The complete sentence is “Il-karta hija ġdida.”",
+          "reviewCard": {
+            "maltese": "ġdida",
+            "english": "new (feminine)",
+            "example": "Il-karta hija ġdida."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġdida"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-kbar",
+            "b2-school-bag-zghir",
+            "b2-school-bag-zghar",
+            "b2-school-bag-gdid"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kbar",
+              "right": "big / large (plural)"
+            },
+            {
+              "left": "żgħir",
+              "right": "small"
+            },
+            {
+              "left": "żgħar",
+              "right": "small (plural)"
+            },
+            {
+              "left": "ġdid",
+              "right": "new (masculine)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kbar",
+            "english": "big / large (plural)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-6",
+      "kind": "checkpoint",
+      "sequence": 6,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 6",
+      "items": [
+        {
+          "id": "b2-school-bag-godda-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-godda"
+          ],
+          "prompt": "What is the lesson meaning of “ġodda”?",
+          "choices": [
+            "new (plural)",
+            "old (feminine)",
+            "old (plural)"
+          ],
+          "answer": "new (plural)",
+          "explanation": "ġodda means “new (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġodda",
+            "english": "new (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-godda-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-godda"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are new.)",
+          "answer": "ġodda",
+          "explanation": "The complete sentence is “Il-kotba huma ġodda.”",
+          "reviewCard": {
+            "maltese": "ġodda",
+            "english": "new (plural)",
+            "example": "Il-kotba huma ġodda."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġodda"
+          ]
+        },
+        {
+          "id": "b2-school-bag-qadim-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-qadim"
+          ],
+          "prompt": "True or false: “qadim” means “old (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "qadim means “old”.",
+          "reviewCard": {
+            "maltese": "qadim",
+            "english": "old"
+          }
+        },
+        {
+          "id": "b2-school-bag-qadim-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-qadim"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is old.)",
+          "answer": "qadim",
+          "explanation": "The complete sentence is “Il-ktieb huwa qadim.”",
+          "reviewCard": {
+            "maltese": "qadim",
+            "english": "old",
+            "example": "Il-ktieb huwa qadim."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qadim"
+          ]
+        },
+        {
+          "id": "b2-school-bag-qadima-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-qadima"
+          ],
+          "prompt": "What is the lesson meaning of “qadima”?",
+          "choices": [
+            "modern",
+            "old (feminine)",
+            "modern (masculine)"
+          ],
+          "answer": "old (feminine)",
+          "explanation": "qadima means “old (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "qadima",
+            "english": "old (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-qadima-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-qadima"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is old.)",
+          "answer": "qadima",
+          "explanation": "The complete sentence is “Il-karta hija qadima.”",
+          "reviewCard": {
+            "maltese": "qadima",
+            "english": "old (feminine)",
+            "example": "Il-karta hija qadima."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qadima"
+          ]
+        },
+        {
+          "id": "b2-school-bag-qodma-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-qodma"
+          ],
+          "prompt": "True or false: “qodma” means “modern” in this chapter.",
+          "answer": false,
+          "explanation": "qodma means “old (plural)”.",
+          "reviewCard": {
+            "maltese": "qodma",
+            "english": "old (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-qodma-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-qodma"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are old.)",
+          "answer": "qodma",
+          "explanation": "The complete sentence is “Il-kotba huma qodma.”",
+          "reviewCard": {
+            "maltese": "qodma",
+            "english": "old (plural)",
+            "example": "Il-kotba huma qodma."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "qodma"
+          ]
+        },
+        {
+          "id": "b2-school-bag-modern-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-modern"
+          ],
+          "prompt": "What is the lesson meaning of “modern”?",
+          "choices": [
+            "modern (plural)",
+            "antique / old (masculine)",
+            "modern (masculine)"
+          ],
+          "answer": "modern (masculine)",
+          "explanation": "modern means “modern (masculine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "modern",
+            "english": "modern (masculine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-modern-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-modern"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is modern.)",
+          "answer": "modern",
+          "explanation": "The complete sentence is “Il-ktieb huwa modern.”",
+          "reviewCard": {
+            "maltese": "modern",
+            "english": "modern (masculine)",
+            "example": "Il-ktieb huwa modern."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "modern"
+          ]
+        },
+        {
+          "id": "b2-school-bag-moderna-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-moderna"
+          ],
+          "prompt": "True or false: “moderna” means “antique / old (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "moderna means “modern”.",
+          "reviewCard": {
+            "maltese": "moderna",
+            "english": "modern"
+          }
+        },
+        {
+          "id": "b2-school-bag-moderna-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-moderna"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is modern.)",
+          "answer": "moderna",
+          "explanation": "The complete sentence is “Il-karta hija moderna.”",
+          "reviewCard": {
+            "maltese": "moderna",
+            "english": "modern",
+            "example": "Il-karta hija moderna."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "moderna"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-6-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-godda",
+            "b2-school-bag-qadim",
+            "b2-school-bag-qadima",
+            "b2-school-bag-qodma"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ġodda",
+              "right": "new (plural)"
+            },
+            {
+              "left": "qadim",
+              "right": "old"
+            },
+            {
+              "left": "qadima",
+              "right": "old (feminine)"
+            },
+            {
+              "left": "qodma",
+              "right": "old (plural)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ġodda",
+            "english": "new (plural)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-7",
+      "kind": "checkpoint",
+      "sequence": 7,
+      "targetCount": 6,
+      "title": "Fil-Basket tal-Iskola Checkpoint 7",
+      "items": [
+        {
+          "id": "b2-school-bag-moderni-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-moderni"
+          ],
+          "prompt": "What is the lesson meaning of “moderni”?",
+          "choices": [
+            "modern (plural)",
+            "antique / old (feminine)",
+            "antique / old (plural)"
+          ],
+          "answer": "modern (plural)",
+          "explanation": "moderni means “modern (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "moderni",
+            "english": "modern (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-moderni-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-moderni"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are modern.)",
+          "answer": "moderni",
+          "explanation": "The complete sentence is “Il-kotba huma moderni.”",
+          "reviewCard": {
+            "maltese": "moderni",
+            "english": "modern (plural)",
+            "example": "Il-kotba huma moderni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "moderni"
+          ]
+        },
+        {
+          "id": "b2-school-bag-antik-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-antik"
+          ],
+          "prompt": "True or false: “antik” means “antique / old (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "antik means “antique / old (masculine)”.",
+          "reviewCard": {
+            "maltese": "antik",
+            "english": "antique / old (masculine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-antik-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-antik"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is antique.)",
+          "answer": "antik",
+          "explanation": "The complete sentence is “Il-ktieb huwa antik.”",
+          "reviewCard": {
+            "maltese": "antik",
+            "english": "antique / old (masculine)",
+            "example": "Il-ktieb huwa antik."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "antik"
+          ]
+        },
+        {
+          "id": "b2-school-bag-antika-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-antika"
+          ],
+          "prompt": "What is the lesson meaning of “antika”?",
+          "choices": [
+            "colourful (feminine)",
+            "antique / old (feminine)",
+            "colourful"
+          ],
+          "answer": "antique / old (feminine)",
+          "explanation": "antika means “antique / old (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "antika",
+            "english": "antique / old (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-antika-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-antika"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is antique.)",
+          "answer": "antika",
+          "explanation": "The complete sentence is “Il-karta hija antika.”",
+          "reviewCard": {
+            "maltese": "antika",
+            "english": "antique / old (feminine)",
+            "example": "Il-karta hija antika."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "antika"
+          ]
+        },
+        {
+          "id": "b2-school-bag-antiki-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-antiki"
+          ],
+          "prompt": "True or false: “antiki” means “colourful (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "antiki means “antique / old (plural)”.",
+          "reviewCard": {
+            "maltese": "antiki",
+            "english": "antique / old (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-antiki-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-antiki"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are antique.)",
+          "answer": "antiki",
+          "explanation": "The complete sentence is “Il-kotba huma antiki.”",
+          "reviewCard": {
+            "maltese": "antiki",
+            "english": "antique / old (plural)",
+            "example": "Il-kotba huma antiki."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "antiki"
+          ]
+        },
+        {
+          "id": "b2-school-bag-ikkulurit-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkulurit"
+          ],
+          "prompt": "What is the lesson meaning of “ikkulurit”?",
+          "choices": [
+            "colourful (plural)",
+            "clean (masculine)",
+            "colourful"
+          ],
+          "answer": "colourful",
+          "explanation": "ikkulurit means “colourful” in this chapter.",
+          "reviewCard": {
+            "maltese": "ikkulurit",
+            "english": "colourful"
+          }
+        },
+        {
+          "id": "b2-school-bag-ikkulurit-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ikkulurit"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is colourful.)",
+          "answer": "ikkulurit",
+          "explanation": "The complete sentence is “Il-ktieb huwa ikkulurit.”",
+          "reviewCard": {
+            "maltese": "ikkulurit",
+            "english": "colourful",
+            "example": "Il-ktieb huwa ikkulurit."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ikkulurit"
+          ]
+        },
+        {
+          "id": "b2-school-bag-ikkulurita-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkulurita"
+          ],
+          "prompt": "True or false: “ikkulurita” means “clean (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "ikkulurita means “colourful (feminine)”.",
+          "reviewCard": {
+            "maltese": "ikkulurita",
+            "english": "colourful (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-ikkulurita-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ikkulurita"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is colourful.)",
+          "answer": "ikkulurita",
+          "explanation": "The complete sentence is “Il-karta hija ikkulurita.”",
+          "reviewCard": {
+            "maltese": "ikkulurita",
+            "english": "colourful (feminine)",
+            "example": "Il-karta hija ikkulurita."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ikkulurita"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-7-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-moderni",
+            "b2-school-bag-antik",
+            "b2-school-bag-antika",
+            "b2-school-bag-antiki"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "moderni",
+              "right": "modern (plural)"
+            },
+            {
+              "left": "antik",
+              "right": "antique / old (masculine)"
+            },
+            {
+              "left": "antika",
+              "right": "antique / old (feminine)"
+            },
+            {
+              "left": "antiki",
+              "right": "antique / old (plural)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "moderni",
+            "english": "modern (plural)"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-school-bag",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-school-bag-checkpoint-8",
+      "kind": "checkpoint",
+      "sequence": 8,
+      "targetCount": 5,
+      "title": "Fil-Basket tal-Iskola Checkpoint 8",
+      "items": [
+        {
+          "id": "b2-school-bag-ikkuluriti-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkuluriti"
+          ],
+          "prompt": "What is the lesson meaning of “ikkuluriti”?",
+          "choices": [
+            "colourful (plural)",
+            "clean (feminine)",
+            "clean (plural)"
+          ],
+          "answer": "colourful (plural)",
+          "explanation": "ikkuluriti means “colourful (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ikkuluriti",
+            "english": "colourful (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-ikkuluriti-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ikkuluriti"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are colourful.)",
+          "answer": "ikkuluriti",
+          "explanation": "The complete sentence is “Il-kotba huma ikkuluriti.”",
+          "reviewCard": {
+            "maltese": "ikkuluriti",
+            "english": "colourful (plural)",
+            "example": "Il-kotba huma ikkuluriti."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ikkuluriti"
+          ]
+        },
+        {
+          "id": "b2-school-bag-nadif-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-nadif"
+          ],
+          "prompt": "True or false: “nadif” means “clean (plural)” in this chapter.",
+          "answer": false,
+          "explanation": "nadif means “clean (masculine)”.",
+          "reviewCard": {
+            "maltese": "nadif",
+            "english": "clean (masculine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-nadif-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-nadif"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is clean.)",
+          "answer": "nadif",
+          "explanation": "The complete sentence is “Il-ktieb huwa nadif.”",
+          "reviewCard": {
+            "maltese": "nadif",
+            "english": "clean (masculine)",
+            "example": "Il-ktieb huwa nadif."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nadif"
+          ]
+        },
+        {
+          "id": "b2-school-bag-nadifa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-nadifa"
+          ],
+          "prompt": "What is the lesson meaning of “nadifa”?",
+          "choices": [
+            "school bag",
+            "clean (feminine)",
+            "dirty (feminine)"
+          ],
+          "answer": "clean (feminine)",
+          "explanation": "nadifa means “clean (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "nadifa",
+            "english": "clean (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-nadifa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-nadifa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is clean.)",
+          "answer": "nadifa",
+          "explanation": "The complete sentence is “Il-karta hija nadifa.”",
+          "reviewCard": {
+            "maltese": "nadifa",
+            "english": "clean (feminine)",
+            "example": "Il-karta hija nadifa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nadifa"
+          ]
+        },
+        {
+          "id": "b2-school-bag-nodfa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-nodfa"
+          ],
+          "prompt": "True or false: “nodfa” means “school bag” in this chapter.",
+          "answer": false,
+          "explanation": "nodfa means “clean (plural)”.",
+          "reviewCard": {
+            "maltese": "nodfa",
+            "english": "clean (plural)"
+          }
+        },
+        {
+          "id": "b2-school-bag-nodfa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-nodfa"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are clean.)",
+          "answer": "nodfa",
+          "explanation": "The complete sentence is “Il-kotba huma nodfa.”",
+          "reviewCard": {
+            "maltese": "nodfa",
+            "english": "clean (plural)",
+            "example": "Il-kotba huma nodfa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "nodfa"
+          ]
+        },
+        {
+          "id": "b2-school-bag-mahmuga-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-mahmuga"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġa”?",
+          "choices": [
+            "pocket",
+            "pencil sharpener",
+            "dirty (feminine)"
+          ],
+          "answer": "dirty (feminine)",
+          "explanation": "maħmuġa means “dirty (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġa",
+            "english": "dirty (feminine)"
+          }
+        },
+        {
+          "id": "b2-school-bag-mahmuga-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-mahmuga"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is dirty.)",
+          "answer": "maħmuġa",
+          "explanation": "The complete sentence is “Il-karta hija maħmuġa.”",
+          "reviewCard": {
+            "maltese": "maħmuġa",
+            "english": "dirty (feminine)",
+            "example": "Il-karta hija maħmuġa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "maħmuġa"
+          ]
+        },
+        {
+          "id": "b2-school-bag-checkpoint-8-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkuluriti",
+            "b2-school-bag-nadif",
+            "b2-school-bag-nadifa",
+            "b2-school-bag-nodfa"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ikkuluriti",
+              "right": "colourful (plural)"
+            },
+            {
+              "left": "nadif",
+              "right": "clean (masculine)"
+            },
+            {
+              "left": "nadifa",
+              "right": "clean (feminine)"
+            },
+            {
+              "left": "nodfa",
+              "right": "clean (plural)"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ikkuluriti",
+            "english": "colourful (plural)"
+          }
+        }
+      ]
+    }
+  ]
+}

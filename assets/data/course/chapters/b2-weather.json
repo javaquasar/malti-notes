@@ -1,0 +1,2814 @@
+{
+  "schemaVersion": 1,
+  "chapter": {
+    "id": "b2-weather",
+    "levelId": "b2",
+    "levelLabel": "B2 Development",
+    "number": 3,
+    "title": "It-Temp"
+  },
+  "inventoryChapter": {
+    "id": "b2.3",
+    "courseChapterId": "b2-weather",
+    "book": "B2",
+    "number": 3,
+    "title": "It-Temp",
+    "targets": [
+      "borra",
+      "temperatura",
+      "sajjetti",
+      "sħab",
+      "riħ",
+      "sħana",
+      "kesħa",
+      "maltemp",
+      "istaġun",
+      "staġuni",
+      "rebbiegħa",
+      "sajf",
+      "ħarifa",
+      "xitwa",
+      "xemx",
+      "xita",
+      "ragħad",
+      "bnazzi",
+      "silġ",
+      "xemxi",
+      "imsaħħab",
+      "l-ogħla temperatura",
+      "l-inqas temperatura"
+    ],
+    "baselineMissing": [
+      "temperatura",
+      "sajjetti",
+      "kesħa",
+      "istaġun",
+      "staġuni",
+      "bnazzi",
+      "l-ogħla temperatura",
+      "l-inqas temperatura"
+    ]
+  },
+  "sourceChapter": {
+    "chapterId": "b2-weather",
+    "book": "B2",
+    "chapterNumber": 3,
+    "chapterTitle": "It-Temp",
+    "pageStart": 27,
+    "pageEnd": 36
+  },
+  "targets": [
+    {
+      "id": "b2-weather-borra",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "borra",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-borra"
+      },
+      "assessmentIds": [
+        "b2-weather-borra-diagnostic-recognition",
+        "b2-weather-borra-recognition",
+        "b2-weather-borra-production",
+        "b2-weather-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-temperatura",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "temperatura",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-temperatura"
+      },
+      "assessmentIds": [
+        "b2-weather-temperatura-recognition-true-false",
+        "b2-weather-temperatura-production",
+        "b2-weather-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-sajjetti",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sajjetti",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-sajjetti"
+      },
+      "assessmentIds": [
+        "b2-weather-sajjetti-diagnostic-recognition-true-false",
+        "b2-weather-sajjetti-recognition",
+        "b2-weather-sajjetti-production",
+        "b2-weather-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-shab",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sħab",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "shab"
+      },
+      "assessmentIds": [
+        "b2-weather-shab-recognition-true-false",
+        "b2-weather-shab-production",
+        "b2-weather-checkpoint-1-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-rih",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "riħ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "rih"
+      },
+      "assessmentIds": [
+        "b2-weather-rih-diagnostic-recognition",
+        "b2-weather-rih-recognition",
+        "b2-weather-rih-production"
+      ]
+    },
+    {
+      "id": "b2-weather-shana",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sħana",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-shana"
+      },
+      "assessmentIds": [
+        "b2-weather-shana-recognition-true-false",
+        "b2-weather-shana-production"
+      ]
+    },
+    {
+      "id": "b2-weather-kesha",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "kesħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-kesha"
+      },
+      "assessmentIds": [
+        "b2-weather-kesha-recognition",
+        "b2-weather-kesha-production",
+        "b2-weather-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-maltemp",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "maltemp",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-maltemp"
+      },
+      "assessmentIds": [
+        "b2-weather-maltemp-diagnostic-recognition-true-false",
+        "b2-weather-maltemp-recognition-true-false",
+        "b2-weather-maltemp-production",
+        "b2-weather-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-istagun",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "istaġun",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-istagun"
+      },
+      "assessmentIds": [
+        "b2-weather-istagun-recognition",
+        "b2-weather-istagun-production",
+        "b2-weather-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-staguni",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "staġuni",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-staguni"
+      },
+      "assessmentIds": [
+        "b2-weather-staguni-diagnostic-recognition",
+        "b2-weather-staguni-recognition-true-false",
+        "b2-weather-staguni-production",
+        "b2-weather-checkpoint-2-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-rebbiegha",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "rebbiegħa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "rebbiegha"
+      },
+      "assessmentIds": [
+        "b2-weather-rebbiegha-recognition",
+        "b2-weather-rebbiegha-production"
+      ]
+    },
+    {
+      "id": "b2-weather-sajf",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "sajf",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "sajf"
+      },
+      "assessmentIds": [
+        "b2-weather-sajf-recognition-true-false",
+        "b2-weather-sajf-production"
+      ]
+    },
+    {
+      "id": "b2-weather-harifa",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "ħarifa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "harifa"
+      },
+      "assessmentIds": [
+        "b2-weather-harifa-diagnostic-recognition-true-false",
+        "b2-weather-harifa-recognition",
+        "b2-weather-harifa-production",
+        "b2-weather-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-xitwa",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xitwa",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "xitwa"
+      },
+      "assessmentIds": [
+        "weather-season",
+        "weather-winter-production",
+        "b2-weather-xitwa-recognition-true-false",
+        "b2-weather-xitwa-production",
+        "b2-weather-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-xemx",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xemx",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "xemx"
+      },
+      "assessmentIds": [
+        "b2-weather-xemx-diagnostic-recognition",
+        "b2-weather-xemx-recognition",
+        "b2-weather-xemx-production",
+        "b2-weather-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-xita",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xita",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "weather.html",
+        "file": "assets/data/weather.json",
+        "itemId": "xita"
+      },
+      "assessmentIds": [
+        "b2-weather-xita-recognition-true-false",
+        "b2-weather-xita-production",
+        "b2-weather-checkpoint-3-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-raghad",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "ragħad",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-raghad"
+      },
+      "assessmentIds": [
+        "b2-weather-raghad-recognition",
+        "b2-weather-raghad-production"
+      ]
+    },
+    {
+      "id": "b2-weather-bnazzi",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "bnazzi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-bnazzi"
+      },
+      "assessmentIds": [
+        "b2-weather-bnazzi-diagnostic-recognition-true-false",
+        "b2-weather-bnazzi-recognition-true-false",
+        "b2-weather-bnazzi-production"
+      ]
+    },
+    {
+      "id": "b2-weather-silg",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "silġ",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-silg"
+      },
+      "assessmentIds": [
+        "b2-weather-silg-recognition",
+        "b2-weather-silg-production",
+        "b2-weather-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-xemxi",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "xemxi",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-xemxi"
+      },
+      "assessmentIds": [
+        "b2-weather-xemxi-diagnostic-recognition",
+        "b2-weather-xemxi-recognition-true-false",
+        "b2-weather-xemxi-production",
+        "b2-weather-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-imsahhab",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "vocabulary",
+      "sourceRequirement": "imsaħħab",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-imsahhab"
+      },
+      "assessmentIds": [
+        "b2-weather-imsahhab-recognition",
+        "b2-weather-imsahhab-production",
+        "b2-weather-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-l-oghla-temperatura",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "phrase",
+      "sourceRequirement": "l-ogħla temperatura",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-l-oghla-temperatura"
+      },
+      "assessmentIds": [
+        "b2-weather-l-oghla-temperatura-recognition-true-false",
+        "b2-weather-l-oghla-temperatura-production",
+        "b2-weather-checkpoint-4-matching"
+      ]
+    },
+    {
+      "id": "b2-weather-l-inqas-temperatura",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "phrase",
+      "sourceRequirement": "l-inqas temperatura",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "contentRef": {
+        "page": "course_chapter.html",
+        "file": "assets/data/course_supplemental_content.json",
+        "itemId": "b2-weather-l-inqas-temperatura"
+      },
+      "assessmentIds": [
+        "b2-weather-l-inqas-temperatura-diagnostic-recognition-true-false",
+        "b2-weather-l-inqas-temperatura-recognition",
+        "b2-weather-l-inqas-temperatura-production"
+      ]
+    }
+  ],
+  "targetSources": {
+    "b2-weather-borra": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 31,
+      "pages": [
+        31
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-temperatura": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-sajjetti": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 29,
+      "pages": [
+        29,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-shab": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 29,
+      "pages": [
+        29,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-rih": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        32,
+        33,
+        34
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-shana": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 31,
+      "pages": [
+        31,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-kesha": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        31,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-maltemp": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 29,
+      "pages": [
+        29,
+        31
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-istagun": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 32,
+      "pages": [
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-staguni": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 36,
+      "pages": [
+        36
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-rebbiegha": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-weather-sajf": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        32,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-harifa": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xitwa": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 28,
+      "pages": [
+        28,
+        32,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xemx": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        31,
+        32,
+        34
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xita": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        29,
+        32,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-raghad": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-bnazzi": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": null,
+      "pages": [],
+      "match": "chapter-range"
+    },
+    "b2-weather-silg": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 27,
+      "pages": [
+        27,
+        32
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-xemxi": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-imsahhab": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-l-oghla-temperatura": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33,
+        34,
+        35
+      ],
+      "match": "text-exact"
+    },
+    "b2-weather-l-inqas-temperatura": {
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "chapterNumber": 3,
+      "chapterTitle": "It-Temp",
+      "pageRange": [
+        27,
+        36
+      ],
+      "primaryPage": 33,
+      "pages": [
+        33,
+        34,
+        35
+      ],
+      "match": "text-exact"
+    }
+  },
+  "supplementalItems": [
+    {
+      "id": "b2-weather-borra",
+      "maltese": "borra",
+      "english": "snow",
+      "example": "Illum hemm ħafna borra.",
+      "exampleTranslation": "Today there is a lot of snow.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 31,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 31",
+      "notes": [
+        "Example: Illum hemm ħafna borra.",
+        "Translation: Today there is a lot of snow.",
+        "Source: B2, Chapter 3, p. 31"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-temperatura",
+      "maltese": "temperatura",
+      "english": "temperature",
+      "example": "It-temperatura hija għoxrin grad.",
+      "exampleTranslation": "The temperature is twenty degrees.",
+      "examplePattern": "temperature",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: It-temperatura hija għoxrin grad.",
+        "Translation: The temperature is twenty degrees.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-sajjetti",
+      "maltese": "sajjetti",
+      "english": "lightning",
+      "example": "Illum hemm ħafna sajjetti.",
+      "exampleTranslation": "Today there is a lot of lightning.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 29,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 29",
+      "notes": [
+        "Example: Illum hemm ħafna sajjetti.",
+        "Translation: Today there is a lot of lightning.",
+        "Source: B2, Chapter 3, p. 29"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-shab",
+      "maltese": "sħab",
+      "english": "clouds",
+      "example": "Illum hemm ħafna sħab.",
+      "exampleTranslation": "Today there is a lot of clouds.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 29,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 29",
+      "notes": [
+        "Example: Illum hemm ħafna sħab.",
+        "Translation: Today there is a lot of clouds.",
+        "Source: B2, Chapter 3, p. 29"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-rih",
+      "maltese": "riħ",
+      "english": "wind",
+      "example": "Illum hemm ħafna riħ.",
+      "exampleTranslation": "Today there is a lot of wind.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: Illum hemm ħafna riħ.",
+        "Translation: Today there is a lot of wind.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-shana",
+      "maltese": "sħana",
+      "english": "heat / hot weather",
+      "example": "Illum hemm ħafna sħana.",
+      "exampleTranslation": "Today there is a lot of heat.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 31,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 31",
+      "notes": [
+        "Example: Illum hemm ħafna sħana.",
+        "Translation: Today there is a lot of heat.",
+        "Source: B2, Chapter 3, p. 31"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-kesha",
+      "maltese": "kesħa",
+      "english": "cold",
+      "example": "Illum hemm ħafna kesħa.",
+      "exampleTranslation": "Today there is a lot of cold.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: Illum hemm ħafna kesħa.",
+        "Translation: Today there is a lot of cold.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-maltemp",
+      "maltese": "maltemp",
+      "english": "bad weather",
+      "example": "Illum hemm ħafna maltemp.",
+      "exampleTranslation": "Today there is a lot of bad weather.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 29,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 29",
+      "notes": [
+        "Example: Illum hemm ħafna maltemp.",
+        "Translation: Today there is a lot of bad weather.",
+        "Source: B2, Chapter 3, p. 29"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-istagun",
+      "maltese": "istaġun",
+      "english": "season",
+      "example": "Istaġun ġdid jibda dalwaqt.",
+      "exampleTranslation": "A new season starts soon.",
+      "examplePattern": "season",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 32,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 32",
+      "notes": [
+        "Example: Istaġun ġdid jibda dalwaqt.",
+        "Translation: A new season starts soon.",
+        "Source: B2, Chapter 3, p. 32"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-staguni",
+      "maltese": "staġuni",
+      "english": "seasons",
+      "example": "Hemm erba' staġuni.",
+      "exampleTranslation": "There are four seasons.",
+      "examplePattern": "seasons",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 36,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 36",
+      "notes": [
+        "Example: Hemm erba' staġuni.",
+        "Translation: There are four seasons.",
+        "Source: B2, Chapter 3, p. 36"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-rebbiegha",
+      "maltese": "rebbiegħa",
+      "english": "spring",
+      "example": "L-istaġun favorit tiegħi huwa rebbiegħa.",
+      "exampleTranslation": "My favourite season is spring.",
+      "examplePattern": "named-season",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": null,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 3, pp. 27-36",
+      "notes": [
+        "Example: L-istaġun favorit tiegħi huwa rebbiegħa.",
+        "Translation: My favourite season is spring.",
+        "Source: B2, Chapter 3, pp. 27-36"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-sajf",
+      "maltese": "sajf",
+      "english": "summer",
+      "example": "L-istaġun favorit tiegħi huwa sajf.",
+      "exampleTranslation": "My favourite season is summer.",
+      "examplePattern": "named-season",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 28,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 28",
+      "notes": [
+        "Example: L-istaġun favorit tiegħi huwa sajf.",
+        "Translation: My favourite season is summer.",
+        "Source: B2, Chapter 3, p. 28"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-harifa",
+      "maltese": "ħarifa",
+      "english": "autumn",
+      "example": "L-istaġun favorit tiegħi huwa ħarifa.",
+      "exampleTranslation": "My favourite season is autumn.",
+      "examplePattern": "named-season",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 28,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 28",
+      "notes": [
+        "Example: L-istaġun favorit tiegħi huwa ħarifa.",
+        "Translation: My favourite season is autumn.",
+        "Source: B2, Chapter 3, p. 28"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-xitwa",
+      "maltese": "xitwa",
+      "english": "winter",
+      "example": "L-istaġun favorit tiegħi huwa xitwa.",
+      "exampleTranslation": "My favourite season is winter.",
+      "examplePattern": "named-season",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 28,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 28",
+      "notes": [
+        "Example: L-istaġun favorit tiegħi huwa xitwa.",
+        "Translation: My favourite season is winter.",
+        "Source: B2, Chapter 3, p. 28"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-xemx",
+      "maltese": "xemx",
+      "english": "sun",
+      "example": "Illum hemm ħafna xemx.",
+      "exampleTranslation": "Today there is a lot of sun.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: Illum hemm ħafna xemx.",
+        "Translation: Today there is a lot of sun.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-xita",
+      "maltese": "xita",
+      "english": "rain",
+      "example": "Illum hemm ħafna xita.",
+      "exampleTranslation": "Today there is a lot of rain.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: Illum hemm ħafna xita.",
+        "Translation: Today there is a lot of rain.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "implemented",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-raghad",
+      "maltese": "ragħad",
+      "english": "thunder",
+      "example": "Illum hemm ħafna ragħad.",
+      "exampleTranslation": "Today there is a lot of thunder.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: Illum hemm ħafna ragħad.",
+        "Translation: Today there is a lot of thunder.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-bnazzi",
+      "maltese": "bnazzi",
+      "english": "fine / calm weather",
+      "example": "Illum hemm ħafna bnazzi.",
+      "exampleTranslation": "Today there is a lot of fine.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": null,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "chapter-range"
+      },
+      "sourceLabel": "B2, Chapter 3, pp. 27-36",
+      "notes": [
+        "Example: Illum hemm ħafna bnazzi.",
+        "Translation: Today there is a lot of fine.",
+        "Source: B2, Chapter 3, pp. 27-36"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-silg",
+      "maltese": "silġ",
+      "english": "ice",
+      "example": "Illum hemm ħafna silġ.",
+      "exampleTranslation": "Today there is a lot of ice.",
+      "examplePattern": "weather-today",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 27,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 27",
+      "notes": [
+        "Example: Illum hemm ħafna silġ.",
+        "Translation: Today there is a lot of ice.",
+        "Source: B2, Chapter 3, p. 27"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-xemxi",
+      "maltese": "xemxi",
+      "english": "sunny",
+      "example": "It-temp huwa xemxi.",
+      "exampleTranslation": "The weather is sunny.",
+      "examplePattern": "weather-adjective",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 33,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 33",
+      "notes": [
+        "Example: It-temp huwa xemxi.",
+        "Translation: The weather is sunny.",
+        "Source: B2, Chapter 3, p. 33"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-imsahhab",
+      "maltese": "imsaħħab",
+      "english": "cloudy",
+      "example": "It-temp huwa imsaħħab.",
+      "exampleTranslation": "The weather is cloudy.",
+      "examplePattern": "weather-adjective",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 33,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 33",
+      "notes": [
+        "Example: It-temp huwa imsaħħab.",
+        "Translation: The weather is cloudy.",
+        "Source: B2, Chapter 3, p. 33"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "evidence-only",
+      "review": {
+        "enabled": true,
+        "type": "word"
+      }
+    },
+    {
+      "id": "b2-weather-l-oghla-temperatura",
+      "maltese": "l-ogħla temperatura",
+      "english": "the highest temperature",
+      "example": "L-ogħla temperatura hija tletin grad.",
+      "exampleTranslation": "The highest temperature is thirty degrees.",
+      "examplePattern": "temperature-range",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 33,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 33",
+      "notes": [
+        "Example: L-ogħla temperatura hija tletin grad.",
+        "Translation: The highest temperature is thirty degrees.",
+        "Source: B2, Chapter 3, p. 33"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    },
+    {
+      "id": "b2-weather-l-inqas-temperatura",
+      "maltese": "l-inqas temperatura",
+      "english": "the lowest temperature",
+      "example": "L-inqas temperatura hija għaxar gradi.",
+      "exampleTranslation": "The lowest temperature is ten degrees.",
+      "examplePattern": "temperature-range",
+      "exampleReview": "reviewed-template",
+      "source": {
+        "book": "B2",
+        "chapter": 3,
+        "page": 33,
+        "pageRange": [
+          27,
+          36
+        ],
+        "match": "text-exact"
+      },
+      "sourceLabel": "B2, Chapter 3, p. 33",
+      "notes": [
+        "Example: L-inqas temperatura hija għaxar gradi.",
+        "Translation: The lowest temperature is ten degrees.",
+        "Source: B2, Chapter 3, p. 33"
+      ],
+      "glossReview": "reviewed",
+      "sourceStatus": "added-from-book",
+      "review": {
+        "enabled": true,
+        "type": "sentence"
+      }
+    }
+  ],
+  "assessmentSets": [
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-diagnostic",
+      "kind": "diagnostic",
+      "title": "It-Temp Entry Diagnostic",
+      "items": [
+        {
+          "id": "b2-weather-borra-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-borra"
+          ],
+          "prompt": "What is the lesson meaning of “borra”?",
+          "choices": [
+            "snow",
+            "temperature",
+            "lightning"
+          ],
+          "answer": "snow",
+          "explanation": "borra means “snow” in this chapter.",
+          "reviewCard": {
+            "maltese": "borra",
+            "english": "snow"
+          }
+        },
+        {
+          "id": "b2-weather-sajjetti-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-sajjetti"
+          ],
+          "prompt": "True or false: “sajjetti” means “clouds” in this chapter.",
+          "answer": false,
+          "explanation": "sajjetti means “lightning”.",
+          "reviewCard": {
+            "maltese": "sajjetti",
+            "english": "lightning"
+          }
+        },
+        {
+          "id": "b2-weather-rih-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "What is the lesson meaning of “riħ”?",
+          "choices": [
+            "heat / hot weather",
+            "wind",
+            "clouds"
+          ],
+          "answer": "wind",
+          "explanation": "riħ means “wind” in this chapter.",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind"
+          }
+        },
+        {
+          "id": "b2-weather-maltemp-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-maltemp"
+          ],
+          "prompt": "True or false: “maltemp” means “wind” in this chapter.",
+          "answer": false,
+          "explanation": "maltemp means “bad weather”.",
+          "reviewCard": {
+            "maltese": "maltemp",
+            "english": "bad weather"
+          }
+        },
+        {
+          "id": "b2-weather-staguni-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-staguni"
+          ],
+          "prompt": "What is the lesson meaning of “staġuni”?",
+          "choices": [
+            "heat / hot weather",
+            "cold",
+            "seasons"
+          ],
+          "answer": "seasons",
+          "explanation": "staġuni means “seasons” in this chapter.",
+          "reviewCard": {
+            "maltese": "staġuni",
+            "english": "seasons"
+          }
+        },
+        {
+          "id": "b2-weather-harifa-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-harifa"
+          ],
+          "prompt": "True or false: “ħarifa” means “cold” in this chapter.",
+          "answer": false,
+          "explanation": "ħarifa means “autumn”.",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn"
+          }
+        },
+        {
+          "id": "b2-weather-xemx-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemx"
+          ],
+          "prompt": "What is the lesson meaning of “xemx”?",
+          "choices": [
+            "sun",
+            "bad weather",
+            "season"
+          ],
+          "answer": "sun",
+          "explanation": "xemx means “sun” in this chapter.",
+          "reviewCard": {
+            "maltese": "xemx",
+            "english": "sun"
+          }
+        },
+        {
+          "id": "b2-weather-bnazzi-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-bnazzi"
+          ],
+          "prompt": "True or false: “bnazzi” means “season” in this chapter.",
+          "answer": false,
+          "explanation": "bnazzi means “fine / calm weather”.",
+          "reviewCard": {
+            "maltese": "bnazzi",
+            "english": "fine / calm weather"
+          }
+        },
+        {
+          "id": "b2-weather-xemxi-diagnostic-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemxi"
+          ],
+          "prompt": "What is the lesson meaning of “xemxi”?",
+          "choices": [
+            "spring",
+            "sunny",
+            "seasons"
+          ],
+          "answer": "sunny",
+          "explanation": "xemxi means “sunny” in this chapter.",
+          "reviewCard": {
+            "maltese": "xemxi",
+            "english": "sunny"
+          }
+        },
+        {
+          "id": "b2-weather-l-inqas-temperatura-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-l-inqas-temperatura"
+          ],
+          "prompt": "True or false: “l-inqas temperatura” means “spring” in this chapter.",
+          "answer": false,
+          "explanation": "l-inqas temperatura means “the lowest temperature”.",
+          "reviewCard": {
+            "maltese": "l-inqas temperatura",
+            "english": "the lowest temperature"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-1",
+      "kind": "checkpoint",
+      "sequence": 1,
+      "targetCount": 6,
+      "title": "It-Temp Checkpoint 1",
+      "items": [
+        {
+          "id": "b2-weather-borra-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-borra"
+          ],
+          "prompt": "What is the lesson meaning of “borra”?",
+          "choices": [
+            "snow",
+            "temperature",
+            "lightning"
+          ],
+          "answer": "snow",
+          "explanation": "borra means “snow” in this chapter.",
+          "reviewCard": {
+            "maltese": "borra",
+            "english": "snow"
+          }
+        },
+        {
+          "id": "b2-weather-borra-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-borra"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of snow.)",
+          "answer": "borra",
+          "explanation": "The complete sentence is “Illum hemm ħafna borra.”",
+          "reviewCard": {
+            "maltese": "borra",
+            "english": "snow",
+            "example": "Illum hemm ħafna borra."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "borra"
+          ]
+        },
+        {
+          "id": "b2-weather-temperatura-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-temperatura"
+          ],
+          "prompt": "True or false: “temperatura” means “lightning” in this chapter.",
+          "answer": false,
+          "explanation": "temperatura means “temperature”.",
+          "reviewCard": {
+            "maltese": "temperatura",
+            "english": "temperature"
+          }
+        },
+        {
+          "id": "b2-weather-temperatura-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-temperatura"
+          ],
+          "prompt": "Complete the Maltese sentence: “It-_____ hija għoxrin grad.” (The temperature is twenty degrees.)",
+          "answer": "temperatura",
+          "explanation": "The complete sentence is “It-temperatura hija għoxrin grad.”",
+          "reviewCard": {
+            "maltese": "temperatura",
+            "english": "temperature",
+            "example": "It-temperatura hija għoxrin grad."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "temperatura"
+          ]
+        },
+        {
+          "id": "b2-weather-sajjetti-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-sajjetti"
+          ],
+          "prompt": "What is the lesson meaning of “sajjetti”?",
+          "choices": [
+            "wind",
+            "lightning",
+            "clouds"
+          ],
+          "answer": "lightning",
+          "explanation": "sajjetti means “lightning” in this chapter.",
+          "reviewCard": {
+            "maltese": "sajjetti",
+            "english": "lightning"
+          }
+        },
+        {
+          "id": "b2-weather-sajjetti-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-sajjetti"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of lightning.)",
+          "answer": "sajjetti",
+          "explanation": "The complete sentence is “Illum hemm ħafna sajjetti.”",
+          "reviewCard": {
+            "maltese": "sajjetti",
+            "english": "lightning",
+            "example": "Illum hemm ħafna sajjetti."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sajjetti"
+          ]
+        },
+        {
+          "id": "b2-weather-shab-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-shab"
+          ],
+          "prompt": "True or false: “sħab” means “wind” in this chapter.",
+          "answer": false,
+          "explanation": "sħab means “clouds”.",
+          "reviewCard": {
+            "maltese": "sħab",
+            "english": "clouds"
+          }
+        },
+        {
+          "id": "b2-weather-shab-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-shab"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of clouds.)",
+          "answer": "sħab",
+          "explanation": "The complete sentence is “Illum hemm ħafna sħab.”",
+          "reviewCard": {
+            "maltese": "sħab",
+            "english": "clouds",
+            "example": "Illum hemm ħafna sħab."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sħab"
+          ]
+        },
+        {
+          "id": "b2-weather-rih-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "What is the lesson meaning of “riħ”?",
+          "choices": [
+            "heat / hot weather",
+            "cold",
+            "wind"
+          ],
+          "answer": "wind",
+          "explanation": "riħ means “wind” in this chapter.",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind"
+          }
+        },
+        {
+          "id": "b2-weather-rih-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of wind.)",
+          "answer": "riħ",
+          "explanation": "The complete sentence is “Illum hemm ħafna riħ.”",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind",
+            "example": "Illum hemm ħafna riħ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "riħ"
+          ]
+        },
+        {
+          "id": "b2-weather-shana-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-shana"
+          ],
+          "prompt": "True or false: “sħana” means “cold” in this chapter.",
+          "answer": false,
+          "explanation": "sħana means “heat / hot weather”.",
+          "reviewCard": {
+            "maltese": "sħana",
+            "english": "heat / hot weather"
+          }
+        },
+        {
+          "id": "b2-weather-shana-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-shana"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of heat.)",
+          "answer": "sħana",
+          "explanation": "The complete sentence is “Illum hemm ħafna sħana.”",
+          "reviewCard": {
+            "maltese": "sħana",
+            "english": "heat / hot weather",
+            "example": "Illum hemm ħafna sħana."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sħana"
+          ]
+        },
+        {
+          "id": "b2-weather-checkpoint-1-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-borra",
+            "b2-weather-temperatura",
+            "b2-weather-sajjetti",
+            "b2-weather-shab"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "borra",
+              "right": "snow"
+            },
+            {
+              "left": "temperatura",
+              "right": "temperature"
+            },
+            {
+              "left": "sajjetti",
+              "right": "lightning"
+            },
+            {
+              "left": "sħab",
+              "right": "clouds"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "borra",
+            "english": "snow"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-2",
+      "kind": "checkpoint",
+      "sequence": 2,
+      "targetCount": 6,
+      "title": "It-Temp Checkpoint 2",
+      "items": [
+        {
+          "id": "b2-weather-kesha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-kesha"
+          ],
+          "prompt": "What is the lesson meaning of “kesħa”?",
+          "choices": [
+            "cold",
+            "bad weather",
+            "season"
+          ],
+          "answer": "cold",
+          "explanation": "kesħa means “cold” in this chapter.",
+          "reviewCard": {
+            "maltese": "kesħa",
+            "english": "cold"
+          }
+        },
+        {
+          "id": "b2-weather-kesha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-kesha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of cold.)",
+          "answer": "kesħa",
+          "explanation": "The complete sentence is “Illum hemm ħafna kesħa.”",
+          "reviewCard": {
+            "maltese": "kesħa",
+            "english": "cold",
+            "example": "Illum hemm ħafna kesħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kesħa"
+          ]
+        },
+        {
+          "id": "b2-weather-maltemp-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-maltemp"
+          ],
+          "prompt": "True or false: “maltemp” means “season” in this chapter.",
+          "answer": false,
+          "explanation": "maltemp means “bad weather”.",
+          "reviewCard": {
+            "maltese": "maltemp",
+            "english": "bad weather"
+          }
+        },
+        {
+          "id": "b2-weather-maltemp-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-maltemp"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of bad weather.)",
+          "answer": "maltemp",
+          "explanation": "The complete sentence is “Illum hemm ħafna maltemp.”",
+          "reviewCard": {
+            "maltese": "maltemp",
+            "english": "bad weather",
+            "example": "Illum hemm ħafna maltemp."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "maltemp"
+          ]
+        },
+        {
+          "id": "b2-weather-istagun-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-istagun"
+          ],
+          "prompt": "What is the lesson meaning of “istaġun”?",
+          "choices": [
+            "spring",
+            "season",
+            "seasons"
+          ],
+          "answer": "season",
+          "explanation": "istaġun means “season” in this chapter.",
+          "reviewCard": {
+            "maltese": "istaġun",
+            "english": "season"
+          }
+        },
+        {
+          "id": "b2-weather-istagun-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-istagun"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ ġdid jibda dalwaqt.” (A new season starts soon.)",
+          "answer": "istaġun",
+          "explanation": "The complete sentence is “Istaġun ġdid jibda dalwaqt.”",
+          "reviewCard": {
+            "maltese": "istaġun",
+            "english": "season",
+            "example": "Istaġun ġdid jibda dalwaqt."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "istaġun"
+          ]
+        },
+        {
+          "id": "b2-weather-staguni-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-staguni"
+          ],
+          "prompt": "True or false: “staġuni” means “spring” in this chapter.",
+          "answer": false,
+          "explanation": "staġuni means “seasons”.",
+          "reviewCard": {
+            "maltese": "staġuni",
+            "english": "seasons"
+          }
+        },
+        {
+          "id": "b2-weather-staguni-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-staguni"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm erba' _____.” (There are four seasons.)",
+          "answer": "staġuni",
+          "explanation": "The complete sentence is “Hemm erba' staġuni.”",
+          "reviewCard": {
+            "maltese": "staġuni",
+            "english": "seasons",
+            "example": "Hemm erba' staġuni."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "staġuni"
+          ]
+        },
+        {
+          "id": "b2-weather-rebbiegha-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rebbiegha"
+          ],
+          "prompt": "What is the lesson meaning of “rebbiegħa”?",
+          "choices": [
+            "summer",
+            "autumn",
+            "spring"
+          ],
+          "answer": "spring",
+          "explanation": "rebbiegħa means “spring” in this chapter.",
+          "reviewCard": {
+            "maltese": "rebbiegħa",
+            "english": "spring"
+          }
+        },
+        {
+          "id": "b2-weather-rebbiegha-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-rebbiegha"
+          ],
+          "prompt": "Complete the Maltese sentence: “L-istaġun favorit tiegħi huwa _____.” (My favourite season is spring.)",
+          "answer": "rebbiegħa",
+          "explanation": "The complete sentence is “L-istaġun favorit tiegħi huwa rebbiegħa.”",
+          "reviewCard": {
+            "maltese": "rebbiegħa",
+            "english": "spring",
+            "example": "L-istaġun favorit tiegħi huwa rebbiegħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "rebbiegħa"
+          ]
+        },
+        {
+          "id": "b2-weather-sajf-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-sajf"
+          ],
+          "prompt": "True or false: “sajf” means “autumn” in this chapter.",
+          "answer": false,
+          "explanation": "sajf means “summer”.",
+          "reviewCard": {
+            "maltese": "sajf",
+            "english": "summer"
+          }
+        },
+        {
+          "id": "b2-weather-sajf-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-sajf"
+          ],
+          "prompt": "Complete the Maltese sentence: “L-istaġun favorit tiegħi huwa _____.” (My favourite season is summer.)",
+          "answer": "sajf",
+          "explanation": "The complete sentence is “L-istaġun favorit tiegħi huwa sajf.”",
+          "reviewCard": {
+            "maltese": "sajf",
+            "english": "summer",
+            "example": "L-istaġun favorit tiegħi huwa sajf."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sajf"
+          ]
+        },
+        {
+          "id": "b2-weather-checkpoint-2-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-kesha",
+            "b2-weather-maltemp",
+            "b2-weather-istagun",
+            "b2-weather-staguni"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "kesħa",
+              "right": "cold"
+            },
+            {
+              "left": "maltemp",
+              "right": "bad weather"
+            },
+            {
+              "left": "istaġun",
+              "right": "season"
+            },
+            {
+              "left": "staġuni",
+              "right": "seasons"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "kesħa",
+            "english": "cold"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-3",
+      "kind": "checkpoint",
+      "sequence": 3,
+      "targetCount": 6,
+      "title": "It-Temp Checkpoint 3",
+      "items": [
+        {
+          "id": "b2-weather-harifa-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-harifa"
+          ],
+          "prompt": "What is the lesson meaning of “ħarifa”?",
+          "choices": [
+            "autumn",
+            "winter",
+            "sun"
+          ],
+          "answer": "autumn",
+          "explanation": "ħarifa means “autumn” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn"
+          }
+        },
+        {
+          "id": "b2-weather-harifa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-harifa"
+          ],
+          "prompt": "Complete the Maltese sentence: “L-istaġun favorit tiegħi huwa _____.” (My favourite season is autumn.)",
+          "answer": "ħarifa",
+          "explanation": "The complete sentence is “L-istaġun favorit tiegħi huwa ħarifa.”",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn",
+            "example": "L-istaġun favorit tiegħi huwa ħarifa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħarifa"
+          ]
+        },
+        {
+          "id": "b2-weather-xitwa-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xitwa"
+          ],
+          "prompt": "True or false: “xitwa” means “sun” in this chapter.",
+          "answer": false,
+          "explanation": "xitwa means “winter”.",
+          "reviewCard": {
+            "maltese": "xitwa",
+            "english": "winter"
+          }
+        },
+        {
+          "id": "b2-weather-xitwa-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xitwa"
+          ],
+          "prompt": "Complete the Maltese sentence: “L-istaġun favorit tiegħi huwa _____.” (My favourite season is winter.)",
+          "answer": "xitwa",
+          "explanation": "The complete sentence is “L-istaġun favorit tiegħi huwa xitwa.”",
+          "reviewCard": {
+            "maltese": "xitwa",
+            "english": "winter",
+            "example": "L-istaġun favorit tiegħi huwa xitwa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "xitwa"
+          ]
+        },
+        {
+          "id": "b2-weather-xemx-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemx"
+          ],
+          "prompt": "What is the lesson meaning of “xemx”?",
+          "choices": [
+            "thunder",
+            "sun",
+            "rain"
+          ],
+          "answer": "sun",
+          "explanation": "xemx means “sun” in this chapter.",
+          "reviewCard": {
+            "maltese": "xemx",
+            "english": "sun"
+          }
+        },
+        {
+          "id": "b2-weather-xemx-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xemx"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of sun.)",
+          "answer": "xemx",
+          "explanation": "The complete sentence is “Illum hemm ħafna xemx.”",
+          "reviewCard": {
+            "maltese": "xemx",
+            "english": "sun",
+            "example": "Illum hemm ħafna xemx."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "xemx"
+          ]
+        },
+        {
+          "id": "b2-weather-xita-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xita"
+          ],
+          "prompt": "True or false: “xita” means “thunder” in this chapter.",
+          "answer": false,
+          "explanation": "xita means “rain”.",
+          "reviewCard": {
+            "maltese": "xita",
+            "english": "rain"
+          }
+        },
+        {
+          "id": "b2-weather-xita-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xita"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of rain.)",
+          "answer": "xita",
+          "explanation": "The complete sentence is “Illum hemm ħafna xita.”",
+          "reviewCard": {
+            "maltese": "xita",
+            "english": "rain",
+            "example": "Illum hemm ħafna xita."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "xita"
+          ]
+        },
+        {
+          "id": "b2-weather-raghad-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-raghad"
+          ],
+          "prompt": "What is the lesson meaning of “ragħad”?",
+          "choices": [
+            "fine / calm weather",
+            "ice",
+            "thunder"
+          ],
+          "answer": "thunder",
+          "explanation": "ragħad means “thunder” in this chapter.",
+          "reviewCard": {
+            "maltese": "ragħad",
+            "english": "thunder"
+          }
+        },
+        {
+          "id": "b2-weather-raghad-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-raghad"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of thunder.)",
+          "answer": "ragħad",
+          "explanation": "The complete sentence is “Illum hemm ħafna ragħad.”",
+          "reviewCard": {
+            "maltese": "ragħad",
+            "english": "thunder",
+            "example": "Illum hemm ħafna ragħad."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ragħad"
+          ]
+        },
+        {
+          "id": "b2-weather-bnazzi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-bnazzi"
+          ],
+          "prompt": "True or false: “bnazzi” means “ice” in this chapter.",
+          "answer": false,
+          "explanation": "bnazzi means “fine / calm weather”.",
+          "reviewCard": {
+            "maltese": "bnazzi",
+            "english": "fine / calm weather"
+          }
+        },
+        {
+          "id": "b2-weather-bnazzi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-bnazzi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of fine.)",
+          "answer": "bnazzi",
+          "explanation": "The complete sentence is “Illum hemm ħafna bnazzi.”",
+          "reviewCard": {
+            "maltese": "bnazzi",
+            "english": "fine / calm weather",
+            "example": "Illum hemm ħafna bnazzi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bnazzi"
+          ]
+        },
+        {
+          "id": "b2-weather-checkpoint-3-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-harifa",
+            "b2-weather-xitwa",
+            "b2-weather-xemx",
+            "b2-weather-xita"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "ħarifa",
+              "right": "autumn"
+            },
+            {
+              "left": "xitwa",
+              "right": "winter"
+            },
+            {
+              "left": "xemx",
+              "right": "sun"
+            },
+            {
+              "left": "xita",
+              "right": "rain"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "ħarifa",
+            "english": "autumn"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-4",
+      "kind": "checkpoint",
+      "sequence": 4,
+      "targetCount": 5,
+      "title": "It-Temp Checkpoint 4",
+      "items": [
+        {
+          "id": "b2-weather-silg-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-silg"
+          ],
+          "prompt": "What is the lesson meaning of “silġ”?",
+          "choices": [
+            "ice",
+            "sunny",
+            "cloudy"
+          ],
+          "answer": "ice",
+          "explanation": "silġ means “ice” in this chapter.",
+          "reviewCard": {
+            "maltese": "silġ",
+            "english": "ice"
+          }
+        },
+        {
+          "id": "b2-weather-silg-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-silg"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of ice.)",
+          "answer": "silġ",
+          "explanation": "The complete sentence is “Illum hemm ħafna silġ.”",
+          "reviewCard": {
+            "maltese": "silġ",
+            "english": "ice",
+            "example": "Illum hemm ħafna silġ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "silġ"
+          ]
+        },
+        {
+          "id": "b2-weather-xemxi-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-xemxi"
+          ],
+          "prompt": "True or false: “xemxi” means “cloudy” in this chapter.",
+          "answer": false,
+          "explanation": "xemxi means “sunny”.",
+          "reviewCard": {
+            "maltese": "xemxi",
+            "english": "sunny"
+          }
+        },
+        {
+          "id": "b2-weather-xemxi-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-xemxi"
+          ],
+          "prompt": "Complete the Maltese sentence: “It-temp huwa _____.” (The weather is sunny.)",
+          "answer": "xemxi",
+          "explanation": "The complete sentence is “It-temp huwa xemxi.”",
+          "reviewCard": {
+            "maltese": "xemxi",
+            "english": "sunny",
+            "example": "It-temp huwa xemxi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "xemxi"
+          ]
+        },
+        {
+          "id": "b2-weather-imsahhab-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-imsahhab"
+          ],
+          "prompt": "What is the lesson meaning of “imsaħħab”?",
+          "choices": [
+            "the lowest temperature",
+            "cloudy",
+            "the highest temperature"
+          ],
+          "answer": "cloudy",
+          "explanation": "imsaħħab means “cloudy” in this chapter.",
+          "reviewCard": {
+            "maltese": "imsaħħab",
+            "english": "cloudy"
+          }
+        },
+        {
+          "id": "b2-weather-imsahhab-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-imsahhab"
+          ],
+          "prompt": "Complete the Maltese sentence: “It-temp huwa _____.” (The weather is cloudy.)",
+          "answer": "imsaħħab",
+          "explanation": "The complete sentence is “It-temp huwa imsaħħab.”",
+          "reviewCard": {
+            "maltese": "imsaħħab",
+            "english": "cloudy",
+            "example": "It-temp huwa imsaħħab."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "imsaħħab"
+          ]
+        },
+        {
+          "id": "b2-weather-l-oghla-temperatura-recognition-true-false",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-l-oghla-temperatura"
+          ],
+          "prompt": "True or false: “l-ogħla temperatura” means “the lowest temperature” in this chapter.",
+          "answer": false,
+          "explanation": "l-ogħla temperatura means “the highest temperature”.",
+          "reviewCard": {
+            "maltese": "l-ogħla temperatura",
+            "english": "the highest temperature"
+          }
+        },
+        {
+          "id": "b2-weather-l-oghla-temperatura-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-l-oghla-temperatura"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ hija tletin grad.” (The highest temperature is thirty degrees.)",
+          "answer": "l-ogħla temperatura",
+          "explanation": "The complete sentence is “L-ogħla temperatura hija tletin grad.”",
+          "reviewCard": {
+            "maltese": "l-ogħla temperatura",
+            "english": "the highest temperature",
+            "example": "L-ogħla temperatura hija tletin grad."
+          },
+          "type": "order-words",
+          "tokens": [
+            "l-ogħla",
+            "temperatura"
+          ]
+        },
+        {
+          "id": "b2-weather-l-inqas-temperatura-recognition",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-l-inqas-temperatura"
+          ],
+          "prompt": "What is the lesson meaning of “l-inqas temperatura”?",
+          "choices": [
+            "snow",
+            "temperature",
+            "the lowest temperature"
+          ],
+          "answer": "the lowest temperature",
+          "explanation": "l-inqas temperatura means “the lowest temperature” in this chapter.",
+          "reviewCard": {
+            "maltese": "l-inqas temperatura",
+            "english": "the lowest temperature"
+          }
+        },
+        {
+          "id": "b2-weather-l-inqas-temperatura-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-l-inqas-temperatura"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ hija għaxar gradi.” (The lowest temperature is ten degrees.)",
+          "answer": "l-inqas temperatura",
+          "explanation": "The complete sentence is “L-inqas temperatura hija għaxar gradi.”",
+          "reviewCard": {
+            "maltese": "l-inqas temperatura",
+            "english": "the lowest temperature",
+            "example": "L-inqas temperatura hija għaxar gradi."
+          },
+          "type": "order-words",
+          "tokens": [
+            "l-inqas",
+            "temperatura"
+          ]
+        },
+        {
+          "id": "b2-weather-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-silg",
+            "b2-weather-xemxi",
+            "b2-weather-imsahhab",
+            "b2-weather-l-oghla-temperatura"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "silġ",
+              "right": "ice"
+            },
+            {
+              "left": "xemxi",
+              "right": "sunny"
+            },
+            {
+              "left": "imsaħħab",
+              "right": "cloudy"
+            },
+            {
+              "left": "l-ogħla temperatura",
+              "right": "the highest temperature"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "silġ",
+            "english": "ice"
+          }
+        }
+      ]
+    }
+  ]
+}
