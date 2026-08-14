@@ -2,6 +2,7 @@
   const COURSE_URL = "./assets/data/course_path.json";
   const INVENTORY_URL = "./assets/data/book_coverage_inventory.json";
   const BINDINGS_URL = "./assets/data/course_target_bindings.json";
+  const TARGET_ASSESSMENTS_URL = "./assets/data/course_target_assessments.json";
   const TARGET_PROGRESS_KEY = "malti_course_target_progress_v1";
 
   const loadJson = async (url) => {
@@ -131,13 +132,26 @@
     if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(container.parentElement);
   };
 
+  const renderTargetExercise = async (chapter, targetAssessments) => {
+    const setId = `${chapter.id}-target-check`;
+    if (!(targetAssessments.sets || []).some((set) => set.id === setId)) return;
+    const section = document.querySelector("[data-course-target-test-section]");
+    const container = document.querySelector("[data-course-target-exercise]");
+    section.hidden = false;
+    container.dataset.exerciseSet = setId;
+    container.dataset.exerciseSrc = TARGET_ASSESSMENTS_URL;
+    container.dataset.autoSaveMissed = "true";
+    if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(section);
+  };
+
   const initialize = async () => {
     const chapterId = new URLSearchParams(window.location.search).get("chapter");
     if (!chapterId) return;
-    const [course, inventory, bindings] = await Promise.all([
+    const [course, inventory, bindings, targetAssessments] = await Promise.all([
       loadJson(COURSE_URL),
       loadJson(INVENTORY_URL),
-      loadJson(BINDINGS_URL)
+      loadJson(BINDINGS_URL),
+      loadJson(TARGET_ASSESSMENTS_URL)
     ]);
     const match = findChapter(course, chapterId);
     const inventoryChapter = inventory.chapters.find((chapter) => chapter.courseChapterId === chapterId);
@@ -186,6 +200,7 @@
     document.querySelector("[data-course-chapter-content]").hidden = false;
     window.addEventListener("malti-course-target-progress", () => updateLearnerMetrics(implemented));
     await renderExercise(match.chapter);
+    await renderTargetExercise(match.chapter, targetAssessments);
   };
 
   const start = () => initialize().catch((error) => {

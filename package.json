@@ -18,7 +18,9 @@
     "books:coverage": "node ./scripts/book_coverage_check.js",
     "course:bindings:build": "node ./scripts/build_course_target_bindings.js",
     "course:bindings:check": "node ./scripts/build_course_target_bindings.js --check",
-    "course:lint": "npm run course:bindings:check && node ./scripts/course_lint.js",
+    "course:assessments:build": "node ./scripts/build_course_target_assessments.js",
+    "course:assessments:check": "node ./scripts/build_course_target_assessments.js --check",
+    "course:lint": "npm run course:assessments:check && npm run course:bindings:check && node ./scripts/course_lint.js",
     "links:lint": "node ./scripts/links_lint.js",
     "functional:test": "node ./scripts/functional_check.js"
   },

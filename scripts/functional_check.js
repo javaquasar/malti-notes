@@ -169,6 +169,8 @@ async function main() {
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "20 / 27", "Guided animals coverage is incorrect.");
       assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
+      const targetCheck = page.locator('[data-course-target-exercise][data-exercise-set="b1-animals-target-check"]');
+      assert(await targetCheck.locator(".exercise-item").count() === 40, "Animals target check does not cover all implemented targets in both modes.");
       const firstStepHref = await page.locator(".course-step a").first().getAttribute("href");
       assert(firstStepHref.includes("animals.html?course=b1") && firstStepHref.includes("view=chapter"), "Animals step does not open chapter view.");
 

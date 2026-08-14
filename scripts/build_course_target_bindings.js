@@ -5,10 +5,13 @@ const root = path.resolve(__dirname, "..");
 const bindingFile = path.join(root, "assets/data/course_target_bindings.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const course = readJson("assets/data/course_path.json");
-const exercises = readJson("assets/data/course_exercises.json");
+const exerciseSources = [
+  readJson("assets/data/course_exercises.json"),
+  readOptionalJson("assets/data/course_target_assessments.json", { sets: [] })
+];
 const assessmentIds = new Map();
 
-exercises.sets.forEach((set) => set.items.forEach((item) => {
+exerciseSources.flatMap((source) => source.sets || []).forEach((set) => set.items.forEach((item) => {
   (item.targetIds || []).forEach((targetId) => {
     const ids = assessmentIds.get(targetId) || [];
     ids.push(item.id);
@@ -39,6 +42,11 @@ const cardinalNumbers = new Set([
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
+}
+
+function readOptionalJson(file, fallback) {
+  const absolute = path.join(root, file);
+  return fs.existsSync(absolute) ? JSON.parse(fs.readFileSync(absolute, "utf8")) : fallback;
 }
 
 function normalize(value) {

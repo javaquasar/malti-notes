@@ -26,6 +26,7 @@ function validateCourseBindings({ root, fail }) {
   const inventoryFile = "assets/data/book_coverage_inventory.json";
   const courseFile = "assets/data/course_path.json";
   const exerciseFile = "assets/data/course_exercises.json";
+  const targetExerciseFile = "assets/data/course_target_assessments.json";
   const read = (file) => {
     try {
       return JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
@@ -39,7 +40,8 @@ function validateCourseBindings({ root, fail }) {
   const inventory = read(inventoryFile);
   const course = read(courseFile);
   const exercises = read(exerciseFile);
-  if (!bindings || !inventory || !course || !exercises) return;
+  const targetExercises = read(targetExerciseFile);
+  if (!bindings || !inventory || !course || !exercises || !targetExercises) return;
   if (bindings.schemaVersion !== 2) fail(bindingFile, "schemaVersion must be 2");
   if (!Array.isArray(bindings.targets)) {
     fail(bindingFile, "targets must be an array");
@@ -51,10 +53,13 @@ function validateCourseBindings({ root, fail }) {
   const inventoryByChapter = new Map();
   inventory.chapters.forEach((chapter) => inventoryByChapter.set(chapter.courseChapterId, chapter));
   const exerciseItems = new Map();
-  exercises.sets.forEach((set) => set.items.forEach((item) => {
-    if (exerciseItems.has(item.id)) fail(exerciseFile, `exercise item id must be globally unique: ${item.id}`);
-    exerciseItems.set(item.id, { set, item });
-  }));
+  [
+    { file: exerciseFile, data: exercises },
+    { file: targetExerciseFile, data: targetExercises }
+  ].forEach(({ file, data }) => (data.sets || []).forEach((set) => set.items.forEach((item) => {
+    if (exerciseItems.has(item.id)) fail(file, `exercise item id must be globally unique: ${item.id}`);
+    exerciseItems.set(item.id, { set, item, file });
+  })));
   const contentCache = new Map();
   const contentIds = (file) => {
     if (!contentCache.has(file)) {
@@ -134,12 +139,20 @@ function validateCourseBindings({ root, fail }) {
     }
   });
 
-  exerciseItems.forEach(({ item }) => (item.targetIds || []).forEach((targetId) => {
-    if (!targetIds.has(targetId)) fail(exerciseFile, `${item.id} references missing target: ${targetId}`);
+  exerciseItems.forEach(({ item, file }) => (item.targetIds || []).forEach((targetId) => {
+    if (!targetIds.has(targetId)) fail(file, `${item.id} references missing target: ${targetId}`);
   }));
-  exerciseItems.forEach(({ item }) => {
+  exerciseItems.forEach(({ item, file }) => {
     if ((item.targetIds || []).length && !["recognition", "production"].includes(item.assessmentMode)) {
-      fail(exerciseFile, `${item.id}.assessmentMode must be recognition or production when targetIds are present`);
+      fail(file, `${item.id}.assessmentMode must be recognition or production when targetIds are present`);
+    }
+  });
+
+  bindings.targets.forEach((target) => {
+    if (target.book !== "B1" || target.implementationStatus !== "implemented") return;
+    const modes = new Set(target.assessmentIds.map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
+    if (!modes.has("recognition") || !modes.has("production")) {
+      fail(bindingFile, `${target.id} needs recognition and production assessment coverage`);
     }
   });
   const auditedChapterIds = bindings.fullyAuditedChapterIds || [];
