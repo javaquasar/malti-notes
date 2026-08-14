@@ -17,6 +17,7 @@ const pageOverrides = {
 const excluded = new Set([
   "book_coverage_inventory.json",
   "course_exercises.json",
+  "course_milestone_assessments.json",
   "course_path.json",
   "course_source_provenance.json",
   "course_supplemental_content.json",

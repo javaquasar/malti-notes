@@ -1,0 +1,1774 @@
+{
+  "schemaVersion": 1,
+  "description": "Generated cumulative assessments balanced across course chapters and response modes.",
+  "sets": [
+    {
+      "id": "course-milestone-b1",
+      "title": "B1 Cumulative Test",
+      "kind": "milestone",
+      "passPercent": 75,
+      "chapterIds": [
+        "b1-introductions",
+        "b1-residence",
+        "b1-school",
+        "b1-animals",
+        "b1-colours",
+        "b1-food",
+        "b1-family"
+      ],
+      "chapterCount": 7,
+      "targetCount": 28,
+      "itemCount": 28,
+      "modeCounts": {
+        "recognition": 14,
+        "production": 14
+      },
+      "items": [
+        {
+          "id": "course-milestone-b1-b1-introductions-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-annimal"
+          ],
+          "prompt": "What is the lesson meaning of “annimal”?",
+          "choices": [
+            "animal",
+            "city",
+            "certificate"
+          ],
+          "answer": "animal",
+          "explanation": "annimal means “animal” in this chapter.",
+          "reviewCard": {
+            "maltese": "annimal",
+            "english": "animal"
+          },
+          "sourceAssessmentId": "b1-introductions-annimal-recognition",
+          "sourceChapterId": "b1-introductions"
+        },
+        {
+          "id": "course-milestone-b1-b1-introductions-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-belt"
+          ],
+          "prompt": "True or false: “belt” means “certificate” in this chapter.",
+          "answer": false,
+          "explanation": "belt means “city”.",
+          "reviewCard": {
+            "maltese": "belt",
+            "english": "city"
+          },
+          "sourceAssessmentId": "b1-introductions-belt-recognition-true-false",
+          "sourceChapterId": "b1-introductions"
+        },
+        {
+          "id": "course-milestone-b1-b1-introductions-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-introductions-cajtier"
+          ],
+          "prompt": "Complete the Maltese sentence: “Mario huwa _____.” (Mario is playful.)",
+          "answer": "ċajtier",
+          "explanation": "The complete sentence is “Mario huwa ċajtier.”",
+          "reviewCard": {
+            "maltese": "ċajtier",
+            "english": "playful / funny (masculine)",
+            "example": "Mario huwa ċajtier."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċajtier"
+          ],
+          "sourceAssessmentId": "b1-introductions-cajtier-production",
+          "sourceChapterId": "b1-introductions"
+        },
+        {
+          "id": "course-milestone-b1-b1-introductions-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-introductions-cajtiera"
+          ],
+          "prompt": "Complete the Maltese sentence: “Marija hija _____.” (Marija is funny.)",
+          "answer": "ċajtiera",
+          "explanation": "The complete sentence is “Marija hija ċajtiera.”",
+          "reviewCard": {
+            "maltese": "ċajtiera",
+            "english": "funny / playful",
+            "example": "Marija hija ċajtiera."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċajtiera"
+          ],
+          "sourceAssessmentId": "b1-introductions-cajtiera-production",
+          "sourceChapterId": "b1-introductions"
+        },
+        {
+          "id": "course-milestone-b1-b1-residence-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bankina"
+          ],
+          "prompt": "What is the lesson meaning of “bankina”?",
+          "choices": [
+            "pavement / sidewalk",
+            "tree",
+            "hospital"
+          ],
+          "answer": "pavement / sidewalk",
+          "explanation": "bankina means “pavement / sidewalk” in this chapter.",
+          "reviewCard": {
+            "maltese": "bankina",
+            "english": "pavement / sidewalk"
+          },
+          "sourceAssessmentId": "b1-residence-bankina-recognition",
+          "sourceChapterId": "b1-residence"
+        },
+        {
+          "id": "course-milestone-b1-b1-residence-recognition-2",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-karozza"
+          ],
+          "prompt": "What is the lesson meaning of “bil-karozza”?",
+          "choices": [
+            "by car",
+            "coach / bus",
+            "by coach"
+          ],
+          "answer": "by car",
+          "explanation": "bil-karozza means “by car” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-karozza",
+            "english": "by car"
+          },
+          "sourceAssessmentId": "b1-residence-bil-karozza-recognition",
+          "sourceChapterId": "b1-residence"
+        },
+        {
+          "id": "course-milestone-b1-b1-residence-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-kowc"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work by coach.)",
+          "answer": "bil-kowċ",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-kowċ.”",
+          "reviewCard": {
+            "maltese": "bil-kowċ",
+            "english": "by coach",
+            "example": "Immur ix-xogħol bil-kowċ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-kowċ"
+          ],
+          "sourceAssessmentId": "b1-residence-bil-kowc-production",
+          "sourceChapterId": "b1-residence"
+        },
+        {
+          "id": "course-milestone-b1-b1-residence-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-mixi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work on foot.)",
+          "answer": "bil-mixi",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-mixi.”",
+          "reviewCard": {
+            "maltese": "bil-mixi",
+            "english": "on foot",
+            "example": "Immur ix-xogħol bil-mixi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-mixi"
+          ],
+          "sourceAssessmentId": "b1-residence-bil-mixi-production",
+          "sourceChapterId": "b1-residence"
+        },
+        {
+          "id": "course-milestone-b1-b1-school-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-dublett"
+          ],
+          "prompt": "True or false: “dublett” means “tie” in this chapter.",
+          "answer": false,
+          "explanation": "dublett means “skirt”.",
+          "reviewCard": {
+            "maltese": "dublett",
+            "english": "skirt"
+          },
+          "sourceAssessmentId": "b1-school-dublett-recognition-true-false",
+          "sourceChapterId": "b1-school"
+        },
+        {
+          "id": "course-milestone-b1-b1-school-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-garaxx"
+          ],
+          "prompt": "True or false: “garaxx” means “corridor” in this chapter.",
+          "answer": false,
+          "explanation": "garaxx means “garage”.",
+          "reviewCard": {
+            "maltese": "garaxx",
+            "english": "garage"
+          },
+          "sourceAssessmentId": "b1-school-garaxx-recognition-true-false",
+          "sourceChapterId": "b1-school"
+        },
+        {
+          "id": "course-milestone-b1-b1-school-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-glekk"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear jacket at school.)",
+          "answer": "ġlekk",
+          "explanation": "The complete sentence is “Nilbes ġlekk l-iskola.”",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket",
+            "example": "Nilbes ġlekk l-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġlekk"
+          ],
+          "sourceAssessmentId": "b1-school-glekk-production",
+          "sourceChapterId": "b1-school"
+        },
+        {
+          "id": "course-milestone-b1-b1-school-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-gnien"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The garden is in the building.)",
+          "answer": "ġnien",
+          "explanation": "The complete sentence is “Hemm ġnien fil-bini.”",
+          "reviewCard": {
+            "maltese": "ġnien",
+            "english": "garden",
+            "example": "Hemm ġnien fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġnien"
+          ],
+          "sourceAssessmentId": "b1-school-gnien-production",
+          "sourceChapterId": "b1-school"
+        },
+        {
+          "id": "course-milestone-b1-b1-animals-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-emu"
+          ],
+          "prompt": "True or false: “emu” means “bream” in this chapter.",
+          "answer": false,
+          "explanation": "emu means “emu”.",
+          "reviewCard": {
+            "maltese": "emu",
+            "english": "emu"
+          },
+          "sourceAssessmentId": "b1-animals-emu-recognition-true-false",
+          "sourceChapterId": "b1-animals"
+        },
+        {
+          "id": "course-milestone-b1-b1-animals-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fekruna"
+          ],
+          "prompt": "True or false: “fekruna” means “hen” in this chapter.",
+          "answer": false,
+          "explanation": "fekruna means “turtle”.",
+          "reviewCard": {
+            "maltese": "fekruna",
+            "english": "turtle"
+          },
+          "sourceAssessmentId": "b1-animals-fekruna-recognition-true-false",
+          "sourceChapterId": "b1-animals"
+        },
+        {
+          "id": "course-milestone-b1-b1-animals-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-fellus"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the chick in the garden.)",
+          "answer": "fellus",
+          "explanation": "The complete sentence is “Nara fellus fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "fellus",
+            "english": "chick",
+            "example": "Nara fellus fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fellus"
+          ],
+          "sourceAssessmentId": "b1-animals-fellus-production",
+          "sourceChapterId": "b1-animals"
+        },
+        {
+          "id": "course-milestone-b1-b1-animals-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-fenek"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the rabbit in the garden.)",
+          "answer": "fenek",
+          "explanation": "The complete sentence is “Nara fenek fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "fenek",
+            "english": "rabbit",
+            "example": "Nara fenek fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fenek"
+          ],
+          "sourceAssessmentId": "b1-animals-fenek-production",
+          "sourceChapterId": "b1-animals"
+        },
+        {
+          "id": "course-milestone-b1-b1-colours-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-bajda"
+          ],
+          "prompt": "True or false: “bajda” means “red” in this chapter.",
+          "answer": false,
+          "explanation": "bajda means “white (feminine)”.",
+          "reviewCard": {
+            "maltese": "bajda",
+            "english": "white (feminine)"
+          },
+          "sourceAssessmentId": "b1-colours-bajda-recognition-true-false",
+          "sourceChapterId": "b1-colours"
+        },
+        {
+          "id": "course-milestone-b1-b1-colours-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-bandiera"
+          ],
+          "prompt": "True or false: “bandiera” means “Italy” in this chapter.",
+          "answer": false,
+          "explanation": "bandiera means “flag”.",
+          "reviewCard": {
+            "maltese": "bandiera",
+            "english": "flag"
+          },
+          "sourceAssessmentId": "b1-colours-bandiera-recognition-true-false",
+          "sourceChapterId": "b1-colours"
+        },
+        {
+          "id": "course-milestone-b1-b1-colours-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-blu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-basket huwa _____.” (The bag is blue.)",
+          "answer": "blu",
+          "explanation": "The complete sentence is “Il-basket huwa blu.”",
+          "reviewCard": {
+            "maltese": "blu",
+            "english": "blue",
+            "example": "Il-basket huwa blu."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "blu"
+          ],
+          "sourceAssessmentId": "b1-colours-blu-production",
+          "sourceChapterId": "b1-colours"
+        },
+        {
+          "id": "course-milestone-b1-b1-colours-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-cina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about China.)",
+          "answer": "Ċina",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ċina.”",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China",
+            "example": "Nitkellmu dwar Ċina."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ċina"
+          ],
+          "sourceAssessmentId": "b1-colours-cina-production",
+          "sourceChapterId": "b1-colours"
+        },
+        {
+          "id": "course-milestone-b1-b1-food-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-cikkulata"
+          ],
+          "prompt": "True or false: “ċikkulata” means “pizza” in this chapter.",
+          "answer": false,
+          "explanation": "ċikkulata means “chocolate”.",
+          "reviewCard": {
+            "maltese": "ċikkulata",
+            "english": "chocolate"
+          },
+          "sourceAssessmentId": "b1-food-cikkulata-recognition-true-false",
+          "sourceChapterId": "b1-food"
+        },
+        {
+          "id": "course-milestone-b1-b1-food-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-cirasa"
+          ],
+          "prompt": "True or false: “ċirasa” means “figs” in this chapter.",
+          "answer": false,
+          "explanation": "ċirasa means “cherry”.",
+          "reviewCard": {
+            "maltese": "ċirasa",
+            "english": "cherry"
+          },
+          "sourceAssessmentId": "b1-food-cirasa-recognition-true-false",
+          "sourceChapterId": "b1-food"
+        },
+        {
+          "id": "course-milestone-b1-b1-food-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-dulliegh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the watermelons, please.)",
+          "answer": "dulliegħ",
+          "explanation": "The complete sentence is “Nixtieq dulliegħ, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "dulliegħ",
+            "english": "watermelons",
+            "example": "Nixtieq dulliegħ, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dulliegħ"
+          ],
+          "sourceAssessmentId": "b1-food-dulliegh-production",
+          "sourceChapterId": "b1-food"
+        },
+        {
+          "id": "course-milestone-b1-b1-food-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-dulliegha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the watermelon, please.)",
+          "answer": "dulliegħa",
+          "explanation": "The complete sentence is “Nixtieq dulliegħa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "dulliegħa",
+            "english": "watermelon -> watermelons",
+            "example": "Nixtieq dulliegħa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dulliegħa"
+          ],
+          "sourceAssessmentId": "b1-food-dulliegha-production",
+          "sourceChapterId": "b1-food"
+        },
+        {
+          "id": "course-milestone-b1-b1-family-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-genituri"
+          ],
+          "prompt": "True or false: “ġenituri” means “mother” in this chapter.",
+          "answer": false,
+          "explanation": "ġenituri means “parents”.",
+          "reviewCard": {
+            "maltese": "ġenituri",
+            "english": "parents"
+          },
+          "sourceAssessmentId": "b1-family-genituri-recognition-true-false",
+          "sourceChapterId": "b1-family"
+        },
+        {
+          "id": "course-milestone-b1-b1-family-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-hu-hsieb"
+          ],
+          "prompt": "True or false: “Ħu ħsieb” means “siblings” in this chapter.",
+          "answer": false,
+          "explanation": "Ħu ħsieb means “Take care”.",
+          "reviewCard": {
+            "maltese": "Ħu ħsieb",
+            "english": "Take care"
+          },
+          "sourceAssessmentId": "b1-family-hu-hsieb-recognition-true-false",
+          "sourceChapterId": "b1-family"
+        },
+        {
+          "id": "course-milestone-b1-b1-family-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-hu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the brother.)",
+          "answer": "ħu",
+          "explanation": "The complete sentence is “Għandi ħu fil-familja.”",
+          "reviewCard": {
+            "maltese": "ħu",
+            "english": "brother",
+            "example": "Għandi ħu fil-familja."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħu"
+          ],
+          "sourceAssessmentId": "b1-family-hu-production",
+          "sourceChapterId": "b1-family"
+        },
+        {
+          "id": "course-milestone-b1-b1-family-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-gimgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Friday.)",
+          "answer": "Il-Ġimgħa",
+          "explanation": "The complete sentence is “Il-jum huwa Il-Ġimgħa.”",
+          "reviewCard": {
+            "maltese": "Il-Ġimgħa",
+            "english": "Friday",
+            "example": "Il-jum huwa Il-Ġimgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Il-Ġimgħa"
+          ],
+          "sourceAssessmentId": "b1-family-il-gimgha-production",
+          "sourceChapterId": "b1-family"
+        }
+      ]
+    },
+    {
+      "id": "course-milestone-b2",
+      "title": "B2 Cumulative Test",
+      "kind": "milestone",
+      "passPercent": 75,
+      "chapterIds": [
+        "b2-school-bag",
+        "b2-imperative",
+        "b2-weather",
+        "b2-clothes",
+        "b2-hobbies",
+        "b2-town",
+        "b2-recycling"
+      ],
+      "chapterCount": 7,
+      "targetCount": 28,
+      "itemCount": 28,
+      "modeCounts": {
+        "recognition": 14,
+        "production": 14
+      },
+      "items": [
+        {
+          "id": "course-milestone-b2-b2-school-bag-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-antika"
+          ],
+          "prompt": "What is the lesson meaning of “antika”?",
+          "choices": [
+            "colourful (feminine)",
+            "antique / old (feminine)",
+            "colourful"
+          ],
+          "answer": "antique / old (feminine)",
+          "explanation": "antika means “antique / old (feminine)” in this chapter.",
+          "reviewCard": {
+            "maltese": "antika",
+            "english": "antique / old (feminine)"
+          },
+          "sourceAssessmentId": "b2-school-bag-antika-recognition",
+          "sourceChapterId": "b2-school-bag"
+        },
+        {
+          "id": "course-milestone-b2-b2-school-bag-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-antiki"
+          ],
+          "prompt": "True or false: “antiki” means “colourful (feminine)” in this chapter.",
+          "answer": false,
+          "explanation": "antiki means “antique / old (plural)”.",
+          "reviewCard": {
+            "maltese": "antiki",
+            "english": "antique / old (plural)"
+          },
+          "sourceAssessmentId": "b2-school-bag-antiki-recognition-true-false",
+          "sourceChapterId": "b2-school-bag"
+        },
+        {
+          "id": "course-milestone-b2-b2-school-bag-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-basket-tal-iskola"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the school bag.)",
+          "answer": "basket tal-iskola",
+          "explanation": "The complete sentence is “Hemm basket tal-iskola fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "basket tal-iskola",
+            "english": "school bag",
+            "example": "Hemm basket tal-iskola fil-basket tal-iskola."
+          },
+          "type": "order-words",
+          "tokens": [
+            "basket",
+            "tal-iskola"
+          ],
+          "sourceAssessmentId": "b2-school-bag-basket-tal-iskola-production",
+          "sourceChapterId": "b2-school-bag"
+        },
+        {
+          "id": "course-milestone-b2-b2-school-bag-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-fajl"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the file.)",
+          "answer": "fajl",
+          "explanation": "The complete sentence is “Hemm fajl fil-basket tal-iskola.”",
+          "reviewCard": {
+            "maltese": "fajl",
+            "english": "file",
+            "example": "Hemm fajl fil-basket tal-iskola."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fajl"
+          ],
+          "sourceAssessmentId": "b2-school-bag-fajl-production",
+          "sourceChapterId": "b2-school-bag"
+        },
+        {
+          "id": "course-milestone-b2-b2-imperative-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aghmel"
+          ],
+          "prompt": "True or false: “agħmel” means “one” in this chapter.",
+          "answer": false,
+          "explanation": "agħmel means “do / make (singular command)”.",
+          "reviewCard": {
+            "maltese": "agħmel",
+            "english": "do / make (singular command)"
+          },
+          "sourceAssessmentId": "b2-imperative-aghmel-recognition-true-false",
+          "sourceChapterId": "b2-imperative"
+        },
+        {
+          "id": "course-milestone-b2-b2-imperative-recognition-2",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-aqra"
+          ],
+          "prompt": "What is the lesson meaning of “aqra”?",
+          "choices": [
+            "open (singular command)",
+            "read (singular command)",
+            "read (plural command)"
+          ],
+          "answer": "read (singular command)",
+          "explanation": "aqra means “read (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "aqra",
+            "english": "read (singular command)"
+          },
+          "sourceAssessmentId": "b2-imperative-aqra-recognition",
+          "sourceChapterId": "b2-imperative"
+        },
+        {
+          "id": "course-milestone-b2-b2-imperative-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-aqraw"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-paġna.” (Read the page, everyone.)",
+          "answer": "aqraw",
+          "explanation": "The complete sentence is “Aqraw il-paġna.”",
+          "reviewCard": {
+            "maltese": "aqraw",
+            "english": "read (plural command)",
+            "example": "Aqraw il-paġna."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "aqraw"
+          ],
+          "sourceAssessmentId": "b2-imperative-aqraw-production",
+          "sourceChapterId": "b2-imperative"
+        },
+        {
+          "id": "course-milestone-b2-b2-imperative-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-dahhal"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ il-ktieb fil-basket.” (Put the book in the bag.)",
+          "answer": "daħħal",
+          "explanation": "The complete sentence is “Daħħal il-ktieb fil-basket.”",
+          "reviewCard": {
+            "maltese": "daħħal",
+            "english": "put inside (singular command)",
+            "example": "Daħħal il-ktieb fil-basket."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "daħħal"
+          ],
+          "sourceAssessmentId": "b2-imperative-dahhal-production",
+          "sourceChapterId": "b2-imperative"
+        },
+        {
+          "id": "course-milestone-b2-b2-weather-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-imsahhab"
+          ],
+          "prompt": "What is the lesson meaning of “imsaħħab”?",
+          "choices": [
+            "the lowest temperature",
+            "cloudy",
+            "the highest temperature"
+          ],
+          "answer": "cloudy",
+          "explanation": "imsaħħab means “cloudy” in this chapter.",
+          "reviewCard": {
+            "maltese": "imsaħħab",
+            "english": "cloudy"
+          },
+          "sourceAssessmentId": "b2-weather-imsahhab-recognition",
+          "sourceChapterId": "b2-weather"
+        },
+        {
+          "id": "course-milestone-b2-b2-weather-recognition-2",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-istagun"
+          ],
+          "prompt": "What is the lesson meaning of “istaġun”?",
+          "choices": [
+            "spring",
+            "season",
+            "seasons"
+          ],
+          "answer": "season",
+          "explanation": "istaġun means “season” in this chapter.",
+          "reviewCard": {
+            "maltese": "istaġun",
+            "english": "season"
+          },
+          "sourceAssessmentId": "b2-weather-istagun-recognition",
+          "sourceChapterId": "b2-weather"
+        },
+        {
+          "id": "course-milestone-b2-b2-weather-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-kesha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of cold.)",
+          "answer": "kesħa",
+          "explanation": "The complete sentence is “Illum hemm ħafna kesħa.”",
+          "reviewCard": {
+            "maltese": "kesħa",
+            "english": "cold",
+            "example": "Illum hemm ħafna kesħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "kesħa"
+          ],
+          "sourceAssessmentId": "b2-weather-kesha-production",
+          "sourceChapterId": "b2-weather"
+        },
+        {
+          "id": "course-milestone-b2-b2-weather-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-l-inqas-temperatura"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ hija għaxar gradi.” (The lowest temperature is ten degrees.)",
+          "answer": "l-inqas temperatura",
+          "explanation": "The complete sentence is “L-inqas temperatura hija għaxar gradi.”",
+          "reviewCard": {
+            "maltese": "l-inqas temperatura",
+            "english": "the lowest temperature",
+            "example": "L-inqas temperatura hija għaxar gradi."
+          },
+          "type": "order-words",
+          "tokens": [
+            "l-inqas",
+            "temperatura"
+          ],
+          "sourceAssessmentId": "b2-weather-l-inqas-temperatura-production",
+          "sourceChapterId": "b2-weather"
+        },
+        {
+          "id": "course-milestone-b2-b2-clothes-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-bic-cingi"
+          ],
+          "prompt": "True or false: “flokk biċ-ċingi” means “swimsuit” in this chapter.",
+          "answer": false,
+          "explanation": "flokk biċ-ċingi means “strappy top”.",
+          "reviewCard": {
+            "maltese": "flokk biċ-ċingi",
+            "english": "strappy top"
+          },
+          "sourceAssessmentId": "b2-clothes-flokk-bic-cingi-recognition-true-false",
+          "sourceChapterId": "b2-clothes"
+        },
+        {
+          "id": "course-milestone-b2-b2-clothes-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-flokk-bil-komma-qasira"
+          ],
+          "prompt": "True or false: “flokk bil-komma qasira” means “denim jacket” in this chapter.",
+          "answer": false,
+          "explanation": "flokk bil-komma qasira means “short-sleeved shirt”.",
+          "reviewCard": {
+            "maltese": "flokk bil-komma qasira",
+            "english": "short-sleeved shirt"
+          },
+          "sourceAssessmentId": "b2-clothes-flokk-bil-komma-qasira-recognition-true-false",
+          "sourceChapterId": "b2-clothes"
+        },
+        {
+          "id": "course-milestone-b2-b2-clothes-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-hafif"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the light shirt.)",
+          "answer": "flokk ħafif",
+          "explanation": "The complete sentence is “Illum se nilbes flokk ħafif.”",
+          "reviewCard": {
+            "maltese": "flokk ħafif",
+            "english": "light shirt",
+            "example": "Illum se nilbes flokk ħafif."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "ħafif"
+          ],
+          "sourceAssessmentId": "b2-clothes-flokk-hafif-production",
+          "sourceChapterId": "b2-clothes"
+        },
+        {
+          "id": "course-milestone-b2-b2-clothes-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-flokk-ta-taht"
+          ],
+          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the undershirt.)",
+          "answer": "flokk ta' taħt",
+          "explanation": "The complete sentence is “Illum se nilbes flokk ta' taħt.”",
+          "reviewCard": {
+            "maltese": "flokk ta' taħt",
+            "english": "undershirt",
+            "example": "Illum se nilbes flokk ta' taħt."
+          },
+          "type": "order-words",
+          "tokens": [
+            "flokk",
+            "ta'",
+            "taħt"
+          ],
+          "sourceAssessmentId": "b2-clothes-flokk-ta-taht-production",
+          "sourceChapterId": "b2-clothes"
+        },
+        {
+          "id": "course-milestone-b2-b2-hobbies-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbes"
+          ],
+          "prompt": "True or false: “ilbes” means “wear / get dressed (plural command)” in this chapter.",
+          "answer": false,
+          "explanation": "ilbes means “wear / get dressed (singular command)”.",
+          "reviewCard": {
+            "maltese": "ilbes",
+            "english": "wear / get dressed (singular command)"
+          },
+          "sourceAssessmentId": "b2-hobbies-ilbes-recognition-true-false",
+          "sourceChapterId": "b2-hobbies"
+        },
+        {
+          "id": "course-milestone-b2-b2-hobbies-recognition-2",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-ilbsu"
+          ],
+          "prompt": "What is the lesson meaning of “ilbsu”?",
+          "choices": [
+            "do / make (singular command)",
+            "wear / get dressed (plural command)",
+            "did / made"
+          ],
+          "answer": "wear / get dressed (plural command)",
+          "explanation": "ilbsu means “wear / get dressed (plural command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "ilbsu",
+            "english": "wear / get dressed (plural command)"
+          },
+          "sourceAssessmentId": "b2-hobbies-ilbsu-recognition",
+          "sourceChapterId": "b2-hobbies"
+        },
+        {
+          "id": "course-milestone-b2-b2-hobbies-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-ilghab"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ it-tenis.” (Play tennis.)",
+          "answer": "ilgħab",
+          "explanation": "The complete sentence is “Ilgħab it-tenis.”",
+          "reviewCard": {
+            "maltese": "ilgħab",
+            "english": "play (singular command)",
+            "example": "Ilgħab it-tenis."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ilgħab"
+          ],
+          "sourceAssessmentId": "b2-hobbies-ilghab-production",
+          "sourceChapterId": "b2-hobbies"
+        },
+        {
+          "id": "course-milestone-b2-b2-hobbies-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-imxi"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ sal-pjazza.” (Walk to the square.)",
+          "answer": "imxi",
+          "explanation": "The complete sentence is “Imxi sal-pjazza.”",
+          "reviewCard": {
+            "maltese": "imxi",
+            "english": "walk (singular command)",
+            "example": "Imxi sal-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "imxi"
+          ],
+          "sourceAssessmentId": "b2-hobbies-imxi-production",
+          "sourceChapterId": "b2-hobbies"
+        },
+        {
+          "id": "course-milestone-b2-b2-town-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-ieqaf"
+          ],
+          "prompt": "True or false: “Ieqaf” means “Turn right” in this chapter.",
+          "answer": false,
+          "explanation": "Ieqaf means “stop (singular command)”.",
+          "reviewCard": {
+            "maltese": "Ieqaf",
+            "english": "stop (singular command)"
+          },
+          "sourceAssessmentId": "b2-town-ieqaf-recognition-true-false",
+          "sourceChapterId": "b2-town"
+        },
+        {
+          "id": "course-milestone-b2-b2-town-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-imxi-dritt"
+          ],
+          "prompt": "True or false: “Imxi dritt” means “Go up” in this chapter.",
+          "answer": false,
+          "explanation": "Imxi dritt means “Go straight”.",
+          "reviewCard": {
+            "maltese": "Imxi dritt",
+            "english": "Go straight"
+          },
+          "sourceAssessmentId": "b2-town-imxi-dritt-recognition-true-false",
+          "sourceChapterId": "b2-town"
+        },
+        {
+          "id": "course-milestone-b2-b2-town-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-indirizz"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The address is in the square.)",
+          "answer": "indirizz",
+          "explanation": "The complete sentence is “Hemm indirizz fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "indirizz",
+            "english": "address",
+            "example": "Hemm indirizz fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "indirizz"
+          ],
+          "sourceAssessmentId": "b2-town-indirizz-production",
+          "sourceChapterId": "b2-town"
+        },
+        {
+          "id": "course-milestone-b2-b2-town-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-inzel-l-isfel"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ sal-pjan terran.” (Go down to the ground floor.)",
+          "answer": "Inżel 'l isfel",
+          "explanation": "The complete sentence is “Inżel 'l isfel sal-pjan terran.”",
+          "reviewCard": {
+            "maltese": "Inżel 'l isfel",
+            "english": "Go down",
+            "example": "Inżel 'l isfel sal-pjan terran."
+          },
+          "type": "order-words",
+          "tokens": [
+            "Inżel",
+            "'l",
+            "isfel"
+          ],
+          "sourceAssessmentId": "b2-town-inzel-l-isfel-production",
+          "sourceChapterId": "b2-town"
+        },
+        {
+          "id": "course-milestone-b2-b2-recycling-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-issepara"
+          ],
+          "prompt": "What is the lesson meaning of “issepara”?",
+          "choices": [
+            "separate (singular command)",
+            "separate (plural command)",
+            "he took out"
+          ],
+          "answer": "separate (singular command)",
+          "explanation": "issepara means “separate (singular command)” in this chapter.",
+          "reviewCard": {
+            "maltese": "issepara",
+            "english": "separate (singular command)"
+          },
+          "sourceAssessmentId": "b2-recycling-issepara-recognition",
+          "sourceChapterId": "b2-recycling"
+        },
+        {
+          "id": "course-milestone-b2-b2-recycling-recognition-2",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-isseparaw"
+          ],
+          "prompt": "True or false: “isseparaw” means “he took out” in this chapter.",
+          "answer": false,
+          "explanation": "isseparaw means “separate (plural command)”.",
+          "reviewCard": {
+            "maltese": "isseparaw",
+            "english": "separate (plural command)"
+          },
+          "sourceAssessmentId": "b2-recycling-isseparaw-recognition-true-false",
+          "sourceChapterId": "b2-recycling"
+        },
+        {
+          "id": "course-milestone-b2-b2-recycling-production-3",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-jinten"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur _____.” (The container stinks.)",
+          "answer": "jinten",
+          "explanation": "The complete sentence is “Il-kontenitur jinten.”",
+          "reviewCard": {
+            "maltese": "jinten",
+            "english": "it stinks (masculine)",
+            "example": "Il-kontenitur jinten."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "jinten"
+          ],
+          "sourceAssessmentId": "b2-recycling-jinten-production",
+          "sourceChapterId": "b2-recycling"
+        },
+        {
+          "id": "course-milestone-b2-b2-recycling-production-4",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-jintnu"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenituri _____.” (The containers stink.)",
+          "answer": "jintnu",
+          "explanation": "The complete sentence is “Il-kontenituri jintnu.”",
+          "reviewCard": {
+            "maltese": "jintnu",
+            "english": "they stink",
+            "example": "Il-kontenituri jintnu."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "jintnu"
+          ],
+          "sourceAssessmentId": "b2-recycling-jintnu-production",
+          "sourceChapterId": "b2-recycling"
+        }
+      ]
+    },
+    {
+      "id": "course-milestone-mixed",
+      "title": "B1 and B2 Mixed Test",
+      "kind": "milestone",
+      "passPercent": 75,
+      "chapterIds": [
+        "b1-introductions",
+        "b1-residence",
+        "b1-school",
+        "b1-animals",
+        "b1-colours",
+        "b1-food",
+        "b1-family",
+        "b2-school-bag",
+        "b2-imperative",
+        "b2-weather",
+        "b2-clothes",
+        "b2-hobbies",
+        "b2-town",
+        "b2-recycling"
+      ],
+      "chapterCount": 14,
+      "targetCount": 28,
+      "itemCount": 28,
+      "modeCounts": {
+        "recognition": 14,
+        "production": 14
+      },
+      "items": [
+        {
+          "id": "course-milestone-mixed-b1-introductions-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-introductions-cajtier"
+          ],
+          "prompt": "True or false: “ċajtier” means “funny / playful” in this chapter.",
+          "answer": false,
+          "explanation": "ċajtier means “playful / funny (masculine)”.",
+          "reviewCard": {
+            "maltese": "ċajtier",
+            "english": "playful / funny (masculine)"
+          },
+          "sourceAssessmentId": "b1-introductions-cajtier-recognition-true-false",
+          "sourceChapterId": "b1-introductions"
+        },
+        {
+          "id": "course-milestone-mixed-b1-introductions-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-introductions-cajtiera"
+          ],
+          "prompt": "Complete the Maltese sentence: “Marija hija _____.” (Marija is funny.)",
+          "answer": "ċajtiera",
+          "explanation": "The complete sentence is “Marija hija ċajtiera.”",
+          "reviewCard": {
+            "maltese": "ċajtiera",
+            "english": "funny / playful",
+            "example": "Marija hija ċajtiera."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ċajtiera"
+          ],
+          "sourceAssessmentId": "b1-introductions-cajtiera-production",
+          "sourceChapterId": "b1-introductions"
+        },
+        {
+          "id": "course-milestone-mixed-b1-residence-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-residence-bil-kowc"
+          ],
+          "prompt": "What is the lesson meaning of “bil-kowċ”?",
+          "choices": [
+            "shop",
+            "by coach",
+            "school"
+          ],
+          "answer": "by coach",
+          "explanation": "bil-kowċ means “by coach” in this chapter.",
+          "reviewCard": {
+            "maltese": "bil-kowċ",
+            "english": "by coach"
+          },
+          "sourceAssessmentId": "b1-residence-bil-kowc-recognition",
+          "sourceChapterId": "b1-residence"
+        },
+        {
+          "id": "course-milestone-mixed-b1-residence-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-residence-bil-mixi"
+          ],
+          "prompt": "Complete the Maltese sentence: “Immur ix-xogħol _____.” (I go to work on foot.)",
+          "answer": "bil-mixi",
+          "explanation": "The complete sentence is “Immur ix-xogħol bil-mixi.”",
+          "reviewCard": {
+            "maltese": "bil-mixi",
+            "english": "on foot",
+            "example": "Immur ix-xogħol bil-mixi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "bil-mixi"
+          ],
+          "sourceAssessmentId": "b1-residence-bil-mixi-production",
+          "sourceChapterId": "b1-residence"
+        },
+        {
+          "id": "course-milestone-mixed-b1-school-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-school-glekk"
+          ],
+          "prompt": "What is the lesson meaning of “ġlekk”?",
+          "choices": [
+            "shoe",
+            "jacket",
+            "trousers"
+          ],
+          "answer": "jacket",
+          "explanation": "ġlekk means “jacket” in this chapter.",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket"
+          },
+          "sourceAssessmentId": "b1-school-glekk-recognition",
+          "sourceChapterId": "b1-school"
+        },
+        {
+          "id": "course-milestone-mixed-b1-school-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-school-gnien"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The garden is in the building.)",
+          "answer": "ġnien",
+          "explanation": "The complete sentence is “Hemm ġnien fil-bini.”",
+          "reviewCard": {
+            "maltese": "ġnien",
+            "english": "garden",
+            "example": "Hemm ġnien fil-bini."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ġnien"
+          ],
+          "sourceAssessmentId": "b1-school-gnien-production",
+          "sourceChapterId": "b1-school"
+        },
+        {
+          "id": "course-milestone-mixed-b1-animals-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-animals-fellus"
+          ],
+          "prompt": "True or false: “fellus” means “cow” in this chapter.",
+          "answer": false,
+          "explanation": "fellus means “chick”.",
+          "reviewCard": {
+            "maltese": "fellus",
+            "english": "chick"
+          },
+          "sourceAssessmentId": "b1-animals-fellus-recognition-true-false",
+          "sourceChapterId": "b1-animals"
+        },
+        {
+          "id": "course-milestone-mixed-b1-animals-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-animals-fenek"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the rabbit in the garden.)",
+          "answer": "fenek",
+          "explanation": "The complete sentence is “Nara fenek fil-ġnien.”",
+          "reviewCard": {
+            "maltese": "fenek",
+            "english": "rabbit",
+            "example": "Nara fenek fil-ġnien."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "fenek"
+          ],
+          "sourceAssessmentId": "b1-animals-fenek-production",
+          "sourceChapterId": "b1-animals"
+        },
+        {
+          "id": "course-milestone-mixed-b1-colours-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-colours-blu"
+          ],
+          "prompt": "What is the lesson meaning of “blu”?",
+          "choices": [
+            "box",
+            "boxes",
+            "blue"
+          ],
+          "answer": "blue",
+          "explanation": "blu means “blue” in this chapter.",
+          "reviewCard": {
+            "maltese": "blu",
+            "english": "blue"
+          },
+          "sourceAssessmentId": "b1-colours-blu-recognition",
+          "sourceChapterId": "b1-colours"
+        },
+        {
+          "id": "course-milestone-mixed-b1-colours-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-colours-cina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nitkellmu dwar _____.” (We are talking about China.)",
+          "answer": "Ċina",
+          "explanation": "The complete sentence is “Nitkellmu dwar Ċina.”",
+          "reviewCard": {
+            "maltese": "Ċina",
+            "english": "China",
+            "example": "Nitkellmu dwar Ċina."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Ċina"
+          ],
+          "sourceAssessmentId": "b1-colours-cina-production",
+          "sourceChapterId": "b1-colours"
+        },
+        {
+          "id": "course-milestone-mixed-b1-food-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-food-dulliegh"
+          ],
+          "prompt": "True or false: “dulliegħ” means “cake” in this chapter.",
+          "answer": false,
+          "explanation": "dulliegħ means “watermelons”.",
+          "reviewCard": {
+            "maltese": "dulliegħ",
+            "english": "watermelons"
+          },
+          "sourceAssessmentId": "b1-food-dulliegh-recognition-true-false",
+          "sourceChapterId": "b1-food"
+        },
+        {
+          "id": "course-milestone-mixed-b1-food-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-food-dulliegha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the watermelon, please.)",
+          "answer": "dulliegħa",
+          "explanation": "The complete sentence is “Nixtieq dulliegħa, jekk jogħġbok.”",
+          "reviewCard": {
+            "maltese": "dulliegħa",
+            "english": "watermelon -> watermelons",
+            "example": "Nixtieq dulliegħa, jekk jogħġbok."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "dulliegħa"
+          ],
+          "sourceAssessmentId": "b1-food-dulliegha-production",
+          "sourceChapterId": "b1-food"
+        },
+        {
+          "id": "course-milestone-mixed-b1-family-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b1-family-hu"
+          ],
+          "prompt": "True or false: “ħu” means “sister” in this chapter.",
+          "answer": false,
+          "explanation": "ħu means “brother”.",
+          "reviewCard": {
+            "maltese": "ħu",
+            "english": "brother"
+          },
+          "sourceAssessmentId": "b1-family-hu-recognition-true-false",
+          "sourceChapterId": "b1-family"
+        },
+        {
+          "id": "course-milestone-mixed-b1-family-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b1-family-il-gimgha"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-jum huwa _____.” (The day is Friday.)",
+          "answer": "Il-Ġimgħa",
+          "explanation": "The complete sentence is “Il-jum huwa Il-Ġimgħa.”",
+          "reviewCard": {
+            "maltese": "Il-Ġimgħa",
+            "english": "Friday",
+            "example": "Il-jum huwa Il-Ġimgħa."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "Il-Ġimgħa"
+          ],
+          "sourceAssessmentId": "b1-family-il-gimgha-production",
+          "sourceChapterId": "b1-family"
+        },
+        {
+          "id": "course-milestone-mixed-b2-school-bag-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-school-bag-ikkulurita"
+          ],
+          "prompt": "True or false: “ikkulurita” means “clean (masculine)” in this chapter.",
+          "answer": false,
+          "explanation": "ikkulurita means “colourful (feminine)”.",
+          "reviewCard": {
+            "maltese": "ikkulurita",
+            "english": "colourful (feminine)"
+          },
+          "sourceAssessmentId": "b2-school-bag-ikkulurita-recognition-true-false",
+          "sourceChapterId": "b2-school-bag"
+        },
+        {
+          "id": "course-milestone-mixed-b2-school-bag-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-school-bag-ikkuluriti"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are colourful.)",
+          "answer": "ikkuluriti",
+          "explanation": "The complete sentence is “Il-kotba huma ikkuluriti.”",
+          "reviewCard": {
+            "maltese": "ikkuluriti",
+            "english": "colourful (plural)",
+            "example": "Il-kotba huma ikkuluriti."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ikkuluriti"
+          ],
+          "sourceAssessmentId": "b2-school-bag-ikkuluriti-production",
+          "sourceChapterId": "b2-school-bag"
+        },
+        {
+          "id": "course-milestone-mixed-b2-imperative-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-imperative-hamsa"
+          ],
+          "prompt": "What is the lesson meaning of “ħamsa”?",
+          "choices": [
+            "seven",
+            "five",
+            "six"
+          ],
+          "answer": "five",
+          "explanation": "ħamsa means “five” in this chapter.",
+          "reviewCard": {
+            "maltese": "ħamsa",
+            "english": "five"
+          },
+          "sourceAssessmentId": "b2-imperative-hamsa-recognition",
+          "sourceChapterId": "b2-imperative"
+        },
+        {
+          "id": "course-milestone-mixed-b2-imperative-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-imperative-idhlu"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ fil-klassi.” (Enter the classroom, everyone.)",
+          "answer": "idħlu",
+          "explanation": "The complete sentence is “Idħlu fil-klassi.”",
+          "reviewCard": {
+            "maltese": "idħlu",
+            "english": "enter (plural command)",
+            "example": "Idħlu fil-klassi."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "idħlu"
+          ],
+          "sourceAssessmentId": "b2-imperative-idhlu-production",
+          "sourceChapterId": "b2-imperative"
+        },
+        {
+          "id": "course-milestone-mixed-b2-weather-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-rih"
+          ],
+          "prompt": "What is the lesson meaning of “riħ”?",
+          "choices": [
+            "heat / hot weather",
+            "cold",
+            "wind"
+          ],
+          "answer": "wind",
+          "explanation": "riħ means “wind” in this chapter.",
+          "reviewCard": {
+            "maltese": "riħ",
+            "english": "wind"
+          },
+          "sourceAssessmentId": "b2-weather-rih-recognition",
+          "sourceChapterId": "b2-weather"
+        },
+        {
+          "id": "course-milestone-mixed-b2-weather-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-weather-sajf"
+          ],
+          "prompt": "Complete the Maltese sentence: “L-istaġun favorit tiegħi huwa _____.” (My favourite season is summer.)",
+          "answer": "sajf",
+          "explanation": "The complete sentence is “L-istaġun favorit tiegħi huwa sajf.”",
+          "reviewCard": {
+            "maltese": "sajf",
+            "english": "summer",
+            "example": "L-istaġun favorit tiegħi huwa sajf."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "sajf"
+          ],
+          "sourceAssessmentId": "b2-weather-sajf-production",
+          "sourceChapterId": "b2-weather"
+        },
+        {
+          "id": "course-milestone-mixed-b2-clothes-recognition-1",
+          "type": "true-false",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-clothes-glekk"
+          ],
+          "prompt": "True or false: “ġlekk” means “boots” in this chapter.",
+          "answer": false,
+          "explanation": "ġlekk means “jacket”.",
+          "reviewCard": {
+            "maltese": "ġlekk",
+            "english": "jacket"
+          },
+          "sourceAssessmentId": "b2-clothes-glekk-recognition-true-false",
+          "sourceChapterId": "b2-clothes"
+        },
+        {
+          "id": "course-milestone-mixed-b2-clothes-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-clothes-hdax"
+          ],
+          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is eleven.)",
+          "answer": "ħdax",
+          "explanation": "The complete sentence is “In-numru huwa ħdax.”",
+          "reviewCard": {
+            "maltese": "ħdax",
+            "english": "eleven",
+            "example": "In-numru huwa ħdax."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "ħdax"
+          ],
+          "sourceAssessmentId": "b2-clothes-hdax-production",
+          "sourceChapterId": "b2-clothes"
+        },
+        {
+          "id": "course-milestone-mixed-b2-hobbies-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-hobbies-se-jghumu"
+          ],
+          "prompt": "What is the lesson meaning of “se jgħumu”?",
+          "choices": [
+            "I will eat",
+            "they will swim",
+            "we will go out"
+          ],
+          "answer": "they will swim",
+          "explanation": "se jgħumu means “they will swim” in this chapter.",
+          "reviewCard": {
+            "maltese": "se jgħumu",
+            "english": "they will swim"
+          },
+          "sourceAssessmentId": "b2-hobbies-se-jghumu-recognition",
+          "sourceChapterId": "b2-hobbies"
+        },
+        {
+          "id": "course-milestone-mixed-b2-hobbies-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-hobbies-se-mmur"
+          ],
+          "prompt": "Complete the Maltese sentence: “_____ għada.” (I will go tomorrow.)",
+          "answer": "se mmur",
+          "explanation": "The complete sentence is “Se mmur għada.”",
+          "reviewCard": {
+            "maltese": "se mmur",
+            "english": "I will go",
+            "example": "Se mmur għada."
+          },
+          "type": "order-words",
+          "tokens": [
+            "se",
+            "mmur"
+          ],
+          "sourceAssessmentId": "b2-hobbies-se-mmur-production",
+          "sourceChapterId": "b2-hobbies"
+        },
+        {
+          "id": "course-milestone-mixed-b2-town-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-town-lukanda"
+          ],
+          "prompt": "What is the lesson meaning of “lukanda”?",
+          "choices": [
+            "hotel",
+            "address",
+            "Cross the road"
+          ],
+          "answer": "hotel",
+          "explanation": "lukanda means “hotel” in this chapter.",
+          "reviewCard": {
+            "maltese": "lukanda",
+            "english": "hotel"
+          },
+          "sourceAssessmentId": "b2-town-lukanda-recognition",
+          "sourceChapterId": "b2-town"
+        },
+        {
+          "id": "course-milestone-mixed-b2-town-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-town-medicina"
+          ],
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The medicine is in the square.)",
+          "answer": "mediċina",
+          "explanation": "The complete sentence is “Hemm mediċina fil-pjazza.”",
+          "reviewCard": {
+            "maltese": "mediċina",
+            "english": "medicine",
+            "example": "Hemm mediċina fil-pjazza."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "mediċina"
+          ],
+          "sourceAssessmentId": "b2-town-medicina-production",
+          "sourceChapterId": "b2-town"
+        },
+        {
+          "id": "course-milestone-mixed-b2-recycling-recognition-1",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-recycling-mahmugin"
+          ],
+          "prompt": "What is the lesson meaning of “maħmuġin”?",
+          "choices": [
+            "full (masculine)",
+            "full",
+            "dirty (plural)"
+          ],
+          "answer": "dirty (plural)",
+          "explanation": "maħmuġin means “dirty (plural)” in this chapter.",
+          "reviewCard": {
+            "maltese": "maħmuġin",
+            "english": "dirty (plural)"
+          },
+          "sourceAssessmentId": "b2-recycling-mahmugin-recognition",
+          "sourceChapterId": "b2-recycling"
+        },
+        {
+          "id": "course-milestone-mixed-b2-recycling-production-2",
+          "assessmentMode": "production",
+          "targetIds": [
+            "b2-recycling-miftuh"
+          ],
+          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is open.)",
+          "answer": "miftuħ",
+          "explanation": "The complete sentence is “Il-kontenitur huwa miftuħ.”",
+          "reviewCard": {
+            "maltese": "miftuħ",
+            "english": "open (masculine)",
+            "example": "Il-kontenitur huwa miftuħ."
+          },
+          "type": "fill-blank",
+          "accepted": [
+            "miftuħ"
+          ],
+          "sourceAssessmentId": "b2-recycling-miftuh-production",
+          "sourceChapterId": "b2-recycling"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Milestone Tests</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <span class="tag">Course assessment</span>
+                <h1>Milestone Tests</h1>
+                <p class="lead">Check recognition and production across complete levels, not only the latest chapter.</p>
+                <div class="pill-row">
+                    <span class="pill"><strong data-exam-items>0</strong>&nbsp;questions</span>
+                    <span class="pill"><strong data-exam-chapters>0</strong>&nbsp;chapters</span>
+                    <span class="pill"><strong data-exam-targets>0</strong>&nbsp;targets</span>
+                </div>
+            </div>
+            <aside class="note">
+                <strong>Balanced recall</strong>
+                <p data-exam-balance>Recognition and production are represented equally.</p>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section course-exam-shell" data-course-exam-root aria-live="polite">
+        <div class="segmented-toggle course-exam-tabs" aria-label="Choose milestone test">
+            <button class="toggle-chip" type="button" data-exam-set="course-milestone-b1" aria-pressed="true">B1</button>
+            <button class="toggle-chip" type="button" data-exam-set="course-milestone-b2" aria-pressed="false">B2</button>
+            <button class="toggle-chip" type="button" data-exam-set="course-milestone-mixed" aria-pressed="false">B1 + B2</button>
+        </div>
+        <div data-course-exam-stage></div>
+        <nav class="course-chapter-nav" aria-label="Course assessment navigation">
+            <a class="action-link" href="./today.html">Today</a>
+            <a class="action-link" href="./course_progress.html">Course progress</a>
+            <a class="action-link" href="./mistakes.html">Mistake journal</a>
+        </nav>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/mistake-store.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/course-exam.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

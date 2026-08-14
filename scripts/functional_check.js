@@ -141,7 +141,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 42, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 43, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -256,6 +256,26 @@ async function main() {
       await page.locator("[data-mistake-correct]").click();
       assert((await page.locator("[data-mistake-open]").textContent()).trim() === "3", "Two correct attempts did not resolve a mistake.");
       assert((await page.locator("[data-mistake-resolved]").textContent()).trim() === "1", "Resolved mistake count is incorrect.");
+    });
+
+    await runTest(context, "milestone tests stay balanced across course chapters", async (page) => {
+      await openCleanPage(page, "course_exam.html");
+      const stage = page.locator("[data-course-exam-stage]");
+      await stage.locator(".exercise-item").first().waitFor();
+      assert(await stage.locator(".exercise-item").count() === 28, "B1 milestone item count is incorrect.");
+      assert((await page.locator("[data-exam-chapters]").textContent()).trim() === "7", "B1 milestone chapter count is incorrect.");
+
+      await page.locator('[data-exam-set="course-milestone-b2"]').click();
+      await page.waitForFunction(() => document.querySelector("[data-course-exam-stage]")?.dataset.exerciseSet === "course-milestone-b2" && document.querySelectorAll("[data-course-exam-stage] .exercise-item").length === 28);
+      await page.locator('[data-exam-set="course-milestone-mixed"]').click();
+      await page.waitForFunction(() => document.querySelector("[data-course-exam-stage]")?.dataset.exerciseSet === "course-milestone-mixed" && document.querySelectorAll("[data-course-exam-stage] .exercise-item").length === 28);
+      assert((await page.locator("[data-exam-chapters]").textContent()).trim() === "14", "Mixed milestone does not cover all chapters.");
+      assert((await page.locator("[data-exam-balance]").textContent()).includes("14 recognition and 14 production"), "Mixed milestone modes are not balanced.");
+      const structure = await page.evaluate(async () => {
+        const data = await fetch("./assets/data/course_milestone_assessments.json").then((response) => response.json());
+        return data.sets.map((set) => ({ chapters: new Set(set.items.map((item) => item.sourceChapterId)).size, modes: set.modeCounts, uniqueIds: new Set(set.items.map((item) => item.id)).size }));
+      });
+      assert(structure.every((set, index) => set.chapters === (index === 2 ? 14 : 7) && set.modes.recognition === set.modes.production && set.uniqueIds === 28), "Generated milestone structure is incomplete.");
     });
 
     await runTest(context, "course runtime loads manifest and one chapter payload", async (page) => {

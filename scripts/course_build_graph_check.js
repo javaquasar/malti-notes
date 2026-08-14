@@ -10,6 +10,10 @@ const payloadBuilder = fs.readFileSync(
   path.join(root, "scripts", "build_course_chapter_payloads.js"),
   "utf8"
 );
+const milestoneBuilder = fs.readFileSync(
+  path.join(root, "scripts", "build_course_milestone_assessments.js"),
+  "utf8"
+);
 
 const forbiddenUpstreamInputs = [
   "course_target_assessments.json",
@@ -23,9 +27,13 @@ if (!payloadBuilder.includes("assessmentIdsByTarget")) {
   errors.push("chapter payload builder must derive assessmentIds downstream");
 }
 
+if (!milestoneBuilder.includes("course_target_assessments.json")) {
+  errors.push("milestone builder must derive cumulative tests from canonical target assessments");
+}
+
 if (errors.length) {
   errors.forEach((error) => console.error(`fail course build graph: ${error}`));
   process.exit(1);
 }
 
-console.log("ok course build graph is bindings -> examples/supplements/assessments -> chapter payloads");
+console.log("ok course build graph is bindings -> examples/supplements/assessments -> chapter payloads/milestones");

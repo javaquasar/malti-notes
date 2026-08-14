@@ -7,6 +7,7 @@ const fullPageVisualPages = [
   "today.html",
   "course_chapter.html?chapter=b1-animals",
   "course_chapter.html?chapter=b2-hobbies",
+  "course_exam.html",
   "environment_recycling.html",
   "hobbies_future.html",
   "introductions_alphabet.html",

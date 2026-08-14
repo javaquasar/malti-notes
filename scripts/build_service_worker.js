@@ -23,6 +23,7 @@ const assets = [
   "./assets/data/search-index.json",
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",
+  "./assets/data/course_milestone_assessments.json",
   "./assets/data/course/manifest.json",
   "./assets/data/course_verb_paradigms.json",
   "./assets/img/favicon-option-speech.svg",

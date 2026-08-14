@@ -584,6 +584,19 @@
   }
 }
 
+.course-exam-shell {
+  display: grid;
+  gap: var(--space-4xl);
+}
+
+.course-exam-tabs {
+  justify-content: center;
+}
+
+.course-exam-tabs .toggle-chip {
+  min-width: 7rem;
+}
+
 .mistake-shell {
   display: grid;
   gap: var(--space-5xl);
