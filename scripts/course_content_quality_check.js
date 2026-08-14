@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, "..");
 const read = (file) => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
 const inventory = read("assets/data/book_coverage_inventory.json");
 const glossData = read("assets/data/course_target_glosses.json");
+const exampleData = read("assets/data/course_target_examples.json");
 const supplements = read("assets/data/course_supplemental_content.json");
 const assessments = read("assets/data/course_target_assessments.json");
 const errors = [];
@@ -18,10 +19,14 @@ const requirements = inventory.chapters.flatMap((chapter) => chapter.targets.map
 })));
 const expectedKeys = new Set(requirements.map(({ key }) => key));
 const glossKeys = Object.keys(glossData.glosses || {});
+const exampleKeys = Object.keys(exampleData.examples || {});
 
 if (glossData.schemaVersion !== 2) fail("course_target_glosses schemaVersion must be 2");
 if (glossKeys.length !== expectedKeys.size) fail(`expected ${expectedKeys.size} explicit glosses, found ${glossKeys.length}`);
 glossKeys.filter((key) => !expectedKeys.has(key)).forEach((key) => fail(`unexpected gloss key: ${key}`));
+if (exampleData.schemaVersion !== 1) fail("course_target_examples schemaVersion must be 1");
+if (exampleKeys.length !== expectedKeys.size) fail(`expected ${expectedKeys.size} contextual examples, found ${exampleKeys.length}`);
+exampleKeys.filter((key) => !expectedKeys.has(key)).forEach((key) => fail(`unexpected example key: ${key}`));
 
 requirements.forEach(({ key, target }) => {
   const gloss = glossData.glosses[key];
@@ -32,6 +37,12 @@ requirements.forEach(({ key, target }) => {
   if (normalize(gloss) === normalize(target) && !allowedSame.has(normalize(target))) {
     fail(`${key} repeats the Maltese target as its English gloss`);
   }
+  const example = exampleData.examples[key];
+  if (!example) return;
+  if (!normalize(example.maltese).includes(normalize(target))) fail(`${key} example does not contain its target`);
+  if (normalize(example.maltese) === normalize(target)) fail(`${key} example repeats only its target`);
+  if (!normalize(example.english)) fail(`${key} example has no English translation`);
+  if (example.review !== "reviewed-template") fail(`${key} example is not marked reviewed`);
 });
 
 const supplementItems = new Map();
@@ -40,6 +51,8 @@ const supplementItems = new Map();
   supplementItems.set(key, item);
   if (item.glossReview !== "reviewed") fail(`${key} is not marked as reviewed`);
   if (item.english !== glossData.glosses[key]) fail(`${key} is out of sync with reviewed glosses`);
+  if (item.example !== exampleData.examples[key]?.maltese) fail(`${key} is out of sync with contextual examples`);
+  if (item.exampleTranslation !== exampleData.examples[key]?.english) fail(`${key} has a stale example translation`);
 }));
 if (supplementItems.size !== expectedKeys.size) fail(`expected ${expectedKeys.size} supplemental cards, found ${supplementItems.size}`);
 

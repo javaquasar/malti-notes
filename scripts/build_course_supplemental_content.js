@@ -7,6 +7,7 @@ const bindings = readJson("assets/data/course_target_bindings.json");
 const course = readJson("assets/data/course_path.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const glosses = readJson("assets/data/course_target_glosses.json").glosses;
+const examples = readJson("assets/data/course_target_examples.json").examples;
 const baselineMissingKeys = new Set(inventory.chapters.flatMap((chapter) => (
   chapter.baselineMissing.map((requirement) => `${chapter.courseChapterId}::${requirement}`)
 )));
@@ -27,12 +28,16 @@ function targetItem(target) {
   const key = `${target.chapterId}::${target.sourceRequirement}`;
   const english = glosses[key] || numberGlosses.get(target.sourceRequirement.toLocaleLowerCase("mt"));
   if (!english) throw new Error(`Missing reviewed gloss for ${key}`);
+  const context = examples[key];
+  if (!context) throw new Error(`Missing contextual example for ${key}`);
   return {
     id: target.id,
     maltese: target.sourceRequirement,
     english,
-    example: target.sourceRequirement,
-    exampleTranslation: english,
+    example: context.maltese,
+    exampleTranslation: context.english,
+    examplePattern: context.pattern,
+    exampleReview: context.review,
     glossReview: "reviewed",
     sourceStatus: baselineMissingKeys.has(key)
       ? "added-from-book"

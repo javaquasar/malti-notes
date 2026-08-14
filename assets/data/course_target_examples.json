@@ -1,0 +1,2782 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": [
+    "assets/data/course_target_bindings.json",
+    "assets/data/course_target_glosses.json"
+  ],
+  "description": "Short authored contexts for every audited B1/B2 course target.",
+  "examples": {
+    "b1-introductions::annimal": {
+      "maltese": "Nara annimal fl-istampa.",
+      "english": "I see the animal in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::belt": {
+      "maltese": "Nara belt fl-istampa.",
+      "english": "I see the city in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ċertifikat": {
+      "maltese": "Nara ċertifikat fl-istampa.",
+      "english": "I see the certificate in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::dentist": {
+      "maltese": "Nara dentist fl-istampa.",
+      "english": "I see the dentist in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::erbgħa": {
+      "maltese": "In-numru tat-tweġiba huwa erbgħa.",
+      "english": "The answer number is four.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::fenek": {
+      "maltese": "Nara fenek fl-istampa.",
+      "english": "I see the rabbit in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ġemel": {
+      "maltese": "Nara ġemel fl-istampa.",
+      "english": "I see the camel in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::gazzetta": {
+      "maltese": "Nara gazzetta fl-istampa.",
+      "english": "I see the newspaper in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::għajn": {
+      "maltese": "Nara għajn fl-istampa.",
+      "english": "I see the eye in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::għajnejn": {
+      "maltese": "Nara għajnejn fl-istampa.",
+      "english": "I see the eyes in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::huma": {
+      "maltese": "Huma studenti.",
+      "english": "They are students.",
+      "pattern": "pronoun",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ħabel": {
+      "maltese": "Nara ħabel fl-istampa.",
+      "english": "I see the rope in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ilma": {
+      "maltese": "Nara ilma fl-istampa.",
+      "english": "I see the water in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ieħor": {
+      "maltese": "Nixtieq ktieb ieħor.",
+      "english": "I would like another book.",
+      "pattern": "adjective",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::jott": {
+      "maltese": "Nara jott fl-istampa.",
+      "english": "I see the yacht in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::kafè": {
+      "maltese": "Nara kafè fl-istampa.",
+      "english": "I see the coffee in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::lemin": {
+      "maltese": "Dawwar lejn il-lemin.",
+      "english": "Turn to the right.",
+      "pattern": "direction",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::meraq": {
+      "maltese": "Nara meraq fl-istampa.",
+      "english": "I see the juice in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::negozju": {
+      "maltese": "Nara negozju fl-istampa.",
+      "english": "I see the shop in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ors": {
+      "maltese": "Nara ors fl-istampa.",
+      "english": "I see the bear in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::pedala": {
+      "maltese": "Nara pedala fl-istampa.",
+      "english": "I see the pedal in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::qawsalla": {
+      "maltese": "Nara qawsalla fl-istampa.",
+      "english": "I see the rainbow in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::rebbiegħa": {
+      "maltese": "Nara rebbiegħa fl-istampa.",
+      "english": "I see the spring in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::serp": {
+      "maltese": "Nara serp fl-istampa.",
+      "english": "I see the snake in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::teżor": {
+      "maltese": "Nara teżor fl-istampa.",
+      "english": "I see the treasure in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::uviera": {
+      "maltese": "Nara uviera fl-istampa.",
+      "english": "I see the egg cup in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::verità": {
+      "maltese": "Din hija l-verità.",
+      "english": "This is the truth.",
+      "pattern": "abstract-noun",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::waqfa": {
+      "maltese": "Nieħu waqfa qasira.",
+      "english": "I take a short break.",
+      "pattern": "activity",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::xellug": {
+      "maltese": "Dawwar lejn il-xellug.",
+      "english": "Turn to the left.",
+      "pattern": "direction",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::żiemel": {
+      "maltese": "Nara żiemel fl-istampa.",
+      "english": "I see the horse in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ziju": {
+      "maltese": "Nara ziju fl-istampa.",
+      "english": "I see the uncle in the picture.",
+      "pattern": "picture-object",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ferħan": {
+      "maltese": "Mario huwa ferħan.",
+      "english": "Mario is happy.",
+      "pattern": "person-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ferħana": {
+      "maltese": "Marija hija ferħana.",
+      "english": "Marija is happy.",
+      "pattern": "person-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::sportiv": {
+      "maltese": "Mario huwa sportiv.",
+      "english": "Mario is sporty.",
+      "pattern": "person-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::sportiva": {
+      "maltese": "Marija hija sportiva.",
+      "english": "Marija is sporty.",
+      "pattern": "person-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ċajtier": {
+      "maltese": "Mario huwa ċajtier.",
+      "english": "Mario is playful.",
+      "pattern": "person-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-introductions::ċajtiera": {
+      "maltese": "Marija hija ċajtiera.",
+      "english": "Marija is funny.",
+      "pattern": "person-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-residence::rota": {
+      "maltese": "Nara rota fit-triq.",
+      "english": "I see the bicycle in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::trakk": {
+      "maltese": "Nara trakk fit-triq.",
+      "english": "I see the truck in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::ħelikopter": {
+      "maltese": "Nara ħelikopter fit-triq.",
+      "english": "I see the helicopter in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::vann": {
+      "maltese": "Nara vann fit-triq.",
+      "english": "I see the van in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::karozza": {
+      "maltese": "Nara karozza fit-triq.",
+      "english": "I see the car in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::karozza tal-linja": {
+      "maltese": "Nara karozza tal-linja fit-triq.",
+      "english": "I see the bus in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::mutur": {
+      "maltese": "Nara mutur fit-triq.",
+      "english": "I see the motorcycle in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::vapur": {
+      "maltese": "Nara vapur fit-triq.",
+      "english": "I see the ship in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bil-mixi": {
+      "maltese": "Immur ix-xogħol bil-mixi.",
+      "english": "I go to work on foot.",
+      "pattern": "transport-method",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bil-mutur": {
+      "maltese": "Immur ix-xogħol bil-mutur.",
+      "english": "I go to work by motorcycle.",
+      "pattern": "transport-method",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bir-rota": {
+      "maltese": "Immur ix-xogħol bir-rota.",
+      "english": "I go to work by bicycle.",
+      "pattern": "transport-method",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bil-vann": {
+      "maltese": "Immur ix-xogħol bil-vann.",
+      "english": "I go to work by van.",
+      "pattern": "transport-method",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bil-karozza": {
+      "maltese": "Immur ix-xogħol bil-karozza.",
+      "english": "I go to work by car.",
+      "pattern": "transport-method",
+      "review": "reviewed-template"
+    },
+    "b1-residence::kowċ": {
+      "maltese": "Nara kowċ fit-triq.",
+      "english": "I see the coach in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bil-kowċ": {
+      "maltese": "Immur ix-xogħol bil-kowċ.",
+      "english": "I go to work by coach.",
+      "pattern": "transport-method",
+      "review": "reviewed-template"
+    },
+    "b1-residence::skola": {
+      "maltese": "Hemm skola qrib id-dar.",
+      "english": "The school is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-residence::ħanut": {
+      "maltese": "Hemm ħanut qrib id-dar.",
+      "english": "The shop is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-residence::dar": {
+      "maltese": "Hemm dar qrib id-dar.",
+      "english": "The house is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-residence::bankina": {
+      "maltese": "Hemm bankina qrib id-dar.",
+      "english": "The pavement is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-residence::siġra": {
+      "maltese": "Hemm siġra qrib id-dar.",
+      "english": "The tree is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-residence::sptar": {
+      "maltese": "Hemm sptar qrib id-dar.",
+      "english": "The hospital is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-residence::ajruplan": {
+      "maltese": "Nara ajruplan fit-triq.",
+      "english": "I see the airplane in the street.",
+      "pattern": "transport-object",
+      "review": "reviewed-template"
+    },
+    "b1-residence::knisja": {
+      "maltese": "Hemm knisja qrib id-dar.",
+      "english": "The church is near the house.",
+      "pattern": "place-near-home",
+      "review": "reviewed-template"
+    },
+    "b1-school::kuritur": {
+      "maltese": "Hemm kuritur fil-bini.",
+      "english": "The corridor is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::laboratorju": {
+      "maltese": "Hemm laboratorju fil-bini.",
+      "english": "The laboratory is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::librerija": {
+      "maltese": "Hemm librerija fil-bini.",
+      "english": "The library is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::klassi": {
+      "maltese": "Hemm klassi fil-bini.",
+      "english": "The class is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::klinika": {
+      "maltese": "Hemm klinika fil-bini.",
+      "english": "The clinic is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::bitħa": {
+      "maltese": "Hemm bitħa fil-bini.",
+      "english": "The school yard is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::sala": {
+      "maltese": "Hemm sala fil-bini.",
+      "english": "The hall is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::uffiċċju": {
+      "maltese": "Hemm uffiċċju fil-bini.",
+      "english": "The office is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::tojlit": {
+      "maltese": "Hemm tojlit fil-bini.",
+      "english": "The toilet is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::ċoff": {
+      "maltese": "Nilbes ċoff l-iskola.",
+      "english": "I wear bow at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::qmis": {
+      "maltese": "Nilbes qmis l-iskola.",
+      "english": "I wear shirt at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::dublett": {
+      "maltese": "Nilbes dublett l-iskola.",
+      "english": "I wear skirt at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::ingravata": {
+      "maltese": "Nilbes ingravata l-iskola.",
+      "english": "I wear tie at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::kalzetta": {
+      "maltese": "Nilbes kalzetta l-iskola.",
+      "english": "I wear sock at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::ġlekk": {
+      "maltese": "Nilbes ġlekk l-iskola.",
+      "english": "I wear jacket at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::qalziet": {
+      "maltese": "Nilbes qalziet l-iskola.",
+      "english": "I wear trousers at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::żarbuna": {
+      "maltese": "Nilbes żarbuna l-iskola.",
+      "english": "I wear shoe at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::uniformi": {
+      "maltese": "Nilbes uniformi l-iskola.",
+      "english": "I wear uniform at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::ilbies": {
+      "maltese": "Nilbes ilbies l-iskola.",
+      "english": "I wear clothing at school.",
+      "pattern": "school-clothing",
+      "review": "reviewed-template"
+    },
+    "b1-school::kamra tas-sodda": {
+      "maltese": "Hemm kamra tas-sodda fil-bini.",
+      "english": "The bedroom is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::kamra tal-banju": {
+      "maltese": "Hemm kamra tal-banju fil-bini.",
+      "english": "The bathroom is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::kamra tal-ikel": {
+      "maltese": "Hemm kamra tal-ikel fil-bini.",
+      "english": "The dining room is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::ġnien": {
+      "maltese": "Hemm ġnien fil-bini.",
+      "english": "The garden is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::kċina": {
+      "maltese": "Hemm kċina fil-bini.",
+      "english": "The kitchen is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::salott": {
+      "maltese": "Hemm salott fil-bini.",
+      "english": "The living room is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-school::garaxx": {
+      "maltese": "Hemm garaxx fil-bini.",
+      "english": "The garage is in the building.",
+      "pattern": "school-place",
+      "review": "reviewed-template"
+    },
+    "b1-animals::kelb": {
+      "maltese": "Nara kelb fil-ġnien.",
+      "english": "I see the dog in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::kelba": {
+      "maltese": "Nara kelba fil-ġnien.",
+      "english": "I see the female dog in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::qattus": {
+      "maltese": "Nara qattus fil-ġnien.",
+      "english": "I see the cat in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::qattusa": {
+      "maltese": "Nara qattusa fil-ġnien.",
+      "english": "I see the female cat in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::għasfur": {
+      "maltese": "Nara għasfur fil-ġnien.",
+      "english": "I see the bird in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::fenek": {
+      "maltese": "Nara fenek fil-ġnien.",
+      "english": "I see the rabbit in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::pappagall": {
+      "maltese": "Nara pappagall fil-ġnien.",
+      "english": "I see the parrot in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::fekruna": {
+      "maltese": "Nara fekruna fil-ġnien.",
+      "english": "I see the turtle in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::tiġieġa": {
+      "maltese": "Nara tiġieġa fil-ġnien.",
+      "english": "I see the hen in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::fellus": {
+      "maltese": "Nara fellus fil-ġnien.",
+      "english": "I see the chick in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::baqra": {
+      "maltese": "Nara baqra fil-ġnien.",
+      "english": "I see the cow in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::nagħġa": {
+      "maltese": "Nara nagħġa fil-ġnien.",
+      "english": "I see the sheep in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::ħmara": {
+      "maltese": "Nara ħmara fil-ġnien.",
+      "english": "I see the female donkey in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::ġurdien": {
+      "maltese": "Nara ġurdien fil-ġnien.",
+      "english": "I see the mouse in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::ħanżir": {
+      "maltese": "Nara ħanżir fil-ġnien.",
+      "english": "I see the pig in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::żiemel": {
+      "maltese": "Nara żiemel fil-ġnien.",
+      "english": "I see the horse in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::papra": {
+      "maltese": "Nara papra fil-ġnien.",
+      "english": "I see the duck in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::emu": {
+      "maltese": "Nara emu fil-ġnien.",
+      "english": "I see the emu in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::brama": {
+      "maltese": "Nara brama fil-ġnien.",
+      "english": "I see the bream in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::xadina": {
+      "maltese": "Nara xadina fil-ġnien.",
+      "english": "I see the monkey in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::kamaleont": {
+      "maltese": "Nara kamaleont fil-ġnien.",
+      "english": "I see the chameleon in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::lampuka": {
+      "maltese": "Nara lampuka fil-ġnien.",
+      "english": "I see the dolphinfish in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::nemla": {
+      "maltese": "Nara nemla fil-ġnien.",
+      "english": "I see the ant in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::serp": {
+      "maltese": "Nara serp fil-ġnien.",
+      "english": "I see the snake in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::denfil": {
+      "maltese": "Nara denfil fil-ġnien.",
+      "english": "I see the dolphin in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::ġemel": {
+      "maltese": "Nara ġemel fil-ġnien.",
+      "english": "I see the camel in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-animals::iljunfant": {
+      "maltese": "Nara iljunfant fil-ġnien.",
+      "english": "I see the elephant in the garden.",
+      "pattern": "animal-in-garden",
+      "review": "reviewed-template"
+    },
+    "b1-colours::abjad": {
+      "maltese": "Il-flokk huwa abjad.",
+      "english": "The shirt is white.",
+      "pattern": "colour-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::bajda": {
+      "maltese": "Il-kaxxa hija bajda.",
+      "english": "The box is white.",
+      "pattern": "colour-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::aħmar": {
+      "maltese": "Il-flokk huwa aħmar.",
+      "english": "The shirt is red.",
+      "pattern": "colour-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::ħamra": {
+      "maltese": "Il-kaxxa hija ħamra.",
+      "english": "The box is red.",
+      "pattern": "colour-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::isfar": {
+      "maltese": "Il-flokk huwa isfar.",
+      "english": "The shirt is yellow.",
+      "pattern": "colour-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::safra": {
+      "maltese": "Il-kaxxa hija safra.",
+      "english": "The box is yellow.",
+      "pattern": "colour-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::aħdar": {
+      "maltese": "Il-flokk huwa aħdar.",
+      "english": "The shirt is green.",
+      "pattern": "colour-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::ħadra": {
+      "maltese": "Il-kaxxa hija ħadra.",
+      "english": "The box is green.",
+      "pattern": "colour-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::griż": {
+      "maltese": "Il-flokk huwa griż.",
+      "english": "The shirt is grey.",
+      "pattern": "colour-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::griża": {
+      "maltese": "Il-kaxxa hija griża.",
+      "english": "The box is grey.",
+      "pattern": "colour-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::iswed": {
+      "maltese": "Il-flokk huwa iswed.",
+      "english": "The shirt is black.",
+      "pattern": "colour-masculine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::sewda": {
+      "maltese": "Il-kaxxa hija sewda.",
+      "english": "The box is black.",
+      "pattern": "colour-feminine",
+      "review": "reviewed-template"
+    },
+    "b1-colours::kannella": {
+      "maltese": "Il-basket huwa kannella.",
+      "english": "The bag is brown.",
+      "pattern": "colour-invariant",
+      "review": "reviewed-template"
+    },
+    "b1-colours::oranġjo": {
+      "maltese": "Il-basket huwa oranġjo.",
+      "english": "The bag is orange.",
+      "pattern": "colour-invariant",
+      "review": "reviewed-template"
+    },
+    "b1-colours::roża": {
+      "maltese": "Il-basket huwa roża.",
+      "english": "The bag is pink.",
+      "pattern": "colour-invariant",
+      "review": "reviewed-template"
+    },
+    "b1-colours::vjola": {
+      "maltese": "Il-basket huwa vjola.",
+      "english": "The bag is purple.",
+      "pattern": "colour-invariant",
+      "review": "reviewed-template"
+    },
+    "b1-colours::blu": {
+      "maltese": "Il-basket huwa blu.",
+      "english": "The bag is blue.",
+      "pattern": "colour-invariant",
+      "review": "reviewed-template"
+    },
+    "b1-colours::ċirku": {
+      "maltese": "Nara ċirku fuq il-karta.",
+      "english": "I see the circle on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::ċrieki": {
+      "maltese": "Nara ċrieki fuq il-karta.",
+      "english": "I see the circles on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::kaxxa": {
+      "maltese": "Nara kaxxa fuq il-karta.",
+      "english": "I see the box on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::kaxxi": {
+      "maltese": "Nara kaxxi fuq il-karta.",
+      "english": "I see the boxes on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::trijanglu": {
+      "maltese": "Nara trijanglu fuq il-karta.",
+      "english": "I see the triangle on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::trijangli": {
+      "maltese": "Nara trijangli fuq il-karta.",
+      "english": "I see the triangles on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::strixxa": {
+      "maltese": "Nara strixxa fuq il-karta.",
+      "english": "I see the stripe on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::strixxi": {
+      "maltese": "Nara strixxi fuq il-karta.",
+      "english": "I see the stripes on the paper.",
+      "pattern": "shape-on-paper",
+      "review": "reviewed-template"
+    },
+    "b1-colours::bandiera": {
+      "maltese": "Din hija bandiera.",
+      "english": "This is a flag.",
+      "pattern": "shape-object",
+      "review": "reviewed-template"
+    },
+    "b1-colours::pajjiż": {
+      "maltese": "Dan huwa pajjiż żgħir.",
+      "english": "This is a small country.",
+      "pattern": "shape-object",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Malta": {
+      "maltese": "Nitkellmu dwar Malta.",
+      "english": "We are talking about Malta.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Italja": {
+      "maltese": "Nitkellmu dwar Italja.",
+      "english": "We are talking about Italy.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Ingilterra": {
+      "maltese": "Nitkellmu dwar Ingilterra.",
+      "english": "We are talking about England.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Ġermanja": {
+      "maltese": "Nitkellmu dwar Ġermanja.",
+      "english": "We are talking about Germany.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Spanja": {
+      "maltese": "Nitkellmu dwar Spanja.",
+      "english": "We are talking about Spain.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Franza": {
+      "maltese": "Nitkellmu dwar Franza.",
+      "english": "We are talking about France.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Pakistan": {
+      "maltese": "Nitkellmu dwar Pakistan.",
+      "english": "We are talking about Pakistan.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Ukraina": {
+      "maltese": "Nitkellmu dwar Ukraina.",
+      "english": "We are talking about Ukraine.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Turkija": {
+      "maltese": "Nitkellmu dwar Turkija.",
+      "english": "We are talking about Turkey.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Portugall": {
+      "maltese": "Nitkellmu dwar Portugall.",
+      "english": "We are talking about Portugal.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Filippini": {
+      "maltese": "Nitkellmu dwar Filippini.",
+      "english": "We are talking about the Philippines.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Indja": {
+      "maltese": "Nitkellmu dwar Indja.",
+      "english": "We are talking about India.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Ġappun": {
+      "maltese": "Nitkellmu dwar Ġappun.",
+      "english": "We are talking about Japan.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Libja": {
+      "maltese": "Nitkellmu dwar Libja.",
+      "english": "We are talking about Libya.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Awstralja": {
+      "maltese": "Nitkellmu dwar Awstralja.",
+      "english": "We are talking about Australia.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-colours::Ċina": {
+      "maltese": "Nitkellmu dwar Ċina.",
+      "english": "We are talking about China.",
+      "pattern": "country",
+      "review": "reviewed-template"
+    },
+    "b1-food::te": {
+      "maltese": "Nixtieq te, jekk jogħġbok.",
+      "english": "I would like the tea, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::spagetti": {
+      "maltese": "Nixtieq spagetti, jekk jogħġbok.",
+      "english": "I would like the spaghetti, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::pizza": {
+      "maltese": "Nixtieq pizza, jekk jogħġbok.",
+      "english": "I would like the pizza, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::kafè": {
+      "maltese": "Nixtieq kafè, jekk jogħġbok.",
+      "english": "I would like the coffee, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::kuskus": {
+      "maltese": "Nixtieq kuskus, jekk jogħġbok.",
+      "english": "I would like the couscous, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ilma": {
+      "maltese": "Nixtieq ilma, jekk jogħġbok.",
+      "english": "I would like the water, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ross": {
+      "maltese": "Nixtieq ross, jekk jogħġbok.",
+      "english": "I would like the rice, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::paella": {
+      "maltese": "Nixtieq paella, jekk jogħġbok.",
+      "english": "I would like the paella, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::luminata": {
+      "maltese": "Nixtieq luminata, jekk jogħġbok.",
+      "english": "I would like the lemonade, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::meraq tal-frott": {
+      "maltese": "Nixtieq meraq tal-frott, jekk jogħġbok.",
+      "english": "I would like the fruit juice, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::żejt": {
+      "maltese": "Nixtieq żejt, jekk jogħġbok.",
+      "english": "I would like the oil, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ħelu": {
+      "maltese": "Nixtieq ħelu, jekk jogħġbok.",
+      "english": "I would like the sweets, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::mandolina": {
+      "maltese": "Nixtieq mandolina, jekk jogħġbok.",
+      "english": "I would like the mandarin, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::għanqud": {
+      "maltese": "Nixtieq għanqud, jekk jogħġbok.",
+      "english": "I would like the bunch, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::għeneb": {
+      "maltese": "Nixtieq għeneb, jekk jogħġbok.",
+      "english": "I would like the grapes, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::dulliegħa": {
+      "maltese": "Nixtieq dulliegħa, jekk jogħġbok.",
+      "english": "I would like the watermelon, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::bambinella": {
+      "maltese": "Nixtieq bambinella, jekk jogħġbok.",
+      "english": "I would like the small Maltese pear, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::bajtra tax-xewk": {
+      "maltese": "Nixtieq bajtra tax-xewk, jekk jogħġbok.",
+      "english": "I would like the prickly pear, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::bettieħa": {
+      "maltese": "Nixtieq bettieħa, jekk jogħġbok.",
+      "english": "I would like the melon, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ċirasa": {
+      "maltese": "Nixtieq ċirasa, jekk jogħġbok.",
+      "english": "I would like the cherry, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::tina": {
+      "maltese": "Nixtieq tina, jekk jogħġbok.",
+      "english": "I would like the figs, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::tuffieħa": {
+      "maltese": "Nixtieq tuffieħa, jekk jogħġbok.",
+      "english": "I would like the apple, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::kiwi": {
+      "maltese": "Nixtieq kiwi, jekk jogħġbok.",
+      "english": "I would like the kiwi, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::banana": {
+      "maltese": "Nixtieq banana, jekk jogħġbok.",
+      "english": "I would like the banana, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::lumi": {
+      "maltese": "Nixtieq lumi, jekk jogħġbok.",
+      "english": "I would like the lemons, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::lumija": {
+      "maltese": "Nixtieq lumija, jekk jogħġbok.",
+      "english": "I would like the lemon, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::laħam": {
+      "maltese": "Nixtieq laħam, jekk jogħġbok.",
+      "english": "I would like the meat, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::lanġas": {
+      "maltese": "Nixtieq lanġas, jekk jogħġbok.",
+      "english": "I would like the pears, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::lanġasa": {
+      "maltese": "Nixtieq lanġasa, jekk jogħġbok.",
+      "english": "I would like the pear, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::larinġ": {
+      "maltese": "Nixtieq larinġ, jekk jogħġbok.",
+      "english": "I would like the oranges, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::larinġa": {
+      "maltese": "Nixtieq larinġa, jekk jogħġbok.",
+      "english": "I would like the orange, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::frawli": {
+      "maltese": "Nixtieq frawli, jekk jogħġbok.",
+      "english": "I would like the strawberry, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::frawla": {
+      "maltese": "Nixtieq frawla, jekk jogħġbok.",
+      "english": "I would like the strawberry, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::dulliegħ": {
+      "maltese": "Nixtieq dulliegħ, jekk jogħġbok.",
+      "english": "I would like the watermelons, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::bettieħ": {
+      "maltese": "Nixtieq bettieħ, jekk jogħġbok.",
+      "english": "I would like the melon, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::tuffieħ": {
+      "maltese": "Nixtieq tuffieħ, jekk jogħġbok.",
+      "english": "I would like the apples, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::kejk": {
+      "maltese": "Nixtieq kejk, jekk jogħġbok.",
+      "english": "I would like the cake, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::kejkijiet": {
+      "maltese": "Nixtieq kejkijiet, jekk jogħġbok.",
+      "english": "I would like the cakes, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::insalata": {
+      "maltese": "Nixtieq insalata, jekk jogħġbok.",
+      "english": "I would like the salad, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::insalati": {
+      "maltese": "Nixtieq insalati, jekk jogħġbok.",
+      "english": "I would like the salads, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::pastizzi": {
+      "maltese": "Nixtieq pastizzi, jekk jogħġbok.",
+      "english": "I would like the pastizzi, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::pasti": {
+      "maltese": "Nixtieq pasti, jekk jogħġbok.",
+      "english": "I would like the pastries, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ġelat": {
+      "maltese": "Nixtieq ġelat, jekk jogħġbok.",
+      "english": "I would like the ice cream, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::għadma": {
+      "maltese": "Nixtieq għadma, jekk jogħġbok.",
+      "english": "I would like the bone, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ħut": {
+      "maltese": "Nixtieq ħut, jekk jogħġbok.",
+      "english": "I would like the fish, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-food::ċikkulata": {
+      "maltese": "Nixtieq ċikkulata, jekk jogħġbok.",
+      "english": "I would like the chocolate, please.",
+      "pattern": "food-order",
+      "review": "reviewed-template"
+    },
+    "b1-family::aħwa": {
+      "maltese": "Għandi aħwa fil-familja.",
+      "english": "My family includes the siblings.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::ħu": {
+      "maltese": "Għandi ħu fil-familja.",
+      "english": "My family includes the brother.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::oħt": {
+      "maltese": "Għandi oħt fil-familja.",
+      "english": "My family includes the sister.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::ġenituri": {
+      "maltese": "Għandi ġenituri fil-familja.",
+      "english": "My family includes the parents.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::omm": {
+      "maltese": "Għandi omm fil-familja.",
+      "english": "My family includes the mother.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::missier": {
+      "maltese": "Għandi missier fil-familja.",
+      "english": "My family includes the father.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::nanniet": {
+      "maltese": "Għandi nanniet fil-familja.",
+      "english": "My family includes the grandparents.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::nannu": {
+      "maltese": "Għandi nannu fil-familja.",
+      "english": "My family includes the grandfather.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::nanna": {
+      "maltese": "Għandi nanna fil-familja.",
+      "english": "My family includes the grandmother.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::ziju": {
+      "maltese": "Għandi ziju fil-familja.",
+      "english": "My family includes the uncle.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::zija": {
+      "maltese": "Għandi zija fil-familja.",
+      "english": "My family includes the aunt.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::kuġin": {
+      "maltese": "Għandi kuġin fil-familja.",
+      "english": "My family includes the cousin.",
+      "pattern": "family-member",
+      "review": "reviewed-template"
+    },
+    "b1-family::filgħodu": {
+      "maltese": "Naħdem filgħodu.",
+      "english": "I work in the morning.",
+      "pattern": "daily-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::f'nofsinhar": {
+      "maltese": "Naħdem f'nofsinhar.",
+      "english": "I work at midday.",
+      "pattern": "daily-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::waranofsinhar": {
+      "maltese": "Naħdem waranofsinhar.",
+      "english": "I work in the afternoon.",
+      "pattern": "daily-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::filgħaxija": {
+      "maltese": "Naħdem filgħaxija.",
+      "english": "I work in the evening.",
+      "pattern": "daily-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::billejl": {
+      "maltese": "Naħdem billejl.",
+      "english": "I work at night.",
+      "pattern": "daily-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::kmieni": {
+      "maltese": "Inqum kmieni.",
+      "english": "I get up early.",
+      "pattern": "routine-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::tard": {
+      "maltese": "Inqum tard.",
+      "english": "I get up late.",
+      "pattern": "routine-time",
+      "review": "reviewed-template"
+    },
+    "b1-family::It-Tnejn": {
+      "maltese": "Il-jum huwa It-Tnejn.",
+      "english": "The day is Monday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::It-Tlieta": {
+      "maltese": "Il-jum huwa It-Tlieta.",
+      "english": "The day is Tuesday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::L-Erbgħa": {
+      "maltese": "Il-jum huwa L-Erbgħa.",
+      "english": "The day is Wednesday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::Il-Ħamis": {
+      "maltese": "Il-jum huwa Il-Ħamis.",
+      "english": "The day is Thursday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::Il-Ġimgħa": {
+      "maltese": "Il-jum huwa Il-Ġimgħa.",
+      "english": "The day is Friday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::Is-Sibt": {
+      "maltese": "Il-jum huwa Is-Sibt.",
+      "english": "The day is Saturday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::Il-Ħadd": {
+      "maltese": "Il-jum huwa Il-Ħadd.",
+      "english": "The day is Sunday.",
+      "pattern": "weekday",
+      "review": "reviewed-template"
+    },
+    "b1-family::tmiem il-ġimgħa": {
+      "maltese": "Nistrieħ fi tmiem il-ġimgħa.",
+      "english": "I rest at the weekend.",
+      "pattern": "weekend",
+      "review": "reviewed-template"
+    },
+    "b1-family::tenis": {
+      "maltese": "Inħobb tenis.",
+      "english": "I like tennis.",
+      "pattern": "family-activity",
+      "review": "reviewed-template"
+    },
+    "b1-family::passeġġata": {
+      "maltese": "Inħobb passeġġata.",
+      "english": "I like walk.",
+      "pattern": "family-activity",
+      "review": "reviewed-template"
+    },
+    "b1-family::żfin": {
+      "maltese": "Inħobb żfin.",
+      "english": "I like dancing.",
+      "pattern": "family-activity",
+      "review": "reviewed-template"
+    },
+    "b1-family::pjazza": {
+      "maltese": "Hemm pjazza qrib id-dar.",
+      "english": "The square is near the house.",
+      "pattern": "family-place",
+      "review": "reviewed-template"
+    },
+    "b1-family::restorant": {
+      "maltese": "Hemm restorant qrib id-dar.",
+      "english": "The restaurant is near the house.",
+      "pattern": "family-place",
+      "review": "reviewed-template"
+    },
+    "b1-family::Bonġu": {
+      "maltese": "Ngħid: “Bonġu”",
+      "english": "I say: “Good morning”",
+      "pattern": "greeting",
+      "review": "reviewed-template"
+    },
+    "b1-family::Il-waranofsinhar it-tajjeb": {
+      "maltese": "Ngħid: “Il-waranofsinhar it-tajjeb”",
+      "english": "I say: “Good afternoon”",
+      "pattern": "greeting",
+      "review": "reviewed-template"
+    },
+    "b1-family::Il-lejla t-tajba": {
+      "maltese": "Ngħid: “Il-lejla t-tajba”",
+      "english": "I say: “Good evening”",
+      "pattern": "greeting",
+      "review": "reviewed-template"
+    },
+    "b1-family::Kif inti": {
+      "maltese": "Ngħid: “Kif inti”",
+      "english": "I say: “How are you?”",
+      "pattern": "greeting",
+      "review": "reviewed-template"
+    },
+    "b1-family::Mhux ħażin": {
+      "maltese": "Ngħid: “Mhux ħażin”",
+      "english": "I say: “Not bad”",
+      "pattern": "greeting",
+      "review": "reviewed-template"
+    },
+    "b1-family::Ħu ħsieb": {
+      "maltese": "Ngħid: “Ħu ħsieb”",
+      "english": "I say: “Take care”",
+      "pattern": "greeting",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::basket tal-iskola": {
+      "maltese": "Hemm basket tal-iskola fil-basket tal-iskola.",
+      "english": "The school bag contains the school bag.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::pokit": {
+      "maltese": "Hemm pokit fil-basket tal-iskola.",
+      "english": "The school bag contains the pocket.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::temprina": {
+      "maltese": "Hemm temprina fil-basket tal-iskola.",
+      "english": "The school bag contains the pencil sharpener.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kulur": {
+      "maltese": "Hemm kulur fil-basket tal-iskola.",
+      "english": "The school bag contains the colour.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::lapes": {
+      "maltese": "Hemm lapes fil-basket tal-iskola.",
+      "english": "The school bag contains the pencil.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::fajl": {
+      "maltese": "Hemm fajl fil-basket tal-iskola.",
+      "english": "The school bag contains the file.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ktieb": {
+      "maltese": "Hemm ktieb fil-basket tal-iskola.",
+      "english": "The school bag contains the book.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::marker": {
+      "maltese": "Hemm marker fil-basket tal-iskola.",
+      "english": "The school bag contains the marker pen.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kalkulatur": {
+      "maltese": "Hemm kalkulatur fil-basket tal-iskola.",
+      "english": "The school bag contains the calculator.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kumpass": {
+      "maltese": "Hemm kumpass fil-basket tal-iskola.",
+      "english": "The school bag contains the compass.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::imqass": {
+      "maltese": "Hemm imqass fil-basket tal-iskola.",
+      "english": "The school bag contains the scissors.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::pitazz": {
+      "maltese": "Hemm pitazz fil-basket tal-iskola.",
+      "english": "The school bag contains the copybook.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::karta": {
+      "maltese": "Hemm karta fil-basket tal-iskola.",
+      "english": "The school bag contains the paper.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kolla": {
+      "maltese": "Hemm kolla fil-basket tal-iskola.",
+      "english": "The school bag contains the glue.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::orarju": {
+      "maltese": "Hemm orarju fil-basket tal-iskola.",
+      "english": "The school bag contains the timetable.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::riga": {
+      "maltese": "Hemm riga fil-basket tal-iskola.",
+      "english": "The school bag contains the ruler.",
+      "pattern": "school-bag-object",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::sabiħ": {
+      "maltese": "Il-ktieb huwa sabiħ.",
+      "english": "The book is beautiful.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::sabiħa": {
+      "maltese": "Il-karta hija sabiħa.",
+      "english": "The paper is beautiful.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::sbieħ": {
+      "maltese": "Il-kotba huma sbieħ.",
+      "english": "The books are beautiful.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ikrah": {
+      "maltese": "Il-ktieb huwa ikrah.",
+      "english": "The book is ugly.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kerha": {
+      "maltese": "Il-karta hija kerha.",
+      "english": "The paper is ugly.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::koroh": {
+      "maltese": "Il-kotba huma koroh.",
+      "english": "The books are ugly.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kbir": {
+      "maltese": "Il-ktieb huwa kbir.",
+      "english": "The book is large.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kbira": {
+      "maltese": "Il-karta hija kbira.",
+      "english": "The paper is big.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::kbar": {
+      "maltese": "Il-kotba huma kbar.",
+      "english": "The books are big.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::żgħir": {
+      "maltese": "Il-ktieb huwa żgħir.",
+      "english": "The book is small.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::żgħira": {
+      "maltese": "Il-karta hija żgħira.",
+      "english": "The paper is small.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::żgħar": {
+      "maltese": "Il-kotba huma żgħar.",
+      "english": "The books are small.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ġdid": {
+      "maltese": "Il-ktieb huwa ġdid.",
+      "english": "The book is new.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ġdida": {
+      "maltese": "Il-karta hija ġdida.",
+      "english": "The paper is new.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ġodda": {
+      "maltese": "Il-kotba huma ġodda.",
+      "english": "The books are new.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::qadim": {
+      "maltese": "Il-ktieb huwa qadim.",
+      "english": "The book is old.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::qadima": {
+      "maltese": "Il-karta hija qadima.",
+      "english": "The paper is old.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::qodma": {
+      "maltese": "Il-kotba huma qodma.",
+      "english": "The books are old.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::modern": {
+      "maltese": "Il-ktieb huwa modern.",
+      "english": "The book is modern.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::moderna": {
+      "maltese": "Il-karta hija moderna.",
+      "english": "The paper is modern.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::moderni": {
+      "maltese": "Il-kotba huma moderni.",
+      "english": "The books are modern.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::antik": {
+      "maltese": "Il-ktieb huwa antik.",
+      "english": "The book is antique.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::antika": {
+      "maltese": "Il-karta hija antika.",
+      "english": "The paper is antique.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::antiki": {
+      "maltese": "Il-kotba huma antiki.",
+      "english": "The books are antique.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ikkulurit": {
+      "maltese": "Il-ktieb huwa ikkulurit.",
+      "english": "The book is colourful.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ikkulurita": {
+      "maltese": "Il-karta hija ikkulurita.",
+      "english": "The paper is colourful.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::ikkuluriti": {
+      "maltese": "Il-kotba huma ikkuluriti.",
+      "english": "The books are colourful.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::nadif": {
+      "maltese": "Il-ktieb huwa nadif.",
+      "english": "The book is clean.",
+      "pattern": "object-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::nadifa": {
+      "maltese": "Il-karta hija nadifa.",
+      "english": "The paper is clean.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::nodfa": {
+      "maltese": "Il-kotba huma nodfa.",
+      "english": "The books are clean.",
+      "pattern": "object-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-school-bag::maħmuġa": {
+      "maltese": "Il-karta hija maħmuġa.",
+      "english": "The paper is dirty.",
+      "pattern": "object-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::qum": {
+      "maltese": "Qum kmieni.",
+      "english": "Get up early.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::qumu": {
+      "maltese": "Qumu kmieni.",
+      "english": "Get up early, everyone.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::poġġi": {
+      "maltese": "Poġġi bilqiegħda.",
+      "english": "Sit down.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::poġġu": {
+      "maltese": "Poġġu bilqiegħda.",
+      "english": "Sit down, everyone.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::ikteb": {
+      "maltese": "Ikteb ismek.",
+      "english": "Write your name.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::iktbu": {
+      "maltese": "Iktbu isimkom.",
+      "english": "Write your names.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::agħlaq": {
+      "maltese": "Agħlaq il-bieb.",
+      "english": "Close the door.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::agħlqu": {
+      "maltese": "Agħlqu l-bieb.",
+      "english": "Close the door, everyone.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::oħroġ": {
+      "maltese": "Oħroġ barra.",
+      "english": "Go outside.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::oħorġu": {
+      "maltese": "Oħorġu barra.",
+      "english": "Go outside, everyone.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::idħol": {
+      "maltese": "Idħol fil-klassi.",
+      "english": "Enter the classroom.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::idħlu": {
+      "maltese": "Idħlu fil-klassi.",
+      "english": "Enter the classroom, everyone.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::daħħal": {
+      "maltese": "Daħħal il-ktieb fil-basket.",
+      "english": "Put the book in the bag.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::daħħlu": {
+      "maltese": "Daħħlu l-kotba fil-basket.",
+      "english": "Put the books in the bag.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::aqra": {
+      "maltese": "Aqra l-paġna.",
+      "english": "Read the page.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::aqraw": {
+      "maltese": "Aqraw il-paġna.",
+      "english": "Read the page, everyone.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::iftaħ": {
+      "maltese": "Iftaħ il-ktieb.",
+      "english": "Open the book.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::iftħu": {
+      "maltese": "Iftħu l-kotba.",
+      "english": "Open the books.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::isimgħu": {
+      "maltese": "Isimgħu lill-għalliem.",
+      "english": "Listen to the teacher.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::staqsi": {
+      "maltese": "Staqsi mistoqsija.",
+      "english": "Ask a question.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::tkellem": {
+      "maltese": "Tkellem bil-mod.",
+      "english": "Speak slowly.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::agħmel": {
+      "maltese": "Agħmel l-eżerċizzju.",
+      "english": "Do the exercise.",
+      "pattern": "classroom-command",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::wieħed": {
+      "maltese": "In-numru huwa wieħed.",
+      "english": "The number is one.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::tnejn": {
+      "maltese": "In-numru huwa tnejn.",
+      "english": "The number is two.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::tlieta": {
+      "maltese": "In-numru huwa tlieta.",
+      "english": "The number is three.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::erbgħa": {
+      "maltese": "In-numru huwa erbgħa.",
+      "english": "The number is four.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::ħamsa": {
+      "maltese": "In-numru huwa ħamsa.",
+      "english": "The number is five.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::sitta": {
+      "maltese": "In-numru huwa sitta.",
+      "english": "The number is six.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::sebgħa": {
+      "maltese": "In-numru huwa sebgħa.",
+      "english": "The number is seven.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::tmienja": {
+      "maltese": "In-numru huwa tmienja.",
+      "english": "The number is eight.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::disgħa": {
+      "maltese": "In-numru huwa disgħa.",
+      "english": "The number is nine.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-imperative::għaxra": {
+      "maltese": "In-numru huwa għaxra.",
+      "english": "The number is ten.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-weather::borra": {
+      "maltese": "Illum hemm ħafna borra.",
+      "english": "Today there is a lot of snow.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::temperatura": {
+      "maltese": "It-temperatura hija għoxrin grad.",
+      "english": "The temperature is twenty degrees.",
+      "pattern": "temperature",
+      "review": "reviewed-template"
+    },
+    "b2-weather::sajjetti": {
+      "maltese": "Illum hemm ħafna sajjetti.",
+      "english": "Today there is a lot of lightning.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::sħab": {
+      "maltese": "Illum hemm ħafna sħab.",
+      "english": "Today there is a lot of clouds.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::riħ": {
+      "maltese": "Illum hemm ħafna riħ.",
+      "english": "Today there is a lot of wind.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::sħana": {
+      "maltese": "Illum hemm ħafna sħana.",
+      "english": "Today there is a lot of heat.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::kesħa": {
+      "maltese": "Illum hemm ħafna kesħa.",
+      "english": "Today there is a lot of cold.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::maltemp": {
+      "maltese": "Illum hemm ħafna maltemp.",
+      "english": "Today there is a lot of bad weather.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::istaġun": {
+      "maltese": "Istaġun ġdid jibda dalwaqt.",
+      "english": "A new season starts soon.",
+      "pattern": "season",
+      "review": "reviewed-template"
+    },
+    "b2-weather::staġuni": {
+      "maltese": "Hemm erba' staġuni.",
+      "english": "There are four seasons.",
+      "pattern": "seasons",
+      "review": "reviewed-template"
+    },
+    "b2-weather::rebbiegħa": {
+      "maltese": "L-istaġun favorit tiegħi huwa rebbiegħa.",
+      "english": "My favourite season is spring.",
+      "pattern": "named-season",
+      "review": "reviewed-template"
+    },
+    "b2-weather::sajf": {
+      "maltese": "L-istaġun favorit tiegħi huwa sajf.",
+      "english": "My favourite season is summer.",
+      "pattern": "named-season",
+      "review": "reviewed-template"
+    },
+    "b2-weather::ħarifa": {
+      "maltese": "L-istaġun favorit tiegħi huwa ħarifa.",
+      "english": "My favourite season is autumn.",
+      "pattern": "named-season",
+      "review": "reviewed-template"
+    },
+    "b2-weather::xitwa": {
+      "maltese": "L-istaġun favorit tiegħi huwa xitwa.",
+      "english": "My favourite season is winter.",
+      "pattern": "named-season",
+      "review": "reviewed-template"
+    },
+    "b2-weather::xemx": {
+      "maltese": "Illum hemm ħafna xemx.",
+      "english": "Today there is a lot of sun.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::xita": {
+      "maltese": "Illum hemm ħafna xita.",
+      "english": "Today there is a lot of rain.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::ragħad": {
+      "maltese": "Illum hemm ħafna ragħad.",
+      "english": "Today there is a lot of thunder.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::bnazzi": {
+      "maltese": "Illum hemm ħafna bnazzi.",
+      "english": "Today there is a lot of fine.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::silġ": {
+      "maltese": "Illum hemm ħafna silġ.",
+      "english": "Today there is a lot of ice.",
+      "pattern": "weather-today",
+      "review": "reviewed-template"
+    },
+    "b2-weather::xemxi": {
+      "maltese": "It-temp huwa xemxi.",
+      "english": "The weather is sunny.",
+      "pattern": "weather-adjective",
+      "review": "reviewed-template"
+    },
+    "b2-weather::imsaħħab": {
+      "maltese": "It-temp huwa imsaħħab.",
+      "english": "The weather is cloudy.",
+      "pattern": "weather-adjective",
+      "review": "reviewed-template"
+    },
+    "b2-weather::l-ogħla temperatura": {
+      "maltese": "L-ogħla temperatura hija tletin grad.",
+      "english": "The highest temperature is thirty degrees.",
+      "pattern": "temperature-range",
+      "review": "reviewed-template"
+    },
+    "b2-weather::l-inqas temperatura": {
+      "maltese": "L-inqas temperatura hija għaxar gradi.",
+      "english": "The lowest temperature is ten degrees.",
+      "pattern": "temperature-range",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::flokk ħafif": {
+      "maltese": "Illum se nilbes flokk ħafif.",
+      "english": "Today I will wear the light shirt.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::libsa ħafifa": {
+      "maltese": "Illum se nilbes libsa ħafifa.",
+      "english": "Today I will wear the light dress.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::dublett": {
+      "maltese": "Illum se nilbes dublett.",
+      "english": "Today I will wear the skirt.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::flokk bil-komma qasira": {
+      "maltese": "Illum se nilbes flokk bil-komma qasira.",
+      "english": "Today I will wear the short-sleeved shirt.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::ġakketta tal-jeans": {
+      "maltese": "Illum se nilbes ġakketta tal-jeans.",
+      "english": "Today I will wear the denim jacket.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::flokk ta' taħt": {
+      "maltese": "Illum se nilbes flokk ta' taħt.",
+      "english": "Today I will wear the undershirt.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::qalziet ħafif": {
+      "maltese": "Illum se nilbes qalziet ħafif.",
+      "english": "Today I will wear the light trousers.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::flokk biċ-ċingi": {
+      "maltese": "Illum se nilbes flokk biċ-ċingi.",
+      "english": "Today I will wear the strappy top.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::malja": {
+      "maltese": "Illum se nilbes malja.",
+      "english": "Today I will wear the swimsuit.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::kappell": {
+      "maltese": "Illum se nilbes kappell.",
+      "english": "Today I will wear the hat.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::karkur": {
+      "maltese": "Illum se nilbes karkur.",
+      "english": "Today I will wear the flip-flop.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::flokk tas-suf": {
+      "maltese": "Illum se nilbes flokk tas-suf.",
+      "english": "Today I will wear the woollen jumper.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::ġakketta": {
+      "maltese": "Illum se nilbes ġakketta.",
+      "english": "Today I will wear the jacket.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::ġlekk": {
+      "maltese": "Illum se nilbes ġlekk.",
+      "english": "Today I will wear the jacket.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::qalziet": {
+      "maltese": "Illum se nilbes qalziet.",
+      "english": "Today I will wear the trousers.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::boots": {
+      "maltese": "Illum se nilbes boots.",
+      "english": "Today I will wear the boots.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::xalpa": {
+      "maltese": "Illum se nilbes xalpa.",
+      "english": "Today I will wear the scarf.",
+      "pattern": "clothing-choice",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::ħdax": {
+      "maltese": "In-numru huwa ħdax.",
+      "english": "The number is eleven.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::tnax": {
+      "maltese": "In-numru huwa tnax.",
+      "english": "The number is twelve.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::tlettax": {
+      "maltese": "In-numru huwa tlettax.",
+      "english": "The number is thirteen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::erbatax": {
+      "maltese": "In-numru huwa erbatax.",
+      "english": "The number is fourteen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::ħmistax": {
+      "maltese": "In-numru huwa ħmistax.",
+      "english": "The number is fifteen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::sittax": {
+      "maltese": "In-numru huwa sittax.",
+      "english": "The number is sixteen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::sbatax": {
+      "maltese": "In-numru huwa sbatax.",
+      "english": "The number is seventeen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::tmintax": {
+      "maltese": "In-numru huwa tmintax.",
+      "english": "The number is eighteen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::dsatax": {
+      "maltese": "In-numru huwa dsatax.",
+      "english": "The number is nineteen.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-clothes::għoxrin": {
+      "maltese": "In-numru huwa għoxrin.",
+      "english": "The number is twenty.",
+      "pattern": "number",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::libes": {
+      "maltese": "Ilbieraħ libes ġakketta.",
+      "english": "Yesterday he wore a jacket.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::ilbes": {
+      "maltese": "Ilbes ġakketta.",
+      "english": "Wear a jacket.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::ilbsu": {
+      "maltese": "Ilbsu l-ġkieket.",
+      "english": "Wear the jackets, everyone.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::għamel": {
+      "maltese": "Ilbieraħ għamel l-eżerċizzju.",
+      "english": "Yesterday he did the exercise.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::agħmel": {
+      "maltese": "Agħmel l-eżerċizzju.",
+      "english": "Do the exercise.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::agħmlu": {
+      "maltese": "Agħmlu l-eżerċizzju.",
+      "english": "Do the exercise, everyone.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::uża": {
+      "maltese": "Uża l-kalkulatur.",
+      "english": "Use the calculator.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::użaw": {
+      "maltese": "Użaw il-kalkulatur.",
+      "english": "Use the calculator, everyone.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::għum": {
+      "maltese": "Għum fil-pixxina.",
+      "english": "Swim in the pool.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::imxi": {
+      "maltese": "Imxi sal-pjazza.",
+      "english": "Walk to the square.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::orqod": {
+      "maltese": "Orqod kmieni.",
+      "english": "Sleep early.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::qum": {
+      "maltese": "Qum kmieni.",
+      "english": "Get up early.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::ilgħab": {
+      "maltese": "Ilgħab it-tenis.",
+      "english": "Play tennis.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::ara": {
+      "maltese": "Ara dan il-film.",
+      "english": "Watch this film.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::oħroġ": {
+      "maltese": "Oħroġ mal-ħbieb.",
+      "english": "Go out with friends.",
+      "pattern": "hobby-verb",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se nilbes": {
+      "maltese": "Se nilbes għada.",
+      "english": "I will wear tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se mmur": {
+      "maltese": "Se mmur għada.",
+      "english": "I will go tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se norqdu": {
+      "maltese": "Se norqdu għada.",
+      "english": "We will sleep tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se tilgħab": {
+      "maltese": "Se tilgħab għada.",
+      "english": "You will play tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se naraw": {
+      "maltese": "Se naraw għada.",
+      "english": "We will see tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se jgħumu": {
+      "maltese": "Se jgħumu għada.",
+      "english": "They will swim tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se noħorġu": {
+      "maltese": "Se noħorġu għada.",
+      "english": "We will go out tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se niekol": {
+      "maltese": "Se niekol għada.",
+      "english": "I will eat tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-hobbies::se nagħmel": {
+      "maltese": "Se nagħmel għada.",
+      "english": "I will do tomorrow.",
+      "pattern": "future-plan",
+      "review": "reviewed-template"
+    },
+    "b2-town::kafetterija": {
+      "maltese": "Hemm kafetterija fil-pjazza.",
+      "english": "The cafeteria is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::ispiżerija": {
+      "maltese": "Hemm ispiżerija fil-pjazza.",
+      "english": "The pharmacy is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::furnar": {
+      "maltese": "Hemm furnar fil-pjazza.",
+      "english": "The bakery is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::restorant": {
+      "maltese": "Hemm restorant fil-pjazza.",
+      "english": "The restaurant is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::uffiċċju tal-Kunsill Lokali": {
+      "maltese": "Hemm uffiċċju tal-Kunsill Lokali fil-pjazza.",
+      "english": "The Local Council office is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::knisja": {
+      "maltese": "Hemm knisja fil-pjazza.",
+      "english": "The church is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::posta": {
+      "maltese": "Hemm posta fil-pjazza.",
+      "english": "The post office is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::zuntier": {
+      "maltese": "Hemm zuntier fil-pjazza.",
+      "english": "The church parvis is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::pastizz tal-irkotta": {
+      "maltese": "Nixtieq pastizz tal-irkotta, jekk jogħġbok.",
+      "english": "I would like the ricotta pastizz, please.",
+      "pattern": "town-order",
+      "review": "reviewed-template"
+    },
+    "b2-town::pastizz tal-piżelli": {
+      "maltese": "Nixtieq pastizz tal-piżelli, jekk jogħġbok.",
+      "english": "I would like the pea pastizz, please.",
+      "pattern": "town-order",
+      "review": "reviewed-template"
+    },
+    "b2-town::mediċina": {
+      "maltese": "Hemm mediċina fil-pjazza.",
+      "english": "The medicine is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::menu": {
+      "maltese": "Hemm menu fil-pjazza.",
+      "english": "The menu is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::appartament": {
+      "maltese": "Hemm appartament fil-pjazza.",
+      "english": "The apartment is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::triq": {
+      "maltese": "Hemm triq fil-pjazza.",
+      "english": "The street is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::sqaq": {
+      "maltese": "Hemm sqaq fil-pjazza.",
+      "english": "The alley is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::numru": {
+      "maltese": "Hemm numru fil-pjazza.",
+      "english": "The number is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::vjal": {
+      "maltese": "Hemm vjal fil-pjazza.",
+      "english": "The avenue is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::pjazza": {
+      "maltese": "Hemm pjazza fil-pjazza.",
+      "english": "The square is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::lukanda": {
+      "maltese": "Hemm lukanda fil-pjazza.",
+      "english": "The hotel is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::indirizz": {
+      "maltese": "Hemm indirizz fil-pjazza.",
+      "english": "The address is in the square.",
+      "pattern": "town-place",
+      "review": "reviewed-template"
+    },
+    "b2-town::Aqsam it-triq": {
+      "maltese": "Aqsam it-triq bir-reqqa.",
+      "english": "Cross the road carefully.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Dur fuq ix-xellug": {
+      "maltese": "Dur fuq ix-xellug ħdejn il-knisja.",
+      "english": "Turn left by the church.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Dur mal-kantuniera": {
+      "maltese": "Dur mal-kantuniera u kompli miexi.",
+      "english": "Turn around the corner and keep walking.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Ieqaf": {
+      "maltese": "Ieqaf ħdejn il-pjazza.",
+      "english": "Stop by the square.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Dur fuq il-lemin": {
+      "maltese": "Dur fuq il-lemin ħdejn il-lukanda.",
+      "english": "Turn right by the hotel.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Imxi dritt": {
+      "maltese": "Imxi dritt sal-pjazza.",
+      "english": "Go straight to the square.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Itla' 'l fuq": {
+      "maltese": "Itla' 'l fuq sat-tieni sular.",
+      "english": "Go up to the second floor.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-town::Inżel 'l isfel": {
+      "maltese": "Inżel 'l isfel sal-pjan terran.",
+      "english": "Go down to the ground floor.",
+      "pattern": "town-direction",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::plastik": {
+      "maltese": "Hemm plastik fil-kontenitur.",
+      "english": "The container contains the plastic.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::karta": {
+      "maltese": "Hemm karta fil-kontenitur.",
+      "english": "The container contains the paper.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::riċiklar": {
+      "maltese": "Hemm riċiklar fil-kontenitur.",
+      "english": "The container contains the recycling.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::skart imħallat": {
+      "maltese": "Hemm skart imħallat fil-kontenitur.",
+      "english": "The container contains the mixed waste.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::skart riċiklabbli": {
+      "maltese": "Hemm skart riċiklabbli fil-kontenitur.",
+      "english": "The container contains the recyclable waste.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::nadif": {
+      "maltese": "Il-kontenitur huwa nadif.",
+      "english": "The container is clean.",
+      "pattern": "recycling-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::nadifa": {
+      "maltese": "Il-borża hija nadifa.",
+      "english": "The bag is clean.",
+      "pattern": "recycling-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::nodfa": {
+      "maltese": "Il-kontenituri huma nodfa.",
+      "english": "The containers are clean.",
+      "pattern": "recycling-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::maħmuġ": {
+      "maltese": "Il-kontenitur huwa maħmuġ.",
+      "english": "The container is dirty.",
+      "pattern": "recycling-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::maħmuġa": {
+      "maltese": "Il-borża hija maħmuġa.",
+      "english": "The bag is dirty.",
+      "pattern": "recycling-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::maħmuġin": {
+      "maltese": "Il-kontenituri huma maħmuġin.",
+      "english": "The containers are dirty.",
+      "pattern": "recycling-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mimli": {
+      "maltese": "Il-kontenitur huwa mimli.",
+      "english": "The container is full.",
+      "pattern": "recycling-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mimlija": {
+      "maltese": "Il-borża hija mimlija.",
+      "english": "The bag is full.",
+      "pattern": "recycling-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mimlijin": {
+      "maltese": "Il-kontenituri huma mimlijin.",
+      "english": "The containers are full.",
+      "pattern": "recycling-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mormi": {
+      "maltese": "Il-kontenitur huwa mormi.",
+      "english": "The container is discarded.",
+      "pattern": "recycling-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mormija": {
+      "maltese": "Il-borża hija mormija.",
+      "english": "The bag is discarded.",
+      "pattern": "recycling-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mormijin": {
+      "maltese": "Il-kontenituri huma mormijin.",
+      "english": "The containers are discarded.",
+      "pattern": "recycling-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::jinten": {
+      "maltese": "Il-kontenitur jinten.",
+      "english": "The container stinks.",
+      "pattern": "recycling-state",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::tinten": {
+      "maltese": "Il-borża tinten.",
+      "english": "The bag stinks.",
+      "pattern": "recycling-state",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::jintnu": {
+      "maltese": "Il-kontenituri jintnu.",
+      "english": "The containers stink.",
+      "pattern": "recycling-state",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::miftuħ": {
+      "maltese": "Il-kontenitur huwa miftuħ.",
+      "english": "The container is open.",
+      "pattern": "recycling-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::miftuħa": {
+      "maltese": "Il-borża hija miftuħa.",
+      "english": "The bag is open.",
+      "pattern": "recycling-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::miftuħin": {
+      "maltese": "Il-kontenituri huma miftuħin.",
+      "english": "The containers are open.",
+      "pattern": "recycling-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mqatta'": {
+      "maltese": "Il-kontenitur huwa mqatta'.",
+      "english": "The container is cut.",
+      "pattern": "recycling-adjective-masculine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mqattgħa": {
+      "maltese": "Il-borża hija mqattgħa.",
+      "english": "The bag is cut.",
+      "pattern": "recycling-adjective-feminine",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::mqattgħin": {
+      "maltese": "Il-kontenituri huma mqattgħin.",
+      "english": "The containers are cut.",
+      "pattern": "recycling-adjective-plural",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::skart organiku": {
+      "maltese": "Hemm skart organiku fil-kontenitur.",
+      "english": "The container contains the organic waste.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::borża": {
+      "maltese": "Hemm borża fil-kontenitur.",
+      "english": "The container contains the bag.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::kontenitur": {
+      "maltese": "Hemm kontenitur fil-kontenitur.",
+      "english": "The container contains the container.",
+      "pattern": "recycling-material",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::armi": {
+      "maltese": "Armi l-karta fil-kontenitur.",
+      "english": "Throw the paper into the container.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::armu": {
+      "maltese": "Armu l-karta fil-kontenitur.",
+      "english": "Throw the paper into the container, everyone.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::għażel": {
+      "maltese": "Ilbieraħ għażel il-kontenitur it-tajjeb.",
+      "english": "Yesterday he chose the correct container.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::agħżel": {
+      "maltese": "Agħżel il-kontenitur it-tajjeb.",
+      "english": "Choose the correct container.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::agħżlu": {
+      "maltese": "Agħżlu l-kontenitur it-tajjeb.",
+      "english": "Choose the correct container, everyone.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::waddab": {
+      "maltese": "Waddab il-flixkun fil-kontenitur.",
+      "english": "Throw the bottle into the container.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::waddbu": {
+      "maltese": "Waddbu l-fliexken fil-kontenitur.",
+      "english": "Throw the bottles into the container, everyone.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::issepara": {
+      "maltese": "Issepara l-plastik mill-karta.",
+      "english": "Separate the plastic from the paper.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::isseparaw": {
+      "maltese": "Isseparaw il-plastik mill-karta.",
+      "english": "Separate the plastic from the paper, everyone.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::ħareġ": {
+      "maltese": "Ħareġ il-borża tal-iskart.",
+      "english": "He took out the rubbish bag.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::oħroġ": {
+      "maltese": "Oħroġ il-borża tal-iskart.",
+      "english": "Take out the rubbish bag.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    },
+    "b2-recycling::oħorġu": {
+      "maltese": "Oħorġu l-boroż tal-iskart.",
+      "english": "Take out the rubbish bags, everyone.",
+      "pattern": "recycling-action",
+      "review": "reviewed-template"
+    }
+  }
+}

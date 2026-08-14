@@ -19,6 +19,7 @@ const CORE_ASSETS = [
   "./assets/data/course_target_bindings.json",
   "./assets/data/course_supplemental_content.json",
   "./assets/data/course_target_glosses.json",
+  "./assets/data/course_target_examples.json",
   "./assets/data/book_coverage_inventory.json",
   "./assets/data/course_verb_paradigms.json",
   "./assets/data/introductions_alphabet.json",
