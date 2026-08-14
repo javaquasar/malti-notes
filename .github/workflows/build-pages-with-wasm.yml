@@ -63,6 +63,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run links:lint
 
+      - name: Validate generated offline shell
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run pwa:check
+
       - name: Check theme accessibility
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run theme:a11y
@@ -110,11 +114,19 @@ jobs:
         with:
           targets: wasm32-unknown-unknown
 
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
       - name: Install wasm-pack
         run: cargo install wasm-pack --locked
 
       - name: Build Rust WASM bundle
         run: wasm-pack build wasm-search --target web --out-dir ../assets/wasm --out-name malti_notes_wasm
+
+      - name: Generate revisioned offline shell
+        run: npm run pwa:build
 
       - name: Prepare static site folder
         run: |

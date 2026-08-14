@@ -4,6 +4,8 @@
   "description": "Static Maltese study notes and review pages.",
   "scripts": {
     "ci:workflow:check": "node ./scripts/ci_workflow_check.js",
+    "pwa:build": "node ./scripts/build_service_worker.js",
+    "pwa:check": "node ./scripts/build_service_worker.js --check",
     "visual:smoke": "node ./scripts/visual_smoke_check.js",
     "visual:screenshots": "node ./scripts/visual_screenshots.js",
     "visual:ci": "node ./scripts/visual_ci_check.js",

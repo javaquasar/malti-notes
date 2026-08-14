@@ -1750,9 +1750,14 @@
         reader.onload = function () {
             try {
                 var parsed = JSON.parse(String(reader.result || "{}"));
-                var confirmed = window.confirm(
-                    "Replace the current review and game progress with this backup?"
-                );
+                var preview = null;
+                if (parsed && [window.MaltiProgressBackup.FORMAT, window.MaltiProgressBackup.LEGACY_FORMAT].includes(parsed.format)) {
+                    preview = window.MaltiProgressBackup.previewBackup(parsed);
+                }
+                var summary = preview
+                    ? preview.importedKeys + " progress sections" + (preview.exportedAt ? " exported " + preview.exportedAt.slice(0, 10) : "")
+                    : "legacy review cards";
+                var confirmed = window.confirm("Replace the current progress with " + summary + "?");
 
                 if (!confirmed) {
                     setBackupStatus("Import cancelled.");
@@ -1762,9 +1767,9 @@
                 var result;
                 var status;
 
-                if (parsed && parsed.format === window.MaltiProgressBackup.FORMAT) {
+                if (preview) {
                     result = window.MaltiProgressBackup.importBackup(parsed, { mode: "replace" });
-                    status = "Imported " + result.importedKeys + " progress sections.";
+                    status = "Imported " + result.importedKeys + " verified progress sections" + (result.legacy ? " from a v1 backup." : ".");
                 } else {
                     result = window.MaltiReviewStore.importBackup(parsed, { mode: "replace" });
                     status = "Imported " + result.imported + " review cards from a legacy backup.";

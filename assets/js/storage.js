@@ -4,6 +4,8 @@
   }
 
   const memory = new Map();
+  const META_KEY = "malti_storage_meta_v1";
+  const SCHEMA_VERSION = 2;
 
   const readRaw = (key) => {
     try {
@@ -60,11 +62,31 @@
 
   const setJson = (key, value) => writeRaw(key, JSON.stringify(value));
 
+  const initializeSchema = () => {
+    const current = getJson(META_KEY, null);
+    const previousVersion = Number.isInteger(current?.schemaVersion) ? current.schemaVersion : 0;
+    if (previousVersion >= SCHEMA_VERSION) return current;
+
+    const next = {
+      schemaVersion: SCHEMA_VERSION,
+      previousVersion,
+      migratedAt: new Date().toISOString()
+    };
+    setJson(META_KEY, next);
+    return next;
+  };
+
   window.MaltiStorage = {
+    META_KEY,
+    SCHEMA_VERSION,
     getJson,
     getString,
+    getMeta: () => getJson(META_KEY, null),
+    initializeSchema,
     remove,
     setJson,
     setString
   };
+
+  initializeSchema();
 })();

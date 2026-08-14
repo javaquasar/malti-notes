@@ -15,9 +15,33 @@
 
   if ("serviceWorker" in navigator && /^https?:$/.test(window.location.protocol)) {
     window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js").catch((error) => {
-        console.warn("Offline support could not be enabled.", error);
-      });
+      navigator.serviceWorker.register("./service-worker.js").then((registration) => {
+        const showUpdate = (worker) => {
+          if (!navigator.serviceWorker.controller || !worker) return;
+          let notice = document.querySelector(".site-update-notice");
+          if (!notice) {
+            notice = document.createElement("div");
+            notice.className = "site-update-notice";
+            notice.setAttribute("role", "status");
+            notice.innerHTML = '<span>New site version is ready.</span><button type="button">Reload</button>';
+            notice.querySelector("button").addEventListener("click", () => worker.postMessage({ type: "SKIP_WAITING" }));
+            document.body.appendChild(notice);
+          }
+        };
+        if (registration.waiting) showUpdate(registration.waiting);
+        registration.addEventListener("updatefound", () => {
+          const worker = registration.installing;
+          worker?.addEventListener("statechange", () => {
+            if (worker.state === "installed") showUpdate(worker);
+          });
+        });
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          if (refreshing) return;
+          refreshing = true;
+          window.location.reload();
+        });
+      }).catch((error) => console.warn("Offline support could not be enabled.", error));
     }, { once: true });
   }
 

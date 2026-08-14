@@ -490,6 +490,20 @@ async function main() {
         window.localStorage.setItem("malti_exercise_progress_v1", JSON.stringify({ "b1-introductions-check": { score: 3, total: 3, passed: true } }));
         window.localStorage.setItem("malti_course_target_progress_v1", JSON.stringify({ "b1-animals-kelb": { state: "learning", attempts: 1 } }));
         const backup = window.MaltiProgressBackup.exportBackup();
+        const preview = window.MaltiProgressBackup.previewBackup(backup);
+        const legacy = JSON.parse(JSON.stringify(backup));
+        legacy.format = window.MaltiProgressBackup.LEGACY_FORMAT;
+        delete legacy.checksum;
+        delete legacy.schemaVersion;
+        const legacyPreview = window.MaltiProgressBackup.previewBackup(legacy);
+        const tampered = JSON.parse(JSON.stringify(backup));
+        tampered.data.malti_site_theme = "forest";
+        let tamperRejected = false;
+        try {
+          window.MaltiProgressBackup.previewBackup(tampered);
+        } catch (error) {
+          tamperRejected = true;
+        }
         window.MaltiProgressBackup.clearAll();
         const clearedTotal = window.MaltiReviewStore.getStats().total;
         const clearedSeen = window.localStorage.getItem("malti_word_search_seen_words_v1");
@@ -499,6 +513,11 @@ async function main() {
         const imported = window.MaltiProgressBackup.importBackup(backup, { mode: "replace" });
         return {
           format: backup.format,
+          checksum: backup.checksum,
+          schemaVersion: preview.schemaVersion,
+          storageSchemaVersion: window.MaltiStorage.getMeta().schemaVersion,
+          tamperRejected,
+          legacyAccepted: legacyPreview.legacy,
           exportedKeys: Object.keys(backup.data).length,
           importedKeys: imported.importedKeys,
           clearedTotal,
@@ -514,7 +533,10 @@ async function main() {
         };
       });
 
-      assert(result.format === "malti-progress-backup-v1", "Unexpected backup format.");
+      assert(result.format === "malti-progress-backup-v2" && result.checksum.startsWith("fnv1a-"), "Unexpected backup format or checksum.");
+      assert(result.schemaVersion === 2 && result.storageSchemaVersion === 2, "Storage schema metadata was not initialized.");
+      assert(result.tamperRejected, "Tampered progress backup was accepted.");
+      assert(result.legacyAccepted, "Version 1 progress backup is no longer accepted.");
       assert(result.exportedKeys >= 5 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");
       assert(result.clearedTotal === 0 && result.clearedSeen === null && result.clearedCourse === null && result.clearedExercises === null && result.clearedTargets === null, "Progress was not cleared before import.");
       assert(result.restoredTotal === 1 && result.restoredSeen[0] === "kelb", "Review and game progress was not restored.");
