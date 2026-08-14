@@ -225,6 +225,31 @@
   font-size: 1.5rem;
 }
 
+.course-recommendation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.course-recommendation span,
+.course-recommendation strong,
+.course-recommendation small {
+  display: block;
+}
+
+.course-recommendation span,
+.course-recommendation small {
+  color: var(--text-muted);
+}
+
+.course-recommendation strong {
+  margin: var(--space-xs) 0;
+  font-size: 1.1rem;
+}
+
 .course-objective-static {
   cursor: default;
 }
@@ -414,8 +439,13 @@
   .course-chapter-header,
   .course-page-links,
   .course-metric-grid,
+  .course-recommendation,
   .course-coverage-columns {
     grid-template-columns: 1fr;
+  }
+
+  .course-recommendation .action-button {
+    justify-self: start;
   }
 
   .course-metric {

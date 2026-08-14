@@ -36,10 +36,12 @@
     if (element) element.textContent = value;
   };
 
+  const isDue = (target) => window.MaltiExerciseRunner?.isTargetDue?.(target) ?? (target?.state === "review");
+
   const updateLearnerMetrics = (implemented) => {
     const progress = window.MaltiStorage?.getJson(TARGET_PROGRESS_KEY, {}) || {};
     const mastered = implemented.filter((target) => progress[target.id]?.state === "mastered").length;
-    const review = implemented.filter((target) => progress[target.id]?.state === "review").length;
+    const review = implemented.filter((target) => isDue(progress[target.id])).length;
     setText("[data-course-mastery]", `${mastered} / ${implemented.length}`);
     setText("[data-course-review-count]", String(review));
   };
@@ -152,6 +154,7 @@
     const diagnosticRoot = document.querySelector("[data-course-diagnostic]");
     const checkpointRoot = document.querySelector("[data-course-checkpoints]");
     const diagnosticContainer = exerciseContainer(diagnostic.id);
+    diagnosticRoot.dataset.courseDiagnosticSet = diagnostic.id;
     diagnosticRoot.replaceChildren(diagnosticContainer);
 
     checkpointRoot.replaceChildren(...checkpoints.map((set) => {
@@ -165,6 +168,7 @@
         status.textContent = progress ? `Best ${progress.bestScore}/${progress.total}` : `${set.targetCount} targets`;
       };
       details.className = "course-checkpoint";
+      details.dataset.courseCheckpointSet = set.id;
       title.textContent = `Checkpoint ${set.sequence}`;
       status.className = "status-chip";
       summary.append(title, status);
@@ -178,6 +182,67 @@
     }));
     section.hidden = false;
     if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(diagnosticRoot);
+  };
+
+  const renderRecommendation = (chapter, implemented, targetAssessments) => {
+    const progress = window.MaltiExerciseRunner?.getTargetProgress?.() || {};
+    const exerciseProgress = window.MaltiExerciseRunner?.getProgress?.() || {};
+    const chapterSets = (targetAssessments.sets || []).filter((set) => set.chapterId === chapter.id);
+    const diagnostic = chapterSets.find((set) => set.kind === "diagnostic");
+    const checkpoints = chapterSets.filter((set) => set.kind === "checkpoint").sort((a, b) => a.sequence - b.sequence);
+    const dueIds = new Set(implemented.filter((target) => isDue(progress[target.id])).map((target) => target.id));
+    const mastered = implemented.filter((target) => progress[target.id]?.state === "mastered").length;
+    let selectedSet = null;
+    let title = "Continue this chapter";
+    let detail = "Open the next focused checkpoint.";
+    let actionLabel = "Continue";
+    let destination = null;
+
+    if (dueIds.size) {
+      selectedSet = checkpoints.find((set) => set.items.some((item) => (item.targetIds || []).some((id) => dueIds.has(id))));
+      title = `Review ${dueIds.size} due target${dueIds.size === 1 ? "" : "s"}`;
+      detail = selectedSet ? `Checkpoint ${selectedSet.sequence} contains the earliest due material.` : "Use shared review for the due material.";
+      actionLabel = selectedSet ? `Open checkpoint ${selectedSet.sequence}` : "Open Review";
+      if (!selectedSet) destination = "./review_cards.html";
+    } else if (diagnostic && !exerciseProgress[diagnostic.id]?.attempts) {
+      selectedSet = diagnostic;
+      title = "Start with the entry diagnostic";
+      detail = "Use the short recognition check to choose where to focus.";
+      actionLabel = "Start diagnostic";
+    } else {
+      selectedSet = checkpoints.find((set) => exerciseProgress[set.id]?.passed !== true) || null;
+      if (selectedSet) {
+        title = `Continue with Checkpoint ${selectedSet.sequence}`;
+        detail = `${selectedSet.targetCount} targets are ready for recognition and production practice.`;
+        actionLabel = `Open checkpoint ${selectedSet.sequence}`;
+      } else if (mastered === implemented.length) {
+        title = "Chapter targets are mastered";
+        detail = "Keep the interval active from the shared review queue.";
+        actionLabel = "Open Review";
+        destination = "./review_cards.html";
+      } else {
+        title = "Reinforce learning targets";
+        detail = "Use shared review before the next checkpoint attempt.";
+        actionLabel = "Open Review";
+        destination = "./review_cards.html";
+      }
+    }
+
+    setText("[data-course-recommendation-title]", title);
+    setText("[data-course-recommendation-detail]", detail);
+    const action = document.querySelector("[data-course-recommendation-action]");
+    action.textContent = actionLabel;
+    action.onclick = () => {
+      if (destination) {
+        window.location.href = destination;
+        return;
+      }
+      const target = selectedSet?.kind === "diagnostic"
+        ? document.querySelector("[data-course-diagnostic]")
+        : document.querySelector(`[data-course-checkpoint-set="${selectedSet?.id}"]`);
+      if (target instanceof HTMLDetailsElement) target.open = true;
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
   };
 
   const renderSupplements = (chapter, chapterTargets, supplementalContent) => {
@@ -290,6 +355,10 @@
     window.addEventListener("malti-course-target-progress", () => updateLearnerMetrics(implemented));
     await renderExercise(match.chapter);
     await renderAssessmentFlow(match.chapter, targetAssessments);
+    const updateRecommendation = () => renderRecommendation(match.chapter, implemented, targetAssessments);
+    updateRecommendation();
+    window.addEventListener("malti-course-target-progress", updateRecommendation);
+    window.addEventListener("malti-exercise-progress", updateRecommendation);
   };
 
   const start = () => initialize().catch((error) => {

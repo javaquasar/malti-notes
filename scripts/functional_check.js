@@ -184,7 +184,7 @@ async function main() {
       const animals = page.locator('[data-progress-chapter="b1-animals"]');
       assert((await animals.textContent()).includes("1/27"), "Animals mastery is missing from chapter progress.");
       assert((await animals.textContent()).includes("1/5 passed"), "Animals checkpoint progress is incorrect.");
-      assert((await animals.locator(".course-progress-action-cell a").textContent()).trim() === "Review chapter", "Review state did not choose the expected chapter action.");
+      assert((await animals.locator(".course-progress-action-cell a").textContent()).trim() === "Review 1 due", "Due state did not choose the expected chapter action.");
       await page.locator('[data-progress-filter="b2"]').click();
       assert(await page.locator('[data-progress-level="b2"]:visible').count() === 7, "B2 progress filter is incomplete.");
       assert(await page.locator('[data-progress-level="b1"]:visible').count() === 0, "B1 rows remain visible after selecting B2.");
@@ -196,6 +196,7 @@ async function main() {
       assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "27 / 27", "Current animals coverage is incorrect.");
       assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "27 / 27", "Guided animals coverage is incorrect.");
       assert((await page.locator("[data-course-chapter-pills]").textContent()).includes("B1 pp. 46-64"), "Animals book page range is missing.");
+      assert((await page.locator("[data-course-recommendation-title]").textContent()).trim() === "Start with the entry diagnostic", "New chapter did not recommend its diagnostic.");
       assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
       assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b1-animals-diagnostic"] .exercise-item').count() === 10, "Animals entry diagnostic is incomplete.");
@@ -221,6 +222,7 @@ async function main() {
         review: JSON.parse(localStorage.getItem("malti_review_cards_v2"))
       }));
       assert(Object.values(saved.targets).filter((target) => target.state === "review").length === 3, "Missed target states were not saved.");
+      assert(Object.values(saved.targets).filter((target) => target.state === "review").every((target) => target.intervalDays === 0 && target.streak === 0 && Boolean(target.dueAt)), "Missed targets were not scheduled for immediate review.");
       assert(Object.keys(saved.review).length === 8, "Missed chapter answers were not added to shared review.");
       assert((await page.locator("[data-course-review-count]").textContent()).trim() === "3", "Chapter review count did not update.");
     });
@@ -288,6 +290,8 @@ async function main() {
       await exercise.locator('button[type="submit"]').click();
       let target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
       assert(target.state === "learning" && target.recognitionCorrect && target.productionCorrect, "First mixed attempt did not enter learning state.");
+      assert(target.intervalDays === 1 && target.streak === 1 && target.ease > 2.3 && Boolean(target.dueAt), "First success did not create an adaptive review schedule.");
+      assert(target.modeStats.recognition.attempts === 1 && target.modeStats.production.attempts === 1, "Mode statistics were not recorded.");
 
       await page.evaluate(() => {
         const progress = JSON.parse(localStorage.getItem("malti_course_target_progress_v1"));
@@ -300,6 +304,7 @@ async function main() {
       await exercise.locator('button[type="submit"]').click();
       target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
       assert(target.state === "mastered", "Spaced recognition and production did not master the target.");
+      assert(target.intervalDays === 3 && target.streak === 2, "Repeated success did not expand the review interval.");
       assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 24", "Chapter mastery metric did not update.");
     });
 

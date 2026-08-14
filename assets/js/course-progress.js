@@ -17,6 +17,8 @@
     return counts;
   }, { mastered: 0, learning: 0, review: 0, new: 0 });
 
+  const isDue = (target) => window.MaltiExerciseRunner?.isTargetDue?.(target) ?? (target?.state === "review");
+
   const setText = (selector, value) => {
     const element = document.querySelector(selector);
     if (element) element.textContent = String(value);
@@ -44,6 +46,7 @@
     const passedCheckpoints = checkpoints.filter((set) => exerciseProgress[set.id]?.passed === true).length;
     const objectiveKeys = chapter.objectives.map((objective) => `${chapter.id}::${objective.id}`);
     const completedObjectives = objectiveKeys.filter((key) => objectiveProgress.objectives?.[key] === true).length;
+    const dueCount = targets.filter((target) => isDue(targetProgress[target.id])).length;
 
     const label = document.createElement("span");
     const title = document.createElement("strong");
@@ -88,9 +91,14 @@
     checkpointCell.append(checkpointStrong, diagnostic);
 
     const action = document.createElement("a");
+    const nextCheckpoint = checkpoints.find((set) => exerciseProgress[set.id]?.passed !== true);
     action.className = "action-link";
-    action.href = chapterUrl(chapter.id);
-    action.textContent = counts.review ? "Review chapter" : (counts.mastered === targets.length ? "Open chapter" : "Continue");
+    action.href = `${chapterUrl(chapter.id)}#chapter-assessments`;
+    action.textContent = dueCount
+      ? `Review ${dueCount} due`
+      : (!exerciseProgress[diagnosticSet?.id]?.attempts
+        ? "Start diagnostic"
+        : (nextCheckpoint ? `Checkpoint ${nextCheckpoint.sequence}` : (counts.mastered === targets.length ? "Open chapter" : "Continue")));
     actionCell.appendChild(action);
 
     row.dataset.progressLevel = level.id;
@@ -109,11 +117,12 @@
     const objectiveProgress = storage.getJson(COURSE_PROGRESS_KEY, {}) || {};
     const allTargets = bindings.targets.filter((target) => target.implementationStatus === "implemented");
     const totals = stateCounts(allTargets, targetProgress);
+    const dueTotal = allTargets.filter((target) => isDue(targetProgress[target.id])).length;
     setText("[data-progress-mastered]", totals.mastered);
     setText("[data-progress-learning]", totals.learning);
-    setText("[data-progress-review]", totals.review);
+    setText("[data-progress-review]", dueTotal);
     setText("[data-progress-new]", totals.new);
-    setText("[data-progress-summary]", `${totals.mastered} of ${allTargets.length} targets mastered · ${totals.review} due for review`);
+    setText("[data-progress-summary]", `${totals.mastered} of ${allTargets.length} targets mastered · ${dueTotal} due for review`);
 
     const chapters = course.levels.flatMap((level) => level.chapters.map((chapter) => ({ level, chapter })));
     const body = document.querySelector("[data-progress-chapters]");

@@ -62,36 +62,74 @@
     window.dispatchEvent(new CustomEvent("malti-course-target-progress"));
   };
 
+  const isTargetDue = (target, now = Date.now()) => {
+    if (!target) return false;
+    if (!target.dueAt) return target.state === "review";
+    const due = Date.parse(target.dueAt);
+    return !Number.isFinite(due) || due <= now;
+  };
+
+  const nextSchedule = (previous, correct, now) => {
+    const previousEase = Number.isFinite(previous.ease) ? previous.ease : 2.3;
+    const ease = Math.min(2.8, Math.max(1.3, previousEase + (correct ? 0.05 : -0.2)));
+    let intervalDays = 0;
+    if (correct) {
+      const previousInterval = Number.isFinite(previous.intervalDays) ? previous.intervalDays : 0;
+      intervalDays = previousInterval < 1 ? 1 : (previousInterval < 3 ? 3 : Math.min(90, Math.round(previousInterval * ease)));
+    }
+    const due = new Date(now);
+    due.setDate(due.getDate() + intervalDays);
+    return { ease, intervalDays, dueAt: due.toISOString() };
+  };
+
   const recordTargetResults = (results) => {
     const progress = loadTargetProgress();
-    const date = new Date().toISOString().slice(0, 10);
-    let changed = false;
-
-    results.forEach(({ item, correct }) => {
-      (item.targetIds || []).forEach((targetId) => {
-        const previous = progress[targetId] || {};
-        const successfulDates = Array.isArray(previous.successfulDates) ? previous.successfulDates.slice() : [];
-        const mode = item.assessmentMode === "production" ? "production" : "recognition";
-        const next = {
-          attempts: (previous.attempts || 0) + 1,
-          recognitionCorrect: previous.recognitionCorrect === true,
-          productionCorrect: previous.productionCorrect === true,
-          successfulDates,
-          lastResult: correct ? "correct" : "incorrect",
-          lastAttemptAt: new Date().toISOString()
-        };
-        if (correct) {
-          next[`${mode}Correct`] = true;
-          if (!successfulDates.includes(date)) successfulDates.push(date);
-        }
-        next.state = correct
-          ? (next.recognitionCorrect && next.productionCorrect && successfulDates.length >= 2 ? "mastered" : "learning")
-          : "review";
-        progress[targetId] = next;
-        changed = true;
+    const now = new Date();
+    const date = now.toISOString().slice(0, 10);
+    const grouped = new Map();
+    results.forEach((entry) => {
+      (entry.item.targetIds || []).forEach((targetId) => {
+        const targetResults = grouped.get(targetId) || [];
+        targetResults.push(entry);
+        grouped.set(targetId, targetResults);
       });
     });
-    if (changed) saveTargetProgress(progress);
+
+    grouped.forEach((targetResults, targetId) => {
+      const previous = progress[targetId] || {};
+      const successfulDates = Array.isArray(previous.successfulDates) ? previous.successfulDates.slice() : [];
+      const modeStats = {
+        recognition: { attempts: previous.modeStats?.recognition?.attempts || 0, correct: previous.modeStats?.recognition?.correct || 0 },
+        production: { attempts: previous.modeStats?.production?.attempts || 0, correct: previous.modeStats?.production?.correct || 0 }
+      };
+      const next = {
+        ...previous,
+        attempts: (previous.attempts || 0) + targetResults.length,
+        recognitionCorrect: previous.recognitionCorrect === true,
+        productionCorrect: previous.productionCorrect === true,
+        successfulDates,
+        modeStats,
+        lastAttemptAt: now.toISOString()
+      };
+      targetResults.forEach(({ item, correct }) => {
+        const mode = item.assessmentMode === "production" ? "production" : "recognition";
+        modeStats[mode].attempts += 1;
+        if (correct) {
+          modeStats[mode].correct += 1;
+          next[`${mode}Correct`] = true;
+        }
+      });
+      const correct = targetResults.every((entry) => entry.correct);
+      if (targetResults.some((entry) => entry.correct) && !successfulDates.includes(date)) successfulDates.push(date);
+      Object.assign(next, nextSchedule(previous, correct, now));
+      next.streak = correct ? (previous.streak || 0) + 1 : 0;
+      next.lastResult = correct ? "correct" : "incorrect";
+      next.state = correct
+        ? (next.recognitionCorrect && next.productionCorrect && successfulDates.length >= 2 ? "mastered" : "learning")
+        : "review";
+      progress[targetId] = next;
+    });
+    if (grouped.size) saveTargetProgress(progress);
   };
 
   const renderChoices = (item, itemElement, values) => {
@@ -427,6 +465,7 @@
   window.MaltiExerciseRunner = {
     getProgress: loadProgress,
     getTargetProgress: loadTargetProgress,
+    isTargetDue,
     scan,
     storageKey: STORAGE_KEY,
     targetStorageKey: TARGET_PROGRESS_KEY
