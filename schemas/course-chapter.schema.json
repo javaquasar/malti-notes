@@ -1,0 +1,56 @@
+{
+  "$id": "https://malti-notes.local/schemas/course-chapter.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "chapter", "inventoryChapter", "sourceChapter", "targets", "targetSources", "supplementalItems", "assessmentSets"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "chapter": {
+      "type": "object",
+      "required": ["id", "levelId", "levelLabel", "number", "title"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^b[12]-" },
+        "levelId": { "enum": ["b1", "b2"] },
+        "levelLabel": { "type": "string", "minLength": 1 },
+        "number": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "inventoryChapter": { "type": "object" },
+    "sourceChapter": { "type": "object" },
+    "targets": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/target" } },
+    "targetSources": { "type": "object", "minProperties": 1 },
+    "supplementalItems": { "type": "array" },
+    "assessmentSets": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/assessmentSet" } }
+  },
+  "$defs": {
+    "target": {
+      "type": "object",
+      "required": ["id", "book", "chapterId", "type", "sourceRequirement", "role", "implementationStatus", "assessmentIds"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "book": { "enum": ["B1", "B2"] },
+        "chapterId": { "type": "string", "minLength": 1 },
+        "type": { "type": "string", "minLength": 1 },
+        "sourceRequirement": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "implementationStatus": { "type": "string", "minLength": 1 },
+        "contentRef": { "type": "object" },
+        "assessmentIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      },
+      "additionalProperties": true
+    },
+    "assessmentSet": {
+      "type": "object",
+      "required": ["id", "chapterId", "kind", "items"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "chapterId": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["diagnostic", "checkpoint"] },
+        "items": { "type": "array", "minItems": 1 }
+      },
+      "additionalProperties": true
+    }
+  }
+}

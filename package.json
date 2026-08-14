@@ -17,6 +17,8 @@
     "visual:groups": "node ./scripts/framed_group_visual_check.js",
     "visual:groups:update": "node ./scripts/framed_group_visual_check.js --update",
     "theme:a11y": "node ./scripts/theme_accessibility_check.js",
+    "a11y:check": "node ./scripts/accessibility_check.js",
+    "schema:check": "node ./scripts/schema_check.js",
     "style:lint": "node ./scripts/style_lint.js",
     "data:lint": "node ./scripts/data_lint.js",
     "content:lint": "node ./scripts/content_lint.js",
@@ -53,6 +55,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "ajv": "^8.20.0",
+    "axe-core": "^4.13.0",
     "pixelmatch": "^7.2.0",
     "playwright": "^1.59.1",
     "pngjs": "^7.0.0"

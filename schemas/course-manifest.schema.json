@@ -1,0 +1,58 @@
+{
+  "$id": "https://malti-notes.local/schemas/course-manifest.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "description", "chapterCount", "targetCount", "chapters"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "chapterCount": { "type": "integer", "minimum": 1 },
+    "targetCount": { "type": "integer", "minimum": 1 },
+    "chapters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "levelId", "levelLabel", "number", "title", "file", "bytes", "targetIds", "implementedCount", "pageHrefs", "diagnostic", "checkpoints", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^b[12]-" },
+          "levelId": { "enum": ["b1", "b2"] },
+          "levelLabel": { "type": "string", "minLength": 1 },
+          "number": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "file": { "type": "string", "pattern": "^\\./assets/data/course/chapters/.+\\.json$" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "targetIds": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true },
+          "implementedCount": { "type": "integer", "minimum": 1 },
+          "pageHrefs": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "\\.html$" }, "uniqueItems": true },
+          "diagnostic": { "$ref": "#/$defs/setSummary" },
+          "checkpoints": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/setSummary" } },
+          "source": {
+            "type": "object",
+            "required": ["book", "pageStart", "pageEnd"],
+            "additionalProperties": false,
+            "properties": {
+              "book": { "enum": ["B1", "B2"] },
+              "pageStart": { "type": "integer", "minimum": 1 },
+              "pageEnd": { "type": "integer", "minimum": 1 }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "setSummary": {
+      "type": "object",
+      "required": ["id", "itemCount"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "sequence": { "type": "integer", "minimum": 1 },
+        "targetCount": { "type": "integer", "minimum": 1 },
+        "itemCount": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

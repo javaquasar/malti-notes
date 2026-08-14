@@ -75,7 +75,9 @@ function makeServer() {
 }
 
 async function main() {
-  const outputRoot = path.join(root, "visual-regression", "screenshots", new Date().toISOString().replace(/[:.]/g, "-"));
+  const outputSuffix = safeName(process.env.VISUAL_OUTPUT_SUFFIX || "");
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const outputRoot = path.join(root, "visual-regression", "screenshots", `${timestamp}${outputSuffix ? `-${outputSuffix}` : ""}`);
   fs.mkdirSync(outputRoot, { recursive: true });
 
   const server = makeServer();
@@ -88,7 +90,8 @@ async function main() {
         for (const pageName of pages) {
           const context = await browser.newContext({
             viewport: { width: viewport.width, height: viewport.height },
-            deviceScaleFactor: 1
+            deviceScaleFactor: 1,
+            serviceWorkers: "block"
           });
           const page = await context.newPage();
           await page.addInitScript(({ themeName, seed }) => {

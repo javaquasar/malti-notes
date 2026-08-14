@@ -91,6 +91,7 @@
             var button = document.createElement("button");
             button.className = "year4-tab year4-collection-tab";
             button.type = "button";
+            button.setAttribute("role", "tab");
             button.textContent = collection.title;
             button.setAttribute("aria-selected", String(state.collection === collection.id));
             button.addEventListener("click", function () {
@@ -111,6 +112,7 @@
             var button = document.createElement("button");
             button.className = "year4-tab";
             button.type = "button";
+            button.setAttribute("role", "tab");
             button.textContent = group.title;
             button.setAttribute("aria-selected", String(state.active === group.id));
             button.addEventListener("click", function () {

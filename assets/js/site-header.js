@@ -171,7 +171,7 @@
         ${linkHtml("all_pages.html", "All Pages")}
       </nav>
       <form class="site-search" role="search" data-site-search-form>
-        <input type="search" data-site-search placeholder="Search site content" aria-label="Search site content" aria-controls="site-search-results" aria-expanded="false" autocomplete="off">
+        <input type="search" role="combobox" data-site-search placeholder="Search site content" aria-label="Search site content" aria-controls="site-search-results" aria-expanded="false" aria-autocomplete="list" autocomplete="off">
         <div class="site-search-results" id="site-search-results" role="listbox" data-site-search-results hidden></div>
       </form>
       <label class="theme-switcher">

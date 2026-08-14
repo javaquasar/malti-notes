@@ -47,6 +47,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run data:lint
 
+      - name: Validate generated JSON schemas
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run schema:check
+
       - name: Validate learning content
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run content:lint
@@ -75,6 +79,12 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run theme:a11y
 
+      - name: Run browser accessibility checks
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+        run: npm run a11y:check
+
       - name: Run visual smoke checks
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run visual:smoke
@@ -82,10 +92,6 @@ jobs:
       - name: Run functional Playwright checks
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         run: npm run functional:test
-
-      - name: Capture and validate visual matrix
-        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
-        run: npm run visual:ci
 
       - name: Compare framed content group baseline
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
@@ -95,10 +101,52 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: visual-regression-artifacts
+          name: framed-content-artifacts
           path: |
             visual-regression/screenshots/
             visual-regression/diffs/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  visual:
+    runs-on: ubuntu-latest
+    needs: quality
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture and validate visual shard
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+          VISUAL_SHARD_INDEX: ${{ matrix.shard }}
+          VISUAL_SHARD_TOTAL: 3
+        run: npm run visual:ci
+
+      - name: Upload visual shard artifacts
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-regression-shard-${{ matrix.shard }}
+          path: visual-regression/screenshots/
           if-no-files-found: ignore
           retention-days: 7
 
@@ -106,7 +154,7 @@ jobs:
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    needs: quality
+    needs: [quality, visual]
     permissions:
       contents: read
     steps:
@@ -123,7 +171,15 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Cache wasm-pack
+        id: wasm_pack_cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/wasm-pack
+          key: wasm-pack-${{ runner.os }}-v1
+
       - name: Install wasm-pack
+        if: steps.wasm_pack_cache.outputs.cache-hit != 'true'
         run: cargo install wasm-pack --locked
 
       - name: Build Rust WASM bundle

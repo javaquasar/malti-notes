@@ -13,6 +13,7 @@ const workflow = fs.readFileSync(workflowPath, "utf8");
 const requiredChecks = [
   "style:lint",
   "data:lint",
+  "schema:check",
   "content:lint",
   "books:coverage",
   "course:lint",
@@ -20,6 +21,7 @@ const requiredChecks = [
   "pwa:check",
   "search:check",
   "theme:a11y",
+  "a11y:check",
   "visual:smoke",
   "functional:test",
   "visual:ci",
@@ -31,10 +33,12 @@ const missingChecks = requiredChecks.filter(
 );
 const requiredFragments = [
   "pull_request:",
-  "needs: quality",
+  "needs: [quality, visual]",
   "node-version: \"24\"",
   "actions/checkout@v7",
   "actions/setup-node@v7",
+  "actions/cache@v4",
+  "VISUAL_SHARD_TOTAL: 3",
 ];
 const missingFragments = requiredFragments.filter(
   (fragment) => !workflow.includes(fragment)

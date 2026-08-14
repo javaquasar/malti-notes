@@ -48,13 +48,21 @@ function isBlankPng(filePath) {
 }
 
 function main() {
-  const pages = parseList(process.env.VISUAL_CI_PAGES || process.env.VISUAL_PAGES, defaultPages);
+  const allPages = parseList(process.env.VISUAL_CI_PAGES || process.env.VISUAL_PAGES, defaultPages);
+  const shardTotal = Number(process.env.VISUAL_SHARD_TOTAL || 1);
+  const shardIndex = Number(process.env.VISUAL_SHARD_INDEX || 0);
+  if (!Number.isInteger(shardTotal) || shardTotal < 1 || !Number.isInteger(shardIndex) || shardIndex < 0 || shardIndex >= shardTotal) {
+    throw new Error(`Invalid visual shard ${shardIndex}/${shardTotal}`);
+  }
+  const pages = allPages.filter((_, index) => index % shardTotal === shardIndex);
+  if (!pages.length) throw new Error(`Visual shard ${shardIndex}/${shardTotal} has no pages`);
   const themes = parseList(process.env.VISUAL_CI_THEMES || process.env.VISUAL_THEMES, defaultThemes);
   const env = {
     ...process.env,
     VISUAL_PAGES: pages.join(","),
     VISUAL_THEMES: themes.join(","),
-    VISUAL_PORT: process.env.VISUAL_PORT || "4174"
+    VISUAL_PORT: process.env.VISUAL_PORT || "4174",
+    VISUAL_OUTPUT_SUFFIX: process.env.VISUAL_OUTPUT_SUFFIX || `shard-${shardIndex}`
   };
   const result = spawnSync(process.execPath, [path.join(__dirname, "visual_screenshots.js")], {
     cwd: root,
@@ -93,7 +101,7 @@ function main() {
     throw new Error(`Blank screenshots detected: ${blankFiles.join(", ")}`);
   }
 
-  console.log(`ok visual CI checked ${pngFiles.length} screenshot(s) in ${path.relative(root, outputFolder)}`);
+  console.log(`ok visual CI shard ${shardIndex + 1}/${shardTotal} checked ${pngFiles.length} screenshot(s) in ${path.relative(root, outputFolder)}`);
 }
 
 try {
