@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 2,
-  "description": "Audited runtime bindings between all B1/B2 book requirements, canonical site content, and assessments.",
+  "schemaVersion": 3,
+  "description": "Canonical audited registry between all B1/B2 book requirements and teaching content. Assessments are derived downstream.",
   "fullyAuditedChapterIds": [
     "b1-introductions",
     "b1-residence",
@@ -30,13 +30,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-annimal"
-      },
-      "assessmentIds": [
-        "b1-introductions-annimal-diagnostic-recognition",
-        "b1-introductions-annimal-recognition",
-        "b1-introductions-annimal-production",
-        "b1-introductions-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-belt",
@@ -50,12 +44,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-belt"
-      },
-      "assessmentIds": [
-        "b1-introductions-belt-recognition-true-false",
-        "b1-introductions-belt-production",
-        "b1-introductions-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-certifikat",
@@ -69,12 +58,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-certifikat"
-      },
-      "assessmentIds": [
-        "b1-introductions-certifikat-recognition",
-        "b1-introductions-certifikat-production",
-        "b1-introductions-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-dentist",
@@ -88,12 +72,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-dentist"
-      },
-      "assessmentIds": [
-        "b1-introductions-dentist-recognition-true-false",
-        "b1-introductions-dentist-production",
-        "b1-introductions-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-erbgha",
@@ -107,12 +86,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-erbgha"
-      },
-      "assessmentIds": [
-        "b1-introductions-erbgha-diagnostic-recognition-true-false",
-        "b1-introductions-erbgha-recognition",
-        "b1-introductions-erbgha-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-fenek",
@@ -126,11 +100,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-fenek"
-      },
-      "assessmentIds": [
-        "b1-introductions-fenek-recognition-true-false",
-        "b1-introductions-fenek-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-gemel",
@@ -144,12 +114,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-gemel"
-      },
-      "assessmentIds": [
-        "b1-introductions-gemel-recognition",
-        "b1-introductions-gemel-production",
-        "b1-introductions-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-gazzetta",
@@ -163,12 +128,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-gazzetta"
-      },
-      "assessmentIds": [
-        "b1-introductions-gazzetta-recognition-true-false",
-        "b1-introductions-gazzetta-production",
-        "b1-introductions-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ghajn",
@@ -182,13 +142,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-ghajn"
-      },
-      "assessmentIds": [
-        "b1-introductions-ghajn-diagnostic-recognition",
-        "b1-introductions-ghajn-recognition",
-        "b1-introductions-ghajn-production",
-        "b1-introductions-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ghajnejn",
@@ -202,12 +156,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-ghajnejn"
-      },
-      "assessmentIds": [
-        "b1-introductions-ghajnejn-recognition-true-false",
-        "b1-introductions-ghajnejn-production",
-        "b1-introductions-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-huma",
@@ -221,11 +170,7 @@
         "page": "pronouns_possessives.html",
         "file": "assets/data/pronouns_possessives.json",
         "itemId": "huma"
-      },
-      "assessmentIds": [
-        "b1-introductions-huma-recognition",
-        "b1-introductions-huma-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-habel",
@@ -239,11 +184,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-habel"
-      },
-      "assessmentIds": [
-        "b1-introductions-habel-recognition-true-false",
-        "b1-introductions-habel-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ilma",
@@ -257,13 +198,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-ilma"
-      },
-      "assessmentIds": [
-        "b1-introductions-ilma-diagnostic-recognition-true-false",
-        "b1-introductions-ilma-recognition",
-        "b1-introductions-ilma-production",
-        "b1-introductions-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-iehor",
@@ -277,12 +212,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-iehor"
-      },
-      "assessmentIds": [
-        "b1-introductions-iehor-recognition-true-false",
-        "b1-introductions-iehor-production",
-        "b1-introductions-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-jott",
@@ -296,12 +226,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-jott"
-      },
-      "assessmentIds": [
-        "b1-introductions-jott-recognition",
-        "b1-introductions-jott-production",
-        "b1-introductions-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-kafe",
@@ -315,12 +240,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-kafe"
-      },
-      "assessmentIds": [
-        "b1-introductions-kafe-recognition-true-false",
-        "b1-introductions-kafe-production",
-        "b1-introductions-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-lemin",
@@ -334,12 +254,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-lemin"
-      },
-      "assessmentIds": [
-        "b1-introductions-lemin-diagnostic-recognition",
-        "b1-introductions-lemin-recognition",
-        "b1-introductions-lemin-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-meraq",
@@ -353,11 +268,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-meraq"
-      },
-      "assessmentIds": [
-        "b1-introductions-meraq-recognition-true-false",
-        "b1-introductions-meraq-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-negozju",
@@ -371,12 +282,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-negozju"
-      },
-      "assessmentIds": [
-        "b1-introductions-negozju-recognition",
-        "b1-introductions-negozju-production",
-        "b1-introductions-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ors",
@@ -390,12 +296,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-ors"
-      },
-      "assessmentIds": [
-        "b1-introductions-ors-recognition-true-false",
-        "b1-introductions-ors-production",
-        "b1-introductions-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-pedala",
@@ -409,13 +310,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-pedala"
-      },
-      "assessmentIds": [
-        "b1-introductions-pedala-diagnostic-recognition-true-false",
-        "b1-introductions-pedala-recognition",
-        "b1-introductions-pedala-production",
-        "b1-introductions-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-qawsalla",
@@ -429,12 +324,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-qawsalla"
-      },
-      "assessmentIds": [
-        "b1-introductions-qawsalla-recognition-true-false",
-        "b1-introductions-qawsalla-production",
-        "b1-introductions-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-rebbiegha",
@@ -448,11 +338,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-rebbiegha"
-      },
-      "assessmentIds": [
-        "b1-introductions-rebbiegha-recognition",
-        "b1-introductions-rebbiegha-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-serp",
@@ -466,11 +352,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-serp"
-      },
-      "assessmentIds": [
-        "b1-introductions-serp-recognition-true-false",
-        "b1-introductions-serp-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-tezor",
@@ -484,13 +366,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-tezor"
-      },
-      "assessmentIds": [
-        "b1-introductions-tezor-diagnostic-recognition",
-        "b1-introductions-tezor-recognition",
-        "b1-introductions-tezor-production",
-        "b1-introductions-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-uviera",
@@ -504,12 +380,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-uviera"
-      },
-      "assessmentIds": [
-        "b1-introductions-uviera-recognition-true-false",
-        "b1-introductions-uviera-production",
-        "b1-introductions-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-verita",
@@ -523,12 +394,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-verita"
-      },
-      "assessmentIds": [
-        "b1-introductions-verita-recognition",
-        "b1-introductions-verita-production",
-        "b1-introductions-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-waqfa",
@@ -542,12 +408,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-waqfa"
-      },
-      "assessmentIds": [
-        "b1-introductions-waqfa-recognition-true-false",
-        "b1-introductions-waqfa-production",
-        "b1-introductions-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-xellug",
@@ -561,12 +422,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-xellug"
-      },
-      "assessmentIds": [
-        "b1-introductions-xellug-diagnostic-recognition-true-false",
-        "b1-introductions-xellug-recognition",
-        "b1-introductions-xellug-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ziemel",
@@ -580,11 +436,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-ziemel"
-      },
-      "assessmentIds": [
-        "b1-introductions-ziemel-recognition-true-false",
-        "b1-introductions-ziemel-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ziju",
@@ -598,12 +450,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-ziju"
-      },
-      "assessmentIds": [
-        "b1-introductions-ziju-recognition",
-        "b1-introductions-ziju-production",
-        "b1-introductions-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ferhan",
@@ -617,14 +464,7 @@
         "page": "introductions_alphabet.html",
         "file": "assets/data/introductions_alphabet.json",
         "itemId": "ferhan-ferhana"
-      },
-      "assessmentIds": [
-        "adjective-gender",
-        "personal-happy-production",
-        "b1-introductions-ferhan-recognition-true-false",
-        "b1-introductions-ferhan-production",
-        "b1-introductions-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-ferhana",
@@ -638,13 +478,7 @@
         "page": "introductions_alphabet.html",
         "file": "assets/data/introductions_alphabet.json",
         "itemId": "ferhan-ferhana"
-      },
-      "assessmentIds": [
-        "b1-introductions-ferhana-diagnostic-recognition",
-        "b1-introductions-ferhana-recognition",
-        "b1-introductions-ferhana-production",
-        "b1-introductions-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-sportiv",
@@ -658,12 +492,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-sportiv"
-      },
-      "assessmentIds": [
-        "b1-introductions-sportiv-recognition-true-false",
-        "b1-introductions-sportiv-production",
-        "b1-introductions-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-introductions-sportiva",
@@ -677,11 +506,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-introductions-sportiva"
-      },
-      "assessmentIds": [
-        "b1-introductions-sportiva-recognition",
-        "b1-introductions-sportiva-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-cajtier",
@@ -695,11 +520,7 @@
         "page": "introductions_alphabet.html",
         "file": "assets/data/introductions_alphabet.json",
         "itemId": "cajtier-cajtiera"
-      },
-      "assessmentIds": [
-        "b1-introductions-cajtier-recognition-true-false",
-        "b1-introductions-cajtier-production"
-      ]
+      }
     },
     {
       "id": "b1-introductions-cajtiera",
@@ -713,12 +534,7 @@
         "page": "introductions_alphabet.html",
         "file": "assets/data/introductions_alphabet.json",
         "itemId": "cajtier-cajtiera"
-      },
-      "assessmentIds": [
-        "b1-introductions-cajtiera-diagnostic-recognition-true-false",
-        "b1-introductions-cajtiera-recognition",
-        "b1-introductions-cajtiera-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-rota",
@@ -732,13 +548,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "bir-rota"
-      },
-      "assessmentIds": [
-        "b1-residence-rota-diagnostic-recognition",
-        "b1-residence-rota-recognition",
-        "b1-residence-rota-production",
-        "b1-residence-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-trakk",
@@ -752,12 +562,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-trakk"
-      },
-      "assessmentIds": [
-        "b1-residence-trakk-recognition-true-false",
-        "b1-residence-trakk-production",
-        "b1-residence-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-helikopter",
@@ -771,13 +576,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-helikopter"
-      },
-      "assessmentIds": [
-        "b1-residence-helikopter-diagnostic-recognition-true-false",
-        "b1-residence-helikopter-recognition",
-        "b1-residence-helikopter-production",
-        "b1-residence-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-vann",
@@ -791,12 +590,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-vann"
-      },
-      "assessmentIds": [
-        "b1-residence-vann-recognition-true-false",
-        "b1-residence-vann-production",
-        "b1-residence-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-karozza",
@@ -810,12 +604,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "bil-karozza"
-      },
-      "assessmentIds": [
-        "b1-residence-karozza-diagnostic-recognition",
-        "b1-residence-karozza-recognition",
-        "b1-residence-karozza-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-karozza-tal-linja",
@@ -829,11 +618,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-karozza-tal-linja"
-      },
-      "assessmentIds": [
-        "b1-residence-karozza-tal-linja-recognition-true-false",
-        "b1-residence-karozza-tal-linja-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-mutur",
@@ -847,12 +632,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "mutur-scooter"
-      },
-      "assessmentIds": [
-        "b1-residence-mutur-recognition",
-        "b1-residence-mutur-production",
-        "b1-residence-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-vapur",
@@ -866,13 +646,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "vapur"
-      },
-      "assessmentIds": [
-        "b1-residence-vapur-diagnostic-recognition-true-false",
-        "b1-residence-vapur-recognition-true-false",
-        "b1-residence-vapur-production",
-        "b1-residence-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-bil-mixi",
@@ -886,12 +660,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "bil-mixi"
-      },
-      "assessmentIds": [
-        "b1-residence-bil-mixi-recognition",
-        "b1-residence-bil-mixi-production",
-        "b1-residence-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-bil-mutur",
@@ -905,13 +674,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "mutur-scooter"
-      },
-      "assessmentIds": [
-        "b1-residence-bil-mutur-diagnostic-recognition",
-        "b1-residence-bil-mutur-recognition-true-false",
-        "b1-residence-bil-mutur-production",
-        "b1-residence-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-bir-rota",
@@ -925,11 +688,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "bir-rota"
-      },
-      "assessmentIds": [
-        "b1-residence-bir-rota-recognition",
-        "b1-residence-bir-rota-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-bil-vann",
@@ -943,11 +702,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-bil-vann"
-      },
-      "assessmentIds": [
-        "b1-residence-bil-vann-recognition-true-false",
-        "b1-residence-bil-vann-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-bil-karozza",
@@ -961,15 +716,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "bil-karozza"
-      },
-      "assessmentIds": [
-        "travel-order",
-        "travel-car-recognition",
-        "b1-residence-bil-karozza-diagnostic-recognition-true-false",
-        "b1-residence-bil-karozza-recognition",
-        "b1-residence-bil-karozza-production",
-        "b1-residence-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-kowc",
@@ -983,12 +730,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-kowc"
-      },
-      "assessmentIds": [
-        "b1-residence-kowc-recognition-true-false",
-        "b1-residence-kowc-production",
-        "b1-residence-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-bil-kowc",
@@ -1002,13 +744,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-bil-kowc"
-      },
-      "assessmentIds": [
-        "b1-residence-bil-kowc-diagnostic-recognition",
-        "b1-residence-bil-kowc-recognition",
-        "b1-residence-bil-kowc-production",
-        "b1-residence-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-skola",
@@ -1022,12 +758,7 @@
         "page": "directions_town.html",
         "file": "assets/data/directions_town.json",
         "itemId": "skola"
-      },
-      "assessmentIds": [
-        "b1-residence-skola-recognition-true-false",
-        "b1-residence-skola-production",
-        "b1-residence-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-hanut",
@@ -1041,11 +772,7 @@
         "page": "directions_town.html",
         "file": "assets/data/directions_town.json",
         "itemId": "hanut"
-      },
-      "assessmentIds": [
-        "b1-residence-hanut-recognition",
-        "b1-residence-hanut-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-dar",
@@ -1059,12 +786,7 @@
         "page": "pronouns_possessives.html",
         "file": "assets/data/pronouns_possessives.json",
         "itemId": "id-dar-tieghi"
-      },
-      "assessmentIds": [
-        "b1-residence-dar-diagnostic-recognition-true-false",
-        "b1-residence-dar-recognition-true-false",
-        "b1-residence-dar-production"
-      ]
+      }
     },
     {
       "id": "b1-residence-bankina",
@@ -1078,12 +800,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-bankina"
-      },
-      "assessmentIds": [
-        "b1-residence-bankina-recognition",
-        "b1-residence-bankina-production",
-        "b1-residence-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-sigra",
@@ -1097,13 +814,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-sigra"
-      },
-      "assessmentIds": [
-        "b1-residence-sigra-diagnostic-recognition",
-        "b1-residence-sigra-recognition-true-false",
-        "b1-residence-sigra-production",
-        "b1-residence-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-sptar",
@@ -1117,12 +828,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-residence-sptar"
-      },
-      "assessmentIds": [
-        "b1-residence-sptar-recognition",
-        "b1-residence-sptar-production",
-        "b1-residence-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-ajruplan",
@@ -1136,12 +842,7 @@
         "page": "transport_travel.html",
         "file": "assets/data/transport.json",
         "itemId": "ajruplan"
-      },
-      "assessmentIds": [
-        "b1-residence-ajruplan-recognition-true-false",
-        "b1-residence-ajruplan-production",
-        "b1-residence-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-residence-knisja",
@@ -1155,12 +856,7 @@
         "page": "directions_town.html",
         "file": "assets/data/directions_town.json",
         "itemId": "knisja"
-      },
-      "assessmentIds": [
-        "b1-residence-knisja-diagnostic-recognition-true-false",
-        "b1-residence-knisja-recognition",
-        "b1-residence-knisja-production"
-      ]
+      }
     },
     {
       "id": "b1-school-kuritur",
@@ -1174,13 +870,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-kuritur"
-      },
-      "assessmentIds": [
-        "b1-school-kuritur-diagnostic-recognition",
-        "b1-school-kuritur-recognition",
-        "b1-school-kuritur-production",
-        "b1-school-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-laboratorju",
@@ -1194,12 +884,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-laboratorju"
-      },
-      "assessmentIds": [
-        "b1-school-laboratorju-recognition-true-false",
-        "b1-school-laboratorju-production",
-        "b1-school-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-librerija",
@@ -1213,15 +898,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "librerija"
-      },
-      "assessmentIds": [
-        "school-article",
-        "school-library-production",
-        "b1-school-librerija-diagnostic-recognition-true-false",
-        "b1-school-librerija-recognition",
-        "b1-school-librerija-production",
-        "b1-school-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-klassi",
@@ -1235,12 +912,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "klassi"
-      },
-      "assessmentIds": [
-        "b1-school-klassi-recognition-true-false",
-        "b1-school-klassi-production",
-        "b1-school-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-klinika",
@@ -1254,11 +926,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-klinika"
-      },
-      "assessmentIds": [
-        "b1-school-klinika-recognition",
-        "b1-school-klinika-production"
-      ]
+      }
     },
     {
       "id": "b1-school-bitha",
@@ -1272,12 +940,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-bitha"
-      },
-      "assessmentIds": [
-        "b1-school-bitha-diagnostic-recognition",
-        "b1-school-bitha-recognition-true-false",
-        "b1-school-bitha-production"
-      ]
+      }
     },
     {
       "id": "b1-school-sala",
@@ -1291,12 +954,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-sala"
-      },
-      "assessmentIds": [
-        "b1-school-sala-recognition",
-        "b1-school-sala-production",
-        "b1-school-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-ufficcju",
@@ -1310,12 +968,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-ufficcju"
-      },
-      "assessmentIds": [
-        "b1-school-ufficcju-recognition-true-false",
-        "b1-school-ufficcju-production",
-        "b1-school-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-tojlit",
@@ -1329,13 +982,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-tojlit"
-      },
-      "assessmentIds": [
-        "b1-school-tojlit-diagnostic-recognition-true-false",
-        "b1-school-tojlit-recognition",
-        "b1-school-tojlit-production",
-        "b1-school-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-coff",
@@ -1349,12 +996,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-coff"
-      },
-      "assessmentIds": [
-        "b1-school-coff-recognition-true-false",
-        "b1-school-coff-production",
-        "b1-school-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-qmis",
@@ -1368,11 +1010,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-qmis"
-      },
-      "assessmentIds": [
-        "b1-school-qmis-recognition",
-        "b1-school-qmis-production"
-      ]
+      }
     },
     {
       "id": "b1-school-dublett",
@@ -1386,12 +1024,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-dublett"
-      },
-      "assessmentIds": [
-        "b1-school-dublett-diagnostic-recognition",
-        "b1-school-dublett-recognition-true-false",
-        "b1-school-dublett-production"
-      ]
+      }
     },
     {
       "id": "b1-school-ingravata",
@@ -1405,12 +1038,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-ingravata"
-      },
-      "assessmentIds": [
-        "b1-school-ingravata-recognition",
-        "b1-school-ingravata-production",
-        "b1-school-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-kalzetta",
@@ -1424,13 +1052,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-kalzetta"
-      },
-      "assessmentIds": [
-        "b1-school-kalzetta-diagnostic-recognition-true-false",
-        "b1-school-kalzetta-recognition-true-false",
-        "b1-school-kalzetta-production",
-        "b1-school-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-glekk",
@@ -1444,12 +1066,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-glekk"
-      },
-      "assessmentIds": [
-        "b1-school-glekk-recognition",
-        "b1-school-glekk-production",
-        "b1-school-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-qalziet",
@@ -1463,12 +1080,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-qalziet"
-      },
-      "assessmentIds": [
-        "b1-school-qalziet-recognition-true-false",
-        "b1-school-qalziet-production",
-        "b1-school-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-zarbuna",
@@ -1482,12 +1094,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-zarbuna"
-      },
-      "assessmentIds": [
-        "b1-school-zarbuna-diagnostic-recognition",
-        "b1-school-zarbuna-recognition",
-        "b1-school-zarbuna-production"
-      ]
+      }
     },
     {
       "id": "b1-school-uniformi",
@@ -1501,11 +1108,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-uniformi"
-      },
-      "assessmentIds": [
-        "b1-school-uniformi-recognition-true-false",
-        "b1-school-uniformi-production"
-      ]
+      }
     },
     {
       "id": "b1-school-ilbies",
@@ -1519,12 +1122,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-school-ilbies"
-      },
-      "assessmentIds": [
-        "b1-school-ilbies-recognition",
-        "b1-school-ilbies-production",
-        "b1-school-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-kamra-tas-sodda",
@@ -1538,13 +1136,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "kamra-tas-sodda"
-      },
-      "assessmentIds": [
-        "b1-school-kamra-tas-sodda-diagnostic-recognition-true-false",
-        "b1-school-kamra-tas-sodda-recognition-true-false",
-        "b1-school-kamra-tas-sodda-production",
-        "b1-school-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-kamra-tal-banju",
@@ -1558,12 +1150,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "kamra-tal-banju"
-      },
-      "assessmentIds": [
-        "b1-school-kamra-tal-banju-recognition",
-        "b1-school-kamra-tal-banju-production",
-        "b1-school-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-kamra-tal-ikel",
@@ -1577,12 +1164,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "kamra-tal-ikel"
-      },
-      "assessmentIds": [
-        "b1-school-kamra-tal-ikel-recognition-true-false",
-        "b1-school-kamra-tal-ikel-production",
-        "b1-school-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-gnien",
@@ -1596,12 +1178,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "gnien"
-      },
-      "assessmentIds": [
-        "b1-school-gnien-diagnostic-recognition",
-        "b1-school-gnien-recognition",
-        "b1-school-gnien-production"
-      ]
+      }
     },
     {
       "id": "b1-school-kcina",
@@ -1615,11 +1192,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "kcina"
-      },
-      "assessmentIds": [
-        "b1-school-kcina-recognition-true-false",
-        "b1-school-kcina-production"
-      ]
+      }
     },
     {
       "id": "b1-school-salott",
@@ -1633,12 +1206,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "salott"
-      },
-      "assessmentIds": [
-        "b1-school-salott-recognition",
-        "b1-school-salott-production",
-        "b1-school-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-school-garaxx",
@@ -1652,13 +1220,7 @@
         "page": "home_furniture.html",
         "file": "assets/data/home_furniture.json",
         "itemId": "garaxx"
-      },
-      "assessmentIds": [
-        "b1-school-garaxx-diagnostic-recognition-true-false",
-        "b1-school-garaxx-recognition-true-false",
-        "b1-school-garaxx-production",
-        "b1-school-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-kelb",
@@ -1672,15 +1234,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "kelb"
-      },
-      "assessmentIds": [
-        "animal-kelb-meaning",
-        "animal-kelb-production",
-        "b1-animals-kelb-diagnostic-recognition",
-        "b1-animals-kelb-recognition",
-        "b1-animals-kelb-production",
-        "b1-animals-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-kelba",
@@ -1694,12 +1248,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "kelb"
-      },
-      "assessmentIds": [
-        "b1-animals-kelba-recognition-true-false",
-        "b1-animals-kelba-production",
-        "b1-animals-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-qattus",
@@ -1713,14 +1262,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "qattus"
-      },
-      "assessmentIds": [
-        "animal-qattus-production",
-        "b1-animals-qattus-diagnostic-recognition-true-false",
-        "b1-animals-qattus-recognition",
-        "b1-animals-qattus-production",
-        "b1-animals-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-qattusa",
@@ -1734,12 +1276,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "qattus"
-      },
-      "assessmentIds": [
-        "b1-animals-qattusa-recognition-true-false",
-        "b1-animals-qattusa-production",
-        "b1-animals-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-ghasfur",
@@ -1753,11 +1290,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "g-asfur"
-      },
-      "assessmentIds": [
-        "b1-animals-ghasfur-recognition",
-        "b1-animals-ghasfur-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-fenek",
@@ -1771,12 +1304,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "fenek"
-      },
-      "assessmentIds": [
-        "b1-animals-fenek-diagnostic-recognition",
-        "b1-animals-fenek-recognition-true-false",
-        "b1-animals-fenek-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-pappagall",
@@ -1790,12 +1318,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "pappagall"
-      },
-      "assessmentIds": [
-        "b1-animals-pappagall-recognition",
-        "b1-animals-pappagall-production",
-        "b1-animals-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-fekruna",
@@ -1809,12 +1332,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "fekruna-tal-art"
-      },
-      "assessmentIds": [
-        "b1-animals-fekruna-recognition-true-false",
-        "b1-animals-fekruna-production",
-        "b1-animals-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-tigiega",
@@ -1828,13 +1346,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "ti-ie-a"
-      },
-      "assessmentIds": [
-        "b1-animals-tigiega-diagnostic-recognition-true-false",
-        "b1-animals-tigiega-recognition",
-        "b1-animals-tigiega-production",
-        "b1-animals-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-fellus",
@@ -1848,12 +1360,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-fellus"
-      },
-      "assessmentIds": [
-        "b1-animals-fellus-recognition-true-false",
-        "b1-animals-fellus-production",
-        "b1-animals-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-baqra",
@@ -1867,11 +1374,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "baqra"
-      },
-      "assessmentIds": [
-        "b1-animals-baqra-recognition",
-        "b1-animals-baqra-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-naghga",
@@ -1885,12 +1388,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "nag-a"
-      },
-      "assessmentIds": [
-        "b1-animals-naghga-diagnostic-recognition",
-        "b1-animals-naghga-recognition-true-false",
-        "b1-animals-naghga-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-hmara",
@@ -1904,12 +1402,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-hmara"
-      },
-      "assessmentIds": [
-        "b1-animals-hmara-recognition",
-        "b1-animals-hmara-production",
-        "b1-animals-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-gurdien",
@@ -1923,12 +1416,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "urdien"
-      },
-      "assessmentIds": [
-        "b1-animals-gurdien-recognition-true-false",
-        "b1-animals-gurdien-production",
-        "b1-animals-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-hanzir",
@@ -1942,13 +1430,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "an-ir"
-      },
-      "assessmentIds": [
-        "b1-animals-hanzir-diagnostic-recognition-true-false",
-        "b1-animals-hanzir-recognition",
-        "b1-animals-hanzir-production",
-        "b1-animals-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-ziemel",
@@ -1962,12 +1444,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "iemel"
-      },
-      "assessmentIds": [
-        "b1-animals-ziemel-recognition-true-false",
-        "b1-animals-ziemel-production",
-        "b1-animals-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-papra",
@@ -1981,11 +1458,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "papra"
-      },
-      "assessmentIds": [
-        "b1-animals-papra-recognition",
-        "b1-animals-papra-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-emu",
@@ -1999,12 +1472,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-emu"
-      },
-      "assessmentIds": [
-        "b1-animals-emu-diagnostic-recognition",
-        "b1-animals-emu-recognition-true-false",
-        "b1-animals-emu-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-brama",
@@ -2018,12 +1486,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-brama"
-      },
-      "assessmentIds": [
-        "b1-animals-brama-recognition",
-        "b1-animals-brama-production",
-        "b1-animals-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-xadina",
@@ -2037,12 +1500,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "xadina"
-      },
-      "assessmentIds": [
-        "b1-animals-xadina-recognition-true-false",
-        "b1-animals-xadina-production",
-        "b1-animals-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-kamaleont",
@@ -2056,13 +1514,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-kamaleont"
-      },
-      "assessmentIds": [
-        "b1-animals-kamaleont-diagnostic-recognition-true-false",
-        "b1-animals-kamaleont-recognition",
-        "b1-animals-kamaleont-production",
-        "b1-animals-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-lampuka",
@@ -2076,12 +1528,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-lampuka"
-      },
-      "assessmentIds": [
-        "b1-animals-lampuka-recognition-true-false",
-        "b1-animals-lampuka-production",
-        "b1-animals-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-nemla",
@@ -2095,11 +1542,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "nemla"
-      },
-      "assessmentIds": [
-        "b1-animals-nemla-recognition",
-        "b1-animals-nemla-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-serp",
@@ -2113,12 +1556,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "serp"
-      },
-      "assessmentIds": [
-        "b1-animals-serp-diagnostic-recognition",
-        "b1-animals-serp-recognition-true-false",
-        "b1-animals-serp-production"
-      ]
+      }
     },
     {
       "id": "b1-animals-denfil",
@@ -2132,12 +1570,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-animals-denfil"
-      },
-      "assessmentIds": [
-        "b1-animals-denfil-recognition",
-        "b1-animals-denfil-production",
-        "b1-animals-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-gemel",
@@ -2151,12 +1584,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "emel"
-      },
-      "assessmentIds": [
-        "b1-animals-gemel-recognition-true-false",
-        "b1-animals-gemel-production",
-        "b1-animals-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-animals-iljunfant",
@@ -2170,14 +1598,7 @@
         "page": "animals.html",
         "file": "assets/data/animals.json",
         "itemId": "iljunfant"
-      },
-      "assessmentIds": [
-        "animal-iljunfant-production",
-        "b1-animals-iljunfant-diagnostic-recognition-true-false",
-        "b1-animals-iljunfant-recognition",
-        "b1-animals-iljunfant-production",
-        "b1-animals-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-abjad",
@@ -2191,13 +1612,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "abjad"
-      },
-      "assessmentIds": [
-        "b1-colours-abjad-diagnostic-recognition",
-        "b1-colours-abjad-recognition",
-        "b1-colours-abjad-production",
-        "b1-colours-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-bajda",
@@ -2211,12 +1626,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-bajda"
-      },
-      "assessmentIds": [
-        "b1-colours-bajda-recognition-true-false",
-        "b1-colours-bajda-production",
-        "b1-colours-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-ahmar",
@@ -2230,14 +1640,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "ahmar"
-      },
-      "assessmentIds": [
-        "colour-red-recognition",
-        "colour-red-production",
-        "b1-colours-ahmar-recognition",
-        "b1-colours-ahmar-production",
-        "b1-colours-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-hamra",
@@ -2251,12 +1654,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "ahmar"
-      },
-      "assessmentIds": [
-        "b1-colours-hamra-recognition-true-false",
-        "b1-colours-hamra-production",
-        "b1-colours-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-isfar",
@@ -2270,12 +1668,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "isfar"
-      },
-      "assessmentIds": [
-        "b1-colours-isfar-diagnostic-recognition-true-false",
-        "b1-colours-isfar-recognition",
-        "b1-colours-isfar-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-safra",
@@ -2289,11 +1682,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "isfar"
-      },
-      "assessmentIds": [
-        "b1-colours-safra-recognition-true-false",
-        "b1-colours-safra-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-ahdar",
@@ -2307,12 +1696,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "ahdar"
-      },
-      "assessmentIds": [
-        "b1-colours-ahdar-recognition",
-        "b1-colours-ahdar-production",
-        "b1-colours-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-hadra",
@@ -2326,11 +1710,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-hadra"
-      },
-      "assessmentIds": [
-        "b1-colours-hadra-recognition-true-false",
-        "b1-colours-hadra-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-griz",
@@ -2344,12 +1724,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "griz"
-      },
-      "assessmentIds": [
-        "b1-colours-griz-recognition",
-        "b1-colours-griz-production",
-        "b1-colours-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-griza",
@@ -2363,13 +1738,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-griza"
-      },
-      "assessmentIds": [
-        "b1-colours-griza-diagnostic-recognition",
-        "b1-colours-griza-recognition-true-false",
-        "b1-colours-griza-production",
-        "b1-colours-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-iswed",
@@ -2383,12 +1752,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "iswed"
-      },
-      "assessmentIds": [
-        "b1-colours-iswed-recognition",
-        "b1-colours-iswed-production",
-        "b1-colours-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-sewda",
@@ -2402,11 +1766,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "iswed"
-      },
-      "assessmentIds": [
-        "b1-colours-sewda-recognition-true-false",
-        "b1-colours-sewda-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-kannella",
@@ -2420,12 +1780,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "kannella"
-      },
-      "assessmentIds": [
-        "b1-colours-kannella-recognition",
-        "b1-colours-kannella-production",
-        "b1-colours-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-orangjo",
@@ -2439,12 +1794,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "orangjo"
-      },
-      "assessmentIds": [
-        "b1-colours-orangjo-recognition-true-false",
-        "b1-colours-orangjo-production",
-        "b1-colours-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-roza",
@@ -2458,13 +1808,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "roza"
-      },
-      "assessmentIds": [
-        "b1-colours-roza-diagnostic-recognition-true-false",
-        "b1-colours-roza-recognition",
-        "b1-colours-roza-production",
-        "b1-colours-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-vjola",
@@ -2478,12 +1822,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "vjola"
-      },
-      "assessmentIds": [
-        "b1-colours-vjola-recognition-true-false",
-        "b1-colours-vjola-production",
-        "b1-colours-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-blu",
@@ -2497,11 +1836,7 @@
         "page": "colors_maltese.html",
         "file": "assets/data/colors.json",
         "itemId": "blu"
-      },
-      "assessmentIds": [
-        "b1-colours-blu-recognition",
-        "b1-colours-blu-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-cirku",
@@ -2515,11 +1850,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-cirku"
-      },
-      "assessmentIds": [
-        "b1-colours-cirku-recognition-true-false",
-        "b1-colours-cirku-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-crieki",
@@ -2533,13 +1864,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-crieki"
-      },
-      "assessmentIds": [
-        "b1-colours-crieki-diagnostic-recognition",
-        "b1-colours-crieki-recognition",
-        "b1-colours-crieki-production",
-        "b1-colours-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-kaxxa",
@@ -2553,12 +1878,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-kaxxa"
-      },
-      "assessmentIds": [
-        "b1-colours-kaxxa-recognition-true-false",
-        "b1-colours-kaxxa-production",
-        "b1-colours-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-kaxxi",
@@ -2572,12 +1892,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-kaxxi"
-      },
-      "assessmentIds": [
-        "b1-colours-kaxxi-recognition",
-        "b1-colours-kaxxi-production",
-        "b1-colours-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-trijanglu",
@@ -2591,12 +1906,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-trijanglu"
-      },
-      "assessmentIds": [
-        "b1-colours-trijanglu-recognition-true-false",
-        "b1-colours-trijanglu-production",
-        "b1-colours-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-trijangli",
@@ -2610,11 +1920,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-trijangli"
-      },
-      "assessmentIds": [
-        "b1-colours-trijangli-recognition",
-        "b1-colours-trijangli-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-strixxa",
@@ -2628,12 +1934,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-strixxa"
-      },
-      "assessmentIds": [
-        "b1-colours-strixxa-diagnostic-recognition-true-false",
-        "b1-colours-strixxa-recognition-true-false",
-        "b1-colours-strixxa-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-strixxi",
@@ -2647,12 +1948,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-strixxi"
-      },
-      "assessmentIds": [
-        "b1-colours-strixxi-recognition",
-        "b1-colours-strixxi-production",
-        "b1-colours-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-bandiera",
@@ -2666,12 +1962,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-bandiera"
-      },
-      "assessmentIds": [
-        "b1-colours-bandiera-recognition-true-false",
-        "b1-colours-bandiera-production",
-        "b1-colours-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-pajjiz",
@@ -2685,12 +1976,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-pajjiz"
-      },
-      "assessmentIds": [
-        "b1-colours-pajjiz-recognition",
-        "b1-colours-pajjiz-production",
-        "b1-colours-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-malta",
@@ -2704,12 +1990,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-malta"
-      },
-      "assessmentIds": [
-        "b1-colours-malta-recognition-true-false",
-        "b1-colours-malta-production",
-        "b1-colours-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-italja",
@@ -2723,12 +2004,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-italja"
-      },
-      "assessmentIds": [
-        "b1-colours-italja-diagnostic-recognition",
-        "b1-colours-italja-recognition",
-        "b1-colours-italja-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-ingilterra",
@@ -2742,11 +2018,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-ingilterra"
-      },
-      "assessmentIds": [
-        "b1-colours-ingilterra-recognition-true-false",
-        "b1-colours-ingilterra-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-germanja",
@@ -2760,12 +2032,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-germanja"
-      },
-      "assessmentIds": [
-        "b1-colours-germanja-recognition",
-        "b1-colours-germanja-production",
-        "b1-colours-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-spanja",
@@ -2779,12 +2046,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-spanja"
-      },
-      "assessmentIds": [
-        "b1-colours-spanja-recognition-true-false",
-        "b1-colours-spanja-production",
-        "b1-colours-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-franza",
@@ -2798,13 +2060,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-franza"
-      },
-      "assessmentIds": [
-        "b1-colours-franza-diagnostic-recognition-true-false",
-        "b1-colours-franza-recognition",
-        "b1-colours-franza-production",
-        "b1-colours-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-pakistan",
@@ -2818,12 +2074,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-pakistan"
-      },
-      "assessmentIds": [
-        "b1-colours-pakistan-recognition-true-false",
-        "b1-colours-pakistan-production",
-        "b1-colours-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-ukraina",
@@ -2837,11 +2088,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-ukraina"
-      },
-      "assessmentIds": [
-        "b1-colours-ukraina-recognition",
-        "b1-colours-ukraina-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-turkija",
@@ -2855,11 +2102,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-turkija"
-      },
-      "assessmentIds": [
-        "b1-colours-turkija-recognition-true-false",
-        "b1-colours-turkija-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-portugall",
@@ -2873,12 +2116,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-portugall"
-      },
-      "assessmentIds": [
-        "b1-colours-portugall-recognition",
-        "b1-colours-portugall-production",
-        "b1-colours-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-filippini",
@@ -2892,13 +2130,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-filippini"
-      },
-      "assessmentIds": [
-        "b1-colours-filippini-diagnostic-recognition",
-        "b1-colours-filippini-recognition-true-false",
-        "b1-colours-filippini-production",
-        "b1-colours-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-indja",
@@ -2912,12 +2144,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-indja"
-      },
-      "assessmentIds": [
-        "b1-colours-indja-recognition",
-        "b1-colours-indja-production",
-        "b1-colours-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-gappun",
@@ -2931,12 +2158,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-gappun"
-      },
-      "assessmentIds": [
-        "b1-colours-gappun-recognition-true-false",
-        "b1-colours-gappun-production",
-        "b1-colours-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-colours-libja",
@@ -2950,11 +2172,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-libja"
-      },
-      "assessmentIds": [
-        "b1-colours-libja-recognition",
-        "b1-colours-libja-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-awstralja",
@@ -2968,11 +2186,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-awstralja"
-      },
-      "assessmentIds": [
-        "b1-colours-awstralja-recognition-true-false",
-        "b1-colours-awstralja-production"
-      ]
+      }
     },
     {
       "id": "b1-colours-cina",
@@ -2986,12 +2200,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-colours-cina"
-      },
-      "assessmentIds": [
-        "b1-colours-cina-diagnostic-recognition-true-false",
-        "b1-colours-cina-recognition",
-        "b1-colours-cina-production"
-      ]
+      }
     },
     {
       "id": "b1-food-te",
@@ -3005,13 +2214,7 @@
         "page": "food_preferences.html",
         "file": "assets/data/food.json",
         "itemId": "te"
-      },
-      "assessmentIds": [
-        "b1-food-te-diagnostic-recognition",
-        "b1-food-te-recognition",
-        "b1-food-te-production",
-        "b1-food-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-spagetti",
@@ -3025,12 +2228,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-spagetti"
-      },
-      "assessmentIds": [
-        "b1-food-spagetti-recognition-true-false",
-        "b1-food-spagetti-production",
-        "b1-food-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-pizza",
@@ -3044,12 +2242,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-pizza"
-      },
-      "assessmentIds": [
-        "b1-food-pizza-recognition",
-        "b1-food-pizza-production",
-        "b1-food-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-kafe",
@@ -3063,14 +2256,7 @@
         "page": "food_preferences.html",
         "file": "assets/data/food.json",
         "itemId": "kafe"
-      },
-      "assessmentIds": [
-        "food-category",
-        "food-coffee-production",
-        "b1-food-kafe-recognition-true-false",
-        "b1-food-kafe-production",
-        "b1-food-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-kuskus",
@@ -3084,11 +2270,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-kuskus"
-      },
-      "assessmentIds": [
-        "b1-food-kuskus-recognition",
-        "b1-food-kuskus-production"
-      ]
+      }
     },
     {
       "id": "b1-food-ilma",
@@ -3102,12 +2284,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-ilma"
-      },
-      "assessmentIds": [
-        "b1-food-ilma-diagnostic-recognition-true-false",
-        "b1-food-ilma-recognition-true-false",
-        "b1-food-ilma-production"
-      ]
+      }
     },
     {
       "id": "b1-food-ross",
@@ -3121,12 +2298,7 @@
         "page": "food_preferences.html",
         "file": "assets/data/food.json",
         "itemId": "ross"
-      },
-      "assessmentIds": [
-        "b1-food-ross-recognition",
-        "b1-food-ross-production",
-        "b1-food-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-paella",
@@ -3140,12 +2312,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-paella"
-      },
-      "assessmentIds": [
-        "b1-food-paella-recognition-true-false",
-        "b1-food-paella-production",
-        "b1-food-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-luminata",
@@ -3159,12 +2326,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-luminata"
-      },
-      "assessmentIds": [
-        "b1-food-luminata-recognition",
-        "b1-food-luminata-production",
-        "b1-food-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-meraq-tal-frott",
@@ -3178,12 +2340,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-meraq-tal-frott"
-      },
-      "assessmentIds": [
-        "b1-food-meraq-tal-frott-recognition-true-false",
-        "b1-food-meraq-tal-frott-production",
-        "b1-food-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-zejt",
@@ -3197,12 +2354,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-zejt"
-      },
-      "assessmentIds": [
-        "b1-food-zejt-diagnostic-recognition",
-        "b1-food-zejt-recognition",
-        "b1-food-zejt-production"
-      ]
+      }
     },
     {
       "id": "b1-food-helu",
@@ -3216,11 +2368,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "helwa"
-      },
-      "assessmentIds": [
-        "b1-food-helu-recognition-true-false",
-        "b1-food-helu-production"
-      ]
+      }
     },
     {
       "id": "b1-food-mandolina",
@@ -3234,12 +2382,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "mandolina"
-      },
-      "assessmentIds": [
-        "b1-food-mandolina-recognition",
-        "b1-food-mandolina-production",
-        "b1-food-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-ghanqud",
@@ -3253,12 +2396,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-ghanqud"
-      },
-      "assessmentIds": [
-        "b1-food-ghanqud-recognition-true-false",
-        "b1-food-ghanqud-production",
-        "b1-food-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-gheneb",
@@ -3272,12 +2410,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-gheneb"
-      },
-      "assessmentIds": [
-        "b1-food-gheneb-recognition",
-        "b1-food-gheneb-production",
-        "b1-food-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-dulliegha",
@@ -3291,13 +2424,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "dulliegha"
-      },
-      "assessmentIds": [
-        "b1-food-dulliegha-diagnostic-recognition-true-false",
-        "b1-food-dulliegha-recognition-true-false",
-        "b1-food-dulliegha-production",
-        "b1-food-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-bambinella",
@@ -3311,11 +2438,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-bambinella"
-      },
-      "assessmentIds": [
-        "b1-food-bambinella-recognition",
-        "b1-food-bambinella-production"
-      ]
+      }
     },
     {
       "id": "b1-food-bajtra-tax-xewk",
@@ -3329,11 +2452,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-bajtra-tax-xewk"
-      },
-      "assessmentIds": [
-        "b1-food-bajtra-tax-xewk-recognition-true-false",
-        "b1-food-bajtra-tax-xewk-production"
-      ]
+      }
     },
     {
       "id": "b1-food-bettieha",
@@ -3347,12 +2466,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "bettieha"
-      },
-      "assessmentIds": [
-        "b1-food-bettieha-recognition",
-        "b1-food-bettieha-production",
-        "b1-food-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-cirasa",
@@ -3366,12 +2480,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-cirasa"
-      },
-      "assessmentIds": [
-        "b1-food-cirasa-recognition-true-false",
-        "b1-food-cirasa-production",
-        "b1-food-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-tina",
@@ -3385,13 +2494,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-tina"
-      },
-      "assessmentIds": [
-        "b1-food-tina-diagnostic-recognition",
-        "b1-food-tina-recognition",
-        "b1-food-tina-production",
-        "b1-food-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-tuffieha",
@@ -3405,12 +2508,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "tuffieha"
-      },
-      "assessmentIds": [
-        "b1-food-tuffieha-recognition-true-false",
-        "b1-food-tuffieha-production",
-        "b1-food-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-kiwi",
@@ -3424,11 +2522,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-kiwi"
-      },
-      "assessmentIds": [
-        "b1-food-kiwi-recognition",
-        "b1-food-kiwi-production"
-      ]
+      }
     },
     {
       "id": "b1-food-banana",
@@ -3442,11 +2536,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "banana"
-      },
-      "assessmentIds": [
-        "b1-food-banana-recognition-true-false",
-        "b1-food-banana-production"
-      ]
+      }
     },
     {
       "id": "b1-food-lumi",
@@ -3460,12 +2550,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "lumija"
-      },
-      "assessmentIds": [
-        "b1-food-lumi-recognition",
-        "b1-food-lumi-production",
-        "b1-food-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-lumija",
@@ -3479,13 +2564,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "lumija"
-      },
-      "assessmentIds": [
-        "b1-food-lumija-diagnostic-recognition-true-false",
-        "b1-food-lumija-recognition-true-false",
-        "b1-food-lumija-production",
-        "b1-food-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-laham",
@@ -3499,12 +2578,7 @@
         "page": "food_preferences.html",
         "file": "assets/data/food.json",
         "itemId": "laham"
-      },
-      "assessmentIds": [
-        "b1-food-laham-recognition",
-        "b1-food-laham-production",
-        "b1-food-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-langas",
@@ -3518,12 +2592,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "langasa"
-      },
-      "assessmentIds": [
-        "b1-food-langas-recognition-true-false",
-        "b1-food-langas-production",
-        "b1-food-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-langasa",
@@ -3537,11 +2606,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "langasa"
-      },
-      "assessmentIds": [
-        "b1-food-langasa-recognition",
-        "b1-food-langasa-production"
-      ]
+      }
     },
     {
       "id": "b1-food-laring",
@@ -3555,11 +2620,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "laringa"
-      },
-      "assessmentIds": [
-        "b1-food-laring-recognition-true-false",
-        "b1-food-laring-production"
-      ]
+      }
     },
     {
       "id": "b1-food-laringa",
@@ -3573,13 +2634,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "laringa"
-      },
-      "assessmentIds": [
-        "b1-food-laringa-diagnostic-recognition",
-        "b1-food-laringa-recognition",
-        "b1-food-laringa-production",
-        "b1-food-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-frawli",
@@ -3593,12 +2648,7 @@
         "page": "food_preferences.html",
         "file": "assets/data/food.json",
         "itemId": "kaxxa-frawli"
-      },
-      "assessmentIds": [
-        "b1-food-frawli-recognition-true-false",
-        "b1-food-frawli-production",
-        "b1-food-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-frawla",
@@ -3612,11 +2662,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "frawla"
-      },
-      "assessmentIds": [
-        "b1-food-frawla-recognition",
-        "b1-food-frawla-production"
-      ]
+      }
     },
     {
       "id": "b1-food-dulliegh",
@@ -3630,12 +2676,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "dulliegha"
-      },
-      "assessmentIds": [
-        "b1-food-dulliegh-recognition-true-false",
-        "b1-food-dulliegh-production",
-        "b1-food-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-bettieh",
@@ -3649,12 +2690,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "bettieha"
-      },
-      "assessmentIds": [
-        "b1-food-bettieh-recognition",
-        "b1-food-bettieh-production",
-        "b1-food-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-tuffieh",
@@ -3668,12 +2704,7 @@
         "page": "collective_nouns.html",
         "file": "assets/data/collective_nouns.json",
         "itemId": "tuffieha"
-      },
-      "assessmentIds": [
-        "b1-food-tuffieh-diagnostic-recognition-true-false",
-        "b1-food-tuffieh-recognition-true-false",
-        "b1-food-tuffieh-production"
-      ]
+      }
     },
     {
       "id": "b1-food-kejk",
@@ -3687,12 +2718,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-kejk"
-      },
-      "assessmentIds": [
-        "b1-food-kejk-recognition",
-        "b1-food-kejk-production",
-        "b1-food-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-kejkijiet",
@@ -3706,12 +2732,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-kejkijiet"
-      },
-      "assessmentIds": [
-        "b1-food-kejkijiet-recognition-true-false",
-        "b1-food-kejkijiet-production",
-        "b1-food-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-insalata",
@@ -3725,12 +2746,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-insalata"
-      },
-      "assessmentIds": [
-        "b1-food-insalata-recognition",
-        "b1-food-insalata-production",
-        "b1-food-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-insalati",
@@ -3744,12 +2760,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-insalati"
-      },
-      "assessmentIds": [
-        "b1-food-insalati-recognition-true-false",
-        "b1-food-insalati-production",
-        "b1-food-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-pastizzi",
@@ -3763,12 +2774,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-pastizzi"
-      },
-      "assessmentIds": [
-        "b1-food-pastizzi-diagnostic-recognition",
-        "b1-food-pastizzi-recognition",
-        "b1-food-pastizzi-production"
-      ]
+      }
     },
     {
       "id": "b1-food-pasti",
@@ -3782,11 +2788,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-pasti"
-      },
-      "assessmentIds": [
-        "b1-food-pasti-recognition-true-false",
-        "b1-food-pasti-production"
-      ]
+      }
     },
     {
       "id": "b1-food-gelat",
@@ -3800,12 +2802,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-gelat"
-      },
-      "assessmentIds": [
-        "b1-food-gelat-recognition",
-        "b1-food-gelat-production",
-        "b1-food-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-ghadma",
@@ -3819,12 +2816,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-ghadma"
-      },
-      "assessmentIds": [
-        "b1-food-ghadma-recognition-true-false",
-        "b1-food-ghadma-production",
-        "b1-food-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-hut",
@@ -3838,12 +2830,7 @@
         "page": "food_preferences.html",
         "file": "assets/data/food.json",
         "itemId": "hut"
-      },
-      "assessmentIds": [
-        "b1-food-hut-recognition",
-        "b1-food-hut-production",
-        "b1-food-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b1-food-cikkulata",
@@ -3857,13 +2844,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-food-cikkulata"
-      },
-      "assessmentIds": [
-        "b1-food-cikkulata-diagnostic-recognition-true-false",
-        "b1-food-cikkulata-recognition-true-false",
-        "b1-food-cikkulata-production",
-        "b1-food-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-ahwa",
@@ -3877,13 +2858,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-ahwa"
-      },
-      "assessmentIds": [
-        "b1-family-ahwa-diagnostic-recognition",
-        "b1-family-ahwa-recognition",
-        "b1-family-ahwa-production",
-        "b1-family-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-hu",
@@ -3897,12 +2872,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "hu-hija"
-      },
-      "assessmentIds": [
-        "b1-family-hu-recognition-true-false",
-        "b1-family-hu-production",
-        "b1-family-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-oht",
@@ -3916,13 +2886,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "oht-ohti"
-      },
-      "assessmentIds": [
-        "family-members",
-        "b1-family-oht-recognition",
-        "b1-family-oht-production",
-        "b1-family-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-genituri",
@@ -3936,12 +2900,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "genituri"
-      },
-      "assessmentIds": [
-        "b1-family-genituri-recognition-true-false",
-        "b1-family-genituri-production",
-        "b1-family-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-omm",
@@ -3955,14 +2914,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "omm"
-      },
-      "assessmentIds": [
-        "family-members",
-        "family-mother-production",
-        "b1-family-omm-diagnostic-recognition-true-false",
-        "b1-family-omm-recognition",
-        "b1-family-omm-production"
-      ]
+      }
     },
     {
       "id": "b1-family-missier",
@@ -3976,12 +2928,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "missier"
-      },
-      "assessmentIds": [
-        "family-members",
-        "b1-family-missier-recognition-true-false",
-        "b1-family-missier-production"
-      ]
+      }
     },
     {
       "id": "b1-family-nanniet",
@@ -3995,12 +2942,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-nanniet"
-      },
-      "assessmentIds": [
-        "b1-family-nanniet-recognition",
-        "b1-family-nanniet-production",
-        "b1-family-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-nannu",
@@ -4014,12 +2956,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "nannu"
-      },
-      "assessmentIds": [
-        "b1-family-nannu-recognition-true-false",
-        "b1-family-nannu-production",
-        "b1-family-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-nanna",
@@ -4033,13 +2970,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "nanna"
-      },
-      "assessmentIds": [
-        "b1-family-nanna-diagnostic-recognition",
-        "b1-family-nanna-recognition",
-        "b1-family-nanna-production",
-        "b1-family-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-ziju",
@@ -4053,12 +2984,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "ziju"
-      },
-      "assessmentIds": [
-        "b1-family-ziju-recognition-true-false",
-        "b1-family-ziju-production",
-        "b1-family-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-zija",
@@ -4072,11 +2998,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "zija"
-      },
-      "assessmentIds": [
-        "b1-family-zija-recognition",
-        "b1-family-zija-production"
-      ]
+      }
     },
     {
       "id": "b1-family-kugin",
@@ -4090,11 +3012,7 @@
         "page": "family_home_food.html",
         "file": "assets/data/family_home_food.json",
         "itemId": "kugin"
-      },
-      "assessmentIds": [
-        "b1-family-kugin-recognition-true-false",
-        "b1-family-kugin-production"
-      ]
+      }
     },
     {
       "id": "b1-family-filghodu",
@@ -4108,13 +3026,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "filghodu"
-      },
-      "assessmentIds": [
-        "b1-family-filghodu-diagnostic-recognition-true-false",
-        "b1-family-filghodu-recognition",
-        "b1-family-filghodu-production",
-        "b1-family-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-f-nofsinhar",
@@ -4128,12 +3040,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-f-nofsinhar"
-      },
-      "assessmentIds": [
-        "b1-family-f-nofsinhar-recognition-true-false",
-        "b1-family-f-nofsinhar-production",
-        "b1-family-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-waranofsinhar",
@@ -4147,12 +3054,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "waranofsinhar"
-      },
-      "assessmentIds": [
-        "b1-family-waranofsinhar-recognition",
-        "b1-family-waranofsinhar-production",
-        "b1-family-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-filghaxija",
@@ -4166,12 +3068,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "filghaxija"
-      },
-      "assessmentIds": [
-        "b1-family-filghaxija-recognition-true-false",
-        "b1-family-filghaxija-production",
-        "b1-family-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-billejl",
@@ -4185,12 +3082,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "ta-billejl"
-      },
-      "assessmentIds": [
-        "b1-family-billejl-diagnostic-recognition",
-        "b1-family-billejl-recognition",
-        "b1-family-billejl-production"
-      ]
+      }
     },
     {
       "id": "b1-family-kmieni",
@@ -4204,11 +3096,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "ghada"
-      },
-      "assessmentIds": [
-        "b1-family-kmieni-recognition-true-false",
-        "b1-family-kmieni-production"
-      ]
+      }
     },
     {
       "id": "b1-family-tard",
@@ -4222,12 +3110,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-tard"
-      },
-      "assessmentIds": [
-        "b1-family-tard-recognition",
-        "b1-family-tard-production",
-        "b1-family-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-it-tnejn",
@@ -4241,12 +3124,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "it-tnejn"
-      },
-      "assessmentIds": [
-        "b1-family-it-tnejn-recognition-true-false",
-        "b1-family-it-tnejn-production",
-        "b1-family-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-it-tlieta",
@@ -4260,13 +3138,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "it-tlieta"
-      },
-      "assessmentIds": [
-        "b1-family-it-tlieta-diagnostic-recognition-true-false",
-        "b1-family-it-tlieta-recognition",
-        "b1-family-it-tlieta-production",
-        "b1-family-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-l-erbgha",
@@ -4280,12 +3152,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "l-erbgha"
-      },
-      "assessmentIds": [
-        "b1-family-l-erbgha-recognition-true-false",
-        "b1-family-l-erbgha-production",
-        "b1-family-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-il-hamis",
@@ -4299,11 +3166,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "il-hamis"
-      },
-      "assessmentIds": [
-        "b1-family-il-hamis-recognition",
-        "b1-family-il-hamis-production"
-      ]
+      }
     },
     {
       "id": "b1-family-il-gimgha",
@@ -4317,11 +3180,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "il-gimgha"
-      },
-      "assessmentIds": [
-        "b1-family-il-gimgha-recognition-true-false",
-        "b1-family-il-gimgha-production"
-      ]
+      }
     },
     {
       "id": "b1-family-is-sibt",
@@ -4335,13 +3194,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "is-sibt"
-      },
-      "assessmentIds": [
-        "b1-family-is-sibt-diagnostic-recognition",
-        "b1-family-is-sibt-recognition",
-        "b1-family-is-sibt-production",
-        "b1-family-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-il-hadd",
@@ -4355,12 +3208,7 @@
         "page": "numbers_calendar_time.html",
         "file": "assets/data/numbers_calendar_time.json",
         "itemId": "il-hadd"
-      },
-      "assessmentIds": [
-        "b1-family-il-hadd-recognition-true-false",
-        "b1-family-il-hadd-production",
-        "b1-family-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-tmiem-il-gimgha",
@@ -4374,12 +3222,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-tmiem-il-gimgha"
-      },
-      "assessmentIds": [
-        "b1-family-tmiem-il-gimgha-recognition",
-        "b1-family-tmiem-il-gimgha-production",
-        "b1-family-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-tenis",
@@ -4393,12 +3236,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-tenis"
-      },
-      "assessmentIds": [
-        "b1-family-tenis-recognition-true-false",
-        "b1-family-tenis-production",
-        "b1-family-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-passeggata",
@@ -4412,12 +3250,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-passeggata"
-      },
-      "assessmentIds": [
-        "b1-family-passeggata-diagnostic-recognition-true-false",
-        "b1-family-passeggata-recognition",
-        "b1-family-passeggata-production"
-      ]
+      }
     },
     {
       "id": "b1-family-zfin",
@@ -4431,11 +3264,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-zfin"
-      },
-      "assessmentIds": [
-        "b1-family-zfin-recognition-true-false",
-        "b1-family-zfin-production"
-      ]
+      }
     },
     {
       "id": "b1-family-pjazza",
@@ -4449,12 +3278,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-pjazza"
-      },
-      "assessmentIds": [
-        "b1-family-pjazza-recognition",
-        "b1-family-pjazza-production",
-        "b1-family-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-restorant",
@@ -4468,12 +3292,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-restorant"
-      },
-      "assessmentIds": [
-        "b1-family-restorant-recognition-true-false",
-        "b1-family-restorant-production",
-        "b1-family-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-bongu",
@@ -4487,13 +3306,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-bongu"
-      },
-      "assessmentIds": [
-        "b1-family-bongu-diagnostic-recognition",
-        "b1-family-bongu-recognition",
-        "b1-family-bongu-production",
-        "b1-family-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-il-waranofsinhar-it-tajjeb",
@@ -4507,12 +3320,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-il-waranofsinhar-it-tajjeb"
-      },
-      "assessmentIds": [
-        "b1-family-il-waranofsinhar-it-tajjeb-recognition-true-false",
-        "b1-family-il-waranofsinhar-it-tajjeb-production",
-        "b1-family-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-il-lejla-t-tajba",
@@ -4526,11 +3334,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-il-lejla-t-tajba"
-      },
-      "assessmentIds": [
-        "b1-family-il-lejla-t-tajba-recognition",
-        "b1-family-il-lejla-t-tajba-production"
-      ]
+      }
     },
     {
       "id": "b1-family-kif-inti",
@@ -4544,11 +3348,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-kif-inti"
-      },
-      "assessmentIds": [
-        "b1-family-kif-inti-recognition-true-false",
-        "b1-family-kif-inti-production"
-      ]
+      }
     },
     {
       "id": "b1-family-mhux-hazin",
@@ -4562,12 +3362,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-mhux-hazin"
-      },
-      "assessmentIds": [
-        "b1-family-mhux-hazin-recognition",
-        "b1-family-mhux-hazin-production",
-        "b1-family-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b1-family-hu-hsieb",
@@ -4581,13 +3376,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b1-family-hu-hsieb"
-      },
-      "assessmentIds": [
-        "b1-family-hu-hsieb-diagnostic-recognition-true-false",
-        "b1-family-hu-hsieb-recognition-true-false",
-        "b1-family-hu-hsieb-production",
-        "b1-family-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-basket-tal-iskola",
@@ -4601,13 +3390,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-basket-tal-iskola"
-      },
-      "assessmentIds": [
-        "b2-school-bag-basket-tal-iskola-diagnostic-recognition",
-        "b2-school-bag-basket-tal-iskola-recognition",
-        "b2-school-bag-basket-tal-iskola-production",
-        "b2-school-bag-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-pokit",
@@ -4621,12 +3404,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-pokit"
-      },
-      "assessmentIds": [
-        "b2-school-bag-pokit-recognition-true-false",
-        "b2-school-bag-pokit-production",
-        "b2-school-bag-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-temprina",
@@ -4640,12 +3418,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-temprina"
-      },
-      "assessmentIds": [
-        "b2-school-bag-temprina-recognition",
-        "b2-school-bag-temprina-production",
-        "b2-school-bag-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kulur",
@@ -4659,12 +3432,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-kulur"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kulur-recognition-true-false",
-        "b2-school-bag-kulur-production",
-        "b2-school-bag-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-lapes",
@@ -4678,11 +3446,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "lapes"
-      },
-      "assessmentIds": [
-        "b2-school-bag-lapes-recognition",
-        "b2-school-bag-lapes-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-fajl",
@@ -4696,12 +3460,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "fajl"
-      },
-      "assessmentIds": [
-        "b2-school-bag-fajl-diagnostic-recognition-true-false",
-        "b2-school-bag-fajl-recognition-true-false",
-        "b2-school-bag-fajl-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-ktieb",
@@ -4715,12 +3474,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "ktieb"
-      },
-      "assessmentIds": [
-        "b2-school-bag-ktieb-recognition",
-        "b2-school-bag-ktieb-production",
-        "b2-school-bag-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-marker",
@@ -4734,12 +3488,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-marker"
-      },
-      "assessmentIds": [
-        "b2-school-bag-marker-recognition-true-false",
-        "b2-school-bag-marker-production",
-        "b2-school-bag-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kalkulatur",
@@ -4753,14 +3502,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "kalkulatur"
-      },
-      "assessmentIds": [
-        "bag-objects",
-        "bag-calculator-production",
-        "b2-school-bag-kalkulatur-recognition",
-        "b2-school-bag-kalkulatur-production",
-        "b2-school-bag-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kumpass",
@@ -4774,12 +3516,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-kumpass"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kumpass-recognition-true-false",
-        "b2-school-bag-kumpass-production",
-        "b2-school-bag-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-imqass",
@@ -4793,12 +3530,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "imqass"
-      },
-      "assessmentIds": [
-        "b2-school-bag-imqass-diagnostic-recognition",
-        "b2-school-bag-imqass-recognition",
-        "b2-school-bag-imqass-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-pitazz",
@@ -4812,12 +3544,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "pitazz"
-      },
-      "assessmentIds": [
-        "bag-objects",
-        "b2-school-bag-pitazz-recognition-true-false",
-        "b2-school-bag-pitazz-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-karta",
@@ -4831,12 +3558,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-karta"
-      },
-      "assessmentIds": [
-        "b2-school-bag-karta-recognition",
-        "b2-school-bag-karta-production",
-        "b2-school-bag-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kolla",
@@ -4850,12 +3572,7 @@
         "page": "school_classroom.html",
         "file": "assets/data/school_classroom.json",
         "itemId": "kolla"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kolla-recognition-true-false",
-        "b2-school-bag-kolla-production",
-        "b2-school-bag-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-orarju",
@@ -4869,12 +3586,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-orarju"
-      },
-      "assessmentIds": [
-        "b2-school-bag-orarju-recognition",
-        "b2-school-bag-orarju-production",
-        "b2-school-bag-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-riga",
@@ -4888,13 +3600,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-riga"
-      },
-      "assessmentIds": [
-        "b2-school-bag-riga-diagnostic-recognition-true-false",
-        "b2-school-bag-riga-recognition-true-false",
-        "b2-school-bag-riga-production",
-        "b2-school-bag-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-sabih",
@@ -4908,11 +3614,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-sabih"
-      },
-      "assessmentIds": [
-        "b2-school-bag-sabih-recognition",
-        "b2-school-bag-sabih-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-sabiha",
@@ -4926,11 +3628,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-sabiha"
-      },
-      "assessmentIds": [
-        "b2-school-bag-sabiha-recognition-true-false",
-        "b2-school-bag-sabiha-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-sbieh",
@@ -4944,12 +3642,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-sbieh"
-      },
-      "assessmentIds": [
-        "b2-school-bag-sbieh-recognition",
-        "b2-school-bag-sbieh-production",
-        "b2-school-bag-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-ikrah",
@@ -4963,12 +3656,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-ikrah"
-      },
-      "assessmentIds": [
-        "b2-school-bag-ikrah-recognition-true-false",
-        "b2-school-bag-ikrah-production",
-        "b2-school-bag-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kerha",
@@ -4982,13 +3670,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-kerha"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kerha-diagnostic-recognition",
-        "b2-school-bag-kerha-recognition",
-        "b2-school-bag-kerha-production",
-        "b2-school-bag-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-koroh",
@@ -5002,12 +3684,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-koroh"
-      },
-      "assessmentIds": [
-        "b2-school-bag-koroh-recognition-true-false",
-        "b2-school-bag-koroh-production",
-        "b2-school-bag-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kbir",
@@ -5021,11 +3698,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-kbir"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kbir-recognition",
-        "b2-school-bag-kbir-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kbira",
@@ -5039,11 +3712,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-kbira"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kbira-recognition-true-false",
-        "b2-school-bag-kbira-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-kbar",
@@ -5057,12 +3726,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-kbar"
-      },
-      "assessmentIds": [
-        "b2-school-bag-kbar-recognition",
-        "b2-school-bag-kbar-production",
-        "b2-school-bag-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-zghir",
@@ -5076,13 +3740,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-zghir"
-      },
-      "assessmentIds": [
-        "b2-school-bag-zghir-diagnostic-recognition-true-false",
-        "b2-school-bag-zghir-recognition-true-false",
-        "b2-school-bag-zghir-production",
-        "b2-school-bag-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-zghira",
@@ -5096,11 +3754,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-zghira"
-      },
-      "assessmentIds": [
-        "b2-school-bag-zghira-recognition",
-        "b2-school-bag-zghira-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-zghar",
@@ -5114,12 +3768,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-zghar"
-      },
-      "assessmentIds": [
-        "b2-school-bag-zghar-recognition-true-false",
-        "b2-school-bag-zghar-production",
-        "b2-school-bag-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-gdid",
@@ -5133,12 +3782,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-gdid"
-      },
-      "assessmentIds": [
-        "b2-school-bag-gdid-recognition",
-        "b2-school-bag-gdid-production",
-        "b2-school-bag-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-gdida",
@@ -5152,11 +3796,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-gdida"
-      },
-      "assessmentIds": [
-        "b2-school-bag-gdida-recognition-true-false",
-        "b2-school-bag-gdida-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-godda",
@@ -5170,13 +3810,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-godda"
-      },
-      "assessmentIds": [
-        "b2-school-bag-godda-diagnostic-recognition",
-        "b2-school-bag-godda-recognition",
-        "b2-school-bag-godda-production",
-        "b2-school-bag-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-qadim",
@@ -5190,12 +3824,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-qadim"
-      },
-      "assessmentIds": [
-        "b2-school-bag-qadim-recognition-true-false",
-        "b2-school-bag-qadim-production",
-        "b2-school-bag-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-qadima",
@@ -5209,12 +3838,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-qadima"
-      },
-      "assessmentIds": [
-        "b2-school-bag-qadima-recognition",
-        "b2-school-bag-qadima-production",
-        "b2-school-bag-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-qodma",
@@ -5228,12 +3852,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-qodma"
-      },
-      "assessmentIds": [
-        "b2-school-bag-qodma-recognition-true-false",
-        "b2-school-bag-qodma-production",
-        "b2-school-bag-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-modern",
@@ -5247,11 +3866,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-modern"
-      },
-      "assessmentIds": [
-        "b2-school-bag-modern-recognition",
-        "b2-school-bag-modern-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-moderna",
@@ -5265,12 +3880,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-moderna"
-      },
-      "assessmentIds": [
-        "b2-school-bag-moderna-diagnostic-recognition-true-false",
-        "b2-school-bag-moderna-recognition-true-false",
-        "b2-school-bag-moderna-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-moderni",
@@ -5284,12 +3894,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-moderni"
-      },
-      "assessmentIds": [
-        "b2-school-bag-moderni-recognition",
-        "b2-school-bag-moderni-production",
-        "b2-school-bag-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-antik",
@@ -5303,12 +3908,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-antik"
-      },
-      "assessmentIds": [
-        "b2-school-bag-antik-recognition-true-false",
-        "b2-school-bag-antik-production",
-        "b2-school-bag-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-antika",
@@ -5322,12 +3922,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-antika"
-      },
-      "assessmentIds": [
-        "b2-school-bag-antika-recognition",
-        "b2-school-bag-antika-production",
-        "b2-school-bag-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-antiki",
@@ -5341,12 +3936,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-antiki"
-      },
-      "assessmentIds": [
-        "b2-school-bag-antiki-recognition-true-false",
-        "b2-school-bag-antiki-production",
-        "b2-school-bag-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-ikkulurit",
@@ -5360,12 +3950,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-ikkulurit"
-      },
-      "assessmentIds": [
-        "b2-school-bag-ikkulurit-diagnostic-recognition",
-        "b2-school-bag-ikkulurit-recognition",
-        "b2-school-bag-ikkulurit-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-ikkulurita",
@@ -5379,11 +3964,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-ikkulurita"
-      },
-      "assessmentIds": [
-        "b2-school-bag-ikkulurita-recognition-true-false",
-        "b2-school-bag-ikkulurita-production"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-ikkuluriti",
@@ -5397,12 +3978,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-ikkuluriti"
-      },
-      "assessmentIds": [
-        "b2-school-bag-ikkuluriti-recognition",
-        "b2-school-bag-ikkuluriti-production",
-        "b2-school-bag-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-nadif",
@@ -5416,12 +3992,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-nadif"
-      },
-      "assessmentIds": [
-        "b2-school-bag-nadif-recognition-true-false",
-        "b2-school-bag-nadif-production",
-        "b2-school-bag-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-nadifa",
@@ -5435,12 +4006,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-nadifa"
-      },
-      "assessmentIds": [
-        "b2-school-bag-nadifa-recognition",
-        "b2-school-bag-nadifa-production",
-        "b2-school-bag-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-nodfa",
@@ -5454,12 +4020,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-nodfa"
-      },
-      "assessmentIds": [
-        "b2-school-bag-nodfa-recognition-true-false",
-        "b2-school-bag-nodfa-production",
-        "b2-school-bag-checkpoint-8-matching"
-      ]
+      }
     },
     {
       "id": "b2-school-bag-mahmuga",
@@ -5473,12 +4034,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-school-bag-mahmuga"
-      },
-      "assessmentIds": [
-        "b2-school-bag-mahmuga-diagnostic-recognition-true-false",
-        "b2-school-bag-mahmuga-recognition",
-        "b2-school-bag-mahmuga-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-qum",
@@ -5492,13 +4048,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-qum"
-      },
-      "assessmentIds": [
-        "b2-imperative-qum-diagnostic-recognition",
-        "b2-imperative-qum-recognition",
-        "b2-imperative-qum-production",
-        "b2-imperative-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-qumu",
@@ -5512,12 +4062,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-qumu"
-      },
-      "assessmentIds": [
-        "b2-imperative-qumu-recognition-true-false",
-        "b2-imperative-qumu-production",
-        "b2-imperative-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-poggi",
@@ -5531,12 +4076,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-pogga"
-      },
-      "assessmentIds": [
-        "b2-imperative-poggi-recognition",
-        "b2-imperative-poggi-production",
-        "b2-imperative-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-poggu",
@@ -5550,13 +4090,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-pogga"
-      },
-      "assessmentIds": [
-        "b2-imperative-poggu-diagnostic-recognition-true-false",
-        "b2-imperative-poggu-recognition-true-false",
-        "b2-imperative-poggu-production",
-        "b2-imperative-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-ikteb",
@@ -5570,11 +4104,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-kiteb"
-      },
-      "assessmentIds": [
-        "b2-imperative-ikteb-recognition",
-        "b2-imperative-ikteb-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-iktbu",
@@ -5588,11 +4118,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-kiteb"
-      },
-      "assessmentIds": [
-        "b2-imperative-iktbu-recognition-true-false",
-        "b2-imperative-iktbu-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-aghlaq",
@@ -5606,13 +4132,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-gh-bidu-ghalaq"
-      },
-      "assessmentIds": [
-        "b2-imperative-aghlaq-diagnostic-recognition",
-        "b2-imperative-aghlaq-recognition",
-        "b2-imperative-aghlaq-production",
-        "b2-imperative-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-aghlqu",
@@ -5626,12 +4146,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-gh-bidu-ghalaq"
-      },
-      "assessmentIds": [
-        "b2-imperative-aghlqu-recognition-true-false",
-        "b2-imperative-aghlqu-production",
-        "b2-imperative-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-ohrog",
@@ -5645,12 +4160,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-ohrog"
-      },
-      "assessmentIds": [
-        "b2-imperative-ohrog-recognition",
-        "b2-imperative-ohrog-production",
-        "b2-imperative-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-ohorgu",
@@ -5664,12 +4174,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-ohorgu"
-      },
-      "assessmentIds": [
-        "b2-imperative-ohorgu-recognition-true-false",
-        "b2-imperative-ohorgu-production",
-        "b2-imperative-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-idhol",
@@ -5683,12 +4188,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-dahal"
-      },
-      "assessmentIds": [
-        "b2-imperative-idhol-diagnostic-recognition-true-false",
-        "b2-imperative-idhol-recognition",
-        "b2-imperative-idhol-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-idhlu",
@@ -5702,11 +4202,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-dahal"
-      },
-      "assessmentIds": [
-        "b2-imperative-idhlu-recognition-true-false",
-        "b2-imperative-idhlu-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-dahhal",
@@ -5720,12 +4216,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-dahhal"
-      },
-      "assessmentIds": [
-        "b2-imperative-dahhal-recognition",
-        "b2-imperative-dahhal-production",
-        "b2-imperative-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-dahhlu",
@@ -5739,13 +4230,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-dahhlu"
-      },
-      "assessmentIds": [
-        "b2-imperative-dahhlu-diagnostic-recognition",
-        "b2-imperative-dahhlu-recognition-true-false",
-        "b2-imperative-dahhlu-production",
-        "b2-imperative-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-aqra",
@@ -5759,12 +4244,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-aqra"
-      },
-      "assessmentIds": [
-        "b2-imperative-aqra-recognition",
-        "b2-imperative-aqra-production",
-        "b2-imperative-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-aqraw",
@@ -5778,12 +4258,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-aqraw"
-      },
-      "assessmentIds": [
-        "b2-imperative-aqraw-recognition-true-false",
-        "b2-imperative-aqraw-production",
-        "b2-imperative-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-iftah",
@@ -5797,13 +4272,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-fetah"
-      },
-      "assessmentIds": [
-        "imperative-open-plural",
-        "imperative-polite",
-        "b2-imperative-iftah-recognition",
-        "b2-imperative-iftah-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-ifthu",
@@ -5817,12 +4286,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-fetah"
-      },
-      "assessmentIds": [
-        "b2-imperative-ifthu-diagnostic-recognition-true-false",
-        "b2-imperative-ifthu-recognition-true-false",
-        "b2-imperative-ifthu-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-isimghu",
@@ -5836,12 +4300,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-sema"
-      },
-      "assessmentIds": [
-        "b2-imperative-isimghu-recognition",
-        "b2-imperative-isimghu-production",
-        "b2-imperative-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-staqsi",
@@ -5855,12 +4314,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-staqsi"
-      },
-      "assessmentIds": [
-        "b2-imperative-staqsi-recognition-true-false",
-        "b2-imperative-staqsi-production",
-        "b2-imperative-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-tkellem",
@@ -5874,13 +4328,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-imperative-tkellem"
-      },
-      "assessmentIds": [
-        "b2-imperative-tkellem-diagnostic-recognition",
-        "b2-imperative-tkellem-recognition",
-        "b2-imperative-tkellem-production",
-        "b2-imperative-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-aghmel",
@@ -5894,12 +4342,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-ghamel"
-      },
-      "assessmentIds": [
-        "b2-imperative-aghmel-recognition-true-false",
-        "b2-imperative-aghmel-production",
-        "b2-imperative-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-wiehed",
@@ -5913,11 +4356,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-1"
-      },
-      "assessmentIds": [
-        "b2-imperative-wiehed-recognition",
-        "b2-imperative-wiehed-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-tnejn",
@@ -5931,11 +4370,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-2"
-      },
-      "assessmentIds": [
-        "b2-imperative-tnejn-recognition-true-false",
-        "b2-imperative-tnejn-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-tlieta",
@@ -5949,13 +4384,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-3"
-      },
-      "assessmentIds": [
-        "b2-imperative-tlieta-diagnostic-recognition-true-false",
-        "b2-imperative-tlieta-recognition",
-        "b2-imperative-tlieta-production",
-        "b2-imperative-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-erbgha",
@@ -5969,12 +4398,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-4"
-      },
-      "assessmentIds": [
-        "b2-imperative-erbgha-recognition-true-false",
-        "b2-imperative-erbgha-production",
-        "b2-imperative-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-hamsa",
@@ -5988,12 +4412,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-5"
-      },
-      "assessmentIds": [
-        "b2-imperative-hamsa-recognition",
-        "b2-imperative-hamsa-production",
-        "b2-imperative-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-sitta",
@@ -6007,13 +4426,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-6"
-      },
-      "assessmentIds": [
-        "b2-imperative-sitta-diagnostic-recognition",
-        "b2-imperative-sitta-recognition-true-false",
-        "b2-imperative-sitta-production",
-        "b2-imperative-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-sebgha",
@@ -6027,11 +4440,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-7"
-      },
-      "assessmentIds": [
-        "b2-imperative-sebgha-recognition",
-        "b2-imperative-sebgha-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-tmienja",
@@ -6045,11 +4454,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-8"
-      },
-      "assessmentIds": [
-        "b2-imperative-tmienja-recognition-true-false",
-        "b2-imperative-tmienja-production"
-      ]
+      }
     },
     {
       "id": "b2-imperative-disgha",
@@ -6063,12 +4468,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-9"
-      },
-      "assessmentIds": [
-        "b2-imperative-disgha-recognition",
-        "b2-imperative-disgha-production",
-        "b2-imperative-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-imperative-ghaxra",
@@ -6082,13 +4482,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-10"
-      },
-      "assessmentIds": [
-        "b2-imperative-ghaxra-diagnostic-recognition-true-false",
-        "b2-imperative-ghaxra-recognition-true-false",
-        "b2-imperative-ghaxra-production",
-        "b2-imperative-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-borra",
@@ -6102,13 +4496,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-borra"
-      },
-      "assessmentIds": [
-        "b2-weather-borra-diagnostic-recognition",
-        "b2-weather-borra-recognition",
-        "b2-weather-borra-production",
-        "b2-weather-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-temperatura",
@@ -6122,12 +4510,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-temperatura"
-      },
-      "assessmentIds": [
-        "b2-weather-temperatura-recognition-true-false",
-        "b2-weather-temperatura-production",
-        "b2-weather-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-sajjetti",
@@ -6141,13 +4524,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-sajjetti"
-      },
-      "assessmentIds": [
-        "b2-weather-sajjetti-diagnostic-recognition-true-false",
-        "b2-weather-sajjetti-recognition",
-        "b2-weather-sajjetti-production",
-        "b2-weather-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-shab",
@@ -6161,12 +4538,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "shab"
-      },
-      "assessmentIds": [
-        "b2-weather-shab-recognition-true-false",
-        "b2-weather-shab-production",
-        "b2-weather-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-rih",
@@ -6180,12 +4552,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "rih"
-      },
-      "assessmentIds": [
-        "b2-weather-rih-diagnostic-recognition",
-        "b2-weather-rih-recognition",
-        "b2-weather-rih-production"
-      ]
+      }
     },
     {
       "id": "b2-weather-shana",
@@ -6199,11 +4566,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-shana"
-      },
-      "assessmentIds": [
-        "b2-weather-shana-recognition-true-false",
-        "b2-weather-shana-production"
-      ]
+      }
     },
     {
       "id": "b2-weather-kesha",
@@ -6217,12 +4580,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-kesha"
-      },
-      "assessmentIds": [
-        "b2-weather-kesha-recognition",
-        "b2-weather-kesha-production",
-        "b2-weather-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-maltemp",
@@ -6236,13 +4594,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-maltemp"
-      },
-      "assessmentIds": [
-        "b2-weather-maltemp-diagnostic-recognition-true-false",
-        "b2-weather-maltemp-recognition-true-false",
-        "b2-weather-maltemp-production",
-        "b2-weather-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-istagun",
@@ -6256,12 +4608,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-istagun"
-      },
-      "assessmentIds": [
-        "b2-weather-istagun-recognition",
-        "b2-weather-istagun-production",
-        "b2-weather-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-staguni",
@@ -6275,13 +4622,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-staguni"
-      },
-      "assessmentIds": [
-        "b2-weather-staguni-diagnostic-recognition",
-        "b2-weather-staguni-recognition-true-false",
-        "b2-weather-staguni-production",
-        "b2-weather-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-rebbiegha",
@@ -6295,11 +4636,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "rebbiegha"
-      },
-      "assessmentIds": [
-        "b2-weather-rebbiegha-recognition",
-        "b2-weather-rebbiegha-production"
-      ]
+      }
     },
     {
       "id": "b2-weather-sajf",
@@ -6313,11 +4650,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "sajf"
-      },
-      "assessmentIds": [
-        "b2-weather-sajf-recognition-true-false",
-        "b2-weather-sajf-production"
-      ]
+      }
     },
     {
       "id": "b2-weather-harifa",
@@ -6331,13 +4664,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "harifa"
-      },
-      "assessmentIds": [
-        "b2-weather-harifa-diagnostic-recognition-true-false",
-        "b2-weather-harifa-recognition",
-        "b2-weather-harifa-production",
-        "b2-weather-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-xitwa",
@@ -6351,14 +4678,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "xitwa"
-      },
-      "assessmentIds": [
-        "weather-season",
-        "weather-winter-production",
-        "b2-weather-xitwa-recognition-true-false",
-        "b2-weather-xitwa-production",
-        "b2-weather-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-xemx",
@@ -6372,13 +4692,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "xemx"
-      },
-      "assessmentIds": [
-        "b2-weather-xemx-diagnostic-recognition",
-        "b2-weather-xemx-recognition",
-        "b2-weather-xemx-production",
-        "b2-weather-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-xita",
@@ -6392,12 +4706,7 @@
         "page": "weather.html",
         "file": "assets/data/weather.json",
         "itemId": "xita"
-      },
-      "assessmentIds": [
-        "b2-weather-xita-recognition-true-false",
-        "b2-weather-xita-production",
-        "b2-weather-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-raghad",
@@ -6411,11 +4720,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-raghad"
-      },
-      "assessmentIds": [
-        "b2-weather-raghad-recognition",
-        "b2-weather-raghad-production"
-      ]
+      }
     },
     {
       "id": "b2-weather-bnazzi",
@@ -6429,12 +4734,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-bnazzi"
-      },
-      "assessmentIds": [
-        "b2-weather-bnazzi-diagnostic-recognition-true-false",
-        "b2-weather-bnazzi-recognition-true-false",
-        "b2-weather-bnazzi-production"
-      ]
+      }
     },
     {
       "id": "b2-weather-silg",
@@ -6448,12 +4748,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-silg"
-      },
-      "assessmentIds": [
-        "b2-weather-silg-recognition",
-        "b2-weather-silg-production",
-        "b2-weather-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-xemxi",
@@ -6467,13 +4762,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-xemxi"
-      },
-      "assessmentIds": [
-        "b2-weather-xemxi-diagnostic-recognition",
-        "b2-weather-xemxi-recognition-true-false",
-        "b2-weather-xemxi-production",
-        "b2-weather-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-imsahhab",
@@ -6487,12 +4776,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-imsahhab"
-      },
-      "assessmentIds": [
-        "b2-weather-imsahhab-recognition",
-        "b2-weather-imsahhab-production",
-        "b2-weather-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-l-oghla-temperatura",
@@ -6506,12 +4790,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-l-oghla-temperatura"
-      },
-      "assessmentIds": [
-        "b2-weather-l-oghla-temperatura-recognition-true-false",
-        "b2-weather-l-oghla-temperatura-production",
-        "b2-weather-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-weather-l-inqas-temperatura",
@@ -6525,12 +4804,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-weather-l-inqas-temperatura"
-      },
-      "assessmentIds": [
-        "b2-weather-l-inqas-temperatura-diagnostic-recognition-true-false",
-        "b2-weather-l-inqas-temperatura-recognition",
-        "b2-weather-l-inqas-temperatura-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-flokk-hafif",
@@ -6544,13 +4818,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-flokk-hafif"
-      },
-      "assessmentIds": [
-        "b2-clothes-flokk-hafif-diagnostic-recognition",
-        "b2-clothes-flokk-hafif-recognition",
-        "b2-clothes-flokk-hafif-production",
-        "b2-clothes-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-libsa-hafifa",
@@ -6564,12 +4832,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-libsa-hafifa"
-      },
-      "assessmentIds": [
-        "b2-clothes-libsa-hafifa-recognition-true-false",
-        "b2-clothes-libsa-hafifa-production",
-        "b2-clothes-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-dublett",
@@ -6583,13 +4846,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-dublett"
-      },
-      "assessmentIds": [
-        "b2-clothes-dublett-diagnostic-recognition-true-false",
-        "b2-clothes-dublett-recognition",
-        "b2-clothes-dublett-production",
-        "b2-clothes-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-flokk-bil-komma-qasira",
@@ -6603,12 +4860,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-flokk-bil-komma-qasira"
-      },
-      "assessmentIds": [
-        "b2-clothes-flokk-bil-komma-qasira-recognition-true-false",
-        "b2-clothes-flokk-bil-komma-qasira-production",
-        "b2-clothes-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-gakketta-tal-jeans",
@@ -6622,11 +4874,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-gakketta-tal-jeans"
-      },
-      "assessmentIds": [
-        "b2-clothes-gakketta-tal-jeans-recognition",
-        "b2-clothes-gakketta-tal-jeans-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-flokk-ta-taht",
@@ -6640,12 +4888,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-flokk-ta-taht"
-      },
-      "assessmentIds": [
-        "b2-clothes-flokk-ta-taht-diagnostic-recognition",
-        "b2-clothes-flokk-ta-taht-recognition-true-false",
-        "b2-clothes-flokk-ta-taht-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-qalziet-hafif",
@@ -6659,12 +4902,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-qalziet-hafif"
-      },
-      "assessmentIds": [
-        "b2-clothes-qalziet-hafif-recognition",
-        "b2-clothes-qalziet-hafif-production",
-        "b2-clothes-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-flokk-bic-cingi",
@@ -6678,12 +4916,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-flokk-bic-cingi"
-      },
-      "assessmentIds": [
-        "b2-clothes-flokk-bic-cingi-recognition-true-false",
-        "b2-clothes-flokk-bic-cingi-production",
-        "b2-clothes-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-malja",
@@ -6697,13 +4930,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-malja"
-      },
-      "assessmentIds": [
-        "b2-clothes-malja-diagnostic-recognition-true-false",
-        "b2-clothes-malja-recognition",
-        "b2-clothes-malja-production",
-        "b2-clothes-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-kappell",
@@ -6717,12 +4944,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-kappell"
-      },
-      "assessmentIds": [
-        "b2-clothes-kappell-recognition-true-false",
-        "b2-clothes-kappell-production",
-        "b2-clothes-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-karkur",
@@ -6736,11 +4958,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-karkur"
-      },
-      "assessmentIds": [
-        "b2-clothes-karkur-recognition",
-        "b2-clothes-karkur-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-flokk-tas-suf",
@@ -6754,12 +4972,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-flokk-tas-suf"
-      },
-      "assessmentIds": [
-        "b2-clothes-flokk-tas-suf-diagnostic-recognition",
-        "b2-clothes-flokk-tas-suf-recognition-true-false",
-        "b2-clothes-flokk-tas-suf-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-gakketta",
@@ -6773,12 +4986,7 @@
         "page": "shopping_clothes.html",
         "file": "assets/data/shopping_clothes.json",
         "itemId": "gakketta"
-      },
-      "assessmentIds": [
-        "b2-clothes-gakketta-recognition",
-        "b2-clothes-gakketta-production",
-        "b2-clothes-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-glekk",
@@ -6792,11 +5000,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-glekk"
-      },
-      "assessmentIds": [
-        "b2-clothes-glekk-recognition-true-false",
-        "b2-clothes-glekk-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-qalziet",
@@ -6810,13 +5014,7 @@
         "page": "shopping_clothes.html",
         "file": "assets/data/shopping_clothes.json",
         "itemId": "qalziet"
-      },
-      "assessmentIds": [
-        "b2-clothes-qalziet-diagnostic-recognition-true-false",
-        "b2-clothes-qalziet-recognition",
-        "b2-clothes-qalziet-production",
-        "b2-clothes-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-boots",
@@ -6830,12 +5028,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-boots"
-      },
-      "assessmentIds": [
-        "b2-clothes-boots-recognition-true-false",
-        "b2-clothes-boots-production",
-        "b2-clothes-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-xalpa",
@@ -6849,12 +5042,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-clothes-xalpa"
-      },
-      "assessmentIds": [
-        "b2-clothes-xalpa-recognition",
-        "b2-clothes-xalpa-production",
-        "b2-clothes-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-hdax",
@@ -6868,12 +5056,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-11"
-      },
-      "assessmentIds": [
-        "b2-clothes-hdax-diagnostic-recognition",
-        "b2-clothes-hdax-recognition-true-false",
-        "b2-clothes-hdax-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-tnax",
@@ -6887,14 +5070,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-12"
-      },
-      "assessmentIds": [
-        "clothes-twelve-recognition",
-        "clothes-twelve-production",
-        "b2-clothes-tnax-recognition",
-        "b2-clothes-tnax-production",
-        "b2-clothes-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-tlettax",
@@ -6908,12 +5084,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-13"
-      },
-      "assessmentIds": [
-        "b2-clothes-tlettax-recognition-true-false",
-        "b2-clothes-tlettax-production",
-        "b2-clothes-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-erbatax",
@@ -6927,13 +5098,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-14"
-      },
-      "assessmentIds": [
-        "b2-clothes-erbatax-diagnostic-recognition-true-false",
-        "b2-clothes-erbatax-recognition",
-        "b2-clothes-erbatax-production",
-        "b2-clothes-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-hmistax",
@@ -6947,12 +5112,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-15"
-      },
-      "assessmentIds": [
-        "b2-clothes-hmistax-recognition-true-false",
-        "b2-clothes-hmistax-production",
-        "b2-clothes-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-sittax",
@@ -6966,11 +5126,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-16"
-      },
-      "assessmentIds": [
-        "b2-clothes-sittax-recognition",
-        "b2-clothes-sittax-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-sbatax",
@@ -6984,12 +5140,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-17"
-      },
-      "assessmentIds": [
-        "b2-clothes-sbatax-diagnostic-recognition",
-        "b2-clothes-sbatax-recognition-true-false",
-        "b2-clothes-sbatax-production"
-      ]
+      }
     },
     {
       "id": "b2-clothes-tmintax",
@@ -7003,12 +5154,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-18"
-      },
-      "assessmentIds": [
-        "b2-clothes-tmintax-recognition",
-        "b2-clothes-tmintax-production",
-        "b2-clothes-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-dsatax",
@@ -7022,12 +5168,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-19"
-      },
-      "assessmentIds": [
-        "b2-clothes-dsatax-recognition-true-false",
-        "b2-clothes-dsatax-production",
-        "b2-clothes-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-clothes-ghoxrin",
@@ -7041,13 +5182,7 @@
         "page": "numbers_calendar_time.html",
         "file": "numbers_calendar_time.html",
         "itemId": "cardinal-20"
-      },
-      "assessmentIds": [
-        "b2-clothes-ghoxrin-diagnostic-recognition-true-false",
-        "b2-clothes-ghoxrin-recognition",
-        "b2-clothes-ghoxrin-production",
-        "b2-clothes-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-libes",
@@ -7061,13 +5196,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-libes"
-      },
-      "assessmentIds": [
-        "b2-hobbies-libes-diagnostic-recognition",
-        "b2-hobbies-libes-recognition",
-        "b2-hobbies-libes-production",
-        "b2-hobbies-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ilbes",
@@ -7081,12 +5210,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-libes"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ilbes-recognition-true-false",
-        "b2-hobbies-ilbes-production",
-        "b2-hobbies-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ilbsu",
@@ -7100,13 +5224,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-libes"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ilbsu-diagnostic-recognition-true-false",
-        "b2-hobbies-ilbsu-recognition",
-        "b2-hobbies-ilbsu-production",
-        "b2-hobbies-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ghamel",
@@ -7120,12 +5238,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-ghamel"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ghamel-recognition-true-false",
-        "b2-hobbies-ghamel-production",
-        "b2-hobbies-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-aghmel",
@@ -7139,13 +5252,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-ghamel"
-      },
-      "assessmentIds": [
-        "hobby-do-recognition",
-        "hobby-do-production",
-        "b2-hobbies-aghmel-recognition",
-        "b2-hobbies-aghmel-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-aghmlu",
@@ -7159,12 +5266,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-common-lesson25-ghamel"
-      },
-      "assessmentIds": [
-        "b2-hobbies-aghmlu-diagnostic-recognition",
-        "b2-hobbies-aghmlu-recognition-true-false",
-        "b2-hobbies-aghmlu-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-uza",
@@ -7178,12 +5280,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-uza"
-      },
-      "assessmentIds": [
-        "b2-hobbies-uza-recognition",
-        "b2-hobbies-uza-production",
-        "b2-hobbies-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-uzaw",
@@ -7197,13 +5294,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-uzaw"
-      },
-      "assessmentIds": [
-        "b2-hobbies-uzaw-diagnostic-recognition-true-false",
-        "b2-hobbies-uzaw-recognition-true-false",
-        "b2-hobbies-uzaw-production",
-        "b2-hobbies-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ghum",
@@ -7217,12 +5308,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-gh-bidu-gham"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ghum-recognition",
-        "b2-hobbies-ghum-production",
-        "b2-hobbies-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-imxi",
@@ -7236,12 +5322,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-imxi"
-      },
-      "assessmentIds": [
-        "b2-hobbies-imxi-recognition-true-false",
-        "b2-hobbies-imxi-production",
-        "b2-hobbies-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-orqod",
@@ -7255,12 +5336,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-raqad"
-      },
-      "assessmentIds": [
-        "b2-hobbies-orqod-diagnostic-recognition",
-        "b2-hobbies-orqod-recognition",
-        "b2-hobbies-orqod-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-qum",
@@ -7274,11 +5350,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-qum"
-      },
-      "assessmentIds": [
-        "b2-hobbies-qum-recognition-true-false",
-        "b2-hobbies-qum-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ilghab",
@@ -7292,13 +5364,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-ilghab"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ilghab-diagnostic-recognition-true-false",
-        "b2-hobbies-ilghab-recognition",
-        "b2-hobbies-ilghab-production",
-        "b2-hobbies-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ara",
@@ -7312,12 +5378,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-fil-mamma-ra"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ara-recognition-true-false",
-        "b2-hobbies-ara-production",
-        "b2-hobbies-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-ohrog",
@@ -7331,12 +5392,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-ohrog"
-      },
-      "assessmentIds": [
-        "b2-hobbies-ohrog-recognition",
-        "b2-hobbies-ohrog-production",
-        "b2-hobbies-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-nilbes",
@@ -7350,13 +5406,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-nilbes"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-nilbes-diagnostic-recognition",
-        "b2-hobbies-se-nilbes-recognition-true-false",
-        "b2-hobbies-se-nilbes-production",
-        "b2-hobbies-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-mmur",
@@ -7370,11 +5420,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-mmur"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-mmur-recognition",
-        "b2-hobbies-se-mmur-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-norqdu",
@@ -7388,12 +5434,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-norqdu"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-norqdu-diagnostic-recognition-true-false",
-        "b2-hobbies-se-norqdu-recognition-true-false",
-        "b2-hobbies-se-norqdu-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-tilghab",
@@ -7407,12 +5448,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-tilghab"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-tilghab-recognition",
-        "b2-hobbies-se-tilghab-production",
-        "b2-hobbies-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-naraw",
@@ -7426,12 +5462,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-naraw"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-naraw-recognition-true-false",
-        "b2-hobbies-se-naraw-production",
-        "b2-hobbies-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-jghumu",
@@ -7445,13 +5476,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-jghumu"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-jghumu-diagnostic-recognition",
-        "b2-hobbies-se-jghumu-recognition",
-        "b2-hobbies-se-jghumu-production",
-        "b2-hobbies-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-nohorgu",
@@ -7465,12 +5490,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-nohorgu"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-nohorgu-recognition-true-false",
-        "b2-hobbies-se-nohorgu-production",
-        "b2-hobbies-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-niekol",
@@ -7484,11 +5504,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-niekol"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-niekol-recognition",
-        "b2-hobbies-se-niekol-production"
-      ]
+      }
     },
     {
       "id": "b2-hobbies-se-naghmel",
@@ -7502,12 +5518,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-hobbies-se-naghmel"
-      },
-      "assessmentIds": [
-        "b2-hobbies-se-naghmel-diagnostic-recognition-true-false",
-        "b2-hobbies-se-naghmel-recognition-true-false",
-        "b2-hobbies-se-naghmel-production"
-      ]
+      }
     },
     {
       "id": "b2-town-kafetterija",
@@ -7521,13 +5532,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-kafetterija"
-      },
-      "assessmentIds": [
-        "b2-town-kafetterija-diagnostic-recognition",
-        "b2-town-kafetterija-recognition",
-        "b2-town-kafetterija-production",
-        "b2-town-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-ispizerija",
@@ -7541,14 +5546,7 @@
         "page": "directions_town.html",
         "file": "assets/data/directions_town.json",
         "itemId": "spizerija"
-      },
-      "assessmentIds": [
-        "town-places",
-        "town-pharmacy-production",
-        "b2-town-ispizerija-recognition-true-false",
-        "b2-town-ispizerija-production",
-        "b2-town-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-furnar",
@@ -7562,12 +5560,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-furnar"
-      },
-      "assessmentIds": [
-        "b2-town-furnar-recognition",
-        "b2-town-furnar-production",
-        "b2-town-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-restorant",
@@ -7581,13 +5574,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-restorant"
-      },
-      "assessmentIds": [
-        "b2-town-restorant-diagnostic-recognition-true-false",
-        "b2-town-restorant-recognition-true-false",
-        "b2-town-restorant-production",
-        "b2-town-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-ufficcju-tal-kunsill-lokali",
@@ -7601,11 +5588,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-ufficcju-tal-kunsill-lokali"
-      },
-      "assessmentIds": [
-        "b2-town-ufficcju-tal-kunsill-lokali-recognition",
-        "b2-town-ufficcju-tal-kunsill-lokali-production"
-      ]
+      }
     },
     {
       "id": "b2-town-knisja",
@@ -7619,11 +5602,7 @@
         "page": "directions_town.html",
         "file": "assets/data/directions_town.json",
         "itemId": "knisja"
-      },
-      "assessmentIds": [
-        "b2-town-knisja-recognition-true-false",
-        "b2-town-knisja-production"
-      ]
+      }
     },
     {
       "id": "b2-town-posta",
@@ -7637,13 +5616,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-posta"
-      },
-      "assessmentIds": [
-        "b2-town-posta-diagnostic-recognition",
-        "b2-town-posta-recognition",
-        "b2-town-posta-production",
-        "b2-town-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-zuntier",
@@ -7657,12 +5630,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-zuntier"
-      },
-      "assessmentIds": [
-        "b2-town-zuntier-recognition-true-false",
-        "b2-town-zuntier-production",
-        "b2-town-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-pastizz-tal-irkotta",
@@ -7676,12 +5644,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-pastizz-tal-irkotta"
-      },
-      "assessmentIds": [
-        "b2-town-pastizz-tal-irkotta-recognition",
-        "b2-town-pastizz-tal-irkotta-production",
-        "b2-town-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-pastizz-tal-pizelli",
@@ -7695,13 +5658,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-pastizz-tal-pizelli"
-      },
-      "assessmentIds": [
-        "b2-town-pastizz-tal-pizelli-diagnostic-recognition-true-false",
-        "b2-town-pastizz-tal-pizelli-recognition-true-false",
-        "b2-town-pastizz-tal-pizelli-production",
-        "b2-town-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-medicina",
@@ -7715,11 +5672,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-medicina"
-      },
-      "assessmentIds": [
-        "b2-town-medicina-recognition",
-        "b2-town-medicina-production"
-      ]
+      }
     },
     {
       "id": "b2-town-menu",
@@ -7733,11 +5686,7 @@
         "page": "restaurant_ordering.html",
         "file": "assets/data/restaurant_ordering.json",
         "itemId": "menu"
-      },
-      "assessmentIds": [
-        "b2-town-menu-recognition-true-false",
-        "b2-town-menu-production"
-      ]
+      }
     },
     {
       "id": "b2-town-appartament",
@@ -7751,13 +5700,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-appartament"
-      },
-      "assessmentIds": [
-        "b2-town-appartament-diagnostic-recognition",
-        "b2-town-appartament-recognition",
-        "b2-town-appartament-production",
-        "b2-town-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-triq",
@@ -7771,12 +5714,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-triq"
-      },
-      "assessmentIds": [
-        "b2-town-triq-recognition-true-false",
-        "b2-town-triq-production",
-        "b2-town-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-sqaq",
@@ -7790,12 +5728,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-sqaq"
-      },
-      "assessmentIds": [
-        "b2-town-sqaq-recognition",
-        "b2-town-sqaq-production",
-        "b2-town-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-numru",
@@ -7809,13 +5742,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-numru"
-      },
-      "assessmentIds": [
-        "b2-town-numru-diagnostic-recognition-true-false",
-        "b2-town-numru-recognition-true-false",
-        "b2-town-numru-production",
-        "b2-town-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-vjal",
@@ -7829,11 +5756,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-vjal"
-      },
-      "assessmentIds": [
-        "b2-town-vjal-recognition",
-        "b2-town-vjal-production"
-      ]
+      }
     },
     {
       "id": "b2-town-pjazza",
@@ -7847,11 +5770,7 @@
         "page": "directions_town.html",
         "file": "assets/data/directions_town.json",
         "itemId": "pjazza"
-      },
-      "assessmentIds": [
-        "b2-town-pjazza-recognition-true-false",
-        "b2-town-pjazza-production"
-      ]
+      }
     },
     {
       "id": "b2-town-lukanda",
@@ -7865,13 +5784,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-lukanda"
-      },
-      "assessmentIds": [
-        "b2-town-lukanda-diagnostic-recognition",
-        "b2-town-lukanda-recognition",
-        "b2-town-lukanda-production",
-        "b2-town-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-indirizz",
@@ -7885,12 +5798,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-indirizz"
-      },
-      "assessmentIds": [
-        "b2-town-indirizz-recognition-true-false",
-        "b2-town-indirizz-production",
-        "b2-town-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-aqsam-it-triq",
@@ -7904,12 +5812,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-aqsam-it-triq"
-      },
-      "assessmentIds": [
-        "b2-town-aqsam-it-triq-recognition",
-        "b2-town-aqsam-it-triq-production",
-        "b2-town-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-dur-fuq-ix-xellug",
@@ -7923,13 +5826,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-dur-fuq-ix-xellug"
-      },
-      "assessmentIds": [
-        "b2-town-dur-fuq-ix-xellug-diagnostic-recognition-true-false",
-        "b2-town-dur-fuq-ix-xellug-recognition-true-false",
-        "b2-town-dur-fuq-ix-xellug-production",
-        "b2-town-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-dur-mal-kantuniera",
@@ -7943,11 +5840,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-dur-mal-kantuniera"
-      },
-      "assessmentIds": [
-        "b2-town-dur-mal-kantuniera-recognition",
-        "b2-town-dur-mal-kantuniera-production"
-      ]
+      }
     },
     {
       "id": "b2-town-ieqaf",
@@ -7961,11 +5854,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-ieqaf"
-      },
-      "assessmentIds": [
-        "b2-town-ieqaf-recognition-true-false",
-        "b2-town-ieqaf-production"
-      ]
+      }
     },
     {
       "id": "b2-town-dur-fuq-il-lemin",
@@ -7979,13 +5868,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-dur-fuq-il-lemin"
-      },
-      "assessmentIds": [
-        "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
-        "b2-town-dur-fuq-il-lemin-recognition",
-        "b2-town-dur-fuq-il-lemin-production",
-        "b2-town-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-imxi-dritt",
@@ -7999,12 +5882,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-imxi-dritt"
-      },
-      "assessmentIds": [
-        "b2-town-imxi-dritt-recognition-true-false",
-        "b2-town-imxi-dritt-production",
-        "b2-town-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-itla-l-fuq",
@@ -8018,12 +5896,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-itla-l-fuq"
-      },
-      "assessmentIds": [
-        "b2-town-itla-l-fuq-recognition",
-        "b2-town-itla-l-fuq-production",
-        "b2-town-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-town-inzel-l-isfel",
@@ -8037,13 +5910,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-town-inzel-l-isfel"
-      },
-      "assessmentIds": [
-        "b2-town-inzel-l-isfel-diagnostic-recognition-true-false",
-        "b2-town-inzel-l-isfel-recognition-true-false",
-        "b2-town-inzel-l-isfel-production",
-        "b2-town-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-plastik",
@@ -8057,15 +5924,7 @@
         "page": "environment_recycling.html",
         "file": "assets/data/environment_recycling.json",
         "itemId": "plastik"
-      },
-      "assessmentIds": [
-        "recycling-materials",
-        "recycling-plastic-production",
-        "b2-recycling-plastik-diagnostic-recognition",
-        "b2-recycling-plastik-recognition",
-        "b2-recycling-plastik-production",
-        "b2-recycling-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-karta",
@@ -8079,13 +5938,7 @@
         "page": "environment_recycling.html",
         "file": "assets/data/environment_recycling.json",
         "itemId": "karta"
-      },
-      "assessmentIds": [
-        "recycling-materials",
-        "b2-recycling-karta-recognition-true-false",
-        "b2-recycling-karta-production",
-        "b2-recycling-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-riciklar",
@@ -8099,12 +5952,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-riciklar"
-      },
-      "assessmentIds": [
-        "b2-recycling-riciklar-recognition",
-        "b2-recycling-riciklar-production",
-        "b2-recycling-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-skart-imhallat",
@@ -8118,12 +5966,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-skart-imhallat"
-      },
-      "assessmentIds": [
-        "b2-recycling-skart-imhallat-recognition-true-false",
-        "b2-recycling-skart-imhallat-production",
-        "b2-recycling-checkpoint-1-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-skart-riciklabbli",
@@ -8137,12 +5980,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-skart-riciklabbli"
-      },
-      "assessmentIds": [
-        "b2-recycling-skart-riciklabbli-diagnostic-recognition-true-false",
-        "b2-recycling-skart-riciklabbli-recognition",
-        "b2-recycling-skart-riciklabbli-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-nadif",
@@ -8156,11 +5994,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-nadif"
-      },
-      "assessmentIds": [
-        "b2-recycling-nadif-recognition-true-false",
-        "b2-recycling-nadif-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-nadifa",
@@ -8174,12 +6008,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-nadifa"
-      },
-      "assessmentIds": [
-        "b2-recycling-nadifa-recognition",
-        "b2-recycling-nadifa-production",
-        "b2-recycling-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-nodfa",
@@ -8193,12 +6022,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-nodfa"
-      },
-      "assessmentIds": [
-        "b2-recycling-nodfa-recognition-true-false",
-        "b2-recycling-nodfa-production",
-        "b2-recycling-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mahmug",
@@ -8212,13 +6036,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mahmug"
-      },
-      "assessmentIds": [
-        "b2-recycling-mahmug-diagnostic-recognition",
-        "b2-recycling-mahmug-recognition",
-        "b2-recycling-mahmug-production",
-        "b2-recycling-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mahmuga",
@@ -8232,12 +6050,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mahmuga"
-      },
-      "assessmentIds": [
-        "b2-recycling-mahmuga-recognition-true-false",
-        "b2-recycling-mahmuga-production",
-        "b2-recycling-checkpoint-2-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mahmugin",
@@ -8251,11 +6064,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mahmugin"
-      },
-      "assessmentIds": [
-        "b2-recycling-mahmugin-recognition",
-        "b2-recycling-mahmugin-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mimli",
@@ -8269,11 +6078,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mimli"
-      },
-      "assessmentIds": [
-        "b2-recycling-mimli-recognition-true-false",
-        "b2-recycling-mimli-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mimlija",
@@ -8287,12 +6092,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mimlija"
-      },
-      "assessmentIds": [
-        "b2-recycling-mimlija-recognition",
-        "b2-recycling-mimlija-production",
-        "b2-recycling-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mimlijin",
@@ -8306,13 +6106,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mimlijin"
-      },
-      "assessmentIds": [
-        "b2-recycling-mimlijin-diagnostic-recognition-true-false",
-        "b2-recycling-mimlijin-recognition-true-false",
-        "b2-recycling-mimlijin-production",
-        "b2-recycling-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mormi",
@@ -8326,12 +6120,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mormi"
-      },
-      "assessmentIds": [
-        "b2-recycling-mormi-recognition",
-        "b2-recycling-mormi-production",
-        "b2-recycling-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mormija",
@@ -8345,12 +6134,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mormija"
-      },
-      "assessmentIds": [
-        "b2-recycling-mormija-recognition-true-false",
-        "b2-recycling-mormija-production",
-        "b2-recycling-checkpoint-3-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mormijin",
@@ -8364,11 +6148,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mormijin"
-      },
-      "assessmentIds": [
-        "b2-recycling-mormijin-recognition",
-        "b2-recycling-mormijin-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-jinten",
@@ -8382,12 +6162,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-jinten"
-      },
-      "assessmentIds": [
-        "b2-recycling-jinten-diagnostic-recognition",
-        "b2-recycling-jinten-recognition-true-false",
-        "b2-recycling-jinten-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-tinten",
@@ -8401,12 +6176,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-tinten"
-      },
-      "assessmentIds": [
-        "b2-recycling-tinten-recognition",
-        "b2-recycling-tinten-production",
-        "b2-recycling-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-jintnu",
@@ -8420,12 +6190,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-jintnu"
-      },
-      "assessmentIds": [
-        "b2-recycling-jintnu-recognition-true-false",
-        "b2-recycling-jintnu-production",
-        "b2-recycling-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-miftuh",
@@ -8439,12 +6204,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-miftuh"
-      },
-      "assessmentIds": [
-        "b2-recycling-miftuh-recognition",
-        "b2-recycling-miftuh-production",
-        "b2-recycling-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-miftuha",
@@ -8458,12 +6218,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-miftuha"
-      },
-      "assessmentIds": [
-        "b2-recycling-miftuha-recognition-true-false",
-        "b2-recycling-miftuha-production",
-        "b2-recycling-checkpoint-4-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-miftuhin",
@@ -8477,12 +6232,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-miftuhin"
-      },
-      "assessmentIds": [
-        "b2-recycling-miftuhin-diagnostic-recognition-true-false",
-        "b2-recycling-miftuhin-recognition",
-        "b2-recycling-miftuhin-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mqatta",
@@ -8496,11 +6246,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mqatta"
-      },
-      "assessmentIds": [
-        "b2-recycling-mqatta-recognition-true-false",
-        "b2-recycling-mqatta-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mqattgha",
@@ -8514,12 +6260,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mqattgha"
-      },
-      "assessmentIds": [
-        "b2-recycling-mqattgha-recognition",
-        "b2-recycling-mqattgha-production",
-        "b2-recycling-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-mqattghin",
@@ -8533,12 +6274,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-mqattghin"
-      },
-      "assessmentIds": [
-        "b2-recycling-mqattghin-recognition-true-false",
-        "b2-recycling-mqattghin-production",
-        "b2-recycling-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-skart-organiku",
@@ -8552,13 +6288,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-skart-organiku"
-      },
-      "assessmentIds": [
-        "b2-recycling-skart-organiku-diagnostic-recognition",
-        "b2-recycling-skart-organiku-recognition",
-        "b2-recycling-skart-organiku-production",
-        "b2-recycling-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-borza",
@@ -8572,12 +6302,7 @@
         "page": "environment_recycling.html",
         "file": "assets/data/environment_recycling.json",
         "itemId": "nohrog-il-borza"
-      },
-      "assessmentIds": [
-        "b2-recycling-borza-recognition-true-false",
-        "b2-recycling-borza-production",
-        "b2-recycling-checkpoint-5-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-kontenitur",
@@ -8591,11 +6316,7 @@
         "page": "environment_recycling.html",
         "file": "assets/data/environment_recycling.json",
         "itemId": "nahsel-il-kontenitur"
-      },
-      "assessmentIds": [
-        "b2-recycling-kontenitur-recognition",
-        "b2-recycling-kontenitur-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-armi",
@@ -8609,11 +6330,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-armi"
-      },
-      "assessmentIds": [
-        "b2-recycling-armi-recognition-true-false",
-        "b2-recycling-armi-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-armu",
@@ -8627,12 +6344,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-armu"
-      },
-      "assessmentIds": [
-        "b2-recycling-armu-recognition",
-        "b2-recycling-armu-production",
-        "b2-recycling-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-ghazel",
@@ -8646,13 +6358,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-gh-bidu-ghazel"
-      },
-      "assessmentIds": [
-        "b2-recycling-ghazel-diagnostic-recognition-true-false",
-        "b2-recycling-ghazel-recognition-true-false",
-        "b2-recycling-ghazel-production",
-        "b2-recycling-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-aghzel",
@@ -8666,12 +6372,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-gh-bidu-ghazel"
-      },
-      "assessmentIds": [
-        "b2-recycling-aghzel-recognition",
-        "b2-recycling-aghzel-production",
-        "b2-recycling-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-aghzlu",
@@ -8685,12 +6386,7 @@
         "page": "imperative_verbs.html",
         "file": "assets/data/imperative_verbs.json",
         "itemId": "imperative-gh-bidu-ghazel"
-      },
-      "assessmentIds": [
-        "b2-recycling-aghzlu-recognition-true-false",
-        "b2-recycling-aghzlu-production",
-        "b2-recycling-checkpoint-6-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-waddab",
@@ -8704,11 +6400,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-waddab"
-      },
-      "assessmentIds": [
-        "b2-recycling-waddab-recognition",
-        "b2-recycling-waddab-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-waddbu",
@@ -8722,12 +6414,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-waddbu"
-      },
-      "assessmentIds": [
-        "b2-recycling-waddbu-diagnostic-recognition",
-        "b2-recycling-waddbu-recognition-true-false",
-        "b2-recycling-waddbu-production"
-      ]
+      }
     },
     {
       "id": "b2-recycling-issepara",
@@ -8741,12 +6428,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-issepara"
-      },
-      "assessmentIds": [
-        "b2-recycling-issepara-recognition",
-        "b2-recycling-issepara-production",
-        "b2-recycling-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-isseparaw",
@@ -8760,12 +6442,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-isseparaw"
-      },
-      "assessmentIds": [
-        "b2-recycling-isseparaw-recognition-true-false",
-        "b2-recycling-isseparaw-production",
-        "b2-recycling-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-hareg",
@@ -8779,12 +6456,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-hareg"
-      },
-      "assessmentIds": [
-        "b2-recycling-hareg-recognition",
-        "b2-recycling-hareg-production",
-        "b2-recycling-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-ohrog",
@@ -8798,12 +6470,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-ohrog"
-      },
-      "assessmentIds": [
-        "b2-recycling-ohrog-recognition-true-false",
-        "b2-recycling-ohrog-production",
-        "b2-recycling-checkpoint-7-matching"
-      ]
+      }
     },
     {
       "id": "b2-recycling-ohorgu",
@@ -8817,12 +6484,7 @@
         "page": "course_chapter.html",
         "file": "assets/data/course_supplemental_content.json",
         "itemId": "b2-recycling-ohorgu"
-      },
-      "assessmentIds": [
-        "b2-recycling-ohorgu-diagnostic-recognition-true-false",
-        "b2-recycling-ohorgu-recognition",
-        "b2-recycling-ohorgu-production"
-      ]
+      }
     }
   ]
 }

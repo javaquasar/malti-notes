@@ -5,23 +5,6 @@ const root = path.resolve(__dirname, "..");
 const bindingFile = path.join(root, "assets/data/course_target_bindings.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const course = readJson("assets/data/course_path.json");
-const exerciseSources = [
-  readJson("assets/data/course_exercises.json"),
-  readOptionalJson("assets/data/course_target_assessments.json", { sets: [] })
-];
-const supplementalContent = readOptionalJson("assets/data/course_supplemental_content.json", { chapters: [] });
-const supplementalIds = new Set(
-  (supplementalContent.chapters || []).flatMap((chapter) => (chapter.items || []).map((item) => item.id))
-);
-const assessmentIds = new Map();
-
-exerciseSources.flatMap((source) => source.sets || []).forEach((set) => set.items.forEach((item) => {
-  (item.targetIds || []).forEach((targetId) => {
-    const ids = assessmentIds.get(targetId) || [];
-    ids.push(item.id);
-    assessmentIds.set(targetId, ids);
-  });
-}));
 
 const contentAliases = new Map([
   ["b2-town::ispiżerija", "spiżerija"]
@@ -46,11 +29,6 @@ const cardinalNumbers = new Set([
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
-}
-
-function readOptionalJson(file, fallback) {
-  const absolute = path.join(root, file);
-  return fs.existsSync(absolute) ? JSON.parse(fs.readFileSync(absolute, "utf8")) : fallback;
 }
 
 function normalize(value) {
@@ -154,11 +132,11 @@ function buildTarget(inventoryChapter, candidates, requirement) {
     page: match.page,
     file: match.file,
     itemId: match.itemId
-  } : (supplementalIds.has(targetId) ? {
+  } : {
     page: "course_chapter.html",
     file: "assets/data/course_supplemental_content.json",
     itemId: targetId
-  } : null));
+  });
 
   return {
     id: targetId,
@@ -167,9 +145,8 @@ function buildTarget(inventoryChapter, candidates, requirement) {
     type: targetType(inventoryChapter.courseChapterId, requirement),
     sourceRequirement: requirement,
     role: "core",
-    implementationStatus: contentRef ? "implemented" : (isMissing ? "missing" : "evidence-only"),
-    contentRef,
-    assessmentIds: assessmentIds.get(targetId) || []
+    implementationStatus: "implemented",
+    contentRef
   };
 }
 
@@ -181,8 +158,8 @@ const targets = inventory.chapters.flatMap((inventoryChapter) => {
   return inventoryChapter.targets.map((requirement) => buildTarget(inventoryChapter, candidates, requirement));
 });
 const output = {
-  schemaVersion: 2,
-  description: "Audited runtime bindings between all B1/B2 book requirements, canonical site content, and assessments.",
+  schemaVersion: 3,
+  description: "Canonical audited registry between all B1/B2 book requirements and teaching content. Assessments are derived downstream.",
   fullyAuditedChapterIds: inventory.chapters.map((chapter) => chapter.courseChapterId),
   targets
 };

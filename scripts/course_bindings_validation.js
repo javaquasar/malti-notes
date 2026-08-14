@@ -42,7 +42,7 @@ function validateCourseBindings({ root, fail }) {
   const exercises = read(exerciseFile);
   const targetExercises = read(targetExerciseFile);
   if (!bindings || !inventory || !course || !exercises || !targetExercises) return;
-  if (bindings.schemaVersion !== 2) fail(bindingFile, "schemaVersion must be 2");
+  if (bindings.schemaVersion !== 3) fail(bindingFile, "schemaVersion must be 3");
   if (!Array.isArray(bindings.targets)) {
     fail(bindingFile, "targets must be an array");
     return;
@@ -53,12 +53,18 @@ function validateCourseBindings({ root, fail }) {
   const inventoryByChapter = new Map();
   inventory.chapters.forEach((chapter) => inventoryByChapter.set(chapter.courseChapterId, chapter));
   const exerciseItems = new Map();
+  const assessmentIdsByTarget = new Map();
   [
     { file: exerciseFile, data: exercises },
     { file: targetExerciseFile, data: targetExercises }
   ].forEach(({ file, data }) => (data.sets || []).forEach((set) => set.items.forEach((item) => {
     if (exerciseItems.has(item.id)) fail(file, `exercise item id must be globally unique: ${item.id}`);
     exerciseItems.set(item.id, { set, item, file });
+    (item.targetIds || []).forEach((targetId) => {
+      const ids = assessmentIdsByTarget.get(targetId) || [];
+      ids.push(item.id);
+      assessmentIdsByTarget.set(targetId, ids);
+    });
   })));
   if (targetExercises.schemaVersion !== 2) fail(targetExerciseFile, "schemaVersion must be 2");
   chapters.forEach((chapter, chapterId) => {
@@ -155,19 +161,8 @@ function validateCourseBindings({ root, fail }) {
       fail(bindingFile, `${owner}.contentRef must be null unless implementationStatus is implemented`);
     }
 
-    if (!Array.isArray(target.assessmentIds)) {
-      fail(bindingFile, `${owner}.assessmentIds must be an array`);
-    } else {
-      target.assessmentIds.forEach((assessmentId) => {
-        const exercise = exerciseItems.get(assessmentId);
-        if (!exercise) {
-          fail(bindingFile, `${owner} references missing assessment: ${assessmentId}`);
-        } else if (exercise.set.chapterId !== target.chapterId) {
-          fail(bindingFile, `${owner} assessment ${assessmentId} belongs to ${exercise.set.chapterId}`);
-        } else if (!Array.isArray(exercise.item.targetIds) || !exercise.item.targetIds.includes(target.id)) {
-          fail(bindingFile, `${owner} assessment ${assessmentId} does not link back to ${target.id}`);
-        }
-      });
+    if (Object.prototype.hasOwnProperty.call(target, "assessmentIds")) {
+      fail(bindingFile, `${owner}.assessmentIds is derived in chapter payloads and must not be stored in the canonical registry`);
     }
   });
 
@@ -185,7 +180,7 @@ function validateCourseBindings({ root, fail }) {
       fail(bindingFile, `${target.id} must remain connected to canonical teaching content`);
       return;
     }
-    const modes = new Set(target.assessmentIds.map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
+    const modes = new Set((assessmentIdsByTarget.get(target.id) || []).map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
     if (!modes.has("recognition") || !modes.has("production")) {
       fail(bindingFile, `${target.id} needs recognition and production assessment coverage`);
     }
@@ -216,7 +211,7 @@ function validateCourseBindings({ root, fail }) {
     }
     const masteryReady = bindings.targets.some((target) => {
       if (target.chapterId !== chapterId || target.implementationStatus !== "implemented") return false;
-      const modes = new Set(target.assessmentIds.map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
+      const modes = new Set((assessmentIdsByTarget.get(target.id) || []).map((assessmentId) => exerciseItems.get(assessmentId)?.item.assessmentMode));
       return modes.has("recognition") && modes.has("production");
     });
     if (!masteryReady) {

@@ -9,6 +9,7 @@ const checkOnly = process.argv.includes("--check");
 const read = (file) => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
 
 const course = read("assets/data/course_path.json");
+const courseExercises = read("assets/data/course_exercises.json");
 const inventory = read("assets/data/book_coverage_inventory.json");
 const bindings = read("assets/data/course_target_bindings.json");
 const assessments = read("assets/data/course_target_assessments.json");
@@ -21,9 +22,26 @@ const sourceChapters = new Map(provenance.chapters.map((chapter) => [chapter.cha
 const expectedFiles = new Map();
 const manifestChapters = [];
 
+function assessmentIdsByTarget(sets) {
+  const ids = new Map();
+  sets.forEach((set) => (set.items || []).forEach((item) => (item.targetIds || []).forEach((targetId) => {
+    const targetIds = ids.get(targetId) || [];
+    if (!targetIds.includes(item.id)) targetIds.push(item.id);
+    ids.set(targetId, targetIds);
+  })));
+  return ids;
+}
+
 course.levels.forEach((level) => level.chapters.forEach((chapter) => {
-  const chapterTargets = bindings.targets.filter((target) => target.chapterId === chapter.id);
   const assessmentSets = assessments.sets.filter((set) => set.chapterId === chapter.id);
+  const linkedAssessmentSets = [
+    ...courseExercises.sets.filter((set) => set.chapterId === chapter.id),
+    ...assessmentSets,
+  ];
+  const assessmentIndex = assessmentIdsByTarget(linkedAssessmentSets);
+  const chapterTargets = bindings.targets
+    .filter((target) => target.chapterId === chapter.id)
+    .map((target) => ({ ...target, assessmentIds: assessmentIndex.get(target.id) || [] }));
   const sourceChapter = sourceChapters.get(chapter.id);
   const targetSources = Object.fromEntries(chapterTargets.map((target) => [target.id, provenance.targets[target.id]]));
   const payload = {

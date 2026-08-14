@@ -122,6 +122,12 @@ jobs:
           cp *.html site-dist/
           cp manifest.webmanifest service-worker.js site-dist/
           cp -R assets site-dist/
+          rm -f site-dist/assets/data/course_target_assessments.json
+          rm -f site-dist/assets/data/course_target_bindings.json
+          rm -f site-dist/assets/data/course_target_examples.json
+          rm -f site-dist/assets/data/course_target_glosses.json
+          rm -f site-dist/assets/data/course_source_provenance.json
+          rm -f site-dist/assets/data/course_supplemental_content.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
