@@ -19,6 +19,7 @@ const fullPageVisualPages = [
   "health_doctor.html",
   "home_furniture.html",
   "memory_game.html",
+  "mistakes.html",
   "modals_needs.html",
   "numbers_calendar_time.html",
   "numbers_calendar_time.html?course=b2&chapter=b2-imperative&step=2&view=chapter",

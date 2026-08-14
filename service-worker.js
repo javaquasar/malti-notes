@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}e0f9b1efc8be`;
+const CACHE_NAME = `${CACHE_PREFIX}b3694d5eceea`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",
@@ -27,6 +27,7 @@ const CORE_ASSETS = [
     "./index.html",
     "./introductions_alphabet.html",
     "./memory_game.html",
+    "./mistakes.html",
     "./modals_needs.html",
     "./numbers_calendar_time.html",
     "./picture_description.html",
@@ -77,6 +78,8 @@ const CORE_ASSETS = [
     "./assets/js/game-audio.js",
     "./assets/js/home-compact-toggle.js",
     "./assets/js/init-verbs-course-bank.js",
+    "./assets/js/mistake-store.js",
+    "./assets/js/mistakes.js",
     "./assets/js/progress-backup.js",
     "./assets/js/render-course-verb-paradigms.js",
     "./assets/js/render-example-banks.js",

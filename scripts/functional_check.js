@@ -141,7 +141,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 41, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 42, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -228,6 +228,34 @@ async function main() {
       assert((await primary.getAttribute("href")).includes("review_cards.html?quick=due&limit=15"), "Today did not adapt the review limit to 30 minutes.");
       await Promise.all([page.waitForURL(/review_cards\.html\?quick=due&limit=15/), primary.click()]);
       assert((await page.locator("#review-session-status").textContent()).includes("Today's due cards"), "Due review session did not start from Today.");
+    });
+
+    await runTest(context, "wrong exercise answers flow into the mistake journal", async (page) => {
+      await openCleanPage(page, "course_path.html");
+      await page.locator('[data-course-chapter="b1-introductions"] .course-practice > summary').click();
+      const exercise = page.locator('[data-exercise-set="b1-introductions-check"]');
+      await exercise.locator('button[type="submit"]').click();
+      let journal = await page.evaluate(() => window.MaltiMistakeStore.getAll());
+      assert(journal.length === 4 && journal.every((entry) => entry.status === "open"), "Wrong answers were not added to the mistake journal.");
+
+      await exercise.getByRole("button", { name: "Try again" }).click();
+      await exercise.locator('[data-exercise-item="name-introduction"] input[value="Jien jisimni Lara."]').check();
+      await exercise.locator('[data-exercise-item="complete-name"] input').fill("jisimni");
+      const matching = exercise.locator('[data-exercise-item="adjective-gender"] select');
+      await matching.nth(0).selectOption("ferħana");
+      await matching.nth(1).selectOption("attiva");
+      await matching.nth(2).selectOption("ċajtiera");
+      await exercise.locator('[data-exercise-item="personal-happy-production"] input').fill("ferħan");
+      await exercise.locator('button[type="submit"]').click();
+      journal = await page.evaluate(() => window.MaltiMistakeStore.getAll());
+      assert(journal.every((entry) => entry.correctStreak === 1), "Correct retry did not advance mistake remediation.");
+
+      await page.goto(`${baseUrl}/mistakes.html`, { waitUntil: "networkidle" });
+      assert((await page.locator("[data-mistake-open]").textContent()).trim() === "4", "Mistake journal open count is incorrect.");
+      await page.locator("[data-mistake-reveal]").click();
+      await page.locator("[data-mistake-correct]").click();
+      assert((await page.locator("[data-mistake-open]").textContent()).trim() === "3", "Two correct attempts did not resolve a mistake.");
+      assert((await page.locator("[data-mistake-resolved]").textContent()).trim() === "1", "Resolved mistake count is incorrect.");
     });
 
     await runTest(context, "course runtime loads manifest and one chapter payload", async (page) => {
@@ -591,7 +619,7 @@ async function main() {
       });
 
       assert(result.format === "malti-progress-backup-v2" && result.checksum.startsWith("fnv1a-"), "Unexpected backup format or checksum.");
-      assert(result.schemaVersion === 2 && result.storageSchemaVersion === 2, "Storage schema metadata was not initialized.");
+      assert(result.schemaVersion === 3 && result.storageSchemaVersion === 3, "Storage schema metadata was not initialized.");
       assert(result.tamperRejected, "Tampered progress backup was accepted.");
       assert(result.legacyAccepted, "Version 1 progress backup is no longer accepted.");
       assert(result.exportedKeys >= 5 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");

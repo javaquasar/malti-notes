@@ -339,6 +339,25 @@
     return saved;
   };
 
+  const recordMistakeResults = (set, results) => {
+    const mistakeStore = window.MaltiMistakeStore;
+    if (!mistakeStore) return;
+    const sourcePage = `${window.location.pathname.split("/").pop() || "course_path.html"}${window.location.search}`;
+    results.forEach(({ item, correct, answer }) => mistakeStore.recordAttempt({
+      id: `exercise::${set.id}::${item.id}`,
+      setId: set.id,
+      itemId: item.id,
+      prompt: item.prompt,
+      given: Array.isArray(answer) ? answer.join("; ") : answer,
+      correctAnswer: correctAnswerText(item),
+      explanation: item.explanation || "",
+      targetIds: item.targetIds || [],
+      sourcePage,
+      topic: set.title,
+      type: item.type
+    }, correct));
+  };
+
   const updateBestStatus = (status, set) => {
     const result = loadProgress()[set.id];
     status.textContent = result
@@ -388,8 +407,9 @@
       set.items.forEach((item) => {
         const itemElement = form.querySelector(`[data-exercise-item="${item.id}"]`);
         const feedback = itemElement.querySelector(".exercise-feedback");
-        const correct = isCorrect(item, answerFor(itemElement, item));
-        targetResults.push({ item, correct });
+        const answer = answerFor(itemElement, item);
+        const correct = isCorrect(item, answer);
+        targetResults.push({ item, correct, answer });
         itemElement.classList.toggle("is-correct", correct);
         itemElement.classList.toggle("is-incorrect", !correct);
         feedback.hidden = false;
@@ -418,6 +438,7 @@
       };
       saveProgress(progress);
       recordTargetResults(targetResults);
+      recordMistakeResults(set, targetResults);
       updateBestStatus(best, set);
 
       const autoSaveMissed = container.dataset.autoSaveMissed === "true";

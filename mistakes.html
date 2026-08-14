@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistake Journal</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <span class="tag">Personal feedback</span>
+                <h1>Mistake Journal</h1>
+                <p class="lead">Retry answers that caused trouble and close them after two correct attempts.</p>
+                <div class="pill-row">
+                    <span class="pill"><strong data-mistake-open>0</strong>&nbsp;open</span>
+                    <span class="pill"><strong data-mistake-resolved>0</strong>&nbsp;resolved</span>
+                    <span class="pill"><strong data-mistake-attempts>0</strong>&nbsp;attempts</span>
+                </div>
+            </div>
+            <aside class="note">
+                <strong>Built from practice</strong>
+                <p>Wrong answers from course checks and Year 4 spelling practice appear here automatically.</p>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section mistake-shell" data-mistake-root aria-live="polite">
+        <section class="mistake-practice" data-mistake-practice>
+            <div>
+                <span class="tag">Retry</span>
+                <h2 data-mistake-prompt>No open mistakes</h2>
+                <p class="muted-note" data-mistake-topic>Complete a course check to start the journal.</p>
+            </div>
+            <div class="mistake-answer" data-mistake-answer hidden>
+                <strong data-mistake-correct-answer></strong>
+                <p data-mistake-explanation></p>
+            </div>
+            <div class="toolbar-row">
+                <button class="action-button" type="button" data-mistake-reveal>Show answer</button>
+                <button class="action-button" type="button" data-mistake-again hidden>Again</button>
+                <button class="action-button" type="button" data-mistake-correct hidden>Correct</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading-row">
+                <div>
+                    <span class="tag">History</span>
+                    <h2>Your difficult answers</h2>
+                </div>
+                <div class="toolbar-row">
+                    <div class="segmented-toggle" aria-label="Filter mistake journal">
+                        <button class="toggle-chip" type="button" data-mistake-filter="open" aria-pressed="true">Open</button>
+                        <button class="toggle-chip" type="button" data-mistake-filter="all" aria-pressed="false">All</button>
+                        <button class="toggle-chip" type="button" data-mistake-filter="resolved" aria-pressed="false">Resolved</button>
+                    </div>
+                    <button class="action-button" type="button" data-mistake-clear>Clear resolved</button>
+                </div>
+            </div>
+            <div class="mistake-list" data-mistake-list></div>
+            <p class="empty-state" data-mistake-empty hidden>No mistakes match this filter.</p>
+        </section>
+
+        <nav class="course-chapter-nav" aria-label="Review navigation">
+            <a class="action-link" href="./today.html">Today</a>
+            <a class="action-link" href="./review_cards.html">Review cards</a>
+            <a class="action-link" href="./course_progress.html">Course progress</a>
+        </nav>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/mistake-store.js"></script>
+<script src="./assets/js/mistakes.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 
   const memory = new Map();
   const META_KEY = "malti_storage_meta_v1";
-  const SCHEMA_VERSION = 2;
+  const SCHEMA_VERSION = 3;
 
   const readRaw = (key) => {
     try {

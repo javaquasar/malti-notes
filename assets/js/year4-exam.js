@@ -194,7 +194,21 @@
 
     function checkPracticeWord() {
         if (!currentWord) return newPracticeWord();
-        feedback.textContent = normalizeText(answer.value) === normalizeText(currentWord.maltese)
+        var correct = normalizeText(answer.value) === normalizeText(currentWord.maltese);
+        if (window.MaltiMistakeStore) {
+            window.MaltiMistakeStore.recordAttempt({
+                id: "year4::" + (currentWord.slug || normalizeText(currentWord.maltese)),
+                itemId: currentWord.slug || currentWord.maltese,
+                prompt: currentWord.english,
+                given: answer.value,
+                correctAnswer: currentWord.maltese,
+                explanation: currentWord.example || "",
+                sourcePage: "year4_exam.html",
+                topic: "Year 4 - " + currentWord.groupTitle,
+                type: "spelling"
+            }, correct);
+        }
+        feedback.textContent = correct
             ? "Correct: " + currentWord.maltese
             : "Answer: " + currentWord.maltese;
     }
