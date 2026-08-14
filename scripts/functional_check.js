@@ -203,7 +203,7 @@ async function main() {
       assert(await animalCheckpoints.locator(".exercise-item").count() === 0, "Closed checkpoints should not render their questions eagerly.");
       await animalCheckpoints.first().locator("summary").click();
       await animalCheckpoints.first().locator(".exercise-item").first().waitFor();
-      assert(await animalCheckpoints.first().locator(".exercise-item").count() === 12, "The first animals checkpoint should assess six targets in both modes.");
+      assert(await animalCheckpoints.first().locator(".exercise-item").count() === 13, "The first animals checkpoint should assess six targets in both modes plus matching.");
       assert(await page.locator("[data-course-supplement-grid] .visual-vocab-card").count() === 7, "Animals supplemental vocabulary is incomplete.");
       assert((await page.locator("[data-course-missing-targets]").textContent()).includes("All required targets are linked"), "Completed chapter still reports missing targets.");
       const supplementCard = page.locator('[data-course-supplement-grid] [data-content-id="b1-animals-brama"]');
@@ -334,6 +334,20 @@ async function main() {
       await first.locator(".course-verb-review-button").click();
       const savedCount = await page.evaluate(() => window.MaltiReviewStore.getStats().total);
       assert(savedCount > 0, "Book verb paradigm was not added to Review.");
+    });
+
+    await runTest(context, "book checkpoints render varied contextual assessment types", async (page) => {
+      await openCleanPage(page, "course_chapter.html?chapter=b1-residence");
+      await page.locator("[data-course-assessment-flow] .exercise-item").first().waitFor();
+      const checkpoint = page.locator("[data-course-checkpoints] .course-checkpoint").first();
+      await checkpoint.locator("summary").click();
+      await checkpoint.locator(".exercise-item").first().waitFor();
+      assert(await page.locator("[data-course-assessment-flow] .exercise-matching").count() > 0, "Matching checks were not rendered.");
+      assert(await page.locator("[data-course-assessment-flow] .exercise-order-bank").count() > 0, "Phrase ordering checks were not rendered.");
+      assert(await page.locator("[data-course-assessment-flow] input[value='True']").count() > 0, "True/false checks were not rendered.");
+      assert((await page.locator("[data-course-assessment-flow] .exercise-question-header").allTextContents()).some((text) => text.includes("_____")), "Contextual cloze prompts were not rendered.");
+      const phraseTokens = await page.locator("[data-course-assessment-flow] .exercise-order-bank").first().locator(".exercise-token").allTextContents();
+      assert(phraseTokens.join(" ") !== "karozza tal-linja", "Phrase tokens were shown in answer order.");
     });
 
     await runTest(context, "generated banks keep the shared card styling", async (page) => {

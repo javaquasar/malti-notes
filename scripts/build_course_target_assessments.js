@@ -2,9 +2,12 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const outputFile = path.join(root, "assets/data/course_target_assessments.json");
+const outputFile = path.join(root, "assets", "data", "course_target_assessments.json");
+const readJson = (file) => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
 const bindings = readJson("assets/data/course_target_bindings.json");
 const course = readJson("assets/data/course_path.json");
+const glosses = readJson("assets/data/course_target_glosses.json").glosses;
+const contextualExamples = readJson("assets/data/course_target_examples.json").examples;
 const requestedLevels = new Set(
   (process.env.COURSE_ASSESSMENT_LEVELS || "B1,B2")
     .split(",")
@@ -12,89 +15,18 @@ const requestedLevels = new Set(
     .filter(Boolean)
 );
 
-const numberMeanings = new Map([
-  ["wieħed", "one"], ["tnejn", "two"], ["tlieta", "three"], ["erbgħa", "four"],
-  ["ħamsa", "five"], ["sitta", "six"], ["sebgħa", "seven"], ["tmienja", "eight"],
-  ["disgħa", "nine"], ["għaxra", "ten"], ["ħdax", "eleven"], ["tnax", "twelve"],
-  ["tlettax", "thirteen"], ["erbatax", "fourteen"], ["ħmistax", "fifteen"],
-  ["sittax", "sixteen"], ["sbatax", "seventeen"], ["tmintax", "eighteen"],
-  ["dsatax", "nineteen"], ["għoxrin", "twenty"]
-]);
-
-function readJson(file) {
-  return JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
-}
-
-function findContentItem(value, itemId) {
-  if (Array.isArray(value)) {
-    for (const item of value) {
-      const match = findContentItem(item, itemId);
-      if (match) return match;
-    }
-    return null;
-  }
-  if (!value || typeof value !== "object") return null;
-  if (value.id === itemId || value.slug === itemId) return value;
-  for (const item of Object.values(value)) {
-    const match = findContentItem(item, itemId);
-    if (match) return match;
-  }
-  return null;
-}
-
-function normalize(value) {
-  return String(value || "").normalize("NFKC").trim().toLocaleLowerCase("mt");
-}
-
-function formLabel(item, requirement) {
-  const expected = normalize(requirement);
-  const keys = [
-    ["imperativeSingular", "singular command"],
-    ["imperativePlural", "plural command"],
-    ["singular", "singular form"],
-    ["plural", "plural form"]
-  ];
-  const keyed = keys.find(([key]) => normalize(item[key]) === expected);
-  if (keyed) return keyed[1];
-
-  const notes = [item.note, ...(Array.isArray(item.notes) ? item.notes : [])]
-    .filter((value) => typeof value === "string");
-  const note = notes.find((value) => normalize(value).includes(expected));
-  if (note) {
-    if (/female|feminine/i.test(note)) return "feminine form";
-    if (/plural/i.test(note)) return "plural form";
-    if (/male|masculine/i.test(note)) return "masculine form";
-  }
-
-  const primary = String(item.maltese || item.lemma || "").split("/").map(normalize).filter(Boolean);
-  if (primary.length > 1 && primary.includes(expected)) {
-    if (primary.indexOf(expected) === 0) return "masculine or base form";
-    if (primary.indexOf(expected) === 1) return "feminine form";
-    return "alternate form";
-  }
-  return "required form";
-}
-
 function targetMeaning(target) {
-  const numberMeaning = numberMeanings.get(normalize(target.sourceRequirement));
-  if (numberMeaning) return numberMeaning;
-  const ref = target.contentRef;
-  if (!ref || ref.file.endsWith(".html")) {
-    throw new Error(`No assessment meaning for ${target.id}`);
-  }
-  const item = findContentItem(readJson(ref.file), ref.itemId);
-  if (!item || typeof item.english !== "string" || !item.english.trim()) {
-    throw new Error(`No English gloss for ${target.id} in ${ref.file}#${ref.itemId}`);
-  }
-  const label = formLabel(item, target.sourceRequirement);
-  return label === "required form" ? item.english.trim() : `${item.english.trim()} (${label})`;
+  const key = `${target.chapterId}::${target.sourceRequirement}`;
+  const meaning = glosses[key];
+  if (!meaning) throw new Error(`No reviewed assessment meaning for ${target.id}`);
+  return meaning;
 }
 
 function rotate(values, offset) {
   return values.map((_, index) => values[(index + offset) % values.length]);
 }
 
-function recognitionItem(entry, index, meanings, suffix = "recognition") {
+function multipleChoiceItem(entry, index, meanings, suffix = "recognition") {
   const { target, meaning } = entry;
   const distractors = rotate(meanings, index + 1).filter((value) => value !== meaning).slice(0, 2);
   return {
@@ -105,22 +37,78 @@ function recognitionItem(entry, index, meanings, suffix = "recognition") {
     prompt: `What is the lesson meaning of “${target.sourceRequirement}”?`,
     choices: rotate([meaning, ...distractors], index % 3),
     answer: meaning,
-    explanation: `${target.sourceRequirement} is linked to “${meaning}” in this chapter.`,
+    explanation: `${target.sourceRequirement} means “${meaning}” in this chapter.`,
     reviewCard: { maltese: target.sourceRequirement, english: meaning }
   };
 }
 
-function productionItem({ target, meaning }) {
+function trueFalseItem(entry, index, meanings, suffix = "recognition") {
+  const { target, meaning } = entry;
+  const distractor = rotate(meanings, index + 1).find((value) => value !== meaning);
+  const correct = index % 2 === 0;
+  const shownMeaning = correct ? meaning : distractor;
   return {
+    id: `${target.id}-${suffix}-true-false`,
+    type: "true-false",
+    assessmentMode: "recognition",
+    targetIds: [target.id],
+    prompt: `True or false: “${target.sourceRequirement}” means “${shownMeaning}” in this chapter.`,
+    answer: correct,
+    explanation: `${target.sourceRequirement} means “${meaning}”.`,
+    reviewCard: { maltese: target.sourceRequirement, english: meaning }
+  };
+}
+
+function recognitionItem(entry, index, meanings, suffix = "recognition") {
+  return index % 2 === 0
+    ? multipleChoiceItem(entry, index, meanings, suffix)
+    : trueFalseItem(entry, index, meanings, suffix);
+}
+
+function clozeExample(target) {
+  const key = `${target.chapterId}::${target.sourceRequirement}`;
+  const context = contextualExamples[key];
+  if (!context) throw new Error(`No contextual assessment example for ${target.id}`);
+  const escaped = target.sourceRequirement.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const cloze = context.maltese.replace(new RegExp(escaped, "i"), "_____");
+  if (cloze === context.maltese) throw new Error(`Could not make contextual cloze for ${target.id}`);
+  return { context, cloze };
+}
+
+function productionItem({ target, meaning }) {
+  const { context, cloze } = clozeExample(target);
+  const shared = {
     id: `${target.id}-production`,
-    type: "fill-blank",
     assessmentMode: "production",
     targetIds: [target.id],
-    prompt: `Write the Maltese ${target.type === "verb-form" ? "form" : "target"} for “${meaning}”.`,
+    prompt: `Complete the Maltese sentence: “${cloze}” (${context.english})`,
     answer: target.sourceRequirement,
-    accepted: [target.sourceRequirement],
-    explanation: `The required chapter form is ${target.sourceRequirement}.`,
-    reviewCard: { maltese: target.sourceRequirement, english: meaning }
+    explanation: `The complete sentence is “${context.maltese}”`,
+    reviewCard: { maltese: target.sourceRequirement, english: meaning, example: context.maltese }
+  };
+  const tokens = target.sourceRequirement.split(/\s+/).filter(Boolean);
+  return tokens.length > 1
+    ? { ...shared, type: "order-words", tokens }
+    : { ...shared, type: "fill-blank", accepted: [target.sourceRequirement] };
+}
+
+function matchingItem(chunk, checkpointIndex) {
+  const uniqueMeanings = new Set();
+  const entries = chunk.filter((entry) => {
+    if (uniqueMeanings.has(entry.meaning)) return false;
+    uniqueMeanings.add(entry.meaning);
+    return true;
+  }).slice(0, 4);
+  if (entries.length < 2) throw new Error(`Checkpoint ${checkpointIndex + 1} needs two unique matching pairs`);
+  return {
+    id: `${entries[0].target.chapterId}-checkpoint-${checkpointIndex + 1}-matching`,
+    type: "matching",
+    assessmentMode: "recognition",
+    targetIds: entries.map((entry) => entry.target.id),
+    prompt: "Match each Maltese target to its chapter meaning.",
+    pairs: entries.map((entry) => ({ left: entry.target.sourceRequirement, right: entry.meaning })),
+    explanation: "These pairs use the reviewed meanings from this chapter.",
+    reviewCard: { maltese: entries[0].target.sourceRequirement, english: entries[0].meaning }
   };
 }
 
@@ -157,10 +145,13 @@ function buildSets(chapter, targets) {
     sequence: checkpointIndex + 1,
     targetCount: chunk.length,
     title: `${chapter.title} Checkpoint ${checkpointIndex + 1}`,
-    items: chunk.flatMap((entry, index) => [
-      recognitionItem(entry, checkpointIndex * 6 + index, meanings),
-      productionItem(entry)
-    ])
+    items: [
+      ...chunk.flatMap((entry, index) => [
+        recognitionItem(entry, checkpointIndex * 6 + index, meanings),
+        productionItem(entry)
+      ]),
+      ...(chunk.length > 1 ? [matchingItem(chunk, checkpointIndex)] : [])
+    ]
   }));
   return [diagnostic, ...checkpoints];
 }
@@ -176,8 +167,8 @@ const sets = chapters
   });
 
 const output = {
-  schemaVersion: 1,
-  description: "Generated entry diagnostics and small recognition/production checkpoints for every implemented book-course target.",
+  schemaVersion: 2,
+  description: "Generated diagnostics and contextual recognition, matching, cloze, and phrase-order checkpoints for every implemented book-course target.",
   levels: [...requestedLevels].sort(),
   sets
 };
@@ -191,6 +182,6 @@ if (process.argv.includes("--check")) {
   }
   console.log(`ok checked ${sets.length} generated target assessment sets`);
 } else {
-  fs.writeFileSync(outputFile, serialized);
+  fs.writeFileSync(outputFile, serialized, "utf8");
   console.log(`wrote ${sets.length} target assessment sets with ${sets.reduce((sum, set) => sum + set.items.length, 0)} items`);
 }

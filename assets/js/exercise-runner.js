@@ -162,6 +162,10 @@
     const bank = document.createElement("div");
     const answer = document.createElement("div");
     const selected = [];
+    const originalOrder = item.tokens.map((_, index) => index);
+    const hash = Array.from(item.id || "").reduce((total, character) => total + character.charCodeAt(0), 0);
+    const offset = item.tokens.length > 1 ? (hash % (item.tokens.length - 1)) + 1 : 0;
+    const availableOrder = originalOrder.slice(offset).concat(originalOrder.slice(0, offset));
     bank.className = "exercise-order-bank";
     answer.className = "exercise-order-answer";
     bank.setAttribute("aria-label", "Available words");
@@ -172,8 +176,9 @@
       bank.innerHTML = "";
       answer.innerHTML = "";
 
-      item.tokens.forEach((token, index) => {
+      availableOrder.forEach((index) => {
         if (selected.includes(index)) return;
+        const token = item.tokens[index];
         const button = createButton(token, "exercise-token");
         button.addEventListener("click", () => {
           selected.push(index);

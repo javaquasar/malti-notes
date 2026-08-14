@@ -56,6 +56,28 @@ const supplementItems = new Map();
 }));
 if (supplementItems.size !== expectedKeys.size) fail(`expected ${expectedKeys.size} supplemental cards, found ${supplementItems.size}`);
 
+if (assessments.schemaVersion !== 2) fail("course_target_assessments schemaVersion must be 2");
+const assessmentTypes = new Set();
+(assessments.sets || []).forEach((set) => {
+  const setTypes = new Set((set.items || []).map((item) => item.type));
+  setTypes.forEach((type) => assessmentTypes.add(type));
+  if (set.kind === "diagnostic" && (!setTypes.has("multiple-choice") || !setTypes.has("true-false"))) {
+    fail(`${set.id} must mix multiple-choice and true-false recognition`);
+  }
+  if (set.kind === "checkpoint" && set.targetCount > 1 && !setTypes.has("matching")) fail(`${set.id} has no matching task`);
+  (set.items || []).forEach((item) => {
+    if (item.assessmentMode === "production" && !String(item.prompt || "").includes("_____")) {
+      fail(`${set.id}/${item.id} production prompt has no contextual cloze`);
+    }
+    if (item.type === "order-words" && (item.tokens || []).length < 2) {
+      fail(`${set.id}/${item.id} phrase ordering needs at least two tokens`);
+    }
+  });
+});
+["multiple-choice", "true-false", "fill-blank", "matching", "order-words"].forEach((type) => {
+  if (!assessmentTypes.has(type)) fail(`generated assessments do not exercise ${type}`);
+});
+
 (assessments.sets || []).forEach((set) => (set.items || []).forEach((item) => {
   const strings = [item.prompt, item.answer, item.explanation, item.reviewCard?.english].filter(Boolean);
   if (strings.some((value) => /\[(?:UNCERTAIN|overview-based)\]/i.test(value))) {

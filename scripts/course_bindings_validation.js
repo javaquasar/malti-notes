@@ -60,7 +60,7 @@ function validateCourseBindings({ root, fail }) {
     if (exerciseItems.has(item.id)) fail(file, `exercise item id must be globally unique: ${item.id}`);
     exerciseItems.set(item.id, { set, item, file });
   })));
-  if (targetExercises.schemaVersion !== 1) fail(targetExerciseFile, "schemaVersion must be 1");
+  if (targetExercises.schemaVersion !== 2) fail(targetExerciseFile, "schemaVersion must be 2");
   chapters.forEach((chapter, chapterId) => {
     const sets = (targetExercises.sets || []).filter((set) => set.chapterId === chapterId);
     const diagnostics = sets.filter((set) => set.kind === "diagnostic");
@@ -75,7 +75,10 @@ function validateCourseBindings({ root, fail }) {
       if (!Number.isInteger(set.targetCount) || set.targetCount < 1 || set.targetCount > 6) {
         fail(targetExerciseFile, `${set.id}.targetCount must be from 1 to 6`);
       }
-      if (set.items.length !== set.targetCount * 2) fail(targetExerciseFile, `${set.id} must contain two items per target`);
+      const expectedItems = set.targetCount * 2 + (set.targetCount > 1 ? 1 : 0);
+      if (set.items.length !== expectedItems) {
+        fail(targetExerciseFile, `${set.id} must contain two items per target plus one matching task when possible`);
+      }
       const modesByTarget = new Map();
       set.items.forEach((item) => (item.targetIds || []).forEach((targetId) => {
         const modes = modesByTarget.get(targetId) || new Set();
