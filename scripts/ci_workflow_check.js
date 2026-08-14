@@ -37,7 +37,7 @@ const requiredFragments = [
   "node-version: \"24\"",
   "actions/checkout@v7",
   "actions/setup-node@v7",
-  "actions/cache@v4",
+  "actions/cache@v5",
   "VISUAL_SHARD_TOTAL: 3",
 ];
 const missingFragments = requiredFragments.filter(
