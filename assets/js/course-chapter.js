@@ -3,6 +3,7 @@
   const INVENTORY_URL = "./assets/data/book_coverage_inventory.json";
   const BINDINGS_URL = "./assets/data/course_target_bindings.json";
   const TARGET_ASSESSMENTS_URL = "./assets/data/course_target_assessments.json";
+  const SUPPLEMENTAL_CONTENT_URL = "./assets/data/course_supplemental_content.json";
   const TARGET_PROGRESS_KEY = "malti_course_target_progress_v1";
 
   const loadJson = async (url) => {
@@ -144,14 +145,63 @@
     if (window.MaltiExerciseRunner) await window.MaltiExerciseRunner.scan(section);
   };
 
+  const renderSupplements = (chapter, chapterTargets, supplementalContent) => {
+    const supplementIds = new Set(chapterTargets
+      .filter((target) => target.contentRef?.file === "assets/data/course_supplemental_content.json")
+      .map((target) => target.id));
+    const sourceChapter = (supplementalContent.chapters || []).find((item) => item.id === chapter.id);
+    const items = (sourceChapter?.items || []).filter((item) => supplementIds.has(item.id));
+    if (!items.length) return;
+
+    const section = document.querySelector("[data-course-supplement-section]");
+    const grid = document.querySelector("[data-course-supplement-grid]");
+    const renderer = window.MaltiVocabRenderer;
+    if (!section || !grid || !renderer) return;
+
+    const createReviewButton = (item) => {
+      const button = document.createElement("button");
+      const reviewId = `word::course-supplement::${item.id}`;
+      const sync = () => {
+        const saved = window.MaltiReviewStore?.hasWord(reviewId) === true;
+        button.textContent = saved ? "Saved for Review" : "Add to Review";
+        button.classList.toggle("is-added", saved);
+        button.disabled = saved;
+      };
+      button.type = "button";
+      button.className = "review-add-button";
+      button.addEventListener("click", () => {
+        window.MaltiReviewStore?.addWord({
+          id: reviewId,
+          contentId: item.id,
+          maltese: item.maltese,
+          english: item.english,
+          topic: `${chapter.title} book supplement`,
+          sourcePage: "course_chapter.html",
+          example: item.maltese
+        });
+        sync();
+      });
+      sync();
+      return button;
+    };
+
+    grid.replaceChildren(...items.map((item) => renderer.createFigureCard(item, {
+      cardClass: "visual-vocab-card",
+      groupId: `${chapter.id}-supplement`,
+      reviewButtonFactory: createReviewButton
+    })));
+    section.hidden = false;
+  };
+
   const initialize = async () => {
     const chapterId = new URLSearchParams(window.location.search).get("chapter");
     if (!chapterId) return;
-    const [course, inventory, bindings, targetAssessments] = await Promise.all([
+    const [course, inventory, bindings, targetAssessments, supplementalContent] = await Promise.all([
       loadJson(COURSE_URL),
       loadJson(INVENTORY_URL),
       loadJson(BINDINGS_URL),
-      loadJson(TARGET_ASSESSMENTS_URL)
+      loadJson(TARGET_ASSESSMENTS_URL),
+      loadJson(SUPPLEMENTAL_CONTENT_URL)
     ]);
     const match = findChapter(course, chapterId);
     const inventoryChapter = inventory.chapters.find((chapter) => chapter.courseChapterId === chapterId);
@@ -196,6 +246,7 @@
     renderObjectives(match.chapter);
     renderSteps(match.level, match.chapter, implemented);
     renderMissing(inventoryChapter, chapterTargets);
+    renderSupplements(match.chapter, chapterTargets, supplementalContent);
     document.querySelector("[data-course-chapter-empty]").hidden = true;
     document.querySelector("[data-course-chapter-content]").hidden = false;
     window.addEventListener("malti-course-target-progress", () => updateLearnerMetrics(implemented));

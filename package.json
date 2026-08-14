@@ -20,7 +20,9 @@
     "course:bindings:check": "node ./scripts/build_course_target_bindings.js --check",
     "course:assessments:build": "node ./scripts/build_course_target_assessments.js",
     "course:assessments:check": "node ./scripts/build_course_target_assessments.js --check",
-    "course:lint": "npm run course:assessments:check && npm run course:bindings:check && node ./scripts/course_lint.js",
+    "course:supplements:build": "node ./scripts/build_course_supplemental_content.js",
+    "course:supplements:check": "node ./scripts/build_course_supplemental_content.js --check",
+    "course:lint": "npm run course:supplements:check && npm run course:assessments:check && npm run course:bindings:check && node ./scripts/course_lint.js",
     "links:lint": "node ./scripts/links_lint.js",
     "functional:test": "node ./scripts/functional_check.js"
   },

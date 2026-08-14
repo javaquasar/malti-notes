@@ -112,7 +112,9 @@ function validateCourseBindings({ root, fail }) {
         fail(bindingFile, `${owner}.contentRef is required for implemented targets`);
       } else {
         const chapter = chapters.get(target.chapterId);
-        if (typeof target.contentRef.page !== "string" || !chapter?.pages.some((page) => page.href === target.contentRef.page)) {
+        const isChapterSupplement = target.contentRef.page === "course_chapter.html" &&
+          target.contentRef.file === "assets/data/course_supplemental_content.json";
+        if (typeof target.contentRef.page !== "string" || (!isChapterSupplement && !chapter?.pages.some((page) => page.href === target.contentRef.page))) {
           fail(bindingFile, `${owner}.contentRef.page is not a study step in ${target.chapterId}: ${target.contentRef.page}`);
         }
         const ids = contentIds(target.contentRef.file);

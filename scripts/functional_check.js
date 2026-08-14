@@ -166,11 +166,15 @@ async function main() {
       await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
       assert((await page.locator("[data-course-chapter-title]").textContent()).trim() === "L-Annimali", "Animals chapter title is missing.");
       assert((await page.locator("[data-course-book-coverage]").textContent()).trim() === "21 / 27", "Frozen animals coverage is incorrect.");
-      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "20 / 27", "Guided animals coverage is incorrect.");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "21 / 27", "Guided animals coverage is incorrect.");
       assert(await page.locator(".course-step").count() === 2, "Animals chapter steps are incomplete.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
       const targetCheck = page.locator('[data-course-target-exercise][data-exercise-set="b1-animals-target-check"]');
-      assert(await targetCheck.locator(".exercise-item").count() === 40, "Animals target check does not cover all implemented targets in both modes.");
+      assert(await targetCheck.locator(".exercise-item").count() === 42, "Animals target check does not cover all implemented targets in both modes.");
+      const supplementCard = page.locator('[data-course-supplement-grid] [data-content-id="b1-animals-brama"]');
+      assert(await supplementCard.count() === 1, "The unlinked animals target was not promoted to a supplemental card.");
+      await supplementCard.locator(".review-add-button").click();
+      assert(await page.evaluate(() => window.MaltiReviewStore.hasWord("word::course-supplement::b1-animals-brama")), "Supplemental target was not added to shared review.");
       const firstStepHref = await page.locator(".course-step a").first().getAttribute("href");
       assert(firstStepHref.includes("animals.html?course=b1") && firstStepHref.includes("view=chapter"), "Animals step does not open chapter view.");
 
@@ -180,7 +184,7 @@ async function main() {
         review: JSON.parse(localStorage.getItem("malti_review_cards_v2"))
       }));
       assert(Object.values(saved.targets).filter((target) => target.state === "review").length === 3, "Missed target states were not saved.");
-      assert(Object.keys(saved.review).length === 7, "Missed chapter answers were not added to shared review.");
+      assert(Object.keys(saved.review).length === 8, "Missed chapter answers were not added to shared review.");
       assert((await page.locator("[data-course-review-count]").textContent()).trim() === "3", "Chapter review count did not update.");
     });
 
@@ -205,9 +209,9 @@ async function main() {
 
     await runTest(context, "guided chapter scope is derived for every mapped page type", async (page) => {
       await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
-      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "9 / 24", "B2 hobbies mapping is incorrect.");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "15 / 24", "B2 hobbies mapping is incorrect.");
       assert(await page.locator(".course-step").count() === 4, "B2 hobbies study steps are incomplete.");
-      assert(await page.locator('[data-course-target-exercise][data-exercise-set="b2-hobbies-target-check"] .exercise-item').count() === 18, "B2 hobbies target check is incomplete.");
+      assert(await page.locator('[data-course-target-exercise][data-exercise-set="b2-hobbies-target-check"] .exercise-item').count() === 30, "B2 hobbies target check is incomplete.");
       const imperativeHref = await page.locator(".course-step a", { hasText: "Imperative Verbs" }).getAttribute("href");
       assert(imperativeHref.includes("imperative_verbs.html") && imperativeHref.includes("view=chapter"), "Mapped imperative step is not scoped.");
       const guideHref = await page.locator(".course-step a", { hasText: "Verbs Guide" }).getAttribute("href");
@@ -258,7 +262,7 @@ async function main() {
       await exercise.locator('button[type="submit"]').click();
       target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
       assert(target.state === "mastered", "Spaced recognition and production did not master the target.");
-      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 9", "Chapter mastery metric did not update.");
+      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 15", "Chapter mastery metric did not update.");
     });
 
     await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {

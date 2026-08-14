@@ -9,6 +9,10 @@ const exerciseSources = [
   readJson("assets/data/course_exercises.json"),
   readOptionalJson("assets/data/course_target_assessments.json", { sets: [] })
 ];
+const supplementalContent = readOptionalJson("assets/data/course_supplemental_content.json", { chapters: [] });
+const supplementalIds = new Set(
+  (supplementalContent.chapters || []).flatMap((chapter) => (chapter.items || []).map((item) => item.id))
+);
 const assessmentIds = new Map();
 
 exerciseSources.flatMap((source) => source.sets || []).forEach((set) => set.items.forEach((item) => {
@@ -150,7 +154,11 @@ function buildTarget(inventoryChapter, candidates, requirement) {
     page: match.page,
     file: match.file,
     itemId: match.itemId
-  } : null));
+  } : (supplementalIds.has(targetId) ? {
+    page: "course_chapter.html",
+    file: "assets/data/course_supplemental_content.json",
+    itemId: targetId
+  } : null)));
 
   return {
     id: targetId,
