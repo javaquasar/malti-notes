@@ -10,8 +10,8 @@
     "description": { "type": "string", "minLength": 1 },
     "targets": {
       "type": "array",
-      "minItems": 8,
-      "maxItems": 8,
+      "minItems": 17,
+      "maxItems": 17,
       "items": { "$ref": "#/$defs/target" }
     }
   },

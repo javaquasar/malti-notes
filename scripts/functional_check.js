@@ -194,7 +194,7 @@ async function main() {
       assert((await page.locator("[data-progress-mastered]").textContent()).trim() === "1", "Mastered target total is incorrect.");
       assert((await page.locator("[data-progress-learning]").textContent()).trim() === "1", "Learning target total is incorrect.");
       assert((await page.locator("[data-progress-review]").textContent()).trim() === "1", "Review target total is incorrect.");
-      assert((await page.locator("[data-progress-new]").textContent()).trim() === "467", "Not-started target total is incorrect.");
+      assert((await page.locator("[data-progress-new]").textContent()).trim() === "476", "Not-started target total is incorrect.");
       const animals = page.locator('[data-progress-chapter="b1-animals"]');
       assert((await animals.textContent()).includes("1/28"), "Animals mastery is missing from chapter progress.");
       assert((await animals.textContent()).includes("1/5 passed"), "Animals checkpoint progress is incorrect.");
@@ -261,13 +261,17 @@ async function main() {
     await runTest(context, "grammar path tracks recognition, production, and rule mistakes", async (page) => {
       await openCleanPage(page, "grammar_path.html");
       await page.locator(".grammar-target").first().waitFor();
-      assert(await page.locator(".grammar-target").count() === 8, "Grammar path does not contain eight targets.");
-      assert(await page.locator(".grammar-rule-box").count() === 8, "Grammar rules do not share the framed visual contract.");
+      assert(await page.locator(".grammar-target").count() === 17, "Grammar path does not contain seventeen targets.");
+      assert(await page.locator(".grammar-rule-box").count() === 17, "Grammar rules do not share the framed visual contract.");
 
       await page.locator('[data-grammar-level="B1"]').click();
-      assert(await page.locator(".grammar-target").count() === 3, "B1 grammar filter is incorrect.");
+      assert(await page.locator(".grammar-target").count() === 8, "B1 grammar filter is incorrect.");
+      assert(await page.locator("#grammar-subject-pronouns").isVisible(), "B1 grammar filter omits subject pronouns.");
+      assert(await page.locator("#grammar-collective-forms").isVisible(), "B1 grammar filter omits collective noun forms.");
       await page.locator('[data-grammar-level="B2"]').click();
-      assert(await page.locator(".grammar-target").count() === 5, "B2 grammar filter is incorrect.");
+      assert(await page.locator(".grammar-target").count() === 9, "B2 grammar filter is incorrect.");
+      assert(await page.locator("#grammar-past-person-forms").isVisible(), "B2 grammar filter omits past-tense forms.");
+      assert(await page.locator("#grammar-verb-negation").isVisible(), "B2 grammar filter omits verb negation.");
 
       const future = page.locator("#grammar-future-se");
       await future.locator(".grammar-practice > summary").click();
@@ -296,7 +300,8 @@ async function main() {
 
       await page.goto(`${baseUrl}/grammar_path.html?course=b2&chapter=b2-hobbies&step=5&view=chapter`, { waitUntil: "networkidle" });
       await page.locator("#grammar-future-se").waitFor();
-      assert(await page.locator(".grammar-target:visible").count() === 1, "Chapter grammar view is not scoped to its target.");
+      assert(await page.locator(".grammar-target:visible").count() === 2, "Chapter grammar view is not scoped to its targets.");
+      assert(await page.locator("#grammar-past-person-forms").isVisible(), "Chapter grammar view omits the past-tense target.");
     });
 
     await runTest(context, "milestone tests stay balanced across course chapters", async (page) => {
@@ -344,19 +349,19 @@ async function main() {
           }
         });
       });
-      assert(await stage.locator(".exercise-item").count() === 8, "Grammar-only coverage does not contain all eight rules.");
+      assert(await stage.locator(".exercise-item").count() === 17, "Grammar-only coverage does not contain all seventeen rules.");
       assert((await page.evaluate(() => new Set(window.MaltiCoverageTest.getCurrentSession().categories).size)) === 1, "Grammar filter mixed unrelated categories.");
 
       await stage.locator('button[type="submit"]').click();
       let coverage = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_comprehensive_coverage_v1")));
-      assert(Object.keys(coverage.targets).length === 8, "Coverage progress did not save attempted grammar targets.");
-      assert((await page.locator("[data-coverage-started]").textContent()).trim() === "8", "Started target count was not updated.");
+      assert(Object.keys(coverage.targets).length === 17, "Coverage progress did not save attempted grammar targets.");
+      assert((await page.locator("[data-coverage-started]").textContent()).trim() === "17", "Started target count was not updated.");
 
       await page.locator("[data-coverage-new]").click();
       await stage.locator('button[type="submit"]').click();
       coverage = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_comprehensive_coverage_v1")));
       assert(Object.values(coverage.targets).every((target) => target.modes.recognition?.attempts === 1 && target.modes.production?.attempts === 1), "Coverage cycle did not test both recognition and production.");
-      assert((await page.locator("[data-coverage-complete]").textContent()).trim() === "8", "Both-mode coverage total was not updated.");
+      assert((await page.locator("[data-coverage-complete]").textContent()).trim() === "17", "Both-mode coverage total was not updated.");
     });
 
     await runTest(context, "course runtime loads manifest and one chapter payload", async (page) => {
@@ -433,7 +438,7 @@ async function main() {
 
     await runTest(context, "guided chapter scope is derived for every mapped page type", async (page) => {
       await openCleanPage(page, "course_chapter.html?chapter=b2-hobbies");
-      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "25 / 25", "B2 hobbies mapping is incorrect.");
+      assert((await page.locator("[data-course-guided-coverage]").textContent()).trim() === "26 / 26", "B2 hobbies mapping is incorrect.");
       assert(await page.locator(".course-step").count() === 5, "B2 hobbies study steps are incomplete.");
       assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b2-hobbies-diagnostic"] .exercise-item').count() === 10, "B2 hobbies diagnostic is incomplete.");
       assert(await page.locator("[data-course-checkpoints] .course-checkpoint").count() === 5, "B2 hobbies checkpoints are incomplete.");
@@ -490,7 +495,7 @@ async function main() {
       target = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_course_target_progress_v1"))["b2-hobbies-aghmel"]);
       assert(target.state === "mastered", "Spaced recognition and production did not master the target.");
       assert(target.intervalDays === 3 && target.streak === 2, "Repeated success did not expand the review interval.");
-      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 25", "Chapter mastery metric did not update.");
+      assert((await page.locator("[data-course-mastery]").textContent()).trim() === "1 / 26", "Chapter mastery metric did not update.");
     });
 
     await runTest(context, "course topic pages render data, exercises, and chapter context", async (page) => {

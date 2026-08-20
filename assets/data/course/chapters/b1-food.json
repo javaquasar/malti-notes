@@ -951,10 +951,35 @@
         "itemId": "b1-food-cikkulata"
       },
       "assessmentIds": [
-        "b1-food-cikkulata-diagnostic-recognition-true-false",
         "b1-food-cikkulata-recognition-true-false",
         "b1-food-cikkulata-production",
         "b1-food-checkpoint-8-matching"
+      ]
+    },
+    {
+      "id": "grammar-collective-forms",
+      "book": "B1",
+      "chapterId": "b1-food",
+      "type": "grammar",
+      "sourceRequirement": "Unit, collective, and plural food nouns",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-collective-food-nouns"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-collective-forms"
+      },
+      "assessmentIds": [
+        "grammar-collective-forms-diagnostic-recognition",
+        "grammar-collective-forms-recognition",
+        "grammar-collective-forms-production"
       ]
     }
   ],
@@ -1691,6 +1716,13 @@
         97
       ],
       "match": "text-exact"
+    },
+    "grammar-collective-forms": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b1-collective-food-nouns"
+      ],
+      "coverageStatus": "covered"
     }
   },
   "supplementalItems": [
@@ -3291,18 +3323,24 @@
           }
         },
         {
-          "id": "b1-food-cikkulata-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which phrase means \"one apple\"?",
+          "choices": [
+            "tuffieħ wieħed",
+            "tuffieħa waħda",
+            "tuffiħiet waħda"
+          ],
+          "answer": "tuffieħa waħda",
+          "explanation": "Tuffieħa is the singulative form for one apple.",
+          "id": "grammar-collective-forms-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-food-cikkulata"
+            "grammar-collective-forms"
           ],
-          "prompt": "True or false: “ċikkulata” means “oil” in this chapter.",
-          "answer": false,
-          "explanation": "ċikkulata means “chocolate”.",
           "reviewCard": {
-            "maltese": "ċikkulata",
-            "english": "chocolate"
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
           }
         }
       ]
@@ -5178,7 +5216,7 @@
       "id": "b1-food-checkpoint-8",
       "kind": "checkpoint",
       "sequence": 8,
-      "targetCount": 4,
+      "targetCount": 5,
       "title": "L-Ikel Checkpoint 8",
       "items": [
         {
@@ -5192,7 +5230,7 @@
           "choices": [
             "ice cream",
             "chocolate",
-            "tea"
+            "choose and produce the collective, unit, or plural noun form"
           ],
           "answer": "ice cream",
           "explanation": "ġelat means “ice cream” in this chapter.",
@@ -5227,7 +5265,7 @@
           "targetIds": [
             "b1-food-ghadma"
           ],
-          "prompt": "True or false: “għadma” means “tea” in this chapter.",
+          "prompt": "True or false: “għadma” means “choose and produce the collective, unit, or plural noun form” in this chapter.",
           "answer": false,
           "explanation": "għadma means “bone”.",
           "reviewCard": {
@@ -5263,9 +5301,9 @@
           ],
           "prompt": "What is the lesson meaning of “ħut”?",
           "choices": [
-            "pizza",
+            "spaghetti",
             "fish",
-            "spaghetti"
+            "tea"
           ],
           "answer": "fish",
           "explanation": "ħut means “fish” in this chapter.",
@@ -5300,7 +5338,7 @@
           "targetIds": [
             "b1-food-cikkulata"
           ],
-          "prompt": "True or false: “ċikkulata” means “pizza” in this chapter.",
+          "prompt": "True or false: “ċikkulata” means “spaghetti” in this chapter.",
           "answer": false,
           "explanation": "ċikkulata means “chocolate”.",
           "reviewCard": {
@@ -5326,6 +5364,46 @@
           "accepted": [
             "ċikkulata"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which phrase means \"one apple\"?",
+          "choices": [
+            "tuffieħ wieħed",
+            "tuffieħa waħda",
+            "tuffiħiet waħda"
+          ],
+          "answer": "tuffieħa waħda",
+          "explanation": "Tuffieħa is the singulative form for one apple.",
+          "id": "grammar-collective-forms-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-collective-forms"
+          ],
+          "reviewCard": {
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete with one countable item: Għandi _____ waħda. (I have one apple.)",
+          "answer": "tuffieħa",
+          "accepted": [
+            "tuffieħa"
+          ],
+          "explanation": "Use the singulative form tuffieħa for one item.",
+          "id": "grammar-collective-forms-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-collective-forms"
+          ],
+          "reviewCard": {
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
+          }
         },
         {
           "id": "b1-food-checkpoint-8-matching",

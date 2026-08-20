@@ -466,7 +466,6 @@
         "itemId": "it-tlieta"
       },
       "assessmentIds": [
-        "b1-family-it-tlieta-diagnostic-recognition-true-false",
         "b1-family-it-tlieta-recognition",
         "b1-family-it-tlieta-production",
         "b1-family-checkpoint-4-matching"
@@ -486,6 +485,7 @@
         "itemId": "l-erbgha"
       },
       "assessmentIds": [
+        "b1-family-l-erbgha-diagnostic-recognition-true-false",
         "b1-family-l-erbgha-recognition-true-false",
         "b1-family-l-erbgha-production",
         "b1-family-checkpoint-4-matching"
@@ -541,7 +541,6 @@
         "itemId": "is-sibt"
       },
       "assessmentIds": [
-        "b1-family-is-sibt-diagnostic-recognition",
         "b1-family-is-sibt-recognition",
         "b1-family-is-sibt-production",
         "b1-family-checkpoint-5-matching"
@@ -561,6 +560,7 @@
         "itemId": "il-hadd"
       },
       "assessmentIds": [
+        "b1-family-il-hadd-diagnostic-recognition",
         "b1-family-il-hadd-recognition-true-false",
         "b1-family-il-hadd-production",
         "b1-family-checkpoint-5-matching"
@@ -618,7 +618,6 @@
         "itemId": "b1-family-passeggata"
       },
       "assessmentIds": [
-        "b1-family-passeggata-diagnostic-recognition-true-false",
         "b1-family-passeggata-recognition",
         "b1-family-passeggata-production"
       ]
@@ -637,6 +636,7 @@
         "itemId": "b1-family-zfin"
       },
       "assessmentIds": [
+        "b1-family-zfin-diagnostic-recognition-true-false",
         "b1-family-zfin-recognition-true-false",
         "b1-family-zfin-production"
       ]
@@ -693,7 +693,6 @@
         "itemId": "b1-family-bongu"
       },
       "assessmentIds": [
-        "b1-family-bongu-diagnostic-recognition",
         "b1-family-bongu-recognition",
         "b1-family-bongu-production",
         "b1-family-checkpoint-6-matching"
@@ -713,6 +712,7 @@
         "itemId": "b1-family-il-waranofsinhar-it-tajjeb"
       },
       "assessmentIds": [
+        "b1-family-il-waranofsinhar-it-tajjeb-diagnostic-recognition",
         "b1-family-il-waranofsinhar-it-tajjeb-recognition-true-false",
         "b1-family-il-waranofsinhar-it-tajjeb-production",
         "b1-family-checkpoint-6-matching"
@@ -787,9 +787,33 @@
         "itemId": "b1-family-hu-hsieb"
       },
       "assessmentIds": [
-        "b1-family-hu-hsieb-diagnostic-recognition-true-false",
         "b1-family-hu-hsieb-recognition-true-false",
         "b1-family-hu-hsieb-production",
+        "b1-family-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "grammar-present-person-forms",
+      "book": "B1",
+      "chapterId": "b1-family",
+      "type": "grammar",
+      "sourceRequirement": "Present-tense person forms",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "verbs_guide.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-present-person-forms"
+      },
+      "assessmentIds": [
+        "grammar-present-person-forms-diagnostic-recognition",
+        "grammar-present-person-forms-recognition",
+        "grammar-present-person-forms-production",
         "b1-family-checkpoint-7-matching"
       ]
     }
@@ -1398,6 +1422,11 @@
         118
       ],
       "match": "text-exact"
+    },
+    "grammar-present-person-forms": {
+      "kind": "site-extension",
+      "sourcePage": "verbs_guide.html",
+      "coverageStatus": "extended"
     }
   },
   "supplementalItems": [
@@ -2680,88 +2709,94 @@
           }
         },
         {
-          "id": "b1-family-it-tlieta-diagnostic-recognition-true-false",
+          "id": "b1-family-l-erbgha-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-it-tlieta"
+            "b1-family-l-erbgha"
           ],
-          "prompt": "True or false: “It-Tlieta” means “grandparents” in this chapter.",
+          "prompt": "True or false: “L-Erbgħa” means “grandparents” in this chapter.",
           "answer": false,
-          "explanation": "It-Tlieta means “Tuesday”.",
+          "explanation": "L-Erbgħa means “Wednesday”.",
           "reviewCard": {
-            "maltese": "It-Tlieta",
-            "english": "Tuesday"
+            "maltese": "L-Erbgħa",
+            "english": "Wednesday"
           }
         },
         {
-          "id": "b1-family-is-sibt-diagnostic-recognition",
+          "id": "b1-family-il-hadd-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-is-sibt"
+            "b1-family-il-hadd"
           ],
-          "prompt": "What is the lesson meaning of “Is-Sibt”?",
+          "prompt": "What is the lesson meaning of “Il-Ħadd”?",
           "choices": [
-            "Saturday",
+            "Sunday",
             "grandfather",
             "grandmother"
           ],
-          "answer": "Saturday",
-          "explanation": "Is-Sibt means “Saturday” in this chapter.",
+          "answer": "Sunday",
+          "explanation": "Il-Ħadd means “Sunday” in this chapter.",
           "reviewCard": {
-            "maltese": "Is-Sibt",
-            "english": "Saturday"
+            "maltese": "Il-Ħadd",
+            "english": "Sunday"
           }
         },
         {
-          "id": "b1-family-passeggata-diagnostic-recognition-true-false",
+          "id": "b1-family-zfin-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-passeggata"
+            "b1-family-zfin"
           ],
-          "prompt": "True or false: “passeġġata” means “grandmother” in this chapter.",
+          "prompt": "True or false: “żfin” means “grandmother” in this chapter.",
           "answer": false,
-          "explanation": "passeġġata means “walk / stroll”.",
+          "explanation": "żfin means “dancing”.",
           "reviewCard": {
-            "maltese": "passeġġata",
-            "english": "walk / stroll"
+            "maltese": "żfin",
+            "english": "dancing"
           }
         },
         {
-          "id": "b1-family-bongu-diagnostic-recognition",
+          "id": "b1-family-il-waranofsinhar-it-tajjeb-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-bongu"
+            "b1-family-il-waranofsinhar-it-tajjeb"
           ],
-          "prompt": "What is the lesson meaning of “Bonġu”?",
+          "prompt": "What is the lesson meaning of “Il-waranofsinhar it-tajjeb”?",
           "choices": [
             "aunt",
-            "Good morning.",
+            "Good afternoon",
             "uncle"
           ],
-          "answer": "Good morning.",
-          "explanation": "Bonġu means “Good morning.” in this chapter.",
+          "answer": "Good afternoon",
+          "explanation": "Il-waranofsinhar it-tajjeb means “Good afternoon” in this chapter.",
           "reviewCard": {
-            "maltese": "Bonġu",
-            "english": "Good morning."
+            "maltese": "Il-waranofsinhar it-tajjeb",
+            "english": "Good afternoon"
           }
         },
         {
-          "id": "b1-family-hu-hsieb-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She eats bread\"?",
+          "choices": [
+            "Hi niekol il-ħobż.",
+            "Hi tiekol il-ħobż.",
+            "Hi jieklu l-ħobż."
+          ],
+          "answer": "Hi tiekol il-ħobż.",
+          "explanation": "The third-person feminine present form is tiekol.",
+          "id": "grammar-present-person-forms-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-hu-hsieb"
+            "grammar-present-person-forms"
           ],
-          "prompt": "True or false: “Ħu ħsieb” means “aunt” in this chapter.",
-          "answer": false,
-          "explanation": "Ħu ħsieb means “Take care”.",
           "reviewCard": {
-            "maltese": "Ħu ħsieb",
-            "english": "Take care"
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
           }
         }
       ]
@@ -4373,7 +4408,7 @@
       "id": "b1-family-checkpoint-7",
       "kind": "checkpoint",
       "sequence": 7,
-      "targetCount": 2,
+      "targetCount": 3,
       "title": "Il-Familja Checkpoint 7",
       "items": [
         {
@@ -4387,7 +4422,7 @@
           "choices": [
             "Not bad",
             "Take care",
-            "siblings"
+            "select and produce a present form that matches its subject"
           ],
           "answer": "Not bad",
           "explanation": "Mhux ħażin means “Not bad” in this chapter.",
@@ -4423,7 +4458,7 @@
           "targetIds": [
             "b1-family-hu-hsieb"
           ],
-          "prompt": "True or false: “Ħu ħsieb” means “siblings” in this chapter.",
+          "prompt": "True or false: “Ħu ħsieb” means “select and produce a present form that matches its subject” in this chapter.",
           "answer": false,
           "explanation": "Ħu ħsieb means “Take care”.",
           "reviewCard": {
@@ -4452,12 +4487,53 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She eats bread\"?",
+          "choices": [
+            "Hi niekol il-ħobż.",
+            "Hi tiekol il-ħobż.",
+            "Hi jieklu l-ħobż."
+          ],
+          "answer": "Hi tiekol il-ħobż.",
+          "explanation": "The third-person feminine present form is tiekol.",
+          "id": "grammar-present-person-forms-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-present-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the present form: Aħna _____ l-ħobż. (We eat bread.)",
+          "answer": "nieklu",
+          "accepted": [
+            "nieklu"
+          ],
+          "explanation": "The aħna form of kiel in the present is nieklu.",
+          "id": "grammar-present-person-forms-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-present-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
+          }
+        },
+        {
           "id": "b1-family-checkpoint-7-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-family-mhux-hazin",
-            "b1-family-hu-hsieb"
+            "b1-family-hu-hsieb",
+            "grammar-present-person-forms"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -4468,6 +4544,10 @@
             {
               "left": "Ħu ħsieb",
               "right": "Take care"
+            },
+            {
+              "left": "Present-tense person forms",
+              "right": "select and produce a present form that matches its subject"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

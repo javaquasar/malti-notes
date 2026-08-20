@@ -191,7 +191,6 @@
         "itemId": "imperative-gh-bidu-ghalaq"
       },
       "assessmentIds": [
-        "b2-imperative-aghlaq-diagnostic-recognition",
         "b2-imperative-aghlaq-recognition",
         "b2-imperative-aghlaq-production",
         "b2-imperative-checkpoint-2-matching"
@@ -211,6 +210,7 @@
         "itemId": "imperative-gh-bidu-ghalaq"
       },
       "assessmentIds": [
+        "b2-imperative-aghlqu-diagnostic-recognition",
         "b2-imperative-aghlqu-recognition-true-false",
         "b2-imperative-aghlqu-production",
         "b2-imperative-checkpoint-2-matching"
@@ -324,7 +324,6 @@
         "itemId": "b2-imperative-dahhlu"
       },
       "assessmentIds": [
-        "b2-imperative-dahhlu-diagnostic-recognition",
         "b2-imperative-dahhlu-recognition-true-false",
         "b2-imperative-dahhlu-production",
         "b2-imperative-checkpoint-3-matching"
@@ -344,6 +343,7 @@
         "itemId": "b2-imperative-aqra"
       },
       "assessmentIds": [
+        "b2-imperative-aqra-diagnostic-recognition",
         "b2-imperative-aqra-recognition",
         "b2-imperative-aqra-production",
         "b2-imperative-checkpoint-3-matching"
@@ -459,7 +459,6 @@
         "itemId": "b2-imperative-tkellem"
       },
       "assessmentIds": [
-        "b2-imperative-tkellem-diagnostic-recognition",
         "b2-imperative-tkellem-recognition",
         "b2-imperative-tkellem-production",
         "b2-imperative-checkpoint-4-matching"
@@ -479,6 +478,7 @@
         "itemId": "imperative-common-lesson25-ghamel"
       },
       "assessmentIds": [
+        "b2-imperative-aghmel-diagnostic-recognition",
         "b2-imperative-aghmel-recognition-true-false",
         "b2-imperative-aghmel-production",
         "b2-imperative-checkpoint-4-matching"
@@ -592,7 +592,6 @@
         "itemId": "cardinal-6"
       },
       "assessmentIds": [
-        "b2-imperative-sitta-diagnostic-recognition",
         "b2-imperative-sitta-recognition-true-false",
         "b2-imperative-sitta-production",
         "b2-imperative-checkpoint-5-matching"
@@ -612,6 +611,7 @@
         "itemId": "cardinal-7"
       },
       "assessmentIds": [
+        "b2-imperative-sebgha-diagnostic-recognition",
         "b2-imperative-sebgha-recognition",
         "b2-imperative-sebgha-production"
       ]
@@ -667,9 +667,35 @@
         "itemId": "cardinal-10"
       },
       "assessmentIds": [
-        "b2-imperative-ghaxra-diagnostic-recognition-true-false",
         "b2-imperative-ghaxra-recognition-true-false",
         "b2-imperative-ghaxra-production",
+        "b2-imperative-checkpoint-6-matching"
+      ]
+    },
+    {
+      "id": "grammar-imperative-number",
+      "book": "B2",
+      "chapterId": "b2-imperative",
+      "type": "grammar",
+      "sourceRequirement": "Singular and plural imperative",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b2-imperative"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-imperative-number"
+      },
+      "assessmentIds": [
+        "grammar-imperative-number-diagnostic-recognition",
+        "grammar-imperative-number-recognition",
+        "grammar-imperative-number-production",
         "b2-imperative-checkpoint-6-matching"
       ]
     }
@@ -1197,6 +1223,13 @@
         24
       ],
       "match": "text-exact"
+    },
+    "grammar-imperative-number": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b2-imperative"
+      ],
+      "coverageStatus": "covered"
     }
   },
   "supplementalItems": [
@@ -2238,23 +2271,23 @@
           }
         },
         {
-          "id": "b2-imperative-aghlaq-diagnostic-recognition",
+          "id": "b2-imperative-aghlqu-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-aghlaq"
+            "b2-imperative-aghlqu"
           ],
-          "prompt": "What is the lesson meaning of “agħlaq”?",
+          "prompt": "What is the lesson meaning of “agħlqu”?",
           "choices": [
             "write (singular command)",
-            "close (singular command)",
+            "close (plural command)",
             "sit down / place (plural command)"
           ],
-          "answer": "close (singular command)",
-          "explanation": "agħlaq means “close (singular command)” in this chapter.",
+          "answer": "close (plural command)",
+          "explanation": "agħlqu means “close (plural command)” in this chapter.",
           "reviewCard": {
-            "maltese": "agħlaq",
-            "english": "close (singular command)"
+            "maltese": "agħlqu",
+            "english": "close (plural command)"
           }
         },
         {
@@ -2273,23 +2306,23 @@
           }
         },
         {
-          "id": "b2-imperative-dahhlu-diagnostic-recognition",
+          "id": "b2-imperative-aqra-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-dahhlu"
+            "b2-imperative-aqra"
           ],
-          "prompt": "What is the lesson meaning of “daħħlu”?",
+          "prompt": "What is the lesson meaning of “aqra”?",
           "choices": [
             "write (plural command)",
             "close (singular command)",
-            "put inside (plural command)"
+            "read (singular command)"
           ],
-          "answer": "put inside (plural command)",
-          "explanation": "daħħlu means “put inside (plural command)” in this chapter.",
+          "answer": "read (singular command)",
+          "explanation": "aqra means “read (singular command)” in this chapter.",
           "reviewCard": {
-            "maltese": "daħħlu",
-            "english": "put inside (plural command)"
+            "maltese": "aqra",
+            "english": "read (singular command)"
           }
         },
         {
@@ -2308,23 +2341,23 @@
           }
         },
         {
-          "id": "b2-imperative-tkellem-diagnostic-recognition",
+          "id": "b2-imperative-aghmel-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-tkellem"
+            "b2-imperative-aghmel"
           ],
-          "prompt": "What is the lesson meaning of “tkellem”?",
+          "prompt": "What is the lesson meaning of “agħmel”?",
           "choices": [
-            "speak (singular command)",
+            "do / make (singular command)",
             "close (plural command)",
             "go out (singular command)"
           ],
-          "answer": "speak (singular command)",
-          "explanation": "tkellem means “speak (singular command)” in this chapter.",
+          "answer": "do / make (singular command)",
+          "explanation": "agħmel means “do / make (singular command)” in this chapter.",
           "reviewCard": {
-            "maltese": "tkellem",
-            "english": "speak (singular command)"
+            "maltese": "agħmel",
+            "english": "do / make (singular command)"
           }
         },
         {
@@ -2343,38 +2376,44 @@
           }
         },
         {
-          "id": "b2-imperative-sitta-diagnostic-recognition",
+          "id": "b2-imperative-sebgha-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-sitta"
+            "b2-imperative-sebgha"
           ],
-          "prompt": "What is the lesson meaning of “sitta”?",
+          "prompt": "What is the lesson meaning of “sebgħa”?",
           "choices": [
             "enter (singular command)",
-            "six",
+            "seven",
             "go out (plural command)"
           ],
-          "answer": "six",
-          "explanation": "sitta means “six” in this chapter.",
+          "answer": "seven",
+          "explanation": "sebgħa means “seven” in this chapter.",
           "reviewCard": {
-            "maltese": "sitta",
-            "english": "six"
+            "maltese": "sebgħa",
+            "english": "seven"
           }
         },
         {
-          "id": "b2-imperative-ghaxra-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which command tells a group to open the books?",
+          "choices": [
+            "Iftaħ il-kotba.",
+            "Iftħu l-kotba.",
+            "Intom tiftaħ il-kotba."
+          ],
+          "answer": "Iftħu l-kotba.",
+          "explanation": "Iftħu is the plural imperative used for more than one addressee.",
+          "id": "grammar-imperative-number-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-ghaxra"
+            "grammar-imperative-number"
           ],
-          "prompt": "True or false: “għaxra” means “enter (singular command)” in this chapter.",
-          "answer": false,
-          "explanation": "għaxra means “ten”.",
           "reviewCard": {
-            "maltese": "għaxra",
-            "english": "ten"
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
           }
         }
       ]
@@ -3716,7 +3755,7 @@
       "id": "b2-imperative-checkpoint-6",
       "kind": "checkpoint",
       "sequence": 6,
-      "targetCount": 2,
+      "targetCount": 3,
       "title": "Iftaħ il-Ktieb u Aqra Checkpoint 6",
       "items": [
         {
@@ -3730,7 +3769,7 @@
           "choices": [
             "nine",
             "ten",
-            "stand up (singular command)"
+            "select and produce a singular or plural imperative for the addressee"
           ],
           "answer": "nine",
           "explanation": "disgħa means “nine” in this chapter.",
@@ -3765,7 +3804,7 @@
           "targetIds": [
             "b2-imperative-ghaxra"
           ],
-          "prompt": "True or false: “għaxra” means “stand up (singular command)” in this chapter.",
+          "prompt": "True or false: “għaxra” means “select and produce a singular or plural imperative for the addressee” in this chapter.",
           "answer": false,
           "explanation": "għaxra means “ten”.",
           "reviewCard": {
@@ -3793,12 +3832,54 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which command tells a group to open the books?",
+          "choices": [
+            "Iftaħ il-kotba.",
+            "Iftħu l-kotba.",
+            "Intom tiftaħ il-kotba."
+          ],
+          "answer": "Iftħu l-kotba.",
+          "explanation": "Iftħu is the plural imperative used for more than one addressee.",
+          "id": "grammar-imperative-number-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-imperative-number"
+          ],
+          "reviewCard": {
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the plural command: _____ l-kotba. (Open the books.)",
+          "answer": "Iftħu",
+          "accepted": [
+            "Iftħu",
+            "iftħu"
+          ],
+          "explanation": "Use the plural imperative Iftħu when speaking to a group.",
+          "id": "grammar-imperative-number-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-imperative-number"
+          ],
+          "reviewCard": {
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
+          }
+        },
+        {
           "id": "b2-imperative-checkpoint-6-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b2-imperative-disgha",
-            "b2-imperative-ghaxra"
+            "b2-imperative-ghaxra",
+            "grammar-imperative-number"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -3809,6 +3890,10 @@
             {
               "left": "għaxra",
               "right": "ten"
+            },
+            {
+              "left": "Singular and plural imperative",
+              "right": "select and produce a singular or plural imperative for the addressee"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

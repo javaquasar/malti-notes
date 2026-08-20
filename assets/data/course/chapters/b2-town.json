@@ -367,7 +367,6 @@
         "itemId": "b2-town-numru"
       },
       "assessmentIds": [
-        "b2-town-numru-diagnostic-recognition-true-false",
         "b2-town-numru-recognition-true-false",
         "b2-town-numru-production",
         "b2-town-checkpoint-3-matching"
@@ -387,6 +386,7 @@
         "itemId": "b2-town-vjal"
       },
       "assessmentIds": [
+        "b2-town-vjal-diagnostic-recognition-true-false",
         "b2-town-vjal-recognition",
         "b2-town-vjal-production"
       ]
@@ -423,7 +423,6 @@
         "itemId": "b2-town-lukanda"
       },
       "assessmentIds": [
-        "b2-town-lukanda-diagnostic-recognition",
         "b2-town-lukanda-recognition",
         "b2-town-lukanda-production",
         "b2-town-checkpoint-4-matching"
@@ -443,6 +442,7 @@
         "itemId": "b2-town-indirizz"
       },
       "assessmentIds": [
+        "b2-town-indirizz-diagnostic-recognition",
         "b2-town-indirizz-recognition-true-false",
         "b2-town-indirizz-production",
         "b2-town-checkpoint-4-matching"
@@ -481,7 +481,6 @@
         "itemId": "b2-town-dur-fuq-ix-xellug"
       },
       "assessmentIds": [
-        "b2-town-dur-fuq-ix-xellug-diagnostic-recognition-true-false",
         "b2-town-dur-fuq-ix-xellug-recognition-true-false",
         "b2-town-dur-fuq-ix-xellug-production",
         "b2-town-checkpoint-4-matching"
@@ -501,6 +500,7 @@
         "itemId": "b2-town-dur-mal-kantuniera"
       },
       "assessmentIds": [
+        "b2-town-dur-mal-kantuniera-diagnostic-recognition-true-false",
         "b2-town-dur-mal-kantuniera-recognition",
         "b2-town-dur-mal-kantuniera-production"
       ]
@@ -537,7 +537,6 @@
         "itemId": "b2-town-dur-fuq-il-lemin"
       },
       "assessmentIds": [
-        "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
         "b2-town-dur-fuq-il-lemin-recognition",
         "b2-town-dur-fuq-il-lemin-production",
         "b2-town-checkpoint-5-matching"
@@ -557,6 +556,7 @@
         "itemId": "b2-town-imxi-dritt"
       },
       "assessmentIds": [
+        "b2-town-imxi-dritt-diagnostic-recognition",
         "b2-town-imxi-dritt-recognition-true-false",
         "b2-town-imxi-dritt-production",
         "b2-town-checkpoint-5-matching"
@@ -619,9 +619,32 @@
         "itemId": "grammar-modals"
       },
       "assessmentIds": [
-        "grammar-modals-diagnostic-recognition",
         "grammar-modals-recognition",
         "grammar-modals-production"
+      ]
+    },
+    {
+      "id": "grammar-preposition-contractions",
+      "book": "B2",
+      "chapterId": "b2-town",
+      "type": "grammar",
+      "sourceRequirement": "Place prepositions with the definite article",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "pronouns_possessives.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-preposition-contractions"
+      },
+      "assessmentIds": [
+        "grammar-preposition-contractions-diagnostic-recognition",
+        "grammar-preposition-contractions-recognition",
+        "grammar-preposition-contractions-production"
       ]
     }
   ],
@@ -1053,6 +1076,11 @@
     "grammar-modals": {
       "kind": "site-extension",
       "sourcePage": "modals_needs.html",
+      "coverageStatus": "extended"
+    },
+    "grammar-preposition-contractions": {
+      "kind": "site-extension",
+      "sourcePage": "pronouns_possessives.html",
       "coverageStatus": "extended"
     }
   },
@@ -2026,94 +2054,94 @@
           }
         },
         {
-          "id": "b2-town-numru-diagnostic-recognition-true-false",
+          "id": "b2-town-vjal-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-numru"
+            "b2-town-vjal"
           ],
-          "prompt": "True or false: “numru” means “post office” in this chapter.",
+          "prompt": "True or false: “vjal” means “post office” in this chapter.",
           "answer": false,
-          "explanation": "numru means “number”.",
+          "explanation": "vjal means “avenue”.",
           "reviewCard": {
-            "maltese": "numru",
-            "english": "number"
+            "maltese": "vjal",
+            "english": "avenue"
           }
         },
         {
-          "id": "b2-town-lukanda-diagnostic-recognition",
+          "id": "b2-town-indirizz-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-lukanda"
+            "b2-town-indirizz"
           ],
-          "prompt": "What is the lesson meaning of “lukanda”?",
+          "prompt": "What is the lesson meaning of “indirizz”?",
           "choices": [
-            "hotel",
+            "address",
             "church parvis / forecourt",
             "ricotta pastizz"
           ],
-          "answer": "hotel",
-          "explanation": "lukanda means “hotel” in this chapter.",
+          "answer": "address",
+          "explanation": "indirizz means “address” in this chapter.",
           "reviewCard": {
-            "maltese": "lukanda",
-            "english": "hotel"
+            "maltese": "indirizz",
+            "english": "address"
           }
         },
         {
-          "id": "b2-town-dur-fuq-ix-xellug-diagnostic-recognition-true-false",
+          "id": "b2-town-dur-mal-kantuniera-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-dur-fuq-ix-xellug"
+            "b2-town-dur-mal-kantuniera"
           ],
-          "prompt": "True or false: “Dur fuq ix-xellug” means “ricotta pastizz” in this chapter.",
+          "prompt": "True or false: “Dur mal-kantuniera” means “ricotta pastizz” in this chapter.",
           "answer": false,
-          "explanation": "Dur fuq ix-xellug means “Turn left”.",
+          "explanation": "Dur mal-kantuniera means “Turn around the corner”.",
           "reviewCard": {
-            "maltese": "Dur fuq ix-xellug",
-            "english": "Turn left"
+            "maltese": "Dur mal-kantuniera",
+            "english": "Turn around the corner"
           }
         },
         {
-          "id": "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
+          "id": "b2-town-imxi-dritt-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-dur-fuq-il-lemin"
+            "b2-town-imxi-dritt"
           ],
-          "prompt": "What is the lesson meaning of “Dur fuq il-lemin”?",
+          "prompt": "What is the lesson meaning of “Imxi dritt”?",
           "choices": [
             "medicine",
-            "Turn right",
+            "Go straight",
             "pea pastizz"
           ],
-          "answer": "Turn right",
-          "explanation": "Dur fuq il-lemin means “Turn right” in this chapter.",
+          "answer": "Go straight",
+          "explanation": "Imxi dritt means “Go straight” in this chapter.",
           "reviewCard": {
-            "maltese": "Dur fuq il-lemin",
-            "english": "Turn right"
+            "maltese": "Imxi dritt",
+            "english": "Go straight"
           }
         },
         {
           "type": "multiple-choice",
-          "prompt": "Which sentence politely says “I would like to drink coffee”?",
+          "prompt": "Which phrase correctly means \"in the house\"?",
           "choices": [
-            "Nixtieq nixrob kafè.",
-            "Għandi bżonn kafè nixrob.",
-            "Nista' kafè."
+            "fi id-dar",
+            "fil-dar",
+            "fid-dar"
           ],
-          "answer": "Nixtieq nixrob kafè.",
-          "explanation": "Nixtieq followed by the action expresses a polite preference.",
-          "id": "grammar-modals-diagnostic-recognition",
+          "answer": "fid-dar",
+          "explanation": "Fi contracts with the assimilated article id- to form fid-.",
+          "id": "grammar-preposition-contractions-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "grammar-modals"
+            "grammar-preposition-contractions"
           ],
           "reviewCard": {
-            "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
-            "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
-            "example": "Nista' mmur."
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
           }
         }
       ]
@@ -3197,7 +3225,7 @@
       "id": "b2-town-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 5,
+      "targetCount": 6,
       "title": "Fil-Pjazza Checkpoint 5",
       "items": [
         {
@@ -3392,6 +3420,46 @@
             "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
             "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
             "example": "Nista' mmur."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which phrase correctly means \"in the house\"?",
+          "choices": [
+            "fi id-dar",
+            "fil-dar",
+            "fid-dar"
+          ],
+          "answer": "fid-dar",
+          "explanation": "Fi contracts with the assimilated article id- to form fid-.",
+          "id": "grammar-preposition-contractions-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-preposition-contractions"
+          ],
+          "reviewCard": {
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the place phrase: Il-ktieb qiegħed _____ borża. (The book is in the bag.)",
+          "answer": "fil-borża",
+          "accepted": [
+            "fil-borża"
+          ],
+          "explanation": "Fi plus il-borża contracts to fil-borża.",
+          "id": "grammar-preposition-contractions-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-preposition-contractions"
+          ],
+          "reviewCard": {
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
           }
         },
         {

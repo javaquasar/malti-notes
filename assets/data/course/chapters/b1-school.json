@@ -321,7 +321,6 @@
         "itemId": "b1-school-kalzetta"
       },
       "assessmentIds": [
-        "b1-school-kalzetta-diagnostic-recognition-true-false",
         "b1-school-kalzetta-recognition-true-false",
         "b1-school-kalzetta-production",
         "b1-school-checkpoint-3-matching"
@@ -341,6 +340,7 @@
         "itemId": "b1-school-glekk"
       },
       "assessmentIds": [
+        "b1-school-glekk-diagnostic-recognition-true-false",
         "b1-school-glekk-recognition",
         "b1-school-glekk-production",
         "b1-school-checkpoint-3-matching"
@@ -379,7 +379,6 @@
         "itemId": "b1-school-zarbuna"
       },
       "assessmentIds": [
-        "b1-school-zarbuna-diagnostic-recognition",
         "b1-school-zarbuna-recognition",
         "b1-school-zarbuna-production"
       ]
@@ -398,6 +397,7 @@
         "itemId": "b1-school-uniformi"
       },
       "assessmentIds": [
+        "b1-school-uniformi-diagnostic-recognition",
         "b1-school-uniformi-recognition-true-false",
         "b1-school-uniformi-production"
       ]
@@ -435,7 +435,6 @@
         "itemId": "kamra-tas-sodda"
       },
       "assessmentIds": [
-        "b1-school-kamra-tas-sodda-diagnostic-recognition-true-false",
         "b1-school-kamra-tas-sodda-recognition-true-false",
         "b1-school-kamra-tas-sodda-production",
         "b1-school-checkpoint-4-matching"
@@ -455,6 +454,7 @@
         "itemId": "kamra-tal-banju"
       },
       "assessmentIds": [
+        "b1-school-kamra-tal-banju-diagnostic-recognition-true-false",
         "b1-school-kamra-tal-banju-recognition",
         "b1-school-kamra-tal-banju-production",
         "b1-school-checkpoint-4-matching"
@@ -493,7 +493,6 @@
         "itemId": "gnien"
       },
       "assessmentIds": [
-        "b1-school-gnien-diagnostic-recognition",
         "b1-school-gnien-recognition",
         "b1-school-gnien-production"
       ]
@@ -512,6 +511,7 @@
         "itemId": "kcina"
       },
       "assessmentIds": [
+        "b1-school-kcina-diagnostic-recognition",
         "b1-school-kcina-recognition-true-false",
         "b1-school-kcina-production"
       ]
@@ -549,9 +549,33 @@
         "itemId": "garaxx"
       },
       "assessmentIds": [
-        "b1-school-garaxx-diagnostic-recognition-true-false",
         "b1-school-garaxx-recognition-true-false",
         "b1-school-garaxx-production",
+        "b1-school-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "grammar-basic-word-order",
+      "book": "B1",
+      "chapterId": "b1-school",
+      "type": "grammar",
+      "sourceRequirement": "Basic statement word order",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "sentence_builder.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-basic-word-order"
+      },
+      "assessmentIds": [
+        "grammar-basic-word-order-diagnostic-recognition",
+        "grammar-basic-word-order-recognition",
+        "grammar-basic-word-order-production",
         "b1-school-checkpoint-5-matching"
       ]
     }
@@ -997,6 +1021,11 @@
         45
       ],
       "match": "text-exact"
+    },
+    "grammar-basic-word-order": {
+      "kind": "site-extension",
+      "sourcePage": "sentence_builder.html",
+      "coverageStatus": "extended"
     }
   },
   "supplementalItems": [
@@ -1907,88 +1936,94 @@
           }
         },
         {
-          "id": "b1-school-kalzetta-diagnostic-recognition-true-false",
+          "id": "b1-school-glekk-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-kalzetta"
+            "b1-school-glekk"
           ],
-          "prompt": "True or false: “kalzetta” means “hall” in this chapter.",
+          "prompt": "True or false: “ġlekk” means “hall” in this chapter.",
           "answer": false,
-          "explanation": "kalzetta means “sock”.",
+          "explanation": "ġlekk means “jacket”.",
           "reviewCard": {
-            "maltese": "kalzetta",
-            "english": "sock"
+            "maltese": "ġlekk",
+            "english": "jacket"
           }
         },
         {
-          "id": "b1-school-zarbuna-diagnostic-recognition",
+          "id": "b1-school-uniformi-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-zarbuna"
+            "b1-school-uniformi"
           ],
-          "prompt": "What is the lesson meaning of “żarbuna”?",
+          "prompt": "What is the lesson meaning of “uniformi”?",
           "choices": [
-            "shoe",
+            "uniform",
             "office",
             "toilet"
           ],
-          "answer": "shoe",
-          "explanation": "żarbuna means “shoe” in this chapter.",
+          "answer": "uniform",
+          "explanation": "uniformi means “uniform” in this chapter.",
           "reviewCard": {
-            "maltese": "żarbuna",
-            "english": "shoe"
+            "maltese": "uniformi",
+            "english": "uniform"
           }
         },
         {
-          "id": "b1-school-kamra-tas-sodda-diagnostic-recognition-true-false",
+          "id": "b1-school-kamra-tal-banju-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-kamra-tas-sodda"
+            "b1-school-kamra-tal-banju"
           ],
-          "prompt": "True or false: “kamra tas-sodda” means “toilet” in this chapter.",
+          "prompt": "True or false: “kamra tal-banju” means “toilet” in this chapter.",
           "answer": false,
-          "explanation": "kamra tas-sodda means “bedroom”.",
+          "explanation": "kamra tal-banju means “bathroom”.",
           "reviewCard": {
-            "maltese": "kamra tas-sodda",
-            "english": "bedroom"
+            "maltese": "kamra tal-banju",
+            "english": "bathroom"
           }
         },
         {
-          "id": "b1-school-gnien-diagnostic-recognition",
+          "id": "b1-school-kcina-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-gnien"
+            "b1-school-kcina"
           ],
-          "prompt": "What is the lesson meaning of “ġnien”?",
+          "prompt": "What is the lesson meaning of “kċina”?",
           "choices": [
             "shirt",
-            "garden",
+            "kitchen",
             "bow / ribbon"
           ],
-          "answer": "garden",
-          "explanation": "ġnien means “garden” in this chapter.",
+          "answer": "kitchen",
+          "explanation": "kċina means “kitchen” in this chapter.",
           "reviewCard": {
-            "maltese": "ġnien",
-            "english": "garden"
+            "maltese": "kċina",
+            "english": "kitchen"
           }
         },
         {
-          "id": "b1-school-garaxx-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which option is a complete basic statement?",
+          "choices": [
+            "Jien ktieb naqra.",
+            "Jien naqra ktieb.",
+            "Jien do naqra ktieb."
+          ],
+          "answer": "Jien naqra ktieb.",
+          "explanation": "The safe beginner order is subject, matching verb, then object.",
+          "id": "grammar-basic-word-order-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-garaxx"
+            "grammar-basic-word-order"
           ],
-          "prompt": "True or false: “garaxx” means “shirt” in this chapter.",
-          "answer": false,
-          "explanation": "garaxx means “garage”.",
           "reviewCard": {
-            "maltese": "garaxx",
-            "english": "garage"
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
           }
         }
       ]
@@ -3067,7 +3102,7 @@
       "id": "b1-school-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 2,
+      "targetCount": 3,
       "title": "L-Iskola Checkpoint 5",
       "items": [
         {
@@ -3081,7 +3116,7 @@
           "choices": [
             "living room",
             "garage",
-            "corridor"
+            "recognize and produce a complete basic Maltese statement"
           ],
           "answer": "living room",
           "explanation": "salott means “living room” in this chapter.",
@@ -3116,7 +3151,7 @@
           "targetIds": [
             "b1-school-garaxx"
           ],
-          "prompt": "True or false: “garaxx” means “corridor” in this chapter.",
+          "prompt": "True or false: “garaxx” means “recognize and produce a complete basic Maltese statement” in this chapter.",
           "answer": false,
           "explanation": "garaxx means “garage”.",
           "reviewCard": {
@@ -3144,12 +3179,53 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which option is a complete basic statement?",
+          "choices": [
+            "Jien ktieb naqra.",
+            "Jien naqra ktieb.",
+            "Jien do naqra ktieb."
+          ],
+          "answer": "Jien naqra ktieb.",
+          "explanation": "The safe beginner order is subject, matching verb, then object.",
+          "id": "grammar-basic-word-order-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-basic-word-order"
+          ],
+          "reviewCard": {
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the statement: Jien _____ ktieb kull filgħaxija. (I read a book every evening.)",
+          "answer": "naqra",
+          "accepted": [
+            "naqra"
+          ],
+          "explanation": "Naqra is the first-person present form and comes before its object.",
+          "id": "grammar-basic-word-order-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-basic-word-order"
+          ],
+          "reviewCard": {
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
+          }
+        },
+        {
           "id": "b1-school-checkpoint-5-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-school-salott",
-            "b1-school-garaxx"
+            "b1-school-garaxx",
+            "grammar-basic-word-order"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -3160,6 +3236,10 @@
             {
               "left": "garaxx",
               "right": "garage"
+            },
+            {
+              "left": "Basic statement word order",
+              "right": "recognize and produce a complete basic Maltese statement"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

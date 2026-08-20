@@ -8,29 +8,95 @@
     "canonical assets/data topic banks"
   ],
   "description": "Generated unique coverage bank with recognition and production for book targets, grammar, verb paradigms, and canonical site vocabulary.",
-  "targetCount": 1210,
-  "modeCount": 2420,
+  "targetCount": 1219,
+  "modeCount": 2438,
   "categoryCounts": {
     "adjectives": 84,
-    "grammar": 8,
+    "grammar": 17,
     "numbers-time": 98,
     "pronouns": 41,
     "verbs": 233,
     "vocabulary": 746
   },
   "levelCounts": {
-    "B1": 297,
-    "B2": 262,
+    "B1": 302,
+    "B2": 266,
     "Site": 651
   },
   "sourceCounts": {
     "book-course": 440,
-    "book-grammar-topic": 6,
+    "book-grammar-topic": 9,
     "site-bank": 651,
-    "site-extension": 2,
+    "site-extension": 8,
     "verb-paradigm": 111
   },
   "targets": [
+    {
+      "id": "grammar-basic-word-order",
+      "level": "B1",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Basic sentence order",
+      "title": "Basic sentence order",
+      "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+      "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+      "sourceKind": "site-extension",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which option is a complete basic statement?",
+          "choices": [
+            "Jien ktieb naqra.",
+            "Jien naqra ktieb.",
+            "Jien do naqra ktieb."
+          ],
+          "answer": "Jien naqra ktieb.",
+          "explanation": "The safe beginner order is subject, matching verb, then object.",
+          "targetIds": [
+            "grammar-basic-word-order"
+          ],
+          "reviewCard": {
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
+          },
+          "id": "coverage-grammar-basic-word-order-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-basic-word-order"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-basic-word-order",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the statement: Jien _____ ktieb kull filgħaxija. (I read a book every evening.)",
+          "answer": "naqra",
+          "accepted": [
+            "naqra"
+          ],
+          "explanation": "Naqra is the first-person present form and comes before its object.",
+          "targetIds": [
+            "grammar-basic-word-order"
+          ],
+          "reviewCard": {
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
+          },
+          "id": "coverage-grammar-basic-word-order-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-basic-word-order"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-basic-word-order",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
     {
       "id": "grammar-modals",
       "level": "B2",
@@ -94,6 +160,72 @@
           ],
           "category": "grammar",
           "ruleId": "grammar-modals",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-collective-forms",
+      "level": "B1",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Collective, unit, and plural forms",
+      "title": "Collective, unit, and plural forms",
+      "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+      "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+      "sourceKind": "book-grammar-topic",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which phrase means \"one apple\"?",
+          "choices": [
+            "tuffieħ wieħed",
+            "tuffieħa waħda",
+            "tuffiħiet waħda"
+          ],
+          "answer": "tuffieħa waħda",
+          "explanation": "Tuffieħa is the singulative form for one apple.",
+          "targetIds": [
+            "grammar-collective-forms"
+          ],
+          "reviewCard": {
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
+          },
+          "id": "coverage-grammar-collective-forms-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-collective-forms"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-collective-forms",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete with one countable item: Għandi _____ waħda. (I have one apple.)",
+          "answer": "tuffieħa",
+          "accepted": [
+            "tuffieħa"
+          ],
+          "explanation": "Use the singulative form tuffieħa for one item.",
+          "targetIds": [
+            "grammar-collective-forms"
+          ],
+          "reviewCard": {
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
+          },
+          "id": "coverage-grammar-collective-forms-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-collective-forms"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-collective-forms",
           "sourcePage": "grammar_path.html"
         }
       }
@@ -497,6 +629,72 @@
       }
     },
     {
+      "id": "grammar-past-person-forms",
+      "level": "B2",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Past-tense person forms",
+      "title": "Past-tense person forms",
+      "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+      "english": "Match a completed past action to the ending required by its subject.",
+      "sourceKind": "site-extension",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She went to school\"?",
+          "choices": [
+            "Hi mort l-iskola.",
+            "Hi marret l-iskola.",
+            "Hi marru l-iskola."
+          ],
+          "answer": "Hi marret l-iskola.",
+          "explanation": "The third-person feminine past form is marret.",
+          "targetIds": [
+            "grammar-past-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
+          },
+          "id": "coverage-grammar-past-person-forms-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-past-person-forms"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-past-person-forms",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the past form: Huma _____ il-belt ilbieraħ. (They went to the city yesterday.)",
+          "answer": "marru",
+          "accepted": [
+            "marru"
+          ],
+          "explanation": "The huma past form of mar is marru.",
+          "targetIds": [
+            "grammar-past-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
+          },
+          "id": "coverage-grammar-past-person-forms-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-past-person-forms"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-past-person-forms",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
       "id": "grammar-possession-ghandu",
       "level": "B1",
       "category": "grammar",
@@ -558,6 +756,406 @@
           ],
           "category": "grammar",
           "ruleId": "grammar-possession-ghandu",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-preposition-contractions",
+      "level": "B2",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Preposition and article contractions",
+      "title": "Preposition and article contractions",
+      "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+      "english": "Combine the place preposition fi with the following definite article.",
+      "sourceKind": "site-extension",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which phrase correctly means \"in the house\"?",
+          "choices": [
+            "fi id-dar",
+            "fil-dar",
+            "fid-dar"
+          ],
+          "answer": "fid-dar",
+          "explanation": "Fi contracts with the assimilated article id- to form fid-.",
+          "targetIds": [
+            "grammar-preposition-contractions"
+          ],
+          "reviewCard": {
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
+          },
+          "id": "coverage-grammar-preposition-contractions-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-preposition-contractions"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-preposition-contractions",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the place phrase: Il-ktieb qiegħed _____ borża. (The book is in the bag.)",
+          "answer": "fil-borża",
+          "accepted": [
+            "fil-borża"
+          ],
+          "explanation": "Fi plus il-borża contracts to fil-borża.",
+          "targetIds": [
+            "grammar-preposition-contractions"
+          ],
+          "reviewCard": {
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
+          },
+          "id": "coverage-grammar-preposition-contractions-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-preposition-contractions"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-preposition-contractions",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-present-person-forms",
+      "level": "B1",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Present-tense person forms",
+      "title": "Present-tense person forms",
+      "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+      "english": "Match a present-tense verb form to its subject pronoun.",
+      "sourceKind": "site-extension",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She eats bread\"?",
+          "choices": [
+            "Hi niekol il-ħobż.",
+            "Hi tiekol il-ħobż.",
+            "Hi jieklu l-ħobż."
+          ],
+          "answer": "Hi tiekol il-ħobż.",
+          "explanation": "The third-person feminine present form is tiekol.",
+          "targetIds": [
+            "grammar-present-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
+          },
+          "id": "coverage-grammar-present-person-forms-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-present-person-forms"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-present-person-forms",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the present form: Aħna _____ l-ħobż. (We eat bread.)",
+          "answer": "nieklu",
+          "accepted": [
+            "nieklu"
+          ],
+          "explanation": "The aħna form of kiel in the present is nieklu.",
+          "targetIds": [
+            "grammar-present-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
+          },
+          "id": "coverage-grammar-present-person-forms-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-present-person-forms"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-present-person-forms",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-question-patterns",
+      "level": "B1",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Question patterns",
+      "title": "Question patterns",
+      "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+      "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+      "sourceKind": "site-extension",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which question asks where someone lives?",
+          "choices": [
+            "Meta toqgħod?",
+            "Fejn toqgħod?",
+            "Min toqgħod?"
+          ],
+          "answer": "Fejn toqgħod?",
+          "explanation": "Fejn asks about a place.",
+          "targetIds": [
+            "grammar-question-patterns"
+          ],
+          "reviewCard": {
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
+          },
+          "id": "coverage-grammar-question-patterns-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-question-patterns"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-question-patterns",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the place question: _____ toqgħod? (Where do you live?)",
+          "answer": "Fejn",
+          "accepted": [
+            "Fejn",
+            "fejn"
+          ],
+          "explanation": "Fejn is the question word for where.",
+          "targetIds": [
+            "grammar-question-patterns"
+          ],
+          "reviewCard": {
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
+          },
+          "id": "coverage-grammar-question-patterns-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-question-patterns"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-question-patterns",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-imperative-number",
+      "level": "B2",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Singular and plural imperative",
+      "title": "Singular and plural imperative",
+      "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+      "english": "Choose a command form according to whether it addresses one person or more than one.",
+      "sourceKind": "book-grammar-topic",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which command tells a group to open the books?",
+          "choices": [
+            "Iftaħ il-kotba.",
+            "Iftħu l-kotba.",
+            "Intom tiftaħ il-kotba."
+          ],
+          "answer": "Iftħu l-kotba.",
+          "explanation": "Iftħu is the plural imperative used for more than one addressee.",
+          "targetIds": [
+            "grammar-imperative-number"
+          ],
+          "reviewCard": {
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
+          },
+          "id": "coverage-grammar-imperative-number-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-imperative-number"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-imperative-number",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the plural command: _____ l-kotba. (Open the books.)",
+          "answer": "Iftħu",
+          "accepted": [
+            "Iftħu",
+            "iftħu"
+          ],
+          "explanation": "Use the plural imperative Iftħu when speaking to a group.",
+          "targetIds": [
+            "grammar-imperative-number"
+          ],
+          "reviewCard": {
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
+          },
+          "id": "coverage-grammar-imperative-number-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-imperative-number"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-imperative-number",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-subject-pronouns",
+      "level": "B1",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Subject pronouns",
+      "title": "Subject pronouns",
+      "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+      "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+      "sourceKind": "book-grammar-topic",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which Maltese subject pronoun means \"we\"?",
+          "choices": [
+            "Jien",
+            "Aħna",
+            "Huma"
+          ],
+          "answer": "Aħna",
+          "explanation": "Aħna is the first-person plural subject pronoun.",
+          "targetIds": [
+            "grammar-subject-pronouns"
+          ],
+          "reviewCard": {
+            "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+            "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+            "example": "Jien noqgħod Malta."
+          },
+          "id": "coverage-grammar-subject-pronouns-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-subject-pronouns"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-subject-pronouns",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete with the subject pronoun: _____ noqogħdu Malta. (We live in Malta.)",
+          "answer": "Aħna",
+          "accepted": [
+            "Aħna",
+            "aħna"
+          ],
+          "explanation": "Aħna is used when the subject is we.",
+          "targetIds": [
+            "grammar-subject-pronouns"
+          ],
+          "reviewCard": {
+            "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+            "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+            "example": "Jien noqgħod Malta."
+          },
+          "id": "coverage-grammar-subject-pronouns-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-subject-pronouns"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-subject-pronouns",
+          "sourcePage": "grammar_path.html"
+        }
+      }
+    },
+    {
+      "id": "grammar-verb-negation",
+      "level": "B2",
+      "category": "grammar",
+      "kind": "grammar",
+      "topic": "Verb negation with ma...x",
+      "title": "Verb negation with ma...x",
+      "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+      "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+      "sourceKind": "site-extension",
+      "sourcePage": "grammar_path.html",
+      "items": {
+        "recognition": {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly says \"I do not like coffee\"?",
+          "choices": [
+            "Ma nħobb il-kafè.",
+            "Nħobbx il-kafè.",
+            "Ma nħobbx il-kafè."
+          ],
+          "answer": "Ma nħobbx il-kafè.",
+          "explanation": "The verb is surrounded by ma and the attached ending -x.",
+          "targetIds": [
+            "grammar-verb-negation"
+          ],
+          "reviewCard": {
+            "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+            "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+            "example": "Ma nħobbx il-kafè."
+          },
+          "id": "coverage-grammar-verb-negation-recognition",
+          "assessmentMode": "recognition",
+          "coverageIds": [
+            "grammar-verb-negation"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-verb-negation",
+          "sourcePage": "grammar_path.html"
+        },
+        "production": {
+          "type": "fill-blank",
+          "prompt": "Complete the negative: Jien _____ il-kafè. (I do not like coffee.)",
+          "answer": "ma nħobbx",
+          "accepted": [
+            "ma nħobbx",
+            "Ma nħobbx"
+          ],
+          "explanation": "The complete negative form is ma nħobbx.",
+          "targetIds": [
+            "grammar-verb-negation"
+          ],
+          "reviewCard": {
+            "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+            "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+            "example": "Ma nħobbx il-kafè."
+          },
+          "id": "coverage-grammar-verb-negation-production",
+          "assessmentMode": "production",
+          "coverageIds": [
+            "grammar-verb-negation"
+          ],
+          "category": "grammar",
+          "ruleId": "grammar-verb-negation",
           "sourcePage": "grammar_path.html"
         }
       }
@@ -18369,7 +18967,7 @@
           "choices": [
             "nine",
             "ten",
-            "stand up (singular command)"
+            "select and produce a singular or plural imperative for the addressee"
           ],
           "answer": "nine",
           "explanation": "disgħa means “nine” in this chapter.",
@@ -18430,7 +19028,7 @@
           "targetIds": [
             "b2-imperative-ghaxra"
           ],
-          "prompt": "True or false: “għaxra” means “stand up (singular command)” in this chapter.",
+          "prompt": "True or false: “għaxra” means “select and produce a singular or plural imperative for the addressee” in this chapter.",
           "answer": false,
           "explanation": "għaxra means “ten”.",
           "reviewCard": {
@@ -44841,7 +45439,7 @@
           "targetIds": [
             "b1-family-hu-hsieb"
           ],
-          "prompt": "True or false: “Ħu ħsieb” means “siblings” in this chapter.",
+          "prompt": "True or false: “Ħu ħsieb” means “select and produce a present form that matches its subject” in this chapter.",
           "answer": false,
           "explanation": "Ħu ħsieb means “Take care”.",
           "reviewCard": {
@@ -45154,7 +45752,7 @@
           "choices": [
             "Not bad",
             "Take care",
-            "siblings"
+            "select and produce a present form that matches its subject"
           ],
           "answer": "Not bad",
           "explanation": "Mhux ħażin means “Not bad” in this chapter.",
@@ -50733,8 +51331,8 @@
           ],
           "prompt": "What is the lesson meaning of “l-inqas temperatura”?",
           "choices": [
+            "recognize and produce the complete ma...x negative pattern",
             "recognize and produce a complete comparison with minn",
-            "snow",
             "the lowest temperature"
           ],
           "answer": "the lowest temperature",
@@ -51912,7 +52510,7 @@
           "choices": [
             "funny / playful",
             "choose and produce the adjective form that agrees with its noun",
-            "animal"
+            "choose and produce the subject pronoun for person and number"
           ],
           "answer": "funny / playful",
           "explanation": "ċajtiera means “funny / playful” in this chapter.",
@@ -55757,7 +56355,7 @@
           "targetIds": [
             "b1-food-cikkulata"
           ],
-          "prompt": "True or false: “ċikkulata” means “pizza” in this chapter.",
+          "prompt": "True or false: “ċikkulata” means “spaghetti” in this chapter.",
           "answer": false,
           "explanation": "ċikkulata means “chocolate”.",
           "reviewCard": {
@@ -56126,7 +56724,7 @@
           "choices": [
             "ice cream",
             "chocolate",
-            "tea"
+            "choose and produce the collective, unit, or plural noun form"
           ],
           "answer": "ice cream",
           "explanation": "ġelat means “ice cream” in this chapter.",
@@ -56187,7 +56785,7 @@
           "targetIds": [
             "b1-food-ghadma"
           ],
-          "prompt": "True or false: “għadma” means “tea” in this chapter.",
+          "prompt": "True or false: “għadma” means “choose and produce the collective, unit, or plural noun form” in this chapter.",
           "answer": false,
           "explanation": "għadma means “bone”.",
           "reviewCard": {
@@ -56434,9 +57032,9 @@
           ],
           "prompt": "What is the lesson meaning of “ħut”?",
           "choices": [
-            "pizza",
+            "spaghetti",
             "fish",
-            "spaghetti"
+            "tea"
           ],
           "answer": "fish",
           "explanation": "ħut means “fish” in this chapter.",
@@ -58380,7 +58978,7 @@
           "targetIds": [
             "b1-school-garaxx"
           ],
-          "prompt": "True or false: “garaxx” means “corridor” in this chapter.",
+          "prompt": "True or false: “garaxx” means “recognize and produce a complete basic Maltese statement” in this chapter.",
           "answer": false,
           "explanation": "garaxx means “garage”.",
           "reviewCard": {
@@ -59521,7 +60119,7 @@
           "choices": [
             "living room",
             "garage",
-            "corridor"
+            "recognize and produce a complete basic Maltese statement"
           ],
           "answer": "living room",
           "explanation": "salott means “living room” in this chapter.",

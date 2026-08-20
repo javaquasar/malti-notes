@@ -33,7 +33,7 @@ const grammarTargetIds = new Set();
     fail(`${target.id} production prompt has no cloze`);
   }
 });
-if (grammarTargetIds.size !== 8) fail(`expected 8 grammar targets, found ${grammarTargetIds.size}`);
+if (grammarTargetIds.size !== 17) fail(`expected 17 grammar targets, found ${grammarTargetIds.size}`);
 
 const requirements = inventory.chapters.flatMap((chapter) => chapter.targets.map((target) => ({
   key: `${chapter.courseChapterId}::${target}`,

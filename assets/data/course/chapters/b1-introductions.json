@@ -313,7 +313,6 @@
         "itemId": "b1-introductions-ilma"
       },
       "assessmentIds": [
-        "b1-introductions-ilma-diagnostic-recognition-true-false",
         "b1-introductions-ilma-recognition",
         "b1-introductions-ilma-production",
         "b1-introductions-checkpoint-3-matching"
@@ -333,6 +332,7 @@
         "itemId": "b1-introductions-iehor"
       },
       "assessmentIds": [
+        "b1-introductions-iehor-diagnostic-recognition-true-false",
         "b1-introductions-iehor-recognition-true-false",
         "b1-introductions-iehor-production",
         "b1-introductions-checkpoint-3-matching"
@@ -390,7 +390,6 @@
         "itemId": "b1-introductions-lemin"
       },
       "assessmentIds": [
-        "b1-introductions-lemin-diagnostic-recognition",
         "b1-introductions-lemin-recognition",
         "b1-introductions-lemin-production"
       ]
@@ -409,6 +408,7 @@
         "itemId": "b1-introductions-meraq"
       },
       "assessmentIds": [
+        "b1-introductions-meraq-diagnostic-recognition",
         "b1-introductions-meraq-recognition-true-false",
         "b1-introductions-meraq-production"
       ]
@@ -465,7 +465,6 @@
         "itemId": "b1-introductions-pedala"
       },
       "assessmentIds": [
-        "b1-introductions-pedala-diagnostic-recognition-true-false",
         "b1-introductions-pedala-recognition",
         "b1-introductions-pedala-production",
         "b1-introductions-checkpoint-4-matching"
@@ -485,6 +484,7 @@
         "itemId": "b1-introductions-qawsalla"
       },
       "assessmentIds": [
+        "b1-introductions-qawsalla-diagnostic-recognition-true-false",
         "b1-introductions-qawsalla-recognition-true-false",
         "b1-introductions-qawsalla-production",
         "b1-introductions-checkpoint-4-matching"
@@ -540,7 +540,6 @@
         "itemId": "b1-introductions-tezor"
       },
       "assessmentIds": [
-        "b1-introductions-tezor-diagnostic-recognition",
         "b1-introductions-tezor-recognition",
         "b1-introductions-tezor-production",
         "b1-introductions-checkpoint-5-matching"
@@ -579,6 +578,7 @@
         "itemId": "b1-introductions-verita"
       },
       "assessmentIds": [
+        "b1-introductions-verita-diagnostic-recognition",
         "b1-introductions-verita-recognition",
         "b1-introductions-verita-production",
         "b1-introductions-checkpoint-5-matching"
@@ -617,7 +617,6 @@
         "itemId": "b1-introductions-xellug"
       },
       "assessmentIds": [
-        "b1-introductions-xellug-diagnostic-recognition-true-false",
         "b1-introductions-xellug-recognition",
         "b1-introductions-xellug-production"
       ]
@@ -654,6 +653,7 @@
         "itemId": "b1-introductions-ziju"
       },
       "assessmentIds": [
+        "b1-introductions-ziju-diagnostic-recognition-true-false",
         "b1-introductions-ziju-recognition",
         "b1-introductions-ziju-production",
         "b1-introductions-checkpoint-6-matching"
@@ -694,7 +694,6 @@
         "itemId": "ferhan-ferhana"
       },
       "assessmentIds": [
-        "b1-introductions-ferhana-diagnostic-recognition",
         "b1-introductions-ferhana-recognition",
         "b1-introductions-ferhana-production",
         "b1-introductions-checkpoint-6-matching"
@@ -733,6 +732,7 @@
         "itemId": "b1-introductions-sportiva"
       },
       "assessmentIds": [
+        "b1-introductions-sportiva-diagnostic-recognition",
         "b1-introductions-sportiva-recognition",
         "b1-introductions-sportiva-production"
       ]
@@ -796,9 +796,59 @@
         "itemId": "grammar-agreement"
       },
       "assessmentIds": [
-        "grammar-agreement-diagnostic-recognition",
         "grammar-agreement-recognition",
         "grammar-agreement-production",
+        "b1-introductions-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "grammar-subject-pronouns",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "grammar",
+      "sourceRequirement": "Subject pronouns",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "book-grammar-topic",
+        "inventoryTopicIds": [
+          "b1-subject-pronouns"
+        ],
+        "coverageStatus": "covered"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-subject-pronouns"
+      },
+      "assessmentIds": [
+        "grammar-subject-pronouns-recognition",
+        "grammar-subject-pronouns-production",
+        "b1-introductions-checkpoint-7-matching"
+      ]
+    },
+    {
+      "id": "grammar-question-patterns",
+      "book": "B1",
+      "chapterId": "b1-introductions",
+      "type": "grammar",
+      "sourceRequirement": "Question words and yes-no questions",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "verbs_guide.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-question-patterns"
+      },
+      "assessmentIds": [
+        "grammar-question-patterns-diagnostic-recognition",
+        "grammar-question-patterns-recognition",
+        "grammar-question-patterns-production",
         "b1-introductions-checkpoint-7-matching"
       ]
     }
@@ -1373,6 +1423,18 @@
         "b1-colour-agreement"
       ],
       "coverageStatus": "covered"
+    },
+    "grammar-subject-pronouns": {
+      "kind": "book-grammar-topic",
+      "inventoryTopicIds": [
+        "b1-subject-pronouns"
+      ],
+      "coverageStatus": "covered"
+    },
+    "grammar-question-patterns": {
+      "kind": "site-extension",
+      "sourcePage": "verbs_guide.html",
+      "coverageStatus": "extended"
     }
   },
   "supplementalItems": [
@@ -2589,129 +2651,129 @@
           }
         },
         {
-          "id": "b1-introductions-ilma-diagnostic-recognition-true-false",
+          "id": "b1-introductions-iehor-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ilma"
+            "b1-introductions-iehor"
           ],
-          "prompt": "True or false: “ilma” means “four” in this chapter.",
+          "prompt": "True or false: “ieħor” means “four” in this chapter.",
           "answer": false,
-          "explanation": "ilma means “water”.",
+          "explanation": "ieħor means “another / other (masculine)”.",
           "reviewCard": {
-            "maltese": "ilma",
-            "english": "water"
+            "maltese": "ieħor",
+            "english": "another / other (masculine)"
           }
         },
         {
-          "id": "b1-introductions-lemin-diagnostic-recognition",
+          "id": "b1-introductions-meraq-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-lemin"
+            "b1-introductions-meraq"
           ],
-          "prompt": "What is the lesson meaning of “lemin”?",
+          "prompt": "What is the lesson meaning of “meraq”?",
           "choices": [
             "rabbit",
             "camel",
-            "right"
+            "juice"
           ],
-          "answer": "right",
-          "explanation": "lemin means “right” in this chapter.",
+          "answer": "juice",
+          "explanation": "meraq means “juice” in this chapter.",
           "reviewCard": {
-            "maltese": "lemin",
-            "english": "right"
+            "maltese": "meraq",
+            "english": "juice"
           }
         },
         {
-          "id": "b1-introductions-pedala-diagnostic-recognition-true-false",
+          "id": "b1-introductions-qawsalla-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-pedala"
+            "b1-introductions-qawsalla"
           ],
-          "prompt": "True or false: “pedala” means “camel” in this chapter.",
+          "prompt": "True or false: “qawsalla” means “camel” in this chapter.",
           "answer": false,
-          "explanation": "pedala means “pedal”.",
+          "explanation": "qawsalla means “rainbow”.",
           "reviewCard": {
-            "maltese": "pedala",
-            "english": "pedal"
+            "maltese": "qawsalla",
+            "english": "rainbow"
           }
         },
         {
-          "id": "b1-introductions-tezor-diagnostic-recognition",
+          "id": "b1-introductions-verita-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-tezor"
+            "b1-introductions-verita"
           ],
-          "prompt": "What is the lesson meaning of “teżor”?",
+          "prompt": "What is the lesson meaning of “verità”?",
           "choices": [
-            "treasure",
+            "truth",
             "newspaper",
             "eye"
           ],
-          "answer": "treasure",
-          "explanation": "teżor means “treasure” in this chapter.",
+          "answer": "truth",
+          "explanation": "verità means “truth” in this chapter.",
           "reviewCard": {
-            "maltese": "teżor",
-            "english": "treasure"
+            "maltese": "verità",
+            "english": "truth"
           }
         },
         {
-          "id": "b1-introductions-xellug-diagnostic-recognition-true-false",
+          "id": "b1-introductions-ziju-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-xellug"
+            "b1-introductions-ziju"
           ],
-          "prompt": "True or false: “xellug” means “eye” in this chapter.",
+          "prompt": "True or false: “ziju” means “eye” in this chapter.",
           "answer": false,
-          "explanation": "xellug means “left”.",
+          "explanation": "ziju means “uncle”.",
           "reviewCard": {
-            "maltese": "xellug",
-            "english": "left"
+            "maltese": "ziju",
+            "english": "uncle"
           }
         },
         {
-          "id": "b1-introductions-ferhana-diagnostic-recognition",
+          "id": "b1-introductions-sportiva-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ferhana"
+            "b1-introductions-sportiva"
           ],
-          "prompt": "What is the lesson meaning of “ferħana”?",
+          "prompt": "What is the lesson meaning of “sportiva”?",
           "choices": [
             "they",
-            "happy (feminine)",
+            "sporty / athletic (feminine)",
             "eyes"
           ],
-          "answer": "happy (feminine)",
-          "explanation": "ferħana means “happy (feminine)” in this chapter.",
+          "answer": "sporty / athletic (feminine)",
+          "explanation": "sportiva means “sporty / athletic (feminine)” in this chapter.",
           "reviewCard": {
-            "maltese": "ferħana",
-            "english": "happy (feminine)"
+            "maltese": "sportiva",
+            "english": "sporty / athletic (feminine)"
           }
         },
         {
           "type": "multiple-choice",
-          "prompt": "Which phrase has correct feminine agreement?",
+          "prompt": "Which question asks where someone lives?",
           "choices": [
-            "karozza aħmar",
-            "karozza ħamra",
-            "karozza ħomor"
+            "Meta toqgħod?",
+            "Fejn toqgħod?",
+            "Min toqgħod?"
           ],
-          "answer": "karozza ħamra",
-          "explanation": "Karozza is feminine singular, so aħmar changes to ħamra.",
-          "id": "grammar-agreement-diagnostic-recognition",
+          "answer": "Fejn toqgħod?",
+          "explanation": "Fejn asks about a place.",
+          "id": "grammar-question-patterns-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "grammar-agreement"
+            "grammar-question-patterns"
           ],
           "reviewCard": {
-            "maltese": "ktieb ġdid | karozza ġdida | kotba ġodda",
-            "english": "Match an adjective to a masculine singular, feminine singular, or plural noun.",
-            "example": "Dan ktieb ġdid."
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
           }
         }
       ]
@@ -4319,7 +4381,7 @@
       "id": "b1-introductions-checkpoint-7",
       "kind": "checkpoint",
       "sequence": 7,
-      "targetCount": 2,
+      "targetCount": 4,
       "title": "Jien u Int Checkpoint 7",
       "items": [
         {
@@ -4333,7 +4395,7 @@
           "choices": [
             "funny / playful",
             "choose and produce the adjective form that agrees with its noun",
-            "animal"
+            "choose and produce the subject pronoun for person and number"
           ],
           "answer": "funny / playful",
           "explanation": "ċajtiera means “funny / playful” in this chapter.",
@@ -4402,12 +4464,96 @@
           }
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which Maltese subject pronoun means \"we\"?",
+          "choices": [
+            "Jien",
+            "Aħna",
+            "Huma"
+          ],
+          "answer": "Aħna",
+          "explanation": "Aħna is the first-person plural subject pronoun.",
+          "id": "grammar-subject-pronouns-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-subject-pronouns"
+          ],
+          "reviewCard": {
+            "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+            "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+            "example": "Jien noqgħod Malta."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete with the subject pronoun: _____ noqogħdu Malta. (We live in Malta.)",
+          "answer": "Aħna",
+          "accepted": [
+            "Aħna",
+            "aħna"
+          ],
+          "explanation": "Aħna is used when the subject is we.",
+          "id": "grammar-subject-pronouns-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-subject-pronouns"
+          ],
+          "reviewCard": {
+            "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+            "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+            "example": "Jien noqgħod Malta."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which question asks where someone lives?",
+          "choices": [
+            "Meta toqgħod?",
+            "Fejn toqgħod?",
+            "Min toqgħod?"
+          ],
+          "answer": "Fejn toqgħod?",
+          "explanation": "Fejn asks about a place.",
+          "id": "grammar-question-patterns-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-question-patterns"
+          ],
+          "reviewCard": {
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the place question: _____ toqgħod? (Where do you live?)",
+          "answer": "Fejn",
+          "accepted": [
+            "Fejn",
+            "fejn"
+          ],
+          "explanation": "Fejn is the question word for where.",
+          "id": "grammar-question-patterns-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-question-patterns"
+          ],
+          "reviewCard": {
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
+          }
+        },
+        {
           "id": "b1-introductions-checkpoint-7-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-introductions-cajtiera",
-            "grammar-agreement"
+            "grammar-agreement",
+            "grammar-subject-pronouns",
+            "grammar-question-patterns"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -4418,6 +4564,14 @@
             {
               "left": "Gender and number agreement",
               "right": "choose and produce the adjective form that agrees with its noun"
+            },
+            {
+              "left": "Subject pronouns",
+              "right": "choose and produce the subject pronoun for person and number"
+            },
+            {
+              "left": "Question words and yes-no questions",
+              "right": "choose and produce a question word with the correct verb form"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

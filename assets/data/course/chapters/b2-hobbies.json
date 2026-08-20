@@ -268,7 +268,6 @@
         "itemId": "imperative-fil-mamma-raqad"
       },
       "assessmentIds": [
-        "b2-hobbies-orqod-diagnostic-recognition",
         "b2-hobbies-orqod-recognition",
         "b2-hobbies-orqod-production"
       ]
@@ -287,6 +286,7 @@
         "itemId": "b2-hobbies-qum"
       },
       "assessmentIds": [
+        "b2-hobbies-qum-diagnostic-recognition",
         "b2-hobbies-qum-recognition-true-false",
         "b2-hobbies-qum-production"
       ]
@@ -419,7 +419,6 @@
         "itemId": "b2-hobbies-se-tilghab"
       },
       "assessmentIds": [
-        "b2-hobbies-se-tilghab-diagnostic-recognition-true-false",
         "b2-hobbies-se-tilghab-recognition",
         "b2-hobbies-se-tilghab-production",
         "b2-hobbies-checkpoint-4-matching"
@@ -439,6 +438,7 @@
         "itemId": "b2-hobbies-se-naraw"
       },
       "assessmentIds": [
+        "b2-hobbies-se-naraw-diagnostic-recognition-true-false",
         "b2-hobbies-se-naraw-recognition-true-false",
         "b2-hobbies-se-naraw-production",
         "b2-hobbies-checkpoint-4-matching"
@@ -477,7 +477,6 @@
         "itemId": "b2-hobbies-se-nohorgu"
       },
       "assessmentIds": [
-        "b2-hobbies-se-nohorgu-diagnostic-recognition",
         "b2-hobbies-se-nohorgu-recognition-true-false",
         "b2-hobbies-se-nohorgu-production",
         "b2-hobbies-checkpoint-4-matching"
@@ -497,6 +496,7 @@
         "itemId": "b2-hobbies-se-niekol"
       },
       "assessmentIds": [
+        "b2-hobbies-se-niekol-diagnostic-recognition",
         "b2-hobbies-se-niekol-recognition",
         "b2-hobbies-se-niekol-production"
       ]
@@ -540,9 +540,34 @@
         "itemId": "grammar-future-se"
       },
       "assessmentIds": [
-        "grammar-future-se-diagnostic-recognition",
         "grammar-future-se-recognition",
-        "grammar-future-se-production"
+        "grammar-future-se-production",
+        "b2-hobbies-checkpoint-5-matching"
+      ]
+    },
+    {
+      "id": "grammar-past-person-forms",
+      "book": "B2",
+      "chapterId": "b2-hobbies",
+      "type": "grammar",
+      "sourceRequirement": "Past-tense person forms",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "verbs_guide.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-past-person-forms"
+      },
+      "assessmentIds": [
+        "grammar-past-person-forms-diagnostic-recognition",
+        "grammar-past-person-forms-recognition",
+        "grammar-past-person-forms-production",
+        "b2-hobbies-checkpoint-5-matching"
       ]
     }
   ],
@@ -915,6 +940,11 @@
         "b2-future-se"
       ],
       "coverageStatus": "covered-with-example-gaps"
+    },
+    "grammar-past-person-forms": {
+      "kind": "site-extension",
+      "sourcePage": "verbs_guide.html",
+      "coverageStatus": "extended"
     }
   },
   "supplementalItems": [
@@ -1743,23 +1773,23 @@
           }
         },
         {
-          "id": "b2-hobbies-orqod-diagnostic-recognition",
+          "id": "b2-hobbies-qum-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-orqod"
+            "b2-hobbies-qum"
           ],
-          "prompt": "What is the lesson meaning of “orqod”?",
+          "prompt": "What is the lesson meaning of “qum”?",
           "choices": [
             "do / make (plural command)",
             "use (singular command)",
-            "sleep (singular command)"
+            "get up (singular command)"
           ],
-          "answer": "sleep (singular command)",
-          "explanation": "orqod means “sleep (singular command)” in this chapter.",
+          "answer": "get up (singular command)",
+          "explanation": "qum means “get up (singular command)” in this chapter.",
           "reviewCard": {
-            "maltese": "orqod",
-            "english": "sleep (singular command)"
+            "maltese": "qum",
+            "english": "get up (singular command)"
           }
         },
         {
@@ -1798,59 +1828,59 @@
           }
         },
         {
-          "id": "b2-hobbies-se-tilghab-diagnostic-recognition-true-false",
+          "id": "b2-hobbies-se-naraw-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-tilghab"
+            "b2-hobbies-se-naraw"
           ],
-          "prompt": "True or false: “se tilgħab” means “swim (singular command)” in this chapter.",
+          "prompt": "True or false: “se naraw” means “swim (singular command)” in this chapter.",
           "answer": false,
-          "explanation": "se tilgħab means “you will play / she will play”.",
+          "explanation": "se naraw means “we will see / watch”.",
           "reviewCard": {
-            "maltese": "se tilgħab",
-            "english": "you will play / she will play"
+            "maltese": "se naraw",
+            "english": "we will see / watch"
           }
         },
         {
-          "id": "b2-hobbies-se-nohorgu-diagnostic-recognition",
+          "id": "b2-hobbies-se-niekol-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-nohorgu"
+            "b2-hobbies-se-niekol"
           ],
-          "prompt": "What is the lesson meaning of “se noħorġu”?",
+          "prompt": "What is the lesson meaning of “se niekol”?",
           "choices": [
             "sleep (singular command)",
-            "we will go out",
+            "I will eat",
             "walk (singular command)"
           ],
-          "answer": "we will go out",
-          "explanation": "se noħorġu means “we will go out” in this chapter.",
+          "answer": "I will eat",
+          "explanation": "se niekol means “I will eat” in this chapter.",
           "reviewCard": {
-            "maltese": "se noħorġu",
-            "english": "we will go out"
+            "maltese": "se niekol",
+            "english": "I will eat"
           }
         },
         {
           "type": "multiple-choice",
-          "prompt": "Which sentence correctly describes a future plan?",
+          "prompt": "Which sentence correctly means \"She went to school\"?",
           "choices": [
-            "Għada se mort il-belt.",
-            "Għada se mmur il-belt.",
-            "Għada mort se il-belt."
+            "Hi mort l-iskola.",
+            "Hi marret l-iskola.",
+            "Hi marru l-iskola."
           ],
-          "answer": "Għada se mmur il-belt.",
-          "explanation": "Use se before the matching present-type form mmur.",
-          "id": "grammar-future-se-diagnostic-recognition",
+          "answer": "Hi marret l-iskola.",
+          "explanation": "The third-person feminine past form is marret.",
+          "id": "grammar-past-person-forms-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "grammar-future-se"
+            "grammar-past-person-forms"
           ],
           "reviewCard": {
-            "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
-            "english": "Build a future plan with se and the present-type form that matches the subject.",
-            "example": "Għada se mmur il-belt."
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
           }
         }
       ]
@@ -2935,7 +2965,7 @@
       "id": "b2-hobbies-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 1,
+      "targetCount": 2,
       "title": "Xi Nħobb Nagħmel Checkpoint 5",
       "items": [
         {
@@ -2976,6 +3006,71 @@
             "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
             "english": "Build a future plan with se and the present-type form that matches the subject.",
             "example": "Għada se mmur il-belt."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She went to school\"?",
+          "choices": [
+            "Hi mort l-iskola.",
+            "Hi marret l-iskola.",
+            "Hi marru l-iskola."
+          ],
+          "answer": "Hi marret l-iskola.",
+          "explanation": "The third-person feminine past form is marret.",
+          "id": "grammar-past-person-forms-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-past-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the past form: Huma _____ il-belt ilbieraħ. (They went to the city yesterday.)",
+          "answer": "marru",
+          "accepted": [
+            "marru"
+          ],
+          "explanation": "The huma past form of mar is marru.",
+          "id": "grammar-past-person-forms-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-past-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
+          }
+        },
+        {
+          "id": "b2-hobbies-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-future-se",
+            "grammar-past-person-forms"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Future with se plus a present-type verb form",
+              "right": "choose and produce se with the correct present-type verb form"
+            },
+            {
+              "left": "Past-tense person forms",
+              "right": "select and produce a past form that matches its subject"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Future with se plus a present-type verb form",
+            "english": "choose and produce se with the correct present-type verb form"
           }
         }
       ]

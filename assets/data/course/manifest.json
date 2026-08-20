@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "description": "Runtime index for lazy-loaded book-course chapter payloads.",
   "chapterCount": 14,
-  "targetCount": 470,
+  "targetCount": 479,
   "chapters": [
     {
       "id": "b1-introductions",
@@ -11,7 +11,7 @@
       "number": 1,
       "title": "Jien u Int",
       "file": "./assets/data/course/chapters/b1-introductions.json",
-      "bytes": 128995,
+      "bytes": 134501,
       "targetIds": [
         "b1-introductions-annimal",
         "b1-introductions-belt",
@@ -50,9 +50,11 @@
         "b1-introductions-sportiva",
         "b1-introductions-cajtier",
         "b1-introductions-cajtiera",
-        "grammar-agreement"
+        "grammar-agreement",
+        "grammar-subject-pronouns",
+        "grammar-question-patterns"
       ],
-      "implementedCount": 38,
+      "implementedCount": 40,
       "pageHrefs": [
         "course_chapter.html",
         "pronouns_possessives.html",
@@ -103,8 +105,8 @@
         {
           "id": "b1-introductions-checkpoint-7",
           "sequence": 7,
-          "targetCount": 2,
-          "itemCount": 5
+          "targetCount": 4,
+          "itemCount": 9
         }
       ],
       "source": {
@@ -196,7 +198,7 @@
       "number": 3,
       "title": "L-Iskola",
       "file": "./assets/data/course/chapters/b1-school.json",
-      "bytes": 89328,
+      "bytes": 92584,
       "targetIds": [
         "b1-school-kuritur",
         "b1-school-laboratorju",
@@ -223,13 +225,15 @@
         "b1-school-gnien",
         "b1-school-kcina",
         "b1-school-salott",
-        "b1-school-garaxx"
+        "b1-school-garaxx",
+        "grammar-basic-word-order"
       ],
-      "implementedCount": 26,
+      "implementedCount": 27,
       "pageHrefs": [
         "course_chapter.html",
         "school_classroom.html",
-        "home_furniture.html"
+        "home_furniture.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b1-school-diagnostic",
@@ -263,8 +267,8 @@
         {
           "id": "b1-school-checkpoint-5",
           "sequence": 5,
-          "targetCount": 2,
-          "itemCount": 5
+          "targetCount": 3,
+          "itemCount": 7
         }
       ],
       "source": {
@@ -486,7 +490,7 @@
       "number": 6,
       "title": "L-Ikel",
       "file": "./assets/data/course/chapters/b1-food.json",
-      "bytes": 152564,
+      "bytes": 155450,
       "targetIds": [
         "b1-food-te",
         "b1-food-spagetti",
@@ -533,13 +537,15 @@
         "b1-food-gelat",
         "b1-food-ghadma",
         "b1-food-hut",
-        "b1-food-cikkulata"
+        "b1-food-cikkulata",
+        "grammar-collective-forms"
       ],
-      "implementedCount": 46,
+      "implementedCount": 47,
       "pageHrefs": [
         "food_preferences.html",
         "course_chapter.html",
-        "collective_nouns.html"
+        "collective_nouns.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b1-food-diagnostic",
@@ -591,8 +597,8 @@
         {
           "id": "b1-food-checkpoint-8",
           "sequence": 8,
-          "targetCount": 4,
-          "itemCount": 9
+          "targetCount": 5,
+          "itemCount": 11
         }
       ],
       "source": {
@@ -608,7 +614,7 @@
       "number": 7,
       "title": "Il-Familja",
       "file": "./assets/data/course/chapters/b1-family.json",
-      "bytes": 127174,
+      "bytes": 130414,
       "targetIds": [
         "b1-family-ahwa",
         "b1-family-hu",
@@ -647,13 +653,15 @@
         "b1-family-il-lejla-t-tajba",
         "b1-family-kif-inti",
         "b1-family-mhux-hazin",
-        "b1-family-hu-hsieb"
+        "b1-family-hu-hsieb",
+        "grammar-present-person-forms"
       ],
-      "implementedCount": 38,
+      "implementedCount": 39,
       "pageHrefs": [
         "course_chapter.html",
         "family_home_food.html",
-        "numbers_calendar_time.html"
+        "numbers_calendar_time.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b1-family-diagnostic",
@@ -699,8 +707,8 @@
         {
           "id": "b1-family-checkpoint-7",
           "sequence": 7,
-          "targetCount": 2,
-          "itemCount": 5
+          "targetCount": 3,
+          "itemCount": 7
         }
       ],
       "source": {
@@ -840,7 +848,7 @@
       "number": 2,
       "title": "Iftaħ il-Ktieb u Aqra",
       "file": "./assets/data/course/chapters/b2-imperative.json",
-      "bytes": 110748,
+      "bytes": 113931,
       "targetIds": [
         "b2-imperative-qum",
         "b2-imperative-qumu",
@@ -873,13 +881,15 @@
         "b2-imperative-sebgha",
         "b2-imperative-tmienja",
         "b2-imperative-disgha",
-        "b2-imperative-ghaxra"
+        "b2-imperative-ghaxra",
+        "grammar-imperative-number"
       ],
-      "implementedCount": 32,
+      "implementedCount": 33,
       "pageHrefs": [
         "course_chapter.html",
         "imperative_verbs.html",
-        "numbers_calendar_time.html"
+        "numbers_calendar_time.html",
+        "grammar_path.html"
       ],
       "diagnostic": {
         "id": "b2-imperative-diagnostic",
@@ -919,8 +929,8 @@
         {
           "id": "b2-imperative-checkpoint-6",
           "sequence": 6,
-          "targetCount": 2,
-          "itemCount": 5
+          "targetCount": 3,
+          "itemCount": 7
         }
       ],
       "source": {
@@ -936,7 +946,7 @@
       "number": 3,
       "title": "It-Temp",
       "file": "./assets/data/course/chapters/b2-weather.json",
-      "bytes": 83094,
+      "bytes": 85944,
       "targetIds": [
         "b2-weather-borra",
         "b2-weather-temperatura",
@@ -961,9 +971,10 @@
         "b2-weather-imsahhab",
         "b2-weather-l-oghla-temperatura",
         "b2-weather-l-inqas-temperatura",
+        "grammar-verb-negation",
         "grammar-comparisons"
       ],
-      "implementedCount": 24,
+      "implementedCount": 25,
       "pageHrefs": [
         "course_chapter.html",
         "weather.html",
@@ -997,6 +1008,12 @@
           "sequence": 4,
           "targetCount": 6,
           "itemCount": 13
+        },
+        {
+          "id": "b2-weather-checkpoint-5",
+          "sequence": 5,
+          "targetCount": 1,
+          "itemCount": 2
         }
       ],
       "source": {
@@ -1099,7 +1116,7 @@
       "number": 5,
       "title": "Xi Nħobb Nagħmel",
       "file": "./assets/data/course/chapters/b2-hobbies.json",
-      "bytes": 87417,
+      "bytes": 90888,
       "targetIds": [
         "b2-hobbies-libes",
         "b2-hobbies-ilbes",
@@ -1125,9 +1142,10 @@
         "b2-hobbies-se-nohorgu",
         "b2-hobbies-se-niekol",
         "b2-hobbies-se-naghmel",
-        "grammar-future-se"
+        "grammar-future-se",
+        "grammar-past-person-forms"
       ],
-      "implementedCount": 25,
+      "implementedCount": 26,
       "pageHrefs": [
         "imperative_verbs.html",
         "course_chapter.html",
@@ -1165,8 +1183,8 @@
         {
           "id": "b2-hobbies-checkpoint-5",
           "sequence": 5,
-          "targetCount": 1,
-          "itemCount": 2
+          "targetCount": 2,
+          "itemCount": 5
         }
       ],
       "source": {
@@ -1182,7 +1200,7 @@
       "number": 6,
       "title": "Fil-Pjazza",
       "file": "./assets/data/course/chapters/b2-town.json",
-      "bytes": 100801,
+      "bytes": 103338,
       "targetIds": [
         "b2-town-kafetterija",
         "b2-town-ispizerija",
@@ -1212,9 +1230,10 @@
         "b2-town-imxi-dritt",
         "b2-town-itla-l-fuq",
         "b2-town-inzel-l-isfel",
-        "grammar-modals"
+        "grammar-modals",
+        "grammar-preposition-contractions"
       ],
-      "implementedCount": 29,
+      "implementedCount": 30,
       "pageHrefs": [
         "course_chapter.html",
         "directions_town.html",
@@ -1253,8 +1272,8 @@
         {
           "id": "b2-town-checkpoint-5",
           "sequence": 5,
-          "targetCount": 5,
-          "itemCount": 11
+          "targetCount": 6,
+          "itemCount": 13
         }
       ],
       "source": {

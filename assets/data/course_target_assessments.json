@@ -70,129 +70,129 @@
           }
         },
         {
-          "id": "b1-introductions-ilma-diagnostic-recognition-true-false",
+          "id": "b1-introductions-iehor-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ilma"
+            "b1-introductions-iehor"
           ],
-          "prompt": "True or false: “ilma” means “four” in this chapter.",
+          "prompt": "True or false: “ieħor” means “four” in this chapter.",
           "answer": false,
-          "explanation": "ilma means “water”.",
+          "explanation": "ieħor means “another / other (masculine)”.",
           "reviewCard": {
-            "maltese": "ilma",
-            "english": "water"
+            "maltese": "ieħor",
+            "english": "another / other (masculine)"
           }
         },
         {
-          "id": "b1-introductions-lemin-diagnostic-recognition",
+          "id": "b1-introductions-meraq-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-lemin"
+            "b1-introductions-meraq"
           ],
-          "prompt": "What is the lesson meaning of “lemin”?",
+          "prompt": "What is the lesson meaning of “meraq”?",
           "choices": [
             "rabbit",
             "camel",
-            "right"
+            "juice"
           ],
-          "answer": "right",
-          "explanation": "lemin means “right” in this chapter.",
+          "answer": "juice",
+          "explanation": "meraq means “juice” in this chapter.",
           "reviewCard": {
-            "maltese": "lemin",
-            "english": "right"
+            "maltese": "meraq",
+            "english": "juice"
           }
         },
         {
-          "id": "b1-introductions-pedala-diagnostic-recognition-true-false",
+          "id": "b1-introductions-qawsalla-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-pedala"
+            "b1-introductions-qawsalla"
           ],
-          "prompt": "True or false: “pedala” means “camel” in this chapter.",
+          "prompt": "True or false: “qawsalla” means “camel” in this chapter.",
           "answer": false,
-          "explanation": "pedala means “pedal”.",
+          "explanation": "qawsalla means “rainbow”.",
           "reviewCard": {
-            "maltese": "pedala",
-            "english": "pedal"
+            "maltese": "qawsalla",
+            "english": "rainbow"
           }
         },
         {
-          "id": "b1-introductions-tezor-diagnostic-recognition",
+          "id": "b1-introductions-verita-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-tezor"
+            "b1-introductions-verita"
           ],
-          "prompt": "What is the lesson meaning of “teżor”?",
+          "prompt": "What is the lesson meaning of “verità”?",
           "choices": [
-            "treasure",
+            "truth",
             "newspaper",
             "eye"
           ],
-          "answer": "treasure",
-          "explanation": "teżor means “treasure” in this chapter.",
+          "answer": "truth",
+          "explanation": "verità means “truth” in this chapter.",
           "reviewCard": {
-            "maltese": "teżor",
-            "english": "treasure"
+            "maltese": "verità",
+            "english": "truth"
           }
         },
         {
-          "id": "b1-introductions-xellug-diagnostic-recognition-true-false",
+          "id": "b1-introductions-ziju-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-xellug"
+            "b1-introductions-ziju"
           ],
-          "prompt": "True or false: “xellug” means “eye” in this chapter.",
+          "prompt": "True or false: “ziju” means “eye” in this chapter.",
           "answer": false,
-          "explanation": "xellug means “left”.",
+          "explanation": "ziju means “uncle”.",
           "reviewCard": {
-            "maltese": "xellug",
-            "english": "left"
+            "maltese": "ziju",
+            "english": "uncle"
           }
         },
         {
-          "id": "b1-introductions-ferhana-diagnostic-recognition",
+          "id": "b1-introductions-sportiva-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ferhana"
+            "b1-introductions-sportiva"
           ],
-          "prompt": "What is the lesson meaning of “ferħana”?",
+          "prompt": "What is the lesson meaning of “sportiva”?",
           "choices": [
             "they",
-            "happy (feminine)",
+            "sporty / athletic (feminine)",
             "eyes"
           ],
-          "answer": "happy (feminine)",
-          "explanation": "ferħana means “happy (feminine)” in this chapter.",
+          "answer": "sporty / athletic (feminine)",
+          "explanation": "sportiva means “sporty / athletic (feminine)” in this chapter.",
           "reviewCard": {
-            "maltese": "ferħana",
-            "english": "happy (feminine)"
+            "maltese": "sportiva",
+            "english": "sporty / athletic (feminine)"
           }
         },
         {
           "type": "multiple-choice",
-          "prompt": "Which phrase has correct feminine agreement?",
+          "prompt": "Which question asks where someone lives?",
           "choices": [
-            "karozza aħmar",
-            "karozza ħamra",
-            "karozza ħomor"
+            "Meta toqgħod?",
+            "Fejn toqgħod?",
+            "Min toqgħod?"
           ],
-          "answer": "karozza ħamra",
-          "explanation": "Karozza is feminine singular, so aħmar changes to ħamra.",
-          "id": "grammar-agreement-diagnostic-recognition",
+          "answer": "Fejn toqgħod?",
+          "explanation": "Fejn asks about a place.",
+          "id": "grammar-question-patterns-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "grammar-agreement"
+            "grammar-question-patterns"
           ],
           "reviewCard": {
-            "maltese": "ktieb ġdid | karozza ġdida | kotba ġodda",
-            "english": "Match an adjective to a masculine singular, feminine singular, or plural noun.",
-            "example": "Dan ktieb ġdid."
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
           }
         }
       ]
@@ -1800,7 +1800,7 @@
       "id": "b1-introductions-checkpoint-7",
       "kind": "checkpoint",
       "sequence": 7,
-      "targetCount": 2,
+      "targetCount": 4,
       "title": "Jien u Int Checkpoint 7",
       "items": [
         {
@@ -1814,7 +1814,7 @@
           "choices": [
             "funny / playful",
             "choose and produce the adjective form that agrees with its noun",
-            "animal"
+            "choose and produce the subject pronoun for person and number"
           ],
           "answer": "funny / playful",
           "explanation": "ċajtiera means “funny / playful” in this chapter.",
@@ -1883,12 +1883,96 @@
           }
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which Maltese subject pronoun means \"we\"?",
+          "choices": [
+            "Jien",
+            "Aħna",
+            "Huma"
+          ],
+          "answer": "Aħna",
+          "explanation": "Aħna is the first-person plural subject pronoun.",
+          "id": "grammar-subject-pronouns-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-subject-pronouns"
+          ],
+          "reviewCard": {
+            "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+            "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+            "example": "Jien noqgħod Malta."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete with the subject pronoun: _____ noqogħdu Malta. (We live in Malta.)",
+          "answer": "Aħna",
+          "accepted": [
+            "Aħna",
+            "aħna"
+          ],
+          "explanation": "Aħna is used when the subject is we.",
+          "id": "grammar-subject-pronouns-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-subject-pronouns"
+          ],
+          "reviewCard": {
+            "maltese": "jien | inti | hu/hi | aħna | intom | huma",
+            "english": "Choose the subject pronoun that matches the person and number of the sentence.",
+            "example": "Jien noqgħod Malta."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which question asks where someone lives?",
+          "choices": [
+            "Meta toqgħod?",
+            "Fejn toqgħod?",
+            "Min toqgħod?"
+          ],
+          "answer": "Fejn toqgħod?",
+          "explanation": "Fejn asks about a place.",
+          "id": "grammar-question-patterns-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-question-patterns"
+          ],
+          "reviewCard": {
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the place question: _____ toqgħod? (Where do you live?)",
+          "answer": "Fejn",
+          "accepted": [
+            "Fejn",
+            "fejn"
+          ],
+          "explanation": "Fejn is the question word for where.",
+          "id": "grammar-question-patterns-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-question-patterns"
+          ],
+          "reviewCard": {
+            "maltese": "Fejn toqgħod? | X'tagħmel? | Tħobb it-te?",
+            "english": "Build information questions with a question word and yes-no questions with the matching verb form.",
+            "example": "Fejn toqgħod?"
+          }
+        },
+        {
           "id": "b1-introductions-checkpoint-7-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-introductions-cajtiera",
-            "grammar-agreement"
+            "grammar-agreement",
+            "grammar-subject-pronouns",
+            "grammar-question-patterns"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -1899,6 +1983,14 @@
             {
               "left": "Gender and number agreement",
               "right": "choose and produce the adjective form that agrees with its noun"
+            },
+            {
+              "left": "Subject pronouns",
+              "right": "choose and produce the subject pronoun for person and number"
+            },
+            {
+              "left": "Question words and yes-no questions",
+              "right": "choose and produce a question word with the correct verb form"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",
@@ -3224,88 +3316,94 @@
           }
         },
         {
-          "id": "b1-school-kalzetta-diagnostic-recognition-true-false",
+          "id": "b1-school-glekk-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-kalzetta"
+            "b1-school-glekk"
           ],
-          "prompt": "True or false: “kalzetta” means “hall” in this chapter.",
+          "prompt": "True or false: “ġlekk” means “hall” in this chapter.",
           "answer": false,
-          "explanation": "kalzetta means “sock”.",
+          "explanation": "ġlekk means “jacket”.",
           "reviewCard": {
-            "maltese": "kalzetta",
-            "english": "sock"
+            "maltese": "ġlekk",
+            "english": "jacket"
           }
         },
         {
-          "id": "b1-school-zarbuna-diagnostic-recognition",
+          "id": "b1-school-uniformi-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-zarbuna"
+            "b1-school-uniformi"
           ],
-          "prompt": "What is the lesson meaning of “żarbuna”?",
+          "prompt": "What is the lesson meaning of “uniformi”?",
           "choices": [
-            "shoe",
+            "uniform",
             "office",
             "toilet"
           ],
-          "answer": "shoe",
-          "explanation": "żarbuna means “shoe” in this chapter.",
+          "answer": "uniform",
+          "explanation": "uniformi means “uniform” in this chapter.",
           "reviewCard": {
-            "maltese": "żarbuna",
-            "english": "shoe"
+            "maltese": "uniformi",
+            "english": "uniform"
           }
         },
         {
-          "id": "b1-school-kamra-tas-sodda-diagnostic-recognition-true-false",
+          "id": "b1-school-kamra-tal-banju-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-kamra-tas-sodda"
+            "b1-school-kamra-tal-banju"
           ],
-          "prompt": "True or false: “kamra tas-sodda” means “toilet” in this chapter.",
+          "prompt": "True or false: “kamra tal-banju” means “toilet” in this chapter.",
           "answer": false,
-          "explanation": "kamra tas-sodda means “bedroom”.",
+          "explanation": "kamra tal-banju means “bathroom”.",
           "reviewCard": {
-            "maltese": "kamra tas-sodda",
-            "english": "bedroom"
+            "maltese": "kamra tal-banju",
+            "english": "bathroom"
           }
         },
         {
-          "id": "b1-school-gnien-diagnostic-recognition",
+          "id": "b1-school-kcina-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-gnien"
+            "b1-school-kcina"
           ],
-          "prompt": "What is the lesson meaning of “ġnien”?",
+          "prompt": "What is the lesson meaning of “kċina”?",
           "choices": [
             "shirt",
-            "garden",
+            "kitchen",
             "bow / ribbon"
           ],
-          "answer": "garden",
-          "explanation": "ġnien means “garden” in this chapter.",
+          "answer": "kitchen",
+          "explanation": "kċina means “kitchen” in this chapter.",
           "reviewCard": {
-            "maltese": "ġnien",
-            "english": "garden"
+            "maltese": "kċina",
+            "english": "kitchen"
           }
         },
         {
-          "id": "b1-school-garaxx-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which option is a complete basic statement?",
+          "choices": [
+            "Jien ktieb naqra.",
+            "Jien naqra ktieb.",
+            "Jien do naqra ktieb."
+          ],
+          "answer": "Jien naqra ktieb.",
+          "explanation": "The safe beginner order is subject, matching verb, then object.",
+          "id": "grammar-basic-word-order-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-garaxx"
+            "grammar-basic-word-order"
           ],
-          "prompt": "True or false: “garaxx” means “shirt” in this chapter.",
-          "answer": false,
-          "explanation": "garaxx means “garage”.",
           "reviewCard": {
-            "maltese": "garaxx",
-            "english": "garage"
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
           }
         }
       ]
@@ -4384,7 +4482,7 @@
       "id": "b1-school-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 2,
+      "targetCount": 3,
       "title": "L-Iskola Checkpoint 5",
       "items": [
         {
@@ -4398,7 +4496,7 @@
           "choices": [
             "living room",
             "garage",
-            "corridor"
+            "recognize and produce a complete basic Maltese statement"
           ],
           "answer": "living room",
           "explanation": "salott means “living room” in this chapter.",
@@ -4433,7 +4531,7 @@
           "targetIds": [
             "b1-school-garaxx"
           ],
-          "prompt": "True or false: “garaxx” means “corridor” in this chapter.",
+          "prompt": "True or false: “garaxx” means “recognize and produce a complete basic Maltese statement” in this chapter.",
           "answer": false,
           "explanation": "garaxx means “garage”.",
           "reviewCard": {
@@ -4461,12 +4559,53 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which option is a complete basic statement?",
+          "choices": [
+            "Jien ktieb naqra.",
+            "Jien naqra ktieb.",
+            "Jien do naqra ktieb."
+          ],
+          "answer": "Jien naqra ktieb.",
+          "explanation": "The safe beginner order is subject, matching verb, then object.",
+          "id": "grammar-basic-word-order-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-basic-word-order"
+          ],
+          "reviewCard": {
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the statement: Jien _____ ktieb kull filgħaxija. (I read a book every evening.)",
+          "answer": "naqra",
+          "accepted": [
+            "naqra"
+          ],
+          "explanation": "Naqra is the first-person present form and comes before its object.",
+          "id": "grammar-basic-word-order-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-basic-word-order"
+          ],
+          "reviewCard": {
+            "maltese": "Jien naqra ktieb. | Hi tgħix Malta. | Filgħodu nixrob it-te.",
+            "english": "Build a clear statement from a subject, a person-marked verb, and its object, place, or time phrase.",
+            "example": "Jien naqra ktieb."
+          }
+        },
+        {
           "id": "b1-school-checkpoint-5-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-school-salott",
-            "b1-school-garaxx"
+            "b1-school-garaxx",
+            "grammar-basic-word-order"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -4477,6 +4616,10 @@
             {
               "left": "garaxx",
               "right": "garage"
+            },
+            {
+              "left": "Basic statement word order",
+              "right": "recognize and produce a complete basic Maltese statement"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",
@@ -8280,18 +8423,24 @@
           }
         },
         {
-          "id": "b1-food-cikkulata-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which phrase means \"one apple\"?",
+          "choices": [
+            "tuffieħ wieħed",
+            "tuffieħa waħda",
+            "tuffiħiet waħda"
+          ],
+          "answer": "tuffieħa waħda",
+          "explanation": "Tuffieħa is the singulative form for one apple.",
+          "id": "grammar-collective-forms-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-food-cikkulata"
+            "grammar-collective-forms"
           ],
-          "prompt": "True or false: “ċikkulata” means “oil” in this chapter.",
-          "answer": false,
-          "explanation": "ċikkulata means “chocolate”.",
           "reviewCard": {
-            "maltese": "ċikkulata",
-            "english": "chocolate"
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
           }
         }
       ]
@@ -10167,7 +10316,7 @@
       "id": "b1-food-checkpoint-8",
       "kind": "checkpoint",
       "sequence": 8,
-      "targetCount": 4,
+      "targetCount": 5,
       "title": "L-Ikel Checkpoint 8",
       "items": [
         {
@@ -10181,7 +10330,7 @@
           "choices": [
             "ice cream",
             "chocolate",
-            "tea"
+            "choose and produce the collective, unit, or plural noun form"
           ],
           "answer": "ice cream",
           "explanation": "ġelat means “ice cream” in this chapter.",
@@ -10216,7 +10365,7 @@
           "targetIds": [
             "b1-food-ghadma"
           ],
-          "prompt": "True or false: “għadma” means “tea” in this chapter.",
+          "prompt": "True or false: “għadma” means “choose and produce the collective, unit, or plural noun form” in this chapter.",
           "answer": false,
           "explanation": "għadma means “bone”.",
           "reviewCard": {
@@ -10252,9 +10401,9 @@
           ],
           "prompt": "What is the lesson meaning of “ħut”?",
           "choices": [
-            "pizza",
+            "spaghetti",
             "fish",
-            "spaghetti"
+            "tea"
           ],
           "answer": "fish",
           "explanation": "ħut means “fish” in this chapter.",
@@ -10289,7 +10438,7 @@
           "targetIds": [
             "b1-food-cikkulata"
           ],
-          "prompt": "True or false: “ċikkulata” means “pizza” in this chapter.",
+          "prompt": "True or false: “ċikkulata” means “spaghetti” in this chapter.",
           "answer": false,
           "explanation": "ċikkulata means “chocolate”.",
           "reviewCard": {
@@ -10315,6 +10464,46 @@
           "accepted": [
             "ċikkulata"
           ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which phrase means \"one apple\"?",
+          "choices": [
+            "tuffieħ wieħed",
+            "tuffieħa waħda",
+            "tuffiħiet waħda"
+          ],
+          "answer": "tuffieħa waħda",
+          "explanation": "Tuffieħa is the singulative form for one apple.",
+          "id": "grammar-collective-forms-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-collective-forms"
+          ],
+          "reviewCard": {
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete with one countable item: Għandi _____ waħda. (I have one apple.)",
+          "answer": "tuffieħa",
+          "accepted": [
+            "tuffieħa"
+          ],
+          "explanation": "Use the singulative form tuffieħa for one item.",
+          "id": "grammar-collective-forms-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-collective-forms"
+          ],
+          "reviewCard": {
+            "maltese": "tuffieħ | tuffieħa | tuffiħiet",
+            "english": "Distinguish a collective food noun from one countable unit and from several separate units.",
+            "example": "Inħobb it-tuffieħ."
+          }
         },
         {
           "id": "b1-food-checkpoint-8-matching",
@@ -10452,88 +10641,94 @@
           }
         },
         {
-          "id": "b1-family-it-tlieta-diagnostic-recognition-true-false",
+          "id": "b1-family-l-erbgha-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-it-tlieta"
+            "b1-family-l-erbgha"
           ],
-          "prompt": "True or false: “It-Tlieta” means “grandparents” in this chapter.",
+          "prompt": "True or false: “L-Erbgħa” means “grandparents” in this chapter.",
           "answer": false,
-          "explanation": "It-Tlieta means “Tuesday”.",
+          "explanation": "L-Erbgħa means “Wednesday”.",
           "reviewCard": {
-            "maltese": "It-Tlieta",
-            "english": "Tuesday"
+            "maltese": "L-Erbgħa",
+            "english": "Wednesday"
           }
         },
         {
-          "id": "b1-family-is-sibt-diagnostic-recognition",
+          "id": "b1-family-il-hadd-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-is-sibt"
+            "b1-family-il-hadd"
           ],
-          "prompt": "What is the lesson meaning of “Is-Sibt”?",
+          "prompt": "What is the lesson meaning of “Il-Ħadd”?",
           "choices": [
-            "Saturday",
+            "Sunday",
             "grandfather",
             "grandmother"
           ],
-          "answer": "Saturday",
-          "explanation": "Is-Sibt means “Saturday” in this chapter.",
+          "answer": "Sunday",
+          "explanation": "Il-Ħadd means “Sunday” in this chapter.",
           "reviewCard": {
-            "maltese": "Is-Sibt",
-            "english": "Saturday"
+            "maltese": "Il-Ħadd",
+            "english": "Sunday"
           }
         },
         {
-          "id": "b1-family-passeggata-diagnostic-recognition-true-false",
+          "id": "b1-family-zfin-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-passeggata"
+            "b1-family-zfin"
           ],
-          "prompt": "True or false: “passeġġata” means “grandmother” in this chapter.",
+          "prompt": "True or false: “żfin” means “grandmother” in this chapter.",
           "answer": false,
-          "explanation": "passeġġata means “walk / stroll”.",
+          "explanation": "żfin means “dancing”.",
           "reviewCard": {
-            "maltese": "passeġġata",
-            "english": "walk / stroll"
+            "maltese": "żfin",
+            "english": "dancing"
           }
         },
         {
-          "id": "b1-family-bongu-diagnostic-recognition",
+          "id": "b1-family-il-waranofsinhar-it-tajjeb-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-bongu"
+            "b1-family-il-waranofsinhar-it-tajjeb"
           ],
-          "prompt": "What is the lesson meaning of “Bonġu”?",
+          "prompt": "What is the lesson meaning of “Il-waranofsinhar it-tajjeb”?",
           "choices": [
             "aunt",
-            "Good morning.",
+            "Good afternoon",
             "uncle"
           ],
-          "answer": "Good morning.",
-          "explanation": "Bonġu means “Good morning.” in this chapter.",
+          "answer": "Good afternoon",
+          "explanation": "Il-waranofsinhar it-tajjeb means “Good afternoon” in this chapter.",
           "reviewCard": {
-            "maltese": "Bonġu",
-            "english": "Good morning."
+            "maltese": "Il-waranofsinhar it-tajjeb",
+            "english": "Good afternoon"
           }
         },
         {
-          "id": "b1-family-hu-hsieb-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She eats bread\"?",
+          "choices": [
+            "Hi niekol il-ħobż.",
+            "Hi tiekol il-ħobż.",
+            "Hi jieklu l-ħobż."
+          ],
+          "answer": "Hi tiekol il-ħobż.",
+          "explanation": "The third-person feminine present form is tiekol.",
+          "id": "grammar-present-person-forms-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-hu-hsieb"
+            "grammar-present-person-forms"
           ],
-          "prompt": "True or false: “Ħu ħsieb” means “aunt” in this chapter.",
-          "answer": false,
-          "explanation": "Ħu ħsieb means “Take care”.",
           "reviewCard": {
-            "maltese": "Ħu ħsieb",
-            "english": "Take care"
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
           }
         }
       ]
@@ -12145,7 +12340,7 @@
       "id": "b1-family-checkpoint-7",
       "kind": "checkpoint",
       "sequence": 7,
-      "targetCount": 2,
+      "targetCount": 3,
       "title": "Il-Familja Checkpoint 7",
       "items": [
         {
@@ -12159,7 +12354,7 @@
           "choices": [
             "Not bad",
             "Take care",
-            "siblings"
+            "select and produce a present form that matches its subject"
           ],
           "answer": "Not bad",
           "explanation": "Mhux ħażin means “Not bad” in this chapter.",
@@ -12195,7 +12390,7 @@
           "targetIds": [
             "b1-family-hu-hsieb"
           ],
-          "prompt": "True or false: “Ħu ħsieb” means “siblings” in this chapter.",
+          "prompt": "True or false: “Ħu ħsieb” means “select and produce a present form that matches its subject” in this chapter.",
           "answer": false,
           "explanation": "Ħu ħsieb means “Take care”.",
           "reviewCard": {
@@ -12224,12 +12419,53 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She eats bread\"?",
+          "choices": [
+            "Hi niekol il-ħobż.",
+            "Hi tiekol il-ħobż.",
+            "Hi jieklu l-ħobż."
+          ],
+          "answer": "Hi tiekol il-ħobż.",
+          "explanation": "The third-person feminine present form is tiekol.",
+          "id": "grammar-present-person-forms-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-present-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the present form: Aħna _____ l-ħobż. (We eat bread.)",
+          "answer": "nieklu",
+          "accepted": [
+            "nieklu"
+          ],
+          "explanation": "The aħna form of kiel in the present is nieklu.",
+          "id": "grammar-present-person-forms-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-present-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien niekol | inti tiekol | hu jiekol | aħna nieklu | intom tieklu | huma jieklu",
+            "english": "Match a present-tense verb form to its subject pronoun.",
+            "example": "Jien niekol il-ħobż."
+          }
+        },
+        {
           "id": "b1-family-checkpoint-7-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-family-mhux-hazin",
-            "b1-family-hu-hsieb"
+            "b1-family-hu-hsieb",
+            "grammar-present-person-forms"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -12240,6 +12476,10 @@
             {
               "left": "Ħu ħsieb",
               "right": "Take care"
+            },
+            {
+              "left": "Present-tense person forms",
+              "right": "select and produce a present form that matches its subject"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",
@@ -14621,23 +14861,23 @@
           }
         },
         {
-          "id": "b2-imperative-aghlaq-diagnostic-recognition",
+          "id": "b2-imperative-aghlqu-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-aghlaq"
+            "b2-imperative-aghlqu"
           ],
-          "prompt": "What is the lesson meaning of “agħlaq”?",
+          "prompt": "What is the lesson meaning of “agħlqu”?",
           "choices": [
             "write (singular command)",
-            "close (singular command)",
+            "close (plural command)",
             "sit down / place (plural command)"
           ],
-          "answer": "close (singular command)",
-          "explanation": "agħlaq means “close (singular command)” in this chapter.",
+          "answer": "close (plural command)",
+          "explanation": "agħlqu means “close (plural command)” in this chapter.",
           "reviewCard": {
-            "maltese": "agħlaq",
-            "english": "close (singular command)"
+            "maltese": "agħlqu",
+            "english": "close (plural command)"
           }
         },
         {
@@ -14656,23 +14896,23 @@
           }
         },
         {
-          "id": "b2-imperative-dahhlu-diagnostic-recognition",
+          "id": "b2-imperative-aqra-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-dahhlu"
+            "b2-imperative-aqra"
           ],
-          "prompt": "What is the lesson meaning of “daħħlu”?",
+          "prompt": "What is the lesson meaning of “aqra”?",
           "choices": [
             "write (plural command)",
             "close (singular command)",
-            "put inside (plural command)"
+            "read (singular command)"
           ],
-          "answer": "put inside (plural command)",
-          "explanation": "daħħlu means “put inside (plural command)” in this chapter.",
+          "answer": "read (singular command)",
+          "explanation": "aqra means “read (singular command)” in this chapter.",
           "reviewCard": {
-            "maltese": "daħħlu",
-            "english": "put inside (plural command)"
+            "maltese": "aqra",
+            "english": "read (singular command)"
           }
         },
         {
@@ -14691,23 +14931,23 @@
           }
         },
         {
-          "id": "b2-imperative-tkellem-diagnostic-recognition",
+          "id": "b2-imperative-aghmel-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-tkellem"
+            "b2-imperative-aghmel"
           ],
-          "prompt": "What is the lesson meaning of “tkellem”?",
+          "prompt": "What is the lesson meaning of “agħmel”?",
           "choices": [
-            "speak (singular command)",
+            "do / make (singular command)",
             "close (plural command)",
             "go out (singular command)"
           ],
-          "answer": "speak (singular command)",
-          "explanation": "tkellem means “speak (singular command)” in this chapter.",
+          "answer": "do / make (singular command)",
+          "explanation": "agħmel means “do / make (singular command)” in this chapter.",
           "reviewCard": {
-            "maltese": "tkellem",
-            "english": "speak (singular command)"
+            "maltese": "agħmel",
+            "english": "do / make (singular command)"
           }
         },
         {
@@ -14726,38 +14966,44 @@
           }
         },
         {
-          "id": "b2-imperative-sitta-diagnostic-recognition",
+          "id": "b2-imperative-sebgha-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-sitta"
+            "b2-imperative-sebgha"
           ],
-          "prompt": "What is the lesson meaning of “sitta”?",
+          "prompt": "What is the lesson meaning of “sebgħa”?",
           "choices": [
             "enter (singular command)",
-            "six",
+            "seven",
             "go out (plural command)"
           ],
-          "answer": "six",
-          "explanation": "sitta means “six” in this chapter.",
+          "answer": "seven",
+          "explanation": "sebgħa means “seven” in this chapter.",
           "reviewCard": {
-            "maltese": "sitta",
-            "english": "six"
+            "maltese": "sebgħa",
+            "english": "seven"
           }
         },
         {
-          "id": "b2-imperative-ghaxra-diagnostic-recognition-true-false",
-          "type": "true-false",
+          "type": "multiple-choice",
+          "prompt": "Which command tells a group to open the books?",
+          "choices": [
+            "Iftaħ il-kotba.",
+            "Iftħu l-kotba.",
+            "Intom tiftaħ il-kotba."
+          ],
+          "answer": "Iftħu l-kotba.",
+          "explanation": "Iftħu is the plural imperative used for more than one addressee.",
+          "id": "grammar-imperative-number-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-ghaxra"
+            "grammar-imperative-number"
           ],
-          "prompt": "True or false: “għaxra” means “enter (singular command)” in this chapter.",
-          "answer": false,
-          "explanation": "għaxra means “ten”.",
           "reviewCard": {
-            "maltese": "għaxra",
-            "english": "ten"
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
           }
         }
       ]
@@ -16099,7 +16345,7 @@
       "id": "b2-imperative-checkpoint-6",
       "kind": "checkpoint",
       "sequence": 6,
-      "targetCount": 2,
+      "targetCount": 3,
       "title": "Iftaħ il-Ktieb u Aqra Checkpoint 6",
       "items": [
         {
@@ -16113,7 +16359,7 @@
           "choices": [
             "nine",
             "ten",
-            "stand up (singular command)"
+            "select and produce a singular or plural imperative for the addressee"
           ],
           "answer": "nine",
           "explanation": "disgħa means “nine” in this chapter.",
@@ -16148,7 +16394,7 @@
           "targetIds": [
             "b2-imperative-ghaxra"
           ],
-          "prompt": "True or false: “għaxra” means “stand up (singular command)” in this chapter.",
+          "prompt": "True or false: “għaxra” means “select and produce a singular or plural imperative for the addressee” in this chapter.",
           "answer": false,
           "explanation": "għaxra means “ten”.",
           "reviewCard": {
@@ -16176,12 +16422,54 @@
           ]
         },
         {
+          "type": "multiple-choice",
+          "prompt": "Which command tells a group to open the books?",
+          "choices": [
+            "Iftaħ il-kotba.",
+            "Iftħu l-kotba.",
+            "Intom tiftaħ il-kotba."
+          ],
+          "answer": "Iftħu l-kotba.",
+          "explanation": "Iftħu is the plural imperative used for more than one addressee.",
+          "id": "grammar-imperative-number-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-imperative-number"
+          ],
+          "reviewCard": {
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the plural command: _____ l-kotba. (Open the books.)",
+          "answer": "Iftħu",
+          "accepted": [
+            "Iftħu",
+            "iftħu"
+          ],
+          "explanation": "Use the plural imperative Iftħu when speaking to a group.",
+          "id": "grammar-imperative-number-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-imperative-number"
+          ],
+          "reviewCard": {
+            "maltese": "iftaħ/iftħu | oħroġ/oħorġu | agħmel/agħmlu",
+            "english": "Choose a command form according to whether it addresses one person or more than one.",
+            "example": "Iftaħ il-ktieb."
+          }
+        },
+        {
           "id": "b2-imperative-checkpoint-6-matching",
           "type": "matching",
           "assessmentMode": "recognition",
           "targetIds": [
             "b2-imperative-disgha",
-            "b2-imperative-ghaxra"
+            "b2-imperative-ghaxra",
+            "grammar-imperative-number"
           ],
           "prompt": "Match each Maltese target to its chapter meaning.",
           "pairs": [
@@ -16192,6 +16480,10 @@
             {
               "left": "għaxra",
               "right": "ten"
+            },
+            {
+              "left": "Singular and plural imperative",
+              "right": "select and produce a singular or plural imperative for the addressee"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",
@@ -16266,18 +16558,18 @@
           }
         },
         {
-          "id": "b2-weather-maltemp-diagnostic-recognition-true-false",
+          "id": "b2-weather-istagun-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-maltemp"
+            "b2-weather-istagun"
           ],
-          "prompt": "True or false: “maltemp” means “wind” in this chapter.",
+          "prompt": "True or false: “istaġun” means “wind” in this chapter.",
           "answer": false,
-          "explanation": "maltemp means “bad weather”.",
+          "explanation": "istaġun means “season”.",
           "reviewCard": {
-            "maltese": "maltemp",
-            "english": "bad weather"
+            "maltese": "istaġun",
+            "english": "season"
           }
         },
         {
@@ -16301,73 +16593,73 @@
           }
         },
         {
-          "id": "b2-weather-harifa-diagnostic-recognition-true-false",
+          "id": "b2-weather-xitwa-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-harifa"
+            "b2-weather-xitwa"
           ],
-          "prompt": "True or false: “ħarifa” means “cold” in this chapter.",
+          "prompt": "True or false: “xitwa” means “cold” in this chapter.",
           "answer": false,
-          "explanation": "ħarifa means “autumn”.",
+          "explanation": "xitwa means “winter”.",
           "reviewCard": {
-            "maltese": "ħarifa",
-            "english": "autumn"
+            "maltese": "xitwa",
+            "english": "winter"
           }
         },
         {
-          "id": "b2-weather-xita-diagnostic-recognition",
+          "id": "b2-weather-raghad-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-xita"
+            "b2-weather-raghad"
           ],
-          "prompt": "What is the lesson meaning of “xita”?",
+          "prompt": "What is the lesson meaning of “ragħad”?",
           "choices": [
-            "rain",
+            "thunder",
             "bad weather",
             "season"
           ],
-          "answer": "rain",
-          "explanation": "xita means “rain” in this chapter.",
+          "answer": "thunder",
+          "explanation": "ragħad means “thunder” in this chapter.",
           "reviewCard": {
-            "maltese": "xita",
-            "english": "rain"
+            "maltese": "ragħad",
+            "english": "thunder"
           }
         },
         {
-          "id": "b2-weather-bnazzi-diagnostic-recognition-true-false",
+          "id": "b2-weather-silg-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-bnazzi"
+            "b2-weather-silg"
           ],
-          "prompt": "True or false: “bnazzi” means “season” in this chapter.",
+          "prompt": "True or false: “silġ” means “season” in this chapter.",
           "answer": false,
-          "explanation": "bnazzi means “fine / calm weather”.",
+          "explanation": "silġ means “ice”.",
           "reviewCard": {
-            "maltese": "bnazzi",
-            "english": "fine / calm weather"
+            "maltese": "silġ",
+            "english": "ice"
           }
         },
         {
-          "id": "b2-weather-imsahhab-diagnostic-recognition",
+          "id": "b2-weather-l-oghla-temperatura-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-imsahhab"
+            "b2-weather-l-oghla-temperatura"
           ],
-          "prompt": "What is the lesson meaning of “imsaħħab”?",
+          "prompt": "What is the lesson meaning of “l-ogħla temperatura”?",
           "choices": [
             "spring",
-            "cloudy",
+            "the highest temperature",
             "seasons"
           ],
-          "answer": "cloudy",
-          "explanation": "imsaħħab means “cloudy” in this chapter.",
+          "answer": "the highest temperature",
+          "explanation": "l-ogħla temperatura means “the highest temperature” in this chapter.",
           "reviewCard": {
-            "maltese": "imsaħħab",
-            "english": "cloudy"
+            "maltese": "l-ogħla temperatura",
+            "english": "the highest temperature"
           }
         },
         {
@@ -17357,8 +17649,8 @@
           ],
           "prompt": "What is the lesson meaning of “l-inqas temperatura”?",
           "choices": [
+            "recognize and produce the complete ma...x negative pattern",
             "recognize and produce a complete comparison with minn",
-            "snow",
             "the lowest temperature"
           ],
           "answer": "the lowest temperature",
@@ -17388,6 +17680,94 @@
             "temperatura"
           ]
         },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly says \"I do not like coffee\"?",
+          "choices": [
+            "Ma nħobb il-kafè.",
+            "Nħobbx il-kafè.",
+            "Ma nħobbx il-kafè."
+          ],
+          "answer": "Ma nħobbx il-kafè.",
+          "explanation": "The verb is surrounded by ma and the attached ending -x.",
+          "id": "grammar-verb-negation-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-verb-negation"
+          ],
+          "reviewCard": {
+            "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+            "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+            "example": "Ma nħobbx il-kafè."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the negative: Jien _____ il-kafè. (I do not like coffee.)",
+          "answer": "ma nħobbx",
+          "accepted": [
+            "ma nħobbx",
+            "Ma nħobbx"
+          ],
+          "explanation": "The complete negative form is ma nħobbx.",
+          "id": "grammar-verb-negation-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-verb-negation"
+          ],
+          "reviewCard": {
+            "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+            "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+            "example": "Ma nħobbx il-kafè."
+          }
+        },
+        {
+          "id": "b2-weather-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-silg",
+            "b2-weather-xemxi",
+            "b2-weather-imsahhab",
+            "b2-weather-l-oghla-temperatura"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "silġ",
+              "right": "ice"
+            },
+            {
+              "left": "xemxi",
+              "right": "sunny"
+            },
+            {
+              "left": "imsaħħab",
+              "right": "cloudy"
+            },
+            {
+              "left": "l-ogħla temperatura",
+              "right": "the highest temperature"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "silġ",
+            "english": "ice"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 1,
+      "title": "It-Temp Checkpoint 5",
+      "items": [
         {
           "type": "multiple-choice",
           "prompt": "Which sentence makes a complete comparison?",
@@ -17426,41 +17806,6 @@
             "maltese": "A + comparative + minn + B",
             "english": "Compare two people, objects, places, or conditions with a comparative and minn.",
             "example": "Din id-dar akbar minn dik."
-          }
-        },
-        {
-          "id": "b2-weather-checkpoint-4-matching",
-          "type": "matching",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-weather-silg",
-            "b2-weather-xemxi",
-            "b2-weather-imsahhab",
-            "b2-weather-l-oghla-temperatura"
-          ],
-          "prompt": "Match each Maltese target to its chapter meaning.",
-          "pairs": [
-            {
-              "left": "silġ",
-              "right": "ice"
-            },
-            {
-              "left": "xemxi",
-              "right": "sunny"
-            },
-            {
-              "left": "imsaħħab",
-              "right": "cloudy"
-            },
-            {
-              "left": "l-ogħla temperatura",
-              "right": "the highest temperature"
-            }
-          ],
-          "explanation": "These pairs use the reviewed meanings from this chapter.",
-          "reviewCard": {
-            "maltese": "silġ",
-            "english": "ice"
           }
         }
       ]
@@ -19008,23 +19353,23 @@
           }
         },
         {
-          "id": "b2-hobbies-orqod-diagnostic-recognition",
+          "id": "b2-hobbies-qum-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-orqod"
+            "b2-hobbies-qum"
           ],
-          "prompt": "What is the lesson meaning of “orqod”?",
+          "prompt": "What is the lesson meaning of “qum”?",
           "choices": [
             "do / make (plural command)",
             "use (singular command)",
-            "sleep (singular command)"
+            "get up (singular command)"
           ],
-          "answer": "sleep (singular command)",
-          "explanation": "orqod means “sleep (singular command)” in this chapter.",
+          "answer": "get up (singular command)",
+          "explanation": "qum means “get up (singular command)” in this chapter.",
           "reviewCard": {
-            "maltese": "orqod",
-            "english": "sleep (singular command)"
+            "maltese": "qum",
+            "english": "get up (singular command)"
           }
         },
         {
@@ -19063,59 +19408,59 @@
           }
         },
         {
-          "id": "b2-hobbies-se-tilghab-diagnostic-recognition-true-false",
+          "id": "b2-hobbies-se-naraw-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-tilghab"
+            "b2-hobbies-se-naraw"
           ],
-          "prompt": "True or false: “se tilgħab” means “swim (singular command)” in this chapter.",
+          "prompt": "True or false: “se naraw” means “swim (singular command)” in this chapter.",
           "answer": false,
-          "explanation": "se tilgħab means “you will play / she will play”.",
+          "explanation": "se naraw means “we will see / watch”.",
           "reviewCard": {
-            "maltese": "se tilgħab",
-            "english": "you will play / she will play"
+            "maltese": "se naraw",
+            "english": "we will see / watch"
           }
         },
         {
-          "id": "b2-hobbies-se-nohorgu-diagnostic-recognition",
+          "id": "b2-hobbies-se-niekol-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-hobbies-se-nohorgu"
+            "b2-hobbies-se-niekol"
           ],
-          "prompt": "What is the lesson meaning of “se noħorġu”?",
+          "prompt": "What is the lesson meaning of “se niekol”?",
           "choices": [
             "sleep (singular command)",
-            "we will go out",
+            "I will eat",
             "walk (singular command)"
           ],
-          "answer": "we will go out",
-          "explanation": "se noħorġu means “we will go out” in this chapter.",
+          "answer": "I will eat",
+          "explanation": "se niekol means “I will eat” in this chapter.",
           "reviewCard": {
-            "maltese": "se noħorġu",
-            "english": "we will go out"
+            "maltese": "se niekol",
+            "english": "I will eat"
           }
         },
         {
           "type": "multiple-choice",
-          "prompt": "Which sentence correctly describes a future plan?",
+          "prompt": "Which sentence correctly means \"She went to school\"?",
           "choices": [
-            "Għada se mort il-belt.",
-            "Għada se mmur il-belt.",
-            "Għada mort se il-belt."
+            "Hi mort l-iskola.",
+            "Hi marret l-iskola.",
+            "Hi marru l-iskola."
           ],
-          "answer": "Għada se mmur il-belt.",
-          "explanation": "Use se before the matching present-type form mmur.",
-          "id": "grammar-future-se-diagnostic-recognition",
+          "answer": "Hi marret l-iskola.",
+          "explanation": "The third-person feminine past form is marret.",
+          "id": "grammar-past-person-forms-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "grammar-future-se"
+            "grammar-past-person-forms"
           ],
           "reviewCard": {
-            "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
-            "english": "Build a future plan with se and the present-type form that matches the subject.",
-            "example": "Għada se mmur il-belt."
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
           }
         }
       ]
@@ -20200,7 +20545,7 @@
       "id": "b2-hobbies-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 1,
+      "targetCount": 2,
       "title": "Xi Nħobb Nagħmel Checkpoint 5",
       "items": [
         {
@@ -20241,6 +20586,71 @@
             "maltese": "jien se mmur | hi se tilgħab | aħna se naraw",
             "english": "Build a future plan with se and the present-type form that matches the subject.",
             "example": "Għada se mmur il-belt."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly means \"She went to school\"?",
+          "choices": [
+            "Hi mort l-iskola.",
+            "Hi marret l-iskola.",
+            "Hi marru l-iskola."
+          ],
+          "answer": "Hi marret l-iskola.",
+          "explanation": "The third-person feminine past form is marret.",
+          "id": "grammar-past-person-forms-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-past-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the past form: Huma _____ il-belt ilbieraħ. (They went to the city yesterday.)",
+          "answer": "marru",
+          "accepted": [
+            "marru"
+          ],
+          "explanation": "The huma past form of mar is marru.",
+          "id": "grammar-past-person-forms-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-past-person-forms"
+          ],
+          "reviewCard": {
+            "maltese": "jien mort | hu mar | hi marret | aħna morna | intom mortu | huma marru",
+            "english": "Match a completed past action to the ending required by its subject.",
+            "example": "Jien mort il-belt."
+          }
+        },
+        {
+          "id": "b2-hobbies-checkpoint-5-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-future-se",
+            "grammar-past-person-forms"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "Future with se plus a present-type verb form",
+              "right": "choose and produce se with the correct present-type verb form"
+            },
+            {
+              "left": "Past-tense person forms",
+              "right": "select and produce a past form that matches its subject"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "Future with se plus a present-type verb form",
+            "english": "choose and produce se with the correct present-type verb form"
           }
         }
       ]
@@ -20344,94 +20754,94 @@
           }
         },
         {
-          "id": "b2-town-numru-diagnostic-recognition-true-false",
+          "id": "b2-town-vjal-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-numru"
+            "b2-town-vjal"
           ],
-          "prompt": "True or false: “numru” means “post office” in this chapter.",
+          "prompt": "True or false: “vjal” means “post office” in this chapter.",
           "answer": false,
-          "explanation": "numru means “number”.",
+          "explanation": "vjal means “avenue”.",
           "reviewCard": {
-            "maltese": "numru",
-            "english": "number"
+            "maltese": "vjal",
+            "english": "avenue"
           }
         },
         {
-          "id": "b2-town-lukanda-diagnostic-recognition",
+          "id": "b2-town-indirizz-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-lukanda"
+            "b2-town-indirizz"
           ],
-          "prompt": "What is the lesson meaning of “lukanda”?",
+          "prompt": "What is the lesson meaning of “indirizz”?",
           "choices": [
-            "hotel",
+            "address",
             "church parvis / forecourt",
             "ricotta pastizz"
           ],
-          "answer": "hotel",
-          "explanation": "lukanda means “hotel” in this chapter.",
+          "answer": "address",
+          "explanation": "indirizz means “address” in this chapter.",
           "reviewCard": {
-            "maltese": "lukanda",
-            "english": "hotel"
+            "maltese": "indirizz",
+            "english": "address"
           }
         },
         {
-          "id": "b2-town-dur-fuq-ix-xellug-diagnostic-recognition-true-false",
+          "id": "b2-town-dur-mal-kantuniera-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-dur-fuq-ix-xellug"
+            "b2-town-dur-mal-kantuniera"
           ],
-          "prompt": "True or false: “Dur fuq ix-xellug” means “ricotta pastizz” in this chapter.",
+          "prompt": "True or false: “Dur mal-kantuniera” means “ricotta pastizz” in this chapter.",
           "answer": false,
-          "explanation": "Dur fuq ix-xellug means “Turn left”.",
+          "explanation": "Dur mal-kantuniera means “Turn around the corner”.",
           "reviewCard": {
-            "maltese": "Dur fuq ix-xellug",
-            "english": "Turn left"
+            "maltese": "Dur mal-kantuniera",
+            "english": "Turn around the corner"
           }
         },
         {
-          "id": "b2-town-dur-fuq-il-lemin-diagnostic-recognition",
+          "id": "b2-town-imxi-dritt-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-town-dur-fuq-il-lemin"
+            "b2-town-imxi-dritt"
           ],
-          "prompt": "What is the lesson meaning of “Dur fuq il-lemin”?",
+          "prompt": "What is the lesson meaning of “Imxi dritt”?",
           "choices": [
             "medicine",
-            "Turn right",
+            "Go straight",
             "pea pastizz"
           ],
-          "answer": "Turn right",
-          "explanation": "Dur fuq il-lemin means “Turn right” in this chapter.",
+          "answer": "Go straight",
+          "explanation": "Imxi dritt means “Go straight” in this chapter.",
           "reviewCard": {
-            "maltese": "Dur fuq il-lemin",
-            "english": "Turn right"
+            "maltese": "Imxi dritt",
+            "english": "Go straight"
           }
         },
         {
           "type": "multiple-choice",
-          "prompt": "Which sentence politely says “I would like to drink coffee”?",
+          "prompt": "Which phrase correctly means \"in the house\"?",
           "choices": [
-            "Nixtieq nixrob kafè.",
-            "Għandi bżonn kafè nixrob.",
-            "Nista' kafè."
+            "fi id-dar",
+            "fil-dar",
+            "fid-dar"
           ],
-          "answer": "Nixtieq nixrob kafè.",
-          "explanation": "Nixtieq followed by the action expresses a polite preference.",
-          "id": "grammar-modals-diagnostic-recognition",
+          "answer": "fid-dar",
+          "explanation": "Fi contracts with the assimilated article id- to form fid-.",
+          "id": "grammar-preposition-contractions-diagnostic-recognition",
           "assessmentMode": "recognition",
           "targetIds": [
-            "grammar-modals"
+            "grammar-preposition-contractions"
           ],
           "reviewCard": {
-            "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
-            "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
-            "example": "Nista' mmur."
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
           }
         }
       ]
@@ -21515,7 +21925,7 @@
       "id": "b2-town-checkpoint-5",
       "kind": "checkpoint",
       "sequence": 5,
-      "targetCount": 5,
+      "targetCount": 6,
       "title": "Fil-Pjazza Checkpoint 5",
       "items": [
         {
@@ -21710,6 +22120,46 @@
             "maltese": "nista' mmur | irrid naħdem | nixtieq nixrob | għandi bżonn nistrieħ",
             "english": "Use common modal patterns before an action to express ability, obligation, preference, or need.",
             "example": "Nista' mmur."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which phrase correctly means \"in the house\"?",
+          "choices": [
+            "fi id-dar",
+            "fil-dar",
+            "fid-dar"
+          ],
+          "answer": "fid-dar",
+          "explanation": "Fi contracts with the assimilated article id- to form fid-.",
+          "id": "grammar-preposition-contractions-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-preposition-contractions"
+          ],
+          "reviewCard": {
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the place phrase: Il-ktieb qiegħed _____ borża. (The book is in the bag.)",
+          "answer": "fil-borża",
+          "accepted": [
+            "fil-borża"
+          ],
+          "explanation": "Fi plus il-borża contracts to fil-borża.",
+          "id": "grammar-preposition-contractions-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-preposition-contractions"
+          ],
+          "reviewCard": {
+            "maltese": "fi + il-kamra = fil-kamra | fi + id-dar = fid-dar | fi + l-iskola = fl-iskola",
+            "english": "Combine the place preposition fi with the following definite article.",
+            "example": "Il-mejda tinsab fil-kamra."
           }
         },
         {

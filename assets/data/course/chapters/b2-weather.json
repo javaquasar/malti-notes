@@ -206,7 +206,6 @@
         "itemId": "b2-weather-maltemp"
       },
       "assessmentIds": [
-        "b2-weather-maltemp-diagnostic-recognition-true-false",
         "b2-weather-maltemp-recognition-true-false",
         "b2-weather-maltemp-production",
         "b2-weather-checkpoint-2-matching"
@@ -226,6 +225,7 @@
         "itemId": "b2-weather-istagun"
       },
       "assessmentIds": [
+        "b2-weather-istagun-diagnostic-recognition-true-false",
         "b2-weather-istagun-recognition",
         "b2-weather-istagun-production",
         "b2-weather-checkpoint-2-matching"
@@ -301,7 +301,6 @@
         "itemId": "harifa"
       },
       "assessmentIds": [
-        "b2-weather-harifa-diagnostic-recognition-true-false",
         "b2-weather-harifa-recognition",
         "b2-weather-harifa-production",
         "b2-weather-checkpoint-3-matching"
@@ -323,6 +322,7 @@
       "assessmentIds": [
         "weather-season",
         "weather-winter-production",
+        "b2-weather-xitwa-diagnostic-recognition-true-false",
         "b2-weather-xitwa-recognition-true-false",
         "b2-weather-xitwa-production",
         "b2-weather-checkpoint-3-matching"
@@ -361,7 +361,6 @@
         "itemId": "xita"
       },
       "assessmentIds": [
-        "b2-weather-xita-diagnostic-recognition",
         "b2-weather-xita-recognition-true-false",
         "b2-weather-xita-production",
         "b2-weather-checkpoint-3-matching"
@@ -381,6 +380,7 @@
         "itemId": "b2-weather-raghad"
       },
       "assessmentIds": [
+        "b2-weather-raghad-diagnostic-recognition",
         "b2-weather-raghad-recognition",
         "b2-weather-raghad-production"
       ]
@@ -399,7 +399,6 @@
         "itemId": "b2-weather-bnazzi"
       },
       "assessmentIds": [
-        "b2-weather-bnazzi-diagnostic-recognition-true-false",
         "b2-weather-bnazzi-recognition-true-false",
         "b2-weather-bnazzi-production"
       ]
@@ -418,6 +417,7 @@
         "itemId": "b2-weather-silg"
       },
       "assessmentIds": [
+        "b2-weather-silg-diagnostic-recognition-true-false",
         "b2-weather-silg-recognition",
         "b2-weather-silg-production",
         "b2-weather-checkpoint-4-matching"
@@ -456,7 +456,6 @@
         "itemId": "b2-weather-imsahhab"
       },
       "assessmentIds": [
-        "b2-weather-imsahhab-diagnostic-recognition",
         "b2-weather-imsahhab-recognition",
         "b2-weather-imsahhab-production",
         "b2-weather-checkpoint-4-matching"
@@ -476,6 +475,7 @@
         "itemId": "b2-weather-l-oghla-temperatura"
       },
       "assessmentIds": [
+        "b2-weather-l-oghla-temperatura-diagnostic-recognition",
         "b2-weather-l-oghla-temperatura-recognition-true-false",
         "b2-weather-l-oghla-temperatura-production",
         "b2-weather-checkpoint-4-matching"
@@ -497,6 +497,29 @@
       "assessmentIds": [
         "b2-weather-l-inqas-temperatura-recognition",
         "b2-weather-l-inqas-temperatura-production"
+      ]
+    },
+    {
+      "id": "grammar-verb-negation",
+      "book": "B2",
+      "chapterId": "b2-weather",
+      "type": "grammar",
+      "sourceRequirement": "Negative verb pattern with ma and -x",
+      "role": "core",
+      "implementationStatus": "implemented",
+      "sourceRef": {
+        "kind": "site-extension",
+        "sourcePage": "verbs_guide.html",
+        "coverageStatus": "extended"
+      },
+      "contentRef": {
+        "page": "grammar_path.html",
+        "file": "assets/data/grammar_targets.json",
+        "itemId": "grammar-verb-negation"
+      },
+      "assessmentIds": [
+        "grammar-verb-negation-recognition",
+        "grammar-verb-negation-production"
       ]
     },
     {
@@ -898,6 +921,11 @@
         35
       ],
       "match": "text-exact"
+    },
+    "grammar-verb-negation": {
+      "kind": "site-extension",
+      "sourcePage": "verbs_guide.html",
+      "coverageStatus": "extended"
     },
     "grammar-comparisons": {
       "kind": "site-extension",
@@ -1685,18 +1713,18 @@
           }
         },
         {
-          "id": "b2-weather-maltemp-diagnostic-recognition-true-false",
+          "id": "b2-weather-istagun-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-maltemp"
+            "b2-weather-istagun"
           ],
-          "prompt": "True or false: “maltemp” means “wind” in this chapter.",
+          "prompt": "True or false: “istaġun” means “wind” in this chapter.",
           "answer": false,
-          "explanation": "maltemp means “bad weather”.",
+          "explanation": "istaġun means “season”.",
           "reviewCard": {
-            "maltese": "maltemp",
-            "english": "bad weather"
+            "maltese": "istaġun",
+            "english": "season"
           }
         },
         {
@@ -1720,73 +1748,73 @@
           }
         },
         {
-          "id": "b2-weather-harifa-diagnostic-recognition-true-false",
+          "id": "b2-weather-xitwa-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-harifa"
+            "b2-weather-xitwa"
           ],
-          "prompt": "True or false: “ħarifa” means “cold” in this chapter.",
+          "prompt": "True or false: “xitwa” means “cold” in this chapter.",
           "answer": false,
-          "explanation": "ħarifa means “autumn”.",
+          "explanation": "xitwa means “winter”.",
           "reviewCard": {
-            "maltese": "ħarifa",
-            "english": "autumn"
+            "maltese": "xitwa",
+            "english": "winter"
           }
         },
         {
-          "id": "b2-weather-xita-diagnostic-recognition",
+          "id": "b2-weather-raghad-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-xita"
+            "b2-weather-raghad"
           ],
-          "prompt": "What is the lesson meaning of “xita”?",
+          "prompt": "What is the lesson meaning of “ragħad”?",
           "choices": [
-            "rain",
+            "thunder",
             "bad weather",
             "season"
           ],
-          "answer": "rain",
-          "explanation": "xita means “rain” in this chapter.",
+          "answer": "thunder",
+          "explanation": "ragħad means “thunder” in this chapter.",
           "reviewCard": {
-            "maltese": "xita",
-            "english": "rain"
+            "maltese": "ragħad",
+            "english": "thunder"
           }
         },
         {
-          "id": "b2-weather-bnazzi-diagnostic-recognition-true-false",
+          "id": "b2-weather-silg-diagnostic-recognition-true-false",
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-bnazzi"
+            "b2-weather-silg"
           ],
-          "prompt": "True or false: “bnazzi” means “season” in this chapter.",
+          "prompt": "True or false: “silġ” means “season” in this chapter.",
           "answer": false,
-          "explanation": "bnazzi means “fine / calm weather”.",
+          "explanation": "silġ means “ice”.",
           "reviewCard": {
-            "maltese": "bnazzi",
-            "english": "fine / calm weather"
+            "maltese": "silġ",
+            "english": "ice"
           }
         },
         {
-          "id": "b2-weather-imsahhab-diagnostic-recognition",
+          "id": "b2-weather-l-oghla-temperatura-diagnostic-recognition",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-weather-imsahhab"
+            "b2-weather-l-oghla-temperatura"
           ],
-          "prompt": "What is the lesson meaning of “imsaħħab”?",
+          "prompt": "What is the lesson meaning of “l-ogħla temperatura”?",
           "choices": [
             "spring",
-            "cloudy",
+            "the highest temperature",
             "seasons"
           ],
-          "answer": "cloudy",
-          "explanation": "imsaħħab means “cloudy” in this chapter.",
+          "answer": "the highest temperature",
+          "explanation": "l-ogħla temperatura means “the highest temperature” in this chapter.",
           "reviewCard": {
-            "maltese": "imsaħħab",
-            "english": "cloudy"
+            "maltese": "l-ogħla temperatura",
+            "english": "the highest temperature"
           }
         },
         {
@@ -2776,8 +2804,8 @@
           ],
           "prompt": "What is the lesson meaning of “l-inqas temperatura”?",
           "choices": [
+            "recognize and produce the complete ma...x negative pattern",
             "recognize and produce a complete comparison with minn",
-            "snow",
             "the lowest temperature"
           ],
           "answer": "the lowest temperature",
@@ -2807,6 +2835,94 @@
             "temperatura"
           ]
         },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which sentence correctly says \"I do not like coffee\"?",
+          "choices": [
+            "Ma nħobb il-kafè.",
+            "Nħobbx il-kafè.",
+            "Ma nħobbx il-kafè."
+          ],
+          "answer": "Ma nħobbx il-kafè.",
+          "explanation": "The verb is surrounded by ma and the attached ending -x.",
+          "id": "grammar-verb-negation-recognition",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "grammar-verb-negation"
+          ],
+          "reviewCard": {
+            "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+            "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+            "example": "Ma nħobbx il-kafè."
+          }
+        },
+        {
+          "type": "fill-blank",
+          "prompt": "Complete the negative: Jien _____ il-kafè. (I do not like coffee.)",
+          "answer": "ma nħobbx",
+          "accepted": [
+            "ma nħobbx",
+            "Ma nħobbx"
+          ],
+          "explanation": "The complete negative form is ma nħobbx.",
+          "id": "grammar-verb-negation-production",
+          "assessmentMode": "production",
+          "targetIds": [
+            "grammar-verb-negation"
+          ],
+          "reviewCard": {
+            "maltese": "ma nħobbx | ma niekolx | ma mmurx",
+            "english": "Negate a person-marked verb by placing ma before it and attaching -x to the verb form.",
+            "example": "Ma nħobbx il-kafè."
+          }
+        },
+        {
+          "id": "b2-weather-checkpoint-4-matching",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "targetIds": [
+            "b2-weather-silg",
+            "b2-weather-xemxi",
+            "b2-weather-imsahhab",
+            "b2-weather-l-oghla-temperatura"
+          ],
+          "prompt": "Match each Maltese target to its chapter meaning.",
+          "pairs": [
+            {
+              "left": "silġ",
+              "right": "ice"
+            },
+            {
+              "left": "xemxi",
+              "right": "sunny"
+            },
+            {
+              "left": "imsaħħab",
+              "right": "cloudy"
+            },
+            {
+              "left": "l-ogħla temperatura",
+              "right": "the highest temperature"
+            }
+          ],
+          "explanation": "These pairs use the reviewed meanings from this chapter.",
+          "reviewCard": {
+            "maltese": "silġ",
+            "english": "ice"
+          }
+        }
+      ]
+    },
+    {
+      "chapterId": "b2-weather",
+      "level": "B2",
+      "passPercent": 75,
+      "id": "b2-weather-checkpoint-5",
+      "kind": "checkpoint",
+      "sequence": 5,
+      "targetCount": 1,
+      "title": "It-Temp Checkpoint 5",
+      "items": [
         {
           "type": "multiple-choice",
           "prompt": "Which sentence makes a complete comparison?",
@@ -2845,41 +2961,6 @@
             "maltese": "A + comparative + minn + B",
             "english": "Compare two people, objects, places, or conditions with a comparative and minn.",
             "example": "Din id-dar akbar minn dik."
-          }
-        },
-        {
-          "id": "b2-weather-checkpoint-4-matching",
-          "type": "matching",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-weather-silg",
-            "b2-weather-xemxi",
-            "b2-weather-imsahhab",
-            "b2-weather-l-oghla-temperatura"
-          ],
-          "prompt": "Match each Maltese target to its chapter meaning.",
-          "pairs": [
-            {
-              "left": "silġ",
-              "right": "ice"
-            },
-            {
-              "left": "xemxi",
-              "right": "sunny"
-            },
-            {
-              "left": "imsaħħab",
-              "right": "cloudy"
-            },
-            {
-              "left": "l-ogħla temperatura",
-              "right": "the highest temperature"
-            }
-          ],
-          "explanation": "These pairs use the reviewed meanings from this chapter.",
-          "reviewCard": {
-            "maltese": "silġ",
-            "english": "ice"
           }
         }
       ]
