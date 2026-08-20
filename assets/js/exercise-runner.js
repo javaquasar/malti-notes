@@ -313,13 +313,15 @@
   };
 
   const toReviewCard = (set, item) => ({
-    id: `sentence::course-exercise::${set.id}::${item.id}`,
+    id: item.coverageIds?.length
+      ? `sentence::coverage::${item.coverageIds[0]}::${item.assessmentMode || "recognition"}`
+      : `sentence::course-exercise::${set.id}::${item.id}`,
     type: "sentence-card",
     maltese: item.reviewCard.maltese,
     english: item.reviewCard.english,
     topic: set.title,
-    group: "Course quick checks",
-    sourcePage: window.location.pathname.split("/").pop() || "course_path.html",
+    group: item.coverageIds?.length ? "Coverage tests" : "Course quick checks",
+    sourcePage: item.sourcePage || window.location.pathname.split("/").pop() || "course_path.html",
     prompt: item.reviewCard.maltese,
     answer: item.reviewCard.english,
     targetIds: item.targetIds || []
@@ -342,7 +344,7 @@
   const recordMistakeResults = (set, results) => {
     const mistakeStore = window.MaltiMistakeStore;
     if (!mistakeStore) return;
-    const sourcePage = `${window.location.pathname.split("/").pop() || "course_path.html"}${window.location.search}`;
+    const currentPage = `${window.location.pathname.split("/").pop() || "course_path.html"}${window.location.search}`;
     results.forEach(({ item, correct, answer }) => {
       const grammarTargetId = (item.targetIds || []).find((targetId) => targetId.startsWith("grammar-"));
       mistakeStore.recordAttempt({
@@ -354,7 +356,7 @@
         correctAnswer: correctAnswerText(item),
         explanation: item.explanation || "",
         targetIds: item.targetIds || [],
-        sourcePage,
+        sourcePage: item.sourcePage || currentPage,
         topic: set.title,
         type: item.type,
         category: item.category || set.category || (grammarTargetId ? "grammar" : "course"),
@@ -444,6 +446,17 @@
       saveProgress(progress);
       recordTargetResults(targetResults);
       recordMistakeResults(set, targetResults);
+      window.dispatchEvent(new CustomEvent("malti-exercise-complete", {
+        detail: {
+          setId: set.id,
+          results: targetResults.map(({ item, correct }) => ({
+            itemId: item.id,
+            coverageIds: item.coverageIds || [],
+            assessmentMode: item.assessmentMode || "recognition",
+            correct
+          }))
+        }
+      }));
       updateBestStatus(best, set);
 
       const autoSaveMissed = container.dataset.autoSaveMissed === "true";

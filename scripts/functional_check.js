@@ -141,7 +141,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 44, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 45, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -317,6 +317,46 @@ async function main() {
         return data.sets.map((set) => ({ chapters: new Set(set.items.map((item) => item.sourceChapterId)).size, modes: set.modeCounts, uniqueIds: new Set(set.items.map((item) => item.id)).size }));
       });
       assert(structure.every((set, index) => set.chapters === (index === 2 ? 14 : 7) && set.modes.recognition === set.modes.production && set.uniqueIds === 28), "Generated milestone structure is incomplete.");
+    });
+
+    await runTest(context, "coverage tests rotate and track the complete learning bank", async (page) => {
+      await openCleanPage(page, "coverage_test.html");
+      const stage = page.locator("[data-coverage-test-stage]");
+      await stage.locator(".exercise-item").first().waitFor();
+      assert(await stage.locator(".exercise-item").count() === 20, "Default coverage session does not contain 20 questions.");
+      assert((await page.locator("[data-coverage-total]").textContent()).trim() === "1256", "Coverage target total is stale.");
+      const firstIds = await page.evaluate(() => window.MaltiCoverageTest.getCurrentSession().targetIds);
+
+      await page.reload({ waitUntil: "networkidle" });
+      await stage.locator(".exercise-item").first().waitFor();
+      const refreshedIds = await page.evaluate(() => window.MaltiCoverageTest.getCurrentSession().targetIds);
+      assert(firstIds.join("|") !== refreshedIds.join("|"), "Reload repeated the same coverage session.");
+
+      await page.locator('[data-size="50"]').click();
+      assert(await stage.locator(".exercise-item").count() === 50, "Coverage size control did not create 50 questions.");
+
+      await page.locator("[data-coverage-category-list] input").evaluateAll((inputs) => {
+        inputs.forEach((input) => {
+          const shouldCheck = input.value === "grammar";
+          if (input.checked !== shouldCheck) {
+            input.checked = shouldCheck;
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+        });
+      });
+      assert(await stage.locator(".exercise-item").count() === 8, "Grammar-only coverage does not contain all eight rules.");
+      assert((await page.evaluate(() => new Set(window.MaltiCoverageTest.getCurrentSession().categories).size)) === 1, "Grammar filter mixed unrelated categories.");
+
+      await stage.locator('button[type="submit"]').click();
+      let coverage = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_comprehensive_coverage_v1")));
+      assert(Object.keys(coverage.targets).length === 8, "Coverage progress did not save attempted grammar targets.");
+      assert((await page.locator("[data-coverage-started]").textContent()).trim() === "8", "Started target count was not updated.");
+
+      await page.locator("[data-coverage-new]").click();
+      await stage.locator('button[type="submit"]').click();
+      coverage = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_comprehensive_coverage_v1")));
+      assert(Object.values(coverage.targets).every((target) => target.modes.recognition?.attempts === 1 && target.modes.production?.attempts === 1), "Coverage cycle did not test both recognition and production.");
+      assert((await page.locator("[data-coverage-complete]").textContent()).trim() === "8", "Both-mode coverage total was not updated.");
     });
 
     await runTest(context, "course runtime loads manifest and one chapter payload", async (page) => {
@@ -635,6 +675,7 @@ async function main() {
         window.localStorage.setItem("malti_course_progress_v1", JSON.stringify({ objectives: { "b1-introductions::identity": true }, activeLevel: "b1" }));
         window.localStorage.setItem("malti_exercise_progress_v1", JSON.stringify({ "b1-introductions-check": { score: 3, total: 3, passed: true } }));
         window.localStorage.setItem("malti_course_target_progress_v1", JSON.stringify({ "b1-animals-kelb": { state: "learning", attempts: 1 } }));
+        window.localStorage.setItem("malti_comprehensive_coverage_v1", JSON.stringify({ schemaVersion: 1, counter: 2, targets: { "grammar-future-se": { modes: { recognition: { attempts: 1, correct: 1 } } } } }));
         const backup = window.MaltiProgressBackup.exportBackup();
         const preview = window.MaltiProgressBackup.previewBackup(backup);
         const legacy = JSON.parse(JSON.stringify(backup));
@@ -656,6 +697,7 @@ async function main() {
         const clearedCourse = window.localStorage.getItem("malti_course_progress_v1");
         const clearedExercises = window.localStorage.getItem("malti_exercise_progress_v1");
         const clearedTargets = window.localStorage.getItem("malti_course_target_progress_v1");
+        const clearedCoverage = window.localStorage.getItem("malti_comprehensive_coverage_v1");
         const imported = window.MaltiProgressBackup.importBackup(backup, { mode: "replace" });
         return {
           format: backup.format,
@@ -671,11 +713,13 @@ async function main() {
           clearedCourse,
           clearedExercises,
           clearedTargets,
+          clearedCoverage,
           restoredTotal: window.MaltiReviewStore.getStats().total,
           restoredSeen: JSON.parse(window.localStorage.getItem("malti_word_search_seen_words_v1")),
           restoredCourse: JSON.parse(window.localStorage.getItem("malti_course_progress_v1")),
           restoredExercises: JSON.parse(window.localStorage.getItem("malti_exercise_progress_v1")),
-          restoredTargets: JSON.parse(window.localStorage.getItem("malti_course_target_progress_v1"))
+          restoredTargets: JSON.parse(window.localStorage.getItem("malti_course_target_progress_v1")),
+          restoredCoverage: JSON.parse(window.localStorage.getItem("malti_comprehensive_coverage_v1"))
         };
       });
 
@@ -684,11 +728,12 @@ async function main() {
       assert(result.tamperRejected, "Tampered progress backup was accepted.");
       assert(result.legacyAccepted, "Version 1 progress backup is no longer accepted.");
       assert(result.exportedKeys >= 5 && result.importedKeys === result.exportedKeys, "Backup did not contain all progress values.");
-      assert(result.clearedTotal === 0 && result.clearedSeen === null && result.clearedCourse === null && result.clearedExercises === null && result.clearedTargets === null, "Progress was not cleared before import.");
+      assert(result.clearedTotal === 0 && result.clearedSeen === null && result.clearedCourse === null && result.clearedExercises === null && result.clearedTargets === null && result.clearedCoverage === null, "Progress was not cleared before import.");
       assert(result.restoredTotal === 1 && result.restoredSeen[0] === "kelb", "Review and game progress was not restored.");
       assert(result.restoredCourse.objectives["b1-introductions::identity"] === true, "Course progress was not restored.");
       assert(result.restoredExercises["b1-introductions-check"].passed === true, "Exercise progress was not restored.");
       assert(result.restoredTargets["b1-animals-kelb"].state === "learning", "Course target progress was not restored.");
+      assert(result.restoredCoverage.targets["grammar-future-se"].modes.recognition.correct === 1, "Coverage test progress was not restored.");
     });
 
     await runTest(context, "word search creates a playable puzzle", async (page) => {

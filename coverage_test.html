@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Coverage Tests</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <span class="tag">Adaptive assessment</span>
+                <h1>Coverage Tests</h1>
+                <p class="lead">Build a fresh test from the complete grammar, verb, phrase, and vocabulary bank.</p>
+                <div class="pill-row">
+                    <span class="pill"><strong data-coverage-total>0</strong>&nbsp;targets</span>
+                    <span class="pill"><strong data-coverage-modes>0</strong>&nbsp;test modes</span>
+                    <span class="pill"><strong data-coverage-categories>0</strong>&nbsp;categories</span>
+                </div>
+            </div>
+            <aside class="note">
+                <strong>Fresh on every visit</strong>
+                <p>Untested recognition and production prompts are selected first.</p>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section coverage-test-shell" data-coverage-test-root>
+        <section class="coverage-controls" aria-labelledby="coverage-settings-heading">
+            <div class="section-heading-row">
+                <div>
+                    <span class="tag">Test setup</span>
+                    <h2 id="coverage-settings-heading">Choose the coverage</h2>
+                </div>
+                <button class="action-button" type="button" data-coverage-new>New test</button>
+            </div>
+
+            <div class="coverage-control-grid">
+                <fieldset class="coverage-control-group">
+                    <legend>Source</legend>
+                    <div class="segmented-toggle" data-coverage-scope>
+                        <button class="toggle-chip" type="button" data-scope="All" aria-pressed="true">All</button>
+                        <button class="toggle-chip" type="button" data-scope="B1" aria-pressed="false">B1</button>
+                        <button class="toggle-chip" type="button" data-scope="B2" aria-pressed="false">B2</button>
+                        <button class="toggle-chip" type="button" data-scope="Site" aria-pressed="false">Site</button>
+                    </div>
+                </fieldset>
+                <fieldset class="coverage-control-group">
+                    <legend>Questions</legend>
+                    <div class="segmented-toggle" data-coverage-size>
+                        <button class="toggle-chip" type="button" data-size="20" aria-pressed="true">20</button>
+                        <button class="toggle-chip" type="button" data-size="50" aria-pressed="false">50</button>
+                        <button class="toggle-chip" type="button" data-size="100" aria-pressed="false">100</button>
+                    </div>
+                </fieldset>
+            </div>
+
+            <fieldset class="coverage-control-group">
+                <legend>Categories</legend>
+                <div class="coverage-category-grid" data-coverage-category-list></div>
+            </fieldset>
+        </section>
+
+        <section aria-labelledby="coverage-progress-heading">
+            <div class="section-heading-row">
+                <div>
+                    <span class="tag">Saved progress</span>
+                    <h2 id="coverage-progress-heading">Coverage in this selection</h2>
+                </div>
+                <strong class="coverage-progress-percent" data-coverage-percent>0%</strong>
+            </div>
+            <div class="course-progress-track" aria-hidden="true">
+                <div class="course-progress-fill" data-coverage-progress-fill></div>
+            </div>
+            <div class="course-metric-grid coverage-metric-grid">
+                <div class="course-metric"><span>Available</span><strong data-coverage-available>0</strong><small>targets</small></div>
+                <div class="course-metric"><span>Started</span><strong data-coverage-started>0</strong><small>at least one mode</small></div>
+                <div class="course-metric"><span>Both modes</span><strong data-coverage-complete>0</strong><small>recognition + production</small></div>
+                <div class="course-metric"><span>Mastered</span><strong data-coverage-mastered>0</strong><small>correct in both modes</small></div>
+            </div>
+        </section>
+
+        <p class="coverage-session-status" data-coverage-session-status role="status">Building a fresh test...</p>
+        <div data-coverage-test-stage></div>
+
+        <nav class="course-chapter-nav" aria-label="Assessment navigation">
+            <a class="action-link" href="./course_exam.html">Milestone tests</a>
+            <a class="action-link" href="./grammar_path.html">Grammar path</a>
+            <a class="action-link" href="./mistakes.html">Mistake journal</a>
+        </nav>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/mistake-store.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/coverage-test.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>
