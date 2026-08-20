@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}8a83dd7d23ef`;
+const CACHE_NAME = `${CACHE_PREFIX}6f436810eaab`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",
@@ -13,6 +13,7 @@ const CORE_ASSETS = [
     "./course_exam.html",
     "./course_path.html",
     "./course_progress.html",
+    "./coverage_test.html",
     "./daily_problems.html",
     "./daily_routine.html",
     "./directions_town.html",
@@ -77,6 +78,7 @@ const CORE_ASSETS = [
     "./assets/js/course-path.js",
     "./assets/js/course-progress.js",
     "./assets/js/course-topic-view.js",
+    "./assets/js/coverage-test.js",
     "./assets/js/exercise-runner.js",
     "./assets/js/game-audio.js",
     "./assets/js/grammar-path.js",
@@ -117,6 +119,7 @@ const CORE_ASSETS = [
     "./assets/data/course_milestone_assessments.json",
     "./assets/data/course/manifest.json",
     "./assets/data/course_verb_paradigms.json",
+    "./assets/data/comprehensive_test_bank.json",
     "./assets/data/grammar_targets.json",
     "./assets/img/favicon-option-speech.svg"
   ];

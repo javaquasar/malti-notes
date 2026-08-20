@@ -26,6 +26,7 @@ const assets = [
   "./assets/data/course_milestone_assessments.json",
   "./assets/data/course/manifest.json",
   "./assets/data/course_verb_paradigms.json",
+  "./assets/data/comprehensive_test_bank.json",
   "./assets/data/grammar_targets.json",
   "./assets/img/favicon-option-speech.svg",
 ];

@@ -63,6 +63,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run course:lint
 
+      - name: Validate comprehensive coverage bank
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run coverage:check
+
       - name: Validate links and data bindings
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run links:lint
