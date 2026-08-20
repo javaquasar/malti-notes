@@ -7,28 +7,28 @@
     "assets/data/course_verb_paradigms.json",
     "canonical assets/data topic banks"
   ],
-  "description": "Generated coverage bank with recognition and production for book targets, grammar, verb paradigms, and canonical site vocabulary.",
-  "targetCount": 1256,
-  "modeCount": 2512,
+  "description": "Generated unique coverage bank with recognition and production for book targets, grammar, verb paradigms, and canonical site vocabulary.",
+  "targetCount": 1210,
+  "modeCount": 2420,
   "categoryCounts": {
     "adjectives": 84,
     "grammar": 8,
-    "numbers-time": 99,
+    "numbers-time": 98,
     "pronouns": 41,
-    "verbs": 256,
-    "vocabulary": 768
+    "verbs": 233,
+    "vocabulary": 746
   },
   "levelCounts": {
-    "B1": 304,
-    "B2": 291,
-    "Site": 661
+    "B1": 297,
+    "B2": 262,
+    "Site": 651
   },
   "sourceCounts": {
-    "book-course": 462,
+    "book-course": 440,
     "book-grammar-topic": 6,
-    "site-bank": 661,
+    "site-bank": 651,
     "site-extension": 2,
-    "verb-paradigm": 125
+    "verb-paradigm": 111
   },
   "targets": [
     {
@@ -6206,68 +6206,6 @@
       }
     },
     {
-      "id": "site-daily-routine-daily-routine-core-immur",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Everyday verbs for a normal day",
-      "title": "immur",
-      "maltese": "immur",
-      "english": "I go",
-      "sourceKind": "site-bank",
-      "sourcePage": "daily_routine.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I go\"?",
-          "choices": [
-            "immur",
-            "tkellem",
-            "agħmel"
-          ],
-          "answer": "immur",
-          "explanation": "immur means \"I go\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "immur",
-            "english": "I go",
-            "example": "Immur ix-xogħol filgħodu."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-immur-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-immur"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I go\".",
-          "answer": "immur",
-          "accepted": [
-            "immur"
-          ],
-          "explanation": "The Maltese answer is immur.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "immur",
-            "english": "I go",
-            "example": "Immur ix-xogħol filgħodu."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-immur-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-immur"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        }
-      }
-    },
-    {
       "id": "site-daily-routine-daily-routine-core-inqum",
       "level": "Site",
       "category": "verbs",
@@ -6384,68 +6322,6 @@
           "assessmentMode": "production",
           "coverageIds": [
             "site-daily-routine-daily-routine-core-nahdem"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        }
-      }
-    },
-    {
-      "id": "site-daily-routine-daily-routine-core-niekol",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Everyday verbs for a normal day",
-      "title": "niekol",
-      "maltese": "niekol",
-      "english": "I eat",
-      "sourceKind": "site-bank",
-      "sourcePage": "daily_routine.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I eat\"?",
-          "choices": [
-            "niekol",
-            "jilgħab",
-            "jixrob"
-          ],
-          "answer": "niekol",
-          "explanation": "niekol means \"I eat\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "niekol",
-            "english": "I eat",
-            "example": "F'nofsinhar niekol soppa."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-niekol-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-niekol"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I eat\".",
-          "answer": "niekol",
-          "accepted": [
-            "niekol"
-          ],
-          "explanation": "The Maltese answer is niekol.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "niekol",
-            "english": "I eat",
-            "example": "F'nofsinhar niekol soppa."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-niekol-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-niekol"
           ],
           "category": "verbs",
           "ruleId": "",
@@ -6698,250 +6574,6 @@
           "category": "verbs",
           "ruleId": "",
           "sourcePage": "daily_routine.html"
-        }
-      }
-    },
-    {
-      "id": "site-daily-routine-daily-routine-core-noqghod",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Everyday verbs for a normal day",
-      "title": "noqgħod",
-      "maltese": "noqgħod",
-      "english": "I live / stay",
-      "sourceKind": "site-bank",
-      "sourcePage": "daily_routine.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I live / stay\"?",
-          "choices": [
-            "noqgħod",
-            "jiena",
-            "jisimha"
-          ],
-          "answer": "noqgħod",
-          "explanation": "noqgħod means \"I live / stay\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "noqgħod",
-            "english": "I live / stay",
-            "example": "Noqgħod Malta."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-noqghod-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-noqghod"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I live / stay\".",
-          "answer": "noqgħod",
-          "accepted": [
-            "noqgħod"
-          ],
-          "explanation": "The Maltese answer is noqgħod.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "noqgħod",
-            "english": "I live / stay",
-            "example": "Noqgħod Malta."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-noqghod-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-noqghod"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        }
-      }
-    },
-    {
-      "id": "site-daily-routine-daily-routine-core-norqod",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Everyday verbs for a normal day",
-      "title": "norqod",
-      "maltese": "norqod",
-      "english": "I sleep",
-      "sourceKind": "site-bank",
-      "sourcePage": "daily_routine.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I sleep\"?",
-          "choices": [
-            "norqod",
-            "waddbu",
-            "nissepara"
-          ],
-          "answer": "norqod",
-          "explanation": "norqod means \"I sleep\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "norqod",
-            "english": "I sleep",
-            "example": "Bil-lejl norqod id-dar."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-norqod-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-norqod"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I sleep\".",
-          "answer": "norqod",
-          "accepted": [
-            "norqod"
-          ],
-          "explanation": "The Maltese answer is norqod.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "norqod",
-            "english": "I sleep",
-            "example": "Bil-lejl norqod id-dar."
-          },
-          "id": "coverage-site-daily-routine-daily-routine-core-norqod-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-daily-routine-daily-routine-core-norqod"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "daily_routine.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-ghamel-imperative-7",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "għamel / imperative",
-      "title": "agħmel",
-      "maltese": "agħmel",
-      "english": "do / make (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"do / make (singular command)\" for għamel?",
-          "choices": [
-            "agħmel",
-            "nagħmel",
-            "tagħmel"
-          ],
-          "answer": "agħmel",
-          "explanation": "agħmel is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħmel",
-            "english": "do / make (singular command)"
-          },
-          "id": "coverage-verb-b2-ghamel-imperative-7-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-ghamel-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"do / make (singular command)\" (għamel).",
-          "answer": "agħmel",
-          "accepted": [
-            "agħmel"
-          ],
-          "explanation": "agħmel is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħmel",
-            "english": "do / make (singular command)"
-          },
-          "id": "coverage-verb-b2-ghamel-imperative-7-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-ghamel-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-ghamel-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "għamel / imperative",
-      "title": "agħmlu",
-      "maltese": "agħmlu",
-      "english": "do / make (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"do / make (plural command)\" for għamel?",
-          "choices": [
-            "agħmlu",
-            "nagħmel",
-            "tagħmel"
-          ],
-          "answer": "agħmlu",
-          "explanation": "agħmlu is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħmlu",
-            "english": "do / make (plural command)"
-          },
-          "id": "coverage-verb-b2-ghamel-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-ghamel-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"do / make (plural command)\" (għamel).",
-          "answer": "agħmlu",
-          "accepted": [
-            "agħmlu"
-          ],
-          "explanation": "agħmlu is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħmlu",
-            "english": "do / make (plural command)"
-          },
-          "id": "coverage-verb-b2-ghamel-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-ghamel-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
         }
       }
     },
@@ -7718,126 +7350,6 @@
           "assessmentMode": "production",
           "coverageIds": [
             "verb-b1-ghandu-present-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-ghazel-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "għażel / imperative",
-      "title": "agħżel",
-      "maltese": "agħżel",
-      "english": "choose (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"choose (singular command)\" for għażel?",
-          "choices": [
-            "agħżel",
-            "għażel",
-            "nagħżel"
-          ],
-          "answer": "agħżel",
-          "explanation": "agħżel is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħżel",
-            "english": "choose (singular command)"
-          },
-          "id": "coverage-verb-b2-ghazel-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-ghazel-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"choose (singular command)\" (għażel).",
-          "answer": "agħżel",
-          "accepted": [
-            "agħżel"
-          ],
-          "explanation": "agħżel is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħżel",
-            "english": "choose (singular command)"
-          },
-          "id": "coverage-verb-b2-ghazel-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-ghazel-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-ghazel-imperative-9",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "għażel / imperative",
-      "title": "agħżlu",
-      "maltese": "agħżlu",
-      "english": "choose (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"choose (plural command)\" for għażel?",
-          "choices": [
-            "agħżlu",
-            "għażel",
-            "nagħżel"
-          ],
-          "answer": "agħżlu",
-          "explanation": "agħżlu is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħżlu",
-            "english": "choose (plural command)"
-          },
-          "id": "coverage-verb-b2-ghazel-imperative-9-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-ghazel-imperative-9"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"choose (plural command)\" (għażel).",
-          "answer": "agħżlu",
-          "accepted": [
-            "agħżlu"
-          ],
-          "explanation": "agħżlu is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "agħżlu",
-            "english": "choose (plural command)"
-          },
-          "id": "coverage-verb-b2-ghazel-imperative-9-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-ghazel-imperative-9"
           ],
           "category": "verbs",
           "ruleId": "",
@@ -8986,126 +8498,6 @@
       }
     },
     {
-      "id": "verb-b2-hareg-imperative-7",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "ħareġ / imperative",
-      "title": "oħroġ",
-      "maltese": "oħroġ",
-      "english": "go out (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"go out (singular command)\" for ħareġ?",
-          "choices": [
-            "oħroġ",
-            "noħroġ",
-            "toħroġ"
-          ],
-          "answer": "oħroġ",
-          "explanation": "oħroġ is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "oħroġ",
-            "english": "go out (singular command)"
-          },
-          "id": "coverage-verb-b2-hareg-imperative-7-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-hareg-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"go out (singular command)\" (ħareġ).",
-          "answer": "oħroġ",
-          "accepted": [
-            "oħroġ"
-          ],
-          "explanation": "oħroġ is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "oħroġ",
-            "english": "go out (singular command)"
-          },
-          "id": "coverage-verb-b2-hareg-imperative-7-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-hareg-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-hareg-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "ħareġ / imperative",
-      "title": "oħorġu",
-      "maltese": "oħorġu",
-      "english": "go out (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"go out (plural command)\" for ħareġ?",
-          "choices": [
-            "oħorġu",
-            "noħroġ",
-            "toħroġ"
-          ],
-          "answer": "oħorġu",
-          "explanation": "oħorġu is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "oħorġu",
-            "english": "go out (plural command)"
-          },
-          "id": "coverage-verb-b2-hareg-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-hareg-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"go out (plural command)\" (ħareġ).",
-          "answer": "oħorġu",
-          "accepted": [
-            "oħorġu"
-          ],
-          "explanation": "oħorġu is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "oħorġu",
-            "english": "go out (plural command)"
-          },
-          "id": "coverage-verb-b2-hareg-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-hareg-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
       "id": "verb-b2-hareg-present-1",
       "level": "B2",
       "category": "verbs",
@@ -9607,7 +8999,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-aghmel"
+            "b2-imperative-aghmel",
+            "b2-hobbies-aghmel"
           ],
           "prompt": "True or false: “agħmel” means “one” in this chapter.",
           "answer": false,
@@ -9627,7 +9020,8 @@
           "id": "coverage-b2-imperative-aghmel-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-imperative-aghmel"
+            "b2-imperative-aghmel",
+            "b2-hobbies-aghmel"
           ],
           "prompt": "Complete the Maltese sentence: “_____ l-eżerċizzju.” (Do the exercise.)",
           "answer": "agħmel",
@@ -10417,7 +9811,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-imperative-ohrog"
+            "b2-imperative-ohrog",
+            "b2-hobbies-ohrog"
           ],
           "prompt": "What is the lesson meaning of “oħroġ”?",
           "choices": [
@@ -10442,7 +9837,8 @@
           "id": "coverage-b2-imperative-ohrog-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-imperative-ohrog"
+            "b2-imperative-ohrog",
+            "b2-hobbies-ohrog"
           ],
           "prompt": "Complete the Maltese sentence: “_____ barra.” (Go outside.)",
           "answer": "oħroġ",
@@ -10837,126 +10233,6 @@
           "category": "verbs",
           "ruleId": "",
           "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-issepara-imperative-7",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "issepara / imperative",
-      "title": "issepara",
-      "maltese": "issepara",
-      "english": "separate (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"separate (singular command)\" for issepara?",
-          "choices": [
-            "issepara",
-            "nissepara",
-            "tissepara"
-          ],
-          "answer": "issepara",
-          "explanation": "issepara is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "issepara",
-            "english": "separate (singular command)"
-          },
-          "id": "coverage-verb-b2-issepara-imperative-7-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-issepara-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"separate (singular command)\" (issepara).",
-          "answer": "issepara",
-          "accepted": [
-            "issepara"
-          ],
-          "explanation": "issepara is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "issepara",
-            "english": "separate (singular command)"
-          },
-          "id": "coverage-verb-b2-issepara-imperative-7-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-issepara-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-issepara-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "issepara / imperative",
-      "title": "isseparaw",
-      "maltese": "isseparaw",
-      "english": "separate (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"separate (plural command)\" for issepara?",
-          "choices": [
-            "isseparaw",
-            "nissepara",
-            "tissepara"
-          ],
-          "answer": "isseparaw",
-          "explanation": "isseparaw is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "isseparaw",
-            "english": "separate (plural command)"
-          },
-          "id": "coverage-verb-b2-issepara-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-issepara-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"separate (plural command)\" (issepara).",
-          "answer": "isseparaw",
-          "accepted": [
-            "isseparaw"
-          ],
-          "explanation": "isseparaw is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "isseparaw",
-            "english": "separate (plural command)"
-          },
-          "id": "coverage-verb-b2-issepara-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-issepara-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
         }
       }
     },
@@ -12281,68 +11557,6 @@
           "assessmentMode": "production",
           "coverageIds": [
             "site-hobbies-future-hobby-actions-nikteb"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "hobbies_future.html"
-        }
-      }
-    },
-    {
-      "id": "site-hobbies-future-hobby-actions-nilghab",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Leisure activities",
-      "title": "nilgħab",
-      "maltese": "nilgħab",
-      "english": "I play",
-      "sourceKind": "site-bank",
-      "sourcePage": "hobbies_future.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I play\"?",
-          "choices": [
-            "nilgħab",
-            "ilbsu",
-            "għamel"
-          ],
-          "answer": "nilgħab",
-          "explanation": "nilgħab means \"I play\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "nilgħab",
-            "english": "I play",
-            "example": "Nilgħab it-tenis is-Sibt."
-          },
-          "id": "coverage-site-hobbies-future-hobby-actions-nilghab-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-hobbies-future-hobby-actions-nilghab"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "hobbies_future.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I play\".",
-          "answer": "nilgħab",
-          "accepted": [
-            "nilgħab"
-          ],
-          "explanation": "The Maltese answer is nilgħab.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "nilgħab",
-            "english": "I play",
-            "example": "Nilgħab it-tenis is-Sibt."
-          },
-          "id": "coverage-site-hobbies-future-hobby-actions-nilghab-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-hobbies-future-hobby-actions-nilghab"
           ],
           "category": "verbs",
           "ruleId": "",
@@ -15509,126 +14723,6 @@
       }
     },
     {
-      "id": "verb-b2-rema-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "rema / imperative",
-      "title": "armi",
-      "maltese": "armi",
-      "english": "throw away (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"throw away (singular command)\" for rema?",
-          "choices": [
-            "armi",
-            "rema",
-            "narmi"
-          ],
-          "answer": "armi",
-          "explanation": "armi is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "armi",
-            "english": "throw away (singular command)"
-          },
-          "id": "coverage-verb-b2-rema-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-rema-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"throw away (singular command)\" (rema).",
-          "answer": "armi",
-          "accepted": [
-            "armi"
-          ],
-          "explanation": "armi is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "armi",
-            "english": "throw away (singular command)"
-          },
-          "id": "coverage-verb-b2-rema-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-rema-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-rema-imperative-9",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "rema / imperative",
-      "title": "armu",
-      "maltese": "armu",
-      "english": "throw away (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"throw away (plural command)\" for rema?",
-          "choices": [
-            "armu",
-            "rema",
-            "narmi"
-          ],
-          "answer": "armu",
-          "explanation": "armu is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "armu",
-            "english": "throw away (plural command)"
-          },
-          "id": "coverage-verb-b2-rema-imperative-9-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-rema-imperative-9"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"throw away (plural command)\" (rema).",
-          "answer": "armu",
-          "accepted": [
-            "armu"
-          ],
-          "explanation": "armu is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "armu",
-            "english": "throw away (plural command)"
-          },
-          "id": "coverage-verb-b2-rema-imperative-9-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-rema-imperative-9"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
       "id": "verb-b2-rema-past-1",
       "level": "B2",
       "category": "verbs",
@@ -16545,68 +15639,6 @@
       }
     },
     {
-      "id": "site-environment-recycling-recycling-actions-narmi",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Useful recycling actions",
-      "title": "narmi",
-      "maltese": "narmi",
-      "english": "I throw away",
-      "sourceKind": "site-bank",
-      "sourcePage": "environment_recycling.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I throw away\"?",
-          "choices": [
-            "narmi",
-            "balena",
-            "delfin"
-          ],
-          "answer": "narmi",
-          "explanation": "narmi means \"I throw away\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "narmi",
-            "english": "I throw away",
-            "example": "Narmi l-iskart fil-kontenitur it-tajjeb."
-          },
-          "id": "coverage-site-environment-recycling-recycling-actions-narmi-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-environment-recycling-recycling-actions-narmi"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "environment_recycling.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I throw away\".",
-          "answer": "narmi",
-          "accepted": [
-            "narmi"
-          ],
-          "explanation": "The Maltese answer is narmi.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "narmi",
-            "english": "I throw away",
-            "example": "Narmi l-iskart fil-kontenitur it-tajjeb."
-          },
-          "id": "coverage-site-environment-recycling-recycling-actions-narmi-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-environment-recycling-recycling-actions-narmi"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "environment_recycling.html"
-        }
-      }
-    },
-    {
       "id": "site-environment-recycling-recycling-actions-nerggha-nuza",
       "level": "Site",
       "category": "verbs",
@@ -16731,68 +15763,6 @@
       }
     },
     {
-      "id": "site-environment-recycling-recycling-actions-nissepara",
-      "level": "Site",
-      "category": "verbs",
-      "kind": "vocabulary",
-      "topic": "Useful recycling actions",
-      "title": "nissepara",
-      "maltese": "nissepara",
-      "english": "I separate",
-      "sourceKind": "site-bank",
-      "sourcePage": "environment_recycling.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I separate\"?",
-          "choices": [
-            "nissepara",
-            "tifforma",
-            "tikteb"
-          ],
-          "answer": "nissepara",
-          "explanation": "nissepara means \"I separate\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "nissepara",
-            "english": "I separate",
-            "example": "Nissepara l-iskart kuljum."
-          },
-          "id": "coverage-site-environment-recycling-recycling-actions-nissepara-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-environment-recycling-recycling-actions-nissepara"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "environment_recycling.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I separate\".",
-          "answer": "nissepara",
-          "accepted": [
-            "nissepara"
-          ],
-          "explanation": "The Maltese answer is nissepara.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "nissepara",
-            "english": "I separate",
-            "example": "Nissepara l-iskart kuljum."
-          },
-          "id": "coverage-site-environment-recycling-recycling-actions-nissepara-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-environment-recycling-recycling-actions-nissepara"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "environment_recycling.html"
-        }
-      }
-    },
-    {
       "id": "site-environment-recycling-recycling-actions-nohrog-il-borza",
       "level": "Site",
       "category": "verbs",
@@ -16851,126 +15821,6 @@
           "category": "verbs",
           "ruleId": "",
           "sourcePage": "environment_recycling.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-uza-imperative-7",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "uża / imperative",
-      "title": "uża",
-      "maltese": "uża",
-      "english": "use (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"use (singular command)\" for uża?",
-          "choices": [
-            "uża",
-            "nuża",
-            "tuża"
-          ],
-          "answer": "uża",
-          "explanation": "uża is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "uża",
-            "english": "use (singular command)"
-          },
-          "id": "coverage-verb-b2-uza-imperative-7-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-uza-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"use (singular command)\" (uża).",
-          "answer": "uża",
-          "accepted": [
-            "uża"
-          ],
-          "explanation": "uża is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "uża",
-            "english": "use (singular command)"
-          },
-          "id": "coverage-verb-b2-uza-imperative-7-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-uza-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-uza-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "uża / imperative",
-      "title": "użaw",
-      "maltese": "użaw",
-      "english": "use (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"use (plural command)\" for uża?",
-          "choices": [
-            "użaw",
-            "nuża",
-            "tuża"
-          ],
-          "answer": "użaw",
-          "explanation": "użaw is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "użaw",
-            "english": "use (plural command)"
-          },
-          "id": "coverage-verb-b2-uza-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-uza-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"use (plural command)\" (uża).",
-          "answer": "użaw",
-          "accepted": [
-            "użaw"
-          ],
-          "explanation": "użaw is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "użaw",
-            "english": "use (plural command)"
-          },
-          "id": "coverage-verb-b2-uza-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-uza-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
         }
       }
     },
@@ -17335,126 +16185,6 @@
       }
     },
     {
-      "id": "verb-b2-waddab-imperative-7",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "waddab / imperative",
-      "title": "waddab",
-      "maltese": "waddab",
-      "english": "throw (singular command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"throw (singular command)\" for waddab?",
-          "choices": [
-            "waddab",
-            "nwaddab",
-            "twaddab"
-          ],
-          "answer": "waddab",
-          "explanation": "waddab is the int imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "waddab",
-            "english": "throw (singular command)"
-          },
-          "id": "coverage-verb-b2-waddab-imperative-7-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-waddab-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"throw (singular command)\" (waddab).",
-          "answer": "waddab",
-          "accepted": [
-            "waddab"
-          ],
-          "explanation": "waddab is the int imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "waddab",
-            "english": "throw (singular command)"
-          },
-          "id": "coverage-verb-b2-waddab-imperative-7-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-waddab-imperative-7"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "verb-b2-waddab-imperative-8",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "waddab / imperative",
-      "title": "waddbu",
-      "maltese": "waddbu",
-      "english": "throw (plural command)",
-      "sourceKind": "verb-paradigm",
-      "sourcePage": "verbs_guide.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese form means \"throw (plural command)\" for waddab?",
-          "choices": [
-            "waddbu",
-            "nwaddab",
-            "twaddab"
-          ],
-          "answer": "waddbu",
-          "explanation": "waddbu is the intom imperative form in this paradigm.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "waddbu",
-            "english": "throw (plural command)"
-          },
-          "id": "coverage-verb-b2-waddab-imperative-8-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "verb-b2-waddab-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese form for \"throw (plural command)\" (waddab).",
-          "answer": "waddbu",
-          "accepted": [
-            "waddbu"
-          ],
-          "explanation": "waddbu is the intom imperative form.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "waddbu",
-            "english": "throw (plural command)"
-          },
-          "id": "coverage-verb-b2-waddab-imperative-8-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "verb-b2-waddab-imperative-8"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
       "id": "verb-b2-waddab-present-1",
       "level": "B2",
       "category": "verbs",
@@ -17811,71 +16541,6 @@
           "category": "verbs",
           "ruleId": "",
           "sourcePage": "verbs_guide.html"
-        }
-      }
-    },
-    {
-      "id": "b2-hobbies-aghmel",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "Xi Nħobb Nagħmel",
-      "title": "agħmel",
-      "maltese": "agħmel",
-      "english": "do / make (singular command)",
-      "sourceKind": "book-course",
-      "sourcePage": "imperative_verbs.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-hobbies-aghmel-recognition",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-hobbies-aghmel"
-          ],
-          "prompt": "What is the lesson meaning of “agħmel”?",
-          "choices": [
-            "do / make (plural command)",
-            "use (singular command)",
-            "do / make (singular command)"
-          ],
-          "answer": "do / make (singular command)",
-          "explanation": "agħmel means “do / make (singular command)” in this chapter.",
-          "reviewCard": {
-            "maltese": "agħmel",
-            "english": "do / make (singular command)"
-          },
-          "coverageIds": [
-            "b2-hobbies-aghmel"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "imperative_verbs.html"
-        },
-        "production": {
-          "id": "coverage-b2-hobbies-aghmel-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-hobbies-aghmel"
-          ],
-          "prompt": "Complete the Maltese sentence: “_____ l-eżerċizzju.” (Do the exercise.)",
-          "answer": "agħmel",
-          "explanation": "The complete sentence is “Agħmel l-eżerċizzju.”",
-          "reviewCard": {
-            "maltese": "agħmel",
-            "english": "do / make (singular command)",
-            "example": "Agħmel l-eżerċizzju."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "agħmel"
-          ],
-          "coverageIds": [
-            "b2-hobbies-aghmel"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "imperative_verbs.html"
         }
       }
     },
@@ -18436,71 +17101,6 @@
           "category": "verbs",
           "ruleId": "",
           "sourcePage": "imperative_verbs.html"
-        }
-      }
-    },
-    {
-      "id": "b2-hobbies-ohrog",
-      "level": "B2",
-      "category": "verbs",
-      "kind": "verb-form",
-      "topic": "Xi Nħobb Nagħmel",
-      "title": "oħroġ",
-      "maltese": "oħroġ",
-      "english": "go out (singular command)",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-hobbies-ohrog-recognition",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-hobbies-ohrog"
-          ],
-          "prompt": "What is the lesson meaning of “oħroġ”?",
-          "choices": [
-            "I will go",
-            "go out (singular command)",
-            "I will wear"
-          ],
-          "answer": "go out (singular command)",
-          "explanation": "oħroġ means “go out (singular command)” in this chapter.",
-          "reviewCard": {
-            "maltese": "oħroġ",
-            "english": "go out (singular command)"
-          },
-          "coverageIds": [
-            "b2-hobbies-ohrog"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-hobbies-ohrog-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-hobbies-ohrog"
-          ],
-          "prompt": "Complete the Maltese sentence: “_____ mal-ħbieb.” (Go out with friends.)",
-          "answer": "oħroġ",
-          "explanation": "The complete sentence is “Oħroġ mal-ħbieb.”",
-          "reviewCard": {
-            "maltese": "oħroġ",
-            "english": "go out (singular command)",
-            "example": "Oħroġ mal-ħbieb."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "oħroġ"
-          ],
-          "coverageIds": [
-            "b2-hobbies-ohrog"
-          ],
-          "category": "verbs",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
         }
       }
     },
@@ -19804,66 +18404,6 @@
           ],
           "coverageIds": [
             "b2-imperative-disgha"
-          ],
-          "category": "numbers-time",
-          "ruleId": "",
-          "sourcePage": "numbers_calendar_time.html"
-        }
-      }
-    },
-    {
-      "id": "b2-imperative-erbgha",
-      "level": "B2",
-      "category": "numbers-time",
-      "kind": "vocabulary",
-      "topic": "Iftaħ il-Ktieb u Aqra",
-      "title": "erbgħa",
-      "maltese": "erbgħa",
-      "english": "four",
-      "sourceKind": "book-course",
-      "sourcePage": "numbers_calendar_time.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-imperative-erbgha-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-imperative-erbgha"
-          ],
-          "prompt": "True or false: “erbgħa” means “five” in this chapter.",
-          "answer": false,
-          "explanation": "erbgħa means “four”.",
-          "reviewCard": {
-            "maltese": "erbgħa",
-            "english": "four"
-          },
-          "coverageIds": [
-            "b2-imperative-erbgha"
-          ],
-          "category": "numbers-time",
-          "ruleId": "",
-          "sourcePage": "numbers_calendar_time.html"
-        },
-        "production": {
-          "id": "coverage-b2-imperative-erbgha-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-imperative-erbgha"
-          ],
-          "prompt": "Complete the Maltese sentence: “In-numru huwa _____.” (The number is four.)",
-          "answer": "erbgħa",
-          "explanation": "The complete sentence is “In-numru huwa erbgħa.”",
-          "reviewCard": {
-            "maltese": "erbgħa",
-            "english": "four",
-            "example": "In-numru huwa erbgħa."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "erbgħa"
-          ],
-          "coverageIds": [
-            "b2-imperative-erbgha"
           ],
           "category": "numbers-time",
           "ruleId": "",
@@ -37731,7 +36271,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-residence-knisja"
+            "b1-residence-knisja",
+            "b2-town-knisja"
           ],
           "prompt": "What is the lesson meaning of “knisja”?",
           "choices": [
@@ -37756,7 +36297,8 @@
           "id": "coverage-b1-residence-knisja-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-residence-knisja"
+            "b1-residence-knisja",
+            "b2-town-knisja"
           ],
           "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The church is near the house.)",
           "answer": "knisja",
@@ -39232,7 +37774,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-karta"
+            "b2-school-bag-karta",
+            "b2-recycling-karta"
           ],
           "prompt": "What is the lesson meaning of “karta”?",
           "choices": [
@@ -39257,7 +37800,8 @@
           "id": "coverage-b2-school-bag-karta-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-school-bag-karta"
+            "b2-school-bag-karta",
+            "b2-recycling-karta"
           ],
           "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the paper.)",
           "answer": "karta",
@@ -39922,7 +38466,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-mahmuga"
+            "b2-school-bag-mahmuga",
+            "b2-recycling-mahmuga"
           ],
           "prompt": "What is the lesson meaning of “maħmuġa”?",
           "choices": [
@@ -39947,7 +38492,8 @@
           "id": "coverage-b2-school-bag-mahmuga-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-school-bag-mahmuga"
+            "b2-school-bag-mahmuga",
+            "b2-recycling-mahmuga"
           ],
           "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is dirty.)",
           "answer": "maħmuġa",
@@ -40237,7 +38783,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-nadif"
+            "b2-school-bag-nadif",
+            "b2-recycling-nadif"
           ],
           "prompt": "True or false: “nadif” means “clean (plural)” in this chapter.",
           "answer": false,
@@ -40257,7 +38804,8 @@
           "id": "coverage-b2-school-bag-nadif-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-school-bag-nadif"
+            "b2-school-bag-nadif",
+            "b2-recycling-nadif"
           ],
           "prompt": "Complete the Maltese sentence: “Il-ktieb huwa _____.” (The book is clean.)",
           "answer": "nadif",
@@ -40297,7 +38845,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-nadifa"
+            "b2-school-bag-nadifa",
+            "b2-recycling-nadifa"
           ],
           "prompt": "What is the lesson meaning of “nadifa”?",
           "choices": [
@@ -40322,7 +38871,8 @@
           "id": "coverage-b2-school-bag-nadifa-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-school-bag-nadifa"
+            "b2-school-bag-nadifa",
+            "b2-recycling-nadifa"
           ],
           "prompt": "Complete the Maltese sentence: “Il-karta hija _____.” (The paper is clean.)",
           "answer": "nadifa",
@@ -40362,7 +38912,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b2-school-bag-nodfa"
+            "b2-school-bag-nodfa",
+            "b2-recycling-nodfa"
           ],
           "prompt": "True or false: “nodfa” means “apply the regular, reduced, or assimilated definite article” in this chapter.",
           "answer": false,
@@ -40382,7 +38933,8 @@
           "id": "coverage-b2-school-bag-nodfa-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b2-school-bag-nodfa"
+            "b2-school-bag-nodfa",
+            "b2-recycling-nodfa"
           ],
           "prompt": "Complete the Maltese sentence: “Il-kotba huma _____.” (The books are clean.)",
           "answer": "nodfa",
@@ -42102,66 +40654,6 @@
       }
     },
     {
-      "id": "b2-town-knisja",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Fil-Pjazza",
-      "title": "knisja",
-      "maltese": "knisja",
-      "english": "church",
-      "sourceKind": "book-course",
-      "sourcePage": "directions_town.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-town-knisja-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-town-knisja"
-          ],
-          "prompt": "True or false: “knisja” means “post office” in this chapter.",
-          "answer": false,
-          "explanation": "knisja means “church”.",
-          "reviewCard": {
-            "maltese": "knisja",
-            "english": "church"
-          },
-          "coverageIds": [
-            "b2-town-knisja"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "directions_town.html"
-        },
-        "production": {
-          "id": "coverage-b2-town-knisja-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-town-knisja"
-          ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The church is in the square.)",
-          "answer": "knisja",
-          "explanation": "The complete sentence is “Hemm knisja fil-pjazza.”",
-          "reviewCard": {
-            "maltese": "knisja",
-            "english": "church",
-            "example": "Hemm knisja fil-pjazza."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "knisja"
-          ],
-          "coverageIds": [
-            "b2-town-knisja"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "directions_town.html"
-        }
-      }
-    },
-    {
       "id": "b2-town-lukanda",
       "level": "B2",
       "category": "vocabulary",
@@ -42539,66 +41031,6 @@
       }
     },
     {
-      "id": "b2-town-pjazza",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Fil-Pjazza",
-      "title": "pjazza",
-      "maltese": "pjazza",
-      "english": "square / piazza",
-      "sourceKind": "book-course",
-      "sourcePage": "directions_town.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-town-pjazza-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-town-pjazza"
-          ],
-          "prompt": "True or false: “pjazza” means “hotel” in this chapter.",
-          "answer": false,
-          "explanation": "pjazza means “square / piazza”.",
-          "reviewCard": {
-            "maltese": "pjazza",
-            "english": "square / piazza"
-          },
-          "coverageIds": [
-            "b2-town-pjazza"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "directions_town.html"
-        },
-        "production": {
-          "id": "coverage-b2-town-pjazza-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-town-pjazza"
-          ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The square is in the square.)",
-          "answer": "pjazza",
-          "explanation": "The complete sentence is “Hemm pjazza fil-pjazza.”",
-          "reviewCard": {
-            "maltese": "pjazza",
-            "english": "square / piazza",
-            "example": "Hemm pjazza fil-pjazza."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "pjazza"
-          ],
-          "coverageIds": [
-            "b2-town-pjazza"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "directions_town.html"
-        }
-      }
-    },
-    {
       "id": "b2-town-posta",
       "level": "B2",
       "category": "vocabulary",
@@ -42656,66 +41088,6 @@
           ],
           "coverageIds": [
             "b2-town-posta"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-town-restorant",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Fil-Pjazza",
-      "title": "restorant",
-      "maltese": "restorant",
-      "english": "restaurant",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-town-restorant-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-town-restorant"
-          ],
-          "prompt": "True or false: “restorant” means “Local Council office” in this chapter.",
-          "answer": false,
-          "explanation": "restorant means “restaurant”.",
-          "reviewCard": {
-            "maltese": "restorant",
-            "english": "restaurant"
-          },
-          "coverageIds": [
-            "b2-town-restorant"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-town-restorant-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-town-restorant"
-          ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-pjazza.” (The restaurant is in the square.)",
-          "answer": "restorant",
-          "explanation": "The complete sentence is “Hemm restorant fil-pjazza.”",
-          "reviewCard": {
-            "maltese": "restorant",
-            "english": "restaurant",
-            "example": "Hemm restorant fil-pjazza."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "restorant"
-          ],
-          "coverageIds": [
-            "b2-town-restorant"
           ],
           "category": "vocabulary",
           "ruleId": "",
@@ -47287,7 +45659,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-pjazza"
+            "b1-family-pjazza",
+            "b2-town-pjazza"
           ],
           "prompt": "What is the lesson meaning of “pjazza”?",
           "choices": [
@@ -47312,7 +45685,8 @@
           "id": "coverage-b1-family-pjazza-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-family-pjazza"
+            "b1-family-pjazza",
+            "b2-town-pjazza"
           ],
           "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The square is near the house.)",
           "answer": "pjazza",
@@ -47352,7 +45726,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-family-restorant"
+            "b1-family-restorant",
+            "b2-town-restorant"
           ],
           "prompt": "True or false: “restorant” means “Good morning.” in this chapter.",
           "answer": false,
@@ -47372,7 +45747,8 @@
           "id": "coverage-b1-family-restorant-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-family-restorant"
+            "b1-family-restorant",
+            "b2-town-restorant"
           ],
           "prompt": "Complete the Maltese sentence: “Hemm _____ qrib id-dar.” (The restaurant is near the house.)",
           "answer": "restorant",
@@ -47712,66 +46088,6 @@
       }
     },
     {
-      "id": "b1-family-ziju",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Il-Familja",
-      "title": "ziju",
-      "maltese": "ziju",
-      "english": "uncle",
-      "sourceKind": "book-course",
-      "sourcePage": "family_home_food.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-family-ziju-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-family-ziju"
-          ],
-          "prompt": "True or false: “ziju” means “aunt” in this chapter.",
-          "answer": false,
-          "explanation": "ziju means “uncle”.",
-          "reviewCard": {
-            "maltese": "ziju",
-            "english": "uncle"
-          },
-          "coverageIds": [
-            "b1-family-ziju"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "family_home_food.html"
-        },
-        "production": {
-          "id": "coverage-b1-family-ziju-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-family-ziju"
-          ],
-          "prompt": "Complete the Maltese sentence: “Għandi _____ fil-familja.” (My family includes the uncle.)",
-          "answer": "ziju",
-          "explanation": "The complete sentence is “Għandi ziju fil-familja.”",
-          "reviewCard": {
-            "maltese": "ziju",
-            "english": "uncle",
-            "example": "Għandi ziju fil-familja."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "ziju"
-          ],
-          "coverageIds": [
-            "b1-family-ziju"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "family_home_food.html"
-        }
-      }
-    },
-    {
       "id": "b2-clothes-boots",
       "level": "B2",
       "category": "vocabulary",
@@ -47824,71 +46140,6 @@
           ],
           "coverageIds": [
             "b2-clothes-boots"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-clothes-dublett",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Il-Ħwejjeġ",
-      "title": "dublett",
-      "maltese": "dublett",
-      "english": "skirt",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-clothes-dublett-recognition",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-clothes-dublett"
-          ],
-          "prompt": "What is the lesson meaning of “dublett”?",
-          "choices": [
-            "denim jacket",
-            "skirt",
-            "short-sleeved shirt"
-          ],
-          "answer": "skirt",
-          "explanation": "dublett means “skirt” in this chapter.",
-          "reviewCard": {
-            "maltese": "dublett",
-            "english": "skirt"
-          },
-          "coverageIds": [
-            "b2-clothes-dublett"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-clothes-dublett-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-clothes-dublett"
-          ],
-          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the skirt.)",
-          "answer": "dublett",
-          "explanation": "The complete sentence is “Illum se nilbes dublett.”",
-          "reviewCard": {
-            "maltese": "dublett",
-            "english": "skirt",
-            "example": "Illum se nilbes dublett."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "dublett"
-          ],
-          "coverageIds": [
-            "b2-clothes-dublett"
           ],
           "category": "vocabulary",
           "ruleId": "",
@@ -48340,66 +46591,6 @@
       }
     },
     {
-      "id": "b2-clothes-glekk",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Il-Ħwejjeġ",
-      "title": "ġlekk",
-      "maltese": "ġlekk",
-      "english": "jacket",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-clothes-glekk-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-clothes-glekk"
-          ],
-          "prompt": "True or false: “ġlekk” means “boots” in this chapter.",
-          "answer": false,
-          "explanation": "ġlekk means “jacket”.",
-          "reviewCard": {
-            "maltese": "ġlekk",
-            "english": "jacket"
-          },
-          "coverageIds": [
-            "b2-clothes-glekk"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-clothes-glekk-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-clothes-glekk"
-          ],
-          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the jacket.)",
-          "answer": "ġlekk",
-          "explanation": "The complete sentence is “Illum se nilbes ġlekk.”",
-          "reviewCard": {
-            "maltese": "ġlekk",
-            "english": "jacket",
-            "example": "Illum se nilbes ġlekk."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "ġlekk"
-          ],
-          "coverageIds": [
-            "b2-clothes-glekk"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
       "id": "b2-clothes-kappell",
       "level": "B2",
       "category": "vocabulary",
@@ -48647,71 +46838,6 @@
           "category": "vocabulary",
           "ruleId": "",
           "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-clothes-qalziet",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Il-Ħwejjeġ",
-      "title": "qalziet",
-      "maltese": "qalziet",
-      "english": "trousers",
-      "sourceKind": "book-course",
-      "sourcePage": "shopping_clothes.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-clothes-qalziet-recognition",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-clothes-qalziet"
-          ],
-          "prompt": "What is the lesson meaning of “qalziet”?",
-          "choices": [
-            "eleven",
-            "trousers",
-            "scarf"
-          ],
-          "answer": "trousers",
-          "explanation": "qalziet means “trousers” in this chapter.",
-          "reviewCard": {
-            "maltese": "qalziet",
-            "english": "trousers"
-          },
-          "coverageIds": [
-            "b2-clothes-qalziet"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "shopping_clothes.html"
-        },
-        "production": {
-          "id": "coverage-b2-clothes-qalziet-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-clothes-qalziet"
-          ],
-          "prompt": "Complete the Maltese sentence: “Illum se nilbes _____.” (Today I will wear the trousers.)",
-          "answer": "qalziet",
-          "explanation": "The complete sentence is “Illum se nilbes qalziet.”",
-          "reviewCard": {
-            "maltese": "qalziet",
-            "english": "trousers",
-            "example": "Illum se nilbes qalziet."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "qalziet"
-          ],
-          "coverageIds": [
-            "b2-clothes-qalziet"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "shopping_clothes.html"
         }
       }
     },
@@ -52839,71 +50965,6 @@
       }
     },
     {
-      "id": "b2-weather-rebbiegha",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "It-Temp",
-      "title": "rebbiegħa",
-      "maltese": "rebbiegħa",
-      "english": "spring",
-      "sourceKind": "book-course",
-      "sourcePage": "weather.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-weather-rebbiegha-recognition",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-weather-rebbiegha"
-          ],
-          "prompt": "What is the lesson meaning of “rebbiegħa”?",
-          "choices": [
-            "summer",
-            "autumn",
-            "spring"
-          ],
-          "answer": "spring",
-          "explanation": "rebbiegħa means “spring” in this chapter.",
-          "reviewCard": {
-            "maltese": "rebbiegħa",
-            "english": "spring"
-          },
-          "coverageIds": [
-            "b2-weather-rebbiegha"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "weather.html"
-        },
-        "production": {
-          "id": "coverage-b2-weather-rebbiegha-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-weather-rebbiegha"
-          ],
-          "prompt": "Complete the Maltese sentence: “L-istaġun favorit tiegħi huwa _____.” (My favourite season is spring.)",
-          "answer": "rebbiegħa",
-          "explanation": "The complete sentence is “L-istaġun favorit tiegħi huwa rebbiegħa.”",
-          "reviewCard": {
-            "maltese": "rebbiegħa",
-            "english": "spring",
-            "example": "L-istaġun favorit tiegħi huwa rebbiegħa."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "rebbiegħa"
-          ],
-          "coverageIds": [
-            "b2-weather-rebbiegha"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "weather.html"
-        }
-      }
-    },
-    {
       "id": "b2-weather-rih",
       "level": "B2",
       "category": "vocabulary",
@@ -54035,7 +52096,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-erbgha"
+            "b1-introductions-erbgha",
+            "b2-imperative-erbgha"
           ],
           "prompt": "What is the lesson meaning of “erbgħa”?",
           "choices": [
@@ -54060,7 +52122,8 @@
           "id": "coverage-b1-introductions-erbgha-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-erbgha"
+            "b1-introductions-erbgha",
+            "b2-imperative-erbgha"
           ],
           "prompt": "Complete the Maltese sentence: “In-numru tat-tweġiba huwa _____.” (The answer number is four.)",
           "answer": "erbgħa",
@@ -54100,7 +52163,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-fenek"
+            "b1-introductions-fenek",
+            "b1-animals-fenek"
           ],
           "prompt": "True or false: “fenek” means “camel” in this chapter.",
           "answer": false,
@@ -54120,7 +52184,8 @@
           "id": "coverage-b1-introductions-fenek-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-fenek"
+            "b1-introductions-fenek",
+            "b1-animals-fenek"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the rabbit in the picture.)",
           "answer": "fenek",
@@ -54345,7 +52410,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-gemel"
+            "b1-introductions-gemel",
+            "b1-animals-gemel"
           ],
           "prompt": "What is the lesson meaning of “ġemel”?",
           "choices": [
@@ -54370,7 +52436,8 @@
           "id": "coverage-b1-introductions-gemel-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-gemel"
+            "b1-introductions-gemel",
+            "b1-animals-gemel"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the camel in the picture.)",
           "answer": "ġemel",
@@ -54655,7 +52722,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ilma"
+            "b1-introductions-ilma",
+            "b1-food-ilma"
           ],
           "prompt": "What is the lesson meaning of “ilma”?",
           "choices": [
@@ -54680,7 +52748,8 @@
           "id": "coverage-b1-introductions-ilma-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-ilma"
+            "b1-introductions-ilma",
+            "b1-food-ilma"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the water in the picture.)",
           "answer": "ilma",
@@ -54785,7 +52854,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-kafe"
+            "b1-introductions-kafe",
+            "b1-food-kafe"
           ],
           "prompt": "True or false: “kafè” means “right” in this chapter.",
           "answer": false,
@@ -54805,7 +52875,8 @@
           "id": "coverage-b1-introductions-kafe-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-kafe"
+            "b1-introductions-kafe",
+            "b1-food-kafe"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the coffee in the picture.)",
           "answer": "kafè",
@@ -55220,7 +53291,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-rebbiegha"
+            "b1-introductions-rebbiegha",
+            "b2-weather-rebbiegha"
           ],
           "prompt": "What is the lesson meaning of “rebbiegħa”?",
           "choices": [
@@ -55245,7 +53317,8 @@
           "id": "coverage-b1-introductions-rebbiegha-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-rebbiegha"
+            "b1-introductions-rebbiegha",
+            "b2-weather-rebbiegha"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the spring in the picture.)",
           "answer": "rebbiegħa",
@@ -55285,7 +53358,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-serp"
+            "b1-introductions-serp",
+            "b1-animals-serp"
           ],
           "prompt": "True or false: “serp” means “treasure” in this chapter.",
           "answer": false,
@@ -55305,7 +53379,8 @@
           "id": "coverage-b1-introductions-serp-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-serp"
+            "b1-introductions-serp",
+            "b1-animals-serp"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the snake in the picture.)",
           "answer": "serp",
@@ -55785,7 +53860,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ziemel"
+            "b1-introductions-ziemel",
+            "b1-animals-ziemel"
           ],
           "prompt": "True or false: “żiemel” means “uncle” in this chapter.",
           "answer": false,
@@ -55805,7 +53881,8 @@
           "id": "coverage-b1-introductions-ziemel-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-ziemel"
+            "b1-introductions-ziemel",
+            "b1-animals-ziemel"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the horse in the picture.)",
           "answer": "żiemel",
@@ -55845,7 +53922,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-introductions-ziju"
+            "b1-introductions-ziju",
+            "b1-family-ziju"
           ],
           "prompt": "What is the lesson meaning of “ziju”?",
           "choices": [
@@ -55870,7 +53948,8 @@
           "id": "coverage-b1-introductions-ziju-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-introductions-ziju"
+            "b1-introductions-ziju",
+            "b1-family-ziju"
           ],
           "prompt": "Complete the Maltese sentence: “Nara _____ fl-istampa.” (I see the uncle in the picture.)",
           "answer": "ziju",
@@ -56265,126 +54344,6 @@
           "category": "vocabulary",
           "ruleId": "",
           "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b1-animals-fenek",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "L-Annimali",
-      "title": "fenek",
-      "maltese": "fenek",
-      "english": "rabbit",
-      "sourceKind": "book-course",
-      "sourcePage": "animals.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-animals-fenek-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-animals-fenek"
-          ],
-          "prompt": "True or false: “fenek” means “parrot” in this chapter.",
-          "answer": false,
-          "explanation": "fenek means “rabbit”.",
-          "reviewCard": {
-            "maltese": "fenek",
-            "english": "rabbit"
-          },
-          "coverageIds": [
-            "b1-animals-fenek"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        },
-        "production": {
-          "id": "coverage-b1-animals-fenek-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-animals-fenek"
-          ],
-          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the rabbit in the garden.)",
-          "answer": "fenek",
-          "explanation": "The complete sentence is “Nara fenek fil-ġnien.”",
-          "reviewCard": {
-            "maltese": "fenek",
-            "english": "rabbit",
-            "example": "Nara fenek fil-ġnien."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "fenek"
-          ],
-          "coverageIds": [
-            "b1-animals-fenek"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        }
-      }
-    },
-    {
-      "id": "b1-animals-gemel",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "L-Annimali",
-      "title": "ġemel",
-      "maltese": "ġemel",
-      "english": "camel",
-      "sourceKind": "book-course",
-      "sourcePage": "animals.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-animals-gemel-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-animals-gemel"
-          ],
-          "prompt": "True or false: “ġemel” means “elephant” in this chapter.",
-          "answer": false,
-          "explanation": "ġemel means “camel”.",
-          "reviewCard": {
-            "maltese": "ġemel",
-            "english": "camel"
-          },
-          "coverageIds": [
-            "b1-animals-gemel"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        },
-        "production": {
-          "id": "coverage-b1-animals-gemel-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-animals-gemel"
-          ],
-          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the camel in the garden.)",
-          "answer": "ġemel",
-          "explanation": "The complete sentence is “Nara ġemel fil-ġnien.”",
-          "reviewCard": {
-            "maltese": "ġemel",
-            "english": "camel",
-            "example": "Nara ġemel fil-ġnien."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "ġemel"
-          ],
-          "coverageIds": [
-            "b1-animals-gemel"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
         }
       }
     },
@@ -57339,66 +55298,6 @@
       }
     },
     {
-      "id": "b1-animals-serp",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "L-Annimali",
-      "title": "serp",
-      "maltese": "serp",
-      "english": "snake",
-      "sourceKind": "book-course",
-      "sourcePage": "animals.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-animals-serp-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-animals-serp"
-          ],
-          "prompt": "True or false: “serp” means “dolphin” in this chapter.",
-          "answer": false,
-          "explanation": "serp means “snake”.",
-          "reviewCard": {
-            "maltese": "serp",
-            "english": "snake"
-          },
-          "coverageIds": [
-            "b1-animals-serp"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        },
-        "production": {
-          "id": "coverage-b1-animals-serp-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-animals-serp"
-          ],
-          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the snake in the garden.)",
-          "answer": "serp",
-          "explanation": "The complete sentence is “Nara serp fil-ġnien.”",
-          "reviewCard": {
-            "maltese": "serp",
-            "english": "snake",
-            "example": "Nara serp fil-ġnien."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "serp"
-          ],
-          "coverageIds": [
-            "b1-animals-serp"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        }
-      }
-    },
-    {
       "id": "b1-animals-tigiega",
       "level": "B1",
       "category": "vocabulary",
@@ -57516,66 +55415,6 @@
           ],
           "coverageIds": [
             "b1-animals-xadina"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        }
-      }
-    },
-    {
-      "id": "b1-animals-ziemel",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "L-Annimali",
-      "title": "żiemel",
-      "maltese": "żiemel",
-      "english": "horse",
-      "sourceKind": "book-course",
-      "sourcePage": "animals.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-animals-ziemel-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-animals-ziemel"
-          ],
-          "prompt": "True or false: “żiemel” means “duck” in this chapter.",
-          "answer": false,
-          "explanation": "żiemel means “horse”.",
-          "reviewCard": {
-            "maltese": "żiemel",
-            "english": "horse"
-          },
-          "coverageIds": [
-            "b1-animals-ziemel"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "animals.html"
-        },
-        "production": {
-          "id": "coverage-b1-animals-ziemel-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-animals-ziemel"
-          ],
-          "prompt": "Complete the Maltese sentence: “Nara _____ fil-ġnien.” (I see the horse in the garden.)",
-          "answer": "żiemel",
-          "explanation": "The complete sentence is “Nara żiemel fil-ġnien.”",
-          "reviewCard": {
-            "maltese": "żiemel",
-            "english": "horse",
-            "example": "Nara żiemel fil-ġnien."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "żiemel"
-          ],
-          "coverageIds": [
-            "b1-animals-ziemel"
           ],
           "category": "vocabulary",
           "ruleId": "",
@@ -58640,66 +56479,6 @@
       }
     },
     {
-      "id": "b1-food-ilma",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "L-Ikel",
-      "title": "ilma",
-      "maltese": "ilma",
-      "english": "water",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-food-ilma-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-food-ilma"
-          ],
-          "prompt": "True or false: “ilma” means “rice” in this chapter.",
-          "answer": false,
-          "explanation": "ilma means “water”.",
-          "reviewCard": {
-            "maltese": "ilma",
-            "english": "water"
-          },
-          "coverageIds": [
-            "b1-food-ilma"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b1-food-ilma-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-food-ilma"
-          ],
-          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the water, please.)",
-          "answer": "ilma",
-          "explanation": "The complete sentence is “Nixtieq ilma, jekk jogħġbok.”",
-          "reviewCard": {
-            "maltese": "ilma",
-            "english": "water",
-            "example": "Nixtieq ilma, jekk jogħġbok."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "ilma"
-          ],
-          "coverageIds": [
-            "b1-food-ilma"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
       "id": "b1-food-insalata",
       "level": "B1",
       "category": "vocabulary",
@@ -58821,66 +56600,6 @@
           "category": "vocabulary",
           "ruleId": "",
           "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b1-food-kafe",
-      "level": "B1",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "L-Ikel",
-      "title": "kafè",
-      "maltese": "kafè",
-      "english": "coffee",
-      "sourceKind": "book-course",
-      "sourcePage": "food_preferences.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b1-food-kafe-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b1-food-kafe"
-          ],
-          "prompt": "True or false: “kafè” means “couscous” in this chapter.",
-          "answer": false,
-          "explanation": "kafè means “coffee”.",
-          "reviewCard": {
-            "maltese": "kafè",
-            "english": "coffee"
-          },
-          "coverageIds": [
-            "b1-food-kafe"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "food_preferences.html"
-        },
-        "production": {
-          "id": "coverage-b1-food-kafe-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b1-food-kafe"
-          ],
-          "prompt": "Complete the Maltese sentence: “Nixtieq _____, jekk jogħġbok.” (I would like the coffee, please.)",
-          "answer": "kafè",
-          "explanation": "The complete sentence is “Nixtieq kafè, jekk jogħġbok.”",
-          "reviewCard": {
-            "maltese": "kafè",
-            "english": "coffee",
-            "example": "Nixtieq kafè, jekk jogħġbok."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "kafè"
-          ],
-          "coverageIds": [
-            "b1-food-kafe"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "food_preferences.html"
         }
       }
     },
@@ -60597,7 +58316,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-dublett"
+            "b1-school-dublett",
+            "b2-clothes-dublett"
           ],
           "prompt": "True or false: “dublett” means “tie” in this chapter.",
           "answer": false,
@@ -60617,7 +58337,8 @@
           "id": "coverage-b1-school-dublett-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-school-dublett"
+            "b1-school-dublett",
+            "b2-clothes-dublett"
           ],
           "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear skirt at school.)",
           "answer": "dublett",
@@ -60717,7 +58438,8 @@
           "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-glekk"
+            "b1-school-glekk",
+            "b2-clothes-glekk"
           ],
           "prompt": "What is the lesson meaning of “ġlekk”?",
           "choices": [
@@ -60742,7 +58464,8 @@
           "id": "coverage-b1-school-glekk-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-school-glekk"
+            "b1-school-glekk",
+            "b2-clothes-glekk"
           ],
           "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear jacket at school.)",
           "answer": "ġlekk",
@@ -61600,7 +59323,8 @@
           "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
-            "b1-school-qalziet"
+            "b1-school-qalziet",
+            "b2-clothes-qalziet"
           ],
           "prompt": "True or false: “qalziet” means “shoe” in this chapter.",
           "answer": false,
@@ -61620,7 +59344,8 @@
           "id": "coverage-b1-school-qalziet-production",
           "assessmentMode": "production",
           "targetIds": [
-            "b1-school-qalziet"
+            "b1-school-qalziet",
+            "b2-clothes-qalziet"
           ],
           "prompt": "Complete the Maltese sentence: “Nilbes _____ l-iskola.” (I wear trousers at school.)",
           "answer": "qalziet",
@@ -63199,66 +60924,6 @@
       }
     },
     {
-      "id": "b2-recycling-karta",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Nirriċiklaw l-Iskart",
-      "title": "karta",
-      "maltese": "karta",
-      "english": "paper / card",
-      "sourceKind": "book-course",
-      "sourcePage": "environment_recycling.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-recycling-karta-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-recycling-karta"
-          ],
-          "prompt": "True or false: “karta” means “recycling” in this chapter.",
-          "answer": false,
-          "explanation": "karta means “paper / card”.",
-          "reviewCard": {
-            "maltese": "karta",
-            "english": "paper / card"
-          },
-          "coverageIds": [
-            "b2-recycling-karta"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "environment_recycling.html"
-        },
-        "production": {
-          "id": "coverage-b2-recycling-karta-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-recycling-karta"
-          ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-kontenitur.” (The container contains the paper.)",
-          "answer": "karta",
-          "explanation": "The complete sentence is “Hemm karta fil-kontenitur.”",
-          "reviewCard": {
-            "maltese": "karta",
-            "english": "paper / card",
-            "example": "Hemm karta fil-kontenitur."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "karta"
-          ],
-          "coverageIds": [
-            "b2-recycling-karta"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "environment_recycling.html"
-        }
-      }
-    },
-    {
       "id": "b2-recycling-kontenitur",
       "level": "B2",
       "category": "vocabulary",
@@ -63381,66 +61046,6 @@
           ],
           "coverageIds": [
             "b2-recycling-mahmug"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-recycling-mahmuga",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Nirriċiklaw l-Iskart",
-      "title": "maħmuġa",
-      "maltese": "maħmuġa",
-      "english": "dirty (feminine)",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-recycling-mahmuga-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-recycling-mahmuga"
-          ],
-          "prompt": "True or false: “maħmuġa” means “dirty (plural)” in this chapter.",
-          "answer": false,
-          "explanation": "maħmuġa means “dirty (feminine)”.",
-          "reviewCard": {
-            "maltese": "maħmuġa",
-            "english": "dirty (feminine)"
-          },
-          "coverageIds": [
-            "b2-recycling-mahmuga"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-recycling-mahmuga-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-recycling-mahmuga"
-          ],
-          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is dirty.)",
-          "answer": "maħmuġa",
-          "explanation": "The complete sentence is “Il-borża hija maħmuġa.”",
-          "reviewCard": {
-            "maltese": "maħmuġa",
-            "english": "dirty (feminine)",
-            "example": "Il-borża hija maħmuġa."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "maħmuġa"
-          ],
-          "coverageIds": [
-            "b2-recycling-mahmuga"
           ],
           "category": "vocabulary",
           "ruleId": "",
@@ -64256,191 +61861,6 @@
           ],
           "coverageIds": [
             "b2-recycling-mqattghin"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-recycling-nadif",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Nirriċiklaw l-Iskart",
-      "title": "nadif",
-      "maltese": "nadif",
-      "english": "clean (masculine)",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-recycling-nadif-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-recycling-nadif"
-          ],
-          "prompt": "True or false: “nadif” means “clean (feminine)” in this chapter.",
-          "answer": false,
-          "explanation": "nadif means “clean (masculine)”.",
-          "reviewCard": {
-            "maltese": "nadif",
-            "english": "clean (masculine)"
-          },
-          "coverageIds": [
-            "b2-recycling-nadif"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-recycling-nadif-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-recycling-nadif"
-          ],
-          "prompt": "Complete the Maltese sentence: “Il-kontenitur huwa _____.” (The container is clean.)",
-          "answer": "nadif",
-          "explanation": "The complete sentence is “Il-kontenitur huwa nadif.”",
-          "reviewCard": {
-            "maltese": "nadif",
-            "english": "clean (masculine)",
-            "example": "Il-kontenitur huwa nadif."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "nadif"
-          ],
-          "coverageIds": [
-            "b2-recycling-nadif"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-recycling-nadifa",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Nirriċiklaw l-Iskart",
-      "title": "nadifa",
-      "maltese": "nadifa",
-      "english": "clean (feminine)",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-recycling-nadifa-recognition",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-recycling-nadifa"
-          ],
-          "prompt": "What is the lesson meaning of “nadifa”?",
-          "choices": [
-            "clean (feminine)",
-            "clean (plural)",
-            "dirty (masculine)"
-          ],
-          "answer": "clean (feminine)",
-          "explanation": "nadifa means “clean (feminine)” in this chapter.",
-          "reviewCard": {
-            "maltese": "nadifa",
-            "english": "clean (feminine)"
-          },
-          "coverageIds": [
-            "b2-recycling-nadifa"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-recycling-nadifa-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-recycling-nadifa"
-          ],
-          "prompt": "Complete the Maltese sentence: “Il-borża hija _____.” (The bag is clean.)",
-          "answer": "nadifa",
-          "explanation": "The complete sentence is “Il-borża hija nadifa.”",
-          "reviewCard": {
-            "maltese": "nadifa",
-            "english": "clean (feminine)",
-            "example": "Il-borża hija nadifa."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "nadifa"
-          ],
-          "coverageIds": [
-            "b2-recycling-nadifa"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        }
-      }
-    },
-    {
-      "id": "b2-recycling-nodfa",
-      "level": "B2",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Nirriċiklaw l-Iskart",
-      "title": "nodfa",
-      "maltese": "nodfa",
-      "english": "clean (plural)",
-      "sourceKind": "book-course",
-      "sourcePage": "course_chapter.html",
-      "items": {
-        "recognition": {
-          "id": "coverage-b2-recycling-nodfa-recognition",
-          "type": "true-false",
-          "assessmentMode": "recognition",
-          "targetIds": [
-            "b2-recycling-nodfa"
-          ],
-          "prompt": "True or false: “nodfa” means “dirty (masculine)” in this chapter.",
-          "answer": false,
-          "explanation": "nodfa means “clean (plural)”.",
-          "reviewCard": {
-            "maltese": "nodfa",
-            "english": "clean (plural)"
-          },
-          "coverageIds": [
-            "b2-recycling-nodfa"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "course_chapter.html"
-        },
-        "production": {
-          "id": "coverage-b2-recycling-nodfa-production",
-          "assessmentMode": "production",
-          "targetIds": [
-            "b2-recycling-nodfa"
-          ],
-          "prompt": "Complete the Maltese sentence: “Il-kontenituri huma _____.” (The containers are clean.)",
-          "answer": "nodfa",
-          "explanation": "The complete sentence is “Il-kontenituri huma nodfa.”",
-          "reviewCard": {
-            "maltese": "nodfa",
-            "english": "clean (plural)",
-            "example": "Il-kontenituri huma nodfa."
-          },
-          "type": "fill-blank",
-          "accepted": [
-            "nodfa"
-          ],
-          "coverageIds": [
-            "b2-recycling-nodfa"
           ],
           "category": "vocabulary",
           "ruleId": "",
@@ -72703,192 +70123,6 @@
           "assessmentMode": "production",
           "coverageIds": [
             "site-year4-vocabulary-grammar-ghandek"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "year4_exam.html"
-        }
-      }
-    },
-    {
-      "id": "site-year4-vocabulary-grammar-ghandi",
-      "level": "Site",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Small Words and Grammar",
-      "title": "għandi",
-      "maltese": "għandi",
-      "english": "I have",
-      "sourceKind": "site-bank",
-      "sourcePage": "year4_exam.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"I have\"?",
-          "choices": [
-            "għandi",
-            "jorqdu",
-            "nilgħab"
-          ],
-          "answer": "għandi",
-          "explanation": "għandi means \"I have\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "għandi",
-            "english": "I have",
-            "example": "X 'għandi fil-pokit?"
-          },
-          "id": "coverage-site-year4-vocabulary-grammar-ghandi-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-year4-vocabulary-grammar-ghandi"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "year4_exam.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"I have\".",
-          "answer": "għandi",
-          "accepted": [
-            "għandi"
-          ],
-          "explanation": "The Maltese answer is għandi.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "għandi",
-            "english": "I have",
-            "example": "X 'għandi fil-pokit?"
-          },
-          "id": "coverage-site-year4-vocabulary-grammar-ghandi-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-year4-vocabulary-grammar-ghandi"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "year4_exam.html"
-        }
-      }
-    },
-    {
-      "id": "site-year4-vocabulary-grammar-ghandna",
-      "level": "Site",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Small Words and Grammar",
-      "title": "għandna",
-      "maltese": "għandna",
-      "english": "we have",
-      "sourceKind": "site-bank",
-      "sourcePage": "year4_exam.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"we have\"?",
-          "choices": [
-            "għandna",
-            "ħassa -> ħass",
-            "pastarda -> pastard"
-          ],
-          "answer": "għandna",
-          "explanation": "għandna means \"we have\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "għandna",
-            "english": "we have",
-            "example": "Aħna għandna kelb."
-          },
-          "id": "coverage-site-year4-vocabulary-grammar-ghandna-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-year4-vocabulary-grammar-ghandna"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "year4_exam.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"we have\".",
-          "answer": "għandna",
-          "accepted": [
-            "għandna"
-          ],
-          "explanation": "The Maltese answer is għandna.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "għandna",
-            "english": "we have",
-            "example": "Aħna għandna kelb."
-          },
-          "id": "coverage-site-year4-vocabulary-grammar-ghandna-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-year4-vocabulary-grammar-ghandna"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "year4_exam.html"
-        }
-      }
-    },
-    {
-      "id": "site-year4-vocabulary-grammar-ghandu",
-      "level": "Site",
-      "category": "vocabulary",
-      "kind": "vocabulary",
-      "topic": "Small Words and Grammar",
-      "title": "għandu",
-      "maltese": "għandu",
-      "english": "he has",
-      "sourceKind": "site-bank",
-      "sourcePage": "year4_exam.html",
-      "items": {
-        "recognition": {
-          "type": "multiple-choice",
-          "prompt": "Which Maltese item means \"he has\"?",
-          "choices": [
-            "għandu",
-            "maħmuġa",
-            "maħmuġin"
-          ],
-          "answer": "għandu",
-          "explanation": "għandu means \"he has\".",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "għandu",
-            "english": "he has",
-            "example": "Huwa għandu qmis."
-          },
-          "id": "coverage-site-year4-vocabulary-grammar-ghandu-recognition",
-          "assessmentMode": "recognition",
-          "coverageIds": [
-            "site-year4-vocabulary-grammar-ghandu"
-          ],
-          "category": "vocabulary",
-          "ruleId": "",
-          "sourcePage": "year4_exam.html"
-        },
-        "production": {
-          "type": "fill-blank",
-          "prompt": "Write the Maltese for \"he has\".",
-          "answer": "għandu",
-          "accepted": [
-            "għandu"
-          ],
-          "explanation": "The Maltese answer is għandu.",
-          "targetIds": [],
-          "reviewCard": {
-            "maltese": "għandu",
-            "english": "he has",
-            "example": "Huwa għandu qmis."
-          },
-          "id": "coverage-site-year4-vocabulary-grammar-ghandu-production",
-          "assessmentMode": "production",
-          "coverageIds": [
-            "site-year4-vocabulary-grammar-ghandu"
           ],
           "category": "vocabulary",
           "ruleId": "",

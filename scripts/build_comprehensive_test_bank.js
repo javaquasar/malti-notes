@@ -292,6 +292,25 @@ siteTargets.forEach((target) => {
   targets.push(target);
 });
 
+const uniqueTargets = [];
+const targetByPair = new Map();
+targets.forEach((target) => {
+  const pairKey = `${normalize(target.maltese)}::${normalize(target.english)}`;
+  const existing = targetByPair.get(pairKey);
+  if (!existing) {
+    targetByPair.set(pairKey, target);
+    uniqueTargets.push(target);
+    return;
+  }
+  ["recognition", "production"].forEach((mode) => {
+    existing.items[mode].targetIds = [...new Set([
+      ...(existing.items[mode].targetIds || []),
+      ...(target.items[mode].targetIds || [])
+    ])];
+  });
+});
+targets.splice(0, targets.length, ...uniqueTargets);
+
 targets.sort((left, right) => (
   categoryOrder.indexOf(left.category) - categoryOrder.indexOf(right.category)
   || left.topic.localeCompare(right.topic, "en")
@@ -310,7 +329,7 @@ const output = {
     "assets/data/course_verb_paradigms.json",
     "canonical assets/data topic banks"
   ],
-  description: "Generated coverage bank with recognition and production for book targets, grammar, verb paradigms, and canonical site vocabulary.",
+  description: "Generated unique coverage bank with recognition and production for book targets, grammar, verb paradigms, and canonical site vocabulary.",
   targetCount: targets.length,
   modeCount: targets.length * 2,
   categoryCounts: countBy("category"),
@@ -323,9 +342,13 @@ const serialized = `${JSON.stringify(output, null, 2)}\n`;
 function validate() {
   const ids = new Set();
   const itemIds = new Set();
+  const pairs = new Set();
   targets.forEach((target) => {
     if (ids.has(target.id)) throw new Error(`Duplicate coverage target: ${target.id}`);
     ids.add(target.id);
+    const pairKey = `${normalize(target.maltese)}::${normalize(target.english)}`;
+    if (pairs.has(pairKey)) throw new Error(`Duplicate coverage pair: ${target.maltese} / ${target.english}`);
+    pairs.add(pairKey);
     ["recognition", "production"].forEach((mode) => {
       const item = target.items[mode];
       if (!item || item.assessmentMode !== mode || !item.coverageIds.includes(target.id)) throw new Error(`${target.id} has invalid ${mode} coverage`);
