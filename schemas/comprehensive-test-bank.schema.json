@@ -1,0 +1,66 @@
+{
+  "$id": "https://malti-notes.local/schemas/comprehensive-test-bank.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "generatedFrom", "description", "targetCount", "modeCount", "categoryCounts", "levelCounts", "sourceCounts", "targets"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "generatedFrom": { "type": "array", "minItems": 4, "items": { "type": "string" } },
+    "description": { "type": "string", "minLength": 1 },
+    "targetCount": { "type": "integer", "minimum": 700 },
+    "modeCount": { "type": "integer", "minimum": 1400 },
+    "categoryCounts": { "$ref": "#/$defs/counts" },
+    "levelCounts": { "$ref": "#/$defs/counts" },
+    "sourceCounts": { "$ref": "#/$defs/counts" },
+    "targets": { "type": "array", "minItems": 700, "items": { "$ref": "#/$defs/target" } }
+  },
+  "$defs": {
+    "counts": {
+      "type": "object",
+      "minProperties": 3,
+      "additionalProperties": { "type": "integer", "minimum": 1 }
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "type", "assessmentMode", "prompt", "answer", "explanation", "coverageIds", "category", "sourcePage"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^coverage-" },
+        "type": { "enum": ["multiple-choice", "true-false", "fill-blank", "order-words"] },
+        "assessmentMode": { "enum": ["recognition", "production"] },
+        "prompt": { "type": "string", "minLength": 1 },
+        "answer": {},
+        "explanation": { "type": "string", "minLength": 1 },
+        "coverageIds": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "type": "string" } },
+        "category": { "enum": ["grammar", "pronouns", "verbs", "numbers-time", "adjectives", "vocabulary"] },
+        "sourcePage": { "type": "string", "pattern": "\\.html$" }
+      },
+      "additionalProperties": true
+    },
+    "target": {
+      "type": "object",
+      "required": ["id", "level", "category", "kind", "topic", "title", "maltese", "english", "sourceKind", "sourcePage", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "level": { "enum": ["B1", "B2", "Site"] },
+        "category": { "enum": ["grammar", "pronouns", "verbs", "numbers-time", "adjectives", "vocabulary"] },
+        "kind": { "type": "string", "minLength": 1 },
+        "topic": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "maltese": { "type": "string", "minLength": 1 },
+        "english": { "type": "string", "minLength": 1 },
+        "sourceKind": { "enum": ["book-course", "book-grammar-topic", "site-extension", "verb-paradigm", "site-bank"] },
+        "sourcePage": { "type": "string", "pattern": "\\.html$" },
+        "items": {
+          "type": "object",
+          "required": ["recognition", "production"],
+          "additionalProperties": false,
+          "properties": {
+            "recognition": { "$ref": "#/$defs/item" },
+            "production": { "$ref": "#/$defs/item" }
+          }
+        }
+      }
+    }
+  }
+}

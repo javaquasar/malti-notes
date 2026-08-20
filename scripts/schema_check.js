@@ -9,6 +9,7 @@ const checks = [
   ["schemas/site-map.schema.json", ["assets/data/site-map.json"]],
   ["schemas/search-index.schema.json", ["assets/data/search-index.json"]],
   ["schemas/grammar-targets.schema.json", ["assets/data/grammar_targets.json"]],
+  ["schemas/comprehensive-test-bank.schema.json", ["assets/data/comprehensive_test_bank.json"]],
   ["schemas/course-manifest.schema.json", ["assets/data/course/manifest.json"]],
   ["schemas/course-chapter.schema.json", fs.readdirSync(path.join(root, "assets/data/course/chapters")).filter((file) => file.endsWith(".json")).sort().map((file) => `assets/data/course/chapters/${file}`)],
   ["schemas/course-milestones.schema.json", ["assets/data/course_milestone_assessments.json"]]
@@ -24,6 +25,16 @@ checks.forEach(([schemaFile, dataFiles]) => {
       return;
     }
     if (dataFile.endsWith("search-index.json") && data.entryCount !== data.entries.length) failures.push(`${dataFile} entryCount does not match entries.length`);
+    if (dataFile.endsWith("comprehensive_test_bank.json")) {
+      const countBy = (key) => Object.fromEntries(Object.entries(data.targets.reduce((counts, target) => {
+        counts[target[key]] = (counts[target[key]] || 0) + 1;
+        return counts;
+      }, {})).sort(([left], [right]) => left.localeCompare(right)));
+      if (data.targetCount !== data.targets.length || data.modeCount !== data.targets.length * 2) failures.push(`${dataFile} target or mode summary counts are stale`);
+      if (JSON.stringify(data.categoryCounts) !== JSON.stringify(countBy("category"))) failures.push(`${dataFile} categoryCounts are stale`);
+      if (JSON.stringify(data.levelCounts) !== JSON.stringify(countBy("level"))) failures.push(`${dataFile} levelCounts are stale`);
+      if (JSON.stringify(data.sourceCounts) !== JSON.stringify(countBy("sourceKind"))) failures.push(`${dataFile} sourceCounts are stale`);
+    }
     if (dataFile.endsWith("manifest.json") && (data.chapterCount !== data.chapters.length || data.targetCount !== data.chapters.reduce((total, chapter) => total + chapter.targetIds.length, 0))) failures.push(`${dataFile} summary counts are stale`);
     if (dataFile.endsWith("course_milestone_assessments.json")) data.sets.forEach((set) => {
       if (set.chapterCount !== set.chapterIds.length || set.itemCount !== set.items.length) failures.push(`${dataFile} ${set.id} summary counts are stale`);
