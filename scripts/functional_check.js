@@ -388,6 +388,18 @@ async function main() {
       assert((await page.locator("[data-course-chapter-pills]").textContent()).includes("B1 pp. 46-64"), "Animals book page range is missing.");
       assert((await page.locator("[data-course-recommendation-title]").textContent()).trim() === "Start with the entry diagnostic", "New chapter did not recommend its diagnostic.");
       assert(await page.locator(".course-step").count() === 3, "Animals chapter steps are incomplete.");
+      const stepNumberLayout = await page.locator(".course-step-number").evaluateAll((numbers) => numbers.map((number) => {
+        const badge = number.getBoundingClientRect();
+        const range = document.createRange();
+        range.selectNodeContents(number);
+        const label = range.getBoundingClientRect();
+        return {
+          isSquare: Math.abs(badge.width - badge.height) < 0.5,
+          hasStableSize: badge.width >= 28,
+          containsLabel: label.left >= badge.left && label.right <= badge.right && label.top >= badge.top && label.bottom <= badge.bottom
+        };
+      }));
+      assert(stepNumberLayout.every((number) => number.isSquare && number.hasStableSize && number.containsLabel), "Chapter step numbers do not fit inside their circular badges.");
       assert(await page.locator("#chapter-test .exercise-item").count() === 7, "Animals chapter test is incomplete.");
       assert(await page.locator('[data-course-diagnostic] [data-exercise-set="b1-animals-diagnostic"] .exercise-item').count() === 10, "Animals entry diagnostic is incomplete.");
       const animalCheckpoints = page.locator("[data-course-checkpoints] .course-checkpoint");
@@ -522,6 +534,9 @@ async function main() {
     await runTest(context, "book verb paradigms render every audited form and save a drill", async (page) => {
       await openCleanPage(page, "verbs_guide.html");
       await page.locator("[data-course-verb-paradigms][data-ready='true']").waitFor();
+      const standaloneGrammarTables = page.locator("#qed-system > table, #present > table, #future > table");
+      assert(await standaloneGrammarTables.count() === 3, "Expected three standalone grammar tables.");
+      assert(await standaloneGrammarTables.evaluateAll((tables) => tables.every((table) => table.classList.contains("table-soft"))), "Standalone grammar tables lost their light surface styling.");
       assert(await page.locator("[data-course-verb-paradigm]").count() === 18, "Expected 18 book verb paradigms.");
       assert(await page.locator("[data-course-verb-form]").count() === 125, "Expected 125 audited book verb forms.");
       await page.locator("[data-course-verb-book='B2']").click();

@@ -279,12 +279,14 @@
 .course-step-number {
   display: grid;
   place-items: center;
-  width: var(--space-3xl);
-  height: var(--space-3xl);
+  width: var(--space-6xl);
+  height: var(--space-6xl);
+  min-width: var(--space-6xl);
   border: 1px solid var(--border-panel);
   border-radius: 50%;
   color: var(--text-brand);
   font-weight: 700;
+  line-height: 1;
 }
 
 .course-step a {
