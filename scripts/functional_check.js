@@ -562,6 +562,27 @@ async function main() {
       assert(phraseTokens.join(" ") !== "karozza tal-linja", "Phrase tokens were shown in answer order.");
     });
 
+    await runTest(context, "lesson support surfaces keep consistent spacing and width", async (page) => {
+      await openCleanPage(page, "common_mistakes.html");
+      const contrastGap = await page.locator("#qed-system").evaluate((section) => {
+        const contrast = section.querySelector(".grammar-contrast-grid").getBoundingClientRect();
+        const bank = section.querySelector(".open-group").getBoundingClientRect();
+        return bank.top - contrast.bottom;
+      });
+      assert(contrastGap >= 16, "The correction bank touches the Wrong/Right cards.");
+
+      await openCleanPage(page, "daily_routine.html");
+      const routineSurface = await page.locator("#time-blocks .formula + .study-card").evaluate((surface) => {
+        const surfaceRect = surface.getBoundingClientRect();
+        const sectionRect = surface.parentElement.getBoundingClientRect();
+        return {
+          isDirectChild: surface.parentElement.id === "time-blocks",
+          relativeWidth: surfaceRect.width / sectionRect.width
+        };
+      });
+      assert(routineSurface.isDirectChild && routineSurface.relativeWidth > 0.9, "Routine examples do not use the available content width.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

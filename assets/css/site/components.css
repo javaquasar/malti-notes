@@ -255,6 +255,11 @@
   gap: var(--space-3xl);
 }
 
+.grammar-contrast-grid + .open-group,
+.grammar-contrast-grid + .open-group-grid {
+  margin-top: var(--flow-gap-md);
+}
+
 .content-group,
 .open-group,
 .example-bank-section,
@@ -282,7 +287,7 @@
 }
 
 .grammar-contrast-formula--right {
-  border-left-color: var(--text-accent);
+  border-left-color: var(--color-success);
 }
 
 .grammar-contrast-card--wrong .wrong {
@@ -291,7 +296,7 @@
 }
 
 .grammar-contrast-card--right .right {
-  color: var(--text-accent);
+  color: var(--color-success);
   font-weight: 700;
 }
 
@@ -336,4 +341,3 @@
   display: block;
   line-height: 1.45;
 }
-
