@@ -43,8 +43,10 @@ const fullPageVisualPages = [
 ];
 
 const framedGroupFixturePage = "scripts/fixtures/framed_content_groups.html";
+const uiComponentCatalogPage = "scripts/fixtures/ui_component_catalog.html";
 
 module.exports = {
   framedGroupFixturePage,
-  fullPageVisualPages
+  fullPageVisualPages,
+  uiComponentCatalogPage
 };

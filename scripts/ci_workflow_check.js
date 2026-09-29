@@ -28,6 +28,7 @@ const requiredChecks = [
   "visual:smoke",
   "functional:test",
   "visual:ci",
+  "visual:catalog",
   "visual:groups",
 ];
 

@@ -16,6 +16,8 @@
     "visual:diff:baseline": "node ./scripts/visual_diff.js --baseline visual-regression/baseline",
     "visual:groups": "node ./scripts/framed_group_visual_check.js",
     "visual:groups:update": "node ./scripts/framed_group_visual_check.js --update",
+    "visual:catalog": "node ./scripts/ui_component_catalog_visual_check.js",
+    "visual:catalog:update": "node ./scripts/ui_component_catalog_visual_check.js --update",
     "theme:a11y": "node ./scripts/theme_accessibility_check.js",
     "a11y:check": "node ./scripts/accessibility_check.js",
     "schema:check": "node ./scripts/schema_check.js",

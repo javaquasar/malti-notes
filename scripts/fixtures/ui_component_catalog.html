@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Component Catalog</title>
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+    <link rel="stylesheet" href="../../assets/css/site.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <style>
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+            background: var(--color-bg);
+        }
+
+        body {
+            padding: 32px;
+        }
+
+        .catalog-page {
+            width: min(1120px, 100%);
+            margin: 0 auto;
+        }
+
+        .catalog-header {
+            margin-bottom: var(--space-4xl);
+        }
+
+        .catalog-header p,
+        .catalog-section > p {
+            color: var(--text-muted);
+        }
+
+        .catalog-stack {
+            display: grid;
+            gap: var(--space-4xl);
+        }
+
+        .catalog-section {
+            padding: var(--space-4xl);
+        }
+
+        .catalog-section > h2 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: var(--grid-gap-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .catalog-grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .catalog-full {
+            grid-column: 1 / -1;
+        }
+
+        .catalog-surface {
+            min-height: 132px;
+        }
+
+        .catalog-table-wrap {
+            min-width: 0;
+            overflow-x: auto;
+        }
+
+        .catalog-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 18px;
+            }
+
+            .catalog-section {
+                padding: var(--space-2xl);
+            }
+
+            .catalog-grid,
+            .catalog-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="catalog-page">
+    <header class="catalog-header">
+        <span class="tag">Visual contract</span>
+        <h1>UI Component Catalog</h1>
+        <p>Stable examples of the shared teaching surfaces used across the Maltese study site.</p>
+    </header>
+
+    <div class="catalog-stack">
+        <section class="content-card catalog-section" data-component="controls">
+            <h2>Controls and labels</h2>
+            <div class="catalog-controls">
+                <button class="action-button" type="button">Add to review</button>
+                <button class="action-button" type="button" disabled>Saved</button>
+                <span class="status-chip">4 saved, 8 left</span>
+                <span class="pill">B1 core</span>
+                <span class="tag">Grammar</span>
+            </div>
+        </section>
+
+        <section class="content-card catalog-section" data-component="cards">
+            <h2>Cards</h2>
+            <p>Shared semantic card variants with real Maltese and English content.</p>
+            <div class="catalog-grid catalog-grid-3">
+                <article class="study-card catalog-surface" data-component="card-study">
+                    <strong><code>Jien nitgħallem il-Malti.</code></strong>
+                    <span>I am learning Maltese.</span>
+                    <small>Standard study card</small>
+                </article>
+                <article class="info-card catalog-surface" data-component="card-info">
+                    <strong>Agreement</strong>
+                    <span>The adjective follows the noun and agrees in gender and number.</span>
+                </article>
+                <article class="example-card catalog-surface" data-component="card-example">
+                    <strong><code>Din karozza ġdida.</code></strong>
+                    <span>This is a new car.</span>
+                </article>
+                <article class="pattern-card catalog-surface" data-component="card-pattern">
+                    <strong><code>subject + verb + object</code></strong>
+                    <span><code>It-tfal jilagħbu fil-ġnien.</code></span>
+                </article>
+                <article class="dialogue-card catalog-surface" data-component="card-dialogue">
+                    <strong>Customer</strong>
+                    <span><code>Nixtieq kafè, jekk jogħġbok.</code></span>
+                </article>
+                <article class="demo-box catalog-surface" data-component="card-demo">
+                    <strong>Quick model</strong>
+                    <span><code>Filgħodu nixrob kafè.</code></span>
+                </article>
+                <article class="study-card study-card-compact catalog-surface" data-component="card-compact">
+                    <h4>Compact reference</h4>
+                    <p><code>illum</code> means today.</p>
+                </article>
+                <article class="study-card study-card-note catalog-surface" data-component="card-note">
+                    <h4>Study note</h4>
+                    <p>Use a short model before building a longer answer.</p>
+                </article>
+                <aside class="note catalog-surface" data-component="card-note-panel">
+                    <strong>Remember</strong>
+                    <p>Keep the subject and verb person consistent.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="content-card catalog-section" data-component="learning-pairs">
+            <h2>Questions, answers, and translations</h2>
+            <div class="catalog-grid">
+                <section class="example-bank-section" data-component="pair-translation">
+                    <h3>Translation</h3>
+                    <article class="study-card">
+                        <strong><code>Għada se mmur il-Belt.</code></strong>
+                        <span>Tomorrow I will go to Valletta.</span>
+                    </article>
+                </section>
+                <section class="example-bank-section" data-component="pair-question-answer">
+                    <h3>Question and answer</h3>
+                    <article class="study-card">
+                        <strong><code>Fejn taħdem?</code></strong>
+                        <span>Naħdem f'uffiċċju.</span>
+                        <small>Where do you work? I work in an office.</small>
+                    </article>
+                </section>
+                <section class="shopping-dialogue-bank catalog-full" data-component="dialogue-stack">
+                    <h3>Dialogue</h3>
+                    <div class="example-dialogue-stack stack">
+                        <article class="dialogue-card">
+                            <strong>Customer</strong>
+                            <span><code>Għandek qmis blu?</code></span>
+                        </article>
+                        <article class="dialogue-card">
+                            <strong>Assistant</strong>
+                            <span><code>Iva, għandna din.</code></span>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="content-card catalog-section" data-component="rules">
+            <h2>Rules and contrasts</h2>
+            <article class="grammar-target" data-component="grammar-target">
+                <div class="grammar-target-header">
+                    <div>
+                        <span class="tag">Present tense</span>
+                        <h3>Person endings</h3>
+                    </div>
+                    <span class="status-chip">B1</span>
+                </div>
+                <div class="grammar-rule-box" data-component="rule-box">
+                    <p>The verb form changes with the subject.</p>
+                    <code class="grammar-pattern">jien niekol | inti tiekol | huma jieklu</code>
+                </div>
+                <div class="grammar-example-list" data-component="rule-examples">
+                    <div class="grammar-example-row">
+                        <strong><code>Jien niekol soppa.</code><small>first person</small></strong>
+                        <span>I eat soup.</span>
+                    </div>
+                    <div class="grammar-example-row">
+                        <strong><code>Huma jieklu ross.</code><small>third person plural</small></strong>
+                        <span>They eat rice.</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="grammar-contrast-grid mt-16" data-component="contrast-grid">
+                <article class="grammar-contrast-card grammar-contrast-card--wrong" data-component="contrast-wrong">
+                    <h3>Wrong</h3>
+                    <p class="formula grammar-contrast-formula grammar-contrast-formula--wrong"><span class="wrong">Wrong:</span> <code>Din ktieb.</code></p>
+                    <p class="mini">The demonstrative does not agree with the masculine noun.</p>
+                </article>
+                <article class="grammar-contrast-card grammar-contrast-card--right" data-component="contrast-right">
+                    <h3>Right</h3>
+                    <p class="formula grammar-contrast-formula grammar-contrast-formula--right"><span class="right">Better:</span> <code>Dan ktieb.</code></p>
+                    <p class="mini">Use the masculine singular demonstrative.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-card catalog-section" data-component="lists">
+            <h2>Lists and grouped panels</h2>
+            <div class="catalog-grid">
+                <section class="open-group" data-component="list-example">
+                    <h3>Example list</h3>
+                    <ul class="example-list">
+                        <li><code>filgħodu</code> - in the morning</li>
+                        <li><code>waranofsinhar</code> - in the afternoon</li>
+                        <li><code>filgħaxija</code> - in the evening</li>
+                    </ul>
+                </section>
+                <section class="content-group" data-component="list-card-stack">
+                    <h3>Card list</h3>
+                    <div class="list">
+                        <div class="info-card"><strong><code>dan</code></strong><span>this, masculine</span></div>
+                        <div class="info-card"><strong><code>din</code></strong><span>this, feminine</span></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="content-card catalog-section" data-component="tables">
+            <h2>Tables</h2>
+            <div class="catalog-grid">
+                <article class="study-card catalog-table-wrap" data-component="table-standard">
+                    <h3>Standard table</h3>
+                    <table>
+                        <caption>Present-tense forms</caption>
+                        <thead><tr><th scope="col">Person</th><th scope="col">Form</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Jien</th><td><code>niekol</code></td></tr>
+                            <tr><th scope="row">Int</th><td><code>tiekol</code></td></tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article class="study-card catalog-table-wrap" data-component="table-soft">
+                    <h3>Soft table</h3>
+                    <table class="table-soft">
+                        <caption>Future forms</caption>
+                        <thead><tr><th scope="col">Person</th><th scope="col">Form</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Jien</th><td><code>se niekol</code></td></tr>
+                            <tr><th scope="row">Huma</th><td><code>se jieklu</code></td></tr>
+                        </tbody>
+                    </table>
+                </article>
+                <section class="example-bank-section catalog-full" data-component="table-attached">
+                    <h3>Attached pattern table</h3>
+                    <div class="attached-pattern-panel catalog-table-wrap">
+                        <table class="table-soft attached-pattern-table">
+                            <caption>Attached pronouns</caption>
+                            <thead><tr><th scope="col">Base</th><th scope="col">With pronoun</th><th scope="col">Meaning</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row"><code>għand</code></th><td><code>għandi</code></td><td>I have</td></tr>
+                                <tr><th scope="row"><code>għand</code></th><td><code>għandhom</code></td><td>they have</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

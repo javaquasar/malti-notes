@@ -109,11 +109,15 @@ jobs:
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         run: npm run visual:groups
 
+      - name: Compare UI component catalog baseline
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run visual:catalog
+
       - name: Upload visual artifacts
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: framed-content-artifacts
+          name: component-visual-artifacts
           path: |
             visual-regression/screenshots/
             visual-regression/diffs/
