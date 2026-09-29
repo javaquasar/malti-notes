@@ -4,7 +4,9 @@ const { spawnSync } = require("child_process");
 const { uiComponentCatalogPage } = require("./visual_config");
 
 const root = path.resolve(__dirname, "..");
-const baselineFolder = path.join("visual-regression", "ui-component-catalog-baseline");
+const baselinePlatform = process.env.UI_CATALOG_BASELINE_PLATFORM || process.platform;
+const supportedBaselinePlatforms = new Set(["linux", "win32"]);
+const baselineFolder = path.join("visual-regression", `ui-component-catalog-baseline-${baselinePlatform}`);
 const requiredComponents = [
   "controls",
   "card-study",
@@ -58,6 +60,10 @@ function validateFixture() {
 }
 
 function main() {
+  if (!supportedBaselinePlatforms.has(baselinePlatform)) {
+    throw new Error(`No UI component catalog baseline is configured for ${baselinePlatform}`);
+  }
+
   validateFixture();
   const updateBaseline = process.argv.includes("--update");
   const output = runNode("visual_screenshots.js", [], {
