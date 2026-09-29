@@ -1,9 +1,12 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "transport_travel.html" },
   "groups": [
     {
       "id": "transport-frequency",
       "sectionId": "frequency",
       "title": "Frequency and Travel Words",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -21,6 +24,7 @@
       "id": "transport-grammar",
       "sectionId": "grammar",
       "title": "Useful Grammar",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -34,21 +38,23 @@
       "id": "transport-qa",
       "sectionId": "questions",
       "title": "Questions and Answers",
+      "itemType": "questionAnswer",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
-        { "maltese": "Kif tmur il-Belt?", "english": "Jien immur il-Belt bil-ferry jew bit-tal-linja." },
-        { "maltese": "Liema mezz ta' trasport tuża kuljum?", "english": "Kuljum naqbad bit-tal-linja." },
-        { "maltese": "Xi kultant tmur bir-rota?", "english": "Iva, xi kultant immur bir-rota." },
-        { "maltese": "Għaliex tuża l-ferry?", "english": "Għax huwa mgħaġġel u l-vjaġġ huwa sabiħ." },
-        { "maltese": "Meta tuża t-taxi?", "english": "Rari nuża t-taxi, imma nużah meta għandi bżonn nasal malajr." },
-        { "maltese": "Kemm jieħu l-vjaġġ bil-ferry?", "english": "Il-vjaġġ bil-ferry jieħu madwar kwart." }
+        {"question":{"maltese":"Kif tmur il-Belt?"},"answer":{"maltese":"Jien immur il-Belt bil-ferry jew bit-tal-linja."}},
+        {"question":{"maltese":"Liema mezz ta' trasport tuża kuljum?"},"answer":{"maltese":"Kuljum naqbad bit-tal-linja."}},
+        {"question":{"maltese":"Xi kultant tmur bir-rota?"},"answer":{"maltese":"Iva, xi kultant immur bir-rota."}},
+        {"question":{"maltese":"Għaliex tuża l-ferry?"},"answer":{"maltese":"Għax huwa mgħaġġel u l-vjaġġ huwa sabiħ."}},
+        {"question":{"maltese":"Meta tuża t-taxi?"},"answer":{"maltese":"Rari nuża t-taxi, imma nużah meta għandi bżonn nasal malajr."}},
+        {"question":{"maltese":"Kemm jieħu l-vjaġġ bil-ferry?"},"answer":{"maltese":"Il-vjaġġ bil-ferry jieħu madwar kwart."}}
       ]
     },
     {
       "id": "transport-story-bank",
       "sectionId": "story-bank",
       "title": "Story Bank",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [

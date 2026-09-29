@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const learningContent = require("../assets/js/learning-content");
 
 const root = path.resolve(__dirname, "..");
 const dataRoot = path.join(root, "assets", "data");
@@ -50,7 +51,8 @@ function walk(file, value, location, document) {
         verificationIds.add(value.verificationId);
       }
       if (value.review?.enabled === true) fail(file, location, "needs-review content cannot enable review");
-      quarantined.push({ file, location, maltese: value.maltese || "", english: value.english || "" });
+      const normalized = learningContent.normalizeItem(value);
+      quarantined.push({ file, location, maltese: normalized.primary, english: normalized.secondary });
     }
   }
 

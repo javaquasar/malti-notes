@@ -698,6 +698,21 @@ async function main() {
     });
     await verificationContext.close();
 
+    await runTest(context, "typed question-answer banks render and save the correct sides", async (page) => {
+      await openCleanPage(page, "daily_routine.html");
+      const bank = page.locator('[data-example-group="daily-routine-qa"]');
+      const firstCard = bank.locator(":scope > article").first();
+      assert((await firstCard.locator(":scope > strong").textContent()).includes("X'tagħmel filgħodu?"), "Q&A card does not render the question as its prompt.");
+      assert((await firstCard.locator(":scope > span").textContent()).trim() === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Q&A card does not render the Maltese answer separately.");
+      assert((await firstCard.locator(":scope > small").textContent()).includes("What do you do in the morning?"), "Q&A card lost its English support text.");
+
+      await bank.locator("xpath=preceding-sibling::*[1]").locator("button").click();
+      const saved = await page.evaluate(() => window.MaltiReviewStore.getAllCards().find((card) => card.prompt === "X'tagħmel filgħodu?"));
+      assert(saved?.contentType === "questionAnswer", "Review card did not preserve its Q&A content type.");
+      assert(saved?.prompt === "X'tagħmel filgħodu?", "Review card saved the wrong Q&A prompt.");
+      assert(saved?.answer === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Review card saved the wrong Q&A answer.");
+    });
+
     await runTest(context, "Year 4 vocabulary uses the shared review store", async (page) => {
       await openCleanPage(page, "year4_exam.html");
       await page.locator("#year4-search").fill("fekruna");

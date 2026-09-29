@@ -60,10 +60,11 @@
     },
     "target": {
       "type": "object",
-      "required": ["id", "book", "chapterId", "title", "sourceRequirement", "role", "summary", "rule", "pattern", "commonMistake", "sourceRef", "examples", "masteryLabel", "assessment"],
+      "required": ["id", "itemType", "book", "chapterId", "title", "sourceRequirement", "role", "summary", "rule", "pattern", "commonMistake", "sourceRef", "examples", "masteryLabel", "assessment"],
       "additionalProperties": false,
       "properties": {
         "id": { "type": "string", "pattern": "^grammar-" },
+        "itemType": { "const": "rule" },
         "book": { "enum": ["B1", "B2"] },
         "chapterId": { "type": "string", "pattern": "^b[12]-" },
         "title": { "type": "string", "minLength": 1 },

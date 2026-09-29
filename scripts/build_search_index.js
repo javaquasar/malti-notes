@@ -1,6 +1,7 @@
 const childProcess = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const learningContent = require("../assets/js/learning-content");
 
 const root = path.resolve(__dirname, "..");
 const outputFile = path.join(root, "assets", "data", "search-index.json");
@@ -112,7 +113,18 @@ function buildIndex() {
       lemma: value.lemma || context.lemma || "",
       meaning: value.meaning || value.translation || context.meaning || "",
     };
-    if (typeof value.maltese === "string" && value.maltese.trim()) {
+    if (value.question && value.answer) {
+      const normalized = learningContent.normalizeItem(value, { itemType: "questionAnswer" });
+      add({
+        kind: "phrase",
+        title: normalized.primary,
+        subtitle: normalized.secondary,
+        group: nextContext.group,
+        href: page,
+        keywords: [normalized.questionTranslation, normalized.answerTranslation, value.note].filter(Boolean).join(" "),
+      });
+      return;
+    } else if (typeof value.maltese === "string" && value.maltese.trim()) {
       add({
         kind: value.maltese.trim().includes(" ") ? "phrase" : "word",
         title: value.maltese,

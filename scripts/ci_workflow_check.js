@@ -15,6 +15,7 @@ const requiredChecks = [
   "data:lint",
   "schema:check",
   "content:lint",
+  "content:model:check",
   "content:verify",
   "books:coverage",
   "course:lint",

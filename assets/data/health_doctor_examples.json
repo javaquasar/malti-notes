@@ -1,8 +1,11 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "health_doctor.html" },
   "groups": [
     {
       "id": "health-pain",
       "title": "I Have Pain",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -15,6 +18,7 @@
     {
       "id": "health-useful-expressions",
       "title": "Useful Expressions",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -27,6 +31,7 @@
     {
       "id": "health-doctor-visit",
       "title": "At the Doctor",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -38,6 +43,7 @@
     {
       "id": "health-pharmacy",
       "title": "At the Pharmacy",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -49,6 +55,7 @@
     {
       "id": "health-dialogue-doctor",
       "title": "At the doctor",
+      "itemType": "example",
       "containerClass": "grid-2 example-dialogue-stack",
       "cardClass": "dialogue-card",
       "numbered": false,
@@ -61,6 +68,7 @@
     {
       "id": "health-dialogue-pharmacy",
       "title": "At the pharmacy",
+      "itemType": "example",
       "containerClass": "grid-2 example-dialogue-stack",
       "cardClass": "dialogue-card",
       "numbered": false,
@@ -73,6 +81,7 @@
     {
       "id": "health-phrases",
       "title": "Thematic Phrases",
+      "itemType": "example",
       "items": [
         { "maltese": "Ma nħossnix tajjeb.", "english": "I do not feel well." },
         { "maltese": "Illum inħossni ħażin.", "english": "Today I feel bad." },

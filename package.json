@@ -22,6 +22,7 @@
     "style:lint": "node ./scripts/style_lint.js",
     "data:lint": "node ./scripts/data_lint.js",
     "content:lint": "node ./scripts/content_lint.js",
+    "content:model:check": "node ./scripts/learning_content_model_check.js",
     "content:verify": "node ./scripts/content_verification_check.js",
     "books:coverage": "node ./scripts/book_coverage_check.js",
     "coverage:build": "node ./scripts/build_comprehensive_test_bank.js",

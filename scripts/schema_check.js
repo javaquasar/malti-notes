@@ -12,7 +12,8 @@ const checks = [
   ["schemas/comprehensive-test-bank.schema.json", ["assets/data/comprehensive_test_bank.json"]],
   ["schemas/course-manifest.schema.json", ["assets/data/course/manifest.json"]],
   ["schemas/course-chapter.schema.json", fs.readdirSync(path.join(root, "assets/data/course/chapters")).filter((file) => file.endsWith(".json")).sort().map((file) => `assets/data/course/chapters/${file}`)],
-  ["schemas/course-milestones.schema.json", ["assets/data/course_milestone_assessments.json"]]
+  ["schemas/course-milestones.schema.json", ["assets/data/course_milestone_assessments.json"]],
+  ["schemas/learning-content.schema.json", fs.readdirSync(path.join(root, "assets/data")).filter((file) => file.endsWith("_examples.json") && file !== "course_target_examples.json").sort().map((file) => `assets/data/${file}`)]
 ];
 const failures = [];
 

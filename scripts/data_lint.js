@@ -133,6 +133,11 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
 
   validateStringField(file, `group ${groupLabel}`, "sectionId", group.sectionId);
 
+  const allowedItemTypes = new Set(["translation", "questionAnswer", "rule", "example"]);
+  if (group.itemType !== undefined && !allowedItemTypes.has(group.itemType)) {
+    fail(file, `group ${groupLabel} uses unknown itemType: ${group.itemType}`);
+  }
+
   if (group.cardClass !== undefined && !allowedCardClasses.has(group.cardClass)) {
     fail(file, `group ${groupLabel} uses unknown cardClass: ${group.cardClass}`);
   }
@@ -162,6 +167,18 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
       validateStringField(file, `group ${groupLabel} item ${itemIndex}`, field, item[field]);
     });
 
+    if (group.itemType === "questionAnswer") {
+      ["question", "answer"].forEach((field) => {
+        const localized = item[field];
+        if (!isObject(localized) || !isNonEmptyString(localized.maltese)) {
+          fail(file, `group ${groupLabel} item ${itemIndex}.${field}.maltese is required`);
+        }
+        if (localized?.english !== undefined) {
+          validateStringField(file, `group ${groupLabel} item ${itemIndex}.${field}`, "english", localized.english);
+        }
+      });
+    }
+
     const uniqueKey = item.id || item.slug;
 
     if (uniqueKey) {
@@ -172,7 +189,7 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
       }
     }
 
-    if (!hasContent(item)) {
+    if (!hasContent(item) && group.itemType !== "questionAnswer") {
       fail(file, `group ${groupLabel} item ${itemIndex} has no recognizable text content`);
     }
 

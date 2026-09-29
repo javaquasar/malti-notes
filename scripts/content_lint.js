@@ -87,8 +87,11 @@ function validateDuplicates(file, location, items) {
   const seen = new Map();
 
   items.forEach((item, index) => {
-    if (!isObject(item) || !hasText(item.maltese) || !hasText(translationOf(item))) return;
-    const key = `${normalize(item.maltese)}|${normalize(translationOf(item))}`;
+    if (!isObject(item)) return;
+    const left = item.question?.maltese || item.maltese;
+    const right = item.answer?.maltese || translationOf(item);
+    if (!hasText(left) || !hasText(right)) return;
+    const key = `${normalize(left)}|${normalize(right)}`;
     if (seen.has(key)) {
       fail(file, `${location}[${index}]`, `duplicates ${location}[${seen.get(key)}]`);
     } else {
@@ -97,15 +100,23 @@ function validateDuplicates(file, location, items) {
   });
 }
 
-function validateValue(file, location, value) {
+function validateValue(file, location, value, allowMonolingual = false) {
   if (Array.isArray(value)) {
     validateDuplicates(file, location, value);
-    value.forEach((item, index) => validateValue(file, `${location}[${index}]`, item));
+    value.forEach((item, index) => validateValue(file, `${location}[${index}]`, item, allowMonolingual));
     return;
   }
   if (!isObject(value)) return;
 
-  validatePair(file, location, value);
+  if (!allowMonolingual) validatePair(file, location, value);
+  const localizedQuestionAnswer = isObject(value.question) && isObject(value.answer);
+  if (localizedQuestionAnswer) {
+    ["question", "answer"].forEach((field) => {
+      if (!isObject(value[field]) || !hasText(value[field].maltese)) {
+        fail(file, `${location}.${field}`, "must contain non-empty Maltese text");
+      }
+    });
+  }
   if (value.review?.enabled === true && !hasText(value.example)) {
     const name = relative(file);
     missingExamples.set(name, (missingExamples.get(name) || 0) + 1);
@@ -113,7 +124,10 @@ function validateValue(file, location, value) {
 
   Object.entries(value).forEach(([field, child]) => {
     if (typeof child === "string") validateText(file, location, field, child);
-    if (typeof child === "object" && child !== null) validateValue(file, `${location}.${field}`, child);
+    if (typeof child === "object" && child !== null) {
+      const localizedQuestionPart = (field === "question" || field === "answer") && localizedQuestionAnswer;
+      validateValue(file, `${location}.${field}`, child, localizedQuestionPart);
+    }
   });
 }
 

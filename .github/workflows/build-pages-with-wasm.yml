@@ -55,6 +55,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run content:lint
 
+      - name: Validate typed learning content model
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run content:model:check
+
       - name: Verify uncertain learning content is quarantined
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run content:verify

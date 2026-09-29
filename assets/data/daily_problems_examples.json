@@ -1,8 +1,11 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "daily_problems.html" },
   "groups": [
     {
       "id": "daily-problems-transport",
       "title": "Transport problems",
+      "itemType": "example",
       "items": [
         { "maltese": "Il-linja waslet tard.", "english": "The bus arrived late." },
         { "maltese": "Hemm traffiku ħafna.", "english": "There is a lot of traffic." },
@@ -13,6 +16,7 @@
     {
       "id": "daily-problems-home",
       "title": "Home problems",
+      "itemType": "example",
       "items": [
         { "maltese": "Tlift iċ-ċwievet.", "english": "I lost the keys." },
         { "maltese": "Il-bieb ma jinfetaħx.", "english": "The door does not open." },
@@ -23,6 +27,7 @@
     {
       "id": "daily-problems-stress",
       "title": "Time and stress",
+      "itemType": "example",
       "items": [
         { "maltese": "Illum m'għandix ħin.", "english": "Today I do not have time." },
         { "maltese": "Jien għajjien ħafna.", "english": "I am very tired." },
@@ -33,6 +38,7 @@
     {
       "id": "daily-problems-dialogue-bus",
       "title": "Late bus",
+      "itemType": "example",
       "numbered": false,
       "containerClass": "grid-2 example-dialogue-stack",
       "cardClass": "dialogue-card",
@@ -45,6 +51,7 @@
     {
       "id": "daily-problems-dialogue-keys",
       "title": "Lost keys",
+      "itemType": "example",
       "numbered": false,
       "containerClass": "grid-2 example-dialogue-stack",
       "cardClass": "dialogue-card",
@@ -57,6 +64,7 @@
     {
       "id": "daily-problems-phrases",
       "title": "Thematic phrases",
+      "itemType": "example",
       "items": [
         { "maltese": "Għandi problema.", "english": "I have a problem." },
         { "maltese": "Għandi problema żgħira.", "english": "I have a small problem." },

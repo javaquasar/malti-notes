@@ -1,8 +1,11 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "collective_nouns.html" },
   "groups": [
     {
       "id": "collective-shopping-lines",
       "title": "Ready-made shopping lines",
+      "itemType": "example",
       "items": [
         { "maltese": "Agħmel lista ta' frott u ħaxix li tħobb tixtri.", "english": "Make a list of fruit and vegetables that you like to buy." },
         { "maltese": "Pereżempju: kilo brunġiel, wiżna patata, żewġ basliet, larinġ, lumi.", "english": "For example: a kilo of aubergines, a sack of potatoes, two onions, oranges, lemons." },
@@ -13,20 +16,22 @@
     {
       "id": "collective-qa-bank",
       "title": "Questions and answers",
+      "itemType": "questionAnswer",
       "items": [
-        { "maltese": "X'inhu l-kollettiv ta' tuffieħa? Il-kollettiv ta' tuffieħa huwa tuffieħ.", "english": "What is the collective of apple? The collective of apple is tuffieħ." },
-        { "maltese": "X'inhu l-kollettiv ta' tadama? Il-kollettiv ta' tadama huwa tadam.", "english": "What is the collective of tomato? The collective of tomato is tadam." },
-        { "maltese": "Meta nuża l-plural? Nuża l-plural meta rrid ngħid numru speċifiku, bħal żewġ basliet.", "english": "When do I use the plural? I use the plural when I want to say a specific number, such as two onions." },
-        { "maltese": "Meta nuża l-kollettiv? Nuża l-kollettiv meta nitkellem fuq ħafna, ftit, kilo jew tip ta' ikel u frott.", "english": "When do I use the collective? I use the collective when I talk about much, a little, a kilo, or a type of food and fruit." },
-        { "maltese": "Kif ngħid “fresh fish”? Ngħid ħut frisk.", "english": "How do I say “fresh fish”? I say ħut frisk." },
-        { "maltese": "Kif ngħid “good cheese”? Ngħid ġobon tajjeb.", "english": "How do I say “good cheese”? I say ġobon tajjeb." },
-        { "maltese": "X'se tixtri mis-suq? Se nixtri ftit ħass, kilo larinġ u naqra brunġiel.", "english": "What will you buy at the market? I will buy some lettuce, a kilo of oranges, and some aubergines." },
-        { "maltese": "Għandek bżonn xi frott? Iva, għandi bżonn tuffieħ u lumi.", "english": "Do you need any fruit? Yes, I need apples and lemons." }
+        {"question":{"maltese":"X'inhu l-kollettiv ta' tuffieħa?","english":"What is the collective of apple?"},"answer":{"maltese":"Il-kollettiv ta' tuffieħa huwa tuffieħ.","english":"The collective of apple is tuffieħ."}},
+        {"question":{"maltese":"X'inhu l-kollettiv ta' tadama?","english":"What is the collective of tomato?"},"answer":{"maltese":"Il-kollettiv ta' tadama huwa tadam.","english":"The collective of tomato is tadam."}},
+        {"question":{"maltese":"Meta nuża l-plural?","english":"When do I use the plural?"},"answer":{"maltese":"Nuża l-plural meta rrid ngħid numru speċifiku, bħal żewġ basliet.","english":"I use the plural when I want to say a specific number, such as two onions."}},
+        {"question":{"maltese":"Meta nuża l-kollettiv?","english":"When do I use the collective?"},"answer":{"maltese":"Nuża l-kollettiv meta nitkellem fuq ħafna, ftit, kilo jew tip ta' ikel u frott.","english":"I use the collective when I talk about much, a little, a kilo, or a type of food and fruit."}},
+        {"question":{"maltese":"Kif ngħid “fresh fish”?","english":"How do I say “fresh fish”?"},"answer":{"maltese":"Ngħid ħut frisk.","english":"I say ħut frisk."}},
+        {"question":{"maltese":"Kif ngħid “good cheese”?","english":"How do I say “good cheese”?"},"answer":{"maltese":"Ngħid ġobon tajjeb.","english":"I say ġobon tajjeb."}},
+        {"question":{"maltese":"X'se tixtri mis-suq?","english":"What will you buy at the market?"},"answer":{"maltese":"Se nixtri ftit ħass, kilo larinġ u naqra brunġiel.","english":"I will buy some lettuce, a kilo of oranges, and some aubergines."}},
+        {"question":{"maltese":"Għandek bżonn xi frott?","english":"Do you need any fruit?"},"answer":{"maltese":"Iva, għandi bżonn tuffieħ u lumi.","english":"Yes, I need apples and lemons."}}
       ]
     },
     {
       "id": "collective-practice-bank",
       "title": "Collective Noun Practice Bank",
+      "itemType": "example",
       "items": [
         { "maltese": "Tuffieħa ħadra, imma tuffieħ aħdar.", "english": "Green apple, but green apples / apple fruit." },
         { "maltese": "Tadama ħamra, imma tadam aħmar.", "english": "Red tomato, but red tomatoes." },

@@ -33,7 +33,11 @@ function applyClassList(element, classNames) {
 }
 
 function isPublishableBankItem(item) {
-    return item && item.verificationStatus !== "needs-review";
+    return window.MaltiLearningContent.isPublishable(item);
+}
+
+function normalizeBankItem(item, group) {
+    return window.MaltiLearningContent.normalizeItem(item, group);
 }
 
 async function renderExampleBanksFromData(config) {
@@ -69,9 +73,10 @@ async function renderExampleBanksFromData(config) {
         const store = getStore();
         const vocabConfig = getVocabConfig();
         const reviewPrefix = config.reviewPrefix || vocabConfig.reviewPrefix || "examples";
+        const normalized = normalizeBankItem(item, group);
         const key = store
-            ? store.normalizeForKey(item.slug || item.maltese)
-            : String(item.slug || item.maltese || "").toLowerCase();
+            ? store.normalizeForKey(item.slug || normalized.primary)
+            : String(item.slug || normalized.primary || "").toLowerCase();
         return "sentence::" + reviewPrefix + "::" + key;
     }
 
@@ -90,16 +95,21 @@ async function renderExampleBanksFromData(config) {
     function toSentenceCard(item, group, container) {
         const groupLabel = getGroupLabel(container, group);
         const vocabConfig = getVocabConfig();
+        const normalized = normalizeBankItem(item, group);
         return {
             id: makeSentenceId(item, group),
             type: "sentence-card",
-            maltese: item.maltese,
-            english: item.english,
+            contentType: normalized.itemType,
+            maltese: normalized.primary,
+            english: normalized.secondary,
             topic: getSentenceTopic(groupLabel),
             group: groupLabel,
+            source: normalized.source,
             sourcePage: config.sourcePage || vocabConfig.sourcePage || window.location.pathname.split("/").pop() || "",
-            prompt: item.maltese,
-            answer: item.english
+            prompt: normalized.prompt,
+            answer: normalized.answer,
+            questionTranslation: normalized.questionTranslation || "",
+            answerTranslation: normalized.answerTranslation || ""
         };
     }
 
@@ -142,6 +152,7 @@ async function renderExampleBanksFromData(config) {
     const bulkButtons = [];
 
     groups.forEach((group) => {
+        const contentGroup = Object.assign({ source: data.source || null }, group);
         const selector = `[${groupAttribute}="${group.id}"]`;
         const container = document.querySelector(selector);
         if (!container) {
@@ -152,7 +163,7 @@ async function renderExampleBanksFromData(config) {
         applyClassList(container, group.containerClass || containerClass);
 
         const publishableItems = (group.items || []).filter(isPublishableBankItem);
-        const sentenceItems = publishableItems.map((item) => toSentenceCard(item, group, container));
+        const sentenceItems = publishableItems.map((item) => toSentenceCard(item, contentGroup, container));
         allSentenceItems.push(...sentenceItems);
 
         if (getStore()) {
@@ -182,6 +193,7 @@ async function renderExampleBanksFromData(config) {
         }
 
         publishableItems.forEach((item, index) => {
+            const normalized = normalizeBankItem(item, contentGroup);
             const article = document.createElement("article");
             article.className = resolveBankCardClass(group.cardClass || cardClass, "study-card");
 
@@ -192,18 +204,19 @@ async function renderExampleBanksFromData(config) {
             const strong = document.createElement("strong");
             const code = document.createElement("code");
             const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
-            code.textContent = shouldNumber ? `${index + 1}. ${item.maltese}` : item.maltese;
+            code.textContent = shouldNumber ? `${index + 1}. ${normalized.primary}` : normalized.primary;
             strong.appendChild(code);
 
             const span = document.createElement("span");
-            span.textContent = item.english;
+            span.textContent = normalized.secondary;
 
             article.appendChild(strong);
             article.appendChild(span);
 
-            if (item.note) {
+            const supportingText = [item.note, normalized.supportingText].filter(Boolean).join(" ");
+            if (supportingText) {
                 const note = document.createElement("small");
-                note.textContent = item.note;
+                note.textContent = supportingText;
                 article.appendChild(note);
             }
             container.appendChild(article);
@@ -275,25 +288,29 @@ async function renderQuestionBanksFromData(config) {
         const store = getStore();
         const vocabConfig = getVocabConfig();
         const reviewPrefix = config.reviewPrefix || vocabConfig.reviewPrefix || "examples";
+        const normalized = normalizeBankItem(item, group);
         const key = store
-            ? store.normalizeForKey(item.slug || item.maltese)
-            : String(item.slug || item.maltese || "").toLowerCase();
+            ? store.normalizeForKey(item.slug || normalized.primary)
+            : String(item.slug || normalized.primary || "").toLowerCase();
         return "sentence::" + reviewPrefix + "-questions::" + key;
     }
 
     function toQuestionCard(item, group, container) {
         const groupLabel = getGroupLabel(container, group);
         const vocabConfig = getVocabConfig();
+        const normalized = normalizeBankItem(item, group);
         return {
             id: makeQuestionId(item, group),
             type: "sentence-card",
-            maltese: item.maltese,
-            english: item.english,
+            contentType: normalized.itemType,
+            maltese: normalized.primary,
+            english: normalized.secondary,
             topic: getQuestionTopic(groupLabel),
             group: groupLabel,
+            source: normalized.source,
             sourcePage: config.sourcePage || vocabConfig.sourcePage || window.location.pathname.split("/").pop() || "",
-            prompt: item.maltese,
-            answer: item.english
+            prompt: normalized.prompt,
+            answer: normalized.answer
         };
     }
 
@@ -344,8 +361,9 @@ async function renderQuestionBanksFromData(config) {
         container.innerHTML = "";
         applyClassList(container, containerClass);
 
+        const questionGroup = Object.assign({ source: data.source || null }, group, { itemType: group.questionItemType || "translation" });
         const publishableItems = (group[listKey] || []).filter(isPublishableBankItem);
-        const questionItems = publishableItems.map((item) => toQuestionCard(item, group, container));
+        const questionItems = publishableItems.map((item) => toQuestionCard(item, questionGroup, container));
 
         if (getStore()) {
             const previous = container.previousElementSibling;
@@ -374,14 +392,15 @@ async function renderQuestionBanksFromData(config) {
         }
 
         publishableItems.forEach((item, index) => {
+            const normalized = normalizeBankItem(item, questionGroup);
             const card = document.createElement("div");
             card.className = resolveBankCardClass(cardClass, "example-card");
 
             const strong = document.createElement("strong");
-            strong.textContent = numbered ? `${index + 1}. ${item.maltese}` : item.maltese;
+            strong.textContent = numbered ? `${index + 1}. ${normalized.primary}` : normalized.primary;
 
             const span = document.createElement("span");
-            span.textContent = item.english;
+            span.textContent = normalized.secondary;
 
             card.appendChild(strong);
             card.appendChild(span);

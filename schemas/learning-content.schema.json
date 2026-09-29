@@ -1,0 +1,141 @@
+{
+  "$id": "https://malti-notes.local/schemas/learning-content.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "source", "groups"],
+  "additionalProperties": true,
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "source": { "$ref": "#/$defs/source" },
+    "page": { "type": "string", "pattern": "\\.html$" },
+    "topic": { "type": "string", "minLength": 1 },
+    "groups": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/group" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["kind"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["site", "book", "generated"] },
+        "page": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "integer", "minimum": 1 }
+          ]
+        },
+        "book": { "type": "string", "minLength": 1 },
+        "chapter": { "type": "string", "minLength": 1 },
+        "file": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "site" } }, "required": ["kind"] },
+          "then": { "required": ["page"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "book" } }, "required": ["kind"] },
+          "then": { "required": ["book", "chapter", "page"] }
+        }
+      ]
+    },
+    "localizedText": {
+      "type": "object",
+      "required": ["maltese"],
+      "additionalProperties": false,
+      "properties": {
+        "maltese": { "type": "string", "minLength": 1 },
+        "english": { "type": "string", "minLength": 1 }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "itemType": { "enum": ["translation", "questionAnswer", "rule", "example"] },
+        "source": { "$ref": "#/$defs/source" },
+        "verificationStatus": { "enum": ["verified", "needs-review"] },
+        "verificationId": { "type": "string", "minLength": 1 },
+        "book": { "type": "string", "minLength": 1 },
+        "chapter": { "type": "string", "minLength": 1 },
+        "page": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "integer", "minimum": 1 }
+          ]
+        }
+      }
+    },
+    "pairedItem": {
+      "allOf": [
+        { "$ref": "#/$defs/metadata" },
+        {
+          "type": "object",
+          "required": ["maltese", "english"],
+          "properties": {
+            "maltese": { "type": "string", "minLength": 1 },
+            "english": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "questionAnswerItem": {
+      "allOf": [
+        { "$ref": "#/$defs/metadata" },
+        {
+          "type": "object",
+          "required": ["question", "answer"],
+          "properties": {
+            "question": { "$ref": "#/$defs/localizedText" },
+            "answer": { "$ref": "#/$defs/localizedText" }
+          }
+        }
+      ]
+    },
+    "ruleItem": {
+      "allOf": [
+        { "$ref": "#/$defs/metadata" },
+        {
+          "type": "object",
+          "required": ["rule"],
+          "properties": {
+            "title": { "type": "string", "minLength": 1 },
+            "rule": { "type": "string", "minLength": 1 },
+            "pattern": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "item": {
+      "anyOf": [
+        { "$ref": "#/$defs/pairedItem" },
+        { "$ref": "#/$defs/questionAnswerItem" },
+        { "$ref": "#/$defs/ruleItem" }
+      ]
+    },
+    "group": {
+      "type": "object",
+      "required": ["id", "title", "itemType", "items"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "itemType": { "enum": ["translation", "questionAnswer", "rule", "example"] },
+        "questionItemType": { "enum": ["translation", "questionAnswer", "rule", "example"] },
+        "source": { "$ref": "#/$defs/source" },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/item" }
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/item" }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const learningContent = require("../assets/js/learning-content");
 
 const root = path.resolve(__dirname, "..");
 const dataDir = path.join(root, "assets", "data");
@@ -80,6 +81,10 @@ function collectExamples(file) {
       return;
     }
 
+    if (learningContent.resolveItemType(value) === "questionAnswer") {
+      return;
+    }
+
     const mt = value.maltese || value.mt || value.phrase || value.sentence || value.word;
     const en = value.english || value.en || value.translation || value.meaning || value.gloss;
     if (mt && en && String(mt).trim().split(/\s+/).length > 1) {
@@ -93,23 +98,25 @@ function collectExamples(file) {
 }
 
 function findExample(item, examples) {
-  if (hasRealExample(item)) {
-    return {
-      example: item.example,
-      exampleTranslation: item.exampleTranslation
-    };
-  }
-
   const term = normalizeKey(item.maltese);
   const found = examples.find((example) => normalizeKey(example.maltese).includes(term));
   if (found) {
     return {
       example: found.maltese,
-      exampleTranslation: found.english
+      exampleTranslation: found.english,
+      source: "site examples"
     };
   }
 
-  return simpleExample(item);
+  if (hasRealExample(item)) {
+    return {
+      example: item.example,
+      exampleTranslation: item.exampleTranslation,
+      source: "topic data"
+    };
+  }
+
+  return { ...simpleExample(item), source: "site examples" };
 }
 
 function extractGroups(file, sourceLabel, tier) {
@@ -134,7 +141,7 @@ function extractGroups(file, sourceLabel, tier) {
             english: item.english,
             example: example.example,
             exampleTranslation: example.exampleTranslation,
-            exampleSource: hasRealExample(item) ? "topic data" : "site examples",
+            exampleSource: example.source,
             notes: item.notes || (item.note ? [item.note] : []),
             sourceLabel,
             sourceFile: file,

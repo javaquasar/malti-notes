@@ -1,4 +1,6 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "weather.html" },
   "page": "weather.html",
   "topic": "Weather",
   "groups": [
@@ -6,6 +8,7 @@
       "id": "weather-today",
       "sectionId": "today",
       "title": "Today the Weather Is...",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -35,6 +38,7 @@
       "id": "weather-seasons-models",
       "sectionId": "seasons",
       "title": "Ready models",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -60,6 +64,7 @@
       "id": "weather-plans",
       "sectionId": "plans",
       "title": "Weather and Daily Plans",
+      "itemType": "example",
       "containerClass": "grid-2",
       "cardClass": "study-card",
       "items": [
@@ -85,6 +90,7 @@
       "id": "weather-dialogue-morning",
       "sectionId": "dialogues",
       "title": "Morning small talk",
+      "itemType": "example",
       "containerClass": "grid-2 example-dialogue-stack",
       "cardClass": "dialogue-card",
       "numbered": false,
@@ -107,6 +113,7 @@
       "id": "weather-dialogue-rain",
       "sectionId": "dialogues",
       "title": "Rainy day",
+      "itemType": "example",
       "containerClass": "grid-2 example-dialogue-stack",
       "cardClass": "dialogue-card",
       "numbered": false,
@@ -129,6 +136,7 @@
       "id": "weather-phrases",
       "sectionId": "phrases",
       "title": "Thematic Phrases",
+      "itemType": "example",
       "items": [
         {
           "maltese": "Illum it-temp huwa sabiħ.",
