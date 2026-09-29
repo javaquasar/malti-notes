@@ -187,17 +187,18 @@ function renderTenseTable(title, table) {
     <div class="verb-table-card verb-table-card--compact">
       <h4>${title}</h4>
       <table>
+        <caption class="visually-hidden">${title} forms</caption>
         <thead>
           <tr>
-            <th>person</th>
-            <th>positive</th>
-            ${hasNegative ? "<th>negative</th>" : ""}
+            <th scope="col">person</th>
+            <th scope="col">positive</th>
+            ${hasNegative ? "<th scope=\"col\">negative</th>" : ""}
           </tr>
         </thead>
         <tbody>
           ${people.map((person) => `
             <tr>
-              <th>${formatPersonLabel(person)}</th>
+              <th scope="row">${formatPersonLabel(person)}</th>
               <td>${table.positive?.[person] ? `<code>${table.positive[person]}</code>` : ""}</td>
               ${hasNegative ? `<td>${table.negative?.[person] ? `<code>${table.negative[person]}</code>` : ""}</td>` : ""}
             </tr>

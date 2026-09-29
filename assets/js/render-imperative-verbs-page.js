@@ -309,10 +309,11 @@
                 var table = document.createElement("table");
                 table.className = "table-soft imperative-shortlist-table";
                 table.innerHTML = "" +
+                    "<caption class=\"visually-hidden\">" + (group.title || "Imperative verb forms") + "</caption>" +
                     "<thead><tr>" +
-                        "<th>Verb</th>" +
-                        "<th>English</th>" +
-                        "<th>Imperative</th>" +
+                        "<th scope=\"col\">Verb</th>" +
+                        "<th scope=\"col\">English</th>" +
+                        "<th scope=\"col\">Imperative</th>" +
                     "</tr></thead>";
 
                 var tbody = document.createElement("tbody");

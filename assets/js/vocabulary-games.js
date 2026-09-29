@@ -185,8 +185,14 @@
         button.className = `memory-card memory-card-${card.kind.toLowerCase()}`;
         button.dataset.cardIndex = String(index);
         button.dataset.pairId = String(card.id);
-        if (state.flipped.includes(index)) button.classList.add("is-flipped");
-        if (state.matched.has(card.id)) button.classList.add("is-matched");
+        const isFlipped = state.flipped.includes(index);
+        const isMatched = state.matched.has(card.id);
+        if (isFlipped) button.classList.add("is-flipped");
+        if (isMatched) button.classList.add("is-matched");
+        button.setAttribute(
+          "aria-label",
+          isFlipped || isMatched ? `${card.kind}: ${card.text}` : `Hidden memory card ${index + 1}`
+        );
         button.innerHTML = `
           <span class="memory-card-face">
             <span class="memory-card-kind">${card.kind}</span>
@@ -357,6 +363,12 @@
         tile.className = `builder-answer-tile${state.answer[index] ? " is-filled" : ""}`;
         tile.dataset.answerIndex = String(index);
         tile.textContent = state.answer[index] ? displayToken(state.answer[index].token) : "";
+        tile.setAttribute(
+          "aria-label",
+          state.answer[index]
+            ? `Remove ${displayToken(state.answer[index].token)} from position ${index + 1}`
+            : `Empty answer position ${index + 1}`
+        );
         answer.appendChild(tile);
       });
       bank.innerHTML = "";

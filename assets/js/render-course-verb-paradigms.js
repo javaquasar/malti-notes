@@ -30,9 +30,17 @@
     tableWrap.className = "course-verb-table-wrap";
     const table = document.createElement("table");
     table.className = "table-soft course-verb-table";
+    const caption = document.createElement("caption");
+    caption.className = "visually-hidden";
+    caption.textContent = `Forms for ${paradigm.lemma}`;
+    table.appendChild(caption);
     const head = document.createElement("thead");
     const headRow = document.createElement("tr");
-    ["Mode", "Person", "Maltese", "Meaning"].forEach((label) => headRow.appendChild(makeCell("th", label)));
+    ["Mode", "Person", "Maltese", "Meaning"].forEach(function (label) {
+      const cell = makeCell("th", label);
+      cell.scope = "col";
+      headRow.appendChild(cell);
+    });
     head.appendChild(headRow);
     table.appendChild(head);
 

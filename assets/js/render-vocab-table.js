@@ -23,6 +23,7 @@
     function createMalteseCell(text) {
         var cell = document.createElement("th");
         cell.className = "vocab-table-maltese";
+        cell.scope = "row";
 
         var code = document.createElement("code");
         code.textContent = text || "";
@@ -90,6 +91,11 @@
         table.className = "table-soft vocab-data-table";
         var richExamples = hasExampleTranslations(group);
 
+        var caption = document.createElement("caption");
+        caption.className = "visually-hidden";
+        caption.textContent = group.title || "Vocabulary examples";
+        table.appendChild(caption);
+
         var thead = document.createElement("thead");
         var headRow = document.createElement("tr");
         headRow.appendChild(createCell("th", "Maltese"));
@@ -100,6 +106,9 @@
         } else {
             headRow.appendChild(createCell("th", "Example / Note"));
         }
+        Array.from(headRow.children).forEach(function (cell) {
+            cell.scope = "col";
+        });
         thead.appendChild(headRow);
         table.appendChild(thead);
 

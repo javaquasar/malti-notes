@@ -45,6 +45,35 @@
     }, { once: true });
   }
 
+  const syncScrollableRegions = () => {
+    document.querySelectorAll("table, #key-verbs > .study-card").forEach((element) => {
+      const style = getComputedStyle(element);
+      const scrollsHorizontally = ["auto", "scroll"].includes(style.overflowX)
+        && element.scrollWidth > element.clientWidth + 1;
+
+      if (scrollsHorizontally && !element.hasAttribute("tabindex")) {
+        element.tabIndex = 0;
+        element.dataset.scrollFocusManaged = "true";
+      } else if (!scrollsHorizontally && element.dataset.scrollFocusManaged === "true") {
+        element.removeAttribute("tabindex");
+        delete element.dataset.scrollFocusManaged;
+      }
+    });
+  };
+  let scrollSyncScheduled = false;
+  const scheduleScrollableRegionSync = () => {
+    if (scrollSyncScheduled) return;
+    scrollSyncScheduled = true;
+    requestAnimationFrame(() => {
+      scrollSyncScheduled = false;
+      syncScrollableRegions();
+    });
+  };
+
+  scheduleScrollableRegionSync();
+  new MutationObserver(scheduleScrollableRegionSync).observe(document.body, { childList: true, subtree: true });
+  window.addEventListener("resize", scheduleScrollableRegionSync);
+
   const header = document.querySelector(".site-header");
   if (!header) return;
   const REVIEW_STORAGE_KEY = "malti_review_cards_v2";

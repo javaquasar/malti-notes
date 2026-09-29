@@ -11,8 +11,14 @@ const axeSource = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8"
 const defaultChromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const useBundledBrowser = process.env.PLAYWRIGHT_USE_BUNDLED === "1";
 const chromePath = useBundledBrowser ? "" : process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
-const defaultPages = ["index.html", "today.html", "course_path.html", "grammar_path.html", "course_exam.html", "coverage_test.html", "mistakes.html", "review_cards.html", "year4_exam.html"];
+const defaultPages = fs.readdirSync(root)
+  .filter((file) => file.toLowerCase().endsWith(".html") && fs.statSync(path.join(root, file)).isFile())
+  .sort();
 const pages = (process.env.A11Y_PAGES || defaultPages.join(",")).split(",").map((page) => page.trim()).filter(Boolean);
+const requestedConcurrency = Number(process.env.A11Y_CONCURRENCY || 4);
+const concurrency = Number.isFinite(requestedConcurrency) && requestedConcurrency > 0
+  ? Math.floor(requestedConcurrency)
+  : 4;
 const allViewports = [
   { name: "desktop", width: 1280, height: 900 },
   { name: "mobile", width: 390, height: 844 }
@@ -46,6 +52,71 @@ function makeServer() {
   });
 }
 
+async function auditPage(context, pageName, viewportName) {
+  const page = await context.newPage();
+  const failures = [];
+
+  try {
+    await page.goto(`${baseUrl}/${pageName}`, { waitUntil: "networkidle" });
+    await page.addScriptTag({ content: axeSource });
+    const audit = await page.evaluate(async () => {
+      const result = await window.axe.run(document, {
+        runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] },
+        resultTypes: ["violations"]
+      });
+      const tableIssues = [];
+      const scrollIssues = [];
+
+      document.querySelectorAll("table").forEach((table, index) => {
+        const label = table.id ? `#${table.id}` : `table ${index + 1}`;
+        const caption = table.querySelector(":scope > caption");
+        if (!caption?.textContent.trim()) tableIssues.push(`${label} has no caption`);
+
+        const missingScopes = table.querySelectorAll("th:not([scope='col']):not([scope='row'])");
+        if (missingScopes.length) tableIssues.push(`${label} has ${missingScopes.length} header cell(s) without scope`);
+      });
+
+      document.querySelectorAll("table, #key-verbs > .study-card").forEach((element, index) => {
+        const style = getComputedStyle(element);
+        const scrollsHorizontally = ["auto", "scroll"].includes(style.overflowX)
+          && element.scrollWidth > element.clientWidth + 1;
+        if (scrollsHorizontally && element.tabIndex < 0) {
+          scrollIssues.push(`horizontal scroll region ${index + 1} is not keyboard focusable`);
+        }
+      });
+
+      return {
+        scrollIssues,
+        tableIssues,
+        violations: result.violations.filter((violation) => ["serious", "critical"].includes(violation.impact))
+      };
+    });
+
+    audit.violations.forEach((violation) => {
+      const targets = violation.nodes.slice(0, 4).map((node) => node.target.join(" ")).join(", ");
+      const detail = violation.nodes[0]?.failureSummary?.replace(/\s+/g, " ") || "";
+      failures.push(`${violation.id} (${violation.nodes.length} node(s)) ${violation.help}; ${targets}; ${detail}`);
+    });
+    failures.push(...audit.tableIssues);
+    failures.push(...audit.scrollIssues);
+
+    await page.keyboard.press("Tab");
+    const focus = await page.evaluate(() => {
+      const element = document.activeElement;
+      if (!element || element === document.body) return { focusable: false, visible: false };
+      const style = getComputedStyle(element);
+      const rect = element.getBoundingClientRect();
+      return { focusable: true, visible: style.visibility !== "hidden" && style.display !== "none" && rect.width > 0 && rect.height > 0 };
+    });
+    if (!focus.focusable || !focus.visible) failures.push("first Tab does not reach a visible control");
+  } finally {
+    await page.close();
+  }
+
+  console.log(`${failures.length ? "fail" : "ok"} a11y ${pageName} ${viewportName}`);
+  return failures.map((failure) => `${pageName} ${viewportName}: ${failure}`);
+}
+
 async function main() {
   const server = makeServer();
   await new Promise((resolve) => server.listen(port, host, resolve));
@@ -57,35 +128,15 @@ async function main() {
         viewport: { width: viewport.width, height: viewport.height },
         serviceWorkers: "block"
       });
-      for (const pageName of pages) {
-        const page = await context.newPage();
-        await page.goto(`${baseUrl}/${pageName}`, { waitUntil: "networkidle" });
-        await page.addScriptTag({ content: axeSource });
-        const violations = await page.evaluate(async () => {
-          const result = await window.axe.run(document, {
-            runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] },
-            resultTypes: ["violations"]
-          });
-          return result.violations.filter((violation) => ["serious", "critical"].includes(violation.impact));
-        });
-        violations.forEach((violation) => {
-          const targets = violation.nodes.slice(0, 4).map((node) => node.target.join(" ")).join(", ");
-          const detail = violation.nodes[0]?.failureSummary?.replace(/\s+/g, " ") || "";
-          failures.push(`${pageName} ${viewport.name}: ${violation.id} (${violation.nodes.length} node(s)) ${violation.help}; ${targets}; ${detail}`);
-        });
-
-        await page.keyboard.press("Tab");
-        const focus = await page.evaluate(() => {
-          const element = document.activeElement;
-          if (!element || element === document.body) return { focusable: false, visible: false };
-          const style = getComputedStyle(element);
-          const rect = element.getBoundingClientRect();
-          return { focusable: true, visible: style.visibility !== "hidden" && style.display !== "none" && rect.width > 0 && rect.height > 0 };
-        });
-        if (!focus.focusable || !focus.visible) failures.push(`${pageName} ${viewport.name}: first Tab does not reach a visible control`);
-        await page.close();
-        console.log(`ok a11y ${pageName} ${viewport.name}`);
-      }
+      let nextPageIndex = 0;
+      const workers = Array.from({ length: Math.min(concurrency, pages.length) }, async () => {
+        while (nextPageIndex < pages.length) {
+          const pageName = pages[nextPageIndex];
+          nextPageIndex += 1;
+          failures.push(...await auditPage(context, pageName, viewport.name));
+        }
+      });
+      await Promise.all(workers);
       await context.close();
     }
   } finally {
