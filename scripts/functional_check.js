@@ -537,6 +537,27 @@ async function main() {
       const standaloneGrammarTables = page.locator("#qed-system > table, #present > table, #future > table");
       assert(await standaloneGrammarTables.count() === 3, "Expected three standalone grammar tables.");
       assert(await standaloneGrammarTables.evaluateAll((tables) => tables.every((table) => table.classList.contains("table-soft"))), "Standalone grammar tables lost their light surface styling.");
+      const tableSurfaceDistances = await standaloneGrammarTables.evaluateAll((tables) => {
+        const renderedPixel = (backgrounds) => {
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d", { willReadFrequently: true });
+          canvas.width = 1;
+          canvas.height = 1;
+          backgrounds.forEach((background) => {
+            context.fillStyle = background;
+            context.fillRect(0, 0, 1, 1);
+          });
+          return Array.from(context.getImageData(0, 0, 1, 1).data.slice(0, 3));
+        };
+
+        return tables.map((table) => {
+          const parentBackground = getComputedStyle(table.parentElement).backgroundColor;
+          const parentPixel = renderedPixel([parentBackground]);
+          const tablePixel = renderedPixel([parentBackground, getComputedStyle(table).backgroundColor]);
+          return tablePixel.reduce((distance, channel, index) => distance + Math.abs(channel - parentPixel[index]), 0);
+        });
+      });
+      assert(tableSurfaceDistances.every((distance) => distance >= 12), "Standalone grammar table fills are indistinguishable from their parent cards.");
       assert(await page.locator("[data-course-verb-paradigm]").count() === 18, "Expected 18 book verb paradigms.");
       assert(await page.locator("[data-course-verb-form]").count() === 125, "Expected 125 audited book verb forms.");
       await page.locator("[data-course-verb-book='B2']").click();
@@ -629,6 +650,53 @@ async function main() {
 
       assert(checkedCards > 0, "No generated bank cards were checked.");
     });
+
+    const verificationContext = await browser.newContext({
+      viewport: { width: 1280, height: 900 },
+      serviceWorkers: "block"
+    });
+    await runTest(verificationContext, "needs-review examples stay out of rendered banks", async (page) => {
+      const cases = [
+        ["animals.html", "animals_examples.json"],
+        ["picture_description.html", "picture_description_examples.json"],
+        ["pronouns_possessives.html", "pronouns_possessives_examples.json"]
+      ];
+
+      for (const [pageName, dataFile] of cases) {
+        await page.goto(`${baseUrl}/${pageName}`, { waitUntil: "networkidle" });
+        const result = await page.evaluate(async (fileName) => {
+          const data = await fetch(`./assets/data/${fileName}`).then((response) => response.json());
+          const mismatches = [];
+          let quarantined = 0;
+
+          (data.groups || []).forEach((group) => {
+            [
+              ["data-example-group", group.items || []],
+              ["data-question-group", group.questions || []]
+            ].forEach(([attribute, sourceItems]) => {
+              const container = document.querySelector(`[${attribute}="${group.id}"]`);
+              if (!container) return;
+              const expected = sourceItems.filter((item) => item.verificationStatus !== "needs-review").length;
+              quarantined += sourceItems.length - expected;
+              if (container.children.length !== expected) {
+                mismatches.push(`${group.id}/${attribute}: ${container.children.length}/${expected}`);
+              }
+            });
+          });
+
+          return {
+            mismatches,
+            quarantined,
+            hasMarker: /\[(?:UNCERTAIN|overview-based)\]/i.test(document.body.textContent)
+          };
+        }, dataFile);
+
+        assert(result.quarantined > 0, `${pageName} fixture has no quarantined examples.`);
+        assert(result.mismatches.length === 0, `${pageName}: ${result.mismatches.join("; ")}`);
+        assert(!result.hasMarker, `${pageName} rendered an uncertainty marker.`);
+      }
+    });
+    await verificationContext.close();
 
     await runTest(context, "Year 4 vocabulary uses the shared review store", async (page) => {
       await openCleanPage(page, "year4_exam.html");

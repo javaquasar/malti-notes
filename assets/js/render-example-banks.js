@@ -32,6 +32,10 @@ function applyClassList(element, classNames) {
         .forEach((className) => element.classList.add(className));
 }
 
+function isPublishableBankItem(item) {
+    return item && item.verificationStatus !== "needs-review";
+}
+
 async function renderExampleBanksFromData(config) {
     const {
         dataUrl,
@@ -147,7 +151,8 @@ async function renderExampleBanksFromData(config) {
         container.innerHTML = "";
         applyClassList(container, group.containerClass || containerClass);
 
-        const sentenceItems = (group.items || []).map((item) => toSentenceCard(item, group, container));
+        const publishableItems = (group.items || []).filter(isPublishableBankItem);
+        const sentenceItems = publishableItems.map((item) => toSentenceCard(item, group, container));
         allSentenceItems.push(...sentenceItems);
 
         if (getStore()) {
@@ -176,7 +181,7 @@ async function renderExampleBanksFromData(config) {
             }
         }
 
-        (group.items || []).forEach((item, index) => {
+        publishableItems.forEach((item, index) => {
             const article = document.createElement("article");
             article.className = resolveBankCardClass(group.cardClass || cardClass, "study-card");
 
@@ -339,7 +344,8 @@ async function renderQuestionBanksFromData(config) {
         container.innerHTML = "";
         applyClassList(container, containerClass);
 
-        const questionItems = (group[listKey] || []).map((item) => toQuestionCard(item, group, container));
+        const publishableItems = (group[listKey] || []).filter(isPublishableBankItem);
+        const questionItems = publishableItems.map((item) => toQuestionCard(item, group, container));
 
         if (getStore()) {
             const previous = container.previousElementSibling;
@@ -367,7 +373,7 @@ async function renderQuestionBanksFromData(config) {
             }
         }
 
-        (group[listKey] || []).forEach((item, index) => {
+        publishableItems.forEach((item, index) => {
             const card = document.createElement("div");
             card.className = resolveBankCardClass(cardClass, "example-card");
 

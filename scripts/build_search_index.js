@@ -105,6 +105,7 @@ function buildIndex() {
       return;
     }
     if (!value || typeof value !== "object") return;
+    if (value.verificationStatus === "needs-review") return;
 
     const nextContext = {
       group: value.title || value.sectionTitle || context.group || "",

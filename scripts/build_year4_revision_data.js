@@ -76,6 +76,9 @@ function collectExamples(file) {
     if (!value || typeof value !== "object") {
       return;
     }
+    if (value.verificationStatus === "needs-review") {
+      return;
+    }
 
     const mt = value.maltese || value.mt || value.phrase || value.sentence || value.word;
     const en = value.english || value.en || value.translation || value.meaning || value.gloss;
@@ -122,7 +125,7 @@ function extractGroups(file, sourceLabel, tier) {
     if (Array.isArray(group.items)) {
       const groupTitle = group.title || group.sectionTitle || parentTitle || sourceLabel;
       const items = group.items
-        .filter((item) => item && item.maltese && item.english)
+        .filter((item) => item && item.maltese && item.english && item.verificationStatus !== "needs-review")
         .map((item) => {
           const example = findExample(item, examples);
           return {

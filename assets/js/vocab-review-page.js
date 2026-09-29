@@ -180,7 +180,10 @@
                 }
                 container.dataset.courseContentGroup = group.id;
 
-                const words = group.items.map(function (item) {
+                const publishableItems = (group.items || []).filter(function (item) {
+                    return item && item.verificationStatus !== "needs-review";
+                });
+                const words = publishableItems.map(function (item) {
                     const word = toReviewWord(item, group);
                     allItems.push(word);
                     return word;
@@ -191,7 +194,7 @@
                     container.parentNode.insertBefore(createBulkActionRow("Add section to review", words), container);
                 }
 
-                renderer.renderFigureGroup(container, group, {
+                renderer.renderFigureGroup(container, Object.assign({}, group, { items: publishableItems }), {
                     cardClass: config.cardClass || "visual-vocab-card",
                     reviewButtonFactory: function (item) {
                         return createReviewButton(item, group);

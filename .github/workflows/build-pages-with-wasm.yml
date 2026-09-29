@@ -55,6 +55,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run content:lint
 
+      - name: Verify uncertain learning content is quarantined
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run content:verify
+
       - name: Check B1 and B2 book coverage
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run books:coverage

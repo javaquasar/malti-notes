@@ -114,6 +114,7 @@ function canonicalEntries() {
       const page = pageFor(fileName, data);
       if (!page || !Array.isArray(data.groups)) return [];
       return data.groups.flatMap((group, groupIndex) => (group.items || []).flatMap((item, itemIndex) => {
+        if (item.verificationStatus === "needs-review") return [];
         const maltese = typeof item.maltese === "string" ? item.maltese.trim() : "";
         const english = typeof (item.english || item.translation) === "string" ? (item.english || item.translation).trim() : "";
         if (!maltese || !english) return [];
