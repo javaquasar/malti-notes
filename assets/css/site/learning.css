@@ -586,6 +586,124 @@
   }
 }
 
+.knowledge-map-shell {
+  display: grid;
+  gap: var(--space-5xl);
+}
+
+.knowledge-recommendation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-4xl);
+  align-items: center;
+  padding: var(--space-4xl) 0;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.knowledge-recommendation h2 {
+  margin: var(--space-sm) 0;
+}
+
+.knowledge-reason-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-xl);
+  margin: var(--space-lg) 0 0;
+  padding-left: var(--space-xl);
+  color: var(--text-muted);
+}
+
+.knowledge-metric-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.knowledge-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4xl);
+}
+
+.knowledge-focus {
+  min-width: 0;
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.knowledge-focus h2 {
+  margin: var(--space-sm) 0;
+}
+
+.knowledge-focus-list {
+  display: grid;
+  margin: var(--space-xl) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.knowledge-focus-list li {
+  min-width: 0;
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--border-default);
+}
+
+.knowledge-focus-list a,
+.knowledge-focus-list strong,
+.knowledge-focus-list small {
+  display: block;
+}
+
+.knowledge-focus-list a {
+  color: var(--text-brand);
+  font-weight: 700;
+}
+
+.knowledge-focus-list small,
+.knowledge-empty {
+  margin-top: var(--space-xs);
+  color: var(--text-muted);
+}
+
+.knowledge-area-table td:nth-child(4) strong,
+.knowledge-area-table td:nth-child(4) small {
+  display: block;
+}
+
+.knowledge-area-table td:nth-child(4) small {
+  margin-top: var(--space-xs);
+}
+
+@media (max-width: 980px) {
+  .knowledge-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .knowledge-metric-grid .course-metric:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .knowledge-focus-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 760px) {
+  .knowledge-recommendation,
+  .knowledge-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-recommendation .action-button {
+    justify-self: start;
+  }
+
+  .knowledge-reason-list {
+    display: grid;
+  }
+}
+
 .course-exam-shell {
   display: grid;
   gap: var(--space-4xl);

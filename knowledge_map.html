@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Knowledge Map</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <a class="site-brand" href="./index.html">Maltese Study Site</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div>
+                <span class="tag">Learning overview</span>
+                <h1>Knowledge Map</h1>
+                <p class="lead">Connect course coverage, weak vocabulary, grammar, mistakes, and due review in one place.</p>
+                <div class="pill-row">
+                    <span class="pill"><strong data-knowledge-mastered>0</strong>&nbsp;mastered</span>
+                    <span class="pill"><strong data-knowledge-due>0</strong>&nbsp;due</span>
+                    <span class="pill"><strong data-knowledge-mistakes>0</strong>&nbsp;open mistakes</span>
+                </div>
+            </div>
+            <aside class="note">
+                <p><strong>How the next action is chosen</strong></p>
+                <p>Open mistakes come first, followed by spaced review, due course targets, and the next unfinished chapter step.</p>
+            </aside>
+        </div>
+    </section>
+
+    <main class="section knowledge-map-shell" data-knowledge-map-root aria-live="polite">
+        <nav class="course-chapter-nav" aria-label="Knowledge map navigation">
+            <a class="action-link" href="./today.html">Today</a>
+            <a class="action-link" href="./course_progress.html">Course progress</a>
+            <a class="action-link" href="./mistakes.html">Mistake journal</a>
+            <a class="action-link" href="./review_cards.html">Review cards</a>
+            <a class="action-link" href="./coverage_test.html">Coverage tests</a>
+        </nav>
+
+        <section class="knowledge-recommendation" aria-labelledby="knowledge-next-title">
+            <div>
+                <span class="tag">Recommended next</span>
+                <h2 id="knowledge-next-title" data-knowledge-next-title>Building your recommendation...</h2>
+                <p class="muted-note" data-knowledge-next-detail>Reading your saved progress.</p>
+                <ul class="knowledge-reason-list" data-knowledge-next-reasons></ul>
+            </div>
+            <a class="action-button" data-knowledge-next-link href="./today.html">Start next activity</a>
+        </section>
+
+        <section class="course-metric-grid knowledge-metric-grid" aria-label="Knowledge map totals">
+            <article class="course-metric">
+                <span>Mastered targets</span>
+                <strong data-knowledge-metric-mastered>0</strong>
+                <small data-knowledge-metric-mastered-detail>Loading course coverage</small>
+            </article>
+            <article class="course-metric">
+                <span>Learning</span>
+                <strong data-knowledge-learning>0</strong>
+                <small>Targets with successful work in progress</small>
+            </article>
+            <article class="course-metric">
+                <span>Due now</span>
+                <strong data-knowledge-metric-due>0</strong>
+                <small>Review cards and course targets</small>
+            </article>
+            <article class="course-metric">
+                <span>Open mistakes</span>
+                <strong data-knowledge-metric-mistakes>0</strong>
+                <small>Resolved after two correct retries</small>
+            </article>
+            <article class="course-metric">
+                <span>Chapters active</span>
+                <strong data-knowledge-active>0</strong>
+                <small>Chapters with saved learning activity</small>
+            </article>
+        </section>
+
+        <div class="knowledge-focus-grid">
+            <section class="knowledge-focus" aria-labelledby="knowledge-vocabulary-title">
+                <span class="tag">Vocabulary and phrases</span>
+                <h2 id="knowledge-vocabulary-title">Weak Review Items</h2>
+                <p class="muted-note">Due and low-box cards that need reinforcement.</p>
+                <ol class="knowledge-focus-list" data-knowledge-vocabulary></ol>
+                <p class="knowledge-empty" data-knowledge-vocabulary-empty hidden>No weak review items yet.</p>
+                <a class="action-link" href="./review_cards.html">Open review cards</a>
+            </section>
+
+            <section class="knowledge-focus" aria-labelledby="knowledge-grammar-title">
+                <span class="tag">Grammar</span>
+                <h2 id="knowledge-grammar-title">Grammar Focus</h2>
+                <p class="muted-note">Rules selected from mistakes, due work, and learning state.</p>
+                <ol class="knowledge-focus-list" data-knowledge-grammar></ol>
+                <p class="knowledge-empty" data-knowledge-grammar-empty hidden>No grammar focus is needed right now.</p>
+                <a class="action-link" href="./grammar_path.html">Open grammar path</a>
+            </section>
+
+            <section class="knowledge-focus" aria-labelledby="knowledge-mistake-title">
+                <span class="tag">Mistake journal</span>
+                <h2 id="knowledge-mistake-title">Open Mistakes</h2>
+                <p class="muted-note">Recent errors that still need two correct attempts.</p>
+                <ol class="knowledge-focus-list" data-knowledge-mistake-list></ol>
+                <p class="knowledge-empty" data-knowledge-mistakes-empty hidden>No open mistakes. Keep testing to find the next weak spot.</p>
+                <a class="action-link" href="./mistakes.html">Practise mistakes</a>
+            </section>
+        </div>
+
+        <section class="content-group knowledge-coverage" aria-labelledby="knowledge-coverage-title">
+            <div class="course-progress-heading">
+                <div>
+                    <span class="tag">Course coverage</span>
+                    <h2 id="knowledge-coverage-title">Knowledge Areas</h2>
+                </div>
+                <div class="segmented-toggle" data-knowledge-filters aria-label="Filter knowledge areas by level"></div>
+            </div>
+            <p class="muted-note" data-knowledge-summary>Loading knowledge areas...</p>
+            <div class="course-progress-table-wrap">
+                <table class="course-progress-table knowledge-area-table">
+                    <caption class="visually-hidden">Knowledge coverage and attention by course chapter</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Knowledge area</th>
+                        <th scope="col">Mastery</th>
+                        <th scope="col">Needs attention</th>
+                        <th scope="col">Learning activity</th>
+                        <th scope="col"><span class="visually-hidden">Action</span></th>
+                    </tr>
+                    </thead>
+                    <tbody data-knowledge-areas></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/mistake-store.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/knowledge-map.js"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

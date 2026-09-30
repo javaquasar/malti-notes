@@ -157,7 +157,7 @@ async function main() {
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
       assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 45, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === 46, "Site directory page count is out of sync.");
       assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
     });
 
@@ -218,6 +218,52 @@ async function main() {
       await page.locator('[data-progress-filter="b2"]').click();
       assert(await page.locator('[data-progress-level="b2"]:visible').count() === 7, "B2 progress filter is incomplete.");
       assert(await page.locator('[data-progress-level="b1"]:visible').count() === 0, "B1 rows remain visible after selecting B2.");
+    });
+
+    await runTest(context, "knowledge map explains the next study action", async (page) => {
+      await openCleanPage(page, "knowledge_map.html");
+      await page.evaluate(() => {
+        window.MaltiReviewStore.addCustomWord({
+          maltese: "kelma dghajfa",
+          english: "weak word",
+          topic: "Knowledge map test"
+        });
+        localStorage.setItem("malti_course_target_progress_v1", JSON.stringify({
+          "b1-animals-qattus": {
+            state: "review",
+            dueAt: new Date(Date.now() - 60000).toISOString()
+          },
+          "grammar-agreement": { state: "learning", attempts: 1 }
+        }));
+        localStorage.setItem("malti_course_progress_v1", JSON.stringify({
+          objectives: { "b1-introductions::identity": true }
+        }));
+        window.MaltiMistakeStore.recordAttempt({
+          id: "knowledge-map-grammar-error",
+          prompt: "Choose the agreeing adjective",
+          correctAnswer: "karozza hamra",
+          topic: "Gender agreement",
+          category: "grammar",
+          ruleId: "grammar-agreement",
+          targetIds: ["grammar-agreement"]
+        }, false);
+      });
+      await page.reload({ waitUntil: "networkidle" });
+
+      assert(await page.locator("[data-knowledge-area]").count() === 14, "Knowledge map chapter coverage is incomplete.");
+      assert((await page.locator("[data-knowledge-metric-due]").textContent()).trim() === "2", "Knowledge map did not combine due cards and course targets.");
+      assert((await page.locator("[data-knowledge-metric-mistakes]").textContent()).trim() === "1", "Knowledge map did not count open mistakes.");
+      assert((await page.locator("[data-knowledge-next-title]").textContent()).includes("Resolve 1 open mistake"), "Knowledge map did not prioritize the strongest learning signal.");
+      assert(await page.locator("[data-knowledge-next-reasons] li").count() === 3, "Knowledge map does not explain its recommendation.");
+      assert((await page.locator("[data-knowledge-vocabulary]").textContent()).includes("kelma dghajfa"), "Weak vocabulary is missing from the knowledge map.");
+      const grammar = page.locator("[data-knowledge-grammar]");
+      assert((await grammar.textContent()).includes("Gender and number agreement"), "Weak grammar target is missing from the knowledge map.");
+      assert((await grammar.textContent()).includes("1 open mistake"), "Grammar focus does not explain its weak state.");
+      assert((await page.locator('[data-knowledge-area="b1-introductions"]').textContent()).includes("Mistakes 1"), "Mistake was not connected to its chapter.");
+      assert((await page.locator('[data-knowledge-area="b1-animals"]').textContent()).includes("Due 1"), "Due target was not connected to its chapter.");
+      await page.locator('[data-knowledge-filter="b2"]').click();
+      assert(await page.locator('[data-knowledge-level="b2"]:visible').count() === 7, "B2 knowledge map filter is incomplete.");
+      assert(await page.locator('[data-knowledge-level="b1"]:visible').count() === 0, "B1 knowledge areas remain visible after selecting B2.");
     });
 
     await runTest(context, "Today builds a focused adaptive study queue", async (page) => {

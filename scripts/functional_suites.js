@@ -27,6 +27,7 @@ const functionalSuites = {
   ],
   "progress-storage": [
     "course progress summarizes target states and filters chapters",
+    "knowledge map explains the next study action",
     "coverage tests rotate and track the complete learning bank",
     "progress backup restores cleared data"
   ],
