@@ -596,8 +596,19 @@ async function main() {
     await runTest(context, "book verb paradigms render every audited form and save a drill", async (page) => {
       await openCleanPage(page, "verbs_guide.html");
       await page.locator("[data-course-verb-paradigms][data-ready='true']").waitFor();
-      const standaloneGrammarTables = page.locator("#qed-system > table, #present > table, #future > table");
-      assert(await standaloneGrammarTables.count() === 3, "Expected three standalone grammar tables.");
+      const standaloneGrammarTables = page.locator("#lesson6-inserted-i > .table-scroll > table, #qed-system > table, #present > table, #future > table");
+      assert(await standaloneGrammarTables.count() === 4, "Expected four standalone grammar tables.");
+      assert(await standaloneGrammarTables.evaluateAll((tables) => tables.every((table) => !table.closest(".study-card"))), "Standalone grammar tables must not have a second framed wrapper.");
+      const comparisonWrapper = page.locator("#lesson6-inserted-i > .table-scroll");
+      const comparisonFrame = await comparisonWrapper.evaluate((wrapper) => {
+        const styles = getComputedStyle(wrapper);
+        return {
+          borderWidth: styles.borderWidth,
+          desktopScrolls: wrapper.scrollWidth > wrapper.clientWidth
+        };
+      });
+      assert(comparisonFrame.borderWidth === "0px", "Comparison table kept an outer frame.");
+      assert(!comparisonFrame.desktopScrolls, "Comparison table should fit without scrolling on desktop.");
       assert(await standaloneGrammarTables.evaluateAll((tables) => tables.every((table) => table.classList.contains("table-soft"))), "Standalone grammar tables lost their light surface styling.");
       const tableSurfaceDistances = await standaloneGrammarTables.evaluateAll((tables) => {
         const renderedPixel = (backgrounds) => {
@@ -613,13 +624,21 @@ async function main() {
         };
 
         return tables.map((table) => {
-          const parentBackground = getComputedStyle(table.parentElement).backgroundColor;
+          const parentBackground = getComputedStyle(table.closest(".content-card")).backgroundColor;
           const parentPixel = renderedPixel([parentBackground]);
           const tablePixel = renderedPixel([parentBackground, getComputedStyle(table).backgroundColor]);
           return tablePixel.reduce((distance, channel, index) => distance + Math.abs(channel - parentPixel[index]), 0);
         });
       });
       assert(tableSurfaceDistances.every((distance) => distance >= 12), "Standalone grammar table fills are indistinguishable from their parent cards.");
+      await page.setViewportSize({ width: 390, height: 900 });
+      const mobileComparison = await comparisonWrapper.evaluate((wrapper) => ({
+        clientWidth: wrapper.clientWidth,
+        scrollWidth: wrapper.scrollWidth,
+        tableWidth: wrapper.querySelector("table").getBoundingClientRect().width
+      }));
+      assert(mobileComparison.scrollWidth > mobileComparison.clientWidth && mobileComparison.tableWidth >= 720, "Wide comparison table does not scroll cleanly on mobile.");
+      await page.setViewportSize({ width: 1280, height: 900 });
       assert(await page.locator("[data-course-verb-paradigm]").count() === 18, "Expected 18 book verb paradigms.");
       assert(await page.locator("[data-course-verb-form]").count() === 125, "Expected 125 audited book verb forms.");
       await page.locator("[data-course-verb-book='B2']").click();

@@ -229,6 +229,20 @@
   color: var(--text-muted);
 }
 
+.table-scroll {
+  max-width: 100%;
+  margin-top: var(--flow-gap-sm);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll > table {
+  display: table;
+  min-width: 720px;
+  max-width: none;
+  margin-top: 0;
+}
+
 .lookup-status-box {
   margin-top: 12px;
   padding: 12px 14px;
