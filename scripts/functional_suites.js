@@ -1,0 +1,60 @@
+const functionalSuites = {
+  "navigation-search": [
+    "site search opens the matching page",
+    "site search finds and reveals learning content",
+    "site directory is generated from the shared map"
+  ],
+  course: [
+    "course path saves objectives and quick-check progress",
+    "milestone tests stay balanced across course chapters",
+    "course runtime loads manifest and one chapter payload",
+    "guided chapter route reports book, mapping, and assessment scope",
+    "book context scopes a topic without changing its full view",
+    "guided chapter scope is derived for every mapped page type",
+    "linked chapter checks can advance a target to mastery",
+    "course topic pages render data, exercises, and chapter context",
+    "book verb paradigms render every audited form and save a drill",
+    "book checkpoints render varied contextual assessment types"
+  ],
+  "review-games": [
+    "Today builds a focused adaptive study queue",
+    "wrong exercise answers flow into the mistake journal",
+    "grammar path tracks recognition, production, and rule mistakes",
+    "typed question-answer banks render and save the correct sides",
+    "Year 4 vocabulary uses the shared review store",
+    "word search creates a playable puzzle",
+    "memory game creates a complete deck"
+  ],
+  "progress-storage": [
+    "course progress summarizes target states and filters chapters",
+    "coverage tests rotate and track the complete learning bank",
+    "progress backup restores cleared data"
+  ],
+  "visual-contracts": [
+    "lesson support surfaces keep consistent spacing and width",
+    "generated banks keep the shared card styling",
+    "needs-review examples stay out of rendered banks",
+    "framed content groups keep the shared visual contract",
+    "theme choice survives a reload"
+  ],
+  "offline-pwa": [
+    "offline application assets are registered",
+    "visited course chapter remains available offline"
+  ]
+};
+
+const suiteNames = Object.keys(functionalSuites);
+const allFunctionalTestNames = suiteNames.flatMap((suiteName) => functionalSuites[suiteName]);
+const duplicateTestNames = allFunctionalTestNames.filter(
+  (testName, index) => allFunctionalTestNames.indexOf(testName) !== index
+);
+
+if (duplicateTestNames.length) {
+  throw new Error(`Functional tests assigned to multiple suites: ${[...new Set(duplicateTestNames)].join(", ")}`);
+}
+
+module.exports = {
+  allFunctionalTestNames,
+  functionalSuites,
+  suiteNames
+};

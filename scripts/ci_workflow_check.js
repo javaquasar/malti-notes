@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { suiteNames } = require("./functional_suites");
 
 const rootDir = path.resolve(__dirname, "..");
 const workflowPath = path.join(
@@ -37,12 +38,14 @@ const missingChecks = requiredChecks.filter(
 );
 const requiredFragments = [
   "pull_request:",
-  "needs: [quality, visual]",
+  "needs: [quality, functional, visual]",
   "node-version: \"24\"",
   "actions/checkout@v7",
   "actions/setup-node@v7",
   "actions/cache@v5",
   "VISUAL_SHARD_TOTAL: 3",
+  "FUNCTIONAL_SUITE: ${{ matrix.suite }}",
+  ...suiteNames,
 ];
 const missingFragments = requiredFragments.filter(
   (fragment) => !workflow.includes(fragment)
@@ -59,5 +62,5 @@ if (missingChecks.length || missingFragments.length) {
 }
 
 console.log(
-  `CI workflow contract passed (${requiredChecks.length} quality checks, PR gate, Node 24).`
+  `CI workflow contract passed (${requiredChecks.length} workflow checks, ${suiteNames.length} functional suites, PR gate, Node 24).`
 );

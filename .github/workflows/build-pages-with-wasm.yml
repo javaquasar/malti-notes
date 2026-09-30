@@ -101,10 +101,6 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run visual:smoke
 
-      - name: Run functional Playwright checks
-        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
-        run: npm run functional:test
-
       - name: Compare framed content group baseline
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         run: npm run visual:groups
@@ -123,6 +119,43 @@ jobs:
             visual-regression/diffs/
           if-no-files-found: ignore
           retention-days: 7
+
+  functional:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        suite:
+          - navigation-search
+          - course
+          - review-games
+          - progress-storage
+          - visual-contracts
+          - offline-pwa
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run functional suite
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+          FUNCTIONAL_SUITE: ${{ matrix.suite }}
+        run: npm run functional:test
 
   visual:
     runs-on: ubuntu-latest
@@ -170,7 +203,7 @@ jobs:
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    needs: [quality, visual]
+    needs: [quality, functional, visual]
     permissions:
       contents: read
     steps:

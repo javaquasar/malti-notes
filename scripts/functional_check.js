@@ -2,13 +2,23 @@ const fs = require("fs");
 const http = require("http");
 const path = require("path");
 const { chromium } = require("playwright");
+const { allFunctionalTestNames, functionalSuites, suiteNames } = require("./functional_suites");
 
 const root = path.resolve(__dirname, "..");
 const host = "127.0.0.1";
 const port = Number(process.env.FUNCTIONAL_PORT || 4175);
 const defaultChromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-const chromePath = process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
+const useBundledBrowser = process.env.PLAYWRIGHT_USE_BUNDLED === "1";
+const chromePath = useBundledBrowser ? "" : process.env.CHROME_PATH || (fs.existsSync(defaultChromePath) ? defaultChromePath : "");
 const baseUrl = `http://${host}:${port}`;
+const suiteArgumentIndex = process.argv.indexOf("--suite");
+const requestedSuite = process.env.FUNCTIONAL_SUITE
+  || (suiteArgumentIndex >= 0 ? process.argv[suiteArgumentIndex + 1] : "");
+const listSuites = process.argv.includes("--list");
+const selectedTestNames = requestedSuite ? new Set(functionalSuites[requestedSuite] || []) : null;
+const assignedTestNames = new Set(allFunctionalTestNames);
+const observedTestNames = new Set();
+let executedTestCount = 0;
 const mimeTypes = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
@@ -90,6 +100,11 @@ async function openCleanPage(page, pageName) {
 }
 
 async function runTest(context, name, callback) {
+  assert(assignedTestNames.has(name), `Functional test is not assigned to a suite: ${name}`);
+  observedTestNames.add(name);
+  if (selectedTestNames && !selectedTestNames.has(name)) return;
+  executedTestCount += 1;
+
   const page = await context.newPage();
   const pageErrors = [];
   page.on("pageerror", (error) => pageErrors.push(error.message));
@@ -104,6 +119,7 @@ async function runTest(context, name, callback) {
 }
 
 async function main() {
+  assert(!requestedSuite || suiteNames.includes(requestedSuite), `Unknown functional suite: ${requestedSuite}. Expected one of: ${suiteNames.join(", ")}`);
   const server = makeServer();
   await new Promise((resolve) => server.listen(port, host, resolve));
   const browser = await chromium.launch(chromePath ? { executablePath: chromePath } : {});
@@ -909,6 +925,11 @@ async function main() {
       }
     });
 
+    const missingRegistrations = allFunctionalTestNames.filter((testName) => !observedTestNames.has(testName));
+    assert(missingRegistrations.length === 0, `Functional suite registry contains missing tests: ${missingRegistrations.join(", ")}`);
+    const expectedTestCount = selectedTestNames ? selectedTestNames.size : allFunctionalTestNames.length;
+    assert(executedTestCount === expectedTestCount, `Expected ${expectedTestCount} functional tests, ran ${executedTestCount}.`);
+    console.log(`ok functional ${requestedSuite || "all"}: ${executedTestCount} test(s)`);
     await context.close();
   } finally {
     await browser.close();
@@ -916,7 +937,12 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (listSuites) {
+  suiteNames.forEach((suiteName) => console.log(`${suiteName}: ${functionalSuites[suiteName].length}`));
+  console.log(`total: ${allFunctionalTestNames.length}`);
+} else {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

@@ -50,7 +50,8 @@
     "course:quality": "node ./scripts/course_content_quality_check.js",
     "course:lint": "npm run course:graph:check && npm run course:provenance:check && npm run course:examples:check && npm run course:supplements:check && npm run course:assessments:check && npm run course:milestones:check && npm run course:bindings:check && npm run course:verbs:check && npm run coverage:check && npm run course:payloads:check && npm run course:payloads:budget && npm run course:quality && node ./scripts/course_lint.js",
     "links:lint": "node ./scripts/links_lint.js",
-    "functional:test": "node ./scripts/functional_check.js"
+    "functional:test": "node ./scripts/functional_check.js",
+    "functional:list": "node ./scripts/functional_check.js --list"
   },
   "repository": {
     "type": "git",
