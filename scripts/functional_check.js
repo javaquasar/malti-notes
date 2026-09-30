@@ -842,14 +842,80 @@ async function main() {
       assert(saved?.answer === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Review card saved the wrong Q&A answer.");
     });
 
+    await runTest(context, "reviewable bank items toggle individually without covering text", async (page) => {
+      for (const pageName of bankPages) {
+        await openCleanPage(page, pageName);
+        const result = await page.locator("[data-example-group], [data-question-group]").evaluateAll((containers) => {
+          const renderedCards = containers.flatMap((container) => Array.from(container.children));
+          return {
+            cards: renderedCards.length,
+            toggles: renderedCards.filter((card) => (
+              card.classList.contains("sentence-card--review-toggle")
+              && card.querySelector(":scope > .review-add-button--icon")
+            )).length
+          };
+        });
+        assert(result.cards > 0, `${pageName} rendered no reviewable bank items.`);
+        assert(result.toggles === result.cards, `${pageName} did not add an individual bookmark to every bank item.`);
+      }
+
+      await openCleanPage(page, "emotions.html");
+      const bank = page.locator('[data-example-group="emotions-practice-bank"]');
+      const cards = bank.locator(":scope > .sentence-card--review-toggle");
+      await cards.first().waitFor();
+      assert(await cards.count() === 30, "The emotions practice bank did not render a bookmark for every sentence.");
+
+      for (const viewport of [{ width: 1280, height: 900 }, { width: 390, height: 844 }]) {
+        await page.setViewportSize(viewport);
+        const geometry = await cards.last().evaluate((card) => {
+          const content = card.querySelector("strong").getBoundingClientRect();
+          const button = card.querySelector(".review-add-button--icon").getBoundingClientRect();
+          return { contentRight: content.right, buttonLeft: button.left };
+        });
+        assert(geometry.contentRight < geometry.buttonLeft, `Sentence text reaches the bookmark at ${viewport.width}px.`);
+      }
+
+      const firstButton = cards.first().locator(".review-add-button--icon");
+      const reviewId = await firstButton.getAttribute("data-review-id");
+      const bulkRow = bank.locator("xpath=preceding-sibling::*[1]");
+      assert(await firstButton.getAttribute("aria-label") === "Add to review", "Sentence bookmark has the wrong initial label.");
+      await firstButton.click();
+      assert(await page.evaluate((id) => window.MaltiReviewStore.hasCard(id), reviewId), "Sentence bookmark did not save its sentence.");
+      assert(await firstButton.getAttribute("aria-label") === "Remove from review", "Saved sentence bookmark does not expose removal.");
+      assert((await bulkRow.locator("[data-section-status]").textContent()).includes("1 saved, 29 left"), "Bulk status did not reflect the individual save.");
+      await firstButton.click();
+      assert(!await page.evaluate((id) => window.MaltiReviewStore.hasCard(id), reviewId), "Second sentence bookmark click did not remove its sentence.");
+      assert(await firstButton.getAttribute("aria-label") === "Add to review", "Removed sentence bookmark did not return to its empty state.");
+
+      await openCleanPage(page, "daily_routine.html");
+      const qaCard = page.locator('[data-example-group="daily-routine-qa"] > .qa-pair-card').first();
+      const qaButton = qaCard.locator(":scope > .review-add-button--icon");
+      assert(await qaButton.count() === 1, "Question-and-answer card has no individual bookmark.");
+      const qaGeometry = await qaCard.evaluate((card) => {
+        const question = card.querySelector(".qa-pair-part--question").getBoundingClientRect();
+        const button = card.querySelector(".review-add-button--icon").getBoundingClientRect();
+        return { questionRight: question.right, buttonLeft: button.left };
+      });
+      assert(qaGeometry.questionRight < qaGeometry.buttonLeft, "Question-and-answer text reaches its bookmark area.");
+      await qaButton.click();
+      assert(await page.evaluate(() => window.MaltiReviewStore.getAllCards().some((card) => card.contentType === "questionAnswer")), "Question-and-answer bookmark did not save the pair.");
+
+      await openCleanPage(page, "picture_description.html");
+      const questionCard = page.locator('[data-question-group="family-home"] > .sentence-card--review-toggle').first();
+      const questionButton = questionCard.locator(":scope > .review-add-button--icon");
+      assert(await questionButton.count() === 1, "Standalone question has no individual bookmark.");
+      await questionButton.click();
+      assert(await page.evaluate(() => window.MaltiReviewStore.getStats().total === 1), "Standalone question bookmark did not save its question.");
+    });
+
     await runTest(context, "shared vocabulary bookmarks toggle the review collection", async (page) => {
       for (const pageName of vocabularyCardPages) {
         await openCleanPage(page, pageName);
         const buttons = page.locator(".review-add-button");
         await buttons.first().waitFor();
         const counts = await page.evaluate(() => ({
-          all: document.querySelectorAll(".review-add-button").length,
-          icons: document.querySelectorAll(".review-add-button--icon").length,
+          all: document.querySelectorAll(".vocab-card--review-toggle > .review-add-button").length,
+          icons: document.querySelectorAll(".vocab-card--review-toggle > .review-add-button--icon").length,
           positionedCards: document.querySelectorAll(".vocab-card--review-toggle").length
         }));
         assert(counts.all > 0, `${pageName} rendered no vocabulary review controls.`);

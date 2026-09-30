@@ -64,7 +64,7 @@ function appendQuestionAnswerPart(card, type, label, text, translation) {
     card.appendChild(part);
 }
 
-function appendQuestionAnswerCard(container, normalized, index, numbered) {
+function appendQuestionAnswerCard(container, normalized, index, numbered, reviewButton) {
     const article = document.createElement("article");
     const questionLabel = numbered ? `${index + 1}. Question` : "Question";
 
@@ -72,6 +72,10 @@ function appendQuestionAnswerCard(container, normalized, index, numbered) {
     article.dataset.contentType = "questionAnswer";
     appendQuestionAnswerPart(article, "question", questionLabel, normalized.prompt, normalized.questionTranslation);
     appendQuestionAnswerPart(article, "answer", "Answer", normalized.answer, normalized.answerTranslation);
+    if (reviewButton) {
+        article.classList.add("sentence-card--review-toggle");
+        article.appendChild(reviewButton);
+    }
     container.appendChild(article);
 }
 
@@ -81,6 +85,7 @@ async function renderExampleBanksFromData(config) {
         groupAttribute = "data-example-group",
         cardClass = "study-card",
         containerClass = "grid-2",
+        individualReviewGroups = null,
         numbered = true
     } = config || {};
 
@@ -165,7 +170,7 @@ async function renderExampleBanksFromData(config) {
         }
     }
 
-    function addSentenceCards(items, bulkButtons) {
+    function addSentenceCards(items) {
         const store = getStore();
         if (!store) {
             return;
@@ -175,16 +180,58 @@ async function renderExampleBanksFromData(config) {
                 store.addSentence(item);
             }
         });
+        refreshSentenceReviewUi();
+    }
+
+    function syncSentenceButton(button) {
+        const store = getStore();
+        if (!store) {
+            return;
+        }
+        const exists = store.hasCard(button.dataset.reviewId);
+        const label = exists ? "Remove from review" : "Add to review";
+        button.textContent = exists ? "Remove from Review" : "Add to Review";
+        button.classList.toggle("is-added", exists);
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-pressed", String(exists));
+    }
+
+    function refreshSentenceReviewUi() {
         bulkButtons.forEach(syncBulkButton);
+        individualReviewButtons.forEach(syncSentenceButton);
         const summary = document.querySelector("[data-review-summary]");
         if (summary) {
-            const stats = store.getStats();
+            const stats = getStore().getStats();
             summary.textContent = stats.total + " saved, " + stats.due + " due";
         }
     }
 
+    function createSentenceReviewButton(sentence) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "review-add-button review-add-button--icon";
+        button.dataset.reviewId = sentence.id;
+        button.addEventListener("click", () => {
+            const store = getStore();
+            if (store.hasCard(sentence.id)) {
+                store.removeCard(sentence.id);
+            } else {
+                store.addSentence(sentence);
+            }
+            refreshSentenceReviewUi();
+        });
+        individualReviewButtons.push(button);
+        syncSentenceButton(button);
+        return button;
+    }
+
     const allSentenceItems = [];
     const bulkButtons = [];
+    const individualReviewButtons = [];
+    const individualReviewGroupIds = Array.isArray(individualReviewGroups)
+        ? new Set(individualReviewGroups)
+        : null;
 
     groups.forEach((group) => {
         const contentGroup = Object.assign({ source: data.source || null }, group);
@@ -207,6 +254,9 @@ async function renderExampleBanksFromData(config) {
         }
 
         const sentenceItems = publishableItems.map((item) => toSentenceCard(item, contentGroup, container));
+        const hasIndividualReview = !!getStore() && (
+            !individualReviewGroupIds || individualReviewGroupIds.has(group.id)
+        );
         allSentenceItems.push(...sentenceItems);
 
         if (getStore()) {
@@ -221,7 +271,7 @@ async function renderExampleBanksFromData(config) {
                 button.className = "action-button";
                 button.dataset.items = JSON.stringify(sentenceItems);
                 button.dataset.bulkLabel = "Add sentence bank to review";
-                button.addEventListener("click", () => addSentenceCards(sentenceItems, bulkButtons));
+                button.addEventListener("click", () => addSentenceCards(sentenceItems));
 
                 const status = document.createElement("span");
                 status.className = "status-chip";
@@ -240,12 +290,19 @@ async function renderExampleBanksFromData(config) {
             const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
 
             if (normalized.itemType === "questionAnswer") {
-                appendQuestionAnswerCard(container, normalized, index, shouldNumber);
+                const reviewButton = hasIndividualReview
+                    ? createSentenceReviewButton(sentenceItems[index])
+                    : null;
+                appendQuestionAnswerCard(container, normalized, index, shouldNumber, reviewButton);
                 return;
             }
 
             const article = document.createElement("article");
             article.className = resolveBankCardClass(group.cardClass || cardClass, "study-card");
+
+            if (hasIndividualReview) {
+                article.classList.add("sentence-card--review-toggle");
+            }
 
             if (item.origin) {
                 article.dataset.origin = item.origin;
@@ -268,6 +325,9 @@ async function renderExampleBanksFromData(config) {
                 note.textContent = supportingText;
                 article.appendChild(note);
             }
+            if (hasIndividualReview) {
+                article.appendChild(createSentenceReviewButton(sentenceItems[index]));
+            }
             container.appendChild(article);
         });
     });
@@ -283,7 +343,7 @@ async function renderExampleBanksFromData(config) {
             button.dataset.pageSentenceReviewAdd = "true";
             button.dataset.bulkLabel = config.pageBulkLabel || "Add all example sentences";
             button.dataset.items = JSON.stringify(allSentenceItems);
-            button.addEventListener("click", () => addSentenceCards(allSentenceItems, bulkButtons));
+            button.addEventListener("click", () => addSentenceCards(allSentenceItems));
             toolbar.insertBefore(button, toolbar.children[1] || null);
             bulkButtons.push(button);
             syncBulkButton(button);
@@ -380,7 +440,7 @@ async function renderQuestionBanksFromData(config) {
         }
     }
 
-    function addQuestionCards(items, bulkButtons) {
+    function addQuestionCards(items) {
         const store = getStore();
         if (!store) {
             return;
@@ -390,15 +450,54 @@ async function renderQuestionBanksFromData(config) {
                 store.addSentence(item);
             }
         });
+        refreshQuestionReviewUi();
+    }
+
+    function syncQuestionButton(button) {
+        const store = getStore();
+        if (!store) {
+            return;
+        }
+        const exists = store.hasCard(button.dataset.reviewId);
+        const label = exists ? "Remove from review" : "Add to review";
+        button.textContent = exists ? "Remove from Review" : "Add to Review";
+        button.classList.toggle("is-added", exists);
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-pressed", String(exists));
+    }
+
+    function refreshQuestionReviewUi() {
         bulkButtons.forEach(syncBulkButton);
+        individualReviewButtons.forEach(syncQuestionButton);
         const summary = document.querySelector("[data-review-summary]");
         if (summary) {
-            const stats = store.getStats();
+            const stats = getStore().getStats();
             summary.textContent = stats.total + " saved, " + stats.due + " due";
         }
     }
 
+    function createQuestionReviewButton(question) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "review-add-button review-add-button--icon";
+        button.dataset.reviewId = question.id;
+        button.addEventListener("click", () => {
+            const store = getStore();
+            if (store.hasCard(question.id)) {
+                store.removeCard(question.id);
+            } else {
+                store.addSentence(question);
+            }
+            refreshQuestionReviewUi();
+        });
+        individualReviewButtons.push(button);
+        syncQuestionButton(button);
+        return button;
+    }
+
     const bulkButtons = [];
+    const individualReviewButtons = [];
 
     groups.forEach((group) => {
         const selector = `[${groupAttribute}="${group.id}"]`;
@@ -426,7 +525,7 @@ async function renderQuestionBanksFromData(config) {
                 button.className = "action-button";
                 button.dataset.items = JSON.stringify(questionItems);
                 button.dataset.bulkLabel = config.bulkLabel || "Add question bank to review";
-                button.addEventListener("click", () => addQuestionCards(questionItems, bulkButtons));
+                button.addEventListener("click", () => addQuestionCards(questionItems));
 
                 const status = document.createElement("span");
                 status.className = "status-chip";
@@ -453,6 +552,10 @@ async function renderQuestionBanksFromData(config) {
 
             card.appendChild(strong);
             card.appendChild(span);
+            if (getStore()) {
+                card.classList.add("sentence-card--review-toggle");
+                card.appendChild(createQuestionReviewButton(questionItems[index]));
+            }
             container.appendChild(card);
         });
     });

@@ -21,6 +21,7 @@ const functionalSuites = {
     "wrong exercise answers flow into the mistake journal",
     "grammar path tracks recognition, production, and rule mistakes",
     "typed question-answer banks render and save the correct sides",
+    "reviewable bank items toggle individually without covering text",
     "shared vocabulary bookmarks toggle the review collection",
     "Year 4 vocabulary uses the shared review store",
     "word search creates a playable puzzle",

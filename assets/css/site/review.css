@@ -81,6 +81,46 @@
   right: var(--space-lg);
 }
 
+.sentence-card--review-toggle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px;
+  column-gap: var(--space-lg);
+  align-items: start;
+}
+
+.sentence-card--review-toggle:not(.qa-pair-card) > :not(.review-add-button--icon) {
+  grid-column: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.sentence-card--review-toggle > .review-add-button--icon {
+  position: static;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.qa-pair-card.sentence-card--review-toggle {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) 56px;
+  column-gap: 0;
+}
+
+.qa-pair-card.sentence-card--review-toggle > .qa-pair-part--question {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.qa-pair-card.sentence-card--review-toggle > .qa-pair-part--answer {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.qa-pair-card.sentence-card--review-toggle > .review-add-button--icon {
+  grid-column: 3;
+  justify-self: center;
+  margin-top: var(--space-lg);
+}
+
 .toggle-images,
 .home-toggle {
   appearance: none;

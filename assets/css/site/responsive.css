@@ -131,6 +131,25 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .qa-pair-card.sentence-card--review-toggle {
+    grid-template-columns: minmax(0, 1fr) 56px;
+  }
+
+  .qa-pair-card.sentence-card--review-toggle > .qa-pair-part--question {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .qa-pair-card.sentence-card--review-toggle > .qa-pair-part--answer {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .qa-pair-card.sentence-card--review-toggle > .review-add-button--icon {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   .qa-pair-part--answer {
     border-top: 1px solid var(--component-card-border);
     border-left: 0;
