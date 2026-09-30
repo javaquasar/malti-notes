@@ -74,6 +74,16 @@
         render();
     }
 
+    function toggleReview(item) {
+        var id = reviewId(item);
+        if (window.MaltiReviewStore.hasWord(id)) {
+            window.MaltiReviewStore.removeWord(id);
+        } else {
+            window.MaltiReviewStore.addWord(toReviewWord(item));
+        }
+        render();
+    }
+
     function updateReviewSummary() {
         var saved = state.visible.filter(function (item) { return window.MaltiReviewStore.hasWord(reviewId(item)); }).length;
         var left = state.visible.length - saved;
@@ -159,7 +169,7 @@
         state.visible.forEach(function (item) {
             var card = document.createElement("article");
             var isSaved = window.MaltiReviewStore.hasWord(reviewId(item));
-            card.className = "year4-card" + (state.hideEnglish ? " hide-english" : "");
+            card.className = "year4-card year4-card--review-toggle" + (state.hideEnglish ? " hide-english" : "");
             card.tabIndex = 0;
             card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p><div class='year4-example'><strong>Example</strong><span class='example-text'></span><strong>English</strong><span class='example-translation'></span></div>";
             card.querySelector("code").textContent = item.maltese;
@@ -169,10 +179,12 @@
             card.querySelector(".example-translation").textContent = item.exampleTranslation || item.english || "";
             var reviewButton = document.createElement("button");
             reviewButton.type = "button";
-            reviewButton.className = "review-add-button" + (isSaved ? " is-added" : "");
-            reviewButton.textContent = isSaved ? "Saved for Review" : "Add to Review";
-            reviewButton.disabled = isSaved;
-            reviewButton.addEventListener("click", function () { addToReview([item]); });
+            reviewButton.className = "review-add-button review-add-button--icon" + (isSaved ? " is-added" : "");
+            reviewButton.textContent = isSaved ? "Remove from Review" : "Add to Review";
+            reviewButton.setAttribute("aria-label", isSaved ? "Remove from review" : "Add to review");
+            reviewButton.setAttribute("title", isSaved ? "Remove from review" : "Add to review");
+            reviewButton.setAttribute("aria-pressed", String(isSaved));
+            reviewButton.addEventListener("click", function () { toggleReview(item); });
             card.appendChild(reviewButton);
             bindCardReveal(card);
             grid.appendChild(card);

@@ -260,13 +260,21 @@
       const reviewId = `word::course-supplement::${item.id}`;
       const sync = () => {
         const saved = window.MaltiReviewStore?.hasWord(reviewId) === true;
-        button.textContent = saved ? "Saved for Review" : "Add to Review";
+        const label = saved ? "Remove from review" : "Add to review";
+        button.textContent = saved ? "Remove from Review" : "Add to Review";
         button.classList.toggle("is-added", saved);
-        button.disabled = saved;
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-pressed", String(saved));
       };
       button.type = "button";
-      button.className = "review-add-button";
+      button.className = "review-add-button review-add-button--icon";
       button.addEventListener("click", () => {
+        if (window.MaltiReviewStore?.hasWord(reviewId)) {
+          window.MaltiReviewStore.removeWord(reviewId);
+          sync();
+          return;
+        }
         window.MaltiReviewStore?.addWord({
           id: reviewId,
           contentId: item.id,

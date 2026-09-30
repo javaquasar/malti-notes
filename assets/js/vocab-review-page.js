@@ -64,9 +64,19 @@
                 return;
             }
             const exists = store.hasWord(button.dataset.reviewId);
-            button.textContent = exists ? "Saved for Review" : "Add to Review";
+            const isIconButton = button.classList.contains("review-add-button--icon");
+            button.textContent = exists
+                ? (isIconButton ? "Remove from Review" : "Saved for Review")
+                : "Add to Review";
             button.classList.toggle("is-added", !!exists);
-            button.disabled = !!exists;
+            button.disabled = isIconButton ? false : !!exists;
+
+            if (isIconButton) {
+                const label = exists ? "Remove from review" : "Add to review";
+                button.setAttribute("aria-label", label);
+                button.setAttribute("title", label);
+                button.setAttribute("aria-pressed", String(!!exists));
+            }
         }
 
         function syncBulkButton(button) {
@@ -111,8 +121,17 @@
             const button = document.createElement("button");
             button.type = "button";
             button.className = "review-add-button";
+            if (config.reviewButtonMode !== "text") {
+                button.classList.add("review-add-button--icon");
+            }
             button.dataset.reviewId = makeReviewId(item);
             button.addEventListener("click", function () {
+                const store = getStore();
+                if (button.classList.contains("review-add-button--icon") && store?.hasWord(button.dataset.reviewId)) {
+                    store.removeWord(button.dataset.reviewId);
+                    refreshReviewUi();
+                    return;
+                }
                 addWords([toReviewWord(item, group)]);
             });
             reviewButtons.push(button);

@@ -36,6 +36,10 @@ const bankPages = fs.readdirSync(root)
   .filter((file) => file.endsWith(".html"))
   .filter((file) => /data-(?:example|question)-group/.test(fs.readFileSync(path.join(root, file), "utf8")))
   .sort();
+const vocabularyCardPages = fs.readdirSync(root)
+  .filter((file) => file.endsWith(".html"))
+  .filter((file) => fs.readFileSync(path.join(root, file), "utf8").includes("vocab-review-page.js"))
+  .sort();
 
 const courseTopicPages = [
   { pageName: "introductions_alphabet.html", groupSelector: "[data-introduction-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 },
@@ -475,8 +479,14 @@ async function main() {
       const supplementCard = page.locator('[data-course-supplement-grid] [data-content-id="b1-animals-brama"]');
       assert(await supplementCard.count() === 1, "The unlinked animals target was not promoted to a supplemental card.");
       assert((await supplementCard.textContent()).includes("Source: B1, Chapter 4, p. 62"), "Supplemental target source page is missing.");
-      await supplementCard.locator(".review-add-button").click();
+      const supplementBookmark = supplementCard.locator(".review-add-button--icon");
+      assert(await supplementBookmark.getAttribute("aria-label") === "Add to review", "Supplemental vocabulary does not use the bookmark action.");
+      await supplementBookmark.click();
       assert(await page.evaluate(() => window.MaltiReviewStore.hasWord("word::course-supplement::b1-animals-brama")), "Supplemental target was not added to shared review.");
+      assert(await supplementBookmark.getAttribute("aria-label") === "Remove from review", "Saved supplemental bookmark does not expose removal.");
+      await supplementBookmark.click();
+      assert(!await page.evaluate(() => window.MaltiReviewStore.hasWord("word::course-supplement::b1-animals-brama")), "Supplemental bookmark did not remove the saved word.");
+      await supplementBookmark.click();
       const firstStepHref = await page.locator(".course-step a").first().getAttribute("href");
       assert(firstStepHref.includes("animals.html?course=b1") && firstStepHref.includes("view=chapter"), "Animals step does not open chapter view.");
 
@@ -832,6 +842,36 @@ async function main() {
       assert(saved?.answer === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Review card saved the wrong Q&A answer.");
     });
 
+    await runTest(context, "shared vocabulary bookmarks toggle the review collection", async (page) => {
+      for (const pageName of vocabularyCardPages) {
+        await openCleanPage(page, pageName);
+        const buttons = page.locator(".review-add-button");
+        await buttons.first().waitFor();
+        const counts = await page.evaluate(() => ({
+          all: document.querySelectorAll(".review-add-button").length,
+          icons: document.querySelectorAll(".review-add-button--icon").length,
+          positionedCards: document.querySelectorAll(".vocab-card--review-toggle").length
+        }));
+        assert(counts.all > 0, `${pageName} rendered no vocabulary review controls.`);
+        assert(counts.icons === counts.all, `${pageName} kept a full-width vocabulary review button.`);
+        assert(counts.positionedCards === counts.all, `${pageName} did not position every vocabulary bookmark.`);
+      }
+
+      await openCleanPage(page, "animals.html");
+      const lionButton = page.locator('[data-content-id="iljun"] .review-add-button--icon');
+      const reviewId = await lionButton.getAttribute("data-review-id");
+
+      assert(await lionButton.getAttribute("aria-label") === "Add to review", "Empty bookmark has the wrong accessible label.");
+      await lionButton.click();
+      assert(await page.evaluate((id) => window.MaltiReviewStore.hasWord(id), reviewId), "Bookmark did not add the animal word.");
+      assert(await lionButton.getAttribute("aria-label") === "Remove from review", "Saved bookmark does not expose its remove action.");
+      assert(await lionButton.isEnabled(), "Saved bookmark cannot be toggled.");
+
+      await lionButton.click();
+      assert(!await page.evaluate((id) => window.MaltiReviewStore.hasWord(id), reviewId), "Second bookmark click did not remove the animal word.");
+      assert(await lionButton.getAttribute("aria-label") === "Add to review", "Removed bookmark did not return to its empty state.");
+    });
+
     await runTest(context, "Year 4 vocabulary uses the shared review store", async (page) => {
       await openCleanPage(page, "year4_exam.html");
       await page.locator("#year4-search").fill("fekruna");
@@ -842,11 +882,16 @@ async function main() {
         visible: window.MaltiYear4Exam.getVisibleItems().length
       }));
       assert(saved.total === 1 && saved.visible === 1, "Year 4 visible word was not saved once.");
-      assert(await page.locator(".year4-card .review-add-button").isDisabled(), "Saved Year 4 card did not update its state.");
+      const bookmark = page.locator(".year4-card .review-add-button--icon");
+      assert(await bookmark.isEnabled(), "Saved Year 4 bookmark cannot be toggled.");
+      assert(await bookmark.getAttribute("aria-label") === "Remove from review", "Saved Year 4 bookmark does not expose removal.");
+      await bookmark.click();
+      assert(await page.evaluate(() => window.MaltiReviewStore.getStats().total) === 0, "Year 4 bookmark did not remove the saved word.");
+      await bookmark.click();
       await page.reload({ waitUntil: "networkidle" });
       await page.locator("#year4-search").fill("fekruna");
       await page.waitForFunction(() => document.querySelectorAll(".year4-card").length === 1);
-      assert(await page.locator(".year4-card .review-add-button").isDisabled(), "Year 4 review state did not survive reload.");
+      assert(await page.locator(".year4-card .review-add-button--icon").getAttribute("aria-label") === "Remove from review", "Year 4 review state did not survive reload.");
     });
 
     await runTest(context, "framed content groups keep the shared visual contract", async (page) => {

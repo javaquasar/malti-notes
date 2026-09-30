@@ -263,6 +263,16 @@
   min-width: 0;
 }
 
+.vocab-card--review-toggle,
+.year4-card.year4-card--review-toggle {
+  position: relative;
+}
+
+.vocab-card--review-toggle:not(.vocab-card--has-visual),
+.year4-card.year4-card--review-toggle {
+  padding-right: calc(var(--space-lg) + 48px);
+}
+
 .animal-figure-card img,
 .transport-figure-card img {
   display: block;

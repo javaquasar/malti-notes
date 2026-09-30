@@ -35,6 +35,52 @@
   color: var(--accent);
 }
 
+.review-add-button--icon {
+  position: absolute;
+  top: calc(var(--component-figure-card-padding) + 10px);
+  right: calc(var(--component-figure-card-padding) + 10px);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--surface-card);
+  box-shadow: var(--shadow-float-soft);
+  color: var(--accent);
+  font-size: 0;
+  line-height: 0;
+}
+
+.review-add-button--icon::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  content: "";
+  transform: translateY(7px);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.review-add-button--icon.is-added::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+}
+
+.review-add-button--icon:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.vocab-card--review-toggle:not(.vocab-card--has-visual) > .review-add-button--icon,
+.year4-card--review-toggle > .review-add-button--icon {
+  top: var(--space-lg);
+  right: var(--space-lg);
+}
+
 .toggle-images,
 .home-toggle {
   appearance: none;
@@ -727,4 +773,3 @@
     min-height: 470px;
   }
 }
-

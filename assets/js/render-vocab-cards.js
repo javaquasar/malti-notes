@@ -48,6 +48,7 @@
 
         var lead = createVisualLead(item, options || {});
         if (lead) {
+            figure.classList.add("vocab-card--has-visual");
             figure.appendChild(lead);
         }
 
@@ -64,6 +65,9 @@
         if (typeof options.reviewButtonFactory === "function") {
             var reviewButton = options.reviewButtonFactory(item);
             if (reviewButton) {
+                if (reviewButton.classList.contains("review-add-button--icon")) {
+                    figure.classList.add("vocab-card--review-toggle");
+                }
                 figure.appendChild(reviewButton);
             }
         }
