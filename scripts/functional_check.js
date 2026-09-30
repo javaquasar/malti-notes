@@ -707,16 +707,28 @@ async function main() {
 
             Array.from(container.children).forEach((card, index) => {
               const style = window.getComputedStyle(card);
-              const strong = card.querySelector(":scope > strong");
-              const translation = card.querySelector(":scope > span");
+              const isQuestionAnswer = card.getAttribute("data-content-type") === "questionAnswer";
               const issues = [];
               cardCount += 1;
 
               if (parseFloat(style.borderTopWidth) === 0 || style.borderTopStyle === "none") issues.push("border");
-              if (parseFloat(style.paddingTop) === 0) issues.push("padding");
               if (style.backgroundColor === "rgba(0, 0, 0, 0)") issues.push("background");
-              if (!strong || window.getComputedStyle(strong).display !== "block") issues.push("Maltese line display");
-              if (!translation || window.getComputedStyle(translation).display !== "block") issues.push("translation display");
+
+              if (isQuestionAnswer) {
+                const question = card.querySelector(":scope > .qa-pair-part--question");
+                const answer = card.querySelector(":scope > .qa-pair-part--answer");
+                const parts = [question, answer].filter(Boolean);
+                if (parts.length !== 2) issues.push("paired structure");
+                if (parts.some((part) => parseFloat(window.getComputedStyle(part).paddingTop) === 0)) issues.push("pair padding");
+                if (parts.some((part) => !part.querySelector(".qa-pair-label"))) issues.push("pair labels");
+                if (parts.some((part) => window.getComputedStyle(part.querySelector(".qa-pair-text")).display !== "block")) issues.push("pair text display");
+              } else {
+                const strong = card.querySelector(":scope > strong");
+                const translation = card.querySelector(":scope > span");
+                if (parseFloat(style.paddingTop) === 0) issues.push("padding");
+                if (!strong || window.getComputedStyle(strong).display !== "block") issues.push("Maltese line display");
+                if (!translation || window.getComputedStyle(translation).display !== "block") issues.push("translation display");
+              }
 
               if (issues.length) {
                 problems.push(`${groupName}[${index}] (${card.className}): ${issues.join(", ")}`);
@@ -786,9 +798,11 @@ async function main() {
       await openCleanPage(page, "daily_routine.html");
       const bank = page.locator('[data-example-group="daily-routine-qa"]');
       const firstCard = bank.locator(":scope > article").first();
-      assert((await firstCard.locator(":scope > strong").textContent()).includes("X'tagħmel filgħodu?"), "Q&A card does not render the question as its prompt.");
-      assert((await firstCard.locator(":scope > span").textContent()).trim() === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Q&A card does not render the Maltese answer separately.");
-      assert((await firstCard.locator(":scope > small").textContent()).includes("What do you do in the morning?"), "Q&A card lost its English support text.");
+      assert(await firstCard.getAttribute("data-content-type") === "questionAnswer", "Q&A card lost its semantic content type.");
+      assert((await firstCard.locator(".qa-pair-part--question .qa-pair-text").textContent()).includes("X'tagħmel filgħodu?"), "Q&A card does not render the question as its prompt.");
+      assert((await firstCard.locator(".qa-pair-part--answer .qa-pair-text").textContent()).trim() === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Q&A card does not render the Maltese answer separately.");
+      assert((await firstCard.locator(".qa-pair-part--question .qa-pair-translation").textContent()).trim() === "What do you do in the morning?", "Q&A card lost the question translation.");
+      assert((await firstCard.locator(".qa-pair-part--answer .qa-pair-translation").textContent()).trim() === "In the morning I drink coffee and eat some bread.", "Q&A card lost the answer translation.");
 
       await bank.locator("xpath=preceding-sibling::*[1]").locator("button").click();
       const saved = await page.evaluate(() => window.MaltiReviewStore.getAllCards().find((card) => card.prompt === "X'tagħmel filgħodu?"));

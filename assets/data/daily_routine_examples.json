@@ -25,27 +25,34 @@
       ]
     },
     {
-      "id": "daily-small-talk-questions",
-      "title": "Basic questions",
-      "itemType": "example",
+      "id": "daily-small-talk-qa",
+      "title": "Basic Questions and Answers",
+      "itemType": "questionAnswer",
       "items": [
-        { "maltese": "Kif inti?", "english": "How are you?" },
-        { "maltese": "Kif jismek?", "english": "What is your name?" },
-        { "maltese": "Minn fejn inti?", "english": "Where are you from?" },
-        { "maltese": "X'tagħmel?", "english": "What do you do?" },
-        { "maltese": "Fejn toqgħod?", "english": "Where do you live?" }
-      ]
-    },
-    {
-      "id": "daily-small-talk-answers",
-      "title": "Basic answers",
-      "itemType": "example",
-      "items": [
-        { "maltese": "Jiena Artur.", "english": "I am Artur." },
-        { "maltese": "Jiena mill-Kanada.", "english": "I am from Canada." },
-        { "maltese": "Noqgħod Malta.", "english": "I live in Malta." },
-        { "maltese": "Naħdem f'uffiċċju.", "english": "I work in an office." },
-        { "maltese": "Jiena student / studenta.", "english": "I am a student." }
+        {
+          "question": { "maltese": "Kif inti?", "english": "How are you?" },
+          "answer": { "maltese": "Jiena tajjeb / tajba, grazzi.", "english": "I am fine, thank you." }
+        },
+        {
+          "question": { "maltese": "Kif jismek?", "english": "What is your name?" },
+          "answer": { "maltese": "Jiena Artur.", "english": "I am Artur." }
+        },
+        {
+          "question": { "maltese": "Minn fejn inti?", "english": "Where are you from?" },
+          "answer": { "maltese": "Jiena mill-Kanada.", "english": "I am from Canada." }
+        },
+        {
+          "question": { "maltese": "X'tagħmel?", "english": "What do you do?" },
+          "answer": { "maltese": "Naħdem f'uffiċċju.", "english": "I work in an office." }
+        },
+        {
+          "question": { "maltese": "Fejn toqgħod?", "english": "Where do you live?" },
+          "answer": { "maltese": "Noqgħod Malta.", "english": "I live in Malta." }
+        },
+        {
+          "question": { "maltese": "Inti student / studenta?", "english": "Are you a student?" },
+          "answer": { "maltese": "Jiena student / studenta.", "english": "I am a student." }
+        }
       ]
     },
     {

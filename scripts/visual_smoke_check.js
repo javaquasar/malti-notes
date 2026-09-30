@@ -177,6 +177,34 @@ check("animal vocabulary groups stay unframed", () => {
   });
 });
 
+check("question and answer examples use paired cards", () => {
+  const migratedBanks = [
+    ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],
+    ["body_appearance.html", "assets/data/body_appearance_examples.json", "body-qa"],
+    ["modals_needs.html", "assets/data/modals_needs_examples.json", "modals-qa"],
+    ["daily_routine.html", "assets/data/daily_routine_examples.json", "daily-small-talk-qa"]
+  ];
+
+  migratedBanks.forEach(([page, dataFile, groupId]) => {
+    const html = read(page);
+    const data = JSON.parse(read(dataFile));
+    const group = data.groups.find((item) => item.id === groupId);
+    assert(html.includes(`data-example-group="${groupId}"`), `${page} does not expose ${groupId}`);
+    assert(!/<h3>\s*(Questions|Answers)\s*<\/h3>/i.test(html), `${page} still separates questions from answers`);
+    assert(group?.itemType === "questionAnswer", `${dataFile} ${groupId} is not a typed Q&A bank`);
+    assert(group.items.every((item) => item.question?.maltese && item.answer?.maltese), `${dataFile} ${groupId} contains an incomplete pair`);
+  });
+
+  ["colors_maltese.html", "comparisons.html", "emotions.html"].forEach((page) => {
+    assert(read(page).includes('class="qa-pair-grid"'), `${page} does not use the shared Q&A layout`);
+  });
+
+  const renderer = read("assets/js/render-example-banks.js");
+  const css = read("assets/css/site/components.css");
+  assert(renderer.includes("appendQuestionAnswerCard"), "example renderer lacks paired Q&A cards");
+  assert(css.includes(".qa-pair-card"), "shared Q&A card styles are missing");
+});
+
 check("offline application shell is complete", () => {
   const manifest = JSON.parse(read("manifest.webmanifest"));
   const serviceWorker = read("service-worker.js");

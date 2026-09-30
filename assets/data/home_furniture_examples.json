@@ -35,70 +35,38 @@
       ]
     },
     {
-      "id": "home-questions",
+      "id": "home-qa",
       "sectionId": "questions",
-      "title": "Questions",
-      "itemType": "example",
-      "containerClass": "grid-2",
-      "cardClass": "study-card",
+      "title": "Questions and Answers for Small Talk and Homework",
+      "itemType": "questionAnswer",
       "items": [
         {
-          "maltese": "Fejn toqgħod?",
-          "english": "Where do you live?"
+          "question": { "maltese": "Fejn toqgħod?", "english": "Where do you live?" },
+          "answer": { "maltese": "Noqgħod f'appartament f'Tas-Sliema.", "english": "I live in an apartment in Sliema." }
         },
         {
-          "maltese": "Toqgħod f'dar jew f'appartament?",
-          "english": "Do you live in a house or in an apartment?"
+          "question": { "maltese": "Toqgħod f'dar jew f'appartament?", "english": "Do you live in a house or in an apartment?" },
+          "answer": { "maltese": "Noqgħod f'appartament.", "english": "I live in an apartment." }
         },
         {
-          "maltese": "Id-dar tiegħek hija kbira jew żgħira?",
-          "english": "Is your house big or small?"
+          "question": { "maltese": "Id-dar tiegħek hija kbira jew żgħira?", "english": "Is your house big or small?" },
+          "answer": { "maltese": "Id-dar tiegħi hija żgħira imma komda.", "english": "My home is small but comfortable." }
         },
         {
-          "maltese": "Kemm hemm kmamar fid-dar tiegħek?",
-          "english": "How many rooms are there in your home?"
+          "question": { "maltese": "Kemm hemm kmamar fid-dar tiegħek?", "english": "How many rooms are there in your home?" },
+          "answer": { "maltese": "Għandi kċina, salott, u żewġ kmamar tas-sodda.", "english": "I have a kitchen, a living room, and two bedrooms." }
         },
         {
-          "maltese": "Xi hemm fil-kċina?",
-          "english": "What is in the kitchen?"
+          "question": { "maltese": "Xi hemm fil-kċina?", "english": "What is in the kitchen?" },
+          "answer": { "maltese": "Fil-kċina hemm mejda, siġġijiet, u friġġ.", "english": "In the kitchen there is a table, chairs, and a fridge." }
         },
         {
-          "maltese": "Xi hemm fis-salott?",
-          "english": "What is in the living room?"
-        }
-      ]
-    },
-    {
-      "id": "home-answers",
-      "sectionId": "questions",
-      "title": "Answers",
-      "itemType": "example",
-      "containerClass": "grid-2",
-      "cardClass": "study-card",
-      "items": [
-        {
-          "maltese": "Noqgħod f'appartament f'Tas-Sliema.",
-          "english": "I live in an apartment in Sliema."
+          "question": { "maltese": "Xi hemm fis-salott?", "english": "What is in the living room?" },
+          "answer": { "maltese": "Fis-salott hemm sufan u televixin.", "english": "In the living room there is a sofa and a television." }
         },
         {
-          "maltese": "Id-dar tiegħi hija żgħira imma komda.",
-          "english": "My home is small but comfortable."
-        },
-        {
-          "maltese": "Għandi kċina, salott, u żewġ kmamar tas-sodda.",
-          "english": "I have a kitchen, a living room, and two bedrooms."
-        },
-        {
-          "maltese": "Fil-kċina hemm mejda, siġġijiet, u friġġ.",
-          "english": "In the kitchen there is a table, chairs, and a fridge."
-        },
-        {
-          "maltese": "Fis-salott hemm sufan u televixin.",
-          "english": "In the living room there is a sofa and a television."
-        },
-        {
-          "maltese": "Il-kamra favorita tiegħi hija l-kamra tas-sodda.",
-          "english": "My favourite room is the bedroom."
+          "question": { "maltese": "Liema hija l-kamra favorita tiegħek?", "english": "Which is your favourite room?" },
+          "answer": { "maltese": "Il-kamra favorita tiegħi hija l-kamra tas-sodda.", "english": "My favourite room is the bedroom." }
         }
       ]
     },

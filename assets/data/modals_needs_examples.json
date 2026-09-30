@@ -215,25 +215,26 @@
       ]
     },
     {
-      "id": "modals-qa-questions",
-      "title": "Questions",
-      "itemType": "example",
+      "id": "modals-qa",
+      "title": "Questions and Answers",
+      "itemType": "questionAnswer",
       "items": [
-        { "maltese": "Tista' tiġi illum?", "english": "Can you come today?" },
-        { "maltese": "Trid taħdem għada?", "english": "Do you have to work tomorrow?" },
-        { "maltese": "X'għandek bżonn?", "english": "What do you need?" },
-        { "maltese": "X'tixtieq tiekol?", "english": "What would you like to eat?" }
-      ]
-    },
-    {
-      "id": "modals-qa-answers",
-      "title": "Answers",
-      "itemType": "example",
-      "items": [
-        { "maltese": "Iva, nista' niġi.", "english": "Yes, I can come." },
-        { "maltese": "Le, irrid naħdem.", "english": "No, I must work." },
-        { "maltese": "Għandi bżonn ftit ħin.", "english": "I need a little time." },
-        { "maltese": "Nixtieq niekol pizza.", "english": "I would like to eat pizza." }
+        {
+          "question": { "maltese": "Tista' tiġi illum?", "english": "Can you come today?" },
+          "answer": { "maltese": "Iva, nista' niġi.", "english": "Yes, I can come." }
+        },
+        {
+          "question": { "maltese": "Trid taħdem għada?", "english": "Do you have to work tomorrow?" },
+          "answer": { "maltese": "Le, irrid naħdem.", "english": "No, I must work." }
+        },
+        {
+          "question": { "maltese": "X'għandek bżonn?", "english": "What do you need?" },
+          "answer": { "maltese": "Għandi bżonn ftit ħin.", "english": "I need a little time." }
+        },
+        {
+          "question": { "maltese": "X'tixtieq tiekol?", "english": "What would you like to eat?" },
+          "answer": { "maltese": "Nixtieq niekol pizza.", "english": "I would like to eat pizza." }
+        }
       ]
     },
     {

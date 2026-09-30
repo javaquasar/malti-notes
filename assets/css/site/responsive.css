@@ -109,6 +109,15 @@
     grid-template-columns: 1fr;
   }
 
+  .qa-pair-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .qa-pair-part--answer {
+    border-top: 1px solid var(--component-card-border);
+    border-left: 0;
+  }
+
   .study-card,
   .transport-figure-card,
   .route-card,

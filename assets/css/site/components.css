@@ -287,6 +287,57 @@
   background: var(--color-surface-muted);
 }
 
+.qa-pair-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--grid-gap-sm);
+}
+
+.qa-pair-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--component-card-border);
+  border-radius: var(--component-card-radius);
+  background: var(--surface-table-soft);
+}
+
+.qa-pair-part {
+  min-width: 0;
+  padding: var(--component-card-padding);
+}
+
+.qa-pair-part--answer {
+  border-left: 1px solid var(--component-card-border);
+  background: var(--component-note-bg);
+}
+
+.qa-pair-label,
+.qa-pair-text,
+.qa-pair-translation {
+  display: block;
+}
+
+.qa-pair-label {
+  margin-bottom: var(--space-sm);
+  color: var(--text-brand);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.qa-pair-text {
+  margin: 0;
+}
+
+.qa-pair-translation {
+  margin-top: var(--space-sm);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 .grammar-contrast-card h3 {
   margin-bottom: var(--space-lg);
 }

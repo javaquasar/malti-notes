@@ -40,6 +40,41 @@ function normalizeBankItem(item, group) {
     return window.MaltiLearningContent.normalizeItem(item, group);
 }
 
+function appendQuestionAnswerPart(card, type, label, text, translation) {
+    const part = document.createElement("div");
+    const labelElement = document.createElement("span");
+    const strong = document.createElement("strong");
+    const code = document.createElement("code");
+
+    part.className = `qa-pair-part qa-pair-part--${type}`;
+    labelElement.className = "qa-pair-label";
+    labelElement.textContent = label;
+    strong.className = "qa-pair-text";
+    code.textContent = text;
+    strong.appendChild(code);
+    part.append(labelElement, strong);
+
+    if (translation) {
+        const small = document.createElement("small");
+        small.className = "qa-pair-translation";
+        small.textContent = translation;
+        part.appendChild(small);
+    }
+
+    card.appendChild(part);
+}
+
+function appendQuestionAnswerCard(container, normalized, index, numbered) {
+    const article = document.createElement("article");
+    const questionLabel = numbered ? `${index + 1}. Question` : "Question";
+
+    article.className = "qa-pair-card";
+    article.dataset.contentType = "questionAnswer";
+    appendQuestionAnswerPart(article, "question", questionLabel, normalized.prompt, normalized.questionTranslation);
+    appendQuestionAnswerPart(article, "answer", "Answer", normalized.answer, normalized.answerTranslation);
+    container.appendChild(article);
+}
+
 async function renderExampleBanksFromData(config) {
     const {
         dataUrl,
@@ -160,9 +195,17 @@ async function renderExampleBanksFromData(config) {
         }
 
         container.innerHTML = "";
-        applyClassList(container, group.containerClass || containerClass);
-
         const publishableItems = (group.items || []).filter(isPublishableBankItem);
+        const isQuestionAnswerGroup = publishableItems.length > 0 && publishableItems.every((item) => (
+            normalizeBankItem(item, contentGroup).itemType === "questionAnswer"
+        ));
+        if (isQuestionAnswerGroup) {
+            container.classList.remove("grid-2", "grid-3", "grid-auto", "stack");
+            container.classList.add("qa-pair-grid");
+        } else {
+            applyClassList(container, group.containerClass || containerClass);
+        }
+
         const sentenceItems = publishableItems.map((item) => toSentenceCard(item, contentGroup, container));
         allSentenceItems.push(...sentenceItems);
 
@@ -194,6 +237,13 @@ async function renderExampleBanksFromData(config) {
 
         publishableItems.forEach((item, index) => {
             const normalized = normalizeBankItem(item, contentGroup);
+            const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
+
+            if (normalized.itemType === "questionAnswer") {
+                appendQuestionAnswerCard(container, normalized, index, shouldNumber);
+                return;
+            }
+
             const article = document.createElement("article");
             article.className = resolveBankCardClass(group.cardClass || cardClass, "study-card");
 
@@ -203,7 +253,6 @@ async function renderExampleBanksFromData(config) {
 
             const strong = document.createElement("strong");
             const code = document.createElement("code");
-            const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
             code.textContent = shouldNumber ? `${index + 1}. ${normalized.primary}` : normalized.primary;
             strong.appendChild(code);
 

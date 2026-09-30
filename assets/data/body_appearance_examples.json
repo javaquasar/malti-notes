@@ -60,31 +60,27 @@
       ]
     },
     {
-      "id": "body-questions",
+      "id": "body-qa",
       "sectionId": "questions",
-      "title": "Questions",
-      "itemType": "example",
-      "containerClass": "grid-2",
-      "cardClass": "study-card",
+      "title": "Questions and Answers",
+      "itemType": "questionAnswer",
       "items": [
-        { "maltese": "Kif jidher?", "english": "What does he look like?" },
-        { "maltese": "Kif tidher?", "english": "What does she look like?" },
-        { "maltese": "Għandu xagħar twil jew qasir?", "english": "Does he have long or short hair?" },
-        { "maltese": "Għandha għajnejn kbar?", "english": "Does she have big eyes?" }
-      ]
-    },
-    {
-      "id": "body-answers",
-      "sectionId": "questions",
-      "title": "Answers",
-      "itemType": "example",
-      "containerClass": "grid-2",
-      "cardClass": "study-card",
-      "items": [
-        { "maltese": "Huwa twil u għandu xagħar qasir.", "english": "He is tall and he has short hair." },
-        { "maltese": "Hija qasira u għandha għajnejn kbar.", "english": "She is short and she has big eyes." },
-        { "maltese": "Iva, għandha xagħar twil.", "english": "Yes, she has long hair." },
-        { "maltese": "Le, għandu xagħar qasir.", "english": "No, he has short hair." }
+        {
+          "question": { "maltese": "Kif jidher?", "english": "What does he look like?" },
+          "answer": { "maltese": "Huwa twil u għandu xagħar qasir.", "english": "He is tall and he has short hair." }
+        },
+        {
+          "question": { "maltese": "Kif tidher?", "english": "What does she look like?" },
+          "answer": { "maltese": "Hija qasira u għandha għajnejn kbar.", "english": "She is short and she has big eyes." }
+        },
+        {
+          "question": { "maltese": "Għandu xagħar twil jew qasir?", "english": "Does he have long or short hair?" },
+          "answer": { "maltese": "Għandu xagħar qasir.", "english": "He has short hair." }
+        },
+        {
+          "question": { "maltese": "Għandha għajnejn kbar?", "english": "Does she have big eyes?" },
+          "answer": { "maltese": "Iva, għandha għajnejn kbar.", "english": "Yes, she has big eyes." }
+        }
       ]
     },
     {
