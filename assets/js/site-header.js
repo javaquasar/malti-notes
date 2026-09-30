@@ -1,4 +1,5 @@
 (async () => {
+  const scriptBaseUrl = new URL(".", document.currentScript?.src || window.location.href);
   const params = new URLSearchParams(window.location.search);
   if (params.has("chapter") && params.has("view") && !document.querySelector('script[src$="/course-topic-view.js"]')) {
     const courseTopicScript = document.createElement("script");
@@ -209,6 +210,7 @@
           ${themes.map((theme) => `<option value="${theme.value}">${theme.label}</option>`).join("")}
         </select>
       </label>
+      <div data-cloud-account-host></div>
     </div>
   `;
 
@@ -222,6 +224,55 @@
   const menuLinks = Array.from(header.querySelectorAll(".nav-menu a, .site-nav-compact > .nav-link"));
   const closeTimers = new WeakMap();
   const desktopHoverMedia = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  const loadScript = (url) => new Promise((resolve, reject) => {
+    const existing = document.querySelector(`script[src="${url}"]`);
+    if (existing) {
+      if (existing.dataset.loaded === "true") resolve();
+      else existing.addEventListener("load", resolve, { once: true });
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = url;
+    script.addEventListener("load", () => {
+      script.dataset.loaded = "true";
+      resolve();
+    }, { once: true });
+    script.addEventListener("error", reject, { once: true });
+    document.head.appendChild(script);
+  });
+
+  const initializeCloudSync = async () => {
+    const response = await fetch("./assets/data/firebase-config.json");
+    if (!response.ok) throw new Error(`Could not load Firebase configuration (${response.status})`);
+    const settings = await response.json();
+    if (!settings.enabled) return;
+
+    const required = ["apiKey", "authDomain", "projectId", "appId"];
+    if (required.some((key) => !settings.firebaseConfig?.[key])) {
+      throw new Error("Firebase sync is enabled but its public configuration is incomplete.");
+    }
+
+    if (!window.MaltiProgressBackup) {
+      await loadScript(new URL("./progress-backup.js", scriptBaseUrl).href);
+    }
+    if (!window.MaltiCloudSyncCore) {
+      await loadScript(new URL("./cloud-sync-core.js", scriptBaseUrl).href);
+    }
+
+    const module = await import(new URL("./firebase-sync.js", scriptBaseUrl).href);
+    await module.initializeFirebaseSync({
+      firebaseConfig: settings.firebaseConfig,
+      host: header.querySelector("[data-cloud-account-host]"),
+      backup: window.MaltiProgressBackup,
+      storage,
+      core: window.MaltiCloudSyncCore
+    });
+  };
+
+  initializeCloudSync().catch((error) => {
+    console.warn("Cloud progress sync is unavailable.", error);
+  });
 
   const isDesktopHover = () => desktopHoverMedia.matches;
 

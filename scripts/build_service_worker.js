@@ -20,6 +20,7 @@ const coreAssets = [
   ...walk("assets/css", ".css").sort().map((file) => `./${file}`),
   ...walk("assets/js", ".js").sort().map((file) => `./${file}`),
   "./assets/data/site-map.json",
+  "./assets/data/firebase-config.json",
   "./assets/data/search-index.json",
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",

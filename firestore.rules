@@ -1,0 +1,76 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function ownsProgress(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    function allowedSection(sectionId) {
+      return sectionId in [
+        'malti_review_cards_v2',
+        'malti-review-prefs-v1',
+        'malti_word_search_seen_words_v1',
+        'malti_word_search_best_times_v1',
+        'malti_word_search_sound_v1',
+        'malti_memory_game_seen_words_v1',
+        'malti_word_builder_seen_words_v1',
+        'malti_vocabulary_games_sound_v1',
+        'malti_course_progress_v1',
+        'malti_exercise_progress_v1',
+        'malti_course_target_progress_v1',
+        'malti_comprehensive_coverage_v1',
+        'malti_mistake_journal_v1',
+        'malti_today_minutes_v1',
+        'malti_site_theme',
+        'animalsCompactMode',
+        'homeCompactMode',
+        'transportCompactMode'
+      ];
+    }
+
+    function validProgressSection(sectionId) {
+      return allowedSection(sectionId)
+        && request.resource.data.keys().hasAll([
+          'key',
+          'value',
+          'checksum',
+          'deleted',
+          'schemaVersion',
+          'clientUpdatedAt',
+          'deviceId',
+          'updatedAt'
+        ])
+        && request.resource.data.keys().hasOnly([
+          'key',
+          'value',
+          'checksum',
+          'deleted',
+          'schemaVersion',
+          'clientUpdatedAt',
+          'deviceId',
+          'updatedAt'
+        ])
+        && request.resource.data.key == sectionId
+        && request.resource.data.value is string
+        && request.resource.data.value.size() <= 870400
+        && (request.resource.data.checksum == null || request.resource.data.checksum is string)
+        && request.resource.data.deleted is bool
+        && request.resource.data.schemaVersion is int
+        && request.resource.data.clientUpdatedAt is string
+        && request.resource.data.deviceId is string
+        && request.resource.data.deviceId.size() <= 100
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    match /users/{userId}/progress/{sectionId} {
+      allow read: if ownsProgress(userId);
+      allow create, update: if ownsProgress(userId) && validProgressSection(sectionId);
+      allow delete: if ownsProgress(userId);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

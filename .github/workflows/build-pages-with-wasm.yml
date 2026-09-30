@@ -39,6 +39,14 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run ci:workflow:check
 
+      - name: Validate cloud progress reconciliation
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run cloud-sync:check
+
+      - name: Validate Firebase configuration and rules
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run firebase:check
+
       - name: Validate documentation structure
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run docs:check

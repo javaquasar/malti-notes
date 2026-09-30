@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}decaaadb9e15`;
+const CACHE_NAME = `${CACHE_PREFIX}d3293223247f`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",
@@ -73,6 +73,7 @@ const CORE_ASSETS = [
     "./assets/css/vocabulary-games.css",
     "./assets/css/word-search.css",
     "./assets/js/animal-compact-toggle.js",
+    "./assets/js/cloud-sync-core.js",
     "./assets/js/course-chapter.js",
     "./assets/js/course-context.js",
     "./assets/js/course-exam.js",
@@ -81,6 +82,7 @@ const CORE_ASSETS = [
     "./assets/js/course-topic-view.js",
     "./assets/js/coverage-test.js",
     "./assets/js/exercise-runner.js",
+    "./assets/js/firebase-sync.js",
     "./assets/js/game-audio.js",
     "./assets/js/grammar-path.js",
     "./assets/js/home-compact-toggle.js",
@@ -116,6 +118,7 @@ const CORE_ASSETS = [
     "./assets/js/year4-exam.js",
     "./assets/js/year4-revision-topic.js",
     "./assets/data/site-map.json",
+    "./assets/data/firebase-config.json",
     "./assets/data/search-index.json",
     "./assets/data/course_path.json",
     "./assets/data/course_exercises.json",

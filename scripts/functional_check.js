@@ -979,6 +979,98 @@ async function main() {
       assert(result.restoredCoverage.targets["grammar-future-se"].modes.recognition.correct === 1, "Coverage test progress was not restored.");
     });
 
+    await runTest(context, "Google sign-in sync uploads local progress by user id", async (page) => {
+      const syncContext = await page.context().browser().newContext({
+        viewport: { width: 1280, height: 900 },
+        serviceWorkers: "block"
+      });
+      page = await syncContext.newPage();
+      await page.route("**/assets/data/firebase-config.json", (route) => route.fulfill({
+        contentType: "application/json",
+        body: JSON.stringify({
+          enabled: true,
+          firebaseConfig: {
+            apiKey: "test-api-key",
+            authDomain: "test-project.firebaseapp.com",
+            projectId: "test-project",
+            appId: "test-app-id"
+          }
+        })
+      }));
+      await page.route("https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js", (route) => route.fulfill({
+        contentType: "application/javascript",
+        headers: { "Access-Control-Allow-Origin": "*" },
+        body: "export const initializeApp = (config) => ({ config });"
+      }));
+      await page.route("https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js", (route) => route.fulfill({
+        contentType: "application/javascript",
+        headers: { "Access-Control-Allow-Origin": "*" },
+        body: `
+          let observer = null;
+          export class GoogleAuthProvider { setCustomParameters() {} }
+          export const browserLocalPersistence = {};
+          export const getAuth = () => ({});
+          export const setPersistence = async () => {};
+          export const getRedirectResult = async () => null;
+          export const onAuthStateChanged = (_auth, callback) => {
+            observer = callback;
+            queueMicrotask(() => callback(null));
+            return () => {};
+          };
+          export const signInWithPopup = async () => {
+            const user = { uid: "test-user", displayName: "Test Learner", email: "learner@example.com" };
+            observer(user);
+            return { user };
+          };
+          export const signInWithRedirect = async () => {};
+          export const signOut = async () => observer(null);
+        `
+      }));
+      await page.route("https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js", (route) => route.fulfill({
+        contentType: "application/javascript",
+        headers: { "Access-Control-Allow-Origin": "*" },
+        body: `
+          window.__firebaseWrites = [];
+          export const getFirestore = () => ({});
+          export const collection = (_db, ...parts) => ({ path: parts.join("/") });
+          export const doc = (_db, ...parts) => ({ path: parts.join("/") });
+          export const getDocs = async () => ({ docs: [] });
+          export const serverTimestamp = () => "server-timestamp";
+          export const setDoc = async (reference, data) => window.__firebaseWrites.push({ path: reference.path, data });
+        `
+      }));
+
+      await openCleanPage(page, "course_path.html");
+      await page.evaluate(() => {
+        window.MaltiStorage.setJson("malti_course_progress_v1", {
+          objectives: { "b1-introductions::identity": true },
+          updatedAt: "2026-09-30T12:00:00.000Z"
+        });
+      });
+      await page.locator(".account-trigger").click();
+      await page.locator(".account-primary-action").click();
+      await page.locator(".account-menu[data-sync-state='synced']").waitFor();
+      await page.addScriptTag({ path: require.resolve("axe-core/axe.min.js") });
+
+      const result = await page.evaluate(() => ({
+        email: document.querySelector(".account-email")?.textContent,
+        writes: window.__firebaseWrites,
+        state: window.MaltiFirebaseSync?.getState()
+      }));
+      const accessibility = await page.evaluate(async () => {
+        const results = await window.axe.run(document.querySelector(".site-header"));
+        return results.violations.filter((violation) => ["serious", "critical"].includes(violation.impact));
+      });
+      const progressWrite = result.writes.find((entry) => entry.path.endsWith("/malti_course_progress_v1"));
+      assert(result.email === "learner@example.com", "Signed-in Google account was not rendered.");
+      assert(result.state?.signedIn === true && result.state.busy === false, "Firebase sync did not settle in the signed-in state.");
+      assert(progressWrite?.path === "users/test-user/progress/malti_course_progress_v1", "Progress was not namespaced by Firebase uid.");
+      assert(progressWrite.data.value.includes("b1-introductions::identity"), "Local course progress was not uploaded.");
+      assert(progressWrite.data.deleted === false && progressWrite.data.checksum.startsWith("fnv1a-"), "Uploaded progress metadata is incomplete.");
+      assert(accessibility.length === 0, `Cloud account UI has serious accessibility violations: ${accessibility.map((item) => item.id).join(", ")}`);
+      await syncContext.close();
+    });
+
     await runTest(context, "word search creates a playable puzzle", async (page) => {
       await openCleanPage(page, "word_search.html");
       const cellCount = await page.locator(".word-search-cell").count();

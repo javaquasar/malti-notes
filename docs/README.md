@@ -30,6 +30,7 @@ This directory is the canonical home for project documentation. Keep only the re
 
 ## Tools And References
 
+- [Firebase progress sync](FIREBASE_SYNC.md)
 - [Build the verb lookup pack](tools/build-verb-lookup-pack.md)
 - [Export local verb extensions](tools/export-verb-extensions.md)
 - [Generate review SVGs](tools/generate-review-svgs.md)

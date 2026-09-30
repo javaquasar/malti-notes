@@ -143,6 +143,17 @@ check("site header exposes page search", () => {
   assert(css.includes(".site-search"), "site search styles are missing");
 });
 
+check("Firebase progress sync stays optional and local-first", () => {
+  const config = JSON.parse(read("assets/data/firebase-config.json"));
+  const header = read("assets/js/site-header.js");
+  const storage = read("assets/js/storage.js");
+  const rules = read("firestore.rules");
+  assert(typeof config.enabled === "boolean", "Firebase configuration has no enabled flag");
+  assert(header.includes("initializeCloudSync") && header.includes("firebase-config.json"), "site header does not load optional cloud sync");
+  assert(storage.includes("malti-storage-change"), "storage does not publish changes for cloud sync");
+  assert(rules.includes("request.auth.uid == userId"), "Firestore progress is not scoped to the signed-in user");
+});
+
 check("course pages suppress the floating review shortcut", () => {
   const js = read("assets/js/site-header.js");
   const siteMap = JSON.parse(read("assets/data/site-map.json"));

@@ -29,7 +29,8 @@ const functionalSuites = {
     "course progress summarizes target states and filters chapters",
     "knowledge map explains the next study action",
     "coverage tests rotate and track the complete learning bank",
-    "progress backup restores cleared data"
+    "progress backup restores cleared data",
+    "Google sign-in sync uploads local progress by user id"
   ],
   "visual-contracts": [
     "lesson support surfaces keep consistent spacing and width",

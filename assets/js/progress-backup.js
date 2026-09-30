@@ -128,6 +128,8 @@
     exportBackup,
     importBackup,
     previewBackup,
+    validateEntry: validateRawValue,
+    keyRules: { ...keyRules },
     keys: keys.slice()
   };
 })();

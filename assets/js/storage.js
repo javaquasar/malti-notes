@@ -22,10 +22,14 @@
 
     try {
       window.localStorage.setItem(key, text);
-      return true;
     } catch (error) {
-      return false;
+      // The in-memory fallback still keeps the current tab functional.
     }
+
+    window.dispatchEvent(new CustomEvent("malti-storage-change", {
+      detail: { key, value: text, removed: false }
+    }));
+    return true;
   };
 
   const remove = (key) => {
@@ -36,6 +40,10 @@
     } catch (error) {
       // In-memory fallback has already been cleared.
     }
+
+    window.dispatchEvent(new CustomEvent("malti-storage-change", {
+      detail: { key, value: null, removed: true }
+    }));
   };
 
   const getString = (key, fallback = null) => {
