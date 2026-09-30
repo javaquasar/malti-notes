@@ -153,6 +153,18 @@ check("page directories render from shared data", () => {
   assert(renderer.includes("createCluster"), "site map renderer does not generate directory clusters");
 });
 
+check("pronouns page keeps English section headings readable", () => {
+  const html = read("pronouns_possessives.html");
+  const headings = [...html.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)]
+    .map((match) => match[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
+
+  assert(headings.includes("Quick Choice by Noun"), "pronouns page lost the quick-choice heading");
+  assert(headings.includes("Additional Example Clarifiers"), "pronouns page lost the additional-example heading");
+  ["ċhoice", "éxample", "ċlarifiers"].forEach((typo) => {
+    assert(!headings.some((heading) => heading.includes(typo)), `pronouns page heading contains ${typo}`);
+  });
+});
+
 check("offline application shell is complete", () => {
   const manifest = JSON.parse(read("manifest.webmanifest"));
   const serviceWorker = read("service-worker.js");
