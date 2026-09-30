@@ -610,7 +610,7 @@ async function main() {
       assert(comparisonFrame.borderWidth === "0px", "Comparison table kept an outer frame.");
       assert(!comparisonFrame.desktopScrolls, "Comparison table should fit without scrolling on desktop.");
       assert(await standaloneGrammarTables.evaluateAll((tables) => tables.every((table) => table.classList.contains("table-soft"))), "Standalone grammar tables lost their light surface styling.");
-      const tableSurfaceDistances = await standaloneGrammarTables.evaluateAll((tables) => {
+      const tableSurfaceMetrics = await standaloneGrammarTables.evaluateAll((tables) => {
         const renderedPixel = (backgrounds) => {
           const canvas = document.createElement("canvas");
           const context = canvas.getContext("2d", { willReadFrequently: true });
@@ -627,10 +627,13 @@ async function main() {
           const parentBackground = getComputedStyle(table.closest(".content-card")).backgroundColor;
           const parentPixel = renderedPixel([parentBackground]);
           const tablePixel = renderedPixel([parentBackground, getComputedStyle(table).backgroundColor]);
-          return tablePixel.reduce((distance, channel, index) => distance + Math.abs(channel - parentPixel[index]), 0);
+          return {
+            distance: tablePixel.reduce((distance, channel, index) => distance + Math.abs(channel - parentPixel[index]), 0),
+            brightnessGain: tablePixel.reduce((total, channel) => total + channel, 0) - parentPixel.reduce((total, channel) => total + channel, 0)
+          };
         });
       });
-      assert(tableSurfaceDistances.every((distance) => distance >= 12), "Standalone grammar table fills are indistinguishable from their parent cards.");
+      assert(tableSurfaceMetrics.every(({ distance, brightnessGain }) => distance >= 12 && brightnessGain >= 12), "Standalone grammar tables must use a visibly lighter fill than their parent cards.");
       await page.setViewportSize({ width: 390, height: 900 });
       const mobileComparison = await comparisonWrapper.evaluate((wrapper) => ({
         clientWidth: wrapper.clientWidth,
