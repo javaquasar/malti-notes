@@ -624,16 +624,23 @@ async function main() {
         };
 
         return tables.map((table) => {
-          const parentBackground = getComputedStyle(table.closest(".content-card")).backgroundColor;
+          const contentCard = table.closest(".content-card");
+          const parentBackground = getComputedStyle(contentCard).backgroundColor;
+          const defaultCard = document.querySelector("#past .study-card");
           const parentPixel = renderedPixel([parentBackground]);
           const tablePixel = renderedPixel([parentBackground, getComputedStyle(table).backgroundColor]);
+          const defaultCardPixel = renderedPixel([parentBackground, getComputedStyle(defaultCard).backgroundColor]);
           return {
             distance: tablePixel.reduce((distance, channel, index) => distance + Math.abs(channel - parentPixel[index]), 0),
-            brightnessGain: tablePixel.reduce((total, channel) => total + channel, 0) - parentPixel.reduce((total, channel) => total + channel, 0)
+            defaultCardDistance: tablePixel.reduce(
+              (distance, channel, index) => distance + Math.abs(channel - defaultCardPixel[index]),
+              0
+            )
           };
         });
       });
-      assert(tableSurfaceMetrics.every(({ distance, brightnessGain }) => distance >= 12 && brightnessGain >= 12), "Standalone grammar tables must use a visibly lighter fill than their parent cards.");
+      assert(tableSurfaceMetrics.every(({ distance }) => distance >= 6), "Standalone grammar tables must keep a distinct fill from their parent cards.");
+      assert(tableSurfaceMetrics.every(({ defaultCardDistance }) => defaultCardDistance <= 3), "Standalone grammar tables must match the default study-card fill.");
       await page.setViewportSize({ width: 390, height: 900 });
       const mobileComparison = await comparisonWrapper.evaluate((wrapper) => ({
         clientWidth: wrapper.clientWidth,
