@@ -2,7 +2,7 @@
 
 This document freezes the book-to-site audit completed on 2026-08-13. Routine checks use the machine-readable inventory in `assets/data/book_coverage_inventory.json`; the source PDFs do not need to be parsed again.
 
-The architecture for turning this audit into a guided course without duplicating topic content is defined in `BOOK_COURSE_ARCHITECTURE_PLAN.md`.
+The architecture for turning this audit into a guided course without duplicating topic content is defined in [decision 0001](../decisions/0001-book-course-and-topic-library.md).
 
 ## Sources And Method
 

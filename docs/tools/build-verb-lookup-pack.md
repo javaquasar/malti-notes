@@ -116,7 +116,7 @@ C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\fetch_missing_ve
 
 This script reads:
 
-- `verbs_course_unreachable.md`
+- `docs/analysis/verbs-course-unreachable.md`
 
 And writes:
 

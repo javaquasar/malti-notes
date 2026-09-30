@@ -39,6 +39,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run ci:workflow:check
 
+      - name: Validate documentation structure
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run docs:check
+
       - name: Lint shared styles
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run style:lint

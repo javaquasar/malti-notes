@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "assets" / "data" / "verbs_course_bank.json"
-TARGET = ROOT / "verbs_course_lessons.md"
+TARGET = ROOT / "docs" / "analysis" / "verbs-course-lessons.md"
 
 
 def escape_md(value: str) -> str:

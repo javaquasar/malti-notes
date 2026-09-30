@@ -26,9 +26,9 @@ GitHub Actions also runs the Playwright functional and visual suites before publ
 
 ## Book Coverage Snapshot
 
-The frozen B1/B2 book comparison is documented in `BOOKS_SITE_COVERAGE.md`, with its complete machine-readable inventory in `assets/data/book_coverage_inventory.json`. Run `npm run books:coverage` to compare the current site with that baseline without parsing the PDFs again. The check accepts newly added coverage and fails when previously covered material disappears.
+The frozen B1/B2 book comparison is documented in [`docs/analysis/book-coverage.md`](docs/analysis/book-coverage.md), with its complete machine-readable inventory in `assets/data/book_coverage_inventory.json`. Run `npm run books:coverage` to compare the current site with that baseline without parsing the PDFs again. The check accepts newly added coverage and fails when previously covered material disappears.
 
-The planned guided book flow is specified in `BOOK_COURSE_ARCHITECTURE_PLAN.md`. It preserves topic pages as complete content libraries while adding chapter-scoped views, tests, mastery tracking, and a shared review flow.
+The guided book flow is specified in [decision 0001](docs/decisions/0001-book-course-and-topic-library.md). It preserves topic pages as complete content libraries while adding chapter-scoped views, tests, mastery tracking, and a shared review flow.
 
 The first vertical slice is available through `course_chapter.html?chapter=b1-animals`. It provides the reusable chapter dashboard, a scoped B1 Animals topic view, target-linked self-testing, and shared review integration. `npm run course:lint` validates the stable book-target, content, and assessment bindings.
 
@@ -150,4 +150,8 @@ npm run visual:diff:baseline -- --current visual-regression/screenshots/<new-tim
 
 The baseline folder is ignored by git. Commit the workflow scripts and docs, not generated PNG artifacts.
 
-For the manual checklist, see `VISUAL_REGRESSION_CHECKLIST.md`.
+For the manual checklist, see [`docs/quality/visual-regression-checklist.md`](docs/quality/visual-regression-checklist.md).
+
+## Documentation
+
+The [documentation index](docs/README.md) links the single project roadmap, architectural decisions, analysis reports, and tool instructions. Run `npm run docs:check` after changing documentation.

@@ -12,6 +12,7 @@ const workflowPath = path.join(
 const workflow = fs.readFileSync(workflowPath, "utf8");
 
 const requiredChecks = [
+  "docs:check",
   "style:lint",
   "data:lint",
   "schema:check",

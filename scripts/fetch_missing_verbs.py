@@ -13,7 +13,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-UNREACHABLE_REPORT = ROOT / "verbs_course_unreachable.md"
+UNREACHABLE_REPORT = ROOT / "docs" / "analysis" / "verbs-course-unreachable.md"
 EXTENSIONS_PATH = ROOT / "assets" / "data" / "verbs_extensions.json"
 OUTPUT_DEFAULT = ROOT / "assets" / "data" / "generated" / "missing_verbs_candidates.json"
 DRAFT_DEFAULT = ROOT / "assets" / "data" / "generated" / "missing_verbs_draft_extensions.json"
@@ -588,7 +588,7 @@ def main() -> int:
         "--report",
         type=Path,
         default=UNREACHABLE_REPORT,
-        help="Path to verbs_course_unreachable.md",
+        help="Path to the unreachable course verbs report",
     )
     parser.add_argument(
         "--output",

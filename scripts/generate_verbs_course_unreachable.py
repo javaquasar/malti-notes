@@ -10,7 +10,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 COURSE_BANK_PATH = ROOT / "assets" / "data" / "verbs_course_bank.json"
 PACK_PATH = ROOT / "assets" / "data" / "generated" / "verb_lookup_pack.json"
-REPORT_PATH = ROOT / "verbs_course_unreachable.md"
+REPORT_PATH = ROOT / "docs" / "analysis" / "verbs-course-unreachable.md"
 
 
 def maybe_fix_mojibake(value: str) -> str:

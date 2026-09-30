@@ -1,0 +1,1062 @@
+# Smart Word Search Coverage Against Level 5 English PDF
+
+- PDF unique English word tokens: 1041
+- Covered exactly by current bank English glosses: 885
+- Covered by alias/synonym/word-family matching: 98
+- Excluded as low-value function/header tokens: 15
+- Still not covered: 43
+
+This report checks English tokens from the PDF against the Maltese word-search bank. Alias coverage is intentionally conservative: it only counts common spelling variants, plurals, gerunds, and explicit school-vocabulary synonyms.
+
+## Covered By Alias
+
+- ache -> pain (`uġigħ`, Body)
+- bat -> racket (`rakketta`, Sport)
+- bath -> bathroom (`banju`, Home)
+- bathing -> swimsuit (`malja tal-għawm`, Clothes)
+- bike -> bicycle (`rota`, Transport)
+- bookshop -> shop (`ħanut`, Town)
+- bookstore -> shop (`ħanut`, Town)
+- brighten -> light (`ċelesti`, Year 4 Exam)
+- buttons -> button (`buttuna`, Clothes)
+- caf -> cafe (`kafetterija`, Food)
+- cafeteria -> cafe (`kafetterija`, Food)
+- caged -> cage (`gaġġa`, Animals)
+- candy -> sweet (`ħelu`, Food)
+- carpet -> rug (`tapit`, Home)
+- chef -> cook (`insajjar`, Actions)
+- child -> boy (`tifel`, Family)
+- classroom -> class (`klassi`, School)
+- cloud -> cloudy (`imsaħħab`, Weather)
+- cost -> price (`prezz`, Town)
+- cupboard -> wardrobe (`armarju`, Home)
+- danger -> dangerous (`perikoluż`, Animals)
+- dressed -> dress (`libsa`, Clothes)
+- dvd -> cd (`diska`, Technology)
+- earring -> earrings (`imsielet`, Clothes)
+- entertainment -> show (`spettaklu`, Entertainment)
+- fine -> good (`tajjeb`, Describing)
+- fishing -> fish (`ħuta`, Animals)
+- furniture -> chair (`siġġu`, Home)
+- furry -> fur (`pil`, Animals)
+- gas -> petrol (`petrol`, Environment)
+- grandad -> grandfather (`nannu`, Family)
+- grandchild -> son (`iben`, Family)
+- granddaughter -> daughter (`bint`, Family)
+- grandma -> grandmother (`nanna`, Family)
+- grandpa -> grandfather (`nannu`, Family)
+- grandson -> son (`iben`, Family)
+- granny -> grandmother (`nanna`, Family)
+- grilled -> roast (`laħam mixwi`, Food)
+- guy -> boy (`tifel`, Family)
+- hippo -> hippopotamus (`ippopotamu`, Animals)
+- holidays -> holiday (`vaganza`, Readers 1-3)
+- home -> house (`dar`, Home)
+- husband -> father (`missier`, Family)
+- interested -> interesting (`interessanti`, Describing)
+- jewellery -> earrings (`imsielet`, Clothes)
+- jewelry -> earrings (`imsielet`, Clothes)
+- job -> work (`naħdem`, Actions)
+- kid -> boy (`tifel`, Family)
+- licence -> passport (`passaport`, Transport)
+- lift -> elevator (`lift`, Town)
+- maths -> mathematics (`matematika`, School)
+- mice -> mouse (`ġurdien`, Animals)
+- motorbike -> motorcycle (`mutur`, Transport)
+- occupation -> work (`naħdem`, Actions)
+- occupations -> work (`naħdem`, Actions)
+- online -> web (`web`, Technology)
+- panto -> pantomime (`pantomima`, Entertainment)
+- parent -> mother (`omm`, Family)
+- pc -> computer (`kompjuter`, Technology)
+- performance -> show (`spettaklu`, Entertainment)
+- pet -> animal (`annimal`, Animals)
+- photography -> photograph (`ritratt`, Technology)
+- piece -> slice (`porzjon`, Food)
+- plane -> airplane (`ajruplan`, Transport)
+- pop -> music (`mużika`, Entertainment)
+- public -> services (`servizzi`, Town)
+- pupil -> student (`student`, School)
+- recycled -> recycling (`riċiklaġġ`, Environment)
+- refrigerator -> fridge (`friġġ`, Home)
+- riding -> ride (`nirkeb`, Actions)
+- rubber -> eraser (`gomma`, School)
+- science -> subject (`suġġett`, School)
+- shoes -> shoe (`żarbun`, Clothes)
+- shopping -> shop (`ħanut`, Town)
+- sick -> ill (`marid`, Body)
+- skate -> skateboard (`skateboard`, Sport)
+- skiing -> ski (`ski`, Sport)
+- snowboarding -> snowboard (`snowboard`, Sport)
+- soccer -> football (`futbol`, Sport)
+- sock -> socks (`kalzetti`, Clothes)
+- sports -> sport (`sport`, Sport)
+- spot -> spotted (`imtebba`, Animals)
+- stripe -> striped (`strixxat`, Animals)
+- studies -> study (`studju`, Home)
+- t-shirt -> shirt (`flokk`, Clothes)
+- temperature -> fever (`deni`, Body)
+- text -> textbook (`ktieb tal-iskola`, School)
+- tortoise -> turtle (`fekruna`, Animals)
+- town -> city (`belt`, Town)
+- trainers -> shoe (`żarbun`, Clothes)
+- transport -> bus (`xarabank`, Transport)
+- tub -> bathroom (`banju`, Home)
+- vegetable -> vegetables (`ħaxix`, Food)
+- wheel -> bicycle (`rota`, Transport)
+- wife -> mother (`omm`, Family)
+- wool -> sheep (`nagħġa`, Animals)
+- x-ray -> doctor (`tabib`, Work)
+- yogurt -> yoghurt (`jogurt`, Food)
+
+## Still Not Covered
+
+- ad
+- advert
+- advertisement
+- area
+- away
+- base
+- below
+- can
+- die
+- experiences
+- food
+- foot
+- forward
+- great
+- group
+- hear
+- hop
+- life
+- lovely
+- mat
+- matter
+- mistake
+- move
+- nice
+- off
+- oil
+- opinions
+- out
+- part
+- penfriend
+- personal
+- polar
+- shut
+- sign
+- slack
+- stay
+- talk
+- together
+- tour
+- underground
+- watch
+- way
+- well
+
+## Low-Value Tokens Excluded From Missing Count
+
+- aero
+- and
+- at
+- by
+- dr
+- dy
+- etc
+- into
+- mp
+- mr
+- mrs
+- ms
+- st
+- through
+- versus
+
+## Covered Exactly
+
+- able
+- above
+- accessories
+- accident
+- across
+- act
+- actor
+- address
+- advanced
+- adventure
+- afraid
+- after
+- air
+- airport
+- alone
+- along
+- alphabet
+- amazing
+- ambulance
+- angry
+- animal
+- animals
+- answer
+- apartment
+- apple
+- appointment
+- arm
+- armchair
+- around
+- art
+- article
+- artist
+- ask
+- assistant
+- aunt
+- autumn
+- baby
+- back
+- backpack
+- bad
+- badminton
+- bag
+- bake
+- balcony
+- ball
+- banana
+- bandage
+- bank
+- barbecue
+- baseball
+- basement
+- basketball
+- bathroom
+- beach
+- bear
+- beard
+- beautiful
+- bed
+- bedroom
+- bee
+- beetle
+- beginner
+- behind
+- belt
+- better
+- between
+- bicycle
+- big
+- bill
+- bin
+- biology
+- bird
+- biscuit
+- blackboard
+- blanket
+- block
+- blond
+- blood
+- blouse
+- board
+- boat
+- body
+- boil
+- boiled
+- book
+- bookcase
+- bookshelf
+- boot
+- bored
+- boring
+- boss
+- bottle
+- bowl
+- box
+- boy
+- bracelet
+- brain
+- brave
+- bread
+- break
+- breakfast
+- breaktime
+- bridge
+- brilliant
+- brother
+- brush
+- building
+- burger
+- bus
+- business
+- businessman
+- businesswoman
+- busy
+- butter
+- butterfly
+- buy
+- cafe
+- cage
+- cake
+- call
+- calm
+- camel
+- camera
+- camp
+- camping
+- campsite
+- cap
+- car
+- card
+- careful
+- carrot
+- carry
+- cartoon
+- case
+- cash
+- castle
+- cat
+- catch
+- cd
+- cell
+- cent
+- centre
+- cereal
+- chain
+- chair
+- change
+- chat
+- cheap
+- check
+- cheer
+- cheese
+- chemist
+- chemistry
+- cheque
+- chess
+- chicken
+- children
+- chilli
+- chips
+- chocolate
+- chopsticks
+- chubby
+- cinema
+- city
+- classical
+- classmate
+- clean
+- cleaner
+- clear
+- clever
+- click
+- climate
+- climb
+- clock
+- close
+- closed
+- clothes
+- cloudy
+- club
+- coach
+- coat
+- coffee
+- cola
+- cold
+- collage
+- collect
+- college
+- comb
+- come
+- comic
+- communication
+- company
+- competition
+- computer
+- concert
+- conversation
+- cook
+- cooker
+- cool
+- corner
+- correct
+- costume
+- cough
+- country
+- countryside
+- course
+- cousin
+- cow
+- crayon
+- cream
+- creature
+- credit
+- cricket
+- crocodile
+- cross
+- cuddly
+- cup
+- curly
+- curry
+- curtain
+- cushion
+- customer
+- cut
+- cycling
+- dad
+- dance
+- dancer
+- dangerous
+- daughter
+- dead
+- delay
+- delayed
+- delicious
+- dentist
+- desert
+- desk
+- dessert
+- diary
+- dictionary
+- different
+- difficult
+- digital
+- dining
+- dinner
+- dinosaur
+- diploma
+- directions
+- disco
+- dish
+- doctor
+- document
+- dog
+- dollar
+- dolphin
+- donkey
+- door
+- dot
+- down
+- download
+- downstairs
+- draw
+- drawer
+- drawing
+- dress
+- drink
+- drive
+- driver
+- driving
+- drum
+- duck
+- eagle
+- ear
+- earn
+- east
+- eat
+- egg
+- elbow
+- elephant
+- elevator
+- email
+- end
+- engine
+- engineer
+- enter
+- entrance
+- envelope
+- environment
+- eraser
+- euro
+- exam
+- examination
+- example
+- excellent
+- exercise
+- exhibition
+- exit
+- expensive
+- explorer
+- extinct
+- eye
+- face
+- factory
+- fair
+- fall
+- family
+- famous
+- far
+- farm
+- farmer
+- fashion
+- fast
+- fat
+- father
+- favourite
+- feathers
+- feel
+- feelings
+- feet
+- festival
+- field
+- file
+- fill
+- film
+- finger
+- fire
+- fish
+- fit
+- flat
+- flight
+- floor
+- flour
+- flower
+- fly
+- fog
+- foggy
+- football
+- footballer
+- for
+- forest
+- fork
+- form
+- free
+- fridge
+- fried
+- friend
+- friendly
+- friends
+- front
+- fruit
+- fun
+- funny
+- fur
+- game
+- garage
+- garden
+- garlic
+- gate
+- geography
+- get
+- giraffe
+- girl
+- glass
+- glasses
+- glove
+- glue
+- go
+- goal
+- goat
+- golf
+- good
+- grandfather
+- grandmother
+- grandparent
+- grape
+- grass
+- grocery
+- ground
+- grow
+- grown-up
+- guest
+- guesthouse
+- guide
+- guitar
+- hair
+- hall
+- hand
+- handbag
+- hang
+- happy
+- hard
+- harmless
+- hat
+- head
+- health
+- heart
+- heating
+- heavy
+- helicopter
+- here
+- high
+- hill
+- hip
+- history
+- hobbies
+- hobby
+- hockey
+- homework
+- honey
+- hoodie
+- horse
+- hospital
+- hot
+- hotel
+- house
+- hungry
+- hurry
+- hurt
+- ice
+- ill
+- important
+- in
+- information
+- insect
+- instructions
+- instrument
+- interesting
+- internet
+- island
+- jacket
+- jam
+- jeans
+- jellyfish
+- join
+- journalist
+- journey
+- juice
+- jumper
+- kangaroo
+- keyboard
+- kick
+- kilometre
+- kind
+- king
+- kit
+- kitchen
+- kitten
+- kiwi
+- knee
+- knife
+- know
+- lake
+- lamp
+- lane
+- language
+- laptop
+- laugh
+- learn
+- leave
+- left
+- leg
+- leisure
+- lemon
+- lemonade
+- lesson
+- letter
+- library
+- lie
+- light
+- lion
+- listen
+- litter
+- live
+- living
+- lizard
+- log
+- look
+- love
+- luck
+- lucky
+- luggage
+- lunch
+- machine
+- magazine
+- main
+- man
+- manager
+- mango
+- map
+- mark
+- market
+- married
+- mathematics
+- meal
+- meat
+- meatballs
+- mechanic
+- medicine
+- meet
+- meeting
+- melon
+- member
+- men
+- menu
+- message
+- middle
+- milk
+- mineral
+- mirror
+- miss
+- mobile
+- modern
+- monkey
+- moon
+- mother
+- motorway
+- mountain
+- mouse
+- moustache
+- mouth
+- mum
+- museum
+- mushroom
+- music
+- musician
+- my
+- near
+- neck
+- necklace
+- neighbour
+- nest
+- net
+- news
+- newspaper
+- noisy
+- north
+- nose
+- note
+- notebook
+- nurse
+- octopus
+- of
+- office
+- officer
+- old
+- olives
+- omelette
+- on
+- onion
+- open
+- opera
+- opposite
+- orange
+- oven
+- over
+- pain
+- paint
+- painter
+- pancake
+- pantomime
+- park
+- parrot
+- party
+- pass
+- passenger
+- passport
+- password
+- pasta
+- path
+- patient
+- pay
+- pear
+- penguin
+- penny
+- people
+- pepper
+- person
+- petrol
+- pharmacy
+- phone
+- photograph
+- photographer
+- physics
+- piano
+- pick
+- picnic
+- picture
+- pillow
+- pilot
+- pineapple
+- pizza
+- places
+- plant
+- plate
+- platform
+- play
+- player
+- playground
+- pleasant
+- pocket
+- poisonous
+- police
+- pollution
+- pool
+- poor
+- post
+- postcard
+- potato
+- pound
+- pour
+- powerful
+- practice
+- practise
+- pretty
+- price
+- printer
+- prize
+- problem
+- programme
+- project
+- pull
+- puppy
+- purse
+- put
+- pyjamas
+- queen
+- quick
+- quiet
+- quiz
+- rabbit
+- race
+- racket
+- radio
+- railway
+- rain
+- raincoat
+- rainforest
+- read
+- ready
+- real
+- receipt
+- receptionist
+- recycle
+- recycling
+- remember
+- rent
+- repair
+- rest
+- restaurant
+- return
+- rice
+- rich
+- ride
+- right
+- ring
+- river
+- road
+- roast
+- rock
+- roof
+- room
+- roundabout
+- rubbish
+- rug
+- rugby
+- ruler
+- run
+- safe
+- sailing
+- salad
+- sale
+- salt
+- sandwich
+- sauce
+- sausage
+- scarf
+- school
+- screen
+- sea
+- seat
+- secretary
+- sell
+- sentence
+- services
+- shampoo
+- shark
+- shelf
+- ship
+- shirt
+- shop
+- shopper
+- short
+- shorts
+- shoulder
+- show
+- shower
+- sing
+- singer
+- sink
+- sister
+- sitting
+- skateboard
+- ski
+- skirt
+- sky
+- sleep
+- slice
+- slim
+- slow
+- small
+- snack
+- snail
+- snow
+- snowboard
+- soap
+- sofa
+- soft
+- software
+- son
+- song
+- sorry
+- soup
+- south
+- space
+- special
+- spend
+- spider
+- spoon
+- sport
+- spotted
+- spring
+- square
+- stadium
+- staff
+- star
+- station
+- steak
+- step
+- stomach
+- stop
+- store
+- storm
+- straight
+- strange
+- strawberry
+- stream
+- street
+- striped
+- strong
+- student
+- study
+- subject
+- sugar
+- suit
+- suitcase
+- summer
+- sun
+- sunglasses
+- sunny
+- supermarket
+- sure
+- surf
+- surfboard
+- surfboarding
+- surname
+- swan
+- sweater
+- sweet
+- swim
+- swimming
+- swimsuit
+- switch
+- table
+- tail
+- take
+- tall
+- tame
+- taxi
+- tea
+- teach
+- teacher
+- team
+- technology
+- teenager
+- teeth
+- telephone
+- television
+- tennis
+- tent
+- term
+- terrible
+- test
+- textbook
+- the
+- theatre
+- there
+- thin
+- thirsty
+- throw
+- thunderstorm
+- ticket
+- tidy
+- tie
+- tiger
+- tights
+- timetable
+- tired
+- to
+- toast
+- toe
+- toilet
+- tomato
+- tooth
+- toothache
+- toothbrush
+- toothpaste
+- tourist
+- towel
+- traffic
+- train
+- tram
+- travel
+- tree
+- trip
+- trousers
+- try
+- turn
+- tv
+- tyre
+- umbrella
+- uncle
+- under
+- unhappy
+- uniform
+- university
+- up
+- upstairs
+- us
+- use
+- useful
+- valley
+- video
+- village
+- visit
+- visitor
+- volleyball
+- waiter
+- waitress
+- walk
+- wall
+- wallet
+- warm
+- wash
+- water
+- watermelon
+- wear
+- weather
+- web
+- website
+- west
+- wet
+- whale
+- wild
+- win
+- wind
+- window
+- windsurfing
+- windy
+- wing
+- winner
+- winter
+- with
+- woman
+- women
+- wood
+- work
+- worker
+- world
+- worried
+- writer
+- wrong
+- yoghurt
+- young
+- zebra
+- zip
+- zoo

@@ -1,8 +1,9 @@
-# Book Course Architecture Plan
+# Decision 0001: Book Course And Topic Library
 
-Status: accepted architecture implemented across all B1/B2 chapters.
+- Status: Accepted
+- Last updated: 2026-08-14
 
-Last updated: 2026-08-14.
+This decision was originally maintained as the Book Course Architecture Plan. It is now the durable record for the implemented B1/B2 course structure.
 
 ## Implementation Progress
 

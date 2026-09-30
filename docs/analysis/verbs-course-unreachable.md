@@ -10,13 +10,13 @@ These entries from `assets/data/verbs_course_bank.json` still do not open a full
 ## Current Totals
 
 - Total entries checked: `197`
-- Still unreachable: `48`
-- Plain forms: `0`
+- Still unreachable: `49`
+- Plain forms: `1`
 - Phrases / multi-word entries: `48`
 
 ## Plain Forms
 
-- none
+- `niddeċiedi` | `I decide`
 
 ## Phrases / Multi-Word Entries
 
@@ -57,7 +57,7 @@ These entries from `assets/data/verbs_course_bank.json` still do not open a full
 - `se noqgħod` | `I will stay`
 - `se nsiefer` | `I will travel`
 - `se nuża` | `I will use`
-- `se nġemma’` | `I will save up`
+- `se nġemma'` | `I will save up`
 - `se nħallas` | `I will pay`
 - `tagħmel il-ħbieb` | `make friends`
 - `tagħmel l-isports` | `do sports`

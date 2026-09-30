@@ -13,7 +13,7 @@ Total entries: 197
 | ieqaf | stop | Lesson 1 - L-Alfabett |
 | ikkollezzjona | to collect | Lesson 6 - Xi tħobb tagħmel |
 | insuq | I drive | Lesson 16 - It-trasport u l-ivvjaġġar |
-| inġemma’ | I save up | Lesson 11 - Għand tal-ħanut |
+| inġemma' | I save up | Lesson 11 - Għand tal-ħanut |
 | inħallas | I pay | Lesson 11 - Għand tal-ħanut |
 | inħobb | I love | Lesson 5 - Reviżjoni, Lesson 6 - Xi tħobb tagħmel |
 | inżur | I visit | Lesson 15 - Postijiet ta' interess u avvenimenti |
@@ -24,10 +24,10 @@ Total entries: 197
 | jagħmlu | they do / they make | Lesson 6 - Xi tħobb tagħmel |
 | jaqbeż | he jumps | Lesson 5 - Reviżjoni |
 | jaħdem | he works | Lesson 6 - Xi tħobb tagħmel, Lesson 13 - Reviżjoni ta' wara Diċembru |
-| jerġa’ | he returns / does again | Lesson 5 - Reviżjoni |
+| jerġa' | he returns / does again | Lesson 5 - Reviżjoni |
 | jgħanni | sings | Lesson 17 - L-annimali |
 | jgħin | helps | Lesson 22 - X'qed tara fl-istampa |
-| jibża’ | he fears / he is afraid | Lesson 5 - Reviżjoni |
+| jibża' | he fears / he is afraid | Lesson 5 - Reviżjoni |
 | jiekol | he eats | Lesson 13 - Reviżjoni ta' wara Diċembru |
 | jieħdu | they take | Lesson 9 - Għand it-tabib |
 | jieħu | he takes | Lesson 5 - Reviżjoni, Lesson 9 - Għand it-tabib |
@@ -63,7 +63,7 @@ Total entries: 197
 | naċċerta | I make sure | Lesson 6 - Xi tħobb tagħmel |
 | naħdem | I work | Lesson 5 - Reviżjoni, Lesson 6 - Xi tħobb tagħmel |
 | naħsel | I wash | Lesson 8 - Id-dar tiegħi |
-| nibża’ | I fear / I am afraid | Lesson 5 - Reviżjoni |
+| nibża' | I fear / I am afraid | Lesson 5 - Reviżjoni |
 | niddeċiedi | I decide | Lesson 11 - Għand tal-ħanut |
 | niddisinja | I design | Lesson 6 - Xi tħobb tagħmel |
 | niekol | I eat | Lesson 5 - Reviżjoni, Lesson 8 - Id-dar tiegħi |
@@ -90,7 +90,7 @@ Total entries: 197
 | niskurja | I score | Lesson 6 - Xi tħobb tagħmel |
 | nistrieħ | I rest | Lesson 8 - Id-dar tiegħi |
 | nistudja | I study | Lesson 5 - Reviżjoni |
-| nitma’ | I feed | Lesson 5 - Reviżjoni |
+| nitma' | I feed | Lesson 5 - Reviżjoni |
 | nittrejnja | I train | Lesson 6 - Xi tħobb tagħmel |
 | nixrob | I drink | Lesson 5 - Reviżjoni, Lesson 8 - Id-dar tiegħi, Lesson 13 - Reviżjoni ta' wara Diċembru |
 | nixtri | I buy | Lesson 11 - Għand tal-ħanut |
@@ -145,7 +145,7 @@ Total entries: 197
 | toħroġ | you go out | Lesson 5 - Reviżjoni |
 | tħobb | you love / like | Lesson 5 - Reviżjoni, Lesson 6 - Xi tħobb tagħmel |
 | tħobbu | you (plural) like / love | Lesson 6 - Xi tħobb tagħmel |
-| waqa’ | to fall | Lesson 13 - Reviżjoni ta' wara Diċembru |
+| waqa' | to fall | Lesson 13 - Reviżjoni ta' wara Diċembru |
 | xtrajt | I bought | Lesson 18 - Il-Kollettiv |
 | ġera | to run | Lesson 6 - Xi tħobb tagħmel |
 | ħabb | to like / to love | Lesson 6 - Xi tħobb tagħmel |
@@ -163,7 +163,7 @@ Total entries: 197
 | jisimni | my name is / I am called | Lesson 1 - L-Alfabett |
 | jismu | he is called | Lesson 1 - L-Alfabett |
 | jmorru bil-mixi | go on foot | Lesson 6 - Xi tħobb tagħmel |
-| ma rridx | I don’t want | Lesson 5 - Reviżjoni |
+| ma rridx | I don't want | Lesson 5 - Reviżjoni |
 | mmorru passiġġata | go for a walk | Lesson 6 - Xi tħobb tagħmel |
 | nagħmel l-ikel | make the food | Lesson 8 - Id-dar tiegħi |
 | nagħmlu x-xogħol fil-ġnien | do work in the garden | Lesson 6 - Xi tħobb tagħmel |
@@ -191,7 +191,7 @@ Total entries: 197
 | se noqgħod | I will stay | Lesson 12 - Il-Futur |
 | se nsiefer | I will travel | Lesson 12 - Il-Futur |
 | se nuża | I will use | Lesson 12 - Il-Futur |
-| se nġemma’ | I will save up | Lesson 12 - Il-Futur |
+| se nġemma' | I will save up | Lesson 12 - Il-Futur |
 | se nħallas | I will pay | Lesson 12 - Il-Futur |
 | tagħmel il-ħbieb | make friends | Lesson 6 - Xi tħobb tagħmel |
 | tagħmel l-isports | do sports | Lesson 6 - Xi tħobb tagħmel |
