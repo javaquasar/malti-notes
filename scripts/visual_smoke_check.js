@@ -157,11 +157,22 @@ check("offline application shell is complete", () => {
   const manifest = JSON.parse(read("manifest.webmanifest"));
   const serviceWorker = read("service-worker.js");
   const siteHeader = read("assets/js/site-header.js");
+  const coreAssets = JSON.parse(serviceWorker.match(/const CORE_ASSETS = (\[[\s\S]*?\]);/)?.[1] || "[]");
+  const lazyAssets = JSON.parse(serviceWorker.match(/const LAZY_ASSETS = (\[[\s\S]*?\]);/)?.[1] || "[]");
+  const deferredBanks = [
+    "./assets/data/course_milestone_assessments.json",
+    "./assets/data/comprehensive_test_bank.json"
+  ];
   assert(manifest.start_url === "./index.html", "manifest start URL must be index.html");
   assert(manifest.display === "standalone", "manifest display mode must be standalone");
   assert(serviceWorker.includes("CORE_ASSETS"), "service worker does not define its application shell");
+  assert(serviceWorker.includes("lazyAssetResponse"), "service worker lacks an on-demand asset strategy");
   assert(serviceWorker.includes("request.mode === \"navigate\""), "service worker lacks an offline navigation strategy");
   assert(siteHeader.includes("serviceWorker.register"), "site header does not register the service worker");
+  deferredBanks.forEach((asset) => {
+    assert(lazyAssets.includes(asset), `${asset} is missing from the lazy asset list`);
+    assert(!coreAssets.includes(asset), `${asset} must not be downloaded during service worker installation`);
+  });
   manifest.icons.forEach((icon) => {
     assert(fs.existsSync(path.join(root, icon.src.replace(/^\.\//, ""))), `manifest icon is missing: ${icon.src}`);
   });

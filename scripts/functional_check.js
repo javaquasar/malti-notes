@@ -957,6 +957,36 @@ async function main() {
       assert(result.hasActiveWorker, "Service worker did not become active.");
     });
 
+    await runTest(context, "large test bank is cached on first use", async (page) => {
+      await openCleanPage(page, "index.html");
+      const bankUrl = `${baseUrl}/assets/data/comprehensive_test_bank.json`;
+      await page.evaluate(async (url) => {
+        await navigator.serviceWorker.ready;
+        const cacheNames = await caches.keys();
+        await Promise.all(cacheNames
+          .filter((name) => name.startsWith("malti-notes-"))
+          .map(async (name) => (await caches.open(name)).delete(url)));
+      }, bankUrl);
+
+      await page.reload({ waitUntil: "networkidle" });
+      const cachedBeforeUse = await page.evaluate(async (url) => Boolean(await caches.match(url)), bankUrl);
+      assert(!cachedBeforeUse, "Large test bank was restored by the application shell precache.");
+
+      await page.goto(`${baseUrl}/coverage_test.html`, { waitUntil: "networkidle" });
+      await page.locator("[data-coverage-test-stage] .exercise-item").first().waitFor();
+      const cachedAfterUse = await page.evaluate(async (url) => Boolean(await caches.match(url)), bankUrl);
+      assert(cachedAfterUse, "Large test bank was not cached after the coverage page requested it.");
+
+      await page.context().setOffline(true);
+      try {
+        await page.reload({ waitUntil: "domcontentloaded" });
+        await page.locator("[data-coverage-test-stage] .exercise-item").first().waitFor();
+        assert(Number((await page.locator("[data-coverage-total]").textContent()).trim()) >= 1200, "Cached coverage bank was incomplete offline.");
+      } finally {
+        await page.context().setOffline(false);
+      }
+    });
+
     await runTest(context, "visited course chapter remains available offline", async (page) => {
       await openCleanPage(page, "course_chapter.html?chapter=b1-animals");
       await page.locator("[data-course-chapter-title]").getByText("L-Annimali").waitFor();

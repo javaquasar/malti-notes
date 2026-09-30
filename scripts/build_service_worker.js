@@ -13,7 +13,7 @@ function walk(directory, extension) {
   });
 }
 
-const assets = [
+const coreAssets = [
   "./",
   ...fs.readdirSync(root).filter((file) => file.endsWith(".html")).sort().map((file) => `./${file}`),
   "./manifest.webmanifest",
@@ -23,25 +23,43 @@ const assets = [
   "./assets/data/search-index.json",
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",
-  "./assets/data/course_milestone_assessments.json",
   "./assets/data/course/manifest.json",
   "./assets/data/course_verb_paradigms.json",
-  "./assets/data/comprehensive_test_bank.json",
   "./assets/data/grammar_targets.json",
   "./assets/img/favicon-option-speech.svg",
 ];
-const uniqueAssets = [...new Set(assets)];
+
+const lazyAssets = [
+  "./assets/data/course_milestone_assessments.json",
+  "./assets/data/comprehensive_test_bank.json",
+];
+
+const uniqueCoreAssets = [...new Set(coreAssets)];
+const uniqueLazyAssets = [...new Set(lazyAssets)];
+const overlappingAssets = uniqueLazyAssets.filter((asset) => uniqueCoreAssets.includes(asset));
+if (overlappingAssets.length) {
+  throw new Error(`Assets cannot be both core and lazy: ${overlappingAssets.join(", ")}`);
+}
+
+const versionedAssets = [...uniqueCoreAssets, ...uniqueLazyAssets];
 const revision = crypto.createHash("sha256");
-uniqueAssets.filter((asset) => asset !== "./").forEach((asset) => {
+versionedAssets.filter((asset) => asset !== "./").forEach((asset) => {
   const file = path.join(root, asset.slice(2));
+  if (!fs.existsSync(file)) throw new Error(`Service worker asset is missing: ${asset}`);
   revision.update(asset);
   revision.update(fs.readFileSync(file));
 });
 const version = revision.digest("hex").slice(0, 12);
-const serializedAssets = JSON.stringify(uniqueAssets, null, 2).replace(/^/gm, "  ");
+const assetBytes = (asset) => asset === "./" ? 0 : fs.statSync(path.join(root, asset.slice(2))).size;
+const coreBytes = uniqueCoreAssets.reduce((total, asset) => total + assetBytes(asset), 0);
+const lazyBytes = uniqueLazyAssets.reduce((total, asset) => total + assetBytes(asset), 0);
+const serializedCoreAssets = JSON.stringify(uniqueCoreAssets, null, 2).replace(/^/gm, "  ");
+const serializedLazyAssets = JSON.stringify(uniqueLazyAssets, null, 2).replace(/^/gm, "  ");
 const output = `const CACHE_PREFIX = "malti-notes-";
 const CACHE_NAME = \`\${CACHE_PREFIX}${version}\`;
-const CORE_ASSETS = ${serializedAssets.trimStart()};
+const CORE_ASSETS = ${serializedCoreAssets.trimStart()};
+const LAZY_ASSETS = ${serializedLazyAssets.trimStart()};
+const LAZY_ASSET_URLS = new Set(LAZY_ASSETS.map((asset) => new URL(asset, self.registration.scope).href));
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
@@ -81,11 +99,23 @@ async function assetResponse(request) {
   return cached || network;
 }
 
+async function lazyAssetResponse(request) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  return cacheResponse(request, await fetch(request));
+}
+
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
-  event.respondWith(request.mode === "navigate" ? navigationResponse(request) : assetResponse(request));
+  if (request.mode === "navigate") {
+    event.respondWith(navigationResponse(request));
+  } else if (LAZY_ASSET_URLS.has(url.href)) {
+    event.respondWith(lazyAssetResponse(request));
+  } else {
+    event.respondWith(assetResponse(request));
+  }
 });
 `;
 
@@ -96,8 +126,8 @@ if (checkOnly) {
     console.error("fail service-worker.js is stale; run npm run pwa:build");
     process.exit(1);
   }
-  console.log(`ok service worker revision ${version} precaches ${uniqueAssets.length} assets`);
+  console.log(`ok service worker revision ${version} precaches ${uniqueCoreAssets.length} core assets (${coreBytes} bytes) and defers ${uniqueLazyAssets.length} assets (${lazyBytes} bytes)`);
 } else {
   fs.writeFileSync(outputFile, output, "utf8");
-  console.log(`wrote service-worker.js revision ${version} with ${uniqueAssets.length} precache assets`);
+  console.log(`wrote service-worker.js revision ${version} with ${uniqueCoreAssets.length} core assets (${coreBytes} bytes) and ${uniqueLazyAssets.length} lazy assets (${lazyBytes} bytes)`);
 }

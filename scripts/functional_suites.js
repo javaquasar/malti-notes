@@ -40,6 +40,7 @@ const functionalSuites = {
   ],
   "offline-pwa": [
     "offline application assets are registered",
+    "large test bank is cached on first use",
     "visited course chapter remains available offline"
   ]
 };

@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}5b297e47dcfa`;
+const CACHE_NAME = `${CACHE_PREFIX}9521dd5e1bde`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",
@@ -119,13 +119,16 @@ const CORE_ASSETS = [
     "./assets/data/search-index.json",
     "./assets/data/course_path.json",
     "./assets/data/course_exercises.json",
-    "./assets/data/course_milestone_assessments.json",
     "./assets/data/course/manifest.json",
     "./assets/data/course_verb_paradigms.json",
-    "./assets/data/comprehensive_test_bank.json",
     "./assets/data/grammar_targets.json",
     "./assets/img/favicon-option-speech.svg"
   ];
+const LAZY_ASSETS = [
+    "./assets/data/course_milestone_assessments.json",
+    "./assets/data/comprehensive_test_bank.json"
+  ];
+const LAZY_ASSET_URLS = new Set(LAZY_ASSETS.map((asset) => new URL(asset, self.registration.scope).href));
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
@@ -165,9 +168,21 @@ async function assetResponse(request) {
   return cached || network;
 }
 
+async function lazyAssetResponse(request) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  return cacheResponse(request, await fetch(request));
+}
+
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
-  event.respondWith(request.mode === "navigate" ? navigationResponse(request) : assetResponse(request));
+  if (request.mode === "navigate") {
+    event.respondWith(navigationResponse(request));
+  } else if (LAZY_ASSET_URLS.has(url.href)) {
+    event.respondWith(lazyAssetResponse(request));
+  } else {
+    event.respondWith(assetResponse(request));
+  }
 });
