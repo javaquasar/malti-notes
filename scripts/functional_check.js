@@ -688,6 +688,20 @@ async function main() {
       assert(routineSurface.isDirectChild && routineSurface.relativeWidth > 0.9, "Routine examples do not use the available content width.");
     });
 
+    await runTest(context, "course dashboards omit the floating review shortcut", async (page) => {
+      const siteMap = JSON.parse(fs.readFileSync(path.join(root, "assets", "data", "site-map.json"), "utf8"));
+      const coursePages = siteMap.groups.find((group) => group.id === "course")?.pages || [];
+      assert(coursePages.length > 0, "Course group has no pages to verify.");
+
+      for (const coursePage of coursePages) {
+        await openCleanPage(page, coursePage.href);
+        assert(await page.locator(".review-fab").count() === 0, `${coursePage.href} renders the floating review shortcut.`);
+      }
+
+      await openCleanPage(page, "home_furniture.html");
+      assert(await page.locator(".review-fab").count() === 1, "A vocabulary page lost the floating review shortcut.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

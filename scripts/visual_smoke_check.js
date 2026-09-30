@@ -143,6 +143,15 @@ check("site header exposes page search", () => {
   assert(css.includes(".site-search"), "site search styles are missing");
 });
 
+check("course pages suppress the floating review shortcut", () => {
+  const js = read("assets/js/site-header.js");
+  const siteMap = JSON.parse(read("assets/data/site-map.json"));
+  const course = siteMap.groups.find((group) => group.id === "course");
+  assert(course?.pages.length > 0, "site map has no Course pages");
+  assert(js.includes('currentGroup?.id === "course"'), "site header does not suppress the review shortcut by Course group");
+  assert(js.includes('document.querySelector(".review-fab")?.remove()'), "site header does not remove an existing review shortcut");
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");

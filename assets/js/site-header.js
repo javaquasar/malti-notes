@@ -130,8 +130,8 @@
     }))
   }));
 
-  const currentGroupLabel =
-    groups.find((group) => group.items.some((item) => item.href === currentFile))?.label || null;
+  const currentGroup = groups.find((group) => group.items.some((item) => item.href === currentFile)) || null;
+  const currentGroupLabel = currentGroup?.label || null;
   const searchItems = [
     ...siteMap.standalone.map((item) => ({ ...item, group: "Home" })),
     ...groups.flatMap((group) =>
@@ -394,7 +394,8 @@
   };
 
   const ensureReviewFab = () => {
-    if (currentFile === "review_cards.html" || currentFile === "index.html") {
+    if (currentFile === "review_cards.html" || currentFile === "index.html" || currentGroup?.id === "course") {
+      document.querySelector(".review-fab")?.remove();
       return;
     }
 
