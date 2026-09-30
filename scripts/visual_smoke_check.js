@@ -165,6 +165,18 @@ check("pronouns page keeps English section headings readable", () => {
   });
 });
 
+check("animal vocabulary groups stay unframed", () => {
+  const html = read("animals.html");
+  const groupWrappers = [...html.matchAll(/<div\s+class="([^"]+)"\s+data-animal-vocabulary-groups>/g)];
+
+  assert(groupWrappers.length === 2, "animals page must expose two vocabulary group wrappers");
+  groupWrappers.forEach((match) => {
+    const classes = match[1].split(/\s+/);
+    assert(classes.includes("section-stack"), "animal vocabulary wrapper must keep shared vertical spacing");
+    assert(!classes.includes("study-card"), "animal vocabulary wrapper must not add an outer frame");
+  });
+});
+
 check("offline application shell is complete", () => {
   const manifest = JSON.parse(read("manifest.webmanifest"));
   const serviceWorker = read("service-worker.js");
