@@ -189,6 +189,74 @@
   margin-bottom: var(--space-xl);
 }
 
+.number-time-drill {
+  display: grid;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  padding-block: var(--space-2xl);
+  border-block: 1px solid var(--border-default);
+}
+
+.number-time-drill-header,
+.number-time-drill-stats,
+.number-time-drill-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.number-time-drill-header {
+  justify-content: space-between;
+}
+
+.number-time-drill-direction {
+  margin: 0;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.number-time-drill-challenge {
+  display: block;
+  min-height: 1.35em;
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.number-time-drill-form {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.number-time-drill-answer {
+  margin-top: 0;
+}
+
+.number-time-drill-actions {
+  margin: 0;
+}
+
+.number-time-drill-feedback {
+  min-height: 1.6em;
+  margin: 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: var(--space-2xs) solid var(--border-default);
+  background: var(--color-muted-faint-bg);
+}
+
+.number-time-drill-feedback[data-state="correct"] {
+  border-left-color: var(--color-success);
+  background: var(--surface-success-highlight);
+  color: var(--color-success);
+}
+
+.number-time-drill-feedback[data-state="incorrect"] {
+  border-left-color: var(--color-danger);
+  background: var(--surface-danger-soft);
+}
+
 @media (max-width: 640px) {
   .exercise-token {
     min-height: 44px;
@@ -197,6 +265,30 @@
   .course-practice > summary {
     min-height: 44px;
     padding-block: 10px;
+  }
+
+  .number-time-drill-header,
+  .number-time-drill-stats,
+  .number-time-drill-actions {
+    align-items: stretch;
+  }
+
+  .number-time-drill-header,
+  .number-time-drill-actions {
+    flex-direction: column;
+  }
+
+  .number-time-drill .segmented-toggle,
+  .number-time-drill-actions .action-button {
+    width: 100%;
+  }
+
+  .number-time-drill .toggle-chip {
+    flex: 1 1 0;
+  }
+
+  .number-time-drill-challenge {
+    font-size: 1.55rem;
   }
 
   .exercise-set-header,

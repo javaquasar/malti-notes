@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, "..");
 const dataRoot = path.join(root, "assets", "data");
 const errors = [];
 const missingExamples = new Map();
+const schemaValidatedConfigFiles = new Set(["numbers_time_drills.json"]);
 const maxLengths = {
   maltese: 140,
   english: 180,
@@ -126,7 +127,7 @@ function validateValue(file, location, value, allowMonolingual = false) {
     if (typeof child === "string") validateText(file, location, field, child);
     if (typeof child === "object" && child !== null) {
       const localizedQuestionPart = (field === "question" || field === "answer") && localizedQuestionAnswer;
-      validateValue(file, `${location}.${field}`, child, localizedQuestionPart);
+      validateValue(file, `${location}.${field}`, child, allowMonolingual || localizedQuestionPart);
     }
   });
 }
@@ -140,7 +141,7 @@ files.forEach((file) => {
     fail(file, "root", `is invalid JSON: ${error.message}`);
     return;
   }
-  validateValue(file, "root", data);
+  validateValue(file, "root", data, schemaValidatedConfigFiles.has(path.basename(file)));
 });
 
 missingExamples.forEach((count, file) => {

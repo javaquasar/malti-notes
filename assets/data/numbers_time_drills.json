@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "numbers": {
+    "minimum": 1,
+    "maximum": 100,
+    "forms": [
+      { "value": 1, "maltese": "wieħed" },
+      { "value": 2, "maltese": "tnejn" },
+      { "value": 3, "maltese": "tlieta" },
+      { "value": 4, "maltese": "erbgħa" },
+      { "value": 5, "maltese": "ħamsa" },
+      { "value": 6, "maltese": "sitta" },
+      { "value": 7, "maltese": "sebgħa" },
+      { "value": 8, "maltese": "tmienja" },
+      { "value": 9, "maltese": "disgħa" },
+      { "value": 10, "maltese": "għaxra" },
+      { "value": 11, "maltese": "ħdax" },
+      { "value": 12, "maltese": "tnax" },
+      { "value": 13, "maltese": "tlettax" },
+      { "value": 14, "maltese": "erbatax" },
+      { "value": 15, "maltese": "ħmistax" },
+      { "value": 16, "maltese": "sittax" },
+      { "value": 17, "maltese": "sbatax" },
+      { "value": 18, "maltese": "tmintax" },
+      { "value": 19, "maltese": "dsatax" },
+      { "value": 20, "maltese": "għoxrin" },
+      { "value": 30, "maltese": "tletin" },
+      { "value": 40, "maltese": "erbgħin" },
+      { "value": 50, "maltese": "ħamsin" },
+      { "value": 60, "maltese": "sittin" },
+      { "value": 70, "maltese": "sebgħin" },
+      { "value": 80, "maltese": "tmenin" },
+      { "value": 90, "maltese": "disgħin" },
+      { "value": 100, "maltese": "mija" }
+    ]
+  },
+  "clock": {
+    "hours": [
+      { "value": 1, "maltese": "is-siegħa" },
+      { "value": 2, "maltese": "is-sagħtejn" },
+      { "value": 3, "maltese": "it-tlieta" },
+      { "value": 4, "maltese": "l-erbgħa" },
+      { "value": 5, "maltese": "il-ħamsa" },
+      { "value": 6, "maltese": "is-sitta" },
+      { "value": 7, "maltese": "is-sebgħa" },
+      { "value": 8, "maltese": "it-tmienja" },
+      { "value": 9, "maltese": "id-disgħa" },
+      { "value": 10, "maltese": "l-għaxra" },
+      { "value": 11, "maltese": "il-ħdax" }
+    ],
+    "pastMinutes": [
+      { "value": 0, "maltese": "" },
+      { "value": 5, "maltese": "ħamsa" },
+      { "value": 10, "maltese": "għaxra" },
+      { "value": 15, "maltese": "kwart" },
+      { "value": 20, "maltese": "għoxrin" },
+      { "value": 30, "maltese": "nofs" }
+    ],
+    "toMinutes": [
+      { "value": 40, "remaining": 20, "maltese": "għoxrin" },
+      { "value": 45, "remaining": 15, "maltese": "kwart" },
+      { "value": 50, "remaining": 10, "maltese": "għaxra" },
+      { "value": 55, "remaining": 5, "maltese": "ħamsa" }
+    ]
+  }
+}

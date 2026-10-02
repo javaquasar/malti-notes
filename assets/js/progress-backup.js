@@ -17,6 +17,7 @@
     malti_exercise_progress_v1: "object",
     malti_course_target_progress_v1: "object",
     malti_comprehensive_coverage_v1: "object",
+    malti_numbers_time_drill_v1: "object",
     malti_mistake_journal_v1: "object",
     malti_today_minutes_v1: "string",
     malti_site_theme: "string",

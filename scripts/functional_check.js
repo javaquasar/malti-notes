@@ -1517,6 +1517,51 @@ async function main() {
       assert(await firstDetails.locator(":scope > .qa-pair-part--answer").isVisible(), "Preposition visual drill does not reveal its answer.");
     });
 
+    await runTest(context, "number and clock drills rotate and preserve progress", async (page) => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      await openCleanPage(page, "numbers_calendar_time.html#self-test");
+      const drill = page.locator("[data-number-time-drill]");
+      await page.waitForFunction(() => document.querySelector("[data-number-time-drill]")?.dataset.drillReady === "true");
+      const pools = await page.evaluate(() => window.MaltiNumbersTimeDrill.getPoolSizes());
+      assert(pools.numbers === 200, "Number drill does not cover both directions for 1-100.");
+      assert(pools.clock === 212, "Clock drill does not cover every supported time in both directions.");
+
+      const first = await page.evaluate(() => window.MaltiNumbersTimeDrill.getCurrent());
+      await drill.locator("[data-drill-answer]").fill(first.answer);
+      await drill.locator("[data-drill-check]").click();
+      assert(await drill.locator("[data-drill-feedback]").getAttribute("data-state") === "correct", "Correct number drill answer was rejected.");
+      const savedNumber = await page.evaluate((id) => JSON.parse(localStorage.getItem("malti_numbers_time_drill_v1")).numbers.results[id], first.id);
+      assert(savedNumber?.attempts === 1 && savedNumber?.correct === 1, "Number drill progress was not saved.");
+
+      await drill.locator("[data-drill-next]").click();
+      const second = await page.evaluate(() => window.MaltiNumbersTimeDrill.getCurrent());
+      assert(second.id !== first.id, "Number drill repeated the previous challenge while unseen items remain.");
+
+      await drill.locator('[data-drill-mode="clock"]').click();
+      const clock = await page.evaluate(() => window.MaltiNumbersTimeDrill.getCurrent());
+      assert(clock.mode === "clock", "Clock mode did not activate.");
+      await drill.locator("[data-drill-answer]").fill("not the time");
+      await drill.locator("[data-drill-check]").click();
+      assert(await drill.locator("[data-drill-feedback]").getAttribute("data-state") === "incorrect", "Incorrect clock answer was accepted.");
+      const mistake = await page.evaluate((id) => window.MaltiMistakeStore.getOpen().find((item) => item.itemId === id), clock.id);
+      assert(mistake?.category === "numbers-time", "Missed clock answer did not reach the mistake journal.");
+
+      await page.reload({ waitUntil: "networkidle" });
+      await page.waitForFunction(() => document.querySelector("[data-number-time-drill]")?.dataset.drillReady === "true");
+      const afterReload = await page.evaluate(() => window.MaltiNumbersTimeDrill.getCurrent());
+      assert(afterReload.mode === "clock" && afterReload.id !== clock.id, "Refresh did not keep the mode or rotate the clock challenge.");
+      const metrics = await drill.evaluate((element) => ({
+        overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+        inputHeight: element.querySelector("[data-drill-answer]").getBoundingClientRect().height,
+        buttonHeights: Array.from(element.querySelectorAll("button"))
+          .filter((button) => !button.hidden)
+          .map((button) => button.getBoundingClientRect().height),
+        contained: element.getBoundingClientRect().right <= document.documentElement.clientWidth
+      }));
+      assert(!metrics.overflow && metrics.contained, "Number and time drill overflows the mobile viewport.");
+      assert(metrics.inputHeight >= 44 && metrics.buttonHeights.every((height) => height >= 44), "Number and time drill has undersized mobile controls.");
+    });
+
     await runTest(context, "reviewable bank items toggle individually without covering text", async (page) => {
       for (const pageName of bankPages) {
         await openCleanPage(page, pageName);

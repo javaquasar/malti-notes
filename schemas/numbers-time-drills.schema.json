@@ -1,0 +1,71 @@
+{
+  "$id": "https://malti-notes.local/schemas/numbers-time-drills.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "numbers", "clock"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "numbers": {
+      "type": "object",
+      "required": ["minimum", "maximum", "forms"],
+      "additionalProperties": false,
+      "properties": {
+        "minimum": { "const": 1 },
+        "maximum": { "const": 100 },
+        "forms": {
+          "type": "array",
+          "minItems": 28,
+          "maxItems": 28,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/valueForm" }
+        }
+      }
+    },
+    "clock": {
+      "type": "object",
+      "required": ["hours", "pastMinutes", "toMinutes"],
+      "additionalProperties": false,
+      "properties": {
+        "hours": {
+          "type": "array",
+          "minItems": 11,
+          "maxItems": 11,
+          "items": { "$ref": "#/$defs/valueForm" }
+        },
+        "pastMinutes": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": { "$ref": "#/$defs/valueForm" }
+        },
+        "toMinutes": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/toMinute" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "valueForm": {
+      "type": "object",
+      "required": ["value", "maltese"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "maltese": { "type": "string" }
+      }
+    },
+    "toMinute": {
+      "type": "object",
+      "required": ["value", "remaining", "maltese"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "integer", "minimum": 31, "maximum": 59 },
+        "remaining": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "maltese": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

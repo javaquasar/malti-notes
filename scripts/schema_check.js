@@ -14,6 +14,7 @@ const checks = [
   ["schemas/course-manifest.schema.json", ["assets/data/course/manifest.json"]],
   ["schemas/course-chapter.schema.json", fs.readdirSync(path.join(root, "assets/data/course/chapters")).filter((file) => file.endsWith(".json")).sort().map((file) => `assets/data/course/chapters/${file}`)],
   ["schemas/course-milestones.schema.json", ["assets/data/course_milestone_assessments.json"]],
+  ["schemas/numbers-time-drills.schema.json", ["assets/data/numbers_time_drills.json"]],
   ["schemas/learning-content.schema.json", fs.readdirSync(path.join(root, "assets/data")).filter((file) => file.endsWith("_examples.json") && file !== "course_target_examples.json").sort().map((file) => `assets/data/${file}`)]
 ];
 const failures = [];
@@ -41,6 +42,32 @@ checks.forEach(([schemaFile, dataFiles]) => {
     if (dataFile.endsWith("course_milestone_assessments.json")) data.sets.forEach((set) => {
       if (set.chapterCount !== set.chapterIds.length || set.itemCount !== set.items.length) failures.push(`${dataFile} ${set.id} summary counts are stale`);
     });
+    if (dataFile.endsWith("numbers_time_drills.json")) {
+      const uniqueValues = (items) => new Set(items.map((item) => item.value)).size === items.length;
+      const hasExactValues = (items, expected) => (
+        items.length === expected.length
+        && expected.every((value) => items.some((item) => item.value === value))
+      );
+      const formValues = new Set(data.numbers.forms.map((item) => item.value));
+      const requiredForms = [
+        ...Array.from({ length: 20 }, (_, index) => index + 1),
+        ...Array.from({ length: 8 }, (_, index) => (index + 3) * 10)
+      ];
+      if (!uniqueValues(data.numbers.forms) || !requiredForms.every((value) => formValues.has(value))) {
+        failures.push(`${dataFile} number forms must uniquely cover 1-20, tens through 100`);
+      }
+      if (!uniqueValues(data.clock.hours) || !uniqueValues(data.clock.pastMinutes) || !uniqueValues(data.clock.toMinutes)) {
+        failures.push(`${dataFile} clock values must be unique within each list`);
+      }
+      if (!hasExactValues(data.clock.hours, Array.from({ length: 11 }, (_, index) => index + 1))
+        || !hasExactValues(data.clock.pastMinutes, [0, 5, 10, 15, 20, 30])
+        || !hasExactValues(data.clock.toMinutes, [40, 45, 50, 55])) {
+        failures.push(`${dataFile} clock forms do not cover the expected hour and five-minute patterns`);
+      }
+      if (data.clock.toMinutes.some((minute) => minute.value + minute.remaining !== 60)) {
+        failures.push(`${dataFile} each toMinutes value and remaining value must total 60`);
+      }
+    }
     console.log(`ok schema ${dataFile}`);
   });
 });
