@@ -863,6 +863,42 @@ async function main() {
       }
     });
 
+    await runTest(context, "home review toolbar keeps every action visible", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "home_furniture.html");
+      const toolbarMetrics = await page.locator(".home-toggle-row").evaluate((toolbar) => {
+        const bounds = toolbar.getBoundingClientRect();
+        const controls = Array.from(toolbar.children).map((control) => {
+          const rect = control.getBoundingClientRect();
+          return {
+            text: control.textContent.trim(),
+            left: rect.left,
+            right: rect.right,
+            top: rect.top,
+            visible: getComputedStyle(control).visibility !== "hidden" && getComputedStyle(control).display !== "none"
+          };
+        });
+        return {
+          controls,
+          left: bounds.left,
+          right: bounds.right,
+          height: bounds.height,
+          rowCount: new Set(controls.map((control) => Math.round(control.top || 0))).size,
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        };
+      });
+
+      assert(toolbarMetrics.controls.length === 5, "Home toolbar lost a review or image action.");
+      assert(toolbarMetrics.controls.every((control) => control.visible), "Home toolbar hides an action at 320px.");
+      assert(
+        toolbarMetrics.controls.every((control) => control.left >= toolbarMetrics.left && control.right <= toolbarMetrics.right),
+        "Home toolbar pushes an action outside its card at 320px."
+      );
+      assert(toolbarMetrics.rowCount === 3, "Home toolbar does not use two action rows plus one status row at 320px.");
+      assert(toolbarMetrics.height <= 200, "Home toolbar remains too tall at 320px.");
+      assert(!toolbarMetrics.documentOverflow, "Home toolbar causes horizontal page overflow at 320px.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

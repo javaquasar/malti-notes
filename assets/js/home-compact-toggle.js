@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const update = (compact) => {
+    const label = compact ? "Show home images" : "Hide home images";
     root.classList.toggle("home-compact", compact);
-    button.textContent = compact ? "Show home images" : "Hide home images";
+    button.textContent = label;
+    button.dataset.mobileLabel = compact ? "Show images" : "Hide images";
+    button.setAttribute("aria-label", label);
     button.setAttribute("aria-pressed", compact ? "true" : "false");
   };
 

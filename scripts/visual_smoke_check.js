@@ -212,6 +212,19 @@ check("animal vocabulary groups stay unframed", () => {
   });
 });
 
+check("home review toolbar can wrap every generated action", () => {
+  const css = read("assets/css/pages.css");
+  const toolbarRule = css.match(/\.home-toggle-row\s*\{([^}]+)\}/)?.[1] || "";
+  assert(toolbarRule.includes("flex-wrap: wrap"), "home review toolbar cannot wrap generated actions");
+  assert(toolbarRule.includes("justify-content: flex-start"), "home review toolbar can push actions past the left edge");
+  assert(css.includes(".home-toggle-row > [data-mobile-label]"), "home review toolbar lacks compact mobile labels");
+
+  const html = read("home_furniture.html");
+  assert(html.includes('data-mobile-label="Hide images"'), "home image toggle lacks a compact mobile label");
+  assert(html.includes('pageBulkMobileLabel: "Add words"'), "home vocabulary action lacks a compact mobile label");
+  assert(html.includes('pageBulkMobileLabel: "Add examples"'), "home sentence action lacks a compact mobile label");
+});
+
 check("question and answer examples use paired cards", () => {
   const migratedBanks = [
     ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],

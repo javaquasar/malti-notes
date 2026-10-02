@@ -89,7 +89,12 @@
                 return !store.hasWord(item.id);
             }).length;
             const label = button.dataset.bulkLabel || "Add section to review";
-            button.textContent = unsaved === 0 ? "Section saved" : label;
+            const currentLabel = unsaved === 0 ? "Section saved" : label;
+            button.textContent = currentLabel;
+            button.setAttribute("aria-label", currentLabel);
+            if (button.dataset.bulkMobileLabel) {
+                button.dataset.mobileLabel = unsaved === 0 ? "Saved" : button.dataset.bulkMobileLabel;
+            }
             button.disabled = unsaved === 0;
 
             const status = button.parentElement && button.parentElement.querySelector("[data-section-status]");
@@ -175,6 +180,7 @@
             button.dataset.pageReviewAdd = "true";
             button.dataset.items = JSON.stringify(words);
             button.dataset.bulkLabel = config.pageBulkLabel || "Add all words";
+            button.dataset.bulkMobileLabel = config.pageBulkMobileLabel || "Add words";
             button.addEventListener("click", function () {
                 addWords(JSON.parse(button.dataset.items || "[]"));
             });

@@ -207,7 +207,12 @@ async function renderExampleBanksFromData(config) {
         const items = JSON.parse(button.dataset.items || "[]");
         const unsaved = items.filter((item) => !store.hasCard(item.id)).length;
         const label = button.dataset.bulkLabel || "Add sentence bank to review";
-        button.textContent = unsaved === 0 ? "Sentence bank saved" : label;
+        const currentLabel = unsaved === 0 ? "Sentence bank saved" : label;
+        button.textContent = currentLabel;
+        button.setAttribute("aria-label", currentLabel);
+        if (button.dataset.bulkMobileLabel) {
+            button.dataset.mobileLabel = unsaved === 0 ? "Saved" : button.dataset.bulkMobileLabel;
+        }
         button.disabled = unsaved === 0;
 
         const status = button.parentElement && button.parentElement.querySelector("[data-section-status]");
@@ -407,6 +412,7 @@ async function renderExampleBanksFromData(config) {
             button.className = "action-button";
             button.dataset.pageSentenceReviewAdd = "true";
             button.dataset.bulkLabel = config.pageBulkLabel || "Add all example sentences";
+            button.dataset.bulkMobileLabel = config.pageBulkMobileLabel || "Add examples";
             button.dataset.items = JSON.stringify(uniqueSentenceItems);
             button.addEventListener("click", () => addSentenceCards(uniqueSentenceItems));
             toolbar.insertBefore(button, toolbar.children[1] || null);
