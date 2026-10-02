@@ -246,6 +246,18 @@ check("mobile sidebars keep usable navigation targets", () => {
   );
 });
 
+check("mobile data tables keep every column reachable", () => {
+  const css = read("assets/css/site/responsive.css");
+  assert(
+    /table\s*\{[\s\S]*?overflow-x:\s*auto;[\s\S]*?overscroll-behavior-inline:\s*contain;[\s\S]*?scrollbar-width:\s*thin;/.test(css),
+    "mobile tables lack shared touch scrolling and a visible overflow affordance"
+  );
+  assert(
+    /\.table-soft\s*\{\s*overflow-x:\s*auto;\s*overflow-y:\s*hidden;/.test(css),
+    "soft tables can still hide columns on mobile"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");

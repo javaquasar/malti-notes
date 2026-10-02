@@ -1058,6 +1058,42 @@ async function main() {
       }
     });
 
+    await runTest(context, "mobile data tables keep every column reachable", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+
+      for (const pageName of [
+        "pronouns_possessives.html",
+        "verbs_guide.html",
+        "imperative_verbs.html",
+        "numbers_calendar_time.html",
+        "sentence_builder.html"
+      ]) {
+        await openCleanPage(page, pageName);
+        const metrics = await page.locator("table.table-soft:visible").evaluateAll((tables) => tables
+          .filter((table) => table.scrollWidth > table.clientWidth + 1)
+          .map((table) => {
+            const maxScroll = table.scrollWidth - table.clientWidth;
+            table.scrollLeft = maxScroll;
+            const result = {
+              overflowX: getComputedStyle(table).overflowX,
+              tabIndex: table.tabIndex,
+              maxScroll,
+              reachedEnd: Math.abs(maxScroll - table.scrollLeft) < 1
+            };
+            table.scrollLeft = 0;
+            return result;
+          }));
+
+        assert(metrics.length > 0, `${pageName} has no overflowing table to verify.`);
+        assert(
+          metrics.every((table) => ["auto", "scroll"].includes(table.overflowX)),
+          `${pageName} hides an overflowing table column.`
+        );
+        assert(metrics.every((table) => table.tabIndex >= 0), `${pageName} has a scrollable table outside the keyboard order.`);
+        assert(metrics.every((table) => table.maxScroll > 0 && table.reachedEnd), `${pageName} cannot reach a table's final column.`);
+      }
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");

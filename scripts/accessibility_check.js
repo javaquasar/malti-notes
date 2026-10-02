@@ -78,8 +78,17 @@ async function auditPage(context, pageName, viewportName) {
 
       document.querySelectorAll("table, #key-verbs > .study-card").forEach((element, index) => {
         const style = getComputedStyle(element);
-        const scrollsHorizontally = ["auto", "scroll"].includes(style.overflowX)
-          && element.scrollWidth > element.clientWidth + 1;
+        const overflowsHorizontally = element.scrollWidth > element.clientWidth + 1;
+        const isVisible = element.getClientRects().length > 0 && style.visibility !== "hidden";
+        const scrollsHorizontally = isVisible
+          && ["auto", "scroll"].includes(style.overflowX)
+          && overflowsHorizontally;
+        const clipsHorizontally = isVisible
+          && ["hidden", "clip"].includes(style.overflowX)
+          && overflowsHorizontally;
+        if (clipsHorizontally) {
+          scrollIssues.push(`horizontal table region ${index + 1} clips content instead of allowing scrolling`);
+        }
         if (scrollsHorizontally && element.tabIndex < 0) {
           scrollIssues.push(`horizontal scroll region ${index + 1} is not keyboard focusable`);
         }

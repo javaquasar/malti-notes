@@ -211,6 +211,23 @@
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+    scrollbar-color: var(--color-border-emphasis) transparent;
+    scrollbar-width: thin;
+  }
+
+  .table-soft {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  table::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  table::-webkit-scrollbar-thumb {
+    background: var(--color-border-emphasis);
+    border-radius: var(--radius-pill);
   }
 
   .compact-list,
