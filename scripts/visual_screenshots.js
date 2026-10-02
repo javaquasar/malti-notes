@@ -45,6 +45,31 @@ function screenshotSeed(pageName, theme, viewportName) {
   return `${pageName}:${theme}:${viewportName}`;
 }
 
+async function loadImagesForVisualCapture(page) {
+  await page.evaluate(async () => {
+    const images = Array.from(document.images);
+    images.forEach((image) => {
+      image.loading = "eager";
+    });
+    await Promise.all(images.map(async (image) => {
+      if (!image.complete) {
+        await new Promise((resolve) => {
+          const timeout = window.setTimeout(resolve, 5000);
+          const finish = () => {
+            window.clearTimeout(timeout);
+            resolve();
+          };
+          image.addEventListener("load", finish, { once: true });
+          image.addEventListener("error", finish, { once: true });
+        });
+      }
+      if (typeof image.decode === "function") {
+        await image.decode().catch(() => {});
+      }
+    }));
+  });
+}
+
 function makeServer() {
   return http.createServer((req, res) => {
     const url = new URL(req.url, `http://${host}:${port}`);
@@ -113,6 +138,7 @@ async function main() {
             seed: screenshotSeed(pageName, theme, viewport.name)
           });
           await page.goto(`http://${host}:${port}/${pageName}`, { waitUntil: "networkidle" });
+          await loadImagesForVisualCapture(page);
           await page.evaluate((themeName) => {
             document.documentElement.dataset.theme = themeName;
             window.localStorage.setItem("malti_site_theme", themeName);

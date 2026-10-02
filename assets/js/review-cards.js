@@ -883,7 +883,7 @@
             return "";
         }
         if (card.image) {
-            return "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\"></div>";
+            return "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\" loading=\"lazy\" decoding=\"async\" fetchpriority=\"low\"></div>";
         }
         if (card.swatchStyle) {
             return "<div class=\"review-image-wrap\"><div class=\"review-color-swatch\" style=\"" + escapeHtml(card.swatchStyle) + "\" aria-hidden=\"true\"></div></div>";

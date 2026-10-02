@@ -22,8 +22,15 @@
     function createVisualLead(item, options) {
         if (item.image) {
             var img = document.createElement("img");
+            var isTransportImage = item.image.indexOf("/transport/") !== -1;
+            var isSquareImage = item.image.indexOf("favicon-option-speech.svg") !== -1;
             img.src = item.image;
             img.alt = item.imageAlt || item.english || item.maltese;
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.setAttribute("fetchpriority", "low");
+            img.width = isSquareImage ? 64 : (isTransportImage ? 220 : 160);
+            img.height = isSquareImage ? 64 : (isTransportImage ? 120 : 110);
             return img;
         }
 

@@ -258,6 +258,19 @@ check("mobile data tables keep every column reachable", () => {
   );
 });
 
+check("vocabulary images load lazily without layout shifts", () => {
+  const renderer = read("assets/js/render-vocab-cards.js");
+  const review = read("assets/js/review-cards.js");
+  const transport = read("transport_travel.html");
+  const screenshots = read("scripts/visual_screenshots.js");
+  assert(renderer.includes('img.loading = "lazy"') && renderer.includes('img.decoding = "async"'), "vocabulary renderer does not defer image work");
+  assert(renderer.includes('img.setAttribute("fetchpriority", "low")'), "vocabulary renderer does not lower offscreen image priority");
+  assert(renderer.includes("img.width =") && renderer.includes("img.height ="), "vocabulary renderer does not reserve image dimensions");
+  assert(review.includes('loading=\\"lazy\\" decoding=\\"async\\" fetchpriority=\\"low\\"'), "review images do not use shared deferred loading");
+  assert(/sliema-valletta-route\.png[^>]*width="1489"[^>]*height="1222"[^>]*loading="lazy"/.test(transport), "large route image is not dimensioned and deferred");
+  assert(screenshots.includes("loadImagesForVisualCapture"), "visual screenshots do not fully load deferred images");
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");

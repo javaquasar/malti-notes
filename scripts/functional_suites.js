@@ -48,6 +48,7 @@ const functionalSuites = {
     "mobile navigation rows keep usable targets",
     "mobile sidebars keep usable navigation targets",
     "mobile data tables keep every column reachable",
+    "vocabulary images load lazily without layout shifts",
     "home review toolbar keeps every action visible",
     "mobile verb banks stay readable and tappable",
     "Year 4 tabs keep usable mobile targets",

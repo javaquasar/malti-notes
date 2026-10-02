@@ -1094,6 +1094,50 @@ async function main() {
       }
     });
 
+    await runTest(context, "vocabulary images load lazily without layout shifts", async (page) => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      const requestedImages = [];
+      const collectImageRequest = (request) => {
+        if (request.resourceType() === "image" && request.url().includes("/assets/img/animals/")) {
+          requestedImages.push(request.url());
+        }
+      };
+      page.on("request", collectImageRequest);
+      await openCleanPage(page, "animals.html");
+      page.off("request", collectImageRequest);
+
+      const imageMetrics = await page.locator(".animal-figure-card img").evaluateAll((images) => images.map((image) => ({
+        loading: image.loading,
+        decoding: image.decoding,
+        fetchPriority: image.fetchPriority,
+        width: image.getAttribute("width"),
+        height: image.getAttribute("height")
+      })));
+      const uniqueRequests = new Set(requestedImages).size;
+
+      assert(imageMetrics.length === 60, "Animal vocabulary no longer renders all 60 illustrations.");
+      assert(imageMetrics.every((image) => image.loading === "lazy"), "A vocabulary illustration still loads eagerly.");
+      assert(imageMetrics.every((image) => image.decoding === "async"), "A vocabulary illustration still blocks image decoding.");
+      assert(imageMetrics.every((image) => image.fetchPriority === "low"), "A vocabulary illustration lacks low fetch priority.");
+      assert(imageMetrics.every((image) => Number(image.width) > 0 && Number(image.height) > 0), "A vocabulary illustration lacks intrinsic dimensions.");
+      assert(uniqueRequests < imageMetrics.length, "The initial animal page load still requests every illustration.");
+
+      const lastAnimalImage = page.locator(".animal-figure-card img").last();
+      await lastAnimalImage.scrollIntoViewIfNeeded();
+      await lastAnimalImage.waitFor({ state: "visible" });
+      await page.waitForFunction((image) => image.complete && image.naturalWidth > 0, await lastAnimalImage.elementHandle());
+
+      await openCleanPage(page, "transport_travel.html");
+      const routeImage = await page.locator(".route-figure img[src*='sliema-valletta-route']").evaluate((image) => ({
+        loading: image.loading,
+        decoding: image.decoding,
+        width: image.getAttribute("width"),
+        height: image.getAttribute("height")
+      }));
+      assert(routeImage.loading === "lazy" && routeImage.decoding === "async", "The large route image is not deferred.");
+      assert(routeImage.width === "1489" && routeImage.height === "1222", "The route image does not reserve its layout space.");
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");
