@@ -903,6 +903,41 @@ async function main() {
       }
     });
 
+    await runTest(context, "mobile form controls keep usable targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+
+      for (const pageName of ["course_exam.html", "environment_recycling.html", "mistakes.html"]) {
+        await openCleanPage(page, pageName);
+        const metrics = await page.locator(
+          ".exercise-input-label input:visible, .exercise-match-row select:visible, .mistake-category-filter select:visible"
+        ).evaluateAll((controls) => ({
+          count: controls.length,
+          minHeight: Math.min(...controls.map((control) => control.getBoundingClientRect().height)),
+          clipped: controls.filter((control) => (
+            control.scrollWidth > control.clientWidth || control.scrollHeight > control.clientHeight
+          )).length,
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        }));
+        assert(metrics.count > 0, `${pageName} has no mobile form controls to verify.`);
+        assert(metrics.minHeight >= 44, `${pageName} has a mobile form control shorter than 44px.`);
+        assert(metrics.clipped === 0, `${pageName} clips a mobile form value.`);
+        assert(!metrics.documentOverflow, `${pageName} mobile form controls cause horizontal overflow.`);
+      }
+
+      await openCleanPage(page, "index.html");
+      await page.locator(".site-nav-toggle").click();
+      const search = page.locator(".site-search input:visible");
+      assert(await search.count() === 1, "Mobile navigation does not expose site search.");
+      const searchMetrics = await search.evaluate((input) => ({
+        height: input.getBoundingClientRect().height,
+        clipped: input.scrollWidth > input.clientWidth || input.scrollHeight > input.clientHeight,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(searchMetrics.height >= 44, "Mobile site search is shorter than 44px.");
+      assert(!searchMetrics.clipped, "Mobile site search clips its value.");
+      assert(!searchMetrics.documentOverflow, "Mobile site search causes horizontal overflow.");
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");
