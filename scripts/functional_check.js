@@ -1044,6 +1044,7 @@ async function main() {
         return {
           columns: lists.map((list) => getComputedStyle(list).columnCount),
           triggerCount: triggers.length,
+          minTriggerWidth: Math.min(...triggers.map((trigger) => trigger.getBoundingClientRect().width)),
           minTriggerHeight: Math.min(...triggers.map((trigger) => trigger.getBoundingClientRect().height)),
           overflowingTriggers: triggers.filter((trigger) => trigger.scrollWidth > trigger.clientWidth).length,
           documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
@@ -1052,18 +1053,25 @@ async function main() {
 
       assert(guideMetrics.columns.length === 2, "Course verb lists were not rendered.");
       assert(guideMetrics.columns.every((count) => count === "1"), "Course verb lists still use multiple columns on mobile.");
-      assert(guideMetrics.triggerCount > 0 && guideMetrics.minTriggerHeight >= 44, "Mobile verb targets remain too short.");
+      assert(
+        guideMetrics.triggerCount > 0 && guideMetrics.minTriggerWidth >= 44 && guideMetrics.minTriggerHeight >= 44,
+        "Mobile verb targets remain smaller than 44px."
+      );
       assert(guideMetrics.overflowingTriggers === 0, "A mobile verb label is clipped inside its button.");
       assert(!guideMetrics.documentOverflow, "Mobile verb banks cause horizontal page overflow.");
 
       await openCleanPage(page, "imperative_verbs.html");
       const imperativeMetrics = await page.locator(".verb-trigger").evaluateAll((triggers) => ({
         count: triggers.length,
+        minWidth: Math.min(...triggers.map((trigger) => trigger.getBoundingClientRect().width)),
         minHeight: Math.min(...triggers.map((trigger) => trigger.getBoundingClientRect().height)),
         clipped: triggers.filter((trigger) => trigger.scrollWidth > trigger.clientWidth).length,
         documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
       }));
-      assert(imperativeMetrics.count > 0 && imperativeMetrics.minHeight >= 44, "Imperative verb targets remain too short.");
+      assert(
+        imperativeMetrics.count > 0 && imperativeMetrics.minWidth >= 44 && imperativeMetrics.minHeight >= 44,
+        "Imperative verb targets remain smaller than 44px."
+      );
       assert(imperativeMetrics.clipped === 0, "An imperative verb label is clipped inside its button.");
       assert(!imperativeMetrics.documentOverflow, "Imperative verb controls cause horizontal page overflow.");
     });

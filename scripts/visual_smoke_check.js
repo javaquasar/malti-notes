@@ -284,6 +284,7 @@ check("home review toolbar can wrap every generated action", () => {
 check("mobile verb banks keep a readable action layout", () => {
   const css = read("assets/css/pages.css");
   assert(css.includes(".compact-list.compact-3"), "compact verb lists lack a shared mobile override");
+  assert(css.includes("min-width: 44px"), "mobile verb targets lack a usable minimum width");
   assert(css.includes("min-height: 44px"), "mobile verb targets lack a usable minimum height");
   assert(css.includes("white-space: normal"), "long mobile verb labels cannot wrap");
 });
