@@ -1,6 +1,7 @@
 (() => {
   const COURSE_URL = "./assets/data/course_path.json";
   const MANIFEST_URL = "./assets/data/course/manifest.json";
+  const DEPTH_URL = "./assets/data/teaching_depth_report.json";
   const COURSE_PROGRESS_KEY = "malti_course_progress_v1";
   const storage = window.MaltiStorage;
 
@@ -32,12 +33,13 @@
     return cell;
   };
 
-  const createChapterRow = ({ level, chapter, targets, targetProgress, exerciseProgress, assessmentSets, objectiveProgress }) => {
+  const createChapterRow = ({ level, chapter, targets, targetProgress, exerciseProgress, assessmentSets, objectiveProgress, depth }) => {
     const row = document.createElement("tr");
     const chapterCell = createCell("Chapter", "course-progress-chapter-cell");
     const masteryCell = createCell("Target mastery");
     const statesCell = createCell("Current states");
     const checkpointCell = createCell("Checkpoints");
+    const depthCell = createCell("Teaching depth", "course-progress-depth-cell");
     const actionCell = createCell("Action", "course-progress-action-cell");
     const counts = stateCounts(targets, targetProgress);
     const percent = targets.length ? Math.round(counts.mastered / targets.length * 100) : 0;
@@ -89,6 +91,12 @@
     diagnostic.textContent = exerciseProgress[diagnosticSet?.id]?.attempts ? "Diagnostic attempted" : "Diagnostic open";
     checkpointCell.append(checkpointStrong, diagnostic);
 
+    const depthStrong = document.createElement("strong");
+    const depthDetail = document.createElement("small");
+    depthStrong.textContent = `${depth?.completeTargetCount || 0}/${depth?.targetCount || targets.length} complete`;
+    depthDetail.textContent = depth?.gaps?.length ? `${depth.gaps.length} target gaps` : "All 6 stages covered";
+    depthCell.append(depthStrong, depthDetail);
+
     const action = document.createElement("a");
     const nextCheckpoint = checkpoints.find((set) => exerciseProgress[set.id]?.passed !== true);
     action.className = "action-link";
@@ -102,14 +110,14 @@
 
     row.dataset.progressLevel = level.id;
     row.dataset.progressChapter = chapter.id;
-    row.append(chapterCell, masteryCell, statesCell, checkpointCell, actionCell);
+    row.append(chapterCell, masteryCell, statesCell, checkpointCell, depthCell, actionCell);
     return row;
   };
 
   const initialize = async () => {
     if (!storage) return;
-    const [course, manifest] = await Promise.all([
-      loadJson(COURSE_URL), loadJson(MANIFEST_URL)
+    const [course, manifest, depthReport] = await Promise.all([
+      loadJson(COURSE_URL), loadJson(MANIFEST_URL), loadJson(DEPTH_URL)
     ]);
     const targetProgress = window.MaltiExerciseRunner?.getTargetProgress?.() || {};
     const exerciseProgress = window.MaltiExerciseRunner?.getProgress?.() || {};
@@ -125,11 +133,24 @@
     ]);
     const totals = stateCounts(allTargets, targetProgress);
     const dueTotal = allTargets.filter((target) => isDue(targetProgress[target.id])).length;
+    const depthByChapter = new Map(depthReport.chapters.map((chapter) => [chapter.chapterId, chapter]));
+    setText("[data-progress-target-total]", `${allTargets.length} targets`);
     setText("[data-progress-mastered]", totals.mastered);
     setText("[data-progress-learning]", totals.learning);
     setText("[data-progress-review]", dueTotal);
     setText("[data-progress-new]", totals.new);
     setText("[data-progress-summary]", `${totals.mastered} of ${allTargets.length} targets mastered · ${dueTotal} due for review`);
+    setText("[data-depth-summary]", `${depthReport.completeTargetCount}/${depthReport.targetCount} fully taught`);
+    setText("[data-depth-detail]", depthReport.gapCount
+      ? `${depthReport.gapCount} targets still miss at least one teaching stage.`
+      : "Every target has meaning, explanation, an example, recognition, production, and review coverage.");
+    const depthStages = document.querySelector("[data-depth-stages]");
+    depthStages.replaceChildren(...depthReport.stages.map((stage) => {
+      const chip = document.createElement("span");
+      chip.className = "status-chip";
+      chip.textContent = `${stage.label} ${depthReport.stageCounts[stage.id]}/${depthReport.targetCount}`;
+      return chip;
+    }));
 
     const chapters = course.levels.flatMap((level) => level.chapters.map((chapter) => ({ level, chapter })));
     const body = document.querySelector("[data-progress-chapters]");
@@ -140,7 +161,8 @@
       targetProgress,
       exerciseProgress,
       assessmentSets,
-      objectiveProgress
+      objectiveProgress,
+      depth: depthByChapter.get(chapter.id)
     })));
 
     const filters = document.querySelector("[data-progress-filters]");

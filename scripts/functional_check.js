@@ -215,9 +215,13 @@ async function main() {
       assert((await page.locator("[data-progress-learning]").textContent()).trim() === "1", "Learning target total is incorrect.");
       assert((await page.locator("[data-progress-review]").textContent()).trim() === "1", "Review target total is incorrect.");
       assert((await page.locator("[data-progress-new]").textContent()).trim() === "476", "Not-started target total is incorrect.");
+      assert((await page.locator("[data-progress-target-total]").textContent()).trim() === "479 targets", "Course target total is stale.");
+      assert((await page.locator("[data-depth-summary]").textContent()).trim() === "479/479 fully taught", "Teaching-depth summary is incomplete.");
+      assert(await page.locator("[data-depth-stages] .status-chip").count() === 6, "Teaching-depth stages are incomplete.");
       const animals = page.locator('[data-progress-chapter="b1-animals"]');
       assert((await animals.textContent()).includes("1/28"), "Animals mastery is missing from chapter progress.");
       assert((await animals.textContent()).includes("1/5 passed"), "Animals checkpoint progress is incorrect.");
+      assert((await animals.textContent()).includes("28/28 complete"), "Animals teaching depth is missing from chapter progress.");
       assert((await animals.locator(".course-progress-action-cell a").textContent()).trim() === "Review 1 due", "Due state did not choose the expected chapter action.");
       await page.locator('[data-progress-filter="b2"]').click();
       assert(await page.locator('[data-progress-level="b2"]:visible').count() === 7, "B2 progress filter is incomplete.");

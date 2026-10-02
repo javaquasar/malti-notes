@@ -23,7 +23,7 @@
                 <h1>Course Progress</h1>
                 <p class="lead">See what is new, learning, due for review, or mastered across every B1 and B2 chapter.</p>
                 <div class="pill-row">
-                    <span class="pill">462 targets</span>
+                    <span class="pill" data-progress-target-total>479 targets</span>
                     <span class="pill">14 chapters</span>
                     <span class="pill">saved locally</span>
                 </div>
@@ -67,6 +67,18 @@
             </article>
         </section>
 
+        <section class="content-group course-depth-overview" aria-labelledby="course-depth-title">
+            <div class="course-progress-heading">
+                <div>
+                    <span class="tag">Content quality</span>
+                    <h2 id="course-depth-title">Teaching Depth</h2>
+                </div>
+                <strong data-depth-summary>Loading teaching depth...</strong>
+            </div>
+            <p class="muted-note" data-depth-detail>Checking meaning, explanation, examples, practice, and review coverage.</p>
+            <div class="course-progress-state-list" data-depth-stages aria-label="Teaching-depth stages"></div>
+        </section>
+
         <section class="content-group course-progress-overview">
             <div class="course-progress-heading">
                 <div>
@@ -85,6 +97,7 @@
                         <th scope="col">Target mastery</th>
                         <th scope="col">Current states</th>
                         <th scope="col">Checkpoints</th>
+                        <th scope="col">Teaching depth</th>
                         <th scope="col"><span class="visually-hidden">Action</span></th>
                     </tr>
                     </thead>

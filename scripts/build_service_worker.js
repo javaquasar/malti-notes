@@ -25,6 +25,7 @@ const coreAssets = [
   "./assets/data/course_path.json",
   "./assets/data/course_exercises.json",
   "./assets/data/course/manifest.json",
+  "./assets/data/teaching_depth_report.json",
   "./assets/data/course_verb_paradigms.json",
   "./assets/data/grammar_targets.json",
   "./assets/img/favicon-option-speech.svg",

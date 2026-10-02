@@ -10,6 +10,7 @@ const checks = [
   ["schemas/search-index.schema.json", ["assets/data/search-index.json"]],
   ["schemas/grammar-targets.schema.json", ["assets/data/grammar_targets.json"]],
   ["schemas/comprehensive-test-bank.schema.json", ["assets/data/comprehensive_test_bank.json"]],
+  ["schemas/teaching-depth-report.schema.json", ["assets/data/teaching_depth_report.json"]],
   ["schemas/course-manifest.schema.json", ["assets/data/course/manifest.json"]],
   ["schemas/course-chapter.schema.json", fs.readdirSync(path.join(root, "assets/data/course/chapters")).filter((file) => file.endsWith(".json")).sort().map((file) => `assets/data/course/chapters/${file}`)],
   ["schemas/course-milestones.schema.json", ["assets/data/course_milestone_assessments.json"]],

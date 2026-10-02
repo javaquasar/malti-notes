@@ -13,6 +13,7 @@ const requiredFiles = [
   "analysis/book-coverage.md",
   "analysis/phrase-bank-audit.md",
   "analysis/review-connections.md",
+  "analysis/teaching-depth.md",
   "analysis/word-search-pdf-coverage.md",
   "quality/visual-regression-checklist.md",
   "proposals/multi-language-framework.md",

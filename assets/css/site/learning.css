@@ -404,7 +404,9 @@
 .course-progress-chapter-cell strong,
 .course-progress-chapter-cell small,
 .course-progress-table td:nth-child(4) strong,
-.course-progress-table td:nth-child(4) small {
+.course-progress-table td:nth-child(4) small,
+.course-progress-depth-cell strong,
+.course-progress-depth-cell small {
   display: block;
 }
 
@@ -413,8 +415,13 @@
 }
 
 .course-progress-chapter-cell small,
-.course-progress-table td:nth-child(4) small {
+.course-progress-table td:nth-child(4) small,
+.course-progress-depth-cell small {
   color: var(--text-muted);
+}
+
+.course-progress-depth-cell {
+  min-width: 9rem;
 }
 
 .course-progress-mastery-copy {

@@ -49,9 +49,13 @@ if (!packageJson.includes("npm run course:verbs:build && npm run coverage:build"
   errors.push("course build must generate verb paradigms before the comprehensive coverage bank");
 }
 
+if (!packageJson.includes("npm run coverage:build && npm run depth:build && npm run course:payloads:build")) {
+  errors.push("course build must generate teaching depth after assessments and before chapter payloads");
+}
+
 if (errors.length) {
   errors.forEach((error) => console.error(`fail course build graph: ${error}`));
   process.exit(1);
 }
 
-console.log("ok course build graph includes downstream chapter, milestone, verb, and comprehensive coverage artifacts");
+console.log("ok course build graph includes downstream chapter, milestone, verb, comprehensive coverage, and teaching-depth artifacts");

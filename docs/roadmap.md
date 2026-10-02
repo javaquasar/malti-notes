@@ -16,6 +16,8 @@ This is the only project roadmap. It records active priorities and durable compl
 - Preserve explicit `translation`, `example`, `questionAnswer`, and `rule` semantics.
 - Remove legacy renderer aliases only after every owning page uses the shared contract.
 
+Teaching-depth coverage is now enforced for all course targets. The generated report distinguishes simple presence from the complete learning chain: meaning, explanation, example, recognition, production, and review.
+
 The page-by-page evidence is maintained in the [phrase-bank audit](analysis/phrase-bank-audit.md) and [review connection inventory](analysis/review-connections.md).
 
 ### 3. Improve review depth

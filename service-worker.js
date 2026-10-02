@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}462a43870e88`;
+const CACHE_NAME = `${CACHE_PREFIX}64138a9a7dee`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",
@@ -123,6 +123,7 @@ const CORE_ASSETS = [
     "./assets/data/course_path.json",
     "./assets/data/course_exercises.json",
     "./assets/data/course/manifest.json",
+    "./assets/data/teaching_depth_report.json",
     "./assets/data/course_verb_paradigms.json",
     "./assets/data/grammar_targets.json",
     "./assets/img/favicon-option-speech.svg"

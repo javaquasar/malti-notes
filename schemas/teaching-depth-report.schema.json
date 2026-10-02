@@ -1,0 +1,99 @@
+{
+  "$id": "https://malti-notes.local/schemas/teaching-depth-report.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "stages",
+    "targetCount",
+    "completeTargetCount",
+    "completePercent",
+    "stageCounts",
+    "gapCount",
+    "gaps",
+    "targetTypes",
+    "chapters"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "stages": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "enum": ["meaning", "explanation", "example", "recognition", "production", "review"] },
+          "label": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "targetCount": { "type": "integer", "minimum": 1 },
+    "completeTargetCount": { "type": "integer", "minimum": 0 },
+    "completePercent": { "type": "number", "minimum": 0, "maximum": 100 },
+    "stageCounts": { "$ref": "#/$defs/stageCounts" },
+    "gapCount": { "type": "integer", "minimum": 0 },
+    "gaps": { "type": "array", "items": { "$ref": "#/$defs/gap" } },
+    "targetTypes": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/summary" }
+    },
+    "chapters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/summary" },
+          {
+            "type": "object",
+            "required": ["chapterId", "level", "number", "title"],
+            "properties": {
+              "chapterId": { "type": "string", "minLength": 1 },
+              "level": { "enum": ["B1", "B2"] },
+              "number": { "type": "integer", "minimum": 1 },
+              "title": { "type": "string", "minLength": 1 }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "stageCounts": {
+      "type": "object",
+      "required": ["meaning", "explanation", "example", "recognition", "production", "review"],
+      "additionalProperties": false,
+      "properties": {
+        "meaning": { "type": "integer", "minimum": 0 },
+        "explanation": { "type": "integer", "minimum": 0 },
+        "example": { "type": "integer", "minimum": 0 },
+        "recognition": { "type": "integer", "minimum": 0 },
+        "production": { "type": "integer", "minimum": 0 },
+        "review": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "gap": {
+      "type": "object",
+      "required": ["targetId", "chapterId", "type", "sourceRequirement", "missingStages"],
+      "properties": {
+        "targetId": { "type": "string", "minLength": 1 },
+        "chapterId": { "type": "string", "minLength": 1 },
+        "type": { "type": "string", "minLength": 1 },
+        "sourceRequirement": { "type": "string", "minLength": 1 },
+        "missingStages": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["targetCount", "completeTargetCount", "completePercent", "stageCounts", "gaps"],
+      "properties": {
+        "targetCount": { "type": "integer", "minimum": 0 },
+        "completeTargetCount": { "type": "integer", "minimum": 0 },
+        "completePercent": { "type": "number", "minimum": 0, "maximum": 100 },
+        "stageCounts": { "$ref": "#/$defs/stageCounts" },
+        "gaps": { "type": "array", "items": { "$ref": "#/$defs/gap" } }
+      }
+    }
+  }
+}

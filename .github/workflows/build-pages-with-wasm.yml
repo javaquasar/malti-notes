@@ -79,6 +79,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run books:coverage
 
+      - name: Validate teaching depth for every course target
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run depth:check
+
       - name: Validate book course bindings
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run course:lint

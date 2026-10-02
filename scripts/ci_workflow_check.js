@@ -22,6 +22,7 @@ const requiredChecks = [
   "content:model:check",
   "content:verify",
   "books:coverage",
+  "depth:check",
   "course:lint",
   "coverage:check",
   "links:lint",
