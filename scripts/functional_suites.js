@@ -43,6 +43,7 @@ const functionalSuites = {
     "home review toolbar keeps every action visible",
     "mobile verb banks stay readable and tappable",
     "Year 4 tabs keep usable mobile targets",
+    "book verb levels use the shared mobile toggle",
     "generated banks keep the shared card styling",
     "verified example banks render without quarantined content",
     "framed content groups keep the shared visual contract",

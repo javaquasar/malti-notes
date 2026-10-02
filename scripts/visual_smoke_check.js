@@ -239,6 +239,15 @@ check("Year 4 tabs use a stable mobile grid", () => {
   assert(css.includes("min-height: 44px"), "Year 4 mobile tabs lack a usable minimum height");
 });
 
+check("book verb levels use the shared segmented control", () => {
+  const html = read("verbs_guide.html");
+  const css = read("assets/css/site/verbs.css");
+  assert(html.includes('course-verb-book-toggle segmented-toggle'), "book-level toggle lacks the shared segmented control");
+  assert(html.match(/class="toggle-chip"/g)?.length >= 2, "book-level buttons lack shared toggle chips");
+  assert(html.includes('role="group" aria-label="Choose book level"'), "book-level toggle lacks accessible group semantics");
+  assert(css.includes(".course-verb-book-toggle .toggle-chip"), "book-level toggle lacks scoped sizing");
+});
+
 check("question and answer examples use paired cards", () => {
   const migratedBanks = [
     ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],

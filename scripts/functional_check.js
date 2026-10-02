@@ -958,6 +958,30 @@ async function main() {
       assert(!allTabs.documentOverflow, "Year 4 mobile tabs cause horizontal page overflow.");
     });
 
+    await runTest(context, "book verb levels use the shared mobile toggle", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "verbs_guide.html");
+      const toggle = page.locator(".course-verb-book-toggle");
+      const buttons = toggle.locator(".toggle-chip");
+      assert(await toggle.getAttribute("role") === "group", "Book-level toggle lacks group semantics.");
+      assert(await buttons.count() === 2, "Book-level toggle does not use two shared chips.");
+
+      const metrics = await buttons.evaluateAll((items) => ({
+        minHeight: Math.min(...items.map((item) => item.getBoundingClientRect().height)),
+        clipped: items.filter((item) => item.scrollWidth > item.clientWidth).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(metrics.minHeight >= 44, "Book-level mobile toggle targets are too short.");
+      assert(metrics.clipped === 0, "A book-level toggle label is clipped.");
+      assert(!metrics.documentOverflow, "Book-level toggle causes horizontal page overflow.");
+
+      await buttons.nth(1).click();
+      assert(await buttons.nth(0).getAttribute("aria-pressed") === "false", "B1 remained selected after choosing B2.");
+      assert(await buttons.nth(1).getAttribute("aria-pressed") === "true", "B2 was not selected.");
+      assert(await page.locator('[data-course-verb-list="B1"]').isHidden(), "B1 paradigms remain visible after choosing B2.");
+      assert(await page.locator('[data-course-verb-list="B2"]').isVisible(), "B2 paradigms did not become visible.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());
