@@ -102,9 +102,14 @@
 }
 
 @media (max-width: 480px) {
+  .topic-picker-checks,
+  .word-search-topic-checks {
+    max-height: 260px;
+  }
+
   .topic-picker-check,
   .word-search-topic-check {
-    min-height: 32px;
+    min-height: 44px;
     padding: var(--space-xs);
     cursor: pointer;
   }

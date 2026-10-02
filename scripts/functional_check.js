@@ -1571,7 +1571,7 @@ async function main() {
 
       assert(metrics.cellWidth >= 24 && metrics.cellHeight >= 24, "Default mobile puzzle cells are too small to select reliably.");
       assert(metrics.topicTargets.length > 0, "Word-search topic controls were not rendered.");
-      assert(metrics.topicTargets.every((height) => height >= 32), "A mobile word-search topic target is too short.");
+      assert(metrics.topicTargets.every((height) => height >= 44), "A mobile word-search topic target is too short.");
       assert(!metrics.documentOverflow, "Mobile word-search controls cause horizontal page overflow.");
     });
 
@@ -1594,7 +1594,7 @@ async function main() {
           documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
         }));
         assert(metrics.count > 0, `${pageName} did not render topic choices.`);
-        assert(metrics.minHeight >= 32, `${pageName} has a topic target shorter than 32px.`);
+        assert(metrics.minHeight >= 44, `${pageName} has a topic target shorter than 44px.`);
         assert(!metrics.documentOverflow, `${pageName} topic choices cause horizontal overflow.`);
       }
     });

@@ -500,7 +500,8 @@ check("vocabulary games share mobile topic targets", () => {
   const css = read("assets/css/site/games.css");
   assert(css.includes(".topic-picker-check"), "shared topic-picker target styles are missing");
   assert(css.includes(".word-search-topic-check"), "word-search topic picker is not included in shared styles");
-  assert(css.includes("min-height: 32px"), "mobile topic targets lack a usable minimum height");
+  assert(css.includes("max-height: 260px"), "mobile topic picker cannot preserve its visible row count");
+  assert(css.includes("min-height: 44px"), "mobile topic targets lack a usable minimum height");
 });
 
 check("word search uses shared game audio", () => {
