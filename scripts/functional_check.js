@@ -786,7 +786,7 @@ async function main() {
       viewport: { width: 1280, height: 900 },
       serviceWorkers: "block"
     });
-    await runTest(verificationContext, "needs-review examples stay out of rendered banks", async (page) => {
+    await runTest(verificationContext, "verified example banks render without quarantined content", async (page) => {
       const cases = [
         ["animals.html", "animals_examples.json"],
         ["picture_description.html", "picture_description_examples.json"],
@@ -822,7 +822,7 @@ async function main() {
           };
         }, dataFile);
 
-        assert(result.quarantined > 0, `${pageName} fixture has no quarantined examples.`);
+        assert(result.quarantined === 0, `${pageName} still contains ${result.quarantined} quarantined example(s).`);
         assert(result.mismatches.length === 0, `${pageName}: ${result.mismatches.join("; ")}`);
         assert(!result.hasMarker, `${pageName} rendered an uncertainty marker.`);
       }

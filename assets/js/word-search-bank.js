@@ -436,7 +436,7 @@ window.MALTI_WORD_SEARCH_TOPICS = [
         "hippopotamus"
       ],
       [
-        "rinoċeront",
+        "rinoċeronte",
         "rhinoceros"
       ],
       [
@@ -468,7 +468,7 @@ window.MALTI_WORD_SEARCH_TOPICS = [
         "whale"
       ],
       [
-        "delfin",
+        "denfil",
         "dolphin"
       ],
       [
@@ -512,7 +512,7 @@ window.MALTI_WORD_SEARCH_TOPICS = [
         "beetle"
       ],
       [
-        "skorpjun",
+        "għaqreb",
         "scorpion"
       ],
       [

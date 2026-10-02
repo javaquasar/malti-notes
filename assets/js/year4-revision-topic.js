@@ -1358,7 +1358,7 @@
           "hippopotamus"
         ],
         [
-          "rinoċeront",
+          "rinoċeronte",
           "rhinoceros"
         ],
         [
@@ -1374,7 +1374,7 @@
           "fox"
         ],
         [
-          "ċriev",
+          "ċerv",
           "deer"
         ],
         [
@@ -1390,7 +1390,7 @@
           "whale"
         ],
         [
-          "delfin",
+          "denfil",
           "dolphin"
         ],
         [
@@ -1434,7 +1434,7 @@
           "cockroach"
         ],
         [
-          "caterpillar",
+          "xagħat",
           "caterpillar"
         ],
         [
@@ -1442,7 +1442,7 @@
           "beetle"
         ],
         [
-          "skorpjun",
+          "għaqreb",
           "scorpion"
         ],
         [

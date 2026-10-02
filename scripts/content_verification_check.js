@@ -8,6 +8,7 @@ const uncertaintyMarker = /\[(?:UNCERTAIN|overview-based)\]/i;
 const allowedStatuses = new Set(["verified", "needs-review"]);
 const allowedPendingClaims = new Set(["plural"]);
 const sourceRegistry = JSON.parse(fs.readFileSync(path.join(dataRoot, "content_verification_sources.json"), "utf8"));
+const qualityBudgets = sourceRegistry.qualityBudgets || {};
 const errors = [];
 const verificationIds = new Set();
 const quarantined = [];
@@ -150,9 +151,18 @@ quarantined.forEach((item) => {
   }
 });
 
+if (Number.isInteger(qualityBudgets.maxPendingClaims) && pendingClaimCount > qualityBudgets.maxPendingClaims) {
+  fail(path.join(dataRoot, "content_verification_sources.json"), "qualityBudgets.maxPendingClaims", `${pendingClaimCount} pending claims exceed the budget of ${qualityBudgets.maxPendingClaims}`);
+}
+
+const quarantinedCount = quarantined.length + quarantinedHtmlCount;
+if (Number.isInteger(qualityBudgets.maxQuarantinedExamples) && quarantinedCount > qualityBudgets.maxQuarantinedExamples) {
+  fail(path.join(dataRoot, "content_verification_sources.json"), "qualityBudgets.maxQuarantinedExamples", `${quarantinedCount} quarantined examples exceed the budget of ${qualityBudgets.maxQuarantinedExamples}`);
+}
+
 if (errors.length) {
   errors.forEach((error) => console.error(`fail verification ${error}`));
   process.exit(1);
 }
 
-console.log(`ok content verification: ${verifiedClaimCount} sourced claims, ${verifiedExampleCount} source-verified examples, ${pendingClaimCount} pending claims, ${quarantined.length + quarantinedHtmlCount} quarantined examples`);
+console.log(`ok content verification: ${verifiedClaimCount} sourced claims, ${verifiedExampleCount} source-verified examples, ${pendingClaimCount} pending claims, ${quarantinedCount} quarantined examples`);

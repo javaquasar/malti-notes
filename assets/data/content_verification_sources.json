@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
   "description": "Canonical sources used to resolve quarantined examples and individual linguistic claims.",
+  "qualityBudgets": {
+    "maxPendingClaims": 4,
+    "maxQuarantinedExamples": 0
+  },
   "sources": {
     "schola-b1-2022": {
       "title": "Malti: Sensiela ta' kotba għall-Malti bħala Lingwa Barranija - Ktieb tal-istudent",
@@ -18,6 +22,72 @@
       "title": "Maltese broken plural corpus",
       "publisher": "Malta Language Resource Server, University of Malta",
       "url": "https://mlrs.research.um.edu.mt/dl/broken_plural_CVPattern.pdf"
+    },
+    "schola-b2-2023": {
+      "title": "Malti: Sensiela ta' kotba ta' taħriġ fil-Malti bħala Lingwa Barranija - Ktieb tal-istudent",
+      "authors": [
+        "Antoinette Camilleri Grima",
+        "Raisa Abela"
+      ],
+      "publisher": "Schola Publications",
+      "year": 2023,
+      "isbn": "9789918607334",
+      "fileName": "M B2.pdf",
+      "sha256": "856F7F8629237766ECAFA8873058B10CA45461B3C2642F8C1C517CA51CB5946C"
+    },
+    "malta-ln124-2013": {
+      "title": "Regolamenti tal-2013 dwar il-Protezzjoni ta' Annimali li jintużaw għal Skopijiet Xjentifiċi",
+      "publisher": "Government of Malta",
+      "year": 2013,
+      "url": "https://www.parlament.mt/media/73799/00069.pdf"
+    },
+    "kunsill-dinja-darna": {
+      "title": "Id-Dinja Darna",
+      "publisher": "Kunsill Nazzjonali tal-Ilsien Malti",
+      "url": "https://kunsilltalmalti.gov.mt/wp-content/uploads/2023/03/dinjadarna02.pdf"
+    },
+    "kunsill-language-qa": {
+      "title": "Mistoqsija u Tweġiba 77-102",
+      "publisher": "Kunsill Nazzjonali tal-Ilsien Malti",
+      "url": "https://kunsilltalmalti.gov.mt/mistoqsija-u-twegiba-77-102/"
+    },
+    "kunsill-collective-nouns": {
+      "title": "Mistoqsija u Tweġiba 26-51",
+      "publisher": "Kunsill Nazzjonali tal-Ilsien Malti",
+      "url": "https://kunsilltalmalti.gov.mt/mistoqsija-u-twegiba-26-51/"
+    },
+    "nla-klieb-il-bahar": {
+      "title": "Il-Klieb il-Baħar",
+      "publisher": "National Literacy Agency",
+      "url": "https://nla.gov.mt/wp-content/uploads/2024/08/Il-Klieb-il-Bahar.html"
+    },
+    "mlrs-lsm-animals": {
+      "title": "Dizzjunarju tal-Lingwa tas-Sinjali Maltija: animal entries",
+      "publisher": "Malta Language Resource Server, University of Malta",
+      "urls": [
+        "https://mlrs.research.um.edu.mt/resources/lsm/lemma_MOG%C4%A6%C5%BBA-GOAT/results/",
+        "https://mlrs.research.um.edu.mt/resources/lsm/lemma_NEMLA-ANT/results/",
+        "https://mlrs.research.um.edu.mt/resources/lsm/lemma_NA%C4%A6LA-BEE/results/",
+        "https://mlrs.research.um.edu.mt/resources/lsm/lemma_WIRDIENA-COCKROACH/results/"
+      ]
+    },
+    "sem-nohlom-2021": {
+      "title": "Noħlom Li Xi Darba",
+      "publisher": "Servizzi Ewropej f'Malta",
+      "year": 2021,
+      "url": "https://sem.gov.mt/media/Publications/nohlimlixidarba/DIGITALNohlomlixidarba.pdf"
+    },
+    "langsci-maltese-2018": {
+      "title": "The languages of Malta",
+      "publisher": "Language Science Press",
+      "year": 2018,
+      "url": "https://langsci-press.org/catalog/view/182/959/1008-2"
+    },
+    "gabra-uom-2026": {
+      "title": "Ġabra lexical database snapshot",
+      "publisher": "Institute of Linguistics and Language Technology, University of Malta",
+      "year": 2026,
+      "url": "https://mlrs.research.um.edu.mt/resources/gabra/"
     }
   }
 }

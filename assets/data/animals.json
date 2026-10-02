@@ -106,7 +106,8 @@
           "image": "./assets/img/animals/guinea-pig.svg",
           "imageAlt": "Guinea pig illustration",
           "notes": [
-            "female: fenka tal-Indi"
+            "female: fenka tal-Indi",
+            "plural: fniek tal-Indi"
           ],
           "review": {
             "enabled": true,
@@ -114,9 +115,12 @@
           },
           "example": "Nara fenek tal-Indi fil-ġnien.",
           "exampleTranslation": "I see the guinea pig in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "fniek tal-Indi",
+              "source": "malta-ln124-2013"
+            }
+          }
         },
         {
           "slug": "ti-ie-a",
@@ -142,7 +146,8 @@
           "image": "./assets/img/animals/fish.svg",
           "imageAlt": "Fish illustration",
           "notes": [
-            "gender note: ħuta mara / ħuta raġel"
+            "gender note: ħuta mara / ħuta raġel",
+            "plural: ħutiet"
           ],
           "review": {
             "enabled": true,
@@ -150,9 +155,12 @@
           },
           "example": "Nara ħuta fil-ġnien.",
           "exampleTranslation": "I see the fish in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "ħutiet",
+              "source": "sem-nohlom-2021"
+            }
+          }
         },
         {
           "slug": "fekruna-tal-art",
@@ -203,21 +211,25 @@
         {
           "slug": "hamster",
           "maltese": "hamster",
-          "english": "same in English",
+          "english": "hamster",
           "image": "./assets/img/animals/hamster.svg",
           "imageAlt": "Hamster illustration",
           "notes": [
-            "gender note: -"
+            "gender note: -",
+            "plural: ħamsters"
           ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara hamster fil-ġnien.",
-          "exampleTranslation": "I see the same in English in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "exampleTranslation": "I see the hamster in the garden.",
+          "verifiedClaims": {
+            "plural": {
+              "value": "ħamsters",
+              "source": "malta-ln124-2013"
+            }
+          }
         }
       ]
     },
@@ -234,7 +246,8 @@
           "image": "./assets/img/animals/ferret.svg",
           "imageAlt": "Ferret illustration",
           "notes": [
-            "gender note: -"
+            "gender note: -",
+            "plural: inmsa / nemsa"
           ],
           "review": {
             "enabled": true,
@@ -242,9 +255,12 @@
           },
           "example": "Nara nemes fil-ġnien.",
           "exampleTranslation": "I see the ferret in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "inmsa / nemsa",
+              "source": "gabra-uom-2026"
+            }
+          }
         },
         {
           "slug": "in-illa",
@@ -384,7 +400,8 @@
           "image": "./assets/img/animals/goat.svg",
           "imageAlt": "Goat illustration",
           "notes": [
-            "gender note: -"
+            "gender note: -",
+            "plural: mogħoż"
           ],
           "review": {
             "enabled": true,
@@ -392,9 +409,12 @@
           },
           "example": "Nara mogħża fil-ġnien.",
           "exampleTranslation": "I see the goat in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "mogħoż",
+              "source": "mlrs-lsm-animals"
+            }
+          }
         },
         {
           "slug": "papra",
@@ -430,7 +450,8 @@
           "image": "./assets/img/animals/goose.svg",
           "imageAlt": "Goose illustration",
           "notes": [
-            "gender note: -"
+            "gender note: -",
+            "plural: wiżeż"
           ],
           "review": {
             "enabled": true,
@@ -438,9 +459,12 @@
           },
           "example": "Nara wiżż fil-ġnien.",
           "exampleTranslation": "I see the goose in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "wiżeż",
+              "source": "gabra-uom-2026"
+            }
+          }
         },
         {
           "slug": "mar",
@@ -495,7 +519,8 @@
           "image": "./assets/img/animals/rat.svg",
           "imageAlt": "Rat illustration",
           "notes": [
-            "gender note: -"
+            "gender note: -",
+            "plural: firien"
           ],
           "review": {
             "enabled": true,
@@ -503,9 +528,12 @@
           },
           "example": "Nara far fil-ġnien.",
           "exampleTranslation": "I see the rat in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "firien",
+              "source": "malta-ln124-2013"
+            }
+          }
         }
       ]
     },
@@ -713,20 +741,25 @@
           "english": "hippopotamus",
           "image": "./assets/img/animals/hippo.svg",
           "imageAlt": "Hippopotamus illustration",
-          "notes": [],
+          "notes": [
+            "plural: ippopotami"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara ippopotamu fil-ġnien.",
           "exampleTranslation": "I see the hippopotamus in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "ippopotami",
+              "source": "kunsill-dinja-darna"
+            }
+          }
         },
         {
           "slug": "rino-eront",
-          "maltese": "rinoċeront",
+          "maltese": "rinoċeronte",
           "english": "rhinoceros",
           "image": "./assets/img/animals/rhino.svg",
           "imageAlt": "Rhinoceros illustration",
@@ -735,7 +768,7 @@
             "enabled": true,
             "type": "word"
           },
-          "example": "Nara rinoċeront fil-ġnien.",
+          "example": "Nara rinoċeronte fil-ġnien.",
           "exampleTranslation": "I see the rhinoceros in the garden.",
           "pendingClaims": [
             "plural"
@@ -747,16 +780,24 @@
           "english": "bear",
           "image": "./assets/img/animals/bear.svg",
           "imageAlt": "Bear illustration",
-          "notes": [],
+          "notes": [
+            "plural: orsijiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara ors fil-ġnien.",
           "exampleTranslation": "I see the bear in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "orsijiet",
+              "source": "schola-b1-2022",
+              "printedPages": [
+                64
+              ]
+            }
+          }
         },
         {
           "slug": "lupu",
@@ -786,33 +827,43 @@
           "english": "fox",
           "image": "./assets/img/animals/fox.svg",
           "imageAlt": "Fox illustration",
-          "notes": [],
+          "notes": [
+            "plural: volpijiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara volpi fil-ġnien.",
           "exampleTranslation": "I see the fox in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "volpijiet",
+              "source": "kunsill-dinja-darna"
+            }
+          }
         },
         {
           "slug": "riev",
-          "maltese": "ċriev",
+          "maltese": "ċerv",
           "english": "deer",
           "image": "./assets/img/animals/deer.svg",
           "imageAlt": "Deer illustration",
-          "notes": [],
+          "notes": [
+            "plural: ċriev"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
-          "example": "Nara ċriev fil-ġnien.",
+          "example": "Nara ċerv fil-ġnien.",
           "exampleTranslation": "I see the deer in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "ċriev",
+              "source": "kunsill-dinja-darna"
+            }
+          }
         },
         {
           "slug": "emel",
@@ -879,20 +930,25 @@
         },
         {
           "slug": "delfin",
-          "maltese": "delfin",
+          "maltese": "denfil",
           "english": "dolphin",
           "image": "./assets/img/animals/dolphin.svg",
           "imageAlt": "Dolphin illustration",
-          "notes": [],
+          "notes": [
+            "plural: dniefel"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
-          "example": "Nara delfin fil-ġnien.",
+          "example": "Nara denfil fil-ġnien.",
           "exampleTranslation": "I see the dolphin in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "dniefel",
+              "source": "um-broken-plurals"
+            }
+          }
         },
         {
           "slug": "kelb-il-ba-ar",
@@ -900,16 +956,21 @@
           "english": "shark",
           "image": "./assets/img/animals/shark.svg",
           "imageAlt": "Shark illustration",
-          "notes": [],
+          "notes": [
+            "plural: klieb il-baħar"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara kelb il-baħar fil-ġnien.",
           "exampleTranslation": "I see the shark in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "klieb il-baħar",
+              "source": "nla-klieb-il-bahar"
+            }
+          }
         },
         {
           "slug": "qarnita",
@@ -917,16 +978,22 @@
           "english": "octopus",
           "image": "./assets/img/animals/octopus.svg",
           "imageAlt": "Octopus illustration",
-          "notes": [],
+          "notes": [
+            "collective: qarnit",
+            "plural: qarnitiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara qarnita fil-ġnien.",
           "exampleTranslation": "I see the octopus in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "qarnitiet",
+              "source": "gabra-uom-2026"
+            }
+          }
         },
         {
           "slug": "gran",
@@ -934,16 +1001,21 @@
           "english": "crab",
           "image": "./assets/img/animals/crab.svg",
           "imageAlt": "Crab illustration",
-          "notes": [],
+          "notes": [
+            "plural: granċijiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara granċ fil-ġnien.",
           "exampleTranslation": "I see the crab in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "granċijiet",
+              "source": "nla-klieb-il-bahar"
+            }
+          }
         }
       ]
     },
@@ -997,16 +1069,21 @@
           "english": "ant",
           "image": "./assets/img/animals/ant.svg",
           "imageAlt": "Ant illustration",
-          "notes": [],
+          "notes": [
+            "plural: nemel"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara nemla fil-ġnien.",
           "exampleTranslation": "I see the ant in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "nemel",
+              "source": "mlrs-lsm-animals"
+            }
+          }
         },
         {
           "slug": "na-la",
@@ -1014,16 +1091,21 @@
           "english": "bee",
           "image": "./assets/img/animals/bee.svg",
           "imageAlt": "Bee illustration",
-          "notes": [],
+          "notes": [
+            "plural: naħal"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara naħla fil-ġnien.",
           "exampleTranslation": "I see the bee in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "naħal",
+              "source": "mlrs-lsm-animals"
+            }
+          }
         },
         {
           "slug": "nemusa",
@@ -1031,16 +1113,22 @@
           "english": "mosquito",
           "image": "./assets/img/animals/mosquito.svg",
           "imageAlt": "Mosquito illustration",
-          "notes": [],
+          "notes": [
+            "collective: nemus",
+            "plural: nemusiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara nemusa fil-ġnien.",
           "exampleTranslation": "I see the mosquito in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "nemusiet",
+              "source": "gabra-uom-2026"
+            }
+          }
         },
         {
           "slug": "brimba",
@@ -1048,16 +1136,22 @@
           "english": "spider",
           "image": "./assets/img/animals/spider.svg",
           "imageAlt": "Spider illustration",
-          "notes": [],
+          "notes": [
+            "collective: brimb",
+            "plural: brimbiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara brimba fil-ġnien.",
           "exampleTranslation": "I see the spider in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "brimbiet",
+              "source": "langsci-maltese-2018"
+            }
+          }
         },
         {
           "slug": "wirdiena",
@@ -1065,20 +1159,25 @@
           "english": "cockroach",
           "image": "./assets/img/animals/cockroach.svg",
           "imageAlt": "Cockroach illustration",
-          "notes": [],
+          "notes": [
+            "plural: wirdien"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara wirdiena fil-ġnien.",
           "exampleTranslation": "I see the cockroach in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "wirdien",
+              "source": "mlrs-lsm-animals"
+            }
+          }
         },
         {
           "slug": "caterpillar",
-          "maltese": "caterpillar",
+          "maltese": "xagħat",
           "english": "caterpillar",
           "image": "./assets/img/animals/caterpillar.svg",
           "imageAlt": "Caterpillar illustration",
@@ -1087,7 +1186,7 @@
             "enabled": true,
             "type": "word"
           },
-          "example": "Nara caterpillar fil-ġnien.",
+          "example": "Nara xagħat fil-ġnien.",
           "exampleTranslation": "I see the caterpillar in the garden.",
           "pendingClaims": [
             "plural"
@@ -1099,33 +1198,44 @@
           "english": "beetle",
           "image": "./assets/img/animals/beetle.svg",
           "imageAlt": "Beetle illustration",
-          "notes": [],
+          "notes": [
+            "collective: ħanfus",
+            "plural: ħanfusiet"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
           "example": "Nara ħanfusa fil-ġnien.",
           "exampleTranslation": "I see the beetle in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "ħanfusiet",
+              "source": "gabra-uom-2026"
+            }
+          }
         },
         {
           "slug": "skorpjun",
-          "maltese": "skorpjun",
+          "maltese": "għaqreb",
           "english": "scorpion",
           "image": "./assets/img/animals/scorpion.svg",
           "imageAlt": "Scorpion illustration",
-          "notes": [],
+          "notes": [
+            "plural: għeqiereb"
+          ],
           "review": {
             "enabled": true,
             "type": "word"
           },
-          "example": "Nara skorpjun fil-ġnien.",
+          "example": "Nara għaqreb fil-ġnien.",
           "exampleTranslation": "I see the scorpion in the garden.",
-          "pendingClaims": [
-            "plural"
-          ]
+          "verifiedClaims": {
+            "plural": {
+              "value": "għeqiereb",
+              "source": "gabra-uom-2026"
+            }
+          }
         }
       ]
     }

@@ -6047,7 +6047,8 @@
               "exampleTranslation": "I have a small guinea pig.",
               "exampleSource": "site examples",
               "notes": [
-                "female: fenka tal-Indi"
+                "female: fenka tal-Indi",
+                "plural: fniek tal-Indi"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6084,7 +6085,8 @@
               "exampleTranslation": "This is a blue fish.",
               "exampleSource": "site examples",
               "notes": [
-                "gender note: ħuta mara / ħuta raġel"
+                "gender note: ħuta mara / ħuta raġel",
+                "plural: ħutiet"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6135,12 +6137,13 @@
             {
               "slug": "hamster",
               "maltese": "hamster",
-              "english": "same in English",
+              "english": "hamster",
               "example": "Nara hamster fil-ġnien.",
-              "exampleTranslation": "I see the same in English in the garden.",
+              "exampleTranslation": "I see the hamster in the garden.",
               "exampleSource": "topic data",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: ħamsters"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6169,7 +6172,8 @@
               "exampleTranslation": "I see the ferret in the garden.",
               "exampleSource": "topic data",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: inmsa / nemsa"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6243,7 +6247,8 @@
               "exampleTranslation": "I see the sheep in the garden.",
               "exampleSource": "topic data",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: nagħaġ"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6318,7 +6323,8 @@
               "exampleTranslation": "I see the goat in the garden.",
               "exampleSource": "topic data",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: mogħoż"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6336,7 +6342,8 @@
               "exampleTranslation": "I see the duck in the garden.",
               "exampleSource": "topic data",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: papri"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6354,7 +6361,8 @@
               "exampleTranslation": "I see the goose in the garden.",
               "exampleSource": "topic data",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: wiżeż"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6410,7 +6418,8 @@
               "exampleTranslation": "These are white birds.",
               "exampleSource": "site examples",
               "notes": [
-                "gender note: -"
+                "gender note: -",
+                "plural: firien"
               ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6651,10 +6660,12 @@
               "slug": "ippopotamu",
               "maltese": "ippopotamu",
               "english": "hippopotamus",
-              "example": "Nara ippopotamu fil-ġnien.",
-              "exampleTranslation": "I see the hippopotamus in the garden.",
-              "exampleSource": "topic data",
-              "notes": [],
+              "example": "Dan huwa ippopotamu kbir.",
+              "exampleTranslation": "This is a big hippopotamus.",
+              "exampleSource": "site examples",
+              "notes": [
+                "plural: ippopotami"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6665,11 +6676,11 @@
             },
             {
               "slug": "rino-eront",
-              "maltese": "rinoċeront",
+              "maltese": "rinoċeronte",
               "english": "rhinoceros",
-              "example": "Nara rinoċeront fil-ġnien.",
-              "exampleTranslation": "I see the rhinoceros in the garden.",
-              "exampleSource": "topic data",
+              "example": "Ir-rinoċeronte għandu ġilda griża.",
+              "exampleTranslation": "The rhinoceros has grey skin.",
+              "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
@@ -6686,7 +6697,9 @@
               "example": "Nara ors fil-ġnien.",
               "exampleTranslation": "I see the bear in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: orsijiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6720,7 +6733,9 @@
               "example": "Nara volpi fil-ġnien.",
               "exampleTranslation": "I see the fox in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: volpijiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6731,12 +6746,14 @@
             },
             {
               "slug": "riev",
-              "maltese": "ċriev",
+              "maltese": "ċerv",
               "english": "deer",
-              "example": "Nara ċriev fil-ġnien.",
+              "example": "Nara ċerv fil-ġnien.",
               "exampleTranslation": "I see the deer in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: ċriev"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6810,12 +6827,14 @@
             },
             {
               "slug": "delfin",
-              "maltese": "delfin",
+              "maltese": "denfil",
               "english": "dolphin",
-              "example": "Nara delfin fil-ġnien.",
+              "example": "Nara denfil fil-ġnien.",
               "exampleTranslation": "I see the dolphin in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: dniefel"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6831,7 +6850,9 @@
               "example": "Nara kelb il-baħar fil-ġnien.",
               "exampleTranslation": "I see the shark in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: klieb il-baħar"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6847,7 +6868,10 @@
               "example": "Nara qarnita fil-ġnien.",
               "exampleTranslation": "I see the octopus in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "collective: qarnit",
+                "plural: qarnitiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6863,7 +6887,9 @@
               "example": "Nara granċ fil-ġnien.",
               "exampleTranslation": "I see the crab in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: granċijiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6926,7 +6952,9 @@
               "example": "Nara nemla fil-ġnien.",
               "exampleTranslation": "I see the ant in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: nemel"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6942,7 +6970,9 @@
               "example": "Nara naħla fil-ġnien.",
               "exampleTranslation": "I see the bee in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: naħal"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6958,7 +6988,10 @@
               "example": "Nara nemusa fil-ġnien.",
               "exampleTranslation": "I see the mosquito in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "collective: nemus",
+                "plural: nemusiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6974,7 +7007,10 @@
               "example": "Nara brimba fil-ġnien.",
               "exampleTranslation": "I see the spider in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "collective: brimb",
+                "plural: brimbiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -6990,7 +7026,9 @@
               "example": "Nara wirdiena fil-ġnien.",
               "exampleTranslation": "I see the cockroach in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: wirdien"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -7001,9 +7039,9 @@
             },
             {
               "slug": "caterpillar",
-              "maltese": "caterpillar",
+              "maltese": "xagħat",
               "english": "caterpillar",
-              "example": "Nara caterpillar fil-ġnien.",
+              "example": "Nara xagħat fil-ġnien.",
               "exampleTranslation": "I see the caterpillar in the garden.",
               "exampleSource": "topic data",
               "notes": [],
@@ -7022,7 +7060,10 @@
               "example": "Nara ħanfusa fil-ġnien.",
               "exampleTranslation": "I see the beetle in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "collective: ħanfus",
+                "plural: ħanfusiet"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -7033,12 +7074,14 @@
             },
             {
               "slug": "skorpjun",
-              "maltese": "skorpjun",
+              "maltese": "għaqreb",
               "english": "scorpion",
-              "example": "Nara skorpjun fil-ġnien.",
+              "example": "Nara għaqreb fil-ġnien.",
               "exampleTranslation": "I see the scorpion in the garden.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "plural: għeqiereb"
+              ],
               "sourceLabel": "Animals",
               "sourceFile": "animals.json",
               "tier": "basics",
@@ -9920,8 +9963,8 @@
               "slug": "id",
               "maltese": "id",
               "english": "hand",
-              "example": "Kif jidher?",
-              "exampleTranslation": "What does he look like?",
+              "example": "Għandha widnejn żgħar.",
+              "exampleTranslation": "She has small ears.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Body and Appearance",
@@ -13396,8 +13439,8 @@
               "slug": "nahdem",
               "maltese": "naħdem",
               "english": "I work",
-              "example": "Naħdem f'uffiċċju.",
-              "exampleTranslation": "I work in an office.",
+              "example": "Naħdem sa wara nofsinhar.",
+              "exampleTranslation": "I work until the afternoon.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Daily Routine",
@@ -13476,8 +13519,8 @@
               "slug": "noqghod",
               "maltese": "noqgħod",
               "english": "I live / stay",
-              "example": "Noqgħod Malta.",
-              "exampleTranslation": "I live in Malta.",
+              "example": "Nara noqgħod.",
+              "exampleTranslation": "I see I live / stay.",
               "exampleSource": "site examples",
               "notes": [],
               "sourceLabel": "Daily Routine",

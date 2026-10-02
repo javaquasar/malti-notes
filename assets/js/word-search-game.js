@@ -112,7 +112,7 @@
         ["xadina", "monkey"],
         ["ors", "bear"],
         ["volpi", "fox"],
-        ["delfin", "dolphin"]
+        ["denfil", "dolphin"]
       ]
     },
     {

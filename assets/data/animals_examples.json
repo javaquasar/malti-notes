@@ -424,19 +424,28 @@
           "origin": "added-example"
         },
         {
-          "maltese": "Dan ippopotamu kbir.",
+          "maltese": "Dan huwa ippopotamu kbir.",
           "english": "This is a big hippopotamus.",
           "origin": "added-example",
-          "verificationStatus": "needs-review",
-          "verificationId": "animals:wild-bank:items:46",
-          "verificationReason": "Confirm whether the demonstrative sentence needs an explicit copula in this context."
+          "verificationStatus": "verified",
+          "verification": {
+            "source": "schola-b2-2023",
+            "printedPages": [
+              24
+            ],
+            "method": "direct-book-pattern",
+            "checkedOn": "2026-10-02"
+          }
         },
         {
-          "maltese": "Ir-rinoċeront għandu ġilda griża.",
+          "maltese": "Ir-rinoċeronte għandu ġilda griża.",
           "english": "The rhinoceros has grey skin.",
-          "verificationStatus": "needs-review",
-          "verificationId": "animals:wild-bank:items:47",
-          "verificationReason": "Confirm the preferred Maltese spelling and gender of rinoċeront before publishing the sentence."
+          "verificationStatus": "verified",
+          "verification": {
+            "source": "gabra-uom-2026",
+            "method": "lexicon-headword-and-grammar-pattern",
+            "checkedOn": "2026-10-02"
+          }
         },
         {
           "maltese": "L-annimali slavaġ ma jgħixux id-dar.",

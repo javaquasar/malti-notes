@@ -38,7 +38,7 @@ const functionalSuites = {
     "lesson support surfaces keep consistent spacing and width",
     "course dashboards omit the floating review shortcut",
     "generated banks keep the shared card styling",
-    "needs-review examples stay out of rendered banks",
+    "verified example banks render without quarantined content",
     "framed content groups keep the shared visual contract",
     "theme choice survives a reload"
   ],

@@ -714,16 +714,26 @@
         {
           "maltese": "Hemm tadam aħmar.",
           "english": "There are red tomatoes.",
-          "verificationStatus": "needs-review",
-          "verificationId": "picture_description:market:items:5",
-          "verificationReason": "Confirm collective-noun and adjective agreement for tadam in this sentence."
+          "verificationStatus": "verified",
+          "verification": {
+            "source": "kunsill-collective-nouns",
+            "method": "collective-noun-agreement-rule",
+            "checkedOn": "2026-10-02"
+          }
         },
         {
           "maltese": "Hemm frott isfar.",
           "english": "There is yellow fruit.",
-          "verificationStatus": "needs-review",
-          "verificationId": "picture_description:market:items:6",
-          "verificationReason": "Confirm collective-noun and adjective agreement for frott in this sentence."
+          "verificationStatus": "verified",
+          "verification": {
+            "source": "schola-b1-2022",
+            "printedPages": [
+              88,
+              91
+            ],
+            "method": "collective-noun-and-colour-pattern",
+            "checkedOn": "2026-10-02"
+          }
         },
         {
           "maltese": "Ir-raġel għandu flokk blu.",
