@@ -899,6 +899,39 @@ async function main() {
       assert(!toolbarMetrics.documentOverflow, "Home toolbar causes horizontal page overflow at 320px.");
     });
 
+    await runTest(context, "mobile verb banks stay readable and tappable", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "verbs_guide.html");
+      const guideMetrics = await page.evaluate(() => {
+        const lists = Array.from(document.querySelectorAll("#course-verb-bank .compact-list"));
+        const triggers = lists.flatMap((list) => Array.from(list.querySelectorAll(".verb-trigger")));
+        return {
+          columns: lists.map((list) => getComputedStyle(list).columnCount),
+          triggerCount: triggers.length,
+          minTriggerHeight: Math.min(...triggers.map((trigger) => trigger.getBoundingClientRect().height)),
+          overflowingTriggers: triggers.filter((trigger) => trigger.scrollWidth > trigger.clientWidth).length,
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        };
+      });
+
+      assert(guideMetrics.columns.length === 2, "Course verb lists were not rendered.");
+      assert(guideMetrics.columns.every((count) => count === "1"), "Course verb lists still use multiple columns on mobile.");
+      assert(guideMetrics.triggerCount > 0 && guideMetrics.minTriggerHeight >= 32, "Mobile verb targets remain too short.");
+      assert(guideMetrics.overflowingTriggers === 0, "A mobile verb label is clipped inside its button.");
+      assert(!guideMetrics.documentOverflow, "Mobile verb banks cause horizontal page overflow.");
+
+      await openCleanPage(page, "imperative_verbs.html");
+      const imperativeMetrics = await page.locator(".verb-trigger").evaluateAll((triggers) => ({
+        count: triggers.length,
+        minHeight: Math.min(...triggers.map((trigger) => trigger.getBoundingClientRect().height)),
+        clipped: triggers.filter((trigger) => trigger.scrollWidth > trigger.clientWidth).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(imperativeMetrics.count > 0 && imperativeMetrics.minHeight >= 32, "Imperative verb targets remain too short.");
+      assert(imperativeMetrics.clipped === 0, "An imperative verb label is clipped inside its button.");
+      assert(!imperativeMetrics.documentOverflow, "Imperative verb controls cause horizontal page overflow.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

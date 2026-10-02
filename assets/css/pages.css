@@ -583,6 +583,22 @@ body.compact-animals .animal-gallery {
 }
 
 @media (max-width: 720px) {
+  .compact-list,
+  .compact-list.compact-3 {
+    columns: 1;
+  }
+
+  .verb-trigger {
+    min-height: 32px;
+    max-width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.2;
+    vertical-align: middle;
+  }
+
   .home-toggle-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

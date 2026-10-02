@@ -225,6 +225,13 @@ check("home review toolbar can wrap every generated action", () => {
   assert(html.includes('pageBulkMobileLabel: "Add examples"'), "home sentence action lacks a compact mobile label");
 });
 
+check("mobile verb banks keep a readable action layout", () => {
+  const css = read("assets/css/pages.css");
+  assert(css.includes(".compact-list.compact-3"), "compact verb lists lack a shared mobile override");
+  assert(css.includes("min-height: 32px"), "mobile verb targets lack a usable minimum height");
+  assert(css.includes("white-space: normal"), "long mobile verb labels cannot wrap");
+});
+
 check("question and answer examples use paired cards", () => {
   const migratedBanks = [
     ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],

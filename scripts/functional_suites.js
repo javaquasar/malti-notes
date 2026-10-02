@@ -40,6 +40,7 @@ const functionalSuites = {
     "floating review shortcut stays contextual and clear of mobile content",
     "section review controls stay compact on mobile",
     "home review toolbar keeps every action visible",
+    "mobile verb banks stay readable and tappable",
     "generated banks keep the shared card styling",
     "verified example banks render without quarantined content",
     "framed content groups keep the shared visual contract",
