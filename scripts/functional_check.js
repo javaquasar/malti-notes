@@ -1452,6 +1452,27 @@ async function main() {
       assert(await page.locator("#word-search-total").textContent(), "Word search total is empty.");
     });
 
+    await runTest(context, "word search keeps mobile puzzle targets usable", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "word_search.html");
+      const metrics = await page.evaluate(() => {
+        const cell = document.querySelector(".word-search-cell")?.getBoundingClientRect();
+        const topicTargets = Array.from(document.querySelectorAll(".word-search-topic-check"))
+          .map((label) => label.getBoundingClientRect().height);
+        return {
+          cellWidth: cell?.width || 0,
+          cellHeight: cell?.height || 0,
+          topicTargets,
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        };
+      });
+
+      assert(metrics.cellWidth >= 24 && metrics.cellHeight >= 24, "Default mobile puzzle cells are too small to select reliably.");
+      assert(metrics.topicTargets.length > 0, "Word-search topic controls were not rendered.");
+      assert(metrics.topicTargets.every((height) => height >= 32), "A mobile word-search topic target is too short.");
+      assert(!metrics.documentOverflow, "Mobile word-search controls cause horizontal page overflow.");
+    });
+
     await runTest(context, "memory game creates a complete deck", async (page) => {
       await openCleanPage(page, "memory_game.html");
       assert(await page.locator(".memory-card").count() === 16, "Memory game did not create 16 cards.");

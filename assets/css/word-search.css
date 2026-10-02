@@ -620,6 +620,21 @@
   }
 }
 
+@media (max-width: 480px) {
+  .word-search-board-wrap {
+    margin-inline: calc(-1 * var(--space-3xl));
+    padding: var(--space-xs);
+    border-inline: 0;
+    border-radius: 0;
+  }
+
+  .word-search-topic-check {
+    min-height: 32px;
+    padding: var(--space-xs);
+    cursor: pointer;
+  }
+}
+
 @media print {
   @page {
     margin: 12mm;

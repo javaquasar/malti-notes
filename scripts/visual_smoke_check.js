@@ -444,7 +444,10 @@ check("course avoids browser speech fallback", () => {
 
 check("word search stays modular", () => {
   const wordPage = read("word_search.html");
+  const wordCss = read("assets/css/word-search.css");
   assert(wordPage.includes("assets/css/word-search.css"), "word_search.html does not load word-search.css");
+  assert(wordCss.includes("margin-inline: calc(-1 * var(--space-3xl))"), "mobile word-search board does not use the full card width");
+  assert(wordCss.includes(".word-search-topic-check"), "mobile word-search topic targets lack shared sizing");
   keyPages
     .filter((page) => page !== "word_search.html")
     .forEach((page) => {
