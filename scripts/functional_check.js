@@ -814,7 +814,7 @@ async function main() {
       assert(await page.locator("#wrong .grammar-contrast-card").count() === 2, "Health lesson lost its Wrong/Right contrast.");
     });
 
-    await runTest(context, "course dashboards omit the floating review shortcut", async (page) => {
+    await runTest(context, "floating review shortcut stays contextual and clear of mobile content", async (page) => {
       const siteMap = JSON.parse(fs.readFileSync(path.join(root, "assets", "data", "site-map.json"), "utf8"));
       const coursePages = siteMap.groups.find((group) => group.id === "course")?.pages || [];
       assert(coursePages.length > 0, "Course group has no pages to verify.");
@@ -825,7 +825,17 @@ async function main() {
       }
 
       await openCleanPage(page, "home_furniture.html");
-      assert(await page.locator(".review-fab").count() === 1, "A vocabulary page lost the floating review shortcut.");
+      assert(await page.locator(".review-fab").count() === 1, "A desktop vocabulary page lost the floating review shortcut.");
+      assert(await page.locator(".review-fab").isVisible(), "The desktop Review shortcut is hidden.");
+
+      await page.setViewportSize({ width: 980, height: 844 });
+      assert(await page.locator(".review-fab").isHidden(), "The Review shortcut covers content at the mobile navigation breakpoint.");
+      await page.locator(".site-nav-toggle").click();
+      await page.locator(".site-nav-panel .nav-group > summary", { hasText: "Review" }).click();
+      assert(
+        await page.locator('.site-nav-panel a[href="./review_cards.html"]').isVisible(),
+        "Mobile navigation does not provide an accessible Review Cards link."
+      );
     });
 
     await runTest(context, "generated banks keep the shared card styling", async (page) => {

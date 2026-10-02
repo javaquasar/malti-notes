@@ -157,10 +157,15 @@ check("Firebase progress sync stays optional and local-first", () => {
 check("course pages suppress the floating review shortcut", () => {
   const js = read("assets/js/site-header.js");
   const siteMap = JSON.parse(read("assets/data/site-map.json"));
+  const responsiveCss = read("assets/css/site/responsive.css");
   const course = siteMap.groups.find((group) => group.id === "course");
   assert(course?.pages.length > 0, "site map has no Course pages");
   assert(js.includes('currentGroup?.id === "course"'), "site header does not suppress the review shortcut by Course group");
   assert(js.includes('document.querySelector(".review-fab")?.remove()'), "site header does not remove an existing review shortcut");
+  assert(
+    /@media \(max-width: 980px\)[\s\S]*?\.review-fab\s*\{\s*display:\s*none;\s*\}/.test(responsiveCss),
+    "mobile layouts do not suppress the floating Review shortcut"
+  );
 });
 
 check("page directories render from shared data", () => {
