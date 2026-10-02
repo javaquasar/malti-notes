@@ -41,6 +41,7 @@ const functionalSuites = {
     "floating review shortcut stays contextual and clear of mobile content",
     "section review controls stay compact on mobile",
     "shared mobile actions keep usable targets",
+    "mobile toggles keep usable targets",
     "home review toolbar keeps every action visible",
     "mobile verb banks stay readable and tappable",
     "Year 4 tabs keep usable mobile targets",

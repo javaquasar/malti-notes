@@ -190,6 +190,14 @@ check("shared actions keep usable mobile targets", () => {
   );
 });
 
+check("mobile toggles keep usable targets", () => {
+  const css = read("assets/css/site/responsive.css");
+  assert(
+    /@media \(max-width: 980px\)[\s\S]*?\.site-nav-toggle,\s*\.toggle-chip\s*\{\s*min-height:\s*44px;/.test(css),
+    "mobile navigation and segmented toggles lack a 44px minimum height"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");

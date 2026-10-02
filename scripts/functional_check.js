@@ -883,6 +883,26 @@ async function main() {
       }
     });
 
+    await runTest(context, "mobile toggles keep usable targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+
+      for (const pageName of ["numbers_calendar_time.html", "coverage_test.html", "mistakes.html"]) {
+        await openCleanPage(page, pageName);
+        const metrics = await page.locator(".site-nav-toggle:visible, .toggle-chip:visible").evaluateAll((controls) => ({
+          count: controls.length,
+          minHeight: Math.min(...controls.map((control) => control.getBoundingClientRect().height)),
+          clipped: controls.filter((control) => (
+            control.scrollWidth > control.clientWidth || control.scrollHeight > control.clientHeight
+          )).length,
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        }));
+        assert(metrics.count > 1, `${pageName} has no shared mobile toggles to verify.`);
+        assert(metrics.minHeight >= 44, `${pageName} has a mobile toggle shorter than 44px.`);
+        assert(metrics.clipped === 0, `${pageName} clips a mobile toggle label.`);
+        assert(!metrics.documentOverflow, `${pageName} mobile toggles cause horizontal overflow.`);
+      }
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");
