@@ -966,6 +966,37 @@ async function main() {
       );
     });
 
+    await runTest(context, "mobile word builder tiles keep usable targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "word_builder_game.html");
+
+      const tiles = page.locator(".builder-letter-tile:visible, .builder-answer-tile:visible");
+      const metrics = await tiles.evaluateAll((controls) => ({
+        count: controls.length,
+        minWidth: Math.min(...controls.map((control) => control.getBoundingClientRect().width)),
+        minHeight: Math.min(...controls.map((control) => control.getBoundingClientRect().height)),
+        clipped: controls.filter((control) => (
+          control.scrollWidth > control.clientWidth || control.scrollHeight > control.clientHeight
+        )).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(metrics.count >= 6, "The mobile word builder did not render its letter and answer tiles.");
+      assert(metrics.minWidth >= 44 && metrics.minHeight >= 44, "A mobile word builder tile is smaller than 44px.");
+      assert(metrics.clipped === 0, "A mobile word builder tile clips its letter.");
+      assert(!metrics.documentOverflow, "Mobile word builder tiles cause horizontal overflow.");
+
+      await page.locator(".builder-letter-tile:visible").first().click();
+      const filledTile = page.locator(".builder-answer-tile.is-filled").first();
+      await filledTile.waitFor();
+      assert(
+        await filledTile.evaluate((control) => {
+          const bounds = control.getBoundingClientRect();
+          return bounds.width >= 44 && bounds.height >= 44;
+        }),
+        "A filled mobile word builder tile loses its usable target size."
+      );
+    });
+
     await runTest(context, "mobile navigation rows keep usable targets", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "index.html");

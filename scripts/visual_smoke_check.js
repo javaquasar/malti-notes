@@ -214,6 +214,14 @@ check("mobile ordering tokens keep usable targets", () => {
   );
 });
 
+check("mobile word builder tiles keep usable targets", () => {
+  const css = read("assets/css/vocabulary-games.css");
+  assert(
+    /@media \(max-width: 620px\)[\s\S]*?\.builder-answer-tile,\s*\.builder-letter-tile\s*\{\s*min-width:\s*44px;\s*min-height:\s*44px;/.test(css),
+    "mobile word builder tiles lack a 44px square minimum"
+  );
+});
+
 check("mobile navigation rows keep usable targets", () => {
   const css = read("assets/css/site/responsive.css");
   assert(
