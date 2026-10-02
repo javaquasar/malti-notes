@@ -166,6 +166,8 @@ check("course pages suppress the floating review shortcut", () => {
     /@media \(max-width: 980px\)[\s\S]*?\.review-fab\s*\{\s*display:\s*none;\s*\}/.test(responsiveCss),
     "mobile layouts do not suppress the floating Review shortcut"
   );
+  assert(responsiveCss.includes("[data-section-review-row] .action-button"), "mobile section Review actions lack compact sizing");
+  assert(responsiveCss.includes("min-height: 44px"), "mobile section Review actions lack a touch-safe height");
 });
 
 check("page directories render from shared data", () => {

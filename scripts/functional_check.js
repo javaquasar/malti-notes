@@ -838,6 +838,31 @@ async function main() {
       );
     });
 
+    await runTest(context, "section review controls stay compact on mobile", async (page) => {
+      await page.setViewportSize({ width: 390, height: 844 });
+
+      for (const pageName of ["prepositions_place.html", "health_doctor.html"]) {
+        await openCleanPage(page, pageName);
+        const row = page.locator("[data-section-review-row]").first();
+        const metrics = await row.evaluate((element) => {
+          const button = element.querySelector(".action-button").getBoundingClientRect();
+          const status = element.querySelector(".status-chip").getBoundingClientRect();
+          const bounds = element.getBoundingClientRect();
+          return {
+            aligned: Math.abs((button.top + button.height / 2) - (status.top + status.height / 2)) < 1,
+            buttonHeight: button.height,
+            contained: button.right <= bounds.right && status.right <= bounds.right,
+            rowHeight: bounds.height
+          };
+        });
+
+        assert(metrics.aligned, `${pageName} wraps its section Review status onto a second mobile row.`);
+        assert(metrics.buttonHeight >= 44, `${pageName} section Review action is too short for touch.`);
+        assert(metrics.contained, `${pageName} section Review controls overflow their toolbar.`);
+        assert(metrics.rowHeight <= 46, `${pageName} section Review toolbar remains unnecessarily tall.`);
+      }
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

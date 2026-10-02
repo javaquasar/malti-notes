@@ -37,6 +37,7 @@ const functionalSuites = {
   "visual-contracts": [
     "lesson support surfaces keep consistent spacing and width",
     "floating review shortcut stays contextual and clear of mobile content",
+    "section review controls stay compact on mobile",
     "generated banks keep the shared card styling",
     "verified example banks render without quarantined content",
     "framed content groups keep the shared visual contract",
