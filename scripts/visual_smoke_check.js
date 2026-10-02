@@ -234,6 +234,18 @@ check("mobile navigation rows keep usable targets", () => {
   );
 });
 
+check("mobile sidebars keep usable navigation targets", () => {
+  const css = read("assets/css/site/responsive.css");
+  assert(
+    /\.sidebar ul\s*\{[\s\S]*?grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\);/.test(css),
+    "mobile sidebars lack a compact two-column layout"
+  );
+  assert(
+    /\.sidebar a\s*\{[\s\S]*?min-height:\s*44px;[\s\S]*?overflow-wrap:\s*anywhere;/.test(css),
+    "mobile sidebar links lack usable wrapping targets"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");

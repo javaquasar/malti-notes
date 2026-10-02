@@ -46,6 +46,7 @@ const functionalSuites = {
     "mobile ordering tokens keep usable targets",
     "mobile word builder tiles keep usable targets",
     "mobile navigation rows keep usable targets",
+    "mobile sidebars keep usable navigation targets",
     "home review toolbar keeps every action visible",
     "mobile verb banks stay readable and tappable",
     "Year 4 tabs keep usable mobile targets",

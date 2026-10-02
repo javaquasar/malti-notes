@@ -1030,6 +1030,34 @@ async function main() {
       assert(!nestedMetrics.documentOverflow, "Nested mobile navigation links cause horizontal overflow.");
     });
 
+    await runTest(context, "mobile sidebars keep usable navigation targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+
+      for (const pageName of ["body_appearance.html", "verbs_guide.html", "prepositions_place.html"]) {
+        await openCleanPage(page, pageName);
+        const metrics = await page.locator(".sidebar").evaluate((sidebar) => {
+          const list = sidebar.querySelector("ul");
+          const links = Array.from(sidebar.querySelectorAll("a"));
+          return {
+            count: links.length,
+            columns: getComputedStyle(list).gridTemplateColumns.split(" ").length,
+            minHeight: Math.min(...links.map((link) => link.getBoundingClientRect().height)),
+            clipped: links.filter((link) => (
+              link.scrollWidth > link.clientWidth || link.scrollHeight > link.clientHeight
+            )).length,
+            contained: links.every((link) => link.getBoundingClientRect().right <= sidebar.getBoundingClientRect().right),
+            documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+          };
+        });
+        assert(metrics.count >= 6, `${pageName} has too few sidebar links to verify.`);
+        assert(metrics.columns === 2, `${pageName} does not keep a compact two-column mobile sidebar.`);
+        assert(metrics.minHeight >= 44, `${pageName} has a mobile sidebar link shorter than 44px.`);
+        assert(metrics.clipped === 0, `${pageName} clips a mobile sidebar label.`);
+        assert(metrics.contained, `${pageName} pushes a mobile sidebar link outside its panel.`);
+        assert(!metrics.documentOverflow, `${pageName} mobile sidebar causes horizontal overflow.`);
+      }
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");
