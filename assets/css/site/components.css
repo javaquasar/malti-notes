@@ -270,7 +270,8 @@
 }
 
 .grammar-contrast-grid + .open-group,
-.grammar-contrast-grid + .open-group-grid {
+.grammar-contrast-grid + .open-group-grid,
+.grammar-contrast-grid + .section-stack {
   margin-top: var(--flow-gap-md);
 }
 
@@ -336,6 +337,50 @@
   margin-top: var(--space-sm);
   color: var(--text-muted);
   line-height: 1.4;
+}
+
+.qa-disclosure-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--component-card-border);
+  border-radius: var(--component-card-radius);
+  background: var(--surface-table-soft);
+}
+
+.qa-disclosure-card > details > summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-sm) var(--space-md);
+  align-items: start;
+  padding: var(--component-card-padding);
+  padding-right: calc(var(--component-card-padding) + 56px);
+  cursor: pointer;
+}
+
+.qa-disclosure-card > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.qa-disclosure-number {
+  color: var(--text-brand);
+}
+
+.qa-disclosure-prompt,
+.qa-disclosure-options {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.qa-disclosure-options {
+  grid-column: 2;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.qa-disclosure-card > details > .qa-pair-part--answer {
+  border-top: 1px solid var(--component-card-border);
+  border-left: 0;
 }
 
 .grammar-contrast-card h3 {

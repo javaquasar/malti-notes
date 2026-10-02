@@ -89,7 +89,13 @@
           "required": ["question", "answer"],
           "properties": {
             "question": { "$ref": "#/$defs/localizedText" },
-            "answer": { "$ref": "#/$defs/localizedText" }
+            "answer": { "$ref": "#/$defs/localizedText" },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "uniqueItems": true,
+              "items": { "type": "string", "minLength": 1 }
+            }
           }
         }
       ]
@@ -124,6 +130,7 @@
         "title": { "type": "string", "minLength": 1 },
         "itemType": { "enum": ["translation", "questionAnswer", "rule", "example"] },
         "questionItemType": { "enum": ["translation", "questionAnswer", "rule", "example"] },
+        "presentation": { "enum": ["cards", "disclosure"] },
         "source": { "$ref": "#/$defs/source" },
         "items": {
           "type": "array",

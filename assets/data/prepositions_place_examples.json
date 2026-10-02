@@ -29,6 +29,39 @@
       ]
     },
     {
+      "id": "prepositions-visual-drill",
+      "title": "Mini Visual Drill",
+      "itemType": "questionAnswer",
+      "presentation": "disclosure",
+      "containerClass": "grid-2",
+      "items": [
+        {
+          "slug": "cat-under-ball",
+          "question": { "maltese": "Il-qattus qiegħed ___ il-ballun." },
+          "options": ["fuq", "ħdejn", "taħt"],
+          "answer": { "maltese": "Il-qattus qiegħed taħt il-ballun.", "english": "The cat is under the ball." }
+        },
+        {
+          "slug": "cat-in-front-of-ball",
+          "question": { "maltese": "Il-qattus qiegħed ___ il-ballun." },
+          "options": ["quddiem", "bejn", "taħt"],
+          "answer": { "maltese": "Il-qattus qiegħed quddiem il-ballun.", "english": "The cat is in front of the ball." }
+        },
+        {
+          "slug": "cat-behind-ball",
+          "question": { "maltese": "Il-qattus qiegħed ___ il-ballun." },
+          "options": ["ħdejn", "wara", "fuq"],
+          "answer": { "maltese": "Il-qattus qiegħed wara l-ballun.", "english": "The cat is behind the ball." }
+        },
+        {
+          "slug": "church-in-middle-of-square",
+          "question": { "maltese": "Il-knisja qiegħda ___ il-pjazza." },
+          "options": ["taħt", "ħdejn", "f'nofs"],
+          "answer": { "maltese": "Il-knisja qiegħda f'nofs il-pjazza.", "english": "The church is in the middle of the square." }
+        }
+      ]
+    },
+    {
       "id": "prepositions-room-position",
       "title": "Room Position",
       "itemType": "example",

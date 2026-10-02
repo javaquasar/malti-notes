@@ -126,6 +126,10 @@ h3 { font-size: 1.08rem; }
 
 .content { display: grid; gap: var(--grid-gap-lg); }
 
+.section-stack {
+  min-width: 0;
+}
+
 .section-stack > * + * {
   margin-top: var(--flow-gap-md);
 }

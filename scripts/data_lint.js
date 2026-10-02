@@ -19,7 +19,8 @@ const allowedContainerClasses = new Set([
   "example-dialogue-stack",
   "grid-2",
   "grid-2 example-dialogue-stack",
-  "grid-3"
+  "grid-3",
+  "stack"
 ]);
 
 const contentKeys = [
@@ -138,6 +139,14 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
     fail(file, `group ${groupLabel} uses unknown itemType: ${group.itemType}`);
   }
 
+  const allowedPresentations = new Set(["cards", "disclosure"]);
+  if (group.presentation !== undefined && !allowedPresentations.has(group.presentation)) {
+    fail(file, `group ${groupLabel} uses unknown presentation: ${group.presentation}`);
+  }
+  if (group.presentation === "disclosure" && group.itemType !== "questionAnswer") {
+    fail(file, `group ${groupLabel} disclosure presentation requires questionAnswer items`);
+  }
+
   if (group.cardClass !== undefined && !allowedCardClasses.has(group.cardClass)) {
     fail(file, `group ${groupLabel} uses unknown cardClass: ${group.cardClass}`);
   }
@@ -177,6 +186,21 @@ function validateGroup(file, group, groupIndex, seenGroupIds) {
           validateStringField(file, `group ${groupLabel} item ${itemIndex}.${field}`, "english", localized.english);
         }
       });
+
+      if (item.options !== undefined) {
+        if (!Array.isArray(item.options) || item.options.length < 2) {
+          fail(file, `group ${groupLabel} item ${itemIndex}.options must contain at least two values`);
+        } else {
+          item.options.forEach((option, optionIndex) => {
+            if (!isNonEmptyString(option)) {
+              fail(file, `group ${groupLabel} item ${itemIndex}.options[${optionIndex}] must be a non-empty string`);
+            }
+          });
+          if (new Set(item.options).size !== item.options.length) {
+            fail(file, `group ${groupLabel} item ${itemIndex}.options must be unique`);
+          }
+        }
+      }
     }
 
     const uniqueKey = item.id || item.slug;

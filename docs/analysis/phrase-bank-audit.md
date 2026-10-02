@@ -32,7 +32,7 @@ This section reflects a full page-by-page pass with the newer refactor rules in 
   - `example-dialogue-stack`
 - extracted turn-based dialogues should use one shared data/render contract:
   - one dedicated dialogue section
-  - `example-bank-stack` with separate `example-bank-section` blocks for each dialogue
+  - `example-bank-stack` with separate neutral `section-stack` blocks for each dialogue
   - dialogue groups in JSON should use `containerClass: "grid-2 example-dialogue-stack"`
   - dialogue groups in JSON should use `cardClass: "phrase-card"`
   - dialogue groups in JSON should usually use `numbered: false`
@@ -62,42 +62,8 @@ If a future refactor starts to need something similar, first check whether it ca
 
 This is the saved working list of pages that still need structural cleanup or a consistency pass after the latest refactors.
 
-### Highest Priority
-
-- `pronouns_possessives.html`
-  - still the biggest mixed grammar/reference page
-  - needs continued cleanup of heavy reference surfaces and layout rhythm
-  - review wiring is already strong, so future work should stay structural and visual
-- `prepositions_place.html`
-  - still contains older heavy patterns such as nested `wide-box` sections and legacy contrast layout
-  - good candidate for a focused cleanup pass
-- `comparisons.html`
-  - still has older `wide-box` and `section-stack` usage
-  - should be brought in line with the newer open-group and inline contrast patterns
-- `colors_maltese.html`
-  - still contains older `box` and legacy `Wrong vs Right` structure
-  - should be converted to the lighter shared patterns
-
-### Medium Priority
-
-- `daily_routine.html`
-  - contains many legacy `box` sections
-  - needs a selective pass, not a full flattening
-- `sentence_builder.html`
-  - contains many `box` sections
-  - should be cleaned carefully because it is a drill-first page
-- `numbers_calendar_time.html`
-  - contains many `box` and `section-stack` sections
-  - needs selective cleanup only, because some table/toggle/reference structures are intentional
-- `common_mistakes.html`
-  - still uses stacked correction-heavy structure
-  - should be treated as a correction/reference page, not flattened aggressively
-
 ### Lower Priority / Special Cases
 
-- `health_doctor.html`
-  - already close to reference quality
-  - only needs occasional consistency polish
 - `shopping_clothes.html`
   - already a strong reference page
   - only minor cleanup should happen here
@@ -121,13 +87,46 @@ This is the saved working list of pages that still need structural cleanup or a 
 - `body_appearance.html`
 - `collective_nouns.html`
 - `home_furniture.html`
+- `prepositions_place.html`
+- `comparisons.html`
+  - comparison examples and Q&A pairs use shared typed banks
+  - each Q&A pair can be reviewed independently without duplicating HTML markup
+  - compact agreement illustrations and the `Wrong vs Right` contrast remain intentionally specialized
+- `colors_maltese.html`
+  - pattern, object, and Q&A examples use shared typed banks with individual review controls
+  - shade references use light open groups
+  - the shared grammar contrast remains intentionally specialized for correction practice
+- `pronouns_possessives.html`
+  - all nine reference tables use the shared light table surface without a second frame
+  - explanatory cards and generated banks use unframed section stacks instead of nested panels
+  - `Quick Answers` and its mini drill use typed shared banks with individual review controls
+- `daily_routine.html`
+  - greeting and reply banks use neutral section stacks instead of nested framed panels
+  - routine templates remain framed because each one is a complete instructional tool
+  - Q&A, mini routine, and model story content already use shared typed banks
+- `sentence_builder.html`
+  - the Combination Bank has one canonical render target instead of a duplicate empty section
+  - the present-continuous table uses the shared light surface without a second frame
+  - instructional building blocks remain framed because they are independent drill tools
+- `numbers_calendar_time.html`
+  - vocabulary table views and reference tables use one shared light surface without outer card frames
+  - generated time-expression banks use neutral layout wrappers instead of nested panels
+  - the five counting examples use a typed shared bank with individual Review controls
+  - the two contrasting clock-pattern explanations remain framed intentionally
+- `common_mistakes.html`
+  - all six Wrong/Right comparisons remain intentionally framed
+  - correction banks use neutral wrappers so the individual Review cards provide the only inner frame
+  - article and preposition examples use the full content width instead of a compressed nested grid
+  - duplicate correction examples are rejected by the page-level smoke check
+- `health_doctor.html`
+  - attached-pronoun references keep one light table surface without an outer panel and switch to labelled rows on narrow screens
+  - useful expressions and both dialogue banks use neutral section wrappers around their individual cards
+  - 70 displayed examples resolve to 58 unique Review items, so repeated teaching examples do not duplicate saved cards
+  - role-play prompts and the Wrong/Right comparison remain framed intentionally
 
 ### Recommended Next Order
 
-1. `pronouns_possessives.html`
-2. `prepositions_place.html`
-3. `comparisons.html`
-4. `colors_maltese.html`
+The current structural-cleanup queue is complete. New candidates should come from a fresh visual audit rather than the retired list above.
 
 ### Already Good / Recently Refactored
 
@@ -138,13 +137,12 @@ This is the saved working list of pages that still need structural cleanup or a 
     - messenger-style dialogues
     - inline grammar contrasts
 - `health_doctor.html`
-  - already partly in the right direction
-  - use as a reference page for the shared extracted-dialogue contract
+  - use as a reference page for neutral dialogue wrappers, individually framed turns, and deduplicated Review items
 - `restaurant_ordering.html`
   - use as a second reference page for the same extracted-dialogue contract
 - `common_mistakes.html`
-  - should remain a grammar/correction-heavy page
-  - use it as a reference for inline correction patterns, not for phrase-bank extraction of wrong forms
+  - remains a grammar/correction-heavy page
+  - answer-ready correction banks are extracted while Wrong/Right teaching contrasts stay specialized
 
 ### Strong Phrase-Bank Refactor Candidates
 
@@ -444,15 +442,12 @@ Recommended target file:
 
 ### `prepositions_place.html`
 
-Sections that should be banked:
+Current migration status:
 
-- cat / ball mini example lines
-- `Picture Description Models`
-- any remaining inline phrase islands near `Practice Bank`
-
-Recommended target file:
-
-- expand `assets/data/prepositions_place_examples.json`
+- the cat / ball visual drill is a typed `questionAnswer` group with disclosure presentation
+- each hidden answer can be saved to Review without revealing it first
+- `Picture Description Models`, `Practice Bank`, and thematic phrases already use shared data groups
+- no remaining manual phrase islands are known on this page
 
 ### `directions_town.html`
 
@@ -482,13 +477,20 @@ Recommended target file:
 
 Sections that should be banked:
 
-- `Quick Answers`
 - source-based practice answers
 - any remaining hardcoded question-answer clusters
 
 Recommended target file:
 
 - expand `assets/data/pronouns_possessives_examples.json`
+
+Completed in the latest migration pass:
+
+- `Quick Answers` is stored as a typed `questionAnswer` group.
+- `Safe Mini Drill` is stored as an `example` group.
+- both groups render through the shared sentence-review contract.
+- all reference tables use `table-soft` directly, without framed table wrappers.
+- explanatory lists and generated cards use neutral `section-stack` wrappers to avoid nested cards.
 
 ## Lower Priority / Handle Carefully
 

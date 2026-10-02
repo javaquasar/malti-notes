@@ -100,6 +100,17 @@
   grid-row: 1;
 }
 
+.qa-disclosure-card.sentence-card--review-toggle {
+  display: block;
+}
+
+.qa-disclosure-card.sentence-card--review-toggle > .review-add-button--icon {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  margin: 0;
+}
+
 .qa-pair-card.sentence-card--review-toggle {
   grid-template-columns: repeat(2, minmax(0, 1fr)) 56px;
   column-gap: 0;

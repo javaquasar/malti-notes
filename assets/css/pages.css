@@ -580,6 +580,47 @@ body.compact-animals .animal-gallery {
 }
 
 @media (max-width: 720px) {
+  .attached-pattern-table,
+  .attached-pattern-table tbody,
+  .attached-pattern-table tr,
+  .attached-pattern-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .attached-pattern-table thead {
+    display: none;
+  }
+
+  .attached-pattern-table tr {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .attached-pattern-table tr:not(:last-child) {
+    border-bottom: 1px solid var(--color-border-soft);
+  }
+
+  .attached-pattern-table td {
+    display: grid;
+    grid-template-columns: minmax(5.5rem, 0.35fr) minmax(0, 1fr);
+    gap: var(--space-sm);
+    padding: var(--space-xs) 0;
+    border: 0;
+  }
+
+  .attached-pattern-table td::before {
+    color: var(--muted);
+    content: attr(data-label);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .attached-pattern-table code {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
   .open-group-grid {
     gap: 18px;
     grid-template-columns: 1fr;

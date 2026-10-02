@@ -5,6 +5,64 @@
   "topic": "Colours",
   "groups": [
     {
+      "id": "colour-patterns",
+      "sectionId": "patterns",
+      "title": "Useful Colour Patterns",
+      "itemType": "example",
+      "items": [
+        { "maltese": "X'kulur hu?", "english": "What colour is it?" },
+        { "maltese": "Huwa blu.", "english": "It is blue." },
+        { "maltese": "Din il-karozza ħamra.", "english": "This car is red." },
+        { "maltese": "Inħobb il-kulur aħdar.", "english": "I like the colour green." },
+        { "maltese": "Nixtieq qmis abjad.", "english": "I would like a white shirt." },
+        { "maltese": "Il-bieb kannella skur.", "english": "The door is dark brown." }
+      ]
+    },
+    {
+      "id": "colour-objects",
+      "sectionId": "objects",
+      "title": "Colours With Objects",
+      "itemType": "example",
+      "items": [
+        { "maltese": "It-tuffieħa ħamra.", "english": "The apple is red." },
+        { "maltese": "Il-baħar blu.", "english": "The sea is blue." },
+        { "maltese": "Il-lumi safra.", "english": "The lemon is yellow." },
+        { "maltese": "Is-siġra ħadra.", "english": "The tree is green." },
+        { "maltese": "Il-qattus griż.", "english": "The cat is grey." },
+        { "maltese": "Il-borża roża.", "english": "The bag is pink." },
+        { "maltese": "Il-mejda kannella.", "english": "The table is brown." },
+        { "maltese": "Il-kamra bajda u blu.", "english": "The room is white and blue." }
+      ]
+    },
+    {
+      "id": "colour-questions",
+      "sectionId": "questions",
+      "title": "Questions and Answers",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "shirt-colour",
+          "question": { "maltese": "X'kulur hu l-qmis?", "english": "What colour is the shirt?" },
+          "answer": { "maltese": "Il-qmis abjad.", "english": "The shirt is white." }
+        },
+        {
+          "slug": "car-colour",
+          "question": { "maltese": "X'kulur hi l-karozza?", "english": "What colour is the car?" },
+          "answer": { "maltese": "Il-karozza sewda.", "english": "The car is black." }
+        },
+        {
+          "slug": "favourite-colour",
+          "question": { "maltese": "Liema kulur tħobb?", "english": "Which colour do you like?" },
+          "answer": { "maltese": "Jien inħobb il-blu.", "english": "I like blue." }
+        },
+        {
+          "slug": "red-or-blue-shirt",
+          "question": { "maltese": "Tixtieq qmis aħmar jew blu?", "english": "Would you like a red or blue shirt?" },
+          "answer": { "maltese": "Nixtieq qmis blu.", "english": "I would like a blue shirt." }
+        }
+      ]
+    },
+    {
       "id": "colour-phrases",
       "sectionId": "phrase-bank",
       "title": "Colour Phrases",

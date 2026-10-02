@@ -177,9 +177,17 @@ check("pronouns page keeps English section headings readable", () => {
   const html = read("pronouns_possessives.html");
   const headings = [...html.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)]
     .map((match) => match[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
+  const tables = [...html.matchAll(/<table\b([^>]*)>/g)];
 
   assert(headings.includes("Quick Choice by Noun"), "pronouns page lost the quick-choice heading");
   assert(headings.includes("Additional Example Clarifiers"), "pronouns page lost the additional-example heading");
+  ["Singular", "Plural", "Common Prepositions", "Additional Prepositions"].forEach((heading) => {
+    assert(headings.includes(heading), `pronouns page lost the ${heading} table heading`);
+  });
+  assert(tables.length === 9, "pronouns page must keep all nine reference tables");
+  assert(tables.every((match) => /class="[^"]*table-soft/.test(match[1])), "pronouns reference tables lost the shared light surface");
+  assert(!html.includes('class="demo-box'), "pronouns page still wraps tables in demo-box frames");
+  assert(!html.includes('class="open-group"'), "pronouns page still nests content cards inside open-group frames");
   ["ċhoice", "éxample", "ċlarifiers"].forEach((typo) => {
     assert(!headings.some((heading) => heading.includes(typo)), `pronouns page heading contains ${typo}`);
   });
@@ -202,7 +210,10 @@ check("question and answer examples use paired cards", () => {
     ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],
     ["body_appearance.html", "assets/data/body_appearance_examples.json", "body-qa"],
     ["modals_needs.html", "assets/data/modals_needs_examples.json", "modals-qa"],
-    ["daily_routine.html", "assets/data/daily_routine_examples.json", "daily-small-talk-qa"]
+    ["daily_routine.html", "assets/data/daily_routine_examples.json", "daily-small-talk-qa"],
+    ["pronouns_possessives.html", "assets/data/pronouns_possessives_examples.json", "pronouns-quick-answers"],
+    ["comparisons.html", "assets/data/comparisons_examples.json", "comparisons-questions"],
+    ["colors_maltese.html", "assets/data/colors_examples.json", "colour-questions"]
   ];
 
   migratedBanks.forEach(([page, dataFile, groupId]) => {
@@ -215,7 +226,7 @@ check("question and answer examples use paired cards", () => {
     assert(group.items.every((item) => item.question?.maltese && item.answer?.maltese), `${dataFile} ${groupId} contains an incomplete pair`);
   });
 
-  ["colors_maltese.html", "comparisons.html", "emotions.html"].forEach((page) => {
+  ["emotions.html"].forEach((page) => {
     assert(read(page).includes('class="qa-pair-grid"'), `${page} does not use the shared Q&A layout`);
   });
 
@@ -223,6 +234,111 @@ check("question and answer examples use paired cards", () => {
   const css = read("assets/css/site/components.css");
   assert(renderer.includes("appendQuestionAnswerCard"), "example renderer lacks paired Q&A cards");
   assert(css.includes(".qa-pair-card"), "shared Q&A card styles are missing");
+});
+
+check("colour lesson examples use shared banks and light groups", () => {
+  const html = read("colors_maltese.html");
+  const data = JSON.parse(read("assets/data/colors_examples.json"));
+  const expectedGroups = [
+    ["colour-patterns", 6],
+    ["colour-objects", 8],
+    ["colour-questions", 4]
+  ];
+
+  expectedGroups.forEach(([groupId, itemCount]) => {
+    const group = data.groups.find((item) => item.id === groupId);
+    assert(html.includes(`data-example-group="${groupId}"`), `colors page does not expose ${groupId}`);
+    assert(group?.items.length === itemCount, `${groupId} does not contain ${itemCount} items`);
+  });
+  assert(!html.includes('class="demo-box"'), "colors page still uses heavy demo-box groups");
+  assert(!html.includes('class="study-card"'), "colors page still contains manual study cards");
+});
+
+check("daily routine keeps generated greetings unframed", () => {
+  const html = read("daily_routine.html");
+  const data = JSON.parse(read("assets/data/daily_routine_examples.json"));
+  const greetingGroups = ["daily-greetings", "daily-replies"];
+
+  greetingGroups.forEach((groupId) => {
+    const group = data.groups.find((item) => item.id === groupId);
+    assert(group?.items.length === 4, `${groupId} must keep four examples`);
+    assert(html.includes(`data-example-group="${groupId}"`), `daily routine page does not expose ${groupId}`);
+  });
+  assert(!html.includes('class="open-group"'), "daily routine still nests generated cards inside framed groups");
+  assert((html.match(/<section class="section-stack">/g) || []).length === 2, "daily routine greeting groups lost their neutral wrappers");
+});
+
+check("sentence builder keeps one bank and an unframed grammar table", () => {
+  const html = read("sentence_builder.html");
+  const data = JSON.parse(read("assets/data/sentence_builder_examples.json"));
+  const bankTargets = html.match(/data-example-group="combination-bank"/g) || [];
+  const bank = data.groups.find((group) => group.id === "combination-bank");
+
+  assert(bankTargets.length === 1, "sentence builder must expose one combination bank target");
+  assert(bank?.items.length === 10, "sentence builder combination bank lost examples");
+  assert(/id="qed-pattern"[\s\S]*?<table class="table-soft">/.test(html), "sentence builder qed table lost its light surface");
+  assert(!/id="qed-pattern"[\s\S]*?<div class="study-card">\s*<table/.test(html), "sentence builder qed table still has a second frame");
+});
+
+check("numbers and time keeps reference surfaces light", () => {
+  const html = read("numbers_calendar_time.html");
+  const data = JSON.parse(read("assets/data/numbers_calendar_time_examples.json"));
+  const countingGroup = data.groups.find((group) => group.id === "counting-sentence-examples");
+  const framedTablePanels = html.match(/class="study-card" data-vocab-view-panel="table"/g) || [];
+  const timeExpressions = html.match(/id="time-expressions"([\s\S]*?)id="clock-time"/)?.[1] || "";
+
+  assert(framedTablePanels.length === 0, "numbers page table views still add a second frame");
+  assert(countingGroup?.items.length === 5, "numbers page lost its five counting examples");
+  assert(html.includes('data-example-group="counting-sentence-examples"'), "numbers page does not expose the counting example bank");
+  assert(/id="group-counts"[\s\S]*?<table class="table-soft">/.test(html), "counting reference table lost its light surface");
+  assert(!timeExpressions.includes('class="open-group"'), "time expression banks still use outer framed groups");
+  assert((html.match(/<div class="study-card">/g) || []).length === 2, "numbers page should keep only the two clock-pattern cards framed");
+});
+
+check("common mistakes keeps correction banks unframed", () => {
+  const html = read("common_mistakes.html");
+  const data = JSON.parse(read("assets/data/common_mistakes_examples.json"));
+  const exampleCount = data.groups.reduce((total, group) => total + group.items.length, 0);
+
+  assert((html.match(/class="grammar-contrast-grid"/g) || []).length === 6, "common mistakes lost a Wrong/Right comparison");
+  assert((html.match(/class="grammar-contrast-card /g) || []).length === 12, "common mistakes lost a contrast card");
+  assert((html.match(/class="open-group"/g) || []).length === 1, "common mistakes should frame only the final checklist");
+  assert((html.match(/data-example-group=/g) || []).length === 6, "common mistakes lost a correction bank target");
+  assert(exampleCount === 28, "common mistakes correction bank count changed unexpectedly");
+  data.groups.forEach((group) => {
+    const examples = group.items.map((item) => item.maltese);
+    assert(new Set(examples).size === examples.length, `common mistakes ${group.id} contains duplicate examples`);
+  });
+});
+
+check("health lesson keeps tables and dialogue banks singly framed", () => {
+  const html = read("health_doctor.html");
+  const data = JSON.parse(read("assets/data/health_doctor_examples.json"));
+  const exampleCount = data.groups.reduce((total, group) => total + group.items.length, 0);
+  const uniqueReviewItems = new Set(
+    data.groups.flatMap((group) => group.items).map((item) => item.maltese.trim().toLocaleLowerCase())
+  );
+
+  assert(!html.includes('class="example-bank-section"'), "health lesson still uses framed bank sections");
+  assert((html.match(/class="section-stack"/g) || []).length === 4, "health lesson lost a neutral bank wrapper");
+  assert(/<table class="table-soft attached-pattern-table">/.test(html), "attached-pronoun table lost its shared light surface");
+  assert((html.match(/<td data-label="(Base|Example|English)">/g) || []).length === 12, "attached-pronoun table lost its mobile row labels");
+  assert((html.match(/data-example-group="health-dialogue-/g) || []).length === 2, "health lesson lost a dialogue bank");
+  assert((html.match(/class="open-group"/g) || []).length === 2, "health lesson lost a role-play card");
+  assert((html.match(/class="grammar-contrast-card /g) || []).length === 2, "health lesson lost its Wrong/Right contrast");
+  assert(exampleCount === 70, "health lesson example count changed unexpectedly");
+  assert(uniqueReviewItems.size === 58, "health lesson unique Review item count changed unexpectedly");
+});
+
+check("preposition visual drill uses typed disclosures", () => {
+  const html = read("prepositions_place.html");
+  const data = JSON.parse(read("assets/data/prepositions_place_examples.json"));
+  const group = data.groups.find((item) => item.id === "prepositions-visual-drill");
+  assert(html.includes('data-example-group="prepositions-visual-drill"'), "prepositions page lacks the generated visual drill target");
+  assert(!html.includes('class="example-bank"'), "prepositions page still contains a manual example bank");
+  assert(group?.itemType === "questionAnswer", "preposition visual drill is not typed as questionAnswer");
+  assert(group?.presentation === "disclosure", "preposition visual drill does not use disclosure presentation");
+  assert(group.items.every((item) => item.options?.length >= 2), "preposition visual drill has incomplete options");
 });
 
 check("offline application shell is complete", () => {

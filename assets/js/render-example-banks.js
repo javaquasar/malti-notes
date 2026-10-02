@@ -79,6 +79,52 @@ function appendQuestionAnswerCard(container, normalized, index, numbered, review
     container.appendChild(article);
 }
 
+function appendDisclosureQuestionAnswerCard(container, item, normalized, index, numbered, reviewButton) {
+    const article = document.createElement("article");
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    const prompt = document.createElement("span");
+    const options = Array.isArray(item.options) ? item.options : [];
+
+    article.className = "qa-disclosure-card";
+    article.dataset.contentType = "questionAnswer";
+    article.dataset.presentation = "disclosure";
+    prompt.className = "qa-disclosure-prompt";
+    prompt.textContent = normalized.prompt;
+
+    if (numbered) {
+        const number = document.createElement("strong");
+        number.className = "qa-disclosure-number";
+        number.textContent = `${index + 1}.`;
+        summary.appendChild(number);
+    }
+    summary.appendChild(prompt);
+
+    if (options.length) {
+        const optionList = document.createElement("span");
+        optionList.className = "qa-disclosure-options";
+        optionList.append("Options: ");
+        options.forEach((option, optionIndex) => {
+            if (optionIndex) {
+                optionList.append(", ");
+            }
+            const code = document.createElement("code");
+            code.textContent = option;
+            optionList.appendChild(code);
+        });
+        summary.appendChild(optionList);
+    }
+
+    details.appendChild(summary);
+    appendQuestionAnswerPart(details, "answer", "Answer", normalized.answer, normalized.answerTranslation);
+    article.appendChild(details);
+    if (reviewButton) {
+        article.classList.add("sentence-card--review-toggle");
+        article.appendChild(reviewButton);
+    }
+    container.appendChild(article);
+}
+
 async function renderExampleBanksFromData(config) {
     const {
         dataUrl,
@@ -246,7 +292,8 @@ async function renderExampleBanksFromData(config) {
         const isQuestionAnswerGroup = publishableItems.length > 0 && publishableItems.every((item) => (
             normalizeBankItem(item, contentGroup).itemType === "questionAnswer"
         ));
-        if (isQuestionAnswerGroup) {
+        const isDisclosureGroup = isQuestionAnswerGroup && group.presentation === "disclosure";
+        if (isQuestionAnswerGroup && !isDisclosureGroup) {
             container.classList.remove("grid-2", "grid-3", "grid-auto", "stack");
             container.classList.add("qa-pair-grid");
         } else {
@@ -288,6 +335,21 @@ async function renderExampleBanksFromData(config) {
         publishableItems.forEach((item, index) => {
             const normalized = normalizeBankItem(item, contentGroup);
             const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
+
+            if (normalized.itemType === "questionAnswer" && isDisclosureGroup) {
+                const reviewButton = hasIndividualReview
+                    ? createSentenceReviewButton(sentenceItems[index])
+                    : null;
+                appendDisclosureQuestionAnswerCard(
+                    container,
+                    item,
+                    normalized,
+                    index,
+                    shouldNumber,
+                    reviewButton
+                );
+                return;
+            }
 
             if (normalized.itemType === "questionAnswer") {
                 const reviewButton = hasIndividualReview
@@ -336,14 +398,17 @@ async function renderExampleBanksFromData(config) {
         const vocabConfig = getVocabConfig();
         const toolbarSelector = config.pageToolbarSelector || vocabConfig.pageToolbarSelector;
         const toolbar = toolbarSelector ? document.querySelector(toolbarSelector) : null;
-        if (toolbar && allSentenceItems.length && !toolbar.querySelector("[data-page-sentence-review-add]")) {
+        const uniqueSentenceItems = Array.from(
+            new Map(allSentenceItems.map((item) => [item.id, item])).values()
+        );
+        if (toolbar && uniqueSentenceItems.length && !toolbar.querySelector("[data-page-sentence-review-add]")) {
             const button = document.createElement("button");
             button.type = "button";
             button.className = "action-button";
             button.dataset.pageSentenceReviewAdd = "true";
             button.dataset.bulkLabel = config.pageBulkLabel || "Add all example sentences";
-            button.dataset.items = JSON.stringify(allSentenceItems);
-            button.addEventListener("click", () => addSentenceCards(allSentenceItems));
+            button.dataset.items = JSON.stringify(uniqueSentenceItems);
+            button.addEventListener("click", () => addSentenceCards(uniqueSentenceItems));
             toolbar.insertBefore(button, toolbar.children[1] || null);
             bulkButtons.push(button);
             syncBulkButton(button);

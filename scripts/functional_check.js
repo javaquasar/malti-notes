@@ -57,9 +57,16 @@ const framedGroupClassTokens = [
   "wide-box"
 ];
 const framedGroupSelector = framedGroupClassTokens.map((token) => `.${token}`).join(", ");
+function hasClassToken(contents, token) {
+  return [...contents.matchAll(/class="([^"]+)"/g)]
+    .some((match) => match[1].split(/\s+/).includes(token));
+}
 const framedGroupPages = fs.readdirSync(root)
   .filter((file) => file.endsWith(".html"))
-  .filter((file) => framedGroupClassTokens.some((token) => fs.readFileSync(path.join(root, file), "utf8").includes(token)))
+  .filter((file) => {
+    const contents = fs.readFileSync(path.join(root, file), "utf8");
+    return framedGroupClassTokens.some((token) => hasClassToken(contents, token));
+  })
   .sort();
 
 
@@ -692,10 +699,20 @@ async function main() {
       await openCleanPage(page, "common_mistakes.html");
       const contrastGap = await page.locator("#qed-system").evaluate((section) => {
         const contrast = section.querySelector(".grammar-contrast-grid").getBoundingClientRect();
-        const bank = section.querySelector(".open-group").getBoundingClientRect();
+        const bank = section.querySelector('[data-example-group="qed-system"]').closest(".section-stack").getBoundingClientRect();
         return bank.top - contrast.bottom;
       });
       assert(contrastGap >= 16, "The correction bank touches the Wrong/Right cards.");
+      assert(await page.locator(".grammar-contrast-grid").count() === 6, "Common mistakes lost a Wrong/Right comparison.");
+      assert(await page.locator(".grammar-contrast-card").count() === 12, "Common mistakes lost a contrast card.");
+      assert(await page.locator("main .open-group .study-card").count() === 0, "Common mistakes still nests correction cards inside framed groups.");
+      assert(await page.locator("main .open-group").count() === 1, "Common mistakes should frame only its final checklist.");
+      assert(await page.locator(".section-stack > [data-example-group]").count() === 6, "Common mistakes correction banks lost their neutral wrappers.");
+      assert(await page.locator("[data-example-group] > article").count() === 28, "Common mistakes did not render all unique correction examples.");
+      const articleBankWidth = await page.locator('[data-example-group="articles-prepositions"] > article').first().evaluate((card) => (
+        card.getBoundingClientRect().width / card.closest(".content-card").getBoundingClientRect().width
+      ));
+      assert(articleBankWidth > 0.4, "Article and preposition correction cards remain compressed into a half-width column.");
 
       await openCleanPage(page, "daily_routine.html");
       const routineSurface = await page.locator("#time-blocks .formula + .study-card").evaluate((surface) => {
@@ -707,6 +724,94 @@ async function main() {
         };
       });
       assert(routineSurface.isDirectChild && routineSurface.relativeWidth > 0.9, "Routine examples do not use the available content width.");
+
+      await openCleanPage(page, "pronouns_possessives.html");
+      const pronounTables = page.locator("main table");
+      assert(await pronounTables.count() === 9, "Pronouns page lost a reference table.");
+      const pronounTableSurfaces = await pronounTables.evaluateAll((tables) => tables.map((table) => {
+        const wrapper = table.closest(".section-stack");
+        const tableStyle = getComputedStyle(table);
+        const wrapperStyle = wrapper ? getComputedStyle(wrapper) : null;
+        return {
+          hasWrapper: Boolean(wrapper),
+          hasLightSurface: table.classList.contains("table-soft") && tableStyle.backgroundColor !== "rgba(0, 0, 0, 0)",
+          wrapperBorderWidth: wrapperStyle?.borderWidth || "missing"
+        };
+      }));
+      assert(pronounTableSurfaces.every((surface) => surface.hasWrapper), "A pronoun table lost its neutral layout wrapper.");
+      assert(pronounTableSurfaces.every((surface) => surface.hasLightSurface), "A pronoun table lost its light shared fill.");
+      assert(pronounTableSurfaces.every((surface) => surface.wrapperBorderWidth === "0px"), "A pronoun table still has a second outer frame.");
+      assert(await page.locator("main .open-group .info-card, main .open-group .qa-pair-card, main .open-group .study-card").count() === 0, "Pronouns page still contains nested card groups.");
+
+      await openCleanPage(page, "daily_routine.html");
+      const greetingGroups = page.locator("#greetings-small-talk .section-stack");
+      assert(await greetingGroups.count() === 2, "Daily routine greeting groups lost their two-column structure.");
+      const greetingMetrics = await greetingGroups.evaluateAll((groups) => groups.map((group) => ({
+        borderWidth: getComputedStyle(group).borderWidth,
+        cards: group.querySelectorAll("[data-example-group] > article").length
+      })));
+      assert(greetingMetrics.every((group) => group.borderWidth === "0px"), "Daily routine greeting cards still have an outer frame.");
+      assert(greetingMetrics.every((group) => group.cards === 4), "Daily routine greeting groups did not render all examples.");
+
+      await openCleanPage(page, "sentence_builder.html");
+      const combinationBank = page.locator('[data-example-group="combination-bank"]');
+      assert(await combinationBank.count() === 1, "Sentence builder renders a duplicate combination bank target.");
+      assert(await combinationBank.locator(":scope > article").count() === 10, "Sentence builder did not render all combination examples.");
+      const sentenceBuilderBulkIds = await page.locator("[data-page-sentence-review-add]").evaluate((button) => (
+        JSON.parse(button.dataset.items || "[]").map((item) => item.id)
+      ));
+      assert(sentenceBuilderBulkIds.length === 10, "Sentence builder bulk action does not contain the complete bank.");
+      assert(new Set(sentenceBuilderBulkIds).size === sentenceBuilderBulkIds.length, "Sentence builder bulk action contains duplicate cards.");
+      const qedTableSurface = await page.locator("#qed-pattern > table").evaluate((table) => ({
+        hasLightSurface: table.classList.contains("table-soft") && getComputedStyle(table).backgroundColor !== "rgba(0, 0, 0, 0)",
+        hasOuterCard: Boolean(table.closest(".study-card"))
+      }));
+      assert(qedTableSurface.hasLightSurface, "Sentence builder qed table lost its shared light fill.");
+      assert(!qedTableSurface.hasOuterCard, "Sentence builder qed table still has a second outer frame.");
+
+      await openCleanPage(page, "numbers_calendar_time.html");
+      const calendarTables = page.locator("[data-vocab-table-group] > table");
+      assert(await calendarTables.count() === 7, "Numbers page did not render all seven vocabulary tables.");
+      assert(
+        await calendarTables.evaluateAll((tables) => tables.every((table) => table.classList.contains("table-soft"))),
+        "A numbers-page vocabulary table lost the shared light surface."
+      );
+      assert(await page.locator('[data-vocab-view-panel="table"].study-card').count() === 0, "Numbers page table views still have a second frame.");
+      assert(await page.locator("#time-expressions .open-group").count() === 0, "Numbers page time banks still have an outer frame.");
+      assert(await page.locator("#clock-time .study-card").count() === 2, "Numbers page did not preserve the two clock-pattern cards.");
+      const countingExamples = page.locator('[data-example-group="counting-sentence-examples"] > article');
+      assert(await countingExamples.count() === 5, "Numbers page did not render all counting examples.");
+      assert(await countingExamples.locator(".review-add-button--icon").count() === 5, "Counting examples lost their individual Review controls.");
+      const countingTable = page.locator("#group-counts table");
+      const countingTableSurface = await countingTable.evaluate((table) => ({
+        hasLightSurface: table.classList.contains("table-soft") && getComputedStyle(table).backgroundColor !== "rgba(0, 0, 0, 0)",
+        hasOuterCard: Boolean(table.closest(".demo-box, .study-card"))
+      }));
+      assert(countingTableSurface.hasLightSurface, "Counting table lost its shared light fill.");
+      assert(!countingTableSurface.hasOuterCard, "Counting table still has a second outer frame.");
+
+      await openCleanPage(page, "health_doctor.html");
+      const healthStacks = page.locator("#attached-pronouns .section-stack, #dialogues .section-stack");
+      assert(await healthStacks.count() === 4, "Health lesson lost a neutral content wrapper.");
+      assert(
+        await healthStacks.evaluateAll((stacks) => stacks.every((stack) => getComputedStyle(stack).borderWidth === "0px")),
+        "Health lesson still adds an outer frame around a table or card bank."
+      );
+      assert(await page.locator("main .example-bank-section").count() === 0, "Health lesson still uses framed bank sections.");
+      const attachedPronounTable = await page.locator("#attached-pronouns .attached-pattern-table").evaluate((table) => ({
+        hasLightSurface: table.classList.contains("table-soft") && getComputedStyle(table).backgroundColor !== "rgba(0, 0, 0, 0)",
+        hasOuterCard: Boolean(table.closest(".example-bank-section, .study-card, .open-group"))
+      }));
+      assert(attachedPronounTable.hasLightSurface, "Attached-pronoun table lost its shared light fill.");
+      assert(!attachedPronounTable.hasOuterCard, "Attached-pronoun table still has a second outer frame.");
+      assert(await page.locator('[data-example-group] > article').count() === 70, "Health lesson did not render all examples.");
+      const healthBulkIds = await page.locator("[data-page-sentence-review-add]").evaluate((button) => (
+        JSON.parse(button.dataset.items || "[]").map((item) => item.id)
+      ));
+      assert(healthBulkIds.length === 58, "Health lesson bulk action does not contain all unique Review items.");
+      assert(new Set(healthBulkIds).size === healthBulkIds.length, "Health lesson bulk action contains duplicate Review items.");
+      assert(await page.locator("#roleplay .open-group").count() === 2, "Health lesson lost a role-play card.");
+      assert(await page.locator("#wrong .grammar-contrast-card").count() === 2, "Health lesson lost its Wrong/Right contrast.");
     });
 
     await runTest(context, "course dashboards omit the floating review shortcut", async (page) => {
@@ -743,6 +848,7 @@ async function main() {
             Array.from(container.children).forEach((card, index) => {
               const style = window.getComputedStyle(card);
               const isQuestionAnswer = card.getAttribute("data-content-type") === "questionAnswer";
+              const isDisclosure = card.getAttribute("data-presentation") === "disclosure";
               const issues = [];
               cardCount += 1;
 
@@ -752,11 +858,18 @@ async function main() {
               if (isQuestionAnswer) {
                 const question = card.querySelector(":scope > .qa-pair-part--question");
                 const answer = card.querySelector(":scope > .qa-pair-part--answer");
-                const parts = [question, answer].filter(Boolean);
-                if (parts.length !== 2) issues.push("paired structure");
-                if (parts.some((part) => parseFloat(window.getComputedStyle(part).paddingTop) === 0)) issues.push("pair padding");
-                if (parts.some((part) => !part.querySelector(".qa-pair-label"))) issues.push("pair labels");
-                if (parts.some((part) => window.getComputedStyle(part.querySelector(".qa-pair-text")).display !== "block")) issues.push("pair text display");
+                if (isDisclosure) {
+                  const summary = card.querySelector(":scope > details > summary");
+                  const disclosureAnswer = card.querySelector(":scope > details > .qa-pair-part--answer");
+                  if (!summary || !disclosureAnswer) issues.push("disclosure structure");
+                  if (!disclosureAnswer?.querySelector(".qa-pair-label")) issues.push("answer label");
+                } else {
+                  const parts = [question, answer].filter(Boolean);
+                  if (parts.length !== 2) issues.push("paired structure");
+                  if (parts.some((part) => parseFloat(window.getComputedStyle(part).paddingTop) === 0)) issues.push("pair padding");
+                  if (parts.some((part) => !part.querySelector(".qa-pair-label"))) issues.push("pair labels");
+                  if (parts.some((part) => window.getComputedStyle(part.querySelector(".qa-pair-text")).display !== "block")) issues.push("pair text display");
+                }
               } else {
                 const strong = card.querySelector(":scope > strong");
                 const translation = card.querySelector(":scope > span");
@@ -844,6 +957,77 @@ async function main() {
       assert(saved?.contentType === "questionAnswer", "Review card did not preserve its Q&A content type.");
       assert(saved?.prompt === "X'tagħmel filgħodu?", "Review card saved the wrong Q&A prompt.");
       assert(saved?.answer === "Filgħodu nixrob kafè u niekol ftit ħobż.", "Review card saved the wrong Q&A answer.");
+
+      await openCleanPage(page, "pronouns_possessives.html");
+      const quickAnswers = page.locator('[data-example-group="pronouns-quick-answers"] > .qa-pair-card');
+      const miniDrill = page.locator('[data-example-group="pronouns-safe-mini-drill"] > article');
+      assert(await quickAnswers.count() === 5, "Pronoun quick answers did not render all typed Q&A pairs.");
+      assert(await miniDrill.count() === 4, "Pronoun mini drill did not render all typed examples.");
+      assert(
+        (await quickAnswers.nth(2).locator(".qa-pair-part--question .qa-pair-translation").textContent()).trim() === "Whose house is it?",
+        "Pronoun quick answer lost its question translation."
+      );
+
+      await openCleanPage(page, "comparisons.html");
+      const comparisonQuestions = page.locator('[data-example-group="comparisons-questions"]');
+      const comparisonCards = comparisonQuestions.locator(":scope > .qa-pair-card");
+      assert(await comparisonCards.count() === 3, "Comparison questions did not render all typed Q&A pairs.");
+      const firstComparison = comparisonCards.first();
+      assert(
+        (await firstComparison.locator(".qa-pair-part--question .qa-pair-text").textContent()).trim() === "Liema dar akbar?",
+        "Comparison Q&A rendered the wrong question."
+      );
+      await firstComparison.locator(":scope > .review-add-button--icon").click();
+      assert(
+        (await comparisonQuestions.locator("xpath=preceding-sibling::*[1]").locator("[data-section-status]").textContent()).includes("1 saved, 2 left"),
+        "Comparison Q&A status did not reflect an individual save."
+      );
+      const savedComparison = await page.evaluate(() => window.MaltiReviewStore.getAllCards()[0]);
+      assert(savedComparison?.prompt === "Liema dar akbar?", "Comparison Q&A saved the wrong prompt.");
+      assert(savedComparison?.answer === "Din id-dar akbar.", "Comparison Q&A saved the wrong answer.");
+
+      await openCleanPage(page, "colors_maltese.html");
+      const colourQuestions = page.locator('[data-example-group="colour-questions"]');
+      const colourCards = colourQuestions.locator(":scope > .qa-pair-card");
+      assert(await page.locator('[data-example-group="colour-patterns"] > article').count() === 6, "Colour patterns did not render all typed examples.");
+      assert(await page.locator('[data-example-group="colour-objects"] > article').count() === 8, "Colour objects did not render all typed examples.");
+      assert(await colourCards.count() === 4, "Colour questions did not render all typed Q&A pairs.");
+      const colourPageItems = await page.locator("[data-page-sentence-review-add]").evaluate((button) => (
+        JSON.parse(button.dataset.items || "[]").map((item) => item.id)
+      ));
+      assert(new Set(colourPageItems).size === colourPageItems.length, "Colour page bulk review contains duplicate cards.");
+      const firstColourQuestion = colourCards.first();
+      await firstColourQuestion.locator(":scope > .review-add-button--icon").click();
+      assert(
+        (await colourQuestions.locator("xpath=preceding-sibling::*[1]").locator("[data-section-status]").textContent()).includes("1 saved, 3 left"),
+        "Colour Q&A status did not reflect an individual save."
+      );
+      const savedColourQuestion = await page.evaluate(() => window.MaltiReviewStore.getAllCards()[0]);
+      assert(savedColourQuestion?.prompt === "X'kulur hu l-qmis?", "Colour Q&A saved the wrong prompt.");
+      assert(savedColourQuestion?.answer === "Il-qmis abjad.", "Colour Q&A saved the wrong answer.");
+
+      await openCleanPage(page, "prepositions_place.html");
+      const visualDrill = page.locator('[data-example-group="prepositions-visual-drill"]');
+      const disclosureCards = visualDrill.locator(":scope > .qa-disclosure-card");
+      assert(await disclosureCards.count() === 4, "Preposition visual drill did not render all disclosure questions.");
+      const disclosureIds = await disclosureCards.locator(".review-add-button--icon").evaluateAll((buttons) => (
+        buttons.map((button) => button.dataset.reviewId)
+      ));
+      assert(new Set(disclosureIds).size === disclosureIds.length, "Preposition visual drill generated duplicate Review IDs.");
+      const firstDisclosure = disclosureCards.first();
+      const firstDetails = firstDisclosure.locator(":scope > details");
+      assert(!await firstDetails.getAttribute("open"), "Preposition visual drill reveals its answer initially.");
+      await firstDisclosure.locator(".review-add-button--icon").click();
+      assert(!await firstDetails.getAttribute("open"), "Saving a preposition drill reveals its answer.");
+      assert(
+        (await visualDrill.locator("xpath=preceding-sibling::*[1]").locator("[data-section-status]").textContent()).includes("1 saved, 3 left"),
+        "Preposition visual drill bulk status did not reflect one saved answer."
+      );
+      const savedDisclosure = await page.evaluate(() => window.MaltiReviewStore.getAllCards()[0]);
+      assert(savedDisclosure?.prompt === "Il-qattus qiegħed ___ il-ballun.", "Preposition drill saved the wrong prompt.");
+      assert(savedDisclosure?.answer === "Il-qattus qiegħed taħt il-ballun.", "Preposition drill saved the wrong answer.");
+      await firstDetails.locator("summary").click();
+      assert(await firstDetails.locator(":scope > .qa-pair-part--answer").isVisible(), "Preposition visual drill does not reveal its answer.");
     });
 
     await runTest(context, "reviewable bank items toggle individually without covering text", async (page) => {
@@ -855,7 +1039,7 @@ async function main() {
             cards: renderedCards.length,
             toggles: renderedCards.filter((card) => (
               card.classList.contains("sentence-card--review-toggle")
-              && card.querySelector(":scope > .review-add-button--icon")
+              && card.querySelector(".review-add-button--icon")
             )).length
           };
         });
