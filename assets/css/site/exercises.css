@@ -190,6 +190,10 @@
 }
 
 @media (max-width: 640px) {
+  .exercise-token {
+    min-height: 44px;
+  }
+
   .course-practice > summary {
     min-height: 44px;
     padding-block: 10px;

@@ -206,6 +206,14 @@ check("mobile form controls keep usable targets", () => {
   );
 });
 
+check("mobile ordering tokens keep usable targets", () => {
+  const css = read("assets/css/site/exercises.css");
+  assert(
+    /@media \(max-width: 640px\)[\s\S]*?\.exercise-token\s*\{\s*min-height:\s*44px;/.test(css),
+    "mobile ordering tokens lack a 44px minimum height"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");

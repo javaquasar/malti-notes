@@ -938,6 +938,34 @@ async function main() {
       assert(!searchMetrics.documentOverflow, "Mobile site search causes horizontal overflow.");
     });
 
+    await runTest(context, "mobile ordering tokens keep usable targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "hobbies_future.html");
+
+      const bank = page.locator(".exercise-order-bank").first();
+      const tokens = bank.locator(".exercise-token");
+      const bankMetrics = await tokens.evaluateAll((controls) => ({
+        count: controls.length,
+        minHeight: Math.min(...controls.map((control) => control.getBoundingClientRect().height)),
+        clipped: controls.filter((control) => (
+          control.scrollWidth > control.clientWidth || control.scrollHeight > control.clientHeight
+        )).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(bankMetrics.count >= 3, "The mobile ordering exercise did not render its word bank.");
+      assert(bankMetrics.minHeight >= 44, "A mobile ordering token is shorter than 44px.");
+      assert(bankMetrics.clipped === 0, "A mobile ordering token clips its label.");
+      assert(!bankMetrics.documentOverflow, "Mobile ordering tokens cause horizontal overflow.");
+
+      await tokens.first().click();
+      const selected = page.locator(".exercise-order-answer .exercise-token");
+      assert(await selected.count() === 1, "Selecting an ordering token does not move it into the answer.");
+      assert(
+        await selected.evaluate((control) => control.getBoundingClientRect().height >= 44),
+        "A selected mobile ordering token loses its usable target height."
+      );
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");
