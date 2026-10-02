@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}c3efbdf0c0a6`;
+const CACHE_NAME = `${CACHE_PREFIX}3e58d6b64036`;
 const CORE_ASSETS = [
     "./",
     "./all_pages.html",

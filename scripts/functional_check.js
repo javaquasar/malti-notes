@@ -916,7 +916,7 @@ async function main() {
 
       assert(guideMetrics.columns.length === 2, "Course verb lists were not rendered.");
       assert(guideMetrics.columns.every((count) => count === "1"), "Course verb lists still use multiple columns on mobile.");
-      assert(guideMetrics.triggerCount > 0 && guideMetrics.minTriggerHeight >= 32, "Mobile verb targets remain too short.");
+      assert(guideMetrics.triggerCount > 0 && guideMetrics.minTriggerHeight >= 44, "Mobile verb targets remain too short.");
       assert(guideMetrics.overflowingTriggers === 0, "A mobile verb label is clipped inside its button.");
       assert(!guideMetrics.documentOverflow, "Mobile verb banks cause horizontal page overflow.");
 
@@ -927,7 +927,7 @@ async function main() {
         clipped: triggers.filter((trigger) => trigger.scrollWidth > trigger.clientWidth).length,
         documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
       }));
-      assert(imperativeMetrics.count > 0 && imperativeMetrics.minHeight >= 32, "Imperative verb targets remain too short.");
+      assert(imperativeMetrics.count > 0 && imperativeMetrics.minHeight >= 44, "Imperative verb targets remain too short.");
       assert(imperativeMetrics.clipped === 0, "An imperative verb label is clipped inside its button.");
       assert(!imperativeMetrics.documentOverflow, "Imperative verb controls cause horizontal page overflow.");
     });
