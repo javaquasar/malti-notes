@@ -8,12 +8,51 @@ const errors = [];
 let groupCount = 0;
 let itemCount = 0;
 const typeCounts = Object.fromEntries(contentModel.ITEM_TYPES.map((type) => [type, 0]));
+const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function fail(file, location, message) {
   errors.push(`${file}:${location} ${message}`);
 }
 
-function validateItem(file, group, item, location) {
+function normalizeReviewKey(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/[’`´]/g, "'")
+    .toLocaleLowerCase();
+}
+
+function reviewSignature(normalized) {
+  return JSON.stringify({
+    contentType: normalized.itemType,
+    primary: normalized.primary,
+    secondary: normalized.secondary,
+    prompt: normalized.prompt,
+    answer: normalized.answer
+  });
+}
+
+function registerReviewIdentity(file, group, item, location, namespace, identities) {
+  const normalized = contentModel.normalizeItem(item, group);
+  const key = normalizeReviewKey(item.slug || normalized.primary);
+  const signature = reviewSignature(normalized);
+  const previous = identities.get(`${namespace}::${key}`);
+
+  if (item.slug && !slugPattern.test(item.slug)) {
+    fail(file, location, `slug must use lowercase kebab-case: ${item.slug}`);
+  }
+  if (previous && previous.signature !== signature) {
+    fail(
+      file,
+      location,
+      `review identity collides with ${previous.location}; add distinct slugs or harmonize equivalent content`
+    );
+  } else if (!previous) {
+    identities.set(`${namespace}::${key}`, { location, signature });
+  }
+}
+
+function validateItem(file, group, item, location, namespace, identities) {
   const type = contentModel.resolveItemType(item, group);
   const normalized = contentModel.normalizeItem(item, group);
   typeCounts[type] += 1;
@@ -33,6 +72,7 @@ function validateItem(file, group, item, location) {
   if (item.verificationStatus === "needs-review" && !item.verificationId) {
     fail(file, location, "needs-review item requires verificationId");
   }
+  registerReviewIdentity(file, group, item, location, namespace, identities);
 }
 
 const files = fs.readdirSync(dataDir)
@@ -41,10 +81,21 @@ const files = fs.readdirSync(dataDir)
 
 files.forEach((file) => {
   const data = JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf8"));
+  const identities = new Map();
   if (data.schemaVersion !== 2) fail(file, "root", "schemaVersion must be 2");
   if (!data.source || !data.source.kind) fail(file, "root", "source metadata is required");
   if (data.source?.kind === "site" && !fs.existsSync(path.join(root, data.source.page || ""))) {
     fail(file, "root", `source page does not exist: ${data.source.page || "(missing)"}`);
+  }
+  if (data.page && data.page !== data.source?.page) {
+    fail(file, "root", "page must match source.page when both are present");
+  }
+
+  const owningPage = data.page || data.source?.page || "";
+  const pagePath = path.join(root, owningPage);
+  const html = owningPage && fs.existsSync(pagePath) ? fs.readFileSync(pagePath, "utf8") : "";
+  if (html && !html.includes(`./assets/data/${file}`)) {
+    fail(file, "root", `source page does not load ${file}`);
   }
 
   (data.groups || []).forEach((group, groupIndex) => {
@@ -52,9 +103,30 @@ files.forEach((file) => {
     if (!contentModel.ITEM_TYPES.includes(group.itemType)) {
       fail(file, `groups[${groupIndex}]`, `unsupported itemType ${group.itemType || "(missing)"}`);
     }
-    (group.items || []).forEach((item, itemIndex) => validateItem(file, group, item, `groups[${groupIndex}].items[${itemIndex}]`));
+    if ((group.items || []).length && !html.includes(`data-example-group="${group.id}"`)) {
+      fail(file, `groups[${groupIndex}]`, `source page has no data-example-group target for ${group.id}`);
+    }
+    if ((group.questions || []).length && !html.includes(`data-question-group="${group.id}"`)) {
+      fail(file, `groups[${groupIndex}]`, `source page has no data-question-group target for ${group.id}`);
+    }
+
+    (group.items || []).forEach((item, itemIndex) => validateItem(
+      file,
+      group,
+      item,
+      `groups[${groupIndex}].items[${itemIndex}]`,
+      "examples",
+      identities
+    ));
     const questionGroup = { ...group, itemType: group.questionItemType || "translation" };
-    (group.questions || []).forEach((item, itemIndex) => validateItem(file, questionGroup, item, `groups[${groupIndex}].questions[${itemIndex}]`));
+    (group.questions || []).forEach((item, itemIndex) => validateItem(
+      file,
+      questionGroup,
+      item,
+      `groups[${groupIndex}].questions[${itemIndex}]`,
+      "questions",
+      identities
+    ));
   });
 });
 

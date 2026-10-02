@@ -84,13 +84,17 @@ These pages were on the older backlog, but are now connected:
 
 Now that most of the connection work is done, the highest-value next tasks are:
 
-1. Keep example-bank JSON files consistent and sentence-review friendly.
-2. Revisit `numbers_calendar_time.html` only if we want dedicated drill modes.
-3. Leave `verbs_guide.html` and `imperative_verbs.html` on their special review paths unless we deliberately redesign verb practice.
+1. Revisit `numbers_calendar_time.html` only if we want dedicated drill modes.
+2. Leave `verbs_guide.html` and `imperative_verbs.html` on their special review paths unless we deliberately redesign verb practice.
 
 The legacy UTF-8 cleanup is complete. `npm run encoding:check` now protects public
 HTML, JSON, CSS, and JavaScript in GitHub Actions while ignoring dependencies and
 the two intentional runtime repair tables.
+
+Example-bank consistency is also enforced by `npm run content:model:check`.
+Every data file must match its owning page and rendered group targets, while two
+different cards may not resolve to the same Review identity. Intentional repeated
+prompts with different answers use explicit stable slugs.
 
 ## Working Rule Going Forward
 

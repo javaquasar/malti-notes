@@ -1425,6 +1425,35 @@ async function main() {
         (await quickAnswers.nth(2).locator(".qa-pair-part--question .qa-pair-translation").textContent()).trim() === "Whose house is it?",
         "Pronoun quick answer lost its question translation."
       );
+      const motherAnswer = page.locator('[data-example-group="pronouns-qa-bank"] > .qa-pair-card').nth(2);
+      await page.evaluate(() => window.MaltiReviewStore.addSentence({
+        id: "sentence::pronouns::min hi?",
+        maltese: "Min hi?",
+        english: "Hi ommi.",
+        prompt: "Min hi?",
+        answer: "Hi ommi.",
+        reviewCount: 3,
+        box: 2
+      }));
+      await page.reload({ waitUntil: "networkidle" });
+      assert(await quickAnswers.first().locator(":scope > .review-add-button--icon").getAttribute("aria-pressed") === "false", "Legacy mother answer marked the sister answer as saved.");
+      assert(await motherAnswer.locator(":scope > .review-add-button--icon").getAttribute("aria-pressed") === "true", "Legacy mother answer was not migrated to its stable Review ID.");
+      const migratedMother = await page.evaluate(() => ({
+        old: window.MaltiReviewStore.getCard("sentence::pronouns::min hi?"),
+        next: window.MaltiReviewStore.getCard("sentence::pronouns::who-is-mother")
+      }));
+      assert(!migratedMother.old, "Legacy colliding Review ID remains after migration.");
+      assert(migratedMother.next?.reviewCount === 3 && migratedMother.next?.box === 2, "Review scheduling state was lost during ID migration.");
+      await motherAnswer.locator(":scope > .review-add-button--icon").click();
+      await quickAnswers.first().locator(":scope > .review-add-button--icon").click();
+      await motherAnswer.locator(":scope > .review-add-button--icon").click();
+      const savedWhoIsShe = await page.evaluate(() => window.MaltiReviewStore.getAllCards()
+        .filter((card) => card.prompt === "Min hi?")
+        .map((card) => ({ id: card.id, answer: card.answer })));
+      assert(savedWhoIsShe.length === 2, "Distinct Min hi? answers collapsed into one Review card.");
+      assert(new Set(savedWhoIsShe.map((card) => card.id)).size === 2, "Distinct Min hi? answers share a Review ID.");
+      assert(savedWhoIsShe.some((card) => card.answer === "Hi oħti."), "Sister answer was not saved.");
+      assert(savedWhoIsShe.some((card) => card.answer === "Hi ommi."), "Mother answer was not saved.");
 
       await openCleanPage(page, "comparisons.html");
       const comparisonQuestions = page.locator('[data-example-group="comparisons-questions"]');

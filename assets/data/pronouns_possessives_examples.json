@@ -61,6 +61,7 @@
       "numbered": false,
       "items": [
         {
+          "slug": "who-is-sister",
           "question": { "maltese": "Min hi?", "english": "Who is she?" },
           "answer": { "maltese": "Hi oħti.", "english": "She is my sister." }
         },
@@ -103,7 +104,7 @@
       "items": [
         {"question":{"maltese":"Min int?"},"answer":{"maltese":"Jien student."}},
         {"question":{"maltese":"Min hu?"},"answer":{"maltese":"Hu missieri."}},
-        {"question":{"maltese":"Min hi?"},"answer":{"maltese":"Hi ommi."}},
+        {"slug":"who-is-mother","question":{"maltese":"Min hi?"},"answer":{"maltese":"Hi ommi."}},
         {"question":{"maltese":"Min huma?"},"answer":{"maltese":"Huma l-ġenituri tiegħi."}},
         {"question":{"maltese":"Għandek ħu?"},"answer":{"maltese":"Iva, għandi ħu."}},
         {"question":{"maltese":"Għandek oħt?"},"answer":{"maltese":"Iva, għandi oħt."}},
@@ -146,7 +147,7 @@
         {"question":{"maltese":"Fejn hu missierek?"},"answer":{"maltese":"Hu fis-salott."},"verificationStatus":"verified","verification":{"source":"schola-b1-2022","printedPages":[116],"method":"direct-book-pattern","checkedOn":"2026-10-02"}},
         {"question":{"maltese":"Fejn huma t-tfal?"},"answer":{"maltese":"Huma fil-park."}},
         {"question":{"maltese":"Fejn hi l-borża?"},"answer":{"maltese":"Hi fuq il-mejda."}},
-        {"question":{"maltese":"Fejn hu l-ballun?"},"answer":{"maltese":"Hu taħt is-siġġu."}},
+        {"slug":"ball-under-chair","question":{"maltese":"Fejn hu l-ballun?"},"answer":{"maltese":"Hu taħt is-siġġu."}},
         {"question":{"maltese":"Fejn huma l-kotba?"},"answer":{"maltese":"Huma fuq il-mejda."}},
         {"question":{"maltese":"Fejn hi oħtok?"},"answer":{"maltese":"Hi ħdejn ommi."}},
         {"question":{"maltese":"Fejn hu ħuk?"},"answer":{"maltese":"Hu ma' missieri."}},
@@ -191,7 +192,7 @@
         {"question":{"maltese":"X'kulur hu l-flokk?"},"answer":{"maltese":"Il-flokk huwa blu."}},
         {"question":{"maltese":"X'qed jagħmel ir-raġel?"},"answer":{"maltese":"Ir-raġel qiegħed isajjar."}},
         {"question":{"maltese":"X'qed tagħmel il-mara?"},"answer":{"maltese":"Il-mara qiegħda tixtri."}},
-        {"question":{"maltese":"Fejn hu l-ballun?"},"answer":{"maltese":"Il-ballun hu fuq il-ħaxix."}},
+        {"slug":"ball-on-grass","question":{"maltese":"Fejn hu l-ballun?"},"answer":{"maltese":"Il-ballun hu fuq il-ħaxix."}},
         {"question":{"maltese":"Min hu ħdejn il-mara?"},"answer":{"maltese":"Huwa missier it-tifel."},"verificationStatus":"verified","verification":{"source":"schola-b1-2022","printedPages":[102],"method":"kinship-and-copula-pattern","checkedOn":"2026-10-02"}},
         {"question":{"maltese":"Huma ferħanin?"},"answer":{"maltese":"Iva, huma ferħanin."}},
         {"question":{"maltese":"Il-post hu sabiħ?"},"answer":{"maltese":"Iva, il-post hu sabiħ."}},

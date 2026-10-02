@@ -54,6 +54,10 @@
     "metadata": {
       "type": "object",
       "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
         "itemType": { "enum": ["translation", "questionAnswer", "rule", "example"] },
         "source": { "$ref": "#/$defs/source" },
         "verificationStatus": { "enum": ["verified", "needs-review"] },

@@ -155,15 +155,37 @@ async function renderExampleBanksFromData(config) {
         return window.MaltiVocabReviewPage || {};
     }
 
-    function makeSentenceId(item, group) {
+    function makeSentenceId(item, group, useSlug = true) {
         const store = getStore();
         const vocabConfig = getVocabConfig();
         const reviewPrefix = config.reviewPrefix || vocabConfig.reviewPrefix || "examples";
         const normalized = normalizeBankItem(item, group);
+        const identity = useSlug && item.slug ? item.slug : normalized.primary;
         const key = store
-            ? store.normalizeForKey(item.slug || normalized.primary)
-            : String(item.slug || normalized.primary || "").toLowerCase();
+            ? store.normalizeForKey(identity)
+            : String(identity || "").toLowerCase();
         return "sentence::" + reviewPrefix + "::" + key;
+    }
+
+    function migrateLegacySentenceId(sentence, legacyId) {
+        const store = getStore();
+        if (!store || !legacyId || legacyId === sentence.id || store.hasCard(sentence.id)) {
+            return;
+        }
+
+        const legacy = store.getCard(legacyId);
+        if (!legacy) {
+            return;
+        }
+
+        const samePrompt = store.normalizeForKey(legacy.prompt) === store.normalizeForKey(sentence.prompt);
+        const sameAnswer = store.normalizeForKey(legacy.answer) === store.normalizeForKey(sentence.answer);
+        if (!samePrompt || !sameAnswer) {
+            return;
+        }
+
+        store.importBackup({ cards: [Object.assign({}, legacy, sentence)] }, { mode: "merge" });
+        store.removeCard(legacyId);
     }
 
     function getGroupLabel(container, group) {
@@ -182,7 +204,7 @@ async function renderExampleBanksFromData(config) {
         const groupLabel = getGroupLabel(container, group);
         const vocabConfig = getVocabConfig();
         const normalized = normalizeBankItem(item, group);
-        return {
+        const sentence = {
             id: makeSentenceId(item, group),
             type: "sentence-card",
             contentType: normalized.itemType,
@@ -197,6 +219,10 @@ async function renderExampleBanksFromData(config) {
             questionTranslation: normalized.questionTranslation || "",
             answerTranslation: normalized.answerTranslation || ""
         };
+        if (item.slug) {
+            migrateLegacySentenceId(sentence, makeSentenceId(item, group, false));
+        }
+        return sentence;
     }
 
     function syncBulkButton(button) {
