@@ -17,7 +17,8 @@ const requiredFiles = [
   "analysis/word-search-pdf-coverage.md",
   "quality/visual-regression-checklist.md",
   "proposals/multi-language-framework.md",
-  "tools/word-search-pdf-audit.md"
+  "tools/word-search-pdf-audit.md",
+  "tools/utf8-mojibake.md"
 ];
 
 const rootMarkdown = fs.readdirSync(root)

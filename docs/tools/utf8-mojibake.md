@@ -24,20 +24,28 @@ It supports two modes:
   - writes the repaired file back as proper UTF-8
   - re-checks the file after repair
 
-## Default Root
+## Routine Project Check
 
-If you do not provide a root manually, the script uses:
+Run the same source-content check used by GitHub Actions:
 
-```text
-C:\Workspace\prj\jq\malti-notes
+```powershell
+npm run encoding:check
 ```
+
+It scans HTML, JSON, CSS, and JavaScript while excluding dependencies, generated
+visual artifacts, temporary folders, and the two runtime files that intentionally
+contain mojibake recovery tables. Any invalid UTF-8 bytes, replacement characters,
+or suspicious encoding markers fail the command.
+
+If `--root` is omitted, the script resolves the project root from its own location,
+so it also works from a different current directory.
 
 ## Basic Commands
 
 ### 1. Check All HTML Pages
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html
+python scripts\utf8_mojibake_tool.py check --include *.html
 ```
 
 ### 2. Check With Verbose Output
@@ -45,19 +53,19 @@ C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_to
 This prints one line for every scanned file.
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html --verbose
+python scripts\utf8_mojibake_tool.py check --include *.html --verbose
 ```
 
 ### 3. Fix All HTML Pages
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py fix --root C:\Workspace\prj\jq\malti-notes --include *.html
+python scripts\utf8_mojibake_tool.py fix --include *.html
 ```
 
 ### 4. Fix With Verbose Output
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py fix --root C:\Workspace\prj\jq\malti-notes --include *.html --verbose
+python scripts\utf8_mojibake_tool.py fix --include *.html --verbose
 ```
 
 ## Narrowing The Scope
@@ -79,7 +87,7 @@ You can scan or repair only specific file types or patterns.
 ### Multiple Include Patterns
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html --include *.css
+python scripts\utf8_mojibake_tool.py check --include *.html --include *.css
 ```
 
 ## Excluding Files
@@ -88,6 +96,12 @@ By default the script excludes:
 
 ```text
 animals - Copy.html
+.git/
+.idea/
+node_modules/
+visual-regression/
+tmp_*/
+target/
 ```
 
 You can add more exclusions:
@@ -95,12 +109,13 @@ You can add more exclusions:
 ```powershell
 --exclude wasm_demo.html
 --exclude review_cards.html
+--exclude-dir imported-content
 ```
 
 Example:
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html --exclude wasm_demo.html
+python scripts\utf8_mojibake_tool.py check --include *.html --exclude wasm_demo.html
 ```
 
 ## Depth Control
@@ -131,9 +146,9 @@ You can increase it if needed:
 Example:
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py fix --root C:\Workspace\prj\jq\malti-notes --include *.html --verbose
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html
+python scripts\utf8_mojibake_tool.py check --include *.html
+python scripts\utf8_mojibake_tool.py fix --include *.html --verbose
+python scripts\utf8_mojibake_tool.py check --include *.html
 ```
 
 ## Output Meaning
@@ -176,14 +191,14 @@ FIXED pronouns_possessives.html | utf8_ok=True markers=0 replacement=0 maltese=1
 
 ## Suggested Use In This Project
 
-For this site, the most useful command is:
+For this site, use the CI-equivalent command:
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py check --root C:\Workspace\prj\jq\malti-notes --include *.html
+npm run encoding:check
 ```
 
 And when needed:
 
 ```powershell
-C:\Python313\python.exe C:\Workspace\prj\jq\malti-notes\scripts\utf8_mojibake_tool.py fix --root C:\Workspace\prj\jq\malti-notes --include *.html --verbose
+python scripts\utf8_mojibake_tool.py fix --include *.html --verbose
 ```

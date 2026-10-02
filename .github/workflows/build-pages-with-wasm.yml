@@ -51,6 +51,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run docs:check
 
+      - name: Reject broken UTF-8 and mojibake
+        if: ${{ always() && steps.node_deps.outcome == 'success' }}
+        run: npm run encoding:check
+
       - name: Lint shared styles
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run style:lint

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import os
 import re
 import sys
 from dataclasses import dataclass
@@ -18,6 +19,16 @@ MOJIBAKE_MARKERS = (
 )
 
 MALTESE_CHARS = "\u010b\u0121\u0127\u017c\u010a\u0120\u0126\u017b"
+
+DEFAULT_EXCLUDED_DIRS = (
+    ".git",
+    ".idea",
+    "__pycache__",
+    "node_modules",
+    "target",
+    "tmp_*",
+    "visual-regression",
+)
 
 CP1252_CONTROL_REPLACEMENTS = {
     "\x80": "\u20ac",
@@ -89,13 +100,13 @@ def parse_args() -> argparse.Namespace:
         cmd = sub.add_parser(name)
         cmd.add_argument(
             "--root",
-            default=r"C:\Workspace\prj\jq\malti-notes",
+            default=str(Path(__file__).resolve().parents[1]),
             help="Project root to scan.",
         )
         cmd.add_argument(
             "--include",
             action="append",
-            default=["*.html"],
+            default=None,
             help="Glob pattern to include. Can be passed multiple times.",
         )
         cmd.add_argument(
@@ -103,6 +114,12 @@ def parse_args() -> argparse.Namespace:
             action="append",
             default=["animals - Copy.html"],
             help="File name pattern to exclude. Can be passed multiple times.",
+        )
+        cmd.add_argument(
+            "--exclude-dir",
+            action="append",
+            default=list(DEFAULT_EXCLUDED_DIRS),
+            help="Directory name pattern to exclude. Can be passed multiple times.",
         )
         cmd.add_argument(
             "--max-depth",
@@ -133,12 +150,29 @@ def should_include(path: Path, root: Path, includes: list[str], excludes: list[s
     return any(fnmatch.fnmatch(path.name, pattern) for pattern in includes)
 
 
-def iter_files(root: Path, includes: list[str], excludes: list[str], max_depth: int) -> list[Path]:
-    return sorted(
-        path
-        for path in root.rglob("*")
-        if should_include(path, root, includes, excludes, max_depth)
-    )
+def iter_files(
+    root: Path,
+    includes: list[str],
+    excludes: list[str],
+    excluded_dirs: list[str],
+    max_depth: int,
+) -> list[Path]:
+    files = []
+    for current_root, directory_names, file_names in os.walk(root):
+        current = Path(current_root)
+        relative = current.relative_to(root)
+        depth = 0 if relative == Path(".") else len(relative.parts)
+        directory_names[:] = sorted(
+            name
+            for name in directory_names
+            if depth < max_depth
+            and not any(fnmatch.fnmatch(name, pattern) for pattern in excluded_dirs)
+        )
+        for name in sorted(file_names):
+            path = current / name
+            if should_include(path, root, includes, excludes, max_depth):
+                files.append(path)
+    return files
 
 
 def count_markers(text: str) -> int:
@@ -327,7 +361,8 @@ def main() -> int:
         print(f"Root does not exist: {root}", file=sys.stderr)
         return 2
 
-    files = iter_files(root, args.include, args.exclude, args.max_depth)
+    includes = args.include or ["*.html"]
+    files = iter_files(root, includes, args.exclude, args.exclude_dir, args.max_depth)
     if not files:
         print("No files matched.")
         return 0

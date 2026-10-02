@@ -13,6 +13,7 @@ const workflow = fs.readFileSync(workflowPath, "utf8");
 
 const requiredChecks = [
   "docs:check",
+  "encoding:check",
   "cloud-sync:check",
   "firebase:check",
   "style:lint",

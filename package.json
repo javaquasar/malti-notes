@@ -7,6 +7,7 @@
     "cloud-sync:check": "node ./scripts/cloud_sync_check.js",
     "firebase:check": "node ./scripts/firebase_config_check.js",
     "docs:check": "node ./scripts/docs_check.js",
+    "encoding:check": "python ./scripts/utf8_mojibake_tool.py check --root . --include \"*.html\" --include \"*.json\" --include \"*.css\" --include \"*.js\" --exclude \"review-cards.js\" --exclude \"verb-lookup-loader.js\" --max-depth 6",
     "word-search:coverage": "python ./scripts/analyze_word_search_pdf_coverage.py",
     "pwa:build": "node ./scripts/build_service_worker.js",
     "pwa:check": "node ./scripts/build_service_worker.js --check",
