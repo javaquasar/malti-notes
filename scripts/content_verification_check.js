@@ -7,11 +7,13 @@ const dataRoot = path.join(root, "assets", "data");
 const uncertaintyMarker = /\[(?:UNCERTAIN|overview-based)\]/i;
 const allowedStatuses = new Set(["verified", "needs-review"]);
 const allowedPendingClaims = new Set(["plural"]);
+const sourceRegistry = JSON.parse(fs.readFileSync(path.join(dataRoot, "content_verification_sources.json"), "utf8"));
 const errors = [];
 const verificationIds = new Set();
 const quarantined = [];
 let pendingClaimCount = 0;
 let verifiedClaimCount = 0;
+let verifiedExampleCount = 0;
 let quarantinedHtmlCount = 0;
 
 function relative(file) {
@@ -51,8 +53,20 @@ function walk(file, value, location, document) {
         verificationIds.add(value.verificationId);
       }
       if (value.review?.enabled === true) fail(file, location, "needs-review content cannot enable review");
+      if (typeof value.verificationReason !== "string" || !value.verificationReason.trim()) {
+        fail(file, location, "needs-review content requires verificationReason");
+      }
       const normalized = learningContent.normalizeItem(value);
       quarantined.push({ file, location, maltese: normalized.primary, english: normalized.secondary });
+    } else if (value.verificationStatus === "verified") {
+      verifiedExampleCount += 1;
+      const verification = value.verification;
+      if (!verification?.source || !sourceRegistry.sources?.[verification.source]) {
+        fail(file, location, `verified content references unknown source ${verification?.source || "(missing)"}`);
+      }
+      if (!verification?.method || !verification?.checkedOn) {
+        fail(file, location, "verified content requires method and checkedOn metadata");
+      }
     }
   }
 
@@ -77,7 +91,9 @@ function walk(file, value, location, document) {
       Object.entries(value.verifiedClaims).forEach(([claim, details]) => {
         verifiedClaimCount += 1;
         if (!details?.value || !details?.source) fail(file, location, `${claim} verification requires value and source`);
-        if (!document.verificationSources?.[details?.source]) fail(file, location, `${claim} references unknown source ${details?.source}`);
+        if (!document.verificationSources?.[details?.source] && !sourceRegistry.sources?.[details?.source]) {
+          fail(file, location, `${claim} references unknown source ${details?.source}`);
+        }
         if (!(value.notes || []).includes(`${claim}: ${details?.value}`)) {
           fail(file, location, `${claim} verified value is not published in notes`);
         }
@@ -139,4 +155,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`ok content verification: ${verifiedClaimCount} sourced claims, ${pendingClaimCount} pending claims, ${quarantined.length + quarantinedHtmlCount} quarantined examples`);
+console.log(`ok content verification: ${verifiedClaimCount} sourced claims, ${verifiedExampleCount} source-verified examples, ${pendingClaimCount} pending claims, ${quarantined.length + quarantinedHtmlCount} quarantined examples`);

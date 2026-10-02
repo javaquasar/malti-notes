@@ -535,10 +535,15 @@
           "english": "The nurse has a light blue uniform."
         },
         {
-          "maltese": "Il-pazjent qiegħed fuq saqqu.",
+          "maltese": "Il-pazjent qiegħed fuq is-sodda.",
           "english": "The patient is on a bed.",
-          "verificationStatus": "needs-review",
-          "verificationId": "picture_description:clinic:items:5"
+          "verificationStatus": "verified",
+          "verification": {
+            "source": "schola-b1-2022",
+            "printedPages": [32, 116],
+            "method": "source-pattern",
+            "checkedOn": "2026-10-02"
+          }
         },
         {
           "maltese": "Il-pazjent għandu flokk aħdar ċar.",
@@ -643,7 +648,7 @@
           "english": "What colour is the nurse's uniform?"
         },
         {
-          "maltese": "Il-pazjent qiegħed fuq saqqu?",
+          "maltese": "Il-pazjent qiegħed fuq is-sodda?",
           "english": "Is the patient on a bed?"
         },
         {
@@ -710,13 +715,15 @@
           "maltese": "Hemm tadam aħmar.",
           "english": "There are red tomatoes.",
           "verificationStatus": "needs-review",
-          "verificationId": "picture_description:market:items:5"
+          "verificationId": "picture_description:market:items:5",
+          "verificationReason": "Confirm collective-noun and adjective agreement for tadam in this sentence."
         },
         {
           "maltese": "Hemm frott isfar.",
           "english": "There is yellow fruit.",
           "verificationStatus": "needs-review",
-          "verificationId": "picture_description:market:items:6"
+          "verificationId": "picture_description:market:items:6",
+          "verificationReason": "Confirm collective-noun and adjective agreement for frott in this sentence."
         },
         {
           "maltese": "Ir-raġel għandu flokk blu.",
