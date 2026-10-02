@@ -863,6 +863,26 @@ async function main() {
       }
     });
 
+    await runTest(context, "shared mobile actions keep usable targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+
+      for (const pageName of ["all_pages.html", "course_path.html", "review_cards.html", "word_search.html"]) {
+        await openCleanPage(page, pageName);
+        const metrics = await page.locator(".action-link:visible, .action-button:visible").evaluateAll((controls) => ({
+          count: controls.length,
+          minHeight: Math.min(...controls.map((control) => control.getBoundingClientRect().height)),
+          clipped: controls.filter((control) => (
+            control.scrollWidth > control.clientWidth || control.scrollHeight > control.clientHeight
+          )).length,
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        }));
+        assert(metrics.count > 0, `${pageName} has no shared actions to verify.`);
+        assert(metrics.minHeight >= 44, `${pageName} has a shared mobile action shorter than 44px.`);
+        assert(metrics.clipped === 0, `${pageName} clips a shared action label.`);
+        assert(!metrics.documentOverflow, `${pageName} shared actions cause horizontal overflow.`);
+      }
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");

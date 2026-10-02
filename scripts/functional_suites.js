@@ -40,6 +40,7 @@ const functionalSuites = {
     "lesson support surfaces keep consistent spacing and width",
     "floating review shortcut stays contextual and clear of mobile content",
     "section review controls stay compact on mobile",
+    "shared mobile actions keep usable targets",
     "home review toolbar keeps every action visible",
     "mobile verb banks stay readable and tappable",
     "Year 4 tabs keep usable mobile targets",

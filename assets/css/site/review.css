@@ -462,6 +462,12 @@
 }
 
 @media (max-width: 720px) {
+  .action-link,
+  .action-button,
+  .review-add-button:not(.review-add-button--icon) {
+    min-height: 44px;
+  }
+
   .review-add-button--icon {
     width: 44px;
     height: 44px;

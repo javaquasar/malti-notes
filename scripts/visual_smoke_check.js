@@ -182,6 +182,14 @@ check("individual review bookmarks keep usable mobile targets", () => {
   );
 });
 
+check("shared actions keep usable mobile targets", () => {
+  const css = read("assets/css/site/review.css");
+  assert(
+    /@media \(max-width: 720px\)[\s\S]*?\.action-link,[\s\S]*?\.action-button,[\s\S]*?\.review-add-button:not\(\.review-add-button--icon\)[\s\S]*?min-height:\s*44px;/.test(css),
+    "shared mobile actions lack a 44px minimum height"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");
