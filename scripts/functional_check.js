@@ -1231,9 +1231,17 @@ async function main() {
         const geometry = await cards.last().evaluate((card) => {
           const content = card.querySelector("strong").getBoundingClientRect();
           const button = card.querySelector(".review-add-button--icon").getBoundingClientRect();
-          return { contentRight: content.right, buttonLeft: button.left };
+          return {
+            contentRight: content.right,
+            buttonLeft: button.left,
+            buttonWidth: button.width,
+            buttonHeight: button.height
+          };
         });
         assert(geometry.contentRight < geometry.buttonLeft, `Sentence text reaches the bookmark at ${viewport.width}px.`);
+        if (viewport.width <= 720) {
+          assert(geometry.buttonWidth >= 44 && geometry.buttonHeight >= 44, "Mobile sentence bookmark target is too small.");
+        }
       }
 
       const firstButton = cards.first().locator(".review-add-button--icon");

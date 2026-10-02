@@ -462,6 +462,16 @@
 }
 
 @media (max-width: 720px) {
+  .review-add-button--icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .sentence-card--review-toggle {
+    grid-template-columns: minmax(0, 1fr) 44px;
+  }
+
   .review-topic-breakdown {
     grid-template-columns: 1fr;
     min-height: 0;

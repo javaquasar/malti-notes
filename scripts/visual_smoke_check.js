@@ -170,6 +170,18 @@ check("course pages suppress the floating review shortcut", () => {
   assert(responsiveCss.includes("min-height: 44px"), "mobile section Review actions lack a touch-safe height");
 });
 
+check("individual review bookmarks keep usable mobile targets", () => {
+  const css = read("assets/css/site/review.css");
+  assert(
+    /@media \(max-width: 720px\)[\s\S]*?\.review-add-button--icon\s*\{[\s\S]*?width:\s*44px;[\s\S]*?height:\s*44px;/.test(css),
+    "mobile review bookmarks lack a 44px target"
+  );
+  assert(
+    /\.sentence-card--review-toggle\s*\{\s*grid-template-columns:\s*minmax\(0, 1fr\) 44px;/.test(css),
+    "mobile sentence cards do not reserve the larger bookmark column"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");
