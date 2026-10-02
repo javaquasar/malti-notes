@@ -101,6 +101,15 @@
   overflow-wrap: anywhere;
 }
 
+@media (max-width: 480px) {
+  .topic-picker-check,
+  .word-search-topic-check {
+    min-height: 32px;
+    padding: var(--space-xs);
+    cursor: pointer;
+  }
+}
+
 .game-refreshing,
 .memory-board.is-refreshing,
 .matched-pair-list.is-refreshing,

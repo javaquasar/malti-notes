@@ -26,7 +26,8 @@ const functionalSuites = {
     "Year 4 vocabulary uses the shared review store",
     "word search creates a playable puzzle",
     "word search keeps mobile puzzle targets usable",
-    "memory game creates a complete deck"
+    "memory game creates a complete deck",
+    "vocabulary games share usable mobile topic targets"
   ],
   "progress-storage": [
     "course progress summarizes target states and filters chapters",

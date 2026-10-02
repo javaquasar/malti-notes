@@ -454,7 +454,6 @@ check("word search stays modular", () => {
   const wordCss = read("assets/css/word-search.css");
   assert(wordPage.includes("assets/css/word-search.css"), "word_search.html does not load word-search.css");
   assert(wordCss.includes("margin-inline: calc(-1 * var(--space-3xl))"), "mobile word-search board does not use the full card width");
-  assert(wordCss.includes(".word-search-topic-check"), "mobile word-search topic targets lack shared sizing");
   keyPages
     .filter((page) => page !== "word_search.html")
     .forEach((page) => {
@@ -473,6 +472,13 @@ check("vocabulary games use shared word-search bank", () => {
     assert(html.includes("assets/js/game-audio.js"), `${page} missing game-audio.js`);
     assert(html.includes("assets/js/vocabulary-games.js"), `${page} missing vocabulary-games.js`);
   });
+});
+
+check("vocabulary games share mobile topic targets", () => {
+  const css = read("assets/css/site/games.css");
+  assert(css.includes(".topic-picker-check"), "shared topic-picker target styles are missing");
+  assert(css.includes(".word-search-topic-check"), "word-search topic picker is not included in shared styles");
+  assert(css.includes("min-height: 32px"), "mobile topic targets lack a usable minimum height");
 });
 
 check("word search uses shared game audio", () => {

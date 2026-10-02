@@ -1514,6 +1514,22 @@ async function main() {
       assert((await page.locator("#memory-score").textContent()).trim() === "0 / 8 matched", "Memory score did not reset.");
     });
 
+    await runTest(context, "vocabulary games share usable mobile topic targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      for (const pageName of ["memory_game.html", "word_builder_game.html", "word_search.html"]) {
+        await openCleanPage(page, pageName);
+        const selector = pageName === "word_search.html" ? ".word-search-topic-check" : ".topic-picker-check";
+        const metrics = await page.locator(selector).evaluateAll((labels) => ({
+          count: labels.length,
+          minHeight: Math.min(...labels.map((label) => label.getBoundingClientRect().height)),
+          documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+        }));
+        assert(metrics.count > 0, `${pageName} did not render topic choices.`);
+        assert(metrics.minHeight >= 32, `${pageName} has a topic target shorter than 32px.`);
+        assert(!metrics.documentOverflow, `${pageName} topic choices cause horizontal overflow.`);
+      }
+    });
+
     await runTest(context, "offline application assets are registered", async (page) => {
       await openCleanPage(page, "index.html");
       const result = await page.evaluate(async () => {
