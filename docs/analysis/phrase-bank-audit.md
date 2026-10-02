@@ -82,6 +82,9 @@ This is the saved working list of pages that still need structural cleanup or a 
 - `transport_travel.html`
 - `animals.html`
 - `emotions.html`
+  - situation models, Q&A pairs, pair-work prompts, and individual speaking models use typed shared banks
+  - every migrated item can be added to Review individually
+  - grammar explanations and agreement examples remain inline because their layout carries teaching meaning
 - `impactful_people.html`
 - `places_events.html`
 - `body_appearance.html`

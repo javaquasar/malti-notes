@@ -381,7 +381,9 @@ check("question and answer examples use paired cards", () => {
   });
 
   ["emotions.html"].forEach((page) => {
-    assert(read(page).includes('class="qa-pair-grid"'), `${page} does not use the shared Q&A layout`);
+    const html = read(page);
+    assert(html.includes('data-example-group="emotions-qa"'), `${page} does not expose the typed Q&A bank`);
+    assert(html.includes('data-example-group="emotions-situations"'), `${page} does not expose the typed situation bank`);
   });
 
   const renderer = read("assets/js/render-example-banks.js");

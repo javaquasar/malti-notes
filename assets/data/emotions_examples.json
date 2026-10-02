@@ -5,6 +5,89 @@
   "topic": "Emotions",
   "groups": [
     {
+      "id": "emotions-situations",
+      "sectionId": "situations",
+      "title": "Situation Models",
+      "itemType": "example",
+      "containerClass": "grid-2",
+      "numbered": false,
+      "items": [
+        { "maltese": "Meta nkun fil-post favorit tiegħi, inħossni ferħan / ferħana.", "english": "When I am in my favourite place, I feel happy." },
+        { "maltese": "Meta nkun ħdejn il-baħar, inħossni kalm / kalma.", "english": "When I am near the sea, I feel calm." },
+        { "maltese": "Meta jkolli ħafna xogħol, inħossni inkwetat / inkwetata.", "english": "When I have a lot of work, I feel worried." },
+        { "maltese": "Meta niltaqa' mal-ħbieb, inħossni kuntent / kuntenta.", "english": "When I meet my friends, I feel content." },
+        { "maltese": "Meta jkolli aħbar tajba, inħossni eċitat / eċitata.", "english": "When I have good news, I feel excited." },
+        { "maltese": "Meta nagħmel żball, inħossni imbarazzat / imbarazzata.", "english": "When I make a mistake, I feel embarrassed." }
+      ]
+    },
+    {
+      "id": "emotions-qa",
+      "sectionId": "questions",
+      "title": "Questions and Answers",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "emotions-qa-feeling-today",
+          "question": { "maltese": "Kif tħossok illum?", "english": "How do you feel today?" },
+          "answer": { "maltese": "Illum inħossni ferħan / ferħana.", "english": "Today I feel happy." }
+        },
+        {
+          "slug": "emotions-qa-calm",
+          "question": { "maltese": "Meta tħossok kalm / kalma?", "english": "When do you feel calm?" },
+          "answer": { "maltese": "Inħossni kalm / kalma meta nkun ħdejn il-baħar.", "english": "I feel calm when I am near the sea." }
+        },
+        {
+          "slug": "emotions-qa-nervous",
+          "question": { "maltese": "Meta tħossok nervuż / nervuża?", "english": "When do you feel nervous?" },
+          "answer": { "maltese": "Inħossni nervuż / nervuża qabel eżami.", "english": "I feel nervous before an exam." }
+        },
+        {
+          "slug": "emotions-qa-content",
+          "question": { "maltese": "Għaliex tħossok kuntent / kuntenta?", "english": "Why do you feel content?" },
+          "answer": { "maltese": "Għax illum għandi aħbar tajba.", "english": "Because today I have good news." }
+        },
+        {
+          "slug": "emotions-qa-sad",
+          "question": { "maltese": "Tħossok imdejjaq / imdejqa xi kultant?", "english": "Do you sometimes feel sad?" },
+          "answer": { "maltese": "Iva, xi kultant inħossni imdejjaq / imdejqa.", "english": "Yes, sometimes I feel sad." }
+        },
+        {
+          "slug": "emotions-qa-relaxed",
+          "question": { "maltese": "X'jagħmlek rilassat / rilassata?", "english": "What makes you feel relaxed?" },
+          "answer": { "maltese": "Il-baħar jagħmilni rilassat / rilassata.", "english": "The sea makes me feel relaxed." }
+        }
+      ]
+    },
+    {
+      "id": "emotions-pair-work",
+      "sectionId": "pair-work",
+      "title": "Pair Work",
+      "itemType": "translation",
+      "containerClass": "grid-2",
+      "numbered": false,
+      "items": [
+        { "slug": "emotions-pair-feeling-today", "maltese": "Kif tħossok illum?", "english": "How do you feel today?" },
+        { "maltese": "Meta tħossok ferħan / ferħana?", "english": "When do you feel happy?" },
+        { "maltese": "Meta tħossok rilassat / rilassata?", "english": "When do you feel relaxed?" },
+        { "maltese": "X'jagħmlek nervuż / nervuża?", "english": "What makes you nervous?" },
+        { "maltese": "Fejn tħossok kalm / kalma?", "english": "Where do you feel calm?" }
+      ]
+    },
+    {
+      "id": "emotions-individual-speaking",
+      "sectionId": "individual",
+      "title": "Individual Speaking",
+      "itemType": "example",
+      "containerClass": "grid-2",
+      "numbered": false,
+      "items": [
+        { "maltese": "Illum inħossni ferħan / ferħana għax il-ġurnata tiegħi sejra tajjeb.", "english": "Today I feel happy because my day is going well." },
+        { "maltese": "Xi kultant inħossni nervuż / nervuża, imma meta nitkellem mal-ħbieb nikkalma.", "english": "Sometimes I feel nervous, but when I speak with friends I calm down." },
+        { "maltese": "Meta nkun ħdejn il-baħar, inħossni rilassat / rilassata u kalm / kalma.", "english": "When I am near the sea, I feel relaxed and calm." },
+        { "maltese": "Ma nħobbx inħossni imbarazzat / imbarazzata, imma kultant jiġri.", "english": "I do not like feeling embarrassed, but sometimes it happens." }
+      ]
+    },
+    {
       "id": "emotions-practice-bank",
       "sectionId": "practice-bank",
       "title": "Practice Bank",

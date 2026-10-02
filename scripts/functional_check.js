@@ -1493,6 +1493,19 @@ async function main() {
       assert(savedColourQuestion?.prompt === "X'kulur hu l-qmis?", "Colour Q&A saved the wrong prompt.");
       assert(savedColourQuestion?.answer === "Il-qmis abjad.", "Colour Q&A saved the wrong answer.");
 
+      await openCleanPage(page, "emotions.html");
+      const emotionQuestions = page.locator('[data-example-group="emotions-qa"]');
+      const emotionCards = emotionQuestions.locator(":scope > .qa-pair-card");
+      assert(await emotionCards.count() === 6, "Emotion questions did not render all typed Q&A pairs.");
+      assert(await page.locator('[data-example-group="emotions-situations"] > article').count() === 6, "Emotion situations did not render all typed examples.");
+      assert(await page.locator('[data-example-group="emotions-pair-work"] > article').count() === 5, "Emotion pair-work questions did not render all typed prompts.");
+      assert(await page.locator('[data-example-group="emotions-individual-speaking"] > article').count() === 4, "Emotion speaking models did not render all typed examples.");
+      const calmQuestion = emotionCards.nth(1);
+      await calmQuestion.locator(":scope > .review-add-button--icon").click();
+      const savedEmotionQuestion = await page.evaluate(() => window.MaltiReviewStore.getAllCards()[0]);
+      assert(savedEmotionQuestion?.prompt === "Meta tħossok kalm / kalma?", "Emotion Q&A saved the wrong prompt.");
+      assert(savedEmotionQuestion?.answer === "Inħossni kalm / kalma meta nkun ħdejn il-baħar.", "Emotion Q&A saved the wrong answer.");
+
       await openCleanPage(page, "prepositions_place.html");
       const visualDrill = page.locator('[data-example-group="prepositions-visual-drill"]');
       const disclosureCards = visualDrill.locator(":scope > .qa-disclosure-card");
