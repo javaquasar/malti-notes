@@ -232,6 +232,13 @@ check("mobile verb banks keep a readable action layout", () => {
   assert(css.includes("white-space: normal"), "long mobile verb labels cannot wrap");
 });
 
+check("Year 4 tabs use a stable mobile grid", () => {
+  const css = read("assets/css/pages.css");
+  assert(css.includes(".year4-collection-tabs"), "Year 4 collection tabs lack shared layout styles");
+  assert(css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))"), "Year 4 tabs lack a two-column mobile grid");
+  assert(css.includes("min-height: 44px"), "Year 4 mobile tabs lack a usable minimum height");
+});
+
 check("question and answer examples use paired cards", () => {
   const migratedBanks = [
     ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],

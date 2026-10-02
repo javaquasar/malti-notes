@@ -932,6 +932,32 @@ async function main() {
       assert(!imperativeMetrics.documentOverflow, "Imperative verb controls cause horizontal page overflow.");
     });
 
+    await runTest(context, "Year 4 tabs keep usable mobile targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "year4_exam.html");
+      const readTabs = async () => page.locator(".year4-tab:visible").evaluateAll((tabs) => ({
+        count: tabs.length,
+        minWidth: Math.min(...tabs.map((tab) => tab.getBoundingClientRect().width)),
+        minHeight: Math.min(...tabs.map((tab) => tab.getBoundingClientRect().height)),
+        clipped: tabs.filter((tab) => tab.scrollWidth > tab.clientWidth || tab.scrollHeight > tab.clientHeight).length,
+        rows: new Set(tabs.map((tab) => Math.round(tab.getBoundingClientRect().top))).size,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+
+      const collectionTabs = await readTabs();
+      assert(collectionTabs.count === 4, "Year 4 collection tabs were not rendered.");
+      assert(collectionTabs.rows === 2, "Year 4 collection tabs do not use a stable two-row mobile grid.");
+      assert(collectionTabs.minWidth >= 44 && collectionTabs.minHeight >= 44, "A Year 4 collection tab is too small.");
+      assert(collectionTabs.clipped === 0, "A Year 4 collection tab label is clipped.");
+
+      await page.locator("#year4-topic-toggle").click();
+      const allTabs = await readTabs();
+      assert(allTabs.count > collectionTabs.count, "Year 4 topic tabs did not expand.");
+      assert(allTabs.minWidth >= 44 && allTabs.minHeight >= 44, "A Year 4 topic tab is too small.");
+      assert(allTabs.clipped === 0, "A Year 4 topic tab label is clipped.");
+      assert(!allTabs.documentOverflow, "Year 4 mobile tabs cause horizontal page overflow.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());
