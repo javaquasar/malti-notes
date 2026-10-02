@@ -114,8 +114,10 @@
 
   .site-nav-compact .nav-link,
   .site-nav-compact summary {
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
+    min-height: 44px;
   }
 
   .nav-group {
@@ -128,6 +130,16 @@
     margin-top: 8px;
     box-shadow: none;
     background: var(--color-surface-panel-muted);
+  }
+
+  .nav-menu a,
+  .theme-switcher {
+    min-height: 44px;
+  }
+
+  .nav-menu a {
+    display: flex;
+    align-items: center;
   }
 
   .verb-lookup-grid {

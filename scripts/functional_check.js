@@ -966,6 +966,39 @@ async function main() {
       );
     });
 
+    await runTest(context, "mobile navigation rows keep usable targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "index.html");
+      await page.locator(".site-nav-toggle").click();
+
+      const primaryMetrics = await page.locator(
+        ".site-nav-compact > .nav-link:visible, .site-nav-compact > .nav-group > summary:visible, .theme-switcher:visible"
+      ).evaluateAll((controls) => ({
+        count: controls.length,
+        minHeight: Math.min(...controls.map((control) => control.getBoundingClientRect().height)),
+        clipped: controls.filter((control) => (
+          control.scrollWidth > control.clientWidth || control.scrollHeight > control.clientHeight
+        )).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(primaryMetrics.count === 8, "Mobile navigation lost a primary row or the theme selector.");
+      assert(primaryMetrics.minHeight >= 44, "A primary mobile navigation row is shorter than 44px.");
+      assert(primaryMetrics.clipped === 0, "A primary mobile navigation row clips its label.");
+      assert(!primaryMetrics.documentOverflow, "Primary mobile navigation rows cause horizontal overflow.");
+
+      await page.locator(".site-nav-compact > .nav-group > summary", { hasText: "Course" }).click();
+      const nestedMetrics = await page.locator(".nav-group[open] .nav-menu a:visible").evaluateAll((links) => ({
+        count: links.length,
+        minHeight: Math.min(...links.map((link) => link.getBoundingClientRect().height)),
+        clipped: links.filter((link) => link.scrollWidth > link.clientWidth || link.scrollHeight > link.clientHeight).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(nestedMetrics.count >= 7, "The mobile Course menu did not expose its links.");
+      assert(nestedMetrics.minHeight >= 44, "A nested mobile navigation link is shorter than 44px.");
+      assert(nestedMetrics.clipped === 0, "A nested mobile navigation link clips its label.");
+      assert(!nestedMetrics.documentOverflow, "Nested mobile navigation links cause horizontal overflow.");
+    });
+
     await runTest(context, "home review toolbar keeps every action visible", async (page) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await openCleanPage(page, "home_furniture.html");

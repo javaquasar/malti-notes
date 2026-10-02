@@ -214,6 +214,18 @@ check("mobile ordering tokens keep usable targets", () => {
   );
 });
 
+check("mobile navigation rows keep usable targets", () => {
+  const css = read("assets/css/site/responsive.css");
+  assert(
+    /\.site-nav-compact \.nav-link,\s*\.site-nav-compact summary\s*\{[\s\S]*?min-height:\s*44px;/.test(css),
+    "primary mobile navigation rows lack a 44px minimum height"
+  );
+  assert(
+    /\.nav-menu a,\s*\.theme-switcher\s*\{\s*min-height:\s*44px;/.test(css),
+    "nested mobile navigation and theme rows lack a 44px minimum height"
+  );
+});
+
 check("page directories render from shared data", () => {
   const index = read("index.html");
   const directory = read("all_pages.html");
