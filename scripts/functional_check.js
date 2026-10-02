@@ -1128,13 +1128,15 @@ async function main() {
       await page.waitForFunction((image) => image.complete && image.naturalWidth > 0, await lastAnimalImage.elementHandle());
 
       await openCleanPage(page, "transport_travel.html");
-      const routeImage = await page.locator(".route-figure img[src*='sliema-valletta-route']").evaluate((image) => ({
+      const routeImage = await page.locator(".route-figure img[src$='sliema-valletta-route.webp']").evaluate((image) => ({
         loading: image.loading,
         decoding: image.decoding,
+        source: image.getAttribute("src"),
         width: image.getAttribute("width"),
         height: image.getAttribute("height")
       }));
       assert(routeImage.loading === "lazy" && routeImage.decoding === "async", "The large route image is not deferred.");
+      assert(routeImage.source.endsWith(".webp"), "The large route image does not use the optimized format.");
       assert(routeImage.width === "1489" && routeImage.height === "1222", "The route image does not reserve its layout space.");
     });
 
