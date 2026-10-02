@@ -248,6 +248,12 @@ check("book verb levels use the shared segmented control", () => {
   assert(css.includes(".course-verb-book-toggle .toggle-chip"), "book-level toggle lacks scoped sizing");
 });
 
+check("course quick checks keep usable mobile targets", () => {
+  const css = read("assets/css/site/exercises.css");
+  assert(css.includes(".course-practice > summary"), "course quick checks lack shared summary styling");
+  assert(css.includes("min-height: 44px"), "course quick checks lack a usable mobile minimum height");
+});
+
 check("question and answer examples use paired cards", () => {
   const migratedBanks = [
     ["home_furniture.html", "assets/data/home_furniture_examples.json", "home-qa"],

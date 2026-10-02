@@ -982,6 +982,25 @@ async function main() {
       assert(await page.locator('[data-course-verb-list="B2"]').isVisible(), "B2 paradigms did not become visible.");
     });
 
+    await runTest(context, "course quick checks keep usable mobile targets", async (page) => {
+      await page.setViewportSize({ width: 320, height: 844 });
+      await openCleanPage(page, "course_path.html");
+      const summaries = page.locator('[data-course-level="b1"] .course-practice > summary');
+      const metrics = await summaries.evaluateAll((items) => ({
+        count: items.length,
+        minHeight: Math.min(...items.map((item) => item.getBoundingClientRect().height)),
+        clipped: items.filter((item) => item.scrollWidth > item.clientWidth || item.scrollHeight > item.clientHeight).length,
+        documentOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      }));
+      assert(metrics.count === 7, "B1 course path lost a quick-check disclosure.");
+      assert(metrics.minHeight >= 44, "A course quick-check target is too short on mobile.");
+      assert(metrics.clipped === 0, "A course quick-check label is clipped.");
+      assert(!metrics.documentOverflow, "Course quick checks cause horizontal page overflow.");
+
+      await summaries.first().click();
+      assert(await page.locator('[data-course-chapter="b1-introductions"] .course-practice').getAttribute("open") !== null, "Quick check did not open.");
+    });
+
     await runTest(context, "generated banks keep the shared card styling", async (page) => {
       await page.goto(`${baseUrl}/index.html`, { waitUntil: "domcontentloaded" });
       await page.evaluate(() => window.localStorage.clear());

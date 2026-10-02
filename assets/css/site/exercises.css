@@ -190,6 +190,11 @@
 }
 
 @media (max-width: 640px) {
+  .course-practice > summary {
+    min-height: 44px;
+    padding-block: 10px;
+  }
+
   .exercise-set-header,
   .exercise-question-header,
   .exercise-match-row {

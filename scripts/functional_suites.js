@@ -44,6 +44,7 @@ const functionalSuites = {
     "mobile verb banks stay readable and tappable",
     "Year 4 tabs keep usable mobile targets",
     "book verb levels use the shared mobile toggle",
+    "course quick checks keep usable mobile targets",
     "generated banks keep the shared card styling",
     "verified example banks render without quarantined content",
     "framed content groups keep the shared visual contract",
