@@ -167,9 +167,16 @@ async function main() {
 
     await runTest(context, "site directory is generated from the shared map", async (page) => {
       await openCleanPage(page, "all_pages.html");
-      assert(await page.locator("[data-site-map-directory] > .section").count() === 5, "Site directory does not contain five groups.");
-      assert(await page.locator("[data-site-map-directory] .page-card").count() === 46, "Site directory page count is out of sync.");
-      assert(await page.locator("[data-site-map-jumps] .action-link").count() === 5, "Site directory quick jumps are incomplete.");
+      const expected = await page.evaluate(async () => {
+        const siteMap = await fetch("./assets/data/site-map.json").then((response) => response.json());
+        return {
+          groups: siteMap.groups.length,
+          pages: siteMap.groups.reduce((total, group) => total + group.pages.length, 0)
+        };
+      });
+      assert(await page.locator("[data-site-map-directory] > .section").count() === expected.groups, "Site directory group count is out of sync.");
+      assert(await page.locator("[data-site-map-directory] .page-card").count() === expected.pages, "Site directory page count is out of sync.");
+      assert(await page.locator("[data-site-map-jumps] .action-link").count() === expected.groups, "Site directory quick jumps are incomplete.");
     });
 
     await runTest(context, "course path saves objectives and quick-check progress", async (page) => {
