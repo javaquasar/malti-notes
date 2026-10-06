@@ -1,7 +1,8 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}a904642b9a27`;
+const CACHE_NAME = `${CACHE_PREFIX}405d881faf2b`;
 const CORE_ASSETS = [
     "./",
+    "./about_me.html",
     "./all_pages.html",
     "./animals.html",
     "./body_appearance.html",
@@ -72,6 +73,7 @@ const CORE_ASSETS = [
     "./assets/css/topic-picker.css",
     "./assets/css/vocabulary-games.css",
     "./assets/css/word-search.css",
+    "./assets/js/about-me.js",
     "./assets/js/animal-compact-toggle.js",
     "./assets/js/cloud-sync-core.js",
     "./assets/js/course-chapter.js",

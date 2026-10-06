@@ -1530,6 +1530,44 @@ async function main() {
       assert(await firstDetails.locator(":scope > .qa-pair-part--answer").isVisible(), "Preposition visual drill does not reveal its answer.");
     });
 
+    await runTest(context, "about-me builder saves locally and self-check records practice", async (page) => {
+      await openCleanPage(page, "about_me.html");
+      const questionCards = page.locator('[data-example-group="about-me-questions"] > .qa-pair-card');
+      assert(await questionCards.count() === 10, "About-me page did not render the complete question bank.");
+
+      await page.locator("[data-about-me-sample]").click();
+      const sampleStory = await page.locator("[data-about-me-output]").textContent();
+      assert(sampleStory.includes("Jisimni Alex."), "About-me sample did not generate the name line.");
+      assert(sampleStory.includes("Jien miżżewweġ."), "About-me sample did not use the male married form.");
+      assert(sampleStory.includes("Marti jisimha Sara."), "About-me sample did not generate the wife line.");
+
+      await page.selectOption('[name="gender"]', "female");
+      await page.locator('[name="spouseName"]').fill("Mark");
+      const femaleStory = await page.locator("[data-about-me-output]").textContent();
+      assert(femaleStory.includes("Jien miżżewġa."), "About-me builder did not switch to the female married form.");
+      assert(femaleStory.includes("Żewġi jismu Mark."), "About-me builder did not switch to the husband line.");
+
+      await page.locator("[data-about-me-save]").click();
+      assert(await page.evaluate(() => Boolean(localStorage.getItem("malti_about_me_draft_v1"))), "About-me draft was not saved locally.");
+      await page.reload({ waitUntil: "networkidle" });
+      assert((await page.locator("[data-about-me-output]").textContent()).includes("Żewġi jismu Mark."), "About-me draft was not restored after reload.");
+
+      const firstQuestion = await page.locator("[data-practice-question]").textContent();
+      await page.locator("[data-practice-answer]").fill("Tweġiba tiegħi");
+      await page.locator("[data-practice-reveal]").click();
+      assert(await page.locator("[data-practice-model]").isVisible(), "About-me self-check did not reveal the model answer.");
+      await page.locator('[data-practice-result="incorrect"]').click();
+      const savedMistake = await page.evaluate(() => window.MaltiMistakeStore.getOpen()[0]);
+      assert(savedMistake?.sourcePage === "about_me.html", "About-me self-check did not save a missed answer to the Mistake Journal.");
+      assert(savedMistake?.given === "Tweġiba tiegħi", "About-me self-check lost the learner's answer.");
+
+      await page.locator("[data-practice-next]").click();
+      const nextQuestion = await page.locator("[data-practice-question]").textContent();
+      assert(nextQuestion !== firstQuestion, "About-me self-check repeated a question before exhausting the bank.");
+      const backupScript = fs.readFileSync(path.join(root, "assets", "js", "progress-backup.js"), "utf8");
+      assert(!backupScript.includes("malti_about_me_draft_v1"), "Personal about-me draft was added to cloud-synced progress.");
+    });
+
     await runTest(context, "number and clock drills rotate and preserve progress", async (page) => {
       await page.setViewportSize({ width: 390, height: 844 });
       await openCleanPage(page, "numbers_calendar_time.html#self-test");

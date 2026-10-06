@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "about_me.html" },
+  "page": "about_me.html",
+  "topic": "Talking About Yourself",
+  "groups": [
+    {
+      "id": "about-me-questions",
+      "title": "Questions and model answers",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "name",
+          "question": { "maltese": "Int x'jismek?", "english": "What is your name?" },
+          "answer": { "maltese": "Jisimni Alex.", "english": "My name is Alex." },
+          "verificationStatus": "verified",
+          "verification": { "source": "schola-b1-2022", "method": "direct-source-pattern-pages-6-7", "checkedOn": "2026-10-06" }
+        },
+        {
+          "slug": "age",
+          "question": { "maltese": "Kemm għandek żmien?", "english": "How old are you?" },
+          "answer": { "maltese": "Għandi ħamsa u tletin sena.", "english": "I am thirty-five years old." },
+          "verificationStatus": "verified",
+          "verification": { "source": "lifelong-learning-malta-2025", "method": "direct-source-pattern", "checkedOn": "2026-10-06" }
+        },
+        {
+          "slug": "origin",
+          "question": { "maltese": "Minn fejn int?", "english": "Where are you from?" },
+          "answer": { "maltese": "Jien mill-Italja.", "english": "I am from Italy." },
+          "verificationStatus": "verified",
+          "verification": { "source": "schola-b1-2022", "method": "direct-source-example-page-78", "checkedOn": "2026-10-06" }
+        },
+        {
+          "slug": "residence",
+          "question": { "maltese": "Fejn toqgħod?", "english": "Where do you live?" },
+          "answer": { "maltese": "Noqgħod il-Mosta.", "english": "I live in Mosta." },
+          "verificationStatus": "verified",
+          "verification": { "source": "schola-b1-2022", "method": "direct-source-pattern-pages-16-17", "checkedOn": "2026-10-06" }
+        },
+        {
+          "slug": "duration",
+          "question": { "maltese": "Kemm ilek toqgħod f'Malta?", "english": "How long have you lived in Malta?" },
+          "answer": { "maltese": "Ilni noqgħod f'Malta għal ħames snin.", "english": "I have lived in Malta for five years." },
+          "verificationStatus": "verified",
+          "verification": { "source": "identita-residence-faq", "method": "direct-source-pattern", "checkedOn": "2026-10-06" }
+        },
+        {
+          "slug": "occupation",
+          "question": { "maltese": "X'taħdem?", "english": "What do you do for work?" },
+          "answer": { "maltese": "Naħdem bħala għalliem.", "english": "I work as a teacher." },
+          "verificationStatus": "verified",
+          "verification": { "source": "health-staff-miriam-agius", "method": "direct-source-pattern", "checkedOn": "2026-10-06" }
+        },
+        {
+          "slug": "work-duties",
+          "question": { "maltese": "X'tagħmel fuq ix-xogħol?", "english": "What do you do at work?" },
+          "answer": { "maltese": "Ngħallem il-Malti u nipprepara l-lezzjonijiet.", "english": "I teach Maltese and prepare lessons." }
+        },
+        {
+          "slug": "marital-status",
+          "question": { "maltese": "Int miżżewweġ?", "english": "Are you married?" },
+          "answer": { "maltese": "Iva, jien miżżewweġ.", "english": "Yes, I am married. (male speaker)" }
+        },
+        {
+          "slug": "children",
+          "question": { "maltese": "Għandek tfal?", "english": "Do you have children?" },
+          "answer": { "maltese": "Iva, għandi żewġt itfal.", "english": "Yes, I have two children." }
+        },
+        {
+          "slug": "hobbies",
+          "question": { "maltese": "X'tħobb tagħmel fil-ħin liberu?", "english": "What do you like doing in your free time?" },
+          "answer": { "maltese": "Fil-ħin liberu tiegħi nħobb naqra, nimxi u nisma' l-mużika.", "english": "In my free time I like reading, walking, and listening to music." },
+          "verificationStatus": "verified",
+          "verification": { "source": "public-service-people-malta", "method": "direct-source-pattern", "checkedOn": "2026-10-06" }
+        }
+      ]
+    },
+    {
+      "id": "about-me-family-choices",
+      "title": "Family choices",
+      "itemType": "example",
+      "containerClass": "grid-2",
+      "numbered": false,
+      "items": [
+        { "slug": "married-man", "maltese": "Jien miżżewweġ.", "english": "I am married. (male speaker)" },
+        { "slug": "married-woman", "maltese": "Jien miżżewġa.", "english": "I am married. (female speaker)" },
+        { "slug": "not-married-man", "maltese": "M'iniex miżżewweġ.", "english": "I am not married. (male speaker)" },
+        { "slug": "not-married-woman", "maltese": "M'iniex miżżewġa.", "english": "I am not married. (female speaker)" },
+        { "slug": "wife-name", "maltese": "Marti jisimha Sara.", "english": "My wife's name is Sara." },
+        { "slug": "husband-name", "maltese": "Żewġi jismu Mark.", "english": "My husband's name is Mark." },
+        { "slug": "no-children", "maltese": "M'għandix tfal.", "english": "I do not have children." },
+        { "slug": "two-children", "maltese": "Għandi żewġt itfal.", "english": "I have two children." }
+      ]
+    },
+    {
+      "id": "about-me-connectors",
+      "title": "Useful connectors",
+      "itemType": "example",
+      "containerClass": "grid-2",
+      "numbered": false,
+      "items": [
+        { "slug": "currently", "maltese": "Bħalissa noqgħod il-Mosta.", "english": "At present I live in Mosta." },
+        { "slug": "but", "maltese": "Jien mill-Italja, imma noqgħod Malta.", "english": "I am from Italy, but I live in Malta." },
+        { "slug": "normally", "maltese": "Normalment nieklu flimkien filgħaxija.", "english": "We normally eat together in the evening." },
+        { "slug": "weekend", "maltese": "Fi tmiem il-ġimgħa nqatta' l-ħin mal-familja tiegħi.", "english": "At the weekend I spend time with my family." }
+      ]
+    }
+  ]
+}
