@@ -406,6 +406,122 @@
   margin: var(--space-md) 0 0;
 }
 
+.about-me-guided,
+.about-me-practice {
+  background: var(--color-surface-muted);
+}
+
+.about-me-guided-header,
+.about-me-timer-header,
+.about-me-coverage-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--grid-gap-lg);
+}
+
+.about-me-guided-header h3,
+.about-me-guided-header p {
+  margin-bottom: 0;
+}
+
+.about-me-speaker-control {
+  width: min(180px, 100%);
+}
+
+.about-me-progress-track {
+  height: 8px;
+  margin: var(--space-xl) 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border-default);
+}
+
+.about-me-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-brand);
+  transition: width 180ms ease;
+}
+
+.about-me-guided-control {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap-sm);
+  margin-top: var(--space-lg);
+}
+
+.about-me-guided-control input,
+.about-me-guided-control select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface-input);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.about-me-guided-preview {
+  min-height: 72px;
+  margin-top: var(--space-xl);
+}
+
+.about-me-coverage {
+  border-top: 1px solid var(--border-default);
+}
+
+.about-me-coverage-row {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.about-me-coverage-row > div:first-child {
+  display: grid;
+  gap: var(--space-xs);
+  min-width: 140px;
+}
+
+.about-me-coverage-row > div:first-child span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.about-me-status-control {
+  justify-content: flex-end;
+}
+
+.about-me-status-control .toggle-chip {
+  min-height: 40px;
+  padding: var(--space-xs) var(--space-md);
+}
+
+.about-me-mode-toggle {
+  margin: var(--space-lg) 0;
+}
+
+.about-me-timer-header {
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.about-me-timer-display {
+  min-width: 4ch;
+  color: var(--text-brand);
+  font-family: var(--font-mono);
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.about-me-timer-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm) var(--grid-gap-lg);
+  margin: var(--space-xl) 0;
+  padding-left: 1.25rem;
+}
+
 .about-me-practice-label {
   margin: 0 0 var(--space-sm);
   color: var(--text-brand);
@@ -699,8 +815,33 @@ body.compact-animals .animal-gallery {
 
 @media (max-width: 720px) {
   .about-me-tool-layout,
-  .about-me-form-grid {
+  .about-me-form-grid,
+  .about-me-guided-control,
+  .about-me-timer-checklist {
     grid-template-columns: 1fr;
+  }
+
+  .about-me-guided-header,
+  .about-me-timer-header,
+  .about-me-coverage-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .about-me-status-control {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .about-me-status-control .toggle-chip {
+    width: 100%;
+    padding-inline: var(--space-xs);
+    font-size: 0.85rem;
+  }
+
+  .about-me-timer-display {
+    font-size: 2.5rem;
   }
 
   .about-me-field--full {

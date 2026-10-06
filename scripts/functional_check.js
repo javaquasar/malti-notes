@@ -1532,8 +1532,16 @@ async function main() {
 
     await runTest(context, "about-me builder saves locally and self-check records practice", async (page) => {
       await openCleanPage(page, "about_me.html");
+      await page.waitForFunction(() => document.querySelector("[data-about-me-practice]")?.dataset.aboutMeReady === "true");
       const questionCards = page.locator('[data-example-group="about-me-questions"] > .qa-pair-card');
       assert(await questionCards.count() === 10, "About-me page did not render the complete question bank.");
+
+      await page.selectOption("[data-smart-origin]", "italy");
+      assert(await page.locator('[name="origin"]').inputValue() === "mill-Italja", "Origin dictionary did not fill the verified Maltese form.");
+      await page.selectOption("[data-smart-occupation]", "teacher");
+      assert(await page.locator('[name="occupation"]').inputValue() === "għalliem", "Occupation dictionary did not use the male form.");
+      await page.selectOption('[name="gender"]', "female");
+      assert(await page.locator('[name="occupation"]').inputValue() === "għalliema", "Occupation dictionary did not switch to the female form.");
 
       await page.locator("[data-about-me-sample]").click();
       const sampleStory = await page.locator("[data-about-me-output]").textContent();
@@ -1552,6 +1560,13 @@ async function main() {
       await page.reload({ waitUntil: "networkidle" });
       assert((await page.locator("[data-about-me-output]").textContent()).includes("Żewġi jismu Mark."), "About-me draft was not restored after reload.");
 
+      await page.locator("[data-guided-input]").fill("Maya");
+      await page.locator("[data-guided-next]").click();
+      const guidedProgress = await page.evaluate(() => JSON.parse(localStorage.getItem("malti_about_me_progress_v1")));
+      assert(guidedProgress?.topics?.name?.status === "learning", "Guided story did not mark the completed topic as learning.");
+      await page.locator('[data-coverage-topic="name"] [data-coverage-status="confident"]').click();
+      assert((await page.evaluate(() => window.MaltiAboutMe.getProgress().topics.name.status)) === "confident", "Manual topic status did not update coverage.");
+
       const firstQuestion = await page.locator("[data-practice-question]").textContent();
       await page.locator("[data-practice-answer]").fill("Tweġiba tiegħi");
       await page.locator("[data-practice-reveal]").click();
@@ -1564,8 +1579,20 @@ async function main() {
       await page.locator("[data-practice-next]").click();
       const nextQuestion = await page.locator("[data-practice-question]").textContent();
       assert(nextQuestion !== firstQuestion, "About-me self-check repeated a question before exhausting the bank.");
+      await page.locator('[data-practice-mode="translation"]').click();
+      assert(await page.locator("[data-practice-label]").textContent() === "English to Maltese", "Translation practice mode did not activate.");
+      assert((await page.locator("[data-practice-translation]").textContent()).includes("Maltese"), "Translation mode did not explain the answer direction.");
+      await page.locator('[data-practice-mode="keywords"]').click();
+      assert(await page.locator("[data-practice-label]").textContent() === "Keywords", "Keyword practice mode did not activate.");
+      assert((await page.locator("[data-practice-question]").textContent()).includes("·"), "Keyword mode did not show compact speaking prompts.");
+      await page.locator('[data-practice-mode="timed"]').click();
+      assert(await page.locator("[data-practice-timed]").isVisible(), "Timed story mode did not activate.");
+      await page.evaluate(() => window.MaltiAboutMe.finishTimer());
+      await page.locator('[data-timer-result="correct"]').click();
+      assert((await page.evaluate(() => window.MaltiAboutMe.getProgress().practice.timed)) === 1, "Timed story attempt was not recorded.");
       const backupScript = fs.readFileSync(path.join(root, "assets", "js", "progress-backup.js"), "utf8");
       assert(!backupScript.includes("malti_about_me_draft_v1"), "Personal about-me draft was added to cloud-synced progress.");
+      assert(backupScript.includes("malti_about_me_progress_v1"), "About-me coverage was not added to cloud-synced progress.");
     });
 
     await runTest(context, "number and clock drills rotate and preserve progress", async (page) => {

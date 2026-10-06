@@ -28,6 +28,8 @@ const coreAssets = [
   "./assets/data/teaching_depth_report.json",
   "./assets/data/course_verb_paradigms.json",
   "./assets/data/grammar_targets.json",
+  "./assets/data/about_me_examples.json",
+  "./assets/data/about_me_options.json",
   "./assets/img/favicon-option-speech.svg",
 ];
 

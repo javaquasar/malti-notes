@@ -43,8 +43,10 @@
                 <li><a href="#questions">Core Questions</a></li>
                 <li><a href="#choices">Family Choices</a></li>
                 <li><a href="#models">Story Ladder</a></li>
+                <li><a href="#guided">Guided Story</a></li>
                 <li><a href="#builder">Build Your Story</a></li>
-                <li><a href="#self-check">Random Self-Check</a></li>
+                <li><a href="#coverage">Topic Coverage</a></li>
+                <li><a href="#self-check">Practice Modes</a></li>
                 <li><a href="#related">Related Pages</a></li>
             </ul>
         </aside>
@@ -118,6 +120,39 @@
                 <div data-example-group="about-me-connectors"></div>
             </section>
 
+            <section class="card" id="guided">
+                <span class="tag">Guided Story</span>
+                <h2>Build One Detail at a Time</h2>
+                <p>Work through the ten speaking topics in order. Each completed step is copied into the full builder and marked as started.</p>
+                <div class="content-group about-me-guided" data-about-me-guided>
+                    <div class="about-me-guided-header">
+                        <div>
+                            <p class="about-me-practice-label" data-guided-step>Step 1 of 10</p>
+                            <h3 data-guided-question>What is your name?</h3>
+                        </div>
+                        <label class="about-me-field about-me-speaker-control">Speaker form
+                            <select data-guided-gender>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="about-me-progress-track" role="progressbar" aria-label="Guided story progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" data-guided-progress>
+                        <span data-guided-progress-bar></span>
+                    </div>
+                    <p class="mini" data-guided-help></p>
+                    <div class="about-me-guided-control" data-guided-control></div>
+                    <div class="formula about-me-guided-preview" data-guided-preview aria-live="polite"></div>
+                    <div class="toolbar-row about-me-actions">
+                        <button class="action-button" type="button" data-guided-back>Back</button>
+                        <button class="action-button" type="button" data-guided-skip>Skip</button>
+                        <button class="action-button" type="button" data-guided-next>Save and Continue</button>
+                        <a class="action-button" href="#builder" data-guided-builder hidden>Continue in Full Builder</a>
+                    </div>
+                    <p class="mini about-me-status" data-guided-status aria-live="polite">Start with any detail you are comfortable sharing.</p>
+                </div>
+            </section>
+
             <section class="card" id="builder">
                 <span class="tag">Personal Builder</span>
                 <h2>Build Your Own Story</h2>
@@ -133,15 +168,24 @@
                                     <input name="age" type="number" min="1" max="120" inputmode="numeric" placeholder="35">
                                 </label>
                                 <label class="about-me-field">Origin after <code>Jien</code>
+                                    <select data-smart-origin aria-label="Choose a ready-made origin form">
+                                        <option value="">Choose a ready-made form</option>
+                                    </select>
                                     <input name="origin" type="text" placeholder="mill-Italja">
                                 </label>
                                 <label class="about-me-field">Place after <code>Noqgħod</code>
+                                    <select data-smart-residence aria-label="Choose a ready-made place form">
+                                        <option value="">Choose a ready-made form</option>
+                                    </select>
                                     <input name="residence" type="text" placeholder="il-Mosta">
                                 </label>
                                 <label class="about-me-field">Years living in Malta
                                     <input name="years" type="number" min="1" max="99" inputmode="numeric" placeholder="5">
                                 </label>
                                 <label class="about-me-field">Occupation after <code>Naħdem bħala</code>
+                                    <select data-smart-occupation aria-label="Choose a ready-made occupation form">
+                                        <option value="">Choose a ready-made form</option>
+                                    </select>
                                     <input name="occupation" type="text" placeholder="għalliem">
                                 </label>
                                 <label class="about-me-field about-me-field--full">Work detail beginning with a verb
@@ -192,26 +236,62 @@
                 </div>
             </section>
 
+            <section class="card" id="coverage">
+                <span class="tag">Topic Coverage</span>
+                <h2>See What You Can Say Confidently</h2>
+                <p>The tracker stores only learning status and attempt counts. It never stores the personal details from your story.</p>
+                <div class="about-me-coverage" data-about-me-coverage></div>
+                <p class="mini about-me-status" data-coverage-status aria-live="polite">Progress is saved on this device and included in signed-in cloud sync.</p>
+            </section>
+
             <section class="card" id="self-check">
-                <span class="tag">Random Self-Check</span>
-                <h2>Answer Without Following the Story Order</h2>
-                <p>The questions rotate through the full bank before they repeat. Give your own details, then compare the grammar with the model.</p>
+                <span class="tag">Practice Modes</span>
+                <h2>Recall the Same Topics in Different Ways</h2>
+                <p>Each mode rotates through the full bank before repeating. Change the task when one direction becomes too familiar.</p>
+                <div class="segmented-toggle about-me-mode-toggle" aria-label="Practice mode">
+                    <button class="toggle-chip is-active" type="button" data-practice-mode="question" aria-pressed="true">Questions</button>
+                    <button class="toggle-chip" type="button" data-practice-mode="translation" aria-pressed="false">English to Maltese</button>
+                    <button class="toggle-chip" type="button" data-practice-mode="keywords" aria-pressed="false">Keywords</button>
+                    <button class="toggle-chip" type="button" data-practice-mode="timed" aria-pressed="false">Timed Story</button>
+                </div>
                 <div class="content-group about-me-practice" data-about-me-practice>
-                    <p class="about-me-practice-label">Question</p>
-                    <h3 data-practice-question>Loading question...</h3>
-                    <p class="mini" data-practice-translation></p>
-                    <label class="about-me-field">Your answer
-                        <textarea rows="3" data-practice-answer placeholder="Write an answer or say it aloud first."></textarea>
-                    </label>
-                    <div class="formula about-me-model" data-practice-model hidden>
-                        <strong data-practice-model-text></strong>
-                        <span class="mini" data-practice-model-translation></span>
+                    <div data-practice-card>
+                        <p class="about-me-practice-label" data-practice-label>Question</p>
+                        <h3 data-practice-question>Loading question...</h3>
+                        <p class="mini" data-practice-translation></p>
+                        <label class="about-me-field">Your answer
+                            <textarea rows="3" data-practice-answer placeholder="Write an answer or say it aloud first."></textarea>
+                        </label>
+                        <div class="formula about-me-model" data-practice-model hidden>
+                            <strong data-practice-model-text></strong>
+                            <span class="mini" data-practice-model-translation></span>
+                        </div>
+                        <div class="toolbar-row about-me-actions">
+                            <button class="action-button" type="button" data-practice-reveal>Reveal Model</button>
+                            <button class="action-button" type="button" data-practice-result="incorrect" hidden>Needs Practice</button>
+                            <button class="action-button" type="button" data-practice-result="correct" hidden>I Could Answer</button>
+                            <button class="action-button" type="button" data-practice-next hidden>Next Prompt</button>
+                        </div>
                     </div>
-                    <div class="toolbar-row about-me-actions">
-                        <button class="action-button" type="button" data-practice-reveal>Reveal Model</button>
-                        <button class="action-button" type="button" data-practice-result="incorrect" hidden>Needs Practice</button>
-                        <button class="action-button" type="button" data-practice-result="correct" hidden>I Could Answer</button>
-                        <button class="action-button" type="button" data-practice-next hidden>Next Question</button>
+                    <div class="about-me-timed" data-practice-timed hidden>
+                        <p class="about-me-practice-label">Timed Story</p>
+                        <div class="about-me-timer-header">
+                            <strong class="about-me-timer-display" data-timer-display>0:30</strong>
+                            <div class="segmented-toggle" aria-label="Story duration">
+                                <button class="toggle-chip is-active" type="button" data-timer-duration="30" aria-pressed="true">30 sec</button>
+                                <button class="toggle-chip" type="button" data-timer-duration="60" aria-pressed="false">60 sec</button>
+                                <button class="toggle-chip" type="button" data-timer-duration="120" aria-pressed="false">2 min</button>
+                            </div>
+                        </div>
+                        <p>Speak without reading a script. Use the checklist as prompts, not complete sentences.</p>
+                        <ul class="about-me-timer-checklist" data-timer-checklist></ul>
+                        <div class="toolbar-row about-me-actions">
+                            <button class="action-button" type="button" data-timer-start>Start</button>
+                            <button class="action-button" type="button" data-timer-stop disabled>Stop</button>
+                            <button class="action-button" type="button" data-timer-reset>Reset</button>
+                            <button class="action-button" type="button" data-timer-result="incorrect" hidden>Try Again</button>
+                            <button class="action-button" type="button" data-timer-result="correct" hidden>Completed</button>
+                        </div>
                     </div>
                     <p class="mini about-me-status" data-practice-status aria-live="polite">Loading the complete question bank.</p>
                 </div>
