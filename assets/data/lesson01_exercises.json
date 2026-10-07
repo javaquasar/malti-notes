@@ -1,0 +1,285 @@
+{
+  "topic": "MQF 2 Lesson 01",
+  "sets": [
+    {
+      "id": "lesson01-greetings",
+      "title": "Greetings quick check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "morning",
+          "type": "multiple-choice",
+          "prompt": "You meet a friend in the morning.",
+          "choices": [
+            "Bonġu!",
+            "Il-lejl it-tajjeb!",
+            "L-ikla t-tajba!"
+          ],
+          "answer": "Bonġu!",
+          "explanation": "Bonġu is a morning greeting."
+        },
+        {
+          "id": "evening",
+          "type": "multiple-choice",
+          "prompt": "You wish someone a good evening.",
+          "choices": [
+            "Bonswa!",
+            "Il-waranofsinhar it-tajjeb!",
+            "Grazzi!"
+          ],
+          "answer": "Bonswa!",
+          "explanation": "Bonswa is an evening greeting."
+        },
+        {
+          "id": "night",
+          "type": "multiple-choice",
+          "prompt": "Someone is going to bed.",
+          "choices": [
+            "Il-lejl it-tajjeb!",
+            "Il-lejla t-tajba!",
+            "Merħba!"
+          ],
+          "answer": "Il-lejl it-tajjeb!",
+          "explanation": "Lejl means night; lejla means evening."
+        },
+        {
+          "id": "female",
+          "type": "multiple-choice",
+          "prompt": "A female speaker answers Kif int?",
+          "choices": [
+            "Tajba, grazzi.",
+            "Tajjeb, grazzi.",
+            "Kbir, grazzi."
+          ],
+          "answer": "Tajba, grazzi.",
+          "explanation": "Tajba is the feminine form."
+        },
+        {
+          "id": "plural",
+          "type": "multiple-choice",
+          "prompt": "You say goodbye to several people.",
+          "choices": [
+            "Narawkom!",
+            "Narawk!",
+            "Insellimlek!"
+          ],
+          "answer": "Narawkom!",
+          "explanation": "Narawkom addresses several people."
+        }
+      ]
+    },
+    {
+      "id": "lesson01-polite",
+      "title": "Situations from the worksheet",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "situation-1",
+          "type": "multiple-choice",
+          "prompt": "You say this to wish someone a good evening.",
+          "choices": [
+            "Bonswa.",
+            "Grazzi.",
+            "Jekk jogħġbok."
+          ],
+          "answer": "Bonswa.",
+          "explanation": "Good evening."
+        },
+        {
+          "id": "situation-2",
+          "type": "multiple-choice",
+          "prompt": "You say this to thank someone.",
+          "choices": [
+            "Grazzi.",
+            "Bonġu.",
+            "Bezzjoni."
+          ],
+          "answer": "Grazzi.",
+          "explanation": "Thank you."
+        },
+        {
+          "id": "situation-3",
+          "type": "multiple-choice",
+          "prompt": "We use this greeting when we see someone we know in the morning.",
+          "choices": [
+            "Bonġu.",
+            "Jekk jogħġbok.",
+            "Il-lejl it-tajjeb."
+          ],
+          "answer": "Bonġu.",
+          "explanation": "Good morning."
+        },
+        {
+          "id": "situation-4",
+          "type": "multiple-choice",
+          "prompt": "You say this to ask someone to tell you or give you something.",
+          "choices": [
+            "Jekk jogħġbok.",
+            "Bezzjoni.",
+            "M'hemmx imniex."
+          ],
+          "answer": "Jekk jogħġbok.",
+          "explanation": "Please."
+        },
+        {
+          "id": "situation-5",
+          "type": "multiple-choice",
+          "prompt": "You say this when asking someone for their blessing.",
+          "choices": [
+            "Bezzjoni.",
+            "Il-lejl it-tajjeb.",
+            "Saħħa."
+          ],
+          "answer": "Bezzjoni.",
+          "explanation": "Your blessing, please."
+        },
+        {
+          "id": "situation-6",
+          "type": "multiple-choice",
+          "prompt": "You say this to wish someone a good night.",
+          "choices": [
+            "Il-lejl it-tajjeb.",
+            "M'hemmx imniex.",
+            "Bonswa."
+          ],
+          "answer": "Il-lejl it-tajjeb.",
+          "explanation": "Good night."
+        },
+        {
+          "id": "situation-7",
+          "type": "multiple-choice",
+          "prompt": "You say this in reply after someone has thanked you.",
+          "choices": [
+            "M'hemmx imniex.",
+            "Saħħa.",
+            "Grazzi."
+          ],
+          "answer": "M'hemmx imniex.",
+          "explanation": "You are welcome."
+        },
+        {
+          "id": "situation-8",
+          "type": "multiple-choice",
+          "prompt": "You say this when you are about to part from someone.",
+          "choices": [
+            "Saħħa.",
+            "Bonswa.",
+            "Bonġu."
+          ],
+          "answer": "Saħħa.",
+          "explanation": "Bye."
+        }
+      ]
+    },
+    {
+      "id": "lesson01-conversation",
+      "title": "Conversation help quick check",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "repeat",
+          "type": "multiple-choice",
+          "prompt": "Ask someone to repeat.",
+          "choices": [
+            "Tista' terġa' tirrepeti?",
+            "Kemm jiswa?",
+            "Minn fejn int?"
+          ],
+          "answer": "Tista' terġa' tirrepeti?",
+          "explanation": "Use this when you need to hear the words again."
+        },
+        {
+          "id": "slow",
+          "type": "multiple-choice",
+          "prompt": "Ask someone to speak slowly.",
+          "choices": [
+            "Tista' titkellem bil-mod?",
+            "Żomm il-linja.",
+            "Għaġġel!"
+          ],
+          "answer": "Tista' titkellem bil-mod?",
+          "explanation": "Bil-mod means slowly."
+        },
+        {
+          "id": "understand",
+          "type": "multiple-choice",
+          "prompt": "Say that you do not understand.",
+          "choices": [
+            "Ma nifhimx.",
+            "Ma nafx.",
+            "Ma niflaħx."
+          ],
+          "answer": "Ma nifhimx.",
+          "explanation": "Ma nafx means I do not know; Ma niflaħx means I feel unwell."
+        },
+        {
+          "id": "write",
+          "type": "fill-blank",
+          "prompt": "Complete: Iktibha, jekk ___.",
+          "answer": "jogħġbok",
+          "accepted": [
+            "jogħġbok"
+          ],
+          "explanation": "Jekk jogħġbok means please."
+        }
+      ]
+    },
+    {
+      "id": "lesson01-getting-to-know",
+      "title": "Complete the five sentences",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "hello",
+          "type": "fill-blank",
+          "prompt": "___! Kif int?",
+          "answer": "Bonġu",
+          "accepted": [
+            "Bonġu"
+          ],
+          "explanation": "Hello! How are you?"
+        },
+        {
+          "id": "name",
+          "type": "fill-blank",
+          "prompt": "X'___?",
+          "answer": "jismek",
+          "accepted": [
+            "jismek"
+          ],
+          "explanation": "What is your name?"
+        },
+        {
+          "id": "pleased",
+          "type": "fill-blank",
+          "prompt": "Għandi ___ niltaqa' miegħek.",
+          "answer": "pjaċir",
+          "accepted": [
+            "pjaċir"
+          ],
+          "explanation": "Pleased to meet you."
+        },
+        {
+          "id": "work",
+          "type": "fill-blank",
+          "prompt": "X'inhu x-___ tiegħek?",
+          "answer": "xogħol",
+          "accepted": [
+            "xogħol"
+          ],
+          "explanation": "What is your job?"
+        },
+        {
+          "id": "bye",
+          "type": "fill-blank",
+          "prompt": "Narak aktar tard. ___!",
+          "answer": "Saħħa",
+          "accepted": [
+            "Saħħa"
+          ],
+          "explanation": "See you later. Bye!"
+        }
+      ]
+    }
+  ]
+}

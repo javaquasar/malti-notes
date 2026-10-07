@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}ea2b78a44c26`;
+const CACHE_NAME = `${CACHE_PREFIX}fee52b9b909e`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
     "./colors_maltese.html",
     "./common_mistakes.html",
     "./comparisons.html",
+    "./conversation_help.html",
     "./course_chapter.html",
     "./course_exam.html",
     "./course_path.html",
@@ -22,7 +23,9 @@ const CORE_ASSETS = [
     "./environment_recycling.html",
     "./family_home_food.html",
     "./food_preferences.html",
+    "./getting_to_know.html",
     "./grammar_path.html",
+    "./greetings.html",
     "./health_doctor.html",
     "./hobbies_future.html",
     "./home_furniture.html",
@@ -37,6 +40,7 @@ const CORE_ASSETS = [
     "./numbers_calendar_time.html",
     "./picture_description.html",
     "./places_events.html",
+    "./polite_phrases.html",
     "./prepositions_place.html",
     "./pronouns_possessives.html",
     "./restaurant_ordering.html",
@@ -91,6 +95,7 @@ const CORE_ASSETS = [
     "./assets/js/init-verbs-course-bank.js",
     "./assets/js/knowledge-map.js",
     "./assets/js/learning-content.js",
+    "./assets/js/lesson01-supplements.js",
     "./assets/js/mistake-store.js",
     "./assets/js/mistakes.js",
     "./assets/js/numbers-time-drill.js",
@@ -131,6 +136,17 @@ const CORE_ASSETS = [
     "./assets/data/grammar_targets.json",
     "./assets/data/about_me_examples.json",
     "./assets/data/about_me_options.json",
+    "./assets/data/lesson01_exercises.json",
+    "./assets/data/about_me_lesson01_examples.json",
+    "./assets/data/conversation_help_lesson01_examples.json",
+    "./assets/data/directions_town_lesson01_examples.json",
+    "./assets/data/getting_to_know_lesson01_examples.json",
+    "./assets/data/greetings_lesson01_examples.json",
+    "./assets/data/health_doctor_lesson01_examples.json",
+    "./assets/data/introductions_alphabet_lesson01_examples.json",
+    "./assets/data/numbers_calendar_time_lesson01_examples.json",
+    "./assets/data/polite_phrases_lesson01_examples.json",
+    "./assets/data/shopping_clothes_lesson01_examples.json",
     "./assets/img/favicon-option-speech.svg"
   ];
 const LAZY_ASSETS = [
