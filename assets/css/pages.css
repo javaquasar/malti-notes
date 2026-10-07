@@ -323,6 +323,15 @@
 
 .about-me-child-fields { border: 0; border-top: 1px solid var(--color-border); padding: 12px 0; margin: 0; min-width: 0; }
 .about-me-child-fields[hidden] { display: none; }
+.about-me-story-options { margin-bottom: var(--space-xl); }
+.about-me-check { display: flex; align-items: center; gap: var(--space-sm); min-height: 44px; }
+.about-me-check input { width: 18px; height: 18px; flex: 0 0 18px; }
+.about-me-details { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); border: 0; padding: 0; margin: 0 0 var(--space-xl); }
+.about-me-details legend { font-weight: 700; margin-bottom: var(--space-sm); }
+.about-me-output p, .about-me-personal-practice { overflow-wrap: anywhere; }
+.about-me-story-english { display: block; font-size: 0.9rem; color: var(--text-muted); }
+.about-me-personal-practice { border-top: 1px solid var(--border-default); margin-top: var(--space-xl); padding-top: var(--space-xl); }
+.about-me-personal-practice select { max-width: 280px; }
 .about-me-child-fields legend { font-weight: 700; padding: 0 8px 0 0; }
 .about-me-tool {
   background: var(--color-surface-muted);

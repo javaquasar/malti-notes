@@ -162,6 +162,20 @@
                 <p>Enter Maltese words or short phrases. Empty fields are skipped, so a short answer remains natural.</p>
                 <div class="content-group about-me-tool">
                     <form class="about-me-form" data-about-me-form>
+                        <div class="about-me-form-grid about-me-story-options">
+                            <label class="about-me-field">Story length<select name="storyVersion"><option value="full">Full story</option><option value="short">Short introduction</option></select></label>
+                            <label class="about-me-field">Copy format<select name="copyFormat"><option value="maltese">Maltese only</option><option value="bilingual">Maltese + English</option></select></label>
+                            <label class="about-me-check"><input type="checkbox" name="showEnglish" checked>English translation</label>
+                            <label class="about-me-check"><input type="checkbox" name="numberWords">Numbers in words (up to 100)</label>
+                        </div>
+                        <fieldset class="about-me-details">
+                            <legend>Story details</legend>
+                            <label class="about-me-check"><input type="checkbox" name="includeDuration" checked>Time in Malta</label>
+                            <label class="about-me-check"><input type="checkbox" name="includeDuties" checked>Work duties</label>
+                            <label class="about-me-check"><input type="checkbox" name="includeFamily" checked>Family</label>
+                            <label class="about-me-check"><input type="checkbox" name="includeChildDetails" checked>Children's names and ages</label>
+                            <label class="about-me-check"><input type="checkbox" name="includeHobbies" checked>Hobbies</label>
+                        </fieldset>
                         <div class="about-me-tool-layout">
                             <div class="about-me-form-grid">
                                 <label class="about-me-field">Name
@@ -175,12 +189,14 @@
                                         <option value="">Choose a ready-made form</option>
                                     </select>
                                     <input name="origin" type="text" placeholder="mill-Italja">
+                                    <input name="originEnglish" type="text" aria-label="Origin in English" placeholder="Country in English (custom origin)">
                                 </label>
                                 <label class="about-me-field">Place after <code>Noqgħod</code>
                                     <select data-smart-residence aria-label="Choose a ready-made place form">
                                         <option value="">Choose a ready-made form</option>
                                     </select>
                                     <input name="residence" type="text" placeholder="il-Mosta">
+                                    <input name="residenceEnglish" type="text" aria-label="Place in English" placeholder="Place in English (custom place)">
                                 </label>
                                 <label class="about-me-field">Years living in Malta
                                     <input name="years" type="number" min="1" max="99" inputmode="numeric" placeholder="5">
@@ -190,9 +206,11 @@
                                         <option value="">Choose a ready-made form</option>
                                     </select>
                                     <input name="occupation" type="text" placeholder="għalliem">
+                                    <input name="occupationEnglish" type="text" aria-label="Occupation in English" placeholder="Occupation in English (custom occupation)">
                                 </label>
                                 <label class="about-me-field about-me-field--full">Work detail beginning with a verb
                                     <textarea name="workDetail" rows="2" placeholder="ngħallem il-Malti u nipprepara l-lezzjonijiet"></textarea>
+                                    <textarea name="workDetailEnglish" rows="2" aria-label="Work duties in English" placeholder="I teach Maltese and prepare lessons"></textarea>
                                 </label>
                                 <label class="about-me-field">Speaker form
                                     <select name="gender">
@@ -236,10 +254,15 @@
                                 </fieldset>
                                 <label class="about-me-field about-me-field--full">Hobbies after <code>nħobb</code>
                                     <textarea name="hobbies" rows="2" placeholder="naqra u nimxi ħdejn il-baħar"></textarea>
+                                    <textarea name="hobbiesEnglish" rows="2" aria-label="Hobbies in English" placeholder="read and walk by the sea"></textarea>
                                 </label>
+                                <label class="about-me-check"><input type="checkbox" name="childrenSchool">Children go to school</label>
+                                <label class="about-me-check"><input type="checkbox" name="familyLikesMalta">My family likes Malta</label>
+                                <label class="about-me-field about-me-field--full">Why I am learning Maltese<select name="learningReason"><option value="">Skip this detail</option><option value="home">I live in Malta</option><option value="people">To talk to people</option><option value="work">I work in Malta</option></select></label>
                             </div>
                             <div class="about-me-preview">
                                 <h3>Your Maltese Story</h3>
+                                <p class="mini" data-story-length></p>
                                 <div class="about-me-output" data-about-me-output aria-live="polite"></div>
                             </div>
                         </div>
@@ -251,6 +274,18 @@
                         </div>
                         <p class="mini about-me-status" data-about-me-builder-status aria-live="polite">The draft stays on this device and is excluded from cloud progress sync.</p>
                     </form>
+                    <div class="about-me-personal-practice" data-personal-practice>
+                        <h3>Questions About Your Story</h3>
+                        <label class="about-me-field">Answer support<select data-personal-support><option value="model">Full answer</option><option value="keywords">Key words</option><option value="none">No hints</option></select></label>
+                        <p class="mini" data-personal-position></p>
+                        <h4 data-personal-question></h4>
+                        <p class="mini" data-personal-translation></p>
+                        <p data-personal-answer></p>
+                        <div class="toolbar-row about-me-actions">
+                            <button class="action-button" type="button" data-personal-reveal>Reveal Answer</button>
+                            <button class="action-button" type="button" data-personal-next>Next Question</button>
+                        </div>
+                    </div>
                 </div>
             </section>
 

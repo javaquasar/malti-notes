@@ -8,7 +8,10 @@
   const fields = [
     "name", "age", "origin", "residence", "years", "occupation",
     "workDetail", "gender", "relationship", "spouseName", "children", "hobbies",
-    "child1Name", "child1Gender", "child1Age", "child2Name", "child2Gender", "child2Age"
+    "child1Name", "child1Gender", "child1Age", "child2Name", "child2Gender", "child2Age",
+    "storyVersion", "copyFormat", "showEnglish", "numberWords", "includeDuration", "includeDuties",
+    "includeFamily", "includeChildDetails", "includeHobbies", "originEnglish", "residenceEnglish",
+    "occupationEnglish", "workDetailEnglish", "hobbiesEnglish", "childrenSchool", "familyLikesMalta", "learningReason"
   ];
   const topics = [
     { id: "name", label: "Name", field: "name", question: "What is your name?", help: "Use Jisimni followed by your name.", placeholder: "Alex" },
@@ -29,18 +32,18 @@
   };
   let optionData = { countries: [], places: [], occupations: [] };
   let selectedOccupation = "";
+  let personalIndex = 0;
+  let personalRevealed = false;
 
   function clean(value) {
     return String(value || "").trim().replace(/[.!?]+$/, "");
   }
 
-  function sentence(value) {
-    const text = clean(value);
-    return text ? `${text}.` : "";
-  }
-
   function valuesFromForm() {
-    return Object.fromEntries(fields.map((name) => [name, form?.elements[name]?.value || ""]));
+    return Object.fromEntries(fields.map((name) => {
+      const field = form?.elements[name];
+      return [name, field?.type === "checkbox" ? field.checked : field?.value || ""];
+    }));
   }
 
   function applyValues(values) {
@@ -49,42 +52,33 @@
       values = { ...values, children: "one", child1Gender: values.child1Gender || (values.children === "daughter" ? "female" : "male") };
     }
     fields.forEach((name) => {
-      if (form.elements[name] && values[name] !== undefined) form.elements[name].value = values[name];
+      const field = form.elements[name];
+      if (!field || values[name] === undefined) return;
+      if (field.type === "checkbox") field.checked = values[name] === true;
+      else field.value = values[name];
     });
   }
 
   function buildStory(values) {
-    const lines = [];
-    const name = clean(values.name);
-    const age = clean(values.age);
-    const origin = clean(values.origin);
-    const residence = clean(values.residence);
-    const years = clean(values.years);
-    const occupation = clean(values.occupation);
-    const workDetail = clean(values.workDetail);
-    const spouseName = clean(values.spouseName);
-    const hobbies = clean(values.hobbies);
-    const feminine = values.gender === "female";
+    return window.MaltiStoryCore.rows(values, optionData).map((row) => row.maltese);
+  }
 
-    if (name) lines.push(`Jisimni ${name}.`);
-    if (age) lines.push(`Għandi ${age} sena.`);
-    if (origin) {
-      const originLine = /^m(?:inn|ill-|ir-|is-|it-|ix-)/i.test(origin) ? `Jien ${origin}` : `Jien minn ${origin}`;
-      lines.push(sentence(originLine));
-    }
-    if (residence) lines.push(`Noqgħod ${residence}.`);
-    if (years) lines.push(`Ilni noqgħod f'Malta għal ${years} ${years === "1" ? "sena" : "snin"}.`);
-    if (occupation) lines.push(`Naħdem bħala ${occupation}.`);
-    if (workDetail) lines.push(sentence(`Fuq ix-xogħol ${workDetail}`));
-    if (values.relationship === "married") {
-      lines.push(`Jien ${feminine ? "miżżewġa" : "miżżewweġ"}.`);
-      if (spouseName) lines.push(feminine ? `Żewġi jismu ${spouseName}.` : `Marti jisimha ${spouseName}.`);
-    } else if (values.relationship === "not-married") {
-      lines.push(`M'iniex ${feminine ? "miżżewġa" : "miżżewweġ"}.`);
-    }
-    lines.push(...window.MaltiStoryCore.children(values));
-    if (hobbies) lines.push(sentence(`Fil-ħin liberu tiegħi nħobb ${hobbies}`));
-    return lines;
+  function renderPersonalPractice(reset = false) {
+    const panel = document.querySelector("[data-personal-practice]");
+    if (!panel) return;
+    const rows = window.MaltiStoryCore.rows(valuesFromForm(), optionData);
+    if (reset) { personalIndex = 0; personalRevealed = false; }
+    personalIndex = rows.length ? personalIndex % rows.length : 0;
+    const row = rows[personalIndex];
+    panel.querySelector("[data-personal-position]").textContent = row ? `${personalIndex + 1} / ${rows.length}` : "Add details to your story first.";
+    panel.querySelector("[data-personal-question]").textContent = row?.question || "";
+    panel.querySelector("[data-personal-translation]").textContent = row?.questionEnglish || "";
+    const support = panel.querySelector("[data-personal-support]").value;
+    const answer = panel.querySelector("[data-personal-answer]");
+    answer.textContent = row ? (personalRevealed || support === "model" ? row.maltese : support === "keywords" ? row.maltese.split(/\s+/).filter((_, index) => index % 3 === 0).join(" / ") : "") : "";
+    answer.hidden = !answer.textContent;
+    panel.querySelector("[data-personal-reveal]").disabled = !row || personalRevealed || support === "model";
+    panel.querySelector("[data-personal-next]").disabled = !row;
   }
 
   function renderStory() {
@@ -94,7 +88,11 @@
       fieldset.hidden = Number(fieldset.dataset.childFields) > count;
       fieldset.disabled = fieldset.hidden;
     });
-    const lines = buildStory(valuesFromForm());
+    const values = valuesFromForm();
+    const lines = window.MaltiStoryCore.rows(values, optionData);
+    const words = lines.reduce((total, row) => total + row.maltese.split(/\s+/).length, 0);
+    document.querySelector("[data-story-length]").textContent = `${lines.length} sentences · ${words} words · about ${Math.max(1, Math.round(words / 100 * 60))} seconds at 100 words/min`;
+    renderPersonalPractice(true);
     output.innerHTML = "";
     if (!lines.length) {
       const placeholder = document.createElement("p");
@@ -105,7 +103,15 @@
     }
     lines.forEach((line) => {
       const paragraph = document.createElement("p");
-      paragraph.textContent = line;
+      paragraph.lang = "mt";
+      paragraph.textContent = line.maltese;
+      if (values.showEnglish) {
+        const translation = document.createElement("span");
+        translation.lang = "en";
+        translation.className = "about-me-story-english";
+        translation.textContent = line.english || "English translation needed.";
+        paragraph.appendChild(translation);
+      }
       output.appendChild(paragraph);
     });
   }
@@ -120,7 +126,9 @@
       occupation: "għalliem", workDetail: "ngħallem il-Malti u nipprepara l-lezzjonijiet",
       gender: "male", relationship: "married", spouseName: "Sara", children: "two",
       child1Name: "Luca", child1Gender: "male", child1Age: "9", child2Name: "Maya", child2Gender: "female", child2Age: "6",
-      hobbies: "naqra u nimxi ħdejn il-baħar"
+      hobbies: "naqra u nimxi ħdejn il-baħar",
+      originEnglish: "", residenceEnglish: "", occupationEnglish: "",
+      workDetailEnglish: "I teach Maltese and prepare lessons", hobbiesEnglish: "read and walk by the sea"
     });
     selectedOccupation = "teacher";
     syncSmartControls();
@@ -129,15 +137,20 @@
   }
 
   async function copyStory() {
-    const text = buildStory(valuesFromForm()).join("\n");
-    if (!text) return setBuilderStatus("Add at least one detail before copying.");
     try {
+      const values = valuesFromForm();
+      const text = window.MaltiStoryCore.copyText(window.MaltiStoryCore.rows(values, optionData), values.copyFormat === "bilingual");
+      if (!text) return setBuilderStatus("Add at least one detail before copying.");
       await navigator.clipboard.writeText(text);
-      setBuilderStatus("Story copied.");
+      setBuilderStatus(values.copyFormat === "bilingual" ? "Story copied with English translation." : "Maltese story copied.");
     } catch (error) {
-      setBuilderStatus("Copy is unavailable in this browser. Select the story text instead.");
+      setBuilderStatus(error.message.startsWith("Add the missing") ? error.message : "Copy is unavailable in this browser. Select the story text instead.");
     }
   }
+
+  document.querySelector("[data-personal-support]")?.addEventListener("change", () => { personalRevealed = false; renderPersonalPractice(); });
+  document.querySelector("[data-personal-reveal]")?.addEventListener("click", () => { personalRevealed = true; renderPersonalPractice(); });
+  document.querySelector("[data-personal-next]")?.addEventListener("click", () => { personalIndex++; personalRevealed = false; renderPersonalPractice(); });
 
   function defaultProgress() {
     return {
@@ -611,6 +624,7 @@
     if (!items.length) throw new Error("The self-check bank is empty.");
     optionData = options;
     setupSmartControls();
+    renderStory();
     renderGuided();
     nextQuestion();
     practice.dataset.aboutMeReady = "true";
@@ -623,6 +637,7 @@
   window.MaltiAboutMe = {
     getProgress: () => JSON.parse(JSON.stringify(progress)),
     getStory: () => buildStory(valuesFromForm()),
+    getStoryRows: () => window.MaltiStoryCore.rows(valuesFromForm(), optionData),
     finishTimer: () => {
       timerRemaining = 0;
       renderTimer();
