@@ -214,11 +214,26 @@
                                     <select name="children">
                                         <option value="">Skip this detail</option>
                                         <option value="none">No children</option>
-                                        <option value="son">One son</option>
-                                        <option value="daughter">One daughter</option>
+                                        <option value="one">One child</option>
                                         <option value="two">Two children</option>
                                     </select>
                                 </label>
+                                <fieldset class="about-me-field--full about-me-child-fields" data-child-fields="1" hidden>
+                                    <legend>Child 1</legend>
+                                    <div class="about-me-form-grid">
+                                        <label class="about-me-field">Name<input name="child1Name" type="text" maxlength="80" autocomplete="off"></label>
+                                        <label class="about-me-field">Gender<select name="child1Gender"><option value="male">Boy</option><option value="female">Girl</option></select></label>
+                                        <label class="about-me-field">Age<input name="child1Age" type="number" min="0" max="120" step="1" inputmode="numeric"></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="about-me-field--full about-me-child-fields" data-child-fields="2" hidden>
+                                    <legend>Child 2</legend>
+                                    <div class="about-me-form-grid">
+                                        <label class="about-me-field">Name<input name="child2Name" type="text" maxlength="80" autocomplete="off"></label>
+                                        <label class="about-me-field">Gender<select name="child2Gender"><option value="male">Boy</option><option value="female" selected>Girl</option></select></label>
+                                        <label class="about-me-field">Age<input name="child2Age" type="number" min="0" max="120" step="1" inputmode="numeric"></label>
+                                    </div>
+                                </fieldset>
                                 <label class="about-me-field about-me-field--full">Hobbies after <code>nħobb</code>
                                     <textarea name="hobbies" rows="2" placeholder="naqra u nimxi ħdejn il-baħar"></textarea>
                                 </label>
@@ -344,6 +359,7 @@ window.renderExampleBanksFromData({
     pageBulkLabel: "Add all about-me phrases"
 });
 </script>
+<script src="./assets/js/about-me-story-core.js"></script>
 <script src="./assets/js/about-me.js"></script>
 <script src="./assets/js/site-header.js"></script>
 <script src="./assets/js/lesson01-supplements.js" data-lesson01-src="./assets/data/about_me_lesson01_examples.json"></script>

@@ -7,7 +7,8 @@
   const storage = window.MaltiStorage;
   const fields = [
     "name", "age", "origin", "residence", "years", "occupation",
-    "workDetail", "gender", "relationship", "spouseName", "children", "hobbies"
+    "workDetail", "gender", "relationship", "spouseName", "children", "hobbies",
+    "child1Name", "child1Gender", "child1Age", "child2Name", "child2Gender", "child2Age"
   ];
   const topics = [
     { id: "name", label: "Name", field: "name", question: "What is your name?", help: "Use Jisimni followed by your name.", placeholder: "Alex" },
@@ -18,7 +19,7 @@
     { id: "occupation", label: "Occupation", field: "occupation", question: "What do you do for work?", help: "Choose a ready-made form or enter the occupation after Naħdem bħala.", optionGroup: "occupations", placeholder: "għalliem" },
     { id: "duties", label: "Work duties", field: "workDetail", question: "What do you do at work?", help: "Begin with a verb in the first person.", placeholder: "ngħallem il-Malti u nipprepara l-lezzjonijiet" },
     { id: "family", label: "Family status", field: "relationship", question: "Would you like to mention your relationship status?", help: "The builder changes the Maltese ending with the speaker form.", choices: [["", "Skip this detail"], ["married", "Married"], ["not-married", "Not married"]] },
-    { id: "children", label: "Children", field: "children", question: "Would you like to mention children?", help: "Choose only the line that fits you.", choices: [["", "Skip this detail"], ["none", "No children"], ["son", "One son"], ["daughter", "One daughter"], ["two", "Two children"]] },
+    { id: "children", label: "Children", field: "children", question: "Would you like to mention children?", help: "Choose the number of children and their details.", choices: [["", "Skip this detail"], ["none", "No children"], ["one", "One child"], ["two", "Two children"]] },
     { id: "hobbies", label: "Hobbies", field: "hobbies", question: "What do you like doing in your free time?", help: "Enter one or more verbs after nħobb.", placeholder: "naqra u nimxi ħdejn il-baħar" }
   ];
   const itemTopic = {
@@ -44,6 +45,9 @@
 
   function applyValues(values) {
     if (!form || !values) return;
+    if (values.children === "son" || values.children === "daughter") {
+      values = { ...values, children: "one", child1Gender: values.child1Gender || (values.children === "daughter" ? "female" : "male") };
+    }
     fields.forEach((name) => {
       if (form.elements[name] && values[name] !== undefined) form.elements[name].value = values[name];
     });
@@ -78,16 +82,18 @@
     } else if (values.relationship === "not-married") {
       lines.push(`M'iniex ${feminine ? "miżżewġa" : "miżżewweġ"}.`);
     }
-    const childrenLines = {
-      none: "M'għandix tfal.", son: "Għandi tifel wieħed.", daughter: "Għandi tifla waħda.", two: "Għandi żewġt itfal."
-    };
-    if (childrenLines[values.children]) lines.push(childrenLines[values.children]);
+    lines.push(...window.MaltiStoryCore.children(values));
     if (hobbies) lines.push(sentence(`Fil-ħin liberu tiegħi nħobb ${hobbies}`));
     return lines;
   }
 
   function renderStory() {
     if (!output || !form) return;
+    const count = window.MaltiStoryCore.childCount(form.elements.children.value);
+    form.querySelectorAll("[data-child-fields]").forEach((fieldset) => {
+      fieldset.hidden = Number(fieldset.dataset.childFields) > count;
+      fieldset.disabled = fieldset.hidden;
+    });
     const lines = buildStory(valuesFromForm());
     output.innerHTML = "";
     if (!lines.length) {
@@ -113,6 +119,7 @@
       name: "Alex", age: "35", origin: "mill-Italja", residence: "il-Mosta", years: "5",
       occupation: "għalliem", workDetail: "ngħallem il-Malti u nipprepara l-lezzjonijiet",
       gender: "male", relationship: "married", spouseName: "Sara", children: "two",
+      child1Name: "Luca", child1Gender: "male", child1Age: "9", child2Name: "Maya", child2Gender: "female", child2Age: "6",
       hobbies: "naqra u nimxi ħdejn il-baħar"
     });
     selectedOccupation = "teacher";
@@ -340,6 +347,30 @@
     control.append(input);
     input.addEventListener("input", updateGuidedPreview);
     input.addEventListener("change", updateGuidedPreview);
+    if (topic.id === "children") {
+      const childControls = document.createElement("div");
+      childControls.className = "about-me-form-grid";
+      control.append(childControls);
+      const renderChildren = () => {
+        childControls.replaceChildren();
+        const count = window.MaltiStoryCore.childCount(input.value);
+        for (let index = 1; index <= count; index++) {
+          [["Name", "text"], ["Gender", "select"], ["Age", "number"]].forEach(([suffix, type]) => {
+            const field = `child${index}${suffix}`;
+            const label = document.createElement("label"); label.className = "about-me-field"; label.textContent = `Child ${index} ${suffix.toLowerCase()}`;
+            const childInput = document.createElement(type === "select" ? "select" : "input");
+            if (type === "select") { childInput.add(new Option("Boy", "male")); childInput.add(new Option("Girl", "female")); }
+            else { childInput.type = type; if (type === "number") { childInput.min = "0"; childInput.max = "120"; childInput.step = "1"; } }
+            childInput.value = form.elements[field].value;
+            childInput.setAttribute("aria-label", label.textContent);
+            const update = () => { form.elements[field].value = childInput.value; updateGuidedPreview(); };
+            childInput.addEventListener("input", update); childInput.addEventListener("change", update);
+            label.append(childInput); childControls.append(label);
+          });
+        }
+      };
+      input.addEventListener("change", renderChildren); renderChildren();
+    }
     guided.querySelector("[data-guided-back]").disabled = guidedIndex === 0;
     guided.querySelector("[data-guided-next]").textContent = guidedIndex === topics.length - 1 ? "Finish Story" : "Save and Continue";
     guided.querySelector("[data-guided-builder]").hidden = true;

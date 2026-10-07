@@ -25,5 +25,8 @@
 .lesson-practice input[type="file"] { max-width: 100%; }
 .lp-priority { display: block; color: var(--color-text-muted); margin-top: 8px; font-size: 13px; }
 .lesson-practice .lp-prompt { white-space: pre-line; }
+.lesson-practice .lp-personal { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
+.lp-personal input { width: 20px; height: 20px; flex: 0 0 auto; }
+.lesson-practice .lp-story-link { color: var(--color-brand); }
 .lesson-practice [hidden] { display: none !important; }
 @media (max-width: 520px) { .lp-skills { grid-template-columns: 1fr; } .lp-controls > label { flex: 1 1 140px; } .lesson-practice h2 { font-size: 22px; } }

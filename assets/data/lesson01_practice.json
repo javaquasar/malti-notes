@@ -11,6 +11,9 @@
       "note": "Morning greeting.",
       "accepted": [
         "L-għodwa t-tajba!"
+      ],
+      "replyAccepted": [
+        "L-għodwa t-tajba!"
       ]
     },
     {
@@ -23,6 +26,10 @@
       "note": "Evening greeting, not a bedtime farewell.",
       "accepted": [
         "Bonswa."
+      ],
+      "replyAccepted": [
+        "Il-lejla t-tajba.",
+        "Bonswa."
       ]
     },
     {
@@ -33,7 +40,10 @@
       "english": "Good night.",
       "reply": "Lilek ukoll.",
       "note": "A wish before sleeping or leaving at night.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Il-lejl it-tajjeb."
+      ]
     },
     {
       "id": "meet",
@@ -43,7 +53,13 @@
       "english": "Pleased to meet you.",
       "reply": "Tant ieħor.",
       "note": "When meeting someone for the first time.",
-      "accepted": []
+      "accepted": [
+        "Għandi pjaċir niltaqa' miegħek."
+      ],
+      "replyAccepted": [
+        "Għandi pjaċir ukoll.",
+        "Għandi pjaċir."
+      ]
     },
     {
       "id": "how",
@@ -53,7 +69,12 @@
       "english": "How are you?",
       "reply": "Tajjeb, grazzi. U int?",
       "note": "Tajjeb for a male speaker; Tajba for a female speaker.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Tajjeb, grazzi.",
+        "Tajba, grazzi.",
+        "Tajba, grazzi. U int?"
+      ]
     },
     {
       "id": "goodbye",
@@ -64,8 +85,10 @@
       "reply": "Saħħa!",
       "note": "A common informal farewell.",
       "accepted": [
-        "Ċaw!"
-      ]
+        "Ċaw!",
+        "Narak."
+      ],
+      "replyAccepted": []
     },
     {
       "id": "thanks",
@@ -75,7 +98,12 @@
       "english": "Thank you.",
       "reply": "M'hemmx imniex.",
       "note": "The reply means you are welcome.",
-      "accepted": []
+      "accepted": [
+        "Grazzi ħafna."
+      ],
+      "replyAccepted": [
+        "Ta' xejn."
+      ]
     },
     {
       "id": "please",
@@ -85,7 +113,10 @@
       "english": "Please.",
       "reply": "Iva.",
       "note": "Add to a request; Iva is an affirmative response, not a fixed formula.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Iva, żgur."
+      ]
     },
     {
       "id": "meal",
@@ -95,7 +126,10 @@
       "english": "Enjoy your meal.",
       "reply": "Grazzi.",
       "note": "A wish before eating.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Grazzi ħafna."
+      ]
     },
     {
       "id": "birthday",
@@ -105,7 +139,10 @@
       "english": "Happy birthday.",
       "reply": "Grazzi.",
       "note": "A birthday wish.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Grazzi ħafna."
+      ]
     },
     {
       "id": "also",
@@ -115,7 +152,10 @@
       "english": "You too.",
       "reply": "Grazzi.",
       "note": "Return a suitable wish, such as good evening.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Grazzi ħafna."
+      ]
     },
     {
       "id": "understand",
@@ -125,7 +165,10 @@
       "english": "I do not understand.",
       "reply": "Skużani.",
       "note": "Use when the message is not clear.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Tista' tirrepeti, jekk jogħġbok?"
+      ]
     },
     {
       "id": "repeat",
@@ -135,7 +178,14 @@
       "english": "Can you repeat, please?",
       "reply": "Iva.",
       "note": "A polite request for repetition.",
-      "accepted": []
+      "accepted": [
+        "Tista' terġa' tirrepeti?",
+        "Tista' tirrepeti?",
+        "Tista' terġa' tirrepeti, jekk jogħġbok?"
+      ],
+      "replyAccepted": [
+        "Iva, żgur."
+      ]
     },
     {
       "id": "slow",
@@ -145,7 +195,12 @@
       "english": "Slowly, please.",
       "reply": "Iva.",
       "note": "Ask for a slower pace.",
-      "accepted": []
+      "accepted": [
+        "Tista' titkellem bil-mod, jekk jogħġbok?"
+      ],
+      "replyAccepted": [
+        "Iva, żgur."
+      ]
     },
     {
       "id": "sorry",
@@ -155,7 +210,10 @@
       "english": "Excuse me / sorry.",
       "reply": "M'hemmx imniex.",
       "note": "Get attention or apologise; the reply fits an apology.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Ta' xejn."
+      ]
     },
     {
       "id": "phone",
@@ -165,7 +223,10 @@
       "english": "Who is speaking, please?",
       "reply": "Jien Pawlu.",
       "note": "On the telephone.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Jisimni Pawlu."
+      ]
     },
     {
       "id": "name",
@@ -175,7 +236,13 @@
       "english": "What is your name?",
       "reply": "Jien Pawlu.",
       "note": "Jien plus a name is a simple introduction.",
-      "accepted": []
+      "accepted": [
+        "Kif jismek?"
+      ],
+      "replyAccepted": [
+        "Jisimni Pawlu.",
+        "Jien jisimni Pawlu."
+      ]
     },
     {
       "id": "surname",
@@ -185,7 +252,10 @@
       "english": "What is your surname?",
       "reply": "Kunjomi Borg.",
       "note": "Kunjomi means my surname.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Il-kunjom tiegħi huwa Borg."
+      ]
     },
     {
       "id": "origin",
@@ -195,7 +265,11 @@
       "english": "Where are you from?",
       "reply": "Jien mill-Ukrajna.",
       "note": "Use the country form with its article.",
-      "accepted": []
+      "accepted": [],
+      "replyAccepted": [
+        "Jien minn Malta.",
+        "Mill-Ukrajna."
+      ]
     },
     {
       "id": "hobby",
@@ -205,7 +279,13 @@
       "english": "What do you like doing in your free time?",
       "reply": "Inħobb naqra kotba.",
       "note": "Inħobb is followed here by a present-tense verb.",
-      "accepted": []
+      "accepted": [
+        "X'tħobb tagħmel fil-ħin liberu?"
+      ],
+      "replyAccepted": [
+        "Jien inħobb naqra kotba.",
+        "Inħobb naqra."
+      ]
     }
   ],
   "contrasts": [
@@ -259,49 +339,75 @@
           "role": "Marija",
           "maltese": "Bonġu! Jien Marija. Kif jismek?",
           "english": "Good morning! I am Marija. What is your name?",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "Bonġu! Jisimni Marija. X'jismek?"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Bonġu! Jien Pawlu. Għandi pjaċir niltaqa' miegħek.",
           "english": "Good morning! I am Pawlu. Pleased to meet you.",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Bonġu! Jisimni Pawlu. Għandi pjaċir niltaqa' miegħek.",
+            "Bonġu! Jien Pawlu. Għandi pjaċir."
+          ]
         },
         {
           "role": "Marija",
           "maltese": "Għandi pjaċir ukoll. Minn fejn int, Pawlu?",
           "english": "Pleased to meet you too. Where are you from, Pawlu?",
-          "skill": "reply"
+          "skill": "reply",
+          "accepted": [
+            "Tant ieħor. Minn fejn int, Pawlu?",
+            "Għandi pjaċir ukoll. Minn fejn int?"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Jien minn Ħaż-Żabbar. U int?",
           "english": "I am from Ħaż-Żabbar. And you?",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Minn Ħaż-Żabbar. U int?"
+          ]
         },
         {
           "role": "Marija",
           "maltese": "Jien mill-Mosta. X'tagħmel fil-ħajja?",
           "english": "I am from Mosta. What do you do?",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Jien mill-Mosta. X'inhu x-xogħol tiegħek?"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Naħdem bħala għalliem fi skola sekondarja. U int?",
           "english": "I work as a teacher in a secondary school. And you?",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Jien naħdem bħala għalliem fi skola sekondarja. U int?"
+          ]
         },
         {
           "role": "Marija",
           "maltese": "Jien naħdem f'uffiċċju bħala segretarja.",
           "english": "I work in an office as a secretary.",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Naħdem f'uffiċċju bħala segretarja."
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Saħħa!",
           "english": "Goodbye!",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "Ċaw!"
+          ]
         }
       ]
     },
@@ -317,49 +423,73 @@
           "role": "Marija",
           "maltese": "Bonġu!",
           "english": "Good morning!",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "L-għodwa t-tajba!"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Bonġu! Kif int?",
           "english": "Good morning! How are you?",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "L-għodwa t-tajba! Kif int?"
+          ]
         },
         {
           "role": "Marija",
           "maltese": "Tajba, grazzi. U int?",
           "english": "Well, thanks. And you?",
-          "skill": "reply"
+          "skill": "reply",
+          "accepted": [
+            "Tajba, grazzi. U inti?"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Tajjeb, grazzi.",
           "english": "Well, thanks.",
-          "skill": "reply"
+          "skill": "reply",
+          "accepted": [
+            "Jien tajjeb, grazzi."
+          ]
         },
         {
           "role": "Marija",
           "maltese": "X'tħobb tagħmel fil-ħin liberu tiegħek?",
           "english": "What do you like doing in your free time?",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "X'tħobb tagħmel fil-ħin liberu?"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Jien inħobb insajjar u nivvjaġġa.",
           "english": "I like cooking and travelling.",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Inħobb insajjar u nivvjaġġa."
+          ]
         },
         {
           "role": "Marija",
           "maltese": "Narak aktar tard. Saħħa!",
           "english": "See you later. Goodbye!",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "Narak iktar tard. Saħħa!"
+          ]
         },
         {
           "role": "Pawlu",
           "maltese": "Saħħa!",
           "english": "Goodbye!",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "Ċaw!"
+          ]
         }
       ]
     },
@@ -375,49 +505,73 @@
           "role": "Emma",
           "maltese": "Ħelow.",
           "english": "Hello.",
-          "skill": "greeting"
+          "skill": "greeting",
+          "accepted": [
+            "Ħelow!"
+          ]
         },
         {
           "role": "George",
           "maltese": "Ħelow, Emma Stone jekk jogħġbok?",
           "english": "Hello, Emma Stone, please?",
-          "skill": "clarification"
+          "skill": "clarification",
+          "accepted": [
+            "Ħelow, nista' nkellem lil Emma Stone, jekk jogħġbok?"
+          ]
         },
         {
           "role": "Emma",
           "maltese": "Iva. Min int, jekk jogħġbok?",
           "english": "Yes. Who is speaking, please?",
-          "skill": "clarification"
+          "skill": "clarification",
+          "accepted": [
+            "Iva. Min qed jitkellem, jekk jogħġbok?"
+          ]
         },
         {
           "role": "George",
           "maltese": "Jien George, George Clooney.",
           "english": "This is George, George Clooney.",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Jisimni George Clooney."
+          ]
         },
         {
           "role": "Emma",
           "maltese": "Skużani. Tista' tirrepeti, jekk jogħġbok?",
           "english": "Sorry. Can you repeat, please?",
-          "skill": "clarification"
+          "skill": "clarification",
+          "accepted": [
+            "Skużani. Tista' terġa' tirrepeti, jekk jogħġbok?"
+          ]
         },
         {
           "role": "George",
           "maltese": "Jien George.",
           "english": "This is George.",
-          "skill": "introduction"
+          "skill": "introduction",
+          "accepted": [
+            "Jisimni George."
+          ]
         },
         {
           "role": "Emma",
           "maltese": "Grazzi.",
           "english": "Thank you.",
-          "skill": "reply"
+          "skill": "reply",
+          "accepted": [
+            "Grazzi ħafna."
+          ]
         },
         {
           "role": "George",
           "maltese": "M'hemmx imniex.",
           "english": "You are welcome.",
-          "skill": "reply"
+          "skill": "reply",
+          "accepted": [
+            "Ta' xejn."
+          ]
         }
       ]
     }

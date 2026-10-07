@@ -32,6 +32,14 @@ With the local site running on port 4190, run `node scripts/lesson01_browser_che
 - Full licensed native dialogue recordings are still missing. The local recorder and audio-file player support normal and 0.75 speed without claiming to verify pronunciation. No fallback English/Italian synthetic voice is used.
 - Run `node scripts/lesson01_practice_check.js` with a server on port 4190 for normalization, review, task modes, all six roles, hints, timer, persistence and desktop/mobile checks.
 
+## Adaptive practice and local family details
+- Accepted alternatives are curated per phrase and dialogue turn. Exact normalized variants receive credit; edit distance only selects a useful model for feedback and never grants credit to a wrong answer. This is not a general-purpose grammar checker.
+- Feedback distinguishes missing article prefixes, known person/gender contrasts, Maltese-letter differences and other wording differences. A fragment retry is assisted and cannot overwrite a failed full-answer result.
+- Mixed checks draw two distinct items from each of the four skills and hide model/hint controls. The result reports answered items and identifies skipped tasks. Focused sessions prioritise the actual missed phrase or dialogue turn, then add examples from the weakest skill.
+- Personal mode imports only the learner's explicitly saved local about-me draft. Names, origin, work, hobbies and family details can be used in practice. Personal text is never written to skill metrics, mistake answers or automatic review cards; those use public model patterns. The draft remains excluded from backup/Firebase synchronization.
+- The full and guided about-me builders support one or two children with independent name, gender and age fields. Legacy son/daughter drafts migrate to one child with the correct gender. Inactive child details are retained locally for editing but excluded from generated stories. One year uses sena; the other numeric ages use snin. Blank or out-of-range ages are omitted.
+- Run `node scripts/lesson01_adaptive_check.js` for children, migration-compatible forms, privacy, personal dialogue variants, targeted feedback, mixed checks and next-step practice on desktop/mobile.
+
 ## Pronunciation references
 - [Forvo: Bonġu](https://forvo.com/word/bon%C4%A1u/)
 - [Forvo: L-għodwa t-tajba](https://forvo.com/word/l-g%C4%A7odwa_t-tajba/)
