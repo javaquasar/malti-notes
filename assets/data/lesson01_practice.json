@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "phrases": [
+    {
+      "id": "hello",
+      "page": "greetings.html",
+      "skill": "greeting",
+      "maltese": "Bonġu!",
+      "english": "Good morning!",
+      "reply": "Bonġu!",
+      "note": "Morning greeting.",
+      "accepted": [
+        "L-għodwa t-tajba!"
+      ]
+    },
+    {
+      "id": "evening",
+      "page": "greetings.html",
+      "skill": "greeting",
+      "maltese": "Il-lejla t-tajba.",
+      "english": "Good evening.",
+      "reply": "Lilek ukoll.",
+      "note": "Evening greeting, not a bedtime farewell.",
+      "accepted": [
+        "Bonswa."
+      ]
+    },
+    {
+      "id": "night",
+      "page": "greetings.html",
+      "skill": "greeting",
+      "maltese": "Il-lejl it-tajjeb.",
+      "english": "Good night.",
+      "reply": "Lilek ukoll.",
+      "note": "A wish before sleeping or leaving at night.",
+      "accepted": []
+    },
+    {
+      "id": "meet",
+      "page": "greetings.html",
+      "skill": "reply",
+      "maltese": "Għandi pjaċir.",
+      "english": "Pleased to meet you.",
+      "reply": "Tant ieħor.",
+      "note": "When meeting someone for the first time.",
+      "accepted": []
+    },
+    {
+      "id": "how",
+      "page": "greetings.html",
+      "skill": "reply",
+      "maltese": "Kif int?",
+      "english": "How are you?",
+      "reply": "Tajjeb, grazzi. U int?",
+      "note": "Tajjeb for a male speaker; Tajba for a female speaker.",
+      "accepted": []
+    },
+    {
+      "id": "goodbye",
+      "page": "greetings.html",
+      "skill": "greeting",
+      "maltese": "Saħħa!",
+      "english": "Goodbye!",
+      "reply": "Saħħa!",
+      "note": "A common informal farewell.",
+      "accepted": [
+        "Ċaw!"
+      ]
+    },
+    {
+      "id": "thanks",
+      "page": "polite_phrases.html",
+      "skill": "reply",
+      "maltese": "Grazzi.",
+      "english": "Thank you.",
+      "reply": "M'hemmx imniex.",
+      "note": "The reply means you are welcome.",
+      "accepted": []
+    },
+    {
+      "id": "please",
+      "page": "polite_phrases.html",
+      "skill": "reply",
+      "maltese": "Jekk jogħġbok.",
+      "english": "Please.",
+      "reply": "Iva.",
+      "note": "Add to a request; Iva is an affirmative response, not a fixed formula.",
+      "accepted": []
+    },
+    {
+      "id": "meal",
+      "page": "polite_phrases.html",
+      "skill": "reply",
+      "maltese": "L-ikla t-tajba.",
+      "english": "Enjoy your meal.",
+      "reply": "Grazzi.",
+      "note": "A wish before eating.",
+      "accepted": []
+    },
+    {
+      "id": "birthday",
+      "page": "polite_phrases.html",
+      "skill": "reply",
+      "maltese": "Awguri f'għeluq sninek.",
+      "english": "Happy birthday.",
+      "reply": "Grazzi.",
+      "note": "A birthday wish.",
+      "accepted": []
+    },
+    {
+      "id": "also",
+      "page": "polite_phrases.html",
+      "skill": "reply",
+      "maltese": "Lilek ukoll.",
+      "english": "You too.",
+      "reply": "Grazzi.",
+      "note": "Return a suitable wish, such as good evening.",
+      "accepted": []
+    },
+    {
+      "id": "understand",
+      "page": "conversation_help.html",
+      "skill": "clarification",
+      "maltese": "Ma nifhimx.",
+      "english": "I do not understand.",
+      "reply": "Skużani.",
+      "note": "Use when the message is not clear.",
+      "accepted": []
+    },
+    {
+      "id": "repeat",
+      "page": "conversation_help.html",
+      "skill": "clarification",
+      "maltese": "Tista' tirrepeti, jekk jogħġbok?",
+      "english": "Can you repeat, please?",
+      "reply": "Iva.",
+      "note": "A polite request for repetition.",
+      "accepted": []
+    },
+    {
+      "id": "slow",
+      "page": "conversation_help.html",
+      "skill": "clarification",
+      "maltese": "Bil-mod, jekk jogħġbok.",
+      "english": "Slowly, please.",
+      "reply": "Iva.",
+      "note": "Ask for a slower pace.",
+      "accepted": []
+    },
+    {
+      "id": "sorry",
+      "page": "conversation_help.html",
+      "skill": "clarification",
+      "maltese": "Skużani.",
+      "english": "Excuse me / sorry.",
+      "reply": "M'hemmx imniex.",
+      "note": "Get attention or apologise; the reply fits an apology.",
+      "accepted": []
+    },
+    {
+      "id": "phone",
+      "page": "conversation_help.html",
+      "skill": "clarification",
+      "maltese": "Min int, jekk jogħġbok?",
+      "english": "Who is speaking, please?",
+      "reply": "Jien Pawlu.",
+      "note": "On the telephone.",
+      "accepted": []
+    },
+    {
+      "id": "name",
+      "page": "getting_to_know.html",
+      "skill": "introduction",
+      "maltese": "X'jismek?",
+      "english": "What is your name?",
+      "reply": "Jien Pawlu.",
+      "note": "Jien plus a name is a simple introduction.",
+      "accepted": []
+    },
+    {
+      "id": "surname",
+      "page": "getting_to_know.html",
+      "skill": "introduction",
+      "maltese": "X'kunjomok?",
+      "english": "What is your surname?",
+      "reply": "Kunjomi Borg.",
+      "note": "Kunjomi means my surname.",
+      "accepted": []
+    },
+    {
+      "id": "origin",
+      "page": "getting_to_know.html",
+      "skill": "introduction",
+      "maltese": "Minn fejn int?",
+      "english": "Where are you from?",
+      "reply": "Jien mill-Ukrajna.",
+      "note": "Use the country form with its article.",
+      "accepted": []
+    },
+    {
+      "id": "hobby",
+      "page": "getting_to_know.html",
+      "skill": "introduction",
+      "maltese": "X'tħobb tagħmel fil-ħin liberu tiegħek?",
+      "english": "What do you like doing in your free time?",
+      "reply": "Inħobb naqra kotba.",
+      "note": "Inħobb is followed here by a present-tense verb.",
+      "accepted": []
+    }
+  ],
+  "contrasts": [
+    {
+      "title": "Narak / Narawk",
+      "text": "Narak: I will see you (one person). Narawk: we will see you (one person). Narakom / Narawkom address several people. Do not confuse the number of speakers with the number of listeners."
+    },
+    {
+      "title": "Tajjeb / Tajba",
+      "text": "A male speaker says Tajjeb, grazzi; a female speaker says Tajba, grazzi. In greetings the adjective agrees with the noun: lejl (masculine), lejla (feminine)."
+    },
+    {
+      "title": "Lejl / Lejla",
+      "text": "Il-lejl it-tajjeb: good night, usually a farewell or bedtime wish. Il-lejla t-tajba: good evening, a greeting."
+    },
+    {
+      "title": "Everyday / Occasional",
+      "text": "Bonġu, grazzi and saħħa are everyday priorities. Birthday wishes belong to an occasion. Bezzjoni is a traditional request for a blessing, not a general greeting."
+    }
+  ],
+  "audio": [
+    {
+      "phrase": "Bonġu",
+      "url": "https://forvo.com/word/bon%C4%A1u/",
+      "speaker": "markcame",
+      "location": "Malta"
+    },
+    {
+      "phrase": "L-għodwa t-tajba",
+      "url": "https://forvo.com/word/l-g%C4%A7odwa_t-tajba/",
+      "speaker": "mell0026",
+      "location": "Malta"
+    },
+    {
+      "phrase": "Grazzi",
+      "url": "https://forvo.com/word/grazzi/",
+      "speaker": "Mikiel",
+      "location": "Malta"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "course",
+      "title": "Meeting on a course",
+      "roles": [
+        "Marija",
+        "Pawlu"
+      ],
+      "turns": [
+        {
+          "role": "Marija",
+          "maltese": "Bonġu! Jien Marija. Kif jismek?",
+          "english": "Good morning! I am Marija. What is your name?",
+          "skill": "greeting"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Bonġu! Jien Pawlu. Għandi pjaċir niltaqa' miegħek.",
+          "english": "Good morning! I am Pawlu. Pleased to meet you.",
+          "skill": "introduction"
+        },
+        {
+          "role": "Marija",
+          "maltese": "Għandi pjaċir ukoll. Minn fejn int, Pawlu?",
+          "english": "Pleased to meet you too. Where are you from, Pawlu?",
+          "skill": "reply"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Jien minn Ħaż-Żabbar. U int?",
+          "english": "I am from Ħaż-Żabbar. And you?",
+          "skill": "introduction"
+        },
+        {
+          "role": "Marija",
+          "maltese": "Jien mill-Mosta. X'tagħmel fil-ħajja?",
+          "english": "I am from Mosta. What do you do?",
+          "skill": "introduction"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Naħdem bħala għalliem fi skola sekondarja. U int?",
+          "english": "I work as a teacher in a secondary school. And you?",
+          "skill": "introduction"
+        },
+        {
+          "role": "Marija",
+          "maltese": "Jien naħdem f'uffiċċju bħala segretarja.",
+          "english": "I work in an office as a secretary.",
+          "skill": "introduction"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Saħħa!",
+          "english": "Goodbye!",
+          "skill": "greeting"
+        }
+      ]
+    },
+    {
+      "id": "neighbor",
+      "title": "Meeting a neighbour",
+      "roles": [
+        "Marija",
+        "Pawlu"
+      ],
+      "turns": [
+        {
+          "role": "Marija",
+          "maltese": "Bonġu!",
+          "english": "Good morning!",
+          "skill": "greeting"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Bonġu! Kif int?",
+          "english": "Good morning! How are you?",
+          "skill": "greeting"
+        },
+        {
+          "role": "Marija",
+          "maltese": "Tajba, grazzi. U int?",
+          "english": "Well, thanks. And you?",
+          "skill": "reply"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Tajjeb, grazzi.",
+          "english": "Well, thanks.",
+          "skill": "reply"
+        },
+        {
+          "role": "Marija",
+          "maltese": "X'tħobb tagħmel fil-ħin liberu tiegħek?",
+          "english": "What do you like doing in your free time?",
+          "skill": "introduction"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Jien inħobb insajjar u nivvjaġġa.",
+          "english": "I like cooking and travelling.",
+          "skill": "introduction"
+        },
+        {
+          "role": "Marija",
+          "maltese": "Narak aktar tard. Saħħa!",
+          "english": "See you later. Goodbye!",
+          "skill": "greeting"
+        },
+        {
+          "role": "Pawlu",
+          "maltese": "Saħħa!",
+          "english": "Goodbye!",
+          "skill": "greeting"
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "title": "On the telephone",
+      "roles": [
+        "Emma",
+        "George"
+      ],
+      "turns": [
+        {
+          "role": "Emma",
+          "maltese": "Ħelow.",
+          "english": "Hello.",
+          "skill": "greeting"
+        },
+        {
+          "role": "George",
+          "maltese": "Ħelow, Emma Stone jekk jogħġbok?",
+          "english": "Hello, Emma Stone, please?",
+          "skill": "clarification"
+        },
+        {
+          "role": "Emma",
+          "maltese": "Iva. Min int, jekk jogħġbok?",
+          "english": "Yes. Who is speaking, please?",
+          "skill": "clarification"
+        },
+        {
+          "role": "George",
+          "maltese": "Jien George, George Clooney.",
+          "english": "This is George, George Clooney.",
+          "skill": "introduction"
+        },
+        {
+          "role": "Emma",
+          "maltese": "Skużani. Tista' tirrepeti, jekk jogħġbok?",
+          "english": "Sorry. Can you repeat, please?",
+          "skill": "clarification"
+        },
+        {
+          "role": "George",
+          "maltese": "Jien George.",
+          "english": "This is George.",
+          "skill": "introduction"
+        },
+        {
+          "role": "Emma",
+          "maltese": "Grazzi.",
+          "english": "Thank you.",
+          "skill": "reply"
+        },
+        {
+          "role": "George",
+          "maltese": "M'hemmx imniex.",
+          "english": "You are welcome.",
+          "skill": "reply"
+        }
+      ]
+    }
+  ],
+  "minuteGoals": [
+    "Greet your partner.",
+    "Give your name and surname.",
+    "Say where you are from.",
+    "Talk about your work.",
+    "Mention a hobby.",
+    "Say goodbye."
+  ]
+}

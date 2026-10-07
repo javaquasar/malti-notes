@@ -19,6 +19,7 @@
     malti_comprehensive_coverage_v1: "object",
     malti_numbers_time_drill_v1: "object",
     malti_about_me_progress_v1: "object",
+    malti_lesson01_skills_v1: "object",
     malti_mistake_journal_v1: "object",
     malti_today_minutes_v1: "string",
     malti_site_theme: "string",

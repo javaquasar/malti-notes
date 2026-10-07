@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}fee52b9b909e`;
+const CACHE_NAME = `${CACHE_PREFIX}b16040655855`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -56,6 +56,7 @@ const CORE_ASSETS = [
     "./word_search.html",
     "./year4_exam.html",
     "./manifest.webmanifest",
+    "./assets/css/lesson01-practice.css",
     "./assets/css/pages.css",
     "./assets/css/site.css",
     "./assets/css/site/base.css",
@@ -95,6 +96,8 @@ const CORE_ASSETS = [
     "./assets/js/init-verbs-course-bank.js",
     "./assets/js/knowledge-map.js",
     "./assets/js/learning-content.js",
+    "./assets/js/lesson01-practice-core.js",
+    "./assets/js/lesson01-practice.js",
     "./assets/js/lesson01-supplements.js",
     "./assets/js/mistake-store.js",
     "./assets/js/mistakes.js",
@@ -137,6 +140,7 @@ const CORE_ASSETS = [
     "./assets/data/about_me_examples.json",
     "./assets/data/about_me_options.json",
     "./assets/data/lesson01_exercises.json",
+    "./assets/data/lesson01_practice.json",
     "./assets/data/about_me_lesson01_examples.json",
     "./assets/data/conversation_help_lesson01_examples.json",
     "./assets/data/directions_town_lesson01_examples.json",

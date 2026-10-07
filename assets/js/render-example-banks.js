@@ -446,6 +446,14 @@ async function renderExampleBanksFromData(config) {
             syncBulkButton(button);
         }
     }
+    if (groupAttribute === "data-lesson01-group") {
+        window.addEventListener("malti-storage-change", (event) => {
+            if (event.detail?.key === "malti_review_cards_v2") refreshSentenceReviewUi();
+        });
+        window.addEventListener("storage", (event) => {
+            if (event.key === "malti_review_cards_v2" || event.key === null) refreshSentenceReviewUi();
+        });
+    }
 }
 
 async function renderQuestionBanksFromData(config) {

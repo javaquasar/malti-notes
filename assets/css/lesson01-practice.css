@@ -1,0 +1,29 @@
+.lesson-practice { border-top: 1px solid var(--color-border); padding: 20px 0; }
+.lesson-practice, .lesson-practice button, .lesson-practice select, .lesson-practice input { scroll-margin-top: 140px; }
+.lesson-practice h2 { font-size: 24px; margin: 0 0 16px; }
+.lesson-practice h3 { font-size: 19px; margin: 16px 0 10px; }
+.lesson-practice .lp-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 12px 0; }
+.lesson-practice label { display: grid; gap: 6px; font-size: 15px; }
+.lesson-practice select, .lesson-practice input[type="text"] { font: inherit; min-height: 44px; padding: 8px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-surface-input); color: var(--color-text); min-width: 0; max-width: 100%; }
+.lesson-practice button { font: inherit; min-height: 44px; padding: 8px 14px; border-radius: 6px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; }
+.lesson-practice button:disabled { opacity: .55; cursor: default; }
+.lesson-practice button[aria-pressed="true"] { background: var(--color-surface-ready); border-color: var(--color-ready-border); }
+.lesson-practice button:focus-visible, .lesson-practice input:focus-visible, .lesson-practice select:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
+.lp-phrases { padding: 0; list-style: none; margin: 0; }
+.lp-phrase { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 8px; border-bottom: 1px solid var(--color-border); padding: 12px 0; }
+.lp-phrase > div { min-width: 0; overflow-wrap: anywhere; }
+.lp-phrase p { margin: 6px 0; }
+.lp-phrase small, .lp-muted { color: var(--color-text-muted); }
+.lesson-practice .lp-save { position: static; width: 44px; height: 44px; padding: 0; display: grid; place-items: center; align-self: start; font-size: 0; border-radius: 50%; }
+.lesson-practice .lp-save::before { transform: none; }
+.lp-prompt { border-left: 3px solid var(--color-brand); padding: 10px 14px; margin: 12px 0; background: var(--color-surface-muted); overflow-wrap: anywhere; }
+.lp-answer { width: 100%; box-sizing: border-box; }
+.lp-feedback { min-height: 48px; overflow-wrap: anywhere; }
+.lp-skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.lp-skills p { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--color-border); overflow-wrap: anywhere; }
+.lp-audio { width: 100%; max-width: 440px; }
+.lesson-practice input[type="file"] { max-width: 100%; }
+.lp-priority { display: block; color: var(--color-text-muted); margin-top: 8px; font-size: 13px; }
+.lesson-practice .lp-prompt { white-space: pre-line; }
+.lesson-practice [hidden] { display: none !important; }
+@media (max-width: 520px) { .lp-skills { grid-template-columns: 1fr; } .lp-controls > label { flex: 1 1 140px; } .lesson-practice h2 { font-size: 22px; } }

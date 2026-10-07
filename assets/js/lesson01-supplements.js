@@ -13,6 +13,7 @@
             reviewPrefix: "lesson01-" + stem,
             numbered: false
         });
+        window.dispatchEvent(new CustomEvent("malti-lesson01-ready"));
     } catch (error) {
         console.error("Could not load Lesson 01 examples.", error);
         document.querySelectorAll("[data-lesson01-group]").forEach((region) => {
