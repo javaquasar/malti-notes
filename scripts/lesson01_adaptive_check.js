@@ -51,6 +51,12 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
             await page.locator('[name="children"]').selectOption('none');
             assert.match(await page.locator('[data-about-me-output]').innerText(), /M'għandix tfal/);
             await page.locator('[name="children"]').selectOption('two'); await page.locator('[name="child1Age"]').fill('9');
+            await page.evaluate(() => {
+                Object.defineProperty(navigator.clipboard, 'writeText', { configurable: true, value: async (text) => { window.copiedStory = text; } });
+            });
+            await page.locator('[data-about-me-copy]').click();
+            assert.equal(await page.evaluate(() => window.copiedStory), await page.evaluate(() => window.MaltiAboutMe.getStory().join('\n')));
+            assert.ok((await page.evaluate(() => window.copiedStory)).includes('\nBinti jisimha Kira.\nGħandha 6 snin.'));
             await page.locator('[data-about-me-save]').click();
             await page.reload(); await page.waitForFunction(() => document.querySelector('[data-about-me-practice]')?.dataset.aboutMeReady === 'true');
             assert.equal(await page.locator('[name="child2Name"]').inputValue(), 'Kira');

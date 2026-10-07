@@ -129,7 +129,7 @@
   }
 
   async function copyStory() {
-    const text = buildStory(valuesFromForm()).join(" ");
+    const text = buildStory(valuesFromForm()).join("\n");
     if (!text) return setBuilderStatus("Add at least one detail before copying.");
     try {
       await navigator.clipboard.writeText(text);
