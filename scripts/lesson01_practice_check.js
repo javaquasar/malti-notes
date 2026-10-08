@@ -31,10 +31,13 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
                 await page.locator('#speaking-practice').scrollIntoViewIfNeeded();
                 await page.waitForSelector('[data-lesson01-group] > *', { state: 'attached' });
                 assert.equal(await page.locator('.lp-priority').count(), 0);
+                assert.equal(/Lesson 01/i.test(await page.locator('body').innerText()), false);
                 await page.mouse.move(width - 5, 850);
                 const region = page.locator('#speaking-practice');
                 assert.equal(await region.evaluate((node) => getComputedStyle(node).backgroundColor), await page.locator('main.content > .card').first().evaluate((node) => getComputedStyle(node).backgroundColor));
                 assert.notEqual(await region.evaluate((node) => getComputedStyle(node).backgroundColor), 'rgba(0, 0, 0, 0)');
+                assert.equal(await region.evaluate((node) => getComputedStyle(node).borderRadius), await page.locator('main.content > .card').first().evaluate((node) => getComputedStyle(node).borderRadius));
+                assert.notEqual(await region.evaluate((node) => getComputedStyle(node).borderRadius), '0px');
                 await region.getByLabel('Phrase selection').selectOption('all');
                 assert.equal(await region.locator('.lp-phrase').count(), 20);
                 assert.equal(await region.locator('.lp-phrase').evaluateAll((rows) => rows.some((row) => {
@@ -130,7 +133,7 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
                 await region.evaluate((node) => window.scrollTo(0, node.getBoundingClientRect().top + scrollY - 150));
                 await page.mouse.move(width - 5, 850);
                 await page.waitForTimeout(600);
-                await region.getByRole('heading', { name: 'Lesson 01 Speaking Practice', exact: true }).click();
+                await region.getByRole('heading', { name: 'Speaking Practice', exact: true }).click();
                 await page.screenshot({ path: path.join(shots, stem + '-' + width + '.png') });
                 for (const tab of ['Your turn', 'Role-play', 'Skills']) {
                     await region.getByRole('button', { name: tab, exact: true }).click();

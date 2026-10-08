@@ -1,5 +1,5 @@
 .lesson-practice { border-top: 1px solid var(--color-border); padding: 20px 0; }
-#speaking-practice.lesson-practice { background: var(--component-panel-bg); padding: var(--component-panel-padding); border-top: 0; min-width: 0; }
+#speaking-practice.lesson-practice { background: var(--component-panel-bg); padding: var(--component-panel-padding); border-top: 0; border-radius: var(--component-panel-radius); min-width: 0; }
 .lesson-practice, .lesson-practice button, .lesson-practice select, .lesson-practice input { scroll-margin-top: 140px; }
 .lesson-practice h2 { font-size: 24px; margin: 0 0 16px; }
 .lesson-practice h3 { font-size: 19px; margin: 16px 0 10px; }

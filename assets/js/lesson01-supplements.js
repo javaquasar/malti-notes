@@ -9,13 +9,13 @@
             groupAttribute: "data-lesson01-group",
             cardClass: "study-card",
             sourcePage: page,
-            defaultTopic: "MQF 2 Lesson 01",
+            defaultTopic: "MQF 2",
             reviewPrefix: "lesson01-" + stem,
             numbered: false
         });
         window.dispatchEvent(new CustomEvent("malti-lesson01-ready"));
     } catch (error) {
-        console.error("Could not load Lesson 01 examples.", error);
+        console.error("Could not load examples.", error);
         document.querySelectorAll("[data-lesson01-group]").forEach((region) => {
             region.textContent = "Examples could not be loaded. Please reload the page.";
             region.setAttribute("role", "alert");

@@ -121,7 +121,7 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
             assert.match(await region.locator('.lp-feedback').first().innerText(), /Fragment restored/);
             assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
             await region.evaluate((node) => scrollTo(0, node.getBoundingClientRect().top + scrollY - 150));
-            await page.mouse.move(width - 5, 950); await region.getByRole('heading', { name: 'Lesson 01 Speaking Practice', exact: true }).click();
+            await page.mouse.move(width - 5, 950); await region.getByRole('heading', { name: 'Speaking Practice', exact: true }).click();
             await page.screenshot({ path: path.join(shots, 'focused-' + width + '.png') });
             await context.close();
         }

@@ -45,7 +45,7 @@
                 } catch (error) { console.warn('Could not read source review identities', error); }
             }
             return { id: 'sentence::lesson01-speaking::' + core.normalize(item.maltese), maltese: item.maltese,
-                english: item.english, topic: 'Lesson 01 Speaking', sourcePage: page };
+                english: item.english, topic: 'Speaking Practice', sourcePage: page };
         }
         const save = (item) => window.MaltiReviewStore.addSentence(card(item));
         function record(id, item, given, result, assisted) {
@@ -60,12 +60,12 @@
             window.MaltiMistakeStore.recordAttempt({ id: 'lesson01-speaking-' + id, setId: 'lesson01-speaking', itemId: id,
                 prompt: publicItem.english, given: privateAttempt ? '[Personal answer kept in this tab]' : given,
                 correctAnswer: publicItem.maltese, explanation: privateAttempt ? 'Practise this pattern using your local story.' : (result.message || item.note || ''),
-                sourcePage: page, topic: 'Lesson 01 Speaking', type: 'fill-blank' }, result.correct && !result.spelling);
+                sourcePage: page, topic: 'Speaking Practice', type: 'fill-blank' }, result.correct && !result.spelling);
             if (!result.correct || result.spelling) save(publicItem);
             updateSkills();
         }
         root.replaceChildren();
-        el('h2', 'Lesson 01 Speaking Practice');
+        el('h2', 'Speaking Practice');
         const personalLabel = el('label'); personalLabel.className = 'lp-personal';
         const personal = document.createElement('input'); personal.type = 'checkbox'; personalLabel.append(personal, document.createTextNode(' Use my local story'));
         const profileStatus = el('p', '', root); profileStatus.className = 'lp-muted'; profileStatus.setAttribute('role', 'status');
