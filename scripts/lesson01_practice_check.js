@@ -27,9 +27,14 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
             page.on('pageerror', (e) => errors.push(e.message));
             for (const stem of ['greetings', 'polite_phrases', 'conversation_help', 'getting_to_know']) {
                 await page.goto(base + '/' + stem + '.html');
-                await page.waitForSelector('.lp-phrase');
+                await page.waitForSelector('.lp-phrase', { state: 'attached' });
+                await page.locator('#speaking-practice').scrollIntoViewIfNeeded();
+                await page.waitForSelector('[data-lesson01-group] > *', { state: 'attached' });
+                assert.equal(await page.locator('.lp-priority').count(), 0);
                 await page.mouse.move(width - 5, 850);
                 const region = page.locator('#speaking-practice');
+                assert.equal(await region.evaluate((node) => getComputedStyle(node).backgroundColor), await page.locator('main.content > .card').first().evaluate((node) => getComputedStyle(node).backgroundColor));
+                assert.notEqual(await region.evaluate((node) => getComputedStyle(node).backgroundColor), 'rgba(0, 0, 0, 0)');
                 await region.getByLabel('Phrase selection').selectOption('all');
                 assert.equal(await region.locator('.lp-phrase').count(), 20);
                 assert.equal(await region.locator('.lp-phrase').evaluateAll((rows) => rows.some((row) => {

@@ -1,4 +1,5 @@
 .lesson-practice { border-top: 1px solid var(--color-border); padding: 20px 0; }
+#speaking-practice.lesson-practice { background: var(--component-panel-bg); padding: var(--component-panel-padding); border-top: 0; min-width: 0; }
 .lesson-practice, .lesson-practice button, .lesson-practice select, .lesson-practice input { scroll-margin-top: 140px; }
 .lesson-practice h2 { font-size: 24px; margin: 0 0 16px; }
 .lesson-practice h3 { font-size: 19px; margin: 16px 0 10px; }
@@ -23,7 +24,6 @@
 .lp-skills p { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--color-border); overflow-wrap: anywhere; }
 .lp-audio { width: 100%; max-width: 440px; }
 .lesson-practice input[type="file"] { max-width: 100%; }
-.lp-priority { display: block; color: var(--color-text-muted); margin-top: 8px; font-size: 13px; }
 .lesson-practice .lp-prompt { white-space: pre-line; }
 .lesson-practice .lp-personal { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
 .lp-personal input { width: 20px; height: 20px; flex: 0 0 auto; }

@@ -11,17 +11,6 @@
         if (!response.ok) throw new Error('Practice data unavailable');
         const data = await response.json();
         const core = window.MaltiLessonPracticeCore;
-        function markPriorities() {
-            const phrases = new Set(data.phrases.map((p) => core.normalize(p.maltese)));
-            document.querySelectorAll('[data-lesson01-group] > .study-card, [data-lesson01-group] > .qa-pair-card, [data-lesson01-group] > .qa-disclosure-card').forEach((card) => {
-                if (card.querySelector('.lp-priority')) return;
-                const text = card.querySelector('strong, .qa-disclosure-prompt')?.textContent || '';
-                const tag = document.createElement('small'); tag.className = 'lp-priority';
-                tag.textContent = core.normalize(text).includes('bezzjoni') ? 'Traditional' : phrases.has(core.normalize(text)) ? 'Essential' : 'Context / extension';
-                card.append(tag);
-            });
-        }
-        window.addEventListener('malti-lesson01-ready', markPriorities); markPriorities();
         const key = 'malti_lesson01_skills_v1';
         const store = window.MaltiStorage;
         const profile = () => store.getJson('malti_about_me_draft_v1', {})?.values || {};
