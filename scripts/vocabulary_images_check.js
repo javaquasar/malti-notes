@@ -21,7 +21,7 @@ async function main() {
     assert.equal(records.filter((item) => item.status === 'missing-file').length, 0);
     const before = require('../docs/vocabulary-images/before-with-images.json');
     before.forEach((old) => assert.equal(records.find((item) => item.file === old.file && item.id === old.id).image, old.image));
-    const assets = [require('../docs/vocabulary-images/downloaded-assets.json'), require('../docs/vocabulary-images/game-icons-assets.json'), require('../docs/vocabulary-images/mdi-assets.json')].flatMap((manifest) => manifest.assets);
+    const assets = [require('../docs/vocabulary-images/downloaded-assets.json'), require('../docs/vocabulary-images/game-icons-assets.json'), require('../docs/vocabulary-images/mdi-assets.json'), require('../docs/vocabulary-images/cc0-assets.json')].flatMap((manifest) => manifest.assets);
     assets.forEach((asset) => assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root, asset.file))).digest('hex'), asset.sha256));
     const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
     try {
@@ -88,12 +88,17 @@ async function main() {
         await page.waitForTimeout(100);
         assert.ok(await page.locator('#review-stage img').count(), 'Literal image missing in visual practice');
         assert.ok(await page.locator('#review-stage img').first().getAttribute('src') === literal.image, 'Context image entered visual practice');
+        assert.ok(await page.locator('#review-stage img').first().evaluate((img) => {
+            const image = img.getBoundingClientRect();
+            const frame = img.parentElement.getBoundingClientRect();
+            return Math.abs(image.x + image.width / 2 - frame.x - frame.width / 2) < 1 && getComputedStyle(img).objectFit === 'contain';
+        }), 'Review image is not centered');
         await page.evaluate(() => localStorage.clear());
         const screenshots = path.join(root, 'visual-regression/screenshots/vocabulary-images');
         fs.mkdirSync(screenshots, { recursive: true });
-        for (const width of [1280, 390]) {
+        for (const width of [1280, 390, 320]) {
             await page.setViewportSize({ width, height: 900 });
-            for (const name of ['food_preferences', 'emotions', 'family_home_food', 'collective_nouns', 'year4_exam']) {
+            for (const name of ['food_preferences', 'emotions', 'family_home_food', 'collective_nouns', 'school_classroom', 'year4_exam']) {
                 await page.goto(base + '/' + name + '.html');
                 const selector = name === 'year4_exam' ? '.year4-vocab-image' : '.vocab-image--cutout';
                 await page.locator(selector).first().waitFor({ state: 'attached' });
@@ -105,7 +110,25 @@ async function main() {
                 assert.ok(await page.locator('#vocabulary-image-credits a').count() >= 2, name + ': credits missing');
                 assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), name + ': overflow');
                 assert.ok(await page.locator(selector).first().evaluate((img) => img.getBoundingClientRect().width <= img.parentElement.getBoundingClientRect().width), name + ': oversized image');
+                const layoutFailures = await page.locator(selector).evaluateAll((images) => images.flatMap((img) => {
+                    const image = img.getBoundingClientRect();
+                    const card = img.parentElement.getBoundingClientRect();
+                    const button = img.parentElement.querySelector('.review-add-button')?.getBoundingClientRect();
+                    const failures = [];
+                    if (Math.abs(image.x + image.width / 2 - card.x - card.width / 2) > 1) failures.push(img.src + ': off-center');
+                    if (button && image.top < button.bottom && image.bottom > button.top && image.left < button.right && image.right > button.left) failures.push(img.src + ': bookmark overlaps media');
+                    if (getComputedStyle(img).objectFit !== 'contain') failures.push(img.src + ': cropped media');
+                    return failures;
+                }));
+                assert.deepEqual(layoutFailures, [], name + ': media placement');
                 await page.screenshot({ path: path.join(screenshots, name + '-' + width + '.png') });
+                const newImages = page.locator(selector + '[src*="/cc0/"]');
+                for (let index = 0; index < await newImages.count(); index++) {
+                    const image = newImages.nth(index);
+                    await image.scrollIntoViewIfNeeded();
+                    await image.evaluate((img) => img.decode());
+                    await image.locator('..').screenshot({ path: path.join(screenshots, name + '-cc0-' + index + '-' + width + '.png') });
+                }
                 const card = page.locator(selector).first().locator('..');
                 await card.locator('.review-add-button').click();
                 assert.ok(await page.evaluate((image) => window.MaltiReviewStore.getAllWords().some((word) => word.image === image), await card.locator('img').getAttribute('src')), name + ': image not saved to review');

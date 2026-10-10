@@ -1988,8 +1988,16 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": false,
-          "imageRole": "none"
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "image": "./assets/img/cc0/cauliflower.svg",
+          "imageAlt": "cauliflower",
+          "imageSource": {
+            "provider": "Openclipart",
+            "author": "cactus cowboy",
+            "license": "CC0-1.0",
+            "url": "https://commons.wikimedia.org/wiki/File:Cauliflower.svg"
+          }
         },
         {
           "slug": "skutella",

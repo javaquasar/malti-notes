@@ -1,4 +1,4 @@
-# with images (602 card entries)
+# with images (606 card entries)
 
 | Maltese | English | Page | Group | Image/status |
 | --- | --- | --- | --- | --- |
@@ -82,6 +82,7 @@
 | frawla -> frawli | strawberry -> strawberries | collective_nouns.html | collective-fruit | ./assets/img/openmoji/1F353.svg |
 | lumija -> lumi | lemon -> lemons | collective_nouns.html | collective-fruit | ./assets/img/openmoji/1F34B.svg |
 | ħassa -> ħass | lettuce -> lettuce | collective_nouns.html | collective-vegetables | ./assets/img/openmoji/1F96C.svg |
+| pastarda -> pastard | cauliflower -> cauliflowers | collective_nouns.html | collective-vegetables | ./assets/img/cc0/cauliflower.svg |
 | tadama -> tadam | tomato -> tomatoes | collective_nouns.html | collective-vegetables | ./assets/img/openmoji/1F345.svg |
 | basla -> basal | onion -> onions | collective_nouns.html | collective-vegetables | ./assets/img/openmoji/1F9C5.svg |
 | patata -> patata | potato -> potatoes | collective_nouns.html | collective-vegetables | ./assets/img/openmoji/1F954.svg |
@@ -94,6 +95,7 @@
 | dubbiena -> dubbien | fly -> flies | collective_nouns.html | collective-insects | ./assets/img/openmoji/1FAB0.svg |
 | wirdiena -> wirdien | cockroach -> cockroaches | collective_nouns.html | collective-insects | ./assets/img/openmoji/1FAB3.svg |
 | naħla -> naħal | bee -> bees | collective_nouns.html | collective-insects | ./assets/img/openmoji/1F41D.svg |
+| żunżana -> żunżan | wasp -> wasps | collective_nouns.html | collective-insects | ./assets/img/cc0/wasp.svg |
 | dudu -> dud | worm / bug -> worms / bugs | collective_nouns.html | collective-insects | ./assets/img/openmoji/1FAB1.svg |
 | brimba -> brimb | spider -> spiders | collective_nouns.html | collective-insects | ./assets/img/openmoji/1F577.svg |
 | bebbuxu -> bebbux | snail -> snails | collective_nouns.html | collective-insects | ./assets/img/openmoji/1F40C.svg |
@@ -385,6 +387,7 @@
 | il-pitazz | copybook | school_classroom.html | school-bag | ./assets/img/openmoji/1F4D3.svg |
 | il-kalkulatur | calculator | school_classroom.html | school-bag | ./assets/img/openmoji/E1DB.svg |
 | l-imqass | scissors | school_classroom.html | school-bag | ./assets/img/openmoji/2702.svg |
+| il-kolla | glue | school_classroom.html | school-bag | ./assets/img/cc0/glue.svg |
 | il-fajl | file | school_classroom.html | school-bag | ./assets/img/openmoji/1F4C1.svg |
 | il-mejda | table / desk | school_classroom.html | classroom-core | ./assets/img/home/table.svg |
 | is-siġġu | chair | school_classroom.html | classroom-core | ./assets/img/home/chair.svg |
@@ -495,6 +498,7 @@
 | għeneb | grapes | year4_exam.html | food | ./assets/img/openmoji/1F347.svg |
 | insalata | salad | year4_exam.html | food | ./assets/img/openmoji/1F96C.svg |
 | karrotti | carrots | year4_exam.html | food | ./assets/img/openmoji/1F955.svg |
+| pastard | cauliflower | year4_exam.html | food | ./assets/img/cc0/cauliflower.svg |
 | skutella | bowl | year4_exam.html | food | ./assets/img/openmoji/1F963.svg |
 | tadam | tomatoes | year4_exam.html | food | ./assets/img/openmoji/1F345.svg |
 | tewm | garlic | year4_exam.html | food | ./assets/img/openmoji/1F9C4.svg |

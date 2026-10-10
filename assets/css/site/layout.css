@@ -245,9 +245,15 @@
   width: 100%;
   height: 128px;
   object-fit: contain;
+  object-position: center;
   background: transparent;
   border-radius: 0;
   margin: 0 0 var(--space-md);
+}
+
+.vocab-card--review-toggle img.vocab-image--cutout,
+.year4-card--review-toggle .year4-vocab-image {
+  margin-top: 60px;
 }
 
 .visual-vocab-card strong {
@@ -310,7 +316,7 @@
 }
 
 .vocab-card--review-toggle:not(.vocab-card--has-visual),
-.year4-card.year4-card--review-toggle {
+.year4-card.year4-card--review-toggle:not(.vocab-card--has-visual) {
   padding-right: calc(var(--space-lg) + 48px);
 }
 

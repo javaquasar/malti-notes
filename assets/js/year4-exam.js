@@ -181,6 +181,7 @@
             card.tabIndex = 0;
             card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p><div class='year4-example'><strong>Example</strong><span class='example-text'></span><strong>English</strong><span class='example-translation'></span></div>";
             if (item.image) {
+                card.classList.add("vocab-card--has-visual");
                 var image = document.createElement("img");
                 image.src = item.image;
                 image.alt = item.imageAlt || item.english || item.maltese;

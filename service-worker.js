@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}cc9059c4cfa6`;
+const CACHE_NAME = `${CACHE_PREFIX}420845cb218e`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -444,6 +444,9 @@ const LAZY_ASSETS = [
     "./assets/img/game-icons/table.svg",
     "./assets/img/game-icons/towel.svg",
     "./assets/img/game-icons/waterfall.svg",
+    "./assets/img/cc0/cauliflower.svg",
+    "./assets/img/cc0/glue.svg",
+    "./assets/img/cc0/wasp.svg",
     "./assets/data/course_milestone_assessments.json",
     "./assets/data/comprehensive_test_bank.json"
   ];

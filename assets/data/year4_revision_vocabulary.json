@@ -2242,8 +2242,16 @@
                 "enabled": true,
                 "type": "word"
               },
-              "imageQuizEligible": false,
-              "imageRole": "none",
+              "imageQuizEligible": true,
+              "imageRole": "identifying",
+              "image": "./assets/img/cc0/cauliflower.svg",
+              "imageAlt": "cauliflower",
+              "imageSource": {
+                "provider": "Openclipart",
+                "author": "cactus cowboy",
+                "license": "CC0-1.0",
+                "url": "https://commons.wikimedia.org/wiki/File:Cauliflower.svg"
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -19516,14 +19524,22 @@
               "slug": "pastarda",
               "maltese": "pastarda -> pastard",
               "english": "cauliflower -> cauliflowers",
-              "example": "",
-              "exampleTranslation": "",
+              "example": "Nara pastarda.",
+              "exampleTranslation": "I see cauliflower.",
               "exampleSource": "topic data",
               "notes": [
                 "lesson list item"
               ],
-              "imageRole": "none",
-              "imageQuizEligible": false,
+              "image": "./assets/img/cc0/cauliflower.svg",
+              "imageAlt": "cauliflower",
+              "imageSource": {
+                "provider": "Openclipart",
+                "author": "cactus cowboy",
+                "license": "CC0-1.0",
+                "url": "https://commons.wikimedia.org/wiki/File:Cauliflower.svg"
+              },
+              "imageRole": "identifying",
+              "imageQuizEligible": true,
               "swatchStyle": "",
               "sourceLabel": "Collective Nouns",
               "sourceFile": "collective_nouns.json",
@@ -19884,14 +19900,22 @@
               "slug": "zunzana",
               "maltese": "żunżana -> żunżan",
               "english": "wasp -> wasps",
-              "example": "",
-              "exampleTranslation": "",
+              "example": "Nara żunżana.",
+              "exampleTranslation": "I see a wasp.",
               "exampleSource": "topic data",
               "notes": [
                 "lesson list item"
               ],
-              "imageRole": "none",
-              "imageQuizEligible": false,
+              "image": "./assets/img/cc0/wasp.svg",
+              "imageAlt": "wasp",
+              "imageSource": {
+                "provider": "Openclipart",
+                "author": "Juhele (uploader), publicdomainq.net",
+                "license": "CC0-1.0",
+                "url": "https://openclipart.org/detail/285334/wasp"
+              },
+              "imageRole": "identifying",
+              "imageQuizEligible": true,
               "swatchStyle": "",
               "sourceLabel": "Collective Nouns",
               "sourceFile": "collective_nouns.json",

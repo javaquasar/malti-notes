@@ -9,6 +9,11 @@ const replacements = [
 ];
 const identifying = new Set(('eye|nose|mouth|ear|hand|teeth|door|window|bed|chair|sofa|television|mirror|lamp|armchair|bread|cheese|egg|rice|potato|potatoes|tomato|tomatoes|carrot|carrots|pizza|meat cut|fish|pasta|butter|coffee|tea|milk|salt|pepper|pie|biscuit|banana|pear|watermelon|melon|peach|lemon|onion|garlic|mushroom|cucumber|aubergine|ant|mosquito|fly|cockroach|bee|spider|snail|cow|turtle|rabbit|bird|lion|elephant|dog|parrot|duck|cat|snake|pig|suitcase|gift|robot|soap|toilet|drum|hat|tie|socks|scarf|shorts|grapes|bowl|bicycle|airplane|ambulance|anchor|spider web|astronaut|shower|eraser|chocolate|pen|pencil|calculator|scissors|computer|trousers|dress|jacket|shoe|table|desk|fridge|sink|pillow|skirt|towel|waterfall|cave|cliff|aquarium|wardrobe|balcony|pot|cup|strawberry').split('|'));
 const uncountable = new Set('bread|cheese|rice|pasta|butter|coffee|tea|milk|salt|pepper|soap|chocolate'.split('|'));
+identifying.add('cauliflower');
+identifying.add('glue');
+identifying.add('wasp');
+uncountable.add('glue');
+uncountable.add('cauliflower');
 const norm = (text) => String(text || '').replace(/[’`]/g, "'").trim().toLocaleLowerCase('mt');
 const exampleTranslations = {
     'Nixtieq kartuna bajd.': 'I would like a box of eggs.',

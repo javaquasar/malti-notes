@@ -25,7 +25,7 @@
             var isTransportImage = item.image.indexOf("/transport/") !== -1;
             var isSquareImage = item.image.indexOf("favicon-option-speech.svg") !== -1;
             img.src = item.image;
-            if (/\/(openmoji|game-icons|mdi)\//.test(item.image)) {
+            if (/\/(openmoji|game-icons|mdi|cc0)\//.test(item.image)) {
                 img.className = 'vocab-image--cutout';
             }
             img.alt = item.imageAlt || item.english || item.maltese;
@@ -147,7 +147,8 @@
         var sources = [
             { path: '/openmoji/', name: 'OpenMoji', author: 'HfG Schwabisch Gmund and contributors', url: 'https://openmoji.org/', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/' },
             { path: '/game-icons/', name: 'Game-icons.net', author: 'Delapouite and Caro Asercion', url: 'https://game-icons.net/', license: 'CC BY 3.0', licenseUrl: 'https://creativecommons.org/licenses/by/3.0/' },
-            { path: '/mdi/', name: 'Pictogrammers', author: 'Google, Simran and GreenTurtwig', url: 'https://pictogrammers.com/library/mdi/', license: 'Apache 2.0', licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0' }
+            { path: '/mdi/', name: 'Pictogrammers', author: 'Google, Simran and GreenTurtwig', url: 'https://pictogrammers.com/library/mdi/', license: 'Apache 2.0', licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0' },
+            { path: '/cc0/', name: 'Openclipart and SVG Repo', author: 'cactus cowboy, Juhele / publicdomainq.net and SVG Repo uploaders', url: './docs/vocabulary-images/cc0-assets.json', license: 'CC0 1.0', licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/' }
         ];
         sources.forEach(function (source) {
             if (credits.querySelector('[data-source="' + source.name + '"]') || !items.some(function (item) { return (item.image || '').includes(source.path); })) return;

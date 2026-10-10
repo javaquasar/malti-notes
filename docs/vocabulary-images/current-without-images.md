@@ -1,4 +1,4 @@
-# without images (291 card entries)
+# without images (287 card entries)
 
 | Maltese | English | Page | Group | Image/status |
 | --- | --- | --- | --- | --- |
@@ -8,8 +8,6 @@
 | żgħir / żgħira | small | body_appearance.html | body-appearance | no-image |
 | kbir / kbira | big | body_appearance.html | body-appearance | no-image |
 | sabiħ / sabiħa | beautiful | body_appearance.html | body-appearance | no-image |
-| pastarda -> pastard | cauliflower -> cauliflowers | collective_nouns.html | collective-vegetables | no-image |
-| żunżana -> żunżan | wasp -> wasps | collective_nouns.html | collective-insects | no-image |
 | ikbar | bigger | comparisons.html | comparisons-core | no-image |
 | iżgħar | smaller | comparisons.html | comparisons-core | no-image |
 | aħjar | better | comparisons.html | comparisons-core | no-image |
@@ -161,7 +159,6 @@
 | sa | until / to | pronouns_possessives.html | prepositions-core | no-image |
 | għal | for / to | pronouns_possessives.html | prepositions-core | no-image |
 | b' | with / by means of | pronouns_possessives.html | prepositions-core | no-image |
-| il-kolla | glue | school_classroom.html | school-bag | no-image |
 | il-bord | board | school_classroom.html | classroom-core | no-image |
 | żgħir | small | shopping_clothes.html | shopping-sizes | no-image |
 | medju | medium | shopping_clothes.html | shopping-sizes | no-image |
@@ -170,7 +167,6 @@
 | roża | pink | year4_exam.html | clothes | no-image |
 | ċelesti | light blue | year4_exam.html | clothes | no-image |
 | ħwejjeġ | clothes | year4_exam.html | clothes | no-image |
-| pastard | cauliflower | year4_exam.html | food | no-image |
 | appell | roll call | year4_exam.html | school | no-image |
 | artiklu | article | year4_exam.html | school | no-image |
 | oġġetti | objects | year4_exam.html | school | no-image |

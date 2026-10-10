@@ -10,11 +10,11 @@ The inventory covers vocabulary-card source datasets configured by `MaltiVocabRe
 
 Existing subject-specific images are preserved. Generic favicon placeholders are not counted as useful illustrations. No fuzzy matching is used: `assets/data/vocabulary_image_sources.json` contains explicit reviewed English-gloss mappings. Some icons illustrate a category, activity or emotion rather than a literal object. Abstract grammar, ambiguous meanings and named Maltese landmarks without accurate artwork remain unillustrated rather than receiving an unrelated icon.
 
-Initial inventory: 911 card entries, 102 illustrated, 791 without a useful picture, and 18 colour swatches. After the teaching improvements: 602 illustrated, 291 without a picture, and the same 18 swatches. Shared icons can appear on several cards; counts are not unique artwork counts.
+Initial inventory: 911 card entries, 102 illustrated, 791 without a useful picture, and 18 colour swatches. After the teaching improvements and supplementary CC0 import: 606 illustrated, 287 without a picture, and the same 18 swatches. Shared icons can appear on several cards; counts are not unique artwork counts.
 
 ## Teaching Use
 
-`teaching-audit.json` records image roles and bilingual-example coverage for every entry. There are 274 quiz-eligible visuals (including colour swatches) and 818 paired examples. The remaining 93 entries need a contextual example and English translation; no generic `Nara` sentence is invented for abstract grammar. Existing topic examples are reused where possible; simple object examples and translated topic examples have explicit provenance.
+`teaching-audit.json` records image roles and bilingual-example coverage for every entry. There are 278 quiz-eligible visuals (including colour swatches) and 820 paired examples. The remaining 91 entries need a contextual example and English translation; no generic `Nara` sentence is invented for abstract grammar. Existing topic examples are reused where possible; simple object examples and translated topic examples have explicit provenance.
 
 `imageRole: identifying` and `imageQuizEligible: true` explicitly permit image-to-Maltese practice. Calendar icons, family-role symbols, packaging approximations and other context cues remain visible on topic cards but are excluded from that quiz. Unknown eligibility defaults to excluded. Original pre-existing illustrations are retained. Shelf icons show a bookshelf; other category approximations are treated conservatively.
 
@@ -32,6 +32,10 @@ New illustrations: **OpenMoji**, the open-source emoji and icon project by **HfG
 Additional household and landscape illustrations: **Game-icons.net**, by **Delapouite and Caro Asercion**, licensed under **CC BY 3.0**, https://creativecommons.org/licenses/by/3.0/. Original black-on-transparent SVG exports are unmodified. `game-icons-assets.json` records individual authors, source pages, download URLs and checksums. Run `node scripts/import_vocabulary_game_icons.js` to reproduce this supplementary import.
 
 Additional originals from **Pictogrammers / Material Design Icons**, by **Google, Simran and GreenTurtwig**, under **Apache 2.0**, https://www.apache.org/licenses/LICENSE-2.0. `mdi-assets.json` records authors, pinned revision, original URLs and checksums. Original collection notice and full Apache license are in `assets/img/mdi/`. No SVGs were modified.
+
+Supplementary transparent originals under **CC0 1.0**: cauliflower by **cactus cowboy** (Openclipart, hosted by Wikimedia Commons), wasp uploaded by **Juhele**, derived from **publicdomainq.net** (Openclipart), and glue uploaded by **SVG Repo**. `cc0-assets.json` records each source page, download URL, license and checksum. Artwork is unmodified. Run `node scripts/import_vocabulary_cc0.js` before the teaching and derived-data rebuilds.
+
+Cutout images use a stable 128px-high, centered `contain` area. Bookmark controls have a separate top clearance. Illustrated Year 4 cards use symmetric padding; text-only cards retain extra space for their bookmark. Screenshots and geometric checks cover 320px, 390px and 1280px widths, plus centering in review practice.
 
 Only the imported artwork is covered by this attribution/license notice; it does not relicense unrelated site code or original teaching material. Per-image source URLs are stored in the vocabulary data and in `downloaded-assets.json`.
 

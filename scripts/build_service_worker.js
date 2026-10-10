@@ -43,6 +43,7 @@ const lazyAssets = [
   './assets/data/year4_revision_vocabulary.json',
   ...walk('assets/img/openmoji', '.svg').sort().map((file) => './' + file),
   ...walk('assets/img/game-icons', '.svg').sort().map((file) => './' + file),
+  ...walk('assets/img/cc0', '.svg').sort().map((file) => './' + file),
   "./assets/data/course_milestone_assessments.json",
   "./assets/data/comprehensive_test_bank.json",
 ];
