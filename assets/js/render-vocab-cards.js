@@ -25,7 +25,7 @@
             var isTransportImage = item.image.indexOf("/transport/") !== -1;
             var isSquareImage = item.image.indexOf("favicon-option-speech.svg") !== -1;
             img.src = item.image;
-            if (/\/(openmoji|game-icons)\//.test(item.image)) {
+            if (/\/(openmoji|game-icons|mdi)\//.test(item.image)) {
                 img.className = 'vocab-image--cutout';
             }
             img.alt = item.imageAlt || item.english || item.maltese;
@@ -67,10 +67,24 @@
         figure.appendChild(strong);
 
         var span = document.createElement("span");
+        span.className = 'vocab-english';
         span.textContent = item.english;
         figure.appendChild(span);
 
         createNotes(figure, getItemNotes(item));
+        if (item.example && item.exampleTranslation) {
+            var example = document.createElement('div');
+            example.className = 'vocab-example';
+            var sentence = document.createElement('p');
+            sentence.lang = 'mt';
+            sentence.textContent = item.example;
+            var translation = document.createElement('p');
+            translation.className = 'vocab-english';
+            translation.lang = 'en';
+            translation.textContent = item.exampleTranslation;
+            example.append(sentence, translation);
+            figure.appendChild(example);
+        }
 
         if (typeof options.reviewButtonFactory === "function") {
             var reviewButton = options.reviewButtonFactory(item);
@@ -86,10 +100,38 @@
     }
 
     function renderFigureGroup(container, group, options) {
+        addStudyControls(container);
         container.innerHTML = "";
         (group.items || []).forEach(function (item) {
             container.appendChild(createFigureCard(item, Object.assign({}, options || {}, { groupId: group.id })));
         });
+    }
+
+    function addStudyControls(container, imagesOnly) {
+        if (container.dataset.studyControls) return;
+        container.dataset.studyControls = 'true';
+        var key = 'vocab-study::' + location.pathname + '::' + (container.id || Object.values(container.dataset).join('-'));
+        var storage = window.MaltiStorage;
+        var saved = storage ? storage.getJson(key, {}) : {};
+        var controls = document.createElement('div');
+        controls.className = 'vocab-study-controls';
+        (imagesOnly ? ['Images'] : ['Images', 'English']).forEach(function (label) {
+            var setting = label.toLowerCase();
+            var wrapper = document.createElement('label');
+            var input = document.createElement('input');
+            input.type = 'checkbox';
+            input.checked = saved[setting] !== false;
+            function apply() {
+                container.classList.toggle('vocab-hide-' + setting, !input.checked);
+                saved[setting] = input.checked;
+                if (storage) storage.setJson(key, saved);
+            }
+            apply();
+            input.addEventListener('change', apply);
+            wrapper.append(input, ' ' + label);
+            controls.appendChild(wrapper);
+        });
+        container.before(controls);
     }
 
     function addImageCredits(items) {
@@ -104,7 +146,8 @@
         }
         var sources = [
             { path: '/openmoji/', name: 'OpenMoji', author: 'HfG Schwabisch Gmund and contributors', url: 'https://openmoji.org/', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/' },
-            { path: '/game-icons/', name: 'Game-icons.net', author: 'Delapouite and Caro Asercion', url: 'https://game-icons.net/', license: 'CC BY 3.0', licenseUrl: 'https://creativecommons.org/licenses/by/3.0/' }
+            { path: '/game-icons/', name: 'Game-icons.net', author: 'Delapouite and Caro Asercion', url: 'https://game-icons.net/', license: 'CC BY 3.0', licenseUrl: 'https://creativecommons.org/licenses/by/3.0/' },
+            { path: '/mdi/', name: 'Pictogrammers', author: 'Google, Simran and GreenTurtwig', url: 'https://pictogrammers.com/library/mdi/', license: 'Apache 2.0', licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0' }
         ];
         sources.forEach(function (source) {
             if (credits.querySelector('[data-source="' + source.name + '"]') || !items.some(function (item) { return (item.image || '').includes(source.path); })) return;
@@ -124,6 +167,7 @@
 
     window.MaltiVocabRenderer = {
         addImageCredits: addImageCredits,
+        addStudyControls: addStudyControls,
         createFigureCard: createFigureCard,
         renderFigureGroup: renderFigureGroup
     };

@@ -1,4 +1,4 @@
-# with images (599 card entries)
+# with images (602 card entries)
 
 | Maltese | English | Page | Group | Image/status |
 | --- | --- | --- | --- | --- |
@@ -205,6 +205,7 @@
 | bieb | door | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1F6AA.svg |
 | tieqa | window | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1FA9F.svg |
 | ġnien | garden | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1F3E1.svg |
+| gallarija | balcony | family_home_food.html | fhf-home-core | ./assets/img/mdi/balcony.svg |
 | kamra tas-sodda | bedroom | family_home_food.html | fhf-rooms-core | ./assets/img/openmoji/1F6CF.svg |
 | kamra tal-banju | bathroom | family_home_food.html | fhf-rooms-core | ./assets/img/openmoji/1F6C1.svg |
 | salott | living room | family_home_food.html | fhf-rooms-core | ./assets/img/openmoji/1F6CB.svg |
@@ -213,6 +214,7 @@
 | sufan | sofa | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1F6CB.svg |
 | sodda | bed | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1F6CF.svg |
 | friġġ | fridge | family_home_food.html | fhf-furniture-core | ./assets/img/game-icons/fridge.svg |
+| armarju | wardrobe / cupboard | family_home_food.html | fhf-furniture-core | ./assets/img/mdi/cupboard-outline.svg |
 | bank | bench / seat [basic use] | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1FA91.svg |
 | lampa | lamp | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/E163.svg |
 | xkaffa | shelf | family_home_food.html | fhf-furniture-core | ./assets/img/game-icons/bookshelf.svg |
@@ -258,7 +260,7 @@
 | perżut | ham | food_preferences.html | food-shopping | ./assets/img/openmoji/1F969.svg |
 | ħobż | bread | food_preferences.html | food-shopping | ./assets/img/openmoji/1F35E.svg |
 | butir | butter | food_preferences.html | food-shopping | ./assets/img/openmoji/1F9C8.svg |
-| flixkun inbid aħmar | bottle of red wine | food_preferences.html | food-shopping | ./assets/img/openmoji/1F377.svg |
+| flixkun inbid aħmar | bottle of red wine | food_preferences.html | food-shopping | ./assets/img/mdi/bottle-wine-outline.svg |
 | kafè | coffee | food_preferences.html | food-ingredients | ./assets/img/openmoji/2615.svg |
 | te | tea | food_preferences.html | food-ingredients | ./assets/img/openmoji/1F375.svg |
 | zokkor | sugar | food_preferences.html | food-ingredients | ./assets/img/openmoji/1F36C.svg |
@@ -442,7 +444,8 @@
 | bank | desk | year4_exam.html | home | ./assets/img/game-icons/desk.svg |
 | basket | basket / schoolbag | year4_exam.html | home | ./assets/img/openmoji/1F392.svg |
 | bieb | door | year4_exam.html | home | ./assets/img/openmoji/1F6AA.svg |
-| borma | pot | year4_exam.html | home | ./assets/img/openmoji/1F372.svg |
+| borma | pot | year4_exam.html | home | ./assets/img/mdi/pot-steam-outline.svg |
+| gwardarobba | wardrobe | year4_exam.html | home | ./assets/img/mdi/wardrobe-outline.svg |
 | imħadda | pillow | year4_exam.html | home | ./assets/img/game-icons/pillow.svg |
 | inkwatru | picture frame | year4_exam.html | home | ./assets/img/openmoji/1F5BC.svg |
 | kamra | room | year4_exam.html | home | ./assets/img/openmoji/1F6CF.svg |

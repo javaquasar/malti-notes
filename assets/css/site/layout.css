@@ -254,6 +254,34 @@
   font-size: 1.08rem;
 }
 
+.vocab-study-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.vocab-study-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.vocab-hide-images img,
+.vocab-hide-images .color-swatch,
+.vocab-hide-english .vocab-english {
+  visibility: hidden;
+}
+
+.vocab-example {
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+}
+
+.vocab-example p {
+  margin: var(--space-xs) 0;
+}
+
 .visual-vocab-card span {
   margin-top: var(--space-2xs);
   color: var(--text-muted);

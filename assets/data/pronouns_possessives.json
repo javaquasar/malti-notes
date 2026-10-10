@@ -12,12 +12,16 @@
           "slug": "jien",
           "maltese": "jien",
           "english": "I",
-          "example": "Jien student.",
+          "example": "Jien noqgħod f'dar.",
           "note": "subject pronoun",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "I live in a house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "inti",
@@ -29,7 +33,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "hu",
@@ -40,7 +46,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "He is my father.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "hi",
@@ -51,7 +61,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "She is my sister.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ahna",
@@ -63,7 +77,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "intom",
@@ -75,7 +91,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "huma",
@@ -86,7 +104,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "They are their children.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -100,23 +122,31 @@
           "slug": "dan",
           "maltese": "dan",
           "english": "this",
-          "example": "Dan sufan.",
+          "example": "Dan ħija.",
           "note": "masculine, near",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is my brother.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "din",
           "maltese": "din",
           "english": "this",
-          "example": "Din mejda.",
+          "example": "Din oħti.",
           "note": "feminine, near",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is my sister.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "dawn",
@@ -128,7 +158,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "dak",
@@ -139,7 +171,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "dik",
@@ -151,7 +185,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "dawk",
@@ -162,7 +198,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         }
       ]
     },
@@ -176,12 +214,16 @@
           "slug": "tieghi",
           "maltese": "tiegħi",
           "english": "my / mine",
-          "example": "il-familja tiegħi",
+          "example": "Din id-dar tiegħi.",
           "note": "singular owner",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is my house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "tieghek",
@@ -193,40 +235,54 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "tieghu",
           "maltese": "tiegħu",
           "english": "his",
-          "example": "il-flokk tiegħu",
+          "example": "Din id-dar tiegħu.",
           "note": "masculine owner",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is his house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "taghha",
           "maltese": "tagħha",
           "english": "her",
-          "example": "il-borża tagħha",
+          "example": "Din il-borża tagħha.",
           "note": "feminine owner",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is her bag.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "taghna",
           "maltese": "tagħna",
           "english": "our / ours",
-          "example": "id-dar tagħna",
+          "example": "Din il-mejda tagħna.",
           "note": "plural owner",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is our table.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "taghkom",
@@ -238,18 +294,24 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "taghhom",
           "maltese": "tagħhom",
           "english": "their / theirs",
-          "example": "it-tfal tagħhom",
+          "example": "Huma t-tfal tagħhom.",
           "note": "plural owner",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "They are their children.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -270,12 +332,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F469-200D-1F467.svg",
-          "imageAlt": "my mother",
+          "imageAlt": "Context illustration for my mother",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F469-200D-1F467.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "She is my mother.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "missieri",
@@ -288,12 +354,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F468-200D-1F466.svg",
-          "imageAlt": "my father",
+          "imageAlt": "Context illustration for my father",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F468-200D-1F466.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "He is my father.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ohti",
@@ -306,12 +376,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F467.svg",
-          "imageAlt": "my sister",
+          "imageAlt": "Context illustration for my sister",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F467.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is my sister.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "hija-family",
@@ -324,30 +398,38 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F466.svg",
-          "imageAlt": "my brother",
+          "imageAlt": "Context illustration for my brother",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F466.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is my brother.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ommu",
           "maltese": "ommu",
           "english": "his mother",
-          "example": "Hi ommu.",
+          "example": "It-tifel qiegħed ħdejn ommu.",
           "note": "family form",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F469-200D-1F467.svg",
-          "imageAlt": "his mother",
+          "imageAlt": "Context illustration for his mother",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F469-200D-1F467.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "The boy is next to his mother.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "it-tfal-taghhom",
@@ -361,12 +443,14 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F9D2.svg",
-          "imageAlt": "their children",
+          "imageAlt": "Context illustration for their children",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D2.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         }
       ]
     },
@@ -387,12 +471,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3E0.svg",
-          "imageAlt": "my house",
+          "imageAlt": "Context illustration for my house",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is my house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "id-dar-tieghu",
@@ -405,12 +493,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3E0.svg",
-          "imageAlt": "his house",
+          "imageAlt": "Context illustration for his house",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is his house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "id-dar-taghhom",
@@ -423,12 +515,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3E0.svg",
-          "imageAlt": "their house",
+          "imageAlt": "Context illustration for their house",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is their house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "il-kamra-tieghi",
@@ -441,12 +537,14 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F6CF.svg",
-          "imageAlt": "my room",
+          "imageAlt": "Context illustration for my room",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "il-borza-taghha",
@@ -459,12 +557,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F45C.svg",
-          "imageAlt": "her bag",
+          "imageAlt": "Context illustration for her bag",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F45C.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is her bag.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "il-mejda-taghna",
@@ -477,13 +579,17 @@
             "type": "word"
           },
           "image": "./assets/img/game-icons/table.svg",
-          "imageAlt": "our table",
+          "imageAlt": "Context illustration for our table",
           "imageSource": {
             "provider": "Game-icons.net",
             "author": "Delapouite",
             "license": "CC BY 3.0",
             "url": "https://game-icons.net/1x1/delapouite/table.html"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is our table.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -502,7 +608,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "fil",
@@ -513,95 +621,129 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "fuq",
           "maltese": "fuq",
           "english": "on",
-          "example": "fuq il-mejda",
+          "example": "Il-ktieb huwa fuq il-mejda.",
           "note": "location",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The book is on the table.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "taht",
           "maltese": "taħt",
           "english": "under",
-          "example": "taħt is-siġġu",
+          "example": "Il-ballun huwa taħt is-siġġu.",
           "note": "location",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The ball is under the chair.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "hdejn",
           "maltese": "ħdejn",
           "english": "next to",
-          "example": "ħdejn ommi",
+          "example": "It-tifel qiegħed ħdejn ommu.",
           "note": "location",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The boy is next to his mother.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ma",
           "maltese": "ma'",
           "english": "with",
-          "example": "ma' ħija",
+          "example": "Jien ma' ħija.",
           "note": "company",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "I am with my brother.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ghand",
           "maltese": "għand",
           "english": "at / have-location",
-          "example": "għand ommi",
+          "example": "Għada se mmur għand ommi.",
           "note": "place / possession",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Tomorrow I will go to my mother's place.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "minn",
           "maltese": "minn",
           "english": "from",
-          "example": "minn Malta",
+          "example": "Jien minn Malta.",
           "note": "origin",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "I am from Malta.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "sa",
           "maltese": "sa",
           "english": "until / to",
-          "example": "sa filgħaxija",
+          "example": "Se noqgħod id-dar sa filgħaxija.",
           "note": "time / limit",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "I will stay at home until the evening.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ghal",
           "maltese": "għal",
           "english": "for / to",
-          "example": "għal ommi",
+          "example": "Dan huwa rigal għal oħti.",
           "note": "direction / purpose",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is a gift for my sister.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "bi",
@@ -612,7 +754,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         }
       ]
     }

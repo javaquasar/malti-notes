@@ -23,10 +23,6 @@
         return "word::" + config.reviewPrefix + "::" + key;
     }
 
-    function createExample(item, fallbackPrefix) {
-        return item.example || (fallbackPrefix + " " + item.maltese + ".");
-    }
-
     function createPageController() {
         const config = getConfig();
         const reviewButtons = [];
@@ -51,7 +47,10 @@
                 english: item.english,
                 topic: group.title || config.defaultTopic || "General",
                 sourcePage: config.sourcePage,
-                example: createExample(item, config.examplePrefix || "Nara"),
+                example: item.example || '',
+                exampleTranslation: item.exampleTranslation || '',
+                imageRole: item.imageRole || 'context',
+                imageQuizEligible: item.imageQuizEligible === true,
                 image: item.image || "",
                 imageAlt: item.imageAlt || item.english || item.maltese,
                 swatchStyle: item.swatchStyle || ""
@@ -213,6 +212,7 @@
                     allItems.push(word);
                     return word;
                 });
+                if (getStore().syncWordContent) getStore().syncWordContent(words);
 
                 const previous = container.previousElementSibling;
                 if (!previous || !previous.hasAttribute("data-section-review-row")) {

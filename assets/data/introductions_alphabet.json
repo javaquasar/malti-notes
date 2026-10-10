@@ -13,42 +13,54 @@
           "image": "./assets/img/favicon-option-speech.svg",
           "imageAlt": "Speech mark",
           "example": "Jien jisimni Elena.",
-          "exampleTranslation": "My name is Elena."
+          "exampleTranslation": "My name is Elena.",
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "x-jismek",
           "maltese": "Int x'jismek?",
           "english": "What is your name?",
           "example": "Bonġu! Int x'jismek?",
-          "exampleTranslation": "Hello! What is your name?"
+          "exampleTranslation": "Hello! What is your name?",
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "kunjomi",
           "maltese": "Kunjomi huwa ...",
           "english": "My surname is ...",
           "example": "Kunjomi huwa Grech.",
-          "exampleTranslation": "My surname is Grech."
+          "exampleTranslation": "My surname is Grech.",
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "minn-fejn-int",
           "maltese": "Minn fejn int?",
           "english": "Where are you from?",
           "example": "Minn fejn int, Mark?",
-          "exampleTranslation": "Where are you from, Mark?"
+          "exampleTranslation": "Where are you from, Mark?",
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "jien-minn",
           "maltese": "Jien minn ...",
           "english": "I am from ...",
           "example": "Jien minn Malta.",
-          "exampleTranslation": "I am from Malta."
+          "exampleTranslation": "I am from Malta.",
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "fejn-toqghod",
           "maltese": "Fejn toqgħod?",
           "english": "Where do you live?",
           "example": "Fejn toqgħod issa?",
-          "exampleTranslation": "Where do you live now?"
+          "exampleTranslation": "Where do you live now?",
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "jien-noqghod",
@@ -57,7 +69,9 @@
           "image": "./assets/img/home/house-front.svg",
           "imageAlt": "House",
           "example": "Jien noqgħod il-Mosta.",
-          "exampleTranslation": "I live in Mosta."
+          "exampleTranslation": "I live in Mosta.",
+          "imageQuizEligible": true,
+          "imageRole": "identifying"
         }
       ]
     },
@@ -75,12 +89,14 @@
           "example": "Jien ferħana llum.",
           "exampleTranslation": "I am happy today.",
           "image": "./assets/img/openmoji/1F600.svg",
-          "imageAlt": "happy",
+          "imageAlt": "Context illustration for happy",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F600.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "kwiet-kwieta",
@@ -92,12 +108,14 @@
           "example": "It-tifel huwa kwiet.",
           "exampleTranslation": "The boy is quiet.",
           "image": "./assets/img/openmoji/1F910.svg",
-          "imageAlt": "quiet",
+          "imageAlt": "Context illustration for quiet",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F910.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "attiv-attiva",
@@ -109,12 +127,14 @@
           "example": "Hija persuna attiva.",
           "exampleTranslation": "She is an active person.",
           "image": "./assets/img/openmoji/1F4AA.svg",
-          "imageAlt": "active",
+          "imageAlt": "Context illustration for active",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4AA.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "studjuz-studjuza",
@@ -126,12 +146,14 @@
           "example": "L-istudent huwa studjuż.",
           "exampleTranslation": "The student is studious.",
           "image": "./assets/img/openmoji/1F4D6.svg",
-          "imageAlt": "studious",
+          "imageAlt": "Context illustration for studious",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4D6.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "cajtier-cajtiera",
@@ -143,12 +165,14 @@
           "example": "Oħti hija ċajtiera.",
           "exampleTranslation": "My sister is playful.",
           "image": "./assets/img/openmoji/1F600.svg",
-          "imageAlt": "funny / playful",
+          "imageAlt": "Context illustration for funny / playful",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F600.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "gentili",
@@ -158,7 +182,9 @@
             "same form in this simple model"
           ],
           "example": "Il-ħabib tiegħi huwa ġentili.",
-          "exampleTranslation": "My friend is kind."
+          "exampleTranslation": "My friend is kind.",
+          "imageQuizEligible": false,
+          "imageRole": "none"
         }
       ]
     }

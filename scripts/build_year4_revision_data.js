@@ -54,13 +54,6 @@ function hasRealExample(item) {
   return item.example && item.exampleTranslation && item.example.trim().split(/\s+/).length > 1;
 }
 
-function simpleExample(item) {
-  return {
-    example: "Nara " + item.maltese + ".",
-    exampleTranslation: "I see " + item.english + "."
-  };
-}
-
 function collectExamples(file) {
   const examplesFile = file.replace(/\.json$/, "_examples.json");
   const fullPath = path.join(dataDir, examplesFile);
@@ -116,7 +109,7 @@ function findExample(item, examples) {
     };
   }
 
-  return { ...simpleExample(item), source: "site examples" };
+  return { example: item.example || '', exampleTranslation: item.exampleTranslation || '', source: 'topic data' };
 }
 
 function extractGroups(file, sourceLabel, tier) {
@@ -144,6 +137,9 @@ function extractGroups(file, sourceLabel, tier) {
             exampleSource: example.source,
             notes: item.notes || (item.note ? [item.note] : []),
             ...(item.image ? { image: item.image, imageAlt: item.imageAlt || item.english, imageSource: item.imageSource } : {}),
+            imageRole: item.imageRole || 'none',
+            imageQuizEligible: item.imageQuizEligible === true,
+            swatchStyle: item.swatchStyle || '',
             sourceLabel,
             sourceFile: file,
             tier,

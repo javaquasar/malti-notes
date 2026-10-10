@@ -18,12 +18,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F455.svg",
-          "imageAlt": "shirt / top",
+          "imageAlt": "Context illustration for shirt / top",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F455.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I would like a blue shirt.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "qalziet",
@@ -40,7 +44,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F456.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like black trousers.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "libsa",
@@ -57,7 +65,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F457.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like a green dress.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "gakketta",
@@ -74,13 +86,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9E5.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I need a new jacket.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "zarbun",
           "maltese": "żarbun",
           "english": "shoe",
-          "example": "Kemm jiswa dan iż-żarbun?",
+          "example": "Nixtieq żarbun abjad.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -91,7 +107,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F45E.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like a white shoe.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "borza",
@@ -103,12 +123,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F45C.svg",
-          "imageAlt": "bag",
+          "imageAlt": "Context illustration for bag",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F45C.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This bag is big.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -127,7 +151,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like a red shirt.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "shopping-blu",
@@ -138,7 +166,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like a blue shirt.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "shopping-iswed",
@@ -149,7 +181,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like black trousers.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "shopping-abjad",
@@ -160,7 +196,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like a white shoe.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "shopping-ahdar",
@@ -171,7 +211,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I would like a green dress.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "shopping-roza",
@@ -182,7 +226,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I do not like the colour pink.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -200,17 +248,25 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "This is too small.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "medju",
           "maltese": "medju",
           "english": "medium",
-          "example": "Daqs medju, jekk jogħġbok.",
+          "example": "A: Daqs medju, jekk jogħġbok.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "A: Medium size, please.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "kbir",
@@ -220,7 +276,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Do you have a large size?",
+          "exampleSource": "topic example bank"
         }
       ]
     }

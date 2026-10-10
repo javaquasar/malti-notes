@@ -10,7 +10,15 @@ The inventory covers vocabulary-card source datasets configured by `MaltiVocabRe
 
 Existing subject-specific images are preserved. Generic favicon placeholders are not counted as useful illustrations. No fuzzy matching is used: `assets/data/vocabulary_image_sources.json` contains explicit reviewed English-gloss mappings. Some icons illustrate a category, activity or emotion rather than a literal object. Abstract grammar, ambiguous meanings and named Maltese landmarks without accurate artwork remain unillustrated rather than receiving an unrelated icon.
 
-Initial inventory: 911 card entries, 102 illustrated, 791 without a useful picture, and 18 colour swatches. After integration: 599 illustrated, 294 without a picture, and the same 18 swatches. This adds illustrations to 497 previously unillustrated entries. Shared icons can appear on several cards; counts are not unique artwork counts.
+Initial inventory: 911 card entries, 102 illustrated, 791 without a useful picture, and 18 colour swatches. After the teaching improvements: 602 illustrated, 291 without a picture, and the same 18 swatches. Shared icons can appear on several cards; counts are not unique artwork counts.
+
+## Teaching Use
+
+`teaching-audit.json` records image roles and bilingual-example coverage for every entry. There are 274 quiz-eligible visuals (including colour swatches) and 818 paired examples. The remaining 93 entries need a contextual example and English translation; no generic `Nara` sentence is invented for abstract grammar. Existing topic examples are reused where possible; simple object examples and translated topic examples have explicit provenance.
+
+`imageRole: identifying` and `imageQuizEligible: true` explicitly permit image-to-Maltese practice. Calendar icons, family-role symbols, packaging approximations and other context cues remain visible on topic cards but are excluded from that quiz. Unknown eligibility defaults to excluded. Original pre-existing illustrations are retained. Shelf icons show a bookshelf; other category approximations are treated conservatively.
+
+Topic groups have independent Images and English checkboxes, saved locally. Examples include Maltese and English. Saved built-in review cards receive current images, eligibility and examples through an ID-keyed catalog, without changing their ID, wording, topic, box, review count or review dates. Manual cards are never updated. Clearing an obsolete image is supported explicitly. A failed or offline catalog fetch does not prevent review; normal PWA caching can serve a previously downloaded catalog.
 
 ## Image Credits
 
@@ -23,10 +31,14 @@ New illustrations: **OpenMoji**, the open-source emoji and icon project by **HfG
 
 Additional household and landscape illustrations: **Game-icons.net**, by **Delapouite and Caro Asercion**, licensed under **CC BY 3.0**, https://creativecommons.org/licenses/by/3.0/. Original black-on-transparent SVG exports are unmodified. `game-icons-assets.json` records individual authors, source pages, download URLs and checksums. Run `node scripts/import_vocabulary_game_icons.js` to reproduce this supplementary import.
 
+Additional originals from **Pictogrammers / Material Design Icons**, by **Google, Simran and GreenTurtwig**, under **Apache 2.0**, https://www.apache.org/licenses/LICENSE-2.0. `mdi-assets.json` records authors, pinned revision, original URLs and checksums. Original collection notice and full Apache license are in `assets/img/mdi/`. No SVGs were modified.
+
 Only the imported artwork is covered by this attribution/license notice; it does not relicense unrelated site code or original teaching material. Per-image source URLs are stored in the vocabulary data and in `downloaded-assets.json`.
 
 ## Rebuild
 
 Run `node scripts/vocabulary_image_inventory.js` for current lists. Preserve the original `before-*` snapshots. Run `node scripts/import_vocabulary_images.js` to add missing mapped images, then `node scripts/build_year4_revision_data.js` to rebuild derived Year 4 collections. The import preserves existing non-placeholder images and swatches.
 
-Run `node scripts/vocabulary_images_check.js` for original-image preservation, source checksums, SVG decoding, transparent corners, nonblank artwork, desktop/mobile layout, visible credits and image persistence in the review collection. The test starts and closes its own local HTTP server.
+For the teaching improvements, run `node scripts/improve_vocabulary_content.js`, then `node scripts/build_year4_revision_data.js`, `node scripts/build_vocabulary_review_catalog.js`, `node scripts/build_search_index.js` and `node scripts/build_service_worker.js`. Use `node scripts/build_vocabulary_review_catalog.js --check` to verify the generated catalog.
+
+Run `node scripts/vocabulary_images_check.js` for original-image preservation, source checksums, SVG decoding, transparent corners, nonblank artwork, desktop/mobile layout, visible credits, independent persistent visibility controls, visual-quiz exclusions and saved-card updates without lost progress. The test starts and closes its own local HTTP server.

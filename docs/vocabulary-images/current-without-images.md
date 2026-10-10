@@ -1,4 +1,4 @@
-# without images (294 card entries)
+# without images (291 card entries)
 
 | Maltese | English | Page | Group | Image/status |
 | --- | --- | --- | --- | --- |
@@ -30,11 +30,9 @@
 | zija | aunt | family_home_food.html | fhf-family-core | no-image |
 | neputi | grandson / nephew [basic use] | family_home_food.html | fhf-family-core | no-image |
 | neputija | granddaughter / niece [basic use] | family_home_food.html | fhf-family-core | no-image |
-| gallarija | balcony | family_home_food.html | fhf-home-core | no-image |
 | kċina | kitchen | family_home_food.html | fhf-rooms-core | no-image |
 | kamra tal-ikel | dining room | family_home_food.html | fhf-rooms-core | no-image |
 | kuritur | corridor | family_home_food.html | fhf-rooms-core | no-image |
-| armarju | wardrobe / cupboard | family_home_food.html | fhf-furniture-core | no-image |
 | komodina | small bedside table | family_home_food.html | fhf-furniture-core | no-image |
 | griżmejn | throat | health_doctor.html | health-body | no-image |
 | wara x-xogħol | after work | hobbies_future.html | future-time | no-image |
@@ -168,7 +166,6 @@
 | żgħir | small | shopping_clothes.html | shopping-sizes | no-image |
 | medju | medium | shopping_clothes.html | shopping-sizes | no-image |
 | kbir | large | shopping_clothes.html | shopping-sizes | no-image |
-| gwardarobba | wardrobe | year4_exam.html | home | no-image |
 | tapit | rug | year4_exam.html | home | no-image |
 | roża | pink | year4_exam.html | clothes | no-image |
 | ċelesti | light blue | year4_exam.html | clothes | no-image |

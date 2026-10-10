@@ -17,7 +17,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The book is on the table.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "taht",
@@ -28,7 +32,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The ball is under the chair.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "hdejn",
@@ -39,7 +47,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The lamp is next to the bed.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "quddiem",
@@ -50,7 +62,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The car is in front of the house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "wara",
@@ -61,7 +77,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The garden is behind the house.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "bejn",
@@ -72,7 +92,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The chair is between the table and the window.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "fnofs",
@@ -83,7 +107,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The church is in the middle of the square.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -109,7 +137,11 @@
             "author": "Delapouite",
             "license": "CC BY 3.0",
             "url": "https://game-icons.net/1x1/delapouite/table.html"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "The book is on the table.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "siggu",
@@ -126,7 +158,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA91.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "The ball is under the chair.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "sufan",
@@ -143,7 +179,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CB.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "The sofa is next to the window.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "sodda",
@@ -160,7 +200,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "The lamp is next to the bed.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "xkaffa",
@@ -172,13 +216,17 @@
             "type": "word"
           },
           "image": "./assets/img/game-icons/bookshelf.svg",
-          "imageAlt": "shelf",
+          "imageAlt": "Context illustration for shelf",
           "imageSource": {
             "provider": "Game-icons.net",
             "author": "Delapouite",
             "license": "CC BY 3.0",
             "url": "https://game-icons.net/1x1/delapouite/bookshelf.html"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "The books are on the shelf.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "skrivanija",
@@ -196,7 +244,11 @@
             "author": "Delapouite",
             "license": "CC BY 3.0",
             "url": "https://game-icons.net/1x1/delapouite/desk.html"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "The laptop is on the desk.",
+          "exampleSource": "topic example bank"
         }
       ]
     }

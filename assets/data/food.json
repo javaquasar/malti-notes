@@ -12,7 +12,7 @@
           "slug": "halib",
           "maltese": "ħalib",
           "english": "milk",
-          "example": "Għandi bżonn ħalib.",
+          "example": "Tieħu ħalib mal-kafè?",
           "review": {
             "enabled": true,
             "type": "word"
@@ -23,7 +23,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95B.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "Do you take milk with coffee?",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "kartuna-bajd",
@@ -35,12 +39,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F95A.svg",
-          "imageAlt": "box of eggs",
+          "imageAlt": "Context illustration for box of eggs",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95A.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I would like a box of eggs.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "borza-ross",
@@ -52,12 +60,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F35A.svg",
-          "imageAlt": "bag of rice",
+          "imageAlt": "Context illustration for bag of rice",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35A.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "There is a bag of rice in the kitchen.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "pakkett-ghagin",
@@ -69,12 +81,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F35D.svg",
-          "imageAlt": "packet of pasta",
+          "imageAlt": "Context illustration for packet of pasta",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35D.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I want a packet of pasta.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "bott-pizelli",
@@ -86,12 +102,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1FADB.svg",
-          "imageAlt": "tin of peas",
+          "imageAlt": "Context illustration for tin of peas",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FADB.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "We bought a tin of peas.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "kaxxa-frawli",
@@ -103,12 +123,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F353.svg",
-          "imageAlt": "box of strawberries",
+          "imageAlt": "Context illustration for box of strawberries",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F353.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "This is a box of strawberries.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "kapuljat",
@@ -120,18 +144,22 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F969.svg",
-          "imageAlt": "minced meat",
+          "imageAlt": "Context illustration for minced meat",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I am going to cook minced meat.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "gobon",
           "maltese": "ġobon",
           "english": "cheese",
-          "example": "Inħobb il-ġobon.",
+          "example": "F'nofsinhar nieħu biċċa ħobż bil-butir u ġobon.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -142,7 +170,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C0.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "At midday I have a piece of bread with butter and cheese.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "perzut",
@@ -154,18 +186,22 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F969.svg",
-          "imageAlt": "ham",
+          "imageAlt": "Context illustration for ham",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I would like some ham.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "hobz",
           "maltese": "ħobż",
           "english": "bread",
-          "example": "Għandi ftit ħobż.",
+          "example": "F'nofsinhar nieħu biċċa ħobż bil-butir u ġobon.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -176,13 +212,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35E.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "At midday I have a piece of bread with butter and cheese.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "butir",
           "maltese": "butir",
           "english": "butter",
-          "example": "Inħobb il-butir mat-towst.",
+          "example": "Nara butir.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -193,7 +233,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C8.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see butter.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "flixkun-inbid-ahmar",
@@ -204,13 +248,18 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F377.svg",
-          "imageAlt": "bottle of red wine",
+          "image": "./assets/img/mdi/bottle-wine-outline.svg",
+          "imageAlt": "Context illustration for bottle of red wine",
           "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F377.svg"
-          }
+            "provider": "Pictogrammers",
+            "author": "Simran",
+            "license": "Apache-2.0",
+            "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/bottle-wine-outline.svg"
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "There is a bottle of red wine on the table.",
+          "exampleSource": "translated topic example"
         }
       ]
     },
@@ -224,7 +273,7 @@
           "slug": "kafe",
           "maltese": "kafè",
           "english": "coffee",
-          "example": "Filgħodu nieħu kafè.",
+          "example": "Filgħodu nieħu kafè u gallettina.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -235,13 +284,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2615.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "In the morning I have coffee and a biscuit.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "te",
           "maltese": "te",
           "english": "tea",
-          "example": "Trid te jew kafè?",
+          "example": "Tieħu te jew kafè matul il-ġurnata?",
           "review": {
             "enabled": true,
             "type": "word"
@@ -252,7 +305,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F375.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "Do you take tea or coffee during the day?",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "zokkor",
@@ -264,18 +321,22 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F36C.svg",
-          "imageAlt": "sugar",
+          "imageAlt": "Context illustration for sugar",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F36C.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Do you take sugar with tea?",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "melh",
           "maltese": "melħ",
           "english": "salt",
-          "example": "Trid ftit melħ?",
+          "example": "Nara melħ.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -286,13 +347,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C2.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see salt.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "bzar",
           "maltese": "bżar",
           "english": "pepper",
-          "example": "Dan għandu bżar.",
+          "example": "Nara bżar.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -303,7 +368,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E0CE.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see pepper.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "tigiega",
@@ -315,35 +384,41 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F357.svg",
-          "imageAlt": "chicken",
+          "imageAlt": "Context illustration for chicken",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F357.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "laham",
           "maltese": "laħam",
           "english": "meat",
-          "example": "Inħobb niekol laħam.",
+          "example": "F'nofsinhar inħobb niekol xi laħam u ħaxix.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F969.svg",
-          "imageAlt": "meat",
+          "imageAlt": "Context illustration for meat",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "At midday I like to eat some meat and vegetables.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "hut",
           "maltese": "ħut",
           "english": "fish",
-          "example": "Mal-ħut inħobb nieħu inbid bajda.",
+          "example": "Nara ħut.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -354,13 +429,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F41F.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see a fish.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "torta",
           "maltese": "torta",
           "english": "pie",
-          "example": "Din hija torta tajba.",
+          "example": "Nara torta.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -371,13 +450,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F967.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see a pie.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "bajda",
           "maltese": "bajda",
           "english": "egg",
-          "example": "Filgħodu niekol bajda.",
+          "example": "Filgħodu nħobb niekol bajda u towst bil-butir.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -388,13 +471,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95A.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "In the morning I like to eat an egg and toast with butter.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ross",
           "maltese": "ross",
           "english": "rice",
-          "example": "Għandi ross fil-kċina.",
+          "example": "L-ingredjenti għal dan il-platt huma ross, laħam u ħaxix.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -405,30 +492,38 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35A.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "The ingredients for this dish are rice, meat, and vegetables.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "haxix",
           "maltese": "ħaxix",
           "english": "vegetables",
-          "example": "Niekol ħafna ħaxix.",
+          "example": "F'nofsinhar inħobb niekol xi laħam u ħaxix.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F96C.svg",
-          "imageAlt": "vegetables",
+          "imageAlt": "Context illustration for vegetables",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F96C.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "At midday I like to eat some meat and vegetables.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "patata",
           "maltese": "patata",
           "english": "potatoes",
-          "example": "Inħobb il-patata.",
+          "example": "Nara patata.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -439,7 +534,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F954.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see potatoes.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "soppa",
@@ -451,12 +550,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F372.svg",
-          "imageAlt": "soup",
+          "imageAlt": "Context illustration for soup",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F372.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "At midday I like to have soup.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "frott",
@@ -468,18 +571,20 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F34E.svg",
-          "imageAlt": "fruit",
+          "imageAlt": "Context illustration for fruit",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F34E.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "gallettina",
           "maltese": "gallettina",
           "english": "biscuit",
-          "example": "Nieħu kafè u gallettina.",
+          "example": "Filgħodu nieħu kafè u gallettina.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -490,7 +595,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F36A.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "In the morning I have coffee and a biscuit.",
+          "exampleSource": "topic example bank"
         }
       ]
     }

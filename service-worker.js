@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}6a0345ae266e`;
+const CACHE_NAME = `${CACHE_PREFIX}cc9059c4cfa6`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -155,6 +155,12 @@ const CORE_ASSETS = [
     "./assets/img/favicon-option-speech.svg"
   ];
 const LAZY_ASSETS = [
+    "./assets/data/vocabulary_review_catalog.json",
+    "./assets/img/mdi/balcony.svg",
+    "./assets/img/mdi/bottle-wine-outline.svg",
+    "./assets/img/mdi/cupboard-outline.svg",
+    "./assets/img/mdi/pot-steam-outline.svg",
+    "./assets/img/mdi/wardrobe-outline.svg",
     "./assets/data/animals.json",
     "./assets/data/body_appearance.json",
     "./assets/data/collective_nouns.json",

@@ -18,12 +18,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/E242.svg",
-          "imageAlt": "place / places",
+          "imageAlt": "Context illustration for place / places",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E242.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "In Malta there are many interesting places.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "blue-grotto",
@@ -33,7 +37,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Once I went to Blue Grotto.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "muza",
@@ -43,7 +51,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Once I went to Muża to see an art exhibition.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "belt-valletta",
@@ -53,7 +65,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "imdina",
@@ -63,7 +77,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Mdina is an old and beautiful city.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "katakombi",
@@ -73,7 +91,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "When I am in Rabat, I like to visit the Catacombs.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "palazz-tal-inkwizitur",
@@ -83,17 +105,23 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "ggantija",
           "maltese": "Ġgantija",
           "english": "Ġgantija temple complex",
-          "example": "Il-Ġgantija huwa maqdes kbir.",
+          "example": "Ġgantija huwa maqdes kbir.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Ġgantija is a big temple.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -113,13 +141,17 @@
             "type": "word"
           },
           "image": "./assets/img/game-icons/waterfall.svg",
-          "imageAlt": "waterfall / waterfalls",
+          "imageAlt": "Context illustration for waterfall / waterfalls",
           "imageSource": {
             "provider": "Game-icons.net",
             "author": "Delapouite",
             "license": "CC BY 3.0",
             "url": "https://game-icons.net/1x1/delapouite/waterfall.html"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Malta does not have big waterfalls.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "xmara",
@@ -131,12 +163,14 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3DE.svg",
-          "imageAlt": "river / rivers",
+          "imageAlt": "Context illustration for river / rivers",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3DE.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context"
         },
         {
           "slug": "veduta",
@@ -146,7 +180,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "irdum",
@@ -158,13 +194,17 @@
             "type": "word"
           },
           "image": "./assets/img/game-icons/sea-cliff.svg",
-          "imageAlt": "cliff / cliffs",
+          "imageAlt": "Context illustration for cliff / cliffs",
           "imageSource": {
             "provider": "Game-icons.net",
             "author": "Delapouite",
             "license": "CC BY 3.0",
             "url": "https://game-icons.net/1x1/delapouite/sea-cliff.html"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "The Dingli cliffs are very beautiful.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "muzew",
@@ -176,46 +216,58 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3DB.svg",
-          "imageAlt": "museum / museums",
+          "imageAlt": "Context illustration for museum / museums",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3DB.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I like to go to museums.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "maqdes",
           "maltese": "maqdes / tempju",
           "english": "temple / shrine",
-          "example": "Il-Ġgantija huwa maqdes kbir.",
+          "example": "Ġgantija huwa maqdes kbir.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3DB.svg",
-          "imageAlt": "temple / shrine",
+          "imageAlt": "Context illustration for temple / shrine",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3DB.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Ġgantija is a big temple.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "monument",
           "maltese": "monument",
           "english": "monument",
-          "example": "Dan huwa monument famuż.",
+          "example": "Huma jmorru jaraw monument famuż.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3DB.svg",
-          "imageAlt": "monument",
+          "imageAlt": "Context illustration for monument",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3DB.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "They go to see a famous monument.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "pjazza",
@@ -225,7 +277,9 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         }
       ]
     },
@@ -245,12 +299,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3AD.svg",
-          "imageAlt": "carnival",
+          "imageAlt": "Context illustration for carnival",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3AD.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Carnival is a popular tradition.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "prinjolata",
@@ -260,30 +318,36 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "perlini",
           "maltese": "perlini",
           "english": "sugar pearls / sweets",
-          "example": "Il-prinjolata u l-perlini huma marbuta mal-karnival.",
+          "example": "Xi kultant hemm ukoll ġewż u perlini.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F36C.svg",
-          "imageAlt": "sugar pearls / sweets",
+          "imageAlt": "Context illustration for sugar pearls / sweets",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F36C.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Sometimes there are also walnuts and sugar pearls.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "cikkulata",
           "maltese": "iċ-ċikkulata",
           "english": "chocolate",
-          "example": "Fil-prinjolata hemm iċ-ċikkulata.",
+          "example": "Nara iċ-ċikkulata.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -294,78 +358,102 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F36B.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see chocolate.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "krema",
           "maltese": "krema",
           "english": "cream",
-          "example": "Il-ħlewwa għandha krema.",
+          "example": "Fil-prinjolata hemm krema u ċikkulata.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "In prinjolata there is cream and chocolate.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "gewz",
           "maltese": "ġewż",
           "english": "walnuts",
-          "example": "Fil-prinjolata hemm ġewż.",
+          "example": "Xi kultant hemm ukoll ġewż u perlini.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Sometimes there are also walnuts and sugar pearls.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "festival-tal-muzika",
           "maltese": "festival tal-mużika",
           "english": "music festival",
-          "example": "Inħobb immur festival tal-mużika.",
+          "example": "X'inhu festival tal-mużika?",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F3B6.svg",
-          "imageAlt": "music festival",
+          "imageAlt": "Context illustration for music festival",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3B6.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "What is a music festival?",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "festival-tal-birra",
           "maltese": "festival tal-birra",
           "english": "beer festival",
-          "example": "Hemm festival tal-birra fis-sajf.",
+          "example": "Xi nies iħobbu festival tal-birra.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F37A.svg",
-          "imageAlt": "beer festival",
+          "imageAlt": "Context illustration for beer festival",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F37A.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Some people like the beer festival.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "festival-tal-inbid",
           "maltese": "festival tal-inbid",
           "english": "wine festival",
-          "example": "Huma jmorru festival tal-inbid.",
+          "example": "Oħrajn iħobbu festival tal-inbid.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F942.svg",
-          "imageAlt": "wine festival",
+          "imageAlt": "Context illustration for wine festival",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F942.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "Others like the wine festival.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "esebizzjoni",
@@ -375,7 +463,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Once I went to Muża to see an art exhibition.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "tradizzjoni",
@@ -385,7 +477,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Carnival is a popular tradition.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -403,84 +499,114 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none"
         },
         {
           "slug": "sabih",
           "maltese": "sabiħ / sabiħa",
           "english": "beautiful",
-          "example": "Din hija veduta sabiħa.",
+          "example": "Ir-raħal huwa kwiet u sabiħ.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The village is quiet and beautiful.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "interessanti",
           "maltese": "interessanti",
           "english": "interesting",
-          "example": "Dan huwa mużew interessanti.",
+          "example": "F'Malta hawn ħafna postijiet interessanti.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "In Malta there are many interesting places.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "famuz",
           "maltese": "famuż / famuża",
           "english": "famous",
-          "example": "Dan huwa monument famuż.",
+          "example": "Il-Katakombi huma post storiku famuż.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The Catacombs are a famous historical place.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "kwiet",
           "maltese": "kwiet / kwieta",
           "english": "quiet",
-          "example": "Dan huwa raħal kwiet.",
+          "example": "Ir-raħal huwa kwiet u sabiħ.",
           "review": {
             "enabled": true,
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F910.svg",
-          "imageAlt": "quiet",
+          "imageAlt": "Context illustration for quiet",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F910.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "The village is quiet and beautiful.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "popolari",
           "maltese": "popolari",
           "english": "popular",
-          "example": "Il-karnival huwa avveniment popolari.",
+          "example": "Il-karnival huwa tradizzjoni popolari.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "Carnival is a popular tradition.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "modern",
           "maltese": "modern / moderna",
           "english": "modern",
-          "example": "Dan huwa bini modern.",
+          "example": "Il-bini modern huwa għoli ħafna.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The modern building is very tall.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "gholi",
           "maltese": "għoli / għolja",
           "english": "high / tall",
-          "example": "Dan huwa bini għoli.",
+          "example": "Il-bini modern huwa għoli ħafna.",
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "The modern building is very tall.",
+          "exampleSource": "topic example bank"
         }
       ]
     }

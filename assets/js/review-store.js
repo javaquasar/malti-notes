@@ -135,6 +135,23 @@
         return saveCard(Object.assign({}, word, { type: "word-card" }));
     }
 
+    function syncWordContent(words) {
+        const state = loadState();
+        let changed = false;
+        const fields = ['image', 'imageAlt', 'imageRole', 'imageQuizEligible', 'swatchStyle', 'example', 'exampleTranslation'];
+        (words || []).forEach(function (word) {
+            const card = state[word.id];
+            if (!card || card.type !== 'word-card' || card.sourcePage === 'manual') return;
+            fields.forEach(function (field) {
+                if (!Object.prototype.hasOwnProperty.call(word, field)) return;
+                if ((field === 'example' || field === 'exampleTranslation') && !word[field]) return;
+                if (card[field] !== word[field]) { card[field] = word[field]; changed = true; }
+            });
+        });
+        if (changed) saveState(state);
+        return changed;
+    }
+
     function addSentence(sentence) {
         return saveCard(Object.assign({}, sentence, { type: "sentence-card" }));
     }
@@ -337,6 +354,7 @@
     }
 
     window.MaltiReviewStore = {
+        syncWordContent: syncWordContent,
         addWord: addWord,
         addSentence: addSentence,
         addCustomWord: addCustomWord,

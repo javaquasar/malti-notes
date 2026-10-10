@@ -18,12 +18,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F9D1.svg",
-          "imageAlt": "head",
+          "imageAlt": "Context illustration for head",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D1.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I have a big head.",
+          "exampleSource": "translated topic example"
         },
         {
           "slug": "wicc",
@@ -35,12 +39,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F9D1.svg",
-          "imageAlt": "face",
+          "imageAlt": "Context illustration for face",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D1.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I have a round face.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "ghajn",
@@ -57,7 +65,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F441.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I have brown eyes.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "imnieher",
@@ -74,13 +86,17 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F443.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "He has a long nose.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "fomm",
           "maltese": "fomm",
           "english": "mouth",
-          "example": "Għandi fomm żgħir.",
+          "example": "Nara fomm.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -91,7 +107,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F444.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "I see a mouth.",
+          "exampleSource": "simple object example"
         },
         {
           "slug": "widna",
@@ -108,7 +128,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F442.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "She has small ears.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "id",
@@ -125,7 +149,11 @@
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F590.svg"
-          }
+          },
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "exampleTranslation": "She has small hands.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "sieq",
@@ -137,12 +165,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F9B6.svg",
-          "imageAlt": "leg / foot",
+          "imageAlt": "Context illustration for leg / foot",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9B6.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "He has long legs.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "xaghar",
@@ -154,12 +186,16 @@
             "type": "word"
           },
           "image": "./assets/img/openmoji/1F9B1.svg",
-          "imageAlt": "hair",
+          "imageAlt": "Context illustration for hair",
           "imageSource": {
             "provider": "OpenMoji",
             "license": "CC BY-SA 4.0",
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9B1.svg"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "exampleTranslation": "I have short hair.",
+          "exampleSource": "topic example bank"
         }
       ]
     },
@@ -177,7 +213,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "He is tall.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "qasir-qasira",
@@ -187,7 +227,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "She is short.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "zaghzugh-zaghzugha",
@@ -197,7 +241,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "He is young.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "zghir-zghira",
@@ -207,7 +255,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "She has small ears.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "kbir-kbira",
@@ -217,7 +269,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "He has a big nose.",
+          "exampleSource": "topic example bank"
         },
         {
           "slug": "sabih-sabiha",
@@ -227,7 +283,11 @@
           "review": {
             "enabled": true,
             "type": "word"
-          }
+          },
+          "imageQuizEligible": false,
+          "imageRole": "none",
+          "exampleTranslation": "She is beautiful.",
+          "exampleSource": "topic example bank"
         }
       ]
     }

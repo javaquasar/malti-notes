@@ -138,6 +138,8 @@
     }
 
     function cardMatches(card, filters, dueLookup) {
+        if (filters.direction === 'image-to-maltese' && card.type === 'word-card' &&
+            !(card.swatchStyle || (card.image && card.imageQuizEligible === true))) return false;
         if (filters.topic && card.topic !== filters.topic) {
             return false;
         }
@@ -220,7 +222,10 @@
         });
         return ids.map(function (id) {
             return lookup[id];
-        }).filter(Boolean);
+        }).filter(function (card) {
+            return card && (getFilters().direction !== 'image-to-maltese' || card.type !== 'word-card' ||
+                card.swatchStyle || (card.image && card.imageQuizEligible === true));
+        });
     }
 
     function restartQuickSession() {
@@ -1095,7 +1100,8 @@
         }
 
         if (answerOptions.showExample) {
-            meta.push("<div class=\"review-meta\"><code>Example</code>: " + escapeHtml(card.example || "No example yet.") + "</div>");
+            meta.push("<div class=\"review-meta\"><code>Example</code>: " + escapeHtml(card.example || "No example yet.") +
+                (card.exampleTranslation ? '<br><span lang="en">' + escapeHtml(card.exampleTranslation) + '</span>' : '') + "</div>");
         }
 
         meta.push("<div class=\"review-meta\"><code>Source</code>: " + escapeHtml(card.sourcePage || "manual") + "</div>");
@@ -1978,7 +1984,12 @@
         wireCustomForm();
         wireReviewBackup();
 
-        Promise.allSettled([backfillAnimalImages(), backfillColorSwatches()]).finally(function () {
+        Promise.allSettled([backfillAnimalImages(), backfillColorSwatches(),
+            fetch('./assets/data/vocabulary_review_catalog.json').then(function (response) {
+                if (!response.ok) throw new Error('Vocabulary updates unavailable');
+                return response.json();
+            }).then(function (data) { window.MaltiReviewStore.syncWordContent(Object.values(data.words)); })
+        ]).finally(function () {
             refreshAll(true);
 
             byId("clear-review").addEventListener("click", function () {

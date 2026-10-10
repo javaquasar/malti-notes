@@ -60,6 +60,10 @@
             maltese: item.maltese,
             english: item.english || "",
             example: item.example || "",
+            exampleTranslation: item.exampleTranslation || '',
+            imageRole: item.imageRole || 'context',
+            imageQuizEligible: item.imageQuizEligible === true,
+            swatchStyle: item.swatchStyle || '',
             topic: "Year 4 - " + item.groupTitle,
             sourcePage: "year4_exam.html",
             image: item.image || "",
@@ -168,6 +172,8 @@
             return inGroup && (!query || haystack.includes(query));
         });
         grid.innerHTML = "";
+        if (window.MaltiVocabRenderer) window.MaltiVocabRenderer.addStudyControls(grid, true);
+        if (window.MaltiReviewStore.syncWordContent) window.MaltiReviewStore.syncWordContent(allItems().map(toReviewWord));
         state.visible.forEach(function (item) {
             var card = document.createElement("article");
             var isSaved = window.MaltiReviewStore.hasWord(reviewId(item));
