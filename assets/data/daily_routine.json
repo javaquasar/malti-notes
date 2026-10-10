@@ -8,16 +8,176 @@
       "sectionTitle": "Core Verbs",
       "title": "Everyday verbs for a normal day",
       "items": [
-        { "slug": "inqum", "maltese": "inqum", "english": "I get up", "example": "Filgħodu inqum kmieni.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "immur", "maltese": "immur", "english": "I go", "example": "Immur ix-xogħol filgħodu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "nahdem", "maltese": "naħdem", "english": "I work", "example": "Naħdem f'uffiċċju.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "niekol", "maltese": "niekol", "english": "I eat", "example": "F'nofsinhar niekol soppa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "nixrob", "maltese": "nixrob", "english": "I drink", "example": "Filgħodu nixrob kafè.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "nistrieh", "maltese": "nistrieħ", "english": "I rest", "example": "Wara x-xogħol nistrieħ.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "niltaqa", "maltese": "niltaqa'", "english": "I meet", "example": "Niltaqa' mal-ħbieb tiegħi.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "noqghod", "maltese": "noqgħod", "english": "I live / stay", "example": "Noqgħod Malta.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "nimxi", "maltese": "nimxi", "english": "I walk", "example": "Xi kultant nimxi d-dar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "norqod", "maltese": "norqod", "english": "I sleep", "example": "Bil-lejl norqod id-dar.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "inqum",
+          "maltese": "inqum",
+          "english": "I get up",
+          "example": "Filgħodu inqum kmieni.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F971.svg",
+          "imageAlt": "I get up",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F971.svg"
+          }
+        },
+        {
+          "slug": "immur",
+          "maltese": "immur",
+          "english": "I go",
+          "example": "Immur ix-xogħol filgħodu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6B6.svg",
+          "imageAlt": "I go",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6B6.svg"
+          }
+        },
+        {
+          "slug": "nahdem",
+          "maltese": "naħdem",
+          "english": "I work",
+          "example": "Naħdem f'uffiċċju.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F4BC.svg",
+          "imageAlt": "I work",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4BC.svg"
+          }
+        },
+        {
+          "slug": "niekol",
+          "maltese": "niekol",
+          "english": "I eat",
+          "example": "F'nofsinhar niekol soppa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F37D.svg",
+          "imageAlt": "I eat",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F37D.svg"
+          }
+        },
+        {
+          "slug": "nixrob",
+          "maltese": "nixrob",
+          "english": "I drink",
+          "example": "Filgħodu nixrob kafè.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F95B.svg",
+          "imageAlt": "I drink",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95B.svg"
+          }
+        },
+        {
+          "slug": "nistrieh",
+          "maltese": "nistrieħ",
+          "english": "I rest",
+          "example": "Wara x-xogħol nistrieħ.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6CC.svg",
+          "imageAlt": "I rest",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CC.svg"
+          }
+        },
+        {
+          "slug": "niltaqa",
+          "maltese": "niltaqa'",
+          "english": "I meet",
+          "example": "Niltaqa' mal-ħbieb tiegħi.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F91D.svg",
+          "imageAlt": "I meet",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F91D.svg"
+          }
+        },
+        {
+          "slug": "noqghod",
+          "maltese": "noqgħod",
+          "english": "I live / stay",
+          "example": "Noqgħod Malta.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E0.svg",
+          "imageAlt": "I live / stay",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
+          }
+        },
+        {
+          "slug": "nimxi",
+          "maltese": "nimxi",
+          "english": "I walk",
+          "example": "Xi kultant nimxi d-dar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6B6.svg",
+          "imageAlt": "I walk",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6B6.svg"
+          }
+        },
+        {
+          "slug": "norqod",
+          "maltese": "norqod",
+          "english": "I sleep",
+          "example": "Bil-lejl norqod id-dar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F634.svg",
+          "imageAlt": "I sleep",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F634.svg"
+          }
+        }
       ]
     }
   ]

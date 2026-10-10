@@ -8,12 +8,108 @@
       "sectionTitle": "Clothes Vocabulary",
       "title": "Clothes vocabulary",
       "items": [
-        { "slug": "flokk", "maltese": "flokk", "english": "shirt / top", "example": "Nixtieq flokk blu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "qalziet", "maltese": "qalziet", "english": "trousers", "example": "Nixtieq qalziet iswed.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "libsa", "maltese": "libsa", "english": "dress", "example": "Nixtieq libsa ħadra.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "gakketta", "maltese": "ġakketta", "english": "jacket", "example": "Jien għandi bżonn ġakketta ġdida.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "zarbun", "maltese": "żarbun", "english": "shoe", "example": "Kemm jiswa dan iż-żarbun?", "review": { "enabled": true, "type": "word" } },
-        { "slug": "borza", "maltese": "borża", "english": "bag", "example": "Din il-borża hija kbira.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "flokk",
+          "maltese": "flokk",
+          "english": "shirt / top",
+          "example": "Nixtieq flokk blu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F455.svg",
+          "imageAlt": "shirt / top",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F455.svg"
+          }
+        },
+        {
+          "slug": "qalziet",
+          "maltese": "qalziet",
+          "english": "trousers",
+          "example": "Nixtieq qalziet iswed.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F456.svg",
+          "imageAlt": "trousers",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F456.svg"
+          }
+        },
+        {
+          "slug": "libsa",
+          "maltese": "libsa",
+          "english": "dress",
+          "example": "Nixtieq libsa ħadra.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F457.svg",
+          "imageAlt": "dress",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F457.svg"
+          }
+        },
+        {
+          "slug": "gakketta",
+          "maltese": "ġakketta",
+          "english": "jacket",
+          "example": "Jien għandi bżonn ġakketta ġdida.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9E5.svg",
+          "imageAlt": "jacket",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9E5.svg"
+          }
+        },
+        {
+          "slug": "zarbun",
+          "maltese": "żarbun",
+          "english": "shoe",
+          "example": "Kemm jiswa dan iż-żarbun?",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F45E.svg",
+          "imageAlt": "shoe",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F45E.svg"
+          }
+        },
+        {
+          "slug": "borza",
+          "maltese": "borża",
+          "english": "bag",
+          "example": "Din il-borża hija kbira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F45C.svg",
+          "imageAlt": "bag",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F45C.svg"
+          }
+        }
       ]
     },
     {
@@ -22,12 +118,72 @@
       "sectionTitle": "Colours and Sizes",
       "title": "Shopping colours",
       "items": [
-        { "slug": "shopping-ahmar", "maltese": "aħmar", "english": "red", "swatchStyle": "background:#d73a31;", "example": "Nixtieq flokk aħmar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "shopping-blu", "maltese": "blu", "english": "blue", "swatchStyle": "background:#2f7be5;", "example": "Nixtieq flokk blu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "shopping-iswed", "maltese": "iswed", "english": "black", "swatchStyle": "background:#111111;", "example": "Nixtieq qalziet iswed.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "shopping-abjad", "maltese": "abjad", "english": "white", "swatchStyle": "background:#ffffff;", "example": "Nixtieq żarbun abjad.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "shopping-ahdar", "maltese": "aħdar", "english": "green", "swatchStyle": "background:#3f9b4d;", "example": "Nixtieq libsa ħadra.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "shopping-roza", "maltese": "roża", "english": "pink", "swatchStyle": "background:#f7adc6;", "example": "Ma nħobbx il-kulur roża.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "shopping-ahmar",
+          "maltese": "aħmar",
+          "english": "red",
+          "swatchStyle": "background:#d73a31;",
+          "example": "Nixtieq flokk aħmar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "shopping-blu",
+          "maltese": "blu",
+          "english": "blue",
+          "swatchStyle": "background:#2f7be5;",
+          "example": "Nixtieq flokk blu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "shopping-iswed",
+          "maltese": "iswed",
+          "english": "black",
+          "swatchStyle": "background:#111111;",
+          "example": "Nixtieq qalziet iswed.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "shopping-abjad",
+          "maltese": "abjad",
+          "english": "white",
+          "swatchStyle": "background:#ffffff;",
+          "example": "Nixtieq żarbun abjad.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "shopping-ahdar",
+          "maltese": "aħdar",
+          "english": "green",
+          "swatchStyle": "background:#3f9b4d;",
+          "example": "Nixtieq libsa ħadra.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "shopping-roza",
+          "maltese": "roża",
+          "english": "pink",
+          "swatchStyle": "background:#f7adc6;",
+          "example": "Ma nħobbx il-kulur roża.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -36,9 +192,36 @@
       "sectionTitle": "Colours and Sizes",
       "title": "Shopping sizes",
       "items": [
-        { "slug": "zgir", "maltese": "żgħir", "english": "small", "example": "Dan huwa żgħir wisq.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "medju", "maltese": "medju", "english": "medium", "example": "Daqs medju, jekk jogħġbok.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kbir", "maltese": "kbir", "english": "large", "example": "Għandek daqs kbir?", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "zgir",
+          "maltese": "żgħir",
+          "english": "small",
+          "example": "Dan huwa żgħir wisq.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "medju",
+          "maltese": "medju",
+          "english": "medium",
+          "example": "Daqs medju, jekk jogħġbok.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "kbir",
+          "maltese": "kbir",
+          "english": "large",
+          "example": "Għandek daqs kbir?",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     }
   ]

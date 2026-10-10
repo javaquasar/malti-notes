@@ -61,7 +61,9 @@
             english: item.english || "",
             example: item.example || "",
             topic: "Year 4 - " + item.groupTitle,
-            sourcePage: "year4_exam.html"
+            sourcePage: "year4_exam.html",
+            image: item.image || "",
+            imageAlt: item.imageAlt || item.english || item.maltese
         };
     }
 
@@ -172,6 +174,17 @@
             card.className = "year4-card year4-card--review-toggle" + (state.hideEnglish ? " hide-english" : "");
             card.tabIndex = 0;
             card.innerHTML = "<code></code><p class='english'></p><p class='mini'></p><div class='year4-example'><strong>Example</strong><span class='example-text'></span><strong>English</strong><span class='example-translation'></span></div>";
+            if (item.image) {
+                var image = document.createElement("img");
+                image.src = item.image;
+                image.alt = item.imageAlt || item.english || item.maltese;
+                image.loading = "lazy";
+                image.decoding = "async";
+                image.width = 128;
+                image.height = 128;
+                image.className = "year4-vocab-image";
+                card.prepend(image);
+            }
             card.querySelector("code").textContent = item.maltese;
             card.querySelector(".english").textContent = item.english || "translation pending";
             card.querySelector(".mini").textContent = item.collectionTitle + " - " + (item.sourceLabel || item.groupTitle);
@@ -190,6 +203,7 @@
             grid.appendChild(card);
         });
         count.textContent = state.visible.length + " visible words";
+        if (window.MaltiVocabRenderer) window.MaltiVocabRenderer.addImageCredits(allItems());
         renderCollectionTabs();
         renderTabs();
         updateReviewSummary();

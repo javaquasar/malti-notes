@@ -143,6 +143,7 @@ function extractGroups(file, sourceLabel, tier) {
             exampleTranslation: example.exampleTranslation,
             exampleSource: example.source,
             notes: item.notes || (item.note ? [item.note] : []),
+            ...(item.image ? { image: item.image, imageAlt: item.imageAlt || item.english, imageSource: item.imageSource } : {}),
             sourceLabel,
             sourceFile: file,
             tier,

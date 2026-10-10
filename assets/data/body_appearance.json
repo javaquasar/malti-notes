@@ -8,15 +8,159 @@
       "sectionTitle": "Body Parts",
       "title": "Body parts",
       "items": [
-        { "slug": "ras", "maltese": "ras", "english": "head", "example": "Għandi ras kbira.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "wicc", "maltese": "wiċċ", "english": "face", "example": "Għandi wiċċ tond.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ghajn", "maltese": "għajn", "english": "eye", "example": "Għandi għajnejn kannella.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "imnieher", "maltese": "imnieħer", "english": "nose", "example": "Għandu imnieħer twil.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "fomm", "maltese": "fomm", "english": "mouth", "example": "Għandi fomm żgħir.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "widna", "maltese": "widna", "english": "ear", "example": "Għandha widnejn żgħar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "id", "maltese": "id", "english": "hand", "example": "Għandha idejn żgħar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "sieq", "maltese": "sieq", "english": "leg / foot", "example": "Għandu saqajn twal.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "xaghar", "maltese": "xagħar", "english": "hair", "example": "Għandi xagħar qasir.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "ras",
+          "maltese": "ras",
+          "english": "head",
+          "example": "Għandi ras kbira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9D1.svg",
+          "imageAlt": "head",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D1.svg"
+          }
+        },
+        {
+          "slug": "wicc",
+          "maltese": "wiċċ",
+          "english": "face",
+          "example": "Għandi wiċċ tond.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9D1.svg",
+          "imageAlt": "face",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D1.svg"
+          }
+        },
+        {
+          "slug": "ghajn",
+          "maltese": "għajn",
+          "english": "eye",
+          "example": "Għandi għajnejn kannella.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F441.svg",
+          "imageAlt": "eye",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F441.svg"
+          }
+        },
+        {
+          "slug": "imnieher",
+          "maltese": "imnieħer",
+          "english": "nose",
+          "example": "Għandu imnieħer twil.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F443.svg",
+          "imageAlt": "nose",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F443.svg"
+          }
+        },
+        {
+          "slug": "fomm",
+          "maltese": "fomm",
+          "english": "mouth",
+          "example": "Għandi fomm żgħir.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F444.svg",
+          "imageAlt": "mouth",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F444.svg"
+          }
+        },
+        {
+          "slug": "widna",
+          "maltese": "widna",
+          "english": "ear",
+          "example": "Għandha widnejn żgħar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F442.svg",
+          "imageAlt": "ear",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F442.svg"
+          }
+        },
+        {
+          "slug": "id",
+          "maltese": "id",
+          "english": "hand",
+          "example": "Għandha idejn żgħar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F590.svg",
+          "imageAlt": "hand",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F590.svg"
+          }
+        },
+        {
+          "slug": "sieq",
+          "maltese": "sieq",
+          "english": "leg / foot",
+          "example": "Għandu saqajn twal.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9B6.svg",
+          "imageAlt": "leg / foot",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9B6.svg"
+          }
+        },
+        {
+          "slug": "xaghar",
+          "maltese": "xagħar",
+          "english": "hair",
+          "example": "Għandi xagħar qasir.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9B1.svg",
+          "imageAlt": "hair",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9B1.svg"
+          }
+        }
       ]
     },
     {
@@ -25,12 +169,66 @@
       "sectionTitle": "Basic Appearance",
       "title": "Basic appearance adjectives",
       "items": [
-        { "slug": "twil-twila", "maltese": "twil / twila", "english": "tall / long", "example": "Huwa twil.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "qasir-qasira", "maltese": "qasir / qasira", "english": "short", "example": "Hija qasira.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "zaghzugh-zaghzugha", "maltese": "żagħżugħ / żagħżugħa", "english": "young", "example": "Huwa żagħżugħ.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "zghir-zghira", "maltese": "żgħir / żgħira", "english": "small", "example": "Għandha widnejn żgħar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kbir-kbira", "maltese": "kbir / kbira", "english": "big", "example": "Għandu imnieħer kbir.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "sabih-sabiha", "maltese": "sabiħ / sabiħa", "english": "beautiful", "example": "Hija sabiħa.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "twil-twila",
+          "maltese": "twil / twila",
+          "english": "tall / long",
+          "example": "Huwa twil.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "qasir-qasira",
+          "maltese": "qasir / qasira",
+          "english": "short",
+          "example": "Hija qasira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "zaghzugh-zaghzugha",
+          "maltese": "żagħżugħ / żagħżugħa",
+          "english": "young",
+          "example": "Huwa żagħżugħ.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "zghir-zghira",
+          "maltese": "żgħir / żgħira",
+          "english": "small",
+          "example": "Għandha widnejn żgħar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "kbir-kbira",
+          "maltese": "kbir / kbira",
+          "english": "big",
+          "example": "Għandu imnieħer kbir.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "sabih-sabiha",
+          "maltese": "sabiħ / sabiħa",
+          "english": "beautiful",
+          "example": "Hija sabiħa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     }
   ]

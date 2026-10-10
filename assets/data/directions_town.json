@@ -8,15 +8,107 @@
       "sectionTitle": "Places in Town",
       "title": "Places in town",
       "items": [
-        { "slug": "bank", "maltese": "bank", "english": "bank" },
-        { "slug": "spizerija", "maltese": "spiżerija", "english": "pharmacy" },
-        { "slug": "waqfa-tal-linja", "maltese": "waqfa tal-linja", "english": "bus stop" },
-        { "slug": "skola", "maltese": "skola", "english": "school" },
-        { "slug": "knisja", "maltese": "knisja", "english": "church" },
-        { "slug": "ristorant", "maltese": "ristorant", "english": "restaurant" },
-        { "slug": "hanut", "maltese": "ħanut", "english": "shop" },
-        { "slug": "pjazza", "maltese": "pjazza", "english": "square / piazza" },
-        { "slug": "gnien", "maltese": "ġnien", "english": "garden" }
+        {
+          "slug": "bank",
+          "maltese": "bank",
+          "english": "bank",
+          "image": "./assets/img/openmoji/1F3E6.svg",
+          "imageAlt": "bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E6.svg"
+          }
+        },
+        {
+          "slug": "spizerija",
+          "maltese": "spiżerija",
+          "english": "pharmacy",
+          "image": "./assets/img/openmoji/1F48A.svg",
+          "imageAlt": "pharmacy",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F48A.svg"
+          }
+        },
+        {
+          "slug": "waqfa-tal-linja",
+          "maltese": "waqfa tal-linja",
+          "english": "bus stop",
+          "image": "./assets/img/openmoji/1F68F.svg",
+          "imageAlt": "bus stop",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F68F.svg"
+          }
+        },
+        {
+          "slug": "skola",
+          "maltese": "skola",
+          "english": "school",
+          "image": "./assets/img/openmoji/1F3EB.svg",
+          "imageAlt": "school",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3EB.svg"
+          }
+        },
+        {
+          "slug": "knisja",
+          "maltese": "knisja",
+          "english": "church",
+          "image": "./assets/img/openmoji/26EA.svg",
+          "imageAlt": "church",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/26EA.svg"
+          }
+        },
+        {
+          "slug": "ristorant",
+          "maltese": "ristorant",
+          "english": "restaurant",
+          "image": "./assets/img/openmoji/1F374.svg",
+          "imageAlt": "restaurant",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F374.svg"
+          }
+        },
+        {
+          "slug": "hanut",
+          "maltese": "ħanut",
+          "english": "shop",
+          "image": "./assets/img/openmoji/1F3EA.svg",
+          "imageAlt": "shop",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3EA.svg"
+          }
+        },
+        {
+          "slug": "pjazza",
+          "maltese": "pjazza",
+          "english": "square / piazza"
+        },
+        {
+          "slug": "gnien",
+          "maltese": "ġnien",
+          "english": "garden",
+          "image": "./assets/img/openmoji/1F3E1.svg",
+          "imageAlt": "garden",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E1.svg"
+          }
+        }
       ]
     },
     {
@@ -25,18 +117,116 @@
       "sectionTitle": "Direction Words",
       "title": "Direction words and route vocabulary",
       "items": [
-        { "slug": "lemin", "maltese": "lemin", "english": "right" },
-        { "slug": "xellug", "maltese": "xellug", "english": "left" },
-        { "slug": "salib-it-toroq", "maltese": "salib it-toroq", "english": "crossroads" },
-        { "slug": "kantuniera", "maltese": "kantuniera", "english": "corner" },
-        { "slug": "dur-ikser", "maltese": "dur / ikser", "english": "turn" },
-        { "slug": "imxi", "maltese": "imxi", "english": "walk" },
-        { "slug": "hawn", "maltese": "hawn", "english": "here" },
-        { "slug": "hemm", "maltese": "hemm", "english": "there / there is" },
-        { "slug": "dritt", "maltese": "dritt", "english": "straight on" },
-        { "slug": "qrib", "maltese": "qrib", "english": "near" },
-        { "slug": "il-boghod", "maltese": "'il bogħod", "english": "far" },
-        { "slug": "faccata-ta", "maltese": "faċċata ta'", "english": "opposite" }
+        {
+          "slug": "lemin",
+          "maltese": "lemin",
+          "english": "right",
+          "image": "./assets/img/openmoji/27A1.svg",
+          "imageAlt": "right",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/27A1.svg"
+          }
+        },
+        {
+          "slug": "xellug",
+          "maltese": "xellug",
+          "english": "left",
+          "image": "./assets/img/openmoji/2B05.svg",
+          "imageAlt": "left",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2B05.svg"
+          }
+        },
+        {
+          "slug": "salib-it-toroq",
+          "maltese": "salib it-toroq",
+          "english": "crossroads",
+          "image": "./assets/img/game-icons/crossroad.svg",
+          "imageAlt": "crossroads",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/crossroad.html"
+          }
+        },
+        {
+          "slug": "kantuniera",
+          "maltese": "kantuniera",
+          "english": "corner"
+        },
+        {
+          "slug": "dur-ikser",
+          "maltese": "dur / ikser",
+          "english": "turn",
+          "image": "./assets/img/openmoji/E0A7.svg",
+          "imageAlt": "turn",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E0A7.svg"
+          }
+        },
+        {
+          "slug": "imxi",
+          "maltese": "imxi",
+          "english": "walk",
+          "image": "./assets/img/openmoji/1F6B6.svg",
+          "imageAlt": "walk",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6B6.svg"
+          }
+        },
+        {
+          "slug": "hawn",
+          "maltese": "hawn",
+          "english": "here",
+          "image": "./assets/img/openmoji/E242.svg",
+          "imageAlt": "here",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E242.svg"
+          }
+        },
+        {
+          "slug": "hemm",
+          "maltese": "hemm",
+          "english": "there / there is"
+        },
+        {
+          "slug": "dritt",
+          "maltese": "dritt",
+          "english": "straight on",
+          "image": "./assets/img/openmoji/27A1.svg",
+          "imageAlt": "straight on",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/27A1.svg"
+          }
+        },
+        {
+          "slug": "qrib",
+          "maltese": "qrib",
+          "english": "near"
+        },
+        {
+          "slug": "il-boghod",
+          "maltese": "'il bogħod",
+          "english": "far"
+        },
+        {
+          "slug": "faccata-ta",
+          "maltese": "faċċata ta'",
+          "english": "opposite"
+        }
       ]
     }
   ]

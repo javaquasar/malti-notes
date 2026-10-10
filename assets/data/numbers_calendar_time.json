@@ -4,104 +4,657 @@
       "id": "calendar-ordinals",
       "title": "Ordinal Numbers",
       "items": [
-        { "id": "l-ewwel", "maltese": "l-ewwel", "english": "first", "note": "Huwa l-ewwel.", "example": "Huwa l-ewwel.", "exampleTranslation": "He is first." },
-        { "id": "it-tieni", "maltese": "it-tieni", "english": "second", "note": "Din it-tieni darba.", "example": "Din it-tieni darba.", "exampleTranslation": "This is the second time." },
-        { "id": "it-tielet", "maltese": "it-tielet", "english": "third", "note": "It-tielet lezzjoni.", "example": "It-tielet lezzjoni.", "exampleTranslation": "The third lesson." },
-        { "id": "ir-raba", "maltese": "ir-raba'", "english": "fourth", "note": "Ir-raba' jum.", "example": "Ir-raba' jum.", "exampleTranslation": "The fourth day." },
-        { "id": "il-hames", "maltese": "il-ħames", "english": "fifth", "note": "Il-ħames xahar.", "example": "Il-ħames xahar.", "exampleTranslation": "The fifth month." },
-        { "id": "is-sitt", "maltese": "is-sitt", "english": "sixth", "note": "Is-sitt lezzjoni.", "example": "Is-sitt lezzjoni.", "exampleTranslation": "The sixth lesson." },
-        { "id": "is-seba", "maltese": "is-seba'", "english": "seventh", "note": "Is-seba' jum.", "example": "Is-seba' jum.", "exampleTranslation": "The seventh day." },
-        { "id": "it-tmien", "maltese": "it-tmien", "english": "eighth", "note": "It-tmien sular.", "example": "It-tmien sular.", "exampleTranslation": "The eighth floor." },
-        { "id": "id-disa", "maltese": "id-disa'", "english": "ninth", "note": "Id-disa' paġna.", "example": "Id-disa' paġna.", "exampleTranslation": "The ninth page." },
-        { "id": "l-ghaxar", "maltese": "l-għaxar", "english": "tenth", "note": "L-għaxar kapitlu.", "example": "L-għaxar kapitlu.", "exampleTranslation": "The tenth chapter." }
+        {
+          "id": "l-ewwel",
+          "maltese": "l-ewwel",
+          "english": "first",
+          "note": "Huwa l-ewwel.",
+          "example": "Huwa l-ewwel.",
+          "exampleTranslation": "He is first."
+        },
+        {
+          "id": "it-tieni",
+          "maltese": "it-tieni",
+          "english": "second",
+          "note": "Din it-tieni darba.",
+          "example": "Din it-tieni darba.",
+          "exampleTranslation": "This is the second time."
+        },
+        {
+          "id": "it-tielet",
+          "maltese": "it-tielet",
+          "english": "third",
+          "note": "It-tielet lezzjoni.",
+          "example": "It-tielet lezzjoni.",
+          "exampleTranslation": "The third lesson."
+        },
+        {
+          "id": "ir-raba",
+          "maltese": "ir-raba'",
+          "english": "fourth",
+          "note": "Ir-raba' jum.",
+          "example": "Ir-raba' jum.",
+          "exampleTranslation": "The fourth day."
+        },
+        {
+          "id": "il-hames",
+          "maltese": "il-ħames",
+          "english": "fifth",
+          "note": "Il-ħames xahar.",
+          "example": "Il-ħames xahar.",
+          "exampleTranslation": "The fifth month."
+        },
+        {
+          "id": "is-sitt",
+          "maltese": "is-sitt",
+          "english": "sixth",
+          "note": "Is-sitt lezzjoni.",
+          "example": "Is-sitt lezzjoni.",
+          "exampleTranslation": "The sixth lesson."
+        },
+        {
+          "id": "is-seba",
+          "maltese": "is-seba'",
+          "english": "seventh",
+          "note": "Is-seba' jum.",
+          "example": "Is-seba' jum.",
+          "exampleTranslation": "The seventh day."
+        },
+        {
+          "id": "it-tmien",
+          "maltese": "it-tmien",
+          "english": "eighth",
+          "note": "It-tmien sular.",
+          "example": "It-tmien sular.",
+          "exampleTranslation": "The eighth floor."
+        },
+        {
+          "id": "id-disa",
+          "maltese": "id-disa'",
+          "english": "ninth",
+          "note": "Id-disa' paġna.",
+          "example": "Id-disa' paġna.",
+          "exampleTranslation": "The ninth page."
+        },
+        {
+          "id": "l-ghaxar",
+          "maltese": "l-għaxar",
+          "english": "tenth",
+          "note": "L-għaxar kapitlu.",
+          "example": "L-għaxar kapitlu.",
+          "exampleTranslation": "The tenth chapter."
+        }
       ]
     },
     {
       "id": "calendar-weekdays",
       "title": "Days of the Week",
       "items": [
-        { "id": "it-tnejn", "maltese": "It-Tnejn", "english": "Monday", "note": "It-Tnejn għandi xogħol.", "example": "It-Tnejn għandi xogħol.", "exampleTranslation": "On Monday I have work." },
-        { "id": "it-tlieta", "maltese": "It-Tlieta", "english": "Tuesday", "note": "It-Tlieta sejra fid-disgħa u għaxra.", "example": "It-Tlieta sejra fid-disgħa u għaxra.", "exampleTranslation": "On Tuesday she is going at ten past nine." },
-        { "id": "l-erbgha", "maltese": "L-Erbgħa", "english": "Wednesday", "note": "L-Erbgħa għandi appuntament.", "example": "L-Erbgħa għandi appuntament.", "exampleTranslation": "On Wednesday I have an appointment." },
-        { "id": "il-hamis", "maltese": "Il-Ħamis", "english": "Thursday", "note": "Il-Ħamis immur il-ħanut.", "example": "Il-Ħamis immur il-ħanut.", "exampleTranslation": "On Thursday I go to the shop." },
-        { "id": "il-gimgha", "maltese": "Il-Ġimgħa", "english": "Friday", "note": "Il-Ġimgħa niekol mal-familja.", "example": "Il-Ġimgħa niekol mal-familja.", "exampleTranslation": "On Friday I eat with the family." },
-        { "id": "is-sibt", "maltese": "Is-Sibt", "english": "Saturday", "note": "Is-Sibt immur il-baħar.", "example": "Is-Sibt immur il-baħar.", "exampleTranslation": "On Saturday I go to the sea." },
-        { "id": "il-hadd", "maltese": "Il-Ħadd", "english": "Sunday", "note": "Il-Ħadd noqgħod id-dar.", "example": "Il-Ħadd noqgħod id-dar.", "exampleTranslation": "On Sunday I stay at home." }
+        {
+          "id": "it-tnejn",
+          "maltese": "It-Tnejn",
+          "english": "Monday",
+          "note": "It-Tnejn għandi xogħol.",
+          "example": "It-Tnejn għandi xogħol.",
+          "exampleTranslation": "On Monday I have work."
+        },
+        {
+          "id": "it-tlieta",
+          "maltese": "It-Tlieta",
+          "english": "Tuesday",
+          "note": "It-Tlieta sejra fid-disgħa u għaxra.",
+          "example": "It-Tlieta sejra fid-disgħa u għaxra.",
+          "exampleTranslation": "On Tuesday she is going at ten past nine."
+        },
+        {
+          "id": "l-erbgha",
+          "maltese": "L-Erbgħa",
+          "english": "Wednesday",
+          "note": "L-Erbgħa għandi appuntament.",
+          "example": "L-Erbgħa għandi appuntament.",
+          "exampleTranslation": "On Wednesday I have an appointment."
+        },
+        {
+          "id": "il-hamis",
+          "maltese": "Il-Ħamis",
+          "english": "Thursday",
+          "note": "Il-Ħamis immur il-ħanut.",
+          "example": "Il-Ħamis immur il-ħanut.",
+          "exampleTranslation": "On Thursday I go to the shop.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "Thursday",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "il-gimgha",
+          "maltese": "Il-Ġimgħa",
+          "english": "Friday",
+          "note": "Il-Ġimgħa niekol mal-familja.",
+          "example": "Il-Ġimgħa niekol mal-familja.",
+          "exampleTranslation": "On Friday I eat with the family."
+        },
+        {
+          "id": "is-sibt",
+          "maltese": "Is-Sibt",
+          "english": "Saturday",
+          "note": "Is-Sibt immur il-baħar.",
+          "example": "Is-Sibt immur il-baħar.",
+          "exampleTranslation": "On Saturday I go to the sea.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "Saturday",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "il-hadd",
+          "maltese": "Il-Ħadd",
+          "english": "Sunday",
+          "note": "Il-Ħadd noqgħod id-dar.",
+          "example": "Il-Ħadd noqgħod id-dar.",
+          "exampleTranslation": "On Sunday I stay at home.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "Sunday",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        }
       ]
     },
     {
       "id": "calendar-months",
       "title": "Months of the Year",
       "items": [
-        { "id": "jannar", "maltese": "Jannar", "english": "January", "note": "fil-bidu ta' Jannar", "example": "fil-bidu ta' Jannar", "exampleTranslation": "at the beginning of January" },
-        { "id": "frar", "maltese": "Frar", "english": "February", "note": "fi Frar", "example": "fi Frar", "exampleTranslation": "in February" },
-        { "id": "marzu", "maltese": "Marzu", "english": "March", "note": "f'nofs Marzu", "example": "f'nofs Marzu", "exampleTranslation": "in the middle of March" },
-        { "id": "april", "maltese": "April", "english": "April", "note": "fl-20 ta' April", "example": "fl-20 ta' April", "exampleTranslation": "on the 20th of April" },
-        { "id": "mejju", "maltese": "Mejju", "english": "May", "note": "f'Mejju", "example": "f'Mejju", "exampleTranslation": "in May" },
-        { "id": "gunju", "maltese": "Ġunju", "english": "June", "note": "fil-bidu ta' Ġunju", "example": "fil-bidu ta' Ġunju", "exampleTranslation": "at the beginning of June" },
-        { "id": "lulju", "maltese": "Lulju", "english": "July", "note": "fl-aħħar ta' Lulju", "example": "fl-aħħar ta' Lulju", "exampleTranslation": "at the end of July" },
-        { "id": "awissu", "maltese": "Awwissu", "english": "August", "note": "f'nofs Awwissu", "example": "f'nofs Awwissu", "exampleTranslation": "in the middle of August" },
-        { "id": "settembru", "maltese": "Settembru", "english": "September", "note": "fil-bidu ta' Settembru", "example": "fil-bidu ta' Settembru", "exampleTranslation": "at the beginning of September" },
-        { "id": "ottubru", "maltese": "Ottubru", "english": "October", "note": "f'nofs Ottubru", "example": "f'nofs Ottubru", "exampleTranslation": "in the middle of October" },
-        { "id": "novembru", "maltese": "Novembru", "english": "November", "note": "fl-aħħar ta' Novembru", "example": "fl-aħħar ta' Novembru", "exampleTranslation": "at the end of November" },
-        { "id": "dicembru", "maltese": "Diċembru", "english": "December", "note": "fl-aħħar ta' Diċembru", "example": "fl-aħħar ta' Diċembru", "exampleTranslation": "at the end of December" }
+        {
+          "id": "jannar",
+          "maltese": "Jannar",
+          "english": "January",
+          "note": "fil-bidu ta' Jannar",
+          "example": "fil-bidu ta' Jannar",
+          "exampleTranslation": "at the beginning of January",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "January",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "frar",
+          "maltese": "Frar",
+          "english": "February",
+          "note": "fi Frar",
+          "example": "fi Frar",
+          "exampleTranslation": "in February",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "February",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "marzu",
+          "maltese": "Marzu",
+          "english": "March",
+          "note": "f'nofs Marzu",
+          "example": "f'nofs Marzu",
+          "exampleTranslation": "in the middle of March"
+        },
+        {
+          "id": "april",
+          "maltese": "April",
+          "english": "April",
+          "note": "fl-20 ta' April",
+          "example": "fl-20 ta' April",
+          "exampleTranslation": "on the 20th of April",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "April",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "mejju",
+          "maltese": "Mejju",
+          "english": "May",
+          "note": "f'Mejju",
+          "example": "f'Mejju",
+          "exampleTranslation": "in May"
+        },
+        {
+          "id": "gunju",
+          "maltese": "Ġunju",
+          "english": "June",
+          "note": "fil-bidu ta' Ġunju",
+          "example": "fil-bidu ta' Ġunju",
+          "exampleTranslation": "at the beginning of June"
+        },
+        {
+          "id": "lulju",
+          "maltese": "Lulju",
+          "english": "July",
+          "note": "fl-aħħar ta' Lulju",
+          "example": "fl-aħħar ta' Lulju",
+          "exampleTranslation": "at the end of July"
+        },
+        {
+          "id": "awissu",
+          "maltese": "Awwissu",
+          "english": "August",
+          "note": "f'nofs Awwissu",
+          "example": "f'nofs Awwissu",
+          "exampleTranslation": "in the middle of August",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "August",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "settembru",
+          "maltese": "Settembru",
+          "english": "September",
+          "note": "fil-bidu ta' Settembru",
+          "example": "fil-bidu ta' Settembru",
+          "exampleTranslation": "at the beginning of September",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "September",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "ottubru",
+          "maltese": "Ottubru",
+          "english": "October",
+          "note": "f'nofs Ottubru",
+          "example": "f'nofs Ottubru",
+          "exampleTranslation": "in the middle of October"
+        },
+        {
+          "id": "novembru",
+          "maltese": "Novembru",
+          "english": "November",
+          "note": "fl-aħħar ta' Novembru",
+          "example": "fl-aħħar ta' Novembru",
+          "exampleTranslation": "at the end of November"
+        },
+        {
+          "id": "dicembru",
+          "maltese": "Diċembru",
+          "english": "December",
+          "note": "fl-aħħar ta' Diċembru",
+          "example": "fl-aħħar ta' Diċembru",
+          "exampleTranslation": "at the end of December"
+        }
       ]
     },
     {
       "id": "calendar-seasons",
       "title": "Seasons of the Year",
       "items": [
-        { "id": "ir-rebbiegha", "maltese": "ir-rebbiegħa", "english": "spring", "note": "Ir-rebbiegħa hija sabiħa.", "example": "Ir-rebbiegħa hija sabiħa.", "exampleTranslation": "Spring is beautiful." },
-        { "id": "is-sajf", "maltese": "is-sajf", "english": "summer", "note": "Fis-sajf inħobb immur il-baħar.", "example": "Fis-sajf inħobb immur il-baħar.", "exampleTranslation": "In summer I like to go to the sea." },
-        { "id": "il-harifa", "maltese": "il-ħarifa", "english": "autumn", "note": "Il-ħarifa hija kwieta.", "example": "Il-ħarifa hija kwieta.", "exampleTranslation": "Autumn is quiet." },
-        { "id": "ix-xitwa", "maltese": "ix-xitwa", "english": "winter", "note": "Fix-xitwa noqgħod id-dar.", "example": "Fix-xitwa noqgħod id-dar.", "exampleTranslation": "In winter I stay at home." }
+        {
+          "id": "ir-rebbiegha",
+          "maltese": "ir-rebbiegħa",
+          "english": "spring",
+          "note": "Ir-rebbiegħa hija sabiħa.",
+          "example": "Ir-rebbiegħa hija sabiħa.",
+          "exampleTranslation": "Spring is beautiful.",
+          "image": "./assets/img/openmoji/1F338.svg",
+          "imageAlt": "spring",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F338.svg"
+          }
+        },
+        {
+          "id": "is-sajf",
+          "maltese": "is-sajf",
+          "english": "summer",
+          "note": "Fis-sajf inħobb immur il-baħar.",
+          "example": "Fis-sajf inħobb immur il-baħar.",
+          "exampleTranslation": "In summer I like to go to the sea.",
+          "image": "./assets/img/openmoji/2600.svg",
+          "imageAlt": "summer",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2600.svg"
+          }
+        },
+        {
+          "id": "il-harifa",
+          "maltese": "il-ħarifa",
+          "english": "autumn",
+          "note": "Il-ħarifa hija kwieta.",
+          "example": "Il-ħarifa hija kwieta.",
+          "exampleTranslation": "Autumn is quiet.",
+          "image": "./assets/img/openmoji/1F342.svg",
+          "imageAlt": "autumn",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F342.svg"
+          }
+        },
+        {
+          "id": "ix-xitwa",
+          "maltese": "ix-xitwa",
+          "english": "winter",
+          "note": "Fix-xitwa noqgħod id-dar.",
+          "example": "Fix-xitwa noqgħod id-dar.",
+          "exampleTranslation": "In winter I stay at home.",
+          "image": "./assets/img/openmoji/2744.svg",
+          "imageAlt": "winter",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2744.svg"
+          }
+        }
       ]
     },
     {
       "id": "calendar-time-words",
       "title": "Useful Time Words",
       "items": [
-        { "id": "illum", "maltese": "illum", "english": "today", "note": "Illum għandi xogħol.", "example": "Illum għandi xogħol.", "exampleTranslation": "Today I have work." },
-        { "id": "ilbierah", "maltese": "ilbieraħ", "english": "yesterday", "note": "Ilbieraħ mort il-ħanut.", "example": "Ilbieraħ mort il-ħanut.", "exampleTranslation": "Yesterday I went to the shop." },
-        { "id": "ghada", "maltese": "għada", "english": "tomorrow", "note": "Għada se nqum kmieni.", "example": "Għada se nqum kmieni.", "exampleTranslation": "Tomorrow I will wake up early." },
-        { "id": "ilbirathtlula", "maltese": "ilbiraħtlula", "english": "the day before yesterday", "note": "Ilbiraħtlula kont id-dar.", "example": "Ilbiraħtlula kont id-dar.", "exampleTranslation": "The day before yesterday I was at home." },
-        { "id": "pitghada", "maltese": "pitgħada", "english": "the day after tomorrow", "note": "Pitgħada se niltaqa' ma' ħabib.", "example": "Pitgħada se niltaqa' ma' ħabib.", "exampleTranslation": "The day after tomorrow I will meet a friend." },
-        { "id": "jumejn-ilu", "maltese": "jumejn ilu", "english": "two days ago", "note": "Jumejn ilu mort il-bank.", "example": "Jumejn ilu mort il-bank.", "exampleTranslation": "Two days ago I went to the bank." },
-        { "id": "jum", "maltese": "jum", "english": "day", "note": "Illum huwa jum twil.", "example": "Illum huwa jum twil.", "exampleTranslation": "Today is a long day." },
-        { "id": "gurnata", "maltese": "ġurnata", "english": "day", "note": "Kelli ġurnata sabiħa.", "example": "Kelli ġurnata sabiħa.", "exampleTranslation": "I had a beautiful day." },
-        { "id": "issa", "maltese": "issa", "english": "now", "note": "Issa qed nistudja.", "example": "Issa qed nistudja.", "exampleTranslation": "Now I am studying." },
-        { "id": "kuljum", "maltese": "kuljum", "english": "every day", "note": "Kuljum nieħu kafè.", "example": "Kuljum nieħu kafè.", "exampleTranslation": "Every day I have coffee." },
-        { "id": "il-gimgha-l-ohra", "maltese": "il-ġimgħa l-oħra", "english": "last week", "note": "Il-ġimgħa l-oħra mort Ta' Qali.", "example": "Il-ġimgħa l-oħra mort Ta' Qali.", "exampleTranslation": "Last week I went to Ta' Qali." },
-        { "id": "il-gimgha-d-diehla", "maltese": "il-ġimgħa d-dieħla", "english": "next week", "note": "Il-ġimgħa d-dieħla għandi appuntament.", "example": "Il-ġimgħa d-dieħla għandi appuntament.", "exampleTranslation": "Next week I have an appointment." },
-        { "id": "il-gimgha-ta-wara", "maltese": "il-ġimgħa ta' wara", "english": "the week after", "note": "Il-ġimgħa ta' wara se mmur Għawdex.", "example": "Il-ġimgħa ta' wara se mmur Għawdex.", "exampleTranslation": "The week after I will go to Gozo." },
-        { "id": "xahar-ilu", "maltese": "xahar ilu", "english": "a month ago", "note": "Xahar ilu bdejt il-kors.", "example": "Xahar ilu bdejt il-kors.", "exampleTranslation": "A month ago I started the course." },
-        { "id": "ix-xahar-li-ghadda", "maltese": "ix-xahar li għadda", "english": "last month", "note": "Ix-xahar li għadda kont imsiefer.", "example": "Ix-xahar li għadda kont imsiefer.", "exampleTranslation": "Last month I was abroad." },
-        { "id": "ix-xahar-id-diehel", "maltese": "ix-xahar id-dieħel", "english": "the next month", "note": "Ix-xahar id-dieħel għandi ħafna xogħol.", "example": "Ix-xahar id-dieħel għandi ħafna xogħol.", "exampleTranslation": "Next month I have a lot of work." },
-        { "id": "ix-xahar-ta-wara", "maltese": "ix-xahar ta' wara", "english": "the month after", "note": "Ix-xahar ta' wara se nibda lezzjoni ġdida.", "example": "Ix-xahar ta' wara se nibda lezzjoni ġdida.", "exampleTranslation": "The month after I will start a new lesson." }
+        {
+          "id": "illum",
+          "maltese": "illum",
+          "english": "today",
+          "note": "Illum għandi xogħol.",
+          "example": "Illum għandi xogħol.",
+          "exampleTranslation": "Today I have work.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "today",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "ilbierah",
+          "maltese": "ilbieraħ",
+          "english": "yesterday",
+          "note": "Ilbieraħ mort il-ħanut.",
+          "example": "Ilbieraħ mort il-ħanut.",
+          "exampleTranslation": "Yesterday I went to the shop."
+        },
+        {
+          "id": "ghada",
+          "maltese": "għada",
+          "english": "tomorrow",
+          "note": "Għada se nqum kmieni.",
+          "example": "Għada se nqum kmieni.",
+          "exampleTranslation": "Tomorrow I will wake up early.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "tomorrow",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "ilbirathtlula",
+          "maltese": "ilbiraħtlula",
+          "english": "the day before yesterday",
+          "note": "Ilbiraħtlula kont id-dar.",
+          "example": "Ilbiraħtlula kont id-dar.",
+          "exampleTranslation": "The day before yesterday I was at home."
+        },
+        {
+          "id": "pitghada",
+          "maltese": "pitgħada",
+          "english": "the day after tomorrow",
+          "note": "Pitgħada se niltaqa' ma' ħabib.",
+          "example": "Pitgħada se niltaqa' ma' ħabib.",
+          "exampleTranslation": "The day after tomorrow I will meet a friend."
+        },
+        {
+          "id": "jumejn-ilu",
+          "maltese": "jumejn ilu",
+          "english": "two days ago",
+          "note": "Jumejn ilu mort il-bank.",
+          "example": "Jumejn ilu mort il-bank.",
+          "exampleTranslation": "Two days ago I went to the bank."
+        },
+        {
+          "id": "jum",
+          "maltese": "jum",
+          "english": "day",
+          "note": "Illum huwa jum twil.",
+          "example": "Illum huwa jum twil.",
+          "exampleTranslation": "Today is a long day.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "day",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "gurnata",
+          "maltese": "ġurnata",
+          "english": "day",
+          "note": "Kelli ġurnata sabiħa.",
+          "example": "Kelli ġurnata sabiħa.",
+          "exampleTranslation": "I had a beautiful day.",
+          "image": "./assets/img/openmoji/1F4C5.svg",
+          "imageAlt": "day",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C5.svg"
+          }
+        },
+        {
+          "id": "issa",
+          "maltese": "issa",
+          "english": "now",
+          "note": "Issa qed nistudja.",
+          "example": "Issa qed nistudja.",
+          "exampleTranslation": "Now I am studying."
+        },
+        {
+          "id": "kuljum",
+          "maltese": "kuljum",
+          "english": "every day",
+          "note": "Kuljum nieħu kafè.",
+          "example": "Kuljum nieħu kafè.",
+          "exampleTranslation": "Every day I have coffee."
+        },
+        {
+          "id": "il-gimgha-l-ohra",
+          "maltese": "il-ġimgħa l-oħra",
+          "english": "last week",
+          "note": "Il-ġimgħa l-oħra mort Ta' Qali.",
+          "example": "Il-ġimgħa l-oħra mort Ta' Qali.",
+          "exampleTranslation": "Last week I went to Ta' Qali."
+        },
+        {
+          "id": "il-gimgha-d-diehla",
+          "maltese": "il-ġimgħa d-dieħla",
+          "english": "next week",
+          "note": "Il-ġimgħa d-dieħla għandi appuntament.",
+          "example": "Il-ġimgħa d-dieħla għandi appuntament.",
+          "exampleTranslation": "Next week I have an appointment."
+        },
+        {
+          "id": "il-gimgha-ta-wara",
+          "maltese": "il-ġimgħa ta' wara",
+          "english": "the week after",
+          "note": "Il-ġimgħa ta' wara se mmur Għawdex.",
+          "example": "Il-ġimgħa ta' wara se mmur Għawdex.",
+          "exampleTranslation": "The week after I will go to Gozo."
+        },
+        {
+          "id": "xahar-ilu",
+          "maltese": "xahar ilu",
+          "english": "a month ago",
+          "note": "Xahar ilu bdejt il-kors.",
+          "example": "Xahar ilu bdejt il-kors.",
+          "exampleTranslation": "A month ago I started the course."
+        },
+        {
+          "id": "ix-xahar-li-ghadda",
+          "maltese": "ix-xahar li għadda",
+          "english": "last month",
+          "note": "Ix-xahar li għadda kont imsiefer.",
+          "example": "Ix-xahar li għadda kont imsiefer.",
+          "exampleTranslation": "Last month I was abroad."
+        },
+        {
+          "id": "ix-xahar-id-diehel",
+          "maltese": "ix-xahar id-dieħel",
+          "english": "the next month",
+          "note": "Ix-xahar id-dieħel għandi ħafna xogħol.",
+          "example": "Ix-xahar id-dieħel għandi ħafna xogħol.",
+          "exampleTranslation": "Next month I have a lot of work."
+        },
+        {
+          "id": "ix-xahar-ta-wara",
+          "maltese": "ix-xahar ta' wara",
+          "english": "the month after",
+          "note": "Ix-xahar ta' wara se nibda lezzjoni ġdida.",
+          "example": "Ix-xahar ta' wara se nibda lezzjoni ġdida.",
+          "exampleTranslation": "The month after I will start a new lesson."
+        }
       ]
     },
     {
       "id": "calendar-time-units",
       "title": "Time Units",
       "items": [
-        { "id": "siegha", "maltese": "siegħa", "english": "hour", "note": "Għandi siegħa ħin.", "example": "Għandi siegħa ħin.", "exampleTranslation": "I have an hour of time." },
-        { "id": "sighat", "maltese": "sigħat", "english": "hours", "note": "Ħdimt żewġ sigħat.", "example": "Ħdimt żewġ sigħat.", "exampleTranslation": "I worked for two hours." },
-        { "id": "minuta", "maltese": "minuta", "english": "minute", "note": "Stenna minuta.", "example": "Stenna minuta.", "exampleTranslation": "Wait a minute." },
-        { "id": "minuti", "maltese": "minuti", "english": "minutes", "note": "Għandi għaxar minuti.", "example": "Għandi għaxar minuti.", "exampleTranslation": "I have ten minutes." },
-        { "id": "sekonda", "maltese": "sekonda", "english": "second", "note": "Sekonda biss.", "example": "Sekonda biss.", "exampleTranslation": "Just a second." },
-        { "id": "sekondi", "maltese": "sekondi", "english": "seconds", "note": "Għaddew tletin sekonda.", "example": "Għaddew tletin sekonda.", "exampleTranslation": "Thirty seconds passed." },
-        { "id": "kwart", "maltese": "kwart", "english": "quarter", "note": "Il-ħamsa u kwart.", "example": "Il-ħamsa u kwart.", "exampleTranslation": "Quarter past five." },
-        { "id": "nofs", "maltese": "nofs", "english": "half", "note": "It-tmienja u nofs.", "example": "It-tmienja u nofs.", "exampleTranslation": "Half past eight." }
+        {
+          "id": "siegha",
+          "maltese": "siegħa",
+          "english": "hour",
+          "note": "Għandi siegħa ħin.",
+          "example": "Għandi siegħa ħin.",
+          "exampleTranslation": "I have an hour of time."
+        },
+        {
+          "id": "sighat",
+          "maltese": "sigħat",
+          "english": "hours",
+          "note": "Ħdimt żewġ sigħat.",
+          "example": "Ħdimt żewġ sigħat.",
+          "exampleTranslation": "I worked for two hours."
+        },
+        {
+          "id": "minuta",
+          "maltese": "minuta",
+          "english": "minute",
+          "note": "Stenna minuta.",
+          "example": "Stenna minuta.",
+          "exampleTranslation": "Wait a minute."
+        },
+        {
+          "id": "minuti",
+          "maltese": "minuti",
+          "english": "minutes",
+          "note": "Għandi għaxar minuti.",
+          "example": "Għandi għaxar minuti.",
+          "exampleTranslation": "I have ten minutes."
+        },
+        {
+          "id": "sekonda",
+          "maltese": "sekonda",
+          "english": "second",
+          "note": "Sekonda biss.",
+          "example": "Sekonda biss.",
+          "exampleTranslation": "Just a second."
+        },
+        {
+          "id": "sekondi",
+          "maltese": "sekondi",
+          "english": "seconds",
+          "note": "Għaddew tletin sekonda.",
+          "example": "Għaddew tletin sekonda.",
+          "exampleTranslation": "Thirty seconds passed."
+        },
+        {
+          "id": "kwart",
+          "maltese": "kwart",
+          "english": "quarter",
+          "note": "Il-ħamsa u kwart.",
+          "example": "Il-ħamsa u kwart.",
+          "exampleTranslation": "Quarter past five."
+        },
+        {
+          "id": "nofs",
+          "maltese": "nofs",
+          "english": "half",
+          "note": "It-tmienja u nofs.",
+          "example": "It-tmienja u nofs.",
+          "exampleTranslation": "Half past eight."
+        }
       ]
     },
     {
       "id": "calendar-parts-of-day",
       "title": "Parts of the Day",
       "items": [
-        { "id": "filghodu", "maltese": "filgħodu", "english": "in the morning", "note": "Filgħodu nqum kmieni.", "example": "Filgħodu nqum kmieni.", "exampleTranslation": "In the morning I wake up early." },
-        { "id": "waranofsinhar", "maltese": "waranofsinhar", "english": "in the afternoon", "note": "Waranofsinhar għandi lezzjoni.", "example": "Waranofsinhar għandi lezzjoni.", "exampleTranslation": "In the afternoon I have a lesson." },
-        { "id": "filghaxija", "maltese": "filgħaxija", "english": "in the evening", "note": "Filgħaxija nieħu te.", "example": "Filgħaxija nieħu te.", "exampleTranslation": "In the evening I have tea." },
-        { "id": "ta-billejl", "maltese": "ta' billejl", "english": "at night", "note": "Ma noħroġx ta' billejl.", "example": "Ma noħroġx ta' billejl.", "exampleTranslation": "I do not go out at night." }
+        {
+          "id": "filghodu",
+          "maltese": "filgħodu",
+          "english": "in the morning",
+          "note": "Filgħodu nqum kmieni.",
+          "example": "Filgħodu nqum kmieni.",
+          "exampleTranslation": "In the morning I wake up early."
+        },
+        {
+          "id": "waranofsinhar",
+          "maltese": "waranofsinhar",
+          "english": "in the afternoon",
+          "note": "Waranofsinhar għandi lezzjoni.",
+          "example": "Waranofsinhar għandi lezzjoni.",
+          "exampleTranslation": "In the afternoon I have a lesson."
+        },
+        {
+          "id": "filghaxija",
+          "maltese": "filgħaxija",
+          "english": "in the evening",
+          "note": "Filgħaxija nieħu te.",
+          "example": "Filgħaxija nieħu te.",
+          "exampleTranslation": "In the evening I have tea.",
+          "image": "./assets/img/openmoji/1F307.svg",
+          "imageAlt": "in the evening",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F307.svg"
+          }
+        },
+        {
+          "id": "ta-billejl",
+          "maltese": "ta' billejl",
+          "english": "at night",
+          "note": "Ma noħroġx ta' billejl.",
+          "example": "Ma noħroġx ta' billejl.",
+          "exampleTranslation": "I do not go out at night."
+        }
       ]
     }
   ]

@@ -25,6 +25,9 @@
             var isTransportImage = item.image.indexOf("/transport/") !== -1;
             var isSquareImage = item.image.indexOf("favicon-option-speech.svg") !== -1;
             img.src = item.image;
+            if (/\/(openmoji|game-icons)\//.test(item.image)) {
+                img.className = 'vocab-image--cutout';
+            }
             img.alt = item.imageAlt || item.english || item.maltese;
             img.loading = "lazy";
             img.decoding = "async";
@@ -89,7 +92,38 @@
         });
     }
 
+    function addImageCredits(items) {
+        var main = document.querySelector('main');
+        if (!main) return;
+        var credits = document.getElementById('vocabulary-image-credits');
+        if (!credits) {
+            credits = document.createElement('footer');
+            credits.id = 'vocabulary-image-credits';
+            credits.className = 'vocabulary-image-credits';
+            main.appendChild(credits);
+        }
+        var sources = [
+            { path: '/openmoji/', name: 'OpenMoji', author: 'HfG Schwabisch Gmund and contributors', url: 'https://openmoji.org/', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/' },
+            { path: '/game-icons/', name: 'Game-icons.net', author: 'Delapouite and Caro Asercion', url: 'https://game-icons.net/', license: 'CC BY 3.0', licenseUrl: 'https://creativecommons.org/licenses/by/3.0/' }
+        ];
+        sources.forEach(function (source) {
+            if (credits.querySelector('[data-source="' + source.name + '"]') || !items.some(function (item) { return (item.image || '').includes(source.path); })) return;
+            var line = document.createElement('p');
+            line.dataset.source = source.name;
+            var link = document.createElement('a');
+            link.href = source.url;
+            link.textContent = source.name;
+            var license = document.createElement('a');
+            license.href = source.licenseUrl;
+            license.textContent = source.license;
+            line.append('Illustrations: ', link, ' by ' + source.author + ' (', license, '). Originals, unmodified.');
+            credits.appendChild(line);
+        });
+        credits.hidden = !credits.children.length;
+    }
+
     window.MaltiVocabRenderer = {
+        addImageCredits: addImageCredits,
         createFigureCard: createFigureCard,
         renderFigureGroup: renderFigureGroup
     };

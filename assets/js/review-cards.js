@@ -883,6 +883,7 @@
             return "";
         }
         if (card.image) {
+            if (window.MaltiVocabRenderer) window.MaltiVocabRenderer.addImageCredits([card]);
             return "<div class=\"review-image-wrap\"><img class=\"review-image\" src=\"" + escapeHtml(card.image) + "\" alt=\"" + escapeHtml(card.imageAlt || card.english || card.maltese) + "\" loading=\"lazy\" decoding=\"async\" fetchpriority=\"low\"></div>";
         }
         if (card.swatchStyle) {

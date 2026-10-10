@@ -237,6 +237,19 @@
   overflow-wrap: normal;
 }
 
+.visual-vocab-card img.vocab-image--cutout,
+.animal-figure-card img.vocab-image--cutout,
+.transport-figure-card img.vocab-image--cutout,
+.year4-vocab-image {
+  display: block;
+  width: 100%;
+  height: 128px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  margin: 0 0 var(--space-md);
+}
+
 .visual-vocab-card strong {
   font-size: 1.08rem;
 }

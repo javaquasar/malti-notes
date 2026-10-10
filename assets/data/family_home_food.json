@@ -8,30 +8,372 @@
       "sectionTitle": "Family Words",
       "title": "Family words",
       "items": [
-        { "slug": "omm", "maltese": "omm", "english": "mother", "example": "Din hija ommi.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "missier", "maltese": "missier", "english": "father", "example": "Dan huwa missieri.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "nanna", "maltese": "nanna", "english": "grandmother", "example": "In-nanna tiegħi toqgħod qrib tagħna.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "nannu", "maltese": "nannu", "english": "grandfather", "example": "In-nannu tiegħi jixrob kafè filgħodu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hu-hija", "maltese": "ħu / ħija", "english": "brother / my brother", "example": "Għandi ħu u oħt.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "oht-ohti", "maltese": "oħt / oħti", "english": "sister / my sister", "example": "Għandi ħu u oħt.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "iben", "maltese": "iben", "english": "son", "example": "Għandi iben wieħed.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bint", "maltese": "bint", "english": "daughter", "example": "Għandha bint żgħira.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tifel", "maltese": "tifel", "english": "boy / son in context", "example": "It-tifel huwa żgħir.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tifla", "maltese": "tifla", "english": "girl / daughter in context", "example": "It-tifla hija ferħana.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ragel", "maltese": "raġel", "english": "man / husband [basic meaning varies by context]", "example": "Ir-raġel tiegħi jaħdem ħafna.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "mara", "maltese": "mara", "english": "woman / wife [basic meaning varies by context]", "example": "Il-mara hija d-dar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "zewg", "maltese": "żewġ", "english": "husband / two [context-based]", "example": "Għandi żewġ kuġini.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "familja", "maltese": "familja", "english": "family", "example": "Għandna familja kbira.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "genituri", "maltese": "ġenituri", "english": "parents", "example": "Il-ġenituri tiegħi huma d-dar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tfal", "maltese": "tfal", "english": "children", "example": "It-tfal qed jilagħbu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kugin", "maltese": "kuġin", "english": "cousin", "example": "Il-kuġin tiegħi joqgħod Malta.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ziju", "maltese": "ziju", "english": "uncle", "example": "Iz-ziju tiegħi jħobb il-kafè.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "zija", "maltese": "zija", "english": "aunt", "example": "Iz-zija tiegħi tagħmel soppa tajba.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "neputi", "maltese": "neputi", "english": "grandson / nephew [basic use]", "example": "In-neputi tiegħi huwa student.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "neputija", "maltese": "neputija", "english": "granddaughter / niece [basic use]", "example": "In-neputija tiegħi hija ferħana.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hbieb", "maltese": "ħbieb", "english": "friends", "example": "Niltaqa' mal-ħbieb filgħaxija.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "qarib", "maltese": "qarib", "english": "relative", "example": "Għandi qarib qrib tagħna.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "familja-kbira", "maltese": "familja kbira", "english": "big family", "example": "Għandna familja kbira.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "omm",
+          "maltese": "omm",
+          "english": "mother",
+          "example": "Din hija ommi.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F469-200D-1F467.svg",
+          "imageAlt": "mother",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F469-200D-1F467.svg"
+          }
+        },
+        {
+          "slug": "missier",
+          "maltese": "missier",
+          "english": "father",
+          "example": "Dan huwa missieri.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F468-200D-1F466.svg",
+          "imageAlt": "father",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F468-200D-1F466.svg"
+          }
+        },
+        {
+          "slug": "nanna",
+          "maltese": "nanna",
+          "english": "grandmother",
+          "example": "In-nanna tiegħi toqgħod qrib tagħna.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F475.svg",
+          "imageAlt": "grandmother",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F475.svg"
+          }
+        },
+        {
+          "slug": "nannu",
+          "maltese": "nannu",
+          "english": "grandfather",
+          "example": "In-nannu tiegħi jixrob kafè filgħodu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F474.svg",
+          "imageAlt": "grandfather",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F474.svg"
+          }
+        },
+        {
+          "slug": "hu-hija",
+          "maltese": "ħu / ħija",
+          "english": "brother / my brother",
+          "example": "Għandi ħu u oħt.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F466.svg",
+          "imageAlt": "brother / my brother",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F466.svg"
+          }
+        },
+        {
+          "slug": "oht-ohti",
+          "maltese": "oħt / oħti",
+          "english": "sister / my sister",
+          "example": "Għandi ħu u oħt.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F467.svg",
+          "imageAlt": "sister / my sister",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F467.svg"
+          }
+        },
+        {
+          "slug": "iben",
+          "maltese": "iben",
+          "english": "son",
+          "example": "Għandi iben wieħed.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F466.svg",
+          "imageAlt": "son",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F466.svg"
+          }
+        },
+        {
+          "slug": "bint",
+          "maltese": "bint",
+          "english": "daughter",
+          "example": "Għandha bint żgħira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F467.svg",
+          "imageAlt": "daughter",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F467.svg"
+          }
+        },
+        {
+          "slug": "tifel",
+          "maltese": "tifel",
+          "english": "boy / son in context",
+          "example": "It-tifel huwa żgħir.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F466.svg",
+          "imageAlt": "boy / son in context",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F466.svg"
+          }
+        },
+        {
+          "slug": "tifla",
+          "maltese": "tifla",
+          "english": "girl / daughter in context",
+          "example": "It-tifla hija ferħana.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F467.svg",
+          "imageAlt": "girl / daughter in context",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F467.svg"
+          }
+        },
+        {
+          "slug": "ragel",
+          "maltese": "raġel",
+          "english": "man / husband [basic meaning varies by context]",
+          "example": "Ir-raġel tiegħi jaħdem ħafna.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F468.svg",
+          "imageAlt": "man / husband [basic meaning varies by context]",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F468.svg"
+          }
+        },
+        {
+          "slug": "mara",
+          "maltese": "mara",
+          "english": "woman / wife [basic meaning varies by context]",
+          "example": "Il-mara hija d-dar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F469.svg",
+          "imageAlt": "woman / wife [basic meaning varies by context]",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F469.svg"
+          }
+        },
+        {
+          "slug": "zewg",
+          "maltese": "żewġ",
+          "english": "husband / two [context-based]",
+          "example": "Għandi żewġ kuġini.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "familja",
+          "maltese": "familja",
+          "english": "family",
+          "example": "Għandna familja kbira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F46A.svg",
+          "imageAlt": "family",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F46A.svg"
+          }
+        },
+        {
+          "slug": "genituri",
+          "maltese": "ġenituri",
+          "english": "parents",
+          "example": "Il-ġenituri tiegħi huma d-dar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F46B.svg",
+          "imageAlt": "parents",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F46B.svg"
+          }
+        },
+        {
+          "slug": "tfal",
+          "maltese": "tfal",
+          "english": "children",
+          "example": "It-tfal qed jilagħbu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9D2.svg",
+          "imageAlt": "children",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D2.svg"
+          }
+        },
+        {
+          "slug": "kugin",
+          "maltese": "kuġin",
+          "english": "cousin",
+          "example": "Il-kuġin tiegħi joqgħod Malta.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "ziju",
+          "maltese": "ziju",
+          "english": "uncle",
+          "example": "Iz-ziju tiegħi jħobb il-kafè.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "zija",
+          "maltese": "zija",
+          "english": "aunt",
+          "example": "Iz-zija tiegħi tagħmel soppa tajba.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "neputi",
+          "maltese": "neputi",
+          "english": "grandson / nephew [basic use]",
+          "example": "In-neputi tiegħi huwa student.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "neputija",
+          "maltese": "neputija",
+          "english": "granddaughter / niece [basic use]",
+          "example": "In-neputija tiegħi hija ferħana.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "hbieb",
+          "maltese": "ħbieb",
+          "english": "friends",
+          "example": "Niltaqa' mal-ħbieb filgħaxija.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F91D.svg",
+          "imageAlt": "friends",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F91D.svg"
+          }
+        },
+        {
+          "slug": "qarib",
+          "maltese": "qarib",
+          "english": "relative",
+          "example": "Għandi qarib qrib tagħna.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F46A.svg",
+          "imageAlt": "relative",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F46A.svg"
+          }
+        },
+        {
+          "slug": "familja-kbira",
+          "maltese": "familja kbira",
+          "english": "big family",
+          "example": "Għandna familja kbira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F46A.svg",
+          "imageAlt": "big family",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F46A.svg"
+          }
+        }
       ]
     },
     {
@@ -40,12 +382,101 @@
       "sectionTitle": "Home Vocabulary",
       "title": "Home vocabulary",
       "items": [
-        { "slug": "dar", "maltese": "dar", "english": "house / home", "example": "Jien noqgħod f'dar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "appartament", "maltese": "appartament", "english": "apartment", "example": "Aħna noqogħdu f'appartament.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bieb", "maltese": "bieb", "english": "door", "example": "Il-bieb huwa magħluq.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tieqa", "maltese": "tieqa", "english": "window", "example": "Hemm tieqa kbira fil-kċina.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "gnien", "maltese": "ġnien", "english": "garden", "example": "Għandi ġnien żgħir.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "gallarija", "maltese": "gallarija", "english": "balcony", "example": "Għandna gallarija żgħira.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "dar",
+          "maltese": "dar",
+          "english": "house / home",
+          "example": "Jien noqgħod f'dar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E0.svg",
+          "imageAlt": "house / home",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
+          }
+        },
+        {
+          "slug": "appartament",
+          "maltese": "appartament",
+          "english": "apartment",
+          "example": "Aħna noqogħdu f'appartament.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E2.svg",
+          "imageAlt": "apartment",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E2.svg"
+          }
+        },
+        {
+          "slug": "bieb",
+          "maltese": "bieb",
+          "english": "door",
+          "example": "Il-bieb huwa magħluq.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6AA.svg",
+          "imageAlt": "door",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6AA.svg"
+          }
+        },
+        {
+          "slug": "tieqa",
+          "maltese": "tieqa",
+          "english": "window",
+          "example": "Hemm tieqa kbira fil-kċina.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1FA9F.svg",
+          "imageAlt": "window",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA9F.svg"
+          }
+        },
+        {
+          "slug": "gnien",
+          "maltese": "ġnien",
+          "english": "garden",
+          "example": "Għandi ġnien żgħir.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E1.svg",
+          "imageAlt": "garden",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E1.svg"
+          }
+        },
+        {
+          "slug": "gallarija",
+          "maltese": "gallarija",
+          "english": "balcony",
+          "example": "Għandna gallarija żgħira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -54,12 +485,87 @@
       "sectionTitle": "Rooms In The House",
       "title": "Rooms in the house",
       "items": [
-        { "slug": "kcina", "maltese": "kċina", "english": "kitchen", "example": "Il-kċina hija nadifa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kamra-tas-sodda", "maltese": "kamra tas-sodda", "english": "bedroom", "example": "Il-kamra tas-sodda tiegħi hija żgħira.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kamra-tal-banju", "maltese": "kamra tal-banju", "english": "bathroom", "example": "Il-kamra tal-banju hija nadifa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "salott", "maltese": "salott", "english": "living room", "example": "Is-salott huwa komdu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kamra-tal-ikel", "maltese": "kamra tal-ikel", "english": "dining room", "example": "Nieklu fil-kamra tal-ikel.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kuritur", "maltese": "kuritur", "english": "corridor", "example": "Il-kuritur huwa twil.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "kcina",
+          "maltese": "kċina",
+          "english": "kitchen",
+          "example": "Il-kċina hija nadifa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "kamra-tas-sodda",
+          "maltese": "kamra tas-sodda",
+          "english": "bedroom",
+          "example": "Il-kamra tas-sodda tiegħi hija żgħira.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6CF.svg",
+          "imageAlt": "bedroom",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
+          }
+        },
+        {
+          "slug": "kamra-tal-banju",
+          "maltese": "kamra tal-banju",
+          "english": "bathroom",
+          "example": "Il-kamra tal-banju hija nadifa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6C1.svg",
+          "imageAlt": "bathroom",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6C1.svg"
+          }
+        },
+        {
+          "slug": "salott",
+          "maltese": "salott",
+          "english": "living room",
+          "example": "Is-salott huwa komdu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6CB.svg",
+          "imageAlt": "living room",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CB.svg"
+          }
+        },
+        {
+          "slug": "kamra-tal-ikel",
+          "maltese": "kamra tal-ikel",
+          "english": "dining room",
+          "example": "Nieklu fil-kamra tal-ikel.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "kuritur",
+          "maltese": "kuritur",
+          "english": "corridor",
+          "example": "Il-kuritur huwa twil.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -68,21 +574,251 @@
       "sectionTitle": "Basic Furniture",
       "title": "Basic furniture",
       "items": [
-        { "slug": "mejda", "maltese": "mejda", "english": "table", "example": "Hemm mejda fil-kċina.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "siggu", "maltese": "siġġu", "english": "chair", "example": "Hemm erba' siġġijiet fis-salott.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "sufan", "maltese": "sufan", "english": "sofa", "example": "Is-sufan huwa quddiem it-TV.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "sodda", "maltese": "sodda", "english": "bed", "example": "Is-sodda tinsab fil-kamra tas-sodda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "frigg", "maltese": "friġġ", "english": "fridge", "example": "Il-friġġ jinsab fil-kċina.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "armarju", "maltese": "armarju", "english": "wardrobe / cupboard", "example": "L-armarju jinsab fil-kamra tas-sodda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bank", "maltese": "bank", "english": "bench / seat [basic use]", "example": "Hemm bank żgħir fil-ġnien.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "lampa", "maltese": "lampa", "english": "lamp", "example": "Il-lampa hija ħdejn is-sodda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "xkaffa", "maltese": "xkaffa", "english": "shelf", "example": "Hemm xkaffa kbira fil-kamra.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bieb-furniture", "maltese": "bieb", "english": "door", "example": "Il-bieb jinsab ħdejn it-tieqa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tieqa-furniture", "maltese": "tieqa", "english": "window", "example": "It-tieqa hija miftuħa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "televixin", "maltese": "televixin / TV", "english": "television", "example": "It-TV jinsab quddiem is-sufan.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "skrivanija", "maltese": "skrivanija", "english": "desk", "example": "Għandi skrivanija żgħira fid-dar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "mera", "maltese": "mera", "english": "mirror", "example": "Hemm mera fil-kuritur.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "komodina", "maltese": "komodina", "english": "small bedside table", "example": "Il-komodina tinsab ħdejn is-sodda.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "mejda",
+          "maltese": "mejda",
+          "english": "table",
+          "example": "Hemm mejda fil-kċina.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/game-icons/table.svg",
+          "imageAlt": "table",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/table.html"
+          }
+        },
+        {
+          "slug": "siggu",
+          "maltese": "siġġu",
+          "english": "chair",
+          "example": "Hemm erba' siġġijiet fis-salott.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1FA91.svg",
+          "imageAlt": "chair",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA91.svg"
+          }
+        },
+        {
+          "slug": "sufan",
+          "maltese": "sufan",
+          "english": "sofa",
+          "example": "Is-sufan huwa quddiem it-TV.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6CB.svg",
+          "imageAlt": "sofa",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CB.svg"
+          }
+        },
+        {
+          "slug": "sodda",
+          "maltese": "sodda",
+          "english": "bed",
+          "example": "Is-sodda tinsab fil-kamra tas-sodda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6CF.svg",
+          "imageAlt": "bed",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
+          }
+        },
+        {
+          "slug": "frigg",
+          "maltese": "friġġ",
+          "english": "fridge",
+          "example": "Il-friġġ jinsab fil-kċina.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/game-icons/fridge.svg",
+          "imageAlt": "fridge",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Caro Asercion",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/caro-asercion/fridge.html"
+          }
+        },
+        {
+          "slug": "armarju",
+          "maltese": "armarju",
+          "english": "wardrobe / cupboard",
+          "example": "L-armarju jinsab fil-kamra tas-sodda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "bank",
+          "maltese": "bank",
+          "english": "bench / seat [basic use]",
+          "example": "Hemm bank żgħir fil-ġnien.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1FA91.svg",
+          "imageAlt": "bench / seat [basic use]",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA91.svg"
+          }
+        },
+        {
+          "slug": "lampa",
+          "maltese": "lampa",
+          "english": "lamp",
+          "example": "Il-lampa hija ħdejn is-sodda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/E163.svg",
+          "imageAlt": "lamp",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E163.svg"
+          }
+        },
+        {
+          "slug": "xkaffa",
+          "maltese": "xkaffa",
+          "english": "shelf",
+          "example": "Hemm xkaffa kbira fil-kamra.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/game-icons/bookshelf.svg",
+          "imageAlt": "shelf",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/bookshelf.html"
+          }
+        },
+        {
+          "slug": "bieb-furniture",
+          "maltese": "bieb",
+          "english": "door",
+          "example": "Il-bieb jinsab ħdejn it-tieqa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6AA.svg",
+          "imageAlt": "door",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6AA.svg"
+          }
+        },
+        {
+          "slug": "tieqa-furniture",
+          "maltese": "tieqa",
+          "english": "window",
+          "example": "It-tieqa hija miftuħa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1FA9F.svg",
+          "imageAlt": "window",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA9F.svg"
+          }
+        },
+        {
+          "slug": "televixin",
+          "maltese": "televixin / TV",
+          "english": "television",
+          "example": "It-TV jinsab quddiem is-sufan.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F4FA.svg",
+          "imageAlt": "television",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4FA.svg"
+          }
+        },
+        {
+          "slug": "skrivanija",
+          "maltese": "skrivanija",
+          "english": "desk",
+          "example": "Għandi skrivanija żgħira fid-dar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/game-icons/desk.svg",
+          "imageAlt": "desk",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/desk.html"
+          }
+        },
+        {
+          "slug": "mera",
+          "maltese": "mera",
+          "english": "mirror",
+          "example": "Hemm mera fil-kuritur.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1FA9E.svg",
+          "imageAlt": "mirror",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA9E.svg"
+          }
+        },
+        {
+          "slug": "komodina",
+          "maltese": "komodina",
+          "english": "small bedside table",
+          "example": "Il-komodina tinsab ħdejn is-sodda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -91,24 +827,312 @@
       "sectionTitle": "Basic Food Vocabulary",
       "title": "Basic food vocabulary",
       "items": [
-        { "slug": "hobz", "maltese": "ħobż", "english": "bread", "example": "Inħobb il-ħobż u l-ġobon.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "gobon", "maltese": "ġobon", "english": "cheese", "example": "Inħobb il-ħobż u l-ġobon.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bajda", "maltese": "bajda", "english": "egg", "example": "Jien niekol bajda filgħodu.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "laham", "maltese": "laħam", "english": "meat", "example": "Missieri jħobb il-ħut aktar mil-laħam.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "haxix", "maltese": "ħaxix", "english": "vegetables", "example": "Aħna nieklu ħafna ħaxix.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "frott", "maltese": "frott", "english": "fruit", "example": "Hi tħobb l-insalata u l-frott.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "soppa", "maltese": "soppa", "english": "soup", "example": "Ommi tagħmel soppa tajba.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ross", "maltese": "ross", "english": "rice", "example": "Hemm ross u tiġieġ fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "patata", "maltese": "patata", "english": "potato", "example": "Inħobb il-patata mal-ikel.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tadam", "maltese": "tadam", "english": "tomato", "example": "Inħobb it-tadam fl-insalata.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "karrotta", "maltese": "karrotta", "english": "carrot", "example": "Il-karrotta hija ħaxixa komuni.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "pizza", "maltese": "pizza", "english": "pizza", "example": "Xi kultant niekol pizza filgħaxija.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tigieg", "maltese": "tiġieġ", "english": "chicken", "example": "Hemm ross u tiġieġ fuq il-mejda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "insalata", "maltese": "insalata", "english": "salad", "example": "Hi tħobb l-insalata u l-frott.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kejk", "maltese": "kejk", "english": "cake", "example": "Inħobb niekol kejk fi tmiem il-ġimgħa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hut", "maltese": "ħut", "english": "fish", "example": "Missieri jħobb il-ħut.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ghagin", "maltese": "għaġin", "english": "pasta", "example": "Aħna nieklu għaġin xi kultant.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "butir", "maltese": "butir", "english": "butter", "example": "Nieħu ħobż bil-butir filgħodu.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "hobz",
+          "maltese": "ħobż",
+          "english": "bread",
+          "example": "Inħobb il-ħobż u l-ġobon.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35E.svg",
+          "imageAlt": "bread",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35E.svg"
+          }
+        },
+        {
+          "slug": "gobon",
+          "maltese": "ġobon",
+          "english": "cheese",
+          "example": "Inħobb il-ħobż u l-ġobon.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C0.svg",
+          "imageAlt": "cheese",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C0.svg"
+          }
+        },
+        {
+          "slug": "bajda",
+          "maltese": "bajda",
+          "english": "egg",
+          "example": "Jien niekol bajda filgħodu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F95A.svg",
+          "imageAlt": "egg",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95A.svg"
+          }
+        },
+        {
+          "slug": "laham",
+          "maltese": "laħam",
+          "english": "meat",
+          "example": "Missieri jħobb il-ħut aktar mil-laħam.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F969.svg",
+          "imageAlt": "meat",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
+          }
+        },
+        {
+          "slug": "haxix",
+          "maltese": "ħaxix",
+          "english": "vegetables",
+          "example": "Aħna nieklu ħafna ħaxix.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F96C.svg",
+          "imageAlt": "vegetables",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F96C.svg"
+          }
+        },
+        {
+          "slug": "frott",
+          "maltese": "frott",
+          "english": "fruit",
+          "example": "Hi tħobb l-insalata u l-frott.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F34E.svg",
+          "imageAlt": "fruit",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F34E.svg"
+          }
+        },
+        {
+          "slug": "soppa",
+          "maltese": "soppa",
+          "english": "soup",
+          "example": "Ommi tagħmel soppa tajba.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F372.svg",
+          "imageAlt": "soup",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F372.svg"
+          }
+        },
+        {
+          "slug": "ross",
+          "maltese": "ross",
+          "english": "rice",
+          "example": "Hemm ross u tiġieġ fuq il-mejda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35A.svg",
+          "imageAlt": "rice",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35A.svg"
+          }
+        },
+        {
+          "slug": "patata",
+          "maltese": "patata",
+          "english": "potato",
+          "example": "Inħobb il-patata mal-ikel.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F954.svg",
+          "imageAlt": "potato",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F954.svg"
+          }
+        },
+        {
+          "slug": "tadam",
+          "maltese": "tadam",
+          "english": "tomato",
+          "example": "Inħobb it-tadam fl-insalata.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F345.svg",
+          "imageAlt": "tomato",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F345.svg"
+          }
+        },
+        {
+          "slug": "karrotta",
+          "maltese": "karrotta",
+          "english": "carrot",
+          "example": "Il-karrotta hija ħaxixa komuni.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F955.svg",
+          "imageAlt": "carrot",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F955.svg"
+          }
+        },
+        {
+          "slug": "pizza",
+          "maltese": "pizza",
+          "english": "pizza",
+          "example": "Xi kultant niekol pizza filgħaxija.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F355.svg",
+          "imageAlt": "pizza",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F355.svg"
+          }
+        },
+        {
+          "slug": "tigieg",
+          "maltese": "tiġieġ",
+          "english": "chicken",
+          "example": "Hemm ross u tiġieġ fuq il-mejda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F357.svg",
+          "imageAlt": "chicken",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F357.svg"
+          }
+        },
+        {
+          "slug": "insalata",
+          "maltese": "insalata",
+          "english": "salad",
+          "example": "Hi tħobb l-insalata u l-frott.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F96C.svg",
+          "imageAlt": "salad",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F96C.svg"
+          }
+        },
+        {
+          "slug": "kejk",
+          "maltese": "kejk",
+          "english": "cake",
+          "example": "Inħobb niekol kejk fi tmiem il-ġimgħa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/E0C7.svg",
+          "imageAlt": "cake",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E0C7.svg"
+          }
+        },
+        {
+          "slug": "hut",
+          "maltese": "ħut",
+          "english": "fish",
+          "example": "Missieri jħobb il-ħut.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F41F.svg",
+          "imageAlt": "fish",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F41F.svg"
+          }
+        },
+        {
+          "slug": "ghagin",
+          "maltese": "għaġin",
+          "english": "pasta",
+          "example": "Aħna nieklu għaġin xi kultant.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35D.svg",
+          "imageAlt": "pasta",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35D.svg"
+          }
+        },
+        {
+          "slug": "butir",
+          "maltese": "butir",
+          "english": "butter",
+          "example": "Nieħu ħobż bil-butir filgħodu.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C8.svg",
+          "imageAlt": "butter",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C8.svg"
+          }
+        }
       ]
     },
     {
@@ -117,14 +1141,142 @@
       "sectionTitle": "Drinks",
       "title": "Drinks",
       "items": [
-        { "slug": "ilma", "maltese": "ilma", "english": "water", "example": "Jien nixrob ilma.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kafe", "maltese": "kafè", "english": "coffee", "example": "Filgħodu nieħu kafè.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "te", "maltese": "te", "english": "tea", "example": "Filgħaxija nixrob te.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "meraq", "maltese": "meraq", "english": "juice", "example": "Inħobb meraq kiesaħ.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "halib", "maltese": "ħalib", "english": "milk", "example": "It-tifel jixrob ħalib.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "xorb-kiesah", "maltese": "xorb kiesaħ", "english": "cold drink [basic use]", "example": "Inħobb xorb kiesaħ fis-sajf.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ilma-kiesah", "maltese": "ilma kiesaħ", "english": "cold water", "example": "Missieri jixrob ilma kiesaħ.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "te-shun", "maltese": "te sħun", "english": "hot tea", "example": "Ommi tħobb te sħun.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "ilma",
+          "maltese": "ilma",
+          "english": "water",
+          "example": "Jien nixrob ilma.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6B0.svg",
+          "imageAlt": "water",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6B0.svg"
+          }
+        },
+        {
+          "slug": "kafe",
+          "maltese": "kafè",
+          "english": "coffee",
+          "example": "Filgħodu nieħu kafè.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/2615.svg",
+          "imageAlt": "coffee",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2615.svg"
+          }
+        },
+        {
+          "slug": "te",
+          "maltese": "te",
+          "english": "tea",
+          "example": "Filgħaxija nixrob te.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F375.svg",
+          "imageAlt": "tea",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F375.svg"
+          }
+        },
+        {
+          "slug": "meraq",
+          "maltese": "meraq",
+          "english": "juice",
+          "example": "Inħobb meraq kiesaħ.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C3.svg",
+          "imageAlt": "juice",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C3.svg"
+          }
+        },
+        {
+          "slug": "halib",
+          "maltese": "ħalib",
+          "english": "milk",
+          "example": "It-tifel jixrob ħalib.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F95B.svg",
+          "imageAlt": "milk",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95B.svg"
+          }
+        },
+        {
+          "slug": "xorb-kiesah",
+          "maltese": "xorb kiesaħ",
+          "english": "cold drink [basic use]",
+          "example": "Inħobb xorb kiesaħ fis-sajf.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C3.svg",
+          "imageAlt": "cold drink [basic use]",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C3.svg"
+          }
+        },
+        {
+          "slug": "ilma-kiesah",
+          "maltese": "ilma kiesaħ",
+          "english": "cold water",
+          "example": "Missieri jixrob ilma kiesaħ.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6B0.svg",
+          "imageAlt": "cold water",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6B0.svg"
+          }
+        },
+        {
+          "slug": "te-shun",
+          "maltese": "te sħun",
+          "english": "hot tea",
+          "example": "Ommi tħobb te sħun.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F375.svg",
+          "imageAlt": "hot tea",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F375.svg"
+          }
+        }
       ]
     }
   ]

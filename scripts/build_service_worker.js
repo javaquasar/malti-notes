@@ -37,6 +37,10 @@ const coreAssets = [
 ];
 
 const lazyAssets = [
+  ...[...require('./vocabulary_image_inventory').vocabularyFiles().keys()].map((file) => './assets/data/' + file),
+  './assets/data/year4_revision_vocabulary.json',
+  ...walk('assets/img/openmoji', '.svg').sort().map((file) => './' + file),
+  ...walk('assets/img/game-icons', '.svg').sort().map((file) => './' + file),
   "./assets/data/course_milestone_assessments.json",
   "./assets/data/comprehensive_test_bank.json",
 ];

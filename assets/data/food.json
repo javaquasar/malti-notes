@@ -8,18 +8,210 @@
       "sectionTitle": "Shopping List Vocabulary",
       "title": "Shopping list vocabulary",
       "items": [
-        { "slug": "halib", "maltese": "ħalib", "english": "milk", "example": "Għandi bżonn ħalib.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kartuna-bajd", "maltese": "kartuna bajd", "english": "box of eggs", "example": "Nixtieq kartuna bajd.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "borza-ross", "maltese": "borża ross", "english": "bag of rice", "example": "Fil-kċina hemm borża ross.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "pakkett-ghagin", "maltese": "pakkett għaġin", "english": "packet of pasta", "example": "Irrid pakkett għaġin.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bott-pizelli", "maltese": "bott piżelli", "english": "tin of peas", "example": "Xtrajna bott piżelli.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kaxxa-frawli", "maltese": "kaxxa frawli", "english": "box of strawberries", "example": "Din hija kaxxa frawli.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "kapuljat", "maltese": "kapuljat", "english": "minced meat", "example": "Se nsajjar kapuljat.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "gobon", "maltese": "ġobon", "english": "cheese", "example": "Inħobb il-ġobon.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "perzut", "maltese": "perżut", "english": "ham", "example": "Nixtieq ftit perżut.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hobz", "maltese": "ħobż", "english": "bread", "example": "Għandi ftit ħobż.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "butir", "maltese": "butir", "english": "butter", "example": "Inħobb il-butir mat-towst.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "flixkun-inbid-ahmar", "maltese": "flixkun inbid aħmar", "english": "bottle of red wine", "example": "Hemm flixkun inbid aħmar fuq il-mejda.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "halib",
+          "maltese": "ħalib",
+          "english": "milk",
+          "example": "Għandi bżonn ħalib.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F95B.svg",
+          "imageAlt": "milk",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95B.svg"
+          }
+        },
+        {
+          "slug": "kartuna-bajd",
+          "maltese": "kartuna bajd",
+          "english": "box of eggs",
+          "example": "Nixtieq kartuna bajd.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F95A.svg",
+          "imageAlt": "box of eggs",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95A.svg"
+          }
+        },
+        {
+          "slug": "borza-ross",
+          "maltese": "borża ross",
+          "english": "bag of rice",
+          "example": "Fil-kċina hemm borża ross.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35A.svg",
+          "imageAlt": "bag of rice",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35A.svg"
+          }
+        },
+        {
+          "slug": "pakkett-ghagin",
+          "maltese": "pakkett għaġin",
+          "english": "packet of pasta",
+          "example": "Irrid pakkett għaġin.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35D.svg",
+          "imageAlt": "packet of pasta",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35D.svg"
+          }
+        },
+        {
+          "slug": "bott-pizelli",
+          "maltese": "bott piżelli",
+          "english": "tin of peas",
+          "example": "Xtrajna bott piżelli.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1FADB.svg",
+          "imageAlt": "tin of peas",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FADB.svg"
+          }
+        },
+        {
+          "slug": "kaxxa-frawli",
+          "maltese": "kaxxa frawli",
+          "english": "box of strawberries",
+          "example": "Din hija kaxxa frawli.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F353.svg",
+          "imageAlt": "box of strawberries",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F353.svg"
+          }
+        },
+        {
+          "slug": "kapuljat",
+          "maltese": "kapuljat",
+          "english": "minced meat",
+          "example": "Se nsajjar kapuljat.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F969.svg",
+          "imageAlt": "minced meat",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
+          }
+        },
+        {
+          "slug": "gobon",
+          "maltese": "ġobon",
+          "english": "cheese",
+          "example": "Inħobb il-ġobon.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C0.svg",
+          "imageAlt": "cheese",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C0.svg"
+          }
+        },
+        {
+          "slug": "perzut",
+          "maltese": "perżut",
+          "english": "ham",
+          "example": "Nixtieq ftit perżut.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F969.svg",
+          "imageAlt": "ham",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
+          }
+        },
+        {
+          "slug": "hobz",
+          "maltese": "ħobż",
+          "english": "bread",
+          "example": "Għandi ftit ħobż.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35E.svg",
+          "imageAlt": "bread",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35E.svg"
+          }
+        },
+        {
+          "slug": "butir",
+          "maltese": "butir",
+          "english": "butter",
+          "example": "Inħobb il-butir mat-towst.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C8.svg",
+          "imageAlt": "butter",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C8.svg"
+          }
+        },
+        {
+          "slug": "flixkun-inbid-ahmar",
+          "maltese": "flixkun inbid aħmar",
+          "english": "bottle of red wine",
+          "example": "Hemm flixkun inbid aħmar fuq il-mejda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F377.svg",
+          "imageAlt": "bottle of red wine",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F377.svg"
+          }
+        }
       ]
     },
     {
@@ -28,22 +220,278 @@
       "sectionTitle": "Common Food and Ingredients",
       "title": "Common food and ingredients",
       "items": [
-        { "slug": "kafe", "maltese": "kafè", "english": "coffee", "example": "Filgħodu nieħu kafè.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "te", "maltese": "te", "english": "tea", "example": "Trid te jew kafè?", "review": { "enabled": true, "type": "word" } },
-        { "slug": "zokkor", "maltese": "zokkor", "english": "sugar", "example": "Tieħu zokkor mat-te?", "review": { "enabled": true, "type": "word" } },
-        { "slug": "melh", "maltese": "melħ", "english": "salt", "example": "Trid ftit melħ?", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bzar", "maltese": "bżar", "english": "pepper", "example": "Dan għandu bżar.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tigiega", "maltese": "tiġieġa", "english": "chicken", "example": "Filgħaxija nieħu tiġieġa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "laham", "maltese": "laħam", "english": "meat", "example": "Inħobb niekol laħam.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hut", "maltese": "ħut", "english": "fish", "example": "Mal-ħut inħobb nieħu inbid bajda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "torta", "maltese": "torta", "english": "pie", "example": "Din hija torta tajba.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bajda", "maltese": "bajda", "english": "egg", "example": "Filgħodu niekol bajda.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ross", "maltese": "ross", "english": "rice", "example": "Għandi ross fil-kċina.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "haxix", "maltese": "ħaxix", "english": "vegetables", "example": "Niekol ħafna ħaxix.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "patata", "maltese": "patata", "english": "potatoes", "example": "Inħobb il-patata.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "soppa", "maltese": "soppa", "english": "soup", "example": "F'nofsinhar inħobb nieħu soppa.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "frott", "maltese": "frott", "english": "fruit", "example": "Niekol frott kuljum.", "review": { "enabled": true, "type": "word" } },
-        { "slug": "gallettina", "maltese": "gallettina", "english": "biscuit", "example": "Nieħu kafè u gallettina.", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "kafe",
+          "maltese": "kafè",
+          "english": "coffee",
+          "example": "Filgħodu nieħu kafè.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/2615.svg",
+          "imageAlt": "coffee",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2615.svg"
+          }
+        },
+        {
+          "slug": "te",
+          "maltese": "te",
+          "english": "tea",
+          "example": "Trid te jew kafè?",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F375.svg",
+          "imageAlt": "tea",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F375.svg"
+          }
+        },
+        {
+          "slug": "zokkor",
+          "maltese": "zokkor",
+          "english": "sugar",
+          "example": "Tieħu zokkor mat-te?",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F36C.svg",
+          "imageAlt": "sugar",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F36C.svg"
+          }
+        },
+        {
+          "slug": "melh",
+          "maltese": "melħ",
+          "english": "salt",
+          "example": "Trid ftit melħ?",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9C2.svg",
+          "imageAlt": "salt",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9C2.svg"
+          }
+        },
+        {
+          "slug": "bzar",
+          "maltese": "bżar",
+          "english": "pepper",
+          "example": "Dan għandu bżar.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/E0CE.svg",
+          "imageAlt": "pepper",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E0CE.svg"
+          }
+        },
+        {
+          "slug": "tigiega",
+          "maltese": "tiġieġa",
+          "english": "chicken",
+          "example": "Filgħaxija nieħu tiġieġa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F357.svg",
+          "imageAlt": "chicken",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F357.svg"
+          }
+        },
+        {
+          "slug": "laham",
+          "maltese": "laħam",
+          "english": "meat",
+          "example": "Inħobb niekol laħam.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F969.svg",
+          "imageAlt": "meat",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F969.svg"
+          }
+        },
+        {
+          "slug": "hut",
+          "maltese": "ħut",
+          "english": "fish",
+          "example": "Mal-ħut inħobb nieħu inbid bajda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F41F.svg",
+          "imageAlt": "fish",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F41F.svg"
+          }
+        },
+        {
+          "slug": "torta",
+          "maltese": "torta",
+          "english": "pie",
+          "example": "Din hija torta tajba.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F967.svg",
+          "imageAlt": "pie",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F967.svg"
+          }
+        },
+        {
+          "slug": "bajda",
+          "maltese": "bajda",
+          "english": "egg",
+          "example": "Filgħodu niekol bajda.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F95A.svg",
+          "imageAlt": "egg",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F95A.svg"
+          }
+        },
+        {
+          "slug": "ross",
+          "maltese": "ross",
+          "english": "rice",
+          "example": "Għandi ross fil-kċina.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F35A.svg",
+          "imageAlt": "rice",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F35A.svg"
+          }
+        },
+        {
+          "slug": "haxix",
+          "maltese": "ħaxix",
+          "english": "vegetables",
+          "example": "Niekol ħafna ħaxix.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F96C.svg",
+          "imageAlt": "vegetables",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F96C.svg"
+          }
+        },
+        {
+          "slug": "patata",
+          "maltese": "patata",
+          "english": "potatoes",
+          "example": "Inħobb il-patata.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F954.svg",
+          "imageAlt": "potatoes",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F954.svg"
+          }
+        },
+        {
+          "slug": "soppa",
+          "maltese": "soppa",
+          "english": "soup",
+          "example": "F'nofsinhar inħobb nieħu soppa.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F372.svg",
+          "imageAlt": "soup",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F372.svg"
+          }
+        },
+        {
+          "slug": "frott",
+          "maltese": "frott",
+          "english": "fruit",
+          "example": "Niekol frott kuljum.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F34E.svg",
+          "imageAlt": "fruit",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F34E.svg"
+          }
+        },
+        {
+          "slug": "gallettina",
+          "maltese": "gallettina",
+          "english": "biscuit",
+          "example": "Nieħu kafè u gallettina.",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F36A.svg",
+          "imageAlt": "biscuit",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F36A.svg"
+          }
+        }
       ]
     }
   ]

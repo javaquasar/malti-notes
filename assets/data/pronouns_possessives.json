@@ -8,13 +8,86 @@
       "sectionTitle": "Main Pronouns",
       "title": "Subject pronouns",
       "items": [
-        { "slug": "jien", "maltese": "jien", "english": "I", "example": "Jien student.", "note": "subject pronoun", "review": { "enabled": true, "type": "word" } },
-        { "slug": "inti", "maltese": "inti", "english": "you", "example": "Inti student.", "exampleTranslation": "You are a student.", "note": "singular", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hu", "maltese": "hu", "english": "he", "example": "Hu missieri.", "note": "masculine", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hi", "maltese": "hi", "english": "she", "example": "Hi oħti.", "note": "feminine", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ahna", "maltese": "aħna", "english": "we", "example": "Aħna familja żgħira.", "exampleTranslation": "We are a small family.", "note": "plural", "review": { "enabled": true, "type": "word" } },
-        { "slug": "intom", "maltese": "intom", "english": "you (plural)", "example": "Intom ħbieb.", "exampleTranslation": "You are friends.", "note": "plural", "review": { "enabled": true, "type": "word" } },
-        { "slug": "huma", "maltese": "huma", "english": "they", "example": "Huma t-tfal tagħhom.", "note": "plural", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "jien",
+          "maltese": "jien",
+          "english": "I",
+          "example": "Jien student.",
+          "note": "subject pronoun",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "inti",
+          "maltese": "inti",
+          "english": "you",
+          "example": "Inti student.",
+          "exampleTranslation": "You are a student.",
+          "note": "singular",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "hu",
+          "maltese": "hu",
+          "english": "he",
+          "example": "Hu missieri.",
+          "note": "masculine",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "hi",
+          "maltese": "hi",
+          "english": "she",
+          "example": "Hi oħti.",
+          "note": "feminine",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "ahna",
+          "maltese": "aħna",
+          "english": "we",
+          "example": "Aħna familja żgħira.",
+          "exampleTranslation": "We are a small family.",
+          "note": "plural",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "intom",
+          "maltese": "intom",
+          "english": "you (plural)",
+          "example": "Intom ħbieb.",
+          "exampleTranslation": "You are friends.",
+          "note": "plural",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "huma",
+          "maltese": "huma",
+          "english": "they",
+          "example": "Huma t-tfal tagħhom.",
+          "note": "plural",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -23,12 +96,74 @@
       "sectionTitle": "Demonstrative Pronouns",
       "title": "Demonstratives",
       "items": [
-        { "slug": "dan", "maltese": "dan", "english": "this", "example": "Dan sufan.", "note": "masculine, near", "review": { "enabled": true, "type": "word" } },
-        { "slug": "din", "maltese": "din", "english": "this", "example": "Din mejda.", "note": "feminine, near", "review": { "enabled": true, "type": "word" } },
-        { "slug": "dawn", "maltese": "dawn", "english": "these", "example": "Dawn pjanti.", "exampleTranslation": "These are plants.", "note": "plural, near", "review": { "enabled": true, "type": "word" } },
-        { "slug": "dak", "maltese": "dak", "english": "that", "example": "Dak sufan.", "note": "masculine, far", "review": { "enabled": true, "type": "word" } },
-        { "slug": "dik", "maltese": "dik", "english": "that", "example": "Dik mejda.", "exampleTranslation": "That is a table.", "note": "feminine, far", "review": { "enabled": true, "type": "word" } },
-        { "slug": "dawk", "maltese": "dawk", "english": "those", "example": "Dawk pjanti.", "note": "plural, far", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "dan",
+          "maltese": "dan",
+          "english": "this",
+          "example": "Dan sufan.",
+          "note": "masculine, near",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "din",
+          "maltese": "din",
+          "english": "this",
+          "example": "Din mejda.",
+          "note": "feminine, near",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "dawn",
+          "maltese": "dawn",
+          "english": "these",
+          "example": "Dawn pjanti.",
+          "exampleTranslation": "These are plants.",
+          "note": "plural, near",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "dak",
+          "maltese": "dak",
+          "english": "that",
+          "example": "Dak sufan.",
+          "note": "masculine, far",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "dik",
+          "maltese": "dik",
+          "english": "that",
+          "example": "Dik mejda.",
+          "exampleTranslation": "That is a table.",
+          "note": "feminine, far",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "dawk",
+          "maltese": "dawk",
+          "english": "those",
+          "example": "Dawk pjanti.",
+          "note": "plural, far",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -37,13 +172,85 @@
       "sectionTitle": "Possessive Forms",
       "title": "Possessives",
       "items": [
-        { "slug": "tieghi", "maltese": "tiegħi", "english": "my / mine", "example": "il-familja tiegħi", "note": "singular owner", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tieghek", "maltese": "tiegħek", "english": "your / yours", "example": "id-dar tiegħek", "exampleTranslation": "your house", "note": "singular owner", "review": { "enabled": true, "type": "word" } },
-        { "slug": "tieghu", "maltese": "tiegħu", "english": "his", "example": "il-flokk tiegħu", "note": "masculine owner", "review": { "enabled": true, "type": "word" } },
-        { "slug": "taghha", "maltese": "tagħha", "english": "her", "example": "il-borża tagħha", "note": "feminine owner", "review": { "enabled": true, "type": "word" } },
-        { "slug": "taghna", "maltese": "tagħna", "english": "our / ours", "example": "id-dar tagħna", "note": "plural owner", "review": { "enabled": true, "type": "word" } },
-        { "slug": "taghkom", "maltese": "tagħkom", "english": "your / yours (plural)", "example": "il-familja tagħkom", "exampleTranslation": "your family", "note": "plural owner", "review": { "enabled": true, "type": "word" } },
-        { "slug": "taghhom", "maltese": "tagħhom", "english": "their / theirs", "example": "it-tfal tagħhom", "note": "plural owner", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "tieghi",
+          "maltese": "tiegħi",
+          "english": "my / mine",
+          "example": "il-familja tiegħi",
+          "note": "singular owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "tieghek",
+          "maltese": "tiegħek",
+          "english": "your / yours",
+          "example": "id-dar tiegħek",
+          "exampleTranslation": "your house",
+          "note": "singular owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "tieghu",
+          "maltese": "tiegħu",
+          "english": "his",
+          "example": "il-flokk tiegħu",
+          "note": "masculine owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "taghha",
+          "maltese": "tagħha",
+          "english": "her",
+          "example": "il-borża tagħha",
+          "note": "feminine owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "taghna",
+          "maltese": "tagħna",
+          "english": "our / ours",
+          "example": "id-dar tagħna",
+          "note": "plural owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "taghkom",
+          "maltese": "tagħkom",
+          "english": "your / yours (plural)",
+          "example": "il-familja tagħkom",
+          "exampleTranslation": "your family",
+          "note": "plural owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "taghhom",
+          "maltese": "tagħhom",
+          "english": "their / theirs",
+          "example": "it-tfal tagħhom",
+          "note": "plural owner",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     },
     {
@@ -52,12 +259,115 @@
       "sectionTitle": "Family Examples",
       "title": "Family forms",
       "items": [
-        { "slug": "ommi", "maltese": "ommi", "english": "my mother", "example": "Hi ommi.", "note": "family form", "review": { "enabled": true, "type": "word" } },
-        { "slug": "missieri", "maltese": "missieri", "english": "my father", "example": "Hu missieri.", "note": "family form", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ohti", "maltese": "oħti", "english": "my sister", "example": "Din oħti.", "note": "family form", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hija-family", "maltese": "ħija", "english": "my brother", "example": "Dan ħija.", "note": "family form", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ommu", "maltese": "ommu", "english": "his mother", "example": "Hi ommu.", "note": "family form", "review": { "enabled": true, "type": "word" } },
-        { "slug": "it-tfal-taghhom", "maltese": "it-tfal tagħhom", "english": "their children", "example": "Huma t-tfal tagħhom.", "exampleTranslation": "They are their children.", "note": "family form", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "ommi",
+          "maltese": "ommi",
+          "english": "my mother",
+          "example": "Hi ommi.",
+          "note": "family form",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F469-200D-1F467.svg",
+          "imageAlt": "my mother",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F469-200D-1F467.svg"
+          }
+        },
+        {
+          "slug": "missieri",
+          "maltese": "missieri",
+          "english": "my father",
+          "example": "Hu missieri.",
+          "note": "family form",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F468-200D-1F466.svg",
+          "imageAlt": "my father",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F468-200D-1F466.svg"
+          }
+        },
+        {
+          "slug": "ohti",
+          "maltese": "oħti",
+          "english": "my sister",
+          "example": "Din oħti.",
+          "note": "family form",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F467.svg",
+          "imageAlt": "my sister",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F467.svg"
+          }
+        },
+        {
+          "slug": "hija-family",
+          "maltese": "ħija",
+          "english": "my brother",
+          "example": "Dan ħija.",
+          "note": "family form",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F466.svg",
+          "imageAlt": "my brother",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F466.svg"
+          }
+        },
+        {
+          "slug": "ommu",
+          "maltese": "ommu",
+          "english": "his mother",
+          "example": "Hi ommu.",
+          "note": "family form",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F469-200D-1F467.svg",
+          "imageAlt": "his mother",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F469-200D-1F467.svg"
+          }
+        },
+        {
+          "slug": "it-tfal-taghhom",
+          "maltese": "it-tfal tagħhom",
+          "english": "their children",
+          "example": "Huma t-tfal tagħhom.",
+          "exampleTranslation": "They are their children.",
+          "note": "family form",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F9D2.svg",
+          "imageAlt": "their children",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D2.svg"
+          }
+        }
       ]
     },
     {
@@ -66,12 +376,115 @@
       "sectionTitle": "Home and Object Examples",
       "title": "Home ownership forms",
       "items": [
-        { "slug": "id-dar-tieghi", "maltese": "id-dar tiegħi", "english": "my house", "example": "Din id-dar tiegħi.", "note": "home phrase", "review": { "enabled": true, "type": "word" } },
-        { "slug": "id-dar-tieghu", "maltese": "id-dar tiegħu", "english": "his house", "example": "Din id-dar tiegħu.", "note": "home phrase", "review": { "enabled": true, "type": "word" } },
-        { "slug": "id-dar-taghhom", "maltese": "id-dar tagħhom", "english": "their house", "example": "Din id-dar tagħhom.", "note": "home phrase", "review": { "enabled": true, "type": "word" } },
-        { "slug": "il-kamra-tieghi", "maltese": "il-kamra tiegħi", "english": "my room", "example": "Din il-kamra tiegħi.", "note": "home phrase", "review": { "enabled": true, "type": "word" } },
-        { "slug": "il-borza-taghha", "maltese": "il-borża tagħha", "english": "her bag", "example": "Din il-borża tagħha.", "note": "object phrase", "review": { "enabled": true, "type": "word" } },
-        { "slug": "il-mejda-taghna", "maltese": "il-mejda tagħna", "english": "our table", "example": "Din il-mejda tagħna.", "note": "object phrase", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "id-dar-tieghi",
+          "maltese": "id-dar tiegħi",
+          "english": "my house",
+          "example": "Din id-dar tiegħi.",
+          "note": "home phrase",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E0.svg",
+          "imageAlt": "my house",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
+          }
+        },
+        {
+          "slug": "id-dar-tieghu",
+          "maltese": "id-dar tiegħu",
+          "english": "his house",
+          "example": "Din id-dar tiegħu.",
+          "note": "home phrase",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E0.svg",
+          "imageAlt": "his house",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
+          }
+        },
+        {
+          "slug": "id-dar-taghhom",
+          "maltese": "id-dar tagħhom",
+          "english": "their house",
+          "example": "Din id-dar tagħhom.",
+          "note": "home phrase",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F3E0.svg",
+          "imageAlt": "their house",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
+          }
+        },
+        {
+          "slug": "il-kamra-tieghi",
+          "maltese": "il-kamra tiegħi",
+          "english": "my room",
+          "example": "Din il-kamra tiegħi.",
+          "note": "home phrase",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F6CF.svg",
+          "imageAlt": "my room",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
+          }
+        },
+        {
+          "slug": "il-borza-taghha",
+          "maltese": "il-borża tagħha",
+          "english": "her bag",
+          "example": "Din il-borża tagħha.",
+          "note": "object phrase",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/openmoji/1F45C.svg",
+          "imageAlt": "her bag",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F45C.svg"
+          }
+        },
+        {
+          "slug": "il-mejda-taghna",
+          "maltese": "il-mejda tagħna",
+          "english": "our table",
+          "example": "Din il-mejda tagħna.",
+          "note": "object phrase",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          },
+          "image": "./assets/img/game-icons/table.svg",
+          "imageAlt": "our table",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/table.html"
+          }
+        }
       ]
     },
     {
@@ -80,17 +493,127 @@
       "sectionTitle": "Prepositions and Small Particles",
       "title": "Core prepositions",
       "items": [
-        { "slug": "fi", "maltese": "fi / f'", "english": "in", "example": "fi skola / f'appartament", "note": "location", "review": { "enabled": true, "type": "word" } },
-        { "slug": "fil", "maltese": "fil-", "english": "in the", "example": "fil-kċina", "note": "with article", "review": { "enabled": true, "type": "word" } },
-        { "slug": "fuq", "maltese": "fuq", "english": "on", "example": "fuq il-mejda", "note": "location", "review": { "enabled": true, "type": "word" } },
-        { "slug": "taht", "maltese": "taħt", "english": "under", "example": "taħt is-siġġu", "note": "location", "review": { "enabled": true, "type": "word" } },
-        { "slug": "hdejn", "maltese": "ħdejn", "english": "next to", "example": "ħdejn ommi", "note": "location", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ma", "maltese": "ma'", "english": "with", "example": "ma' ħija", "note": "company", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ghand", "maltese": "għand", "english": "at / have-location", "example": "għand ommi", "note": "place / possession", "review": { "enabled": true, "type": "word" } },
-        { "slug": "minn", "maltese": "minn", "english": "from", "example": "minn Malta", "note": "origin", "review": { "enabled": true, "type": "word" } },
-        { "slug": "sa", "maltese": "sa", "english": "until / to", "example": "sa filgħaxija", "note": "time / limit", "review": { "enabled": true, "type": "word" } },
-        { "slug": "ghal", "maltese": "għal", "english": "for / to", "example": "għal ommi", "note": "direction / purpose", "review": { "enabled": true, "type": "word" } },
-        { "slug": "bi", "maltese": "b'", "english": "with / by means of", "example": "b'karozza", "note": "instrument", "review": { "enabled": true, "type": "word" } }
+        {
+          "slug": "fi",
+          "maltese": "fi / f'",
+          "english": "in",
+          "example": "fi skola / f'appartament",
+          "note": "location",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "fil",
+          "maltese": "fil-",
+          "english": "in the",
+          "example": "fil-kċina",
+          "note": "with article",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "fuq",
+          "maltese": "fuq",
+          "english": "on",
+          "example": "fuq il-mejda",
+          "note": "location",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "taht",
+          "maltese": "taħt",
+          "english": "under",
+          "example": "taħt is-siġġu",
+          "note": "location",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "hdejn",
+          "maltese": "ħdejn",
+          "english": "next to",
+          "example": "ħdejn ommi",
+          "note": "location",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "ma",
+          "maltese": "ma'",
+          "english": "with",
+          "example": "ma' ħija",
+          "note": "company",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "ghand",
+          "maltese": "għand",
+          "english": "at / have-location",
+          "example": "għand ommi",
+          "note": "place / possession",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "minn",
+          "maltese": "minn",
+          "english": "from",
+          "example": "minn Malta",
+          "note": "origin",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "sa",
+          "maltese": "sa",
+          "english": "until / to",
+          "example": "sa filgħaxija",
+          "note": "time / limit",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "ghal",
+          "maltese": "għal",
+          "english": "for / to",
+          "example": "għal ommi",
+          "note": "direction / purpose",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        },
+        {
+          "slug": "bi",
+          "maltese": "b'",
+          "english": "with / by means of",
+          "example": "b'karozza",
+          "note": "instrument",
+          "review": {
+            "enabled": true,
+            "type": "word"
+          }
+        }
       ]
     }
   ]

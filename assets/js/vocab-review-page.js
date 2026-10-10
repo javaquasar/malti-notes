@@ -227,6 +227,7 @@
                 });
             });
 
+            renderer.addImageCredits(allItems);
             injectPageBulkButton(allItems);
             refreshReviewUi();
             document.dispatchEvent(new CustomEvent("malti-vocab-rendered", {
