@@ -290,15 +290,8 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F46B.svg",
-          "imageAlt": "Context illustration for parents",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F46B.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context",
+          "imageRole": "none",
           "exampleTranslation": "My parents are at home.",
           "exampleSource": "topic example bank"
         },
@@ -311,15 +304,8 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F9D2.svg",
-          "imageAlt": "Context illustration for children",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9D2.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "none"
         },
         {
           "slug": "kugin",
@@ -409,15 +395,8 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F46A.svg",
-          "imageAlt": "Context illustration for relative",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F46A.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "none"
         },
         {
           "slug": "familja-kbira",
@@ -604,15 +583,8 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F6CF.svg",
-          "imageAlt": "Context illustration for bedroom",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context",
+          "imageRole": "none",
           "exampleTranslation": "My bedroom is small.",
           "exampleSource": "topic example bank"
         },
@@ -625,15 +597,8 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F6C1.svg",
-          "imageAlt": "Context illustration for bathroom",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6C1.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "none"
         },
         {
           "slug": "salott",
@@ -644,15 +609,8 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F6CB.svg",
-          "imageAlt": "Context illustration for living room",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CB.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context",
+          "imageRole": "none",
           "exampleTranslation": "The living room is comfortable.",
           "exampleSource": "topic example bank"
         },
@@ -864,16 +822,16 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/game-icons/bookshelf.svg",
-          "imageAlt": "Context illustration for shelf",
+          "image": "./assets/img/cc0/shelf.svg",
+          "imageAlt": "shelf",
           "imageSource": {
-            "provider": "Game-icons.net",
-            "author": "Delapouite",
-            "license": "CC BY 3.0",
-            "url": "https://game-icons.net/1x1/delapouite/bookshelf.html"
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/103115/shelf"
           },
-          "imageQuizEligible": false,
-          "imageRole": "context",
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
           "exampleTranslation": "There is a big shelf in the room.",
           "exampleSource": "topic example bank"
         },
@@ -990,8 +948,16 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": false,
-          "imageRole": "none"
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "image": "./assets/img/cc0/bedside-table.svg",
+          "imageAlt": "small bedside table",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/206915/bedside-table"
+          }
         }
       ]
     },

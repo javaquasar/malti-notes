@@ -5,7 +5,9 @@ const { root, vocabularyFiles, inventory, save } = require('./vocabulary_image_i
 const config = require('../assets/data/vocabulary_image_sources.json');
 const directory = path.join(root, 'assets/img/openmoji');
 const aliases = new Map(Object.entries(config.aliases).flatMap(([code, words]) => words.map((word) => [word.toLowerCase(), code])));
+const { withdrawn } = require('./vocabulary_image_policy');
 function match(item) {
+    if (withdrawn.has(String(item.english).split(' -> ')[0])) return undefined;
     if (item.maltese === 'hamster' && item.english === 'same in English') return '1F439';
     // Collective cards name both singular and plural; match only their explicit singular gloss.
     return aliases.get(item.english.toLowerCase().split(' -> ')[0]);

@@ -1,4 +1,4 @@
-# with images (606 card entries)
+# with images (582 card entries)
 
 | Maltese | English | Page | Group | Image/status |
 | --- | --- | --- | --- | --- |
@@ -106,16 +106,12 @@
 | laħma -> laħam | meat cut -> meat | collective_nouns.html | collective-food | ./assets/img/openmoji/1F969.svg |
 | ħelwa -> ħelu | sweet -> sweets | collective_nouns.html | collective-food | ./assets/img/openmoji/1F36C.svg |
 | ħuta -> ħut | fish -> fish | collective_nouns.html | collective-food | ./assets/img/openmoji/1F41F.svg |
-| rossa -> ross | grain of rice -> rice | collective_nouns.html | collective-food | ./assets/img/openmoji/1F35A.svg |
-| melħa -> melħ | salt grain -> salt | collective_nouns.html | collective-food | ./assets/img/openmoji/1F9C2.svg |
-| zokkor | sugar | collective_nouns.html | collective-food | ./assets/img/openmoji/1F36C.svg |
+| zokkor | sugar | collective_nouns.html | collective-food | ./assets/img/cc0/sugar.svg |
 | problema | problem | daily_problems.html | daily-problems-core | ./assets/img/openmoji/2757.svg |
-| tlift | I lost | daily_problems.html | daily-problems-core | ./assets/img/openmoji/1F50D.svg |
 | għandi bżonn għajnuna | I need help | daily_problems.html | daily-problems-core | ./assets/img/openmoji/E083.svg |
 | għajjien / għajjiena | tired | daily_problems.html | daily-problems-core | ./assets/img/openmoji/E280.svg |
 | m'għandix ħin | I do not have time | daily_problems.html | daily-problems-core | ./assets/img/openmoji/23F0.svg |
 | stressjat / stressjata | stressed | daily_problems.html | daily-problems-core | ./assets/img/openmoji/E280.svg |
-| inqum | I get up | daily_routine.html | daily-routine-core | ./assets/img/openmoji/1F971.svg |
 | immur | I go | daily_routine.html | daily-routine-core | ./assets/img/openmoji/1F6B6.svg |
 | naħdem | I work | daily_routine.html | daily-routine-core | ./assets/img/openmoji/1F4BC.svg |
 | niekol | I eat | daily_routine.html | daily-routine-core | ./assets/img/openmoji/1F37D.svg |
@@ -181,8 +177,6 @@
 | narmi | I throw away | environment_recycling.html | recycling-actions | ./assets/img/openmoji/E162.svg |
 | nirriċikla | I recycle | environment_recycling.html | recycling-actions | ./assets/img/openmoji/267B.svg |
 | nerġa' nuża | I reuse | environment_recycling.html | recycling-actions | ./assets/img/openmoji/267B.svg |
-| innaddaf | I clean | environment_recycling.html | recycling-actions | ./assets/img/home/garden.svg |
-| naħsel il-kontenitur | I wash the container | environment_recycling.html | recycling-actions | ./assets/img/openmoji/E0B2.svg |
 | noħroġ il-borża | I put the bag out | environment_recycling.html | recycling-actions | ./assets/img/openmoji/E162.svg |
 | omm | mother | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F469-200D-1F467.svg |
 | missier | father | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F468-200D-1F466.svg |
@@ -197,10 +191,7 @@
 | raġel | man / husband [basic meaning varies by context] | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F468.svg |
 | mara | woman / wife [basic meaning varies by context] | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F469.svg |
 | familja | family | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F46A.svg |
-| ġenituri | parents | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F46B.svg |
-| tfal | children | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F9D2.svg |
 | ħbieb | friends | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F91D.svg |
-| qarib | relative | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F46A.svg |
 | familja kbira | big family | family_home_food.html | fhf-family-core | ./assets/img/openmoji/1F46A.svg |
 | dar | house / home | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1F3E0.svg |
 | appartament | apartment | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1F3E2.svg |
@@ -208,9 +199,6 @@
 | tieqa | window | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1FA9F.svg |
 | ġnien | garden | family_home_food.html | fhf-home-core | ./assets/img/openmoji/1F3E1.svg |
 | gallarija | balcony | family_home_food.html | fhf-home-core | ./assets/img/mdi/balcony.svg |
-| kamra tas-sodda | bedroom | family_home_food.html | fhf-rooms-core | ./assets/img/openmoji/1F6CF.svg |
-| kamra tal-banju | bathroom | family_home_food.html | fhf-rooms-core | ./assets/img/openmoji/1F6C1.svg |
-| salott | living room | family_home_food.html | fhf-rooms-core | ./assets/img/openmoji/1F6CB.svg |
 | mejda | table | family_home_food.html | fhf-furniture-core | ./assets/img/game-icons/table.svg |
 | siġġu | chair | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1FA91.svg |
 | sufan | sofa | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1F6CB.svg |
@@ -219,12 +207,13 @@
 | armarju | wardrobe / cupboard | family_home_food.html | fhf-furniture-core | ./assets/img/mdi/cupboard-outline.svg |
 | bank | bench / seat [basic use] | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1FA91.svg |
 | lampa | lamp | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/E163.svg |
-| xkaffa | shelf | family_home_food.html | fhf-furniture-core | ./assets/img/game-icons/bookshelf.svg |
+| xkaffa | shelf | family_home_food.html | fhf-furniture-core | ./assets/img/cc0/shelf.svg |
 | bieb | door | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1F6AA.svg |
 | tieqa | window | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1FA9F.svg |
 | televixin / TV | television | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1F4FA.svg |
 | skrivanija | desk | family_home_food.html | fhf-furniture-core | ./assets/img/game-icons/desk.svg |
 | mera | mirror | family_home_food.html | fhf-furniture-core | ./assets/img/openmoji/1FA9E.svg |
+| komodina | small bedside table | family_home_food.html | fhf-furniture-core | ./assets/img/cc0/bedside-table.svg |
 | ħobż | bread | family_home_food.html | family-home-food-core | ./assets/img/openmoji/1F35E.svg |
 | ġobon | cheese | family_home_food.html | family-home-food-core | ./assets/img/openmoji/1F9C0.svg |
 | bajda | egg | family_home_food.html | family-home-food-core | ./assets/img/openmoji/1F95A.svg |
@@ -252,20 +241,13 @@
 | ilma kiesaħ | cold water | family_home_food.html | fhf-drinks-core | ./assets/img/openmoji/1F6B0.svg |
 | te sħun | hot tea | family_home_food.html | fhf-drinks-core | ./assets/img/openmoji/1F375.svg |
 | ħalib | milk | food_preferences.html | food-shopping | ./assets/img/openmoji/1F95B.svg |
-| kartuna bajd | box of eggs | food_preferences.html | food-shopping | ./assets/img/openmoji/1F95A.svg |
-| borża ross | bag of rice | food_preferences.html | food-shopping | ./assets/img/openmoji/1F35A.svg |
-| pakkett għaġin | packet of pasta | food_preferences.html | food-shopping | ./assets/img/openmoji/1F35D.svg |
-| bott piżelli | tin of peas | food_preferences.html | food-shopping | ./assets/img/openmoji/1FADB.svg |
-| kaxxa frawli | box of strawberries | food_preferences.html | food-shopping | ./assets/img/openmoji/1F353.svg |
-| kapuljat | minced meat | food_preferences.html | food-shopping | ./assets/img/openmoji/1F969.svg |
 | ġobon | cheese | food_preferences.html | food-shopping | ./assets/img/openmoji/1F9C0.svg |
-| perżut | ham | food_preferences.html | food-shopping | ./assets/img/openmoji/1F969.svg |
 | ħobż | bread | food_preferences.html | food-shopping | ./assets/img/openmoji/1F35E.svg |
 | butir | butter | food_preferences.html | food-shopping | ./assets/img/openmoji/1F9C8.svg |
 | flixkun inbid aħmar | bottle of red wine | food_preferences.html | food-shopping | ./assets/img/mdi/bottle-wine-outline.svg |
 | kafè | coffee | food_preferences.html | food-ingredients | ./assets/img/openmoji/2615.svg |
 | te | tea | food_preferences.html | food-ingredients | ./assets/img/openmoji/1F375.svg |
-| zokkor | sugar | food_preferences.html | food-ingredients | ./assets/img/openmoji/1F36C.svg |
+| zokkor | sugar | food_preferences.html | food-ingredients | ./assets/img/cc0/sugar.svg |
 | melħ | salt | food_preferences.html | food-ingredients | ./assets/img/openmoji/1F9C2.svg |
 | bżar | pepper | food_preferences.html | food-ingredients | ./assets/img/openmoji/E0CE.svg |
 | tiġieġa | chicken | food_preferences.html | food-ingredients | ./assets/img/openmoji/1F357.svg |
@@ -297,29 +279,29 @@
 | għada | tomorrow | hobbies_future.html | future-time | ./assets/img/openmoji/1F4C5.svg |
 | fi tmiem il-ġimgħa | at the weekend | hobbies_future.html | future-time | ./assets/img/openmoji/1F4C5.svg |
 | filgħaxija | in the evening | hobbies_future.html | future-time | ./assets/img/openmoji/1F307.svg |
-| dar | house / home | home_furniture.html | home-outside | ./assets/img/home/house-front.svg |
-| saqaf | roof / ceiling in some contexts | home_furniture.html | home-outside | ./assets/img/home/roof.svg |
-| bieb | door | home_furniture.html | home-outside | ./assets/img/home/door.svg |
-| tieqa | window | home_furniture.html | home-outside | ./assets/img/home/window.svg |
-| gallarija | balcony | home_furniture.html | home-outside | ./assets/img/home/balcony.svg |
-| ġnien | garden | home_furniture.html | home-outside | ./assets/img/home/garden.svg |
-| garaxx | garage | home_furniture.html | home-outside | ./assets/img/home/garage.svg |
-| kċina | kitchen | home_furniture.html | home-rooms | ./assets/img/home/kitchen.svg |
-| kamra tas-sodda | bedroom | home_furniture.html | home-rooms | ./assets/img/home/bedroom.svg |
-| kamra tal-banju | bathroom | home_furniture.html | home-rooms | ./assets/img/home/bathroom.svg |
-| salott | living room | home_furniture.html | home-rooms | ./assets/img/home/living-room.svg |
-| kamra tal-ikel | dining room | home_furniture.html | home-rooms | ./assets/img/home/dining-room.svg |
-| studju | study / study room | home_furniture.html | home-rooms | ./assets/img/home/desk.svg |
-| mejda | table | home_furniture.html | home-furniture | ./assets/img/home/table.svg |
-| siġġu | chair | home_furniture.html | home-furniture | ./assets/img/home/chair.svg |
-| sufan | sofa | home_furniture.html | home-furniture | ./assets/img/home/sofa.svg |
-| sodda | bed | home_furniture.html | home-furniture | ./assets/img/home/bed.svg |
-| armarju | wardrobe / cupboard | home_furniture.html | home-furniture | ./assets/img/home/wardrobe.svg |
-| lampa | lamp | home_furniture.html | home-furniture | ./assets/img/home/lamp.svg |
-| skrivanija | desk | home_furniture.html | home-furniture | ./assets/img/home/desk.svg |
-| friġġ | fridge | home_furniture.html | home-furniture | ./assets/img/home/fridge.svg |
-| xkaffa | shelf | home_furniture.html | home-furniture | ./assets/img/home/shelf.svg |
-| mera | mirror | home_furniture.html | home-furniture | ./assets/img/home/mirror.svg |
+| dar | house / home | home_furniture.html | home-outside | ./assets/img/openmoji/1F3E0.svg |
+| saqaf | roof / ceiling in some contexts | home_furniture.html | home-outside | ./assets/img/cc0/home-roof.svg |
+| bieb | door | home_furniture.html | home-outside | ./assets/img/cc0/classroom-door-closed.svg |
+| tieqa | window | home_furniture.html | home-outside | ./assets/img/cc0/classroom-window-open.svg |
+| gallarija | balcony | home_furniture.html | home-outside | ./assets/img/mdi/balcony.svg |
+| ġnien | garden | home_furniture.html | home-outside | ./assets/img/openmoji/1F3E1.svg |
+| garaxx | garage | home_furniture.html | home-outside | ./assets/img/game-icons/home-garage.svg |
+| kċina | kitchen | home_furniture.html | home-rooms | ./assets/img/cc0/home-kitchen.svg |
+| kamra tas-sodda | bedroom | home_furniture.html | home-rooms | ./assets/img/cc0/home-bedroom-furnishings.svg |
+| kamra tal-banju | bathroom | home_furniture.html | home-rooms | ./assets/img/cc0/home-bathroom-interior.svg |
+| salott | living room | home_furniture.html | home-rooms | ./assets/img/cc0/home-living-room.svg |
+| kamra tal-ikel | dining room | home_furniture.html | home-rooms | ./assets/img/cc0/home-dining-room.svg |
+| studju | study / study room | home_furniture.html | home-rooms | ./assets/img/game-icons/desk.svg |
+| mejda | table | home_furniture.html | home-furniture | ./assets/img/game-icons/table.svg |
+| siġġu | chair | home_furniture.html | home-furniture | ./assets/img/openmoji/1FA91.svg |
+| sufan | sofa | home_furniture.html | home-furniture | ./assets/img/openmoji/1F6CB.svg |
+| sodda | bed | home_furniture.html | home-furniture | ./assets/img/openmoji/1F6CF.svg |
+| armarju | wardrobe / cupboard | home_furniture.html | home-furniture | ./assets/img/mdi/cupboard-outline.svg |
+| lampa | lamp | home_furniture.html | home-furniture | ./assets/img/openmoji/E163.svg |
+| skrivanija | desk | home_furniture.html | home-furniture | ./assets/img/game-icons/desk.svg |
+| friġġ | fridge | home_furniture.html | home-furniture | ./assets/img/game-icons/fridge.svg |
+| xkaffa | shelf | home_furniture.html | home-furniture | ./assets/img/cc0/shelf.svg |
+| mera | mirror | home_furniture.html | home-furniture | ./assets/img/openmoji/1FA9E.svg |
 | Jien noqgħod ... | I live ... | introductions_alphabet.html | introduction-core | ./assets/img/home/house-front.svg |
 | ferħan / ferħana | happy | introductions_alphabet.html | personal-qualities | ./assets/img/openmoji/1F600.svg |
 | kwiet / kwieta | quiet | introductions_alphabet.html | personal-qualities | ./assets/img/openmoji/1F910.svg |
@@ -345,7 +327,7 @@
 | filgħaxija | in the evening | numbers_calendar_time.html | calendar-parts-of-day | ./assets/img/openmoji/1F307.svg |
 | post / postijiet | place / places | places_events.html | places-core | ./assets/img/openmoji/E242.svg |
 | kaskata / kaskati | waterfall / waterfalls | places_events.html | places-landscape | ./assets/img/game-icons/waterfall.svg |
-| xmara / xmajjar | river / rivers | places_events.html | places-landscape | ./assets/img/openmoji/1F3DE.svg |
+| xmara / xmajjar | river / rivers | places_events.html | places-landscape | ./assets/img/game-icons/river.svg |
 | irdum / irdumijiet | cliff / cliffs | places_events.html | places-landscape | ./assets/img/game-icons/sea-cliff.svg |
 | mużew / mużewijiet | museum / museums | places_events.html | places-landscape | ./assets/img/openmoji/1F3DB.svg |
 | maqdes / tempju | temple / shrine | places_events.html | places-landscape | ./assets/img/openmoji/1F3DB.svg |
@@ -353,6 +335,7 @@
 | karnival | carnival | places_events.html | places-events | ./assets/img/openmoji/1F3AD.svg |
 | perlini | sugar pearls / sweets | places_events.html | places-events | ./assets/img/openmoji/1F36C.svg |
 | iċ-ċikkulata | chocolate | places_events.html | places-events | ./assets/img/openmoji/1F36B.svg |
+| ġewż | walnuts | places_events.html | places-events | ./assets/img/cc0/walnut.svg |
 | festival tal-mużika | music festival | places_events.html | places-events | ./assets/img/openmoji/1F3B6.svg |
 | festival tal-birra | beer festival | places_events.html | places-events | ./assets/img/openmoji/1F37A.svg |
 | festival tal-inbid | wine festival | places_events.html | places-events | ./assets/img/openmoji/1F942.svg |
@@ -361,18 +344,16 @@
 | siġġu | chair | prepositions_place.html | prepositions-furniture | ./assets/img/openmoji/1FA91.svg |
 | sufan | sofa | prepositions_place.html | prepositions-furniture | ./assets/img/openmoji/1F6CB.svg |
 | sodda | bed | prepositions_place.html | prepositions-furniture | ./assets/img/openmoji/1F6CF.svg |
-| xkaffa | shelf | prepositions_place.html | prepositions-furniture | ./assets/img/game-icons/bookshelf.svg |
+| xkaffa | shelf | prepositions_place.html | prepositions-furniture | ./assets/img/cc0/shelf.svg |
 | skrivanija | desk | prepositions_place.html | prepositions-furniture | ./assets/img/game-icons/desk.svg |
 | ommi | my mother | pronouns_possessives.html | family-forms-core | ./assets/img/openmoji/1F469-200D-1F467.svg |
 | missieri | my father | pronouns_possessives.html | family-forms-core | ./assets/img/openmoji/1F468-200D-1F466.svg |
 | oħti | my sister | pronouns_possessives.html | family-forms-core | ./assets/img/openmoji/1F467.svg |
 | ħija | my brother | pronouns_possessives.html | family-forms-core | ./assets/img/openmoji/1F466.svg |
 | ommu | his mother | pronouns_possessives.html | family-forms-core | ./assets/img/openmoji/1F469-200D-1F467.svg |
-| it-tfal tagħhom | their children | pronouns_possessives.html | family-forms-core | ./assets/img/openmoji/1F9D2.svg |
 | id-dar tiegħi | my house | pronouns_possessives.html | home-forms-core | ./assets/img/openmoji/1F3E0.svg |
 | id-dar tiegħu | his house | pronouns_possessives.html | home-forms-core | ./assets/img/openmoji/1F3E0.svg |
 | id-dar tagħhom | their house | pronouns_possessives.html | home-forms-core | ./assets/img/openmoji/1F3E0.svg |
-| il-kamra tiegħi | my room | pronouns_possessives.html | home-forms-core | ./assets/img/openmoji/1F6CF.svg |
 | il-borża tagħha | her bag | pronouns_possessives.html | home-forms-core | ./assets/img/openmoji/1F45C.svg |
 | il-mejda tagħna | our table | pronouns_possessives.html | home-forms-core | ./assets/img/game-icons/table.svg |
 | menu | menu | restaurant_ordering.html | restaurant-core | ./assets/img/openmoji/1F4CB.svg |
@@ -389,13 +370,13 @@
 | l-imqass | scissors | school_classroom.html | school-bag | ./assets/img/openmoji/2702.svg |
 | il-kolla | glue | school_classroom.html | school-bag | ./assets/img/cc0/glue.svg |
 | il-fajl | file | school_classroom.html | school-bag | ./assets/img/openmoji/1F4C1.svg |
-| il-mejda | table / desk | school_classroom.html | classroom-core | ./assets/img/home/table.svg |
-| is-siġġu | chair | school_classroom.html | classroom-core | ./assets/img/home/chair.svg |
-| it-tieqa | window | school_classroom.html | classroom-core | ./assets/img/home/window.svg |
-| il-bieb | door | school_classroom.html | classroom-core | ./assets/img/home/door.svg |
+| il-mejda | table / desk | school_classroom.html | classroom-core | ./assets/img/game-icons/table.svg |
+| is-siġġu | chair | school_classroom.html | classroom-core | ./assets/img/openmoji/1FA91.svg |
+| il-bord | board | school_classroom.html | classroom-core | ./assets/img/cc0/classroom-board.svg |
+| it-tieqa | window | school_classroom.html | classroom-core | ./assets/img/cc0/classroom-window-open.svg |
+| il-bieb | door | school_classroom.html | classroom-core | ./assets/img/cc0/classroom-door-closed.svg |
 | il-kompjuter | computer | school_classroom.html | classroom-core | ./assets/img/openmoji/1F4BB.svg |
-| il-librerija | library | school_classroom.html | classroom-core | ./assets/img/home/shelf.svg |
-| il-klassi | classroom | school_classroom.html | classroom-core | ./assets/img/openmoji/1F3EB.svg |
+| il-librerija | library | school_classroom.html | classroom-core | ./assets/img/cc0/classroom-library.svg |
 | flokk | shirt / top | shopping_clothes.html | shopping-clothes | ./assets/img/openmoji/1F455.svg |
 | qalziet | trousers | shopping_clothes.html | shopping-clothes | ./assets/img/openmoji/1F456.svg |
 | libsa | dress | shopping_clothes.html | shopping-clothes | ./assets/img/openmoji/1F457.svg |
@@ -443,7 +424,6 @@
 | akkwarju | aquarium | year4_exam.html | home | ./assets/img/game-icons/aquarium.svg |
 | bagalja | suitcase | year4_exam.html | home | ./assets/img/openmoji/1F9F3.svg |
 | ballun | ball | year4_exam.html | home | ./assets/img/openmoji/26BD.svg |
-| banju | bathroom | year4_exam.html | home | ./assets/img/openmoji/1F6C1.svg |
 | bank | desk | year4_exam.html | home | ./assets/img/game-icons/desk.svg |
 | basket | basket / schoolbag | year4_exam.html | home | ./assets/img/openmoji/1F392.svg |
 | bieb | door | year4_exam.html | home | ./assets/img/openmoji/1F6AA.svg |
@@ -451,7 +431,6 @@
 | gwardarobba | wardrobe | year4_exam.html | home | ./assets/img/mdi/wardrobe-outline.svg |
 | imħadda | pillow | year4_exam.html | home | ./assets/img/game-icons/pillow.svg |
 | inkwatru | picture frame | year4_exam.html | home | ./assets/img/openmoji/1F5BC.svg |
-| kamra | room | year4_exam.html | home | ./assets/img/openmoji/1F6CF.svg |
 | kaxxa | box | year4_exam.html | home | ./assets/img/openmoji/1F4E6.svg |
 | lampa | lamp | year4_exam.html | home | ./assets/img/openmoji/E163.svg |
 | mejda | table | year4_exam.html | home | ./assets/img/game-icons/table.svg |
@@ -459,13 +438,13 @@
 | pultruna | armchair | year4_exam.html | home | ./assets/img/openmoji/E141.svg |
 | rigal | gift | year4_exam.html | home | ./assets/img/openmoji/1F381.svg |
 | robot | robot | year4_exam.html | home | ./assets/img/openmoji/1F916.svg |
-| salott | living room | year4_exam.html | home | ./assets/img/openmoji/1F6CB.svg |
 | sapun | soap | year4_exam.html | home | ./assets/img/openmoji/1F9FC.svg |
 | sink | sink | year4_exam.html | home | ./assets/img/game-icons/sink.svg |
 | siġġu | chair | year4_exam.html | home | ./assets/img/openmoji/1FA91.svg |
 | sodda | bed | year4_exam.html | home | ./assets/img/openmoji/1F6CF.svg |
 | sufan | sofa | year4_exam.html | home | ./assets/img/openmoji/1F6CB.svg |
 | tanbur | drum | year4_exam.html | home | ./assets/img/openmoji/1F941.svg |
+| tapit | rug | year4_exam.html | home | ./assets/img/cc0/rug.svg |
 | tojlit | toilet | year4_exam.html | home | ./assets/img/openmoji/1F6BD.svg |
 | weraq | leaves | year4_exam.html | home | ./assets/img/openmoji/1F343.svg |
 | werqa | leaf | year4_exam.html | home | ./assets/img/openmoji/1F343.svg |
@@ -513,7 +492,6 @@
 | ittri | letters | year4_exam.html | school | ./assets/img/openmoji/1F524.svg |
 | kelma | word | year4_exam.html | school | ./assets/img/openmoji/1F524.svg |
 | kelmiet | words | year4_exam.html | school | ./assets/img/openmoji/1F524.svg |
-| klassi | class | year4_exam.html | school | ./assets/img/openmoji/1F3EB.svg |
 | kliem | words | year4_exam.html | school | ./assets/img/openmoji/1F524.svg |
 | lapes | pencil | year4_exam.html | school | ./assets/img/openmoji/270F.svg |
 | numri | numbers | year4_exam.html | school | ./assets/img/openmoji/1F522.svg |
@@ -538,6 +516,7 @@
 | ħamis | Thursday | year4_exam.html | calendar | ./assets/img/openmoji/1F4C5.svg |
 | afrika | Africa | year4_exam.html | places | ./assets/img/openmoji/1F30D.svg |
 | baħar | sea | year4_exam.html | places | ./assets/img/openmoji/1F30A.svg |
+| għadira | pond | year4_exam.html | places | ./assets/img/cc0/pond.svg |
 | għar | cave | year4_exam.html | places | ./assets/img/game-icons/cave-entrance.svg |
 | postijiet | places | year4_exam.html | places | ./assets/img/openmoji/E242.svg |
 | razzett | farm | year4_exam.html | places | ./assets/img/openmoji/1F69C.svg |
@@ -545,7 +524,6 @@
 | sħab | clouds | year4_exam.html | places | ./assets/img/openmoji/2601.svg |
 | xemx | sun | year4_exam.html | places | ./assets/img/openmoji/2600.svg |
 | xita | rain | year4_exam.html | places | ./assets/img/openmoji/1F327.svg |
-| ħaxix | grass / vegetables | year4_exam.html | places | ./assets/img/openmoji/1F96C.svg |
 | aqra | read | year4_exam.html | verbs | ./assets/img/openmoji/1F4D6.svg |
 | aqsam | cross | year4_exam.html | verbs | ./assets/img/openmoji/274C.svg |
 | ara | see / look | year4_exam.html | verbs | ./assets/img/openmoji/1F440.svg |
@@ -581,6 +559,7 @@
 | anqbuta | spider web | year4_exam.html | other | ./assets/img/openmoji/1F578.svg |
 | astronawta | astronaut | year4_exam.html | other | ./assets/img/openmoji/1F9D1-200D-1F680.svg |
 | attent | careful | year4_exam.html | other | ./assets/img/openmoji/26A0.svg |
+| bandli | swings | year4_exam.html | other | ./assets/img/game-icons/tree-swing.svg |
 | borra | snow | year4_exam.html | other | ./assets/img/openmoji/2744.svg |
 | doċċa | shower | year4_exam.html | other | ./assets/img/openmoji/1F6BF.svg |
 | familja | family | year4_exam.html | other | ./assets/img/openmoji/1F46A.svg |
@@ -591,13 +570,11 @@
 | kampijiet | fields | year4_exam.html | other | ./assets/img/openmoji/1F69C.svg |
 | kikkra | cup | year4_exam.html | other | ./assets/img/openmoji/1F375.svg |
 | passatempi | hobbies | year4_exam.html | other | ./assets/img/openmoji/1F3B6.svg |
-| pjanta | plant | year4_exam.html | other | ./assets/img/openmoji/1F333.svg |
 | qmis | shirt | year4_exam.html | other | ./assets/img/openmoji/1F455.svg |
 | skola | school | year4_exam.html | other | ./assets/img/openmoji/1F3EB.svg |
 | snien | teeth | year4_exam.html | other | ./assets/img/openmoji/1F9B7.svg |
 | tajba | correct / good | year4_exam.html | other | ./assets/img/openmoji/2705.svg |
 | tajjeb | good | year4_exam.html | other | ./assets/img/openmoji/2705.svg |
-| tfal | children | year4_exam.html | other | ./assets/img/openmoji/1F9D2.svg |
 | tifel | boy | year4_exam.html | other | ./assets/img/openmoji/1F466.svg |
 | tifla | girl | year4_exam.html | other | ./assets/img/openmoji/1F467.svg |
 | veru | true | year4_exam.html | other | ./assets/img/openmoji/2705.svg |
@@ -607,4 +584,3 @@
 | ħadra | green | year4_exam.html | other | ./assets/img/openmoji/1F7E2.svg |
 | ħanut | shop | year4_exam.html | other | ./assets/img/openmoji/1F3EA.svg |
 | ħin | time | year4_exam.html | other | ./assets/img/openmoji/23F0.svg |
-| ħuti | my siblings | year4_exam.html | other | ./assets/img/openmoji/1F9D2.svg |

@@ -12,8 +12,8 @@
           "slug": "dar",
           "maltese": "dar",
           "english": "house / home",
-          "image": "./assets/img/home/house-front.svg",
-          "imageAlt": "House illustration",
+          "image": "./assets/img/openmoji/1F3E0.svg",
+          "imageAlt": "Context illustration for house / home",
           "notes": [
             "Id-dar can mean the house or the home, depending on context."
           ],
@@ -22,17 +22,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "My house is beautiful.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E0.svg"
+          }
         },
         {
           "slug": "saqaf",
           "maltese": "saqaf",
           "english": "roof / ceiling in some contexts",
-          "image": "./assets/img/home/roof.svg",
-          "imageAlt": "Roof illustration",
+          "image": "./assets/img/cc0/home-roof.svg",
+          "imageAlt": "Context illustration for roof / ceiling in some contexts",
           "notes": [
             "Useful in home description and object location tasks."
           ],
@@ -41,17 +47,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "The roof of the house is red.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/282481/roof"
+          }
         },
         {
           "slug": "bieb",
           "maltese": "bieb",
           "english": "door",
-          "image": "./assets/img/home/door.svg",
-          "imageAlt": "Door illustration",
+          "image": "./assets/img/cc0/classroom-door-closed.svg",
+          "imageAlt": "door",
           "notes": [
             "Very common with iftaħ, agħlaq, and ħdejn il-bieb."
           ],
@@ -63,14 +75,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "In front of the house there is a big door.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/288905/door-close"
+          }
         },
         {
           "slug": "tieqa",
           "maltese": "tieqa",
           "english": "window",
-          "image": "./assets/img/home/window.svg",
-          "imageAlt": "Window illustration",
+          "image": "./assets/img/cc0/classroom-window-open.svg",
+          "imageAlt": "window",
           "notes": [
             "Useful with curtains, weather, and room light."
           ],
@@ -82,14 +100,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "Next to the door there is a window.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/138395/opened-window-door-of-glasses"
+          }
         },
         {
           "slug": "gallarija",
           "maltese": "gallarija",
           "english": "balcony",
-          "image": "./assets/img/home/balcony.svg",
-          "imageAlt": "Balcony illustration",
+          "image": "./assets/img/mdi/balcony.svg",
+          "imageAlt": "balcony",
           "notes": [
             "Very useful in Malta for apartments and town houses."
           ],
@@ -101,14 +125,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The house has a small balcony.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Pictogrammers",
+            "author": "Google",
+            "license": "Apache-2.0",
+            "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/balcony.svg"
+          }
         },
         {
           "slug": "gnien",
           "maltese": "ġnien",
           "english": "garden",
-          "image": "./assets/img/home/garden.svg",
-          "imageAlt": "Garden illustration",
+          "image": "./assets/img/openmoji/1F3E1.svg",
+          "imageAlt": "Context illustration for garden",
           "notes": [
             "Good with flowers, pets, coffee outside, and family house descriptions."
           ],
@@ -117,17 +147,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "Behind the house there is a garden.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3E1.svg"
+          }
         },
         {
           "slug": "garaxx",
           "maltese": "garaxx",
           "english": "garage",
-          "image": "./assets/img/home/garage.svg",
-          "imageAlt": "Garage illustration",
+          "image": "./assets/img/game-icons/home-garage.svg",
+          "imageAlt": "garage",
           "notes": [
             "Very useful with transport words like karozza and rota."
           ],
@@ -139,7 +175,13 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The garage is under the house.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/home-garage.html"
+          }
         }
       ]
     },
@@ -153,8 +195,8 @@
           "slug": "kcina",
           "maltese": "kċina",
           "english": "kitchen",
-          "image": "./assets/img/home/kitchen.svg",
-          "imageAlt": "Kitchen illustration",
+          "image": "./assets/img/cc0/home-kitchen.svg",
+          "imageAlt": "Context illustration for kitchen",
           "notes": [
             "One of the most useful room words in the whole course."
           ],
@@ -163,17 +205,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "In the kitchen there is a big table.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/490818/kitchen-room"
+          }
         },
         {
           "slug": "kamra-tas-sodda",
           "maltese": "kamra tas-sodda",
           "english": "bedroom",
-          "image": "./assets/img/home/bedroom.svg",
-          "imageAlt": "Bedroom illustration",
+          "image": "./assets/img/cc0/home-bedroom-furnishings.svg",
+          "imageAlt": "Context illustration for bedroom",
           "notes": [
             "Often appears with bed, wardrobe, lamp, and sleep vocabulary."
           ],
@@ -182,17 +230,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "There is one bed in the bedroom.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Openclipart",
+            "author": "loveandread",
+            "license": "CC0-1.0",
+            "url": "https://openclipart.org/detail/275615/bedroom"
+          }
         },
         {
           "slug": "kamra-tal-banju",
           "maltese": "kamra tal-banju",
           "english": "bathroom",
-          "image": "./assets/img/home/bathroom.svg",
-          "imageAlt": "Bathroom illustration",
+          "image": "./assets/img/cc0/home-bathroom-interior.svg",
+          "imageAlt": "Context illustration for bathroom",
           "notes": [
             "Very useful with daily routine verbs."
           ],
@@ -201,17 +255,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "There is a mirror in the bathroom.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/75264/bathroom-furniture"
+          }
         },
         {
           "slug": "salott",
           "maltese": "salott",
           "english": "living room",
-          "image": "./assets/img/home/living-room.svg",
-          "imageAlt": "Living room illustration",
+          "image": "./assets/img/cc0/home-living-room.svg",
+          "imageAlt": "Context illustration for living room",
           "notes": [
             "Often used with sofa, television, and family time."
           ],
@@ -220,17 +280,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "In the living room there is a comfortable sofa.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/490835/living-room"
+          }
         },
         {
           "slug": "kamra-tal-ikel",
           "maltese": "kamra tal-ikel",
           "english": "dining room",
-          "image": "./assets/img/home/dining-room.svg",
-          "imageAlt": "Dining room illustration",
+          "image": "./assets/img/cc0/home-dining-room.svg",
+          "imageAlt": "Context illustration for dining room",
           "notes": [
             "Useful when talking about meals and family dinner."
           ],
@@ -239,17 +305,23 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "In the dining room there is a long table.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/22808/dining-room"
+          }
         },
         {
           "slug": "studju",
           "maltese": "studju",
           "english": "study / study room",
-          "image": "./assets/img/home/desk.svg",
-          "imageAlt": "Study room illustration",
+          "image": "./assets/img/game-icons/desk.svg",
+          "imageAlt": "Context illustration for study / study room",
           "notes": [
             "Good for work, homework, reading, and desk vocabulary."
           ],
@@ -258,10 +330,16 @@
             "enabled": true,
             "type": "word"
           },
-          "imageQuizEligible": true,
-          "imageRole": "identifying",
+          "imageQuizEligible": false,
+          "imageRole": "context",
           "exampleTranslation": "In the study there is a laptop and books.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/desk.html"
+          }
         }
       ]
     },
@@ -275,8 +353,8 @@
           "slug": "mejda",
           "maltese": "mejda",
           "english": "table",
-          "image": "./assets/img/home/table.svg",
-          "imageAlt": "Table illustration",
+          "image": "./assets/img/game-icons/table.svg",
+          "imageAlt": "table",
           "notes": [
             "Very common in picture description and meal vocabulary."
           ],
@@ -288,14 +366,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The table is in the kitchen.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/table.html"
+          }
         },
         {
           "slug": "siggu",
           "maltese": "siġġu",
           "english": "chair",
-          "image": "./assets/img/home/chair.svg",
-          "imageAlt": "Chair illustration",
+          "image": "./assets/img/openmoji/1FA91.svg",
+          "imageAlt": "chair",
           "notes": [
             "Useful with ħdejn, quddiem, and room layout."
           ],
@@ -307,14 +391,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The chair is next to the table.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA91.svg"
+          }
         },
         {
           "slug": "sufan",
           "maltese": "sufan",
           "english": "sofa",
-          "image": "./assets/img/home/sofa.svg",
-          "imageAlt": "Sofa illustration",
+          "image": "./assets/img/openmoji/1F6CB.svg",
+          "imageAlt": "sofa",
           "notes": [
             "Very common in house pictures and homework answers."
           ],
@@ -326,14 +416,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The sofa is very comfortable.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CB.svg"
+          }
         },
         {
           "slug": "sodda",
           "maltese": "sodda",
           "english": "bed",
-          "image": "./assets/img/home/bed.svg",
-          "imageAlt": "Bed illustration",
+          "image": "./assets/img/openmoji/1F6CF.svg",
+          "imageAlt": "bed",
           "notes": [
             "Useful with bedroom, sleep, and routine language."
           ],
@@ -345,14 +441,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "My bed is big.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F6CF.svg"
+          }
         },
         {
           "slug": "armarju",
           "maltese": "armarju",
           "english": "wardrobe / cupboard",
-          "image": "./assets/img/home/wardrobe.svg",
-          "imageAlt": "Wardrobe illustration",
+          "image": "./assets/img/mdi/cupboard-outline.svg",
+          "imageAlt": "wardrobe / cupboard",
           "notes": [
             "Very useful in bedroom and clothing context."
           ],
@@ -364,14 +466,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The wardrobe is next to the bed.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Pictogrammers",
+            "author": "GreenTurtwig",
+            "license": "Apache-2.0",
+            "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/cupboard-outline.svg"
+          }
         },
         {
           "slug": "lampa",
           "maltese": "lampa",
           "english": "lamp",
-          "image": "./assets/img/home/lamp.svg",
-          "imageAlt": "Lamp illustration",
+          "image": "./assets/img/openmoji/E163.svg",
+          "imageAlt": "lamp",
           "notes": [
             "Good for colour, light, and night-time description."
           ],
@@ -383,14 +491,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The lamp is on the bedside table.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/E163.svg"
+          }
         },
         {
           "slug": "skrivanija",
           "maltese": "skrivanija",
           "english": "desk",
-          "image": "./assets/img/home/desk.svg",
-          "imageAlt": "Desk illustration",
+          "image": "./assets/img/game-icons/desk.svg",
+          "imageAlt": "desk",
           "notes": [
             "Very useful for study and work descriptions."
           ],
@@ -402,14 +516,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The desk is in front of the window.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/desk.html"
+          }
         },
         {
           "slug": "frigg",
           "maltese": "friġġ",
           "english": "fridge",
-          "image": "./assets/img/home/fridge.svg",
-          "imageAlt": "Fridge illustration",
+          "image": "./assets/img/game-icons/fridge.svg",
+          "imageAlt": "fridge",
           "notes": [
             "Bridges home vocabulary with food and drink vocabulary."
           ],
@@ -421,14 +541,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The fridge is in the kitchen.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Caro Asercion",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/caro-asercion/fridge.html"
+          }
         },
         {
           "slug": "xkaffa",
           "maltese": "xkaffa",
           "english": "shelf",
-          "image": "./assets/img/home/shelf.svg",
-          "imageAlt": "Shelf illustration",
+          "image": "./assets/img/cc0/shelf.svg",
+          "imageAlt": "shelf",
           "notes": [
             "Useful with books, plants, and object location."
           ],
@@ -440,14 +566,20 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The shelf is on the wall.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/103115/shelf"
+          }
         },
         {
           "slug": "mera",
           "maltese": "mera",
           "english": "mirror",
-          "image": "./assets/img/home/mirror.svg",
-          "imageAlt": "Mirror illustration",
+          "image": "./assets/img/openmoji/1FA9E.svg",
+          "imageAlt": "mirror",
           "notes": [
             "Very useful in the bathroom or bedroom."
           ],
@@ -459,7 +591,13 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The mirror is in the bathroom.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "Collection contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA9E.svg"
+          }
         }
       ]
     }

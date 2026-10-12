@@ -145,23 +145,35 @@
           "slug": "mejda",
           "maltese": "il-mejda",
           "english": "table / desk",
-          "image": "./assets/img/home/table.svg",
-          "imageAlt": "Table",
+          "image": "./assets/img/game-icons/table.svg",
+          "imageAlt": "table / desk",
           "example": "Il-kotba qegħdin fuq il-mejda.",
           "exampleTranslation": "The books are on the table.",
           "imageQuizEligible": true,
-          "imageRole": "identifying"
+          "imageRole": "identifying",
+          "imageSource": {
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/table.html"
+          }
         },
         {
           "slug": "siggu",
           "maltese": "is-siġġu",
           "english": "chair",
-          "image": "./assets/img/home/chair.svg",
-          "imageAlt": "Chair",
+          "image": "./assets/img/openmoji/1FA91.svg",
+          "imageAlt": "chair",
           "example": "Is-siġġu qiegħed ħdejn il-mejda.",
           "exampleTranslation": "The chair is next to the table.",
           "imageQuizEligible": true,
-          "imageRole": "identifying"
+          "imageRole": "identifying",
+          "imageSource": {
+            "provider": "OpenMoji",
+            "author": "HfG Schwabisch Gmund and contributors",
+            "license": "CC BY-SA 4.0",
+            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FA91.svg"
+          }
         },
         {
           "slug": "bord",
@@ -169,30 +181,50 @@
           "english": "board",
           "example": "L-għalliema tikteb fuq il-bord.",
           "exampleTranslation": "The teacher writes on the board.",
-          "imageQuizEligible": false,
-          "imageRole": "none"
+          "imageQuizEligible": true,
+          "imageRole": "identifying",
+          "image": "./assets/img/cc0/classroom-board.svg",
+          "imageAlt": "board",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/181999/blackboard-class"
+          }
         },
         {
           "slug": "tieqa",
           "maltese": "it-tieqa",
           "english": "window",
-          "image": "./assets/img/home/window.svg",
-          "imageAlt": "Window",
+          "image": "./assets/img/cc0/classroom-window-open.svg",
+          "imageAlt": "window",
           "example": "It-tieqa hija miftuħa.",
           "exampleTranslation": "The window is open.",
           "imageQuizEligible": true,
-          "imageRole": "identifying"
+          "imageRole": "identifying",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/138395/opened-window-door-of-glasses"
+          }
         },
         {
           "slug": "bieb",
           "maltese": "il-bieb",
           "english": "door",
-          "image": "./assets/img/home/door.svg",
-          "imageAlt": "Door",
+          "image": "./assets/img/cc0/classroom-door-closed.svg",
+          "imageAlt": "door",
           "example": "Il-bieb huwa magħluq.",
           "exampleTranslation": "The door is closed.",
           "imageQuizEligible": true,
-          "imageRole": "identifying"
+          "imageRole": "identifying",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/288905/door-close"
+          }
         },
         {
           "slug": "kompjuter",
@@ -214,12 +246,18 @@
           "slug": "librerija",
           "maltese": "il-librerija",
           "english": "library",
-          "image": "./assets/img/home/shelf.svg",
-          "imageAlt": "Bookshelf",
           "example": "Il-librerija għandha ħafna kotba.",
           "exampleTranslation": "The library has many books.",
-          "imageQuizEligible": true,
-          "imageRole": "identifying"
+          "imageQuizEligible": false,
+          "imageRole": "context",
+          "image": "./assets/img/cc0/classroom-library.svg",
+          "imageAlt": "Context illustration for library",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/25649/students-reading-sitting-in-a-library"
+          }
         },
         {
           "slug": "klassi",
@@ -227,15 +265,8 @@
           "english": "classroom",
           "example": "Il-klassi tagħna hija nadifa.",
           "exampleTranslation": "Our classroom is clean.",
-          "image": "./assets/img/openmoji/1F3EB.svg",
-          "imageAlt": "Context illustration for classroom",
-          "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3EB.svg"
-          },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "none"
         }
       ]
     }

@@ -12,6 +12,7 @@ const uncountable = new Set('bread|cheese|rice|pasta|butter|coffee|tea|milk|salt
 identifying.add('cauliflower');
 identifying.add('glue');
 identifying.add('wasp');
+const literalAdditions = new Set(['small bedside table', 'rug', 'pond', 'board', 'sugar', 'river / rivers', 'shelf', 'table / desk']);
 uncountable.add('glue');
 uncountable.add('cauliflower');
 const norm = (text) => String(text || '').replace(/[’`]/g, "'").trim().toLocaleLowerCase('mt');
@@ -76,8 +77,9 @@ async function main() {
                 item.imageSource = { provider: 'Pictogrammers', author: asset.author, license: 'Apache-2.0', url: asset.url };
             }
             const gloss = item.english.split(' -> ')[0].toLowerCase();
-            item.imageQuizEligible = !!item.swatchStyle || !!(item.image && !item.image.includes('favicon') &&
-                (identifying.has(gloss) || (!item.imageSource && !item.image.includes('/openmoji/'))));
+            const homeLiteral = file === 'home_furniture.json' && (group.id === 'home-furniture' || ['bieb', 'tieqa', 'gallarija', 'garaxx'].includes(item.slug));
+            item.imageQuizEligible = !!item.swatchStyle || !!(item.image && item.imageSource && !item.image.includes('favicon') &&
+                (identifying.has(gloss) || literalAdditions.has(gloss) || homeLiteral));
             item.imageRole = item.swatchStyle ? 'identifying' : !item.image ? 'none' : item.imageQuizEligible ? 'identifying' : 'context';
             if (item.imageRole === 'context' && item.imageSource) item.imageAlt = 'Context illustration for ' + item.english;
             if (!item.exampleTranslation && exampleTranslations[item.example]) {

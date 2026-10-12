@@ -1,4 +1,4 @@
-# without images (287 card entries)
+# without images (311 card entries)
 
 | Maltese | English | Page | Group | Image/status |
 | --- | --- | --- | --- | --- |
@@ -8,12 +8,16 @@
 | żgħir / żgħira | small | body_appearance.html | body-appearance | no-image |
 | kbir / kbira | big | body_appearance.html | body-appearance | no-image |
 | sabiħ / sabiħa | beautiful | body_appearance.html | body-appearance | no-image |
+| rossa -> ross | grain of rice -> rice | collective_nouns.html | collective-food | no-image |
+| melħa -> melħ | salt grain -> salt | collective_nouns.html | collective-food | no-image |
 | ikbar | bigger | comparisons.html | comparisons-core | no-image |
 | iżgħar | smaller | comparisons.html | comparisons-core | no-image |
 | aħjar | better | comparisons.html | comparisons-core | no-image |
 | isbaħ | more beautiful | comparisons.html | comparisons-core | no-image |
 | aktar | more | comparisons.html | comparisons-core | no-image |
 | inqas | less | comparisons.html | comparisons-core | no-image |
+| tlift | I lost | daily_problems.html | daily-problems-core | no-image |
+| inqum | I get up | daily_routine.html | daily-routine-core | no-image |
 | pjazza | square / piazza | directions_town.html | town-places | no-image |
 | kantuniera | corner | directions_town.html | direction-words | no-image |
 | hemm | there / there is | directions_town.html | direction-words | no-image |
@@ -22,16 +26,30 @@
 | faċċata ta' | opposite | directions_town.html | direction-words | no-image |
 | nissepara | I separate | environment_recycling.html | recycling-actions | no-image |
 | innaqqas | I reduce | environment_recycling.html | recycling-actions | no-image |
+| innaddaf | I clean | environment_recycling.html | recycling-actions | no-image |
+| naħsel il-kontenitur | I wash the container | environment_recycling.html | recycling-actions | no-image |
 | żewġ | husband / two [context-based] | family_home_food.html | fhf-family-core | no-image |
+| ġenituri | parents | family_home_food.html | fhf-family-core | no-image |
+| tfal | children | family_home_food.html | fhf-family-core | no-image |
 | kuġin | cousin | family_home_food.html | fhf-family-core | no-image |
 | ziju | uncle | family_home_food.html | fhf-family-core | no-image |
 | zija | aunt | family_home_food.html | fhf-family-core | no-image |
 | neputi | grandson / nephew [basic use] | family_home_food.html | fhf-family-core | no-image |
 | neputija | granddaughter / niece [basic use] | family_home_food.html | fhf-family-core | no-image |
+| qarib | relative | family_home_food.html | fhf-family-core | no-image |
 | kċina | kitchen | family_home_food.html | fhf-rooms-core | no-image |
+| kamra tas-sodda | bedroom | family_home_food.html | fhf-rooms-core | no-image |
+| kamra tal-banju | bathroom | family_home_food.html | fhf-rooms-core | no-image |
+| salott | living room | family_home_food.html | fhf-rooms-core | no-image |
 | kamra tal-ikel | dining room | family_home_food.html | fhf-rooms-core | no-image |
 | kuritur | corridor | family_home_food.html | fhf-rooms-core | no-image |
-| komodina | small bedside table | family_home_food.html | fhf-furniture-core | no-image |
+| kartuna bajd | box of eggs | food_preferences.html | food-shopping | no-image |
+| borża ross | bag of rice | food_preferences.html | food-shopping | no-image |
+| pakkett għaġin | packet of pasta | food_preferences.html | food-shopping | no-image |
+| bott piżelli | tin of peas | food_preferences.html | food-shopping | no-image |
+| kaxxa frawli | box of strawberries | food_preferences.html | food-shopping | no-image |
+| kapuljat | minced meat | food_preferences.html | food-shopping | no-image |
+| perżut | ham | food_preferences.html | food-shopping | no-image |
 | griżmejn | throat | health_doctor.html | health-body | no-image |
 | wara x-xogħol | after work | hobbies_future.html | future-time | no-image |
 | se + verb | will / going to | hobbies_future.html | future-time | no-image |
@@ -111,7 +129,6 @@
 | pjazza | square | places_events.html | places-landscape | no-image |
 | prinjolata | prinjolata dessert | places_events.html | places-events | no-image |
 | krema | cream | places_events.html | places-events | no-image |
-| ġewż | walnuts | places_events.html | places-events | no-image |
 | esebizzjoni / wirja | exhibition | places_events.html | places-events | no-image |
 | tradizzjoni | tradition | places_events.html | places-events | no-image |
 | qadim / qadima | old | places_events.html | places-adjectives | no-image |
@@ -148,6 +165,8 @@
 | tagħna | our / ours | pronouns_possessives.html | possessives-core | no-image |
 | tagħkom | your / yours (plural) | pronouns_possessives.html | possessives-core | no-image |
 | tagħhom | their / theirs | pronouns_possessives.html | possessives-core | no-image |
+| it-tfal tagħhom | their children | pronouns_possessives.html | family-forms-core | no-image |
+| il-kamra tiegħi | my room | pronouns_possessives.html | home-forms-core | no-image |
 | fi / f' | in | pronouns_possessives.html | prepositions-core | no-image |
 | fil- | in the | pronouns_possessives.html | prepositions-core | no-image |
 | fuq | on | pronouns_possessives.html | prepositions-core | no-image |
@@ -159,16 +178,19 @@
 | sa | until / to | pronouns_possessives.html | prepositions-core | no-image |
 | għal | for / to | pronouns_possessives.html | prepositions-core | no-image |
 | b' | with / by means of | pronouns_possessives.html | prepositions-core | no-image |
-| il-bord | board | school_classroom.html | classroom-core | no-image |
+| il-klassi | classroom | school_classroom.html | classroom-core | no-image |
 | żgħir | small | shopping_clothes.html | shopping-sizes | no-image |
 | medju | medium | shopping_clothes.html | shopping-sizes | no-image |
 | kbir | large | shopping_clothes.html | shopping-sizes | no-image |
-| tapit | rug | year4_exam.html | home | no-image |
+| banju | bathroom | year4_exam.html | home | no-image |
+| kamra | room | year4_exam.html | home | no-image |
+| salott | living room | year4_exam.html | home | no-image |
 | roża | pink | year4_exam.html | clothes | no-image |
 | ċelesti | light blue | year4_exam.html | clothes | no-image |
 | ħwejjeġ | clothes | year4_exam.html | clothes | no-image |
 | appell | roll call | year4_exam.html | school | no-image |
 | artiklu | article | year4_exam.html | school | no-image |
+| klassi | class | year4_exam.html | school | no-image |
 | oġġetti | objects | year4_exam.html | school | no-image |
 | pronomi | pronouns | year4_exam.html | school | no-image |
 | qamrin | moon letters | year4_exam.html | school | no-image |
@@ -180,10 +202,10 @@
 | vojta | empty | year4_exam.html | school | no-image |
 | vokali | vowels | year4_exam.html | school | no-image |
 | xemxin | sun letters | year4_exam.html | school | no-image |
-| għadira | pond | year4_exam.html | places | no-image |
 | madwar | around | year4_exam.html | places | no-image |
 | tajn | mud | year4_exam.html | places | no-image |
 | temp | weather | year4_exam.html | places | no-image |
+| ħaxix | grass / vegetables | year4_exam.html | places | no-image |
 | agħmel | do / make | year4_exam.html | verbs | no-image |
 | agħti | give | year4_exam.html | verbs | no-image |
 | agħżel | choose | year4_exam.html | verbs | no-image |
@@ -270,7 +292,6 @@
 | art | floor | year4_exam.html | other | no-image |
 | aħħar | last | year4_exam.html | other | no-image |
 | bambin | baby Jesus | year4_exam.html | other | no-image |
-| bandli | swings | year4_exam.html | other | no-image |
 | favorit | favourite | year4_exam.html | other | no-image |
 | favorita | favourite | year4_exam.html | other | no-image |
 | fuq | on / above | year4_exam.html | other | no-image |
@@ -284,8 +305,11 @@
 | miktubin | written | year4_exam.html | other | no-image |
 | mimlija | full | year4_exam.html | other | no-image |
 | partijiet | parts | year4_exam.html | other | no-image |
+| pjanta | plant | year4_exam.html | other | no-image |
 | pjaċir | pleasure | year4_exam.html | other | no-image |
+| tfal | children | year4_exam.html | other | no-image |
 | xulxin | each other | year4_exam.html | other | no-image |
 | zija | aunt | year4_exam.html | other | no-image |
 | ziju | uncle | year4_exam.html | other | no-image |
 | ħdejn | next to | year4_exam.html | other | no-image |
+| ħuti | my siblings | year4_exam.html | other | no-image |

@@ -162,15 +162,16 @@
             "enabled": true,
             "type": "word"
           },
-          "image": "./assets/img/openmoji/1F3DE.svg",
-          "imageAlt": "Context illustration for river / rivers",
+          "image": "./assets/img/game-icons/river.svg",
+          "imageAlt": "river / rivers",
           "imageSource": {
-            "provider": "OpenMoji",
-            "license": "CC BY-SA 4.0",
-            "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3DE.svg"
+            "provider": "Game-icons.net",
+            "author": "Delapouite",
+            "license": "CC BY 3.0",
+            "url": "https://game-icons.net/1x1/delapouite/river.html"
           },
-          "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageQuizEligible": true,
+          "imageRole": "identifying"
         },
         {
           "slug": "veduta",
@@ -388,9 +389,17 @@
             "type": "word"
           },
           "imageQuizEligible": false,
-          "imageRole": "none",
+          "imageRole": "context",
           "exampleTranslation": "Sometimes there are also walnuts and sugar pearls.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "image": "./assets/img/cc0/walnut.svg",
+          "imageAlt": "Context illustration for walnuts",
+          "imageSource": {
+            "provider": "SVG Repo",
+            "author": "SVG Repo (uploader)",
+            "license": "CC0-1.0",
+            "url": "https://www.svgrepo.com/svg/447082/walnut"
+          }
         },
         {
           "slug": "festival-tal-muzika",

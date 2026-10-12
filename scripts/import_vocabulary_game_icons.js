@@ -5,11 +5,14 @@ const { root, vocabularyFiles, save } = require('./vocabulary_image_inventory');
 
 // Explicit glosses only: related objects are not interchangeable illustrations.
 const entries = [
+    ['delapouite', 'home-garage', ['garage']],
+    ['delapouite', 'tree-swing', ['swings']],
+    ['delapouite', 'river', ['river / rivers']],
     ['caro-asercion', 'fridge', ['fridge']],
     ['caro-asercion', 'sink', ['sink']],
     ['delapouite', 'table', ['table', 'our table']],
     ['delapouite', 'desk', ['desk']],
-    ['delapouite', 'bookshelf', ['shelf']],
+    ['delapouite', 'bookshelf', []],
     ['delapouite', 'pillow', ['pillow']],
     ['delapouite', 'skirt', ['skirt']],
     ['delapouite', 'towel', ['towel']],
@@ -49,7 +52,7 @@ async function main() {
             const entry = aliases.get((item.english || '').toLowerCase());
             if (!entry || item.swatchStyle) continue;
             // Replace only our fish placeholder for aquarium, never a pre-existing illustration.
-            if (item.image && !item.image.includes('favicon') && !(entry[1] === 'aquarium' && item.imageSource?.provider === 'OpenMoji')) continue;
+            if (item.image && !item.image.includes('favicon') && !(['aquarium', 'river'].includes(entry[1]) && item.imageSource?.provider === 'OpenMoji')) continue;
             const asset = assets.find((asset) => asset.name === entry[1]);
             item.image = asset.file;
             item.imageAlt = item.english;
