@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}5f4464ffcae3`;
+const CACHE_NAME = `${CACHE_PREFIX}a7db4666da87`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -57,6 +57,7 @@ const CORE_ASSETS = [
     "./year4_exam.html",
     "./manifest.webmanifest",
     "./assets/css/lesson01-practice.css",
+    "./assets/css/numbers-expansion.css",
     "./assets/css/pages.css",
     "./assets/css/site.css",
     "./assets/css/site/base.css",
@@ -102,6 +103,7 @@ const CORE_ASSETS = [
     "./assets/js/lesson01-supplements.js",
     "./assets/js/mistake-store.js",
     "./assets/js/mistakes.js",
+    "./assets/js/numbers-expansion.js",
     "./assets/js/numbers-time-drill.js",
     "./assets/js/progress-backup.js",
     "./assets/js/render-course-verb-paradigms.js",
@@ -140,6 +142,8 @@ const CORE_ASSETS = [
     "./assets/data/grammar_targets.json",
     "./assets/data/about_me_examples.json",
     "./assets/data/about_me_options.json",
+    "./assets/data/numbers_expansion.json",
+    "./assets/data/numbers_time_drills.json",
     "./assets/data/lesson01_exercises.json",
     "./assets/data/lesson01_practice.json",
     "./assets/data/about_me_lesson01_examples.json",

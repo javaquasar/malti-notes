@@ -19,7 +19,7 @@
           "title": { "type": "string", "minLength": 1 },
           "subtitle": { "type": "string" },
           "group": { "type": "string" },
-          "href": { "type": "string", "pattern": "\\.html$" },
+          "href": { "type": "string", "pattern": "\\.html(?:#[A-Za-z0-9_-]+)?$" },
           "find": { "type": "string" },
           "normalized": { "type": "string", "minLength": 1 }
         }

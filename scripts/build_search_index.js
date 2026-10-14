@@ -14,6 +14,7 @@ const pageOverrides = {
   verbs_course_bank: "verbs_guide.html",
   verbs_extensions: "verbs_guide.html",
   course_verb_paradigms: "verbs_guide.html",
+  numbers_expansion: "numbers_calendar_time.html",
 };
 const excluded = new Set([
   "book_coverage_inventory.json",
@@ -159,6 +160,14 @@ function buildIndex() {
     const relativePath = `assets/data/${fileName}`;
     const data = JSON.parse(readText(relativePath));
     const page = pageFor(fileName, data);
+    if (fileName === "numbers_expansion.json" && page) {
+      Object.entries(data.sections).forEach(([section, rows]) => rows.filter(row => row.kind !== "rule").forEach(row => {
+        const href = `${page}#${section === "dual-forms" ? "group-counts" : section}`;
+        add({ kind: "phrase", title: row.maltese, subtitle: row.english, group: data.title, href, keywords: [row.ordinary, row.linked, row.singular, row.example, row.exampleTranslation].filter(Boolean).join(" ") });
+        if (row.example) add({ kind: "phrase", title: row.example, subtitle: row.exampleTranslation, group: data.title, href });
+      }));
+      return;
+    }
     if (page) visit(data, { group: data.topic || "", lemma: "", meaning: "" }, page);
   });
 

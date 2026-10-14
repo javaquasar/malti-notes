@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 1 Numbers, Calendar and Time Guide</title>
+    <title>Numbers, Quantities, Calendar and Time</title>
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/site.css">
     <link rel="stylesheet" href="./assets/css/pages.css">
+    <link rel="stylesheet" href="./assets/css/numbers-expansion.css">
 </head>
-<body>
+<body class="numbers-page">
 <div class="page">
     <header class="site-header">
         <a class="site-brand" href="./index.html">Maltese Study Site</a>
@@ -20,8 +21,8 @@
             <div>
                 <h1>Numbers, Calendar and Time</h1>
                 <p class="lead">
-                    A practical Level 1 guide to numbers, weekdays, months, seasons, and telling the time in Maltese.
-                    The page follows the same study style as the verbs guide and focuses on high-frequency course-safe patterns.
+                    Numbers in context: counting, large numbers, fractions, measurements, money,
+                    weather, dates and time.
                 </p>
                 <div class="pill-row">
                     <span class="pill">Numbers</span>
@@ -48,23 +49,35 @@
         <aside class="sidebar">
             <h2>Contents</h2>
             <ul>
+                <li class="numbers-nav-heading">Numbers</li>
                 <li><a href="#numbers">Numbers</a></li>
                 <li><a href="#numbers-21-99">Numbers 21-99</a></li>
+                <li><a href="#number-forms">Number Forms</a></li>
+                <li><a href="#large-numbers">Hundreds and Thousands</a></li>
+                <li><a href="#number-builder">Build a Number</a></li>
                 <li><a href="#ordinals">Ordinal Numbers</a></li>
+                <li class="numbers-nav-heading">Quantities</li>
                 <li><a href="#group-counts">Pairs and Group Counts</a></li>
+                <li><a href="#fractions">Fractions and Mixed Numbers</a></li>
+                <li><a href="#measurements">Decimals, Measurements and Money</a></li>
+                <li><a href="#temperature">Temperature and Weather</a></li>
+                <li class="numbers-nav-heading">Calendar and Time</li>
                 <li><a href="#weekdays">Days of the Week</a></li>
                 <li><a href="#months">Months</a></li>
+                <li><a href="#decades">Decades</a></li>
                 <li><a href="#seasons">Seasons</a></li>
                 <li><a href="#time-words">Time Words</a></li>
                 <li><a href="#time-expressions">Common Time Expressions</a></li>
                 <li><a href="#clock-time">Clock Time</a></li>
+                <li class="numbers-nav-heading">Practice</li>
                 <li><a href="#self-test">Self Test</a></li>
+                <li><a href="#numbers-practice">Mixed Practice</a></li>
                 <li><a href="#ready-models">Ready Models</a></li>
                 <li><a href="#life-phrases">Plans, Dates, Appointments and Everyday Events</a></li>
             </ul>
-            <p class="mini">
-                The number and time patterns here follow Level 1 lesson material, especially the lesson on <code>Il-Ħin</code>.
-            </p>
+            <label class="numbers-copy-setting">Copy format
+                <select data-numbers-copy-format><option value="mt">Maltese only</option><option value="bilingual">Maltese + English</option></select>
+            </label>
         </aside>
 
         <main class="content">
@@ -149,6 +162,9 @@
                 </div>
             </section>
 
+            <section class="content-card" id="number-forms" data-numbers-section="number-forms"><h2>Number Forms</h2></section>
+            <section class="content-card" id="large-numbers" data-numbers-section="large-numbers"><h2>Hundreds and Thousands</h2></section>
+            <section class="content-card" id="number-builder" data-numbers-section="number-builder"><h2>Build a Number</h2></section>
             <section class="content-card" id="ordinals">
                 <span class="tag">Ordinal Numbers</span>
                 <h2>First, Second, Third...</h2>
@@ -181,11 +197,11 @@
                             <tr><td>żewġt itfal</td><td>two children</td></tr>
                             <tr><td>żewġt iklieb</td><td>two dogs</td></tr>
                             <tr><td>żewġ fliexken</td><td>two bottles</td></tr>
-                            <tr><td>tliet itfal</td><td>three children</td></tr>
+                            <tr><td>tlitt itfal</td><td>three children</td></tr>
                             <tr><td>tliet persuni</td><td>three people</td></tr>
                             <tr><td>erbat itfal</td><td>four children</td></tr>
                             <tr><td>erba' persuni</td><td>four people</td></tr>
-                            <tr><td>ħames itfal</td><td>five children</td></tr>
+                            <tr><td>ħamest itfal</td><td>five children</td></tr>
                             <tr><td>sitt itfal</td><td>six children</td></tr>
                             </tbody>
                         </table>
@@ -196,8 +212,12 @@
                     </section>
                 </div>
                 <p class="footer-note">Level 1 also reviewed special pair forms like <code>għajnejn</code>, <code>widnejn</code>, <code>saqajn</code>, and <code>sagħtejn</code>.</p>
+                <div id="dual-forms" data-numbers-section="dual-forms"></div>
             </section>
 
+            <section class="content-card" id="fractions" data-numbers-section="fractions"><h2>Fractions and Mixed Numbers</h2></section>
+            <section class="content-card" id="measurements" data-numbers-section="measurements"><h2>Decimals, Measurements and Money</h2></section>
+            <section class="content-card" id="temperature" data-numbers-section="temperature"><h2>Temperature and Weather</h2></section>
             <section class="content-card" id="weekdays">
                 <span class="tag">Calendar</span>
                 <h2>Days of the Week</h2>
@@ -240,6 +260,7 @@
                 </div>
             </section>
 
+            <section class="content-card" id="decades" data-numbers-section="decades"><h2>Decades</h2></section>
             <section class="content-card" id="seasons">
                 <span class="tag">Seasons</span>
                 <h2>Seasons of the Year</h2>
@@ -293,6 +314,7 @@
                 </div>
             </section>
 
+            <section class="content-card" id="extra-time-expressions" data-numbers-section="extra-time-expressions"><h2>Everyday Time Expressions</h2></section>
             <section class="content-card" id="clock-time">
                 <span class="tag">Clock Time</span>
                 <h2>Telling the Time in Maltese</h2>
@@ -439,6 +461,15 @@
                 </div>
             </section>
 
+            <section class="content-card" id="numbers-practice">
+                <h2>Mixed Practice</h2>
+                <div data-numbers-practice></div>
+                <noscript>Enable JavaScript to load these exercises. The core numbers, calendar and clock reference above remains available.</noscript>
+            </section>
+            <section class="content-card" id="numbers-editorial">
+                <h2>Sources and Editorial Notes</h2>
+                <div data-numbers-editorial></div>
+            </section>
             <section class="content-card" id="ready-models">
                 <span class="tag">Practice</span>
                 <h2>Ready-Made Models</h2>
@@ -527,6 +558,7 @@
         });
     </script>
     <script src="./assets/js/numbers-time-drill.js"></script>
+    <script src="./assets/js/numbers-expansion.js"></script>
     <script src="./assets/js/site-header.js"></script>
 <script src="./assets/js/lesson01-supplements.js" data-lesson01-src="./assets/data/numbers_calendar_time_lesson01_examples.json"></script>
 </body>

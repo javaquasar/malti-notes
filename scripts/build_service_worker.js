@@ -30,6 +30,8 @@ const coreAssets = [
   "./assets/data/grammar_targets.json",
   "./assets/data/about_me_examples.json",
   "./assets/data/about_me_options.json",
+  "./assets/data/numbers_expansion.json",
+  "./assets/data/numbers_time_drills.json",
   "./assets/data/lesson01_exercises.json",
   "./assets/data/lesson01_practice.json",
   ...fs.readdirSync(path.join(root, "assets/data")).filter((file) => file.endsWith("_lesson01_examples.json")).sort().map((file) => "./assets/data/" + file),

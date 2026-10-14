@@ -356,7 +356,9 @@
       const meta = document.createElement("span");
 
       link.className = "site-search-result";
-      link.href = `./${item.href}${item.find ? `?find=${encodeURIComponent(item.find)}` : ""}`;
+      const destination = new URL(`./${item.href}`, window.location.href);
+      if (item.find) destination.searchParams.set("find", item.find);
+      link.href = `./${destination.pathname.split("/").pop()}${destination.search}${destination.hash}`;
       link.setAttribute("role", "option");
       title.textContent = item.title;
       meta.textContent = [item.kind === "page" ? "Page" : item.kind, item.group, item.subtitle].filter(Boolean).join(" · ");
@@ -412,12 +414,16 @@
     let attempts = 0;
     const locate = () => {
       attempts += 1;
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      const searchRoot = document.getElementById(window.location.hash.slice(1)) || document.body;
+      const walker = document.createTreeWalker(searchRoot, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {
         if (!node.parentElement || node.parentElement.closest("script, style, .site-header, .site-update-notice")) continue;
         if (!normalizeSearch(node.nodeValue).includes(term)) continue;
         const target = node.parentElement.closest("article, tr, li, .content-card, section") || node.parentElement;
+        for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+          if (parent.tagName === "DETAILS") parent.open = true;
+        }
         target.classList.add("is-search-target");
         target.scrollIntoView({ block: "center", behavior: "smooth" });
         if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
