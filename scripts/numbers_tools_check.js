@@ -64,9 +64,9 @@ async function main(){
     assert.match(await sheet.locator('pre').textContent(),/English:/);
     await sheet.getByRole('button',{name:'Copy worksheet',exact:true}).click();assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/Numbers and Time\r?\n\r?\n1\./);
     await sheet.getByLabel('Include answers').uncheck();assert(!(await sheet.locator('pre').textContent()).includes('Answer:'));
-    await page.evaluate(()=>document.body.classList.add('numbers-print-worksheet'));await page.emulateMedia({media:'print'});
+    await page.evaluate(()=>document.body.classList.add('printing-sheet'));await page.emulateMedia({media:'print'});
     assert(!(await page.locator('.hero').isVisible()));assert(!(await page.locator('#numbers').isVisible()));assert(await sheet.locator('pre').isVisible());
-    await page.emulateMedia({media:'screen'});await page.evaluate(()=>document.body.classList.remove('numbers-print-worksheet'));
+    await page.emulateMedia({media:'screen'});await page.evaluate(()=>document.body.classList.remove('printing-sheet'));
     const output=path.resolve(__dirname,'../tmp_numbers_sessions');fs.mkdirSync(output,{recursive:true});
     for(const width of [1440,390,320]){
       await page.setViewportSize({width,height:1000});

@@ -29,8 +29,8 @@
     const storage=window.MaltiStorage;
     const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n;};
     const button=(text,action)=>{const b=el('button',text,'action-button');b.type='button';b.addEventListener('click',action);return b;};
-    const select=(name,values)=>{const s=el('select');s.setAttribute('aria-label',name);values.forEach(([v,t])=>{const o=el('option',t);o.value=v;s.append(o);});return s;};
-    const label=(text,node)=>{const l=el('label',text);l.append(node);return l;};
+    const select=(name,values)=>{const s=el('select',null,'study-input');s.setAttribute('aria-label',name);values.forEach(([v,t])=>{const o=el('option',t);o.value=v;s.append(o);});return s;};
+    const label=(text,node)=>{const l=el('label',text,node.type==='checkbox'?'study-check':'study-field');l.append(node);return l;};
     const all=questions.map(q=>({...q,difficulty:q.difficulty || difficultyFor(q)}));
     const byId=new Map(all.map(q=>[q.id,q]));
     const stored=storage.getJson(KEY,{});
@@ -43,33 +43,33 @@
     const difficulty=select('Practice difficulty',[['all','All levels'],['foundation','Foundation'],['intermediate','Intermediate'],['advanced','Advanced']]);
     const mistakes=el('input');mistakes.type='checkbox';
     const adaptive=el('input');adaptive.type='checkbox';adaptive.checked=stored.adaptive!==false;
-    const adaptiveLabel=label('Adaptive review',adaptive);adaptiveLabel.className='numbers-checkbox';
+    const adaptiveLabel=label('Adaptive review',adaptive);
     const legacyMode=storage.getJson('malti_numbers_time_drill_v1',{}).activeMode;
     topic.value=[...topic.options].some(o=>o.value===stored.topic)?stored.topic:legacyMode==='clock'?'clock':legacyMode==='numbers'?'core':'all';
     direction.value=['all','words','digits'].includes(stored.direction)?stored.direction:'all';
     difficulty.value=['all','foundation','intermediate','advanced'].includes(stored.difficulty)?stored.difficulty:'all';
-    const filters=el('div',null,'numbers-practice-filters');
-    const mistakeLabel=label('Mistakes only',mistakes);mistakeLabel.className='numbers-checkbox';
+    const filters=el('div',null,'numbers-practice-filters control-row control-row--responsive no-print');
+    const mistakeLabel=label('Mistakes only',mistakes);
     filters.append(label('Topic',topic),label('Direction',direction),label('Level',difficulty),mistakeLabel,adaptiveLabel);
     const length=select('Session length',[['5','5 questions'],['10','10 questions']]);
-    const test=el('input');test.type='checkbox';const testLabel=label('Test mode',test);testLabel.className='numbers-checkbox';
-    const sessionControls=el('div',null,'numbers-session-controls');
+    const test=el('input');test.type='checkbox';const testLabel=label('Test mode',test);
+    const sessionControls=el('div',null,'numbers-session-controls control-row no-print');
     const start=button('Start session',()=>startSession());
     const finish=button('Finish session',()=>finishSession(true));
     const previousSummary=button('Last session',()=>showSummary());
     sessionControls.append(label('Session',length),testLabel,start,finish,previousSummary);
     const stats=el('p',null,'muted');stats.setAttribute('aria-live','polite');
-    const sessionStatus=el('p',null,'numbers-session-status');sessionStatus.setAttribute('role','status');
+    const sessionStatus=el('p',null,'numbers-session-status study-progress-status');sessionStatus.setAttribute('role','status');
     const panel=el('div',null,'numbers-practice-panel');
-    const prompt=el('p',null,'numbers-question');prompt.lang='mt';
+    const prompt=el('p',null,'numbers-question study-question');prompt.lang='mt';
     const options=el('div',null,'numbers-options');
     const visual=el('div');
-    const form=el('form',null,'numbers-answer-form');
-    const input=el('input');input.type='text';input.autocomplete='off';input.spellcheck=false;
+    const form=el('form',null,'numbers-answer-form control-row control-row--responsive no-print');
+    const input=el('input',null,'study-input');input.type='text';input.autocomplete='off';input.spellcheck=false;
     const check=el('button','Check answer','action-button');check.type='submit';
     form.append(label('Your answer',input),check);
-    const feedback=el('p',null,'numbers-feedback');feedback.setAttribute('role','status');
-    const contrast=el('div',null,'numbers-form-contrast');contrast.hidden=true;
+    const feedback=el('p',null,'numbers-feedback study-feedback');feedback.setAttribute('role','status');
+    const contrast=el('div',null,'numbers-form-contrast study-contrast');contrast.hidden=true;
     const next=button('Next',()=>{
       if (session) {
         if (!session.results.some(r=>r.id===current.id)) recordSession('skipped');
@@ -99,10 +99,10 @@
       announce('Saved to review.');
     });
     const copyAnswer=button('Copy answer',()=>{if(current&&!inTest())copy([answerRow()]);});
-    const controls=el('div',null,'toolbar-row');controls.append(next,hint,reveal,saveAnswer,copyAnswer);
+    const controls=el('div',null,'toolbar-row no-print');controls.append(next,hint,reveal,saveAnswer,copyAnswer);
     panel.append(prompt,visual,options,form,controls,feedback,contrast);
-    const mastery=el('details',null,'numbers-more');mastery.append(el('summary','Progress by topic'));
-    const masteryBody=el('div',null,'numbers-disclosure-body');mastery.append(masteryBody);
+    const mastery=el('details',null,'numbers-more study-disclosure');mastery.append(el('summary','Progress by topic'));
+    const masteryBody=el('div',null,'numbers-disclosure-body study-disclosure-body');mastery.append(masteryBody);
     const summary=el('div',null,'numbers-session-summary');summary.hidden=true;summary.setAttribute('aria-live','polite');
     root.replaceChildren(filters,sessionControls,stats,sessionStatus,panel,summary,mastery);
     function inTest(){return session?.mode==='test';}
@@ -166,7 +166,7 @@
       if(!current){prompt.textContent=mistakes.checked?'No mistakes in this selection.':'No questions in this selection.';updateStats();save();return;}
       prompt.textContent=current.prompt;progress.shownAt[current.id]=Date.now();
       if(current.visualValue){const picture=fractionPicture(current.visualValue);if(picture)visual.append(picture);}
-      current.options.forEach(text=>{const b=button(text,()=>{input.value=text;form.requestSubmit();});b.className='numbers-option';options.append(b);});
+      current.options.forEach(text=>{const b=button(text,()=>{input.value=text;form.requestSubmit();});b.className='numbers-option study-option';options.append(b);});
       [hint,reveal].forEach(n=>{n.hidden=!!inTest();});saveAnswer.disabled=copyAnswer.disabled=!!inTest();
       const saved=session?.results.find(r=>r.id===current.id);
       if(saved){input.value=saved.given;lock();feedback.textContent=inTest()?'Answer recorded.':saved.outcome==='skipped'?'Skipped.':current.answer+' — '+current.explanation;if(!inTest())showContrast();}
@@ -228,7 +228,7 @@
         [compactTopics[t]||titles[t],rows.filter(r=>r.outcome==='independent-correct').length,rows.filter(r=>r.outcome==='assisted-correct').length,rows.filter(r=>!['independent-correct','assisted-correct'].includes(r.outcome)).length].forEach(text=>tr.append(el('td',text)));tr.firstChild.title=titles[t];body.append(tr);
       });table.append(body);summary.append(table);
       const failed=outcomes.filter(r=>!['independent-correct','assisted-correct'].includes(r.outcome));
-      failed.forEach(r=>{const d=el('details',null,'numbers-source-question');d.append(el('summary',r.prompt),el('p','Answer: '+r.answer),el('p','Your answer: '+(r.given||'—')),el('small',byId.get(r.id).explanation));summary.append(d);});
+      failed.forEach(r=>{const d=el('details',null,'numbers-source-question study-disclosure study-card');d.append(el('summary',r.prompt),el('p','Answer: '+r.answer),el('p','Your answer: '+(r.given||'—')),el('small',byId.get(r.id).explanation));summary.append(d);});
       const actions=el('div',null,'toolbar-row');
       const retry=button('Retry session mistakes',()=>startSession(failed.map(r=>r.id)));retry.disabled=!failed.length;
       actions.append(retry,button('Continue practice',()=>renderQuestion()));summary.append(actions);

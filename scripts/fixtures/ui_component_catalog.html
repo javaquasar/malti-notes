@@ -96,7 +96,7 @@
 <body>
 <main class="catalog-page">
     <header class="catalog-header">
-        <span class="tag">Visual contract</span>
+        <span class="pill">Visual contract</span>
         <h1>UI Component Catalog</h1>
         <p>Stable examples of the shared teaching surfaces used across the Maltese study site.</p>
     </header>
@@ -291,6 +291,52 @@
                     </div>
                 </section>
             </div>
+        </section>
+        <section class="content-card catalog-section" data-component="study-controls">
+            <h2>Study controls</h2>
+            <div class="control-row control-row--responsive" data-component="study-fields">
+                <label class="study-field">Answer<input class="study-input" value="tliet kotba"></label>
+                <label class="study-field">Topic<select class="study-input"><option>Number forms</option></select></label>
+                <label class="study-field">Saved answer<input class="study-input" value="tlieta" disabled></label>
+                <label class="study-check"><input type="checkbox" checked>Adaptive review</label>
+                <label class="study-check"><input type="checkbox" disabled>Test mode</label>
+            </div>
+            <div class="toolbar-row" data-component="study-tokens">
+                <button class="study-token" type="button">mija</button>
+                <button class="study-token study-token--selected study-token--removable" type="button" aria-label="Return elf to word bank">elf</button>
+                <button class="study-token" type="button" disabled>u</button>
+                <button class="study-option" type="button">tliet</button>
+                <button class="action-button study-icon-button" type="button" title="Move left" aria-label="Move left">&larr;</button>
+                <button class="study-link-button" type="button">Copy</button>
+            </div>
+            <p class="study-question" data-component="study-question">3 books: ___ kotba</p>
+            <p class="study-feedback" data-state="correct" data-component="study-feedback">Correct.</p>
+            <div class="study-contrast" data-component="study-contrast">
+                <p>Alone: <mark>tlieta</mark></p>
+                <p>Before a noun: <mark>tliet</mark> kotba</p>
+                <p>Linking i: <mark>tlett</mark> itfal</p>
+            </div>
+        </section>
+        <section class="content-card catalog-section" data-component="study-disclosures">
+            <h2>Study disclosures</h2>
+            <details class="study-disclosure"><summary>Closed examples</summary><div class="study-disclosure-body"><p lang="mt">tliet kotba</p></div></details>
+            <details class="study-disclosure" open>
+                <summary>Examples in context</summary>
+                <div class="study-disclosure-body">
+                    <article class="study-card"><strong lang="mt">tliet kotba</strong><span>three books</span></article>
+                    <details class="study-disclosure study-card" open data-component="study-disclosure-question">
+                        <summary>3 children: ___ itfal</summary><p lang="mt">tlett / tlitt</p><small>This noun takes the linking-i form.</small>
+                    </details>
+                </div>
+            </details>
+        </section>
+        <section class="content-card catalog-section print-sheet-section" data-component="study-worksheet">
+            <h2>Worksheet</h2>
+            <div class="print-sheet"><h3>Numbers and Time</h3><p>Name: ____________________</p><pre>1. 23
+____________________
+
+2. 3 books: ___ kotba
+____________________</pre></div>
         </section>
     </div>
 </main>

@@ -147,3 +147,18 @@ view. A mixed worksheet round-robins topics. Printing hides other page sections.
 Run `npm run numbers:tools:check` for contrasts, adaptive return/reload, explorer
 values, all four situations, speaking isolation/retry, worksheet copy/print and
 320/390/1440-pixel screenshots under ignored `tmp_numbers_sessions/`.
+
+## Shared Style Migration
+
+The numbers stylesheet no longer owns input/select, checkbox, choice/token,
+disclosure, feedback, comparison, clipboard or worksheet surfaces. They use the
+shared study contracts documented in [Decision 0003](../decisions/0003-layered-style-system.md).
+Local styles retain number diagrams, builder group layout and responsive table
+composition. Field heights, token heights, spacing and radii come from common
+theme tokens. No teaching data, exercise IDs, storage keys or scheduling logic
+change in this migration.
+
+Run `npm run numbers:style:check` for cross-theme contract equality, token-change
+propagation, accessibility, mobile layouts, worksheet PDF generation and progress
+preservation. Artifacts are saved to ignored `tmp_numbers_sessions/`. Catalog
+variants have independent Windows/Linux visual baselines.

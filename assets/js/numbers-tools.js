@@ -1,8 +1,8 @@
 (() => {
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n;};
   const button=(text,action)=>{const b=el('button',text,'action-button');b.type='button';b.addEventListener('click',action);return b;};
-  const select=(name,values)=>{const s=el('select');s.setAttribute('aria-label',name);values.forEach(([value,text])=>{const o=el('option',text);o.value=value;s.append(o);});return s;};
-  const label=(text,node)=>{const l=el('label',text);l.append(node);return l;};
+  const select=(name,values)=>{const s=el('select',null,'study-input');s.setAttribute('aria-label',name);values.forEach(([value,text])=>{const o=el('option',text);o.value=value;s.append(o);});return s;};
+  const label=(text,node)=>{const l=el('label',text,node.type==='checkbox'?'study-check':'study-field');l.append(node);return l;};
   function formQuestions(data){
     return data.sections['number-forms'].filter(r=>r.kind==='forms').flatMap(r=>{
       const contrast=[{label:'Alone',form:r.maltese},{label:'Before a noun',form:r.ordinary,noun:'kotba'},{label:'Linking i',form:r.linked,noun:'itfal'}];
@@ -24,7 +24,7 @@
     questions.filter(q=>q.topic==='core'&&q.id.endsWith('-words')).forEach(q=>entries.push({value:q.prompt,maltese:q.answer,english:q.prompt,topic:'core'}));
     const unique=[...new Map(entries.map(r=>[`${r.topic}:${r.subtopic||''}:${r.value}`,r])).values()];
     const category=select('Explorer category',[['integer','Whole numbers'],['fractions','Fractions'],...['Decimals','Length','Weight','Volume','Money'].map(t=>[t,t])]);
-    const value=el('input');value.type='text';value.setAttribute('aria-label','Number or quantity');value.setAttribute('list','numbers-explorer-values');
+    const value=el('input',null,'study-input');value.type='text';value.setAttribute('aria-label','Number or quantity');value.setAttribute('list','numbers-explorer-values');
     const list=el('datalist');list.id='numbers-explorer-values';
     const output=el('div',null,'numbers-explorer-result');output.setAttribute('role','status');
     const choices=()=>unique.filter(r=>category.value==='integer'?['core','large-numbers','number-builder'].includes(r.topic):category.value==='fractions'?r.topic==='fractions':r.subtopic===category.value);
@@ -45,7 +45,7 @@
       output.append(button('Copy result',()=>copy([{maltese:row.maltese,english:row.english}])));
     }
     function changeCategory(){list.replaceChildren();choices().forEach(r=>{const o=el('option');o.value=r.value;o.label=r.english;list.append(o);});value.value=String(choices()[0]?.value||'');explore();}
-    const explorerForm=el('form',null,'numbers-tool-controls');const go=el('button','Explore','action-button');go.type='submit';
+    const explorerForm=el('form',null,'numbers-tool-controls control-row control-row--responsive no-print');const go=el('button','Explore','action-button');go.type='submit';
     explorerForm.append(label('Category',category),label('Number or quantity',value),go,list);explorerForm.addEventListener('submit',e=>{e.preventDefault();explore();});category.addEventListener('change',changeCategory);explorer.append(explorerForm,output);changeCategory();
 
     const situations=[
@@ -60,7 +60,7 @@
       const q=written.find(test);if(q){scenarioIds.push(q.id);itinerary.append(el('li',`${name}: ${q.prompt}`));}
     });}
     situation.addEventListener('change',drawSituation);
-    const situationActions=el('div',null,'numbers-tool-controls');situationActions.append(label('Situation',situation),button('Start situation',()=>{if(controller.startQuestions(scenarioIds))document.querySelector('#numbers-practice').scrollIntoView({behavior:'smooth'});}));
+    const situationActions=el('div',null,'numbers-tool-controls control-row control-row--responsive no-print');situationActions.append(label('Situation',situation),button('Start situation',()=>{if(controller.startQuestions(scenarioIds))document.querySelector('#numbers-practice').scrollIntoView({behavior:'smooth'});}));
     situationsRoot.append(situationActions,itinerary);drawSituation();
 
     const speaking=root('speaking'),speakingKey='malti_numbers_speaking_v1';
@@ -69,7 +69,7 @@
     const repeatSpeaking=el('input');repeatSpeaking.type='checkbox';
     if([...speechTopic.options].some(o=>o.value===speechState.topic))speechTopic.value=speechState.topic;
     repeatSpeaking.checked=!!speechState.repeatOnly;
-    const speechPrompt=el('p',null,'numbers-question'),speechAnswer=el('div'),speechStats=el('p');speechAnswer.hidden=true;let speechCurrent=null;
+    const speechPrompt=el('p',null,'numbers-question study-question'),speechAnswer=el('div'),speechStats=el('p');speechAnswer.hidden=true;let speechCurrent=null;
     const speechPool=()=>written.filter(q=>(speechTopic.value==='all'||q.topic===speechTopic.value)&&!q.id.startsWith('form-choice')&&(!repeatSpeaking.checked||speechState.ratings[q.id]?.rating==='again'));
     function drawSpeech(){
       const pool=speechPool();speechCurrent=pool[(speechState.index||0)%pool.length];speechPrompt.textContent=speechCurrent?.prompt||'No speaking prompts to repeat in this selection.';speechAnswer.replaceChildren(el('p',speechCurrent?.answer));speechAnswer.hidden=true;
@@ -88,7 +88,7 @@
     const sheetTopic=select('Worksheet topic',[['all','All topics'],...[...new Set(written.map(q=>q.topic))].map(t=>[t,t==='form-choice'?'Choose a Number Form':t.replace(/-/g,' ')])]);
     const count=select('Worksheet length',[['5','5 questions'],['10','10 questions']]);
     const answers=el('input');answers.type='checkbox';const translations=el('input');translations.type='checkbox';
-    const preview=el('div',null,'numbers-worksheet-preview');preview.setAttribute('aria-live','polite');let sheet=[];
+    const preview=el('div',null,'numbers-worksheet-preview print-sheet');preview.setAttribute('aria-live','polite');let sheet=[];
     function buildSheet(){
       const pool=written.filter(q=>sheetTopic.value==='all'||q.topic===sheetTopic.value);
       // Spread a mixed worksheet across topics instead of taking the first source block.
@@ -98,13 +98,13 @@
     }
     function lines(){return sheet.map((q,i)=>`${i+1}. ${q.prompt}\n${answers.checked?'Answer: '+q.answer:'____________________'}${translations.checked&&q.english?'\nEnglish: '+q.english:''}`).join('\n\n');}
     function renderSheet(){preview.replaceChildren(el('h3','Numbers and Time'),el('p','Name: ____________________'),el('p','Date: ____________________'),el('pre',lines()));}
-    const sheetControls=el('div',null,'numbers-tool-controls');
+    const sheetControls=el('div',null,'numbers-tool-controls control-row control-row--responsive no-print');
     sheetControls.append(label('Topic',sheetTopic),label('Length',count),label('Include answers',answers),label('English translation',translations));
-    const sheetActions=el('div',null,'toolbar-row');
+    const sheetActions=el('div',null,'toolbar-row no-print');
     sheetActions.append(button('Copy worksheet',async()=>{try{await navigator.clipboard.writeText('Numbers and Time\n\n'+lines());announce('Worksheet copied.');}catch{announce('Clipboard unavailable. Use the printable worksheet.');}}),button('Print worksheet',()=>{
-      document.body.classList.add('numbers-print-worksheet');window.print();
+      document.body.classList.add('printing-sheet');window.print();
     }));
-    window.addEventListener('afterprint',()=>document.body.classList.remove('numbers-print-worksheet'));
+    window.addEventListener('afterprint',()=>document.body.classList.remove('printing-sheet'));
     [sheetTopic,count].forEach(n=>n.addEventListener('change',buildSheet));[answers,translations].forEach(n=>n.addEventListener('change',renderSheet));
     worksheet.append(sheetControls,sheetActions,preview);buildSheet();
   }

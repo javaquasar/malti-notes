@@ -33,7 +33,7 @@
   };
   const normal = value => String(value).normalize('NFKC').toLocaleLowerCase().trim()
     .replace(/[’‘`´]/g, "'").replace(/[.!?]+$/g, '').replace(/\s+/g, ' ');
-  const status = el('p', '', 'numbers-live-status');
+  const status = el('p', '', 'numbers-live-status study-live-status no-print');
   status.setAttribute('role', 'status');
   document.querySelector('.content').append(status);
   let announcementTimer;
@@ -48,7 +48,7 @@
       await navigator.clipboard.writeText(copyText(rows)); announce('Copied.');
     } catch {
       const area = el('textarea'); area.value = copyText(rows); area.readOnly = true;
-      area.className = 'numbers-copy-fallback'; document.body.append(area); area.select();
+      area.className = 'copy-fallback'; document.body.append(area); area.select();
       const ok = document.execCommand('copy'); area.remove();
       announce(ok ? 'Copied.' : 'Copy is unavailable in this browser.');
     }
@@ -76,8 +76,8 @@
     if (event.detail?.key === 'malti_review_cards_v2') refreshReview();
   });
   const rowActions = (row, topic) => {
-    const actions = el('div', null, 'numbers-row-actions');
-    actions.append(review(row, topic), button('Copy', () => copy([row]), 'numbers-copy-button'));
+    const actions = el('div', null, 'numbers-row-actions no-print');
+    actions.append(review(row, topic), button('Copy', () => copy([row]), 'numbers-copy-button study-link-button'));
     return actions;
   };
   function fractionPicture(value) {
@@ -134,8 +134,8 @@
         tr.append(cell); body.append(tr);
       });
       table.append(body); wrap.append(table); root.append(wrap);
-      const examples=el('details',null,'numbers-more'); examples.append(el('summary','Examples in context'));
-      const exampleBody=el('div',null,'numbers-disclosure-body');
+      const examples=el('details',null,'numbers-more study-disclosure'); examples.append(el('summary','Examples in context'));
+      const exampleBody=el('div',null,'numbers-disclosure-body study-disclosure-body');
       rows.filter(r=>r.kind!=='forms').forEach(r=>exampleBody.append(referenceRow(r,topic)));
       examples.append(exampleBody); root.append(examples);
     } else if (topic === 'number-builder') {
@@ -149,37 +149,37 @@
           group.append(el('h3',name));
           members.slice(0,2).forEach(row=>group.append(referenceRow(row,topic)));
           if(members.length>2){
-            const more=el('details',null,'numbers-more');more.append(el('summary',`More ${name.toLowerCase()} examples · ${members.length-2}`));
-            const body=el('div',null,'numbers-disclosure-body');members.slice(2).forEach(row=>body.append(referenceRow(row,topic)));more.append(body);group.append(more);
+            const more=el('details',null,'numbers-more study-disclosure');more.append(el('summary',`More ${name.toLowerCase()} examples · ${members.length-2}`));
+            const body=el('div',null,'numbers-disclosure-body study-disclosure-body');members.slice(2).forEach(row=>body.append(referenceRow(row,topic)));more.append(body);group.append(more);
           }
           root.append(group);
         });
       }else display.slice(0, 6).forEach(row => root.append(referenceRow(row, topic)));
       if (topic!=='measurements' && display.length > 6) {
-        const details = el('details', null, 'numbers-more'); details.append(el('summary', 'All examples · ' + display.length));
-        const exampleBody=el('div',null,'numbers-disclosure-body');
+        const details = el('details', null, 'numbers-more study-disclosure'); details.append(el('summary', 'All examples · ' + display.length));
+        const exampleBody=el('div',null,'numbers-disclosure-body study-disclosure-body');
         display.slice(6).forEach(row => exampleBody.append(referenceRow(row, topic)));
         details.append(exampleBody); root.append(details);
       }
     }
     const bank = questions.filter(q => q.topic === topic);
     if (bank.length) {
-      const details = el('details', null, 'numbers-more'); details.append(el('summary', 'Exercise bank · ' + bank.length));
-      const exerciseBody=el('div',null,'numbers-disclosure-body');
+      const details = el('details', null, 'numbers-more study-disclosure'); details.append(el('summary', 'Exercise bank · ' + bank.length));
+      const exerciseBody=el('div',null,'numbers-disclosure-body study-disclosure-body');
       bank.forEach(q => {
-        const item = el('details', null, 'numbers-source-question'); item.append(el('summary', q.prompt));
+        const item = el('details', null, 'numbers-source-question study-disclosure study-card'); item.append(el('summary', q.prompt));
         if (q.visualValue) { const graphic = fractionPicture(q.visualValue); if (graphic) item.append(graphic); }
         item.append(el('p', q.answer), el('small', q.explanation)); exerciseBody.append(item);
       }); details.append(exerciseBody); root.append(details);
     }
   }
   function renderBuilder(root, rows) {
-    const selector=el('select');selector.setAttribute('aria-label','Number to build');
+    const selector=el('select',null,'study-input');selector.setAttribute('aria-label','Number to build');
     rows.forEach((row,index)=>{const option=el('option',row.english);option.value=index;selector.append(option);});
-    const insertion=el('select');insertion.setAttribute('aria-label','Insert word at');
-    const moving=el('select');moving.setAttribute('aria-label','Word to move');
+    const insertion=el('select',null,'study-input');insertion.setAttribute('aria-label','Insert word at');
+    const moving=el('select',null,'study-input');moving.setAttribute('aria-label','Word to move');
     const answer=el('div',null,'numbers-builder-answer');answer.setAttribute('aria-live','polite');
-    const bank=el('div',null,'numbers-word-bank');
+    const bank=el('div',null,'numbers-word-bank no-print');
     const feedback=el('p');feedback.setAttribute('role','status');
     let words=[],selected=[],history=[],dragged=null;
     const remember=()=>{history.push([...selected]);history=history.slice(-50);};
@@ -197,8 +197,8 @@
       remember();selected.splice(selected.indexOf(index),1);
       const position=selected.indexOf(target);selected.splice(position<0?selected.length:position,0,index);draw({selected:index});
     };
-    const left=button('←',()=>move(-1));left.title='Move selected word left';left.setAttribute('aria-label',left.title);
-    const right=button('→',()=>move(1));right.title='Move selected word right';right.setAttribute('aria-label',right.title);
+    const left=button('←',()=>move(-1),'action-button study-icon-button');left.title='Move selected word left';left.setAttribute('aria-label',left.title);
+    const right=button('→',()=>move(1),'action-button study-icon-button');right.title='Move selected word right';right.setAttribute('aria-label',right.title);
     moving.addEventListener('change',()=>updateMoveButtons());
     function updateMoveButtons(){
       const position=selected.indexOf(Number(moving.value));
@@ -225,7 +225,7 @@
         if(!indexes.length)tiles.append(el('span','…'));
         indexes.forEach(index=>{
           const position=selected.indexOf(index);
-          const tile=button(words[index],()=>remove(index),'numbers-word numbers-selected-word');
+          const tile=button(words[index],()=>remove(index),'numbers-word numbers-selected-word study-token study-token--selected study-token--removable');
           tile.dataset.wordIndex=index;tile.draggable=true;
           tile.title=`Return ${words[index]} to word bank`;
           tile.setAttribute('aria-label',`${tile.title} (position ${position+1})`);
@@ -246,7 +246,7 @@
         const tile=button(word,()=>{
           remember();const at=insertion.value==='end'?-1:selected.indexOf(Number(insertion.value));
           selected.splice(at<0?selected.length:at,0,index);draw({selected:index});
-        },'numbers-word');
+        },'numbers-word study-token');
         tile.dataset.wordIndex=index;tile.disabled=selected.includes(index);bank.append(tile);
       });
       updateMoveButtons();feedback.textContent='';feedback.dataset.state='';
@@ -260,9 +260,9 @@
       selected=[];history=[];draw();
     };
     selector.addEventListener('change',reset);
-    const placement=el('div',null,'numbers-builder-placement');
-    const insertLabel=el('label','Insert at');insertLabel.append(insertion);
-    const moveLabel=el('label','Word to move');moveLabel.append(moving);
+    const placement=el('div',null,'numbers-builder-placement control-row control-row--responsive no-print');
+    const insertLabel=el('label','Insert at','study-field');insertLabel.append(insertion);
+    const moveLabel=el('label','Word to move','study-field');moveLabel.append(moving);
     const movement=el('div',null,'numbers-builder-movement');movement.append(left,right);
     placement.append(insertLabel,moveLabel,movement);
     const controls=el('div',null,'toolbar-row');

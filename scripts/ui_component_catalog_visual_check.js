@@ -28,7 +28,15 @@ const requiredComponents = [
   "list-card-stack",
   "table-standard",
   "table-soft",
-  "table-attached"
+  "table-attached",
+  "study-fields",
+  "study-tokens",
+  "study-question",
+  "study-feedback",
+  "study-contrast",
+  "study-disclosures",
+  "study-disclosure-question",
+  "study-worksheet"
 ];
 
 function runNode(script, args = [], extraEnv = {}) {

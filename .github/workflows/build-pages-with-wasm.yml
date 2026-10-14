@@ -129,6 +129,12 @@ jobs:
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         run: npm run visual:catalog
 
+      - name: Check shared numbers study components
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+        run: npm run numbers:style:check
+
       - name: Upload visual artifacts
         if: always()
         uses: actions/upload-artifact@v7
@@ -137,6 +143,7 @@ jobs:
           path: |
             visual-regression/screenshots/
             visual-regression/diffs/
+            tmp_numbers_sessions/shared-*
           if-no-files-found: ignore
           retention-days: 7
 

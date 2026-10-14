@@ -246,3 +246,8 @@ if (failures.length) {
 }
 
 console.log(`ok checked ${cssFiles.length} css files`);
+const contracts = require('node:child_process').spawnSync(process.execPath, [path.join(__dirname, 'style_contract_check.js')], {
+  cwd: root, env: process.env, stdio: 'inherit'
+});
+if (contracts.error) throw contracts.error;
+if (contracts.status !== 0) process.exit(contracts.status || 1);

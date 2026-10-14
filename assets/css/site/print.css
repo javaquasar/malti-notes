@@ -1,4 +1,10 @@
 @media print {
+  .printing-sheet .sidebar, .printing-sheet .hero, .printing-sheet footer,
+  .printing-sheet .content > :not(.print-sheet-section),
+  .printing-sheet .print-sheet-section > h2 { display: none !important; }
+  .printing-sheet .content { margin: 0; width: 100%; max-width: none; padding: 0; }
+  .printing-sheet .print-sheet-section { border: 0; box-shadow: none; padding: 0; break-inside: auto; }
+  .printing-sheet .print-sheet { border: 0; color: var(--print-text); }
   html,
   body {
     max-width: none;
