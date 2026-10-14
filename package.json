@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Static Maltese study notes and review pages.",
   "scripts": {
+    "materials:preflight": "node ./scripts/materials_check.js --preflight",
+    "materials:check": "node ./scripts/materials_check.js",
+    "materials:policy:check": "node ./scripts/materials_policy_check.js",
+    "materials:gate:check": "node ./scripts/materials_gate_check.js",
+    "materials:hooks:install": "node ./scripts/install_materials_hooks.js",
     "numbers:check": "node ./scripts/numbers_expansion_check.js",
     "numbers:sessions:check": "node ./scripts/numbers_sessions_check.js",
     "numbers:tools:check": "node ./scripts/numbers_tools_check.js",

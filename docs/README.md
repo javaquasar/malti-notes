@@ -1,6 +1,6 @@
 # Project Documentation
 
-This directory is the canonical home for project documentation. Keep only the repository `README.md` at the project root.
+This directory is the canonical home for project documentation. The root `README.md` introduces the project; root `AGENTS.md` contains mandatory contributor instructions. Other documentation belongs here.
 
 ## Planning
 
@@ -15,6 +15,8 @@ This directory is the canonical home for project documentation. Keep only the re
 
 ## Models And Quality
 
+- [Mandatory material authoring workflow](quality/material-authoring.md) - required reading, preflight, exact-tree Git checks, CI and protection limits.
+- [UI components and usage](reference/ui-components.md) - English component reference, selection rules, HTML examples, states and styling ownership.
 - [Learning content model](learning-content-model.md)
 - [Content verification](content-verification.md)
 - [Visual regression checklist](quality/visual-regression-checklist.md)

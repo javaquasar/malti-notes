@@ -12,6 +12,8 @@ const workflowPath = path.join(
 const workflow = fs.readFileSync(workflowPath, "utf8");
 
 const requiredChecks = [
+  "materials:check",
+  "numbers:style:check",
   "docs:check",
   "encoding:check",
   "cloud-sync:check",

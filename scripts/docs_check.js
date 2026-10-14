@@ -16,6 +16,8 @@ const requiredFiles = [
   "analysis/teaching-depth.md",
   "analysis/word-search-pdf-coverage.md",
   "quality/visual-regression-checklist.md",
+  "quality/material-authoring.md",
+  "reference/ui-components.md",
   "proposals/multi-language-framework.md",
   "tools/word-search-pdf-audit.md",
   "tools/utf8-mojibake.md"
@@ -23,9 +25,9 @@ const requiredFiles = [
 
 const rootMarkdown = fs.readdirSync(root)
   .filter((name) => name.toLowerCase().endsWith(".md"))
-  .filter((name) => name !== "README.md");
+  .filter((name) => !["README.md", "AGENTS.md"].includes(name));
 if (rootMarkdown.length) {
-  errors.push(`Markdown files must live under docs/: ${rootMarkdown.join(", ")}`);
+    errors.push(`Markdown files other than README.md and AGENTS.md must live under docs/: ${rootMarkdown.join(", ")}`);
 }
 
 requiredFiles.forEach((relativePath) => {
@@ -42,7 +44,7 @@ function markdownFiles(directory) {
   });
 }
 
-const documentationFiles = [path.join(root, "README.md"), ...markdownFiles(docsRoot)];
+const documentationFiles = [path.join(root, "README.md"), path.join(root, "AGENTS.md"), ...markdownFiles(docsRoot)];
 documentationFiles.forEach((file) => {
   const source = fs.readFileSync(file, "utf8");
   const links = Array.from(source.matchAll(/\[[^\]]+\]\(([^)]+)\)/g), (match) => match[1]);

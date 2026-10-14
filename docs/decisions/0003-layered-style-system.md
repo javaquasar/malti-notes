@@ -26,6 +26,9 @@ Page-local CSS and overlapping component classes repeatedly caused missing borde
 
 ## Shared Study Controls
 
+For component descriptions, selection rules and implementation examples, see
+[UI Components and Usage](../reference/ui-components.md).
+
 The numbers-page migration applies the same ownership rule to interactive study
 surfaces. `site/components.css` owns these contracts:
 

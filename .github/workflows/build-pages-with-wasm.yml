@@ -39,6 +39,12 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run ci:workflow:check
 
+      - name: Enforce material authoring policy
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+        run: npm run materials:check
+
       - name: Validate cloud progress reconciliation
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run cloud-sync:check

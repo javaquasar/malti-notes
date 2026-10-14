@@ -2,6 +2,14 @@
 
 Static Maltese study notes, review pages, and vocabulary practice tools.
 
+## Before Creating Learning Material
+
+Follow [AGENTS.md](AGENTS.md) and the [mandatory material authoring workflow](docs/quality/material-authoring.md).
+Read the [component guide](docs/reference/ui-components.md), then run
+`npm run materials:preflight` before editing. Install the local commit/push
+guards with `npm run materials:hooks:install` once per checkout, and run
+`npm run materials:check` before delivery. CI runs the same gate independently.
+
 ## B1/B2 Course
 
 The site exposes a chapter-based route at `course_path.html`. Curriculum alignment lives in `assets/data/course_path.json`; original quick checks live in `assets/data/course_exercises.json` and are rendered by the shared `assets/js/exercise-runner.js` runtime.

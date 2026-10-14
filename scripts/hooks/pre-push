@@ -1,0 +1,3 @@
+#!/bin/sh
+# malti-materials-policy-hook
+exec node scripts/materials_git_gate.js --push
