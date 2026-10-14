@@ -310,6 +310,7 @@
       const accepted=form==='tlett'?[answer,`tlitt ${noun.maltese}`]:[answer];
       return {id:`noun-${row.value}-${noun.english}`,topic:'noun-counting',prompt:`${row.value} + ${noun.maltese}`,value:row.value,
         answer,accepted,options:[],english:`${row.value} ${noun.english}`,sourceRefs:row.sourceRefs,
+        contrast:[{label:'Alone',form:row.maltese},{label:'Before a noun',form:row.ordinary,noun:'kotba'},{label:'Linking i',form:row.linked,noun:'itfal'}],
         explanation:noun.form==='linked'?'This noun uses a linking i. Choose the linked counted form, rather than the standalone number. Tlett and tlitt are accepted variants for three.':'This noun takes the ordinary counted form, rather than the standalone number.'};
     }));
   }
@@ -319,8 +320,10 @@
     const data=await response.json();
     const legacyResponse=await fetch('./assets/data/numbers_time_drills.json');
     if (!legacyResponse.ok) throw new Error('Core drill data could not be loaded.');
-    const allQuestions=[...data.questions,...supplementalQuestions(data),...legacyQuestions(await legacyResponse.json()),...nounQuestions(data)];
+    const allQuestions=[...data.questions,...supplementalQuestions(data),...legacyQuestions(await legacyResponse.json()),...nounQuestions(data),...window.MaltiNumbersTools.formQuestions(data)];
+    titles['form-choice']='Choose a Number Form';
     practiceController=window.MaltiNumbersPractice.mount({root:practiceRoot,questions:allQuestions,titles,copy,announce,fractionPicture});
+    window.MaltiNumbersTools.mount({data,questions:allQuestions,controller:practiceController,copy,announce});
     document.querySelectorAll('[data-numbers-section]').forEach(root=>renderReference(root,root.dataset.numbersSection,data.sections[root.dataset.numbersSection],data.questions));
     const editorial=document.querySelector('[data-numbers-editorial]');
     editorial.append(el('p',`${data.materials.length} source materials · ${data.coverage.length} mapped learning items. Teaching versions are separated from original wording.`));

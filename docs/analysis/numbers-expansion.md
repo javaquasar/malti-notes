@@ -12,7 +12,7 @@ Nine reference groups cover number forms, hundreds/thousands, word building, dua
 forms, fractions, measurements/money, temperatures, decades and time expressions.
 The page includes 156 reference entries and 77 source-derived exercise questions.
 The expanded runtime pool adds contextual reading/reverse-reading and existing
-core/clock patterns plus 63 number/noun combinations for 655 questions. Exact repeated lexical pairs are merged;
+core/clock patterns, 63 number/noun combinations and 27 form-choice tasks for 682 questions. Exact repeated lexical pairs are merged;
 all their original source references remain attached.
 
 ## Import and Provenance
@@ -108,3 +108,42 @@ after reload. The last summary remains available through Last session.
 Run `npm run numbers:sessions:check` for migration-independent scenario tests of
 these features, session resume, test secrecy, topic diversity, partial retries and
 keyboard/drag/insertion builder operations at desktop/mobile widths.
+
+## Context, Recall and Worksheets
+
+`numbers-tools.js` adds 27 three-context form questions (alone, ordinary counted
+noun, linking-i noun). Answer feedback highlights a full contrast; noun-counting
+questions share that comparison. Hints name a rule without displaying the answer.
+
+Adaptive review schedules weak or assisted answers after three intervening
+answered questions or ten minutes. Independent answers increase the interval
+from one day up to thirty days, with an in-session turn interval as well.
+Due items outrank unseen items; unseen items outrank items not yet due. Two
+consecutive independent answers mark an item secure. Existing attempt counters,
+legacy imports, and session snapshots are preserved. The switch can disable
+adaptive ordering. Topic progress reports secure, attempted and time-due counts.
+
+Four selectable situations use checked source questions: shopping, arranging a
+meeting, measuring/cooking, and dates/quantities. They run in the same resumable
+practice controller; a situation never replaces an active session.
+
+The explorer accepts checked values from source examples and the core 1–100
+pool, not arbitrary generated Maltese. Its category distinguishes fractions,
+length, weight, volume, decimals and money. Whole-number examples show their
+numeric decomposition; large examples with elf also show the Maltese thousands
+and remainder groups. Unsupported values receive an explicit message rather
+than an inferred translation. The underlying reference sections retain all
+source alternatives.
+
+Speaking practice reveals the answer on request and records self-assessment
+separately under `malti_numbers_speaking_v1`. It offers a repeat-only filter and
+does not claim pronunciation scoring or change typed-answer mastery. The key is
+included in the existing progress backup/cloud-sync contract.
+
+Teacher worksheets offer 5/10 tasks, topic selection, optional answers, optional
+available English translations, multiline copying, and a worksheet-only print
+view. A mixed worksheet round-robins topics. Printing hides other page sections.
+
+Run `npm run numbers:tools:check` for contrasts, adaptive return/reload, explorer
+values, all four situations, speaking isolation/retry, worksheet copy/print and
+320/390/1440-pixel screenshots under ignored `tmp_numbers_sessions/`.

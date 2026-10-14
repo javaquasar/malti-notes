@@ -34,7 +34,7 @@
     const all=questions.map(q=>({...q,difficulty:q.difficulty || difficultyFor(q)}));
     const byId=new Map(all.map(q=>[q.id,q]));
     const stored=storage.getJson(KEY,{});
-    const progress={...stored,results:stored.results || {},shownAt:stored.shownAt || {},history:stored.history || []};
+    const progress={...stored,results:stored.results || {},shownAt:stored.shownAt || {},history:stored.history || [],turn:stored.turn || 0};
     migrateLegacy(progress,storage);
     let current=null,assisted=false,session=stored.session || null,lastSession=stored.lastSession || null;
     if (session && (!Array.isArray(session.ids) || session.ids.some(id=>!byId.has(id)) || session.index>=session.ids.length)) session=null;
@@ -42,13 +42,15 @@
     const direction=select('Practice direction',[['all','Both directions'],['words','Write in Maltese'],['digits','Write in digits']]);
     const difficulty=select('Practice difficulty',[['all','All levels'],['foundation','Foundation'],['intermediate','Intermediate'],['advanced','Advanced']]);
     const mistakes=el('input');mistakes.type='checkbox';
+    const adaptive=el('input');adaptive.type='checkbox';adaptive.checked=stored.adaptive!==false;
+    const adaptiveLabel=label('Adaptive review',adaptive);adaptiveLabel.className='numbers-checkbox';
     const legacyMode=storage.getJson('malti_numbers_time_drill_v1',{}).activeMode;
     topic.value=[...topic.options].some(o=>o.value===stored.topic)?stored.topic:legacyMode==='clock'?'clock':legacyMode==='numbers'?'core':'all';
     direction.value=['all','words','digits'].includes(stored.direction)?stored.direction:'all';
     difficulty.value=['all','foundation','intermediate','advanced'].includes(stored.difficulty)?stored.difficulty:'all';
     const filters=el('div',null,'numbers-practice-filters');
     const mistakeLabel=label('Mistakes only',mistakes);mistakeLabel.className='numbers-checkbox';
-    filters.append(label('Topic',topic),label('Direction',direction),label('Level',difficulty),mistakeLabel);
+    filters.append(label('Topic',topic),label('Direction',direction),label('Level',difficulty),mistakeLabel,adaptiveLabel);
     const length=select('Session length',[['5','5 questions'],['10','10 questions']]);
     const test=el('input');test.type='checkbox';const testLabel=label('Test mode',test);testLabel.className='numbers-checkbox';
     const sessionControls=el('div',null,'numbers-session-controls');
@@ -67,6 +69,7 @@
     const check=el('button','Check answer','action-button');check.type='submit';
     form.append(label('Your answer',input),check);
     const feedback=el('p',null,'numbers-feedback');feedback.setAttribute('role','status');
+    const contrast=el('div',null,'numbers-form-contrast');contrast.hidden=true;
     const next=button('Next',()=>{
       if (session) {
         if (!session.results.some(r=>r.id===current.id)) recordSession('skipped');
@@ -78,13 +81,13 @@
     const hint=button('Show hint',()=>{
       if (!current || inTest() || input.disabled) return;
       assisted=true;if(session&&!session.assistedIds.includes(current.id))session.assistedIds.push(current.id);
-      feedback.textContent=current.explanation;save();
+      feedback.textContent=current.hint || 'Consider the number, the unit and the noun before choosing a form.';save();
     });
     const reveal=button('Show answer',()=>{
       if (!current || input.disabled || inTest()) return;
       const prior=progress.results[current.id] || {attempts:0,correct:0};
       progress.results[current.id]={...prior,reveals:(prior.reveals || 0)+1,lastResult:'revealed'};
-      recordSession('revealed');feedback.textContent=current.answer+' — '+current.explanation;lock();save();updateStats();
+      schedule(false,true);recordSession('revealed');feedback.textContent=current.answer+' — '+current.explanation;showContrast();lock();save();updateStats();
     });
     const answerRow=()=>{
       const reversed=['integer','time'].includes(current.answerKind);
@@ -97,12 +100,14 @@
     });
     const copyAnswer=button('Copy answer',()=>{if(current&&!inTest())copy([answerRow()]);});
     const controls=el('div',null,'toolbar-row');controls.append(next,hint,reveal,saveAnswer,copyAnswer);
-    panel.append(prompt,visual,options,form,controls,feedback);
+    panel.append(prompt,visual,options,form,controls,feedback,contrast);
+    const mastery=el('details',null,'numbers-more');mastery.append(el('summary','Progress by topic'));
+    const masteryBody=el('div',null,'numbers-disclosure-body');mastery.append(masteryBody);
     const summary=el('div',null,'numbers-session-summary');summary.hidden=true;summary.setAttribute('aria-live','polite');
-    root.replaceChildren(filters,sessionControls,stats,sessionStatus,panel,summary);
+    root.replaceChildren(filters,sessionControls,stats,sessionStatus,panel,summary,mastery);
     function inTest(){return session?.mode==='test';}
     function save(){
-      Object.assign(progress,{topic:topic.value,direction:direction.value,difficulty:difficulty.value,session,lastSession});
+      Object.assign(progress,{topic:topic.value,direction:direction.value,difficulty:difficulty.value,adaptive:adaptive.checked,session,lastSession});
       storage.setJson(KEY,progress);
     }
     function pool(){return all.filter(q=>(topic.value==='all'||q.topic===topic.value)&&
@@ -117,6 +122,31 @@
       finish.hidden=!session;
       previousSummary.hidden=!lastSession||!!session;
       sessionStatus.textContent=session?`${session.mode==='test'?'Test':'Practice'} · Question ${session.index+1} of ${session.ids.length}`:'';
+      masteryBody.replaceChildren();
+      [...new Set(all.map(q=>q.topic))].forEach(t=>{
+        const qs=all.filter(q=>q.topic===t),rs=qs.map(q=>progress.results[q.id]).filter(Boolean);
+        const secure=rs.filter(r=>(r.streak||0)>=2).length;
+        const due=rs.filter(r=>r.dueAt && r.dueAt<=Date.now()).length;
+        masteryBody.append(el('p',`${titles[t]}: ${secure} / ${qs.length} secure · ${rs.filter(r=>r.attempts).length} attempted · ${due} due`));
+      });
+    }
+    function priority(q){
+      const r=progress.results[q.id];if(!adaptive.checked)return 1;
+      if(r?.dueAt && (r.dueAt<=Date.now() || r.dueTurn<=progress.turn))return 0;
+      if(!r?.attempts)return 1;
+      return 2;
+    }
+    function schedule(correct,helped){
+      const r=progress.results[current.id];progress.turn++;
+      r.streak=correct&&!helped?(r.streak||0)+1:0;
+      r.dueTurn=progress.turn+(r.streak?Math.min(40,6*2**(r.streak-1)):3);
+      r.dueAt=Date.now()+(r.streak?Math.min(30,2**(r.streak-1))*86400000:600000);
+    }
+    function showContrast(){
+      contrast.replaceChildren();contrast.hidden=!current?.contrast;
+      (current?.contrast||[]).forEach(row=>{
+        const p=el('p');p.append(el('span',row.label+': '),el('mark',row.form),document.createTextNode(row.noun?' '+row.noun:''));contrast.append(p);
+      });
     }
     function lock(){input.disabled=true;check.disabled=true;hint.disabled=true;reveal.disabled=true;options.querySelectorAll('button').forEach(b=>{b.disabled=true;});}
     function recordSession(outcome){
@@ -127,10 +157,10 @@
       const old=current?.id;
       if(session)current=byId.get(session.ids[session.index]);
       else{
-        const available=pool().sort((a,b)=>(progress.results[a.id]?.attempts||0)-(progress.results[b.id]?.attempts||0)||(progress.shownAt[a.id]||0)-(progress.shownAt[b.id]||0));
+        const available=pool().sort((a,b)=>priority(a)-priority(b)||(progress.results[a.id]?.attempts||0)-(progress.results[b.id]?.attempts||0)||(progress.shownAt[a.id]||0)-(progress.shownAt[b.id]||0));
         current=available.find(q=>q.id!==old)||available[0]||null;
       }
-      panel.hidden=false;summary.hidden=true;feedback.textContent='';feedback.dataset.state='';options.replaceChildren();visual.replaceChildren();input.value='';
+      panel.hidden=false;summary.hidden=true;contrast.hidden=true;feedback.textContent='';feedback.dataset.state='';options.replaceChildren();visual.replaceChildren();input.value='';
       assisted=!!session?.assistedIds.includes(current?.id);
       [input,check,next,hint,reveal,saveAnswer,copyAnswer].forEach(n=>{n.disabled=!current;});
       if(!current){prompt.textContent=mistakes.checked?'No mistakes in this selection.':'No questions in this selection.';updateStats();save();return;}
@@ -139,7 +169,7 @@
       current.options.forEach(text=>{const b=button(text,()=>{input.value=text;form.requestSubmit();});b.className='numbers-option';options.append(b);});
       [hint,reveal].forEach(n=>{n.hidden=!!inTest();});saveAnswer.disabled=copyAnswer.disabled=!!inTest();
       const saved=session?.results.find(r=>r.id===current.id);
-      if(saved){input.value=saved.given;lock();feedback.textContent=inTest()?'Answer recorded.':saved.outcome==='skipped'?'Skipped.':current.answer+' — '+current.explanation;}
+      if(saved){input.value=saved.given;lock();feedback.textContent=inTest()?'Answer recorded.':saved.outcome==='skipped'?'Skipped.':current.answer+' — '+current.explanation;if(!inTest())showContrast();}
       updateStats();save();
     }
     form.addEventListener('submit',event=>{
@@ -151,9 +181,11 @@
       progress.results[current.id]={...previous,attempts:previous.attempts+1,correct:previous.correct+(correct?1:0),
         independentCorrect:(previous.independentCorrect??previous.correct)+(correct&&!assisted?1:0),
         assistedCorrect:(previous.assistedCorrect||0)+(correct&&assisted?1:0),lastResult:correct?'correct':'incorrect'};
+      schedule(correct,assisted);
       recordSession(correct?(assisted?'assisted-correct':'independent-correct'):'incorrect');
       feedback.dataset.state=inTest()?'recorded':correct?'correct':'incorrect';
       feedback.textContent=inTest()?'Answer recorded.':(correct?'Correct. ':'Answer: '+current.answer+'. ')+current.explanation;
+      if(!inTest())showContrast();
       window.MaltiMistakeStore?.recordAttempt({id:'numbers-expanded::'+current.id,setId:'numbers-expanded',itemId:current.id,prompt:current.prompt,
         given:input.value,correctAnswer:current.answer,explanation:current.explanation,sourcePage:'numbers_calendar_time.html#'+(['core','noun-counting'].includes(current.topic)?'number-forms':current.topic==='clock'?'clock-time':current.topic==='dual-forms'?'group-counts':current.topic),
         topic:titles[current.topic],type:'fill-blank',category:'numbers-time'},correct);
@@ -161,7 +193,7 @@
     });
     function chooseSession(candidates,size){
       const groups=new Map();
-      candidates.sort((a,b)=>(progress.results[a.id]?.attempts||0)-(progress.results[b.id]?.attempts||0)||(progress.shownAt[a.id]||0)-(progress.shownAt[b.id]||0)).forEach(q=>{
+      candidates.sort((a,b)=>priority(a)-priority(b)||(progress.results[a.id]?.attempts||0)-(progress.results[b.id]?.attempts||0)||(progress.shownAt[a.id]||0)-(progress.shownAt[b.id]||0)).forEach(q=>{
         if(!groups.has(q.topic))groups.set(q.topic,[]);groups.get(q.topic).push(q.id);
       });
       const topics=[...groups.keys()];
@@ -203,9 +235,11 @@
       updateStats();
     }
     [topic,direction,difficulty,mistakes].forEach(control=>control.addEventListener('change',renderQuestion));
+    adaptive.addEventListener('change',()=>{save();if(!session)renderQuestion();});
     renderQuestion();
     return {getCurrent:()=>current?{...current}:null,getQuestions:()=>all.map(q=>({...q})),
       getSession:()=>session?structuredClone(session):null,getLastSession:()=>lastSession?structuredClone(lastSession):null,
+      startQuestions:ids=>{if(session){announce('Finish the current session before starting a situation.');return false;}const valid=[...new Set(ids)].filter(id=>byId.has(id));if(!valid.length)return false;startSession(valid);return true;},
       setTopic:value=>{if(session){announce('Finish the current session before changing topics.');return;}topic.value=value;direction.value='all';difficulty.value='all';mistakes.checked=false;renderQuestion();}};
   }
   window.MaltiNumbersPractice={mount,difficultyFor};

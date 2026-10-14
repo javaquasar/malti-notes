@@ -5,6 +5,7 @@
   "scripts": {
     "numbers:check": "node ./scripts/numbers_expansion_check.js",
     "numbers:sessions:check": "node ./scripts/numbers_sessions_check.js",
+    "numbers:tools:check": "node ./scripts/numbers_tools_check.js",
     "ci:workflow:check": "node ./scripts/ci_workflow_check.js",
     "cloud-sync:check": "node ./scripts/cloud_sync_check.js",
     "firebase:check": "node ./scripts/firebase_config_check.js",
