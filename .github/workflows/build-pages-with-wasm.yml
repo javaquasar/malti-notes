@@ -141,6 +141,12 @@ jobs:
           PLAYWRIGHT_USE_BUNDLED: "1"
         run: npm run numbers:style:check
 
+      - name: Check numbers learning progression
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+        run: npm run numbers:learning:check
+
       - name: Upload visual artifacts
         if: always()
         uses: actions/upload-artifact@v7
@@ -150,6 +156,7 @@ jobs:
             visual-regression/screenshots/
             visual-regression/diffs/
             tmp_numbers_sessions/shared-*
+            tmp_numbers_sessions/learning-*
           if-no-files-found: ignore
           retention-days: 7
 

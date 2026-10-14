@@ -320,11 +320,12 @@
     const data=await response.json();
     const legacyResponse=await fetch('./assets/data/numbers_time_drills.json');
     if (!legacyResponse.ok) throw new Error('Core drill data could not be loaded.');
-    const allQuestions=[...data.questions,...supplementalQuestions(data),...legacyQuestions(await legacyResponse.json()),...nounQuestions(data),...window.MaltiNumbersTools.formQuestions(data)];
+    const allQuestions=[...data.questions,...supplementalQuestions(data),...legacyQuestions(await legacyResponse.json()),...nounQuestions(data),...window.MaltiNumbersTools.formQuestions(data),...window.MaltiNumbersTools.contextQuestions(data)];
     titles['form-choice']='Choose a Number Form';
     practiceController=window.MaltiNumbersPractice.mount({root:practiceRoot,questions:allQuestions,titles,copy,announce,fractionPicture});
-    window.MaltiNumbersTools.mount({data,questions:allQuestions,controller:practiceController,copy,announce});
     document.querySelectorAll('[data-numbers-section]').forEach(root=>renderReference(root,root.dataset.numbersSection,data.sections[root.dataset.numbersSection],data.questions));
+    const views=window.MaltiNumbersLearning.mountViews(practiceController);practiceController.navigateTo=views.showSection;
+    window.MaltiNumbersTools.mount({data,questions:allQuestions,controller:practiceController,copy,announce});
     const editorial=document.querySelector('[data-numbers-editorial]');
     editorial.append(el('p',`${data.materials.length} source materials · ${data.coverage.length} mapped learning items. Teaching versions are separated from original wording.`));
     data.references.forEach(ref=>{ const p=el('p'); const link=el('a',ref.title); link.href=ref.url; p.append(link); editorial.append(p); });
@@ -341,7 +342,7 @@
     const download=el('a','Download original source evidence (JSON)'); download.href=data.sourceEvidenceUrl; download.download='numbers-source-evidence.json'; details.append(download);
     const coverage=el('p'); const coverageLink=el('a','Download teaching data and coverage (JSON)'); coverageLink.href='./assets/data/numbers_expansion.json'; coverageLink.download='numbers_expansion.json'; coverage.append(coverageLink); details.append(coverage);
     editorial.append(details);
-    window.MaltiNumbersExpansion={...practiceController,copyText,version:2};
+    window.MaltiNumbersExpansion={...practiceController,copyText,version:3};
     document.documentElement.dataset.numbersExpansionReady='true';
   }
   load().catch(error=>{

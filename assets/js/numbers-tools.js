@@ -15,10 +15,33 @@
         english:i===0?String(r.value):`${r.value} ${i===1?'books':'children'}`}));
     });
   }
+  function contextQuestions(data){
+    return data.sections.measurements.filter(row=>row.subtopic==='Money'&&row.value!=null).map(row=>({
+      id:'context-price-'+row.id,topic:'measurements',prompt:row.english,answer:row.maltese,accepted:[row.maltese],options:[],english:row.english,
+      explanation:'Read the amount in euros and cents, rather than treating the decimal as an ordinary whole number.',sourceRefs:row.sourceRefs
+    }));
+  }
   function mount({data,questions,controller,copy,announce}){
     const storage=window.MaltiStorage;
     const written=questions.filter(q=>!['integer','time'].includes(q.answerKind));
     const root=name=>document.querySelector(`[data-number-${name}]`);
+    const comparisons=root('comparisons');
+    const compareNumber=select('Number for comparison',data.sections['number-forms'].filter(r=>r.kind==='forms').map(r=>[String(r.value),String(r.value)]));compareNumber.value='3';
+    const comparisonBody=el('div');let comparisonIds=[];
+    function drawComparison(){
+      const n=compareNumber.value;
+      const candidates=[['Standalone',questions.find(q=>q.id===`core-${n}-words`)],['Books',questions.find(q=>q.id===`noun-${n}-books`)],['Children',questions.find(q=>q.id===`noun-${n}-children`)],['Clock time',questions.find(q=>q.id===`clock-${n}:00-words`)]];
+      data.sections.measurements.filter(r=>r.subtopic==='Money'&&Math.floor(Number(r.value))===Number(n)).forEach(r=>candidates.push(['Price',questions.find(q=>q.id==='context-price-'+r.id)]));
+      const table=el('table',null,'table-soft');table.append(el('caption',`Number ${n} in different contexts`));
+      const head=el('tr');['Context','Value','Maltese'].forEach(text=>{const th=el('th',text);th.scope='col';head.append(th);});const thead=el('thead');thead.append(head);table.append(thead);const body=el('tbody');comparisonIds=[];
+      candidates.forEach(([name,q])=>{if(!q)return;comparisonIds.push(q.id);const tr=el('tr');tr.append(el('td',name),el('td',q.english||q.prompt),el('td',q.answer));tr.lastChild.lang='mt';body.append(tr);});table.append(body);comparisonBody.replaceChildren(table);
+    }
+    const weakNumber=button('Use a weak number',()=>{
+      const results=controller.getResults(),weak=questions.find(q=>['incorrect','revealed'].includes(results[q.id]?.lastResult)&&Number(q.value||q.prompt)>=2&&Number(q.value||q.prompt)<=10);
+      if(!weak){announce('No weak number from 2 to 10 yet.');return;}compareNumber.value=String(weak.value||weak.prompt);drawComparison();
+    });
+    const comparisonActions=el('div',null,'control-row control-row--responsive');comparisonActions.append(label('Number',compareNumber),weakNumber,button('Practise these contexts',()=>{if(controller.startQuestions(comparisonIds))controller.navigateTo('numbers-practice');}));
+    compareNumber.addEventListener('change',drawComparison);comparisons.append(comparisonActions,comparisonBody);drawComparison();
     const explorer=root('explorer');
     const entries=Object.entries(data.sections).flatMap(([topic,rows])=>rows.filter(r=>r.value!=null&&r.maltese&&!['forms','rule','source-exercise','forecast'].includes(r.kind)).map(r=>({...r,topic})));
     questions.filter(q=>q.topic==='core'&&q.id.endsWith('-words')).forEach(q=>entries.push({value:q.prompt,maltese:q.answer,english:q.prompt,topic:'core'}));
@@ -60,29 +83,59 @@
       const q=written.find(test);if(q){scenarioIds.push(q.id);itinerary.append(el('li',`${name}: ${q.prompt}`));}
     });}
     situation.addEventListener('change',drawSituation);
-    const situationActions=el('div',null,'numbers-tool-controls control-row control-row--responsive no-print');situationActions.append(label('Situation',situation),button('Start situation',()=>{if(controller.startQuestions(scenarioIds))document.querySelector('#numbers-practice').scrollIntoView({behavior:'smooth'});}));
+    const situationActions=el('div',null,'numbers-tool-controls control-row control-row--responsive no-print');situationActions.append(label('Situation',situation),button('Start situation',()=>{if(controller.startQuestions(scenarioIds))controller.navigateTo('numbers-practice');}));
     situationsRoot.append(situationActions,itinerary);drawSituation();
 
     const speaking=root('speaking'),speakingKey='malti_numbers_speaking_v1';
     const speechState=storage.getJson(speakingKey,{ratings:{},index:0});
     const speechTopic=select('Speaking topic',[['all','All topics'],...['core','noun-counting','clock','fractions','measurements'].map(t=>[t,t==='core'?'Numbers':t==='noun-counting'?'Number + noun':t[0].toUpperCase()+t.slice(1)])]);
     const repeatSpeaking=el('input');repeatSpeaking.type='checkbox';
+    const speechSource=select('Speaking source',[['all','All checked prompts'],['written','Written mistakes'],['stages','Learning stages']]);
+    if(['all','written','stages'].includes(speechState.source))speechSource.value=speechState.source;
     if([...speechTopic.options].some(o=>o.value===speechState.topic))speechTopic.value=speechState.topic;
     repeatSpeaking.checked=!!speechState.repeatOnly;
-    const speechPrompt=el('p',null,'numbers-question study-question'),speechAnswer=el('div'),speechStats=el('p');speechAnswer.hidden=true;let speechCurrent=null;
-    const speechPool=()=>written.filter(q=>(speechTopic.value==='all'||q.topic===speechTopic.value)&&!q.id.startsWith('form-choice')&&(!repeatSpeaking.checked||speechState.ratings[q.id]?.rating==='again'));
+    const speechPrompt=el('p',null,'numbers-question study-question'),speechAnswer=el('div'),speechStats=el('p'),speechStage=el('p',null,'muted');speechAnswer.hidden=true;let speechCurrent=null,speechForced=null;
+    const speechPool=()=>{const results=controller.getResults();return written.filter(q=>(speechTopic.value==='all'||q.topic===speechTopic.value)&&(!q.id.startsWith('form-choice')||speechSource.value!=='all')&&(!repeatSpeaking.checked||speechState.ratings[q.id]?.rating==='again')&&
+      (speechSource.value==='all'||speechSource.value==='written'&&[q.id,q.id.replace(/-words$/,'-digits')].some(id=>['incorrect','revealed'].includes(results[id]?.lastResult))||speechSource.value==='stages'&&[q.id,q.id.replace(/-words$/,'-digits')].some(id=>results[id]?.attempts)));};
     function drawSpeech(){
-      const pool=speechPool();speechCurrent=pool[(speechState.index||0)%pool.length];speechPrompt.textContent=speechCurrent?.prompt||'No speaking prompts to repeat in this selection.';speechAnswer.replaceChildren(el('p',speechCurrent?.answer));speechAnswer.hidden=true;
+      if(controller.getSession()?.mode==='test'){
+        speechCurrent=null;speechPrompt.textContent='Finish the current test before spoken review.';speechAnswer.replaceChildren();speechAnswer.hidden=true;speechStage.textContent='';ratingButtons.forEach(b=>b.disabled=true);reveal.disabled=true;return;
+      }
+      const pool=speechPool();speechCurrent=speechForced||pool[(speechState.index||0)%pool.length];speechPrompt.textContent=speechCurrent?.prompt||'No speaking prompts to repeat in this selection.';speechAnswer.replaceChildren(el('p',speechCurrent?.answer));speechAnswer.hidden=true;
+      speechStage.textContent=speechCurrent?`Written learning stage: ${controller.getLearningStage(speechCurrent.id).stage}. Spoken recall is self-assessed.`:'';
       ratingButtons.forEach(b=>b.disabled=true);reveal.disabled=!speechCurrent;
       const ratings=Object.values(speechState.ratings);speechStats.textContent=`${ratings.filter(r=>r.rating==='confident').length} confident · ${ratings.filter(r=>r.rating==='again').length} to repeat · Self-assessed, not pronunciation scored`;
     }
     const reveal=button('Reveal spoken answer',()=>{speechAnswer.hidden=false;ratingButtons.forEach(b=>b.disabled=false);});
     const rate=rating=>{if(!speechCurrent)return;speechState.ratings[speechCurrent.id]={rating,at:Date.now()};storage.setJson(speakingKey,speechState);advanceSpeech();};
     const ratingButtons=[button('Confident',()=>rate('confident')),button('Practise again',()=>rate('again'))];
-    function advanceSpeech(){speechState.index=(speechState.index||0)+1;storage.setJson(speakingKey,speechState);drawSpeech();}
+    function advanceSpeech(){speechForced=null;speechState.index=(speechState.index||0)+1;storage.setJson(speakingKey,speechState);drawSpeech();}
     const speechActions=el('div',null,'toolbar-row');speechActions.append(reveal,...ratingButtons,button('Next speaking prompt',advanceSpeech));
-    [speechTopic,repeatSpeaking].forEach(n=>n.addEventListener('change',()=>{speechState.index=0;speechState.topic=speechTopic.value;speechState.repeatOnly=repeatSpeaking.checked;storage.setJson(speakingKey,speechState);drawSpeech();}));
-    speaking.append(label('Topic',speechTopic),label('Repeat speaking mistakes only',repeatSpeaking),speechPrompt,speechAnswer,speechActions,speechStats);drawSpeech();
+    [speechTopic,speechSource,repeatSpeaking].forEach(n=>n.addEventListener('change',()=>{speechForced=null;speechState.index=0;speechState.topic=speechTopic.value;speechState.source=speechSource.value;speechState.repeatOnly=repeatSpeaking.checked;storage.setJson(speakingKey,speechState);drawSpeech();}));
+    speaking.append(label('Topic',speechTopic),label('Source',speechSource),label('Repeat speaking mistakes only',repeatSpeaking),speechStage,speechPrompt,speechAnswer,speechActions,speechStats);drawSpeech();
+    function openSpeaking(id){
+      speechForced=written.find(q=>q.id===id)||written.find(q=>q.id===id.replace(/-digits$/,'-words'));
+      if(!speechForced){announce('No checked spoken prompt for this item.');return;}
+      drawSpeech();controller.navigateTo('number-speaking');
+    }
+    const mistakesRoot=root('mistakes');
+    function drawMistakes(){
+      mistakesRoot.replaceChildren();
+      if(controller.getSession()?.mode==='test'){mistakesRoot.append(el('p','Finish the current test before reviewing its answers.'));return;}
+      const results=controller.getResults(),failed=questions.filter(q=>['incorrect','revealed'].includes(results[q.id]?.lastResult));
+      mistakesRoot.append(el('p',`${failed.length} items to review`));
+      if(!failed.length){mistakesRoot.append(el('p','No written mistakes to review yet.'));return;}
+      const retry=button('Practise all mistakes',()=>{if(controller.startQuestions(failed.map(q=>q.id)))controller.navigateTo('numbers-practice');});mistakesRoot.append(retry);
+      failed.forEach(q=>{
+        const details=el('details',null,'study-disclosure study-card');details.append(el('summary',q.prompt));
+        const body=el('div',null,'study-contrast');
+        if(results[q.id].lastGiven)window.MaltiNumbersLearning.renderDiagnosis(body,q,results[q.id].lastGiven);
+        else body.append(el('p','Checked answer: '+q.answer));
+        const actions=el('div',null,'toolbar-row');actions.append(button('Practise writing',()=>{if(controller.startQuestions([q.id],{answerMode:'write'}))controller.navigateTo('numbers-practice');}),button('Practise speaking',()=>openSpeaking(q.id)));
+        details.append(body,actions);mistakesRoot.append(details);
+      });
+    }
+    window.addEventListener('malti-numbers-progress',()=>{drawMistakes();drawSpeech();});drawMistakes();
 
     const worksheet=root('worksheet');
     const sheetTopic=select('Worksheet topic',[['all','All topics'],...[...new Set(written.map(q=>q.topic))].map(t=>[t,t==='form-choice'?'Choose a Number Form':t.replace(/-/g,' ')])]);
@@ -108,5 +161,5 @@
     [sheetTopic,count].forEach(n=>n.addEventListener('change',buildSheet));[answers,translations].forEach(n=>n.addEventListener('change',renderSheet));
     worksheet.append(sheetControls,sheetActions,preview);buildSheet();
   }
-  window.MaltiNumbersTools={mount,formQuestions};
+  window.MaltiNumbersTools={mount,formQuestions,contextQuestions};
 })();

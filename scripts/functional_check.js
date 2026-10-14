@@ -1714,6 +1714,11 @@ async function main() {
     await runTest(context, "shared vocabulary bookmarks toggle the review collection", async (page) => {
       for (const pageName of vocabularyCardPages) {
         await openCleanPage(page, pageName);
+        if (pageName === "numbers_calendar_time.html") {
+          await page.waitForFunction(() => window.MaltiNumbersExpansion);
+          await page.getByRole("group", { name: "Numbers page view", exact: true }).getByRole("button", { name: "Reference", exact: true }).click();
+          await page.getByLabel("Reference topic", { exact: true }).selectOption("all");
+        }
         const buttons = page.locator(".review-add-button");
         await buttons.first().waitFor();
         const counts = await page.evaluate(() => ({

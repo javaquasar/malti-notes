@@ -30,6 +30,7 @@ async function main(){
     await page.reload();await page.waitForFunction(()=>window.MaltiNumbersExpansion);
     assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('malti_numbers_extended_v1')).results[id].assistedCorrect,failed.id),1);
     const explorer=page.locator('[data-number-explorer]');
+    await page.evaluate(()=>window.MaltiNumbersExpansion.navigateTo('number-explorer'));
     await explorer.getByLabel('Number or quantity',{exact:true}).fill('123655');await explorer.getByRole('button',{name:'Explore',exact:true}).click();
     assert.match(await explorer.textContent(),/123,655 = 123000 \+ 600 \+ 55/);assert.match(await explorer.locator('.numbers-breakdown').textContent(),/Thousands.*elf.*Remainder/s);
     for(const [category,value,pattern] of [['fractions','3/4',/tliet kwarti/],['Volume','9.60',/sitta żero/],['Money','3.5',/ewro/]]){
@@ -37,6 +38,7 @@ async function main(){
     }
     await explorer.getByLabel('Number or quantity',{exact:true}).fill('not a number');await explorer.getByRole('button',{name:'Explore',exact:true}).click();assert.match(await explorer.textContent(),/No checked example/);
     const situations=page.locator('[data-number-situations]');
+    await page.evaluate(()=>window.MaltiNumbersExpansion.navigateTo('number-situations'));
     for(const id of ['shopping','meeting','measuring','dates']){
       await situations.getByLabel('Situation',{exact:true}).selectOption(id);assert((await situations.locator('li').count())>=2);
       await situations.getByRole('button',{name:'Start situation',exact:true}).click();
@@ -71,6 +73,7 @@ async function main(){
     for(const width of [1440,390,320]){
       await page.setViewportSize({width,height:1000});
       for(const id of ['number-explorer','number-situations','number-speaking','number-worksheet','numbers-practice']){
+        await page.evaluate(id=>window.MaltiNumbersExpansion.navigateTo(id),id);
         await page.locator('#'+id).scrollIntoViewIfNeeded();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${id} overflow at ${width}`);
         await page.screenshot({path:path.join(output,`tools-${width}-${id}.png`)});
       }

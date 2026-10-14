@@ -51,6 +51,7 @@ answers, persist progress, copy text or implement drag-and-drop.
 | `toolbar-row` | Wrapping row of actions | Commands such as Check, Next and Copy. |
 | `control-row` | Wrapping controls aligned at the bottom | Labels, fields, checkboxes and commands in one form. |
 | `control-row control-row--responsive` | Control group that becomes one column at 600px and below | Filters and forms that need full-width mobile fields. |
+| `segmented-toggle` with `toggle-chip` buttons | A compact choice between modes | Set `aria-pressed` on exactly one active button; the owning controller implements switching and persistence. |
 | `content-group`, `open-group`, `example-bank-section` | Existing framed group contracts | Use when the content genuinely needs a group boundary; the word "open" does not mean unframed. |
 
 Prefer an unframed layout for arranging repeated cards. Do not introduce another
@@ -297,6 +298,7 @@ control styles into new work.
 | `npm run numbers:check` | Numbers content coverage, builders, review, copying and progress preservation. |
 | `npm run numbers:sessions:check` | Session resume, scoring, hints and builder interactions. |
 | `npm run numbers:tools:check` | Contextual practice, adaptive return, speaking isolation and worksheet behavior. |
+| `npm run numbers:learning:check` | Targeted feedback, guided recall stages, compact views, contextual comparisons and mistake-linked speaking; starts its own server unless `NUMBERS_TEST_URL` is set. |
 
 The three numbers behavior checks use a running local server at port 4190, or
 `NUMBERS_TEST_URL`. The shared-style check starts its own temporary server.

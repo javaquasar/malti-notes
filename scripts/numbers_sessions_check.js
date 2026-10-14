@@ -73,6 +73,7 @@ async function main(){
     for(const width of [1440,390,320]){
       await page.setViewportSize({width,height:900});
       for(const anchor of ['measurements','number-builder','numbers-practice']){
+        await page.evaluate(id=>window.MaltiNumbersExpansion.navigateTo(id),anchor);
         await page.locator('#'+anchor).scrollIntoViewIfNeeded();
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${anchor} overflows at ${width}`);
         await page.screenshot({path:path.join(output,`${width}-${anchor}.png`)});

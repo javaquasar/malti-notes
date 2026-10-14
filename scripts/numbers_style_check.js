@@ -41,6 +41,7 @@ async function main(){
         assert(await catalog.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${theme}/${width} catalog overflow`);
         const heights=await page.locator('#number-builder .study-token').evaluateAll(ns=>ns.map(n=>n.getBoundingClientRect().height));assert(heights.every(h=>h===48));
         for(const id of ['number-explorer','numbers-practice','number-builder','number-worksheet']){
+          await page.evaluate(id=>window.MaltiNumbersExpansion.navigateTo(id),id);
           const target=page.locator('#'+id);await target.scrollIntoViewIfNeeded();await target.screenshot({path:path.join(output,`shared-${theme}-${width}-${id}.png`)});
         }
         if(width!==320){

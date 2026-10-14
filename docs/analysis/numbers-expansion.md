@@ -12,7 +12,7 @@ Nine reference groups cover number forms, hundreds/thousands, word building, dua
 forms, fractions, measurements/money, temperatures, decades and time expressions.
 The page includes 156 reference entries and 77 source-derived exercise questions.
 The expanded runtime pool adds contextual reading/reverse-reading and existing
-core/clock patterns, 63 number/noun combinations and 27 form-choice tasks for 682 questions. Exact repeated lexical pairs are merged;
+core/clock patterns, 63 number/noun combinations, 27 form-choice tasks and two source-backed price contexts for 684 questions. Exact repeated lexical pairs are merged;
 all their original source references remain attached.
 
 ## Import and Provenance
@@ -162,3 +162,44 @@ Run `npm run numbers:style:check` for cross-theme contract equality, token-chang
 propagation, accessibility, mobile layouts, worksheet PDF generation and progress
 preservation. Artifacts are saved to ignored `tmp_numbers_sessions/`. Catalog
 variants have independent Windows/Linux visual baselines.
+
+## Guided Recall and Compact Views
+
+`numbers-learning.js` diagnoses common answer differences using checked accepted
+answers: missing linking u, word order, counted-number forms, past/to clock
+direction, units, place-value groups and diacritics. A common prefix/suffix
+comparison highlights the changed fragment without injecting answer HTML. A
+generic comparison is used when a more specific diagnosis is not supported.
+The last answer and diagnostic category are stored with the existing result;
+the mistake journal receives the targeted explanation. Test mode does not show
+diagnoses, comparisons or answers until completion.
+
+Answer mode defaults to independent writing for backward compatibility. Guided
+progression tracks Choose, Build and Write per existing question ID. Two answers
+without a hint/reveal advance each supported stage. Incorrect or assisted answers
+reset that stage's streak. Recognition and word-building successes are counted
+as supported, not independent writing, and do not advance writing mastery.
+Copying/saving an unanswered answer counts as assistance. Existing independently
+mastered items are not downgraded when guided practice is opened. Stage/session
+data stays inside `malti_numbers_extended_v1` and the existing backup contract.
+
+The shared segmented controls switch Reference, Practice and My mistakes. The
+reference-topic selector shows one section on demand, with an explicit All
+reference sections option. View and topic persist. Existing section hashes and
+search targets select the correct view automatically. The full reference hero
+is reserved for Reference; practice and mistakes use a compact page heading.
+Chapter-scoped course rendering retains its existing navigation ownership.
+
+Context comparison reuses standalone numbers, counted books/children, checked
+clock forms and matching source prices. Two price questions are derived directly
+from existing Money entries, not a general currency-word generator. Mistakes can
+start a targeted writing session or open a checked spoken prompt. Speaking can
+filter by written mistakes or attempted learning items and displays the written
+stage. Oral ratings stay in `malti_numbers_speaking_v1`: no microphone, recording,
+speech synthesis or pronunciation scoring is introduced.
+
+Run `npm run numbers:learning:check` for error types, preserved views and deep
+links, guided progression/resume, keyboard word return, cross-context examples,
+mistake-linked speaking, test secrecy and mobile layouts. It starts a temporary
+server by default or uses `NUMBERS_TEST_URL`; CI runs it alongside shared-style
+checks. Screenshots use the ignored `tmp_numbers_sessions/learning-*` paths.

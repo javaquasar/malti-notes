@@ -82,6 +82,7 @@ async function main() {
     assert.equal(oldReview.box,4); assert.equal(oldReview.reviewCount,8);
 
     const example=page.locator('#fractions .numbers-reference-row').first();
+    await page.evaluate(()=>window.MaltiNumbersExpansion.navigateTo('fractions'));
     await example.locator('.numbers-review-button').click();
     assert.equal(await example.locator('.numbers-review-button').getAttribute('aria-pressed'),'true');
     await page.reload(); await page.waitForFunction(()=>window.MaltiNumbersExpansion);
@@ -107,6 +108,7 @@ async function main() {
     assert.deepEqual(backupResult,{progress:true,copy:true});
 
     const builder=page.locator('#number-builder');
+    await page.evaluate(()=>window.MaltiNumbersExpansion.navigateTo('number-builder'));
     for(let n=0;n<2;n++) {
       await builder.getByLabel('Number to build').selectOption(String(n));
       const expected=data.sections['number-builder'][n].maltese.replace(/,/g,'');
@@ -136,7 +138,7 @@ async function main() {
       assert(tileHeights.length>0 && tileHeights.every(height=>Math.abs(height-48)<1),`Candidate and selected tile heights differ at ${width}px`);
       const drillSpacing=await page.locator('[data-numbers-practice]').evaluate(root=>{
         const input=root.querySelector('.numbers-answer-form input').getBoundingClientRect();
-        const actions=root.querySelector('.numbers-practice-panel .toolbar-row').getBoundingClientRect();
+        const actions=root.querySelector('[data-number-practice-actions]').getBoundingClientRect();
         return {form:actions.top-input.bottom};
       });
       assert(drillSpacing.form>=12,`Drill answer controls touch at ${width}px`);
@@ -148,6 +150,7 @@ async function main() {
       assert(Math.max(...positions.map(p=>p.x))-Math.min(...positions.map(p=>p.x))<1,`Bookmark column is misaligned at ${width}px`);
       assert(positions.every(p=>p.offset<1),`Bookmarks are not vertically centred at ${width}px`);
       for(const anchor of ['number-forms','fractions','number-builder','numbers-practice']) {
+        await page.evaluate(id=>window.MaltiNumbersExpansion.navigateTo(id),anchor);
         await page.locator('#'+anchor).scrollIntoViewIfNeeded();
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Overflow: ${width} ${anchor}`);
         const style=await page.locator('#'+anchor).evaluate(node=>({radius:parseFloat(getComputedStyle(node).borderRadius),background:getComputedStyle(node).backgroundColor}));
@@ -159,6 +162,7 @@ async function main() {
     assert.deepEqual(errors,[]);
     const search=JSON.parse(fs.readFileSync(path.join(root,'assets/data/search-index.json'),'utf8'));
     assert(search.entries.some(e=>e.href==='numbers_calendar_time.html#group-counts' && e.title==='xkertejn'));
+    await page.evaluate(async()=>{await Promise.all(Array.from(document.images).map(img=>{img.loading='eager';return img.decode().catch(()=>{});}));});
     const broken=await page.evaluate(()=>Array.from(document.images).filter(img=>!img.complete || !img.naturalWidth).map(img=>img.src));
     assert.deepEqual(broken,[]);
     const unified=await page.evaluate(()=>{
@@ -173,8 +177,9 @@ async function main() {
     for(const style of [...unified.cards,...unified.disclosures]) assert.deepEqual(style,unified.baseline,'New examples and disclosures must share the standard study-card surface.');
     for(const width of [1440,390,320]) {
       await page.setViewportSize({width,height:900});
+      await page.evaluate(()=>window.MaltiNumbersExpansion.navigateTo('number-forms'));
       await page.locator('.numbers-more').evaluateAll(groups=>groups.forEach(group=>{group.open=true;}));
-      const nesting=await page.locator('.numbers-disclosure-body').evaluateAll(bodies=>bodies.map(body=>{
+      const nesting=await page.locator('.numbers-disclosure-body').evaluateAll(bodies=>bodies.filter(body=>body.getClientRects().length).map(body=>{
         const header=body.parentElement.querySelector('summary').getBoundingClientRect();
         const child=body.firstElementChild.getBoundingClientRect();
         const style=getComputedStyle(body);
