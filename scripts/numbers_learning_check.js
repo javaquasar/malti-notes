@@ -3,6 +3,21 @@ const fs=require('node:fs');
 const path=require('node:path');
 const http=require('node:http');
 const {chromium}=require('playwright');
+const helper=require('../assets/js/numbers-helper');
+const helperCases=new Map([
+  [0,'żero'],[1,'wieħed'],[13,'tlettax'],[19,'dsatax'],[23,'tlieta u għoxrin'],
+  [100,'mija'],[101,'mija u wieħed'],[200,'mitejn'],[999,"disa' mija u disgħa u disgħin"],
+  [1000,'elf'],[2000,'elfejn'],[3000,'tlitt elef'],[10000,'għaxart elef'],[11000,'ħdax-il elf'],
+  [100000,'mitt elf'],[200000,'mitejn elf'],[300000,'tliet mitt elf'],[101000,'mija u wieħed elf'],
+  [102000,'mija u żewġ elf'],[123655,'mija u tlieta u għoxrin elf u sitt mija u ħamsa u ħamsin'],
+  [1000000,'miljun'],[2000000,'żewġ miljuni'],[10000000,'għaxar miljuni'],[11000000,'ħdax-il miljun'],
+  [100000000,'mitt miljun'],[999999999,"disa' mija u disgħa u disgħin miljun u disa' mija u disgħa u disgħin elf u disa' mija u disgħa u disgħin"]
+]);
+for(const [n,expected] of helperCases)assert.equal(helper.toWords(n),expected,String(n));
+for(const n of [-1,1.5,1000000000,NaN,Infinity,'123'])assert.throws(()=>helper.toWords(n),RangeError);
+for(const text of ['', '-1','1.5','1e3','12,34','1 23','1,000 000','1,000,000,000','abc'])assert.equal(helper.parse(text),null,text);
+for(const text of ['999999999','999,999,999','999 999 999','999\u00a0999\u00a0999',' 0999999999 '])assert.equal(helper.parse(text),999999999,text);
+for(let n=0;n<1000000;n+=97)assert(!/undefined|NaN|  /.test(helper.toWords(n)),String(n));
 async function main(){
   const root=path.resolve(__dirname,'..');let server;
   let base=process.env.NUMBERS_TEST_URL;
@@ -20,6 +35,19 @@ async function main(){
     await page.goto(base+'/numbers_calendar_time.html');await page.waitForFunction(()=>window.MaltiNumbersExpansion);
     const practice=page.locator('[data-numbers-practice]'),current=()=>page.evaluate(()=>window.MaltiNumbersExpansion.getCurrent());
     const navigate=id=>page.evaluate(id=>window.MaltiNumbersExpansion.navigateTo(id),id);
+    const unchanged=await page.evaluate(()=>localStorage.getItem('malti_numbers_extended_v1'));
+    await navigate('number-helper');
+    const helperRoot=page.locator('[data-number-helper]'),helperInput=helperRoot.getByLabel('Whole number'),helperOutput=helperRoot.locator('output');
+    for(const [n,expected] of helperCases){await helperInput.fill(n.toLocaleString('en-GB'));assert.equal(await helperOutput.textContent(),expected);}
+    await helperInput.fill('1.5');assert.equal(await helperInput.getAttribute('aria-invalid'),'true');assert.equal(await helperOutput.textContent(),'');assert(await helperRoot.getByRole('button').isDisabled());
+    await helperInput.fill('');assert.equal(await helperRoot.locator('[data-helper-error]').textContent(),'');
+    await helperInput.fill('2 000');await helperInput.press('Enter');assert.equal(await helperOutput.textContent(),'elfejn');
+    await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.helperCopied=text;}}});});
+    await helperRoot.getByRole('button',{name:'Copy Maltese'}).click();assert.equal(await page.evaluate(()=>window.helperCopied),'elfejn');
+    assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('malti_numbers_extended_v1')).results),JSON.parse(unchanged).results);
+    await helperInput.fill('999999999');
+    await navigate('numbers');
+    await navigate('numbers-practice');
     const start=id=>page.evaluate(id=>window.MaltiNumbersExpansion.startQuestions([id]),id);
     const next=()=>practice.getByRole('button',{name:'Next',exact:true}).click();
     const submit=async answer=>{await practice.getByLabel('Your answer',{exact:true}).fill(answer);await practice.getByRole('button',{name:'Check answer',exact:true}).click();};
@@ -85,11 +113,13 @@ async function main(){
     const output=path.resolve(__dirname,'../tmp_numbers_sessions');fs.mkdirSync(output,{recursive:true});
     for(const width of [1440,390,320]){
       await page.setViewportSize({width,height:1000});
-      for(const section of ['numbers','numbers-practice','numbers-mistakes','number-comparisons','number-speaking']){
-        await navigate(section);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${section} overflow at ${width}`);await page.waitForTimeout(200);await page.screenshot({path:path.join(output,`learning-${width}-${section}.png`)});
+      for(const section of ['numbers','numbers-practice','numbers-mistakes','number-comparisons','number-speaking','number-helper']){
+        await navigate(section);
+        if(section==='number-helper')await helperInput.fill('999999999');
+        assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${section} overflow at ${width}`);await page.waitForTimeout(200);await page.screenshot({path:path.join(output,`learning-${width}-${section}.png`)});
       }
     }
-    assert.deepEqual(errors,[]);console.log('PASS: targeted diagnoses, persisted page modes/deep links, guided choose/build/write with independent advancement, keyboard token return, contextual comparisons, mistake-linked speaking, test secrecy and mobile layouts.');
+    assert.deepEqual(errors,[]);console.log('PASS: whole-number helper boundaries/input/copy, targeted diagnoses, persisted page modes/deep links, guided choose/build/write with independent advancement, keyboard token return, contextual comparisons, mistake-linked speaking, test secrecy and mobile layouts.');
   }finally{if(browser)await browser.close();if(server)await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

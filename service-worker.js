@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}f9778c2289f3`;
+const CACHE_NAME = `${CACHE_PREFIX}f1acf0266c66`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -104,6 +104,7 @@ const CORE_ASSETS = [
     "./assets/js/mistake-store.js",
     "./assets/js/mistakes.js",
     "./assets/js/numbers-expansion.js",
+    "./assets/js/numbers-helper.js",
     "./assets/js/numbers-learning.js",
     "./assets/js/numbers-practice.js",
     "./assets/js/numbers-time-drill.js",

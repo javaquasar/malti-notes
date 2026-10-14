@@ -54,6 +54,7 @@
                 <li><a href="#numbers-21-99">Numbers 21-99</a></li>
                 <li><a href="#number-forms">Number Forms</a></li>
                 <li><a href="#large-numbers">Hundreds and Thousands</a></li>
+                <li><a href="#number-helper">Number Helper</a></li>
                 <li><a href="#number-builder">Build a Number</a></li>
                 <li><a href="#ordinals">Ordinal Numbers</a></li>
                 <li class="numbers-nav-heading">Quantities</li>
@@ -169,6 +170,17 @@
 
             <section class="content-card" id="number-forms" data-numbers-section="number-forms"><h2>Number Forms</h2></section>
             <section class="content-card" id="large-numbers" data-numbers-section="large-numbers"><h2>Hundreds and Thousands</h2></section>
+            <section class="content-card" id="number-helper">
+                <h2>Number Helper</h2>
+                <form class="stack" data-number-helper>
+                    <label class="study-field" for="number-helper-input">Whole number (0–999,999,999)
+                        <input class="study-input" id="number-helper-input" type="text" inputmode="numeric" autocomplete="off" maxlength="32" aria-describedby="number-helper-status" value="123655">
+                    </label>
+                    <output class="study-question" for="number-helper-input" lang="mt" aria-label="Number in Maltese" aria-live="polite"></output>
+                    <div class="toolbar-row"><button class="action-button" type="button" disabled>Copy Maltese</button></div>
+                    <p class="study-feedback" id="number-helper-status" role="status" data-helper-error></p>
+                </form>
+            </section>
             <section class="content-card" id="number-builder" data-numbers-section="number-builder"><h2>Build a Number</h2></section>
             <section class="content-card" id="ordinals">
                 <span class="tag">Ordinal Numbers</span>
@@ -542,6 +554,7 @@
     <script src="./assets/js/numbers-learning.js"></script>
     <script src="./assets/js/numbers-practice.js"></script>
     <script src="./assets/js/numbers-tools.js"></script>
+    <script src="./assets/js/numbers-helper.js"></script>
     <script src="./assets/js/numbers-expansion.js"></script>
     <script src="./assets/js/site-header.js"></script>
 <script src="./assets/js/lesson01-supplements.js" data-lesson01-src="./assets/data/numbers_calendar_time_lesson01_examples.json"></script>

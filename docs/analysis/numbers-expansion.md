@@ -203,3 +203,27 @@ links, guided progression/resume, keyboard word return, cross-context examples,
 mistake-linked speaking, test secrecy and mobile layouts. It starts a temporary
 server by default or uses `NUMBERS_TEST_URL`; CI runs it alongside shared-style
 checks. Screenshots use the ignored `tmp_numbers_sessions/learning-*` paths.
+
+## Whole-number helper
+
+`#number-helper` is a Reference section using `content-card`, `stack`,
+`study-field`, `study-input`, `study-question`, `toolbar-row`, `action-button`
+and `study-feedback`. No new CSS or progress keys are introduced. The pure
+`MaltiNumbersHelper.toWords` function covers integer values 0 through 999,999,999;
+`parse` rejects decimals, exponents, negatives and malformed digit grouping.
+Copy writes only the Maltese result. Empty or invalid input clears stale output.
+
+Linguistic references checked on 2026-10-15:
+
+- [Unicode CLDR Maltese rule-based number formatting](https://github.com/unicode-org/cldr/blob/main/common/rbnf/mt.xml): standalone, counted and connective forms, units before tens, scale names.
+- [National Literacy Agency bilingual mathematics glossary](https://nla.gov.mt/wp-content/uploads/2023/12/Glossarju_bilingwi_ta_termini_tal-matematika_is-snin_bikrin_u_tal-primarja_2022.pdf): `miljun`, `miljuni`, `żewġ miljuni`, `ħames mitt elf`.
+- [Government stock issue announcement](https://www.gov.mt/en/Government/DOI/Press%20Releases/Pages/2025/11/07/PR251976.aspx): compound hundreds of millions.
+
+The small converter composes these rules with the page's existing lesson forms;
+it is not a generic CLDR interpreter. It retains standalone units in compound
+tens, uses `mitt` for an exact hundred before a scale, and treats scale groups as
+counted contexts. Groups are joined with `u`. It does not generate counted noun,
+currency, fractional or ordinal phrases. Automated fixtures cover each scale
+boundary and the maximum; generated combinations are rule-derived, not individually
+teacher-reviewed. Tests also cover grouped paste, copying, keyboard submission,
+mobile wrapping and unchanged exercise results, in `numbers:learning:check`.

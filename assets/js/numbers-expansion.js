@@ -326,6 +326,7 @@
     document.querySelectorAll('[data-numbers-section]').forEach(root=>renderReference(root,root.dataset.numbersSection,data.sections[root.dataset.numbersSection],data.questions));
     const views=window.MaltiNumbersLearning.mountViews(practiceController);practiceController.navigateTo=views.showSection;
     window.MaltiNumbersTools.mount({data,questions:allQuestions,controller:practiceController,copy,announce});
+    window.MaltiNumbersHelper.mount();
     const editorial=document.querySelector('[data-numbers-editorial]');
     editorial.append(el('p',`${data.materials.length} source materials · ${data.coverage.length} mapped learning items. Teaching versions are separated from original wording.`));
     data.references.forEach(ref=>{ const p=el('p'); const link=el('a',ref.title); link.href=ref.url; p.append(link); editorial.append(p); });
