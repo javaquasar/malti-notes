@@ -8,7 +8,7 @@
     'number-builder': 'Build a Number', 'dual-forms': 'Dual Forms',
     fractions: 'Fractions and Mixed Numbers', measurements: 'Decimals, Measurements and Money',
     temperature: 'Temperature and Weather', decades: 'Decades',
-    'extra-time-expressions': 'Everyday Time Expressions', clock: 'Clock Time', core: 'Core Numbers'
+    'extra-time-expressions': 'Everyday Time Expressions', clock: 'Clock Time', core: 'Core Numbers', 'noun-counting':'Number + Noun'
   };
   const rules = {
     'number-forms': ['The number changes with its context. Compare counting alone, counting ordinary nouns, and counting nouns with an initial linking i.', 'Compare ħames kotba with ħamest itfal. In the same context, use tliet kotba but tlett / tlitt itfal. Numbers 11–19 take a singular counted noun: tnax-il pazjent.'],
@@ -54,6 +54,7 @@
     }
   };
   const reviewButtons = [];
+  let practiceController;
   function review(row, topic) {
     const store = window.MaltiReviewStore;
     const id = 'sentence::numbers-expanded::' + normal(row.maltese);
@@ -112,10 +113,12 @@
     const count = questions.filter(q => q.topic === topic).length;
     if (count) {
       const link = el('a', 'Practise · ' + count, 'action-link'); link.href = '#numbers-practice';
-      link.addEventListener('click', () => { practiceTopic.value = topic; direction.value='all'; mistakes.checked=false; renderQuestion(); }); actions.append(link);
+      link.addEventListener('click', () => practiceController.setTopic(topic)); actions.append(link);
     }
     root.append(actions);
     if (topic === 'number-forms') {
+      const nounLink=el('a','Number + noun','action-link');nounLink.href='#numbers-practice';
+      nounLink.addEventListener('click',()=>practiceController.setTopic('noun-counting'));actions.append(nounLink);
       const wrap = el('div', null, 'numbers-table-wrap');
       const table = el('table', null, 'table-soft numbers-forms-table');
       const caption = el('caption', 'Standalone and counted forms'); table.append(caption);
@@ -139,8 +142,20 @@
       renderBuilder(root, rows);
     } else {
       const display = rows.filter(r => !['rule','source-exercise'].includes(r.kind));
-      display.slice(0, 6).forEach(row => root.append(referenceRow(row, topic)));
-      if (display.length > 6) {
+      if(topic==='measurements'){
+        ['Units','Decimals','Length','Weight','Volume','Money'].forEach(name=>{
+          const members=display.filter(row=>row.subtopic===name);if(!members.length)return;
+          const group=el('section',null,'numbers-reference-subgroup');group.dataset.referenceSubgroup=name;
+          group.append(el('h3',name));
+          members.slice(0,2).forEach(row=>group.append(referenceRow(row,topic)));
+          if(members.length>2){
+            const more=el('details',null,'numbers-more');more.append(el('summary',`More ${name.toLowerCase()} examples · ${members.length-2}`));
+            const body=el('div',null,'numbers-disclosure-body');members.slice(2).forEach(row=>body.append(referenceRow(row,topic)));more.append(body);group.append(more);
+          }
+          root.append(group);
+        });
+      }else display.slice(0, 6).forEach(row => root.append(referenceRow(row, topic)));
+      if (topic!=='measurements' && display.length > 6) {
         const details = el('details', null, 'numbers-more'); details.append(el('summary', 'All examples · ' + display.length));
         const exampleBody=el('div',null,'numbers-disclosure-body');
         display.slice(6).forEach(row => exampleBody.append(referenceRow(row, topic)));
@@ -159,127 +174,116 @@
     }
   }
   function renderBuilder(root, rows) {
-    const selector = el('select'); selector.setAttribute('aria-label', 'Number to build');
-    rows.forEach((r, index) => { const option = el('option', r.english); option.value = index; selector.append(option); });
-    const answer = el('div', null, 'numbers-builder-answer'); answer.setAttribute('aria-live','polite');
-    const bank = el('div', null, 'numbers-word-bank'); const feedback = el('p'); feedback.setAttribute('role','status');
-    let words = [], selected = [];
-    const draw = (returnedIndex) => {
-      answer.replaceChildren(); bank.replaceChildren();
-      if (!selected.length) answer.append(el('span','…'));
-      selected.forEach((index, position) => {
-        const tile=button(words[index],()=>{
-          selected.splice(selected.indexOf(index),1); draw(index);
-        },'numbers-word numbers-selected-word');
-        tile.dataset.wordIndex=index;
-        tile.title=`Return ${words[index]} to word bank`;
-        tile.setAttribute('aria-label',`${tile.title} (position ${position+1})`);
-        answer.append(tile);
-      });
-      words.forEach((word, index) => { const b = button(word, () => { selected.push(index); draw(); }, 'numbers-word'); b.dataset.wordIndex=index; b.disabled = selected.includes(index); bank.append(b); });
-      feedback.textContent = ''; feedback.dataset.state='';
-      if (returnedIndex !== undefined) bank.children[returnedIndex].focus({preventScroll:true});
+    const selector=el('select');selector.setAttribute('aria-label','Number to build');
+    rows.forEach((row,index)=>{const option=el('option',row.english);option.value=index;selector.append(option);});
+    const insertion=el('select');insertion.setAttribute('aria-label','Insert word at');
+    const moving=el('select');moving.setAttribute('aria-label','Word to move');
+    const answer=el('div',null,'numbers-builder-answer');answer.setAttribute('aria-live','polite');
+    const bank=el('div',null,'numbers-word-bank');
+    const feedback=el('p');feedback.setAttribute('role','status');
+    let words=[],selected=[],history=[],dragged=null;
+    const remember=()=>{history.push([...selected]);history=history.slice(-50);};
+    const expectedWords=()=>rows[Number(selector.value)].maltese.replace(/,/g,'').split(' ');
+    const move=(delta)=>{
+      const index=Number(moving.value),from=selected.indexOf(index),to=from+delta;
+      if(from<0||to<0||to>=selected.length)return;
+      remember();selected.splice(from,1);selected.splice(to,0,index);draw({selected:index});
     };
-    const reset = () => { words = rows[Number(selector.value)].maltese.replace(/,/g,'').split(' ').map((word, index) => ({word,index})).sort((a,b) => a.word.localeCompare(b.word) || a.index-b.index).map(w => w.word); selected=[]; draw(); };
-    selector.addEventListener('change', reset);
-    const controls = el('div', null, 'toolbar-row');
-    controls.append(button('Undo', () => { selected.pop(); draw(); }), button('Reset', reset), button('Check answer', () => {
-      const expected = rows[Number(selector.value)].maltese.replace(/,/g,'');
-      const correct = normal(selected.map(index=>words[index]).join(' ')) === normal(expected);
-      feedback.textContent = correct ? 'Correct.' : 'Not yet. Check the thousands group, then the remaining hundreds, tens and units.';
-      feedback.dataset.state = correct ? 'correct' : 'incorrect';
-    }), button('Show answer', () => { feedback.textContent = rows[Number(selector.value)].maltese; }));
-    root.append(selector, answer, bank, controls, feedback); reset();
+    const remove=index=>{
+      remember();selected.splice(selected.indexOf(index),1);draw({bank:index});
+    };
+    const before=(index,target)=>{
+      if(index===target)return;
+      remember();selected.splice(selected.indexOf(index),1);
+      const position=selected.indexOf(target);selected.splice(position<0?selected.length:position,0,index);draw({selected:index});
+    };
+    const left=button('←',()=>move(-1));left.title='Move selected word left';left.setAttribute('aria-label',left.title);
+    const right=button('→',()=>move(1));right.title='Move selected word right';right.setAttribute('aria-label',right.title);
+    moving.addEventListener('change',()=>updateMoveButtons());
+    function updateMoveButtons(){
+      const position=selected.indexOf(Number(moving.value));
+      left.disabled=position<=0;right.disabled=position<0||position>=selected.length-1;moving.disabled=!selected.length;
+    }
+    function draw(focus){
+      const insertValue=insertion.value,moveValue=moving.value;
+      insertion.replaceChildren();const end=el('option','End');end.value='end';insertion.append(end);
+      moving.replaceChildren();
+      selected.forEach((index,position)=>{
+        const point=el('option',`Before ${words[index]} (${position+1})`);point.value=index;insertion.append(point);
+        const option=el('option',`${position+1}. ${words[index]}`);option.value=index;moving.append(option);
+      });
+      insertion.value=selected.includes(Number(insertValue))?insertValue:'end';
+      if(moveValue!==''&&selected.includes(Number(moveValue)))moving.value=moveValue;
+      answer.replaceChildren();bank.replaceChildren();
+      const boundary=expectedWords().indexOf('elf')+1;
+      const value=rows[Number(selector.value)].value;
+      const groups=[selected.slice(0,boundary),selected.slice(boundary)];
+      groups.forEach((indexes,groupIndex)=>{
+        const group=el('div',null,'numbers-builder-group');
+        group.append(el('span',groupIndex===0?`Thousands · ${(Math.floor(value/1000)*1000).toLocaleString('en-GB')}`:`Remainder · ${value%1000}`,'numbers-builder-group-label'));
+        const tiles=el('div',null,'numbers-builder-group-tiles');
+        if(!indexes.length)tiles.append(el('span','…'));
+        indexes.forEach(index=>{
+          const position=selected.indexOf(index);
+          const tile=button(words[index],()=>remove(index),'numbers-word numbers-selected-word');
+          tile.dataset.wordIndex=index;tile.draggable=true;
+          tile.title=`Return ${words[index]} to word bank`;
+          tile.setAttribute('aria-label',`${tile.title} (position ${position+1})`);
+          tile.addEventListener('focus',()=>{moving.value=index;updateMoveButtons();});
+          tile.addEventListener('keydown',event=>{
+            if(!['ArrowLeft','ArrowRight'].includes(event.key))return;
+            event.preventDefault();moving.value=index;move(event.key==='ArrowLeft'?-1:1);
+          });
+          tile.addEventListener('dragstart',event=>{dragged=index;event.dataTransfer.setData('text/plain',String(index));event.dataTransfer.effectAllowed='move';});
+          tile.addEventListener('dragend',()=>{dragged=null;});
+          tile.addEventListener('dragover',event=>{if(dragged!==null)event.preventDefault();});
+          tile.addEventListener('drop',event=>{event.preventDefault();if(dragged!==null){const source=dragged;dragged=null;before(source,index);}});
+          tiles.append(tile);
+        });
+        group.append(tiles);answer.append(group);
+      });
+      words.forEach((word,index)=>{
+        const tile=button(word,()=>{
+          remember();const at=insertion.value==='end'?-1:selected.indexOf(Number(insertion.value));
+          selected.splice(at<0?selected.length:at,0,index);draw({selected:index});
+        },'numbers-word');
+        tile.dataset.wordIndex=index;tile.disabled=selected.includes(index);bank.append(tile);
+      });
+      updateMoveButtons();feedback.textContent='';feedback.dataset.state='';
+      if(focus?.bank!==undefined)bank.children[focus.bank].focus({preventScroll:true});
+      if(focus?.selected!==undefined)answer.querySelector(`[data-word-index="${focus.selected}"]`)?.focus({preventScroll:true});
+    }
+    bank.addEventListener('dragover',event=>{if(dragged!==null)event.preventDefault();});
+    bank.addEventListener('drop',event=>{event.preventDefault();if(dragged!==null){const index=dragged;dragged=null;remove(index);}});
+    const reset=()=>{
+      words=expectedWords().map((word,index)=>({word,index})).sort((a,b)=>a.word.localeCompare(b.word)||a.index-b.index).map(word=>word.word);
+      selected=[];history=[];draw();
+    };
+    selector.addEventListener('change',reset);
+    const placement=el('div',null,'numbers-builder-placement');
+    const insertLabel=el('label','Insert at');insertLabel.append(insertion);
+    const moveLabel=el('label','Word to move');moveLabel.append(moving);
+    const movement=el('div',null,'numbers-builder-movement');movement.append(left,right);
+    placement.append(insertLabel,moveLabel,movement);
+    const controls=el('div',null,'toolbar-row');
+    controls.append(button('Undo',()=>{if(history.length){selected=history.pop();draw();}}),button('Reset',reset),button('Check answer',()=>{
+      const expected=expectedWords(),actual=selected.map(index=>words[index]),boundary=expected.indexOf('elf')+1;
+      const thousands=normal(actual.slice(0,boundary).join(' '))===normal(expected.slice(0,boundary).join(' '));
+      const remainder=normal(actual.slice(boundary).join(' '))===normal(expected.slice(boundary).join(' '));
+      feedback.textContent=thousands&&remainder?'Correct.':!thousands?'Check the thousands group. Read the whole group before elf.':'The thousands group is correct. Check the remaining hundreds, tens and units.';
+      feedback.dataset.state=thousands&&remainder?'correct':'incorrect';
+    }),button('Show answer',()=>{feedback.textContent=rows[Number(selector.value)].maltese;}));
+    root.append(selector,placement,answer,bank,controls,feedback);reset();
   }
   const practiceRoot = document.querySelector('[data-numbers-practice]');
-  const practiceTopic = el('select'); practiceTopic.setAttribute('aria-label','Practice topic');
-  const direction = el('select'); direction.setAttribute('aria-label','Practice direction');
-  [['all','Both directions'],['words','Write in Maltese'],['digits','Write in digits']].forEach(([value,text]) => { const opt=el('option',text); opt.value=value; direction.append(opt); });
-  const mistakes = el('input'); mistakes.type = 'checkbox';
-  const filters = el('div', null, 'numbers-practice-filters');
-  const topicLabel = el('label','Topic'); topicLabel.append(practiceTopic);
-  const directionLabel = el('label','Direction'); directionLabel.append(direction);
-  const mistakesLabel = el('label',null,'numbers-checkbox'); mistakesLabel.append(mistakes,el('span','Mistakes only'));
-  filters.append(topicLabel,directionLabel,mistakesLabel);
-  const stats = el('p', null, 'muted'); stats.setAttribute('aria-live','polite');
-  const prompt = el('p',null,'numbers-question'); prompt.lang='mt';
-  const visual = el('div'); const options = el('div',null,'numbers-options');
-  const form = el('form',null,'numbers-answer-form');
-  const label = el('label','Your answer'); const input = el('input'); input.type='text'; input.autocomplete='off'; input.spellcheck=false; label.append(input);
-  const check = el('button','Check answer','action-button'); check.type='submit';
-  const next = button('Next', () => renderQuestion());
-  const reveal = button('Show answer', () => {
-    if (!current) return;
-    feedback.textContent = current.answer + ' — ' + current.explanation;
-    input.disabled = true; check.disabled = true; options.querySelectorAll('button').forEach(b => { b.disabled=true; });
-    const previous = progress.results[current.id] || {attempts:0,correct:0};
-    progress.results[current.id]={...previous,lastResult:'revealed'}; saveProgress(); updateStats();
-  });
-  const feedback = el('p', null, 'numbers-feedback'); feedback.setAttribute('role','status');
-  const saveAnswer = button('Save answer to review', () => {
-    if (!current) return;
-    const reversed=['integer','time'].includes(current.answerKind);
-    window.MaltiReviewStore.addSentence({id:'sentence::numbers-practice::'+current.id,maltese:reversed?current.prompt:current.answer,english:reversed?current.answer:(current.english || ''),topic:titles[current.topic],sourcePage:page+'#numbers-practice'});
-    announce('Saved to review.');
-  });
-  const copyAnswer=button('Copy answer',()=>{
-    if (!current) return;
-    const reversed=['integer','time'].includes(current.answerKind);
-    copy([{maltese:reversed?current.prompt:current.answer,english:reversed?current.answer:current.english}]);
-  });
-  const controls = el('div',null,'toolbar-row'); controls.append(next,reveal,saveAnswer,copyAnswer);
-  form.append(label,check); practiceRoot.append(filters,stats,prompt,visual,options,form,controls,feedback);
-  let allQuestions = [], current = null;
-  const stored = storage.getJson(KEY, {});
-  const progress = {results:stored.results && typeof stored.results==='object' ? stored.results : {},shownAt:stored.shownAt && typeof stored.shownAt==='object'?stored.shownAt:{},topic:stored.topic || 'all',direction:stored.direction || 'all'};
-  const saveProgress = () => { progress.topic=practiceTopic.value; progress.direction=direction.value; storage.setJson(KEY,progress); };
-  function pool() {
-    return allQuestions.filter(q => (practiceTopic.value==='all' || q.topic===practiceTopic.value) &&
-      (direction.value==='all' || (direction.value==='digits') === (['integer','time'].includes(q.answerKind))) &&
-      (!mistakes.checked || ['incorrect','revealed'].includes(progress.results[q.id]?.lastResult)));
-  }
-  function updateStats() {
-    const ids = new Set(pool().map(q => q.id));
-    const rows = Object.entries(progress.results).filter(([id]) => ids.has(id)).map(([,r]) => r);
-    const attempts=rows.reduce((n,r)=>n+(r.attempts || 0),0); const correct=rows.reduce((n,r)=>n+(r.correct || 0),0);
-    stats.textContent=`${ids.size} questions · ${attempts} attempts · ${correct} correct`;
-  }
-  function renderQuestion() {
-    const available=pool(); const previousId=current?.id;
-    available.sort((a,b)=>(progress.results[a.id]?.attempts || 0)-(progress.results[b.id]?.attempts || 0) || (progress.shownAt[a.id]||0)-(progress.shownAt[b.id]||0));
-    current=available.find(q=>q.id!==previousId) || available[0] || null;
-    options.replaceChildren(); visual.replaceChildren(); feedback.textContent=''; feedback.dataset.state=''; input.value='';
-    input.disabled=!current; check.disabled=!current; reveal.disabled=!current; saveAnswer.disabled=!current; copyAnswer.disabled=!current; next.disabled=!current;
-    if (!current) { prompt.textContent=mistakes.checked ? 'No mistakes in this selection.' : 'No questions in this selection.'; updateStats(); return; }
-    prompt.textContent=current.prompt;
-    progress.shownAt[current.id]=Date.now();
-    if (current.visualValue) { const picture=fractionPicture(current.visualValue); if (picture) visual.append(picture); }
-    current.options.forEach(text=>options.append(button(text,()=>{ input.value=text; form.requestSubmit(); },'numbers-option')));
-    saveProgress(); updateStats();
-  }
-  form.addEventListener('submit', event => {
-    event.preventDefault(); if (!current || input.disabled) return;
-    if (!input.value.trim()) { feedback.textContent='Enter an answer first.'; input.focus(); return; }
-    const normalizeAnswer = text => current.answerKind==='integer' ? normal(text).replace(/[,\s]/g,'') : normal(text);
-    const correct=current.accepted.some(a=>normalizeAnswer(a)===normalizeAnswer(input.value));
-    const result=progress.results[current.id] || {attempts:0,correct:0};
-    progress.results[current.id]={attempts:result.attempts+1,correct:result.correct+(correct?1:0),lastResult:correct?'correct':'incorrect'};
-    saveProgress(); feedback.dataset.state=correct?'correct':'incorrect';
-    feedback.textContent=(correct?'Correct. ':'Answer: '+current.answer+'. ')+current.explanation;
-    window.MaltiMistakeStore?.recordAttempt({id:'numbers-expanded::'+current.id,setId:'numbers-expanded',itemId:current.id,
-      prompt:current.prompt,given:input.value,correctAnswer:current.answer,explanation:current.explanation,
-      sourcePage:page+'#'+(current.topic==='dual-forms'?'group-counts':current.topic),topic:titles[current.topic],type:'fill-blank',category:'numbers-time'},correct);
-    input.disabled=true; check.disabled=true; reveal.disabled=true; options.querySelectorAll('button').forEach(b=>{ b.disabled=true; }); updateStats(); next.focus({preventScroll:true});
-  });
-  [practiceTopic,direction,mistakes].forEach(control=>control.addEventListener('change',renderQuestion));
   function supplementalQuestions(data) {
     const result=[];
     Object.entries(data.sections).forEach(([topic,rows])=>rows.forEach(row=>{
       if (!['integer','fraction','dual','temperature','measurement'].includes(row.kind) || row.kind==='measurement') return;
       const prompt=row.kind==='dual' ? row.singular+' → 2' : row.kind==='fraction' ? row.value : row.english;
       if (row.maltese.includes(' / ')) return;
-      result.push({id:row.id+'-read',topic,prompt,answer:row.maltese,accepted:[row.maltese],options:[],explanation:rules[topic][0],english:row.english,visualValue:row.kind==='fraction'?row.value:null});
-      if (row.kind==='integer') result.push({id:row.id+'-digits',topic,prompt:row.maltese,answer:String(row.value),accepted:[String(row.value)],answerKind:'integer',options:[],explanation:'Separate the thousands group from the remaining hundreds, tens and units.',english:row.english});
+      result.push({id:row.id+'-read',topic,prompt,value:row.value,answer:row.maltese,accepted:[row.maltese],options:[],explanation:rules[topic][0],english:row.english,visualValue:row.kind==='fraction'?row.value:null});
+      if (row.kind==='integer') result.push({id:row.id+'-digits',topic,prompt:row.maltese,value:row.value,answer:String(row.value),accepted:[String(row.value)],answerKind:'integer',options:[],explanation:'Separate the thousands group from the remaining hundreds, tens and units.',english:row.english});
     }));
     return result;
   }
@@ -299,17 +303,24 @@
     });
     return result;
   }
+  function nounQuestions(data){
+    return data.sections['number-forms'].filter(row=>row.kind==='forms').flatMap(row=>data.countingNouns.map(noun=>{
+      const form=noun.form==='linked'?row.linked:row.ordinary;
+      const answer=`${form} ${noun.maltese}`;
+      const accepted=form==='tlett'?[answer,`tlitt ${noun.maltese}`]:[answer];
+      return {id:`noun-${row.value}-${noun.english}`,topic:'noun-counting',prompt:`${row.value} + ${noun.maltese}`,value:row.value,
+        answer,accepted,options:[],english:`${row.value} ${noun.english}`,sourceRefs:row.sourceRefs,
+        explanation:noun.form==='linked'?'This noun uses a linking i. Choose the linked counted form, rather than the standalone number. Tlett and tlitt are accepted variants for three.':'This noun takes the ordinary counted form, rather than the standalone number.'};
+    }));
+  }
   async function load() {
     const response=await fetch('./assets/data/numbers_expansion.json');
     if (!response.ok) throw new Error('Numbers data could not be loaded.');
     const data=await response.json();
     const legacyResponse=await fetch('./assets/data/numbers_time_drills.json');
     if (!legacyResponse.ok) throw new Error('Core drill data could not be loaded.');
-    allQuestions=[...data.questions,...supplementalQuestions(data),...legacyQuestions(await legacyResponse.json())];
-    const all=el('option','All topics'); all.value='all'; practiceTopic.append(all);
-    [...new Set(allQuestions.map(q=>q.topic))].forEach(topic=>{ const opt=el('option',titles[topic]); opt.value=topic; practiceTopic.append(opt); });
-    practiceTopic.value=[...practiceTopic.options].some(o=>o.value===progress.topic)?progress.topic:'all';
-    direction.value=['all','words','digits'].includes(progress.direction)?progress.direction:'all';
+    const allQuestions=[...data.questions,...supplementalQuestions(data),...legacyQuestions(await legacyResponse.json()),...nounQuestions(data)];
+    practiceController=window.MaltiNumbersPractice.mount({root:practiceRoot,questions:allQuestions,titles,copy,announce,fractionPicture});
     document.querySelectorAll('[data-numbers-section]').forEach(root=>renderReference(root,root.dataset.numbersSection,data.sections[root.dataset.numbersSection],data.questions));
     const editorial=document.querySelector('[data-numbers-editorial]');
     editorial.append(el('p',`${data.materials.length} source materials · ${data.coverage.length} mapped learning items. Teaching versions are separated from original wording.`));
@@ -326,8 +337,8 @@
     ]; decisions.forEach(text=>details.append(el('p',text)));
     const download=el('a','Download original source evidence (JSON)'); download.href=data.sourceEvidenceUrl; download.download='numbers-source-evidence.json'; details.append(download);
     const coverage=el('p'); const coverageLink=el('a','Download teaching data and coverage (JSON)'); coverageLink.href='./assets/data/numbers_expansion.json'; coverageLink.download='numbers_expansion.json'; coverage.append(coverageLink); details.append(coverage);
-    editorial.append(details); renderQuestion();
-    window.MaltiNumbersExpansion={getCurrent:()=>current?{...current}:null,getQuestions:()=>allQuestions.map(q=>({...q})),copyText,version:1};
+    editorial.append(details);
+    window.MaltiNumbersExpansion={...practiceController,copyText,version:2};
     document.documentElement.dataset.numbersExpansionReady='true';
   }
   load().catch(error=>{

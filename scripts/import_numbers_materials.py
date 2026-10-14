@@ -220,6 +220,26 @@ data={'schemaVersion':1,'title':'Numbers, Quantities, Calendar and Time','transl
       'sourceEvidenceUrl':'./docs/analysis/numbers-source-evidence.json',
       'audioPolicy':'Embedded clips were not transcribed and are not used as pronunciation recordings.',
       'editorialPolicy':'Corrected teaching versions are separate from original evidence. Missing listening material is excluded from grading.'}
+data['countingNouns']=[
+ {'maltese':'kotba','english':'books','form':'ordinary'},
+ {'maltese':'tazzi','english':'cups','form':'ordinary'},
+ {'maltese':'pajjiżi','english':'countries','form':'ordinary'},
+ {'maltese':'itfal','english':'children','form':'linked'},
+ {'maltese':'iklieb','english':'dogs','form':'linked'},
+ {'maltese':'iħbieb','english':'friends','form':'linked'},
+ {'maltese':'ibniet','english':'girls','form':'linked'}]
+for row in data['sections']['measurements']:
+    unit=row.get('unit')
+    if row['kind']=='phrase': row['subtopic']='Units'
+    elif unit=='EUR': row['subtopic']='Money'
+    elif row.get('sourceRefs') and row['sourceRefs'][0]['material_id']=='decimali': row['subtopic']='Decimals'
+    elif unit in ['kg','gm','g','tonne']: row['subtopic']='Weight'
+    elif unit in ['m','km','mm','cm']: row['subtopic']='Length'
+    else: row['subtopic']='Decimals'
+for q in questions:
+    if q['topic']=='measurements' and '9.60' in q['prompt']:
+        data['sections']['measurements'].append({'id':q['id']+'-reference','kind':'measurement','maltese':q['answer'],
+          'english':'9.60 litres of water','value':'9.60','unit':'L','subtopic':'Volume','sourceRefs':q['sourceRefs']})
 def published_typography(value):
     if isinstance(value,str): return value.replace('’',"'").replace('‘',"'").replace('´',"'")
     if isinstance(value,list): return [published_typography(v) for v in value]

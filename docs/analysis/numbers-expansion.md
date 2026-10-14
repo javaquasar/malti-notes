@@ -3,14 +3,16 @@
 ## Scope
 
 The existing numbers/calendar/time page is extended in place. Old section anchors,
-the original 1–100 and clock drill, vocabulary review IDs, and the old progress key
-`malti_numbers_time_drill_v1` remain unchanged.
+vocabulary review IDs and old progress key `malti_numbers_time_drill_v1` remain
+intact. The duplicate drill interface is replaced by one practice block. The old
+`#self-test` anchor still lands inside it. Legacy attempts are imported once,
+incrementally and idempotently, into corresponding core/clock question IDs.
 
 Nine reference groups cover number forms, hundreds/thousands, word building, dual
 forms, fractions, measurements/money, temperatures, decades and time expressions.
-The page includes 155 reference entries and 77 source-derived exercise questions.
+The page includes 156 reference entries and 77 source-derived exercise questions.
 The expanded runtime pool adds contextual reading/reverse-reading and existing
-core/clock patterns for 592 questions. Exact repeated lexical pairs are merged;
+core/clock patterns plus 63 number/noun combinations for 655 questions. Exact repeated lexical pairs are merged;
 all their original source references remain attached.
 
 ## Import and Provenance
@@ -56,7 +58,8 @@ editorial derivations from compositional rules, not teacher-supplied keys.
 ## State and Controls
 
 `malti_numbers_extended_v1` stores independent practice results, topic/direction
-and last-shown timestamps. It never rewrites the legacy drill key. Revealing an
+and last-shown timestamps, difficulty, resumable sessions and twenty recent
+session records. It never rewrites the legacy drill key. Revealing an
 answer does not count as a correct attempt; mistakes can be practised separately.
 Mistakes are also sent through the existing `MaltiMistakeStore` API.
 
@@ -80,3 +83,28 @@ The new progress and copy-format keys are registered with the existing backup
 and cloud-sync export contract. Reference phrases are indexed under their topic
 anchors by the existing site search builder; original source evidence is not
 indexed as teaching content.
+
+## Focused Study and Sessions
+
+Measurement examples are grouped as Units, Decimals, Length, Weight, Volume and
+Money, each with visible examples and its own remaining-example disclosure.
+Number/noun practice composes counted forms for seven attested classroom nouns
+with 2–10. The linking-i category is explicitly assigned to each noun; it is not
+guessed from any initial letter i. Both tlett and tlitt are accepted for three.
+
+The number builder supports returning individual tokens, inserting before a
+chosen token, moving a token with arrow buttons or arrow keys, and dragging a
+selected token before another. Undo restores the previous arrangement. Thousand
+and remainder groups are visually separated; feedback identifies the wrong group.
+
+One practice controller owns the topic, direction and difficulty filters. Short
+sessions contain 5 or 10 distinct questions; mixed sessions spread topics. Study
+mode distinguishes independent correctness, correctness after hints, wrong
+answers, revealed answers and skips. Test mode hides hints and answers until the
+summary. The summary supports retrying only that session's failed/revealed/skipped
+questions. Session state, including already recorded answers and hints, resumes
+after reload. The last summary remains available through Last session.
+
+Run `npm run numbers:sessions:check` for migration-independent scenario tests of
+these features, session resume, test secrecy, topic diversity, partial retries and
+keyboard/drag/insertion builder operations at desktop/mobile widths.

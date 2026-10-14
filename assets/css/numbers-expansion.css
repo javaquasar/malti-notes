@@ -3,15 +3,21 @@
   .numbers-page .sidebar { max-height: calc(100dvh - 40px); overflow-y: auto; }
 }
 .numbers-copy-setting { display: grid; gap: 8px; margin-top: 20px; }
-.numbers-page .number-time-drill-header,
-.numbers-page .number-time-drill-stats,
-.numbers-page .number-time-drill-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xl);
+.numbers-copy-setting select,
+#number-builder > select,
+.numbers-builder-placement select,
+.numbers-practice-filters select,
+.numbers-session-controls select {
+  box-sizing: border-box;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  background: var(--surface-input);
+  color: var(--text-primary);
+  font: inherit;
 }
-.numbers-page .number-time-drill-form { display: grid; gap: var(--space-xl); }
-.numbers-page .number-time-drill-actions { margin: 0; }
 [data-numbers-section] { min-width: 0; scroll-margin-top: 80px; }
 .numbers-rule { max-width: 75ch; }
 .numbers-reference-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; margin-top: var(--flow-gap-sm); }
@@ -59,7 +65,24 @@
 .numbers-fraction-parts { display: flex; gap: 3px; width: 160px; max-width: 100%; height: 28px; }
 .numbers-fraction-parts > span { flex: 1; border: 1px solid var(--border-brand); background: var(--surface-input); }
 .numbers-fraction-parts > .is-filled { background: var(--text-brand); }
-.numbers-builder-answer { display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 8px; min-height: 100px; padding: 16px 0; border-bottom: 2px solid var(--border-brand); font-weight: 700; line-height: 1.7; overflow-wrap: anywhere; }
+.numbers-builder-answer { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; min-height: 100px; padding: 16px 0; border-bottom: 2px solid var(--border-brand); font-weight: 700; line-height: 1.7; overflow-wrap: anywhere; }
+.numbers-builder-group { min-width: 0; }
+.numbers-builder-group-label { display: block; margin-bottom: 10px; font-size: 14px; color: var(--text-muted); }
+.numbers-builder-group-tiles { display: flex; flex-wrap: wrap; gap: 8px; min-height: 48px; }
+.numbers-builder-group + .numbers-builder-group { border-inline-start: 2px solid var(--border-default); padding-inline-start: 16px; }
+.numbers-builder-placement, .numbers-session-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 16px 0; }
+.numbers-builder-placement label, .numbers-session-controls label { display: grid; gap: 8px; min-width: 0; max-width: 100%; }
+.numbers-builder-placement select { max-width: 100%; }
+.numbers-builder-movement { display: flex; gap: 8px; }
+.numbers-builder-movement button { width: 44px; height: 44px; padding: 0; }
+.numbers-reference-subgroup { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-default); }
+.numbers-session-controls .numbers-checkbox { display: flex; align-items: center; min-height: 44px; }
+.numbers-session-summary { padding-top: 16px; }
+.numbers-session-summary table { width: 100%; margin: 16px 0; table-layout: fixed; }
+.numbers-session-summary th, .numbers-session-summary td { overflow-wrap: anywhere; }
+.numbers-session-summary th:first-child { width: 46%; }
+.numbers-session-summary .toolbar-row { margin-top: 16px; }
+.numbers-session-status { font-weight: 700; color: var(--text-brand); }
 .numbers-word-bank { display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 8px; margin: 16px 0; min-height: 48px; }
 .numbers-word, .numbers-option { min-height: 44px; padding: 10px 14px; background: var(--surface-input); color: var(--text-primary); border: 1px solid var(--border-default); border-radius: 6px; font: inherit; cursor: pointer; }
 .numbers-word { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; box-sizing: border-box; height: 48px; line-height: 1.4; white-space: nowrap; }
@@ -77,7 +100,7 @@
 .numbers-option { text-align: left; overflow-wrap: anywhere; max-width: 100%; }
 .numbers-answer-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin-bottom: 16px; }
 .numbers-answer-form label { display: grid; gap: 8px; flex: 1 1 240px; min-width: 0; }
-.numbers-answer-form input { min-width: 0; width: 100%; box-sizing: border-box; }
+.numbers-answer-form input { min-width: 0; min-height: 44px; width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--border-default); border-radius: 6px; background: var(--surface-input); color: var(--text-primary); font: inherit; }
 .numbers-feedback { min-height: 70px; overflow-wrap: anywhere; }
 .numbers-feedback[data-state="correct"] { color: var(--text-brand); }
 .numbers-live-status { position: sticky; bottom: 12px; background: var(--surface-paper); padding: 8px 12px; border-radius: 6px; z-index: 2; }
@@ -91,6 +114,14 @@
   .numbers-practice-filters, .numbers-answer-form { display: grid; grid-template-columns: minmax(0, 1fr); }
   .numbers-practice-filters select { width: 100%; }
   .numbers-question { font-size: 20px; }
+  .numbers-builder-answer { grid-template-columns: minmax(0, 1fr); }
+  .numbers-builder-group + .numbers-builder-group { border-inline-start: 0; border-top: 1px solid var(--border-default); padding: 12px 0 0; }
+  .numbers-builder-placement { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .numbers-builder-placement select { width: 100%; }
+  .numbers-session-summary .table-soft { display: table; }
+  .numbers-session-summary th, .numbers-session-summary td { padding: 10px 4px; font-size: 14px; }
+  .numbers-session-summary th { font-size: 12px; text-transform: none; white-space: nowrap; }
+  .numbers-session-summary th:first-child { width: 40%; }
 }
 @media print {
   .numbers-row-actions, .numbers-word-bank, .numbers-practice-filters, .numbers-answer-form, .numbers-live-status { display: none; }

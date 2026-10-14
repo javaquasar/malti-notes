@@ -70,8 +70,7 @@
                 <li><a href="#time-expressions">Common Time Expressions</a></li>
                 <li><a href="#clock-time">Clock Time</a></li>
                 <li class="numbers-nav-heading">Practice</li>
-                <li><a href="#self-test">Self Test</a></li>
-                <li><a href="#numbers-practice">Mixed Practice</a></li>
+                <li><a href="#numbers-practice">Practice and Sessions</a></li>
                 <li><a href="#ready-models">Ready Models</a></li>
                 <li><a href="#life-phrases">Plans, Dates, Appointments and Everyday Events</a></li>
             </ul>
@@ -431,38 +430,9 @@
                 </div>
             </section>
 
-            <section class="content-card" id="self-test">
-                <span class="tag">Self Test</span>
-                <h2>Number and Clock Drills</h2>
-                <div class="number-time-drill no-print" data-number-time-drill>
-                    <div class="number-time-drill-header">
-                        <div class="segmented-toggle" role="group" aria-label="Drill mode">
-                            <button type="button" class="toggle-chip is-active" data-drill-mode="numbers" aria-pressed="true">Numbers</button>
-                            <button type="button" class="toggle-chip" data-drill-mode="clock" aria-pressed="false">Clock</button>
-                        </div>
-                        <div class="number-time-drill-stats" aria-live="polite">
-                            <span class="status-chip" data-drill-seen>0 answered</span>
-                            <span class="status-chip" data-drill-accuracy>No answers yet</span>
-                        </div>
-                    </div>
-                    <p class="number-time-drill-direction" data-drill-direction>Loading...</p>
-                    <strong class="number-time-drill-challenge" data-drill-challenge aria-live="polite">...</strong>
-                    <form class="number-time-drill-form" data-drill-form>
-                        <label class="exercise-input-label number-time-drill-answer">
-                            <span>Your answer</span>
-                            <input type="text" autocomplete="off" spellcheck="false" data-drill-answer>
-                        </label>
-                        <div class="toolbar-row number-time-drill-actions">
-                            <button class="action-button" type="submit" data-drill-check>Check answer</button>
-                            <button class="action-button" type="button" data-drill-next hidden>Next challenge</button>
-                        </div>
-                        <p class="number-time-drill-feedback" data-drill-feedback role="status" hidden></p>
-                    </form>
-                </div>
-            </section>
-
             <section class="content-card" id="numbers-practice">
-                <h2>Mixed Practice</h2>
+                <span id="self-test"></span>
+                <h2>Numbers and Time Practice</h2>
                 <div data-numbers-practice></div>
                 <noscript>Enable JavaScript to load these exercises. The core numbers, calendar and clock reference above remains available.</noscript>
             </section>
@@ -557,7 +527,7 @@
             console.error(error);
         });
     </script>
-    <script src="./assets/js/numbers-time-drill.js"></script>
+    <script src="./assets/js/numbers-practice.js"></script>
     <script src="./assets/js/numbers-expansion.js"></script>
     <script src="./assets/js/site-header.js"></script>
 <script src="./assets/js/lesson01-supplements.js" data-lesson01-src="./assets/data/numbers_calendar_time_lesson01_examples.json"></script>

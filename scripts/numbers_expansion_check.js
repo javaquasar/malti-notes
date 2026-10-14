@@ -43,6 +43,9 @@ async function main() {
     const cleaned=await page.evaluate(()=>window.MaltiReviewStore.getCard('word::calendar-time::il-ħamis'));
     assert.equal(cleaned.box,3); assert.equal(cleaned.reviewCount,4); assert.equal(cleaned.imageRole,'none');
     assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('malti_numbers_time_drill_v1')).numbers.results),oldResults);
+    assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('malti_numbers_extended_v1')).results['core-35-words'].attempts),4);
+    assert.equal(await page.locator('[data-numbers-practice]').count(),1);
+    assert.equal(await page.locator('[data-number-time-drill]').count(),0);
     const pool=await page.evaluate(()=>window.MaltiNumbersExpansion.getQuestions());
     assert(pool.length>450); assert.equal(new Set(pool.map(q=>q.id)).size,pool.length);
     assert(pool.some(q=>q.topic==='clock') && pool.some(q=>q.topic==='core'));
@@ -105,7 +108,7 @@ async function main() {
 
     const builder=page.locator('#number-builder');
     for(let n=0;n<2;n++) {
-      await builder.locator('select').selectOption(String(n));
+      await builder.getByLabel('Number to build').selectOption(String(n));
       const expected=data.sections['number-builder'][n].maltese.replace(/,/g,'');
       for(const word of expected.split(' ')) {
         await builder.locator('.numbers-word-bank .numbers-word:not(:disabled)').getByText(word,{exact:true}).first().click();
@@ -131,14 +134,11 @@ async function main() {
       await page.setViewportSize({width,height:900});
       const tileHeights=await builder.locator('.numbers-word').evaluateAll(tiles=>tiles.map(tile=>tile.getBoundingClientRect().height));
       assert(tileHeights.length>0 && tileHeights.every(height=>Math.abs(height-48)<1),`Candidate and selected tile heights differ at ${width}px`);
-      const drillSpacing=await page.locator('[data-number-time-drill]').evaluate(root=>{
-        const modes=root.querySelector('.segmented-toggle').getBoundingClientRect();
-        const stats=root.querySelector('.number-time-drill-stats').getBoundingClientRect();
-        const input=root.querySelector('[data-drill-answer]').getBoundingClientRect();
-        const actions=root.querySelector('.number-time-drill-actions').getBoundingClientRect();
-        return {header:stats.top>=modes.bottom-1?stats.top-modes.bottom:null,form:actions.top-input.bottom};
+      const drillSpacing=await page.locator('[data-numbers-practice]').evaluate(root=>{
+        const input=root.querySelector('.numbers-answer-form input').getBoundingClientRect();
+        const actions=root.querySelector('.numbers-practice-panel .toolbar-row').getBoundingClientRect();
+        return {form:actions.top-input.bottom};
       });
-      assert(drillSpacing.header===null || drillSpacing.header>=12,`Drill header rows touch at ${width}px`);
       assert(drillSpacing.form>=12,`Drill answer controls touch at ${width}px`);
       const positions=await page.locator('.numbers-forms-table tbody .numbers-review-button').evaluateAll(buttons=>buttons.map(button=>{
         const b=button.getBoundingClientRect(); const row=button.closest('tr').getBoundingClientRect();
