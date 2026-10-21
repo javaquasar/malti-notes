@@ -105,7 +105,7 @@
                     else window.MaltiReviewStore.addSentence(sentence);
                     sync();
                 });
-                b.className = 'lp-save review-add-button review-add-button--icon';
+                b.className = 'lp-save review-add-button review-add-button--icon review-add-button--inline';
                 const sync = () => {
                     const saved = window.MaltiReviewStore.hasCard(card(item).id);
                     b.textContent = '';

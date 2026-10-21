@@ -56,6 +56,22 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
                     assert.notEqual(surfaces.contract.background, 'rgba(0, 0, 0, 0)');
                     assert(surfaces.gap > 0);
                     for (const card of surfaces.cards) { assert(card.shared); const { shared, ...actual } = card; assert.deepEqual(actual, surfaces.contract, `${stem}/${theme}/${width}: phrase surface differs from study-card`); }
+                    const reviewStyles = await region.locator('.lp-save').first().evaluate(button => {
+                        const reference = document.createElement('button'); reference.type = 'button';
+                        const referenceLayout = document.createElement('div'); referenceLayout.className = 'stack'; document.body.append(referenceLayout);
+                        reference.className = 'review-add-button review-add-button--icon review-add-button--inline'; referenceLayout.append(reference);
+                        const originalClass = button.className, originalPressed = button.getAttribute('aria-pressed');
+                        const snapshot = node => {
+                            const style = getComputedStyle(node), glyph = getComputedStyle(node, '::before');
+                            return Object.fromEntries(['color', 'borderTopColor', 'borderTopWidth', 'borderRadius', 'backgroundColor', 'width', 'height', 'padding', 'display'].map(key => [key, style[key]]).concat([['glyphColor', glyph.backgroundColor], ['glyphTransform', glyph.transform]]));
+                        };
+                        const states = [false, true].map(saved => {
+                            for (const node of [button, reference]) { node.classList.toggle('is-added', saved); node.setAttribute('aria-pressed', String(saved)); }
+                            return { actual: snapshot(button), expected: snapshot(reference) };
+                        });
+                        button.className = originalClass; button.setAttribute('aria-pressed', originalPressed); referenceLayout.remove(); return states;
+                    });
+                    for (const state of reviewStyles) assert.deepEqual(state.actual, state.expected, `${stem}/${theme}/${width}: speaking bookmark overrides shared review styles`);
                     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
                     await region.locator('.lp-phrase').first().screenshot({ path: path.join(shots, `${stem}-card-${theme}-${width}.png`) });
                 }
