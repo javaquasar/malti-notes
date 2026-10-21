@@ -91,11 +91,11 @@
         const essential = panes[0];
         el('h3', '20 Essential Phrases', essential);
         const filter = select('Phrase selection', [['page', 'This topic'], ['all', 'All 20 phrases']], controls(essential));
-        const list = el('ul', undefined, essential); list.className = 'lp-phrases';
+        const list = el('ul', undefined, essential); list.className = 'lp-phrases stack';
         function renderPhrases() {
             list.replaceChildren();
             data.phrases.filter((item) => filter.value === 'all' || item.page === page).forEach((item) => {
-                const row = el('li', undefined, list); row.className = 'lp-phrase';
+                const row = el('li', undefined, list); row.className = 'lp-phrase study-card';
                 const content = el('div', undefined, row);
                 el('strong', item.maltese, content); el('p', item.english, content);
                 el('p', 'Reply: ' + item.reply, content); el('small', item.note, content);

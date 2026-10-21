@@ -20,7 +20,7 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
     const shots = path.resolve('visual-regression/screenshots/lesson01-practice');
     fs.mkdirSync(shots, { recursive: true });
     try {
-        for (const width of [1280, 390]) {
+        for (const width of [1280, 390, 320]) {
             const context = await browser.newContext({ viewport: { width, height: 900 }, serviceWorkers: 'block' });
             const page = await context.newPage();
             await context.grantPermissions(['microphone'], { origin: base });
@@ -40,6 +40,26 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
                 assert.notEqual(await region.evaluate((node) => getComputedStyle(node).borderRadius), '0px');
                 await region.getByLabel('Phrase selection').selectOption('all');
                 assert.equal(await region.locator('.lp-phrase').count(), 20);
+                for (const theme of ['classic', 'forest', 'contrast']) {
+                    await page.evaluate(theme => document.documentElement.dataset.theme = theme, theme);
+                    const surfaces = await region.evaluate(node => {
+                        const probe = document.createElement('article'); probe.className = 'study-card'; node.append(probe);
+                        const expected = getComputedStyle(probe);
+                        const contract = { background: expected.backgroundColor, padding: expected.paddingTop, radius: expected.borderRadius, border: expected.borderTopWidth };
+                        const cards = Array.from(node.querySelectorAll('.lp-phrase')).map(card => {
+                            const style = getComputedStyle(card);
+                            return { shared: card.classList.contains('study-card'), background: style.backgroundColor, padding: style.paddingTop, radius: style.borderRadius, border: style.borderTopWidth };
+                        });
+                        const gap = parseFloat(getComputedStyle(node.querySelector('.lp-phrases')).rowGap);
+                        probe.remove(); return { contract, cards, gap };
+                    });
+                    assert.notEqual(surfaces.contract.background, 'rgba(0, 0, 0, 0)');
+                    assert(surfaces.gap > 0);
+                    for (const card of surfaces.cards) { assert(card.shared); const { shared, ...actual } = card; assert.deepEqual(actual, surfaces.contract, `${stem}/${theme}/${width}: phrase surface differs from study-card`); }
+                    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+                    await region.locator('.lp-phrase').first().screenshot({ path: path.join(shots, `${stem}-card-${theme}-${width}.png`) });
+                }
+                await page.evaluate(() => document.documentElement.dataset.theme = 'classic');
                 assert.equal(await region.locator('.lp-phrase').evaluateAll((rows) => rows.some((row) => {
                     const text = row.firstElementChild.getBoundingClientRect(); const button = row.lastElementChild.getBoundingClientRect();
                     return text.right > button.left || button.right > innerWidth;

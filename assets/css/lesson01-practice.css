@@ -11,7 +11,7 @@
 .lesson-practice button[aria-pressed="true"] { background: var(--color-surface-ready); border-color: var(--color-ready-border); }
 .lesson-practice button:focus-visible, .lesson-practice input:focus-visible, .lesson-practice select:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
 .lp-phrases { padding: 0; list-style: none; margin: 0; }
-.lp-phrase { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 8px; border-bottom: 1px solid var(--color-border); padding: 12px 0; }
+.lp-phrase { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 8px; }
 .lp-phrase > div { min-width: 0; overflow-wrap: anywhere; }
 .lp-phrase p { margin: 6px 0; }
 .lp-phrase small, .lp-muted { color: var(--color-text-muted); }
