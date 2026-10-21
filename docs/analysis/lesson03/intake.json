@@ -1,0 +1,851 @@
+{
+  "analysisDate": "2026-10-21",
+  "sourceFileCount": 25,
+  "materialGroupCount": 11,
+  "teachingMaterialCount": 10,
+  "recordCount": 109,
+  "coverage": {
+    "L03-ref-": 10,
+    "L03-sun-": 9,
+    "L03-extra-": 10,
+    "L03-article-": 12,
+    "L03-lil-a": 9,
+    "L03-lil-b": 7,
+    "L03-dir-": 9,
+    "L03-tr-": 12,
+    "L03-gap-": 15,
+    "L03-qa-": 8,
+    "L03-read-": 8
+  },
+  "sourceAnswerLinksChecked": [
+    {
+      "slide": 4,
+      "answer": "’l"
+    },
+    {
+      "slide": 5,
+      "answer": "’il"
+    },
+    {
+      "slide": 6,
+      "answer": "’il"
+    },
+    {
+      "slide": 7,
+      "answer": "’il-"
+    },
+    {
+      "slide": 8,
+      "answer": "’l-"
+    },
+    {
+      "slide": 9,
+      "answer": "’il"
+    },
+    {
+      "slide": 10,
+      "answer": "’il"
+    },
+    {
+      "slide": 11,
+      "answer": "’il-"
+    },
+    {
+      "slide": 12,
+      "answer": "’il"
+    }
+  ],
+  "sourceHashesUnchanged": true,
+  "linguisticAudit": "Target-rule editorial review with explicit unresolved items; not universal independent attestation",
+  "loopCoverage": "72 recovered complete JSON fragments; live document reconstruction not certified",
+  "records": [
+    {
+      "id": "L03-ref-01",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-01 | fi | in | fil- | fil-ħanut | in the shop | RULE |"
+    },
+    {
+      "id": "L03-ref-02",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-02 | ma’ | with | mal- | mal-mamà | with Mum | RULE |"
+    },
+    {
+      "id": "L03-ref-03",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-03 | lil | to; also marks certain direct objects | lill- | lill-isqof | to the bishop | RULE |"
+    },
+    {
+      "id": "L03-ref-04",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-04 | għal | for | għall- | għall-erwieħ | for the souls | RULE |"
+    },
+    {
+      "id": "L03-ref-05",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-05 | ta’ | of | tal- | tal-Mużew | of the museum | RULE |"
+    },
+    {
+      "id": "L03-ref-06",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-06 | sa | as far as; until | sal- | sal-belt | as far as the city | RULE |"
+    },
+    {
+      "id": "L03-ref-07",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-07 | minn | from | mill- | mill-iskola | from the school | RULE |"
+    },
+    {
+      "id": "L03-ref-08",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-08 | ġo | inside; in | ġol- | ġol-gaġġa | inside the cage | RULE |"
+    },
+    {
+      "id": "L03-ref-09",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-09 | bi | with; by | bil- | bil-maqlub | upside down | RULE |"
+    },
+    {
+      "id": "L03-ref-10",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-ref-10 | bħal | like | bħall- | bħall-ieħor | like the other one | RULE |"
+    },
+    {
+      "id": "L03-sun-01",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-01; M01/3 | Rajna lill-neputija. | Rajna lin-neputija. | We saw the niece/granddaughter. | RULE; kinship translation depends on context |"
+    },
+    {
+      "id": "L03-sun-02",
+      "decisions": [
+        "REVIEW",
+        "RULE"
+      ],
+      "record": "| L03-sun-02; M01/4 | Sellili għall-ziju. | Sellili għaz-ziju. | Say hello to the uncle for me. | RULE for għaz-; REVIEW the lexical wording Sellili before publishing the full sentence |"
+    },
+    {
+      "id": "L03-sun-03",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-03; M01/5 | Fil-telgħa tbati bir-rota. | Fit-telgħa tbati bir-rota. | Cycling uphill is hard work. | RULE |"
+    },
+    {
+      "id": "L03-sun-04",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-04; M01/6 | Ħrabt mill-nar. | Ħrabt min-nar. | I escaped from the fire. | RULE |"
+    },
+    {
+      "id": "L03-sun-05",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-05; M01/7 | Toqgħodx fil-xemx! | Toqgħodx fix-xemx! | Do not stay in the sun! | RULE |"
+    },
+    {
+      "id": "L03-sun-06",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-06; M01/8 | Ġejt bil-ċavetta li selliftni. | Ġejt biċ-ċavetta li selliftni. | I came with the key you lent me. | RULE |"
+    },
+    {
+      "id": "L03-sun-07",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-07; M01/9 | Morna sal-Rabat. | Morna sar-Rabat. | We went as far as Rabat. | RULE; this place name takes an article |"
+    },
+    {
+      "id": "L03-sun-08",
+      "decisions": [
+        "FIX",
+        "RULE"
+      ],
+      "record": "| L03-sun-08; M01/10 | Agħmel ix-xogħol tal-dar sew. | Agħmel ix-xogħol tad-dar sew. | Do the housework/homework properly. | RULE; FIX extraction-only missing space in ODP |"
+    },
+    {
+      "id": "L03-sun-09",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-sun-09; M01/11 | Ħadna ritratt mal-tfal. | Ħadna ritratt mat-tfal. | We took a photo with the children. | RULE |"
+    },
+    {
+      "id": "L03-extra-01",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-01 | fix-xelter | in the shelter | RULE |"
+    },
+    {
+      "id": "L03-extra-02",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-02 | mas-surmast | with the headteacher | RULE |"
+    },
+    {
+      "id": "L03-extra-03",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-03 | liz-ziju | to the uncle | RULE |"
+    },
+    {
+      "id": "L03-extra-04",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-04 | ġol-ilma | in the water | RULE |"
+    },
+    {
+      "id": "L03-extra-05",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-05 | mal-art | with/against the ground, depending on context | RULE; do not translate as \"on the ground\" universally |"
+    },
+    {
+      "id": "L03-extra-06",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-06 | tal-ewwel | of the first; first, depending on context | RULE |"
+    },
+    {
+      "id": "L03-extra-07",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-07 | sal-artal | as far as the altar | RULE |"
+    },
+    {
+      "id": "L03-extra-08",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-08 | fi + ix-xemx → fix-xemx | in the sun | RULE; source shorthand Fi+ix omits the noun in the decomposition |"
+    },
+    {
+      "id": "L03-extra-09",
+      "decisions": [
+        "FIX"
+      ],
+      "record": "| L03-extra-09 | ġo + id-dar → ġod-dar | inside the house | FIX source spacing ġod- dar; no internal space after the hyphen |"
+    },
+    {
+      "id": "L03-extra-10",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-extra-10 | fi + id-dar → fid-dar | in the house | RULE |"
+    },
+    {
+      "id": "L03-article-01",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-01; M02/2–5 | Mort għal Jane l-ajruport. | Mort għall-Jane l-ajruport.; ta’ Jane versus tal-Jane | I went to the airport to meet/pick up Jane. | RULE |"
+    },
+    {
+      "id": "L03-article-02",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-02; M02/7–8 | Mort għall-ħabiba l-ajruport. | ta’/tal- test: tal-ħabiba → għall-ħabiba | I went to the airport to meet/pick up the female friend. | RULE |"
+    },
+    {
+      "id": "L03-article-03",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-03; M02/9–11 | It-tabib żar lill-pazjenti l-isptar. | It-tabib żar lil pazjenti l-isptar. | The doctor visited the patients in hospital. | RULE for intended definite reading; no-article phrase is not wrong in every possible context |"
+    },
+    {
+      "id": "L03-article-04",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-04; M02/12 | It-tabib żar lil ommu l-isptar. | ta’ ommu → lil ommu | The doctor visited his mother in hospital. | RULE |"
+    },
+    {
+      "id": "L03-article-05",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-05; M02/13 | Mark weġġa’ bħall-ħabib tiegħu. | Mark weġġa’ bħal ħabib tiegħu. | Mark got hurt like his friend. | RULE for intended definite reading |"
+    },
+    {
+      "id": "L03-article-06",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-06; M02/14 | Mark weġġa’ bħal sieħbu. | Mark weġġa’ bħall-sieħbu. | Mark got hurt like his companion. | RULE |"
+    },
+    {
+      "id": "L03-article-07",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-07; M02/15 | Rajt lill-ħabiba wara l-kantuniera. | Rajt lil ħabiba wara l-kantuniera. | I saw the female friend around the corner. | RULE for intended definite reading; lil ħabiba can mean a female friend |"
+    },
+    {
+      "id": "L03-article-08",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-08; M02/16 | Xtrajt rigal lil oħti. | Xtrajt rigal lill-oħti. | I bought a present for my sister. | RULE |"
+    },
+    {
+      "id": "L03-article-09",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-09; M02/17 | Aħbar bħal dik qatt ma stennejtha. | Aħbar bħall-dik qatt ma stennejtha. | I never expected news like that. | RULE |"
+    },
+    {
+      "id": "L03-article-10",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-10; M02/18 | Tkellimx lil min ma tafx! | Tkellimx lill-min ma tafx! | Do not speak to someone you do not know! | RULE |"
+    },
+    {
+      "id": "L03-article-11",
+      "decisions": [
+        "FIX"
+      ],
+      "record": "| L03-article-11; M02/19 | Ħabiba ta’ veru bħal Hannah għad irrid nara. | Source correct-choice line has għad irid nara; alternative has bħall-Hannah | I have yet to meet a true friend like Hannah. | FIX irid → irrid for first-person nara; bħal Hannah is the particle target |"
+    },
+    {
+      "id": "L03-article-12",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-article-12; M02/20 | Għal ommi nagħmel kollox. | Għall-ommi nagħmel kollox. | I do everything for my mother. | RULE |"
+    },
+    {
+      "id": "L03-lil-a01",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a01; 4 | Staqsejna ___ xulxin x’kien ġara. | b: ’l | We asked each other what had happened. | KEY |"
+    },
+    {
+      "id": "L03-lil-a02",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a02; 5 | Fittxew ___ Robert kullimkien. | d: ’il | They looked everywhere for Robert. | KEY |"
+    },
+    {
+      "id": "L03-lil-a03",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a03; 6 | Ħallejt ___ Katya tiġi miegħi sal-bandli. | ċ: ’il | I let Katya come with me to the swings. | KEY |"
+    },
+    {
+      "id": "L03-lil-a04",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a04; 7 | It-turisti staqsew ___ gwida fejn kienu sejrin. | b: ’il- | The tourists asked the guide where they were going. | KEY |"
+    },
+    {
+      "id": "L03-lil-a05",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a05; 8 | Temgħu ___ kelb għax kien bil-ġuħ. | b: ’l- | They fed the dog because it was hungry. | KEY |"
+    },
+    {
+      "id": "L03-lil-a06",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a06; 9 | Slift il-ktieb tal-Ingliż ___ sieħbi għax insieh l-iskola u kellu bżonnu. | d: ’il | I lent my friend the English book because he had left his at school and needed it. | KEY; translation makes the contextual book reference explicit |"
+    },
+    {
+      "id": "L03-lil-a07",
+      "decisions": [
+        "KEY",
+        "REVIEW"
+      ],
+      "record": "| L03-lil-a07; 10 | Julia gżat ___ dawk it-tfal li ħadulha l-pokit. | a: ’il | Julia [source verb requires lexical review] those children who took her pocket money. | KEY for particle; REVIEW gżat and pokit before translating/grading the entire sentence |"
+    },
+    {
+      "id": "L03-lil-a08",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a08; 11 | Sellimt ___ ġar meta rajtu miexi fit-triq. | ċ: ’il- | I greeted the neighbour when I saw him walking in the street. | KEY |"
+    },
+    {
+      "id": "L03-lil-a09",
+      "decisions": [
+        "KEY"
+      ],
+      "record": "| L03-lil-a09; 12 | Jiena nxejjer ___ kulħadd. | d: ’il | I wave to everyone. | KEY |"
+    },
+    {
+      "id": "L03-lil-b01",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b01; 2 | Rajt ___ ommi xxejjirli mill-gallarija. | ’l | I saw my mother waving to me from the balcony. | RULE |"
+    },
+    {
+      "id": "L03-lil-b02",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b02; 3 | Staqsejt ___ Mark mistoqsija tal-Matematika. | ’il | I asked Mark a mathematics question. | RULE |"
+    },
+    {
+      "id": "L03-lil-b03",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b03; 4 | Kellimna ___ kuġina tiegħek ilbieraħ. | ’l- | We spoke to your female cousin yesterday. | RULE |"
+    },
+    {
+      "id": "L03-lil-b04",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b04; 5 | Ċempilt ___ parrinu biex nitkellmu dwar il-Griżma. | ’il- | I called the godfather/sponsor to discuss Confirmation. | RULE |"
+    },
+    {
+      "id": "L03-lil-b05",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b05; 6 | Qabel tlaqna, sellimna ___ xulxin. | ’l | Before we left, we said goodbye to each other. | RULE |"
+    },
+    {
+      "id": "L03-lil-b06",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b06; 7 | Staqsew ħafna mistoqsijiet ___ xulxin. | ’il | They asked each other many questions. | RULE |"
+    },
+    {
+      "id": "L03-lil-b07",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-lil-b07; 8 | Bagħtu ___ kulħadd id-dar. | ’l | They sent everyone home. | RULE |"
+    },
+    {
+      "id": "L03-dir-01",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-01 | ’il barra | out; outside | RULE |"
+    },
+    {
+      "id": "L03-dir-02",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-02 | ’il ġewwa | in; inside | RULE |"
+    },
+    {
+      "id": "L03-dir-03",
+      "decisions": [
+        "FIX",
+        "RULE"
+      ],
+      "record": "| L03-dir-03 | ’il fejn | where to; in which direction | RULE; FIX improve source gloss where to preserve direction |"
+    },
+    {
+      "id": "L03-dir-04",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-04 | ’il bogħod | far away | RULE |"
+    },
+    {
+      "id": "L03-dir-05",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-05 | ’il fuq | up; upwards | RULE |"
+    },
+    {
+      "id": "L03-dir-06",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-06 | ’il quddiem | ahead; forwards | RULE; validate in its full sentence context |"
+    },
+    {
+      "id": "L03-dir-07",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-07 | ’l hawn | this way; towards here | RULE |"
+    },
+    {
+      "id": "L03-dir-08",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-08 | ’l hemm | that way; towards there | RULE |"
+    },
+    {
+      "id": "L03-dir-09",
+      "decisions": [
+        "RULE"
+      ],
+      "record": "| L03-dir-09 | ’l isfel | down; downwards | RULE |"
+    },
+    {
+      "id": "L03-tr-01",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-01 | With the bag | Bil-borża | DRAFT; instrumental/carrying sense. Mal-borża is context-dependent, not a universally equivalent answer. |"
+    },
+    {
+      "id": "L03-tr-02",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-02 | With my friend | Ma’ ħabibi / Ma’ ħabibti | DRAFT; friend gender unspecified |"
+    },
+    {
+      "id": "L03-tr-03",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-03 | For the cousin | Għall-kuġin / Għall-kuġina | DRAFT; cousin gender unspecified |"
+    },
+    {
+      "id": "L03-tr-04",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-04 | To the woman | Lill-mara | DRAFT |"
+    },
+    {
+      "id": "L03-tr-05",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-05 | On the table | Fuq il-mejda | DRAFT; do not manufacture a fusion fuqil- |"
+    },
+    {
+      "id": "L03-tr-06",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-06 | In the sea | Fil-baħar | DRAFT |"
+    },
+    {
+      "id": "L03-tr-07",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-07 | In the street | Fit-triq | DRAFT; sun consonant t |"
+    },
+    {
+      "id": "L03-tr-08",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-08 | To Tom | Lil Tom | DRAFT; proper name without article |"
+    },
+    {
+      "id": "L03-tr-09",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-09 | From the city | Mill-belt | DRAFT |"
+    },
+    {
+      "id": "L03-tr-10",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-10 | Like the actor | Bħall-attur | DRAFT |"
+    },
+    {
+      "id": "L03-tr-11",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-11 | Like the pear | Bħall-lanġasa | DRAFT; retain the three l letters across the hyphen |"
+    },
+    {
+      "id": "L03-tr-12",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-tr-12 | From China | Miċ-Ċina | DRAFT; the country name takes the article, with ċ assimilation |"
+    },
+    {
+      "id": "L03-gap-01",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-01 | bi + mutur | bil- | bil-mutur | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-02",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-02 | fi + garaxx | fil- | fil-garaxx ta’ missieri | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-03",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-03 | ġo + tank | ġot- | ġot-tank | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-04",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-04 | minn + ewwel | mill- | mill-ewwel | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-05",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-05 | minn + Xewkija | mix- | mix-Xewkija | DRAFT; RULE; place name takes an article |"
+    },
+    {
+      "id": "L03-gap-06",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-06 | għal + Għajnsielem | għal | għal Għajnsielem | DRAFT; RULE; this place name does not take the article here |"
+    },
+    {
+      "id": "L03-gap-07",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-07 | minn + triq | mit- | mit-triq | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-08",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-08 | ma’ + ħajt | mal- | mal-ħajt tas-sejjieħ | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-09",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-09 | fi + ġenb | fil- | fil-ġenb tat-triq | DRAFT; RULE; ġ is not ċ |"
+    },
+    {
+      "id": "L03-gap-10",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-10 | fi + art | fl- | fl-art | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-gap-11",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-11 | fi + dak | f’ | f’dak l-istat | DRAFT; RULE; demonstrative, not an article contraction |"
+    },
+    {
+      "id": "L03-gap-12",
+      "decisions": [
+        "DRAFT",
+        "REVIEW"
+      ],
+      "record": "| L03-gap-12 | lil + ambulanza | lill- | lill-ambulanza | DRAFT; REVIEW semantic/metonymic use of ċempel lill-ambulanza before strict grading |"
+    },
+    {
+      "id": "L03-gap-13",
+      "decisions": [
+        "REVIEW"
+      ],
+      "record": "| L03-gap-13 | sa (ma’) + ambulanza ġiet | No approved fixed answer | Suggested rewrite: Iżda sa ma ġiet l-ambulanza, ilħaqt ġejt f’tiegħi. | REVIEW; temporal ma is not the accompaniment preposition ma’; do not mechanically grade mal- |"
+    },
+    {
+      "id": "L03-gap-14",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-14 | għal + osservazzjoni | għal | għal osservazzjoni | DRAFT; RULE; abstract purpose without an article |"
+    },
+    {
+      "id": "L03-gap-15",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "| L03-gap-15 | bħal + din | bħal | bħal din id-darba | DRAFT; RULE |"
+    },
+    {
+      "id": "L03-qa-01",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-qa-01 | F’liema xahar tas-sena sseħħ l-istorja? | In which month does the story take place? | F’Lulju. | DRAFT; supported by read-01 |"
+    },
+    {
+      "id": "L03-qa-02",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-qa-02 | X’kien hemm wara r-raħal tagħhom? | What was behind their village? | Kien hemm għoljiet imwarrba. | DRAFT; read-01 |"
+    },
+    {
+      "id": "L03-qa-03",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-qa-03 | Min huma ż-żewġ karattri prinċipali u x’inhi r-relazzjoni ta’ bejniethom? | Who are the two main characters, and how are they related? | Leli u Ġanni. Ġanni huwa n-neputi ta’ Leli. | DRAFT; read-01; preserve source kinship ambiguity |"
+    },
+    {
+      "id": "L03-qa-04",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-qa-04 | Għaliex imxew bejn il-blat? | Why did they walk among the rocks? | Għax kienu mqanqla mill-kurżità u riedu jesploraw il-passaġġ. | DRAFT; read-02/03 |"
+    },
+    {
+      "id": "L03-qa-05",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-qa-05 | Għaliex l-għar jismu “l-Għar l-Aħmar”? | Why is the cave called the Red Cave? | Għax il-blat mal-faċċata kien jixgħel lewn in-nar meta tolqtu x-xemx tal-għabex. | DRAFT; read-04 |"
+    },
+    {
+      "id": "L03-qa-06",
+      "decisions": [
+        "DRAFT",
+        "FIX"
+      ],
+      "record": "| L03-qa-06 | X’semgħu malli daħlu ġol-għar? | What did they hear as soon as they entered the cave? | Semgħu l-qtar tal-ilma nieżel mis-saqaf. | FIX source ġo l-għar → ġol-għar for lesson consistency; DRAFT answer |"
+    },
+    {
+      "id": "L03-qa-07",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "| L03-qa-07 | X’sabu Leli u Ġanni midfun fil-ħamrija fuq wara tal-għar? | What did Leli and Ġanni find buried in the soil at the back of the cave? | Sabu kaxxa żgħira tal-ħadid, imsadda biż-żmien, b’kurċifiss antik imnaqqax fuqha. | DRAFT; read-06/07 |"
+    },
+    {
+      "id": "L03-qa-08",
+      "decisions": [
+        "DRAFT",
+        "FIX"
+      ],
+      "record": "| L03-qa-08 | X’għamlu bl-oġġett li sabu fl-aħħar tal-istorja? | What did they do with the object they found at the end of the story? | Iddeċidew li joħduh id-dar biex jippruvaw jiftħuh mal-familja. | FIX source bil-oġġett → bl-oġġett; DRAFT answer |"
+    },
+    {
+      "id": "L03-read-01",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "Kien wara nofsinhar meta f’jum sħun ta’ Lulju, Leli u n-neputi tiegħu Ġanni ddeċidew li jesploraw l-għoljiet imwarrba wara r-raħal tagħhom.\n\nOne afternoon, on a hot July day, Leli and his nephew Ġanni decided to explore the remote hills behind their village."
+    },
+    {
+      "id": "L03-read-02",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "Għalkemm kienu ilhom joqogħdu f’dawk l-inħawi għal snin sħaħ, qatt ma kienu nnutaw passaġġ żgħir moħbi wara s-siġar tal-ħarrub antik.\n\nAlthough they had lived in the area for many years, they had never noticed a small passage hidden behind the old carob trees."
+    },
+    {
+      "id": "L03-read-03",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "Imqanqla mill-kurżità, huma mxew b’attenzjoni bejn il-blat sakemm sabu ruħhom quddiem fetħa mudlama: l-Għar l-Aħmar.\n\nDriven by curiosity, they walked carefully among the rocks until they found themselves facing a dark opening: the Red Cave."
+    },
+    {
+      "id": "L03-read-04",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "L-isem kien ġej mill-kulur tal-blat mal-faċċata, li kien jixgħel lewn in-nar meta tolqtu x-xemx tal-għabex.\n\nIts name came from the colour of the rocks at the entrance, which glowed like fire when the evening sun struck them."
+    },
+    {
+      "id": "L03-read-05",
+      "decisions": [
+        "DRAFT",
+        "FIX"
+      ],
+      "record": "Hekk kif daħlu ġewwa, il-kesħa tal-għar laqtet wiċċhom u bdew jisimgħu l-qtar tal-ilma nieżel bil-mod mis-saqaf.\n\nAs soon as they stepped inside, the cave's cold air hit their faces, and they began to hear water dripping slowly from the ceiling."
+    },
+    {
+      "id": "L03-read-06",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "Fuq wara nett tal-għar, Ġanni nnota xi ħaġa tleqq nofsha midfuna fil-ħamrija.\n\nAt the very back of the cave, Ġanni noticed something shiny, half buried in the soil."
+    },
+    {
+      "id": "L03-read-07",
+      "decisions": [
+        "DRAFT",
+        "RULE"
+      ],
+      "record": "Kienet kaxxa żgħira tal-ħadid, imsadda biż-żmien, imma b’kurċifiss antik imnaqqax fuqha.\n\nIt was a small iron box, rusted with age, with an old crucifix engraved on it."
+    },
+    {
+      "id": "L03-read-08",
+      "decisions": [
+        "DRAFT"
+      ],
+      "record": "Mingħajr ma ħasbuha darbtejn, huma ddeċidew li joħduha d-dar biex jippruvaw jiftħuha flimkien mal-kumplament tal-familja.\n\nWithout thinking twice, they decided to take it home and try to open it together with the rest of the family."
+    }
+  ],
+  "errors": []
+}

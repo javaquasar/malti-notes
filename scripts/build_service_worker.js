@@ -19,6 +19,11 @@ const coreAssets = [
   "./manifest.webmanifest",
   ...walk("assets/css", ".css").sort().map((file) => `./${file}`),
   ...walk("assets/js", ".js").sort().map((file) => `./${file}`),
+  // The new presentation API and its consumer must not mix with older cached scripts.
+  "./assets/js/render-example-banks.js?v=bank-views-2",
+  "./assets/js/particles-study.js?v=bank-views-2",
+  "./assets/css/site.css?v=bank-views-3",
+  "./assets/css/site/review-inline.css?v=2",
   "./assets/data/site-map.json",
   "./assets/data/firebase-config.json",
   "./assets/data/search-index.json",
@@ -32,6 +37,9 @@ const coreAssets = [
   "./assets/data/about_me_options.json",
   "./assets/data/numbers_expansion.json",
   "./assets/data/numbers_time_drills.json",
+  "./assets/data/particles_prepositions_examples.json",
+  "./assets/data/reading_red_cave_examples.json",
+  "./assets/data/directions_particles_examples.json",
   "./assets/data/lesson01_exercises.json",
   "./assets/data/lesson01_practice.json",
   ...fs.readdirSync(path.join(root, "assets/data")).filter((file) => file.endsWith("_lesson01_examples.json")).sort().map((file) => "./assets/data/" + file),
@@ -60,13 +68,13 @@ if (overlappingAssets.length) {
 const versionedAssets = [...uniqueCoreAssets, ...uniqueLazyAssets];
 const revision = crypto.createHash("sha256");
 versionedAssets.filter((asset) => asset !== "./").forEach((asset) => {
-  const file = path.join(root, asset.slice(2));
+  const file = path.join(root, asset.slice(2).split("?")[0]);
   if (!fs.existsSync(file)) throw new Error(`Service worker asset is missing: ${asset}`);
   revision.update(asset);
   revision.update(fs.readFileSync(file));
 });
 const version = revision.digest("hex").slice(0, 12);
-const assetBytes = (asset) => asset === "./" ? 0 : fs.statSync(path.join(root, asset.slice(2))).size;
+const assetBytes = (asset) => asset === "./" ? 0 : fs.statSync(path.join(root, asset.slice(2).split("?")[0])).size;
 const coreBytes = uniqueCoreAssets.reduce((total, asset) => total + assetBytes(asset), 0);
 const lazyBytes = uniqueLazyAssets.reduce((total, asset) => total + assetBytes(asset), 0);
 const serializedCoreAssets = JSON.stringify(uniqueCoreAssets, null, 2).replace(/^/gm, "  ");

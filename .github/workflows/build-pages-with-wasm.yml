@@ -147,6 +147,12 @@ jobs:
           PLAYWRIGHT_USE_BUNDLED: "1"
         run: npm run numbers:learning:check
 
+      - name: Check particles and bilingual reading
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        env:
+          PLAYWRIGHT_USE_BUNDLED: "1"
+        run: npm run particles:check
+
       - name: Upload visual artifacts
         if: always()
         uses: actions/upload-artifact@v7

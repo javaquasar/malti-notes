@@ -140,6 +140,21 @@ Bookmark buttons belong to the existing review component and renderer. They
 must reflect the real review-store state, expose an accessible name and update
 `aria-pressed`; a decorative bookmark alone is not a working review control.
 
+For a bookmark in a table cell or action toolbar, combine
+`review-add-button review-add-button--icon review-add-button--inline`.
+This shared variant stays in normal flow and centers the icon without a
+sentence-card grid wrapper. Keep table actions in their own column.
+The variant is supplied by `site/review-inline.css`, imported through `site.css`;
+pages must not load this shared layer directly.
+
+Icon review buttons use a single flex row with zero gap, not a grid with an
+anonymous text row. Their glyph has no translation offset and stays centered
+whether the renderer supplies fallback text or only an accessible label.
+Sentence-card review actions center against the first grid row, including a
+paragraph's margins. Shared review tables use `review-table` and a dedicated
+`review-table-action` column to center row text and controls together. Do not
+compensate for misalignment with per-page offsets or transforms.
+
 ## Disclosures
 
 Use the default disclosure for a bank of examples. The summary owns the shared
@@ -250,7 +265,7 @@ appear in a worksheet that is configured without answers.
 | Shared CSS import order | `assets/css/site.css` |
 | Page shell and existing card/layout contracts | `assets/css/site/base.css`, `assets/css/site/layout.css` |
 | Shared study components | `assets/css/site/components.css` |
-| Review actions and their states | `assets/css/site/review.css` |
+| Review actions and their states | `assets/css/site/review.css`, `assets/css/site/review-inline.css` |
 | Existing exercise-specific contracts | `assets/css/site/exercises.css` |
 | Print behavior | `assets/css/site/print.css` |
 | Topic-specific diagrams and layout | The owning page stylesheet, within documented exceptions |
@@ -276,6 +291,51 @@ guard. That is a migration backlog, not permission to copy their independent
 control styles into new work.
 
 ## Extending the System
+
+### Shared Bank Presentations
+
+`renderExampleBanksFromData` owns repeated content markup and review buttons.
+Use `groupViews` for an alternative presentation, not a page-local item renderer:
+
+```javascript
+await renderExampleBanksFromData({
+  dataUrl: './assets/data/my_examples.json',
+  groupAttribute: 'data-bank-view',
+  reviewPrefix: 'my-existing-prefix',
+  groupViews: {
+    reference: {
+      presentation: 'table',
+      columns: [{ field: 'maltese', lang: 'mt' }, { field: 'english', lang: 'en' }]
+    },
+    corrections: { presentation: 'correction' },
+    reading: { presentation: 'reading' },
+    questions: { presentation: 'selfAssessment', state: { answers: {}, ratings: {} } }
+  }
+});
+```
+
+The target for `table` is a `tbody` inside a semantic table with a caption and
+column headings; the renderer adds the review heading and aligned row actions.
+Other targets are ordinary layout containers. `correction` uses `incorrect`
+plus the typed correct example. `reading` renders Maltese first, then English.
+`selfAssessment` requires typed question/answer items and starts with hidden
+models and disabled rating commands. It never treats self-ratings as graded results.
+
+All presentations filter quarantined items, normalize typed content, and share
+review IDs and store synchronization with ordinary cards. `data-bank-primary`
+identifies reading text; `data-bank-translation` identifies English text.
+The controller may toggle translations or highlight domain-specific text without
+rebuilding the card. Drafts and ratings emit bubbling `malti-bank-draft` and
+`malti-bank-rating` events with `{ groupId, slug, value }`; controllers persist
+those values and pass them back through `state` on the next render.
+An optional `data` object avoids a second fetch when the controller already
+loaded the same bank. Keep `dataUrl` as its provenance/configuration URL.
+
+For a generated bank inside a disclosure, use an outer
+`study-disclosure-body mt-16` and a separate inner bank target. The renderer
+inserts its bulk-review toolbar immediately before that target, so both toolbar
+and items stay inside the indentation and vertical guide. Do not put the bank
+attribute on the disclosure-body wrapper itself.
 
 1. Find the closest existing component and inspect the visual catalog.
 2. Compose existing layouts and semantic components before writing new CSS.

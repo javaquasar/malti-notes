@@ -29,6 +29,7 @@ This directory is the canonical home for project documentation. The root `README
 - [Word-search PDF coverage](analysis/word-search-pdf-coverage.md)
 - [Verb course lesson map](analysis/verbs-course-lessons.md)
 - [Unreachable course verbs](analysis/verbs-course-unreachable.md)
+- [Particles and reading implementation](analysis/lesson03/implementation.md)
 
 ## Tools And References
 

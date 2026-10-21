@@ -106,11 +106,18 @@
             <h2>Controls and labels</h2>
             <div class="catalog-controls">
                 <button class="action-button" type="button">Add to review</button>
+                <button class="review-add-button review-add-button--icon review-add-button--inline" type="button" aria-label="Add to review" title="Add to review" aria-pressed="false" data-component="review-inline">Add to Review</button>
+                <button class="review-add-button review-add-button--icon review-add-button--inline is-added" type="button" aria-label="Remove from review" title="Remove from review" aria-pressed="true" data-component="review-inline-added">Remove from Review</button>
                 <button class="action-button" type="button" disabled>Saved</button>
                 <span class="status-chip">4 saved, 8 left</span>
                 <span class="pill">B1 core</span>
                 <span class="tag">Grammar</span>
             </div>
+            <article class="study-card sentence-card--review-toggle mt-16" data-component="review-paragraph">
+                <p lang="mt">Rajna lin-neputija.</p>
+                <p>We saw the niece/granddaughter.</p>
+                <button class="review-add-button review-add-button--icon" type="button" aria-label="Add to review" title="Add to review" aria-pressed="false">Add to Review</button>
+            </article>
         </section>
 
         <section class="content-card catalog-section" data-component="cards">
@@ -268,12 +275,12 @@
                 </article>
                 <article class="study-card catalog-table-wrap" data-component="table-soft">
                     <h3>Soft table</h3>
-                    <table class="table-soft">
+                    <table class="table-soft review-table">
                         <caption>Future forms</caption>
-                        <thead><tr><th scope="col">Person</th><th scope="col">Form</th></tr></thead>
+                        <thead><tr><th scope="col">Person</th><th scope="col">Form</th><th scope="col" class="review-table-action">Review</th></tr></thead>
                         <tbody>
-                            <tr><th scope="row">Jien</th><td><code>se niekol</code></td></tr>
-                            <tr><th scope="row">Huma</th><td><code>se jieklu</code></td></tr>
+                            <tr><th scope="row">Jien</th><td><code>se niekol</code></td><td class="review-table-action"><button class="review-add-button review-add-button--icon review-add-button--inline" type="button" aria-label="Add to review" aria-pressed="false">Add to Review</button></td></tr>
+                            <tr><th scope="row">Huma</th><td><code>se jieklu<br>għada</code></td><td class="review-table-action"><button class="review-add-button review-add-button--icon review-add-button--inline is-added" type="button" aria-label="Remove from review" aria-pressed="true">Remove from Review</button></td></tr>
                         </tbody>
                     </table>
                 </article>

@@ -1303,8 +1303,17 @@ async function main() {
         const result = await page.locator("[data-example-group], [data-question-group]").evaluateAll((containers) => {
           const problems = [];
           let cardCount = 0;
+          let customCount = 0;
 
           containers.forEach((container) => {
+            // Tables, contextual contrasts and active study widgets have separate layout checks.
+            if (container.hasAttribute("data-bank-layout")) {
+              customCount += container.children.length;
+              if (!["table", "contrast", "trainer", "reading", "comprehension"].includes(container.dataset.bankLayout)) {
+                problems.push(`Unknown bank layout: ${container.dataset.bankLayout}`);
+              }
+              return;
+            }
             const groupName =
               container.getAttribute("data-example-group") ||
               container.getAttribute("data-question-group") ||
@@ -1349,10 +1358,10 @@ async function main() {
             });
           });
 
-          return { cardCount, problems };
+          return { cardCount, customCount, problems };
         });
 
-        assert(result.cardCount > 0, `${pageName} did not render any bank cards.`);
+        assert(result.cardCount + result.customCount > 0, `${pageName} did not render any bank content.`);
         assert(result.problems.length === 0, `${pageName}: ${result.problems.join("; ")}`);
         checkedCards += result.cardCount;
       }
@@ -1641,16 +1650,33 @@ async function main() {
       for (const pageName of bankPages) {
         await openCleanPage(page, pageName);
         const result = await page.locator("[data-example-group], [data-question-group]").evaluateAll((containers) => {
-          const renderedCards = containers.flatMap((container) => Array.from(container.children));
+          const customProblems = [];
+          let customItems = 0;
+          containers.filter(container => container.hasAttribute("data-bank-layout")).forEach(container => {
+            const layout = container.dataset.bankLayout;
+            const children = Array.from(container.children);
+            customItems += children.length;
+            if (layout === "trainer") {
+              if (!Array.from(container.querySelectorAll("button")).some(button => /question.*review/i.test(button.textContent))) customProblems.push("Trainer review action missing");
+            } else if (layout === "contrast") {
+              if (!children.length || children.some(child => !child.querySelector("s") || !child.querySelector("strong"))) customProblems.push("Correction sides missing");
+            } else if (["table", "reading", "comprehension"].includes(layout)) {
+              if (!children.length || children.some(child => child.querySelectorAll(".review-add-button--icon").length !== 1)) customProblems.push(`${layout} needs one bookmark per item`);
+            } else customProblems.push(`Unknown bank layout: ${layout}`);
+          });
+          const renderedCards = containers.filter((container) => !container.hasAttribute("data-bank-layout"))
+            .flatMap((container) => Array.from(container.children));
           return {
-            cards: renderedCards.length,
+            customProblems,
+            cards: renderedCards.length + customItems,
             toggles: renderedCards.filter((card) => (
               card.classList.contains("sentence-card--review-toggle")
               && card.querySelector(".review-add-button--icon")
-            )).length
+            )).length + customItems
           };
         });
         assert(result.cards > 0, `${pageName} rendered no reviewable bank items.`);
+        assert(result.customProblems.length === 0, `${pageName}: ${result.customProblems.join(", ")}`);
         assert(result.toggles === result.cards, `${pageName} did not add an individual bookmark to every bank item.`);
       }
 

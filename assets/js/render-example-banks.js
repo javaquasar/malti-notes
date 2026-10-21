@@ -139,12 +139,12 @@ async function renderExampleBanksFromData(config) {
         return;
     }
 
-    const response = await fetch(dataUrl);
-    if (!response.ok) {
+    const response = config.data ? null : await fetch(dataUrl);
+    if (response && !response.ok) {
         throw new Error(`Could not load example data from ${dataUrl}`);
     }
 
-    const data = await response.json();
+    const data = config.data || await response.json();
     const groups = Array.isArray(data.groups) ? data.groups : [];
 
     function getStore() {
@@ -320,11 +320,37 @@ async function renderExampleBanksFromData(config) {
 
         container.innerHTML = "";
         const publishableItems = (group.items || []).filter(isPublishableBankItem);
+        const view = config.groupViews?.[group.id];
+        if (container.tagName === "TBODY" && view?.presentation !== "table") {
+            throw new Error(`Table body ${group.id} requires the table presentation.`);
+        }
+        const specialized = view && ["table", "correction", "reading", "selfAssessment"].includes(view.presentation);
+        if (view && !specialized) throw new Error(`Unsupported bank presentation: ${view.presentation}`);
+        if (specialized && publishableItems.some(item => !item.slug)) {
+            throw new Error(`Bank presentation ${group.id} requires stable item slugs.`);
+        }
+        if (view?.presentation === "selfAssessment" && publishableItems.some(item => normalizeBankItem(item, contentGroup).itemType !== "questionAnswer")) {
+            throw new Error(`Self-assessment group ${group.id} requires questionAnswer items.`);
+        }
         const isQuestionAnswerGroup = publishableItems.length > 0 && publishableItems.every((item) => (
             normalizeBankItem(item, contentGroup).itemType === "questionAnswer"
         ));
         const isDisclosureGroup = isQuestionAnswerGroup && group.presentation === "disclosure";
-        if (isQuestionAnswerGroup && !isDisclosureGroup) {
+        if (specialized) {
+            if (view.presentation !== "table") applyClassList(container, group.containerClass || containerClass);
+            if (view.presentation === "table") {
+                container.closest("table").classList.add("review-table");
+                const row = container.closest("table").querySelector("thead tr");
+                if (getStore() && !row.querySelector("[data-bank-review-heading]")) {
+                    const heading = document.createElement("th");
+                    heading.scope = "col";
+                    heading.textContent = "Review";
+                    heading.className = "review-table-action";
+                    heading.dataset.bankReviewHeading = "";
+                    row.appendChild(heading);
+                }
+            }
+        } else if (isQuestionAnswerGroup && !isDisclosureGroup) {
             container.classList.remove("grid-2", "grid-3", "grid-auto", "stack");
             container.classList.add("qa-pair-grid");
         } else {
@@ -337,7 +363,7 @@ async function renderExampleBanksFromData(config) {
         );
         allSentenceItems.push(...sentenceItems);
 
-        if (getStore()) {
+        if (getStore() && !specialized) {
             const previous = container.previousElementSibling;
             if (!previous || !previous.hasAttribute || !previous.hasAttribute("data-sentence-review-row")) {
                 const row = document.createElement("div");
@@ -366,6 +392,13 @@ async function renderExampleBanksFromData(config) {
         publishableItems.forEach((item, index) => {
             const normalized = normalizeBankItem(item, contentGroup);
             const shouldNumber = typeof group.numbered === "boolean" ? group.numbered : numbered;
+
+            if (specialized) {
+                const reviewButton = hasIndividualReview ? createSentenceReviewButton(sentenceItems[index]) : null;
+                if (reviewButton) reviewButton.classList.add("review-add-button--inline");
+                appendBankPresentation(container, item, normalized, index, view, reviewButton, group.id);
+                return;
+            }
 
             if (normalized.itemType === "questionAnswer" && isDisclosureGroup) {
                 const reviewButton = hasIndividualReview
@@ -446,7 +479,7 @@ async function renderExampleBanksFromData(config) {
             syncBulkButton(button);
         }
     }
-    if (groupAttribute === "data-lesson01-group") {
+    if (getStore()) {
         window.addEventListener("malti-storage-change", (event) => {
             if (event.detail?.key === "malti_review_cards_v2") refreshSentenceReviewUi();
         });
@@ -454,6 +487,94 @@ async function renderExampleBanksFromData(config) {
             if (event.key === "malti_review_cards_v2" || event.key === null) refreshSentenceReviewUi();
         });
     }
+}
+
+// Presentations share typed normalization and review identity with ordinary cards.
+function appendBankPresentation(container, item, normalized, index, view, reviewButton, groupId) {
+    const node = (tag, text, className) => {
+        const element = document.createElement(tag);
+        if (text != null) element.textContent = text;
+        if (className) element.className = className;
+        return element;
+    };
+    const mt = (tag, text) => { const element = node(tag, text); element.lang = "mt"; return element; };
+    const translation = text => { const element = node("p", text); element.dataset.bankTranslation = ""; element.lang = "en"; return element; };
+    if (view.presentation === "table") {
+        const row = node("tr");
+        row.dataset.bankItem = item.slug;
+        (view.columns || []).forEach(column => {
+            const cell = node("td", item[column.field] ?? "");
+            if (column.lang) cell.lang = column.lang;
+            row.appendChild(cell);
+        });
+        if (reviewButton) {
+            const cell = node("td", null, "review-table-action");
+            reviewButton.classList.add("review-add-button--inline");
+            cell.appendChild(reviewButton);
+            row.appendChild(cell);
+        }
+        container.appendChild(row);
+        return;
+    }
+    const article = node(view.presentation === "selfAssessment" ? "details" : "article", null,
+        view.presentation === "selfAssessment" ? "study-disclosure" : "study-card");
+    article.dataset.bankItem = item.slug;
+    if (item.intakeId) article.dataset.intakeId = item.intakeId;
+    if (view.presentation === "correction") {
+        const wrong = node("p", "Incorrect: ");
+        wrong.appendChild(mt("s", item.incorrect));
+        const right = node("p", "Correct: ");
+        right.appendChild(mt("strong", normalized.primary));
+        article.append(wrong, right, translation(normalized.secondary));
+    } else if (view.presentation === "reading") {
+        const primary = mt("p", normalized.primary);
+        primary.dataset.bankPrimary = item.slug;
+        article.append(primary, translation(normalized.secondary));
+    } else if (view.presentation === "selfAssessment") {
+        const summary = mt("summary", `${index + 1}. ${normalized.prompt}`);
+        const body = node("div", null, "study-disclosure-body stack");
+        const label = node("label", "Your answer", "study-field");
+        const input = mt("textarea", "");
+        input.className = "study-input";
+        input.rows = 3;
+        input.value = view.state?.answers?.[item.slug] || "";
+        label.appendChild(input);
+        const emit = (name, value) => container.dispatchEvent(new CustomEvent(name, {
+            bubbles: true, detail: { groupId, slug: item.slug, value }
+        }));
+        input.addEventListener("input", () => emit("malti-bank-draft", input.value));
+        const model = node("div");
+        model.hidden = true;
+        model.append(mt("p", normalized.answer), translation(normalized.answerTranslation));
+        const actions = node("div", null, "toolbar-row");
+        const command = (text, action) => { const button = node("button", text, "action-button"); button.type = "button"; button.addEventListener("click", action); return button; };
+        const reveal = command("Show model answer", () => {
+            model.hidden = !model.hidden;
+            reveal.textContent = model.hidden ? "Show model answer" : "Hide model answer";
+            again.disabled = confident.disabled = model.hidden;
+        });
+        const rate = value => {
+            again.setAttribute("aria-pressed", String(value === "again"));
+            confident.setAttribute("aria-pressed", String(value === "confident"));
+            emit("malti-bank-rating", value);
+        };
+        const again = command("Needs practice", () => rate("again"));
+        const confident = command("Confident", () => rate("confident"));
+        again.disabled = confident.disabled = true;
+        again.setAttribute("aria-pressed", String(view.state?.ratings?.[item.slug] === "again"));
+        confident.setAttribute("aria-pressed", String(view.state?.ratings?.[item.slug] === "confident"));
+        actions.append(reveal, again, confident);
+        if (reviewButton) { reviewButton.classList.add("review-add-button--inline"); actions.appendChild(reviewButton); }
+        body.append(translation(normalized.questionTranslation), label, model, actions);
+        article.append(summary, body);
+        container.appendChild(article);
+        return;
+    }
+    if (reviewButton) {
+        article.classList.add("sentence-card--review-toggle");
+        article.appendChild(reviewButton);
+    }
+    container.appendChild(article);
 }
 
 async function renderQuestionBanksFromData(config) {

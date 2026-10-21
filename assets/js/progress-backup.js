@@ -23,6 +23,7 @@
     malti_numbers_copy_format_v1: "string",
     malti_about_me_progress_v1: "object",
     malti_lesson01_skills_v1: "object",
+    malti_particles_study_v1: "object",
     malti_mistake_journal_v1: "object",
     malti_today_minutes_v1: "string",
     malti_site_theme: "string",

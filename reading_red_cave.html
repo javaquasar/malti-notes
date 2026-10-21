@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Red Cave</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css?v=bank-views-3">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <div class="grid">
+        <aside class="sidebar"><h2>Contents</h2><nav aria-label="Reading sections"><ul>
+            <li><a href="#reading">The Red Cave</a></li><li><a href="#comprehension">Comprehension</a></li>
+            <li><a href="./particles_prepositions.html">Particles and Prepositions</a></li><li><a href="./numbers_calendar_time.html#dual-forms">Dual Forms</a></li>
+        </ul></nav></aside>
+        <main class="content" data-red-cave-page data-content-src="./assets/data/reading_red_cave_examples.json">
+            <section class="content-card" id="reading">
+                <h1 lang="mt">Il-Misteru tal-Għar l-Aħmar</h1><p>The Mystery of the Red Cave</p>
+                <div class="control-row control-row--responsive no-print">
+                    <label class="study-check"><input type="checkbox" data-reading-english checked>English translation</label>
+                    <label class="study-check"><input type="checkbox" data-reading-highlight>Highlight particles</label>
+                    <label class="study-field">Copy format<select class="study-input" data-reading-copy-format><option value="mt">Maltese only</option><option value="bilingual">Maltese + English</option></select></label>
+                    <button class="action-button" type="button" data-reading-copy>Copy reading</button>
+                </div>
+                <div class="stack" data-bank-view="red-cave-story" data-bank-layout="reading" data-reading-text data-example-group="red-cave-story"></div>
+                <p class="study-feedback" role="status" data-reading-status></p>
+            </section>
+            <section class="content-card" id="comprehension"><h2>Comprehension</h2><div class="stack" data-bank-view="red-cave-comprehension" data-bank-layout="comprehension" data-reading-questions data-example-group="red-cave-comprehension"></div></section>
+            <noscript>Enable JavaScript to load the reading and comprehension questions.</noscript>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/learning-content.js"></script>
+<script src="./assets/js/render-example-banks.js?v=bank-views-2"></script>
+<script src="./assets/js/particles-study.js?v=bank-views-2"></script>
+<script src="./assets/js/site-header.js"></script>
+</body>
+</html>

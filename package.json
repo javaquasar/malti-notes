@@ -13,6 +13,8 @@
     "numbers:tools:check": "node ./scripts/numbers_tools_check.js",
     "numbers:style:check": "node ./scripts/numbers_style_check.js",
     "numbers:learning:check": "node ./scripts/numbers_learning_check.js",
+    "particles:build": "node ./scripts/build_particles_content.js",
+    "particles:check": "node ./scripts/particles_study_check.js",
     "ci:workflow:check": "node ./scripts/ci_workflow_check.js",
     "cloud-sync:check": "node ./scripts/cloud_sync_check.js",
     "firebase:check": "node ./scripts/firebase_config_check.js",

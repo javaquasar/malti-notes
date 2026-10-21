@@ -1,0 +1,27 @@
+/* In-flow review controls for shared bank tables and action rows. */
+.review-add-button--inline {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  vertical-align: middle;
+}
+
+.review-add-button--inline::before {
+  transform: none;
+}
+
+.sentence-card--review-toggle > .review-add-button--inline {
+  align-self: center;
+}
+
+.review-table td,
+.review-table tbody th {
+  vertical-align: middle;
+}
+
+.review-table .review-table-action {
+  text-align: center;
+  vertical-align: middle;
+}
