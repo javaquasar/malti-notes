@@ -12,6 +12,11 @@ const workflowPath = path.join(
 const workflow = fs.readFileSync(workflowPath, "utf8");
 
 const requiredChecks = [
+  "ui:runtime:check",
+  "ui:progress:check",
+  "visual:components",
+  "release:check",
+  "release:build",
   "materials:check",
   "numbers:style:check",
   "docs:check",

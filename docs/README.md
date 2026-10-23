@@ -20,9 +20,12 @@ This directory is the canonical home for project documentation. The root `README
 - [Learning content model](learning-content-model.md)
 - [Content verification](content-verification.md)
 - [Visual regression checklist](quality/visual-regression-checklist.md)
+- [UI unification checks and release assets](quality/ui-unification-checks.md)
 
 ## Analysis
 
+- [UI unification audit and refactoring backlog](analysis/ui-unification-audit.md)
+- [UI unification progress and remaining style counters](analysis/ui-unification-progress.md)
 - [B1/B2 book coverage](analysis/book-coverage.md)
 - [Phrase-bank audit](analysis/phrase-bank-audit.md)
 - [Review connection inventory](analysis/review-connections.md)

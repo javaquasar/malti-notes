@@ -68,7 +68,7 @@
       else store.addSentence({ id, maltese: row.maltese, english: row.english,
         topic: titles[topic], sourcePage: page + '#' + (topic === 'dual-forms' ? 'group-counts' : topic) });
       refreshReview();
-    }, 'review-add-button review-add-button--icon numbers-review-button');
+    }, 'review-add-button review-add-button--icon review-add-button--inline numbers-review-button');
     reviewButtons.push(() => sync(b)); sync(b); return b;
   }
   function refreshReview() { reviewButtons.forEach(sync => sync()); }

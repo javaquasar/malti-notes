@@ -2,7 +2,7 @@ const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
-const root = path.resolve(__dirname, "..");
+const root = process.env.SITE_BUILD_ROOT ? path.resolve(process.env.SITE_BUILD_ROOT) : path.resolve(__dirname, "..");
 const outputFile = path.join(root, "service-worker.js");
 const checkOnly = process.argv.includes("--check");
 
@@ -13,19 +13,25 @@ function walk(directory, extension) {
   });
 }
 
+function versionedReferences() {
+  if (process.env.SITE_BUILD_ROOT) return []; // Published releases version the containing asset namespace.
+  const sources = [...fs.readdirSync(root).filter((file) => file.endsWith(".html")), ...walk("assets/css", ".css")];
+  return sources.flatMap((file) => {
+    const text = fs.readFileSync(path.join(root, file), "utf8");
+    return [...text.matchAll(/["']([^"']+\.(?:css|js)\?v=[a-zA-Z0-9._-]+)["']/g)].flatMap((match) => {
+      const url = new URL(match[1], `https://local.invalid/${file}`);
+      return url.origin === "https://local.invalid" ? [`.${url.pathname}${url.search}`] : [];
+    });
+  });
+}
+
 const coreAssets = [
   "./",
   ...fs.readdirSync(root).filter((file) => file.endsWith(".html")).sort().map((file) => `./${file}`),
   "./manifest.webmanifest",
   ...walk("assets/css", ".css").sort().map((file) => `./${file}`),
   ...walk("assets/js", ".js").sort().map((file) => `./${file}`),
-  // The new presentation API and its consumer must not mix with older cached scripts.
-  "./assets/js/render-example-banks.js?v=bank-views-2",
-  "./assets/js/particles-study.js?v=bank-views-2",
-  "./assets/css/site.css?v=bank-views-3",
-  "./assets/css/site/review-inline.css?v=2",
-  "./assets/css/lesson01-practice.css?v=phrase-cards-2",
-  "./assets/js/lesson01-practice.js?v=phrase-cards-2",
+  ...versionedReferences(),
   "./assets/data/site-map.json",
   "./assets/data/firebase-config.json",
   "./assets/data/search-index.json",

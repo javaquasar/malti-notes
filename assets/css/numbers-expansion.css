@@ -11,8 +11,6 @@
 .numbers-reference-body strong { white-space: pre-line; }
 .numbers-reference-body p { margin: var(--space-sm) 0 0; }
 .numbers-row-actions { display: flex; gap: var(--space-sm); align-items: start; }
-.numbers-review-button.review-add-button--icon { position: static; width: var(--control-height); height: var(--control-height); min-width: var(--control-height); }
-.numbers-review-button.review-add-button--icon::before { transform: none; }
 .numbers-table-wrap { overflow-x: auto; }
 .numbers-forms-table { width: 100%; }
 .numbers-forms-table caption { text-align: left; padding: var(--space-lg) 0; font-weight: 700; }

@@ -74,6 +74,10 @@
 .exercise-input-label input,
 .exercise-match-row select {
   width: 100%;
+}
+
+.exercise-input-label input:not(.study-input),
+.exercise-match-row select:not(.study-input) {
   min-height: 42px;
   border: 1px solid var(--border-default);
   border-radius: var(--radius-lg);

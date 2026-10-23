@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}a82fc5091bcf`;
+const CACHE_NAME = `${CACHE_PREFIX}4d61c3c21a7c`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -139,12 +139,13 @@ const CORE_ASSETS = [
     "./assets/js/word-search-game.js",
     "./assets/js/year4-exam.js",
     "./assets/js/year4-revision-topic.js",
-    "./assets/js/render-example-banks.js?v=bank-views-2",
-    "./assets/js/particles-study.js?v=bank-views-2",
     "./assets/css/site.css?v=bank-views-3",
-    "./assets/css/site/review-inline.css?v=2",
     "./assets/css/lesson01-practice.css?v=phrase-cards-2",
     "./assets/js/lesson01-practice.js?v=phrase-cards-2",
+    "./assets/js/particles-study.js?v=bank-views-2",
+    "./assets/js/render-example-banks.js?v=bank-views-2",
+    "./assets/js/review-cards.js?v=20260420b",
+    "./assets/css/site/review-inline.css?v=2",
     "./assets/data/site-map.json",
     "./assets/data/firebase-config.json",
     "./assets/data/search-index.json",

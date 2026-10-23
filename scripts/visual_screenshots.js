@@ -150,6 +150,21 @@ async function main() {
             `${safeName(pageName.replace(/\.html$/i, ""))}__${theme}__${viewport.name}.png`
           );
           await page.screenshot({ path: screenshotPath, fullPage: true });
+          if (process.env.VISUAL_COMPONENTS === "1") {
+            const components = page.locator("[data-component]");
+            const names = new Set();
+            for (let index = 0; index < await components.count(); index += 1) {
+              const component = components.nth(index);
+              const name = await component.getAttribute("data-component");
+              if (!/^[a-z0-9-]+$/.test(name) || names.has(name)) throw new Error(`Invalid or duplicate component: ${name}`);
+              names.add(name);
+              await component.screenshot({
+                path: path.join(outputRoot, `component-${name}__${theme}__${viewport.name}.png`),
+                animations: "disabled"
+              });
+            }
+            console.log(`Captured ${names.size} isolated components (${theme}/${viewport.name})`);
+          }
           await page.close();
           await context.close();
           console.log(path.relative(root, screenshotPath));

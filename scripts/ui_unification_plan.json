@@ -1,0 +1,22 @@
+{
+  "packages": [
+    { "id": "U01", "title": "Speaking controls", "status": "pending", "files": ["assets/css/lesson01-practice.css", "assets/js/lesson01-practice.js"], "check": "node scripts/lesson01_practice_check.js" },
+    { "id": "U02", "title": "About Me controls", "status": "pending", "files": ["assets/js/about-me.js"], "check": "npm run functional:test -- --suite progress-storage" },
+    { "id": "U03", "title": "Duplicate demo-box ownership", "status": "pending", "files": ["assets/css/pages.css", "assets/css/site/components.css"], "check": "npm run style:lint" },
+    { "id": "U04", "title": "Parallel shared control families", "status": "in-progress", "files": ["assets/css/site/exercises.css", "assets/css/site/review.css", "assets/css/site/components.css"], "check": "npm run ui:runtime:check" },
+    { "id": "U05", "title": "Year 4 shared rendering", "status": "pending", "files": ["assets/js/year4-revision-topic.js"], "check": "npm run functional:test -- --suite review-games" },
+    { "id": "U06", "title": "Health attached table", "status": "pending", "files": ["assets/css/pages.css", "health_doctor.html"], "check": "npm run functional:test -- --suite visual-contracts" },
+    { "id": "U07", "title": "Inline verb launchers", "status": "pending", "files": ["assets/css/pages.css"], "check": "npm run visual:smoke" },
+    { "id": "U08", "title": "Game chrome controls", "status": "pending", "files": ["assets/css/vocabulary-games.css", "assets/css/word-search.css"], "check": "npm run functional:test -- --suite review-games" },
+    { "id": "U09", "title": "Review factories", "status": "pending", "files": ["assets/js/render-example-banks.js", "assets/js/lesson01-practice.js"], "check": "npm run functional:test -- --suite review-games" },
+    { "id": "U10", "title": "Structured swatch values", "status": "pending", "files": ["assets/js/render-vocab-table.js"], "check": "npm run data:lint" },
+    { "id": "U11", "title": "Redundant numbers layout", "status": "in-progress", "files": ["assets/css/numbers-expansion.css"], "check": "npm run numbers:style:check" },
+    { "id": "U12", "title": "Dead review renderer", "status": "pending", "files": ["assets/js/review-cards.js"], "check": "npm run functional:test -- --suite review-games" }
+  ],
+  "measuredStylesheets": ["assets/css/pages.css", "assets/css/lesson01-practice.css", "assets/css/topic-picker.css", "assets/css/vocabulary-games.css", "assets/css/word-search.css", "assets/css/numbers-expansion.css"],
+  "allowedDomainGeometry": [
+    "Game boards, tiles and fraction diagrams retain domain-specific geometry; shared command controls do not.",
+    "Progress percentages, measured floating-button placement and flying-tile positions are runtime geometry, not component surface overrides.",
+    "Vocabulary swatch colors represent learning content; unrestricted CSS strings remain U10 work, not an exemption."
+  ]
+}

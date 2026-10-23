@@ -135,6 +135,22 @@ jobs:
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         run: npm run visual:catalog
 
+      - name: Check live shared component contracts
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run ui:runtime:check
+
+      - name: Capture isolated components
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run visual:components
+
+      - name: Check unification progress counters
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run ui:progress:check
+
+      - name: Check deterministic release assets
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run release:check
+
       - name: Check shared numbers study components
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         env:
@@ -161,6 +177,7 @@ jobs:
           path: |
             visual-regression/screenshots/
             visual-regression/diffs/
+            tmp_ui/
             tmp_numbers_sessions/shared-*
             tmp_numbers_sessions/learning-*
           if-no-files-found: ignore
@@ -287,17 +304,7 @@ jobs:
         run: npm run pwa:build
 
       - name: Prepare static site folder
-        run: |
-          mkdir -p site-dist
-          cp *.html site-dist/
-          cp manifest.webmanifest service-worker.js site-dist/
-          cp -R assets site-dist/
-          rm -f site-dist/assets/data/course_target_assessments.json
-          rm -f site-dist/assets/data/course_target_bindings.json
-          rm -f site-dist/assets/data/course_target_examples.json
-          rm -f site-dist/assets/data/course_target_glosses.json
-          rm -f site-dist/assets/data/course_source_provenance.json
-          rm -f site-dist/assets/data/course_supplemental_content.json
+        run: npm run release:build
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
