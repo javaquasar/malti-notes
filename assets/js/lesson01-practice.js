@@ -2,7 +2,7 @@
     const page = location.pathname.split('/').pop();
     if (!['greetings.html', 'polite_phrases.html', 'conversation_help.html', 'getting_to_know.html'].includes(page)) return;
     const root = document.createElement('section');
-    root.className = 'lesson-practice';
+    root.className = 'lesson-practice content-card';
     root.id = 'speaking-practice';
     document.querySelector('main.content').prepend(root);
     root.textContent = 'Loading speaking practice...';
@@ -23,16 +23,18 @@
             parent.append(node);
             return node;
         };
-        const button = (text, parent, action) => { const node = el('button', text, parent); node.type = 'button'; node.addEventListener('click', action); return node; };
+        const button = (text, parent, action) => { const node = el('button', text, parent); node.type = 'button'; node.className = 'action-button'; node.addEventListener('click', action); return node; };
         const select = (title, values, parent) => {
             const label = el('label', title, parent);
+            label.className = 'study-field';
             const node = el('select', undefined, label);
+            node.className = 'study-input';
             node.setAttribute('aria-label', title);
             values.forEach(([value, text]) => { const option = el('option', text, node); option.value = value; });
             return node;
         };
         const section = (title) => { const node = el('section'); node.className = 'lesson-practice'; el('h2', title, node); return node; };
-        const controls = (parent) => { const node = el('div', undefined, parent); node.className = 'lp-controls'; return node; };
+        const controls = (parent) => { const node = el('div', undefined, parent); node.className = 'control-row lp-controls'; return node; };
         function card(item) {
             const saved = window.MaltiReviewStore.getAllCards().find((c) => c.type === 'sentence-card' && core.normalize(c.maltese) === core.normalize(item.maltese));
             if (saved) return saved;
@@ -66,10 +68,10 @@
         }
         root.replaceChildren();
         el('h2', 'Speaking Practice');
-        const personalLabel = el('label'); personalLabel.className = 'lp-personal';
+        const personalLabel = el('label'); personalLabel.className = 'study-check lp-personal';
         const personal = document.createElement('input'); personal.type = 'checkbox'; personalLabel.append(personal, document.createTextNode(' Use my local story'));
         const profileStatus = el('p', '', root); profileStatus.className = 'lp-muted'; profileStatus.setAttribute('role', 'status');
-        const builderLink = el('a', 'Edit my story', root); builderLink.href = './about_me.html#builder'; builderLink.className = 'lp-story-link';
+        const builderLink = el('a', 'Edit my story', el('p')); builderLink.href = './about_me.html#builder'; builderLink.className = 'action-link lp-story-link';
         function updateProfileStatus() {
             const available = Object.values(profile()).some((value) => String(value).trim());
             personal.disabled = !available;
@@ -77,11 +79,16 @@
             profileStatus.textContent = available ? 'Personal details stay on this device. Shared progress contains only learning results.' : 'No local story saved yet.';
         }
         updateProfileStatus();
-        const tabs = controls(root);
+        const tabRow = el('div'); tabRow.className = 'toolbar-row';
+        const tabs = el('div', undefined, tabRow);
+        tabs.className = 'segmented-toggle';
+        tabs.setAttribute('role', 'group');
+        tabs.setAttribute('aria-label', 'Speaking practice view');
         const panes = [];
         const tabButtons = [];
         ['Essential phrases', 'Your turn', 'Role-play', 'Pronunciation', 'Skills'].forEach((title, index) => {
             const b = button(title, tabs, () => open(index));
+            b.className = 'toggle-chip';
             const pane = el('div'); pane.hidden = index !== 0;
             pane.id = 'lp-pane-' + index; b.setAttribute('aria-controls', pane.id);
             panes.push(pane); tabButtons.push(b);
@@ -119,17 +126,20 @@
         }
         filter.addEventListener('change', renderPhrases); renderPhrases();
         window.addEventListener('malti-lesson01-ready', renderPhrases);
-        const notes = el('details', undefined, essential); el('summary', 'Useful distinctions', notes);
-        data.contrasts.forEach((note) => { el('h3', note.title, notes); el('p', note.text, notes); });
+        const notes = el('details', undefined, essential); notes.className = 'study-disclosure';
+        el('summary', 'Useful distinctions', notes);
+        const notesBody = el('div', undefined, notes); notesBody.className = 'study-disclosure-body';
+        data.contrasts.forEach((note) => { el('h3', note.title, notesBody); el('p', note.text, notesBody); });
 
         const practice = panes[1];
         el('h3', 'Answer in Maltese', practice);
         const mode = select('Task', [['translate', 'Translate'], ['reply', 'Restore a reply'], ['cloze', 'Complete the phrase'], ['mixed', 'Mixed check'], ['focused', 'Focused practice']], controls(practice));
-        const prompt = el('p', undefined, practice); prompt.className = 'lp-prompt';
+        const prompt = el('p', undefined, practice); prompt.className = 'study-question lp-prompt';
         const label = el('label', 'Your answer', practice);
-        const input = el('input', undefined, label); input.type = 'text'; input.maxLength = 1000; input.className = 'lp-answer'; input.autocomplete = 'off'; input.spellcheck = false;
+        label.className = 'study-field';
+        const input = el('input', undefined, label); input.type = 'text'; input.maxLength = 1000; input.className = 'study-input lp-answer'; input.autocomplete = 'off'; input.spellcheck = false;
         const actions = controls(practice);
-        const feedback = el('p', '', practice); feedback.className = 'lp-feedback'; feedback.setAttribute('role', 'status');
+        const feedback = el('p', '', practice); feedback.className = 'study-feedback lp-feedback'; feedback.setAttribute('role', 'status');
         let cursor = 0, revealed = false, checked = false, taskQueue = [], sessionCorrect = 0, sessionChecked = 0;
         const bank = data.phrases.filter((item) => item.page === page);
         let practiceFragment = null;
@@ -229,9 +239,10 @@
         const hints = select('Mode', [['guided', 'Guided'], ['independent', 'No hints']], options);
         const conversation = el('div', undefined, roleplay);
         const rpLabel = el('label', 'Your next line in Maltese', roleplay);
-        const rpInput = el('input', undefined, rpLabel); rpInput.type = 'text'; rpInput.maxLength = 1000; rpInput.className = 'lp-answer'; rpInput.autocomplete = 'off'; rpInput.spellcheck = false;
+        rpLabel.className = 'study-field';
+        const rpInput = el('input', undefined, rpLabel); rpInput.type = 'text'; rpInput.maxLength = 1000; rpInput.className = 'study-input lp-answer'; rpInput.autocomplete = 'off'; rpInput.spellcheck = false;
         const rpActions = controls(roleplay);
-        const rpFeedback = el('p', '', roleplay); rpFeedback.className = 'lp-feedback'; rpFeedback.setAttribute('role', 'status');
+        const rpFeedback = el('p', '', roleplay); rpFeedback.className = 'study-feedback lp-feedback'; rpFeedback.setAttribute('role', 'status');
         let turn = 0, rpRevealed = false, rpChecked = false, rpCorrect = 0, rpTotal = 0;
         function selected() {
             const s = data.scenarios.find((item) => item.id === scenario.value);
@@ -265,7 +276,7 @@
             roleFragment = null; rpFragment.hidden = true;
             const s = selected();
             while (turn < s.turns.length && s.turns[turn].role !== role.value) {
-                const p = el('p', s.turns[turn].role + ': ' + s.turns[turn].maltese, conversation); p.className = 'lp-prompt'; turn++;
+                const p = el('p', s.turns[turn].role + ': ' + s.turns[turn].maltese, conversation); p.className = 'study-contrast lp-prompt'; turn++;
             }
             const done = turn >= s.turns.length;
             rpLabel.hidden = done; rpCheck.disabled = done; rpNext.disabled = true; rpModel.disabled = done;
@@ -333,7 +344,7 @@
             ...data.phrases.map((phrase) => ['phrase:' + phrase.id, phrase.maltese]),
             ...data.scenarios.map((s) => ['dialogue:' + s.id, s.title])
         ], controls(audioPane));
-        const recordingText = el('p', '', audioPane); recordingText.className = 'lp-prompt';
+        const recordingText = el('p', '', audioPane); recordingText.className = 'study-contrast lp-prompt';
         function showRecordingText() {
             const [type, id] = recordingTarget.value.split(':');
             recordingText.textContent = type === 'phrase' ? data.phrases.find((p) => p.id === id).maltese
@@ -354,7 +365,8 @@
             audio.playbackRate = Number(speed.value); audio.preservesPitch = true;
         }
         const fileLabel = el('label', 'Local audio file (not uploaded)', audioPane);
-        const file = el('input', undefined, fileLabel); file.type = 'file'; file.accept = 'audio/*';
+        fileLabel.className = 'study-field';
+        const file = el('input', undefined, fileLabel); file.type = 'file'; file.accept = 'audio/*'; file.className = 'study-input';
         file.addEventListener('change', () => {
             const clip = file.files[0];
             if (!clip) return;
@@ -384,7 +396,7 @@
         audio.addEventListener('loadedmetadata', () => { file.disabled = false; });
         if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) { recordButton.disabled = true; audioStatus.textContent = 'Recording is unavailable in this browser. Pronunciation links are available online.'; }
         const skillPane = panes[4]; el('h3', 'Speaking Skills', skillPane);
-        const nextTask = el('p', '', skillPane); nextTask.className = 'lp-prompt';
+        const nextTask = el('p', '', skillPane); nextTask.className = 'study-contrast lp-prompt';
         const nextAction = button('Practise next', controls(skillPane), () => { mode.value = 'focused'; resetTasks(); open(1); });
         button('Mixed check', controls(skillPane), () => { mode.value = 'mixed'; resetTasks(); open(1); });
         const skillList = el('div', undefined, skillPane); skillList.className = 'lp-skills';

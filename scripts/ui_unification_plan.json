@@ -1,6 +1,6 @@
 {
   "packages": [
-    { "id": "U01", "title": "Speaking controls", "status": "pending", "files": ["assets/css/lesson01-practice.css", "assets/js/lesson01-practice.js"], "check": "node scripts/lesson01_practice_check.js" },
+    { "id": "U01", "title": "Speaking controls", "status": "complete", "files": ["assets/css/lesson01-practice.css", "assets/js/lesson01-practice.js"], "check": "node scripts/lesson01_practice_check.js", "evidence": ["docs/analysis/speaking-unification.md", "scripts/lesson01_practice_check.js"] },
     { "id": "U02", "title": "About Me controls", "status": "pending", "files": ["assets/js/about-me.js"], "check": "npm run functional:test -- --suite progress-storage" },
     { "id": "U03", "title": "Duplicate demo-box ownership", "status": "pending", "files": ["assets/css/pages.css", "assets/css/site/components.css"], "check": "npm run style:lint" },
     { "id": "U04", "title": "Parallel shared control families", "status": "in-progress", "files": ["assets/css/site/exercises.css", "assets/css/site/review.css", "assets/css/site/components.css"], "check": "npm run ui:runtime:check" },

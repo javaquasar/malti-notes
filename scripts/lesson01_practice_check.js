@@ -42,6 +42,43 @@ const base = process.env.LESSON01_URL || 'http://127.0.0.1:4190';
                 assert.equal(await region.locator('.lp-phrase').count(), 20);
                 for (const theme of ['classic', 'forest', 'contrast']) {
                     await page.evaluate(theme => document.documentElement.dataset.theme = theme, theme);
+                    await page.waitForTimeout(200);
+                    const controls = await region.evaluate(region => {
+                        const failures = [];
+                        const properties = ['color', 'backgroundColor', 'borderTopColor', 'borderTopWidth', 'borderRadius', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'minHeight', 'opacity'];
+                        for (const node of region.querySelectorAll('button, select, input')) {
+                            if (node.classList.contains('review-add-button')) continue;
+                            const type = node.matches('input[type="checkbox"]') ? 'checkbox' :
+                                node.matches('input, select') ? 'study-input' : node.hasAttribute('aria-controls') ? 'toggle-chip' : 'action-button';
+                            if (type === 'checkbox') {
+                                if (!node.closest('.study-check')) failures.push('Checkbox has no shared label');
+                                continue;
+                            }
+                            if (!node.classList.contains(type)) failures.push(`${node.tagName} has no ${type}`);
+                            if (node.matches('input, select') && !node.closest('.study-field')) failures.push('Field has no shared label');
+                            const reference = node.cloneNode(true);
+                            for (const attribute of reference.getAttributeNames()) {
+                                if (attribute === 'id' || attribute === 'style' || attribute.startsWith('data-')) reference.removeAttribute(attribute);
+                            }
+                            reference.className = type;
+                            const host = document.createElement('div');
+                            host.style.cssText = 'position:fixed;left:-10000px;top:0;display:flex';
+                            host.append(reference); document.body.append(host);
+                            const actual = getComputedStyle(node), expected = getComputedStyle(reference);
+                            for (const property of properties) {
+                                // Buttons use intrinsic flex sizing; only fields declare a shared minimum height.
+                                if (property === 'minHeight' && type !== 'study-input') continue;
+                                if (actual[property] !== expected[property]) failures.push(`${type} ${property}: ${actual[property]} != ${expected[property]}`);
+                            }
+                            host.remove();
+                        }
+                        for (const node of region.querySelectorAll('.lp-feedback')) if (!node.classList.contains('study-feedback')) failures.push('Feedback is not shared');
+                        if (!region.classList.contains('content-card')) failures.push('Panel is not shared');
+                        if (!region.querySelector('.segmented-toggle')) failures.push('View switcher is not shared');
+                        if (!region.querySelector('details.study-disclosure > .study-disclosure-body')) failures.push('Disclosure is not shared');
+                        return failures;
+                    });
+                    assert.deepEqual(controls, [], `${stem}/${theme}/${width}: speaking controls differ from shared components`);
                     const surfaces = await region.evaluate(node => {
                         const probe = document.createElement('article'); probe.className = 'study-card'; node.append(probe);
                         const expected = getComputedStyle(probe);
