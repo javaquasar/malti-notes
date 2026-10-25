@@ -343,10 +343,12 @@
       input.placeholder = topic.placeholder || "";
     }
     input.dataset.guidedInput = "";
+    input.className = "study-input";
     input.setAttribute("aria-label", topic.question);
     input.value = form?.elements[topic.field]?.value || "";
     if (topic.optionGroup) {
       const select = document.createElement("select");
+      select.className = "study-input";
       select.dataset.guidedOptions = topic.optionGroup;
       select.add(new Option("Choose a ready-made form", ""));
       optionData[topic.optionGroup].forEach((item) => select.add(new Option(item.label, item.id)));
@@ -355,9 +357,17 @@
         if (item) input.value = optionPhrase(topic.optionGroup, item);
         updateGuidedPreview();
       });
-      control.append(select);
+      const optionLabel = document.createElement("label");
+      optionLabel.className = "study-field";
+      optionLabel.textContent = "Ready-made form";
+      optionLabel.append(select);
+      control.append(optionLabel);
     }
-    control.append(input);
+    const inputLabel = document.createElement("label");
+    inputLabel.className = "study-field";
+    inputLabel.textContent = topic.label;
+    inputLabel.append(input);
+    control.append(inputLabel);
     input.addEventListener("input", updateGuidedPreview);
     input.addEventListener("change", updateGuidedPreview);
     if (topic.id === "children") {
@@ -370,8 +380,9 @@
         for (let index = 1; index <= count; index++) {
           [["Name", "text"], ["Gender", "select"], ["Age", "number"]].forEach(([suffix, type]) => {
             const field = `child${index}${suffix}`;
-            const label = document.createElement("label"); label.className = "about-me-field"; label.textContent = `Child ${index} ${suffix.toLowerCase()}`;
+            const label = document.createElement("label"); label.className = "study-field about-me-field"; label.textContent = `Child ${index} ${suffix.toLowerCase()}`;
             const childInput = document.createElement(type === "select" ? "select" : "input");
+            childInput.className = "study-input";
             if (type === "select") { childInput.add(new Option("Boy", "male")); childInput.add(new Option("Girl", "female")); }
             else { childInput.type = type; if (type === "number") { childInput.min = "0"; childInput.max = "120"; childInput.step = "1"; } }
             childInput.value = form.elements[field].value;

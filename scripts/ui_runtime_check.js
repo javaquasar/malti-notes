@@ -5,7 +5,7 @@ const path = require("path");
 const { chromium } = require("playwright");
 const root = path.resolve(__dirname, "..");
 const pages = ["greetings.html", "polite_phrases.html", "conversation_help.html", "getting_to_know.html",
-  "particles_prepositions.html", "reading_red_cave.html", "numbers_calendar_time.html"];
+  "particles_prepositions.html", "reading_red_cave.html", "numbers_calendar_time.html", "about_me.html"];
 const properties = ["color", "backgroundColor", "borderTopColor", "borderTopWidth", "borderRadius",
   "paddingTop", "paddingRight", "paddingBottom", "paddingLeft", "width", "height", "display", "alignItems", "justifyContent", "fontSize", "lineHeight", "outlineStyle", "outlineWidth", "outlineColor"];
 
@@ -66,7 +66,26 @@ async function check(page) {
       host.remove();
       if (focused) field.focus({ preventScroll: true });
     }
-    return { buttons: buttons.length, fields: fields.length, failures };
+    const checks = [...document.querySelectorAll('.study-check input[type="checkbox"]')].filter((node) => node.getClientRects().length);
+    for (const checkbox of checks) {
+      const reference = document.createElement('label'); reference.className = 'study-check';
+      const input = document.createElement('input'); input.type = 'checkbox'; input.disabled = checkbox.disabled;
+      reference.append(input); document.body.append(reference);
+      for (const property of ['width', 'height', 'accentColor', 'opacity']) {
+        if (getComputedStyle(checkbox)[property] !== getComputedStyle(input)[property]) failures.push(`Checkbox ${property} differs from study-check`);
+      }
+      reference.remove();
+    }
+    for (const toggle of document.querySelectorAll('.about-me-status-control .toggle-chip')) {
+      const reference = document.createElement('button'); reference.className = 'toggle-chip';
+      reference.setAttribute('aria-pressed', toggle.getAttribute('aria-pressed'));
+      document.body.append(reference);
+      for (const property of ['color', 'backgroundColor', 'borderTopColor', 'borderRadius', 'paddingTop', 'paddingRight']) {
+        if (getComputedStyle(toggle)[property] !== getComputedStyle(reference)[property]) failures.push(`Status toggle ${property} differs from toggle-chip`);
+      }
+      reference.remove();
+    }
+    return { buttons: buttons.length, fields: fields.length, checks: checks.length, failures };
   }, properties);
 }
 
@@ -98,8 +117,34 @@ async function main() {
             const result = await check(page);
             evidence.push({ file, theme, width, state, ...result });
             assert.deepEqual(result.failures, [], `${file}/${theme}/${width}/${state}`);
+            if (file === 'about_me.html') assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${file}/${theme}/${width}/${state}: horizontal overflow`);
           }
           await verify("loaded");
+          if (file === "about_me.html") {
+            await page.waitForFunction(() => document.querySelector('[data-about-me-practice]')?.dataset.aboutMeReady === 'true');
+            assert.equal(await page.locator('main.content input:not([type="checkbox"]):not(.study-input), main.content select:not(.study-input), main.content textarea:not(.study-input)').count(), 0, "About Me contains nonstandard fields");
+            for (let step = 0; step < 10; step++) {
+              if (step === 8) {
+                await page.locator('[data-guided-input]').selectOption('two');
+                assert.equal(await page.locator('[data-guided-control] .study-field input, [data-guided-control] .study-field select').count(), 7, "Guided child fields were not rebuilt");
+              }
+              await verify(`guided-step-${step + 1}`);
+              if (step === 8) {
+                fs.mkdirSync(path.join(root, 'tmp_ui'), { recursive: true });
+                await page.locator('#guided').screenshot({ path: path.join(root, `tmp_ui/about-me-children-${theme}-${width}.png`), animations: 'disabled' });
+              }
+              if (step < 9) await page.locator('[data-guided-skip]').click();
+            }
+            await page.locator('[data-guided-back]').click();
+            await verify("guided-back");
+            await page.locator('[data-about-me-sample]').click();
+            await page.locator('[data-about-me-save]').click();
+            const draft = await page.evaluate(() => localStorage.getItem('malti_about_me_draft_v1'));
+            await page.reload({ waitUntil: 'networkidle' });
+            assert.equal(await page.evaluate(() => localStorage.getItem('malti_about_me_draft_v1')), draft, "Personal draft changed on reload");
+            await verify("personal-draft-restored");
+            await page.locator('#coverage').screenshot({ path: path.join(root, `tmp_ui/about-me-status-${theme}-${width}.png`), animations: 'disabled' });
+          }
           if (file === "numbers_calendar_time.html") {
             await page.evaluate(() => { location.hash = "number-forms"; });
             await page.locator("#number-forms .review-add-button--icon").first().waitFor({ state: "visible" });

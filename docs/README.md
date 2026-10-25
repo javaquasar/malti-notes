@@ -27,6 +27,7 @@ This directory is the canonical home for project documentation. The root `README
 - [UI unification audit and refactoring backlog](analysis/ui-unification-audit.md)
 - [UI unification progress and remaining style counters](analysis/ui-unification-progress.md)
 - [Speaking practice component migration](analysis/speaking-unification.md)
+- [About Me component migration](analysis/about-me-unification.md)
 - [B1/B2 book coverage](analysis/book-coverage.md)
 - [Phrase-bank audit](analysis/phrase-bank-audit.md)
 - [Review connection inventory](analysis/review-connections.md)

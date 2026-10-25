@@ -6,11 +6,11 @@ These checks supplement the [component reference](../reference/ui-components.md)
 
 Run `npm run ui:runtime:check`. The runner serves its own isolated origin and uses fresh browser contexts. It never reads or changes a learner's browser profile.
 
-Coverage includes the four speaking pages, particles, bilingual reading and numbers, in Classic, Forest and Contrast at 1280 and 390 pixels. States include initial rendering, open disclosures, speaking tabs, selected numbers sections, focused controls, saved review cards and reload with restored review progress. Evidence is written to `tmp_ui/runtime-contracts.json`.
+Coverage includes the four speaking pages, particles, bilingual reading, numbers and About Me, in Classic, Forest and Contrast at 1280 and 390 pixels. States include initial rendering, open disclosures, speaking tabs, selected numbers sections, focused controls, saved review cards and reload with restored review progress. About Me also exercises ten guided steps, dynamic child fields, Back and restored personal drafts. Evidence is written to `tmp_ui/runtime-contracts.json`.
 
 Review controls are compared with an independent shared-component reference outside page-specific containers. Contracts include surface and icon colors, borders, padding, dimensions, flex alignment, icon transform and focus outline. Table action centers have a two-pixel tolerance. CSS blockification of inline-flex grid items is normalized because it does not change the inner flex layout.
 
-Shared fields are compared for surface, border, radius, padding, minimum height, disabled opacity and focus outline. Width is intentionally owned by the surrounding layout; textarea height is owned by its rows/content. Reference fields have no inherited page-specific classes, inline styles or data selectors. Deliberate button and field mutations must be detected, so a contaminated reference cannot silently approve them.
+Shared fields are compared for surface, border, radius, padding, minimum height, disabled opacity and focus outline. Shared checkboxes are compared for dimensions, accent and opacity; About Me coverage buttons are compared with independent toggle-chip references. Width is intentionally owned by the surrounding layout; textarea height is owned by its rows/content. Reference fields have no inherited page-specific classes, inline styles or data selectors. Deliberate button and field mutations must be detected, so a contaminated reference cannot silently approve them.
 
 This is a bounded regression matrix, not a claim that every page or legacy control has migrated. Extend its page/state list when migrating another work package. Legacy controls without `.study-input` remain visible in the audit rather than being silently reclassified as standard.
 

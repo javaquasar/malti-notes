@@ -324,8 +324,6 @@
 .about-me-child-fields { border: 0; border-top: 1px solid var(--color-border); padding: 12px 0; margin: 0; min-width: 0; }
 .about-me-child-fields[hidden] { display: none; }
 .about-me-story-options { margin-bottom: var(--space-xl); }
-.about-me-check { display: flex; align-items: center; gap: var(--space-sm); min-height: 44px; }
-.about-me-check input { width: 18px; height: 18px; flex: 0 0 18px; }
 .about-me-details { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); border: 0; padding: 0; margin: 0 0 var(--space-xl); }
 .about-me-details legend { font-weight: 700; margin-bottom: var(--space-sm); }
 .about-me-output p, .about-me-personal-practice { overflow-wrap: anywhere; }
@@ -350,14 +348,6 @@
   gap: var(--grid-gap-sm);
 }
 
-.about-me-field {
-  display: grid;
-  gap: var(--space-sm);
-  min-width: 0;
-  color: var(--text-muted);
-  font-weight: 700;
-}
-
 .about-me-field--full {
   grid-column: 1 / -1;
 }
@@ -366,27 +356,10 @@
 .about-me-field select,
 .about-me-field textarea {
   width: 100%;
-  min-height: 44px;
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg);
-  padding: var(--space-sm) var(--space-md);
-  background: var(--color-surface-input);
-  color: var(--text-primary);
-  font: inherit;
-  font-weight: 400;
 }
 
 .about-me-field textarea {
-  min-height: 74px;
   resize: vertical;
-}
-
-.about-me-field input:focus,
-.about-me-field select:focus,
-.about-me-field textarea:focus {
-  border-color: var(--border-brand);
-  outline: 2px solid var(--color-brand-soft);
-  outline-offset: 1px;
 }
 
 .about-me-preview {
@@ -467,14 +440,9 @@
 .about-me-guided-control input,
 .about-me-guided-control select {
   width: 100%;
-  min-height: 44px;
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg);
-  padding: var(--space-sm) var(--space-md);
-  background: var(--color-surface-input);
-  color: var(--text-primary);
-  font: inherit;
 }
+
+.about-me-guided-control > .about-me-form-grid { grid-column: 1 / -1; }
 
 .about-me-guided-preview {
   min-height: 72px;
@@ -503,11 +471,6 @@
 
 .about-me-status-control {
   justify-content: flex-end;
-}
-
-.about-me-status-control .toggle-chip {
-  min-height: 40px;
-  padding: var(--space-xs) var(--space-md);
 }
 
 .about-me-mode-toggle {
@@ -844,15 +807,8 @@ body.compact-animals .animal-gallery {
   }
 
   .about-me-status-control {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: flex-start;
     width: 100%;
-  }
-
-  .about-me-status-control .toggle-chip {
-    width: 100%;
-    padding-inline: var(--space-xs);
-    font-size: 0.85rem;
   }
 
   .about-me-timer-display {

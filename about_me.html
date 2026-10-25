@@ -133,8 +133,8 @@
                             <p class="about-me-practice-label" data-guided-step>Step 1 of 10</p>
                             <h3 data-guided-question>What is your name?</h3>
                         </div>
-                        <label class="about-me-field about-me-speaker-control">Speaker form
-                            <select data-guided-gender>
+                        <label class="study-field about-me-field about-me-speaker-control">Speaker form
+                            <select class="study-input" data-guided-gender>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select>
@@ -163,73 +163,73 @@
                 <div class="content-group about-me-tool">
                     <form class="about-me-form" data-about-me-form>
                         <div class="about-me-form-grid about-me-story-options">
-                            <label class="about-me-field">Story length<select name="storyVersion"><option value="full">Full story</option><option value="short">Short introduction</option></select></label>
-                            <label class="about-me-field">Copy format<select name="copyFormat"><option value="maltese">Maltese only</option><option value="bilingual">Maltese + English</option></select></label>
-                            <label class="about-me-check"><input type="checkbox" name="showEnglish" checked>English translation</label>
-                            <label class="about-me-check"><input type="checkbox" name="numberWords">Numbers in words (up to 100)</label>
+                            <label class="study-field about-me-field">Story length<select class="study-input" name="storyVersion"><option value="full">Full story</option><option value="short">Short introduction</option></select></label>
+                            <label class="study-field about-me-field">Copy format<select class="study-input" name="copyFormat"><option value="maltese">Maltese only</option><option value="bilingual">Maltese + English</option></select></label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="showEnglish" checked>English translation</label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="numberWords">Numbers in words (up to 100)</label>
                         </div>
                         <fieldset class="about-me-details">
                             <legend>Story details</legend>
-                            <label class="about-me-check"><input type="checkbox" name="includeDuration" checked>Time in Malta</label>
-                            <label class="about-me-check"><input type="checkbox" name="includeDuties" checked>Work duties</label>
-                            <label class="about-me-check"><input type="checkbox" name="includeFamily" checked>Family</label>
-                            <label class="about-me-check"><input type="checkbox" name="includeChildDetails" checked>Children's names and ages</label>
-                            <label class="about-me-check"><input type="checkbox" name="includeHobbies" checked>Hobbies</label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="includeDuration" checked>Time in Malta</label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="includeDuties" checked>Work duties</label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="includeFamily" checked>Family</label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="includeChildDetails" checked>Children's names and ages</label>
+                            <label class="study-check about-me-check"><input type="checkbox" name="includeHobbies" checked>Hobbies</label>
                         </fieldset>
                         <div class="about-me-tool-layout">
                             <div class="about-me-form-grid">
-                                <label class="about-me-field">Name
-                                    <input name="name" type="text" autocomplete="name" placeholder="Alex">
+                                <label class="study-field about-me-field">Name
+                                    <input class="study-input" name="name" type="text" autocomplete="name" placeholder="Alex">
                                 </label>
-                                <label class="about-me-field">Age
-                                    <input name="age" type="number" min="1" max="120" inputmode="numeric" placeholder="35">
+                                <label class="study-field about-me-field">Age
+                                    <input class="study-input" name="age" type="number" min="1" max="120" inputmode="numeric" placeholder="35">
                                 </label>
-                                <label class="about-me-field">Origin after <code>Jien</code>
-                                    <select data-smart-origin aria-label="Choose a ready-made origin form">
+                                <label class="study-field about-me-field">Origin after <code>Jien</code>
+                                    <select class="study-input" data-smart-origin aria-label="Choose a ready-made origin form">
                                         <option value="">Choose a ready-made form</option>
                                     </select>
-                                    <input name="origin" type="text" placeholder="mill-Italja">
-                                    <input name="originEnglish" type="text" aria-label="Origin in English" placeholder="Country in English (custom origin)">
+                                    <input class="study-input" name="origin" type="text" placeholder="mill-Italja">
+                                    <input class="study-input" name="originEnglish" type="text" aria-label="Origin in English" placeholder="Country in English (custom origin)">
                                 </label>
-                                <label class="about-me-field">Place after <code>Noqgħod</code>
-                                    <select data-smart-residence aria-label="Choose a ready-made place form">
+                                <label class="study-field about-me-field">Place after <code>Noqgħod</code>
+                                    <select class="study-input" data-smart-residence aria-label="Choose a ready-made place form">
                                         <option value="">Choose a ready-made form</option>
                                     </select>
-                                    <input name="residence" type="text" placeholder="il-Mosta">
-                                    <input name="residenceEnglish" type="text" aria-label="Place in English" placeholder="Place in English (custom place)">
+                                    <input class="study-input" name="residence" type="text" placeholder="il-Mosta">
+                                    <input class="study-input" name="residenceEnglish" type="text" aria-label="Place in English" placeholder="Place in English (custom place)">
                                 </label>
-                                <label class="about-me-field">Years living in Malta
-                                    <input name="years" type="number" min="1" max="99" inputmode="numeric" placeholder="5">
+                                <label class="study-field about-me-field">Years living in Malta
+                                    <input class="study-input" name="years" type="number" min="1" max="99" inputmode="numeric" placeholder="5">
                                 </label>
-                                <label class="about-me-field">Occupation after <code>Naħdem bħala</code>
-                                    <select data-smart-occupation aria-label="Choose a ready-made occupation form">
+                                <label class="study-field about-me-field">Occupation after <code>Naħdem bħala</code>
+                                    <select class="study-input" data-smart-occupation aria-label="Choose a ready-made occupation form">
                                         <option value="">Choose a ready-made form</option>
                                     </select>
-                                    <input name="occupation" type="text" placeholder="għalliem">
-                                    <input name="occupationEnglish" type="text" aria-label="Occupation in English" placeholder="Occupation in English (custom occupation)">
+                                    <input class="study-input" name="occupation" type="text" placeholder="għalliem">
+                                    <input class="study-input" name="occupationEnglish" type="text" aria-label="Occupation in English" placeholder="Occupation in English (custom occupation)">
                                 </label>
-                                <label class="about-me-field about-me-field--full">Work detail beginning with a verb
-                                    <textarea name="workDetail" rows="2" placeholder="ngħallem il-Malti u nipprepara l-lezzjonijiet"></textarea>
-                                    <textarea name="workDetailEnglish" rows="2" aria-label="Work duties in English" placeholder="I teach Maltese and prepare lessons"></textarea>
+                                <label class="study-field about-me-field about-me-field--full">Work detail beginning with a verb
+                                    <textarea class="study-input" name="workDetail" rows="2" placeholder="ngħallem il-Malti u nipprepara l-lezzjonijiet"></textarea>
+                                    <textarea class="study-input" name="workDetailEnglish" rows="2" aria-label="Work duties in English" placeholder="I teach Maltese and prepare lessons"></textarea>
                                 </label>
-                                <label class="about-me-field">Speaker form
-                                    <select name="gender">
+                                <label class="study-field about-me-field">Speaker form
+                                    <select class="study-input" name="gender">
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
                                 </label>
-                                <label class="about-me-field">Relationship line
-                                    <select name="relationship">
+                                <label class="study-field about-me-field">Relationship line
+                                    <select class="study-input" name="relationship">
                                         <option value="">Skip this detail</option>
                                         <option value="married">Married</option>
                                         <option value="not-married">Not married</option>
                                     </select>
                                 </label>
-                                <label class="about-me-field">Spouse name
-                                    <input name="spouseName" type="text" placeholder="Sara">
+                                <label class="study-field about-me-field">Spouse name
+                                    <input class="study-input" name="spouseName" type="text" placeholder="Sara">
                                 </label>
-                                <label class="about-me-field">Children line
-                                    <select name="children">
+                                <label class="study-field about-me-field">Children line
+                                    <select class="study-input" name="children">
                                         <option value="">Skip this detail</option>
                                         <option value="none">No children</option>
                                         <option value="one">One child</option>
@@ -239,26 +239,26 @@
                                 <fieldset class="about-me-field--full about-me-child-fields" data-child-fields="1" hidden>
                                     <legend>Child 1</legend>
                                     <div class="about-me-form-grid">
-                                        <label class="about-me-field">Name<input name="child1Name" type="text" maxlength="80" autocomplete="off"></label>
-                                        <label class="about-me-field">Gender<select name="child1Gender"><option value="male">Boy</option><option value="female">Girl</option></select></label>
-                                        <label class="about-me-field">Age<input name="child1Age" type="number" min="0" max="120" step="1" inputmode="numeric"></label>
+                                        <label class="study-field about-me-field">Name<input class="study-input" name="child1Name" type="text" maxlength="80" autocomplete="off"></label>
+                                        <label class="study-field about-me-field">Gender<select class="study-input" name="child1Gender"><option value="male">Boy</option><option value="female">Girl</option></select></label>
+                                        <label class="study-field about-me-field">Age<input class="study-input" name="child1Age" type="number" min="0" max="120" step="1" inputmode="numeric"></label>
                                     </div>
                                 </fieldset>
                                 <fieldset class="about-me-field--full about-me-child-fields" data-child-fields="2" hidden>
                                     <legend>Child 2</legend>
                                     <div class="about-me-form-grid">
-                                        <label class="about-me-field">Name<input name="child2Name" type="text" maxlength="80" autocomplete="off"></label>
-                                        <label class="about-me-field">Gender<select name="child2Gender"><option value="male">Boy</option><option value="female" selected>Girl</option></select></label>
-                                        <label class="about-me-field">Age<input name="child2Age" type="number" min="0" max="120" step="1" inputmode="numeric"></label>
+                                        <label class="study-field about-me-field">Name<input class="study-input" name="child2Name" type="text" maxlength="80" autocomplete="off"></label>
+                                        <label class="study-field about-me-field">Gender<select class="study-input" name="child2Gender"><option value="male">Boy</option><option value="female" selected>Girl</option></select></label>
+                                        <label class="study-field about-me-field">Age<input class="study-input" name="child2Age" type="number" min="0" max="120" step="1" inputmode="numeric"></label>
                                     </div>
                                 </fieldset>
-                                <label class="about-me-field about-me-field--full">Hobbies after <code>nħobb</code>
-                                    <textarea name="hobbies" rows="2" placeholder="naqra u nimxi ħdejn il-baħar"></textarea>
-                                    <textarea name="hobbiesEnglish" rows="2" aria-label="Hobbies in English" placeholder="read and walk by the sea"></textarea>
+                                <label class="study-field about-me-field about-me-field--full">Hobbies after <code>nħobb</code>
+                                    <textarea class="study-input" name="hobbies" rows="2" placeholder="naqra u nimxi ħdejn il-baħar"></textarea>
+                                    <textarea class="study-input" name="hobbiesEnglish" rows="2" aria-label="Hobbies in English" placeholder="read and walk by the sea"></textarea>
                                 </label>
-                                <label class="about-me-check"><input type="checkbox" name="childrenSchool">Children go to school</label>
-                                <label class="about-me-check"><input type="checkbox" name="familyLikesMalta">My family likes Malta</label>
-                                <label class="about-me-field about-me-field--full">Why I am learning Maltese<select name="learningReason"><option value="">Skip this detail</option><option value="home">I live in Malta</option><option value="people">To talk to people</option><option value="work">I work in Malta</option></select></label>
+                                <label class="study-check about-me-check"><input type="checkbox" name="childrenSchool">Children go to school</label>
+                                <label class="study-check about-me-check"><input type="checkbox" name="familyLikesMalta">My family likes Malta</label>
+                                <label class="study-field about-me-field about-me-field--full">Why I am learning Maltese<select class="study-input" name="learningReason"><option value="">Skip this detail</option><option value="home">I live in Malta</option><option value="people">To talk to people</option><option value="work">I work in Malta</option></select></label>
                             </div>
                             <div class="about-me-preview">
                                 <h3>Your Maltese Story</h3>
@@ -276,7 +276,7 @@
                     </form>
                     <div class="about-me-personal-practice" data-personal-practice>
                         <h3>Questions About Your Story</h3>
-                        <label class="about-me-field">Answer support<select data-personal-support><option value="model">Full answer</option><option value="keywords">Key words</option><option value="none">No hints</option></select></label>
+                        <label class="study-field about-me-field">Answer support<select class="study-input" data-personal-support><option value="model">Full answer</option><option value="keywords">Key words</option><option value="none">No hints</option></select></label>
                         <p class="mini" data-personal-position></p>
                         <h4 data-personal-question></h4>
                         <p class="mini" data-personal-translation></p>
@@ -312,8 +312,8 @@
                         <p class="about-me-practice-label" data-practice-label>Question</p>
                         <h3 data-practice-question>Loading question...</h3>
                         <p class="mini" data-practice-translation></p>
-                        <label class="about-me-field">Your answer
-                            <textarea rows="3" data-practice-answer placeholder="Write an answer or say it aloud first."></textarea>
+                        <label class="study-field about-me-field">Your answer
+                            <textarea class="study-input" rows="3" data-practice-answer placeholder="Write an answer or say it aloud first."></textarea>
                         </label>
                         <div class="formula about-me-model" data-practice-model hidden>
                             <strong data-practice-model-text></strong>
