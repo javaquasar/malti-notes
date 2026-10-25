@@ -6,7 +6,9 @@ These checks supplement the [component reference](../reference/ui-components.md)
 
 Run `npm run ui:runtime:check`. The runner serves its own isolated origin and uses fresh browser contexts. It never reads or changes a learner's browser profile.
 
-Coverage includes the four speaking pages, particles, bilingual reading, numbers and About Me, in Classic, Forest and Contrast at 1280 and 390 pixels. States include initial rendering, open disclosures, speaking tabs, selected numbers sections, focused controls, saved review cards and reload with restored review progress. About Me also exercises ten guided steps, dynamic child fields, Back and restored personal drafts. Evidence is written to `tmp_ui/runtime-contracts.json`.
+Coverage includes the four speaking pages, particles, bilingual reading, numbers, About Me and pronouns, in Classic, Forest and Contrast at 1280 and 390 pixels. States include initial rendering, open disclosures, speaking tabs, selected numbers sections, focused controls, saved review cards and reload with restored review progress. About Me also exercises ten guided steps, dynamic child fields, Back and restored personal drafts. Evidence is written to `tmp_ui/runtime-contracts.json`.
+
+The pronoun page's 22 generated demonstration models are additionally compared with an isolated catalog page with `pages.css` removed. This checks shared `demo-box` ownership independently of the stylesheet that previously supplied the duplicate rule. All three source groups retain their counts and Maltese text, and a deliberately injected page padding override must fail comparison.
 
 Review controls are compared with an independent shared-component reference outside page-specific containers. Contracts include surface and icon colors, borders, padding, dimensions, flex alignment, icon transform and focus outline. Table action centers have a two-pixel tolerance. CSS blockification of inline-flex grid items is normalized because it does not change the inner flex layout.
 

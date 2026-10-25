@@ -5,7 +5,7 @@ const path = require("path");
 const { chromium } = require("playwright");
 const root = path.resolve(__dirname, "..");
 const pages = ["greetings.html", "polite_phrases.html", "conversation_help.html", "getting_to_know.html",
-  "particles_prepositions.html", "reading_red_cave.html", "numbers_calendar_time.html", "about_me.html"];
+  "particles_prepositions.html", "reading_red_cave.html", "numbers_calendar_time.html", "about_me.html", "pronouns_possessives.html"];
 const properties = ["color", "backgroundColor", "borderTopColor", "borderTopWidth", "borderRadius",
   "paddingTop", "paddingRight", "paddingBottom", "paddingLeft", "width", "height", "display", "alignItems", "justifyContent", "fontSize", "lineHeight", "outlineStyle", "outlineWidth", "outlineColor"];
 
@@ -120,6 +120,36 @@ async function main() {
             if (file === 'about_me.html') assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${file}/${theme}/${width}/${state}: horizontal overflow`);
           }
           await verify("loaded");
+          if (file === 'pronouns_possessives.html') {
+            const reference = await context.newPage();
+            await reference.goto(`http://127.0.0.1:${server.address().port}/scripts/fixtures/ui_component_catalog.html`, { waitUntil: 'networkidle' });
+            await reference.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme);
+            await reference.locator('link[href$="/pages.css"]').evaluate((node) => node.remove());
+            const surface = (node) => {
+              const css = getComputedStyle(node);
+              return Object.fromEntries(['backgroundColor', 'borderTopColor', 'borderTopWidth', 'borderTopStyle', 'borderRadius', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'].map((key) => [key, css[key]]));
+            };
+            const expected = await reference.locator('[data-component="card-demo"]').evaluate(surface);
+            const groups = require('../assets/data/pronouns_possessives_examples.json').groups.filter((group) => group.cardClass === 'demo-box');
+            for (const group of groups) {
+              const cards = page.locator(`[data-example-group="${group.id}"] > .demo-box`);
+              assert.equal(await cards.count(), group.items.length, `Missing demo cards: ${group.id}`);
+              for (let index = 0; index < group.items.length; index++) {
+                assert.deepEqual(await cards.nth(index).evaluate(surface), expected, `${theme}/${width}/${group.id}/${index}: demo surface differs from isolated shared component`);
+                assert.ok((await cards.nth(index).textContent()).includes(group.items[index].maltese), 'Demo text changed');
+              }
+            }
+            const first = page.locator('[data-example-group] > .demo-box').first();
+            await first.evaluate((node) => node.dataset.demoNegative = 'true');
+            const mutation = await page.addStyleTag({ content: '[data-demo-negative] { padding: 31px !important; }' });
+            assert.notDeepEqual(await first.evaluate(surface), expected, 'Local demo override escaped detection');
+            await mutation.evaluate((node) => node.remove());
+            await first.evaluate((node) => delete node.dataset.demoNegative);
+            fs.mkdirSync(path.join(root, 'tmp_ui'), { recursive: true });
+            await page.locator('[data-example-group="pronouns-family-ownership"]').screenshot({ path: path.join(root, `tmp_ui/demo-box-${theme}-${width}.png`), animations: 'disabled' });
+            assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Pronoun page overflows');
+            await reference.close();
+          }
           if (file === "about_me.html") {
             await page.waitForFunction(() => document.querySelector('[data-about-me-practice]')?.dataset.aboutMeReady === 'true');
             assert.equal(await page.locator('main.content input:not([type="checkbox"]):not(.study-input), main.content select:not(.study-input), main.content textarea:not(.study-input)').count(), 0, "About Me contains nonstandard fields");
