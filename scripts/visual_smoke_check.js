@@ -108,13 +108,27 @@ check("css tokens resolve", () => {
   });
 });
 
+function localStylesheetFile(href) {
+  const url = new URL(href, "https://visual-check.invalid/");
+  assert(url.origin === "https://visual-check.invalid", "expected a local stylesheet URL");
+  return path.join(root, decodeURIComponent(url.pathname.slice(1)));
+}
+
+check("css link resolver preserves missing-file failures", () => {
+  const expected = path.join(root, "assets/css/site.css");
+  for (const href of ["./assets/css/site.css", "./assets/css/site.css?v=bank-views-3", "./assets/css/site.css?v=3#layer"]) {
+    assert(localStylesheetFile(href) === expected, `incorrect CSS URL resolution: ${href}`);
+  }
+  assert(!fs.existsSync(localStylesheetFile("./assets/css/missing-smoke-fixture.css?v=3#layer")), "missing versioned CSS must remain missing");
+});
+
 check("css links resolve", () => {
   fs.readdirSync(root)
     .filter((file) => file.endsWith(".html"))
     .forEach((page) => {
       const html = read(page);
       [...html.matchAll(/href="\.\/(assets\/css\/[^"]+)"/g)].forEach((match) => {
-        assert(fs.existsSync(path.join(root, match[1])), `${page} links missing ${match[1]}`);
+        assert(fs.existsSync(localStylesheetFile(`./${match[1]}`)), `${page} links missing ${match[1]}`);
       });
     });
 });
