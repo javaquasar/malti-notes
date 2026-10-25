@@ -1,0 +1,18 @@
+# Effective review enforcement also requires a GitHub ruleset with code-owner approval.
+/.github/CODEOWNERS @javaquasar
+/.github/workflows/ @javaquasar
+/AGENTS.md @javaquasar
+/scripts/ui_unification_contract.json @javaquasar
+/docs/quality/ui-unification-contract.md @javaquasar
+/scripts/ui_policy_check.js @javaquasar
+/scripts/ui_policy_scan.js @javaquasar
+/scripts/materials* @javaquasar
+/scripts/style* @javaquasar
+/scripts/ci_workflow_check.js @javaquasar
+/scripts/hooks/ @javaquasar
+/scripts/install_materials_hooks.js @javaquasar
+/docs/reference/ui-components.md @javaquasar
+/docs/quality/material-authoring.md @javaquasar
+/docs/decisions/0003-layered-style-system.md @javaquasar
+/package.json @javaquasar
+/package-lock.json @javaquasar

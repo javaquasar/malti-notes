@@ -157,9 +157,10 @@
     const label = document.createElement("label");
     const text = document.createElement("span");
     const input = document.createElement("input");
-    label.className = "exercise-input-label";
+    label.className = "study-field exercise-input-label";
     text.textContent = "Your answer";
     input.type = "text";
+    input.className = "study-input";
     input.autocomplete = "off";
     input.spellcheck = false;
     input.dataset.exerciseAnswer = "";
@@ -178,6 +179,7 @@
       const select = document.createElement("select");
       const placeholder = document.createElement("option");
       label.className = "exercise-match-row";
+      select.className = "study-input";
       left.textContent = pair.left;
       placeholder.value = "";
       placeholder.textContent = "Choose...";

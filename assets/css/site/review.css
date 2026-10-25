@@ -238,12 +238,6 @@
 
 .review-select {
   width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: var(--color-surface-strong);
-  color: var(--ink);
-  font: inherit;
 }
 
 .review-check {
@@ -527,16 +521,9 @@
 .review-input,
 .review-textarea {
   width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: var(--color-surface-strong);
-  color: var(--ink);
-  font: inherit;
 }
 
 .review-textarea {
-  min-height: 96px;
   resize: vertical;
 }
 

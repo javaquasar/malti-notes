@@ -55,8 +55,12 @@ surface exceptions are recorded in `scripts/style_contract_check.js`.
 `npm run style:lint` includes a native CSSOM ownership check. It rejects local
 redefinitions of the new shared surfaces, page-local appearance rules and raw
 spacing/font-size values in migrated/new page styles, including nested rules.
-Five pre-existing page stylesheets remain a documented migration backlog, not a
-precedent for new page CSS. Negative tests prove that renamed controls and
+Three pre-existing page stylesheets remain a documented migration backlog, not a
+precedent for new page CSS. The [enforced UI registry](../quality/ui-unification-contract.md)
+additionally freezes exact legacy declarations, owners, imports, native controls
+and parsed runtime factories; additions cannot hide behind a filename exception.
+Its JSON list and complete English description must change together through an
+explicit policy-maintenance review. Negative tests prove that renamed controls and
 overrides inside media queries are rejected. Do not expand the exception list to
 silence a duplicate component.
 The guard also scans HTML style blocks, rejects inline style attributes, and

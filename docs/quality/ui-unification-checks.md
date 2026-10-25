@@ -42,6 +42,13 @@ GitHub Pages now publishes the generated release artifact. A plain source-tree d
 
 ## Measurable Refactoring
 
+The [enforced UI registry](ui-unification-contract.md) is a separate, mandatory
+boundary from progress counters. `npm run ui:policy:check` binds the exact
+ownership/exception/factory list to its complete English description. Existing
+legacy stylesheets do not grant whole-file exemptions. A renderer or exception
+change requires an explicitly authorized policy review, not an automatic
+signature refresh as part of an ordinary material task.
+
 The machine-readable work plan is `scripts/ui_unification_plan.json`. It tracks the twelve audit packages separately from these five infrastructure improvements. `pending`, `in-progress`, and `complete` are the only valid states. Completion requires retained evidence files and a verification command.
 
 Run `npm run ui:progress:build` after changing the plan or measured CSS. Review the generated [progress report](../analysis/ui-unification-progress.md). `npm run ui:progress:check` rejects stale counters, missing scope files and completion without evidence. CSSOM counts distinguish total declarations, surface candidates, control-surface candidates and `!important` use. Counts are review signals, not semantic proof of a violation; selector-name matching can undercount controls with opaque names.
@@ -50,4 +57,4 @@ The report explicitly preserves legitimate game geometry, progress placement and
 
 ## CI
 
-CI runs all four new checks (`ui:runtime:check`, `visual:components`, `ui:progress:check`, `release:check`) in addition to existing gates. The workflow contract requires them and the release build step. Runtime evidence and snapshots are uploaded even when another quality check fails. No existing lint, accessibility or visual comparison has been removed.
+CI runs `ui:policy:check`, `ui:runtime:check`, `visual:components`, `ui:progress:check` and `release:check` in addition to existing gates. The workflow contract requires them and the release build step. Runtime evidence and snapshots are uploaded even when another quality check fails. No existing lint, accessibility or visual comparison has been removed. `CODEOWNERS` adds a policy-review owner, but remote rulesets must separately require successful checks and the chosen review policy; repository files cannot enable those server settings by themselves.

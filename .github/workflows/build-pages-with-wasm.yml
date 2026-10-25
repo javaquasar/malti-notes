@@ -65,6 +65,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run style:lint
 
+      - name: Enforce documented UI rule registry
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run ui:policy:check
+
       - name: Validate data structure
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run data:lint

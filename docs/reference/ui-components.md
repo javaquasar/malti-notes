@@ -76,8 +76,8 @@ renderer. Review actions must use the shared review store and stable item IDs.
 ## Fields and Checkboxes
 
 `study-field` arranges a label and its control. `study-input` owns the control's
-height, padding, border, radius, font and theme surface. It works on both inputs
-and selects. `study-check` arranges a checkbox label and gives the native checkbox
+height, padding, border, radius, font and theme surface. It works on inputs,
+selects and textareas. `study-check` arranges a checkbox label and gives the native checkbox
 a consistent size and accent color.
 
 ```html
@@ -106,6 +106,19 @@ Use `aria-describedby` to associate additional help or an error with an input.
 Do not replace a visible label with placeholder text. The responsive row makes
 its fields full width on small screens; outside that row, choose an appropriate
 layout rather than adding a second field appearance rule.
+
+The shared exercise runner uses `study-field study-input` for text-answer labels
+and fields, and `study-input` for matching selects. `exercise-input-label` and
+`exercise-match-row` retain only exercise layout hooks. Do not restore a separate
+42px input skin or a mobile height override: all widths inherit the central
+control tokens. Grading, retry and progress storage remain controller concerns.
+
+Review filters, custom-card fields and the review-style fields in Memory, Word
+Builder, Word Search and Year 4 also use `study-input`. Their `review-select`,
+`review-input` and `review-textarea` classes are retained only as layout hooks,
+not alternative field surfaces. Use native `rows` for a textarea's initial size;
+keep its resize behavior and width in the owning layout. New fields should use
+`study-input` directly rather than relying on those legacy names for appearance.
 
 ## Actions, Options and Tokens
 
@@ -286,9 +299,13 @@ columns, position review controls or size a number diagram. It must not recreate
 the input, card, disclosure or button surface. Retained `numbers-*` classes may
 be controller/test hooks; they are not an alternative visual component system.
 
-Five older page stylesheets are temporarily exempt from part of the composition
-guard. That is a migration backlog, not permission to copy their independent
-control styles into new work.
+Three older page stylesheets retain first-stage migration handling. They are not
+whole-file exemptions: the [enforced UI registry](../quality/ui-unification-contract.md)
+freezes their exact remaining declarations, native controls and runtime factories.
+New or changed deviations require a reviewed registry and description change.
+Do not copy their independent controls into new work or refresh signatures merely
+to pass a material check. See the policy-maintenance procedure in the
+[authoring workflow](../quality/material-authoring.md).
 
 ## Extending the System
 
@@ -350,6 +367,7 @@ attribute on the disclosure-body wrapper itself.
 | --- | --- |
 | `npm run docs:check` | Documentation structure and relative Markdown links. |
 | `npm run style:lint` | Style rules, shared component ownership, theme-token ownership, HTML inline styles and negative regression cases. Requires a Playwright browser. |
+| `npm run ui:policy:check` | Exact ownership/legacy/factory registry, synchronized English descriptions and negative bypass cases. Also runs inside style lint and material/Git gates. |
 | `npm run theme:a11y` | Theme-token contrast pairs. |
 | `npm run a11y:check` | Rendered-page accessibility, including labels and table semantics. |
 | `npm run visual:catalog` | Catalog screenshots against the current platform's baseline. |

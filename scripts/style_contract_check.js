@@ -5,7 +5,7 @@ const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..');
 // Existing independent page systems are not migrated by the numbers refactor.
 // New page styles are checked by default; this list must not grow casually.
-const legacyPages=['pages.css','lesson01-practice.css','topic-picker.css','vocabulary-games.css','word-search.css'];
+const legacyPages=['pages.css','vocabulary-games.css','word-search.css'];
 const owners=['assets/css/site/components.css','assets/css/site/print.css'];
 const diagramSurfaces={
   '.numbers-nav-heading':['color'],

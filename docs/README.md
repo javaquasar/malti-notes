@@ -16,6 +16,7 @@ This directory is the canonical home for project documentation. The root `README
 ## Models And Quality
 
 - [Mandatory material authoring workflow](quality/material-authoring.md) - required reading, preflight, exact-tree Git checks, CI and protection limits.
+- [Enforced UI rule registry and description](quality/ui-unification-contract.md) - exact ownership, legacy exceptions and reviewed runtime factories; changes require a synchronized list and description.
 - [UI components and usage](reference/ui-components.md) - English component reference, selection rules, HTML examples, states and styling ownership.
 - [Learning content model](learning-content-model.md)
 - [Content verification](content-verification.md)

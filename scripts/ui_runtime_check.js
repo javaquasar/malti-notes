@@ -106,6 +106,101 @@ async function main() {
     browser = await chromium.launch();
     for (const theme of ["classic", "forest", "contrast"]) {
       for (const width of [1280, 390]) {
+        for (const [file, expectedCount] of Object.entries({ "review_cards.html": 12, "memory_game.html": 3, "word_builder_game.html": 3, "word_search.html": 6, "year4_exam.html": 2 })) {
+          const context = await browser.newContext({ viewport: { width, height: 960 }, serviceWorkers: "block" });
+          await context.addInitScript((theme) => localStorage.setItem("malti_site_theme", theme), theme);
+          const page = await context.newPage();
+          const errors = [];
+          page.on("pageerror", (error) => errors.push(error.message));
+          await page.goto(`http://127.0.0.1:${server.address().port}/${file}`, { waitUntil: "networkidle" });
+          await page.locator("details").evaluateAll((nodes) => nodes.forEach((node) => { node.open = true; }));
+          const fields = page.locator(".review-select, .review-input, .review-textarea");
+          assert.equal(await fields.count(), expectedCount, `${file}: migrated field coverage changed`);
+          assert.equal(await page.locator(".review-select:not(.study-input), .review-input:not(.study-input), .review-textarea:not(.study-input)").count(), 0, `${file}: legacy field has no shared component`);
+          async function verifyReviewFields(state) {
+            const result = await check(page);
+            evidence.push({ file, theme, width, state, ...result });
+            assert.deepEqual(result.failures, [], `${file}/${theme}/${width}/${state}`);
+            assert.ok(result.fields > 0, `${file}: no visible shared fields checked`);
+            assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${file}: horizontal overflow`);
+          }
+          await verifyReviewFields("fields-loaded");
+          const visibleFields = page.locator(".review-select:visible, .review-input:visible, .review-textarea:visible");
+          for (let index = 0; index < await visibleFields.count(); index++) {
+            await visibleFields.nth(index).focus();
+            await verifyReviewFields(`field-focused-${index}`);
+          }
+          const tokens = await page.addStyleTag({ content: ":root[data-theme] { --control-height: 52px; --control-padding: 13px 15px; --control-radius: 3px; }" });
+          await verifyReviewFields("field-tokens-changed");
+          assert.equal(await visibleFields.first().evaluate((node) => getComputedStyle(node).minHeight), "52px");
+          await tokens.evaluate((node) => node.remove());
+          const disabledStates = await fields.evaluateAll((nodes) => nodes.map((node) => node.disabled));
+          await fields.evaluateAll((nodes) => nodes.forEach((node) => { node.disabled = true; }));
+          await verifyReviewFields("fields-disabled");
+          await fields.evaluateAll((nodes, states) => nodes.forEach((node, index) => { node.disabled = states[index]; }), disabledStates);
+          await page.locator("body").click({ position: { x: 1, y: 1 } });
+          await page.evaluate(() => scrollTo(0, 0));
+          fs.mkdirSync(path.join(root, "tmp_ui"), { recursive: true });
+          await page.screenshot({ path: path.join(root, `tmp_ui/review-fields-${file.replace(".html", "")}-${theme}-${width}.png`), animations: "disabled" });
+          if (file === "review_cards.html") await page.locator("#custom-word-form").screenshot({ path: path.join(root, `tmp_ui/review-fields-custom-${theme}-${width}.png`), animations: "disabled" });
+          assert.deepEqual(errors, [], `${file}: browser errors`);
+          await context.close();
+        }
+        const exerciseContext = await browser.newContext({ viewport: { width, height: 960 }, serviceWorkers: "block" });
+        const exercisePage = await exerciseContext.newPage();
+        await exercisePage.goto(`http://127.0.0.1:${server.address().port}/scripts/fixtures/ui_component_catalog.html`, { waitUntil: "networkidle" });
+        await exercisePage.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme);
+        await exercisePage.addScriptTag({ url: "/assets/js/storage.js" });
+        await exercisePage.addScriptTag({ url: "/assets/js/exercise-runner.js" });
+        await exercisePage.evaluate(() => {
+          const container = document.createElement("section");
+          container.id = "exercise-field-contract";
+          container.className = "content-card";
+          document.body.replaceChildren(container);
+          window.exerciseFieldFixture = {
+            id: "ui-field-contract", title: "Shared exercise fields", items: [
+              { id: "entry", type: "fill-blank", prompt: "Write one in Maltese", answer: "wiehed", explanation: "Text entry." },
+              { id: "pairs", type: "matching", prompt: "Match the numbers", pairs: [{ left: "1", right: "one" }, { left: "2", right: "two" }], explanation: "Matching entry." }
+            ]
+          };
+          window.MaltiExerciseRunner.render(container, window.exerciseFieldFixture);
+        });
+        const exerciseFields = exercisePage.locator("#exercise-field-contract input, #exercise-field-contract select");
+        assert.equal(await exerciseFields.count(), 3);
+        assert.equal(await exerciseFields.locator("xpath=self::*[contains(concat(' ', @class, ' '), ' study-input ')]").count(), 3, "Exercise runner produced nonstandard fields");
+        async function verifyExercise(state) {
+          const result = await check(exercisePage);
+          evidence.push({ file: "exercise-runner fixture", theme, width, state, ...result });
+          assert.deepEqual(result.failures, [], `exercise/${theme}/${width}/${state}`);
+          assert.equal(result.fields, 3);
+          assert.ok(await exercisePage.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "Exercise fixture overflows");
+        }
+        await verifyExercise("loaded");
+        for (let index = 0; index < 3; index++) {
+          await exerciseFields.nth(index).focus();
+          await verifyExercise(`focused-${index}`);
+        }
+        const tokens = await exercisePage.addStyleTag({ content: ":root[data-theme] { --control-height: 52px; --control-padding: 13px 15px; --control-radius: 3px; }" });
+        await verifyExercise("central-tokens-changed");
+        assert.equal(await exerciseFields.first().evaluate((node) => getComputedStyle(node).minHeight), "52px");
+        await tokens.evaluate((node) => node.remove());
+        await exerciseFields.evaluateAll((nodes) => nodes.forEach((node) => { node.disabled = true; }));
+        await verifyExercise("disabled");
+        await exerciseFields.evaluateAll((nodes) => nodes.forEach((node) => { node.disabled = false; }));
+        await exercisePage.getByRole("button", { name: "Check answers", exact: true }).click();
+        assert.match(await exercisePage.locator(".exercise-result").textContent(), /^0\/2/);
+        await exercisePage.getByRole("button", { name: "Try again", exact: true }).click();
+        await verifyExercise("retry-rebuilt");
+        await exercisePage.locator("[data-exercise-answer]").fill("wiehed");
+        await exercisePage.locator('[data-match-index="0"]').selectOption("one");
+        await exercisePage.locator('[data-match-index="1"]').selectOption("two");
+        await exercisePage.getByRole("button", { name: "Check answers", exact: true }).click();
+        assert.match(await exercisePage.locator(".exercise-result").textContent(), /^2\/2/);
+        assert.equal(await exercisePage.evaluate(() => window.MaltiExerciseRunner.getProgress()["ui-field-contract"].attempts), 2);
+        await verifyExercise("graded");
+        fs.mkdirSync(path.join(root, "tmp_ui"), { recursive: true });
+        await exercisePage.locator("#exercise-field-contract").screenshot({ path: path.join(root, `tmp_ui/exercise-fields-${theme}-${width}.png`), animations: "disabled" });
+        await exerciseContext.close();
         for (const file of pages) {
           const context = await browser.newContext({ viewport: { width, height: 960 }, serviceWorkers: "block" });
           const page = await context.newPage();

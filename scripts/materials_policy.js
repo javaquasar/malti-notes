@@ -3,13 +3,15 @@ const requiredReading = [
   'docs/reference/ui-components.md',
   'docs/decisions/0003-layered-style-system.md',
   'docs/learning-content-model.md',
-  'docs/content-verification.md'
+  'docs/content-verification.md',
+  'docs/quality/ui-unification-contract.md'
 ];
 
 const checks = [
   ['materials:gate:check', 'scripts/materials_gate_check.js'],
   ['docs:check', 'scripts/docs_check.js'],
   ['style:lint', 'scripts/style_lint.js'],
+  ['ui:policy:check', 'scripts/ui_policy_check.js'],
   ['data:lint', 'scripts/data_lint.js'],
   ['schema:check', 'scripts/schema_check.js'],
   ['content:lint', 'scripts/content_lint.js'],

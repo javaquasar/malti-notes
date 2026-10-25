@@ -251,3 +251,8 @@ const contracts = require('node:child_process').spawnSync(process.execPath, [pat
 });
 if (contracts.error) throw contracts.error;
 if (contracts.status !== 0) process.exit(contracts.status || 1);
+const policy = require('node:child_process').spawnSync(process.execPath, [path.join(__dirname, 'ui_policy_check.js')], {
+  cwd: root, env: process.env, stdio: 'inherit'
+});
+if (policy.error) throw policy.error;
+if (policy.status !== 0) process.exit(policy.status || 1);

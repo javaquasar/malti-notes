@@ -66,18 +66,34 @@ try {
 
   const policy = path.join(temporary, 'policy');fs.mkdirSync(policy);
   const files = [...requiredReading, ...checks.map(([, file]) => file), 'AGENTS.md', 'package.json',
-    'scripts/hooks/pre-commit', 'scripts/hooks/pre-push', '.github/workflows/build-pages-with-wasm.yml'];
+    'scripts/hooks/pre-commit', 'scripts/hooks/pre-push', '.github/workflows/build-pages-with-wasm.yml', '.github/CODEOWNERS',
+    'scripts/ui_unification_contract.json', 'scripts/ui_policy_scan.js'];
   for (const file of new Set(files)) {
     const target = path.join(policy, file);fs.mkdirSync(path.dirname(target), { recursive: true });fs.copyFileSync(path.join(root, file), target);
   }
   assert(checkPolicy(policy));
+  const registry = path.join(policy, 'scripts/ui_unification_contract.json');
+  const savedRegistry = fs.readFileSync(registry, 'utf8');
+  const changedRegistry = JSON.parse(savedRegistry); changedRegistry.rules[0].description += ' Changed without updating the description.';
+  fs.writeFileSync(registry, JSON.stringify(changedRegistry));
+  assert.throws(() => checkPolicy(policy), /registry and description must change together/);
+  fs.writeFileSync(registry, savedRegistry);
   const guide = path.join(policy, 'docs/reference/ui-components.md'), savedGuide = fs.readFileSync(guide);
   fs.unlinkSync(guide);assert.throws(() => checkPolicy(policy));fs.writeFileSync(guide, savedGuide);
   const workflow = path.join(policy, '.github/workflows/build-pages-with-wasm.yml'), savedWorkflow = fs.readFileSync(workflow, 'utf8');
   fs.writeFileSync(workflow, savedWorkflow.replace('npm run materials:check', 'echo skipped'));assert.throws(() => checkPolicy(policy), /CI must run/);
   fs.writeFileSync(workflow, savedWorkflow);
+  fs.writeFileSync(workflow, savedWorkflow.replace('npm run ui:policy:check', 'echo skipped'));
+  assert.throws(() => checkPolicy(policy), /CI must check the UI registry/);
+  fs.writeFileSync(workflow, savedWorkflow);
+  const codeowners = path.join(policy, '.github/CODEOWNERS'), savedOwners = fs.readFileSync(codeowners, 'utf8');
+  fs.writeFileSync(codeowners, savedOwners.replace('/scripts/ui_unification_contract.json @javaquasar', ''));
+  assert.throws(() => checkPolicy(policy), /Missing policy code owner/);
+  fs.writeFileSync(codeowners, savedOwners);
   const style = path.join(policy, 'scripts/style_lint.js');fs.writeFileSync(style, fs.readFileSync(style, 'utf8').replace('style_contract_check.js', 'disabled.js'));
   assert.throws(() => checkPolicy(policy), /Style ownership guard/);
+  fs.writeFileSync(style, fs.readFileSync(path.join(root, 'scripts/style_lint.js'), 'utf8').replace('ui_policy_check.js', 'disabled.js'));
+  assert.throws(() => checkPolicy(policy), /Exact UI registry guard/);
   console.log('PASS: staged/outgoing tree isolation, valid/invalid/deleted refs, archive exclusions/substitution, cleanup, hook installation/preservation, missing guide and disconnected style/CI guards.');
 } finally {
   if (!temporary.startsWith(prefix) || path.dirname(temporary) !== path.resolve(os.tmpdir())) throw new Error('Unsafe test cleanup path');

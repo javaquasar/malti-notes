@@ -11,6 +11,7 @@ Read these references before creating or changing learning material:
 - [Layered Style System](../decisions/0003-layered-style-system.md)
 - [Learning Content Model](../learning-content-model.md)
 - [Content Verification](../content-verification.md)
+- [Enforced UI Rule Registry](ui-unification-contract.md)
 
 Run `npm run materials:preflight` in the repository root. Do not start authoring
 until it passes. A command cannot prove that a person read or understood a
@@ -91,6 +92,39 @@ not something a local script can guarantee. Enabling them changes the direct-pus
 workflow and must be an explicit repository-owner decision.
 
 ## Policy Maintenance
+
+### UI Contract Changes
+
+`scripts/ui_unification_contract.json` is the machine-readable rule, ownership,
+exact-exception and runtime-factory list. Its complete English description is
+[UI Unification Contract](ui-unification-contract.md). `npm run ui:policy:check`
+requires the two to agree and rejects unregistered CSS, stylesheet dependencies,
+native controls, changed DOM/style/class factories and non-empty data CSS payloads.
+`style:lint`, the material gate, staged/outgoing Git hooks and CI run the check.
+
+Existing legacy files are not blanket permission to add styles. Only exact,
+count-bound registered observations remain accepted. Two migrated/empty sheets
+(`lesson01-practice.css` and `topic-picker.css`) have also been removed from the
+older first-stage filename exception list. Do not add them back.
+
+An authorized policy-maintenance change must explain the scope/ownership in the
+JSON registry, update entries deliberately, run `npm run ui:policy:describe`, and
+review both the list and description diff. Add or update the component reference
+and catalog for real new components. The `--inventory` scanner only collects
+observations in an ignored temporary file; it does not accept or approve them.
+There is no update-baseline option on the checking command.
+
+UI factory signatures are intentionally conservative: a new or changed renderer
+may need a policy review even when its implementation is otherwise compliant.
+New standard static markup and typed data that do not introduce style payloads
+normally use the existing contracts without adding exceptions. Checks are not a
+proof of arbitrary JavaScript data flow or of meaningful human review.
+
+`.github/CODEOWNERS` assigns policy and checker review to the repository owner.
+It does not itself enforce approval or prevent direct pushes. The repository
+owner must separately enable required pull requests, successful CI, code-owner
+approval and restricted bypasses in GitHub rulesets. This change does not modify
+remote settings or claim those settings have been verified.
 
 Keep the component guide linked from the documentation index and the style
 decision. `scripts/materials_policy_check.js` detects missing references,

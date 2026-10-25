@@ -201,9 +201,12 @@ check("mobile toggles keep usable targets", () => {
 check("mobile form controls keep usable targets", () => {
   const css = read("assets/css/site/responsive.css");
   assert(
-    /@media \(max-width: 980px\)[\s\S]*?\.site-search input,\s*\.exercise-input-label input,\s*\.exercise-match-row select,\s*\.mistake-category-filter select\s*\{\s*min-height:\s*44px;/.test(css),
-    "mobile search, exercise, and filter controls lack a 44px minimum height"
+    /@media \(max-width: 980px\)[\s\S]*?\.site-search input,\s*\.mistake-category-filter select\s*\{\s*min-height:\s*44px;/.test(css),
+    "mobile search and filter controls lack a 44px minimum height"
   );
+  const shared = read("assets/css/site/components.css");
+  assert(/\.study-input\s*\{[^}]*min-height:\s*var\(--control-height\)/.test(shared), "exercise fields must inherit shared control height");
+  assert(!/\.exercise-(?:input-label input|match-row select)/.test(css), "responsive styles must not override shared exercise field height");
 });
 
 check("mobile ordering tokens keep usable targets", () => {

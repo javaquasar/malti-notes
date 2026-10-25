@@ -12,6 +12,7 @@ Before creating or expanding learning material, read:
 3. `docs/decisions/0003-layered-style-system.md`
 4. `docs/learning-content-model.md`
 5. `docs/content-verification.md`
+6. `docs/quality/ui-unification-contract.md`
 
 Run `npm run materials:preflight` before authoring and resolve failures before
 proceeding. On a new checkout, run `npm run materials:hooks:install` to install
@@ -26,6 +27,8 @@ the commit/push guards. Do not describe a check as passed unless it was run.
 - Use typed data, stable IDs, the existing review/progress APIs and the content-verification workflow.
 - Do not bypass required reading or checks, add inline styles, override shared tokens locally, or expand legacy exceptions to hide a duplication.
 - Do not disable hooks, weaken validators, suppress failures or promote unexplained visual regressions to finish a content task.
+- The exact ownership/exception list is `scripts/ui_unification_contract.json`; its English description is `docs/quality/ui-unification-contract.md`. New/changed CSS exceptions, nonstandard controls, stylesheet dependencies and DOM/style/class factories require an explicit reviewed registry-and-description change. An inventory is evidence, not approval.
+- Run `npm run ui:policy:check`. After an explicitly authorized policy edit, run `npm run ui:policy:describe` and review both diffs. Never refresh exception signatures just to pass a material task.
 - Changes to this policy or its validators require explicit policy-maintenance intent, not an ordinary material request.
 
 ## Before Delivery
