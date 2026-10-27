@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "food_preferences.html" },
+  "topic": "Food shopping and café orders",
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 4-9",
+    "sources": { "S05": "djalogu at the green grocer.pptx", "S07": "fis supermarket example dialogue.pdf", "S08": "vokabularju fis-supermarkit.odt", "S09": "vokabularju_kafe_malti.pptx", "S10": "vokabularju_ħelu_kafe_malti.pptx" },
+    "editorialMethod": "New bounded recognition, word-order and production questions using clear source vocabulary and dialogue forms. Vegetable, fruit and coffee orders reuse the reviewed quantities and service patterns; short answers state their scope and accept equivalent forms where appropriate. These are not the supplied worksheets or teacher-provided answer keys.",
+    "terminologyReference": "https://nso.gov.mt/wp-content/uploads/Agriculture_2007online.pdf#page=135"
+  },
+  "sets": [
+    {
+      "id": "food-supermarket-check",
+      "sourcePage": "food_preferences.html",
+      "title": "Food and Shopping Quick Check",
+      "passPercent": 80,
+      "items": [
+        {
+          "id": "food-vegetable-meanings",
+          "type": "matching",
+          "prompt": "Match the vegetables to their English meanings.",
+          "pairs": [ { "left": "karrotti", "right": "carrots" }, { "left": "ġidra", "right": "kohlrabi" }, { "left": "tewm", "right": "garlic" } ],
+          "explanation": "Ġidra is kohlrabi, not turnip. Karrotti is the spelling used in the NSO bilingual list."
+        },
+        {
+          "id": "food-drinks-context",
+          "type": "multiple-choice",
+          "prompt": "In the supermarket drinks section, what does minerali mean?",
+          "choices": [ "Soft drinks", "Cheese with holes", "Onions" ],
+          "answer": "Soft drinks",
+          "explanation": "Minerali refers to soft drinks in this shopping context, not mineral substances."
+        },
+        {
+          "id": "food-half-kilo",
+          "type": "fill-blank",
+          "prompt": "Write the Maltese phrase for half a kilo (before perżut).",
+          "answer": "nofs kilo",
+          "accepted": [ "nofs kilo" ],
+          "explanation": "Nofs kilo perżut means half a kilo of ham."
+        },
+        {
+          "id": "food-hundred-grams",
+          "type": "multiple-choice",
+          "prompt": "Which quantity means 300 grams of bacon?",
+          "choices": [ "tliet mitt gramma bejken", "mitejn gramma ġobon tat-toqba", "nofs kilo perżut" ],
+          "answer": "tliet mitt gramma bejken",
+          "explanation": "Tliet mitt gramma is 300 grams; mitejn gramma is 200 grams."
+        },
+        {
+          "id": "food-counter-follow-up",
+          "type": "multiple-choice",
+          "prompt": "The assistant asks Xi ħaġa oħra? Your shopping list is complete. Choose the reply.",
+          "choices": [ "Dak kollox. Grazzi.", "Għandi bżonn kaboċċa.", "Nixtieq meraq tal-frott." ],
+          "answer": "Dak kollox. Grazzi.",
+          "explanation": "Dak kollox closes the order: that is all."
+        },
+        {
+          "id": "food-grated-cheese",
+          "type": "fill-blank",
+          "prompt": "Write the Maltese phrase for grated cheese.",
+          "answer": "ġobon maħkuk",
+          "accepted": [ "ġobon maħkuk" ],
+          "explanation": "Ġobon maħkuk is grated cheese."
+        }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-check",
+      "sourcePage": "restaurant_ordering.html",
+      "title": "Café Orders Quick Check",
+      "passPercent": 80,
+      "items": [
+        {
+          "id": "cafe-milk-meanings",
+          "type": "matching",
+          "prompt": "Match each milk choice to its meaning.",
+          "pairs": [ { "left": "ħalib sħiħ", "right": "full-fat milk" }, { "left": "ħalib xkumat", "right": "skimmed milk" }, { "left": "ħalib tal-ħafur", "right": "oat milk" } ],
+          "explanation": "These are different milk choices; ħalib tal-lewż is almond milk."
+        },
+        {
+          "id": "cafe-no-sugar",
+          "type": "fill-blank",
+          "prompt": "Write the phrase meaning without sugar, beginning with mingħajr.",
+          "answer": "mingħajr zokkor",
+          "accepted": [ "mingħajr zokkor" ],
+          "explanation": "Mingħajr zokkor means without sugar."
+        },
+        {
+          "id": "cafe-one-waiter",
+          "type": "multiple-choice",
+          "prompt": "Sara addresses one waiter. Which form of please fits?",
+          "choices": [ "jekk jogħġbok", "jekk jogħġobkom" ],
+          "answer": "jekk jogħġbok",
+          "explanation": "Choose the form for the recipient: Sara is addressing one person."
+        },
+        {
+          "id": "cafe-two-customers",
+          "type": "multiple-choice",
+          "prompt": "A waiter addresses Sara and Rita together. Which phrase means I will be with you shortly?",
+          "choices": [ "Daqt magħkom.", "Daqt miegħek." ],
+          "answer": "Daqt magħkom.",
+          "explanation": "Magħkom refers to more than one person being addressed, even though only one waiter is speaking."
+        },
+        {
+          "id": "cafe-pastry-context",
+          "type": "multiple-choice",
+          "prompt": "In Rita's café order, what does pasta bil-krema taċ-ċikkulata mean?",
+          "choices": [ "A pastry with chocolate cream", "Noodles with chocolate cream", "A black coffee" ],
+          "answer": "A pastry with chocolate cream",
+          "explanation": "Pasta means a pastry in this café context."
+        },
+        {
+          "id": "cafe-cash-payment",
+          "type": "multiple-choice",
+          "prompt": "Which sentence says I will pay in cash?",
+          "choices": [ "Se nħallas bi flus kontanti.", "Nista' nħallas bil-karta?", "Kemm jiġi kollox?" ],
+          "answer": "Se nħallas bi flus kontanti.",
+          "explanation": "Bi flus kontanti means in cash; bil-karta means by card."
+        }
+      ]
+    },
+    {
+      "id": "food-vegetable-orders",
+      "sourcePage": "food_preferences.html",
+      "title": "Ordering Vegetables",
+      "passPercent": 80,
+      "items": [
+        {
+          "id": "vegetable-shopping-list",
+          "type": "multiple-choice",
+          "prompt": "Your list says a cabbage and a kilo of carrots. Which order matches it?",
+          "choices": [ "Għandi bżonn kaboċċa u kilo karrotti.", "Għandi bżonn pastarda u kilo karrotti.", "Għandi bżonn kaboċċa u kilo tuffieħ." ],
+          "answer": "Għandi bżonn kaboċċa u kilo karrotti.",
+          "explanation": "Kaboċċa is a cabbage; kilo karrotti is a kilo of carrots.",
+          "reviewCard": { "maltese": "Għandi bżonn kaboċċa u kilo karrotti.", "english": "I need a cabbage and a kilo of carrots." }
+        },
+        {
+          "id": "vegetable-counter-words",
+          "type": "matching",
+          "prompt": "Match the vegetables on the counter to the shopping list.",
+          "pairs": [ { "left": "pastarda", "right": "a cauliflower" }, { "left": "basal", "right": "onions" }, { "left": "ħassa", "right": "a lettuce" }, { "left": "brunġiel", "right": "aubergines" } ],
+          "explanation": "These are the produce names used on this page; ħassa names one lettuce."
+        },
+        {
+          "id": "vegetable-garlic-gap",
+          "type": "fill-blank",
+          "prompt": "You also need garlic. Complete only the missing noun: Għandi bżonn ftit ___.",
+          "answer": "tewm",
+          "explanation": "Għandi bżonn ftit tewm means I need some garlic.",
+          "reviewCard": { "maltese": "Għandi bżonn ftit tewm.", "english": "I need some garlic." }
+        },
+        {
+          "id": "vegetable-polite-order",
+          "type": "order-words",
+          "prompt": "Order a cabbage. Begin with Nixtieq and put please at the end.",
+          "tokens": [ "Nixtieq", "kaboċċa,", "jekk", "jogħġbok." ],
+          "answer": "Nixtieq kaboċċa, jekk jogħġbok.",
+          "explanation": "Nixtieq makes the request; jekk jogħġbok addresses one shop assistant.",
+          "reviewCard": { "maltese": "Nixtieq kaboċċa, jekk jogħġbok.", "english": "I would like a cabbage, please." }
+        },
+        {
+          "id": "vegetable-half-kilo-order",
+          "type": "multiple-choice",
+          "prompt": "You need half a kilo of potatoes, not a whole kilo. Choose the order.",
+          "choices": [ "Nixtieq kilo patata.", "Nixtieq nofs kilo patata.", "Nixtieq nofs kilo tuffieħ." ],
+          "answer": "Nixtieq nofs kilo patata.",
+          "explanation": "Nofs kilo is half a kilo; patata means potatoes here.",
+          "reviewCard": { "maltese": "Nixtieq nofs kilo patata.", "english": "I would like half a kilo of potatoes." }
+        },
+        {
+          "id": "vegetable-carrot-measure",
+          "type": "fill-blank",
+          "prompt": "Complete only the measure for a kilo of carrots: Nixtieq ___ karrotti.",
+          "answer": "kilo",
+          "accepted": [ "kilo", "kilogramma" ],
+          "explanation": "Kilo karrotti means a kilo of carrots; kilogramma is also accepted for the measure."
+        },
+        {
+          "id": "vegetable-add-to-order",
+          "type": "order-words",
+          "prompt": "The assistant asks Xi ħaġa oħra? Add a lettuce, beginning with U and ending with please.",
+          "tokens": [ "U", "ħassa,", "jekk", "jogħġbok." ],
+          "answer": "U ħassa, jekk jogħġbok.",
+          "explanation": "U ħassa adds a lettuce to the order already in progress.",
+          "reviewCard": { "maltese": "U ħassa, jekk jogħġbok.", "english": "And a lettuce, please." }
+        },
+        {
+          "id": "vegetable-finish-order",
+          "type": "fill-blank",
+          "prompt": "Your order is complete. Write only the two-word phrase meaning that is all: ___. Grazzi.",
+          "answer": "Dak kollox",
+          "explanation": "Dak kollox. Grazzi. closes the order politely.",
+          "reviewCard": { "maltese": "Dak kollox. Grazzi.", "english": "That is all. Thank you." }
+        }
+      ]
+    },
+    {
+      "id": "food-fruit-orders",
+      "sourcePage": "food_preferences.html",
+      "title": "Ordering Fruit",
+      "passPercent": 80,
+      "items": [
+        {
+          "id": "fruit-counter-words",
+          "type": "matching",
+          "prompt": "Match the fruit in your order to its English meaning.",
+          "pairs": [ { "left": "tuffieħ", "right": "apples" }, { "left": "larinġ", "right": "oranges" }, { "left": "għeneb", "right": "grapes" }, { "left": "frawli", "right": "strawberries" } ],
+          "explanation": "These fruit names are reused with measures such as kilo, ftit and żewġ kaxxi."
+        },
+        {
+          "id": "fruit-two-quantities",
+          "type": "multiple-choice",
+          "prompt": "Order one kilo of apples and two kilograms of oranges. Which list is correct?",
+          "choices": [ "kilo larinġ u żewġ kilogrammi tuffieħ", "żewġ kilogrammi tuffieħ u kilo larinġ", "kilo tuffieħ u żewġ kilogrammi larinġ" ],
+          "answer": "kilo tuffieħ u żewġ kilogrammi larinġ",
+          "explanation": "Check both the fruit and its quantity: one kilo of apples, two kilograms of oranges.",
+          "reviewCard": { "maltese": "Għandi bżonn kilo tuffieħ u żewġ kilogrammi larinġ.", "english": "I need a kilo of apples and two kilograms of oranges." }
+        },
+        {
+          "id": "fruit-apple-request",
+          "type": "order-words",
+          "prompt": "Order a kilo of apples. Begin with Nixtieq and put please at the end.",
+          "tokens": [ "Nixtieq", "kilo", "tuffieħ,", "jekk", "jogħġbok." ],
+          "answer": "Nixtieq kilo tuffieħ, jekk jogħġbok.",
+          "explanation": "The measure kilo comes before the fruit name tuffieħ.",
+          "reviewCard": { "maltese": "Nixtieq kilo tuffieħ, jekk jogħġbok.", "english": "I would like a kilo of apples, please." }
+        },
+        {
+          "id": "fruit-orange-quantity",
+          "type": "fill-blank",
+          "prompt": "Write two kilograms, using kilogrammi: Għandi bżonn ___ larinġ.",
+          "answer": "żewġ kilogrammi",
+          "explanation": "Żewġ kilogrammi larinġ is the two-kilogram orange order in the model."
+        },
+        {
+          "id": "fruit-some-grapes",
+          "type": "fill-blank",
+          "prompt": "Complete only the word for some / a little: U ___ għeneb, jekk jogħġbok.",
+          "answer": "ftit",
+          "explanation": "Ftit għeneb means some grapes.",
+          "reviewCard": { "maltese": "U ftit għeneb, jekk jogħġbok.", "english": "And some grapes, please." }
+        },
+        {
+          "id": "fruit-strawberry-boxes",
+          "type": "multiple-choice",
+          "prompt": "The strawberries are sold in boxes. Which order asks for two boxes?",
+          "choices": [ "Nieħu żewġ kilogrammi frawli.", "Nieħu żewġ kaxxi frawli.", "Nieħu kilo frawli." ],
+          "answer": "Nieħu żewġ kaxxi frawli.",
+          "explanation": "Żewġ kaxxi means two boxes; the unit is boxes, not kilograms.",
+          "reviewCard": { "maltese": "Nieħu żewġ kaxxi frawli.", "english": "I will take two boxes of strawberries." }
+        },
+        {
+          "id": "fruit-price-question",
+          "type": "order-words",
+          "prompt": "Ask how much the two boxes cost. Begin with Kemm and put please at the end.",
+          "tokens": [ "Kemm", "huma,", "jekk", "jogħġbok?" ],
+          "answer": "Kemm huma, jekk jogħġbok?",
+          "explanation": "Kemm huma? asks how much they cost in this shopping context.",
+          "reviewCard": { "maltese": "Kemm huma, jekk jogħġbok?", "english": "How much are they, please?" }
+        },
+        {
+          "id": "fruit-goodbye-reply",
+          "type": "multiple-choice",
+          "prompt": "You have paid. The assistant says Il-ġurnata t-tajba! Choose the reply meaning you too.",
+          "choices": [ "Xi ħaġa oħra?", "Lilek ukoll.", "Kemm huma?" ],
+          "answer": "Lilek ukoll.",
+          "explanation": "Lilek ukoll returns the good wish to one person.",
+          "reviewCard": { "maltese": "Lilek ukoll.", "english": "You too." }
+        }
+      ]
+    },
+    {
+      "id": "restaurant-coffee-orders",
+      "sourcePage": "restaurant_ordering.html",
+      "title": "Ordering Coffee",
+      "passPercent": 80,
+      "items": [
+        {
+          "id": "coffee-black-no-sugar",
+          "type": "multiple-choice",
+          "prompt": "You want black coffee without sugar. Choose the matching order.",
+          "choices": [ "Nixtieq kafè bil-ħalib mingħajr zokkor.", "Nixtieq kafè iswed mingħajr zokkor.", "Nixtieq kafè iswed biz-zokkor." ],
+          "answer": "Nixtieq kafè iswed mingħajr zokkor.",
+          "explanation": "Iswed specifies black coffee; mingħajr zokkor excludes sugar.",
+          "reviewCard": { "maltese": "Nixtieq kafè iswed mingħajr zokkor.", "english": "I would like black coffee without sugar." }
+        },
+        {
+          "id": "coffee-milk-options",
+          "type": "matching",
+          "prompt": "The barista asks about milk. Match the options to their meanings.",
+          "pairs": [ { "left": "ħalib tal-ħafur", "right": "oat milk" }, { "left": "ħalib tal-lewż", "right": "almond milk" }, { "left": "ħalib sħiħ", "right": "full-fat milk" } ],
+          "explanation": "Tal-ħafur is oat; tal-lewż is almond. These are different milk choices."
+        },
+        {
+          "id": "coffee-with-milk-request",
+          "type": "order-words",
+          "prompt": "Order coffee with milk. Begin with Nixtieq and put please at the end.",
+          "tokens": [ "Nixtieq", "kafè", "bil-ħalib,", "jekk", "jogħġbok." ],
+          "answer": "Nixtieq kafè bil-ħalib, jekk jogħġbok.",
+          "explanation": "Bil-ħalib means with milk.",
+          "reviewCard": { "maltese": "Nixtieq kafè bil-ħalib, jekk jogħġbok.", "english": "I would like coffee with milk, please." }
+        },
+        {
+          "id": "coffee-without-sugar-gap",
+          "type": "fill-blank",
+          "prompt": "Write one word meaning without: Nixtieq kafè ___ zokkor.",
+          "answer": "mingħajr",
+          "accepted": [ "mingħajr", "bla" ],
+          "explanation": "Both mingħajr zokkor and bla zokkor mean without sugar.",
+          "reviewCard": { "maltese": "Nixtieq kafè mingħajr zokkor.", "english": "I would like coffee without sugar." }
+        },
+        {
+          "id": "coffee-takeaway-reply",
+          "type": "multiple-choice",
+          "prompt": "The barista asks Hawnhekk jew take-away? You want to take the coffee away. Choose the reply.",
+          "choices": [ "Hawnhekk, jekk jogħġbok.", "Il-kont, jekk jogħġbok.", "Take-away, jekk jogħġbok." ],
+          "answer": "Take-away, jekk jogħġbok.",
+          "explanation": "Take-away answers where you want the order, not how you will pay.",
+          "reviewCard": { "maltese": "Take-away, jekk jogħġbok.", "english": "To take away, please." }
+        },
+        {
+          "id": "coffee-cappuccino-name",
+          "type": "fill-blank",
+          "prompt": "Complete only the Maltese drink name for cappuccino: Nixtieq ___, jekk jogħġbok.",
+          "answer": "kapuċċino",
+          "explanation": "The Maltese spelling used in the coffee bank is kapuċċino.",
+          "reviewCard": { "maltese": "Nixtieq kapuċċino, jekk jogħġbok.", "english": "I would like a cappuccino, please." }
+        },
+        {
+          "id": "coffee-oat-milk-order",
+          "type": "order-words",
+          "prompt": "Order a cappuccino with oat milk. Begin with Nixtieq.",
+          "tokens": [ "Nixtieq", "kapuċċino", "bil-ħalib", "tal-ħafur." ],
+          "answer": "Nixtieq kapuċċino bil-ħalib tal-ħafur.",
+          "explanation": "Bil-ħalib tal-ħafur specifies with oat milk, rather than almond or dairy milk.",
+          "reviewCard": { "maltese": "Nixtieq kapuċċino bil-ħalib tal-ħafur.", "english": "I would like a cappuccino with oat milk." }
+        },
+        {
+          "id": "coffee-brown-sugar",
+          "type": "multiple-choice",
+          "prompt": "The barista offers white or brown sugar. Which phrase selects brown sugar?",
+          "choices": [ "Zokkor abjad, jekk jogħġbok.", "Mingħajr zokkor, jekk jogħġbok.", "Zokkor ismar, jekk jogħġbok." ],
+          "answer": "Zokkor ismar, jekk jogħġbok.",
+          "explanation": "Zokkor ismar is brown sugar; zokkor abjad is white sugar.",
+          "reviewCard": { "maltese": "Zokkor ismar, jekk jogħġbok.", "english": "Brown sugar, please." }
+        },
+        {
+          "id": "coffee-one-barista-please",
+          "type": "fill-blank",
+          "prompt": "You address one barista. Complete only the missing word: Nixtieq espresso, jekk ___.",
+          "answer": "jogħġbok",
+          "explanation": "Jekk jogħġbok addresses one person. Use jogħġobkom when addressing more than one.",
+          "reviewCard": { "maltese": "Nixtieq espresso, jekk jogħġbok.", "english": "I would like an espresso, please." }
+        },
+        {
+          "id": "coffee-pay-by-card",
+          "type": "multiple-choice",
+          "prompt": "Your order is ready and you want to ask whether you can pay by card. Choose the question.",
+          "choices": [ "Nista' nħallas bil-karta?", "Se nħallas bi flus kontanti.", "Kemm jiġi kollox?" ],
+          "answer": "Nista' nħallas bil-karta?",
+          "explanation": "This asks whether card payment is possible. Bi flus kontanti means in cash.",
+          "reviewCard": { "maltese": "Nista' nħallas bil-karta?", "english": "Can I pay by card?" }
+        }
+      ]
+    }
+  ]
+}

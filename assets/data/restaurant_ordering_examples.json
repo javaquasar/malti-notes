@@ -1,7 +1,120 @@
 {
   "schemaVersion": 2,
   "source": { "kind": "site", "page": "restaurant_ordering.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 7-9",
+    "sources": { "S05": "djalogu at the green grocer.pptx, slides 4-6", "S09": "vokabularju_kafe_malti.pptx, slides 4-5", "S10": "vokabularju_ħelu_kafe_malti.pptx, slide 3" },
+    "editorialMethod": "Clear source phrases with accents and punctuation normalized. Mini-dialogue is a shortened source-based model. Recipient notes are restricted to the forms demonstrated in S05. Payment by card reuses the existing site phrase bil-karta. English translations are editorial."
+  },
   "groups": [
+    {
+      "id": "restaurant-cafe-modifiers",
+      "sectionId": "cafe-milk-sugar",
+      "title": "Milk and sugar preferences",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "djalogu at the green grocer.pptx, slide 4; vokabularju_kafe_malti.pptx, slide 3" },
+      "containerClass": "grid-2",
+      "items": [
+        { "slug": "bil-halib", "maltese": "bil-ħalib", "english": "with milk" },
+        { "slug": "bla-halib", "maltese": "bla ħalib", "english": "without milk" },
+        { "slug": "minghajr-zokkor", "maltese": "mingħajr zokkor", "english": "without sugar" }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-orders",
+      "sectionId": "cafe-ordering",
+      "title": "Ordering at a café",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "vokabularju_ħelu_kafe_malti.pptx, slide 3; vokabularju_kafe_malti.pptx, slide 4" },
+      "containerClass": "grid-2",
+      "items": [
+        { "slug": "cakes-today", "maltese": "X'kejkijiet għandkom illum?", "english": "What cakes do you have today?" },
+        { "slug": "cake-piece", "maltese": "Nixtieq biċċa kejk taċ-ċikkulata, jekk jogħġbok.", "english": "I would like a piece of chocolate cake, please." },
+        { "slug": "cannolo-filling", "maltese": "Dak il-kannolu fih l-irkotta?", "english": "Does that cannolo contain ricotta?" },
+        { "slug": "warm-apple-pie", "maltese": "Tista' ssaħħanli din it-torta tat-tuffieħ?", "english": "Could you warm up this apple pie for me?" },
+        { "slug": "here-or-takeaway", "maltese": "Hawnhekk jew take-away?", "english": "Here or takeaway?", "note": "Take-away is the English expression used in this café exchange." },
+        { "slug": "takeaway-please", "maltese": "Take-away, jekk jogħġbok.", "english": "Takeaway, please." }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-payment",
+      "sectionId": "cafe-ordering",
+      "title": "Paying and leaving",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "vokabularju_kafe_malti.pptx, slide 5" },
+      "containerClass": "grid-2",
+      "items": [
+        { "slug": "cafe-total", "maltese": "Kemm jiġi kollox?", "english": "How much is everything?" },
+        { "slug": "cafe-cash", "maltese": "Se nħallas bi flus kontanti.", "english": "I will pay in cash." },
+        { "slug": "cafe-money", "maltese": "Hawn huma l-flus.", "english": "Here is the money." },
+        { "slug": "cafe-goodbye", "maltese": "Il-ġurnata t-tajba!", "english": "Have a nice day!" }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-dialogue",
+      "sectionId": "cafe-dialogue",
+      "title": "Two customers at a café",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "djalogu at the green grocer.pptx, slides 5-6; shortened source-based model" },
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "dialogue-card",
+      "numbered": false,
+      "items": [
+        { "slug": "cafe-waiter-offer", "maltese": "Wejter: X'se nġibilkom, jekk jogħġobkom?", "english": "Waiter: What shall I bring you (both)?" },
+        { "slug": "cafe-sara-order", "maltese": "Sara: Jien irrid kafè u żewġ pastizzi, jekk jogħġbok.", "english": "Sara: I would like a coffee and two pastizzi, please." },
+        { "slug": "cafe-rita-order", "maltese": "Rita: U jien irrid kafè u pasta bil-krema taċ-ċikkulata, jekk jogħġbok.", "english": "Rita: And I would like a coffee and a pastry with chocolate cream, please.", "note": "Pasta means a pastry here, not noodles. Pastizzi are not classified as sweet pastries in this exchange." },
+        { "slug": "cafe-waiter-reply", "maltese": "Wejter: Mela le, daqt magħkom.", "english": "Waiter: Of course, I will be with you shortly (both customers)." },
+        { "slug": "cafe-customers-thanks", "maltese": "Sara u Rita: Grazzi ħafna.", "english": "Sara and Rita: Thank you very much." }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-small-talk",
+      "sectionId": "cafe-small-talk",
+      "title": "Coffee and company",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "MQF - 2/Lesson 04/djalogu at the green grocer.pptx, slides 5-6" },
+      "editorialMethod": "Selected phrases from S05 D04, recorded in lesson-04-materials-analysis.md section 7. The gap completion bħalissa is editorial, not a teacher-supplied key. Accents and punctuation are normalized; English translations are editorial.",
+      "containerClass": "grid-2",
+      "items": [
+        {
+          "slug": "cafe-waiting-for-friend",
+          "maltese": "Il-waranofsinhar it-tajjeb, Rita! Ilek tistennini?",
+          "english": "Good afternoon, Rita! Have you been waiting long for me?",
+          "note": "Sara greets Rita. It-tajjeb completes the greeting in the source word-bank exercise."
+        },
+        {
+          "slug": "mejta-ghal-naqra-kafe",
+          "maltese": "Tajjeb, bħalissa mejta għal naqra kafè.",
+          "english": "Good, I am dying for a little coffee right now.",
+          "note": "Sara uses the feminine mejta. Mejta għal expresses a strong craving here, not literal death or illness. Bħalissa means right now."
+        },
+        {
+          "slug": "mela-bhali",
+          "maltese": "Mela bħali.",
+          "english": "Just like me, then.",
+          "note": "Bħali means like me. Rita shares Sara's wish for coffee."
+        },
+        {
+          "slug": "naqra-kafe",
+          "maltese": "naqra kafè",
+          "english": "a little coffee",
+          "note": "An excerpt from Sara's line: naqra describes a small amount here. It is not the verb naqra meaning I read."
+        }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-recipient-notes",
+      "sectionId": "cafe-recipients",
+      "title": "One recipient or more than one",
+      "itemType": "rule",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "djalogu at the green grocer.pptx, slides 5-6; fis supermarket example dialogue.pdf" },
+      "containerClass": "grid-2",
+      "items": [
+        { "slug": "please-recipient-number", "title": "Please: who is being addressed?", "rule": "Jekk jogħġbok addresses one person; jekk jogħġobkom addresses more than one. Each customer addresses one waiter, while the waiter addresses both customers.", "pattern": "jekk jogħġbok / jekk jogħġobkom" },
+        { "slug": "service-recipient-number", "title": "With you: one customer or several", "rule": "Daqt miegħek addresses one customer; daqt magħkom addresses more than one. The form follows the people being addressed, not the number of speakers.", "pattern": "daqt miegħek / daqt magħkom" },
+        { "slug": "bring-plural-recipient", "title": "Bringing something to both customers", "rule": "In X'se nġibilkom?, the waiter is the speaker: 'What shall I bring you?' The ending -kom refers to more than one recipient; it does not make the speaker 'we'.", "pattern": "X'se nġibilkom?" }
+      ]
+    },
     {
       "id": "restaurant-ordering-patterns",
       "title": "Ordering Patterns",

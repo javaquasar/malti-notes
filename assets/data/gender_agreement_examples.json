@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "gender_agreement.html" },
+  "page": "gender_agreement.html",
+  "topic": "Gender and Agreement",
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 2-3",
+    "sources": { "S01": "1a.Il-Gens-Prezentazzjoni.pptx", "S02": "il-ġens.odt", "S03": "il gens fill in.pdf", "S04": "maskil femminil.pdf" },
+    "groupSources": { "gender-rules": ["S01", "S02"], "gender-people": ["S01", "S02", "S03"], "gender-animals": ["S01", "S02", "S03"], "gender-adjectives": ["S02"], "gender-sentences": ["S01", "existing grammar-agreement target"], "gender-family-examples": ["S01"], "gender-verbs": ["S04"] },
+    "notes": "Originals remain in the supplied local material folder. Source transcriptions and editorial corrections are recorded separately; source filenames are not learner-facing labels."
+  },
+  "editorialReview": { "checkedOn": "2026-10-28", "record": "docs/analysis/gender-food-cafe-integration.md", "method": "Source comparison, editorial grammar review and targeted primary-source corroboration; not teacher certification." },
+  "groups": [
+    {
+      "id": "gender-terms", "title": "Grammar words", "itemType": "translation", "containerClass": "grid-3",
+      "source": { "kind": "site", "page": "gender_agreement.html", "file": "1a.Il-Gens-Prezentazzjoni.pptx; il-ġens.odt; maskil femminil.pdf" },
+      "items": [
+        { "slug": "gens", "maltese": "ġens", "english": "grammatical gender" },
+        { "slug": "maskil", "maltese": "maskil", "english": "masculine" },
+        { "slug": "femminil", "maltese": "femminil", "english": "feminine" }
+      ]
+    },
+    {
+      "id": "gender-exercise-words", "title": "Vocabulary in the exercises", "itemType": "translation", "containerClass": "grid-2",
+      "source": { "kind": "site", "page": "gender_agreement.html", "file": "il gens fill in.pdf; maskil femminil.pdf; editorial contextual glosses" },
+      "items": [
+        { "slug": "qassis", "maltese": "qassis", "english": "priest" },
+        { "slug": "kunvent-tal-klawsura", "maltese": "kunvent tal-klawsura", "english": "cloistered convent", "note": "Kunvent means convent; tal-klawsura specifies religious enclosure." },
+        { "slug": "tibdila", "maltese": "tibdila", "english": "an outfit / a suit, in the clothing example" },
+        { "slug": "jidden", "maltese": "jidden", "english": "he crows, referring to the rooster" },
+        { "slug": "jinhaq", "maltese": "jinħaq", "english": "he brays, referring to the donkey" },
+        { "slug": "tpacpac", "maltese": "tpaċpaċ", "english": "she chats, referring to the female neighbour" },
+        { "slug": "salva", "maltese": "salva", "english": "he saved / rescued" },
+        { "slug": "teghreq", "maltese": "tegħreq", "english": "she sinks / drowns, referring to the female goat in the sentence", "note": "The whole construction salva ... milli tegħreq means saved ... from drowning." },
+        { "slug": "mbierek", "maltese": "mbierek", "english": "blessed, masculine singular" },
+        { "slug": "sthajlet", "maltese": "stħajlet", "english": "she thought / imagined" },
+        { "slug": "bierket", "maltese": "bierket", "english": "she blessed" }
+      ]
+    },
+    {
+      "id": "gender-rules", "title": "Core gender patterns", "itemType": "rule", "cardClass": "pattern-card", "containerClass": "stack",
+      "items": [
+        { "slug": "learn-pairs", "title": "Learn the noun with its gender", "rule": "Maltese distinguishes masculine and feminine grammatical gender. Many feminine forms end in -a, but an ending alone is not a reliable rule for every noun.", "pattern": "kelb / kelba; missier / omm" },
+        { "slug": "not-append-a", "title": "A suffix is not the whole rule", "rule": "Some pairs add -a, some change the stem, and others use different words. Learn the full pair instead of using an automatic add-a conversion.", "pattern": "qattus / qattusa; armel / armla; raġel / mara" },
+        { "slug": "agreement", "title": "Follow the noun through the sentence", "rule": "Demonstratives, adjectives and relevant verb forms agree with their referent. Check the complete sentence, not just the replacement noun.", "pattern": "Dan hu l-papà. / Din hi l-mamà." },
+        { "slug": "number", "title": "Number matters too", "rule": "An adjective can have masculine singular, feminine singular and plural forms. A feminine form is not automatically a plural form.", "pattern": "ktieb ġdid / karozza ġdida / kotba ġodda" }
+      ]
+    },
+    {
+      "id": "gender-people", "title": "People and family pairs", "itemType": "translation",
+      "items": [
+        { "slug": "armel-armla", "masculine": "armel", "feminine": "armla", "maltese": "armel / armla", "english": "widower / widow" },
+        { "slug": "ghalliem-ghalliema", "masculine": "għalliem", "feminine": "għalliema", "maltese": "għalliem / għalliema", "english": "male teacher / female teacher; għalliema is feminine singular here, but can also be plural in other contexts" },
+        { "slug": "ragel-mara", "masculine": "raġel", "feminine": "mara", "maltese": "raġel / mara", "english": "man / woman; husband / wife in a family context" },
+        { "slug": "iben-bint", "masculine": "iben", "feminine": "bint", "maltese": "iben / bint", "english": "son / daughter" },
+        { "slug": "hu-oht", "masculine": "ħu", "feminine": "oħt", "maltese": "ħu / oħt", "english": "brother / sister; not the possessive forms below" },
+        { "slug": "hija-ohti", "masculine": "ħija", "feminine": "oħti", "maltese": "ħija / oħti", "english": "my brother / my sister" },
+        { "slug": "missier-omm", "masculine": "missier", "feminine": "omm", "maltese": "missier / omm", "english": "father / mother" },
+        { "slug": "missieri-ommi", "masculine": "missieri", "feminine": "ommi", "maltese": "missieri / ommi", "english": "my father / my mother" },
+        { "slug": "papa-mama", "masculine": "papà", "feminine": "mamà", "maltese": "papà / mamà", "english": "dad / mum" },
+        { "slug": "guvni-tfajla", "masculine": "ġuvni", "feminine": "tfajla / xebba", "maltese": "ġuvni / tfajla; ġuvni / xebba", "english": "young man / young woman; the article is it-tfajla but ix-xebba" },
+        { "slug": "patri-soru", "masculine": "patri", "feminine": "soru", "maltese": "patri / soru", "english": "friar / nun; corresponding religious roles, not identical offices" },
+        { "slug": "re-regina", "masculine": "re", "feminine": "reġina", "maltese": "re / reġina", "english": "king / queen" },
+        { "slug": "gar-gara", "masculine": "ġar", "feminine": "ġara", "maltese": "ġar / ġara", "english": "male neighbour / female neighbour" }
+      ]
+    },
+    {
+      "id": "gender-animals", "title": "Animal pairs", "itemType": "translation",
+      "items": [
+        { "slug": "kelb-kelba", "masculine": "kelb", "feminine": "kelba", "maltese": "kelb / kelba", "english": "male dog / female dog" },
+        { "slug": "qattus-qattusa", "masculine": "qattus", "feminine": "qattusa", "maltese": "qattus / qattusa", "english": "male cat / female cat" },
+        { "slug": "geru-gerwa", "masculine": "ġeru", "feminine": "ġerwa", "maltese": "ġeru / ġerwa", "english": "male puppy / female puppy" },
+        { "slug": "ghasfur-ghasfura", "masculine": "għasfur", "feminine": "għasfura", "maltese": "għasfur / għasfura", "english": "male bird / female bird in this contrast" },
+        { "slug": "serduq-tigiega", "masculine": "serduq", "feminine": "tiġieġa", "maltese": "serduq / tiġieġa", "english": "rooster / hen" },
+        { "slug": "bodbod-moghza", "masculine": "bodbod", "feminine": "mogħża", "maltese": "bodbod / mogħża", "english": "billy goat / nanny goat" },
+        { "slug": "muntun-naghga", "masculine": "muntun", "feminine": "nagħġa", "maltese": "muntun / nagħġa", "english": "ram / ewe" },
+        { "slug": "barri-baqra", "masculine": "barri", "feminine": "baqra", "maltese": "barri / baqra", "english": "bull / cow" },
+        { "slug": "ziemel-debba", "masculine": "żiemel", "feminine": "debba", "maltese": "żiemel / debba", "english": "horse (stallion in this contrast) / mare" },
+        { "slug": "hmar-hmara", "masculine": "ħmar", "feminine": "ħmara", "maltese": "ħmar / ħmara", "english": "male donkey / female donkey" }
+      ]
+    },
+    {
+      "id": "gender-adjectives", "title": "Adjective forms", "itemType": "translation",
+      "items": [
+        { "slug": "twil-twila", "masculine": "twil", "feminine": "twila", "maltese": "twil / twila", "english": "tall / long" },
+        { "slug": "mhawwad-mhawda", "masculine": "mħawwad", "feminine": "mħawda", "maltese": "mħawwad / mħawda", "english": "confused / mixed up" },
+        { "slug": "mghawweg-mghawga", "masculine": "mgħawweġ", "feminine": "mgħawġa", "maltese": "mgħawweġ / mgħawġa", "english": "crooked / bent" },
+        { "slug": "mxarrab-mxarrba", "masculine": "mxarrab", "feminine": "mxarrba", "maltese": "mxarrab / mxarrba", "english": "wet" },
+        { "slug": "mhassar-mhassra", "masculine": "mħassar", "feminine": "mħassra", "maltese": "mħassar / mħassra", "english": "erased / cancelled / spoiled, depending on context" },
+        { "slug": "mkisser-mkissra", "masculine": "mkisser", "feminine": "mkissra", "maltese": "mkisser / mkissra", "english": "broken" },
+        { "slug": "mfarrak-mfarrka", "masculine": "mfarrak", "feminine": "mfarrka", "maltese": "mfarrak / mfarrka", "english": "shattered / smashed" }
+      ]
+    },
+    {
+      "id": "gender-sentences", "title": "Agreement in context", "itemType": "example", "containerClass": "grid-2",
+      "items": [
+        { "slug": "dan-papa", "maltese": "Dan hu l-papà.", "english": "This is Dad." },
+        { "slug": "din-mama", "maltese": "Din hi l-mamà.", "english": "This is Mum." },
+        { "slug": "ktieb-gdid", "maltese": "Dan ktieb ġdid.", "english": "This is a new book." },
+        { "slug": "karozza-gdida", "maltese": "Din karozza ġdida.", "english": "This is a new car." },
+        { "slug": "kotba-godda", "maltese": "Dawn kotba ġodda.", "english": "These are new books." }
+      ]
+    },
+    {
+      "id": "gender-family-examples", "title": "Family and role examples", "itemType": "example", "containerClass": "grid-2",
+      "items": [
+        { "slug": "meet-family", "maltese": "Niltaqgħu mas-Sinjuri Cilia.", "english": "Let us meet Mr and Mrs Cilia." },
+        { "slug": "wife", "maltese": "Stella hi l-mara tiegħi.", "english": "Stella is my wife." },
+        { "slug": "husband", "maltese": "Andrew hu r-raġel tiegħi.", "english": "Andrew is my husband." },
+        { "slug": "son", "maltese": "Martin hu iben is-Sinjuri Cilia.", "english": "Martin is the son of Mr and Mrs Cilia." },
+        { "slug": "daughter", "maltese": "Ella hi bint is-Sinjuri Cilia.", "english": "Ella is the daughter of Mr and Mrs Cilia." },
+        { "slug": "my-brother", "maltese": "Martin hu ħija.", "english": "Martin is my brother." },
+        { "slug": "my-sister", "maltese": "Ella hi oħti.", "english": "Ella is my sister." },
+        { "slug": "mother", "maltese": "Jien omm Ella.", "english": "I am Ella's mother." },
+        { "slug": "father", "maltese": "Jien missier Martin.", "english": "I am Martin's father." },
+        { "slug": "young-man", "maltese": "Jien ġuvni.", "english": "I am a young man." },
+        { "slug": "young-woman", "maltese": "Jien tfajla.", "english": "I am a young woman." },
+        { "slug": "friar", "maltese": "Jien patri.", "english": "I am a friar." },
+        { "slug": "nun", "maltese": "Jien soru.", "english": "I am a nun." },
+        { "slug": "king", "maltese": "Jien re.", "english": "I am a king." },
+        { "slug": "queen", "maltese": "Jien reġina.", "english": "I am a queen." }
+      ]
+    },
+    {
+      "id": "gender-verbs", "title": "Third-person singular past tense", "itemType": "translation", "containerClass": "grid-2",
+      "items": [
+        { "slug": "beka", "maltese": "beka", "english": "he cried" },
+        { "slug": "nsiet", "maltese": "nsiet", "english": "she forgot" },
+        { "slug": "mexxa", "maltese": "mexxa", "english": "he led / moved something" },
+        { "slug": "xandret", "maltese": "xandret", "english": "she broadcast / announced" },
+        { "slug": "siefer", "maltese": "siefer", "english": "he travelled abroad" },
+        { "slug": "mejlet", "maltese": "mejlet", "english": "she leaned / tilted" },
+        { "slug": "hedded", "maltese": "hedded", "english": "he threatened" },
+        { "slug": "sawret", "maltese": "sawret", "english": "she shaped / formed" },
+        { "slug": "rebah", "maltese": "rebaħ", "english": "he won" },
+        { "slug": "meshet", "maltese": "mesħet", "english": "she wiped" }
+      ]
+    }
+  ]
+}

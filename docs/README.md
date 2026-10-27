@@ -37,6 +37,8 @@ This directory is the canonical home for project documentation. The root `README
 - [Verb course lesson map](analysis/verbs-course-lessons.md)
 - [Unreachable course verbs](analysis/verbs-course-unreachable.md)
 - [Particles and reading implementation](analysis/lesson03/implementation.md)
+- [Gender, food and cafe integration and linguistic review](analysis/gender-food-cafe-integration.md)
+- [Supplied vocabulary gaps, destinations and held entries](analysis/supplied-vocabulary-coverage.md)
 
 ## Tools And References
 

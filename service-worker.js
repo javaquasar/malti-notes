@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}3b696c2efefa`;
+const CACHE_NAME = `${CACHE_PREFIX}d69d6bd7c501`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -23,6 +23,7 @@ const CORE_ASSETS = [
     "./environment_recycling.html",
     "./family_home_food.html",
     "./food_preferences.html",
+    "./gender_agreement.html",
     "./getting_to_know.html",
     "./grammar_path.html",
     "./greetings.html",
@@ -162,6 +163,15 @@ const CORE_ASSETS = [
     "./assets/data/particles_prepositions_examples.json",
     "./assets/data/reading_red_cave_examples.json",
     "./assets/data/directions_particles_examples.json",
+    "./assets/data/gender_agreement_examples.json",
+    "./assets/data/gender_agreement_exercises.json",
+    "./assets/data/food_examples.json",
+    "./assets/data/restaurant_ordering_examples.json",
+    "./assets/data/food_cafe_exercises.json",
+    "./assets/data/daily_problems_examples.json",
+    "./assets/data/daily_routine_examples.json",
+    "./assets/data/school_classroom_examples.json",
+    "./assets/data/emotions_examples.json",
     "./assets/data/lesson01_exercises.json",
     "./assets/data/lesson01_practice.json",
     "./assets/data/about_me_lesson01_examples.json",

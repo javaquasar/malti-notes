@@ -1,6 +1,11 @@
 {
   "schemaVersion": 2,
   "source": { "kind": "site", "page": "daily_routine.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 11 and 17-19; tonina-deep-analysis.md, sections 5-6",
+    "sources": { "S12": "moħħha fil-ġirien vocabulary.odt" },
+    "editorialMethod": "New habit examples are editorial adaptations; the proverb is independently supplied in S12. Neither is presented as a verified quotation from the audio or as a listening-test answer."
+  },
   "groups": [
     {
       "id": "daily-greetings",
@@ -102,6 +107,16 @@
         { "maltese": "Wara x-xogħol immur id-dar.", "english": "After work I go home." },
         { "maltese": "Filgħaxija niltaqa' mal-familja jew mal-ħbieb tiegħi.", "english": "In the evening I meet my family or my friends." },
         { "maltese": "Bil-lejl nistrieħ u norqod.", "english": "At night I rest and sleep." }
+      ]
+    },
+    {
+      "id": "daily-routine-habit-expressions",
+      "title": "Habits in context",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "daily_routine.html", "file": "moħħha fil-ġirien vocabulary.odt; tonina-deep-analysis.md, section 5.1; editorial adaptations" },
+      "items": [
+        { "slug": "kienet-tqatta-hin", "maltese": "Hi kienet tqatta' ħin mal-familja tagħha kuljum.", "english": "She used to spend time with her family every day.", "note": "Hi is the woman spending time; tagħha refers to her family. Kienet with tqatta' and kuljum describes a past habit here, not one ongoing event." },
+        { "slug": "min-jitwieled-tond", "maltese": "Min jitwieled tond ma jmutx kwadru.", "english": "Whoever is born round does not die square.", "note": "Proverb: ingrained habits or character do not easily change. Min means whoever, a general person, not a particular woman or neighbour. The round/square contrast is figurative, not a literal or inevitable rule about people." }
       ]
     }
   ]

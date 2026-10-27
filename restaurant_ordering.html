@@ -47,6 +47,14 @@
             <h2>Contents</h2>
             <ul>
                 <li><a href="#vocab">Restaurant Vocabulary</a></li>
+                <li><a href="#cafe-coffee">Coffee Choices</a></li>
+                <li><a href="#cafe-milk-sugar">Milk and Sugar</a></li>
+                <li><a href="#cafe-pastries">Cakes and Pastries</a></li>
+                <li><a href="#cafe-ordering">At the Café Counter</a></li>
+                <li><a href="#cafe-dialogue">Two Customers at a Café</a></li>
+                <li><a href="#cafe-small-talk">Coffee and Company</a></li>
+                <li><a href="#cafe-recipients">Who Are You Speaking To?</a></li>
+                <li><a href="#cafe-practice">Café Practice</a></li>
                 <li><a href="#ordering">Ordering Patterns</a></li>
                 <li><a href="#reservation">Reservation</a></li>
                 <li><a href="#bill">Bill</a></li>
@@ -61,7 +69,6 @@
 
         <main class="content">
             <section class="card" id="vocab">
-                <span class="tag">Vocabulary</span>
                 <h2>Restaurant Vocabulary</h2>
                 <div class="toolbar-row">
                     <a class="action-link" href="./review_cards.html">Open Review Cards</a>
@@ -71,26 +78,81 @@
                 <div class="grid-auto" data-restaurant-group="restaurant-core"></div>
             </section>
 
+            <section class="content-card" id="cafe-coffee">
+                <h2>Coffee Choices</h2>
+                <div class="grid-auto" data-restaurant-group="restaurant-coffee"></div>
+            </section>
+
+            <section class="content-card" id="cafe-milk-sugar">
+                <h2>Milk and Sugar</h2>
+                <div class="grid-auto" data-restaurant-group="restaurant-milk-sugar"></div>
+                <h3>With or Without</h3>
+                <div data-example-group="restaurant-cafe-modifiers"></div>
+            </section>
+
+            <section class="content-card" id="cafe-pastries">
+                <h2>Cakes and Pastries</h2>
+                <div class="grid-auto" data-restaurant-group="restaurant-cafe-pastries"></div>
+            </section>
+
+            <section class="content-card" id="cafe-ordering">
+                <h2>At the Café Counter</h2>
+                <div data-example-group="restaurant-cafe-orders"></div>
+                <h3>Payment and Goodbye</h3>
+                <div data-example-group="restaurant-cafe-payment"></div>
+                <p><a href="#bill">Asking for the bill and paying by card</a></p>
+            </section>
+
+            <section class="content-card" id="cafe-dialogue">
+                <h2>Two Customers at a Café</h2>
+                <div data-example-group="restaurant-cafe-dialogue"></div>
+            </section>
+
+            <section class="content-card" id="cafe-small-talk">
+                <h2>Coffee and Company</h2>
+                <div data-example-group="restaurant-cafe-small-talk"></div>
+            </section>
+
+            <section class="content-card" id="cafe-recipients">
+                <h2>Who Are You Speaking To?</h2>
+                <div data-example-group="restaurant-cafe-recipient-notes"></div>
+            </section>
+
+            <section class="content-card" id="cafe-practice">
+                <h2>Café Practice</h2>
+                <details class="study-disclosure" id="coffee-order-practice">
+                    <summary>Ordering coffee · 10 tasks</summary>
+                    <div class="study-disclosure-body mt-16">
+                        <div data-exercise-set="restaurant-coffee-orders" data-exercise-src="./assets/data/food_cafe_exercises.json"></div>
+                    </div>
+                </details>
+                <div data-exercise-set="restaurant-cafe-check" data-exercise-src="./assets/data/food_cafe_exercises.json"></div>
+                <details class="study-disclosure">
+                    <summary>Your café conversation</summary>
+                    <div class="study-disclosure-body">
+                        <p>Order a coffee with your choice of milk or sugar and a cake or pastry. Ask a follow-up question, choose cash or card, and say goodbye.</p>
+                        <p>With two customers, let the waiter address both. Each customer can still address the waiter individually.</p>
+                    </div>
+                </details>
+                <p><a href="./food_preferences.html#supermarket-produce">Supermarket food and quantities</a></p>
+            </section>
+
             <section class="card" id="ordering">
-                <span class="tag">Ordering</span>
                 <h2>Ordering Patterns</h2>
                 <div data-example-group="restaurant-ordering-patterns"></div>
             </section>
 
             <section class="card" id="reservation">
-                <span class="tag">Service</span>
                 <h2>Reservation</h2>
                 <div data-example-group="restaurant-reservation"></div>
             </section>
 
             <section class="card" id="bill">
-                <span class="tag">Service</span>
                 <h2>Bill</h2>
                 <div data-example-group="restaurant-bill"></div>
             </section>
 
             <section class="card" id="dialogues">
-                <span class="tag">Dialogues</span>
                 <h2>Mini-dialogues</h2>
                 <div class="example-bank-stack">
                     <div class="example-bank-section">
@@ -105,7 +167,6 @@
             </section>
 
             <section class="card" id="roleplay">
-                <span class="tag">Role Play</span>
                 <h2>Role Play Ideas</h2>
                 <div class="open-group-grid">
                     <section class="open-group">
@@ -122,7 +183,6 @@
             </section>
 
             <section class="card" id="wrong">
-                <span class="tag">Review</span>
                 <h2>Wrong vs Right</h2>
                 <div class="grammar-contrast-grid">
                     <div class="grammar-contrast-card grammar-contrast-card--wrong">
@@ -143,19 +203,16 @@
             </section>
 
             <section class="card" id="survival">
-                <span class="tag">Survival</span>
                 <h2>Survival Phrases</h2>
                 <div data-example-group="restaurant-survival"></div>
             </section>
 
             <section class="card" id="phrases">
-                <span class="tag">Phrases</span>
                 <h2>Thematic Phrases</h2>
                 <div data-example-group="restaurant-phrases"></div>
             </section>
 
             <section class="card" id="related">
-                <span class="tag">Related</span>
                 <h2>Related Pages</h2>
                 <div class="grid-3">
                     <div class="info-card"><strong><a href="./food_preferences.html">Food Preferences</a></strong><span>Reuse food vocabulary, meals, and food verbs.</span></div>
@@ -194,6 +251,7 @@
     });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
+    <script src="./assets/js/exercise-runner.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

@@ -1,9 +1,17 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "daily_problems.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, section 11; sections 17-19 and tonina-deep-analysis.md for contextual cautions",
+    "sources": { "S12": "moħħha fil-ġirien vocabulary.odt", "S13": "ta tonina 1.pdf", "S14": "ta tonina 2.pdf" },
+    "editorialMethod": "New incident vocabulary uses clear glossary and worksheet senses. Examples are short editorial teaching sentences, not audio quotations, a reconstructed story or test answers. Glossary provenance does not establish occurrence in the recording."
+  },
   "page": "daily_problems.html",
   "topic": "Daily Problems",
   "groups": [
     {
       "id": "daily-problems-core",
+      "itemType": "translation",
       "sectionId": "common",
       "sectionTitle": "Common Problems",
       "title": "Common problems",
@@ -127,6 +135,22 @@
           "exampleTranslation": "I am stressed today.",
           "exampleSource": "topic example bank"
         }
+      ]
+    },
+    {
+      "id": "daily-problems-incidents",
+      "sectionId": "disagreements-incidents",
+      "sectionTitle": "Disagreements and Incidents",
+      "title": "Disagreements and incidents",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "daily_problems.html", "file": "moħħha fil-ġirien vocabulary.odt; ta tonina 2.pdf" },
+      "items": [
+        { "slug": "ghajjat", "maltese": "għajjat", "english": "shouting (noun)", "note": "Names the noise or activity here; not the verb meaning 'he shouted' or 'he shouted at me'.", "example": "Hemm ħafna għajjat.", "exampleTranslation": "There is a lot of shouting.", "exampleSource": "editorial example using S12 noun sense", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "tilwima", "maltese": "tilwima", "english": "dispute / argument", "note": "A disagreement; the word alone does not imply physical violence.", "example": "Kien hemm tilwima.", "exampleTranslation": "There was a dispute.", "exampleSource": "editorial example using S12", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "glieda", "maltese": "ġlieda", "english": "fight / quarrel", "note": "Context determines whether this is a verbal quarrel or a physical fight.", "example": "Il-ġlieda spiċċat.", "exampleTranslation": "The quarrel ended.", "exampleSource": "editorial example using S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "xhud", "maltese": "xhud", "english": "witness", "notes": ["Bħala xhud: as a witness."], "example": "Huwa xhud.", "exampleTranslation": "He is a witness.", "exampleSource": "editorial example using S12", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "qorti", "maltese": "qorti", "english": "law court", "note": "A court of law, not a sports court.", "example": "Din hija qorti.", "exampleTranslation": "This is a law court.", "exampleSource": "editorial example using S12 glossary, not recorded wording", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "girien", "maltese": "ġirien", "english": "neighbours", "note": "Plural of ġar (male neighbour) / ġara (female neighbour); not one neighbour.", "example": "Il-ġirien qegħdin barra.", "exampleTranslation": "The neighbours are outside.", "exampleSource": "editorial example using S13-S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
       ]
     }
   ]

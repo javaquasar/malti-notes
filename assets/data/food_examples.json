@@ -3,7 +3,122 @@
   "source": { "kind": "site", "page": "food_preferences.html" },
   "page": "food_preferences.html",
   "topic": "Food Preferences",
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 4-6",
+    "sources": { "S05": "djalogu at the green grocer.pptx, slides 1-3", "S06": "djalogu supermarkit to fill in.docx", "S07": "fis supermarket example dialogue.pdf" },
+    "editorialMethod": "Quantities retained from supplied sources. Supermarket exchanges are shortened/adapted models, not the unique answer to the open S06 worksheet. Translations are editorial.",
+    "currencyReference": "https://kunsilltalmalti.gov.mt/wp-content/uploads/2025/03/euro_EN.pdf"
+  },
   "groups": [
+    {
+      "id": "food-cooking-context", "sectionId": "kitchen-details", "title": "Cooking in context", "itemType": "translation", "containerClass": "grid-2",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "ta tonina 2.pdf; supplied glossary; short editorial lexical examples, not certified audio quotations" },
+      "items": [
+        { "slug": "fuq-in-nar", "maltese": "fuq in-nar", "english": "on the stove / on the heat, in a cooking context" },
+        { "slug": "xammet-riha", "maltese": "Xammet riħa ta' ikel maħruq.", "english": "She smelled burnt food.", "note": "Xammet is she smelled, not she heard." },
+        { "slug": "platt-soppa", "maltese": "platt soppa", "english": "a serving of soup", "note": "Platt literally means plate or dish; the English container may be a bowl in this context." },
+        { "slug": "bicctejn-hobz", "maltese": "biċċtejn ħobż bil-ġobon", "english": "two pieces of bread with cheese" }
+      ]
+    },
+    {
+      "id": "food-supermarket-quantities",
+      "sectionId": "supermarket-quantities",
+      "title": "Shopping quantities",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "fis supermarket example dialogue.pdf; djalogu at the green grocer.pptx" },
+      "containerClass": "grid-2",
+      "items": [
+        { "slug": "kilo-tuffieh", "maltese": "kilo tuffieħ", "english": "a kilo of apples" },
+        { "slug": "zewg-kilogrammi-laring", "maltese": "żewġ kilogrammi larinġ", "english": "two kilograms of oranges" },
+        { "slug": "nofs-kilo-perzut", "maltese": "nofs kilo perżut", "english": "half a kilo of ham" },
+        { "slug": "tliet-mitt-gramma-bejken", "maltese": "tliet mitt gramma bejken", "english": "300 grams of bacon" },
+        { "slug": "mitejn-gramma-gobon", "maltese": "mitejn gramma ġobon tat-toqba", "english": "200 grams of cheese with holes" },
+        { "slug": "erba-mitt-gramma-gobon", "maltese": "erba' mitt gramma ġobon maħkuk", "english": "400 grams of grated cheese" },
+        { "slug": "zewg-kaxxi-frawli", "maltese": "żewġ kaxxi frawli", "english": "two boxes of strawberries" },
+        { "slug": "ftit-gheneb", "maltese": "ftit għeneb", "english": "some grapes" }
+      ]
+    },
+    {
+      "id": "food-supermarket-service",
+      "sectionId": "supermarket-dialogue",
+      "title": "At the counter",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "fis supermarket example dialogue.pdf; djalogu at the green grocer.pptx" },
+      "containerClass": "grid-2",
+      "items": [
+        { "slug": "shopping-needs", "maltese": "xi bżonnijiet", "english": "a few necessities / things needed", "note": "Bżonnijiet is the plural of bżonn (need), as used in the shopping conversation.", "source": { "kind": "site", "page": "food_preferences.html", "file": "djalogu at the green grocer.pptx, slide 3; shortened phrase" } },
+        { "slug": "mela-le", "maltese": "Mela le.", "english": "Of course. / Certainly.", "note": "An affirmative service reply here, not a literal 'then no'." },
+        { "slug": "xi-haga-ohra", "maltese": "Xi ħaġa oħra?", "english": "Anything else?" },
+        { "slug": "dak-kollox", "maltese": "Dak kollox.", "english": "That is all." },
+        { "slug": "kemm-huma", "maltese": "Kemm huma?", "english": "How much are they?" },
+        { "slug": "daqt-mieghek", "maltese": "Daqt miegħek.", "english": "I will be with you shortly (one customer)." },
+        { "slug": "kaxxiera", "maltese": "il-kaxxiera", "english": "the cashier (female)" }
+      ]
+    },
+    {
+      "id": "food-supermarket-vegetables",
+      "sectionId": "supermarket-dialogue",
+      "title": "At the vegetable counter",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "djalogu at the green grocer.pptx, slides 1-3; adapted to the S06 vegetable stage" },
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "dialogue-card",
+      "numbered": false,
+      "items": [
+        { "slug": "vegetable-greeting", "maltese": "Tal-ħanut: Bonġu, x'għandek bżonn?", "english": "Shopkeeper: Good morning, what do you need?" },
+        { "slug": "vegetable-request", "maltese": "Carmen: Bonġu, għandi bżonn kaboċċa, jekk jogħġbok.", "english": "Carmen: Good morning, I need a cabbage, please." },
+        { "slug": "vegetable-follow-up", "maltese": "Tal-ħanut: Mela le, xi ħaġa oħra?", "english": "Shopkeeper: Of course, anything else?" },
+        { "slug": "vegetable-close", "maltese": "Carmen: Le, grazzi.", "english": "Carmen: No, thank you." }
+      ]
+    },
+    {
+      "id": "food-supermarket-drinks-dialogue",
+      "sectionId": "supermarket-dialogue",
+      "title": "At the drinks counter",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "djalogu supermarkit to fill in.docx, drinks stage; editorial completion using S08" },
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "dialogue-card",
+      "numbered": false,
+      "items": [
+        { "slug": "drinks-request", "maltese": "Carmen: Bonġu, nixtieq meraq tal-frott.", "english": "Carmen: Good morning, I would like fruit juice." },
+        { "slug": "drinks-follow-up", "maltese": "Ġanni: Bonġu, iva mela le. Xi ħaġa oħra?", "english": "Ġanni: Good morning, yes, of course. Anything else?" },
+        { "slug": "drinks-close", "maltese": "Carmen: Le, grazzi. Dak kollox.", "english": "Carmen: No, thank you. That is all." }
+      ]
+    },
+    {
+      "id": "food-supermarket-deli-dialogue",
+      "sectionId": "supermarket-dialogue",
+      "title": "At the deli counter",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "fis supermarket example dialogue.pdf, shortened cheese/ham stage" },
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "dialogue-card",
+      "numbered": false,
+      "items": [
+        { "slug": "deli-request", "maltese": "Carmen: Bonġu, għandi bżonn mitejn gramma ġobon tat-toqba, jekk jogħġbok.", "english": "Carmen: Good morning, I need 200 grams of cheese with holes, please." },
+        { "slug": "deli-service", "maltese": "Marija: Bonġu, daqt miegħek. Dak kollox?", "english": "Marija: Good morning, I will be with you shortly. Is that all?" },
+        { "slug": "deli-ham", "maltese": "Carmen: U nofs kilo perżut, jekk jogħġbok.", "english": "Carmen: And half a kilo of ham, please." },
+        { "slug": "deli-follow-up", "maltese": "Marija: Xi ħaġa oħra?", "english": "Marija: Anything else?" },
+        { "slug": "deli-close", "maltese": "Carmen: Dak kollox. Grazzi.", "english": "Carmen: That is all. Thank you." }
+      ]
+    },
+    {
+      "id": "food-supermarket-payment",
+      "sectionId": "supermarket-dialogue",
+      "title": "At the checkout",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "fis supermarket example dialogue.pdf, payment stage; currency spelling normalized using Kunsill euro_EN.pdf" },
+      "containerClass": "grid-2 example-dialogue-stack",
+      "cardClass": "dialogue-card",
+      "numbered": false,
+      "items": [
+        { "slug": "checkout-price", "maltese": "Carmen: Kemm, jekk jogħġbok?", "english": "Carmen: How much, please?" },
+        { "slug": "checkout-total", "maltese": "Sandra: Tnax-il ewro u ħamsin ċenteżmu, jekk jogħġbok.", "english": "Sandra: Twelve euros and fifty cents, please.", "note": "An example checkout total, not a price list for the preceding items." },
+        { "slug": "checkout-goodbye", "maltese": "Carmen: Grazzi, il-ġurnata t-tajba.", "english": "Carmen: Thank you, have a nice day." },
+        { "slug": "checkout-reply", "maltese": "Sandra: Grazzi, lilek ukoll.", "english": "Sandra: Thank you, you too." }
+      ]
+    },
     {
       "id": "food-breakfast-lines",
       "sectionId": "breakfast",

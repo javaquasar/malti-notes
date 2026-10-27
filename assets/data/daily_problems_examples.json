@@ -1,6 +1,11 @@
 {
   "schemaVersion": 2,
   "source": { "kind": "site", "page": "daily_problems.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 11 and 17-19; tonina-deep-analysis.md, sections 5-6",
+    "sources": { "S12": "moħħha fil-ġirien vocabulary.odt", "S13": "ta tonina 1.pdf", "S14": "ta tonina 2.pdf" },
+    "editorialMethod": "The new incident expressions are standalone editorial examples using clear source senses. They are not verified audio quotations, a story retelling or listening-test answers."
+  },
   "groups": [
     {
       "id": "daily-problems-transport",
@@ -117,6 +122,22 @@
         { "maltese": "Issa kollox tajjeb.", "english": "Now everything is fine." },
         { "maltese": "Fl-aħħar sibt iċ-ċwievet.", "english": "At last I found the keys." },
         { "maltese": "Fl-aħħar waslet il-linja.", "english": "At last the bus arrived." }
+      ]
+    },
+    {
+      "id": "daily-problems-incident-expressions",
+      "title": "Actions and reactions",
+      "itemType": "example",
+      "source": { "kind": "site", "page": "daily_problems.html", "file": "lesson-04-materials-analysis.md, section 11; tonina-deep-analysis.md, sections 5-6; editorial adaptations" },
+      "items": [
+        { "slug": "kulma", "maltese": "Hi rat kulma ġara.", "english": "She saw everything that happened.", "note": "Kulma means everything that in this sentence.", "editorialNote": "Short editorial example, not a transcript quotation." },
+        { "slug": "jitghajru", "maltese": "Huma jitgħajru.", "english": "They call each other names.", "note": "Huma refers to the people exchanging insults. Name-calling is not simply shouting." },
+        { "slug": "tat-kas", "maltese": "Hi tat kas.", "english": "She paid attention.", "note": "Hi is the woman who paid attention; tat kas is a past-tense expression." },
+        { "slug": "ma-tatx-kas", "maltese": "Hi ma tatx kas.", "english": "She did not pay attention.", "note": "The same female subject; ma tatx kas is the negative of tat kas." },
+        { "slug": "intebhet", "maltese": "Hi intebħet li l-bieb kien miftuħ.", "english": "She noticed that the door was open.", "note": "Intebħet refers to her noticing or realising something, not merely hearing a sound." },
+        { "slug": "qorbot", "maltese": "Hi qorbot lejn il-bieb.", "english": "She approached the door.", "note": "Hi is the woman moving closer; lejn il-bieb identifies what she approached." },
+        { "slug": "mohhha-fil-girien", "maltese": "Hi dejjem moħħha fil-ġirien.", "english": "She is always preoccupied with the neighbours.", "note": "The suffix -ha in moħħha means 'her': her attention is on the neighbours. This is figurative, not a physical location of her mind." },
+        { "slug": "mghandekx-xtaqsam-mieghu", "maltese": "M'għandekx x'taqsam miegħu.", "english": "You have nothing to do with him / it.", "note": "You addresses one person. Miegħu refers to a male person or a grammatically masculine thing or matter identified by the context, not automatically to a neighbour." }
       ]
     }
   ]

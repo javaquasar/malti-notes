@@ -1,9 +1,17 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "restaurant_ordering.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 7-9",
+    "sources": { "S09": "vokabularju_kafe_malti.pptx, slides 1-3", "S10": "vokabularju_ħelu_kafe_malti.pptx, slides 2-3" },
+    "editorialMethod": "Clear source pairings; request examples are editorial adaptations. Coffee recipe equivalence and uncertain pastry names are not asserted."
+  },
   "page": "restaurant_ordering.html",
   "topic": "Restaurant and Ordering Food",
   "groups": [
     {
       "id": "restaurant-core",
+      "itemType": "translation",
       "sectionId": "vocab",
       "sectionTitle": "Restaurant Vocabulary",
       "title": "Restaurant vocabulary",
@@ -92,6 +100,22 @@
           "exampleSource": "topic example bank"
         },
         {
+          "slug": "sarvetta",
+          "maltese": "sarvetta",
+          "english": "napkin",
+          "example": "Nista' nieħu sarvetta, jekk jogħġbok?",
+          "exampleTranslation": "Can I have a napkin, please?",
+          "exampleSource": "editorial service request; noun checked against Marinaccio (2024), Getting to the root of the Maltese broken plural, Appendix 1, printed page 144",
+          "source": {
+            "kind": "site",
+            "page": "restaurant_ordering.html",
+            "file": "https://www.um.edu.mt/library/oar/bitstream/123456789/119074/1/2419LLTLIN500105080285_3.pdf#page=154"
+          },
+          "review": { "enabled": true, "type": "word" },
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
           "slug": "kont",
           "maltese": "kont",
           "english": "bill",
@@ -133,6 +157,52 @@
           "exampleTranslation": "I have a reservation.",
           "exampleSource": "topic example bank"
         }
+      ]
+    },
+    {
+      "id": "restaurant-coffee",
+      "sectionId": "cafe-coffee",
+      "sectionTitle": "Coffee Choices",
+      "title": "Coffee choices",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "vokabularju_kafe_malti.pptx, slide 2" },
+      "items": [
+        { "slug": "kafe-iswed", "maltese": "kafè iswed", "english": "black coffee", "example": "Nixtieq kafè iswed.", "exampleTranslation": "I would like black coffee.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "kafe-bil-halib", "maltese": "kafè bil-ħalib", "english": "coffee with milk", "example": "Nixtieq kafè bil-ħalib.", "exampleTranslation": "I would like coffee with milk.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "kafe-latte", "maltese": "kafè latte", "english": "caffè latte", "example": "Nixtieq kafè latte.", "exampleTranslation": "I would like a caffè latte.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "kapuccino", "maltese": "kapuċċino", "english": "cappuccino", "example": "Nixtieq kapuċċino.", "exampleTranslation": "I would like a cappuccino.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "espresso", "maltese": "espresso", "english": "espresso", "example": "Nixtieq espresso.", "exampleTranslation": "I would like an espresso.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "kafe-amerikan", "maltese": "kafè Amerikan", "english": "Americano", "example": "Nixtieq kafè Amerikan.", "exampleTranslation": "I would like an Americano.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+      ]
+    },
+    {
+      "id": "restaurant-milk-sugar",
+      "sectionId": "cafe-milk-sugar",
+      "sectionTitle": "Milk and Sugar",
+      "title": "Milk and sugar",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "vokabularju_kafe_malti.pptx, slide 3" },
+      "items": [
+        { "slug": "halib-shih", "maltese": "ħalib sħiħ", "english": "full-fat milk", "example": "Nixtieq ħalib sħiħ.", "exampleTranslation": "I would like full-fat milk.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "halib-xkumat", "maltese": "ħalib xkumat", "english": "skimmed milk", "example": "Nixtieq ħalib xkumat.", "exampleTranslation": "I would like skimmed milk.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "halib-tal-hafur", "maltese": "ħalib tal-ħafur", "english": "oat milk", "example": "Nixtieq ħalib tal-ħafur.", "exampleTranslation": "I would like oat milk.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "halib-tal-lewz", "maltese": "ħalib tal-lewż", "english": "almond milk", "example": "Nixtieq ħalib tal-lewż.", "exampleTranslation": "I would like almond milk.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "zokkor-abjad", "maltese": "zokkor abjad", "english": "white sugar", "example": "Nixtieq zokkor abjad.", "exampleTranslation": "I would like white sugar.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "zokkor-ismar", "maltese": "zokkor ismar", "english": "brown sugar", "example": "Nixtieq zokkor ismar.", "exampleTranslation": "I would like brown sugar.", "exampleSource": "editorial request using S09", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+      ]
+    },
+    {
+      "id": "restaurant-cafe-pastries",
+      "sectionId": "cafe-pastries",
+      "sectionTitle": "Cakes and Pastries",
+      "title": "Cakes and pastries",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "restaurant_ordering.html", "file": "vokabularju_ħelu_kafe_malti.pptx, slides 2-3" },
+      "items": [
+        { "slug": "kejk-tal-lumi", "maltese": "kejk tal-lumi", "english": "lemon cake", "example": "Nixtieq kejk tal-lumi.", "exampleTranslation": "I would like lemon cake.", "exampleSource": "editorial request using S10", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "kejk-tac-cikkulata", "maltese": "kejk taċ-ċikkulata", "english": "chocolate cake", "example": "Nixtieq biċċa kejk taċ-ċikkulata, jekk jogħġbok.", "exampleTranslation": "I would like a piece of chocolate cake, please.", "exampleSource": "S10, slide 3", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "torta-tat-tuffieh", "maltese": "torta tat-tuffieħ", "english": "apple pie / tart", "example": "Tista' ssaħħanli din it-torta tat-tuffieħ?", "exampleTranslation": "Could you warm up this apple pie for me?", "exampleSource": "S10, slide 3", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "kannoli-tal-irkotta", "maltese": "kannoli tal-irkotta", "english": "ricotta-filled cannoli", "note": "Singular: kannolu.", "example": "Dak il-kannolu fih l-irkotta?", "exampleTranslation": "Does that cannolo contain ricotta?", "exampleSource": "S10, slide 3", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
       ]
     }
   ]

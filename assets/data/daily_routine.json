@@ -1,9 +1,17 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "daily_routine.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, section 11; sections 17-19 and tonina-deep-analysis.md, sections 5-6 for contextual cautions",
+    "sources": { "S12": "moħħha fil-ġirien vocabulary.odt" },
+    "editorialMethod": "New habit vocabulary and examples are standalone teaching material. Examples are editorial, not certified audio quotations or a reconstruction of the listening story."
+  },
   "page": "daily_routine.html",
   "topic": "Daily Routine",
   "groups": [
     {
       "id": "daily-routine-core",
+      "itemType": "translation",
       "sectionId": "core-verbs",
       "sectionTitle": "Core Verbs",
       "title": "Everyday verbs for a normal day",
@@ -211,6 +219,18 @@
           "exampleTranslation": "Then I sleep early.",
           "exampleSource": "topic example bank"
         }
+      ]
+    },
+    {
+      "id": "daily-routine-habits",
+      "sectionId": "habits",
+      "sectionTitle": "Habits",
+      "title": "Habits and spending time",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "daily_routine.html", "file": "lesson-04-materials-analysis.md, section 11; tonina-deep-analysis.md, sections 5-6" },
+      "items": [
+        { "slug": "drawwa", "maltese": "drawwa", "english": "habit / custom", "example": "Il-qari huwa drawwa tajba.", "exampleTranslation": "Reading is a good habit.", "exampleSource": "editorial example using S12 glossary, not recorded wording", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "tqatta-hin", "maltese": "tqatta' ħin", "english": "she spends time", "note": "Here the subject is hi (she). This is spending time, not 'I read'; with kienet it can describe a past habit: 'she used to spend time'.", "example": "Hi tqatta' ħin mal-familja tagħha.", "exampleTranslation": "She spends time with her family.", "exampleSource": "editorial example using the expression discussed in tonina-deep-analysis.md, sections 5.1 and 6", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
       ]
     }
   ]

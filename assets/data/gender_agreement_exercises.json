@@ -1,0 +1,64 @@
+{
+  "page": "gender_agreement.html",
+  "topic": "Gender and Agreement",
+  "provenance": {
+    "sources": { "gender-context": "S03: il gens fill in.pdf", "gender-adjectives": "S02: il-ġens.odt", "gender-verbs": "S04: maskil femminil.pdf, exercise 5", "gender-odd-one-out": "S04: maskil femminil.pdf, exercise 6, excluding row 4" },
+    "corrections": "Context Q4 requests the feminine counterpart of patri; Q6 requires tfajla with It-; Q8 opening simplified to Darba raġel. Adjective mgerfex and odd-word row moħor are withheld."
+  },
+  "editorialReview": { "checkedOn": "2026-10-28", "record": "docs/analysis/gender-food-cafe-integration.md", "method": "Editorially reviewed source tasks; contradictory and ambiguous prompts corrected or withheld before publication." },
+  "sets": [
+    {
+      "id": "gender-context", "title": "Nouns in context", "passPercent": 80,
+      "items": [
+        { "id": "rooster", "type": "fill-blank", "prompt": "Is-____ beda jidden filgħodu kmieni. Write the masculine of tiġieġa.", "answer": "serduq", "explanation": "Is-serduq is the rooster. The rooster began crowing early in the morning.", "reviewCard": { "maltese": "serduq / tiġieġa", "english": "rooster / hen" } },
+        { "id": "sister", "type": "fill-blank", "prompt": "____ iżżewġet is-sena l-oħra. Write the feminine of ħija.", "answer": "oħti", "explanation": "Oħti means my sister: My sister got married last year.", "reviewCard": { "maltese": "ħija / oħti", "english": "my brother / my sister" } },
+        { "id": "neighbour", "type": "fill-blank", "prompt": "Il-____ tiegħi dejjem tpaċpaċ man-nies. Write the feminine of ġar.", "answer": "ġara", "explanation": "Il-ġara tiegħi is my female neighbour. The verb tpaċpaċ agrees with her." },
+        { "id": "nun", "type": "fill-blank", "prompt": "Is-____ tgħix f'kunvent tal-klawsura. Write the feminine counterpart of patri.", "answer": "soru", "explanation": "Is-soru is the nun. The feminine tgħix agrees with soru. Patri and soru name corresponding religious roles." },
+        { "id": "donkey", "type": "fill-blank", "prompt": "Il-____ beda jinħaq. Write the masculine of ħmara.", "answer": "ħmar", "explanation": "Il-ħmar beda jinħaq: The donkey began braying." },
+        { "id": "young-woman", "type": "fill-blank", "prompt": "It-____ xtrat tibdila ġdida. Write a feminine counterpart of ġuvni that fits the supplied article.", "answer": "tfajla", "explanation": "It-tfajla fits the given article. Xebba would require Ix-xebba, so it cannot fill this unchanged sentence." },
+        { "id": "king", "type": "fill-blank", "prompt": "Ir-____ sellem lin-nies. Write the masculine of reġina.", "answer": "re", "explanation": "Ir-re is the king: The king greeted the people." },
+        { "id": "goat", "type": "fill-blank", "prompt": "Darba raġel salva ____ milli tegħreq fil-Port il-Kbir. Write the feminine of bodbod.", "answer": "mogħża", "explanation": "Mogħża means a nanny goat. The feminine tegħreq agrees with this referent." },
+        { "id": "mother", "type": "fill-blank", "prompt": "____ ħaditni sal-bandli. Write the feminine of missieri.", "answer": "ommi", "explanation": "Ommi means my mother: My mother took me to the swings." },
+        { "id": "ewe", "type": "fill-blank", "prompt": "In-____ kienet se tintilef. Write the feminine of muntun.", "answer": "nagħġa", "explanation": "In-nagħġa is the ewe. The feminine kienet agrees with her." },
+        { "id": "widower", "type": "fill-blank", "prompt": "L-____ kien joqgħod waħdu. Write the masculine of armla.", "answer": "armel", "explanation": "L-armel is the widower. Notice the stem change armel / armla." },
+        { "id": "horse", "type": "fill-blank", "prompt": "Is-Sur Meli kellu ____. Write the masculine counterpart of debba.", "answer": "żiemel", "explanation": "Żiemel means horse, or stallion in this male/female contrast; debba means mare." }
+      ]
+    },
+    {
+      "id": "gender-adjectives", "title": "Feminine adjective forms", "passPercent": 80,
+      "items": [
+        { "id": "twila", "type": "fill-blank", "prompt": "Write the feminine singular of twil (tall / long).", "answer": "twila", "explanation": "Twil changes to twila." },
+        { "id": "mhawda", "type": "fill-blank", "prompt": "Write the feminine singular of mħawwad (confused / mixed up).", "answer": "mħawda", "explanation": "Mħawwad changes to mħawda, not just an unchanged stem plus -a." },
+        { "id": "mghawga", "type": "fill-blank", "prompt": "Write the feminine singular of mgħawweġ (crooked / bent).", "answer": "mgħawġa", "explanation": "Mgħawweġ changes to mgħawġa." },
+        { "id": "mxarrba", "type": "fill-blank", "prompt": "Write the feminine singular of mxarrab (wet).", "answer": "mxarrba", "explanation": "Mxarrab changes to mxarrba." },
+        { "id": "mhassra", "type": "fill-blank", "prompt": "Write the feminine singular of mħassar (erased / cancelled / spoiled).", "answer": "mħassra", "explanation": "Mħassar changes to mħassra. The precise English meaning depends on context." },
+        { "id": "mkissra", "type": "fill-blank", "prompt": "Write the feminine singular of mkisser (broken).", "answer": "mkissra", "explanation": "Mkisser changes to mkissra." },
+        { "id": "mfarrka", "type": "fill-blank", "prompt": "Write the feminine singular of mfarrak (shattered / smashed).", "answer": "mfarrka", "explanation": "Mfarrak changes to mfarrka." }
+      ]
+    },
+    {
+      "id": "gender-verbs", "title": "He or she: past-tense forms", "passPercent": 80,
+      "items": [
+        { "id": "nsiet", "type": "multiple-choice", "prompt": "nsiet: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "she", "explanation": "Nsiet means she forgot." },
+        { "id": "beka", "type": "multiple-choice", "prompt": "beka: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "he", "explanation": "Beka means he cried." },
+        { "id": "mexxa", "type": "multiple-choice", "prompt": "mexxa: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "he", "explanation": "Mexxa means he led / moved something." },
+        { "id": "xandret", "type": "multiple-choice", "prompt": "xandret: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "she", "explanation": "Xandret means she broadcast / announced." },
+        { "id": "siefer", "type": "multiple-choice", "prompt": "siefer: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "he", "explanation": "Siefer means he travelled abroad." },
+        { "id": "hedded", "type": "multiple-choice", "prompt": "hedded: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "he", "explanation": "Hedded means he threatened." },
+        { "id": "mejlet", "type": "multiple-choice", "prompt": "mejlet: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "she", "explanation": "Mejlet means she leaned / tilted." },
+        { "id": "sawret", "type": "multiple-choice", "prompt": "sawret: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "she", "explanation": "Sawret means she shaped / formed." },
+        { "id": "rebah", "type": "multiple-choice", "prompt": "rebaħ: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "he", "explanation": "Rebaħ means he won." },
+        { "id": "meshet", "type": "multiple-choice", "prompt": "mesħet: identify the third-person singular past-tense form.", "choices": ["he", "she"], "answer": "she", "explanation": "Mesħet means she wiped." }
+      ]
+    },
+    {
+      "id": "gender-odd-one-out", "title": "Find the different gender", "passPercent": 75,
+      "items": [
+        { "id": "noun", "type": "multiple-choice", "prompt": "Which noun is feminine?", "choices": ["missier", "kelb", "qassis", "soru"], "answer": "soru", "explanation": "Soru (nun) is feminine; the other three nouns here are masculine." },
+        { "id": "mixed-forms", "type": "multiple-choice", "prompt": "Which form is masculine among these feminine forms?", "choices": ["stħajlet", "bierket", "żagħżugħa", "mar"], "answer": "mar", "explanation": "Mar means he went. Stħajlet and bierket are she-forms here; żagħżugħa refers to a young woman." },
+        { "id": "past-tense", "type": "multiple-choice", "prompt": "Which third-person singular past-tense verb form is masculine?", "choices": ["semgħet", "miet", "neżgħet", "telgħet"], "answer": "miet", "explanation": "Miet means he died; the other forms here are third-person feminine singular." },
+        { "id": "feminine-adjective", "type": "multiple-choice", "prompt": "Which form is feminine among these masculine forms?", "choices": ["armel", "mbierek", "mxarrab", "sewda"], "answer": "sewda", "explanation": "Sewda is the feminine singular of iswed (black)." }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,34 @@
 {
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "food_preferences.html" },
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 4-6",
+    "sources": { "S08": "vokabularju fis-supermarkit.odt", "S05": "djalogu at the green grocer.pptx, slides 1-3", "S07": "fis supermarket example dialogue.pdf" },
+    "editorialMethod": "Clear source vocabulary; English glosses edited for context. New request examples are editorial adaptations, not teacher-supplied answers.",
+    "terminologyChecks": [
+      { "terms": ["qarabagħli"], "url": "https://ruralaffairs.gov.mt/wp-content/uploads/2024/05/qp003.pdf#page=45", "location": "section 44", "scope": "Corrected spelling and marrows gloss only" },
+      { "terms": ["zunnarija", "karrotti"], "url": "https://journals.pan.pl/Content/124789/PDF/2021-FORI-06-Klimiuk.pdf#page=9", "location": "printed p.119", "scope": "Carrot naming variants; alias note, not a second food concept" },
+      { "terms": ["karrotti", "ġidra"], "url": "https://nso.gov.mt/wp-content/uploads/Agriculture_2007online.pdf#page=135", "location": "Appendix A", "scope": "Carrots spelling and kohlrabi gloss only" },
+      { "terms": ["ġobon tat-tursina"], "url": "https://data.consilium.europa.eu/doc/document/ST-14757-2011-ADD-29/mt/pdf#page=11", "location": "0406400000", "scope": "Blue-type cheese terminology only" }
+    ]
+  },
   "page": "food_preferences.html",
   "topic": "Food Preferences",
   "groups": [
     {
+      "id": "food-kitchen-details", "sectionId": "kitchen-details", "sectionTitle": "Cooking and Serving", "title": "Cooking and serving", "itemType": "translation",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "moħħha fil-ġirien vocabulary.odt; ta tonina 2.pdf; fis supermarket example dialogue.pdf; lexical items, not a transcript" },
+      "items": [
+        { "slug": "mielah", "maltese": "mielaħ", "english": "salty", "notes": ["Mill-mielaħ: of the salty kind, as used for ham in the shopping dialogue."], "example": "Il-ġobon huwa mielaħ.", "exampleTranslation": "The cheese is salty.", "exampleSource": "editorial sentence; source lexical form S07", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "mahruq", "maltese": "maħruq", "english": "burnt, masculine singular", "example": "L-ikel huwa maħruq.", "exampleTranslation": "The food is burnt.", "exampleSource": "editorial sentence using S12-S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "riha", "maltese": "riħa", "english": "smell / scent", "example": "Hemm riħa ta' ikel maħruq.", "exampleTranslation": "There is a smell of burnt food.", "exampleSource": "editorial sentence using S12-S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "imqarrun", "maltese": "imqarrun", "english": "macaroni", "example": "Nixtieq platt imqarrun.", "exampleTranslation": "I would like a plate of macaroni.", "exampleSource": "editorial request using S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "dixx", "maltese": "dixx", "english": "dish / tray", "example": "Id-dixx qiegħed fuq il-mejda.", "exampleTranslation": "The dish is on the table.", "exampleSource": "editorial sentence using S14 vocabulary; already present in the word game", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+      ]
+    },
+    {
       "id": "food-shopping",
+      "itemType": "translation",
       "sectionId": "shopping",
       "sectionTitle": "Shopping List Vocabulary",
       "title": "Shopping list vocabulary",
@@ -216,6 +241,7 @@
     },
     {
       "id": "food-ingredients",
+      "itemType": "translation",
       "sectionId": "ingredients",
       "sectionTitle": "Common Food and Ingredients",
       "title": "Common food and ingredients",
@@ -391,6 +417,7 @@
           "slug": "torta",
           "maltese": "torta",
           "english": "pie",
+          "notes": ["Plural: torti."],
           "example": "Nara torta.",
           "review": {
             "enabled": true,
@@ -553,6 +580,63 @@
           "exampleTranslation": "In the morning I have coffee and a biscuit.",
           "exampleSource": "topic example bank"
         }
+      ]
+    },
+    {
+      "id": "food-produce",
+      "sectionId": "supermarket-produce",
+      "sectionTitle": "Vegetables and Fruit",
+      "title": "Vegetables and fruit",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "vokabularju fis-supermarkit.odt; djalogu at the green grocer.pptx; fis supermarket example dialogue.pdf" },
+      "items": [
+        { "slug": "kabocca", "maltese": "kaboċċa", "english": "a cabbage", "example": "Għandi bżonn kaboċċa.", "exampleTranslation": "I need a cabbage.", "exampleSource": "S05, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "pastarda", "maltese": "pastarda", "english": "a cauliflower", "example": "Nixtieq pastarda.", "exampleTranslation": "I would like a cauliflower.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "basal", "maltese": "basal", "english": "onions", "example": "Nixtieq basal.", "exampleTranslation": "I would like onions.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "karrotti", "maltese": "karrotti", "english": "carrots", "notes": ["Also: zunnarija (carrots, collective)."], "sourceTerms": ["zunnarija"], "example": "Nixtieq karrotti.", "exampleTranslation": "I would like carrots.", "exampleSource": "editorial request; spelling: NSO Appendix A; alias: Klimiuk, Language Questionnaire for Gozo, p.119", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "qarabaghli", "maltese": "qarabagħli", "english": "marrows / courgettes", "example": "Nixtieq kilo qarabagħli.", "exampleTranslation": "I would like a kilo of marrows.", "exampleSource": "editorial request using S08; spelling and gloss: Ministry of Agriculture traditional agro-food inventory, section 44", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "hassa", "maltese": "ħassa", "english": "a lettuce", "example": "Nixtieq ħassa.", "exampleTranslation": "I would like a lettuce.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "gidra", "maltese": "ġidra", "english": "kohlrabi", "example": "Nixtieq ġidra.", "exampleTranslation": "I would like a kohlrabi.", "exampleSource": "editorial request; gloss: NSO Appendix A", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "tewm", "maltese": "tewm", "english": "garlic", "example": "Nixtieq tewm.", "exampleTranslation": "I would like garlic.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "brungiel", "maltese": "brunġiel", "english": "aubergines / eggplant", "example": "Nixtieq brunġiel.", "exampleTranslation": "I would like aubergines.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "tuffieh", "maltese": "tuffieħ", "english": "apples", "example": "Għandi bżonn kilo tuffieħ.", "exampleTranslation": "I need a kilo of apples.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "laring", "maltese": "larinġ", "english": "oranges", "example": "Għandi bżonn żewġ kilogrammi larinġ.", "exampleTranslation": "I need two kilograms of oranges.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "gheneb", "maltese": "għeneb", "english": "grapes", "example": "Nixtieq ftit għeneb.", "exampleTranslation": "I would like some grapes.", "exampleSource": "editorial request using S05", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "frawli", "maltese": "frawli", "english": "strawberries", "example": "Nieħu żewġ kaxxi frawli.", "exampleTranslation": "I will take two boxes of strawberries.", "exampleSource": "S07, adapted without the disputed adjective agreement", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+      ]
+    },
+    {
+      "id": "food-drinks",
+      "sectionId": "supermarket-drinks",
+      "sectionTitle": "Drinks",
+      "title": "Drinks",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "vokabularju fis-supermarkit.odt" },
+      "items": [
+        { "slug": "minerali", "maltese": "minerali", "english": "soft drinks (shopping context)", "example": "Nixtieq minerali.", "exampleTranslation": "I would like soft drinks.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "inbid", "maltese": "inbid", "english": "wine", "example": "Nixtieq inbid.", "exampleTranslation": "I would like wine.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "ilma", "maltese": "ilma", "english": "water", "example": "Nixtieq ilma.", "exampleTranslation": "I would like water.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "meraq-tal-frott", "maltese": "meraq tal-frott", "english": "fruit juice", "example": "Nixtieq meraq tal-frott.", "exampleTranslation": "I would like fruit juice.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "luminata", "maltese": "luminata", "english": "lemonade", "example": "Nixtieq luminata.", "exampleTranslation": "I would like lemonade.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "birra", "maltese": "birra", "english": "beer", "example": "Nixtieq birra.", "exampleTranslation": "I would like a beer.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+      ]
+    },
+    {
+      "id": "food-deli",
+      "sectionId": "supermarket-deli",
+      "sectionTitle": "Cheese and Cold Cuts",
+      "title": "Cheese and cold cuts",
+      "itemType": "translation",
+      "source": { "kind": "site", "page": "food_preferences.html", "file": "vokabularju fis-supermarkit.odt" },
+      "items": [
+        { "slug": "gobon-tat-toqba", "maltese": "ġobon tat-toqba", "english": "cheese with holes", "note": "A descriptive name; not a guarantee of one particular cheese variety.", "example": "Għandi bżonn mitejn gramma ġobon tat-toqba.", "exampleTranslation": "I need 200 grams of cheese with holes.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "gobon-tal-bzar", "maltese": "ġobon tal-bżar", "english": "peppered cheese", "example": "Nixtieq ġobon tal-bżar.", "exampleTranslation": "I would like peppered cheese.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "gobon-tat-tursina", "maltese": "ġobon tat-tursina", "english": "blue-type / blue-veined cheese", "example": "Nixtieq ġobon tat-tursina.", "exampleTranslation": "I would like blue cheese.", "exampleSource": "editorial request; terminology: Council 14757/11 ADD 29, 0406400000", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "gobon-mahkuk", "maltese": "ġobon maħkuk", "english": "grated cheese", "example": "Għandi bżonn erba' mitt gramma ġobon maħkuk.", "exampleTranslation": "I need 400 grams of grated cheese.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "gobon-tal-qoxra-hamra", "maltese": "ġobon tal-qoxra ħamra", "english": "red-rind cheese", "note": "Describes the rind; the phrase does not identify one exclusive variety.", "example": "Nixtieq ġobon tal-qoxra ħamra.", "exampleTranslation": "I would like red-rind cheese.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "bejken", "maltese": "bejken", "english": "bacon", "example": "Nixtieq tliet mitt gramma bejken.", "exampleTranslation": "I would like 300 grams of bacon.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "mortadella", "maltese": "mortadella", "english": "mortadella", "example": "Nixtieq mortadella.", "exampleTranslation": "I would like mortadella.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        { "slug": "salami", "maltese": "salami", "english": "salami", "example": "Nixtieq salami.", "exampleTranslation": "I would like salami.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
       ]
     }
   ]
