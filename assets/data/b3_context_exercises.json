@@ -1,0 +1,564 @@
+{
+  "topic": "Everyday Maltese reading and visual checks",
+  "page": "b3_revision.html",
+  "source": {
+    "kind": "site",
+    "page": "b3_revision.html"
+  },
+  "sets": [
+    {
+      "id": "b3-feelings-context-check",
+      "chapterId": "b3-feelings",
+      "contextId": "b3-feelings-context",
+      "title": "Nina stays at home — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-feelings-context-nina-place",
+          "type": "multiple-choice",
+          "prompt": "Where does Nina stay in the morning?",
+          "choices": [
+            "At home.",
+            "At school.",
+            "In the garden."
+          ],
+          "answer": "At home.",
+          "explanation": "The reading says that she stays at home in the morning.",
+          "reviewCard": {
+            "maltese": "Nina tibqa' d-dar filgħodu.",
+            "english": "Nina stays at home in the morning."
+          },
+          "chapterId": "b3-feelings",
+          "contextId": "b3-feelings-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-feelings-context-nina-companion",
+          "type": "multiple-choice",
+          "prompt": "Who goes to school while Nina stays home?",
+          "choices": [
+            "Her brother.",
+            "Her aunt.",
+            "Nina."
+          ],
+          "answer": "Her brother.",
+          "explanation": "Ħuha is her brother; he goes to school.",
+          "reviewCard": {
+            "maltese": "Ħuha jmur l-iskola.",
+            "english": "Her brother goes to school."
+          },
+          "chapterId": "b3-feelings",
+          "contextId": "b3-feelings-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-feelings-context-nina-body",
+          "type": "fill-blank",
+          "prompt": "Which body part hurts Nina? Answer in Maltese.",
+          "answer": "rasha",
+          "accepted": [
+            "rasha",
+            "ras"
+          ],
+          "explanation": "The first sentence places the pain in her head: f'rasha.",
+          "reviewCard": {
+            "maltese": "Nina għandha uġigħ f'rasha.",
+            "english": "Nina has a headache."
+          },
+          "chapterId": "b3-feelings",
+          "contextId": "b3-feelings-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-feelings-context-nina-evening",
+          "type": "true-false",
+          "prompt": "In this story, Nina reads a book in the evening.",
+          "answer": true,
+          "explanation": "The last sentence names the evening activity.",
+          "reviewCard": {
+            "maltese": "Filgħaxija Nina taqra ktieb.",
+            "english": "In the evening Nina reads a book."
+          },
+          "chapterId": "b3-feelings",
+          "contextId": "b3-feelings-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
+      "id": "b3-sport-context-check",
+      "chapterId": "b3-sport",
+      "contextId": "b3-sport-context",
+      "title": "Two different sports — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-sport-context-liam-day",
+          "type": "multiple-choice",
+          "prompt": "On which day does Liam practise his sport?",
+          "choices": [
+            "Tuesday.",
+            "Saturday.",
+            "Sunday."
+          ],
+          "answer": "Saturday.",
+          "explanation": "Liam plays football nhar ta' Sibt.",
+          "reviewCard": {
+            "maltese": "Liam jipprattika l-futbol nhar ta' Sibt.",
+            "english": "Liam practises football on Saturdays."
+          },
+          "chapterId": "b3-sport",
+          "contextId": "b3-sport-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-sport-context-emma-sport",
+          "type": "multiple-choice",
+          "prompt": "Which sport does Emma practise?",
+          "choices": [
+            "Tennis.",
+            "Football.",
+            "Swimming."
+          ],
+          "answer": "Tennis.",
+          "explanation": "The second sentence describes Emma, not Liam.",
+          "reviewCard": {
+            "maltese": "Emma tipprattika t-tenis nhar ta' Ħadd.",
+            "english": "Emma practises tennis on Sundays."
+          },
+          "chapterId": "b3-sport",
+          "contextId": "b3-sport-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-sport-context-liam-drink",
+          "type": "fill-blank",
+          "prompt": "What does Liam drink after his sport? Answer in Maltese.",
+          "answer": "l-ilma",
+          "accepted": [
+            "l-ilma",
+            "ilma"
+          ],
+          "explanation": "The third sentence says that Liam drinks water.",
+          "reviewCard": {
+            "maltese": "Liam jixrob l-ilma wara l-futbol.",
+            "english": "Liam drinks water after football."
+          },
+          "chapterId": "b3-sport",
+          "contextId": "b3-sport-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-sport-context-emma-drink",
+          "type": "true-false",
+          "prompt": "Emma drinks her milk after football in this story.",
+          "answer": false,
+          "explanation": "Emma drinks milk in the morning. Liam drinks water after football.",
+          "reviewCard": {
+            "maltese": "Emma tixrob il-ħalib filgħodu.",
+            "english": "Emma drinks milk in the morning."
+          },
+          "chapterId": "b3-sport",
+          "contextId": "b3-sport-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
+      "id": "b3-calendar-context-check",
+      "chapterId": "b3-calendar",
+      "contextId": "b3-calendar-context",
+      "title": "Nina's weekly timetable — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-calendar-context-calendar-language-day",
+          "type": "multiple-choice",
+          "prompt": "Use Nina's timetable. When is her Maltese lesson?",
+          "choices": [
+            "Monday at 16:00.",
+            "Tuesday at 17:00.",
+            "Thursday at 15:30."
+          ],
+          "answer": "Monday at 16:00.",
+          "explanation": "Read across the Monday row to connect the lesson with its time.",
+          "reviewCard": {
+            "maltese": "It-Tnejn Nina għandha lezzjoni tal-Malti fl-erbgħa.",
+            "english": "On Monday Nina has a Maltese lesson at four."
+          },
+          "chapterId": "b3-calendar",
+          "contextId": "b3-calendar-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-calendar-context-calendar-piano-day",
+          "type": "fill-blank",
+          "prompt": "On which day is Nina's piano lesson? Answer with the Maltese weekday.",
+          "answer": "Il-Ħamis",
+          "accepted": [
+            "Il-Ħamis",
+            "Ħamis"
+          ],
+          "explanation": "The piano lesson is in the Thursday row.",
+          "reviewCard": {
+            "maltese": "Il-Ħamis Nina għandha lezzjoni tal-pjanu.",
+            "english": "On Thursday Nina has a piano lesson."
+          },
+          "chapterId": "b3-calendar",
+          "contextId": "b3-calendar-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-calendar-context-calendar-earliest",
+          "type": "multiple-choice",
+          "prompt": "Which activity starts earliest in the afternoon?",
+          "choices": [
+            "The piano lesson.",
+            "Swimming.",
+            "The Maltese lesson."
+          ],
+          "answer": "The piano lesson.",
+          "explanation": "15:30 is earlier in the afternoon than 16:00 and 17:00.",
+          "reviewCard": {
+            "maltese": "Il-lezzjoni tal-pjanu tibda fit-tlieta u nofs.",
+            "english": "The piano lesson starts at half past three."
+          },
+          "chapterId": "b3-calendar",
+          "contextId": "b3-calendar-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-calendar-context-calendar-no-clash",
+          "type": "true-false",
+          "prompt": "Nina's three activities are on three different days.",
+          "answer": true,
+          "explanation": "The timetable lists Monday, Tuesday and Thursday.",
+          "reviewCard": {
+            "maltese": "Nina għandha attivitajiet it-Tnejn, it-Tlieta u l-Ħamis.",
+            "english": "Nina has activities on Monday, Tuesday and Thursday."
+          },
+          "chapterId": "b3-calendar",
+          "contextId": "b3-calendar-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
+      "id": "b3-festivals-context-check",
+      "chapterId": "b3-festivals",
+      "contextId": "b3-festivals-context",
+      "title": "An evening at a village festa — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-festivals-context-rita-time",
+          "type": "multiple-choice",
+          "prompt": "When does Rita go to the festa?",
+          "choices": [
+            "At lunchtime.",
+            "In the evening.",
+            "In the morning."
+          ],
+          "answer": "In the evening.",
+          "explanation": "The first sentence says filgħaxija.",
+          "reviewCard": {
+            "maltese": "Rita tmur il-festa filgħaxija.",
+            "english": "Rita goes to the festa in the evening."
+          },
+          "chapterId": "b3-festivals",
+          "contextId": "b3-festivals-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-festivals-context-rita-interest",
+          "type": "multiple-choice",
+          "prompt": "Which activity is linked to Rita's brother?",
+          "choices": [
+            "Playing tennis.",
+            "Watching coloured fireworks.",
+            "Eating cakes."
+          ],
+          "answer": "Watching coloured fireworks.",
+          "explanation": "The brother is the person who likes watching the fireworks.",
+          "reviewCard": {
+            "maltese": "Ħuha jħobb jara l-murtali tal-kulur.",
+            "english": "Her brother likes watching the coloured fireworks."
+          },
+          "chapterId": "b3-festivals",
+          "contextId": "b3-festivals-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-festivals-context-rita-food",
+          "type": "fill-blank",
+          "prompt": "What does Rita eat at this festa? Answer in Maltese.",
+          "answer": "il-qubbajt",
+          "accepted": [
+            "il-qubbajt",
+            "qubbajt"
+          ],
+          "explanation": "The reading pairs Rita with the music and the nougat.",
+          "reviewCard": {
+            "maltese": "Rita tiekol il-qubbajt fil-festa.",
+            "english": "Rita eats nougat at the festa."
+          },
+          "chapterId": "b3-festivals",
+          "contextId": "b3-festivals-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-festivals-context-rita-alone",
+          "type": "true-false",
+          "prompt": "Rita goes to the festa alone.",
+          "answer": false,
+          "explanation": "Ma' ħuha means with her brother.",
+          "reviewCard": {
+            "maltese": "Rita tmur il-festa ma' ħuha.",
+            "english": "Rita goes to the festa with her brother."
+          },
+          "chapterId": "b3-festivals",
+          "contextId": "b3-festivals-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
+      "id": "b3-people-context-check",
+      "chapterId": "b3-people",
+      "contextId": "b3-people-context",
+      "title": "A family and their jobs — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-people-context-anna-relation",
+          "type": "multiple-choice",
+          "prompt": "Who is Anna in relation to Lara?",
+          "choices": [
+            "Her sister.",
+            "Her grandmother.",
+            "Her aunt."
+          ],
+          "answer": "Her aunt.",
+          "explanation": "The opening sentence calls her z-zija ta' Lara.",
+          "reviewCard": {
+            "maltese": "Anna hija z-zija ta' Lara.",
+            "english": "Anna is Lara's aunt."
+          },
+          "chapterId": "b3-people",
+          "contextId": "b3-people-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-people-context-anna-work",
+          "type": "multiple-choice",
+          "prompt": "What does Anna teach?",
+          "choices": [
+            "Music.",
+            "English.",
+            "Maltese."
+          ],
+          "answer": "Maltese.",
+          "explanation": "The reading identifies Anna as a teacher of Maltese.",
+          "reviewCard": {
+            "maltese": "Anna tgħallem il-Malti.",
+            "english": "Anna teaches Maltese."
+          },
+          "chapterId": "b3-people",
+          "contextId": "b3-people-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-people-context-mark-job",
+          "type": "fill-blank",
+          "prompt": "What is Mark's job? Write the masculine Maltese job name.",
+          "answer": "pustier",
+          "accepted": [
+            "pustier",
+            "il-pustier"
+          ],
+          "explanation": "Mark is the brother who delivers letters.",
+          "reviewCard": {
+            "maltese": "Il-pustier iqassam l-ittri.",
+            "english": "The postman delivers letters."
+          },
+          "chapterId": "b3-people",
+          "contextId": "b3-people-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-people-context-anna-hair",
+          "type": "true-false",
+          "prompt": "Anna has long hair in the reading.",
+          "answer": false,
+          "explanation": "Her hair is described as qasir, meaning short.",
+          "reviewCard": {
+            "maltese": "Anna għandha xagħarha qasir.",
+            "english": "Anna has short hair."
+          },
+          "chapterId": "b3-people",
+          "contextId": "b3-people-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
+      "id": "b3-ambitions-context-check",
+      "chapterId": "b3-ambitions",
+      "contextId": "b3-ambitions-context",
+      "title": "Plans for work and free time — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-ambitions-context-marta-profession",
+          "type": "multiple-choice",
+          "prompt": "Which future profession does Marta want?",
+          "choices": [
+            "Doctor.",
+            "Cook.",
+            "Teacher."
+          ],
+          "answer": "Doctor.",
+          "explanation": "Marta tixtieq issir tabiba states her ambition.",
+          "reviewCard": {
+            "maltese": "Marta tixtieq issir tabiba.",
+            "english": "Marta would like to become a doctor."
+          },
+          "chapterId": "b3-ambitions",
+          "contextId": "b3-ambitions-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-ambitions-context-david-partner",
+          "type": "multiple-choice",
+          "prompt": "Who bakes with David?",
+          "choices": [
+            "His grandmother.",
+            "His sister.",
+            "His teacher."
+          ],
+          "answer": "His grandmother.",
+          "explanation": "The last sentence says man-nanna.",
+          "reviewCard": {
+            "maltese": "David isajjar il-kejkijiet man-nanna.",
+            "english": "David bakes cakes with his grandmother."
+          },
+          "chapterId": "b3-ambitions",
+          "contextId": "b3-ambitions-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-ambitions-context-marta-books",
+          "type": "fill-blank",
+          "prompt": "What does Marta read in her free time? Answer in Maltese.",
+          "answer": "il-kotba",
+          "accepted": [
+            "il-kotba",
+            "kotba"
+          ],
+          "explanation": "The third sentence connects Marta with books.",
+          "reviewCard": {
+            "maltese": "Marta taqra l-kotba fil-ħin liberu.",
+            "english": "Marta reads books in her free time."
+          },
+          "chapterId": "b3-ambitions",
+          "contextId": "b3-ambitions-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-ambitions-context-ambitions-same-job",
+          "type": "true-false",
+          "prompt": "Marta and David want the same profession.",
+          "answer": false,
+          "explanation": "Marta wants to become a doctor; David wants to become a cook.",
+          "reviewCard": {
+            "maltese": "Marta tixtieq issir tabiba u David jixtieq isir kok.",
+            "english": "Marta would like to become a doctor and David would like to become a cook."
+          },
+          "chapterId": "b3-ambitions",
+          "contextId": "b3-ambitions-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
+      "id": "b3-town-context-check",
+      "chapterId": "b3-town",
+      "contextId": "b3-town-context",
+      "title": "A neighbourhood plan — understand the context",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "b3-town-context-town-between",
+          "type": "multiple-choice",
+          "prompt": "Use the plan. Which place is between the post office and the bakery?",
+          "choices": [
+            "The garden.",
+            "The church.",
+            "The school."
+          ],
+          "answer": "The church.",
+          "explanation": "All three places are in the north row; the church is in the centre.",
+          "reviewCard": {
+            "maltese": "Il-knisja tinsab bejn il-posta u l-forn.",
+            "english": "The church is between the post office and the bakery."
+          },
+          "chapterId": "b3-town",
+          "contextId": "b3-town-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-town-context-town-south",
+          "type": "fill-blank",
+          "prompt": "What is directly south of the bakery on the plan? Answer in Maltese.",
+          "answer": "L-iskola",
+          "accepted": [
+            "L-iskola",
+            "skola",
+            "l-iskola"
+          ],
+          "explanation": "The school is directly below the bakery in the east column.",
+          "reviewCard": {
+            "maltese": "L-iskola tinsab taħt il-forn fil-pjanta.",
+            "english": "The school is below the bakery on the plan."
+          },
+          "chapterId": "b3-town",
+          "contextId": "b3-town-context",
+          "assessmentMode": "production"
+        },
+        {
+          "id": "b3-town-context-lara-tomorrow",
+          "type": "multiple-choice",
+          "prompt": "Where is Lara going tomorrow?",
+          "choices": [
+            "To the bakery.",
+            "To the school.",
+            "To the garden."
+          ],
+          "answer": "To the garden.",
+          "explanation": "The final sentence gives her future plan.",
+          "reviewCard": {
+            "maltese": "Għada Lara se tmur il-ġnien.",
+            "english": "Tomorrow Lara is going to the garden."
+          },
+          "chapterId": "b3-town",
+          "contextId": "b3-town-context",
+          "assessmentMode": "recognition"
+        },
+        {
+          "id": "b3-town-context-town-same-column",
+          "type": "true-false",
+          "prompt": "The post office and garden are in the same column on the plan.",
+          "answer": true,
+          "explanation": "They occupy the west column, with the garden directly below the post office.",
+          "reviewCard": {
+            "maltese": "Il-ġnien jinsab taħt il-posta fil-pjanta.",
+            "english": "The garden is below the post office on the plan."
+          },
+          "chapterId": "b3-town",
+          "contextId": "b3-town-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    }
+  ]
+}

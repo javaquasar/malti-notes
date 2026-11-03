@@ -1,10 +1,11 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}d69d6bd7c501`;
+const CACHE_NAME = `${CACHE_PREFIX}57bf8113c07f`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
     "./all_pages.html",
     "./animals.html",
+    "./b3_revision.html",
     "./body_appearance.html",
     "./collective_nouns.html",
     "./colors_maltese.html",
@@ -86,6 +87,8 @@ const CORE_ASSETS = [
     "./assets/js/about-me-story-core.js",
     "./assets/js/about-me.js",
     "./assets/js/animal-compact-toggle.js",
+    "./assets/js/b3-practice-core.js",
+    "./assets/js/b3-practice.js",
     "./assets/js/cloud-sync-core.js",
     "./assets/js/course-chapter.js",
     "./assets/js/course-context.js",
@@ -172,6 +175,13 @@ const CORE_ASSETS = [
     "./assets/data/daily_routine_examples.json",
     "./assets/data/school_classroom_examples.json",
     "./assets/data/emotions_examples.json",
+    "./assets/data/b3_revision_examples.json",
+    "./assets/data/b3_revision_exercises.json",
+    "./assets/data/b3_practice_bank.json",
+    "./assets/data/b3_context_examples.json",
+    "./assets/data/b3_context_exercises.json",
+    "./assets/data/b3_speaking_tasks.json",
+    "./assets/img/b3-town-map.svg",
     "./assets/data/lesson01_exercises.json",
     "./assets/data/lesson01_practice.json",
     "./assets/data/about_me_lesson01_examples.json",

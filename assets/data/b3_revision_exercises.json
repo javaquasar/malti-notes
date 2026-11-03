@@ -1,0 +1,1043 @@
+{
+  "topic": "Everyday Maltese Practice",
+  "page": "b3_revision.html",
+  "source": {
+    "kind": "site",
+    "page": "b3_revision.html"
+  },
+  "sets": [
+    {
+      "id": "b3-feelings-check",
+      "chapterId": "b3-feelings",
+      "title": "Feelings and the body — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-feelings-demonstrative",
+          "type": "multiple-choice",
+          "prompt": "Choose the feminine demonstrative before widna.",
+          "choices": [
+            "din",
+            "dan",
+            "dawn"
+          ],
+          "answer": "din",
+          "explanation": "Widna is feminine singular, so use din.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "din widna",
+            "english": "this is an ear"
+          }
+        },
+        {
+          "id": "b3-feelings-my-head",
+          "type": "fill-blank",
+          "prompt": "Write the Maltese form for my head.",
+          "answer": "rasi",
+          "accepted": [
+            "rasi"
+          ],
+          "explanation": "Ras takes the possessive ending -i: rasi.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "rasi",
+            "english": "my head"
+          }
+        },
+        {
+          "id": "b3-feelings-symptom",
+          "type": "multiple-choice",
+          "prompt": "Għandi uġigħ f'widinti. What hurts?",
+          "choices": [
+            "My foot.",
+            "My arm.",
+            "My ear."
+          ],
+          "answer": "My ear.",
+          "explanation": "Widinti means my ear.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Għandi uġigħ f'widinti.",
+            "english": "My ear hurts."
+          }
+        },
+        {
+          "id": "b3-feelings-female-feeling",
+          "type": "fill-blank",
+          "prompt": "A girl says: Inħossni ___ . (tired)",
+          "answer": "għajjiena",
+          "accepted": [
+            "għajjiena"
+          ],
+          "explanation": "The feminine form is għajjiena.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Inħossni għajjiena.",
+            "english": "I feel tired. (female speaker)"
+          }
+        },
+        {
+          "id": "b3-feelings-body-meaning",
+          "type": "matching",
+          "prompt": "Match the body words.",
+          "pairs": [
+            {
+              "left": "ras",
+              "right": "head"
+            },
+            {
+              "left": "sieq",
+              "right": "foot"
+            },
+            {
+              "left": "id",
+              "right": "hand"
+            }
+          ],
+          "explanation": "Learn the body words with their grammatical forms.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "ras / sieq / id",
+            "english": "head / foot / hand"
+          }
+        },
+        {
+          "id": "b3-feelings-feeling-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Illum",
+            "inħossni",
+            "ferħan."
+          ],
+          "answer": "Illum inħossni ferħan.",
+          "explanation": "Inħossni means I feel; ferħan is masculine.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Illum inħossni ferħan.",
+            "english": "Today I feel happy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-sport-check",
+      "chapterId": "b3-sport",
+      "title": "Sport and healthy habits — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-sport-we-practise",
+          "type": "multiple-choice",
+          "prompt": "Complete: Aħna ___ l-baskitbol.",
+          "choices": [
+            "jipprattikaw",
+            "nipprattikaw",
+            "nipprattika"
+          ],
+          "answer": "nipprattikaw",
+          "explanation": "Aħna takes nipprattikaw.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Aħna nipprattikaw il-baskitbol.",
+            "english": "We practise basketball."
+          }
+        },
+        {
+          "id": "b3-sport-they-drink",
+          "type": "fill-blank",
+          "prompt": "Complete: Huma ___ l-ilma.",
+          "answer": "jixorbu",
+          "accepted": [
+            "jixorbu"
+          ],
+          "explanation": "Huma takes jixorbu.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Huma jixorbu l-ilma.",
+            "english": "They drink water."
+          }
+        },
+        {
+          "id": "b3-sport-command-group",
+          "type": "multiple-choice",
+          "prompt": "Which command addresses more than one person?",
+          "choices": [
+            "Jien nixrob l-ilma.",
+            "Ixorbu l-ilma.",
+            "Ixrob l-ilma."
+          ],
+          "answer": "Ixorbu l-ilma.",
+          "explanation": "Ixorbu is the plural command; ixrob addresses one person.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Ixorbu l-ilma.",
+            "english": "Drink water. (to a group)"
+          }
+        },
+        {
+          "id": "b3-sport-feminine-active",
+          "type": "fill-blank",
+          "prompt": "Write the feminine form of attiv.",
+          "answer": "attiva",
+          "accepted": [
+            "attiva"
+          ],
+          "explanation": "Attiv becomes attiva in the feminine.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "attiv / attiva",
+            "english": "active (masculine / feminine)"
+          }
+        },
+        {
+          "id": "b3-sport-sport-meaning",
+          "type": "matching",
+          "prompt": "Match the sports.",
+          "pairs": [
+            {
+              "left": "l-għawm",
+              "right": "swimming"
+            },
+            {
+              "left": "iċ-ċikliżmu",
+              "right": "cycling"
+            },
+            {
+              "left": "it-tenis",
+              "right": "tennis"
+            }
+          ],
+          "explanation": "These are names of sporting activities.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "l-għawm / iċ-ċikliżmu / it-tenis",
+            "english": "swimming / cycling / tennis"
+          }
+        },
+        {
+          "id": "b3-sport-sport-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Aħna",
+            "nipprattikaw",
+            "il-baskitbol."
+          ],
+          "answer": "Aħna nipprattikaw il-baskitbol.",
+          "explanation": "The verb agrees with aħna.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Aħna nipprattikaw il-baskitbol.",
+            "english": "We practise basketball."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-calendar-check",
+      "chapterId": "b3-calendar",
+      "title": "Days, months and dates — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-calendar-month-order",
+          "type": "multiple-choice",
+          "prompt": "Which month follows Jannar?",
+          "choices": [
+            "Marzu",
+            "Diċembru",
+            "Frar"
+          ],
+          "answer": "Frar",
+          "explanation": "Frar is February, the month after January.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Frar jiġi wara Jannar.",
+            "english": "February comes after January."
+          }
+        },
+        {
+          "id": "b3-calendar-twenty-seven",
+          "type": "fill-blank",
+          "prompt": "Write 27 in Maltese.",
+          "answer": "sebgħa u għoxrin",
+          "accepted": [
+            "sebgħa u għoxrin"
+          ],
+          "explanation": "Say the unit, then u għoxrin.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "sebgħa u għoxrin",
+            "english": "twenty-seven"
+          }
+        },
+        {
+          "id": "b3-calendar-date-meaning",
+          "type": "multiple-choice",
+          "prompt": "Għeluq snini fit-tlieta ta' Mejju. When is the birthday?",
+          "choices": [
+            "3 May",
+            "3 March",
+            "5 May"
+          ],
+          "answer": "3 May",
+          "explanation": "Mejju is May; fit-tlieta gives the third day.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Għeluq snini fit-tlieta ta' Mejju.",
+            "english": "My birthday is on the third of May."
+          }
+        },
+        {
+          "id": "b3-calendar-thirty-one",
+          "type": "fill-blank",
+          "prompt": "Write 31 in Maltese.",
+          "answer": "wieħed u tletin",
+          "accepted": [
+            "wieħed u tletin"
+          ],
+          "explanation": "Tletin means thirty; put wieħed u before it for 31.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "wieħed u tletin",
+            "english": "thirty-one"
+          }
+        },
+        {
+          "id": "b3-calendar-weekdays",
+          "type": "matching",
+          "prompt": "Match the weekdays.",
+          "pairs": [
+            {
+              "left": "L-Erbgħa",
+              "right": "Wednesday"
+            },
+            {
+              "left": "Il-Ġimgħa",
+              "right": "Friday"
+            },
+            {
+              "left": "Il-Ħadd",
+              "right": "Sunday"
+            }
+          ],
+          "explanation": "Keep Erbgħa (Wednesday) distinct from Ġimgħa (Friday).",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "L-Erbgħa / Il-Ġimgħa / Il-Ħadd",
+            "english": "Wednesday / Friday / Sunday"
+          }
+        },
+        {
+          "id": "b3-calendar-calendar-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Frar",
+            "jiġi",
+            "wara",
+            "Jannar."
+          ],
+          "answer": "Frar jiġi wara Jannar.",
+          "explanation": "Wara means after.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Frar jiġi wara Jannar.",
+            "english": "February comes after January."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-festivals-check",
+      "chapterId": "b3-festivals",
+      "title": "Festivals and preferences — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-festivals-feminine-like",
+          "type": "multiple-choice",
+          "prompt": "Complete: ___ l-mużika. (I like…)",
+          "choices": [
+            "Jogħġobni",
+            "Jogħġbuni",
+            "Togħġobni"
+          ],
+          "answer": "Togħġobni",
+          "explanation": "Mużika is feminine singular.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Togħġobni l-mużika.",
+            "english": "I like the music."
+          }
+        },
+        {
+          "id": "b3-festivals-plural-like",
+          "type": "fill-blank",
+          "prompt": "Complete: ___ l-kuluri. (I like…)",
+          "answer": "Jogħġbuni",
+          "accepted": [
+            "Jogħġbuni"
+          ],
+          "explanation": "Kuluri is plural, so choose jogħġbuni.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Jogħġbuni l-kuluri.",
+            "english": "I like the colours."
+          }
+        },
+        {
+          "id": "b3-festivals-festival-food",
+          "type": "multiple-choice",
+          "prompt": "Which word means nougat?",
+          "choices": [
+            "il-vara",
+            "il-qubbajt",
+            "il-banda"
+          ],
+          "answer": "il-qubbajt",
+          "explanation": "Qubbajt is nougat; banda is a band and vara is a statue carried in a procession.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "il-qubbajt",
+            "english": "the nougat"
+          }
+        },
+        {
+          "id": "b3-festivals-masculine-like",
+          "type": "fill-blank",
+          "prompt": "Complete: ___ l-baħar. (I like…)",
+          "answer": "Jogħġobni",
+          "accepted": [
+            "Jogħġobni"
+          ],
+          "explanation": "Baħar is masculine singular.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Jogħġobni l-baħar.",
+            "english": "I like the sea."
+          }
+        },
+        {
+          "id": "b3-festivals-festa-words",
+          "type": "matching",
+          "prompt": "Match the festa words.",
+          "pairs": [
+            {
+              "left": "il-banda",
+              "right": "the band"
+            },
+            {
+              "left": "il-purċissjoni",
+              "right": "the procession"
+            },
+            {
+              "left": "il-vara",
+              "right": "the processional statue"
+            }
+          ],
+          "explanation": "These words describe different parts of a festa.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "il-banda / il-purċissjoni / il-vara",
+            "english": "the band / the procession / the processional statue"
+          }
+        },
+        {
+          "id": "b3-festivals-festivals-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Fil-festa",
+            "niekol",
+            "il-qubbajt."
+          ],
+          "answer": "Fil-festa niekol il-qubbajt.",
+          "explanation": "Fil-festa sets the context for the activity.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Fil-festa niekol il-qubbajt.",
+            "english": "At the festa I eat nougat."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-people-check",
+      "chapterId": "b3-people",
+      "title": "People, possession and jobs — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-people-his-bag",
+          "type": "multiple-choice",
+          "prompt": "Choose his: Din il-borża ___ .",
+          "choices": [
+            "tagħha",
+            "tagħna",
+            "tiegħu"
+          ],
+          "answer": "tiegħu",
+          "explanation": "The owner is male, even though borża is feminine.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Din il-borża tiegħu.",
+            "english": "This bag is his."
+          }
+        },
+        {
+          "id": "b3-people-her-piano",
+          "type": "fill-blank",
+          "prompt": "Choose her: Dan il-pjanu ___ .",
+          "answer": "tagħha",
+          "accepted": [
+            "tagħha"
+          ],
+          "explanation": "The owner is female; the gender of pjanu does not change the possessive.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Dan il-pjanu tagħha.",
+            "english": "This piano is hers."
+          }
+        },
+        {
+          "id": "b3-people-teacher-action",
+          "type": "multiple-choice",
+          "prompt": "Complete: L-għalliema ___ il-Malti.",
+          "choices": [
+            "ngħallem",
+            "tgħallem",
+            "jgħallem"
+          ],
+          "answer": "tgħallem",
+          "explanation": "The female teacher takes tgħallem.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "L-għalliema tgħallem il-Malti.",
+            "english": "The teacher teaches Maltese."
+          }
+        },
+        {
+          "id": "b3-people-our",
+          "type": "fill-blank",
+          "prompt": "Write the independent possessive for our.",
+          "answer": "tagħna",
+          "accepted": [
+            "tagħna"
+          ],
+          "explanation": "Aħna corresponds to tagħna.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "tagħna",
+            "english": "our / ours"
+          }
+        },
+        {
+          "id": "b3-people-job-actions",
+          "type": "matching",
+          "prompt": "Match the worker with the action.",
+          "pairs": [
+            {
+              "left": "il-pustier",
+              "right": "iqassam l-ittri"
+            },
+            {
+              "left": "il-kok",
+              "right": "isajjar l-ikel"
+            },
+            {
+              "left": "ix-xufier",
+              "right": "isuq il-karozza tal-linja"
+            }
+          ],
+          "explanation": "The postman delivers letters, the cook cooks food, and the driver drives the bus.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "il-pustier iqassam l-ittri",
+            "english": "the postman delivers letters"
+          }
+        },
+        {
+          "id": "b3-people-people-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Din",
+            "il-borża",
+            "tiegħu."
+          ],
+          "answer": "Din il-borża tiegħu.",
+          "explanation": "Tiegħu identifies the male owner.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Din il-borża tiegħu.",
+            "english": "This bag is his."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-ambitions-check",
+      "chapterId": "b3-ambitions",
+      "title": "Ambitions and hobbies — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-ambitions-want-we",
+          "type": "multiple-choice",
+          "prompt": "Complete: Aħna ___ nsiru tobba.",
+          "choices": [
+            "jixtiequ",
+            "nixtiequ",
+            "nixtieq"
+          ],
+          "answer": "nixtiequ",
+          "explanation": "Aħna takes nixtiequ.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Aħna nixtiequ nsiru tobba.",
+            "english": "We would like to become doctors."
+          }
+        },
+        {
+          "id": "b3-ambitions-become-i",
+          "type": "fill-blank",
+          "prompt": "Complete: Jien nixtieq ___ dentista.",
+          "answer": "insir",
+          "accepted": [
+            "insir"
+          ],
+          "explanation": "Jien takes insir after nixtieq.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Jien nixtieq insir dentista.",
+            "english": "I would like to become a dentist."
+          }
+        },
+        {
+          "id": "b3-ambitions-he-become",
+          "type": "multiple-choice",
+          "prompt": "Choose the complete phrase after Hu jixtieq…",
+          "choices": [
+            "issir kok.",
+            "isir kok.",
+            "insir kok."
+          ],
+          "answer": "isir kok.",
+          "explanation": "After jixtieq, this pattern uses isir.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Hu jixtieq isir kok.",
+            "english": "He would like to become a cook."
+          }
+        },
+        {
+          "id": "b3-ambitions-become-you-plural",
+          "type": "fill-blank",
+          "prompt": "Complete: Intom tixtiequ ___ tobba.",
+          "answer": "ssiru",
+          "accepted": [
+            "ssiru"
+          ],
+          "explanation": "Intom takes ssiru after tixtiequ.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Intom tixtiequ ssiru tobba.",
+            "english": "You would like to become doctors. (plural)"
+          }
+        },
+        {
+          "id": "b3-ambitions-hobby-meaning",
+          "type": "matching",
+          "prompt": "Match the hobbies.",
+          "pairs": [
+            {
+              "left": "indoqq il-vjolin",
+              "right": "I play the violin"
+            },
+            {
+              "left": "niżfen il-balè",
+              "right": "I dance ballet"
+            },
+            {
+              "left": "nieħu ħsieb il-pjanti",
+              "right": "I look after plants"
+            }
+          ],
+          "explanation": "Each hobby uses its own verb.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "indoqq il-vjolin",
+            "english": "I play the violin"
+          }
+        },
+        {
+          "id": "b3-ambitions-ambitions-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Lara",
+            "tixtieq",
+            "issir",
+            "għalliema."
+          ],
+          "answer": "Lara tixtieq issir għalliema.",
+          "explanation": "For Lara, both verbs use the third-person feminine pattern.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Lara tixtieq issir għalliema.",
+            "english": "Lara would like to become a teacher."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-town-check",
+      "chapterId": "b3-town",
+      "title": "My town and future plans — quick check",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-town-next-to",
+          "type": "multiple-choice",
+          "prompt": "Il-posta tinsab ħdejn il-knisja. Where is the post office?",
+          "choices": [
+            "Under the table.",
+            "Next to the church.",
+            "Behind the school."
+          ],
+          "answer": "Next to the church.",
+          "explanation": "Ħdejn means next to.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Il-posta tinsab ħdejn il-knisja.",
+            "english": "The post office is next to the church."
+          }
+        },
+        {
+          "id": "b3-town-behind",
+          "type": "fill-blank",
+          "prompt": "Translate behind in one word.",
+          "answer": "wara",
+          "accepted": [
+            "wara"
+          ],
+          "explanation": "Wara locates something behind another place or object.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "wara",
+            "english": "behind"
+          }
+        },
+        {
+          "id": "b3-town-future-we",
+          "type": "multiple-choice",
+          "prompt": "Which sentence means We are going to play in the garden?",
+          "choices": [
+            "Huma se jilagħbu fil-ġnien.",
+            "Aħna se nilagħbu fil-ġnien.",
+            "Aħna nilagħbu fil-ġnien."
+          ],
+          "answer": "Aħna se nilagħbu fil-ġnien.",
+          "explanation": "Se marks the future plan; nilagħbu agrees with aħna.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Aħna se nilagħbu fil-ġnien.",
+            "english": "We are going to play in the garden."
+          }
+        },
+        {
+          "id": "b3-town-future-i",
+          "type": "fill-blank",
+          "prompt": "Complete: Għada se ___ il-librerija. (I am going)",
+          "answer": "mmur",
+          "accepted": [
+            "mmur"
+          ],
+          "explanation": "After se, use the jien form mmur.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Għada se mmur il-librerija.",
+            "english": "Tomorrow I am going to the library."
+          }
+        },
+        {
+          "id": "b3-town-prepositions",
+          "type": "matching",
+          "prompt": "Match the prepositions.",
+          "pairs": [
+            {
+              "left": "quddiem",
+              "right": "in front of"
+            },
+            {
+              "left": "bejn",
+              "right": "between"
+            },
+            {
+              "left": "fuq",
+              "right": "on / above"
+            }
+          ],
+          "explanation": "These prepositions describe different spatial relationships.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "quddiem / bejn / fuq",
+            "english": "in front of / between / on"
+          }
+        },
+        {
+          "id": "b3-town-town-order",
+          "type": "order-words",
+          "prompt": "Put the words in the correct order.",
+          "tokens": [
+            "Il-ġnien",
+            "jinsab",
+            "wara",
+            "l-iskola."
+          ],
+          "answer": "Il-ġnien jinsab wara l-iskola.",
+          "explanation": "The place comes before jinsab and its location phrase.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Il-ġnien jinsab wara l-iskola.",
+            "english": "The garden is behind the school."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-mixed-check",
+      "chapterId": "b3-mixed",
+      "title": "Everyday Maltese — mixed revision",
+      "passPercent": 70,
+      "items": [
+        {
+          "id": "b3-feelings-demonstrative-mixed",
+          "type": "multiple-choice",
+          "prompt": "Choose the feminine demonstrative before widna.",
+          "choices": [
+            "din",
+            "dan",
+            "dawn"
+          ],
+          "answer": "din",
+          "explanation": "Widna is feminine singular, so use din.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "din widna",
+            "english": "this is an ear"
+          }
+        },
+        {
+          "id": "b3-feelings-my-head-mixed",
+          "type": "fill-blank",
+          "prompt": "Write the Maltese form for my head.",
+          "answer": "rasi",
+          "accepted": [
+            "rasi"
+          ],
+          "explanation": "Ras takes the possessive ending -i: rasi.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "rasi",
+            "english": "my head"
+          }
+        },
+        {
+          "id": "b3-sport-we-practise-mixed",
+          "type": "multiple-choice",
+          "prompt": "Complete: Aħna ___ l-baskitbol.",
+          "choices": [
+            "jipprattikaw",
+            "nipprattikaw",
+            "nipprattika"
+          ],
+          "answer": "nipprattikaw",
+          "explanation": "Aħna takes nipprattikaw.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Aħna nipprattikaw il-baskitbol.",
+            "english": "We practise basketball."
+          }
+        },
+        {
+          "id": "b3-sport-they-drink-mixed",
+          "type": "fill-blank",
+          "prompt": "Complete: Huma ___ l-ilma.",
+          "answer": "jixorbu",
+          "accepted": [
+            "jixorbu"
+          ],
+          "explanation": "Huma takes jixorbu.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Huma jixorbu l-ilma.",
+            "english": "They drink water."
+          }
+        },
+        {
+          "id": "b3-calendar-month-order-mixed",
+          "type": "multiple-choice",
+          "prompt": "Which month follows Jannar?",
+          "choices": [
+            "Marzu",
+            "Diċembru",
+            "Frar"
+          ],
+          "answer": "Frar",
+          "explanation": "Frar is February, the month after January.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Frar jiġi wara Jannar.",
+            "english": "February comes after January."
+          }
+        },
+        {
+          "id": "b3-calendar-twenty-seven-mixed",
+          "type": "fill-blank",
+          "prompt": "Write 27 in Maltese.",
+          "answer": "sebgħa u għoxrin",
+          "accepted": [
+            "sebgħa u għoxrin"
+          ],
+          "explanation": "Say the unit, then u għoxrin.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "sebgħa u għoxrin",
+            "english": "twenty-seven"
+          }
+        },
+        {
+          "id": "b3-festivals-feminine-like-mixed",
+          "type": "multiple-choice",
+          "prompt": "Complete: ___ l-mużika. (I like…)",
+          "choices": [
+            "Jogħġobni",
+            "Jogħġbuni",
+            "Togħġobni"
+          ],
+          "answer": "Togħġobni",
+          "explanation": "Mużika is feminine singular.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Togħġobni l-mużika.",
+            "english": "I like the music."
+          }
+        },
+        {
+          "id": "b3-festivals-plural-like-mixed",
+          "type": "fill-blank",
+          "prompt": "Complete: ___ l-kuluri. (I like…)",
+          "answer": "Jogħġbuni",
+          "accepted": [
+            "Jogħġbuni"
+          ],
+          "explanation": "Kuluri is plural, so choose jogħġbuni.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Jogħġbuni l-kuluri.",
+            "english": "I like the colours."
+          }
+        },
+        {
+          "id": "b3-people-his-bag-mixed",
+          "type": "multiple-choice",
+          "prompt": "Choose his: Din il-borża ___ .",
+          "choices": [
+            "tagħha",
+            "tagħna",
+            "tiegħu"
+          ],
+          "answer": "tiegħu",
+          "explanation": "The owner is male, even though borża is feminine.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Din il-borża tiegħu.",
+            "english": "This bag is his."
+          }
+        },
+        {
+          "id": "b3-people-her-piano-mixed",
+          "type": "fill-blank",
+          "prompt": "Choose her: Dan il-pjanu ___ .",
+          "answer": "tagħha",
+          "accepted": [
+            "tagħha"
+          ],
+          "explanation": "The owner is female; the gender of pjanu does not change the possessive.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Dan il-pjanu tagħha.",
+            "english": "This piano is hers."
+          }
+        },
+        {
+          "id": "b3-ambitions-want-we-mixed",
+          "type": "multiple-choice",
+          "prompt": "Complete: Aħna ___ nsiru tobba.",
+          "choices": [
+            "jixtiequ",
+            "nixtiequ",
+            "nixtieq"
+          ],
+          "answer": "nixtiequ",
+          "explanation": "Aħna takes nixtiequ.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Aħna nixtiequ nsiru tobba.",
+            "english": "We would like to become doctors."
+          }
+        },
+        {
+          "id": "b3-ambitions-become-i-mixed",
+          "type": "fill-blank",
+          "prompt": "Complete: Jien nixtieq ___ dentista.",
+          "answer": "insir",
+          "accepted": [
+            "insir"
+          ],
+          "explanation": "Jien takes insir after nixtieq.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "Jien nixtieq insir dentista.",
+            "english": "I would like to become a dentist."
+          }
+        },
+        {
+          "id": "b3-town-next-to-mixed",
+          "type": "multiple-choice",
+          "prompt": "Il-posta tinsab ħdejn il-knisja. Where is the post office?",
+          "choices": [
+            "Under the table.",
+            "Next to the church.",
+            "Behind the school."
+          ],
+          "answer": "Next to the church.",
+          "explanation": "Ħdejn means next to.",
+          "assessmentMode": "recognition",
+          "reviewCard": {
+            "maltese": "Il-posta tinsab ħdejn il-knisja.",
+            "english": "The post office is next to the church."
+          }
+        },
+        {
+          "id": "b3-town-behind-mixed",
+          "type": "fill-blank",
+          "prompt": "Translate behind in one word.",
+          "answer": "wara",
+          "accepted": [
+            "wara"
+          ],
+          "explanation": "Wara locates something behind another place or object.",
+          "assessmentMode": "production",
+          "reviewCard": {
+            "maltese": "wara",
+            "english": "behind"
+          }
+        }
+      ]
+    }
+  ]
+}

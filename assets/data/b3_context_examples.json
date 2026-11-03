@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 2,
+  "page": "b3_revision.html",
+  "source": {
+    "kind": "site",
+    "page": "b3_revision.html"
+  },
+  "topic": "Everyday Maltese reading and speaking",
+  "visuals": {
+    "calendar": {
+      "id": "b3-calendar-timetable",
+      "caption": "Nina's afternoon timetable",
+      "description": "All times are in the afternoon. Read the day, activity and time together.",
+      "columns": [
+        "Day",
+        "Activity",
+        "Time"
+      ],
+      "columnLangs": [
+        "mt",
+        "mt",
+        "en"
+      ],
+      "rows": [
+        [
+          "It-Tnejn",
+          "Lezzjoni tal-Malti",
+          "16:00"
+        ],
+        [
+          "It-Tlieta",
+          "L-għawm",
+          "17:00"
+        ],
+        [
+          "Il-Ħamis",
+          "Lezzjoni tal-pjanu",
+          "15:30"
+        ]
+      ]
+    },
+    "town": {
+      "id": "b3-town-plan",
+      "caption": "A small neighbourhood",
+      "description": "North is at the top. The first row is north of the second row. West is left and east is right. A place directly below another place is in the same column.",
+      "columns": [
+        "West",
+        "Centre",
+        "East"
+      ],
+      "columnLangs": [
+        "mt",
+        "mt",
+        "mt"
+      ],
+      "rows": [
+        [
+          "Il-posta",
+          "Il-knisja",
+          "Il-forn"
+        ],
+        [
+          "Il-ġnien",
+          "Il-pjazza",
+          "L-iskola"
+        ]
+      ]
+    }
+  },
+  "groups": [
+    {
+      "id": "b3-feelings-context",
+      "title": "Nina stays at home",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-feelings-context-1",
+          "maltese": "Nina għandha uġigħ f'rasha.",
+          "english": "Nina has a headache."
+        },
+        {
+          "slug": "b3-feelings-context-2",
+          "maltese": "Hi għajjiena u tibqa' d-dar filgħodu.",
+          "english": "She is tired and stays at home in the morning."
+        },
+        {
+          "slug": "b3-feelings-context-3",
+          "maltese": "Ħuha jmur l-iskola.",
+          "english": "Her brother goes to school."
+        },
+        {
+          "slug": "b3-feelings-context-4",
+          "maltese": "Filgħaxija Nina taqra ktieb.",
+          "english": "In the evening Nina reads a book."
+        }
+      ]
+    },
+    {
+      "id": "b3-feelings-speaking",
+      "title": "Nina stays at home — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-feelings-speaking-model",
+          "question": {
+            "maltese": "Tkellem dwar kif tħossok illum.",
+            "english": "Talk about how you feel today."
+          },
+          "answer": {
+            "maltese": "Illum inħossni għajjien. Għandi uġigħ f'rasi. Illum nibqa' d-dar.",
+            "english": "Today I feel tired. I have a headache. Today I am staying at home."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-sport-context",
+      "title": "Two different sports",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-sport-context-1",
+          "maltese": "Liam jipprattika l-futbol nhar ta' Sibt.",
+          "english": "Liam practises football on Saturdays."
+        },
+        {
+          "slug": "b3-sport-context-2",
+          "maltese": "Oħtu Emma tipprattika t-tenis nhar ta' Ħadd.",
+          "english": "His sister Emma practises tennis on Sundays."
+        },
+        {
+          "slug": "b3-sport-context-3",
+          "maltese": "Wara l-futbol Liam jixrob l-ilma.",
+          "english": "After football Liam drinks water."
+        },
+        {
+          "slug": "b3-sport-context-4",
+          "maltese": "Emma tixrob tazza ħalib filgħodu.",
+          "english": "Emma drinks a glass of milk in the morning."
+        }
+      ]
+    },
+    {
+      "id": "b3-sport-speaking",
+      "title": "Two different sports — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-sport-speaking-model",
+          "question": {
+            "maltese": "Tkellem dwar l-isport u x'tixrob.",
+            "english": "Talk about sport and what you drink."
+          },
+          "answer": {
+            "maltese": "Nipprattika l-għawm nhar ta' Tlieta. Wara l-għawm nixrob l-ilma. Oħti tipprattika t-tenis.",
+            "english": "I practise swimming on Tuesdays. After swimming I drink water. My sister practises tennis."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-calendar-context",
+      "title": "Nina's weekly timetable",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-calendar-context-1",
+          "maltese": "Nina għandha tliet attivitajiet din il-ġimgħa.",
+          "english": "Nina has three activities this week."
+        },
+        {
+          "slug": "b3-calendar-context-2",
+          "maltese": "It-Tnejn għandha lezzjoni tal-Malti fl-erbgħa.",
+          "english": "On Monday she has a Maltese lesson at four."
+        },
+        {
+          "slug": "b3-calendar-context-3",
+          "maltese": "It-Tlieta tipprattika l-għawm fil-ħamsa.",
+          "english": "On Tuesday she practises swimming at five."
+        },
+        {
+          "slug": "b3-calendar-context-4",
+          "maltese": "Il-Ħamis għandha lezzjoni tal-pjanu fit-tlieta u nofs.",
+          "english": "On Thursday she has a piano lesson at half past three."
+        }
+      ]
+    },
+    {
+      "id": "b3-calendar-speaking",
+      "title": "Nina's weekly timetable — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-calendar-speaking-model",
+          "question": {
+            "maltese": "Meta tagħlaq sninek? X'tagħmel matul il-ġimgħa?",
+            "english": "When is your birthday? What do you do during the week?"
+          },
+          "answer": {
+            "maltese": "Għeluq snini fit-tnejn ta' April. Nhar it-Tnejn għandi lezzjoni. Il-lezzjoni tibda fl-erbgħa.",
+            "english": "My birthday is on the second of April. On Monday I have a lesson. The lesson starts at four."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-festivals-context",
+      "title": "An evening at a village festa",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-festivals-context-1",
+          "maltese": "Rita tmur il-festa ma' ħuha filgħaxija.",
+          "english": "Rita goes to the festa with her brother in the evening."
+        },
+        {
+          "slug": "b3-festivals-context-2",
+          "maltese": "Fil-pjazza hemm banda u ħafna bandalori.",
+          "english": "In the square there is a band and there are many banners."
+        },
+        {
+          "slug": "b3-festivals-context-3",
+          "maltese": "Rita tħobb il-mużika u tiekol il-qubbajt.",
+          "english": "Rita likes the music and eats nougat."
+        },
+        {
+          "slug": "b3-festivals-context-4",
+          "maltese": "Ħuha jħobb jara l-murtali tal-kulur.",
+          "english": "Her brother likes watching the coloured fireworks."
+        }
+      ]
+    },
+    {
+      "id": "b3-festivals-speaking",
+      "title": "An evening at a village festa — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-festivals-speaking-model",
+          "question": {
+            "maltese": "Iddeskrivi festa u għid x'jogħġbok fiha.",
+            "english": "Describe a festa and say what you like about it."
+          },
+          "answer": {
+            "maltese": "Jogħġobni l-marċ. Togħġobni l-mużika. Jogħġbuni l-bandalori. Fil-festa niekol il-qubbajt.",
+            "english": "I like the march. I like the music. I like the banners. At the festa I eat nougat."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-people-context",
+      "title": "A family and their jobs",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-people-context-1",
+          "maltese": "Din hi z-zija ta' Lara. Jisimha Anna.",
+          "english": "This is Lara's aunt. Her name is Anna."
+        },
+        {
+          "slug": "b3-people-context-2",
+          "maltese": "Anna għandha xagħarha qasir u għajnejha ħodor.",
+          "english": "Anna has short hair and green eyes."
+        },
+        {
+          "slug": "b3-people-context-3",
+          "maltese": "Hi għalliema u tgħallem il-Malti.",
+          "english": "She is a teacher and teaches Maltese."
+        },
+        {
+          "slug": "b3-people-context-4",
+          "maltese": "Ħuha Mark hu pustier. Iqassam l-ittri filgħodu.",
+          "english": "Her brother Mark is a postman and delivers letters in the morning."
+        }
+      ]
+    },
+    {
+      "id": "b3-people-speaking",
+      "title": "A family and their jobs — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-people-speaking-model",
+          "question": {
+            "maltese": "Iddeskrivi persuna u x-xogħol tagħha.",
+            "english": "Describe a person and their job."
+          },
+          "answer": {
+            "maltese": "Oħti għandha xagħarha twil. Hi għalliema. Tgħallem il-Malti. Dan il-ktieb tagħha.",
+            "english": "My sister has long hair. She is a teacher. She teaches Maltese. This book is hers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-ambitions-context",
+      "title": "Plans for work and free time",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-ambitions-context-1",
+          "maltese": "Marta tixtieq issir tabiba biex tgħin lin-nies.",
+          "english": "Marta would like to become a doctor to help people."
+        },
+        {
+          "slug": "b3-ambitions-context-2",
+          "maltese": "Ħuha David jixtieq isir kok.",
+          "english": "Her brother David would like to become a cook."
+        },
+        {
+          "slug": "b3-ambitions-context-3",
+          "maltese": "Fil-ħin liberu Marta taqra l-kotba.",
+          "english": "In her free time Marta reads books."
+        },
+        {
+          "slug": "b3-ambitions-context-4",
+          "maltese": "David isajjar il-kejkijiet man-nanna.",
+          "english": "David bakes cakes with his grandmother."
+        }
+      ]
+    },
+    {
+      "id": "b3-ambitions-speaking",
+      "title": "Plans for work and free time — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-ambitions-speaking-model",
+          "question": {
+            "maltese": "X'tixtieq issir? X'tħobb tagħmel fil-ħin liberu?",
+            "english": "What would you like to become? What do you like doing in your free time?"
+          },
+          "answer": {
+            "maltese": "Nixtieq insir kok. Fil-ħin liberu nsajjar il-kejkijiet. Inħobb ukoll naqra l-kotba.",
+            "english": "I would like to become a cook. In my free time I bake cakes. I also like reading books."
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-town-context",
+      "title": "A neighbourhood plan",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "b3-town-context-1",
+          "maltese": "Il-posta tinsab ħdejn il-knisja.",
+          "english": "The post office is next to the church."
+        },
+        {
+          "slug": "b3-town-context-2",
+          "maltese": "Il-knisja tinsab bejn il-posta u l-forn.",
+          "english": "The church is between the post office and the bakery."
+        },
+        {
+          "slug": "b3-town-context-3",
+          "maltese": "Il-ġnien jinsab taħt il-posta fil-pjanta.",
+          "english": "The garden is below the post office on the plan."
+        },
+        {
+          "slug": "b3-town-context-4",
+          "maltese": "L-iskola tinsab taħt il-forn fil-pjanta.",
+          "english": "The school is below the bakery on the plan."
+        },
+        {
+          "slug": "b3-town-context-5",
+          "maltese": "Għada Lara se tmur il-ġnien.",
+          "english": "Tomorrow Lara is going to the garden."
+        }
+      ]
+    },
+    {
+      "id": "b3-town-speaking",
+      "title": "A neighbourhood plan — your turn",
+      "itemType": "questionAnswer",
+      "items": [
+        {
+          "slug": "b3-town-speaking-model",
+          "question": {
+            "maltese": "Iddeskrivi r-raħal tiegħek u għid x'se tagħmel għada.",
+            "english": "Describe your village and say what you are going to do tomorrow."
+          },
+          "answer": {
+            "maltese": "Il-posta tinsab ħdejn il-knisja. Il-ġnien jinsab wara l-iskola. Għada se mmur il-ġnien.",
+            "english": "The post office is next to the church. The garden is behind the school. Tomorrow I am going to the garden."
+          }
+        }
+      ]
+    }
+  ]
+}
