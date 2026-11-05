@@ -25,8 +25,8 @@ This directory is the canonical home for project documentation. The root `README
 
 ## Analysis
 
-- [Everyday Maltese Practice: style analysis and implementation](analysis/b3-revision.md)
-- [Everyday Maltese Practice: variants, mistakes, context, speaking and daily practice](analysis/b3-practice.md)
+- [B3 Revision: style analysis and implementation](analysis/b3-revision.md)
+- [B3 Revision: variants, mistakes, context, speaking and daily practice](analysis/b3-practice.md)
 
 - [UI unification audit and refactoring backlog](analysis/ui-unification-audit.md)
 - [UI unification progress and remaining style counters](analysis/ui-unification-progress.md)

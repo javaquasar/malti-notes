@@ -44,7 +44,7 @@ async function main() {
     await page.goto(base+'b3_revision.html');
     await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===128 && document.querySelectorAll('.exercise-item').length===70);
     assert.equal(await page.locator('main > .course-chapter-list > article').count(),7);
-    assert.equal(await page.locator('h1').innerText(),'Everyday Maltese Practice');
+    assert.equal(await page.locator('h1').innerText(),'B3 Revision');
     assert.doesNotMatch(await page.locator('main, .hero').allTextContents().then(parts=>parts.join(' ')), /Malti\.B|Book pp\.|book mastery|book-aligned|the book uses|Chapter [1-7]/i);
     assert.equal(await page.locator('[data-example-group$="-models"] [lang="mt"], [data-example-group$="-words"] [lang="mt"]').count(),92);
     assert.equal(await page.locator('[data-example-group$="-models"] [lang="en"], [data-example-group$="-words"] [lang="en"]').count(),92);
@@ -116,7 +116,7 @@ async function main() {
     assert.equal(await page.locator('[data-course-level="b2"] .course-chapter').count(),7);
     assert.equal(await page.locator('a[href="./b3_revision.html"]').count()>=1,true);
     await page.goto(base+'all_pages.html');
-    await page.getByRole('link',{name:'Everyday Maltese Practice',exact:true}).last().waitFor();
+    await page.getByRole('link',{name:'B3 Revision',exact:true}).last().waitFor();
     await page.goto(base+'b3_revision.html');await page.locator('[data-theme-select]').waitFor();
     await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===128);
     const audits=[];
@@ -138,7 +138,7 @@ async function main() {
         audits.push({theme,width,violations:0,overflow:false});
         if(width!==320){
           await page.evaluate(()=>{document.querySelectorAll('details.study-disclosure').forEach(d=>d.open=false);scrollTo(0,0);});
-          await page.getByRole('heading',{name:'Everyday Maltese Practice',exact:true}).click();
+          await page.getByRole('heading',{name:'B3 Revision',exact:true}).click();
           await page.screenshot({path:path.join(snapshots,`b3-${theme}-${width}.png`)});
           const reference=page.locator('#b3-sport details').first();await reference.locator('summary').click();
           await page.locator('#b3-sport').scrollIntoViewIfNeeded();

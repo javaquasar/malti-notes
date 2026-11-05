@@ -144,7 +144,7 @@
     root.querySelector('[data-b3-daily-start]').addEventListener('click',()=>{
       const plan = core.buildDailyPlan(bank, state().core, { limit:Number(size.value) });
       if (!plan.items.length) return;
-      mountSession('daily',dailyPanel,{id:'b3-daily-practice-'+plan.items.length,title:'Today’s Maltese practice',passPercent:70,items:plan.items});
+      mountSession('daily',dailyPanel,{id:'b3-daily-practice-'+plan.items.length,title:'Today’s B3 practice',passPercent:70,items:plan.items});
       live.textContent = `Started ${plan.items.length} questions. Your unfinished answers are saved.`;
       dailyPanel.querySelector('h3').tabIndex=-1;dailyPanel.querySelector('h3').focus();
     });
@@ -241,7 +241,7 @@
       if (!saved || saved.complete || !Array.isArray(saved.ids) || key==='repair') continue;
       const panel = key==='daily'?dailyPanel:key==='final'?finalPanel:root.querySelector(`[data-b3-chapter="${key.replace('chapter:','')}"] [data-b3-chapter-panel]`);
       const items = saved.ids.map(id=>itemsById.get(id)).filter(Boolean);
-      const title = key==='daily'?'Today’s Maltese practice':key==='final'?bank.finalSet.title:(bank.chapters.find(chapter=>key==='chapter:'+chapter.id)?.title || 'Topic')+' — varied practice';
+      const title = key==='daily'?'Today’s B3 practice':key==='final'?bank.finalSet.title:(bank.chapters.find(chapter=>key==='chapter:'+chapter.id)?.title || 'Topic')+' — varied practice';
       if (panel && items.length && items.length===saved.ids.length) mountSession(key,panel,{id:saved.setId,title,passPercent:70,items},object(saved.answers));
     }
 

@@ -2,9 +2,14 @@
 
 Date: 2026-11-03.
 
-[Open Everyday Maltese Practice](../../b3_revision.html) · [Original style and architecture analysis](b3-revision.md)
+[Open B3 Revision](../../b3_revision.html) · [Original style and architecture analysis](b3-revision.md)
 
 ## Standalone presentation
+
+On 2026-11-05 the learner-facing label was updated to **B3 Revision**,
+retaining the B1/B2/B3 organisation requested for the site. B3 is used in
+navigation, daily sessions, exercise headings and new review-card topics.
+The seven topics remain self-contained and contain no textbook references.
 
 On 2026-11-03 the learner-facing page was renamed **Everyday Maltese Practice**.
 Seven independent topics replace book chapter labels, printed page ranges,
