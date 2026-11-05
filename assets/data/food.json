@@ -23,7 +23,17 @@
         { "slug": "mahruq", "maltese": "maħruq", "english": "burnt, masculine singular", "example": "L-ikel huwa maħruq.", "exampleTranslation": "The food is burnt.", "exampleSource": "editorial sentence using S12-S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "riha", "maltese": "riħa", "english": "smell / scent", "example": "Hemm riħa ta' ikel maħruq.", "exampleTranslation": "There is a smell of burnt food.", "exampleSource": "editorial sentence using S12-S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "imqarrun", "maltese": "imqarrun", "english": "macaroni", "example": "Nixtieq platt imqarrun.", "exampleTranslation": "I would like a plate of macaroni.", "exampleSource": "editorial request using S14 vocabulary", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
-        { "slug": "dixx", "maltese": "dixx", "english": "dish / tray", "example": "Id-dixx qiegħed fuq il-mejda.", "exampleTranslation": "The dish is on the table.", "exampleSource": "editorial sentence using S14 vocabulary; already present in the word game", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+        { "slug": "dixx", "maltese": "dixx", "english": "dish / tray", "example": "Id-dixx qiegħed fuq il-mejda.", "exampleTranslation": "The dish is on the table.", "exampleSource": "editorial sentence using S14 vocabulary; already present in the word game", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        {
+          "slug": "tazza",
+          "maltese": "tazza",
+          "english": "cup / glass",
+          "example": "Din tazza ilma.",
+          "exampleTranslation": "This is a glass of water.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
       ]
     },
     {
@@ -236,6 +246,16 @@
           "imageRole": "context",
           "exampleTranslation": "There is a bottle of red wine on the table.",
           "exampleSource": "translated topic example"
+        },
+        {
+          "slug": "nixtru",
+          "maltese": "nixtru",
+          "english": "we buy",
+          "example": "Aħna nixtru l-frott.",
+          "exampleTranslation": "We buy fruit.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -579,6 +599,59 @@
           "imageRole": "identifying",
           "exampleTranslation": "In the morning I have coffee and a biscuit.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "ikel",
+          "maltese": "ikel",
+          "english": "food",
+          "example": "L-ikel jinsab fuq il-mejda.",
+          "exampleTranslation": "The food is on the table.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "brodu",
+          "maltese": "brodu",
+          "english": "broth",
+          "example": "Il-brodu sħun.",
+          "exampleTranslation": "The broth is hot.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "minestra",
+          "maltese": "minestra",
+          "english": "vegetable soup",
+          "example": "minestra sħuna",
+          "exampleTranslation": "hot vegetable soup",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "tfuh",
+          "maltese": "tfuħ",
+          "english": "is fragrant; smells pleasant (feminine subject)",
+          "example": "Il-minestra tfuħ.",
+          "exampleTranslation": "The vegetable soup smells fragrant.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Use with a feminine subject: riħa tfuħ, a fragrant smell."
+          ]
+        },
+        {
+          "slug": "tigieg-bil-patata-l-forn",
+          "maltese": "tiġieġ bil-patata l-forn",
+          "english": "roast chicken with potatoes",
+          "example": "Inħobb it-tiġieġ bil-patata l-forn.",
+          "exampleTranslation": "I like roast chicken with potatoes.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -618,7 +691,22 @@
         { "slug": "ilma", "maltese": "ilma", "english": "water", "example": "Nixtieq ilma.", "exampleTranslation": "I would like water.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "meraq-tal-frott", "maltese": "meraq tal-frott", "english": "fruit juice", "example": "Nixtieq meraq tal-frott.", "exampleTranslation": "I would like fruit juice.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "luminata", "maltese": "luminata", "english": "lemonade", "example": "Nixtieq luminata.", "exampleTranslation": "I would like lemonade.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
-        { "slug": "birra", "maltese": "birra", "english": "beer", "example": "Nixtieq birra.", "exampleTranslation": "I would like a beer.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+        { "slug": "birra", "maltese": "birra", "english": "beer", "example": "Nixtieq birra.", "exampleTranslation": "I would like a beer.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        {
+          "slug": "laringa-maghsura",
+          "maltese": "larinġa magħsura",
+          "english": "squeezed orange juice",
+          "example": "Nixrob larinġa magħsura filgħodu.",
+          "exampleTranslation": "I drink squeezed orange juice in the morning.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Literally a squeezed orange; used as a drink expression.",
+            "Magħsura means squeezed, in the feminine singular.",
+            "magħsura — squeezed (feminine singular)"
+          ]
+        }
       ]
     },
     {

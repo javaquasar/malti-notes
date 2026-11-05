@@ -1570,6 +1570,10 @@
           "winter"
         ],
         [
+          "staġun",
+          "season"
+        ],
+        [
           "ilbieraħ",
           "yesterday"
         ],
@@ -1630,6 +1634,42 @@
           "the month after"
         ],
         [
+          "darbtejn",
+          "twice"
+        ],
+        [
+          "nhar",
+          "day (in weekday expressions)"
+        ],
+        [
+          "ddum",
+          "lasts; takes time (feminine or you singular)"
+        ],
+        [
+          "għaddejja",
+          "going on; in progress (feminine)"
+        ],
+        [
+          "sħiħa",
+          "whole; complete (feminine)"
+        ],
+        [
+          "vaganzi",
+          "holidays; vacation"
+        ],
+        [
+          "dejjem",
+          "always"
+        ],
+        [
+          "fl-antik",
+          "in the past; in olden times"
+        ],
+        [
+          "qabel",
+          "before; earlier"
+        ],
+        [
           "siegħa",
           "hour"
         ],
@@ -1662,6 +1702,10 @@
           "half"
         ],
         [
+          "ġimagħtejn",
+          "two weeks; a fortnight"
+        ],
+        [
           "filgħodu",
           "in the morning"
         ],
@@ -1676,6 +1720,98 @@
         [
           "ta' billejl",
           "at night"
+        ],
+        [
+          "litri",
+          "litres"
+        ],
+        [
+          "ħafna",
+          "many / much"
+        ],
+        [
+          "disgħa",
+          "nine (9)"
+        ],
+        [
+          "disgħa u għoxrin",
+          "twenty-nine (29)"
+        ],
+        [
+          "erbgħa u għoxrin",
+          "twenty-four (24)"
+        ],
+        [
+          "għoxrin",
+          "twenty (20)"
+        ],
+        [
+          "sebgħa",
+          "seven (7)"
+        ],
+        [
+          "sebgħa u għoxrin",
+          "twenty-seven (27)"
+        ],
+        [
+          "sitta",
+          "six (6)"
+        ],
+        [
+          "sitta u għoxrin",
+          "twenty-six (26)"
+        ],
+        [
+          "tletin",
+          "thirty (30)"
+        ],
+        [
+          "tlieta u għoxrin",
+          "twenty-three (23)"
+        ],
+        [
+          "tmienja",
+          "eight (8)"
+        ],
+        [
+          "tmienja u għoxrin",
+          "twenty-eight (28)"
+        ],
+        [
+          "tnejn u għoxrin",
+          "twenty-two (22)"
+        ],
+        [
+          "tombla",
+          "bingo"
+        ],
+        [
+          "wieħed",
+          "one (1)"
+        ],
+        [
+          "wieħed u għoxrin",
+          "twenty-one (21)"
+        ],
+        [
+          "wieħed u tletin",
+          "thirty-one (31)"
+        ],
+        [
+          "ħamsa u għoxrin",
+          "twenty-five (25)"
+        ],
+        [
+          "ħdax",
+          "eleven (11)"
+        ],
+        [
+          "ħmistax",
+          "fifteen (15)"
+        ],
+        [
+          "nagħlaq snini / tagħlaq sninek",
+          "I have my birthday; I celebrate my birthday"
         ],
         [
           "omm",
@@ -1744,6 +1880,10 @@
         [
           "familja kbira",
           "big family"
+        ],
+        [
+          "papà",
+          "dad; daddy"
         ],
         [
           "dar",
@@ -1894,6 +2034,14 @@
           "hot tea"
         ],
         [
+          "nies",
+          "people"
+        ],
+        [
+          "għatba",
+          "doorstep / threshold"
+        ],
+        [
           "saqaf",
           "roof / ceiling in some contexts"
         ],
@@ -1902,8 +2050,36 @@
           "garage"
         ],
         [
+          "fjuri",
+          "flowers"
+        ],
+        [
+          "ward",
+          "roses (collective)"
+        ],
+        [
           "studju",
           "study / study room"
+        ],
+        [
+          "injam",
+          "wood"
+        ],
+        [
+          "forn",
+          "oven"
+        ],
+        [
+          "għodda",
+          "tools; equipment"
+        ],
+        [
+          "telefown",
+          "telephone; phone"
+        ],
+        [
+          "żebgħa",
+          "paint; dye"
         ],
         [
           "ras",
@@ -1922,7 +2098,7 @@
           "nose"
         ],
         [
-          "fomm",
+          "fomm / ħalq",
           "mouth"
         ],
         [
@@ -1940,6 +2116,34 @@
         [
           "xagħar",
           "hair"
+        ],
+        [
+          "driegħ",
+          "arm"
+        ],
+        [
+          "irkoppa",
+          "knee"
+        ],
+        [
+          "riġel",
+          "leg"
+        ],
+        [
+          "saba'",
+          "finger"
+        ],
+        [
+          "sider",
+          "chest"
+        ],
+        [
+          "stonku",
+          "stomach (organ)"
+        ],
+        [
+          "xoffa",
+          "lip"
         ],
         [
           "twil / twila",
@@ -1964,6 +2168,110 @@
         [
           "sabiħ / sabiħa",
           "beautiful"
+        ],
+        [
+          "oħxon",
+          "thick / fat"
+        ],
+        [
+          "rqiq",
+          "thin / slim"
+        ],
+        [
+          "ħafif",
+          "light / not heavy"
+        ],
+        [
+          "gustuż / gustuża",
+          "charming; pleasant (of a person)"
+        ],
+        [
+          "mbaċċaċ / mbaċċa",
+          "chubby; plump (masculine / feminine)"
+        ],
+        [
+          "mgħieġed",
+          "wavy (hair)"
+        ],
+        [
+          "ruxxan / ruxxana",
+          "ruddy; flushed (of the face)"
+        ],
+        [
+          "suf",
+          "fur; wool"
+        ],
+        [
+          "ġinġer / ġinġrija",
+          "red-haired (masculine / feminine)"
+        ],
+        [
+          "bjond / bjonda",
+          "blond / blonde"
+        ],
+        [
+          "daqna",
+          "beard"
+        ],
+        [
+          "lixx",
+          "straight / smooth (hair)"
+        ],
+        [
+          "mustaċċi",
+          "moustache"
+        ],
+        [
+          "nokkli / innukklat",
+          "curls / curly (hair)"
+        ],
+        [
+          "nuċċali",
+          "glasses / spectacles"
+        ],
+        [
+          "samrani / samranija",
+          "darkish / brownish (complexion)"
+        ],
+        [
+          "skur",
+          "dark-coloured"
+        ],
+        [
+          "tawwali",
+          "oblong / elongated (face)"
+        ],
+        [
+          "tond / tonda",
+          "round"
+        ],
+        [
+          "ċari",
+          "light-coloured (plural)"
+        ],
+        [
+          "mielaħ",
+          "salty"
+        ],
+        [
+          "maħruq",
+          "burnt, masculine singular"
+        ],
+        [
+          "riħa",
+          "smell / scent"
+        ],
+        [
+          "imqarrun",
+          "macaroni"
+        ],
+        [
+          "dixx",
+          "dish / tray"
+        ],
+        [
+          "tazza",
+          "cup / glass"
         ],
         [
           "kartuna bajd",
@@ -1998,6 +2306,10 @@
           "bottle of red wine"
         ],
         [
+          "nixtru",
+          "we buy"
+        ],
+        [
           "zokkor",
           "sugar"
         ],
@@ -2012,6 +2324,118 @@
         [
           "torta",
           "pie"
+        ],
+        [
+          "ikel",
+          "food"
+        ],
+        [
+          "brodu",
+          "broth"
+        ],
+        [
+          "minestra",
+          "vegetable soup"
+        ],
+        [
+          "tfuħ",
+          "is fragrant; smells pleasant (feminine subject)"
+        ],
+        [
+          "tiġieġ bil-patata l-forn",
+          "roast chicken with potatoes"
+        ],
+        [
+          "kaboċċa",
+          "a cabbage"
+        ],
+        [
+          "pastarda",
+          "a cauliflower"
+        ],
+        [
+          "qarabagħli",
+          "marrows / courgettes"
+        ],
+        [
+          "ħassa",
+          "a lettuce"
+        ],
+        [
+          "ġidra",
+          "kohlrabi"
+        ],
+        [
+          "brunġiel",
+          "aubergines / eggplant"
+        ],
+        [
+          "tuffieħ",
+          "apples"
+        ],
+        [
+          "larinġ",
+          "oranges"
+        ],
+        [
+          "frawli",
+          "strawberries"
+        ],
+        [
+          "minerali",
+          "soft drinks (shopping context)"
+        ],
+        [
+          "inbid",
+          "wine"
+        ],
+        [
+          "meraq tal-frott",
+          "fruit juice"
+        ],
+        [
+          "luminata",
+          "lemonade"
+        ],
+        [
+          "birra",
+          "beer"
+        ],
+        [
+          "larinġa magħsura",
+          "squeezed orange juice"
+        ],
+        [
+          "ġobon tat-toqba",
+          "cheese with holes"
+        ],
+        [
+          "ġobon tal-bżar",
+          "peppered cheese"
+        ],
+        [
+          "ġobon tat-tursina",
+          "blue-type / blue-veined cheese"
+        ],
+        [
+          "ġobon maħkuk",
+          "grated cheese"
+        ],
+        [
+          "ġobon tal-qoxra ħamra",
+          "red-rind cheese"
+        ],
+        [
+          "bejken",
+          "bacon"
+        ],
+        [
+          "mortadella",
+          "mortadella"
+        ],
+        [
+          "salami",
+          "salami"
         ],
         [
           "borża",
@@ -2042,6 +2466,14 @@
           "wind"
         ],
         [
+          "mewġ",
+          "waves"
+        ],
+        [
+          "beraq",
+          "lightning"
+        ],
+        [
           "rebbiegħa",
           "spring"
         ],
@@ -2066,8 +2498,8 @@
           "by bus"
         ],
         [
-          "bil-karozza",
-          "by car"
+          "karozza / bil-karozza",
+          "car / by car"
         ],
         [
           "bir-rota",
@@ -2078,8 +2510,8 @@
           "by ferry"
         ],
         [
-          "bit-taxi",
-          "by taxi"
+          "taxi / bit-taxi",
+          "taxi / by taxi"
         ],
         [
           "vapur",
@@ -2094,12 +2526,24 @@
           "motorcycle / scooter"
         ],
         [
+          "biljett",
+          "ticket"
+        ],
+        [
           "bejn",
           "between"
         ],
         [
           "f'nofs / fin-nofs",
           "in the middle / centre"
+        ],
+        [
+          "qalb",
+          "among; amid"
+        ],
+        [
+          "ġo",
+          "inside; in"
         ],
         [
           "spiżerija",
@@ -2120,6 +2564,26 @@
         [
           "pjazza",
           "square / piazza"
+        ],
+        [
+          "entratura",
+          "entrance"
+        ],
+        [
+          "kunsill lokali",
+          "local council"
+        ],
+        [
+          "park",
+          "park"
+        ],
+        [
+          "ħanut tal-ħwejjeġ",
+          "clothes shop"
+        ],
+        [
+          "ħanut taż-żebgħa",
+          "paint shop"
         ],
         [
           "lemin",
@@ -2164,6 +2628,30 @@
         [
           "faċċata ta'",
           "opposite"
+        ],
+        [
+          "eżatt",
+          "exactly / precisely"
+        ],
+        [
+          "isfel",
+          "down / below"
+        ],
+        [
+          "barra",
+          "outside"
+        ],
+        [
+          "jinsab / tinsab",
+          "is situated; is found (masculine / feminine)"
+        ],
+        [
+          "xi mkien",
+          "somewhere"
+        ],
+        [
+          "naħa",
+          "side"
         ],
         [
           "ferħan",
@@ -2220,6 +2708,10 @@
         [
           "rilassat",
           "relaxed"
+        ],
+        [
+          "għal qalb",
+          "dear to; cherished by"
         ],
         [
           "anzjuż",
@@ -2286,6 +2778,18 @@
           "worried"
         ],
         [
+          "għażżien",
+          "lazy"
+        ],
+        [
+          "inħossni",
+          "I feel"
+        ],
+        [
+          "niddejjaq",
+          "I get bored; I am bothered"
+        ],
+        [
           "post / postijiet",
           "place / places"
         ],
@@ -2318,6 +2822,50 @@
           "Ġgantija temple complex"
         ],
         [
+          "il-Barrakka ta' Fuq",
+          "Upper Barrakka Gardens"
+        ],
+        [
+          "katidral",
+          "cathedral"
+        ],
+        [
+          "konkatidral",
+          "co-cathedral"
+        ],
+        [
+          "lokalità",
+          "locality; town or village"
+        ],
+        [
+          "mappa",
+          "map"
+        ],
+        [
+          "palazz",
+          "palace"
+        ],
+        [
+          "postijiet ta' interess",
+          "places of interest"
+        ],
+        [
+          "raħal",
+          "village"
+        ],
+        [
+          "villa",
+          "villa"
+        ],
+        [
+          "ċittadella",
+          "citadel"
+        ],
+        [
+          "kappella",
+          "chapel"
+        ],
+        [
           "kaskata / kaskati",
           "waterfall / waterfalls"
         ],
@@ -2344,6 +2892,42 @@
         [
           "monument",
           "monument"
+        ],
+        [
+          "bajja",
+          "bay; beach"
+        ],
+        [
+          "grotta",
+          "grotto; cave"
+        ],
+        [
+          "ipoġew",
+          "hypogeum; underground burial complex"
+        ],
+        [
+          "port",
+          "harbour; port"
+        ],
+        [
+          "girna",
+          "traditional corbelled stone hut"
+        ],
+        [
+          "għalqa",
+          "field"
+        ],
+        [
+          "kampanja",
+          "countryside"
+        ],
+        [
+          "natura",
+          "nature"
+        ],
+        [
+          "ġebel",
+          "stones; stone (collective)"
         ],
         [
           "karnival",
@@ -2374,8 +2958,8 @@
           "music festival"
         ],
         [
-          "festival tal-birra",
-          "beer festival"
+          "festival / festival tal-birra",
+          "festival / beer festival"
         ],
         [
           "festival tal-inbid",
@@ -2388,6 +2972,14 @@
         [
           "tradizzjoni",
           "tradition"
+        ],
+        [
+          "avveniment",
+          "event"
+        ],
+        [
+          "kunċerti",
+          "concerts"
         ],
         [
           "qadim / qadima",
@@ -2416,6 +3008,162 @@
         [
           "għoli / għolja",
           "high / tall"
+        ],
+        [
+          "nazzjonali",
+          "national"
+        ],
+        [
+          "marbut",
+          "connected; linked"
+        ],
+        [
+          "tradizzjonali",
+          "traditional"
+        ],
+        [
+          "protett / protetta",
+          "protected"
+        ],
+        [
+          "banda",
+          "band"
+        ],
+        [
+          "briju",
+          "merriment; lively celebration"
+        ],
+        [
+          "festa",
+          "feast; village festival"
+        ],
+        [
+          "festa tal-mejtin",
+          "All Souls' Day"
+        ],
+        [
+          "Għid il-Kbir",
+          "Easter"
+        ],
+        [
+          "jitlob",
+          "he prays"
+        ],
+        [
+          "jiċċelebra",
+          "he celebrates"
+        ],
+        [
+          "marċ",
+          "march (music or procession)"
+        ],
+        [
+          "Milied",
+          "Christmas"
+        ],
+        [
+          "patrun",
+          "patron (of a place or community)"
+        ],
+        [
+          "purċissjoni",
+          "procession"
+        ],
+        [
+          "qaddis",
+          "saint"
+        ],
+        [
+          "qaddis patrun",
+          "patron saint"
+        ],
+        [
+          "rużarju",
+          "rosary"
+        ],
+        [
+          "talb",
+          "prayer; prayers"
+        ],
+        [
+          "vara",
+          "processional statue"
+        ],
+        [
+          "Ġimgħa l-Kbira",
+          "Good Friday"
+        ],
+        [
+          "bandalori",
+          "decorative banners"
+        ],
+        [
+          "murtali / murtali tal-kulur",
+          "aerial fireworks; coloured firework shells"
+        ],
+        [
+          "nar",
+          "fire; fireworks in a feast context"
+        ],
+        [
+          "pavaljuni",
+          "decorative cloth street drapes"
+        ],
+        [
+          "tiżjin",
+          "decorations"
+        ],
+        [
+          "ġigġifogu",
+          "mechanical ground fireworks"
+        ],
+        [
+          "figolli",
+          "almond-filled Easter biscuits"
+        ],
+        [
+          "għadam tal-mejtin",
+          "bone-shaped almond sweets"
+        ],
+        [
+          "ikel tradizzjonali",
+          "traditional food"
+        ],
+        [
+          "imbuljuta",
+          "spiced chestnut and chocolate drink"
+        ],
+        [
+          "karamelli",
+          "hard sweets"
+        ],
+        [
+          "kwareżimal",
+          "traditional Lenten almond biscuits"
+        ],
+        [
+          "qagħaq tal-Appostli",
+          "traditional Easter bread rings"
+        ],
+        [
+          "qagħaq tal-għasel",
+          "treacle rings; honey rings"
+        ],
+        [
+          "qastan",
+          "chestnuts"
+        ],
+        [
+          "qubbajt",
+          "nougat"
+        ],
+        [
+          "żeppoli / sfineġ ta' San Ġużepp",
+          "St Joseph's fritters"
+        ],
+        [
+          "issir / isir",
+          "is held / takes place"
         ],
         [
           "aħna",
@@ -2554,6 +3302,46 @@
           "I sleep"
         ],
         [
+          "iġib",
+          "he brings"
+        ],
+        [
+          "ngħin",
+          "I help"
+        ],
+        [
+          "nibqa'",
+          "I stay; I remain"
+        ],
+        [
+          "rieqed",
+          "asleep; sleeping (masculine)"
+        ],
+        [
+          "tnaddaf",
+          "you clean; she cleans"
+        ],
+        [
+          "xogħol",
+          "work; job"
+        ],
+        [
+          "drawwa",
+          "habit / custom"
+        ],
+        [
+          "tqatta' ħin",
+          "she spends time"
+        ],
+        [
+          "kmieni",
+          "early"
+        ],
+        [
+          "spiss",
+          "often"
+        ],
+        [
           "griżmejn",
           "throat"
         ],
@@ -2574,6 +3362,94 @@
           "cough"
         ],
         [
+          "aptit",
+          "appetite"
+        ],
+        [
+          "darsa / dras",
+          "molar / molars"
+        ],
+        [
+          "mħassar / mħassra",
+          "decayed (of a tooth); damaged"
+        ],
+        [
+          "Ajma!",
+          "Ouch!"
+        ],
+        [
+          "M'għandix aptit",
+          "I have no appetite"
+        ],
+        [
+          "pazjent / pazjenta",
+          "patient"
+        ],
+        [
+          "pilloli",
+          "pills / tablets"
+        ],
+        [
+          "riċetta",
+          "prescription"
+        ],
+        [
+          "tabib / tabiba",
+          "doctor"
+        ],
+        [
+          "tibla'",
+          "you swallow (singular)"
+        ],
+        [
+          "tuġagħni",
+          "it hurts me (feminine subject)"
+        ],
+        [
+          "Tweġġa' meta tibla'?",
+          "Do you feel pain when you swallow?"
+        ],
+        [
+          "vitamini",
+          "vitamins"
+        ],
+        [
+          "Xi ġralek?",
+          "What happened to you?"
+        ],
+        [
+          "Ħa nara",
+          "Let me see"
+        ],
+        [
+          "b'saħħtu",
+          "healthy / strong"
+        ],
+        [
+          "bla saħħa",
+          "weak / lacking strength"
+        ],
+        [
+          "infjammati",
+          "inflamed (plural)"
+        ],
+        [
+          "marid",
+          "ill / sick"
+        ],
+        [
+          "miksura",
+          "broken (feminine)"
+        ],
+        [
+          "misluħa",
+          "grazed / scraped (skin; feminine)"
+        ],
+        [
+          "muġugħ",
+          "in pain"
+        ],
+        [
           "menu",
           "menu"
         ],
@@ -2582,12 +3458,80 @@
           "dish / plate"
         ],
         [
+          "sarvetta",
+          "napkin"
+        ],
+        [
           "kont",
           "bill"
         ],
         [
           "riżervazzjoni",
           "reservation"
+        ],
+        [
+          "kafè iswed",
+          "black coffee"
+        ],
+        [
+          "kafè bil-ħalib",
+          "coffee with milk"
+        ],
+        [
+          "kafè latte",
+          "caffè latte"
+        ],
+        [
+          "kapuċċino",
+          "cappuccino"
+        ],
+        [
+          "espresso",
+          "espresso"
+        ],
+        [
+          "kafè Amerikan",
+          "Americano"
+        ],
+        [
+          "ħalib sħiħ",
+          "full-fat milk"
+        ],
+        [
+          "ħalib xkumat",
+          "skimmed milk"
+        ],
+        [
+          "ħalib tal-ħafur",
+          "oat milk"
+        ],
+        [
+          "ħalib tal-lewż",
+          "almond milk"
+        ],
+        [
+          "zokkor abjad",
+          "white sugar"
+        ],
+        [
+          "zokkor ismar",
+          "brown sugar"
+        ],
+        [
+          "kejk tal-lumi",
+          "lemon cake"
+        ],
+        [
+          "kejk taċ-ċikkulata",
+          "chocolate cake"
+        ],
+        [
+          "torta tat-tuffieħ",
+          "apple pie / tart"
+        ],
+        [
+          "kannoli tal-irkotta",
+          "ricotta-filled cannoli"
         ],
         [
           "problema",
@@ -2612,6 +3556,30 @@
         [
           "stressjat / stressjata",
           "stressed"
+        ],
+        [
+          "għajjat",
+          "shouting (noun)"
+        ],
+        [
+          "tilwima",
+          "dispute / argument"
+        ],
+        [
+          "ġlieda",
+          "fight / quarrel"
+        ],
+        [
+          "xhud",
+          "witness"
+        ],
+        [
+          "qorti",
+          "law court"
+        ],
+        [
+          "ġirien",
+          "neighbours"
         ],
         [
           "nista'",
@@ -2642,6 +3610,14 @@
           "it is necessary / need"
         ],
         [
+          "se jkolli",
+          "I will have to"
+        ],
+        [
+          "jogħġobni / togħġobni / jogħġbuni",
+          "I like it; I like them"
+        ],
+        [
           "ma nistax",
           "I cannot"
         ],
@@ -2660,6 +3636,14 @@
         [
           "ma jmissnix",
           "I should not"
+        ],
+        [
+          "ma tantx",
+          "not much / not very"
+        ],
+        [
+          "għalhekk",
+          "therefore; that is why"
         ],
         [
           "ikbar",
@@ -2684,6 +3668,18 @@
         [
           "inqas",
           "less"
+        ],
+        [
+          "bil-qawwi",
+          "loudly; strongly"
+        ],
+        [
+          "ferm",
+          "very; greatly"
+        ],
+        [
+          "wisq",
+          "too; too much"
         ],
         [
           "tuffieħa -> tuffieħ",

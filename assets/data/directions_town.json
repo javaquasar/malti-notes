@@ -126,6 +126,69 @@
           },
           "imageQuizEligible": false,
           "imageRole": "context"
+        },
+        {
+          "slug": "entratura",
+          "maltese": "entratura",
+          "english": "entrance",
+          "example": "L-entratura qiegħda ħdejn il-ġnien.",
+          "exampleTranslation": "The entrance is next to the garden.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "forn-bakery",
+          "maltese": "forn",
+          "english": "bakery",
+          "example": "Il-forn jinsab ħdejn il-posta.",
+          "exampleTranslation": "The bakery is next to the post office.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Town-place sense; distinguish from forn, oven."
+          ]
+        },
+        {
+          "slug": "kunsill-lokali",
+          "maltese": "kunsill lokali",
+          "english": "local council",
+          "example": "Il-kunsill lokali jinsab ħdejn il-pjazza.",
+          "exampleTranslation": "The local council is next to the square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "park",
+          "maltese": "park",
+          "english": "park",
+          "example": "It-tfal jilagħbu fil-park.",
+          "exampleTranslation": "The children play in the park.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "hanut-tal-hwejjeg",
+          "maltese": "ħanut tal-ħwejjeġ",
+          "english": "clothes shop",
+          "example": "Il-ħanut tal-ħwejjeġ ħdejn il-pjazza.",
+          "exampleTranslation": "The clothes shop is next to the square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "hanut-taz-zebgha",
+          "maltese": "ħanut taż-żebgħa",
+          "english": "paint shop",
+          "example": "Il-ħanut taż-żebgħa jinsab faċċata tal-bank.",
+          "exampleTranslation": "The paint shop is opposite the bank.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -147,7 +210,13 @@
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/27A1.svg"
           },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "context",
+          "notes": [
+            "fuq il-lemin: on the right."
+          ],
+          "example": "Il-ġnien qiegħed fuq il-lemin.",
+          "exampleTranslation": "The garden is on the right.",
+          "exampleSource": "original site-authored example"
         },
         {
           "slug": "xellug",
@@ -161,7 +230,13 @@
             "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/2B05.svg"
           },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "context",
+          "notes": [
+            "fuq ix-xellug: on the left."
+          ],
+          "example": "Il-ħanut qiegħed fuq ix-xellug.",
+          "exampleTranslation": "The shop is on the left.",
+          "exampleSource": "original site-authored example"
         },
         {
           "slug": "salib-it-toroq",
@@ -285,7 +360,73 @@
           "maltese": "faċċata ta'",
           "english": "opposite",
           "imageQuizEligible": false,
-          "imageRole": "none"
+          "imageRole": "none",
+          "notes": [
+            "faċċata: opposite, used with ta' before a place."
+          ],
+          "example": "Il-ħanut jinsab faċċata tal-knisja.",
+          "exampleTranslation": "The shop is opposite the church.",
+          "exampleSource": "original site-authored example"
+        },
+        {
+          "slug": "ezatt",
+          "maltese": "eżatt",
+          "english": "exactly / precisely",
+          "example": "Fejn eżatt hija l-iskola?",
+          "exampleTranslation": "Where exactly is the school?",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "isfel",
+          "maltese": "isfel",
+          "english": "down / below",
+          "example": "Isfel hemm il-ġnien.",
+          "exampleTranslation": "The garden is down below.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "barra",
+          "maltese": "barra",
+          "english": "outside",
+          "example": "Il-kelb qiegħed barra.",
+          "exampleTranslation": "The dog is outside.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "jinsab",
+          "maltese": "jinsab / tinsab",
+          "english": "is situated; is found (masculine / feminine)",
+          "example": "Il-ġnien jinsab ħdejn il-knisja.",
+          "exampleTranslation": "The garden is situated next to the church.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "xi-mkien",
+          "maltese": "xi mkien",
+          "english": "somewhere",
+          "example": "Irrid immur xi mkien kwiet.",
+          "exampleTranslation": "I want to go somewhere quiet.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "naha",
+          "maltese": "naħa",
+          "english": "side",
+          "example": "Il-ħanut fuq in-naħa tax-xellug.",
+          "exampleTranslation": "The shop is on the left-hand side.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     }

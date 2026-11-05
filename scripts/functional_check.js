@@ -42,9 +42,9 @@ const vocabularyCardPages = fs.readdirSync(root)
   .sort();
 
 const courseTopicPages = [
-  { pageName: "introductions_alphabet.html", groupSelector: "[data-introduction-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 },
-  { pageName: "school_classroom.html", groupSelector: "[data-school-group]", groupCount: 2, exerciseSetCount: 2, contextLinkCount: 2 },
-  { pageName: "hobbies_future.html", groupSelector: "[data-hobby-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 },
+  { pageName: "introductions_alphabet.html", groupSelector: "[data-introduction-group]", groupCount: 3, exerciseSetCount: 1, contextLinkCount: 1 },
+  { pageName: "school_classroom.html", groupSelector: "[data-school-group]", groupCount: 4, exerciseSetCount: 2, contextLinkCount: 2 },
+  { pageName: "hobbies_future.html", groupSelector: "[data-hobby-group]", groupCount: 8, exerciseSetCount: 1, contextLinkCount: 1 },
   { pageName: "environment_recycling.html", groupSelector: "[data-recycling-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 }
 ];
 
@@ -554,7 +554,7 @@ async function main() {
       assert(await page.locator("[data-content-id]:visible").count() === 2, "B1 introductions did not keep the two mapped adjective cards.");
       assert((await page.locator("[data-course-scope-status]").textContent()).includes("4 chapter targets"), "Shared-card target count is missing.");
       await page.locator('[data-course-view="all"]').click();
-      assert(await page.locator("[data-content-id]:visible").count() === 13, "B1 introductions full view was not restored.");
+      assert(await page.locator("[data-content-id]:visible").count() === 14, "B1 introductions full view was not restored.");
 
       await page.goto(`${baseUrl}/numbers_calendar_time.html?course=b2&chapter=b2-imperative&step=2&view=chapter`, { waitUntil: "networkidle" });
       await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
@@ -1513,7 +1513,7 @@ async function main() {
       const emotionQuestions = page.locator('[data-example-group="emotions-qa"]');
       const emotionCards = emotionQuestions.locator(":scope > .qa-pair-card");
       assert(await emotionCards.count() === 6, "Emotion questions did not render all typed Q&A pairs.");
-      assert(await page.locator('[data-example-group="emotions-situations"] > article').count() === 6, "Emotion situations did not render all typed examples.");
+      assert(await page.locator('[data-example-group="emotions-situations"] > article').count() === 7, "Emotion situations did not render all typed examples.");
       assert(await page.locator('[data-example-group="emotions-pair-work"] > article').count() === 5, "Emotion pair-work questions did not render all typed prompts.");
       assert(await page.locator('[data-example-group="emotions-individual-speaking"] > article').count() === 4, "Emotion speaking models did not render all typed examples.");
       const calmQuestion = emotionCards.nth(1);
@@ -1651,29 +1651,70 @@ async function main() {
         await openCleanPage(page, pageName);
         const result = await page.locator("[data-example-group], [data-question-group]").evaluateAll((containers) => {
           const customProblems = [];
-          let customItems = 0;
-          containers.filter(container => container.hasAttribute("data-bank-layout")).forEach(container => {
+          let cards = 0;
+          let toggles = 0;
+          const problem = (container, message) => customProblems.push(`${container.dataset.exampleGroup || container.dataset.questionGroup}: ${message}`);
+          containers.forEach(container => {
             const layout = container.dataset.bankLayout;
             const children = Array.from(container.children);
-            customItems += children.length;
-            if (layout === "trainer") {
-              if (!Array.from(container.querySelectorAll("button")).some(button => /question.*review/i.test(button.textContent))) customProblems.push("Trainer review action missing");
-            } else if (layout === "contrast") {
-              if (!children.length || children.some(child => !child.querySelector("s") || !child.querySelector("strong"))) customProblems.push("Correction sides missing");
-            } else if (["table", "reading", "comprehension"].includes(layout)) {
-              if (!children.length || children.some(child => child.querySelectorAll(".review-add-button--icon").length !== 1)) customProblems.push(`${layout} needs one bookmark per item`);
-            } else customProblems.push(`Unknown bank layout: ${layout}`);
+            if (layout === 'trainer') {
+              // A trainer mounts one exercise plus controls, not one card per child.
+              if (container.querySelectorAll('.exercise-set').length !== 1
+                  || Array.from(container.querySelectorAll('button')).filter(button => /save question to review/i.test(button.textContent)).length !== 1) {
+                problem(container, 'Trainer exercise or question review action missing');
+              }
+              return;
+            }
+            if (layout && !['table', 'contrast', 'reading', 'comprehension'].includes(layout)) {
+              problem(container, `Unknown bank layout: ${layout}`);
+              return;
+            }
+            // topic-practice.js explicitly passes individualReviewGroups: [] here.
+            // Validate that deliberate read-only presentation instead of counting it as saved-card UI.
+            if (container.matches('[data-listening-bank="tonina-listening-questions"]')
+                && container.closest('[data-tonina-listening]')) {
+              if (!children.length || children.some(child => !child.matches('article[data-bank-item]')
+                  || !child.querySelector('[data-bank-primary]')
+                  || child.querySelector('.review-add-button')
+                  || child.classList.contains('sentence-card--review-toggle'))) {
+                problem(container, 'Listening prompts must remain typed reading items without review controls');
+              }
+              return;
+            }
+            if (!children.length) problem(container, 'No bank items rendered');
+            children.forEach(card => {
+              // Typed specialized items use stable identities; ordinary bank cards are articles.
+              // Unknown wrappers are errors, so a missing bookmark cannot disappear from the denominator.
+              if (!card.matches('article, details[data-bank-item], tr[data-bank-item]')
+                  && !(container.hasAttribute('data-question-group') && card.tagName === 'DIV')) {
+                problem(container, `Unexpected bank child: ${card.tagName.toLowerCase()}`);
+                return;
+              }
+              cards += 1;
+              const buttons = card.querySelectorAll('.review-add-button--icon');
+              let valid = buttons.length === 1 && !!buttons[0].dataset.reviewId;
+              if (card.matches('details[data-bank-item]')) {
+                // selfAssessment places the bookmark beside reveal/rating controls inside the disclosure.
+                valid = valid && buttons[0].classList.contains('review-add-button--inline');
+                if (!card.querySelector(':scope > summary[lang="mt"]')
+                    || card.querySelectorAll('textarea[lang="mt"]').length !== 1
+                    || card.querySelectorAll('.action-button[aria-pressed]').length !== 2
+                    || Array.from(card.querySelectorAll('button')).filter(button => /show model answer/i.test(button.textContent)).length !== 1) {
+                  problem(container, 'Self-assessment prompt, draft or model/rating controls missing');
+                }
+              } else if (card.tagName === 'TR') {
+                valid = valid && buttons[0].classList.contains('review-add-button--inline');
+              } else {
+                valid = valid && card.classList.contains('sentence-card--review-toggle');
+              }
+              if (valid) toggles += 1;
+              if (layout === 'table' && card.tagName !== 'TR') problem(container, 'Table needs typed rows');
+              if (layout === 'contrast' && (!card.querySelector('s') || !card.querySelector('strong'))) problem(container, 'Correction sides missing');
+              if (layout === 'reading' && !card.querySelector('[data-bank-primary]')) problem(container, 'Reading primary text missing');
+              if (layout === 'comprehension' && !card.matches('details[data-bank-item]')) problem(container, 'Comprehension needs self-assessment items');
+            });
           });
-          const renderedCards = containers.filter((container) => !container.hasAttribute("data-bank-layout"))
-            .flatMap((container) => Array.from(container.children));
-          return {
-            customProblems,
-            cards: renderedCards.length + customItems,
-            toggles: renderedCards.filter((card) => (
-              card.classList.contains("sentence-card--review-toggle")
-              && card.querySelector(".review-add-button--icon")
-            )).length + customItems
-          };
+          return { customProblems, cards, toggles };
         });
         assert(result.cards > 0, `${pageName} rendered no reviewable bank items.`);
         assert(result.customProblems.length === 0, `${pageName}: ${result.customProblems.join(", ")}`);

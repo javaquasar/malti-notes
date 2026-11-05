@@ -282,6 +282,16 @@
           "example": "X'jagħmlek rilassat / rilassata?",
           "exampleTranslation": "What makes you feel relaxed?",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "ghal-qalb",
+          "maltese": "għal qalb",
+          "english": "dear to; cherished by",
+          "example": "Din it-tradizzjoni hija għal qalb il-familja.",
+          "exampleTranslation": "This tradition is dear to the family.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -601,6 +611,96 @@
           "exampleSource": "topic example bank"
         }
       ]
+    },
+    {
+      "id": "personal-states",
+      "sectionId": "personal-states",
+      "sectionTitle": "Personal states",
+      "title": "Personal states",
+      "items": [
+        {
+          "slug": "ghazzien",
+          "maltese": "għażżien",
+          "english": "lazy",
+          "example": "Illum inħossni għażżien.",
+          "exampleTranslation": "Today I feel lazy.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: għażżiena",
+            "plural: għażżenin"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "għażżiena",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "għażżien"
+            },
+            "plural": {
+              "value": "għażżenin",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "għażżien"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "feeling-language",
+      "sectionId": "feeling-language",
+      "sectionTitle": "Talking about feelings",
+      "title": "Talking about feelings",
+      "items": [
+        {
+          "slug": "inhossni",
+          "maltese": "inħossni",
+          "english": "I feel",
+          "example": "Illum inħossni kalm.",
+          "exampleTranslation": "Today I feel calm.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Used when describing your own feeling or condition."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emotion-actions",
+      "sectionId": "emotion-actions",
+      "sectionTitle": "Talking about enjoyment",
+      "title": "Talking about enjoyment",
+      "items": [
+        {
+          "slug": "niddejjaq",
+          "maltese": "niddejjaq",
+          "english": "I get bored; I am bothered",
+          "example": "Niddejjaq meta ma jkolli x'nagħmel.",
+          "exampleTranslation": "I get bored when I have nothing to do.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "ma niddejjaqx can mean I do not mind, depending on context."
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "verificationSources": {
+    "lexical-review-2026-11-05": {
+      "title": "Proofread lexical evidence and form review",
+      "kind": "editorial-lexical-review",
+      "evidence": "docs/analysis/b3-vocabulary-intake.json",
+      "method": "Forms checked against the proofread lexical inventory; additional primary-source reviews are recorded in the evidence manifest.",
+      "checkedOn": "2026-11-05",
+      "scope": "Explicit morphology notes only; not certification of the complete authored examples."
+    }
+  }
 }

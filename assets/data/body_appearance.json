@@ -94,7 +94,7 @@
         },
         {
           "slug": "fomm",
-          "maltese": "fomm",
+          "maltese": "fomm / ħalq",
           "english": "mouth",
           "example": "Nara fomm.",
           "review": {
@@ -196,6 +196,94 @@
           "imageRole": "context",
           "exampleTranslation": "I have short hair.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "driegh",
+          "maltese": "driegħ",
+          "english": "arm",
+          "example": "Id-driegħ tiegħi twil.",
+          "exampleTranslation": "My arm is long.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "irkoppa",
+          "maltese": "irkoppa",
+          "english": "knee",
+          "example": "Għandi uġigħ fl-irkoppa.",
+          "exampleTranslation": "I have pain in my knee.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "rigel",
+          "maltese": "riġel",
+          "english": "leg",
+          "example": "Ir-riġel tiegħi twil.",
+          "exampleTranslation": "My leg is long.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Distinguish riġel (leg) from sieq (foot)."
+          ]
+        },
+        {
+          "slug": "saba",
+          "maltese": "saba'",
+          "english": "finger",
+          "example": "Dan is-saba' qasir.",
+          "exampleTranslation": "This finger is short.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "sider",
+          "maltese": "sider",
+          "english": "chest",
+          "example": "Għandi uġigħ f'sidri.",
+          "exampleTranslation": "I have pain in my chest.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "stonku",
+          "maltese": "stonku",
+          "english": "stomach (organ)",
+          "example": "Għandi uġigħ fl-istonku.",
+          "exampleTranslation": "I have a stomach ache.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "The stomach as an organ; żaqq is used for the belly or abdomen."
+          ]
+        },
+        {
+          "slug": "xoffa",
+          "maltese": "xoffa",
+          "english": "lip",
+          "example": "Il-kulur tax-xoffa huwa aħmar.",
+          "exampleTranslation": "The colour of the lip is red.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "dual: xofftejn"
+          ],
+          "verifiedClaims": {
+            "dual": {
+              "value": "xofftejn",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "xoffa"
+            }
+          }
         }
       ]
     },
@@ -288,8 +376,359 @@
           "imageRole": "none",
           "exampleTranslation": "She is beautiful.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "ohxon",
+          "maltese": "oħxon",
+          "english": "thick / fat",
+          "example": "Dan il-ktieb oħxon.",
+          "exampleTranslation": "This book is thick.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: ħoxna",
+            "plural: ħoxnin"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "ħoxna",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "oħxon"
+            },
+            "plural": {
+              "value": "ħoxnin",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "oħxon"
+            }
+          }
+        },
+        {
+          "slug": "rqiq",
+          "maltese": "rqiq",
+          "english": "thin / slim",
+          "example": "Hu rqiq.",
+          "exampleTranslation": "He is slim.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: rqiqa",
+            "plural: rqaq"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "rqiqa",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "rqiq"
+            },
+            "plural": {
+              "value": "rqaq",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "rqiq"
+            }
+          }
+        },
+        {
+          "slug": "hafif",
+          "maltese": "ħafif",
+          "english": "light / not heavy",
+          "example": "Il-ktieb ħafif.",
+          "exampleTranslation": "The book is light.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: ħafifa",
+            "plural: ħfief"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "ħafifa",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "ħafif"
+            },
+            "plural": {
+              "value": "ħfief",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "ħafif"
+            }
+          }
+        },
+        {
+          "slug": "gustuz",
+          "maltese": "gustuż / gustuża",
+          "english": "charming; pleasant (of a person)",
+          "example": "Oħti gustuża ħafna.",
+          "exampleTranslation": "My sister is very charming.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mbaccac",
+          "maltese": "mbaċċaċ / mbaċċa",
+          "english": "chubby; plump (masculine / feminine)",
+          "example": "It-tifel mbaċċaċ.",
+          "exampleTranslation": "The boy is chubby.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mghieged",
+          "maltese": "mgħieġed",
+          "english": "wavy (hair)",
+          "example": "Oħti għandha xagħar mgħieġed.",
+          "exampleTranslation": "My sister has wavy hair.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "ruxxan",
+          "maltese": "ruxxan / ruxxana",
+          "english": "ruddy; flushed (of the face)",
+          "example": "Wiċċu ruxxan.",
+          "exampleTranslation": "His face is flushed.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Describes a ruddy or flushed face."
+          ]
+        },
+        {
+          "slug": "suf",
+          "maltese": "suf",
+          "english": "fur; wool",
+          "example": "Il-qattus għandu suf artab.",
+          "exampleTranslation": "The cat has soft fur.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Fur of an animal; also wool, as in clothing."
+          ]
+        },
+        {
+          "slug": "ginger",
+          "maltese": "ġinġer / ġinġrija",
+          "english": "red-haired (masculine / feminine)",
+          "example": "Ħija ġinġer.",
+          "exampleTranslation": "My brother is red-haired.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Describes red hair in a person; the feminine form is ġinġrija."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body-face-and-hair",
+      "sectionId": "body-face-and-hair",
+      "sectionTitle": "Face and hair",
+      "title": "Face and hair",
+      "items": [
+        {
+          "slug": "bjond",
+          "maltese": "bjond / bjonda",
+          "english": "blond / blonde",
+          "example": "Hu bjond u għandu xagħru qasir.",
+          "exampleTranslation": "He is blond and has short hair.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "masculine: bjond",
+            "feminine: bjonda"
+          ],
+          "verifiedClaims": {
+            "masculine": {
+              "value": "bjond",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "bjond"
+            },
+            "feminine": {
+              "value": "bjonda",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "bjond"
+            }
+          }
+        },
+        {
+          "slug": "daqna",
+          "maltese": "daqna",
+          "english": "beard",
+          "example": "Ħija għandu daqna qasira.",
+          "exampleTranslation": "My brother has a short beard.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "lixx",
+          "maltese": "lixx",
+          "english": "straight / smooth (hair)",
+          "example": "Xagħri lixx u qasir.",
+          "exampleTranslation": "My hair is straight and short.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mustacci",
+          "maltese": "mustaċċi",
+          "english": "moustache",
+          "example": "Hu għandu l-mustaċċi.",
+          "exampleTranslation": "He has a moustache.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A plural-form noun in Maltese."
+          ]
+        },
+        {
+          "slug": "nokkli",
+          "maltese": "nokkli / innukklat",
+          "english": "curls / curly (hair)",
+          "example": "Għandu xagħar innukklat.",
+          "exampleTranslation": "He has curly hair.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Nokkli can also refer to curls. Innukklat describes hair with curls."
+          ]
+        },
+        {
+          "slug": "nuccali",
+          "maltese": "nuċċali",
+          "english": "glasses / spectacles",
+          "example": "Nilbes nuċċali kuljum.",
+          "exampleTranslation": "I wear glasses every day.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "samrani",
+          "maltese": "samrani / samranija",
+          "english": "darkish / brownish (complexion)",
+          "example": "Hu samrani.",
+          "exampleTranslation": "He has a darkish complexion.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Use here for a brownish or darkish complexion."
+          ]
+        },
+        {
+          "slug": "skur",
+          "maltese": "skur",
+          "english": "dark-coloured",
+          "example": "Xagħru skur.",
+          "exampleTranslation": "His hair is dark.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "plural: skuri"
+          ],
+          "verifiedClaims": {
+            "plural": {
+              "value": "skuri",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "skur"
+            }
+          }
+        },
+        {
+          "slug": "tawwali",
+          "maltese": "tawwali",
+          "english": "oblong / elongated (face)",
+          "example": "Wiċċu tawwali.",
+          "exampleTranslation": "His face is oblong.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "tond",
+          "maltese": "tond / tonda",
+          "english": "round",
+          "example": "Wiċċi tond.",
+          "exampleTranslation": "My face is round.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "masculine: tond",
+            "feminine: tonda"
+          ],
+          "verifiedClaims": {
+            "masculine": {
+              "value": "tond",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "tond"
+            },
+            "feminine": {
+              "value": "tonda",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "tond"
+            }
+          }
+        },
+        {
+          "slug": "cari",
+          "maltese": "ċari",
+          "english": "light-coloured (plural)",
+          "example": "Għajnejh ċari.",
+          "exampleTranslation": "His eyes are light-coloured.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Plural adjective form, as used with għajnejn (eyes)."
+          ]
         }
       ]
     }
-  ]
+  ],
+  "verificationSources": {
+    "lexical-review-2026-11-05": {
+      "title": "Proofread lexical evidence and form review",
+      "kind": "editorial-lexical-review",
+      "evidence": "docs/analysis/b3-vocabulary-intake.json",
+      "method": "Forms checked against the proofread lexical inventory; additional primary-source reviews are recorded in the evidence manifest.",
+      "checkedOn": "2026-11-05",
+      "scope": "Explicit morphology notes only; not certification of the complete authored examples."
+    }
+  }
 }

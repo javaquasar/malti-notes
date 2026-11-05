@@ -96,8 +96,398 @@
           "example": "A: Għandi sogħla.",
           "exampleTranslation": "A: I have a cough.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "aptit",
+          "maltese": "aptit",
+          "english": "appetite",
+          "example": "Illum għandi aptit.",
+          "exampleTranslation": "Today I have an appetite.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "darsa",
+          "maltese": "darsa / dras",
+          "english": "molar / molars",
+          "example": "Id-dentist jeżamina d-dras.",
+          "exampleTranslation": "The dentist examines the molars.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "darsa: one molar; dras: molars."
+          ]
+        },
+        {
+          "slug": "mhassar",
+          "maltese": "mħassar / mħassra",
+          "english": "decayed (of a tooth); damaged",
+          "example": "Għandi sinna mħassra.",
+          "exampleTranslation": "I have a decayed tooth.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
+      ]
+    },
+    {
+      "id": "health-care-language",
+      "sectionId": "health-care-language",
+      "sectionTitle": "At the doctor",
+      "title": "At the doctor",
+      "items": [
+        {
+          "slug": "ajma",
+          "maltese": "Ajma!",
+          "english": "Ouch!",
+          "example": "Ajma, rasi!",
+          "exampleTranslation": "Ouch, my head!",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "m-ghandix-aptit",
+          "maltese": "M'għandix aptit",
+          "english": "I have no appetite",
+          "example": "Illum m'għandix aptit.",
+          "exampleTranslation": "I have no appetite today.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "pazjent",
+          "maltese": "pazjent / pazjenta",
+          "english": "patient",
+          "example": "Il-pazjent huwa għajjien.",
+          "exampleTranslation": "The patient is tired.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "masculine: pazjent",
+            "feminine: pazjenta",
+            "plural: pazjenti"
+          ],
+          "verifiedClaims": {
+            "masculine": {
+              "value": "pazjent",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "pazjent"
+            },
+            "feminine": {
+              "value": "pazjenta",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "pazjent"
+            },
+            "plural": {
+              "value": "pazjenti",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "pazjent"
+            }
+          }
+        },
+        {
+          "slug": "pilloli",
+          "maltese": "pilloli",
+          "english": "pills / tablets",
+          "example": "Il-pilloli qegħdin fil-kaxxa.",
+          "exampleTranslation": "The pills are in the box.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Plural form."
+          ]
+        },
+        {
+          "slug": "ricetta",
+          "maltese": "riċetta",
+          "english": "prescription",
+          "example": "Għandi riċetta mingħand it-tabib.",
+          "exampleTranslation": "I have a prescription from the doctor.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Medical meaning here; riċetta can also mean a cooking recipe."
+          ]
+        },
+        {
+          "slug": "tabib",
+          "maltese": "tabib / tabiba",
+          "english": "doctor",
+          "example": "It-tabib jaħdem filgħodu.",
+          "exampleTranslation": "The doctor works in the morning.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "masculine: tabib",
+            "feminine: tabiba",
+            "plural: tobba",
+            "Dott is a familiar form of address for a doctor.",
+            "Dott: a form of address, as in Grazzi, dott. (Thank you, doctor.)"
+          ],
+          "verifiedClaims": {
+            "masculine": {
+              "value": "tabib",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "tabib"
+            },
+            "feminine": {
+              "value": "tabiba",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "tabib"
+            },
+            "plural": {
+              "value": "tobba",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "tabib"
+            }
+          }
+        },
+        {
+          "slug": "tibla",
+          "maltese": "tibla'",
+          "english": "you swallow (singular)",
+          "example": "Int tibla' ftit ilma.",
+          "exampleTranslation": "You swallow a little water.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Also the third-person feminine singular form in other contexts."
+          ]
+        },
+        {
+          "slug": "tugaghni",
+          "maltese": "tuġagħni",
+          "english": "it hurts me (feminine subject)",
+          "example": "Illum tuġagħni rasi.",
+          "exampleTranslation": "My head hurts today.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Use with a feminine singular thing that hurts, for example rasi (my head)."
+          ]
+        },
+        {
+          "slug": "twegga",
+          "maltese": "Tweġġa' meta tibla'?",
+          "english": "Do you feel pain when you swallow?",
+          "example": "Tweġġa' meta tibla'?",
+          "exampleTranslation": "Does it hurt when you swallow?",
+          "exampleSource": "short context-qualified question",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "The full question addresses one person; tweġġa' alone can have different subjects."
+          ]
+        },
+        {
+          "slug": "vitamini",
+          "maltese": "vitamini",
+          "english": "vitamins",
+          "example": "Il-vitamini qegħdin fuq l-ixkaffa.",
+          "exampleTranslation": "The vitamins are on the shelf.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Plural form."
+          ]
+        },
+        {
+          "slug": "xi-gralek",
+          "maltese": "Xi ġralek?",
+          "english": "What happened to you?",
+          "example": "Xi ġralek, Pawlu?",
+          "exampleTranslation": "What happened to you, Pawlu?",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Ġralek includes the meaning happened to you."
+          ]
+        },
+        {
+          "slug": "ha-nara",
+          "maltese": "Ħa nara",
+          "english": "Let me see",
+          "example": "Ħa nara l-istampa.",
+          "exampleTranslation": "Let me see the picture.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
+      ]
+    },
+    {
+      "id": "health-condition-words",
+      "sectionId": "health-condition-words",
+      "sectionTitle": "Symptoms and conditions",
+      "title": "Symptoms and conditions",
+      "items": [
+        {
+          "slug": "b-sahhtu",
+          "maltese": "b'saħħtu",
+          "english": "healthy / strong",
+          "example": "Hu b'saħħtu u attiv.",
+          "exampleTranslation": "He is healthy and active.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: b'saħħitha",
+            "plural: b'saħħithom"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "b'saħħitha",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "b'saħħtu"
+            },
+            "plural": {
+              "value": "b'saħħithom",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "b'saħħtu"
+            }
+          }
+        },
+        {
+          "slug": "bla-sahha",
+          "maltese": "bla saħħa",
+          "english": "weak / lacking strength",
+          "example": "Illum inħossni bla saħħa.",
+          "exampleTranslation": "Today I feel weak.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "infjammati",
+          "maltese": "infjammati",
+          "english": "inflamed (plural)",
+          "example": "Il-griżmejn infjammati.",
+          "exampleTranslation": "The throat is inflamed.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Plural form; Maltese uses a plural-form noun griżmejn for the throat."
+          ]
+        },
+        {
+          "slug": "marid",
+          "maltese": "marid",
+          "english": "ill / sick",
+          "example": "Il-pazjent marid.",
+          "exampleTranslation": "The patient is ill.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: marida",
+            "plural: morda"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "marida",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "marid"
+            },
+            "plural": {
+              "value": "morda",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "marid"
+            }
+          }
+        },
+        {
+          "slug": "miksura",
+          "maltese": "miksura",
+          "english": "broken (feminine)",
+          "example": "Sieqi miksura.",
+          "exampleTranslation": "My foot is broken.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Feminine singular form."
+          ]
+        },
+        {
+          "slug": "misluha",
+          "maltese": "misluħa",
+          "english": "grazed / scraped (skin; feminine)",
+          "example": "Idi misluħa.",
+          "exampleTranslation": "My hand is grazed.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Grazed or scraped skin in this context; also sore or rubbed raw."
+          ]
+        },
+        {
+          "slug": "mugugh",
+          "maltese": "muġugħ",
+          "english": "in pain",
+          "example": "Illum inħossni muġugħ.",
+          "exampleTranslation": "Today I am in pain.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "rih-cold",
+          "maltese": "riħ",
+          "english": "a cold (illness)",
+          "example": "Għandi riħ illum.",
+          "exampleTranslation": "I have a cold today.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "The illness meaning; riħ also means wind in weather descriptions."
+          ]
         }
       ]
     }
-  ]
+  ],
+  "verificationSources": {
+    "lexical-review-2026-11-05": {
+      "title": "Proofread lexical evidence and form review",
+      "kind": "editorial-lexical-review",
+      "evidence": "docs/analysis/b3-vocabulary-intake.json",
+      "method": "Forms checked against the proofread lexical inventory; additional primary-source reviews are recorded in the evidence manifest.",
+      "checkedOn": "2026-11-05",
+      "scope": "Explicit morphology notes only; not certification of the complete authored examples."
+    }
+  }
 }

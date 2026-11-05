@@ -154,7 +154,10 @@
           "imageQuizEligible": false,
           "imageRole": "context",
           "exampleTranslation": "Sometimes I meet my friends.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "notes": [
+            "jiltaqa': he meets."
+          ]
         },
         {
           "slug": "noqghod",
@@ -218,6 +221,66 @@
           "imageRole": "context",
           "exampleTranslation": "Then I sleep early.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "igib",
+          "maltese": "iġib",
+          "english": "he brings",
+          "example": "Iġib il-kotba miegħu.",
+          "exampleTranslation": "He brings the books with him.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nghin",
+          "maltese": "ngħin",
+          "english": "I help",
+          "example": "Jien ngħin lill-familja.",
+          "exampleTranslation": "I help the family.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nibqa",
+          "maltese": "nibqa'",
+          "english": "I stay; I remain",
+          "example": "Illum nibqa' d-dar.",
+          "exampleTranslation": "Today I am staying at home.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "rieqed",
+          "maltese": "rieqed",
+          "english": "asleep; sleeping (masculine)",
+          "example": "Ħija għadu rieqed.",
+          "exampleTranslation": "My brother is still asleep.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "tnaddaf",
+          "maltese": "tnaddaf",
+          "english": "you clean; she cleans",
+          "example": "Hi tnaddaf il-mejda.",
+          "exampleTranslation": "She cleans the table.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "xoghol",
+          "maltese": "xogħol",
+          "english": "work; job",
+          "example": "Illum għandi ħafna xogħol.",
+          "exampleTranslation": "I have a lot of work today.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -231,6 +294,34 @@
       "items": [
         { "slug": "drawwa", "maltese": "drawwa", "english": "habit / custom", "example": "Il-qari huwa drawwa tajba.", "exampleTranslation": "Reading is a good habit.", "exampleSource": "editorial example using S12 glossary, not recorded wording", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "tqatta-hin", "maltese": "tqatta' ħin", "english": "she spends time", "note": "Here the subject is hi (she). This is spending time, not 'I read'; with kienet it can describe a past habit: 'she used to spend time'.", "example": "Hi tqatta' ħin mal-familja tagħha.", "exampleTranslation": "She spends time with her family.", "exampleSource": "editorial example using the expression discussed in tonina-deep-analysis.md, sections 5.1 and 6", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+      ]
+    },
+    {
+      "id": "daily-routine-time-words",
+      "sectionId": "daily-routine-time-words",
+      "sectionTitle": "Frequency words",
+      "title": "Frequency words",
+      "items": [
+        {
+          "slug": "kmieni",
+          "maltese": "kmieni",
+          "english": "early",
+          "example": "Għada nqum kmieni.",
+          "exampleTranslation": "Tomorrow I get up early.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "spiss",
+          "maltese": "spiss",
+          "english": "often",
+          "example": "Spiss nimxi mal-ħbieb.",
+          "exampleTranslation": "I often walk with friends.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
       ]
     }
   ]

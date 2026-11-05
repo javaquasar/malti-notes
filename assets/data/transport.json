@@ -48,12 +48,13 @@
         },
         {
           "slug": "bil-karozza",
-          "maltese": "bil-karozza",
-          "english": "by car",
+          "maltese": "karozza / bil-karozza",
+          "english": "car / by car",
           "image": "./assets/img/transport/car.svg",
           "imageAlt": "Car illustration",
           "notes": [
-            "Hu jmur ix-xogħol bil-karozza."
+            "Hu jmur ix-xogħol bil-karozza.",
+            "karozza: car; bil-karozza: by car."
           ],
           "example": "Hu jmur ix-xogħol bil-karozza.",
           "review": {
@@ -105,12 +106,13 @@
         },
         {
           "slug": "bit-taxi",
-          "maltese": "bit-taxi",
-          "english": "by taxi",
+          "maltese": "taxi / bit-taxi",
+          "english": "taxi / by taxi",
           "image": "./assets/img/transport/taxi.svg",
           "imageAlt": "Taxi illustration",
           "notes": [
-            "Bit-taxi tasal komdu u malajr."
+            "Bit-taxi tasal komdu u malajr.",
+            "taxi: taxi; bit-taxi: by taxi."
           ],
           "example": "Bit-taxi tasal komdu.",
           "review": {
@@ -193,6 +195,16 @@
           },
           "imageQuizEligible": false,
           "imageRole": "context"
+        },
+        {
+          "slug": "biljett",
+          "maltese": "biljett",
+          "english": "ticket",
+          "example": "Għandi biljett fil-but.",
+          "exampleTranslation": "I have a ticket in my pocket.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     }

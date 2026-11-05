@@ -122,6 +122,119 @@
           "imageRole": "none",
           "exampleTranslation": "Ġgantija is a big temple.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "il-barrakka-ta-fuq",
+          "maltese": "il-Barrakka ta' Fuq",
+          "english": "Upper Barrakka Gardens",
+          "example": "Qed inżur il-Barrakka ta' Fuq.",
+          "exampleTranslation": "I am visiting the Upper Barrakka Gardens.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A landmark in Valletta."
+          ]
+        },
+        {
+          "slug": "katidral",
+          "maltese": "katidral",
+          "english": "cathedral",
+          "example": "Il-katidral qiegħed ħdejn il-pjazza.",
+          "exampleTranslation": "The cathedral is near the square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "konkatidral",
+          "maltese": "konkatidral",
+          "english": "co-cathedral",
+          "example": "Aħna nżuru l-konkatidral.",
+          "exampleTranslation": "We visit the co-cathedral.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "lokalita",
+          "maltese": "lokalità",
+          "english": "locality; town or village",
+          "example": "Din il-lokalità għandha pjazza kbira.",
+          "exampleTranslation": "This locality has a large square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mappa",
+          "maltese": "mappa",
+          "english": "map",
+          "example": "Il-mappa turi t-toroq.",
+          "exampleTranslation": "The map shows the streets.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "palazz",
+          "maltese": "palazz",
+          "english": "palace",
+          "example": "Dan il-palazz għandu ġnien.",
+          "exampleTranslation": "This palace has a garden.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "postijiet-ta-interess",
+          "maltese": "postijiet ta' interess",
+          "english": "places of interest",
+          "example": "F'din il-belt hemm postijiet ta' interess.",
+          "exampleTranslation": "There are places of interest in this city.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "rahal",
+          "maltese": "raħal",
+          "english": "village",
+          "example": "Ir-raħal tagħna għandu pjazza żgħira.",
+          "exampleTranslation": "Our village has a small square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "villa",
+          "maltese": "villa",
+          "english": "villa",
+          "example": "Il-villa għandha ġnien kbir.",
+          "exampleTranslation": "The villa has a large garden.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "cittadella",
+          "maltese": "ċittadella",
+          "english": "citadel",
+          "example": "Iċ-ċittadella tinsab fil-belt.",
+          "exampleTranslation": "The citadel is in the city.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "kappella",
+          "maltese": "kappella",
+          "english": "chapel",
+          "example": "Il-kappella tinsab ħdejn ir-raħal.",
+          "exampleTranslation": "The chapel is near the village.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -247,7 +360,11 @@
           "imageQuizEligible": false,
           "imageRole": "context",
           "exampleTranslation": "Ġgantija is a big temple.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "notes": [
+            "plural: tempji",
+            "The plural tempji belongs to tempju."
+          ]
         },
         {
           "slug": "monument",
@@ -281,6 +398,108 @@
           },
           "imageQuizEligible": false,
           "imageRole": "none"
+        },
+        {
+          "slug": "bajja",
+          "maltese": "bajja",
+          "english": "bay; beach",
+          "example": "Din il-bajja hija kwieta.",
+          "exampleTranslation": "This bay is quiet.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "grotta",
+          "maltese": "grotta",
+          "english": "grotto; cave",
+          "example": "Il-grotta hija kbira.",
+          "exampleTranslation": "The grotto is large.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "ipogew",
+          "maltese": "ipoġew",
+          "english": "hypogeum; underground burial complex",
+          "example": "L-ipoġew huwa post ta' interess.",
+          "exampleTranslation": "The hypogeum is a place of interest.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "port",
+          "maltese": "port",
+          "english": "harbour; port",
+          "example": "Il-port mimli dgħajjes.",
+          "exampleTranslation": "The harbour is full of boats.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "girna",
+          "maltese": "girna",
+          "english": "traditional corbelled stone hut",
+          "example": "Il-girna tinsab fil-kampanja.",
+          "exampleTranslation": "The stone hut is in the countryside.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "ghalqa",
+          "maltese": "għalqa",
+          "english": "field",
+          "example": "Din għalqa kbira.",
+          "exampleTranslation": "This is a large field.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "plural: għelieqi"
+          ],
+          "verifiedClaims": {
+            "plural": {
+              "value": "għelieqi",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "għalqa"
+            }
+          }
+        },
+        {
+          "slug": "kampanja",
+          "maltese": "kampanja",
+          "english": "countryside",
+          "example": "Inħobb nimxi fil-kampanja.",
+          "exampleTranslation": "I like walking in the countryside.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "natura",
+          "maltese": "natura",
+          "english": "nature",
+          "example": "Inħobb in-natura.",
+          "exampleTranslation": "I love nature.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "gebel",
+          "maltese": "ġebel",
+          "english": "stones; stone (collective)",
+          "example": "Il-girna magħmula mill-ġebel.",
+          "exampleTranslation": "The hut is made of stone.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -424,8 +643,8 @@
         },
         {
           "slug": "festival-tal-birra",
-          "maltese": "festival tal-birra",
-          "english": "beer festival",
+          "maltese": "festival / festival tal-birra",
+          "english": "festival / beer festival",
           "example": "Xi nies iħobbu festival tal-birra.",
           "review": {
             "enabled": true,
@@ -441,7 +660,10 @@
           "imageQuizEligible": false,
           "imageRole": "context",
           "exampleTranslation": "Some people like the beer festival.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "notes": [
+            "festival: festival; festival tal-birra: beer festival."
+          ]
         },
         {
           "slug": "festival-tal-inbid",
@@ -491,6 +713,26 @@
           "imageRole": "none",
           "exampleTranslation": "Carnival is a popular tradition.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "avveniment",
+          "maltese": "avveniment",
+          "english": "event",
+          "example": "Dan l-avveniment jibda għada.",
+          "exampleTranslation": "This event starts tomorrow.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "kuncerti",
+          "maltese": "kunċerti",
+          "english": "concerts",
+          "example": "Fil-pjazza jsiru kunċerti.",
+          "exampleTranslation": "Concerts take place in the square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -616,8 +858,495 @@
           "imageRole": "none",
           "exampleTranslation": "The modern building is very tall.",
           "exampleSource": "topic example bank"
+        },
+        {
+          "slug": "nazzjonali",
+          "maltese": "nazzjonali",
+          "english": "national",
+          "example": "Dan huwa tim nazzjonali.",
+          "exampleTranslation": "This is a national team.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "marbut",
+          "maltese": "marbut",
+          "english": "connected; linked",
+          "example": "Dan l-avveniment huwa marbut mat-tradizzjoni.",
+          "exampleTranslation": "This event is connected with the tradition.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "feminine: marbuta"
+          ],
+          "verifiedClaims": {
+            "feminine": {
+              "value": "marbuta",
+              "source": "lexical-review-2026-11-05",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/b3-vocabulary-intake.json",
+              "auditLemma": "marbut"
+            }
+          }
+        },
+        {
+          "slug": "tradizzjonali",
+          "maltese": "tradizzjonali",
+          "english": "traditional",
+          "example": "Din hija riċetta tradizzjonali.",
+          "exampleTranslation": "This is a traditional recipe.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "protett",
+          "maltese": "protett / protetta",
+          "english": "protected",
+          "example": "Din żona protetta.",
+          "exampleTranslation": "This is a protected area.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
+      ]
+    },
+    {
+      "id": "places-festa",
+      "sectionId": "places-festa",
+      "sectionTitle": "Feasts and traditions",
+      "title": "Feasts and traditions",
+      "items": [
+        {
+          "slug": "banda",
+          "maltese": "banda",
+          "english": "band",
+          "example": "Il-banda qiegħda fil-pjazza.",
+          "exampleTranslation": "The band is in the square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A music band, especially a village band at a feast."
+          ]
+        },
+        {
+          "slug": "briju",
+          "maltese": "briju",
+          "english": "merriment; lively celebration",
+          "example": "Fil-pjazza hemm ħafna briju.",
+          "exampleTranslation": "There is a lot of merriment in the square.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "festa",
+          "maltese": "festa",
+          "english": "feast; village festival",
+          "example": "Nhar il-Ħadd immur il-festa.",
+          "exampleTranslation": "On Sunday I go to the village feast.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Here festa means a local celebration, especially a village patron-saint feast, rather than a large meal."
+          ]
+        },
+        {
+          "slug": "festa-tal-mejtin",
+          "maltese": "festa tal-mejtin",
+          "english": "All Souls' Day",
+          "example": "Il-festa tal-mejtin hija f'Novembru.",
+          "exampleTranslation": "All Souls' Day is in November.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "ghid-il-kbir",
+          "maltese": "Għid il-Kbir",
+          "english": "Easter",
+          "example": "Niċċelebraw l-Għid il-Kbir mal-familja.",
+          "exampleTranslation": "We celebrate Easter with the family.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "jitlob",
+          "maltese": "jitlob",
+          "english": "he prays",
+          "example": "Hu jitlob fil-knisja.",
+          "exampleTranslation": "He prays in church.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "jiccelebra",
+          "maltese": "jiċċelebra",
+          "english": "he celebrates",
+          "example": "Hu jiċċelebra mal-familja.",
+          "exampleTranslation": "He celebrates with the family.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "marc",
+          "maltese": "marċ",
+          "english": "march (music or procession)",
+          "example": "Il-marċ jibda filgħaxija.",
+          "exampleTranslation": "The march starts in the evening.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "milied",
+          "maltese": "Milied",
+          "english": "Christmas",
+          "example": "Fil-Milied niltaqa' mal-familja.",
+          "exampleTranslation": "At Christmas I meet the family.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "patrun",
+          "maltese": "patrun",
+          "english": "patron (of a place or community)",
+          "example": "Dan huwa l-patrun tar-raħal.",
+          "exampleTranslation": "This is the village's patron.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "purcissjoni",
+          "maltese": "purċissjoni",
+          "english": "procession",
+          "example": "Il-purċissjoni tgħaddi mit-triq tagħna.",
+          "exampleTranslation": "The procession passes through our street.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "qaddis",
+          "maltese": "qaddis",
+          "english": "saint",
+          "example": "Dan il-qaddis huwa magħruf.",
+          "exampleTranslation": "This saint is well known.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "qaddis-patrun",
+          "maltese": "qaddis patrun",
+          "english": "patron saint",
+          "example": "Dan huwa l-qaddis patrun tar-raħal.",
+          "exampleTranslation": "This is the village's patron saint.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "ruzarju",
+          "maltese": "rużarju",
+          "english": "rosary",
+          "example": "Nara rużarju fuq il-mejda.",
+          "exampleTranslation": "I see a rosary on the table.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A rosary; also the rosary prayer in a religious context."
+          ]
+        },
+        {
+          "slug": "talb",
+          "maltese": "talb",
+          "english": "prayer; prayers",
+          "example": "Fil-knisja hemm ħin għat-talb.",
+          "exampleTranslation": "There is time for prayer in church.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "vara",
+          "maltese": "vara",
+          "english": "processional statue",
+          "example": "Il-vara tinsab fil-knisja.",
+          "exampleTranslation": "The processional statue is in the church.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A religious statue carried in a procession."
+          ]
+        },
+        {
+          "slug": "gimgha-l-kbira",
+          "maltese": "Ġimgħa l-Kbira",
+          "english": "Good Friday",
+          "example": "Il-Ġimgħa l-Kbira hija qabel l-Għid.",
+          "exampleTranslation": "Good Friday is before Easter.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
+      ]
+    },
+    {
+      "id": "places-festa-decorations",
+      "sectionId": "places-festa-decorations",
+      "sectionTitle": "Feast decorations",
+      "title": "Feast decorations",
+      "items": [
+        {
+          "slug": "bandalori",
+          "maltese": "bandalori",
+          "english": "decorative banners",
+          "example": "Il-bandalori jinsabu fit-triq.",
+          "exampleTranslation": "The decorative banners are in the street.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Decorative banners used along streets during village feasts."
+          ]
+        },
+        {
+          "slug": "murtali",
+          "maltese": "murtali / murtali tal-kulur",
+          "english": "aerial fireworks; coloured firework shells",
+          "example": "Il-murtali tal-kulur jidhru fis-sema.",
+          "exampleTranslation": "The coloured fireworks can be seen in the sky.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nar",
+          "maltese": "nar",
+          "english": "fire; fireworks in a feast context",
+          "example": "Il-festival tan-nar jibda filgħaxija.",
+          "exampleTranslation": "The fireworks festival starts in the evening.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "In festival expressions such as festival tan-nar, nar refers to fireworks."
+          ]
+        },
+        {
+          "slug": "pavaljuni",
+          "maltese": "pavaljuni",
+          "english": "decorative cloth street drapes",
+          "example": "It-triq għandha pavaljuni sbieħ.",
+          "exampleTranslation": "The street has beautiful decorative drapes.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Decorative cloth drapes or pavilions used for village-feast street decoration."
+          ]
+        },
+        {
+          "slug": "tizjin",
+          "maltese": "tiżjin",
+          "english": "decorations",
+          "example": "It-tiżjin jagħmel it-triq sabiħa.",
+          "exampleTranslation": "The decorations make the street beautiful.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "giggifogu",
+          "maltese": "ġigġifogu",
+          "english": "mechanical ground fireworks",
+          "example": "Il-ġigġifogu jibda filgħaxija.",
+          "exampleTranslation": "The ground fireworks start in the evening.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
+      ]
+    },
+    {
+      "id": "places-festival-food",
+      "sectionId": "places-festival-food",
+      "sectionTitle": "Traditional festive food",
+      "title": "Traditional festive food",
+      "items": [
+        {
+          "slug": "figolli",
+          "maltese": "figolli",
+          "english": "almond-filled Easter biscuits",
+          "example": "Għandi figolli fuq il-mejda.",
+          "exampleTranslation": "I have figolli on the table.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "singular: figolla"
+          ]
+        },
+        {
+          "slug": "ghadam-tal-mejtin",
+          "maltese": "għadam tal-mejtin",
+          "english": "bone-shaped almond sweets",
+          "example": "Nixtri l-għadam tal-mejtin f'Novembru.",
+          "exampleTranslation": "I buy the bone-shaped almond sweets in November.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Traditional almond sweets shaped like bones; the phrase names a sweet in this context."
+          ]
+        },
+        {
+          "slug": "ikel-tradizzjonali",
+          "maltese": "ikel tradizzjonali",
+          "english": "traditional food",
+          "example": "Inħobb insajjar ikel tradizzjonali.",
+          "exampleTranslation": "I like cooking traditional food.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "imbuljuta",
+          "maltese": "imbuljuta",
+          "english": "spiced chestnut and chocolate drink",
+          "example": "L-imbuljuta tiegħi għadha sħuna.",
+          "exampleTranslation": "My imbuljuta is still hot.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A traditional hot drink made with chestnuts, chocolate and spices."
+          ]
+        },
+        {
+          "slug": "karamelli",
+          "maltese": "karamelli",
+          "english": "hard sweets",
+          "example": "Il-karamelli huma fil-borża.",
+          "exampleTranslation": "The sweets are in the bag.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "kwarezimal",
+          "maltese": "kwareżimal",
+          "english": "traditional Lenten almond biscuits",
+          "example": "Nixtri l-kwareżimal għal ommi.",
+          "exampleTranslation": "I buy kwareżimal for my mother.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "qaghaq-tal-appostli",
+          "maltese": "qagħaq tal-Appostli",
+          "english": "traditional Easter bread rings",
+          "example": "Il-qagħaq tal-Appostli jinsab fuq il-mejda.",
+          "exampleTranslation": "The Easter bread rings are on the table.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "qaghaq-tal-ghasel",
+          "maltese": "qagħaq tal-għasel",
+          "english": "treacle rings; honey rings",
+          "example": "Inħobb il-qagħaq tal-għasel mat-te.",
+          "exampleTranslation": "I like treacle rings with tea.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Often called honey rings; the filling is traditionally made with treacle."
+          ]
+        },
+        {
+          "slug": "qastan",
+          "maltese": "qastan",
+          "english": "chestnuts",
+          "example": "Il-qastan għadu sħun.",
+          "exampleTranslation": "The chestnuts are still hot.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Collective chestnut noun."
+          ]
+        },
+        {
+          "slug": "qubbajt",
+          "maltese": "qubbajt",
+          "english": "nougat",
+          "example": "Inħobb il-qubbajt bil-lewż.",
+          "exampleTranslation": "I like nougat with almonds.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "zeppoli",
+          "maltese": "żeppoli / sfineġ ta' San Ġużepp",
+          "english": "St Joseph's fritters",
+          "example": "Inħobb iż-żeppoli bl-irkotta.",
+          "exampleTranslation": "I like zeppoli with ricotta.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "A traditional fried pastry, commonly filled with sweet ricotta."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "places-event-actions",
+      "sectionId": "places-event-actions",
+      "sectionTitle": "Events taking place",
+      "title": "Events taking place",
+      "items": [
+        {
+          "slug": "issir",
+          "maltese": "issir / isir",
+          "english": "is held / takes place",
+          "example": "Il-festa ssir f'Ġunju.",
+          "exampleTranslation": "The feast takes place in June.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Feminine subject: issir; masculine subject: isir. Plural: isiru.",
+            "This use describes an event taking place."
+          ]
         }
       ]
     }
-  ]
+  ],
+  "verificationSources": {
+    "lexical-review-2026-11-05": {
+      "title": "Proofread lexical evidence and form review",
+      "kind": "editorial-lexical-review",
+      "evidence": "docs/analysis/b3-vocabulary-intake.json",
+      "method": "Forms checked against the proofread lexical inventory; additional primary-source reviews are recorded in the evidence manifest.",
+      "checkedOn": "2026-11-05",
+      "scope": "Explicit morphology notes only; not certification of the complete authored examples."
+    }
+  }
 }
