@@ -1684,15 +1684,26 @@ async function main() {
               problem(container, `Unknown bank layout: ${layout}`);
               return;
             }
-            // topic-practice.js explicitly passes individualReviewGroups: [] here.
-            // Validate that deliberate read-only presentation instead of counting it as saved-card UI.
-            if (container.matches('[data-listening-bank="tonina-listening-questions"]')
-                && container.closest('[data-tonina-listening]')) {
-              if (!children.length || children.some(child => !child.matches('article[data-bank-item]')
-                  || !child.querySelector('[data-bank-primary]')
-                  || child.querySelector('.review-add-button')
-                  || child.classList.contains('sentence-card--review-toggle'))) {
-                problem(container, 'Listening prompts must remain typed reading items without review controls');
+            // Tonina's page bootstrap deliberately renders these two typed banks
+            // without Review controls. Keep this exception exact and complete.
+            const toninaBanks = {
+              'tonina-reading-text': { count: 15, prefix: 'tonina-reading-' },
+              'tonina-listening-questions': { count: 10, prefix: 'tonina-q' }
+            };
+            const tonina = toninaBanks[container.dataset.toninaBank];
+            if (tonina && container.closest('[data-tonina-reading]')) {
+              if (layout !== 'reading' || container.dataset.exampleGroup !== container.dataset.toninaBank
+                  || children.length !== tonina.count || children.some((child, index) => {
+                    const primary = child.querySelector('[data-bank-primary]');
+                    const translation = child.querySelector('[data-bank-translation]');
+                    return !child.matches('article[data-bank-item]')
+                      || child.dataset.bankItem !== tonina.prefix + String(index + 1).padStart(2, '0')
+                      || !primary || primary.lang !== 'mt' || !primary.textContent.trim()
+                      || !translation || translation.lang !== 'en' || !translation.textContent.trim()
+                      || child.querySelector('.review-add-button')
+                      || child.classList.contains('sentence-card--review-toggle');
+                  })) {
+                problem(container, 'Tonina must render every ordered bilingual reading item without review controls');
               }
               return;
             }
