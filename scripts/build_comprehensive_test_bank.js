@@ -125,6 +125,7 @@ function canonicalEntries() {
           group,
           sourceId: item.id || item.slug || `${groupIndex + 1}-${itemIndex + 1}`,
           maltese,
+          lemma: item.lemma || maltese,
           english,
           example: item.example || ""
         }];
@@ -229,7 +230,8 @@ allVerbForms.forEach(({ paradigm, form }) => {
 });
 
 const siteTargets = canonicalEntries().flatMap((entry) => {
-  const pairKey = `${normalize(entry.maltese)}::${normalize(entry.english)}`;
+  // A displayed gender pair still represents its existing lexical head.
+  const pairKey = `${normalize(entry.lemma || entry.maltese)}::${normalize(entry.english)}`;
   if (seenPairs.has(pairKey)) return [];
   seenPairs.add(pairKey);
   const category = categoryFor(entry);

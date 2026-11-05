@@ -202,15 +202,15 @@
           "leaf"
         ],
         [
-          "abjad",
+          "abjad / bajda",
           "white"
         ],
         [
-          "aħdar",
+          "aħdar / ħadra",
           "green"
         ],
         [
-          "aħmar",
+          "aħmar / ħamra",
           "red"
         ],
         [
@@ -234,11 +234,11 @@
           "tie"
         ],
         [
-          "isfar",
+          "isfar / safra",
           "yellow"
         ],
         [
-          "iswed",
+          "iswed / sewda",
           "black"
         ],
         [
@@ -1514,11 +1514,11 @@
           "orange"
         ],
         [
-          "griż",
+          "griż / griża",
           "grey"
         ],
         [
-          "ikkulurit",
+          "ikkulurit / ikkulurita",
           "colourful"
         ],
         [

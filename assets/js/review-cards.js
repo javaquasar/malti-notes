@@ -1941,25 +1941,10 @@
                     });
                 });
 
-                var changed = false;
-                getAllCards().forEach(function (card) {
-                    if (card.type !== "word-card" || card.swatchStyle) {
-                        return;
-                    }
-                    var colorCard = lookup[card.id];
-                    if (!colorCard) {
-                        return;
-                    }
-                    window.MaltiReviewStore.addWord(Object.assign({}, colorCard, {
-                        english: card.english || colorCard.english,
-                        example: card.example || colorCard.example,
-                        topic: card.topic || colorCard.topic,
-                        sourcePage: card.sourcePage || colorCard.sourcePage
-                    }));
-                    changed = true;
-                });
-
-                return changed;
+                var updates = getAllCards().filter(function (card) {
+                    return card.type === "word-card" && !card.swatchStyle && card.sourcePage !== "manual" && lookup[card.id];
+                }).map(function (card) { return lookup[card.id]; });
+                return window.MaltiReviewStore.syncWordContent(updates);
             })
             .catch(function (error) {
                 console.warn(error);

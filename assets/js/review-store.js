@@ -158,6 +158,69 @@
         return changed;
     }
 
+    // Refresh source-owned sentences without resetting their review history. When
+    // legacy IDs collide, retain the complete record reviewed most recently;
+    // ties use reviewCount, then the canonical ID. Content is always canonical.
+    function syncSentenceContent(sentences) {
+        const state = loadState();
+        const result = { changed: false, updated: 0, migrated: 0, conflicts: [] };
+        const fields = ['contentType', 'maltese', 'english', 'prompt', 'answer',
+            'questionTranslation', 'answerTranslation', 'topic', 'group', 'source'];
+        const reviewTime = function (card) {
+            const time = Date.parse(card.lastReviewedAt || '');
+            return Number.isFinite(time) ? time : -Infinity;
+        };
+        const reviewCount = function (card) {
+            return Number.isFinite(card.reviewCount) ? card.reviewCount : 0;
+        };
+        (Array.isArray(sentences) ? sentences : []).forEach(function (sentence) {
+            if (!sentence || typeof sentence.id !== 'string' || !sentence.id.startsWith('sentence::') ||
+                !sentence.sourcePage || sentence.sourcePage === 'manual' ||
+                typeof sentence.maltese !== 'string' || !sentence.maltese.trim()) return;
+            const ids = Array.from(new Set([sentence.id].concat(
+                Array.isArray(sentence.legacyIds) ? sentence.legacyIds.filter(function (id) {
+                    return typeof id === 'string' && id.startsWith('sentence::');
+                }) : []
+            )));
+            const savedIds = ids.filter(function (id) { return Object.prototype.hasOwnProperty.call(state, id); });
+            if (!savedIds.length) return;
+            const protectedIds = savedIds.filter(function (id) {
+                const card = state[id];
+                return !card || card.type !== 'sentence-card' || card.sourcePage !== sentence.sourcePage;
+            });
+            if (protectedIds.length) {
+                result.conflicts.push({ id: sentence.id, protectedIds: protectedIds });
+                return;
+            }
+            let winnerId = savedIds[0];
+            savedIds.slice(1).forEach(function (id) {
+                const card = state[id];
+                const winner = state[winnerId];
+                if (reviewTime(card) > reviewTime(winner) ||
+                    (reviewTime(card) === reviewTime(winner) && reviewCount(card) > reviewCount(winner))) winnerId = id;
+            });
+            const updated = Object.assign({}, state[winnerId], { id: sentence.id });
+            fields.forEach(function (field) {
+                if (Object.prototype.hasOwnProperty.call(sentence, field) && sentence[field] !== undefined && sentence[field] !== null) {
+                    updated[field] = sentence[field];
+                }
+            });
+            updated.maltese = collapseSpaces(sentence.maltese);
+            updated.displayMaltese = updated.maltese;
+            updated.normalizedMaltese = normalizeForKey(updated.maltese);
+            const legacyIds = savedIds.filter(function (id) { return id !== sentence.id; });
+            if (JSON.stringify(state[sentence.id]) !== JSON.stringify(updated) || legacyIds.length) {
+                state[sentence.id] = updated;
+                legacyIds.forEach(function (id) { delete state[id]; });
+                result.changed = true;
+                result.updated += 1;
+                result.migrated += legacyIds.length;
+            }
+        });
+        if (result.changed) saveState(state);
+        return result;
+    }
+
     function addSentence(sentence) {
         return saveCard(Object.assign({}, sentence, { type: "sentence-card" }));
     }
@@ -361,6 +424,7 @@
 
     window.MaltiReviewStore = {
         syncWordContent: syncWordContent,
+        syncSentenceContent: syncSentenceContent,
         addWord: addWord,
         addSentence: addSentence,
         addCustomWord: addCustomWord,

@@ -42,7 +42,7 @@ This directory is the canonical home for project documentation. The root `README
 - [Particles and reading implementation](analysis/lesson03/implementation.md)
 - [Gender, food and cafe integration and linguistic review](analysis/gender-food-cafe-integration.md)
 - [Supplied vocabulary gaps, destinations and held entries](analysis/supplied-vocabulary-coverage.md)
-- [Guided conversations, agreement, open recall and listening practice](analysis/everyday-practice-extension.md)
+- [Guided conversations, agreement, open recall and reading practice](analysis/everyday-practice-extension.md)
 
 ## Tools And References
 

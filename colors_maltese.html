@@ -28,13 +28,13 @@
                     <span class="pill">colours</span>
                     <span class="pill">agreement</span>
                     <span class="pill">objects</span>
-                    <span class="pill">50 phrases</span>
+                    <span class="pill">masculine and feminine</span>
                 </div>
             </div>
             <div class="hero-note">
                 <h2>What To Practise Here</h2>
                 <ul>
-                    <li>basic colour words</li>
+                    <li>masculine and feminine colour pairs</li>
                     <li>light and dark shades</li>
                     <li>simple noun plus colour patterns</li>
                     <li>short answers for pictures and everyday speech</li>
@@ -47,6 +47,7 @@
         <aside class="sidebar">
             <h2>Contents</h2>
             <ul>
+                <li><a href="#colour-agreement">Masculine and Feminine</a></li>
                 <li><a href="#core-colours">Core Colours</a></li>
                 <li><a href="#extra-shades">Shades and Useful Words</a></li>
                 <li><a href="#patterns">Useful Colour Patterns</a></li>
@@ -54,16 +55,30 @@
                 <li><a href="#questions">Questions and Answers</a></li>
                 <li><a href="#mistakes">Wrong vs Right</a></li>
                 <li><a href="#phrase-bank">Colour Phrases</a></li>
+                <li><a href="#colour-symbols">Symbols and Shapes</a></li>
                 <li><a href="#related">Related Pages</a></li>
-                            <li><a href="#colour-symbols">Symbols and shapes</a></li>
             </ul>
-            <p class="mini">This page keeps the same shared layout and study rhythm as the other site pages.</p>
+            <p class="mini">Learn the complete colour pair with a noun: masculine first, feminine second.</p>
         </aside>
 
         <main class="content">
+            <section class="content-card" id="colour-agreement">
+                <h2>Masculine and Feminine Colours</h2>
+                <p>The colour agrees with the grammatical gender of the noun it describes. The gender of the person wearing or owning the object does not change this.</p>
+                <div class="study-contrast">
+                    <p>Masculine: <span lang="mt">flokk <mark>aħmar</mark></span> = a red T-shirt</p>
+                    <p>Feminine: <span lang="mt">libsa <mark>ħamra</mark></span> = a red dress</p>
+                </div>
+                <p>Learn the whole pair: <span lang="mt">aħmar / ħamra</span> and <span lang="mt">abjad / bajda</span> change inside the word. Adding <span lang="mt">-a</span> is not a rule for every colour.</p>
+                <p>Some words keep the same form: <span lang="mt">blu, oranġjo, vjola, roża, kannella</span>. For example, <span lang="mt">flokk blu / libsa blu</span> = a blue T-shirt / a blue dress.</p>
+                <p class="mini">Another word for blue has a changing pair: <span lang="mt">ikħal / kaħla</span>. The feminine of <span lang="mt">blu</span> is still <span lang="mt">blu</span>.</p>
+                <a class="action-link" href="./gender_agreement.html#whole-sentences">Practise agreement in sentences</a>
+            </section>
+
             <section class="content-card" id="core-colours">
                 <span class="tag">Vocabulary</span>
                 <h2>Core Colours</h2>
+                <p>Card headings show <strong>masculine / feminine</strong> singular forms. Each card labels both forms and gives a T-shirt and a dress example. Words that stay the same have one heading.</p>
                 <div class="toolbar-row">
                     <a class="action-link" href="./review_cards.html">Open Review Cards</a>
                     <span class="status-chip" data-review-summary>0 saved, 0 due</span>
@@ -82,7 +97,7 @@
                             <li><code>skur</code> = dark</li>
                             <li><code>ċar</code> = light / pale</li>
                             <li><code>qawwi</code> = strong / bright</li>
-                            <li><code>ikkulurit</code> = colourful</li>
+                            <li><code lang="mt">ikkulurit / ikkulurita</code> = colourful (masculine / feminine)</li>
                         </ul>
                     </section>
                     <section class="open-group">
@@ -194,11 +209,38 @@
         examplePrefix: "Dan hu",
         swatchClass: "color-swatch"
     };
-    window.renderExampleBanksFromData({
-        dataUrl: "./assets/data/colors_examples.json",
-        groupAttribute: "data-example-group",
-        cardClass: "study-card"
-    });
+    fetch("./assets/data/colors_examples.json")
+        .then(function (response) {
+            if (!response.ok) throw new Error("Could not load colour examples.");
+            return response.json();
+        })
+        .then(function (data) {
+            var sentences = data.groups.flatMap(function (group) {
+                return group.items.filter(window.MaltiLearningContent.isPublishable).map(function (item) {
+                    var content = window.MaltiLearningContent.normalizeItem(item, group);
+                    return {
+                        id: "sentence::colors::" + window.MaltiReviewStore.normalizeForKey(item.slug || content.primary),
+                        legacyIds: item.legacyReviewIds || [],
+                        sourcePage: "colors_maltese.html",
+                        contentType: content.itemType,
+                        maltese: content.primary,
+                        english: content.secondary,
+                        prompt: content.prompt,
+                        answer: content.answer,
+                        questionTranslation: content.questionTranslation || "",
+                        answerTranslation: content.answerTranslation || ""
+                    };
+                });
+            });
+            window.MaltiReviewStore.syncSentenceContent(sentences);
+            return window.renderExampleBanksFromData({
+                dataUrl: "./assets/data/colors_examples.json",
+                data: data,
+                groupAttribute: "data-example-group",
+                cardClass: "study-card"
+            });
+        })
+        .catch(function (error) { console.error(error); });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
     <script src="./assets/js/site-header.js"></script>

@@ -352,9 +352,9 @@ loaded the same bank. Keep `dataUrl` as its provenance/configuration URL.
 open vocabulary recall and mixed review; see the [practice integration record](../analysis/everyday-practice-extension.md).
 The shared runner still owns exercise markup and grading. Open recall passes
 saved drafts/ratings through `selfAssessment`; editing a draft invalidates the
-old rating. The native audio player uses the existing constrained `study-field`
-layout without a page-specific skin. Recording questions use `reading` for
-bilingual prompts, without a fabricated answer key or score.
+old rating. Tonina uses the same `reading` presentation for its complete bilingual
+text and its end-of-story questions, without a fabricated answer key or score.
+The recording and player have been removed from the published material.
 
 For a generated bank inside a disclosure, use an outer
 `study-disclosure-body mt-16` and a separate inner bank target. The renderer

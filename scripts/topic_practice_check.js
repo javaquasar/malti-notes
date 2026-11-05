@@ -1,7 +1,6 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const crypto = require('node:crypto');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const base = process.env.TOPICS_TEST_URL || 'http://127.0.0.1:4190';
@@ -9,11 +8,23 @@ const read = file => JSON.parse(fs.readFileSync(path.join(root, 'assets/data', f
 const scenarios = read('everyday_scenarios_exercises.json').sets;
 const recall = read('three_words_examples.json').groups[0].items;
 const allSets = ['gender_agreement_exercises.json', 'food_cafe_exercises.json', 'everyday_scenarios_exercises.json'].flatMap(file => read(file).sets);
-const output = path.join(root, 'artifacts/gender-food-cafe');
+const output = process.env.TOPICS_TEST_OUTPUT || path.join(root, 'artifacts/gender-food-cafe');
 const axe = fs.readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');
 const key = 'malti_topic_practice_v1';
-const hash = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, 'assets/audio/tonina.m4a'))).digest('hex');
-assert.equal(hash, '469c34bf19baf1e1de43b53e33b36a234aa274fcbd5478a79c9e45e9c2406c79');
+const tonina = read('tonina_listening_examples.json').groups;
+const toninaText = tonina.find(group => group.id === 'tonina-reading-text').items;
+const toninaQuestions = tonina.find(group => group.id === 'tonina-listening-questions').items;
+const legacyTonina = { notes: '1. fil-ġirien\n2. għajjat', speed: '0.75', position: 109 };
+assert.equal(fs.existsSync(path.join(root, 'assets/audio/tonina.m4a')), false, 'Removed recording must not remain in published assets');
+const worker = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
+const workerAssets = ['CORE_ASSETS', 'LAZY_ASSETS'].flatMap(name => {
+  const assignment = worker.match(new RegExp(`const ${name} = (\\[[\\s\\S]*?\\]);`));
+  assert(assignment, `Missing generated ${name} manifest`);
+  return JSON.parse(assignment[1]);
+});
+assert.equal(workerAssets.some(asset => /\/audio\/tonina\.m4a(?:[?#]|$)/i.test(asset)), false, 'Removed recording must not remain in offline asset manifests');
+assert.equal(toninaText.length, 15);
+assert.equal(toninaQuestions.length, 10);
 assert.equal(recall.length, 10);
 assert.equal(scenarios.reduce((sum, set) => sum + set.items.length, 0), 14);
 
@@ -27,6 +38,52 @@ async function answer(page, container, item) {
   } else throw new Error(`Unsupported test item: ${item.type}`);
 }
 
+async function assertToninaReading(page) {
+  const section = page.locator('[data-tonina-reading]');
+  const paragraphs = section.locator('[data-tonina-bank="tonina-reading-text"] article');
+  const questions = section.locator('[data-tonina-bank="tonina-listening-questions"] article');
+  await paragraphs.first().waitFor();
+  assert.equal(await paragraphs.count(), 15, 'Complete bilingual story must have fifteen paragraphs');
+  assert.equal(await questions.count(), 10, 'Reading must end with ten bilingual questions');
+  for (const [items, cards] of [[toninaText, paragraphs], [toninaQuestions, questions]]) {
+    for (const [i, item] of items.entries()) {
+      assert.equal(await cards.nth(i).locator('[lang="mt"]').textContent(), item.maltese);
+      assert.equal(await cards.nth(i).locator('[lang="en"]').textContent(), item.english);
+    }
+  }
+  assert(await paragraphs.last().evaluate((last, firstQuestion) => Boolean(last.compareDocumentPosition(firstQuestion) & Node.DOCUMENT_POSITION_FOLLOWING), await questions.first().elementHandle()), 'All story paragraphs must precede the questions');
+  assert.equal(await section.locator('audio, video, source, [data-listening-speed], [data-listening-seek], [data-listening-notes]').count(), 0, 'Reading must not expose media or former player controls');
+  assert.equal(await section.locator('.exercise-set, .review-add-button, [data-sentence-review-row]').count(), 0, 'Reading is unscored and has no Review controls');
+  assert.equal(await section.locator('a[href*="tonina.m4a"]').count(), 0, 'Removed recording must not be linked');
+  return section;
+}
+
+async function assertRemovedMedia(page, urls) {
+  const results = await page.evaluate(async urls => {
+    const cases = urls.flatMap(url => [
+      { url }, { url: url + '?old-recording=1' },
+      { url, range: 'bytes=0-63' }, { url, range: 'bytes=99999999-' }, { url, range: 'invalid-range' }
+    ]);
+    return Promise.all(cases.map(async item => {
+      const response = await fetch(item.url, item.range ? { headers: { Range: item.range } } : {});
+      return { ...item, status: response.status, type: response.headers.get('Content-Type'), range: response.headers.get('Content-Range') };
+    }));
+  }, urls);
+  for (const result of results) {
+    assert.equal(result.status, 410, `Removed recording must return Gone: ${JSON.stringify(result)}`);
+    assert.equal(/^audio\//i.test(result.type || ''), false, 'Removed response must not be playable audio');
+    assert.equal(result.range, null, 'Removed audio must not return a media range');
+  }
+  const cachedMedia = await page.evaluate(async () => {
+    const found = [];
+    for (const name of await caches.keys()) for (const request of await (await caches.open(name)).keys()) {
+      if (/\/audio\/tonina\.m4a$/i.test(decodeURIComponent(new URL(request.url).pathname))) found.push({ name, url: request.url });
+    }
+    return found;
+  });
+  assert.deepEqual(cachedMedia, [], 'Removed recording must not enter any offline cache');
+}
+
 async function main() {
   fs.mkdirSync(output, { recursive: true });
   const chrome = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
@@ -34,14 +91,17 @@ async function main() {
   const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1000 } });
   const page = await context.newPage();
   const errors = [];
+  const unexpectedMedia = [];
   page.on('pageerror', error => errors.push(error.message));
+  page.on('request', request => { if (/\/audio\/tonina\.m4a(?:[?#]|$)/i.test(request.url())) unexpectedMedia.push(request.url()); });
   page.on('dialog', dialog => dialog.accept());
   try {
     await page.goto(`${base}/gender_agreement.html`, { waitUntil: 'networkidle' });
-    await page.evaluate(() => {
+    await page.evaluate(({ key, legacyTonina }) => {
       localStorage.setItem('malti_exercise_progress_v1', JSON.stringify({ unrelated: { bestScore: 9, total: 10 } }));
       localStorage.setItem('malti_numbers_extended_v1', JSON.stringify({ keep: true }));
-    });
+      localStorage.setItem(key, JSON.stringify({ tonina: legacyTonina }));
+    }, { key, legacyTonina });
     for (const scenario of scenarios) {
       await page.goto(`${base}/${scenario.sourcePage.split('#')[0]}`, { waitUntil: 'networkidle' });
       const section = page.locator(`[data-guided-scenario="${scenario.id}"]`);
@@ -97,27 +157,11 @@ async function main() {
     assert.equal(await ending.getByRole('button', { name: 'Confident', exact: true }).getAttribute('aria-pressed'), 'false');
 
     await page.goto(`${base}/daily_problems.html`, { waitUntil: 'networkidle' });
-    const listening = page.locator('[data-tonina-listening]');
-    await page.waitForFunction(() => document.querySelector('[data-tonina-listening] audio').duration > 210);
-    const duration = await listening.locator('audio').evaluate(audio => audio.duration);
-    assert(duration > 212 && duration < 213);
-    await listening.locator('audio').evaluate(async audio => {
-      audio.muted = true;
-      await audio.play();
-    });
-    await page.waitForFunction(() => document.querySelector('[data-tonina-listening] audio').currentTime > 0.1);
-    await listening.locator('audio').evaluate(audio => audio.pause());
-    await listening.locator('[data-listening-notes]').fill('1. fil-ġirien\n2. għajjat');
-    await listening.locator('[data-listening-speed]').selectOption('0.75');
-    await listening.locator('[data-listening-seek="109"]').click();
-    await page.waitForFunction(() => document.querySelector('[data-tonina-listening] audio').currentTime === 109);
-    assert.equal(await listening.locator('audio').evaluate(audio => audio.currentTime), 109);
+    await assertToninaReading(page);
+    assert.deepEqual(await page.evaluate(key => JSON.parse(localStorage.getItem(key)).tonina, key), legacyTonina, 'Removing the player must preserve previous private notes');
     await page.reload({ waitUntil: 'networkidle' });
-    assert.equal(await listening.locator('[data-listening-notes]').inputValue(), '1. fil-ġirien\n2. għajjat');
-    assert.equal(await listening.locator('audio').evaluate(audio => audio.playbackRate), 0.75);
-    assert.equal(await listening.locator('.exercise-set').count(), 0);
-    assert.equal(await listening.locator('[data-listening-bank] article').count(), 10);
-    assert.equal(await listening.locator('.review-add-button').count(), 0);
+    await assertToninaReading(page);
+    assert.deepEqual(await page.evaluate(key => JSON.parse(localStorage.getItem(key)).tonina, key), legacyTonina);
 
     await page.goto(`${base}/gender_agreement.html#mixed-review`, { waitUntil: 'networkidle' });
     const mixed = page.locator('[data-mixed-practice]');
@@ -168,7 +212,6 @@ async function main() {
       if (selector.includes('conversation')) await section.locator('[data-scenario-restart]').click();
       if (selector === '#mixed-review') await section.locator('[data-mixed-start]').click();
       if (selector === '#three-word-challenge') await section.locator('[data-bank-item] summary').first().click();
-      if (selector === '#tonina-listening') await section.locator('summary').click();
       await section.evaluate(node => node.scrollIntoView({ block: 'start' }));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, `${file} ${width} overflow`);
       await page.addScriptTag({ content: axe });
@@ -179,6 +222,8 @@ async function main() {
       await page.screenshot({ path: path.join(output, `practice-${selector.slice(1)}-${width}-${theme}.png`) });
     }
     assert.deepEqual(errors, []);
+    assert.deepEqual(unexpectedMedia, [], 'Reading and other practice surfaces must not request the removed recording');
+    assert.deepEqual(await page.evaluate(key => JSON.parse(localStorage.getItem(key)).tonina, key), legacyTonina);
 
     const offline = await browser.newContext({ viewport: { width: 390, height: 844 } });
     let offlinePage = await offline.newPage();
@@ -188,24 +233,15 @@ async function main() {
     offlinePage = await offline.newPage();
     await offlinePage.goto(`${base}/daily_problems.html`, { waitUntil: 'networkidle' });
     assert(await offlinePage.evaluate(() => Boolean(navigator.serviceWorker.controller)));
-    const mediaUrl = `${base}/assets/audio/tonina.m4a`;
-    const partial = await offlinePage.evaluate(async url => {
-      const response = await fetch(url, { headers: { Range: 'bytes=0-63' } });
-      return { status: response.status, range: response.headers.get('Content-Range'), bytes: (await response.arrayBuffer()).byteLength };
-    }, mediaUrl);
-    assert.deepEqual(partial, { status: 206, range: 'bytes 0-63/1775824', bytes: 64 });
+    await assertToninaReading(offlinePage);
+    const mediaUrls = [`${base}/assets/audio/tonina.m4a`, `${base}/assets/0123456789abcdef/audio/tonina.m4a`, `${base}/assets/audio/%74onina%2Em4a`];
+    await assertRemovedMedia(offlinePage, mediaUrls);
     await offline.setOffline(true);
     await offlinePage.reload({ waitUntil: 'networkidle' });
-    await offlinePage.waitForFunction(() => document.querySelector('audio').duration > 210);
-    const offlineRange = await offlinePage.evaluate(async url => {
-      const response = await fetch(url, { headers: { Range: 'bytes=-32' } });
-      return { status: response.status, bytes: (await response.arrayBuffer()).byteLength };
-    }, mediaUrl);
-    assert.deepEqual(offlineRange, { status: 206, bytes: 32 });
-    const invalid = await offlinePage.evaluate(async url => (await fetch(url, { headers: { Range: 'bytes=99999999-' } })).status, mediaUrl);
-    assert.equal(invalid, 416);
+    await assertToninaReading(offlinePage);
+    await assertRemovedMedia(offlinePage, mediaUrls);
     await offline.close();
-    console.log('PASS: 14 guided turns, wrong/retry and resume, 10 open recall drafts/ratings, real audio playback, unscored listening notes, balanced adaptive modes and due dates, preserved/backup state, 36 responsive/theme/a11y cases, offline audio byte ranges.');
+    console.log('PASS: 14 guided turns, wrong/retry and resume, 10 open recall drafts/ratings, complete bilingual Tonina reading and ten ordered questions, preserved former private notes, no recording/player/requests, balanced adaptive modes and due dates, preserved/backup state, 36 responsive/theme/a11y cases, offline reading and Gone responses for removed audio.');
   } finally { await browser.close(); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

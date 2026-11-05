@@ -138,8 +138,8 @@ async function main() {
   try {
     const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
     // Initial service-worker activation reloads its current page. Settle that
-    // navigation before the course/review suites assert their feature DOM.
-    if (requestedSuite === "course" || requestedSuite === "review-games") {
+    // navigation before the course/review/progress suites assert their feature DOM.
+    if (["course", "review-games", "progress-storage"].includes(requestedSuite)) {
       const warmup = await context.newPage();
       const warmupErrors = [];
       warmup.on("pageerror", (error) => warmupErrors.push(error.message));
@@ -1521,8 +1521,8 @@ async function main() {
         "Colour Q&A status did not reflect an individual save."
       );
       const savedColourQuestion = await page.evaluate(() => window.MaltiReviewStore.getAllCards()[0]);
-      assert(savedColourQuestion?.prompt === "X'kulur hu l-qmis?", "Colour Q&A saved the wrong prompt.");
-      assert(savedColourQuestion?.answer === "Il-qmis abjad.", "Colour Q&A saved the wrong answer.");
+      assert(savedColourQuestion?.prompt === "X'kulur hi l-qmis?", "Colour Q&A saved the wrong prompt.");
+      assert(savedColourQuestion?.answer === "Il-qmis bajda.", "Colour Q&A saved the wrong answer.");
 
       await openCleanPage(page, "emotions.html");
       const emotionQuestions = page.locator('[data-example-group="emotions-qa"]');

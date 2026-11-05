@@ -131,6 +131,7 @@ function extractGroups(file, sourceLabel, tier) {
           return {
             slug: item.slug || item.id || slugify(item.maltese),
             maltese: item.maltese,
+            ...(item.lemma ? { lemma: item.lemma } : {}),
             english: item.english,
             example: example.example,
             exampleTranslation: example.exampleTranslation,
@@ -175,7 +176,8 @@ function dedupeGroups(groups, existingKeys) {
   return groups
     .map((group) => {
       const items = group.items.filter((item) => {
-        const key = normalizeKey(item.maltese);
+        // Displayed gender pairs still represent one lexical head.
+        const key = normalizeKey(item.lemma || item.maltese);
         if (seen.has(key)) {
           return false;
         }
@@ -217,6 +219,7 @@ const extendedGroups = dedupeGroups(
 const output = {
   page: "year4_exam.html",
   topic: "Year 4 Revision Vocabulary",
+  ...(exam.verificationSources ? { verificationSources: exam.verificationSources } : {}),
   source: "Exam OCR list plus existing site vocabulary grouped for Year 4 revision",
   collections: [
     {

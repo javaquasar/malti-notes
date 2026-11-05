@@ -1,6 +1,25 @@
 {
   "page": "year4_exam.html",
   "topic": "Year 4 Revision Vocabulary",
+  "verificationSources": {
+    "hekk-ahjar-colours": {
+      "title": "Hekk aħjar! — Il-kuluri, page 24",
+      "kind": "primary-educational-reference",
+      "url": "https://www.mmargherita.org/wp-content/uploads/2015/10/hekkahjar-abbozz.pdf",
+      "publisher": "Il-Kunsill Nazzjonali tal-Ilsien Malti and the education curriculum department",
+      "method": "Compared all eleven core colour entries with the masculine/feminine columns on page 24.",
+      "checkedOn": "2026-11-05",
+      "scope": "Singular colour forms only. Card example pairs are original site-authored examples."
+    },
+    "government-gazette-coloured-2021": {
+      "title": "Malta Government Gazette, 29 March 2021, page 2764",
+      "kind": "primary-government-usage",
+      "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Documents/2021/03/Government%20Gazette%20-%2029th%20March.pdf",
+      "method": "Compared ikkulurita with feminine art and ikkulurit with masculine sqaq on the same page.",
+      "checkedOn": "2026-11-05",
+      "scope": "Gender forms of coloured; not an external verification of complete card examples."
+    }
+  },
   "source": "Exam OCR list plus existing site vocabulary grouped for Year 4 revision",
   "collections": [
     {
@@ -1341,12 +1360,17 @@
           "items": [
             {
               "slug": "abjad",
-              "maltese": "abjad",
+              "maltese": "abjad / bajda",
               "english": "white",
-              "example": "Il-qmis abjad.",
+              "example": "Il-qmis bajda.",
               "exampleTranslation": "The shirt is white.",
               "exampleSource": "site",
-              "notes": [],
+              "notes": [
+                "masculine: abjad",
+                "feminine: bajda",
+                "flokk abjad = white T-shirt",
+                "libsa bajda = white dress"
+              ],
               "count": 2,
               "sourceTerms": "abjad",
               "review": {
@@ -1362,19 +1386,32 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "abjad",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "bajda",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
             },
             {
               "slug": "ahdar",
-              "maltese": "aħdar",
+              "maltese": "aħdar / ħadra",
               "english": "green",
               "example": "Il-ħaxix aħdar.",
               "exampleTranslation": "The grass is green.",
               "exampleSource": "site",
               "notes": [
-                "normalized from: ahdar"
+                "normalized from: ahdar",
+                "masculine: aħdar",
+                "feminine: ħadra",
+                "flokk aħdar = green T-shirt",
+                "libsa ħadra = green dress"
               ],
               "count": 7,
               "sourceTerms": "ahdar",
@@ -1391,19 +1428,32 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "aħdar",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "ħadra",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
             },
             {
               "slug": "ahmar",
-              "maltese": "aħmar",
+              "maltese": "aħmar / ħamra",
               "english": "red",
               "example": "It-tuffieħa ħamra.",
               "exampleTranslation": "The apple is red.",
               "exampleSource": "site",
               "notes": [
-                "normalized from: ahmar; bl-ahmar"
+                "normalized from: ahmar; bl-ahmar",
+                "masculine: aħmar",
+                "feminine: ħamra",
+                "flokk aħmar = red T-shirt",
+                "libsa ħamra = red dress"
               ],
               "count": 5,
               "sourceTerms": "ahmar; bl-ahmar",
@@ -1420,6 +1470,15 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "aħmar",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "ħamra",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -1458,7 +1517,13 @@
               "example": "Il-baħar blu.",
               "exampleTranslation": "The sea is blue.",
               "exampleSource": "site",
-              "notes": [],
+              "notes": [
+                "masculine: blu",
+                "feminine: blu",
+                "Same form in both singular genders.",
+                "flokk blu = blue T-shirt",
+                "libsa blu = blue dress"
+              ],
               "count": 3,
               "sourceTerms": "blu",
               "review": {
@@ -1474,6 +1539,15 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "blu",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "blu",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -1562,12 +1636,17 @@
             },
             {
               "slug": "isfar",
-              "maltese": "isfar",
+              "maltese": "isfar / safra",
               "english": "yellow",
               "example": "Il-kulur huwa isfar.",
               "exampleTranslation": "The colour is yellow.",
               "exampleSource": "site",
-              "notes": [],
+              "notes": [
+                "masculine: isfar",
+                "feminine: safra",
+                "flokk isfar = yellow T-shirt",
+                "libsa safra = yellow dress"
+              ],
               "count": 5,
               "sourceTerms": "bl-isfar; isfar",
               "review": {
@@ -1583,18 +1662,32 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "isfar",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "safra",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
             },
             {
               "slug": "iswed",
-              "maltese": "iswed",
+              "maltese": "iswed / sewda",
               "english": "black",
               "example": "Il-karozza sewda.",
               "exampleTranslation": "The car is black.",
               "exampleSource": "site",
-              "notes": [],
+              "notes": [
+                "masculine: iswed",
+                "feminine: sewda",
+                "flokk iswed = black T-shirt",
+                "libsa sewda = black dress"
+              ],
               "count": 5,
               "sourceTerms": "iswed",
               "review": {
@@ -1610,6 +1703,15 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "iswed",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "sewda",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -1648,7 +1750,13 @@
               "example": "Il-mejda kannella.",
               "exampleTranslation": "The table is brown.",
               "exampleSource": "site",
-              "notes": [],
+              "notes": [
+                "masculine: kannella",
+                "feminine: kannella",
+                "Same form in both singular genders.",
+                "flokk kannella = brown T-shirt",
+                "libsa kannella = brown dress"
+              ],
               "count": 5,
               "sourceTerms": "kannella",
               "review": {
@@ -1664,6 +1772,15 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "kannella",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "kannella",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -1730,7 +1847,12 @@
               "exampleTranslation": "The bag is pink.",
               "exampleSource": "site",
               "notes": [
-                "normalized from: roia"
+                "normalized from: roia",
+                "masculine: roża",
+                "feminine: roża",
+                "Same form in both singular genders.",
+                "flokk roża = pink T-shirt",
+                "libsa roża = pink dress"
               ],
               "count": 4,
               "sourceTerms": "roia",
@@ -1740,6 +1862,15 @@
               },
               "imageQuizEligible": false,
               "imageRole": "none",
+              "lemma": "roża",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "roża",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -1778,7 +1909,13 @@
               "example": "Il-kulur huwa vjola.",
               "exampleTranslation": "The colour is purple.",
               "exampleSource": "site",
-              "notes": [],
+              "notes": [
+                "masculine: vjola",
+                "feminine: vjola",
+                "Same form in both singular genders.",
+                "flokk vjola = purple T-shirt",
+                "libsa vjola = purple dress"
+              ],
               "count": 2,
               "sourceTerms": "bil-vjola; Vjola",
               "review": {
@@ -1794,6 +1931,15 @@
               },
               "imageQuizEligible": false,
               "imageRole": "context",
+              "lemma": "vjola",
+              "verifiedClaims": {
+                "feminine": {
+                  "value": "vjola",
+                  "source": "hekk-ahjar-colours",
+                  "checkedOn": "2026-11-05",
+                  "evidenceFile": "docs/analysis/colour-agreement.md"
+                }
+              },
               "sourceLabel": "Exam materials",
               "sourceFile": "year4_vocabulary.json",
               "tier": "exam"
@@ -9648,13 +9794,17 @@
           "items": [
             {
               "slug": "abjad",
-              "maltese": "abjad",
+              "maltese": "abjad / bajda",
+              "lemma": "abjad",
               "english": "white",
-              "example": "Nixtieq qmis abjad.",
-              "exampleTranslation": "I would like a white shirt.",
-              "exampleSource": "site examples",
+              "example": "Il-qmis bajda.",
+              "exampleTranslation": "The shirt is white.",
+              "exampleSource": "topic data",
               "notes": [
-                "qmis abjad = white shirt"
+                "masculine: abjad",
+                "feminine: bajda",
+                "flokk abjad = white T-shirt",
+                "libsa bajda = white dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9669,13 +9819,17 @@
             },
             {
               "slug": "iswed",
-              "maltese": "iswed",
+              "maltese": "iswed / sewda",
+              "lemma": "iswed",
               "english": "black",
-              "example": "Il-qalziet iswed.",
-              "exampleTranslation": "The trousers are black.",
-              "exampleSource": "site examples",
+              "example": "Il-karozza sewda.",
+              "exampleTranslation": "The car is black.",
+              "exampleSource": "topic data",
               "notes": [
-                "karozza sewda = black car"
+                "masculine: iswed",
+                "feminine: sewda",
+                "flokk iswed = black T-shirt",
+                "libsa sewda = black dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9690,13 +9844,17 @@
             },
             {
               "slug": "ahmar",
-              "maltese": "aħmar",
+              "maltese": "aħmar / ħamra",
+              "lemma": "aħmar",
               "english": "red",
-              "example": "It-tuffieħ aħdar jew aħmar.",
-              "exampleTranslation": "The apple is green or red.",
-              "exampleSource": "site examples",
+              "example": "It-tuffieħa ħamra.",
+              "exampleTranslation": "The apple is red.",
+              "exampleSource": "topic data",
               "notes": [
-                "fjura ħamra = red flower"
+                "masculine: aħmar",
+                "feminine: ħamra",
+                "flokk aħmar = red T-shirt",
+                "libsa ħamra = red dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9712,12 +9870,17 @@
             {
               "slug": "blu",
               "maltese": "blu",
+              "lemma": "blu",
               "english": "blue",
               "example": "Huwa blu.",
               "exampleTranslation": "It is blue.",
               "exampleSource": "site examples",
               "notes": [
-                "baħar blu = blue sea"
+                "masculine: blu",
+                "feminine: blu",
+                "Same form in both singular genders.",
+                "flokk blu = blue T-shirt",
+                "libsa blu = blue dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9732,13 +9895,17 @@
             },
             {
               "slug": "isfar",
-              "maltese": "isfar",
+              "maltese": "isfar / safra",
+              "lemma": "isfar",
               "english": "yellow",
               "example": "Ix-xemx safra.",
               "exampleTranslation": "The sun is yellow.",
               "exampleSource": "topic data",
               "notes": [
-                "xemx safra = yellow sun"
+                "masculine: isfar",
+                "feminine: safra",
+                "flokk isfar = yellow T-shirt",
+                "libsa safra = yellow dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9753,13 +9920,17 @@
             },
             {
               "slug": "ahdar",
-              "maltese": "aħdar",
+              "maltese": "aħdar / ħadra",
+              "lemma": "aħdar",
               "english": "green",
-              "example": "Inħobb il-kulur aħdar.",
-              "exampleTranslation": "I like the colour green.",
-              "exampleSource": "site examples",
+              "example": "Il-ħaxix aħdar.",
+              "exampleTranslation": "The vegetables are green.",
+              "exampleSource": "topic data",
               "notes": [
-                "ħaxix aħdar = green vegetables"
+                "masculine: aħdar",
+                "feminine: ħadra",
+                "flokk aħdar = green T-shirt",
+                "libsa ħadra = green dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9775,12 +9946,17 @@
             {
               "slug": "orangjo",
               "maltese": "oranġjo",
+              "lemma": "oranġjo",
               "english": "orange",
               "example": "Il-fjura oranġjo.",
               "exampleTranslation": "The flower is orange.",
               "exampleSource": "site examples",
               "notes": [
-                "ballun oranġjo = orange balloon"
+                "masculine: oranġjo",
+                "feminine: oranġjo",
+                "Same form in both singular genders.",
+                "flokk oranġjo = orange T-shirt",
+                "libsa oranġjo = orange dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9796,12 +9972,17 @@
             {
               "slug": "vjola",
               "maltese": "vjola",
+              "lemma": "vjola",
               "english": "purple",
               "example": "Din il-fjura vjola.",
               "exampleTranslation": "This flower is purple.",
               "exampleSource": "site examples",
               "notes": [
-                "fjura vjola = purple flower"
+                "masculine: vjola",
+                "feminine: vjola",
+                "Same form in both singular genders.",
+                "flokk vjola = purple T-shirt",
+                "libsa vjola = purple dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9817,12 +9998,17 @@
             {
               "slug": "roza",
               "maltese": "roża",
+              "lemma": "roża",
               "english": "pink",
               "example": "Il-borża roża.",
               "exampleTranslation": "The bag is pink.",
               "exampleSource": "site examples",
               "notes": [
-                "borża roża = pink bag"
+                "masculine: roża",
+                "feminine: roża",
+                "Same form in both singular genders.",
+                "flokk roża = pink T-shirt",
+                "libsa roża = pink dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9838,12 +10024,17 @@
             {
               "slug": "kannella",
               "maltese": "kannella",
+              "lemma": "kannella",
               "english": "brown",
               "example": "Il-bieb kannella skur.",
               "exampleTranslation": "The door is dark brown.",
               "exampleSource": "site examples",
               "notes": [
-                "mejda kannella = brown table"
+                "masculine: kannella",
+                "feminine: kannella",
+                "Same form in both singular genders.",
+                "flokk kannella = brown T-shirt",
+                "libsa kannella = brown dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9858,13 +10049,17 @@
             },
             {
               "slug": "griz",
-              "maltese": "griż",
+              "maltese": "griż / griża",
+              "lemma": "griż",
               "english": "grey",
               "example": "Il-qattus griż.",
               "exampleTranslation": "The cat is grey.",
-              "exampleSource": "site examples",
+              "exampleSource": "topic data",
               "notes": [
-                "qattus griż = grey cat"
+                "masculine: griż",
+                "feminine: griża",
+                "flokk griż = grey T-shirt",
+                "libsa griża = grey dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,
@@ -9879,13 +10074,17 @@
             },
             {
               "slug": "ikkulurit",
-              "maltese": "ikkulurit",
+              "maltese": "ikkulurit / ikkulurita",
+              "lemma": "ikkulurit",
               "english": "colourful",
               "example": "Il-pittura ikkulurita.",
               "exampleTranslation": "The painting is colourful.",
-              "exampleSource": "site examples",
+              "exampleSource": "topic data",
               "notes": [
-                "stampa ikkulurita = colourful picture"
+                "masculine: ikkulurit",
+                "feminine: ikkulurita",
+                "flokk ikkulurit = colourful T-shirt",
+                "libsa ikkulurita = colourful dress"
               ],
               "imageRole": "identifying",
               "imageQuizEligible": true,

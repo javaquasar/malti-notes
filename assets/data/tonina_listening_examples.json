@@ -1,20 +1,155 @@
 {
   "schemaVersion": 2,
   "page": "daily_problems.html",
-  "source": { "kind": "site", "page": "daily_problems.html", "file": "S13-S14 question sheets and S17 user-supplied audio" },
-  "provenance": { "intake": "lesson-04-materials-analysis.md, sections 11, 18-19; tonina-deep-analysis.md", "method": "Editorial bilingual questions about the same content distinctions as the supplied sheets. No transcript, scored answer key or reconstructed door verb is published. The native audio is the unchanged user-supplied file, named with its actual MP4 container extension." },
+  "source": {
+    "kind": "site",
+    "page": "daily_problems.html"
+  },
+  "provenance": {
+    "intake": "tonina-bilingual-text-and-test-answers.md; tonina-deep-analysis.md",
+    "method": "Complete edited reading adaptation of the supplied bilingual working text: twenty source units grouped into 15 short reading chunks. Two editorial changes: the unresolved action behind the door is replaced with a neutral statement of the supported location; the redundant wording “Tonina daħlet ġewwa hi wkoll” is shortened to “Tonina daħlet hi wkoll”. Other source wording and all translations are retained. This is an editorial reading adaptation, not a verbatim transcript or an official answer key. The ten bilingual comprehension prompts remain unscored."
+  },
   "groups": [
-    { "id": "tonina-listening-questions", "title": "Listening questions", "itemType": "translation", "containerClass": "stack", "items": [
-      { "slug": "tonina-q01", "maltese": "1. Fuq min kienet taħseb Tonina l-ħin kollu?", "english": "Who was Tonina thinking about all the time?" },
-      { "slug": "tonina-q02", "maltese": "2. X'semgħet Tonina barra fit-triq?", "english": "What did Tonina hear outside in the street?" },
-      { "slug": "tonina-q03", "maltese": "3. Minn fejn kienet tara x'kien qed jiġri?", "english": "From where could she see what was happening?" },
-      { "slug": "tonina-q04", "maltese": "4. Għaliex kienet tibża' mill-pulizija?", "english": "Why was she afraid of the police?" },
-      { "slug": "tonina-q05", "maltese": "5. X'nsiet Tonina fuq in-nar?", "english": "What did Tonina forget on the stove?" },
-      { "slug": "tonina-q06", "maltese": "6. X'riħa xammet ħdejn il-kċina?", "english": "What smell did she notice near the kitchen?" },
-      { "slug": "tonina-q07", "maltese": "7. Għaliex ma kellhiex ikel x'tagħti lir-raġel tagħha?", "english": "Why did she have no food to give her husband?" },
-      { "slug": "tonina-q08", "maltese": "8. X'kielu Tonina u r-raġel tagħha dakinhar?", "english": "What did Tonina and her husband eat that day?" },
-      { "slug": "tonina-q09", "maltese": "9. X'qalilha tagħmel żewġha dwar il-ġirien?", "english": "What did her husband tell her to do about the neighbours?" },
-      { "slug": "tonina-q10", "maltese": "10. Tonina bidlet id-drawwa tagħha fl-aħħar?", "english": "Did Tonina change her habit in the end?" }
-    ] }
+    {
+      "id": "tonina-reading-text",
+      "title": "Tonina and the neighbours",
+      "itemType": "example",
+      "containerClass": "stack",
+      "items": [
+        {
+          "slug": "tonina-reading-01",
+          "maltese": "Kienet dejjem moħħha fil-ġirien. U trid tkun taf x'inhu jagħmel dak u x'inhi tagħmel l-oħra.",
+          "english": "She was always preoccupied with the neighbours. And she wants to know what that man is doing and what the other woman is doing."
+        },
+        {
+          "slug": "tonina-reading-02",
+          "maltese": "Kienet tqatta' ħin twil jew fil-bieb tad-dar jew fit-tieqa, ħalli tara x'inhu jiġri madwarha.",
+          "english": "She used to spend a long time either in the doorway or at the window, so that she could see what was happening around her."
+        },
+        {
+          "slug": "tonina-reading-03",
+          "maltese": "Darba waħda, waqt li kienet qed issajjar, semgħet ħafna għajjat barra fit-triq.",
+          "english": "One day, while she was cooking, she heard a lot of shouting outside in the street."
+        },
+        {
+          "slug": "tonina-reading-04",
+          "maltese": "Tonina mill-ewwel intebħet li kienet ġrat xi ħaġa, u wiċċha xegħel bil-ferħ.",
+          "english": "Tonina immediately realised that something had happened, and her face lit up with joy."
+        },
+        {
+          "slug": "tonina-reading-05",
+          "maltese": "Marret tara x'kien qiegħed jiġri, u hemm sabet li xi ġirien kienu qed jiġġieldu u jitgħajru.",
+          "english": "She went to see what was happening and found that some neighbours were quarrelling and calling each other names."
+        },
+        {
+          "slug": "tonina-reading-06",
+          "maltese": "Tonina kienet wara l-bieb tad-dar tagħha, minn fejn setgħet tara kulma kien qiegħed jiġri fit-triq.",
+          "english": "Tonina was behind the door of her house, from where she could see everything that was happening in the street."
+        },
+        {
+          "slug": "tonina-reading-07",
+          "maltese": "Hija baqgħet hemm barra, għax ma riedet titlef xejn minn dak li kien għaddej fit-triq.",
+          "english": "She stayed outside because she did not want to miss anything that was happening in the street."
+        },
+        {
+          "slug": "tonina-reading-08",
+          "maltese": "Min-naħa l-oħra, kellha xi ftit biża' li jekk jiġu l-pulizija jistgħu jtellgħuha bħala xhud.",
+          "english": "On the other hand, she was somewhat afraid that, if the police came, they might call her as a witness."
+        },
+        {
+          "slug": "tonina-reading-09",
+          "maltese": "Tant kienet mitlufa tara dik it-tilwima li nsiet li kellha l-ikel fuq in-nar.",
+          "english": "She was so absorbed in watching that dispute that she forgot she had food on the stove."
+        },
+        {
+          "slug": "tonina-reading-10",
+          "maltese": "Meta spiċċat il-ġlieda u l-ġirien li kienu qed jitgħajru daħlu ġewwa f'darhom, Tonina daħlet hi wkoll biex tkompli ssajjar u tlesti l-ikel.",
+          "english": "When the quarrel ended and the neighbours who had been calling each other names went back into their house, Tonina also went inside to continue cooking and finish the food."
+        },
+        {
+          "slug": "tonina-reading-11",
+          "maltese": "Imma kif qorbot lejn il-kċina, Tonina xammet riħa ta' ikel maħruq. “Ara xi ġrali! Ara xi ġrali!” Bdiet tibki u tgħajjat Tonina.",
+          "english": "But as she approached the kitchen, Tonina smelled burnt food. “Look what has happened to me! Look what has happened to me!” Tonina began crying and shouting."
+        },
+        {
+          "slug": "tonina-reading-12",
+          "maltese": "Ftit ħin wara wasal ir-raġel tagħha mix-xogħol, u ma kellhiex ikel x'tagħtih.",
+          "english": "A little later her husband arrived home from work, and she had no food to give him."
+        },
+        {
+          "slug": "tonina-reading-13",
+          "maltese": "U għal dakinhar Tonina u r-raġel kellhom jieklu biċċtejn ħobż bil-ġobon, għax l-ikel kien inħaraq kollu.",
+          "english": "So that day Tonina and her husband had to eat two pieces of bread with cheese because all the food had burnt."
+        },
+        {
+          "slug": "tonina-reading-14",
+          "maltese": "“M'hemmx li titgħallem int,” qalilha żewġha. “Lill-ġirien ħallihom.” Imma Tonina baqgħet dejjem moħħha fil-ġirien.",
+          "english": "“You never learn,” her husband told her. “Leave the neighbours alone.” But Tonina remained preoccupied with the neighbours."
+        },
+        {
+          "slug": "tonina-reading-15",
+          "maltese": "Kif jgħidu, min jitwieled tond ma jmutx kwadru.",
+          "english": "As they say, someone born round does not die square: ingrained habits do not easily change."
+        }
+      ]
+    },
+    {
+      "id": "tonina-listening-questions",
+      "title": "Reading questions",
+      "itemType": "translation",
+      "containerClass": "stack",
+      "items": [
+        {
+          "slug": "tonina-q01",
+          "maltese": "1. Fuq min kienet taħseb Tonina l-ħin kollu?",
+          "english": "Who was Tonina thinking about all the time?"
+        },
+        {
+          "slug": "tonina-q02",
+          "maltese": "2. X'semgħet Tonina barra fit-triq?",
+          "english": "What did Tonina hear outside in the street?"
+        },
+        {
+          "slug": "tonina-q03",
+          "maltese": "3. Minn fejn kienet tara x'kien qed jiġri?",
+          "english": "From where could she see what was happening?"
+        },
+        {
+          "slug": "tonina-q04",
+          "maltese": "4. Għaliex kienet tibża' mill-pulizija?",
+          "english": "Why was she afraid of the police?"
+        },
+        {
+          "slug": "tonina-q05",
+          "maltese": "5. X'nsiet Tonina fuq in-nar?",
+          "english": "What did Tonina forget on the stove?"
+        },
+        {
+          "slug": "tonina-q06",
+          "maltese": "6. X'riħa xammet ħdejn il-kċina?",
+          "english": "What smell did she notice near the kitchen?"
+        },
+        {
+          "slug": "tonina-q07",
+          "maltese": "7. Għaliex ma kellhiex ikel x'tagħti lir-raġel tagħha?",
+          "english": "Why did she have no food to give her husband?"
+        },
+        {
+          "slug": "tonina-q08",
+          "maltese": "8. X'kielu Tonina u r-raġel tagħha dakinhar?",
+          "english": "What did Tonina and her husband eat that day?"
+        },
+        {
+          "slug": "tonina-q09",
+          "maltese": "9. X'qalilha tagħmel żewġha dwar il-ġirien?",
+          "english": "What did her husband tell her to do about the neighbours?"
+        },
+        {
+          "slug": "tonina-q10",
+          "maltese": "10. Tonina bidlet id-drawwa tagħha fl-aħħar?",
+          "english": "Did Tonina change her habit in the end?"
+        }
+      ]
+    }
   ]
 }

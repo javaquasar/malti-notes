@@ -74,7 +74,6 @@ const coreAssets = [
 ];
 
 const lazyAssets = [
-  './assets/audio/tonina.m4a',
   './assets/data/vocabulary_review_catalog.json',
   ...walk('assets/img/mdi', '.svg').sort().map((file) => './' + file),
   ...[...require('./vocabulary_image_inventory').vocabularyFiles().keys()].map((file) => './assets/data/' + file),
@@ -114,13 +113,24 @@ const LAZY_ASSETS = ${serializedLazyAssets.trimStart()};
 const LAZY_ASSET_URLS = new Set(LAZY_ASSETS.map((asset) => new URL(asset, self.registration.scope).href));
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS))
+      // Replace old workers immediately after a complete install: the recording
+      // was withdrawn, so connected clients must stop serving cached copies.
+      .then(() => self.skipWaiting())
+  );
 });
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(keys.filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME).map((key) => caches.delete(key))))
+      // Also remove a restored or previously fetched copy in the current cache.
+      .then(() => caches.open(CACHE_NAME))
+      .then(async (cache) => {
+        const requests = await cache.keys();
+        await Promise.all(requests.filter((request) => isRetiredMedia(new URL(request.url))).map((request) => cache.delete(request)));
+      })
       .then(() => self.clients.claim())
   );
 });
@@ -182,11 +192,23 @@ async function mediaResponse(request) {
   } });
 }
 
+function isRetiredMedia(url) {
+  let pathname;
+  try { pathname = decodeURIComponent(url.pathname); }
+  catch (error) { return false; }
+  return /\\/assets\\/(?:[a-f0-9]{16}\\/)?audio\\/tonina\\.m4a$/.test(pathname);
+}
+
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
-  if (request.mode === "navigate") {
+  // Block retired raw and revisioned URLs before any cache or network fallback.
+  if (isRetiredMedia(url)) {
+    event.respondWith(Promise.resolve(new Response("This recording is no longer available.", {
+      status: 410, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" }
+    })));
+  } else if (request.mode === "navigate") {
     event.respondWith(navigationResponse(request));
   } else if (url.pathname.endsWith(".m4a") && LAZY_ASSET_URLS.has(url.href)) {
     event.respondWith(mediaResponse(request));

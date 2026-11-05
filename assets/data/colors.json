@@ -10,13 +10,16 @@
       "items": [
         {
           "slug": "abjad",
-          "maltese": "abjad",
+          "maltese": "abjad / bajda",
           "english": "white",
           "swatchStyle": "background:#ffffff;",
           "notes": [
-            "qmis abjad = white shirt"
+            "masculine: abjad",
+            "feminine: bajda",
+            "flokk abjad = white T-shirt",
+            "libsa bajda = white dress"
           ],
-          "example": "Il-qmis abjad.",
+          "example": "Il-qmis bajda.",
           "review": {
             "enabled": true,
             "type": "word"
@@ -24,15 +27,27 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The shirt is white.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "bajda",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "abjad"
         },
         {
           "slug": "iswed",
-          "maltese": "iswed",
+          "maltese": "iswed / sewda",
           "english": "black",
           "swatchStyle": "background:#111111;",
           "notes": [
-            "karozza sewda = black car"
+            "masculine: iswed",
+            "feminine: sewda",
+            "flokk iswed = black T-shirt",
+            "libsa sewda = black dress"
           ],
           "example": "Il-karozza sewda.",
           "review": {
@@ -42,15 +57,27 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The car is black.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "sewda",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "iswed"
         },
         {
           "slug": "ahmar",
-          "maltese": "aħmar",
+          "maltese": "aħmar / ħamra",
           "english": "red",
           "swatchStyle": "background:#d73a31;",
           "notes": [
-            "fjura ħamra = red flower"
+            "masculine: aħmar",
+            "feminine: ħamra",
+            "flokk aħmar = red T-shirt",
+            "libsa ħamra = red dress"
           ],
           "example": "It-tuffieħa ħamra.",
           "review": {
@@ -60,7 +87,16 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The apple is red.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "ħamra",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "aħmar"
         },
         {
           "slug": "blu",
@@ -68,7 +104,11 @@
           "english": "blue",
           "swatchStyle": "background:#2f7be5;",
           "notes": [
-            "baħar blu = blue sea"
+            "masculine: blu",
+            "feminine: blu",
+            "Same form in both singular genders.",
+            "flokk blu = blue T-shirt",
+            "libsa blu = blue dress"
           ],
           "example": "Il-baħar blu.",
           "review": {
@@ -78,15 +118,27 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The sea is blue.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "blu",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "blu"
         },
         {
           "slug": "isfar",
-          "maltese": "isfar",
+          "maltese": "isfar / safra",
           "english": "yellow",
           "swatchStyle": "background:#f0d23d;",
           "notes": [
-            "xemx safra = yellow sun"
+            "masculine: isfar",
+            "feminine: safra",
+            "flokk isfar = yellow T-shirt",
+            "libsa safra = yellow dress"
           ],
           "example": "Ix-xemx safra.",
           "review": {
@@ -96,15 +148,27 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The sun is yellow.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "safra",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "isfar"
         },
         {
           "slug": "ahdar",
-          "maltese": "aħdar",
+          "maltese": "aħdar / ħadra",
           "english": "green",
           "swatchStyle": "background:#3f9b4d;",
           "notes": [
-            "ħaxix aħdar = green vegetables"
+            "masculine: aħdar",
+            "feminine: ħadra",
+            "flokk aħdar = green T-shirt",
+            "libsa ħadra = green dress"
           ],
           "example": "Il-ħaxix aħdar.",
           "review": {
@@ -114,7 +178,16 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The vegetables are green.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "ħadra",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "aħdar"
         },
         {
           "slug": "orangjo",
@@ -122,7 +195,11 @@
           "english": "orange",
           "swatchStyle": "background:#f19d2a;",
           "notes": [
-            "ballun oranġjo = orange balloon"
+            "masculine: oranġjo",
+            "feminine: oranġjo",
+            "Same form in both singular genders.",
+            "flokk oranġjo = orange T-shirt",
+            "libsa oranġjo = orange dress"
           ],
           "example": "Il-fjura oranġjo.",
           "review": {
@@ -132,7 +209,16 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The flower is orange.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "oranġjo",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "oranġjo"
         },
         {
           "slug": "vjola",
@@ -140,7 +226,11 @@
           "english": "purple",
           "swatchStyle": "background:#7d4cc7;",
           "notes": [
-            "fjura vjola = purple flower"
+            "masculine: vjola",
+            "feminine: vjola",
+            "Same form in both singular genders.",
+            "flokk vjola = purple T-shirt",
+            "libsa vjola = purple dress"
           ],
           "example": "Din il-fjura vjola.",
           "review": {
@@ -150,7 +240,16 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "This flower is purple.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "vjola",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "vjola"
         },
         {
           "slug": "roza",
@@ -158,7 +257,11 @@
           "english": "pink",
           "swatchStyle": "background:#f7adc6;",
           "notes": [
-            "borża roża = pink bag"
+            "masculine: roża",
+            "feminine: roża",
+            "Same form in both singular genders.",
+            "flokk roża = pink T-shirt",
+            "libsa roża = pink dress"
           ],
           "example": "Il-borża roża.",
           "review": {
@@ -168,7 +271,16 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The bag is pink.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "roża",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "roża"
         },
         {
           "slug": "kannella",
@@ -176,7 +288,11 @@
           "english": "brown",
           "swatchStyle": "background:#8a5e3b;",
           "notes": [
-            "mejda kannella = brown table"
+            "masculine: kannella",
+            "feminine: kannella",
+            "Same form in both singular genders.",
+            "flokk kannella = brown T-shirt",
+            "libsa kannella = brown dress"
           ],
           "example": "Il-mejda kannella.",
           "review": {
@@ -186,15 +302,27 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The table is brown.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "kannella",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "kannella"
         },
         {
           "slug": "griz",
-          "maltese": "griż",
+          "maltese": "griż / griża",
           "english": "grey",
           "swatchStyle": "background:#b8b8b8;",
           "notes": [
-            "qattus griż = grey cat"
+            "masculine: griż",
+            "feminine: griża",
+            "flokk griż = grey T-shirt",
+            "libsa griża = grey dress"
           ],
           "example": "Il-qattus griż.",
           "review": {
@@ -204,15 +332,27 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The cat is grey.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "griża",
+              "source": "hekk-ahjar-colours",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "griż"
         },
         {
           "slug": "ikkulurit",
-          "maltese": "ikkulurit",
+          "maltese": "ikkulurit / ikkulurita",
           "english": "colourful",
           "swatchStyle": "background:linear-gradient(135deg,#ffd8e3,#cfe8ff,#f7e8a2);",
           "notes": [
-            "stampa ikkulurita = colourful picture"
+            "masculine: ikkulurit",
+            "feminine: ikkulurita",
+            "flokk ikkulurit = colourful T-shirt",
+            "libsa ikkulurita = colourful dress"
           ],
           "example": "Il-pittura ikkulurita.",
           "review": {
@@ -222,7 +362,16 @@
           "imageQuizEligible": true,
           "imageRole": "identifying",
           "exampleTranslation": "The painting is colourful.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "verifiedClaims": {
+            "feminine": {
+              "value": "ikkulurita",
+              "source": "government-gazette-coloured-2021",
+              "checkedOn": "2026-11-05",
+              "evidenceFile": "docs/analysis/colour-agreement.md"
+            }
+          },
+          "lemma": "ikkulurit"
         }
       ]
     },
@@ -287,5 +436,24 @@
         }
       ]
     }
-  ]
+  ],
+  "verificationSources": {
+    "hekk-ahjar-colours": {
+      "title": "Hekk aħjar! — Il-kuluri, page 24",
+      "kind": "primary-educational-reference",
+      "url": "https://www.mmargherita.org/wp-content/uploads/2015/10/hekkahjar-abbozz.pdf",
+      "publisher": "Il-Kunsill Nazzjonali tal-Ilsien Malti and the education curriculum department",
+      "method": "Compared all eleven core colour entries with the masculine/feminine columns on page 24.",
+      "checkedOn": "2026-11-05",
+      "scope": "Singular colour forms only. Card example pairs are original site-authored examples."
+    },
+    "government-gazette-coloured-2021": {
+      "title": "Malta Government Gazette, 29 March 2021, page 2764",
+      "kind": "primary-government-usage",
+      "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Documents/2021/03/Government%20Gazette%20-%2029th%20March.pdf",
+      "method": "Compared ikkulurita with feminine art and ikkulurit with masculine sqaq on the same page.",
+      "checkedOn": "2026-11-05",
+      "scope": "Gender forms of coloured; not an external verification of complete card examples."
+    }
+  }
 }

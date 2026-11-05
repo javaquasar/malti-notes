@@ -1,6 +1,9 @@
 {
   "schemaVersion": 2,
-  "source": { "kind": "site", "page": "colors_maltese.html" },
+  "source": {
+    "kind": "site",
+    "page": "colors_maltese.html"
+  },
   "page": "colors_maltese.html",
   "topic": "Colours",
   "groups": [
@@ -10,12 +13,34 @@
       "title": "Useful Colour Patterns",
       "itemType": "example",
       "items": [
-        { "maltese": "X'kulur hu?", "english": "What colour is it?" },
-        { "maltese": "Huwa blu.", "english": "It is blue." },
-        { "maltese": "Din il-karozza ħamra.", "english": "This car is red." },
-        { "maltese": "Inħobb il-kulur aħdar.", "english": "I like the colour green." },
-        { "maltese": "Nixtieq qmis abjad.", "english": "I would like a white shirt." },
-        { "maltese": "Il-bieb kannella skur.", "english": "The door is dark brown." }
+        {
+          "maltese": "X'kulur hu?",
+          "english": "What colour is it?"
+        },
+        {
+          "maltese": "Huwa blu.",
+          "english": "It is blue."
+        },
+        {
+          "maltese": "Din il-karozza ħamra.",
+          "english": "This car is red."
+        },
+        {
+          "maltese": "Inħobb il-kulur aħdar.",
+          "english": "I like the colour green."
+        },
+        {
+          "maltese": "Nixtieq qmis bajda.",
+          "english": "I would like a white shirt.",
+          "slug": "want-white-shirt",
+          "legacyReviewIds": [
+            "sentence::colors::nixtieq qmis abjad."
+          ]
+        },
+        {
+          "maltese": "Il-bieb kannella skur.",
+          "english": "The door is dark brown."
+        }
       ]
     },
     {
@@ -24,14 +49,38 @@
       "title": "Colours With Objects",
       "itemType": "example",
       "items": [
-        { "maltese": "It-tuffieħa ħamra.", "english": "The apple is red." },
-        { "maltese": "Il-baħar blu.", "english": "The sea is blue." },
-        { "maltese": "Il-lumi safra.", "english": "The lemon is yellow." },
-        { "maltese": "Is-siġra ħadra.", "english": "The tree is green." },
-        { "maltese": "Il-qattus griż.", "english": "The cat is grey." },
-        { "maltese": "Il-borża roża.", "english": "The bag is pink." },
-        { "maltese": "Il-mejda kannella.", "english": "The table is brown." },
-        { "maltese": "Il-kamra bajda u blu.", "english": "The room is white and blue." }
+        {
+          "maltese": "It-tuffieħa ħamra.",
+          "english": "The apple is red."
+        },
+        {
+          "maltese": "Il-baħar blu.",
+          "english": "The sea is blue."
+        },
+        {
+          "maltese": "Il-lumi safra.",
+          "english": "The lemon is yellow."
+        },
+        {
+          "maltese": "Is-siġra ħadra.",
+          "english": "The tree is green."
+        },
+        {
+          "maltese": "Il-qattus griż.",
+          "english": "The cat is grey."
+        },
+        {
+          "maltese": "Il-borża roża.",
+          "english": "The bag is pink."
+        },
+        {
+          "maltese": "Il-mejda kannella.",
+          "english": "The table is brown."
+        },
+        {
+          "maltese": "Il-kamra bajda u blu.",
+          "english": "The room is white and blue."
+        }
       ]
     },
     {
@@ -42,23 +91,47 @@
       "items": [
         {
           "slug": "shirt-colour",
-          "question": { "maltese": "X'kulur hu l-qmis?", "english": "What colour is the shirt?" },
-          "answer": { "maltese": "Il-qmis abjad.", "english": "The shirt is white." }
+          "question": {
+            "maltese": "X'kulur hi l-qmis?",
+            "english": "What colour is the shirt?"
+          },
+          "answer": {
+            "maltese": "Il-qmis bajda.",
+            "english": "The shirt is white."
+          }
         },
         {
           "slug": "car-colour",
-          "question": { "maltese": "X'kulur hi l-karozza?", "english": "What colour is the car?" },
-          "answer": { "maltese": "Il-karozza sewda.", "english": "The car is black." }
+          "question": {
+            "maltese": "X'kulur hi l-karozza?",
+            "english": "What colour is the car?"
+          },
+          "answer": {
+            "maltese": "Il-karozza sewda.",
+            "english": "The car is black."
+          }
         },
         {
           "slug": "favourite-colour",
-          "question": { "maltese": "Liema kulur tħobb?", "english": "Which colour do you like?" },
-          "answer": { "maltese": "Jien inħobb il-blu.", "english": "I like blue." }
+          "question": {
+            "maltese": "Liema kulur tħobb?",
+            "english": "Which colour do you like?"
+          },
+          "answer": {
+            "maltese": "Jien inħobb il-blu.",
+            "english": "I like blue."
+          }
         },
         {
           "slug": "red-or-blue-shirt",
-          "question": { "maltese": "Tixtieq qmis aħmar jew blu?", "english": "Would you like a red or blue shirt?" },
-          "answer": { "maltese": "Nixtieq qmis blu.", "english": "I would like a blue shirt." }
+          "question": {
+            "maltese": "Tixtieq qmis ħamra jew blu?",
+            "english": "Would you like a red or blue shirt?"
+          },
+          "answer": {
+            "maltese": "Nixtieq qmis blu.",
+            "english": "I would like a blue shirt."
+          }
         }
       ]
     },
@@ -69,8 +142,12 @@
       "itemType": "example",
       "items": [
         {
-          "maltese": "Il-qmis abjad.",
-          "english": "The shirt is white."
+          "maltese": "Il-qmis bajda.",
+          "english": "The shirt is white.",
+          "slug": "white-shirt",
+          "legacyReviewIds": [
+            "sentence::colors::il-qmis abjad."
+          ]
         },
         {
           "maltese": "Il-qalziet iswed.",
@@ -186,7 +263,7 @@
         },
         {
           "maltese": "It-tuffieħ aħdar jew aħmar.",
-          "english": "The apple is green or red."
+          "english": "The apples are green or red."
         },
         {
           "maltese": "Il-banana safra.",
@@ -194,7 +271,7 @@
         },
         {
           "maltese": "Il-frawli aħmar.",
-          "english": "The strawberry is red."
+          "english": "The strawberries are red."
         },
         {
           "maltese": "Din il-fjura vjola.",
@@ -229,8 +306,12 @@
           "english": "The window is white."
         },
         {
-          "maltese": "X'kulur hu l-qmis?",
-          "english": "What colour is the shirt?"
+          "maltese": "X'kulur hi l-qmis?",
+          "english": "What colour is the shirt?",
+          "slug": "shirt-colour-question",
+          "legacyReviewIds": [
+            "sentence::colors::x'kulur hu l-qmis?"
+          ]
         },
         {
           "maltese": "Il-qmis blu.",
@@ -266,5 +347,10 @@
         }
       ]
     }
-  ]
+  ],
+  "editorialReview": {
+    "checkedOn": "2026-11-05",
+    "record": "docs/analysis/colour-agreement.md",
+    "method": "Checked colour forms against a primary educational reference and qmis gender against primary parliamentary usage; original examples retain site provenance."
+  }
 }
