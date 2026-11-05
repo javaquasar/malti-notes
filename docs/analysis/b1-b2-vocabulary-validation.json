@@ -1,0 +1,221 @@
+{
+  "checkedOn": "2026-11-05T11:36:50.043255+00:00",
+  "status": "PASS",
+  "commands": {
+    "materials:check": {
+      "status": "PASS",
+      "log": "materials-check.log",
+      "evidence": "PASS: material authoring gate."
+    },
+    "course:lint": {
+      "status": "PASS",
+      "log": "course-lint.log",
+      "evidence": "ok checked course target bindings"
+    },
+    "functional:course": {
+      "status": "PASS",
+      "log": "functional-course.log",
+      "evidence": "ok functional course: 10 test(s)"
+    },
+    "functional:review-games": {
+      "status": "PASS",
+      "log": "functional-review-games.log",
+      "evidence": "ok functional review-games: 13 test(s)"
+    },
+    "accessibility": {
+      "status": "PASS",
+      "log": "accessibility.log",
+      "evidence": "checked 56 page/viewport combinations"
+    }
+  },
+  "static": {
+    "status": "PASS",
+    "checks": 12220,
+    "sourceUnits": 284,
+    "sourceLabels": 274,
+    "newCards": 225,
+    "enrichedNonCourse": 32,
+    "enrichedCourse": 6,
+    "referencedCards": 263,
+    "canonicalBanks": 29,
+    "mountedCourseCards": 288,
+    "backedCourseDefinitions": 462,
+    "oldReviewIdsChecked": {
+      "topic": 961,
+      "course": 288,
+      "verb": 57,
+      "aggregate": 948
+    },
+    "approvedSensePairs": [
+      {
+        "head": "ħelwa",
+        "cards": [
+          "assets/data/collective_nouns.json#collective-food#helwa",
+          "assets/data/getting_to_know_vocabulary.json#people-description#helu-description"
+        ],
+        "glosses": [
+          "sweet -> sweets",
+          "sweet / cute / charming (description)"
+        ]
+      }
+    ],
+    "catalogWords": 2732,
+    "builderCheck": "Contextual examples are synchronized: 462 book targets and 76 animal cards.",
+    "errors": []
+  },
+  "browser": {
+    "passed": 277,
+    "failed": 0,
+    "newCards": 225,
+    "ownerPages": 26,
+    "responsiveChecks": 234,
+    "screenshots": 28,
+    "runtimeErrors": 0,
+    "httpErrors": 0
+  },
+  "finalMounts": {
+    "passed": 12,
+    "failed": 0,
+    "newCards": 0,
+    "ownerPages": 2,
+    "responsiveChecks": 0,
+    "screenshots": 3,
+    "runtimeErrors": 0,
+    "httpErrors": 0
+  },
+  "offline": {
+    "passed": 8,
+    "failed": 0,
+    "newCards": 225,
+    "ownerPages": 0,
+    "responsiveChecks": 0,
+    "screenshots": 0,
+    "runtimeErrors": 0,
+    "httpErrors": 0
+  },
+  "accessibility": {
+    "status": "PASS",
+    "pageViewportCombinations": 56
+  },
+  "negativeProbes": {
+    "status": "PASS",
+    "method": "Five in-memory read-only perturbations; original files never written. Each must trigger its specific guard independently of pending baseline build fixes.",
+    "cases": [
+      {
+        "name": "altered-source-queue",
+        "status": "PASS",
+        "detected": "Source book/lemma set differs from pinned 284-unit audit queue"
+      },
+      {
+        "name": "book-provenance-leak",
+        "status": "PASS",
+        "detected": "assets/data/environment_recycling.json#recycling-materials#ambjent: learner-facing notes includes source-book/development provenance"
+      },
+      {
+        "name": "duplicate-new-head",
+        "status": "PASS",
+        "detected": "New duplicate head/form 'kelb': assets/data/animals.json#domestic-core#kelb (dog) vs assets/data/environment_recycling.json#recycling-materials#ambjent (environment)"
+      },
+      {
+        "name": "missing-new-catalog-word",
+        "status": "PASS",
+        "detected": "assets/data/environment_recycling.json#recycling-materials#ambjent: new word absent from global review catalog"
+      },
+      {
+        "name": "lost-old-review-identity",
+        "status": "PASS",
+        "detected": "Old saved review ID disappeared (topic): word::animals::kelb"
+      }
+    ]
+  },
+  "visualReview": {
+    "reviewedOn": "2026-11-05T11:28:40.628Z",
+    "status": "pass",
+    "method": "Viewed local full-resolution screenshots using view_image; no image generation or visual baseline refresh. Automated computed-style/overflow checks separately cover every affected canonical owner page across 3 themes and 3 widths.",
+    "visuallyReviewedScreenshots": [
+      {
+        "file": "conversation_help-classic-390.png",
+        "sha256": "39080b6c1a2340ece3bdd26a852e4ad38bd9fd465b859dd39138b3899ea187e2"
+      },
+      {
+        "file": "greetings-forest-1280.png",
+        "sha256": "bb6f6138de23f44b02213c81a84f104147762f0521c2552677a92abefb345a77"
+      },
+      {
+        "file": "school_classroom-forest-390.png",
+        "sha256": "c8948647a8696a119e99d45714975c934300cc60bda2d9cb25aa93f0ebaddd6f"
+      },
+      {
+        "file": "year4-all-enriched-card.png",
+        "sha256": "9915d03f4b946113f9dcc675cbf8fe0e922aaffaf889cd4c2d553944d5f53923"
+      },
+      {
+        "file": "conversation_help-contrast-320.png",
+        "sha256": "9ff0ece553c2a9435d4e7ee4b10b58ac8b46964c701a4b1e69697a9388ca0591"
+      },
+      {
+        "file": "school_classroom-contrast-320.png",
+        "sha256": "5ad5e920372972582b9cc25ec8e9cc2be8f4fe397e4ac46f362aea885fe19ba9"
+      },
+      {
+        "file": "school_classroom-classic-1280.png",
+        "sha256": "dceb38c505e3d743fb75f7ff4aa8026f79a4e6d203d6b8630ac09e6986f7cbfa"
+      },
+      {
+        "file": "greetings-classic-320.png",
+        "sha256": "c878deeb2175e28e28b49bb1e01f89a8f9f28eda80e0c36314ac018a6ca7ebdd"
+      },
+      {
+        "file": "school_classroom-forest-320.png",
+        "sha256": "5cbaf7ad5b4f0124d126793bd87669413ce9e648d0306589ee1d875eac06c5ff"
+      },
+      {
+        "file": "conversation_help-contrast-1280.png",
+        "sha256": "b62883f62a591ad2ecddda9ae568e94b471ae8f2f73c5c598d57b4f5d26da9c4"
+      },
+      {
+        "file": "greetings-contrast-390.png",
+        "sha256": "cf02c4bae09ed1a37581c9784d7eb4d7606aedb58f15f026287a24ba6c4e074c"
+      }
+    ],
+    "findings": [
+      "Shared vocabulary card surfaces, spacing, notes, bilingual examples and icon bookmarks are consistent with existing components.",
+      "320px and390px examples wrap within cards; bookmarks remain clear of text and contain44px mobile targets. Desktop cards retain shared borders and matching heights.",
+      "New greeting/conversation groups coexist with existing lesson controls and related-page sections.",
+      "Year4 All view visibly contains updated ninsab/tinsab gloss and the personal-state example while keeping its original review ID."
+    ],
+    "automatedSummary": {
+      "passed": 277,
+      "failed": 0,
+      "newCards": 225,
+      "ownerPages": 26,
+      "responsiveChecks": 234,
+      "screenshots": 28,
+      "runtimeErrors": 0,
+      "httpErrors": 0
+    },
+    "browser": {
+      "version": "156.0.8078.49",
+      "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    "initialFailuresResolved": {
+      "legacyData": [
+        "Added missing English translations to preserved fi and mutur examples."
+      ],
+      "stateRefresh": [
+        "Canonical saved word labels and derived labels refresh while existing SRS fields and manually owned entries remain preserved; course supplements included in the Review catalog."
+      ],
+      "testAdapter": [
+        "Course buttons close over a stable review ID without data-review-id; verified their actual saved records via keyboard/click rather than requiring absent DOM metadata."
+      ]
+    },
+    "scopeLimit": "Representative screenshots visually reviewed; all234 owner-page/theme/viewport combinations were checked automatically, rather than claiming every page was visually read in full."
+  },
+  "sourcePdfSha256": {
+    "B1": "5067bd8bd3f058b931b30d450f356242b17daf40ed527ee5389a67f3dce273b2",
+    "B2": "856f7f8629237766ecafa8873058b10ca45461b3c2642f8c1c517ca51cb5946c"
+  },
+  "limitations": [
+    "24 pre-existing Year 4 cards have no example sentence. All 225 new cards have bilingual examples. No pending claim or quarantined example was added."
+  ]
+}

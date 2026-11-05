@@ -22,6 +22,12 @@ for (const [file, page] of vocabularyFiles()) {
 }
 const year4 = JSON.parse(fs.readFileSync(path.join(root, 'assets/data/year4_revision_vocabulary.json'), 'utf8'));
 for (const collection of year4.collections) for (const group of collection.groups) for (const item of group.items) add(item, 'year-4-exam', 'year4_exam.html');
+// Retain definitions for stable course bookmark IDs, including older saved cards.
+// This registry does not create additional page cards.
+const supplements = JSON.parse(fs.readFileSync(path.join(root, 'assets/data/course_supplemental_content.json'), 'utf8'));
+for (const chapter of supplements.chapters) for (const item of chapter.items) {
+    add({ ...item, slug: item.id }, 'course-supplement', 'course_chapter.html');
+}
 const output = JSON.stringify({ words: Object.fromEntries(words) }, null, 2) + '\n';
 const file = path.join(root, 'assets/data/vocabulary_review_catalog.json');
 if (process.argv.includes('--check')) {

@@ -33,6 +33,16 @@
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
+        },
+        {
+          "slug": "barbikju",
+          "maltese": "barbikju",
+          "english": "barbecue",
+          "example": "Nhar is-Sibt nagħmlu barbikju.",
+          "exampleTranslation": "On Saturday we have a barbecue.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -108,8 +118,8 @@
         },
         {
           "slug": "bott-pizelli",
-          "maltese": "bott piżelli",
-          "english": "tin of peas",
+          "maltese": "piżelli",
+          "english": "peas",
           "example": "Xtrajna bott piżelli.",
           "review": {
             "enabled": true,
@@ -118,7 +128,10 @@
           "imageQuizEligible": false,
           "imageRole": "none",
           "exampleTranslation": "We bought a tin of peas.",
-          "exampleSource": "translated topic example"
+          "exampleSource": "translated topic example",
+          "notes": [
+            "bott piżelli = a tin of peas; pastizz tal-piżelli = a pea-filled pastizz."
+          ]
         },
         {
           "slug": "kaxxa-frawli",
@@ -227,8 +240,8 @@
         },
         {
           "slug": "flixkun-inbid-ahmar",
-          "maltese": "flixkun inbid aħmar",
-          "english": "bottle of red wine",
+          "maltese": "flixkun / fliexken",
+          "english": "bottle / bottles",
           "example": "Hemm flixkun inbid aħmar fuq il-mejda.",
           "review": {
             "enabled": true,
@@ -245,7 +258,10 @@
           "imageQuizEligible": false,
           "imageRole": "context",
           "exampleTranslation": "There is a bottle of red wine on the table.",
-          "exampleSource": "translated topic example"
+          "exampleSource": "translated topic example",
+          "notes": [
+            "flixkun inbid aħmar = a bottle of red wine; flixkun ilma = a bottle of water."
+          ]
         },
         {
           "slug": "nixtru",
@@ -253,6 +269,52 @@
           "english": "we buy",
           "example": "Aħna nixtru l-frott.",
           "exampleTranslation": "We buy fruit.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "bicca",
+          "maltese": "biċċa",
+          "english": "piece; slice",
+          "example": "Nixtieq biċċa ħobż.",
+          "exampleTranslation": "I would like a piece of bread.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "tal-laham",
+          "maltese": "tal-laħam",
+          "english": "the butcher; meat seller (shopkeeper label)",
+          "example": "Tal-laħam ibigħ it-tiġieġ.",
+          "exampleTranslation": "The butcher sells chicken.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Conversational shopkeeper label; tal-laħam literally means of the meat."
+          ]
+        },
+        {
+          "slug": "tal-pastizzi",
+          "maltese": "tal-pastizzi",
+          "english": "the pastizzi seller (shopkeeper label)",
+          "example": "Tal-pastizzi jservi lill-klijenti.",
+          "exampleTranslation": "The pastizzi seller serves the customers.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Conversational label for the person selling pastizzi."
+          ]
+        },
+        {
+          "slug": "xirja",
+          "maltese": "xirja",
+          "english": "shopping; grocery shopping",
+          "example": "Nagħmel ix-xirja nhar is-Sibt.",
+          "exampleTranslation": "I do the grocery shopping on Saturday.",
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
@@ -437,7 +499,10 @@
           "slug": "torta",
           "maltese": "torta",
           "english": "pie",
-          "notes": ["Plural: torti."],
+          "notes": [
+            "Plural: torti.",
+            "torta tal-laħam = meat pie."
+          ],
           "example": "Nara torta.",
           "review": {
             "enabled": true,
@@ -652,6 +717,98 @@
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
+        },
+        {
+          "slug": "croissants",
+          "maltese": "croissants",
+          "english": "croissants",
+          "example": "Filgħodu niekol il-croissants.",
+          "exampleTranslation": "In the morning I eat croissants.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "French food name used without a Maltese spelling change."
+          ]
+        },
+        {
+          "slug": "curry",
+          "maltese": "curry",
+          "english": "curry",
+          "example": "Illum niekol il-curry bir-ross.",
+          "exampleTranslation": "Today I am eating curry with rice.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Borrowed food name; here it means the dish."
+          ]
+        },
+        {
+          "slug": "fish-and-chips",
+          "maltese": "fish and chips",
+          "english": "fish and chips",
+          "example": "Nixtieq il-fish and chips.",
+          "exampleTranslation": "I would like fish and chips.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "English name of the dish, also used in Maltese conversation."
+          ]
+        },
+        {
+          "slug": "ikla",
+          "maltese": "ikla",
+          "english": "meal",
+          "example": "F'nofsinhar niekol ikla ħafifa.",
+          "exampleTranslation": "At midday I eat a light meal.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "karawett",
+          "maltese": "karawett / karawetta",
+          "english": "peanuts / a peanut",
+          "example": "Nixtri borża karawett.",
+          "exampleTranslation": "I buy a bag of peanuts.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "karawett names peanuts collectively; karawetta names one peanut."
+          ]
+        },
+        {
+          "slug": "koxxa-tat-tigiega",
+          "maltese": "koxxa tat-tiġieġa",
+          "english": "chicken thigh",
+          "example": "Nixtieq koxxa tat-tiġieġa.",
+          "exampleTranslation": "I would like a chicken thigh.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "zalza",
+          "maltese": "zalza",
+          "english": "sauce",
+          "example": "L-għaġin fih zalza ħamra.",
+          "exampleTranslation": "The pasta has a red sauce.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "gamm",
+          "maltese": "ġamm",
+          "english": "jam",
+          "example": "Nieħu ħobż bil-ġamm.",
+          "exampleTranslation": "I have bread with jam.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -675,7 +832,30 @@
         { "slug": "tuffieh", "maltese": "tuffieħ", "english": "apples", "example": "Għandi bżonn kilo tuffieħ.", "exampleTranslation": "I need a kilo of apples.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "laring", "maltese": "larinġ", "english": "oranges", "example": "Għandi bżonn żewġ kilogrammi larinġ.", "exampleTranslation": "I need two kilograms of oranges.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "gheneb", "maltese": "għeneb", "english": "grapes", "example": "Nixtieq ftit għeneb.", "exampleTranslation": "I would like some grapes.", "exampleSource": "editorial request using S05", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
-        { "slug": "frawli", "maltese": "frawli", "english": "strawberries", "example": "Nieħu żewġ kaxxi frawli.", "exampleTranslation": "I will take two boxes of strawberries.", "exampleSource": "S07, adapted without the disputed adjective agreement", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+        { "slug": "frawli", "maltese": "frawli", "english": "strawberries", "example": "Nieħu żewġ kaxxi frawli.", "exampleTranslation": "I will take two boxes of strawberries.", "exampleSource": "S07, adapted without the disputed adjective agreement", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        {
+          "slug": "qoxra",
+          "maltese": "qoxra",
+          "english": "skin; peel; rind",
+          "example": "Il-banana għandha qoxra safra.",
+          "exampleTranslation": "The banana has a yellow peel.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "tuta",
+          "maltese": "tuta",
+          "english": "a mulberry (fruit)",
+          "example": "Din tuta sewda.",
+          "exampleTranslation": "This is a black mulberry.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Fruit sense; tut names mulberries collectively."
+          ]
+        }
       ]
     },
     {
@@ -724,7 +904,17 @@
         { "slug": "gobon-tal-qoxra-hamra", "maltese": "ġobon tal-qoxra ħamra", "english": "red-rind cheese", "note": "Describes the rind; the phrase does not identify one exclusive variety.", "example": "Nixtieq ġobon tal-qoxra ħamra.", "exampleTranslation": "I would like red-rind cheese.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "bejken", "maltese": "bejken", "english": "bacon", "example": "Nixtieq tliet mitt gramma bejken.", "exampleTranslation": "I would like 300 grams of bacon.", "exampleSource": "S07, shortened request", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
         { "slug": "mortadella", "maltese": "mortadella", "english": "mortadella", "example": "Nixtieq mortadella.", "exampleTranslation": "I would like mortadella.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
-        { "slug": "salami", "maltese": "salami", "english": "salami", "example": "Nixtieq salami.", "exampleTranslation": "I would like salami.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+        { "slug": "salami", "maltese": "salami", "english": "salami", "example": "Nixtieq salami.", "exampleTranslation": "I would like salami.", "exampleSource": "editorial request using S08", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        {
+          "slug": "irkotta",
+          "maltese": "irkotta",
+          "english": "ricotta",
+          "example": "Dan il-pastizz fih l-irkotta.",
+          "exampleTranslation": "This pastizz contains ricotta.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
       ]
     }
   ]

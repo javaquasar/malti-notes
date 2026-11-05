@@ -51,7 +51,7 @@ function targetItem(target) {
       match: source.match
     },
     sourceLabel,
-    notes: [`Example: ${context.maltese}`, `Translation: ${context.english}`, `Source: ${sourceLabel}`],
+    notes: [...(context.notes || []), `Example: ${context.maltese}`, `Translation: ${context.english}`, `Source: ${sourceLabel}`],
     glossReview: "reviewed",
     sourceStatus: baselineMissingKeys.has(key)
       ? "added-from-book"

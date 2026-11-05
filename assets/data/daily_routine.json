@@ -28,7 +28,10 @@
           "imageQuizEligible": false,
           "imageRole": "none",
           "exampleTranslation": "Every day I get up early.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "notes": [
+            "Qum bilwieqfa! means Stand up! (to one person); Qumu bilwieqfa! addresses more than one person."
+          ]
         },
         {
           "slug": "immur",
@@ -281,6 +284,55 @@
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
+        },
+        {
+          "slug": "naghmel-xaghri",
+          "maltese": "nagħmel xagħri",
+          "english": "I do my hair",
+          "example": "Filgħodu nagħmel xagħri.",
+          "exampleTranslation": "In the morning I do my hair.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nerga",
+          "maltese": "nerġa'",
+          "english": "I do again; I repeat an action",
+          "example": "Nerġa' naqra l-mistoqsija.",
+          "exampleTranslation": "I read the question again.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Follow with another verb to say that you do something again."
+          ]
+        },
+        {
+          "slug": "taqa",
+          "maltese": "taqa'",
+          "english": "you fall; she falls",
+          "example": "Oqgħod attent li ma taqax.",
+          "exampleTranslation": "Be careful not to fall.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Dictionary form: waqa', he fell."
+          ]
+        },
+        {
+          "slug": "rutina",
+          "maltese": "rutina",
+          "english": "routine",
+          "example": "Ir-rutina tiegħi sempliċi.",
+          "exampleTranslation": "My routine is simple.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "ir-rutina: the routine."
+          ]
         }
       ]
     },
@@ -293,7 +345,17 @@
       "source": { "kind": "site", "page": "daily_routine.html", "file": "lesson-04-materials-analysis.md, section 11; tonina-deep-analysis.md, sections 5-6" },
       "items": [
         { "slug": "drawwa", "maltese": "drawwa", "english": "habit / custom", "example": "Il-qari huwa drawwa tajba.", "exampleTranslation": "Reading is a good habit.", "exampleSource": "editorial example using S12 glossary, not recorded wording", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
-        { "slug": "tqatta-hin", "maltese": "tqatta' ħin", "english": "she spends time", "note": "Here the subject is hi (she). This is spending time, not 'I read'; with kienet it can describe a past habit: 'she used to spend time'.", "example": "Hi tqatta' ħin mal-familja tagħha.", "exampleTranslation": "She spends time with her family.", "exampleSource": "editorial example using the expression discussed in tonina-deep-analysis.md, sections 5.1 and 6", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false }
+        { "slug": "tqatta-hin", "maltese": "tqatta' ħin", "english": "she spends time", "note": "Here the subject is hi (she). This is spending time, not 'I read'; with kienet it can describe a past habit: 'she used to spend time'.", "example": "Hi tqatta' ħin mal-familja tagħha.", "exampleTranslation": "She spends time with her family.", "exampleSource": "editorial example using the expression discussed in tonina-deep-analysis.md, sections 5.1 and 6", "review": { "enabled": true, "type": "word" }, "imageRole": "none", "imageQuizEligible": false },
+        {
+          "slug": "flimkien",
+          "maltese": "flimkien",
+          "english": "together",
+          "example": "Nieklu flimkien kull filgħaxija.",
+          "exampleTranslation": "We eat together every evening.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        }
       ]
     },
     {
@@ -318,6 +380,116 @@
           "english": "often",
           "example": "Spiss nimxi mal-ħbieb.",
           "exampleTranslation": "I often walk with friends.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "darb-ohra",
+          "maltese": "darb'oħra",
+          "english": "another time; next time",
+          "example": "Darb'oħra se niġi kmieni.",
+          "exampleTranslation": "Next time I will come early.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mbaghad",
+          "maltese": "mbagħad",
+          "english": "then; afterwards",
+          "example": "Niekol u mbagħad noħroġ.",
+          "exampleTranslation": "I eat and then I go out.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mill-ewwel",
+          "maltese": "mill-ewwel",
+          "english": "immediately; straight away",
+          "example": "Niftaħ il-bieb mill-ewwel.",
+          "exampleTranslation": "I open the door straight away.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "minnufih",
+          "maltese": "minnufih",
+          "english": "immediately; at once",
+          "example": "Niġi minnufih.",
+          "exampleTranslation": "I will come at once.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "dalghodu",
+          "maltese": "dalgħodu",
+          "english": "this morning",
+          "example": "Dalgħodu mort bil-mixi.",
+          "exampleTranslation": "This morning I went on foot.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "dalwaqt",
+          "maltese": "dalwaqt",
+          "english": "soon",
+          "example": "Dalwaqt nasal id-dar.",
+          "exampleTranslation": "I will arrive home soon.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "darba",
+          "maltese": "darba",
+          "english": "once; one time",
+          "example": "Immur hemm darba biss.",
+          "exampleTranslation": "I go there only once.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "darba-f-gimgha",
+          "maltese": "darba f'ġimgħa",
+          "english": "once a week",
+          "example": "Immur ngħum darba f'ġimgħa.",
+          "exampleTranslation": "I go swimming once a week.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "fil-hin",
+          "maltese": "fil-ħin",
+          "english": "on time",
+          "example": "Nasal l-iskola fil-ħin.",
+          "exampleTranslation": "I arrive at school on time.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nhar-ta-hadd",
+          "maltese": "nhar ta' Ħadd",
+          "english": "on Sunday; on Sundays",
+          "example": "Nhar ta' Ħadd immur għand in-nanna.",
+          "exampleTranslation": "On Sundays I go to my grandmother's house.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "gieli",
+          "maltese": "ġieli",
+          "english": "sometimes",
+          "example": "Ġieli mmur bil-mixi.",
+          "exampleTranslation": "Sometimes I go on foot.",
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false

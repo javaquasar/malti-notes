@@ -139,6 +139,7 @@ function contextualExample(target, gloss) {
       if (sets.schoolClothes.has(word)) return result(`Nilbes ${word} l-iskola.`, `I wear ${meaning} at school.`, "school-clothing");
       return result(`Hemm ${word} fil-bini.`, `The ${meaning} is in the building.`, "school-place");
     case "b1-animals":
+      if (word === "brama") return result("Nara brama fil-baħar.", "I see a jellyfish in the sea.", "jellyfish-in-sea");
       return result(`Nara ${word} fil-ġnien.`, `I see the ${meaning} in the garden.`, "animal-in-garden");
     case "b1-colours":
       if (sets.colourMasculine.has(word)) return result(`Il-flokk huwa ${word}.`, `The shirt is ${meaning}.`, "colour-masculine");
@@ -160,6 +161,7 @@ function contextualExample(target, gloss) {
       if (["tenis", "passeġġata", "żfin"].includes(word)) return result(`Inħobb ${word}.`, `I like ${meaning}.`, "family-activity");
       return result(`Hemm ${word} qrib id-dar.`, `The ${meaning} is near the house.`, "family-place");
     case "b2-school-bag":
+      if (word === "kulur") return result("Hemm kulur fil-basket tal-iskola.", "There is a colouring pencil or crayon in the school bag.", "school-colouring-equipment");
       if (sets.schoolBagMasculine.has(word)) return result(`Il-ktieb huwa ${word}.`, `The book is ${meaning}.`, "object-adjective-masculine");
       if (sets.schoolBagFeminine.has(word)) return result(`Il-karta hija ${word}.`, `The paper is ${meaning}.`, "object-adjective-feminine");
       if (sets.schoolBagPlural.has(word)) return result(`Il-kotba huma ${word}.`, `The books are ${meaning}.`, "object-adjective-plural");
@@ -213,11 +215,13 @@ function contextualExample(target, gloss) {
 
 function buildExamples() {
   const targets = readJson(bindingsPath).targets.filter((target) => target.type !== "grammar");
-  const glosses = readJson(glossesPath).glosses;
+  const glossData = readJson(glossesPath);
+  const glosses = glossData.glosses;
   const examples = {};
   targets.forEach((target) => {
     const key = `${target.chapterId}::${target.sourceRequirement}`;
     examples[key] = contextualExample(target, glosses[key]);
+    if (glossData.usageNotes?.[key]) examples[key].notes = glossData.usageNotes[key];
   });
   return {
     schemaVersion: 1,
@@ -230,6 +234,8 @@ function buildExamples() {
 function buildAnimals() {
   const animals = readJson(animalsPath);
   animals.groups.forEach((group) => group.items.forEach((item) => {
+    // Preserve authored contexts, including marine animals and lexical usage.
+    if (item.example && item.exampleTranslation) return;
     item.example = `Nara ${item.maltese} fil-ġnien.`;
     item.exampleTranslation = `I see the ${cleanGloss(item.english)} in the garden.`;
   }));
@@ -246,9 +252,9 @@ if (checkOnly) {
     console.error(`Contextual examples are stale: ${errors.join(", ")}. Run npm run course:examples:build.`);
     process.exit(1);
   }
-  console.log(`Contextual examples are synchronized: ${Object.keys(JSON.parse(serializedExamples).examples).length} book targets and 60 animal cards.`);
+  console.log(`Contextual examples are synchronized: ${Object.keys(JSON.parse(serializedExamples).examples).length} book targets and ${readJson(animalsPath).groups.reduce((sum, group) => sum + group.items.length, 0)} animal cards.`);
 } else {
   fs.writeFileSync(examplesPath, serializedExamples, "utf8");
   fs.writeFileSync(animalsPath, serializedAnimals, "utf8");
-  console.log(`Wrote contextual examples for ${Object.keys(JSON.parse(serializedExamples).examples).length} book targets and 60 animal cards.`);
+  console.log(`Wrote contextual examples for ${Object.keys(JSON.parse(serializedExamples).examples).length} book targets and ${readJson(animalsPath).groups.reduce((sum, group) => sum + group.items.length, 0)} animal cards.`);
 }

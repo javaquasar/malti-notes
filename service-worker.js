@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}936643de8060`;
+const CACHE_NAME = `${CACHE_PREFIX}ae44aa4ca8a4`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -208,6 +208,7 @@ const LAZY_ASSETS = [
     "./assets/data/collective_nouns.json",
     "./assets/data/colors.json",
     "./assets/data/comparisons.json",
+    "./assets/data/conversation_help_vocabulary.json",
     "./assets/data/daily_problems.json",
     "./assets/data/daily_routine.json",
     "./assets/data/directions_town.json",
@@ -216,6 +217,7 @@ const LAZY_ASSETS = [
     "./assets/data/family_home_food.json",
     "./assets/data/food.json",
     "./assets/data/getting_to_know_vocabulary.json",
+    "./assets/data/greetings_vocabulary.json",
     "./assets/data/health_doctor.json",
     "./assets/data/hobbies_future.json",
     "./assets/data/home_furniture.json",

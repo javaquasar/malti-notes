@@ -36,6 +36,8 @@
                 <li><a href="#clarifying-dialogue">A short clarification</a></li>
                 <li><a href="#quick-check">Quick Check</a></li>
                 <li><a href="#related">Related Pages</a></li>
+                            <li><a href="#conversation-responses">Conversation responses</a></li>
+                <li><a href="#conversation-linkers">Connecting a conversation</a></li>
             </ul>
         </aside>
         <main class="content">
@@ -73,6 +75,16 @@
                 <h2>Quick Check</h2>
                 <div data-exercise-set="lesson01-conversation" data-exercise-src="./assets/data/lesson01_exercises.json"></div>
             </section>
+            <section class="content-card" id="conversation-responses">
+                <h2>Conversation responses</h2>
+                <p>Save useful words to Review and practise them with the short examples.</p>
+                <div class="grid-auto" data-conversation-vocab-group="conversation-responses"></div>
+            </section>
+            <section class="content-card" id="conversation-linkers">
+                <h2>Connecting a conversation</h2>
+                <p>Save useful words to Review and practise them with the short examples.</p>
+                <div class="grid-auto" data-conversation-vocab-group="conversation-linkers"></div>
+            </section>
             <section class="card" id="related">
                 <span class="tag">Related</span>
                 <h2>Keep the Conversation Going</h2>
@@ -91,6 +103,7 @@
 </div>
 <script src="./assets/js/storage.js"></script>
 <script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/render-vocab-cards.js"></script>
 <script src="./assets/js/learning-content.js"></script>
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/mistake-store.js"></script>
@@ -99,6 +112,17 @@
 <script src="./assets/js/lesson01-practice-core.js"></script>
 <script src="./assets/js/about-me-story-core.js"></script>
 <script src="./assets/js/lesson01-practice.js?v=phrase-cards-2"></script>
+<script>
+window.MaltiVocabReviewPage = {
+    dataUrl: "./assets/data/conversation_help_vocabulary.json",
+    reviewPrefix: "conversation-vocabulary",
+    groupAttribute: "data-conversation-vocab-group",
+    sourcePage: "conversation_help.html",
+    defaultTopic: "Conversation",
+    cardClass: "visual-vocab-card"
+};
+</script>
+<script src="./assets/js/vocab-review-page.js"></script>
 <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

@@ -430,7 +430,10 @@
       "maltese": "Nilbes qmis l-iskola.",
       "english": "I wear shirt at school.",
       "pattern": "school-clothing",
-      "review": "reviewed-template"
+      "review": "reviewed-template",
+      "notes": [
+        "qmis bil-kmiem qosra: short-sleeved shirt."
+      ]
     },
     "b1-school::dublett": {
       "maltese": "Nilbes dublett l-iskola.",
@@ -631,9 +634,9 @@
       "review": "reviewed-template"
     },
     "b1-animals::brama": {
-      "maltese": "Nara brama fil-ġnien.",
-      "english": "I see the bream in the garden.",
-      "pattern": "animal-in-garden",
+      "maltese": "Nara brama fil-baħar.",
+      "english": "I see a jellyfish in the sea.",
+      "pattern": "jellyfish-in-sea",
       "review": "reviewed-template"
     },
     "b1-animals::xadina": {
@@ -1466,9 +1469,13 @@
     },
     "b2-school-bag::kulur": {
       "maltese": "Hemm kulur fil-basket tal-iskola.",
-      "english": "The school bag contains the colour.",
-      "pattern": "school-bag-object",
-      "review": "reviewed-template"
+      "english": "There is a colouring pencil or crayon in the school bag.",
+      "pattern": "school-colouring-equipment",
+      "review": "reviewed-template",
+      "notes": [
+        "In school equipment, kulur refers to a colouring implement; kuluri / il-kuluri = colouring pencils or crayons.",
+        "lapes tal-kulur = coloured pencil; kulur tax-xema' = wax crayon. Elsewhere kulur means colour."
+      ]
     },
     "b2-school-bag::lapes": {
       "maltese": "Hemm lapes fil-basket tal-iskola.",
@@ -2524,7 +2531,11 @@
       "maltese": "Itla' 'l fuq sat-tieni sular.",
       "english": "Go up to the second floor.",
       "pattern": "town-direction",
-      "review": "reviewed-template"
+      "review": "reviewed-template",
+      "notes": [
+        "tela': he went up; itla': go up! The directional sense.",
+        "itla' 'l fuq: go up; itla' on its own means go up! (one person)."
+      ]
     },
     "b2-town::Inżel 'l isfel": {
       "maltese": "Inżel 'l isfel sal-pjan terran.",
@@ -2554,13 +2565,19 @@
       "maltese": "Hemm skart imħallat fil-kontenitur.",
       "english": "The container contains the mixed waste.",
       "pattern": "recycling-material",
-      "review": "reviewed-template"
+      "review": "reviewed-template",
+      "notes": [
+        "imħallat means mixed. Skart imħallat means mixed waste."
+      ]
     },
     "b2-recycling::skart riċiklabbli": {
       "maltese": "Hemm skart riċiklabbli fil-kontenitur.",
       "english": "The container contains the recyclable waste.",
       "pattern": "recycling-material",
-      "review": "reviewed-template"
+      "review": "reviewed-template",
+      "notes": [
+        "riċiklabbli means recyclable. Skart riċiklabbli means recyclable waste."
+      ]
     },
     "b2-recycling::nadif": {
       "maltese": "Il-kontenitur huwa nadif.",

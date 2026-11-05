@@ -138,14 +138,20 @@
     function syncWordContent(words) {
         const state = loadState();
         let changed = false;
-        const fields = ['image', 'imageAlt', 'imageRole', 'imageQuizEligible', 'swatchStyle', 'example', 'exampleTranslation'];
+        const fields = ['maltese', 'english', 'image', 'imageAlt', 'imageRole', 'imageQuizEligible', 'swatchStyle', 'example', 'exampleTranslation'];
         (words || []).forEach(function (word) {
             const card = state[word.id];
             if (!card || card.type !== 'word-card' || card.sourcePage === 'manual') return;
             fields.forEach(function (field) {
                 if (!Object.prototype.hasOwnProperty.call(word, field)) return;
-                if ((field === 'example' || field === 'exampleTranslation') && !word[field]) return;
+                if ((field === 'maltese' || field === 'english' || field === 'example' || field === 'exampleTranslation') && !word[field]) return;
                 if (card[field] !== word[field]) { card[field] = word[field]; changed = true; }
+                if (field === 'maltese') {
+                    const display = collapseSpaces(word.maltese);
+                    const normalized = normalizeForKey(display);
+                    if (card.displayMaltese !== display) { card.displayMaltese = display; changed = true; }
+                    if (card.normalizedMaltese !== normalized) { card.normalizedMaltese = normalized; changed = true; }
+                }
             });
         });
         if (changed) saveState(state);

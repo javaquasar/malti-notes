@@ -34,7 +34,9 @@
           "image": "./assets/img/transport/bus.svg",
           "imageAlt": "Bus illustration",
           "notes": [
-            "Kuljum ħafna nies imorru bit-tal-linja."
+            "Kuljum ħafna nies imorru bit-tal-linja.",
+            "bil-karozza tal-linja: by bus.",
+            "xarabank: bus; karozza tal-linja: bus; bil-karozza tal-linja: by bus."
           ],
           "example": "Kuljum ħafna nies jaqbdu bit-tal-linja.",
           "review": {
@@ -186,7 +188,8 @@
           "image": "./assets/img/transport/scooter.svg",
           "imageAlt": "Scooter illustration",
           "notes": [
-            "Xi nies jippreferu jmorru bil-mutur."
+            "Xi nies jippreferu jmorru bil-mutur.",
+            "bil-mutur: by motorcycle."
           ],
           "example": "Xi nies jippreferu jmorru bil-mutur.",
           "review": {
@@ -194,7 +197,8 @@
             "type": "word"
           },
           "imageQuizEligible": false,
-          "imageRole": "context"
+          "imageRole": "context",
+          "exampleTranslation": "Some people prefer to go by motorcycle."
         },
         {
           "slug": "biljett",
@@ -205,6 +209,29 @@
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
+        },
+        {
+          "slug": "katamaran",
+          "maltese": "katamaran",
+          "english": "catamaran",
+          "example": "Nivvjaġġa bil-katamaran.",
+          "exampleTranslation": "I travel by catamaran.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "vjagg",
+          "maltese": "vjaġġ",
+          "english": "journey; trip",
+          "example": "Il-vjaġġ twil.",
+          "exampleTranslation": "The journey is long.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "il-vjaġġ: the journey."
+          ]
         }
       ]
     }

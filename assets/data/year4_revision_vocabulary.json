@@ -4679,12 +4679,16 @@
             },
             {
               "slug": "ninsab",
-              "maltese": "ninsab",
-              "english": "I am found",
-              "example": "Jien ninsab fil-klassi.",
-              "exampleTranslation": "I am in class.",
-              "exampleSource": "source material",
-              "notes": [],
+              "maltese": "ninsab / tinsab",
+              "english": "I am / you are; she is (in a place or condition)",
+              "example": "Ninsab marid illum.",
+              "exampleTranslation": "I am ill today.",
+              "exampleSource": "original site-authored example",
+              "notes": [
+                "ninsab marid / ninsab marida = I am ill (male / female speaker).",
+                "Kif tinsab? = How are you? Tinsab can address one person or refer to a female subject.",
+                "This verb describes a location or a state, according to context."
+              ],
               "count": 10,
               "sourceTerms": "ninsab",
               "review": {
@@ -7000,13 +7004,13 @@
             },
             {
               "slug": "istampa",
-              "maltese": "istampa",
-              "english": "picture",
-              "example": "Ikteb 2 (tnejn) sentenzi dwar I-istampa:",
-              "exampleTranslation": "Write two sentences about the picture.",
-              "exampleSource": "source material",
+              "maltese": "stampa / stampi",
+              "english": "picture / pictures",
+              "example": "Nara stampa sabiħa fil-ktieb.",
+              "exampleTranslation": "I see a beautiful picture in the book.",
+              "exampleSource": "original site-authored example",
               "notes": [
-                "normalized from: I-istampa"
+                "With the article: l-istampa, the picture; l-istampi, the pictures."
               ],
               "count": 8,
               "sourceTerms": "I-istampa",
@@ -8112,6 +8116,27 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "pet",
+              "maltese": "pet / pets",
+              "english": "pet / pets",
+              "example": "Il-kelb tiegħi huwa l-pet favorit tiegħi.",
+              "exampleTranslation": "My dog is my favourite pet.",
+              "exampleSource": "topic data",
+              "notes": [
+                "English loan; annimal domestiku means a domestic animal and can refer to a pet in context."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -8930,6 +8955,63 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "ors-tas-silg",
+              "maltese": "ors tas-silġ",
+              "english": "polar bear",
+              "example": "L-ors tas-silġ jgħix fil-kesħa.",
+              "exampleTranslation": "The polar bear lives in the cold.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "gungla",
+              "maltese": "ġungla",
+              "english": "jungle",
+              "example": "It-tigra tgħix fil-ġungla.",
+              "exampleTranslation": "The tiger lives in the jungle.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "zoo",
+              "maltese": "żoo",
+              "english": "zoo",
+              "example": "L-iljuni jgħixu fiż-żoo jew fis-selvaġġ.",
+              "exampleTranslation": "Lions live in the zoo or in the wild.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -9048,6 +9130,105 @@
               "image": "./assets/img/animals/crab.svg",
               "imageAlt": "Crab illustration",
               "imageRole": "context",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "iljun-il-bahar",
+              "maltese": "iljun il-baħar / iljun tal-baħar",
+              "english": "sea lion",
+              "example": "L-iljun tal-baħar jgħum.",
+              "exampleTranslation": "The sea lion swims.",
+              "exampleSource": "topic data",
+              "notes": [
+                "The form iljun tal-baħar is also used."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "klamar",
+              "maltese": "klamar",
+              "english": "squid",
+              "example": "Il-klamar jgħix fil-baħar.",
+              "exampleTranslation": "The squid lives in the sea.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "serp-il-bahar",
+              "maltese": "serp il-baħar / serp tal-baħar",
+              "english": "sea snake",
+              "example": "Dan serp tal-baħar.",
+              "exampleTranslation": "This is a sea snake.",
+              "exampleSource": "topic data",
+              "notes": [
+                "The form serp tal-baħar is also used. No particular species is implied."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "stilla-tal-bahar",
+              "maltese": "stilla tal-baħar",
+              "english": "starfish; sea star",
+              "example": "L-istilla tal-baħar hija fil-baħar.",
+              "exampleTranslation": "The starfish is in the sea.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ziemel-il-bahar",
+              "maltese": "żiemel il-baħar",
+              "english": "seahorse",
+              "example": "Iż-żiemel il-baħar jgħix fil-baħar.",
+              "exampleTranslation": "The seahorse lives in the sea.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
               "sourceLabel": "Animals",
@@ -9292,6 +9473,158 @@
               "image": "./assets/img/animals/scorpion.svg",
               "imageAlt": "Scorpion illustration",
               "imageRole": "context",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "merill",
+              "maltese": "merill",
+              "english": "blue rock-thrush",
+              "example": "Il-merill huwa għasfur.",
+              "exampleTranslation": "The blue rock-thrush is a bird.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "qanfud",
+              "maltese": "qanfud",
+              "english": "hedgehog",
+              "example": "Nara qanfud fil-ġnien.",
+              "exampleTranslation": "I see a hedgehog in the garden.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "werzieq",
+              "maltese": "werżieq",
+              "english": "cricket (insect)",
+              "example": "Nisma' werżieq fil-ġnien.",
+              "exampleTranslation": "I hear a cricket in the garden.",
+              "exampleSource": "topic data",
+              "notes": [
+                "A chirping insect; werżieq ta' binhar can refer specifically to a cicada."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            }
+          ]
+        },
+        {
+          "id": "animals-animal-description",
+          "sectionId": "animal-description",
+          "sectionTitle": "Talking about animals",
+          "title": "Animals: Talking about animals",
+          "sourceLabel": "Animals",
+          "sourceFile": "animals.json",
+          "tier": "basics",
+          "items": [
+            {
+              "slug": "feroci",
+              "maltese": "feroċi",
+              "english": "fierce",
+              "example": "L-iljun huwa annimal feroċi.",
+              "exampleTranslation": "The lion is a fierce animal.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "jghixu",
+              "maltese": "jgħixu",
+              "english": "they live",
+              "example": "L-annimali domestiċi jgħixu mal-bniedem.",
+              "exampleTranslation": "Domestic animals live with people.",
+              "exampleSource": "site examples",
+              "notes": [
+                "Present form with a plural subject."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "jibza",
+              "maltese": "jibża'",
+              "english": "he is afraid",
+              "example": "Il-kelb jibża' mir-ragħad.",
+              "exampleTranslation": "The dog is afraid of thunder.",
+              "exampleSource": "topic data",
+              "notes": [
+                "jibża' minn = is afraid of; minn + ir-ragħad becomes mir-ragħad."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Animals",
+              "sourceFile": "animals.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tgerrem",
+              "maltese": "tgerrem",
+              "english": "she gnaws; chews",
+              "example": "Il-kelba tgerrem għadma.",
+              "exampleTranslation": "The female dog gnaws a bone.",
+              "exampleSource": "topic data",
+              "notes": [
+                "With a feminine subject, as in il-kelba tgerrem (the female dog gnaws)."
+              ],
+              "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
               "sourceLabel": "Animals",
@@ -9557,6 +9890,114 @@
               "imageRole": "identifying",
               "imageQuizEligible": true,
               "swatchStyle": "background:linear-gradient(135deg,#ffd8e3,#cfe8ff,#f7e8a2);",
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            }
+          ]
+        },
+        {
+          "id": "colours-colour-symbols",
+          "sectionId": "colour-symbols",
+          "sectionTitle": "Symbols and shapes",
+          "title": "Colours: Symbols and shapes",
+          "sourceLabel": "Colours",
+          "sourceFile": "colors.json",
+          "tier": "basics",
+          "items": [
+            {
+              "slug": "emblema",
+              "maltese": "emblema / emblemi",
+              "english": "emblem / emblems",
+              "example": "Din l-emblema hija ħamra.",
+              "exampleTranslation": "This emblem is red.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "qamar",
+              "maltese": "qamar / qmura",
+              "english": "moon; crescent shape / moons",
+              "example": "Fuq il-bandiera hemm qamar.",
+              "exampleTranslation": "There is a crescent on the flag.",
+              "exampleSource": "topic data",
+              "notes": [
+                "In a flag or emblem, qamar can refer to a crescent shape."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "salib",
+              "maltese": "salib / slaleb",
+              "english": "cross / crosses",
+              "example": "Hemm salib aħmar fuq l-emblema.",
+              "exampleTranslation": "There is a red cross on the emblem.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "stilla",
+              "maltese": "stilla / stilel",
+              "english": "star / stars",
+              "example": "Fuq il-bandiera hemm stilla bajda.",
+              "exampleTranslation": "There is a white star on the flag.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Colours",
+              "sourceFile": "colors.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "vlegga",
+              "maltese": "vleġġa / vleġeġ",
+              "english": "arrow / arrows",
+              "example": "Il-vleġġa hija ħadra.",
+              "exampleTranslation": "The arrow is green.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
               "sourceLabel": "Colours",
               "sourceFile": "colors.json",
               "tier": "basics",
@@ -10891,6 +11332,88 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "meta",
+              "maltese": "meta",
+              "english": "when",
+              "example": "Meta se tiġi?",
+              "exampleTranslation": "When will you come?",
+              "exampleSource": "topic data",
+              "notes": [
+                "Also introduces a time clause: meta niġi, when I come."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "xhin",
+              "maltese": "xħin",
+              "english": "when; at the time that",
+              "example": "Xħin nasal, niekol.",
+              "exampleTranslation": "When I arrive, I eat.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Use for the time at which something happens; fi x'ħin asks at what time."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "arlogg",
+              "maltese": "arloġġ",
+              "english": "clock; watch",
+              "example": "L-arloġġ qiegħed fuq il-ħajt.",
+              "exampleTranslation": "The clock is on the wall.",
+              "exampleSource": "topic data",
+              "notes": [
+                "l-arloġġ: the clock."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "fi-x-hin",
+              "maltese": "fi x'ħin?",
+              "english": "at what time?",
+              "example": "Fi x'ħin tibda l-lezzjoni?",
+              "exampleTranslation": "At what time does the lesson start?",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -11091,6 +11614,25 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "xahar",
+              "maltese": "xahar",
+              "english": "month",
+              "example": "Se nibqa' hawn għal xahar.",
+              "exampleTranslation": "I will stay here for a month.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -11193,6 +11735,25 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "nofsillejl",
+              "maltese": "nofsillejl",
+              "english": "midnight",
+              "example": "Mort id-dar f'nofsillejl.",
+              "exampleTranslation": "I went home at midnight.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -11244,7 +11805,30 @@
               "example": "Ilbieraħ kelli ħafna xogħol.",
               "exampleTranslation": "Yesterday I had a lot of work.",
               "exampleSource": "site examples",
-              "notes": [],
+              "notes": [
+                "ħafna minnhom: many of them."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kocc",
+              "maltese": "koċċ",
+              "english": "a lot; a heap; a pile",
+              "example": "Għandi koċċ kotba.",
+              "exampleTranslation": "I have a lot of books.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Informal quantity word, often followed by a noun."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -11674,6 +12258,158 @@
               "notes": [
                 "Counting number. Date and ordinal constructions use separate patterns."
               ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "dsatax",
+              "maltese": "dsatax",
+              "english": "nineteen",
+              "example": "In-numru tiegħi huwa dsatax.",
+              "exampleTranslation": "My number is nineteen.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "erbatax",
+              "maltese": "erbatax",
+              "english": "fourteen",
+              "example": "In-numru tiegħi huwa erbatax.",
+              "exampleTranslation": "My number is fourteen.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "sbatax",
+              "maltese": "sbatax",
+              "english": "seventeen",
+              "example": "In-numru tiegħi huwa sbatax.",
+              "exampleTranslation": "My number is seventeen.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "sittax",
+              "maltese": "sittax",
+              "english": "sixteen",
+              "example": "In-numru tiegħi huwa sittax.",
+              "exampleTranslation": "My number is sixteen.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tlettax",
+              "maltese": "tlettax",
+              "english": "thirteen",
+              "example": "In-numru tiegħi huwa tlettax.",
+              "exampleTranslation": "My number is thirteen.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tmintax",
+              "maltese": "tmintax",
+              "english": "eighteen",
+              "example": "In-numru tiegħi huwa tmintax.",
+              "exampleTranslation": "My number is eighteen.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tnax",
+              "maltese": "tnax",
+              "english": "twelve",
+              "example": "In-numru tiegħi huwa tnax.",
+              "exampleTranslation": "My number is twelve.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Numbers, Calendar and Time",
+              "sourceFile": "numbers_calendar_time.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "zero",
+              "maltese": "żero",
+              "english": "zero",
+              "example": "In-numru tiegħi huwa żero.",
+              "exampleTranslation": "My number is zero.",
+              "exampleSource": "topic data",
+              "notes": [],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -12296,6 +13032,44 @@
               "english": "dad; daddy",
               "example": "Il-papà qiegħed id-dar.",
               "exampleTranslation": "Dad is at home.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "arblu-tar-razza",
+              "maltese": "arblu tar-razza",
+              "english": "family tree",
+              "example": "Dan l-arblu tar-razza juri l-familja tiegħi.",
+              "exampleTranslation": "This family tree shows my family.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Family, Home and Food",
+              "sourceFile": "family_home_food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "mama",
+              "maltese": "mamà",
+              "english": "mum; mummy",
+              "example": "Il-mamà qiegħda d-dar.",
+              "exampleTranslation": "Mum is at home.",
               "exampleSource": "topic data",
               "notes": [],
               "imageRole": "none",
@@ -13962,6 +14736,44 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "dawl",
+              "maltese": "dawl",
+              "english": "light",
+              "example": "Fuq barra d-dar hemm dawl isfar.",
+              "exampleTranslation": "Outside the house there is a yellow light.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Home and Furniture",
+              "sourceFile": "home_furniture.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hajt",
+              "maltese": "ħajt",
+              "english": "wall",
+              "example": "Il-ħajt ta' barra huwa abjad.",
+              "exampleTranslation": "The outside wall is white.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Home and Furniture",
+              "sourceFile": "home_furniture.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -14778,7 +15590,9 @@
               "example": "Nilbes nuċċali kuljum.",
               "exampleTranslation": "I wear glasses every day.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "nuċċali tax-xemx: sunglasses."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -15020,6 +15834,25 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "barbikju",
+              "maltese": "barbikju",
+              "english": "barbecue",
+              "example": "Nhar is-Sibt nagħmlu barbikju.",
+              "exampleTranslation": "On Saturday we have a barbecue.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -15091,12 +15924,14 @@
             },
             {
               "slug": "bott-pizelli",
-              "maltese": "bott piżelli",
-              "english": "tin of peas",
+              "maltese": "piżelli",
+              "english": "peas",
               "example": "Xtrajna bott piżelli.",
               "exampleTranslation": "We bought a tin of peas.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "bott piżelli = a tin of peas; pastizz tal-piżelli = a pea-filled pastizz."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -15167,12 +16002,14 @@
             },
             {
               "slug": "flixkun-inbid-ahmar",
-              "maltese": "flixkun inbid aħmar",
-              "english": "bottle of red wine",
+              "maltese": "flixkun / fliexken",
+              "english": "bottle / bottles",
               "example": "Hemm flixkun inbid aħmar fuq il-mejda.",
               "exampleTranslation": "There is a bottle of red wine on the table.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "flixkun inbid aħmar = a bottle of red wine; flixkun ilma = a bottle of water."
+              ],
               "image": "./assets/img/mdi/bottle-wine-outline.svg",
               "imageAlt": "Context illustration for bottle of red wine",
               "imageSource": {
@@ -15198,6 +16035,86 @@
               "english": "we buy",
               "example": "Aħna nixtru l-frott.",
               "exampleTranslation": "We buy fruit.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "bicca",
+              "maltese": "biċċa",
+              "english": "piece; slice",
+              "example": "F'nofsinhar nieħu biċċa ħobż bil-butir u ġobon.",
+              "exampleTranslation": "At midday I have a piece of bread with butter and cheese.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tal-laham",
+              "maltese": "tal-laħam",
+              "english": "the butcher; meat seller (shopkeeper label)",
+              "example": "Tal-laħam ibigħ it-tiġieġ.",
+              "exampleTranslation": "The butcher sells chicken.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Conversational shopkeeper label; tal-laħam literally means of the meat."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tal-pastizzi",
+              "maltese": "tal-pastizzi",
+              "english": "the pastizzi seller (shopkeeper label)",
+              "example": "Tal-pastizzi jservi lill-klijenti.",
+              "exampleTranslation": "The pastizzi seller serves the customers.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Conversational label for the person selling pastizzi."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "xirja",
+              "maltese": "xirja",
+              "english": "shopping; grocery shopping",
+              "example": "Nagħmel ix-xirja nhar is-Sibt.",
+              "exampleTranslation": "I do the grocery shopping on Saturday.",
               "exampleSource": "topic data",
               "notes": [],
               "imageRole": "none",
@@ -15309,7 +16226,8 @@
               "exampleTranslation": "I see a pie.",
               "exampleSource": "topic data",
               "notes": [
-                "Plural: torti."
+                "Plural: torti.",
+                "torta tal-laħam = meat pie."
               ],
               "image": "./assets/img/openmoji/1F967.svg",
               "imageAlt": "pie",
@@ -15439,6 +16357,166 @@
               "english": "roast chicken with potatoes",
               "example": "Inħobb it-tiġieġ bil-patata l-forn.",
               "exampleTranslation": "I like roast chicken with potatoes.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "croissants",
+              "maltese": "croissants",
+              "english": "croissants",
+              "example": "Filgħodu niekol il-croissants.",
+              "exampleTranslation": "In the morning I eat croissants.",
+              "exampleSource": "topic data",
+              "notes": [
+                "French food name used without a Maltese spelling change."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "curry",
+              "maltese": "curry",
+              "english": "curry",
+              "example": "Illum niekol il-curry bir-ross.",
+              "exampleTranslation": "Today I am eating curry with rice.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Borrowed food name; here it means the dish."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "fish-and-chips",
+              "maltese": "fish and chips",
+              "english": "fish and chips",
+              "example": "Nixtieq il-fish and chips.",
+              "exampleTranslation": "I would like fish and chips.",
+              "exampleSource": "topic data",
+              "notes": [
+                "English name of the dish, also used in Maltese conversation."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ikla",
+              "maltese": "ikla",
+              "english": "meal",
+              "example": "X'ħin tiekol l-ikla ta' filgħaxija?",
+              "exampleTranslation": "At what time do you eat the evening meal?",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "karawett",
+              "maltese": "karawett / karawetta",
+              "english": "peanuts / a peanut",
+              "example": "Nixtri borża karawett.",
+              "exampleTranslation": "I buy a bag of peanuts.",
+              "exampleSource": "topic data",
+              "notes": [
+                "karawett names peanuts collectively; karawetta names one peanut."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "koxxa-tat-tigiega",
+              "maltese": "koxxa tat-tiġieġa",
+              "english": "chicken thigh",
+              "example": "Nixtieq koxxa tat-tiġieġa.",
+              "exampleTranslation": "I would like a chicken thigh.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "zalza",
+              "maltese": "zalza",
+              "english": "sauce",
+              "example": "Dan il-platt fih zalza ħamra.",
+              "exampleTranslation": "This dish has red sauce.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "gamm",
+              "maltese": "ġamm",
+              "english": "jam",
+              "example": "Nieħu ħobż bil-ġamm.",
+              "exampleTranslation": "I have bread with jam.",
               "exampleSource": "topic data",
               "notes": [],
               "imageRole": "none",
@@ -15701,6 +16779,46 @@
               "exampleTranslation": "two boxes of strawberries",
               "exampleSource": "site examples",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "qoxra",
+              "maltese": "qoxra",
+              "english": "skin; peel; rind",
+              "example": "Il-banana għandha qoxra safra.",
+              "exampleTranslation": "The banana has a yellow peel.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tuta",
+              "maltese": "tuta",
+              "english": "a mulberry (fruit)",
+              "example": "Din tuta sewda.",
+              "exampleTranslation": "This is a black mulberry.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Fruit sense; tut names mulberries collectively."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -16007,6 +17125,25 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "irkotta",
+              "maltese": "irkotta",
+              "english": "ricotta",
+              "example": "Dan il-pastizz fih l-irkotta.",
+              "exampleTranslation": "This pastizz contains ricotta.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Food",
+              "sourceFile": "food.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -16026,7 +17163,9 @@
               "example": "Nixtieq flokk blu.",
               "exampleTranslation": "I would like a blue shirt.",
               "exampleSource": "site examples",
-              "notes": [],
+              "notes": [
+                "t-shirt: T-shirt; a type of flokk."
+              ],
               "image": "./assets/img/openmoji/1F455.svg",
               "imageAlt": "Context illustration for shirt / top",
               "imageSource": {
@@ -16174,6 +17313,187 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "umbrella",
+              "maltese": "umbrella",
+              "english": "umbrella",
+              "example": "Nieħu umbrella għax se tagħmel ix-xita.",
+              "exampleTranslation": "I take an umbrella because it is going to rain.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "buz",
+              "maltese": "buz",
+              "english": "boots",
+              "example": "Fix-xitwa nilbes il-buz.",
+              "exampleTranslation": "In winter I wear boots.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Footwear; an English loan used in Maltese."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ingwanti",
+              "maltese": "ingwanti",
+              "english": "gloves",
+              "example": "Nilbes l-ingwanti għax hu bard.",
+              "exampleTranslation": "I wear gloves because it is cold.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "incirata",
+              "maltese": "inċirata",
+              "english": "raincoat",
+              "example": "Nilbes inċirata fix-xita.",
+              "exampleTranslation": "I wear a raincoat in the rain.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "komma",
+              "maltese": "komma",
+              "english": "sleeve",
+              "example": "Dan il-flokk bil-komma twila.",
+              "exampleTranslation": "This top has long sleeves.",
+              "exampleSource": "topic data",
+              "notes": [
+                "kmiem: sleeves; bil-komma: with a sleeve; bil-kmiem: with sleeves."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kowt",
+              "maltese": "kowt",
+              "english": "coat",
+              "example": "Għandi kowt twil.",
+              "exampleTranslation": "I have a long coat.",
+              "exampleSource": "topic data",
+              "notes": [
+                "il-kowt: the coat."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "sandli",
+              "maltese": "sandli",
+              "english": "sandals",
+              "example": "Fis-sajf nilbes is-sandli.",
+              "exampleTranslation": "In summer I wear sandals.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "xorz",
+              "maltese": "xorz",
+              "english": "shorts",
+              "example": "Fis-sajf nilbes ix-xorz.",
+              "exampleTranslation": "In summer I wear shorts.",
+              "exampleSource": "topic data",
+              "notes": [
+                "An English loan used in Maltese."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "cingi",
+              "maltese": "ċingi",
+              "english": "straps (on clothing)",
+              "example": "Dan il-flokk biċ-ċingi.",
+              "exampleTranslation": "This is a strappy top.",
+              "exampleSource": "topic data",
+              "notes": [
+                "iċ-ċingi: the straps; biċ-ċingi: with straps."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -16232,6 +17552,204 @@
               "exampleTranslation": "Do you have a large size?",
               "exampleSource": "site examples",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "komdu",
+              "maltese": "komdu / komda",
+              "english": "comfortable (masculine / feminine)",
+              "example": "Din il-libsa komda ħafna.",
+              "exampleTranslation": "This dress is very comfortable.",
+              "exampleSource": "topic data",
+              "notes": [
+                "komda is used with libsa."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "parigg",
+              "maltese": "pariġġ",
+              "english": "matching; alike",
+              "example": "Il-flokk u l-kalzetti pariġġ.",
+              "exampleTranslation": "The top and socks match.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Used for clothes that match or go together."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "qies",
+              "maltese": "qies",
+              "english": "size",
+              "example": "X'inhu l-qies tiegħek?",
+              "exampleTranslation": "What is your size?",
+              "exampleSource": "topic data",
+              "notes": [
+                "l-qies: the size; used when buying clothes."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            }
+          ]
+        },
+        {
+          "id": "shopping-and-clothes-shopping-service",
+          "sectionId": "shopping-service",
+          "sectionTitle": "Shopping and service",
+          "title": "Shopping and Clothes: Shopping and service",
+          "sourceLabel": "Shopping and Clothes",
+          "sourceFile": "shopping_clothes.json",
+          "tier": "basics",
+          "items": [
+            {
+              "slug": "ewro",
+              "maltese": "ewro",
+              "english": "euro",
+              "example": "B: Jiswa tletin ewro.",
+              "exampleTranslation": "B: It costs thirty euro.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "flus",
+              "maltese": "flus",
+              "english": "money",
+              "example": "Nista' nħallas bi flus kontanti?",
+              "exampleTranslation": "Can I pay in cash?",
+              "exampleSource": "site examples",
+              "notes": [
+                "il-flus: the money."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kemm-hi",
+              "maltese": "Kemm hi?",
+              "english": "How much is it?",
+              "example": "Kemm hi din il-libsa?",
+              "exampleTranslation": "How much is this dress?",
+              "exampleSource": "topic data",
+              "notes": [
+                "Use hi for a feminine singular item; kemm huma? asks about plural items."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kif-nista-naqdik",
+              "maltese": "Kif nista' naqdik?",
+              "english": "How can I help you?",
+              "example": "Bonġu! Kif nista' naqdik?",
+              "exampleTranslation": "Good morning! How can I help you?",
+              "exampleSource": "topic data",
+              "notes": [
+                "naqdik: I serve/help you (one person); naqdikom: I serve/help you (more than one person).",
+                "Kif nista' naqdikom? How can I help you? (plural)",
+                "naqdik = I serve or help you (one person); naqdikom = I serve or help you (more than one person)."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "par",
+              "maltese": "par",
+              "english": "pair",
+              "example": "Nixtieq par żraben.",
+              "exampleTranslation": "I would like a pair of shoes.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Shopping and Clothes",
+              "sourceFile": "shopping_clothes.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "bejjiegh",
+              "maltese": "bejjiegħ / bejjiegħa",
+              "english": "salesperson / female salesperson",
+              "example": "Il-bejjiegħa taħdem fil-ħanut tal-ħwejjeġ.",
+              "exampleTranslation": "The saleswoman works in the clothes shop.",
+              "exampleSource": "topic data",
+              "notes": [
+                "bejjiegħa can mean one female seller or several sellers; context distinguishes them."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -16455,6 +17973,90 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "bard",
+              "maltese": "bard",
+              "english": "cold; cold weather (noun)",
+              "example": "Qed tagħmel bard.",
+              "exampleTranslation": "It is cold.",
+              "exampleSource": "site examples",
+              "notes": [
+                "Bard is a noun; kiesaħ is an adjective meaning cold."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "rih-isfel",
+              "maltese": "riħ isfel",
+              "english": "southerly wind; south-easterly wind",
+              "example": "Illum hawn riħ isfel.",
+              "exampleTranslation": "There is a southerly wind today.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Often associated with warm, humid weather in Malta."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "clampu",
+              "maltese": "ċlampu",
+              "english": "humidity; sticky dampness (weather)",
+              "example": "Illum hawn ħafna ċlampu.",
+              "exampleTranslation": "There is a lot of sticky humidity today.",
+              "exampleSource": "topic data",
+              "notes": [
+                "A noun for the humidity or stickiness associated with a south-easterly wind."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tidlik",
+              "maltese": "tidlik",
+              "english": "sticky dampness / mugginess (weather)",
+              "example": "Illum hawn ħafna tidlik.",
+              "exampleTranslation": "It is very muggy today.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Weather use: damp, sticky conditions that make clothes cling and surfaces feel clammy."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Weather",
+              "sourceFile": "weather.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -16613,7 +18215,9 @@
               "exampleTranslation": "Every day many people take the bus.",
               "exampleSource": "site examples",
               "notes": [
-                "Kuljum ħafna nies imorru bit-tal-linja."
+                "Kuljum ħafna nies imorru bit-tal-linja.",
+                "bil-karozza tal-linja: by bus.",
+                "xarabank: bus; karozza tal-linja: bus; bil-karozza tal-linja: by bus."
               ],
               "image": "./assets/img/transport/bus.svg",
               "imageAlt": "Bus illustration",
@@ -16796,10 +18400,11 @@
               "maltese": "mutur / scooter",
               "english": "motorcycle / scooter",
               "example": "Xi nies jippreferu jmorru bil-mutur.",
-              "exampleTranslation": "",
+              "exampleTranslation": "Some people prefer to go by motorcycle.",
               "exampleSource": "topic data",
               "notes": [
-                "Xi nies jippreferu jmorru bil-mutur."
+                "Xi nies jippreferu jmorru bil-mutur.",
+                "bil-mutur: by motorcycle."
               ],
               "image": "./assets/img/transport/scooter.svg",
               "imageAlt": "Scooter illustration",
@@ -16822,6 +18427,46 @@
               "exampleTranslation": "I have a ticket in my pocket.",
               "exampleSource": "topic data",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Transport",
+              "sourceFile": "transport.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "katamaran",
+              "maltese": "katamaran",
+              "english": "catamaran",
+              "example": "Nivvjaġġa bil-katamaran.",
+              "exampleTranslation": "I travel by catamaran.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Transport",
+              "sourceFile": "transport.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "vjagg",
+              "maltese": "vjaġġ",
+              "english": "journey; trip",
+              "example": "Il-vjaġġ bil-ferry huwa qasir.",
+              "exampleTranslation": "The ferry trip is short.",
+              "exampleSource": "site examples",
+              "notes": [
+                "il-vjaġġ: the journey."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -16894,7 +18539,7 @@
               "exampleTranslation": "The lamp is next to the bed.",
               "exampleSource": "site examples",
               "notes": [
-                "place"
+                "Ħdejja means next to me."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -17028,6 +18673,28 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "genb",
+              "maltese": "ġenb / fil-ġenb",
+              "english": "side / at the side",
+              "example": "Il-mejda tinsab fil-ġenb tal-kamra.",
+              "exampleTranslation": "The table is at the side of the room.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Ġenb means side; fil-ġenb means at the side.",
+                "Tal-ġenb means of the side; fil-ġenb means at the side."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Prepositions of Place",
+              "sourceFile": "prepositions_place.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -17073,7 +18740,9 @@
               "example": "A: Skużani, fejn hi l-waqfa tal-linja?",
               "exampleTranslation": "A: Excuse me, where is the bus stop?",
               "exampleSource": "site examples",
-              "notes": [],
+              "notes": [
+                "stejġ: bus stop; l-istejġ: the bus stop."
+              ],
               "image": "./assets/img/openmoji/1F68F.svg",
               "imageAlt": "Context illustration for bus stop",
               "imageSource": {
@@ -17309,6 +18978,204 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "ghassa-tal-pulizija",
+              "maltese": "għassa tal-pulizija",
+              "english": "police station",
+              "example": "Tista' tgħidli fejn hi l-għassa tal-pulizija, jekk jogħġbok?",
+              "exampleTranslation": "Could you tell me where the police station is, please?",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kartolina",
+              "maltese": "kartolina",
+              "english": "postcard",
+              "example": "Nixtri kartolina mill-ħanut.",
+              "exampleTranslation": "I buy a postcard from the shop.",
+              "exampleSource": "topic data",
+              "notes": [
+                "il-kartolina: the postcard."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kastell",
+              "maltese": "kastell",
+              "english": "castle",
+              "example": "Nara kastell antik.",
+              "exampleTranslation": "I see an old castle.",
+              "exampleSource": "topic data",
+              "notes": [
+                "kastelli: castles; il-kastelli: the castles."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "poliklinika",
+              "maltese": "poliklinika",
+              "english": "health centre; polyclinic",
+              "example": "Il-poliklinika ħdejn l-iskola.",
+              "exampleTranslation": "The health centre is next to the school.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "promenade",
+              "maltese": "promenade",
+              "english": "promenade; seafront walkway",
+              "example": "Nimxu fuq il-promenade.",
+              "exampleTranslation": "We walk along the promenade.",
+              "exampleSource": "topic data",
+              "notes": [
+                "An English loan used in Maltese."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "pubbliku",
+              "maltese": "pubbliku",
+              "english": "public",
+              "example": "Dan ġnien pubbliku.",
+              "exampleTranslation": "This is a public garden.",
+              "exampleSource": "topic data",
+              "notes": [
+                "pubbliċi: public (plural), as in postijiet pubbliċi, public places."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hanut-tal-kotba",
+              "maltese": "ħanut tal-kotba",
+              "english": "bookshop",
+              "example": "Il-ħanut tal-kotba ħdejn il-bank.",
+              "exampleTranslation": "The bookshop is next to the bank.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hanut-tal-laham",
+              "maltese": "ħanut tal-laħam",
+              "english": "butcher's shop",
+              "example": "Il-ħanut tal-laħam ħdejn il-bank.",
+              "exampleTranslation": "The butcher's shop is next to the bank.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hanut-tal-pasti",
+              "maltese": "ħanut tal-pasti",
+              "english": "pastry shop",
+              "example": "Il-ħanut tal-pasti ħdejn il-bank.",
+              "exampleTranslation": "The pastry shop is next to the bank.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hanut-taz-zraben",
+              "maltese": "ħanut taż-żraben",
+              "english": "shoe shop",
+              "example": "Il-ħanut taż-żraben ħdejn il-bank.",
+              "exampleTranslation": "The shoe shop is next to the bank.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -17479,10 +19346,12 @@
               "slug": "hawn",
               "maltese": "hawn",
               "english": "here",
-              "example": "",
-              "exampleTranslation": "",
+              "example": "Il-borża tinsab hawnhekk.",
+              "exampleTranslation": "The bag is here.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "hawnhekk = here; an expanded form of hawn."
+              ],
               "image": "./assets/img/openmoji/E242.svg",
               "imageAlt": "Context illustration for here",
               "imageSource": {
@@ -17708,6 +19577,27 @@
               "exampleTranslation": "On the right side of the church there is the police station.",
               "exampleSource": "site examples",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Directions and Town",
+              "sourceFile": "directions_town.json",
+              "tier": "basics",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "direzzjoni",
+              "maltese": "direzzjoni",
+              "english": "direction",
+              "example": "Il-ħabib tiegħek qiegħed fi Triq Santa Marija. Agħtih direzzjonijiet biex imur quddiem il-ġnien.",
+              "exampleTranslation": "Your friend is in Triq Santa Marija. Give directions so that he goes to the front of the garden.",
+              "exampleSource": "site examples",
+              "notes": [
+                "direzzjonijiet: directions; id-direzzjonijiet: the directions."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -18150,6 +20040,27 @@
               "exampleTranslation": "This tradition is dear to the family.",
               "exampleSource": "topic data",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Emotions",
+              "sourceFile": "emotions.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "hena",
+              "maltese": "hena",
+              "english": "happiness; joy",
+              "example": "Il-familja tiegħi hija l-hena tiegħi.",
+              "exampleTranslation": "My family is my joy.",
+              "exampleSource": "topic data",
+              "notes": [
+                "l-hena: the happiness; the joy."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -19497,6 +21408,44 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "ramel",
+              "maltese": "ramel",
+              "english": "sand",
+              "example": "It-tfal jilagħbu fir-ramel.",
+              "exampleTranslation": "The children play in the sand.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "zokk",
+              "maltese": "zokk",
+              "english": "trunk; stem",
+              "example": "Is-siġra għandha zokk kbir.",
+              "exampleTranslation": "The tree has a large trunk.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -19807,6 +21756,25 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "tieg",
+              "maltese": "tieġ",
+              "english": "wedding",
+              "example": "Nhar is-Sibt immur tieġ.",
+              "exampleTranslation": "On Saturday I am going to a wedding.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -19966,7 +21934,9 @@
               "example": "Il-bini modern huwa għoli ħafna.",
               "exampleTranslation": "The modern building is very tall.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "ogħla: higher; taller; l-ogħla: the highest; the tallest."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -20154,7 +22124,9 @@
               "example": "Niċċelebraw l-Għid il-Kbir mal-familja.",
               "exampleTranslation": "We celebrate Easter with the family.",
               "exampleSource": "topic data",
-              "notes": [],
+              "notes": [
+                "Also Għid, Easter, as in il-vaganzi tal-Għid, the Easter holidays."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -20385,6 +22357,65 @@
               "english": "Good Friday",
               "example": "Il-Ġimgħa l-Kbira hija qabel l-Għid.",
               "exampleTranslation": "Good Friday is before Easter.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kristu-rxoxt",
+              "maltese": "Kristu Rxoxt",
+              "english": "the Risen Christ",
+              "example": "Il-purċissjoni ta' Kristu Rxoxt tgħaddi mit-triq.",
+              "exampleTranslation": "The procession of the Risen Christ passes through the street.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "passjoni",
+              "maltese": "Passjoni",
+              "english": "the Passion of Christ",
+              "example": "Id-dramm tal-Passjoni jibda fis-sebgħa.",
+              "exampleTranslation": "The play about the Passion of Christ starts at seven.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Religious context: the suffering of Christ before his death."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Places and Events",
+              "sourceFile": "places_events.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "quddies",
+              "maltese": "quddies",
+              "english": "Mass (church service)",
+              "example": "Nhar il-Ħadd immur il-quddies.",
+              "exampleTranslation": "On Sunday I go to Mass.",
               "exampleSource": "topic data",
               "notes": [],
               "imageRole": "none",
@@ -20781,7 +22812,9 @@
               "exampleSource": "topic data",
               "notes": [
                 "Feminine subject: issir; masculine subject: isir. Plural: isiru.",
-                "This use describes an event taking place."
+                "This use describes an event taking place.",
+                "jsir = it takes place (masculine); sar = it took place / was held.",
+                "jsirx is the negative form: ma jsirx = it does not take place."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -20951,6 +22984,27 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "ohrajn",
+              "maltese": "oħrajn",
+              "english": "others",
+              "example": "Nilgħab mal-oħrajn.",
+              "exampleTranslation": "I play with the others.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Mal-oħrajn means with the others."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -20992,7 +23046,7 @@
               "exampleTranslation": "This is my sister.",
               "exampleSource": "site examples",
               "notes": [
-                "feminine, near"
+                "dil- is a shortened form of din il- before a following noun, as in dil-klassi, this classroom."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -21608,10 +23662,10 @@
               "maltese": "fi / f'",
               "english": "in",
               "example": "fi skola / f'appartament",
-              "exampleTranslation": "",
+              "exampleTranslation": "in a school / in an apartment",
               "exampleSource": "topic data",
               "notes": [
-                "location"
+                "fih = in it (masculine) / in him; the suffixed form of fi."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -21833,6 +23887,235 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "ta",
+              "maltese": "ta'",
+              "english": "of; belonging to",
+              "example": "Dan ktieb ta' Marija.",
+              "exampleTranslation": "This is a book belonging to Marija.",
+              "exampleSource": "topic data",
+              "notes": [
+                "With the definite article: ta' + il- = tal- (or a form assimilated to the next consonant)."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "bhala",
+              "maltese": "bħala",
+              "english": "as; in the role of",
+              "example": "Naħdem bħala traduttur.",
+              "exampleTranslation": "I work as a translator.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "f-posthom",
+              "maltese": "f'posthom",
+              "english": "in their place; where they belong",
+              "example": "Il-kotba huma f'posthom.",
+              "exampleTranslation": "The books are in their place.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "lil",
+              "maltese": "lil",
+              "english": "to; personal object marker",
+              "example": "Nikteb lil ommi.",
+              "exampleTranslation": "I write to my mother.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Also marks a personal object: Nara lil ommi, I see my mother.",
+                "lilek: to you (singular); Grazzi lilek means thank you."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            }
+          ]
+        },
+        {
+          "id": "pronouns-and-possessives-pronouns-quantifiers",
+          "sectionId": "pronouns-quantifiers",
+          "sectionTitle": "Questions, clauses and quantities",
+          "title": "Pronouns and Possessives: Questions, clauses and quantities",
+          "sourceLabel": "Pronouns and Possessives",
+          "sourceFile": "pronouns_possessives.json",
+          "tier": "extended",
+          "items": [
+            {
+              "slug": "ebda",
+              "maltese": "ebda",
+              "english": "no; not any (before a noun)",
+              "example": "Ma għandi ebda mistoqsija.",
+              "exampleTranslation": "I do not have any questions.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Often used as l-ebda: not a single; no."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kollha",
+              "maltese": "kollha",
+              "english": "all; all of them",
+              "example": "It-tfal kollha hawn.",
+              "exampleTranslation": "All the children are here.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kull",
+              "maltese": "kull",
+              "english": "every; each",
+              "example": "Kull student għandu ktieb.",
+              "exampleTranslation": "Every student has a book.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kulhadd",
+              "maltese": "kulħadd",
+              "english": "everyone; everybody",
+              "example": "Kulħadd lest?",
+              "exampleTranslation": "Is everyone ready?",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "li",
+              "maltese": "li",
+              "english": "who; which; that (linking a clause)",
+              "example": "Dan il-ktieb li rrid.",
+              "exampleTranslation": "This is the book that I want.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "liema",
+              "maltese": "liema",
+              "english": "which?",
+              "example": "Liema ktieb trid?",
+              "exampleTranslation": "Which book do you want?",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "xi",
+              "maltese": "xi",
+              "english": "some; any; a certain",
+              "example": "Se noqgħod id-dar sa filgħaxija.",
+              "exampleTranslation": "I will stay at home until the evening.",
+              "exampleSource": "site examples",
+              "notes": [
+                "xi ħaġa: something; anything, according to context."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Pronouns and Possessives",
+              "sourceFile": "pronouns_possessives.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -21852,7 +24135,9 @@
               "example": "Kuljum inqum kmieni.",
               "exampleTranslation": "Every day I get up early.",
               "exampleSource": "site examples",
-              "notes": [],
+              "notes": [
+                "Qum bilwieqfa! means Stand up! (to one person); Qumu bilwieqfa! addresses more than one person."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -22213,6 +24498,88 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "naghmel-xaghri",
+              "maltese": "nagħmel xagħri",
+              "english": "I do my hair",
+              "example": "Filgħodu nagħmel xagħri.",
+              "exampleTranslation": "In the morning I do my hair.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "nerga",
+              "maltese": "nerġa'",
+              "english": "I do again; I repeat an action",
+              "example": "Nerġa' naqra l-mistoqsija.",
+              "exampleTranslation": "I read the question again.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Follow with another verb to say that you do something again."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "taqa",
+              "maltese": "taqa'",
+              "english": "you fall; she falls",
+              "example": "Filgħaxija niltaqa' mal-familja.",
+              "exampleTranslation": "In the evening I meet my family.",
+              "exampleSource": "site examples",
+              "notes": [
+                "Dictionary form: waqa', he fell."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "rutina",
+              "maltese": "rutina",
+              "english": "routine",
+              "example": "Ir-rutina tiegħi sempliċi.",
+              "exampleTranslation": "My routine is simple.",
+              "exampleSource": "topic data",
+              "notes": [
+                "ir-rutina: the routine."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -22264,6 +24631,25 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "flimkien",
+              "maltese": "flimkien",
+              "english": "together",
+              "example": "Nieklu flimkien kull filgħaxija.",
+              "exampleTranslation": "We eat together every evening.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -22301,6 +24687,215 @@
               "english": "often",
               "example": "Spiss nimxi mal-ħbieb.",
               "exampleTranslation": "I often walk with friends.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "darb-ohra",
+              "maltese": "darb'oħra",
+              "english": "another time; next time",
+              "example": "Darb'oħra se niġi kmieni.",
+              "exampleTranslation": "Next time I will come early.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "mbaghad",
+              "maltese": "mbagħad",
+              "english": "then; afterwards",
+              "example": "Imbagħad norqod kmieni.",
+              "exampleTranslation": "Then I sleep early.",
+              "exampleSource": "site examples",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "mill-ewwel",
+              "maltese": "mill-ewwel",
+              "english": "immediately; straight away",
+              "example": "Niftaħ il-bieb mill-ewwel.",
+              "exampleTranslation": "I open the door straight away.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "minnufih",
+              "maltese": "minnufih",
+              "english": "immediately; at once",
+              "example": "Niġi minnufih.",
+              "exampleTranslation": "I will come at once.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "dalghodu",
+              "maltese": "dalgħodu",
+              "english": "this morning",
+              "example": "Dalgħodu mort bil-mixi.",
+              "exampleTranslation": "This morning I went on foot.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "dalwaqt",
+              "maltese": "dalwaqt",
+              "english": "soon",
+              "example": "Dalwaqt nasal id-dar.",
+              "exampleTranslation": "I will arrive home soon.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "darba",
+              "maltese": "darba",
+              "english": "once; one time",
+              "example": "Immur hemm darba biss.",
+              "exampleTranslation": "I go there only once.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "darba-f-gimgha",
+              "maltese": "darba f'ġimgħa",
+              "english": "once a week",
+              "example": "Immur ngħum darba f'ġimgħa.",
+              "exampleTranslation": "I go swimming once a week.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "fil-hin",
+              "maltese": "fil-ħin",
+              "english": "on time",
+              "example": "Nasal l-iskola fil-ħin.",
+              "exampleTranslation": "I arrive at school on time.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "nhar-ta-hadd",
+              "maltese": "nhar ta' Ħadd",
+              "english": "on Sunday; on Sundays",
+              "example": "Nhar ta' Ħadd immur għand in-nanna.",
+              "exampleTranslation": "On Sundays I go to my grandmother's house.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Daily Routine",
+              "sourceFile": "daily_routine.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "gieli",
+              "maltese": "ġieli",
+              "english": "sometimes",
+              "example": "Ġieli mmur bil-mixi.",
+              "exampleTranslation": "Sometimes I go on foot.",
               "exampleSource": "topic data",
               "notes": [],
               "imageRole": "none",
@@ -22960,7 +25555,8 @@
               "exampleTranslation": "I have a cold.",
               "exampleSource": "site examples",
               "notes": [
-                "The illness meaning; riħ also means wind in weather descriptions."
+                "The illness meaning; riħ also means wind in weather descriptions.",
+                "Tieħu riħ means you catch a cold. This is the illness expression, not a reference to wind."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -23878,7 +26474,7 @@
               "exampleTranslation": "I would like to drink coffee.",
               "exampleSource": "site examples",
               "notes": [
-                "polite request"
+                "X'tixtiequ? What would you like? (addressing more than one person)."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -23984,6 +26580,47 @@
               "exampleSource": "topic data",
               "notes": [
                 "Masculine singular thing: jogħġobni; feminine singular thing: togħġobni; plural things: jogħġbuni."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Can, Want and Need",
+              "sourceFile": "modals_needs.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "kif-suppost",
+              "maltese": "kif suppost",
+              "english": "properly; as one should",
+              "example": "Agħmel ix-xogħol kif suppost.",
+              "exampleTranslation": "Do the work properly.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Can, Want and Need",
+              "sourceFile": "modals_needs.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "halli",
+              "maltese": "ħalli",
+              "english": "let; leave (singular command); so that (purpose)",
+              "example": "Huma misshom jitkellmu mal-għalliem.",
+              "exampleTranslation": "They should speak to the teacher.",
+              "exampleSource": "site examples",
+              "notes": [
+                "Can mean let or leave as a singular command. Before another verb it can mean let or introduce a purpose.",
+                "The same verb can mean leave: ħalla, he left; jħalluh, they leave him or it. Ħalli l-ktieb means leave the book."
               ],
               "imageRole": "none",
               "imageQuizEligible": false,
@@ -24130,6 +26767,28 @@
                 "enabled": true,
                 "type": "word"
               }
+            },
+            {
+              "slug": "mhux",
+              "maltese": "mhux / mhix",
+              "english": "is not (masculine / feminine)",
+              "example": "Hu mhux għajjien.",
+              "exampleTranslation": "He is not tired.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Negates a non-verbal predicate: hi mhix għajjiena = she is not tired.",
+                "Mhix is the feminine form used with a nonverbal predicate."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Can, Want and Need",
+              "sourceFile": "modals_needs.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
             }
           ]
         },
@@ -24148,6 +26807,67 @@
               "english": "therefore; that is why",
               "example": "Għandi ħin, għalhekk nista' ngħinek.",
               "exampleTranslation": "I have time, so I can help you.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Can, Want and Need",
+              "sourceFile": "modals_needs.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "ghaliex",
+              "maltese": "għaliex",
+              "english": "why; because",
+              "example": "Għaliex int kuntent?",
+              "exampleTranslation": "Why are you happy?",
+              "exampleSource": "topic data",
+              "notes": [
+                "Can also link a reason: because."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Can, Want and Need",
+              "sourceFile": "modals_needs.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "min-jaf-kemm",
+              "maltese": "min jaf kemm",
+              "english": "who knows how much; so much (exclamation)",
+              "example": "Min jaf kemm hemm nies!",
+              "exampleTranslation": "Who knows how many people there are!",
+              "exampleSource": "topic data",
+              "notes": [
+                "With a countable plural noun, kemm means how many."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Can, Want and Need",
+              "sourceFile": "modals_needs.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "tassew",
+              "maltese": "tassew",
+              "english": "really; truly",
+              "example": "Dan il-ktieb tassew sabiħ.",
+              "exampleTranslation": "This book is really lovely.",
               "exampleSource": "topic data",
               "notes": [],
               "imageRole": "none",
@@ -24255,7 +26975,9 @@
               "example": "Valletta hija aktar storika minn belt żgħira.",
               "exampleTranslation": "Valletta is more historic than a small town.",
               "exampleSource": "site examples",
-              "notes": [],
+              "notes": [
+                "ftit aktar: a little more."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -24275,6 +26997,48 @@
               "exampleTranslation": "Today there is less wind.",
               "exampleSource": "site examples",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Comparisons",
+              "sourceFile": "comparisons.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "baxx",
+              "maltese": "baxx / baxxa",
+              "english": "low (masculine / feminine)",
+              "example": "Illum it-temperatura baxxa.",
+              "exampleTranslation": "The temperature is low today.",
+              "exampleSource": "topic data",
+              "notes": [
+                "baxxa is used with temperatura."
+              ],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Comparisons",
+              "sourceFile": "comparisons.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "differenza",
+              "maltese": "differenza",
+              "english": "difference",
+              "example": "Hemm differenza kbira.",
+              "exampleTranslation": "There is a big difference.",
+              "exampleSource": "topic data",
+              "notes": [
+                "differenzi: differences."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -24343,6 +27107,46 @@
               "exampleTranslation": "This room is too hot.",
               "exampleSource": "topic data",
               "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Comparisons",
+              "sourceFile": "comparisons.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "daqsxejn",
+              "maltese": "daqsxejn",
+              "english": "a little; a bit",
+              "example": "Stenna daqsxejn.",
+              "exampleTranslation": "Wait a little.",
+              "exampleSource": "topic data",
+              "notes": [],
+              "imageRole": "none",
+              "imageQuizEligible": false,
+              "swatchStyle": "",
+              "sourceLabel": "Comparisons",
+              "sourceFile": "comparisons.json",
+              "tier": "extended",
+              "review": {
+                "enabled": true,
+                "type": "word"
+              }
+            },
+            {
+              "slug": "daqskemm",
+              "maltese": "daqskemm",
+              "english": "as much as; so much (in an emphatic clause)",
+              "example": "Nilbes kowt daqskemm hu bard.",
+              "exampleTranslation": "I wear a coat because it is so cold.",
+              "exampleSource": "topic data",
+              "notes": [
+                "Can introduce an emphatic reason, as in daqskemm hu bard, because it is so cold."
+              ],
               "imageRole": "none",
               "imageQuizEligible": false,
               "swatchStyle": "",
@@ -25458,7 +28262,7 @@
   ],
   "counts": {
     "exam": 312,
-    "basics": 421,
-    "extended": 320
+    "basics": 513,
+    "extended": 365
   }
 }

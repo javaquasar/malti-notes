@@ -500,6 +500,26 @@
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
+        },
+        {
+          "slug": "ramel",
+          "maltese": "ramel",
+          "english": "sand",
+          "example": "It-tfal jilagħbu fir-ramel.",
+          "exampleTranslation": "The children play in the sand.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "zokk",
+          "maltese": "zokk",
+          "english": "trunk; stem",
+          "example": "Is-siġra għandha zokk kbir.",
+          "exampleTranslation": "The tree has a large trunk.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -733,6 +753,16 @@
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
+        },
+        {
+          "slug": "tieg",
+          "maltese": "tieġ",
+          "english": "wedding",
+          "example": "Nhar is-Sibt immur tieġ.",
+          "exampleTranslation": "On Saturday I am going to a wedding.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -857,7 +887,10 @@
           "imageQuizEligible": false,
           "imageRole": "none",
           "exampleTranslation": "The modern building is very tall.",
-          "exampleSource": "topic example bank"
+          "exampleSource": "topic example bank",
+          "notes": [
+            "ogħla: higher; taller; l-ogħla: the highest; the tallest."
+          ]
         },
         {
           "slug": "nazzjonali",
@@ -973,7 +1006,10 @@
           "exampleTranslation": "We celebrate Easter with the family.",
           "exampleSource": "original site-authored example",
           "imageRole": "none",
-          "imageQuizEligible": false
+          "imageQuizEligible": false,
+          "notes": [
+            "Also Għid, Easter, as in il-vaganzi tal-Għid, the Easter holidays."
+          ]
         },
         {
           "slug": "jitlob",
@@ -1097,6 +1133,39 @@
           "english": "Good Friday",
           "example": "Il-Ġimgħa l-Kbira hija qabel l-Għid.",
           "exampleTranslation": "Good Friday is before Easter.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "kristu-rxoxt",
+          "maltese": "Kristu Rxoxt",
+          "english": "the Risen Christ",
+          "example": "Il-purċissjoni ta' Kristu Rxoxt tgħaddi mit-triq.",
+          "exampleTranslation": "The procession of the Risen Christ passes through the street.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "passjoni",
+          "maltese": "Passjoni",
+          "english": "the Passion of Christ",
+          "example": "Id-dramm tal-Passjoni jibda fis-sebgħa.",
+          "exampleTranslation": "The play about the Passion of Christ starts at seven.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Religious context: the suffering of Christ before his death."
+          ]
+        },
+        {
+          "slug": "quddies",
+          "maltese": "quddies",
+          "english": "Mass (church service)",
+          "example": "Nhar il-Ħadd immur il-quddies.",
+          "exampleTranslation": "On Sunday I go to Mass.",
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
@@ -1333,7 +1402,9 @@
           "imageQuizEligible": false,
           "notes": [
             "Feminine subject: issir; masculine subject: isir. Plural: isiru.",
-            "This use describes an event taking place."
+            "This use describes an event taking place.",
+            "jsir = it takes place (masculine); sar = it took place / was held.",
+            "jsirx is the negative form: ma jsirx = it does not take place."
           ]
         }
       ]

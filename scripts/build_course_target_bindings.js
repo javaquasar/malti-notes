@@ -6,6 +6,7 @@ const bindingFile = path.join(root, "assets/data/course_target_bindings.json");
 const inventory = readJson("assets/data/book_coverage_inventory.json");
 const course = readJson("assets/data/course_path.json");
 const grammar = readJson("assets/data/grammar_targets.json");
+const bindingOverrides = readJson("assets/data/course_target_binding_overrides.json").bindings;
 
 const contentAliases = new Map([
   ["b2-town::ispiżerija", "spiżerija"]
@@ -123,7 +124,7 @@ function buildTarget(inventoryChapter, candidates, requirement) {
   const key = `${inventoryChapter.courseChapterId}::${requirement}`;
   const targetId = `${inventoryChapter.courseChapterId}-${slugify(requirement)}`;
   const isMissing = inventoryChapter.baselineMissing.includes(requirement);
-  const staticRef = staticContent.get(key);
+  const staticRef = bindingOverrides[targetId]?.contentRef || staticContent.get(key);
   const lookup = contentAliases.get(key) || requirement;
   const match = isMissing || staticRef ? null : candidates
     .map((candidate) => ({ ...candidate, score: itemScore(candidate.item, lookup) }))

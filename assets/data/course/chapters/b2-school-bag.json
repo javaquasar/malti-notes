@@ -1820,10 +1820,10 @@
     {
       "id": "b2-school-bag-kulur",
       "maltese": "kulur",
-      "english": "colour",
+      "english": "colouring pencil / crayon (school equipment)",
       "example": "Hemm kulur fil-basket tal-iskola.",
-      "exampleTranslation": "The school bag contains the colour.",
-      "examplePattern": "school-bag-object",
+      "exampleTranslation": "There is a colouring pencil or crayon in the school bag.",
+      "examplePattern": "school-colouring-equipment",
       "exampleReview": "reviewed-template",
       "source": {
         "book": "B2",
@@ -1837,8 +1837,10 @@
       },
       "sourceLabel": "B2, Chapter 1, p. 3",
       "notes": [
+        "In school equipment, kulur refers to a colouring implement; kuluri / il-kuluri = colouring pencils or crayons.",
+        "lapes tal-kulur = coloured pencil; kulur tax-xema' = wax crayon. Elsewhere kulur means colour.",
         "Example: Hemm kulur fil-basket tal-iskola.",
-        "Translation: The school bag contains the colour.",
+        "Translation: There is a colouring pencil or crayon in the school bag.",
         "Source: B2, Chapter 1, p. 3"
       ],
       "glossReview": "reviewed",
@@ -3237,7 +3239,7 @@
           "choices": [
             "pencil",
             "scissors",
-            "colour"
+            "colouring pencil / crayon (school equipment)"
           ],
           "answer": "scissors",
           "explanation": "imqass means “scissors” in this chapter.",
@@ -3469,7 +3471,7 @@
           "choices": [
             "pencil",
             "pencil sharpener",
-            "colour"
+            "colouring pencil / crayon (school equipment)"
           ],
           "answer": "pencil sharpener",
           "explanation": "temprina means “pencil sharpener” in this chapter.",
@@ -3506,10 +3508,10 @@
           ],
           "prompt": "True or false: “kulur” means “pencil” in this chapter.",
           "answer": false,
-          "explanation": "kulur means “colour”.",
+          "explanation": "kulur means “colouring pencil / crayon (school equipment)”.",
           "reviewCard": {
             "maltese": "kulur",
-            "english": "colour"
+            "english": "colouring pencil / crayon (school equipment)"
           }
         },
         {
@@ -3518,12 +3520,12 @@
           "targetIds": [
             "b2-school-bag-kulur"
           ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the colour.)",
+          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (There is a colouring pencil or crayon in the school bag.)",
           "answer": "kulur",
           "explanation": "The complete sentence is “Hemm kulur fil-basket tal-iskola.”",
           "reviewCard": {
             "maltese": "kulur",
-            "english": "colour",
+            "english": "colouring pencil / crayon (school equipment)",
             "example": "Hemm kulur fil-basket tal-iskola."
           },
           "type": "fill-blank",
@@ -3630,7 +3632,7 @@
             },
             {
               "left": "kulur",
-              "right": "colour"
+              "right": "colouring pencil / crayon (school equipment)"
             }
           ],
           "explanation": "These pairs use the reviewed meanings from this chapter.",

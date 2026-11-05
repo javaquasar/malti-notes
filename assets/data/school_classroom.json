@@ -134,6 +134,16 @@
           },
           "imageQuizEligible": false,
           "imageRole": "context"
+        },
+        {
+          "slug": "djarju",
+          "maltese": "djarju",
+          "english": "diary",
+          "example": "Nikteb fid-djarju kuljum.",
+          "exampleTranslation": "I write in the diary every day.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
         }
       ]
     },
@@ -245,7 +255,7 @@
         {
           "slug": "librerija",
           "maltese": "il-librerija",
-          "english": "library",
+          "english": "library; bookcase (furniture)",
           "example": "Il-librerija għandha ħafna kotba.",
           "exampleTranslation": "The library has many books.",
           "imageQuizEligible": false,
@@ -257,7 +267,12 @@
             "author": "SVG Repo (uploader)",
             "license": "CC0-1.0",
             "url": "https://www.svgrepo.com/svg/25649/students-reading-sitting-in-a-library"
-          }
+          },
+          "notes": [
+            "librerija also means a bookcase: the piece of furniture that holds books.",
+            "Il-kotba huma fil-librerija tal-klassi. = The books are in the classroom bookcase.",
+            "libreriji / il-libreriji = libraries or bookcases, according to context."
+          ]
         },
         {
           "slug": "klassi",
@@ -274,6 +289,49 @@
           "english": "list",
           "example": "Għandi lista ta' kotba.",
           "exampleTranslation": "I have a list of books.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "bord-interattiv",
+          "maltese": "bord interattiv",
+          "english": "interactive board",
+          "example": "Il-bord interattiv jinsab ħdejn il-bieb.",
+          "exampleTranslation": "The interactive board is next to the door.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "imqabbad",
+          "maltese": "imqabbad",
+          "english": "connected (masculine)",
+          "example": "Il-kompjuter huwa imqabbad mal-bord.",
+          "exampleTranslation": "The computer is connected to the board.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nixeghlu",
+          "maltese": "nixegħlu",
+          "english": "we switch on; we turn on",
+          "example": "Nixegħlu d-dawl fil-klassi.",
+          "exampleTranslation": "We switch on the light in the classroom.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Dictionary form: xegħel, he switched on."
+          ]
+        },
+        {
+          "slug": "cart",
+          "maltese": "ċart / ċarts",
+          "english": "chart / charts",
+          "example": "Hemm ċart mal-ħajt.",
+          "exampleTranslation": "There is a chart on the wall.",
           "exampleSource": "original site-authored example",
           "imageRole": "none",
           "imageQuizEligible": false
@@ -330,6 +388,212 @@
           "imageQuizEligible": false,
           "notes": [
             "A Maltese name for the Society of Christian Doctrine and its catechism centres; mużew also means museum."
+          ]
+        },
+        {
+          "slug": "assessjar",
+          "maltese": "assessjar",
+          "english": "assessment",
+          "example": "Għada għandna assessjar tal-Malti.",
+          "exampleTranslation": "Tomorrow we have a Maltese assessment.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "b-attenzjoni",
+          "maltese": "b'attenzjoni",
+          "english": "carefully; with attention",
+          "example": "Aqra l-mistoqsija b'attenzjoni.",
+          "exampleTranslation": "Read the question carefully.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "b-rispett",
+          "maltese": "b'rispett",
+          "english": "respectfully; with respect",
+          "example": "Tkellem b'rispett mal-għalliema.",
+          "exampleTranslation": "Speak respectfully to the teacher.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "nifhem",
+          "maltese": "nifhem / tifhem",
+          "english": "I understand / you understand; she understands",
+          "example": "Jien nifhem il-mistoqsija.",
+          "exampleTranslation": "I understand the question.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Past dictionary form: fehem, he understood. Negative: ma tifhimx, you do not understand; she does not understand."
+          ]
+        },
+        {
+          "slug": "fis-silenzju",
+          "maltese": "fis-silenzju",
+          "english": "in silence; silently",
+          "example": "Naħdmu fis-silenzju.",
+          "exampleTranslation": "We work in silence.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "grupp",
+          "maltese": "grupp / gruppi",
+          "english": "group / groups",
+          "example": "Aħna naħdmu fi grupp.",
+          "exampleTranslation": "We work in a group.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "iddiskuti",
+          "maltese": "iddiskuti / iddiskutu",
+          "english": "discuss (singular / plural command)",
+          "example": "Iddiskuti l-mistoqsija ma' sieħbek.",
+          "exampleTranslation": "Discuss the question with your classmate.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Dictionary form: iddiskuta, he discussed."
+          ]
+        },
+        {
+          "slug": "kwizz",
+          "maltese": "kwiżż",
+          "english": "quiz",
+          "example": "Il-kwiżż huwa qasir.",
+          "exampleTranslation": "The quiz is short.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "matematika",
+          "maltese": "matematika",
+          "english": "mathematics; maths",
+          "example": "Illum għandna lezzjoni tal-matematika.",
+          "exampleTranslation": "Today we have a mathematics lesson.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "mistoqsija",
+          "maltese": "mistoqsija / mistoqsijiet",
+          "english": "question / questions",
+          "example": "Għandi mistoqsija għall-għalliema.",
+          "exampleTranslation": "I have a question for the teacher.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "pulit",
+          "maltese": "pulit",
+          "english": "neat; tidy (masculine)",
+          "example": "Ix-xogħol huwa pulit.",
+          "exampleTranslation": "The work is neat.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "religjon",
+          "maltese": "reliġjon",
+          "english": "religion; religious education",
+          "example": "Għada għandna lezzjoni tar-reliġjon.",
+          "exampleTranslation": "Tomorrow we have a religious education lesson.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "rizorsi",
+          "maltese": "riżorsi",
+          "english": "resources",
+          "example": "Għandna ħafna riżorsi fil-klassi.",
+          "exampleTranslation": "We have many resources in the classroom.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "rizultat",
+          "maltese": "riżultat",
+          "english": "result",
+          "example": "Ir-riżultat tal-kwiżż huwa tajjeb.",
+          "exampleTranslation": "The result of the quiz is good.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "skola-medja",
+          "maltese": "skola medja",
+          "english": "middle school",
+          "example": "It-tifla tmur skola medja.",
+          "exampleTranslation": "The girl goes to middle school.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "skola-primarja",
+          "maltese": "skola primarja",
+          "english": "primary school",
+          "example": "It-tifel imur skola primarja.",
+          "exampleTranslation": "The boy goes to primary school.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Primarja means primary (feminine), as in skola primarja."
+          ]
+        },
+        {
+          "slug": "jistudjaw",
+          "maltese": "jistudjaw / studjaw",
+          "english": "they study / they studied",
+          "example": "It-tfal jistudjaw il-Malti.",
+          "exampleTranslation": "The children study Maltese.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Dictionary form: studja, he studied."
+          ]
+        },
+        {
+          "slug": "xoghol-ghad-dar",
+          "maltese": "xogħol għad-dar",
+          "english": "homework",
+          "example": "Għandi xogħol għad-dar illum.",
+          "exampleTranslation": "I have homework today.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false
+        },
+        {
+          "slug": "jlesti",
+          "maltese": "jlesti / tlesti",
+          "english": "he finishes / you finish; she finishes",
+          "example": "Hu jlesti x-xogħol għad-dar.",
+          "exampleTranslation": "He finishes the homework.",
+          "exampleSource": "original site-authored example",
+          "imageRole": "none",
+          "imageQuizEligible": false,
+          "notes": [
+            "Verb: lesta = he finished; jlesti = he finishes; tlesti = you finish or she finishes.",
+            "This is the action of completing something; lest / lesta can also describe someone who is ready."
           ]
         }
       ]

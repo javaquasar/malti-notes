@@ -42,7 +42,7 @@ const vocabularyCardPages = fs.readdirSync(root)
   .sort();
 
 const courseTopicPages = [
-  { pageName: "introductions_alphabet.html", groupSelector: "[data-introduction-group]", groupCount: 3, exerciseSetCount: 1, contextLinkCount: 1 },
+  { pageName: "introductions_alphabet.html", groupSelector: "[data-introduction-group]", groupCount: 4, exerciseSetCount: 1, contextLinkCount: 1 },
   { pageName: "school_classroom.html", groupSelector: "[data-school-group]", groupCount: 4, exerciseSetCount: 2, contextLinkCount: 2 },
   { pageName: "hobbies_future.html", groupSelector: "[data-hobby-group]", groupCount: 8, exerciseSetCount: 1, contextLinkCount: 1 },
   { pageName: "environment_recycling.html", groupSelector: "[data-recycling-group]", groupCount: 2, exerciseSetCount: 1, contextLinkCount: 1 }
@@ -137,6 +137,21 @@ async function main() {
 
   try {
     const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+    // Initial service-worker activation reloads its current page. Settle that
+    // navigation before the course/review suites assert their feature DOM.
+    if (requestedSuite === "course" || requestedSuite === "review-games") {
+      const warmup = await context.newPage();
+      const warmupErrors = [];
+      warmup.on("pageerror", (error) => warmupErrors.push(error.message));
+      try {
+        await warmup.goto(`${baseUrl}/index.html`, { waitUntil: "networkidle" });
+        await warmup.waitForFunction(() => navigator.serviceWorker.controller?.state === "activated");
+        await warmup.waitForLoadState("networkidle");
+        assert(warmupErrors.length === 0, `Unexpected warmup page error: ${warmupErrors.join("; ")}`);
+      } finally {
+        await warmup.close();
+      }
+    }
 
     await runTest(context, "site search opens the matching page", async (page) => {
       await openCleanPage(page, "index.html");
@@ -522,7 +537,7 @@ async function main() {
     await runTest(context, "book context scopes a topic without changing its full view", async (page) => {
       await openCleanPage(page, "animals.html");
       await page.locator("[data-content-id]").first().waitFor();
-      assert(await page.locator("[data-content-id]:visible").count() === 60, "Normal animals topic is not complete.");
+      assert(await page.locator("[data-content-id]:visible").count() === 76, "Normal animals topic is not complete.");
 
       await page.goto(`${baseUrl}/animals.html?course=b1&chapter=b1-animals&step=1&view=chapter`, { waitUntil: "networkidle" });
       await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
@@ -533,8 +548,8 @@ async function main() {
       assert(chapterBulkCount === 18, "Chapter bulk review contains extended animal cards.");
 
       await page.locator('[data-course-view="all"]').click();
-      assert(await page.locator("[data-content-id]:visible").count() === 60, "Full topic did not restore all animal cards.");
-      assert(await page.locator('[data-course-section-role="extended"]:visible').count() === 2, "Full topic did not restore extended animal banks.");
+      assert(await page.locator("[data-content-id]:visible").count() === 76, "Full topic did not restore all animal cards.");
+      assert(await page.locator('[data-course-section-role="extended"]:visible').count() === 3, "Full topic did not restore extended animal banks.");
       assert(new URL(page.url()).searchParams.get("view") === "all", "Topic scope was not written to the URL.");
     });
 
@@ -554,7 +569,7 @@ async function main() {
       assert(await page.locator("[data-content-id]:visible").count() === 2, "B1 introductions did not keep the two mapped adjective cards.");
       assert((await page.locator("[data-course-scope-status]").textContent()).includes("4 chapter targets"), "Shared-card target count is missing.");
       await page.locator('[data-course-view="all"]').click();
-      assert(await page.locator("[data-content-id]:visible").count() === 14, "B1 introductions full view was not restored.");
+      assert(await page.locator("[data-content-id]:visible").count() === 27, "B1 introductions full view was not restored.");
 
       await page.goto(`${baseUrl}/numbers_calendar_time.html?course=b2&chapter=b2-imperative&step=2&view=chapter`, { waitUntil: "networkidle" });
       await page.waitForFunction(() => document.body.classList.contains("course-topic-chapter-view"));
