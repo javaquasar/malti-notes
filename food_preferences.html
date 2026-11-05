@@ -58,6 +58,7 @@
                 <li><a href="#supermarket-quantities">Shopping Quantities</a></li>
                 <li><a href="#supermarket-dialogue">At the Supermarket</a></li>
                 <li><a href="#supermarket-practice">Shopping Practice</a></li>
+                <li><a href="#shopping-conversation">Your Shopping Conversation</a></li>
                 <li><a href="#kitchen-details">Cooking and Serving</a></li>
                 <li><a href="#questions">Food Question Patterns</a></li>
                 <li><a href="#breakfast">Breakfast</a></li>
@@ -179,6 +180,22 @@
                 </div>
                 <div data-exercise-set="food-supermarket-check" data-exercise-src="./assets/data/food_cafe_exercises.json"></div>
                 <p><a href="./restaurant_ordering.html#cafe-coffee">Coffee and café orders</a></p>
+            </section>
+
+            <section class="content-card" id="shopping-conversation" data-guided-scenario="greengrocer-conversation">
+                <h2>Your Shopping Conversation</h2>
+                <p>Your list: a cabbage, a kilo of carrots and two boxes of strawberries. Ask the price and total, then say goodbye.</p>
+                <p class="study-progress-status" role="status" data-scenario-status>Loading conversation...</p>
+                <div class="study-contrast" data-scenario-cue>
+                    <p lang="mt" data-scenario-maltese></p><p data-scenario-english></p>
+                </div>
+                <div data-scenario-exercise></div>
+                <div class="toolbar-row">
+                    <button class="action-button" type="button" data-scenario-next disabled>Next turn</button>
+                    <button class="action-button" type="button" data-scenario-restart>Practise again</button>
+                    <a class="action-link" href="./gender_agreement.html#mixed-review">Mixed review</a>
+                </div>
+                <p class="study-feedback" role="status" data-practice-error></p>
             </section>
 
             <section class="content-card" id="kitchen-details">
@@ -341,6 +358,7 @@ window.renderExampleBanksFromData({
 </script>
 <script src="./assets/js/vocab-review-page.js"></script>
 <script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/topic-practice.js"></script>
 <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ const axe = fs.readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');
 assert.equal(gender.groups.find(g => g.id === 'gender-people').items.length, 13);
 assert.equal(gender.groups.find(g => g.id === 'gender-animals').items.length, 10);
 assert.equal(gender.groups.find(g => g.id === 'gender-adjectives').items.length, 7);
-assert.equal(genderSets.reduce((n, s) => n + s.items.length, 0), 33);
+assert.equal(genderSets.reduce((n, s) => n + s.items.length, 0), 43);
 assert.deepEqual(orderingSets.map(set => set.items.length), [8, 8, 10]);
 assert.equal(new Set(foodSets.flatMap(set => set.items.map(item => item.id))).size, 38);
 for (const set of orderingSets) {
@@ -221,7 +221,7 @@ async function main() {
     assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('malti_numbers_extended_v1'))), { existing: { attempts: 7 } });
     assert.deepEqual(await page.evaluate(() => window.MaltiReviewStore.getAllCards().find(c => c.id === 'existing-sentence')), sourceReview);
     assert.deepEqual(errors, []);
-    console.log('PASS: 71 answers, 26 new ordering tasks, accepted variants, retry, missed-answer review, persisted state, keyboard disclosures/token return, 27 responsive/theme views, 18 accessibility audits, images and aligned review columns.');
+    console.log('PASS: 81 answers, 26 ordering tasks and 10 whole-sentence tasks, accepted variants, retry, missed-answer review, persisted state, keyboard disclosures/token return, 27 responsive/theme views, 18 accessibility audits, images and aligned review columns.');
     console.log(`Screenshots: ${output}`);
   } finally {
     await browser.close();

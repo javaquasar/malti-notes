@@ -348,6 +348,14 @@ those values and pass them back through `state` on the next render.
 An optional `data` object avoids a second fetch when the controller already
 loaded the same bank. Keep `dataUrl` as its provenance/configuration URL.
 
+`topic-practice.js` composes these presentations for guided conversations,
+open vocabulary recall and mixed review; see the [practice integration record](../analysis/everyday-practice-extension.md).
+The shared runner still owns exercise markup and grading. Open recall passes
+saved drafts/ratings through `selfAssessment`; editing a draft invalidates the
+old rating. The native audio player uses the existing constrained `study-field`
+layout without a page-specific skin. Recording questions use `reading` for
+bilingual prompts, without a fabricated answer key or score.
+
 For a generated bank inside a disclosure, use an outer
 `study-disclosure-body mt-16` and a separate inner bank target. The renderer
 inserts its bulk-review toolbar immediately before that target, so both toolbar

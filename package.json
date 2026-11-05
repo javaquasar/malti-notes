@@ -24,6 +24,7 @@
     "particles:build": "node ./scripts/build_particles_content.js",
     "particles:check": "node ./scripts/particles_study_check.js",
     "topics:check": "node ./scripts/gender_food_cafe_check.js",
+    "topics:practice:check": "node ./scripts/topic_practice_check.js",
     "vocabulary:audit": "node ./scripts/supplied_vocabulary_audit.js",
     "vocabulary:gaps:check": "node ./scripts/vocabulary_gaps_check.js",
     "ci:workflow:check": "node ./scripts/ci_workflow_check.js",

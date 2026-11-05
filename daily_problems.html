@@ -49,6 +49,7 @@
                 <li><a href="#home">Home Problems</a></li>
                 <li><a href="#stress">Time and Stress</a></li>
                 <li><a href="#disagreements-incidents">Disagreements and Incidents</a></li>
+                <li><a href="#tonina-listening">Tonina: Listening</a></li>
                 <li><a href="#dialogues">Late Bus</a></li>
                 <li><a href="#dialogues-keys">Lost Keys</a></li>
                 <li><a href="#wrong">Wrong vs Right</a></li>
@@ -92,6 +93,31 @@
                 <div class="grid-auto" data-daily-problems-group="daily-problems-incidents"></div>
                 <h3>Actions and Reactions</h3>
                 <div data-example-group="daily-problems-incident-expressions"></div>
+            </section>
+
+            <section class="content-card" id="tonina-listening" data-tonina-listening data-content-src="./assets/data/tonina_listening_examples.json">
+                <h2>Tonina: Listening</h2>
+                <p>Listen for the main problem first: what distracts Tonina, and what happens to the meal? Then listen again for the details.</p>
+                <audio class="study-field" controls preload="metadata" aria-label="Tonina story, user-supplied recording">
+                    <source src="./assets/audio/tonina.m4a" type="audio/mp4">
+                    <a href="./assets/audio/tonina.m4a">Open the recording</a>
+                </audio>
+                <div class="control-row control-row--responsive">
+                    <label class="study-field">Playback speed<select class="study-input" data-listening-speed><option value="1">Normal</option><option value="0.75">Slower</option></select></label>
+                    <button class="action-button" type="button" data-listening-seek="0">Beginning</button>
+                    <button class="action-button" type="button" data-listening-seek="109">The forgotten meal</button>
+                    <button class="action-button" type="button" data-listening-seek="176">The ending</button>
+                </div>
+                <p class="mini" data-listening-status>User-supplied recording. A checked transcript and answer key are not yet available; responses are not scored.</p>
+                <details class="study-disclosure">
+                    <summary>10 listening questions · Maltese and English</summary>
+                    <div class="study-disclosure-body mt-16"><div data-listening-bank="tonina-listening-questions" data-example-group="tonina-listening-questions" data-bank-layout="reading"></div></div>
+                </details>
+                <label class="study-field">Your listening notes and answers
+                    <textarea class="study-input" lang="mt" rows="8" data-listening-notes></textarea>
+                </label>
+                <p><a href="#disagreements-incidents">Words for the incident</a> · <a href="./food_preferences.html#kitchen-details">Cooking and serving words</a></p>
+                <p class="study-feedback" role="status" data-practice-error></p>
             </section>
 
             <section class="card" id="dialogues">
@@ -153,6 +179,7 @@
 <script src="./assets/js/learning-content.js"></script>
 
 <script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/topic-practice.js"></script>
 <script>
 window.MaltiVocabReviewPage = {
     dataUrl: "./assets/data/daily_problems.json",

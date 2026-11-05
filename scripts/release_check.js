@@ -41,14 +41,25 @@ async function browserCheck(release) {
     assert.ok(await page.evaluate(() => Boolean(navigator.serviceWorker.controller)), "Offline worker did not control release");
     await page.goto(base + "particles_prepositions.html", { waitUntil: "networkidle" });
     await page.locator(".review-table-action button").first().waitFor();
+    await page.goto(base + "gender_agreement.html", { waitUntil: "networkidle" });
+    await page.locator("[data-mixed-start]").click();
+    assert.equal(await page.locator("[data-mixed-exercise] .exercise-item").count(), 6, "Released mixed bank did not load");
+    await page.goto(base + "school_classroom.html", { waitUntil: "networkidle" });
+    assert.equal(await page.locator("[data-recall-bank] [data-bank-item]").count(), 10, "Released recall bank did not load");
+    await page.goto(base + "daily_problems.html", { waitUntil: "networkidle" });
+    await page.waitForFunction(() => document.querySelector("[data-tonina-listening] audio").duration > 210);
+    assert.equal(await page.locator("[data-listening-bank] article").count(), 10, "Released listening bank did not load");
+    await page.goto(base + "particles_prepositions.html", { waitUntil: "networkidle" });
     await context.setOffline(true);
     await page.reload({ waitUntil: "networkidle" });
     await page.locator(".review-table-action button").first().waitFor();
+    await page.goto(base + "daily_problems.html", { waitUntil: "networkidle" });
+    await page.waitForFunction(() => document.querySelector("[data-tonina-listening] audio").duration > 210);
     assert.ok(requested.length > 10, "Release did not exercise asset loading");
     assert.ok(requested.every((url) => url.includes(`/assets/${release.revision}/`)), "Unversioned browser request");
     assert.deepEqual(errors, []);
     assert.deepEqual(failed, []);
-    console.log("ok deployed subpath: CSS imports, dynamic speaking/data, table renderer and offline reload");
+    console.log("ok deployed subpath: CSS imports, speaking/data, table renderer, mixed/recall/listening banks and offline audio reload");
   } finally {
     if (browser) await browser.close();
     await new Promise((resolve) => server.close(resolve));

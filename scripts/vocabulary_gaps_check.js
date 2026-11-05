@@ -8,14 +8,14 @@ const output = path.join(root, 'tmp_ui/vocabulary-gaps');
 const axe = fs.readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');
 const pages = [
   { file: 'gender_agreement.html', scopes: ['[data-example-group="gender-terms"]', '[data-example-group="gender-exercise-words"]'], counts: [3, 11] },
-  { file: 'food_preferences.html', scopes: ['[data-food-group="food-kitchen-details"]', '[data-example-group="food-cooking-context"]'], counts: [5, 4] },
+  { file: 'food_preferences.html', scopes: ['[data-food-group="food-kitchen-details"]', '[data-example-group="food-cooking-context"]'], counts: [7, 4] },
   { file: 'getting_to_know.html', scopes: ['[data-example-group="work-job-search-vocabulary"]', '[data-example-group="work-job-search-dialogue"]'], counts: [5, 7] },
   { file: 'restaurant_ordering.html', scopes: ['[data-example-group="restaurant-cafe-small-talk"]'], counts: [4] },
   { file: 'daily_problems.html', scopes: ['[data-daily-problems-group="daily-problems-incidents"]', '[data-example-group="daily-problems-incident-expressions"]'], counts: [6, 8] },
-  { file: 'daily_routine.html', scopes: ['[data-daily-routine-group="daily-routine-habits"]', '[data-example-group="daily-routine-habit-expressions"]'], counts: [2, 2] },
+  { file: 'daily_routine.html', scopes: ['[data-daily-routine-group="daily-routine-habits"]', '[data-example-group="daily-routine-habit-expressions"]'], counts: [3, 2] },
   { file: 'school_classroom.html', scopes: ['[data-example-group="school-word-game-language"]'], counts: [5] },
-  { file: 'home_furniture.html', scopes: ['[data-home-group="home-outside"]', '[data-home-group="home-furniture"]'], counts: [8, 11] },
-  { file: 'weather.html', scopes: ['[data-weather-group="weather-core"]'], counts: [7] },
+  { file: 'home_furniture.html', scopes: ['[data-home-group="home-outside"]', '[data-home-group="home-furniture"]'], counts: [10, 17] },
+  { file: 'weather.html', scopes: ['[data-weather-group="weather-core"]'], counts: [12] },
   { file: 'emotions.html', scopes: ['[data-example-group="emotions-situations"]'], counts: [7] }
 ];
 
@@ -27,8 +27,10 @@ async function main() {
   page.setDefaultTimeout(30000);
   const errors = [];
   let auditing = false;
+  const auditRequests = new WeakSet();
   page.on('pageerror', error => errors.push(error.message));
-  page.on('response', response => { if (!auditing && response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
+  page.on('request', request => { if (auditing) auditRequests.add(request); });
+  page.on('response', response => { if (!auditRequests.has(response.request()) && response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   try {
     await page.goto(`${base}/food_preferences.html`, { waitUntil: 'networkidle' });
     await page.evaluate(() => {
@@ -41,6 +43,7 @@ async function main() {
       for (const width of [390, 1440]) for (const theme of ['classic', 'forest', 'contrast']) {
         await page.setViewportSize({ width, height: width < 600 ? 844 : 1000 });
         await page.evaluate(value => localStorage.setItem('malti_site_theme', value), theme);
+        auditing = false;
         await page.goto(`${base}/${config.file}`, { waitUntil: 'networkidle' });
         await page.evaluate(() => document.querySelectorAll('details').forEach(details => { details.open = true; }));
         for (const [index, selector] of config.scopes.entries()) {
@@ -59,7 +62,7 @@ async function main() {
           runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] }
         })).violations.filter(row => ['serious', 'critical'].includes(row.impact)).map(row => `${row.id}: ${row.nodes.map(node => node.target.join(' ')).join(', ')}`), config.scopes);
         await page.waitForLoadState('networkidle');
-        auditing = false;
+        // Keep late CSSOM re-fetches attributed to this audited document.
         assert.deepEqual(violations, [], `${config.file} ${width} ${theme}`);
       }
       const bank = page.locator(config.scopes[0]);
@@ -69,6 +72,7 @@ async function main() {
       assert.equal(await button.getAttribute('aria-pressed'), 'true');
       const id = await button.getAttribute('data-review-id');
       assert(await page.evaluate(id => window.MaltiReviewStore.hasCard(id), id));
+      auditing = false;
       await page.reload({ waitUntil: 'networkidle' });
       assert.equal(await button.getAttribute('aria-pressed'), 'true');
       await page.evaluate(() => document.querySelectorAll('details').forEach(details => { details.open = true; }));

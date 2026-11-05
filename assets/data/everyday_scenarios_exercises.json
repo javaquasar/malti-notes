@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "source": { "kind": "site", "page": "food_preferences.html" },
+  "topic": "Everyday shopping conversations",
+  "provenance": {
+    "intake": "lesson-04-materials-analysis.md, sections 4-8",
+    "method": "Editorial guided conversations using reviewed source vocabulary and service patterns, not original worksheet answer keys. Prices are fictional practice amounts."
+  },
+  "sets": [
+    {
+      "id": "greengrocer-conversation",
+      "title": "At the Greengrocer",
+      "sourcePage": "food_preferences.html#shopping-conversation",
+      "passPercent": 100,
+      "items": [
+        { "id": "market-greeting", "type": "multiple-choice", "cue": { "maltese": "Bonġu! X'għandek bżonn?", "english": "Good morning! What do you need?" }, "prompt": "Your list: a cabbage and a kilo of carrots. Choose your opening order.", "choices": [ "Bonġu, għandi bżonn kaboċċa u kilo karrotti, jekk jogħġbok.", "Bonġu, għandi bżonn kaboċċa u kilo tuffieħ, jekk jogħġbok.", "Dak kollox. Grazzi." ], "answer": "Bonġu, għandi bżonn kaboċċa u kilo karrotti, jekk jogħġbok.", "explanation": "The greeting and both items match the list.", "reviewCard": { "maltese": "Għandi bżonn kaboċċa u kilo karrotti.", "english": "I need a cabbage and a kilo of carrots." } },
+        { "id": "market-add-fruit", "type": "fill-blank", "cue": { "maltese": "Mela le. Xi ħaġa oħra?", "english": "Of course. Anything else?" }, "prompt": "Add two boxes of strawberries. Write only two boxes: Nieħu ___ frawli.", "answer": "żewġ kaxxi", "explanation": "Żewġ kaxxi is two boxes, not two kilograms.", "reviewCard": { "maltese": "Nieħu żewġ kaxxi frawli.", "english": "I will take two boxes of strawberries." } },
+        { "id": "market-price", "type": "multiple-choice", "cue": { "maltese": "Hawn huma l-frawli.", "english": "Here are the strawberries." }, "prompt": "Ask the price of the two boxes.", "choices": [ "Kemm huma, jekk jogħġbok?", "Il-ġurnata t-tajba!", "Għandi bżonn ftit tewm." ], "answer": "Kemm huma, jekk jogħġbok?", "explanation": "Kemm huma? asks how much they cost.", "reviewCard": { "maltese": "Kemm huma, jekk jogħġbok?", "english": "How much are they, please?" } },
+        { "id": "market-close-list", "type": "fill-blank", "cue": { "maltese": "Ħames ewro. Xi ħaġa oħra?", "english": "Five euros. Anything else?" }, "prompt": "Your list is complete. Write only that is all: ___. Grazzi.", "answer": "Dak kollox", "explanation": "Dak kollox closes the order; the next step is the total.", "reviewCard": { "maltese": "Dak kollox. Grazzi.", "english": "That is all. Thank you." } },
+        { "id": "market-total", "type": "multiple-choice", "cue": { "maltese": "Tajjeb.", "english": "All right." }, "prompt": "Ask the total for the whole order, not just the strawberry boxes.", "choices": [ "Kemm jiġi kollox?", "X'għandek bżonn?", "Xi ħaġa oħra?" ], "answer": "Kemm jiġi kollox?", "explanation": "Kollox refers to everything in the order.", "reviewCard": { "maltese": "Kemm jiġi kollox?", "english": "How much is everything?" } },
+        { "id": "market-total-amount", "type": "multiple-choice", "cue": { "maltese": "Tnax-il ewro u ħamsin ċenteżmu, jekk jogħġbok.", "english": "Twelve euros and fifty cents, please." }, "prompt": "Which total has the assistant just given?", "choices": [ "EUR 12.50", "EUR 5.00", "EUR 20.50" ], "answer": "EUR 12.50", "explanation": "Tnax-il ewro is twelve euros; ħamsin ċenteżmu is fifty cents." },
+        { "id": "market-farewell", "type": "fill-blank", "cue": { "maltese": "Grazzi. Il-ġurnata t-tajba!", "english": "Thank you. Have a nice day!" }, "prompt": "Return the wish to this one assistant. Write only you too.", "answer": "Lilek ukoll", "explanation": "Lilek ukoll returns the wish to one person.", "reviewCard": { "maltese": "Lilek ukoll.", "english": "You too." } }
+      ]
+    },
+    {
+      "id": "coffee-counter-conversation",
+      "title": "At the Coffee Counter",
+      "sourcePage": "restaurant_ordering.html#coffee-conversation",
+      "passPercent": 100,
+      "items": [
+        { "id": "counter-order", "type": "multiple-choice", "cue": { "maltese": "Bonġu! X'tixtieq?", "english": "Good morning! What would you like?" }, "prompt": "You want a cappuccino. Choose your opening order.", "choices": [ "Bonġu, nixtieq kapuċċino, jekk jogħġbok.", "Bonġu, nixtieq kafè iswed, jekk jogħġbok.", "Nista' nħallas bil-karta?" ], "answer": "Bonġu, nixtieq kapuċċino, jekk jogħġbok.", "explanation": "Kapuċċino is the drink requested in this scenario.", "reviewCard": { "maltese": "Nixtieq kapuċċino, jekk jogħġbok.", "english": "I would like a cappuccino, please." } },
+        { "id": "counter-milk", "type": "fill-blank", "cue": { "maltese": "B'liema ħalib?", "english": "With which milk?" }, "prompt": "Choose oat milk. Complete only the milk phrase: Bil-___, jekk jogħġbok.", "answer": "ħalib tal-ħafur", "explanation": "Bil-ħalib tal-ħafur means with oat milk.", "reviewCard": { "maltese": "Bil-ħalib tal-ħafur, jekk jogħġbok.", "english": "With oat milk, please." } },
+        { "id": "counter-sugar", "type": "fill-blank", "cue": { "maltese": "Biz-zokkor?", "english": "With sugar?" }, "prompt": "You do not want sugar. Write the complete phrase without sugar.", "answer": "mingħajr zokkor", "accepted": [ "mingħajr zokkor", "bla zokkor" ], "explanation": "Both mingħajr zokkor and bla zokkor express the requested exclusion.", "reviewCard": { "maltese": "Mingħajr zokkor.", "english": "Without sugar." } },
+        { "id": "counter-takeaway", "type": "multiple-choice", "cue": { "maltese": "Hawnhekk jew take-away?", "english": "Here or to take away?" }, "prompt": "You are leaving with your coffee. Choose the reply.", "choices": [ "Take-away, jekk jogħġbok.", "Hawnhekk, jekk jogħġbok.", "Il-kont, jekk jogħġbok." ], "answer": "Take-away, jekk jogħġbok.", "explanation": "Take-away matches taking the drink with you.", "reviewCard": { "maltese": "Take-away, jekk jogħġbok.", "english": "To take away, please." } },
+        { "id": "counter-finish", "type": "multiple-choice", "cue": { "maltese": "Xi ħaġa oħra?", "english": "Anything else?" }, "prompt": "You do not want anything else. Choose the reply.", "choices": [ "Dak kollox. Grazzi.", "U pasta bil-krema, jekk jogħġbok.", "Nixtieq torta tat-tuffieħ." ], "answer": "Dak kollox. Grazzi.", "explanation": "The other replies add a pastry or apple pie.", "reviewCard": { "maltese": "Dak kollox. Grazzi.", "english": "That is all. Thank you." } },
+        { "id": "counter-card", "type": "multiple-choice", "cue": { "maltese": "Tliet ewro, jekk jogħġbok.", "english": "Three euros, please." }, "prompt": "Ask whether you can pay by card.", "choices": [ "Nista' nħallas bil-karta?", "Se nħallas bi flus kontanti.", "Kemm huma?" ], "answer": "Nista' nħallas bil-karta?", "explanation": "The question asks about card payment; it does not announce payment in cash.", "reviewCard": { "maltese": "Nista' nħallas bil-karta?", "english": "Can I pay by card?" } },
+        { "id": "counter-goodbye", "type": "fill-blank", "cue": { "maltese": "Iva, mela le. Grazzi!", "english": "Yes, of course. Thank you!" }, "prompt": "Say have a nice day. Write only the Maltese wish.", "answer": "Il-ġurnata t-tajba", "explanation": "Il-ġurnata t-tajba is a polite daytime farewell.", "reviewCard": { "maltese": "Il-ġurnata t-tajba!", "english": "Have a nice day!" } }
+      ]
+    }
+  ]
+}

@@ -44,6 +44,7 @@
                 <li><a href="#descriptions">Describing Objects</a></li>
                 <li><a href="#commands">Classroom Commands</a></li>
                 <li><a href="#word-game-language">Word-Game Language</a></li>
+                <li><a href="#three-word-challenge">Three-Word Challenge</a></li>
                 <li><a href="#models">Ready-Made Lines</a></li>
                 <li><a href="#practice">Quick Checks</a></li>
                 <li><a href="#related">Related Pages</a></li>
@@ -91,6 +92,15 @@
             <section class="content-card" id="word-game-language">
                 <h2>Word-Game Language</h2>
                 <div data-example-group="school-word-game-language"></div>
+            </section>
+
+            <section class="content-card" id="three-word-challenge" data-open-recall data-content-src="./assets/data/three_words_examples.json">
+                <h2>Three-Word Challenge</h2>
+                <p>Give three Maltese examples for each category. Several answers can work; compare your choices with the examples before assessing your confidence.</p>
+                <p class="study-progress-status" role="status" data-recall-progress>0 / 10 answered</p>
+                <div data-recall-bank="three-word-challenge" data-example-group="three-word-challenge"></div>
+                <p class="study-feedback" role="status" data-recall-status></p>
+                <p class="study-feedback" role="status" data-practice-error></p>
             </section>
 
             <section class="card" id="models">
@@ -143,6 +153,7 @@
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/mistake-store.js"></script>
 <script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/topic-practice.js"></script>
 <script>
 window.MaltiVocabReviewPage = {
     dataUrl: "./assets/data/school_classroom.json",

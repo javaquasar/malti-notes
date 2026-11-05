@@ -23,6 +23,8 @@
                 <li><a href="#sentences">Agreement in Context</a></li>
                 <li><a href="#verbs">Past-Tense Verb Forms</a></li>
                 <li><a href="#practice">Practice</a></li>
+                <li><a href="#whole-sentences">Whole-Sentence Agreement</a></li>
+                <li><a href="#mixed-review">Mixed Review</a></li>
                 <li><a href="#related">Related Topics and Sources</a></li>
             </ul></nav>
         </aside>
@@ -99,6 +101,27 @@
                     <div class="study-disclosure-body mt-16"><div data-exercise-set="gender-odd-one-out" data-exercise-src="./assets/data/gender_agreement_exercises.json"></div></div>
                 </details>
             </section>
+            <section class="content-card" id="whole-sentences">
+                <h2>Whole-Sentence Agreement</h2>
+                <p>Change the referent and follow the agreement through the whole sentence. In the correction tasks, every relevant form must fit.</p>
+                <div data-exercise-set="gender-whole-sentences" data-exercise-src="./assets/data/gender_agreement_exercises.json"></div>
+            </section>
+            <section class="content-card" id="mixed-review" data-mixed-practice>
+                <h2>Mixed Review</h2>
+                <div class="control-row control-row--responsive">
+                    <label class="study-field">Task mode
+                        <select class="study-input" data-mixed-mode><option value="recognition">Recognition</option><option value="production">Production</option></select>
+                    </label>
+                    <button class="action-button" type="button" data-mixed-start disabled>Start session</button>
+                    <a class="action-link" href="./mistakes.html">Mistake journal</a>
+                </div>
+                <p class="study-progress-status" role="status" data-mixed-status>Six tasks: gender, shopping and coffee.</p>
+                <p data-mixed-recognition>Recognition: not attempted</p>
+                <p data-mixed-production>Production: not attempted</p>
+                <p data-mixed-due></p>
+                <div data-mixed-exercise hidden></div>
+                <p class="study-feedback" role="status" data-practice-error></p>
+            </section>
             <section class="content-card" id="related">
                 <h2>Related Topics and Sources</h2>
                 <ul>
@@ -119,6 +142,7 @@
 <script src="./assets/js/learning-content.js"></script>
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/topic-practice.js"></script>
 <script>
 window.renderExampleBanksFromData({
     dataUrl: "./assets/data/gender_agreement_examples.json",

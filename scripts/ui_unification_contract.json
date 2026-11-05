@@ -2522,6 +2522,23 @@
     },
     {
       "kind": "script-factory",
+      "file": "assets/js/topic-practice.js",
+      "description": "Owner-approved registration on 2026-10-28 for the exact guided and listening functions in the shared topic-practice controller. Input-event listeners trigger the conservative factory scan. These functions bind standard static controls to MaltiExerciseRunner and the shared reading renderer, preserving drafts, progress and native audio playback. They introduce no CSS, local control skins or alternative markup renderer. Only these two signatures are approved; future changes still require registry-and-description review. See docs/analysis/everyday-practice-extension.md.",
+      "entries": [
+        {
+          "label": "guided",
+          "signature": "e638ba2001e8e1ef6c3279d7bed4f111201305efd2b86b244505920bec120e35",
+          "count": 1
+        },
+        {
+          "label": "listening",
+          "signature": "93b99f957462788351e6c428c05ccb952202a37d2e0d5160d0faa2ed5e0196eb",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "kind": "script-factory",
       "file": "assets/js/transport-compact-toggle.js",
       "description": "Existing DOM/class/style factory implementation in transport-compact-toggle.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved.",
       "entries": [

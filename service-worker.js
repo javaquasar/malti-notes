@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}ae44aa4ca8a4`;
+const CACHE_NAME = `${CACHE_PREFIX}01a45302f135`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -132,6 +132,7 @@ const CORE_ASSETS = [
     "./assets/js/storage.js",
     "./assets/js/today.js",
     "./assets/js/topic-picker.js",
+    "./assets/js/topic-practice.js",
     "./assets/js/transport-compact-toggle.js",
     "./assets/js/verb-lookup-loader.js",
     "./assets/js/verb-trigger.js",
@@ -171,6 +172,9 @@ const CORE_ASSETS = [
     "./assets/data/food_examples.json",
     "./assets/data/restaurant_ordering_examples.json",
     "./assets/data/food_cafe_exercises.json",
+    "./assets/data/everyday_scenarios_exercises.json",
+    "./assets/data/three_words_examples.json",
+    "./assets/data/tonina_listening_examples.json",
     "./assets/data/daily_problems_examples.json",
     "./assets/data/daily_routine_examples.json",
     "./assets/data/school_classroom_examples.json",
@@ -197,6 +201,7 @@ const CORE_ASSETS = [
     "./assets/img/favicon-option-speech.svg"
   ];
 const LAZY_ASSETS = [
+    "./assets/audio/tonina.m4a",
     "./assets/data/vocabulary_review_catalog.json",
     "./assets/img/mdi/balcony.svg",
     "./assets/img/mdi/bottle-wine-outline.svg",
@@ -572,12 +577,39 @@ async function lazyAssetResponse(request) {
   return cacheResponse(request, await fetch(request));
 }
 
+async function mediaResponse(request) {
+  const cache = await caches.open(CACHE_NAME);
+  let response = await cache.match(request.url);
+  if (!response) {
+    response = await fetch(request.url);
+    if (response.ok && response.status === 200) await cache.put(request.url, response.clone());
+  }
+  const range = request.headers.get("range");
+  if (!range || response.status !== 200) return response;
+  const bytes = await response.arrayBuffer();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const length = bytes.byteLength;
+  let start = match?.[1] ? Number(match[1]) : 0;
+  let end = match?.[2] ? Number(match[2]) : length - 1;
+  if (match && !match[1] && match[2]) { start = Math.max(0, length - end); end = length - 1; }
+  if (!match || (!match[1] && !match[2]) || start >= length || end < start) {
+    return new Response(null, { status: 416, headers: { "Content-Range": "bytes */" + length } });
+  }
+  end = Math.min(end, length - 1);
+  return new Response(bytes.slice(start, end + 1), { status: 206, headers: {
+    "Content-Type": response.headers.get("Content-Type") || "audio/mp4", "Accept-Ranges": "bytes",
+    "Content-Range": "bytes " + start + "-" + end + "/" + length, "Content-Length": String(end - start + 1)
+  } });
+}
+
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
   if (request.mode === "navigate") {
     event.respondWith(navigationResponse(request));
+  } else if (url.pathname.endsWith(".m4a") && LAZY_ASSET_URLS.has(url.href)) {
+    event.respondWith(mediaResponse(request));
   } else if (LAZY_ASSET_URLS.has(url.href)) {
     event.respondWith(lazyAssetResponse(request));
   } else {

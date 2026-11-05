@@ -59,6 +59,23 @@
         { "id": "past-tense", "type": "multiple-choice", "prompt": "Which third-person singular past-tense verb form is masculine?", "choices": ["semgħet", "miet", "neżgħet", "telgħet"], "answer": "miet", "explanation": "Miet means he died; the other forms here are third-person feminine singular." },
         { "id": "feminine-adjective", "type": "multiple-choice", "prompt": "Which form is feminine among these masculine forms?", "choices": ["armel", "mbierek", "mxarrab", "sewda"], "answer": "sewda", "explanation": "Sewda is the feminine singular of iswed (black)." }
       ]
+    },
+    {
+      "id": "gender-whole-sentences", "title": "Change the whole sentence", "passPercent": 80,
+      "sourcePage": "gender_agreement.html#whole-sentences",
+      "editorialMethod": "Constrained adaptations of the reviewed noun, adjective and family pairs; preserve word order while changing the specified referent.",
+      "items": [
+        { "id": "whole-mum", "type": "fill-blank", "prompt": "Dan hu l-papà. Change Dad to Mum and keep this word order. Use hi for is. Write the whole sentence.", "answer": "Din hi l-mamà.", "explanation": "Dan becomes Din, hu becomes hi, and l-papà becomes l-mamà.", "reviewCard": { "maltese": "Din hi l-mamà.", "english": "This is Mum." } },
+        { "id": "whole-sister", "type": "fill-blank", "prompt": "Ħija twil. Change my brother to my sister. Keep the order and write the whole sentence.", "answer": "Oħti twila.", "explanation": "The possessive noun changes to Oħti and the adjective changes to twila.", "reviewCard": { "maltese": "Oħti twila.", "english": "My sister is tall." } },
+        { "id": "whole-teacher", "type": "fill-blank", "prompt": "L-għalliem kien mħawwad. Change the male teacher to one female teacher. Keep the order and write the whole sentence.", "answer": "L-għalliema kienet mħawda.", "explanation": "The noun, past auxiliary and adjective all change: għalliema, kienet, mħawda.", "reviewCard": { "maltese": "L-għalliema kienet mħawda.", "english": "The female teacher was confused." } },
+        { "id": "whole-cat", "type": "fill-blank", "prompt": "Il-qattus kien mxarrab. Change the male cat to a female cat. Keep the order and write the whole sentence.", "answer": "Il-qattusa kienet mxarrba.", "explanation": "Qattusa takes feminine kienet and mxarrba; the article remains Il-.", "reviewCard": { "maltese": "Il-qattusa kienet mxarrba.", "english": "The female cat was wet." } },
+        { "id": "whole-neighbour", "type": "fill-blank", "prompt": "Il-ġar tiegħi kien twil. Change the male neighbour to a female neighbour. Keep the order and write the whole sentence.", "answer": "Il-ġara tiegħi kienet twila.", "explanation": "Ġara, kienet and twila change; tiegħi still means my and stays unchanged.", "reviewCard": { "maltese": "Il-ġara tiegħi kienet twila.", "english": "My female neighbour was tall." } },
+        { "id": "whole-mum-correction", "type": "multiple-choice", "prompt": "Correct all agreement in Dan hu l-mamà. Which complete sentence fits Mum?", "choices": [ "Din hi l-mamà.", "Din hu l-mamà.", "Dan hi l-mamà." ], "answer": "Din hi l-mamà.", "explanation": "Both the demonstrative and the pronoun must refer to Mum in the feminine." },
+        { "id": "whole-teacher-correction", "type": "multiple-choice", "prompt": "The subject is one female teacher. Choose the fully agreed sentence.", "choices": [ "L-għalliema kien mħawda.", "L-għalliema kienet mħawwad.", "L-għalliema kienet mħawda." ], "answer": "L-għalliema kienet mħawda.", "explanation": "Kienet and mħawda are both feminine singular here." },
+        { "id": "whole-possessive-correction", "type": "multiple-choice", "prompt": "Choose the sentence meaning my sister was tall.", "choices": [ "Oħti kienet twila.", "Oħti kien twila.", "Oħti kienet twil." ], "answer": "Oħti kienet twila.", "explanation": "Oħti means my sister; both kienet and twila agree with her." },
+        { "id": "whole-stem-correction", "type": "multiple-choice", "prompt": "Choose the complete sentence meaning the female cat was wet.", "choices": [ "Il-qattusa kienet mxarraba.", "Il-qattusa kienet mxarrba.", "Il-qattusa kien mxarrba." ], "answer": "Il-qattusa kienet mxarrba.", "explanation": "The reviewed adjective pair is mxarrab / mxarrba; it is not formed by merely adding -a to the full masculine spelling." },
+        { "id": "whole-husband-correction", "type": "multiple-choice", "prompt": "Choose the sentence meaning Andrew is my husband.", "choices": [ "Andrew hi r-raġel tiegħi.", "Andrew hu r-raġel tiegħi.", "Andrew hu l-mara tiegħi." ], "answer": "Andrew hu r-raġel tiegħi.", "explanation": "The male pronoun hu and r-raġel match Andrew; tiegħi keeps the possessor as me." }
+      ]
     }
   ]
 }

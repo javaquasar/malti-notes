@@ -99,6 +99,7 @@ Each entry below is exact, file-bound and count-bound. CSS selector ownership is
 | assets/js/site-map-pages.js | script-factory | 3 | Existing DOM/class/style factory implementation in site-map-pages.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved. |
 | assets/js/today.js | script-factory | 1 | Existing DOM/class/style factory implementation in today.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved. |
 | assets/js/topic-picker.js | script-factory | 3 | Existing DOM/class/style factory implementation in topic-picker.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved. |
+| assets/js/topic-practice.js | script-factory | 2 | Owner-approved registration on 2026-10-28 for the exact guided and listening functions in the shared topic-practice controller. Input-event listeners trigger the conservative factory scan. These functions bind standard static controls to MaltiExerciseRunner and the shared reading renderer, preserving drafts, progress and native audio playback. They introduce no CSS, local control skins or alternative markup renderer. Only these two signatures are approved; future changes still require registry-and-description review. See docs/analysis/everyday-practice-extension.md. |
 | assets/js/transport-compact-toggle.js | script-factory | 3 | Existing DOM/class/style factory implementation in transport-compact-toggle.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved. |
 | assets/js/verb-lookup-loader.js | script-factory | 11 | Existing DOM/class/style factory implementation in verb-lookup-loader.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved. |
 | assets/js/verbs-review.js | script-factory | 1 | Existing DOM/class/style factory implementation in verbs-review.js. Parsed function signatures are frozen for review, including geometry and legacy surfaces; registration is not a claim that legacy debt is resolved. |
@@ -865,6 +866,15 @@ Existing DOM/class/style factory implementation in topic-picker.js. Parsed funct
 | anonymous factory | 1 | `6c1c25be44a28d30772d19fc7774e4f35056177108aaebcdbaf7fa286bea9f38` |
 | render | 1 | `8bb34dd3220e1cf57692e75064675cde4c31f2d9eb99ee244adb84144e2a6b3b` |
 | anonymous factory | 1 | `e23d4af016187e2f2d46661b1e50680f0f96451b12a57682475e048e5828a205` |
+
+## assets/js/topic-practice.js (script-factory)
+
+Owner-approved registration on 2026-10-28 for the exact guided and listening functions in the shared topic-practice controller. Input-event listeners trigger the conservative factory scan. These functions bind standard static controls to MaltiExerciseRunner and the shared reading renderer, preserving drafts, progress and native audio playback. They introduce no CSS, local control skins or alternative markup renderer. Only these two signatures are approved; future changes still require registry-and-description review. See docs/analysis/everyday-practice-extension.md.
+
+| Registered element | Count | Signature |
+| --- | ---: | --- |
+| guided | 1 | `e638ba2001e8e1ef6c3279d7bed4f111201305efd2b86b244505920bec120e35` |
+| listening | 1 | `93b99f957462788351e6c428c05ccb952202a37d2e0d5160d0faa2ed5e0196eb` |
 
 ## assets/js/transport-compact-toggle.js (script-factory)
 
