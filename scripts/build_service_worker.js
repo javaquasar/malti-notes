@@ -151,7 +151,16 @@ async function navigationResponse(request) {
   try {
     return await cacheResponse(request, await fetch(request));
   } catch (error) {
-    return (await caches.match(request)) || (await caches.match(new URL("index.html", self.registration.scope).href));
+    const exact = await caches.match(request);
+    if (exact) return exact;
+    const address = new URL(request.url);
+    if (address.pathname.endsWith(".html")) {
+      address.search = "";
+      address.hash = "";
+      const page = await caches.match(address.href);
+      if (page) return page;
+    }
+    return caches.match(new URL("index.html", self.registration.scope).href);
   }
 }
 

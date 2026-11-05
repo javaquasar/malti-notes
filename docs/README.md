@@ -43,6 +43,7 @@ This directory is the canonical home for project documentation. The root `README
 - [Gender, food and cafe integration and linguistic review](analysis/gender-food-cafe-integration.md)
 - [Supplied vocabulary gaps, destinations and held entries](analysis/supplied-vocabulary-coverage.md)
 - [Guided conversations, agreement, open recall and reading practice](analysis/everyday-practice-extension.md)
+- [Unified independent B1, B2 and B3 practice](analysis/unified-study.md)
 
 ## Tools And References
 

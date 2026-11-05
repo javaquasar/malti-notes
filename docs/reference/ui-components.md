@@ -369,6 +369,20 @@ attribute on the disclosure-body wrapper itself.
 5. Verify all three themes, keyboard use, desktop/mobile layouts and print behavior when applicable.
 6. Review visual changes before updating the platform-specific baselines. Never promote an unexplained regression just to make a test pass.
 
+## Unified Study Entry
+
+The B1/B2/B3 My practice entry composes static `content-card`, `stack`,
+`segmented-toggle`, `study-input`, `study-disclosure` and existing action classes.
+`study-session.js` binds those controls to the shared exercise runner; the
+data-only `study-session-core.js` adapts original course and B3 items. It does
+not create a competing item renderer or a local control appearance. The former
+Today review dashboard remains inside the parent disclosure.
+
+See [Unified Study](../analysis/unified-study.md) for progression, help,
+per-topic drafts and preservation of the existing stores. Run `npm run
+study:check` for the new flow. The standard three stylesheet links and existing
+UI registry apply without new exceptions.
+
 ## Verification
 
 | Command | What it checks |

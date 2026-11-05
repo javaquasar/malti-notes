@@ -15,33 +15,37 @@
         <a class="site-brand" href="./index.html">Maltese Study Site</a>
     </header>
 
-    <section class="hero">
-        <div class="hero-band"></div>
-        <div class="hero-body">
-            <div>
-                <h1>B1 and B2 Learning Path</h1>
-                <p class="lead">
-                    A chapter-by-chapter route that connects the supplied course sequence with the site's grammar,
-                    vocabulary, speaking, and review pages.
-                </p>
+    <section class="section">
+        <h1>B1 and B2 Learning Path</h1>
+        <p class="lead">Explore topics, examples and practice for B1 and B2.</p>
+    </section>
+
+    <main class="section course-shell">
+        <section class="content-card" aria-labelledby="practice-start-title">
+            <h2 id="practice-start-title">My practice</h2>
+            <p>Choose a level and follow one short activity at a time.</p>
+            <p><a class="action-link" href="./today.html?level=b1" data-study-entry>Continue practice</a></p>
+            <nav class="toolbar-row" aria-label="Choose a practice level">
+                <a class="action-link" href="./today.html?level=b1">B1</a>
+                <a class="action-link" href="./today.html?level=b2">B2</a>
+                <a class="action-link" href="./today.html?level=b3">B3</a>
+            </nav>
+        </section>
+        <details class="study-disclosure">
+            <summary>About this learning path</summary>
+            <div class="study-disclosure-body">
+                <p>A chapter-by-chapter route that connects the supplied course sequence with the site's grammar, vocabulary, speaking, and review pages.</p>
                 <div class="pill-row">
                     <span class="pill">14 chapters</span>
                     <span class="pill">B1 foundation</span>
                     <span class="pill">B2 development</span>
                     <span class="pill">saved progress</span>
                 </div>
-            </div>
-            <aside class="note">
                 <p><strong>Original practice</strong></p>
-                <p>
-                    The books are used only to align topics and learning objectives. This site does not reproduce
-                    their scans, illustrations, dialogues, or exercise text.
-                </p>
-            </aside>
-        </div>
-    </section>
+                <p>The books are used only to align topics and learning objectives. This site does not reproduce their scans, illustrations, dialogues, or exercise text.</p>
+            </div>
+        </details>
 
-    <main class="section course-shell">
         <div class="course-dashboard">
             <div class="course-progress-copy">
                 <strong>Overall progress</strong>
@@ -78,6 +82,7 @@
 <script src="./assets/js/mistake-store.js"></script>
 <script src="./assets/js/exercise-runner.js"></script>
 <script src="./assets/js/course-path.js"></script>
+<script src="./assets/js/study-entry.js"></script>
 <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

@@ -14,41 +14,22 @@
     <header class="site-header">
         <a class="site-brand" href="./index.html">Maltese Study Site</a>
     </header>
-    <section class="hero">
-        <div class="hero-band"></div>
-        <div class="hero-body">
-            <div>
-                <h1>Maltese Study Site</h1>
-                <p class="lead">
-                    A structured entry point for B1 and B2 Maltese study, practice, and review.
-                </p>
-                <div class="pill-row">
-                    <span class="pill">relative links</span>
-                    <span class="pill">learning path</span>
-                    <span class="pill">grammar</span>
-                    <span class="pill">speaking</span>
-                    <span class="pill">review</span>
-                </div>
-            </div>
-            <div class="hero-note">
-                <h2>What This Site Includes</h2>
-                <p>Practical pages for verbs, vocabulary patterns, picture description, routine, revision, and common
-                    mistakes.</p>
-                <ul>
-                    <li>daily study and quick review</li>
-                    <li>homework support</li>
-                    <li>oral task preparation</li>
-                    <li>easy expansion later with more pages</li>
-                </ul>
-            </div>
-        </div>
+    <section class="section" aria-labelledby="practice-title">
+        <span class="tag">B1 · B2 · B3</span>
+        <h1 id="practice-title">Your Maltese practice</h1>
+        <p class="lead">Practise a few words and sentences. Follow one short activity at a time.</p>
+        <a class="action-link" href="./today.html" data-study-entry>My practice</a>
     </section>
 
     <section class="section" id="pages">
-        <span class="tag">Start Here</span>
-        <h2>Best Entry Points</h2>
-        <div class="home-page-grid" data-site-map-featured aria-live="polite"></div>
-        <p class="footer-note">Start with the <a href="./course_path.html">B1 and B2 Learning Path</a>, or open <a href="./all_pages.html">All Study Pages</a>.</p>
+        <details class="study-disclosure">
+            <summary>Explore study pages</summary>
+            <div class="study-disclosure-body">
+                <h2>Study pages and games</h2>
+                <div class="home-page-grid" data-site-map-featured aria-live="polite"></div>
+                <p class="footer-note">Browse the <a href="./course_path.html">B1 and B2 Learning Path</a>, <a href="./b3_revision.html">B3 revision</a>, or <a href="./all_pages.html">All Study Pages</a>.</p>
+            </div>
+        </details>
     </section>
 
     <section class="section">
@@ -82,7 +63,8 @@
 </div>
     <script src="./assets/js/storage.js"></script>
 
-    <script src="./assets/js/site-header.js"></script>
+    <script src="./assets/js/study-entry.js"></script>
+<script src="./assets/js/site-header.js"></script>
     <script src="./assets/js/site-map-pages.js"></script>
 </body>
 </html>

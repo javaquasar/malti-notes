@@ -121,6 +121,10 @@ jobs:
         if: ${{ always() && steps.node_deps.outcome == 'success' }}
         run: npm run theme:a11y
 
+      - name: Check unified B1 B2 B3 study sessions
+        if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
+        run: npm run study:check
+
       - name: Run browser accessibility checks
         if: ${{ always() && steps.playwright_browser.outcome == 'success' }}
         env:

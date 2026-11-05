@@ -9,12 +9,27 @@
  <link rel="stylesheet" href="./assets/css/pages.css">
 </head><body><div class="page">
  <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
- <section class="hero"><div class="hero-band"></div><div class="hero-body"><div>
- <h1>B3 Revision</h1>
- <p class="lead">Explore seven everyday topics: recall a useful pattern, try a short check, then practise saying something of your own.</p>
- <div class="pill-row"><span class="pill">7 topics</span><span class="pill">Varied practice</span><span class="pill">Saved drafts and progress</span><span class="pill">shared review cards</span></div>
- </div><aside class="note"><p><strong>How to revise</strong></p><p>Try a quick check before opening the examples. Read the feedback, then add useful phrases or missed answers to your review cards.</p><p>Start with any topic, or use today's practice for a short guided session.</p></aside></div></section>
+ <section class="section">
+  <h1>B3 Revision</h1>
+  <p class="lead">Practise words and sentences across seven everyday topics.</p>
+ </section>
  <main class="section course-shell" id="revision-start" data-b3-practice-root data-b3-context-src="./assets/data/b3_context_examples.json">
+        <section class="content-card" aria-labelledby="practice-start-title">
+            <h2 id="practice-start-title">My practice</h2>
+            <p>Choose a level and follow one short activity at a time.</p>
+            <p><a class="action-link" href="./today.html?level=b3" data-study-entry>Continue practice</a></p>
+            <nav class="toolbar-row" aria-label="Choose a practice level">
+                <a class="action-link" href="./today.html?level=b1">B1</a>
+                <a class="action-link" href="./today.html?level=b2">B2</a>
+                <a class="action-link" href="./today.html?level=b3">B3</a>
+            </nav>
+        </section>
+ <details class="study-disclosure"><summary>How to use B3 revision</summary><div class="study-disclosure-body">
+  <p>Explore seven everyday topics: recall a useful pattern, try a short check, then practise saying something of your own.</p>
+  <div class="pill-row"><span class="pill">7 topics</span><span class="pill">Varied practice</span><span class="pill">Saved drafts and progress</span><span class="pill">shared review cards</span></div>
+  <p>Try a quick check before opening the examples. Read the feedback, then add useful phrases or missed answers to your review cards.</p>
+  <p>Start with any topic, or use today's practice for a short guided session.</p>
+ </div></details>
  <div class="course-dashboard"><div class="course-progress-copy"><strong>Your revision</strong><span>Each quick check saves its attempts and best result on this device. Saved cards use your existing review queue.</span></div><div class="course-dashboard-actions"><a class="action-link" href="./review_cards.html">Open review cards</a><span class="status-chip" data-review-summary>Loading review cards…</span><a class="action-link" href="./course_path.html">B1 and B2 learning path</a></div></div>
  <p class="muted-note" data-b3-load-status role="status">Loading examples…</p>
 <section class="stack" id="b3-today" aria-labelledby="b3-today-title">
@@ -191,5 +206,6 @@
     console.error('B3 examples could not be loaded', error);
     document.querySelector('[data-b3-load-status]').textContent = 'Examples could not be loaded. Please reload the page.';
 });</script>
- <script src="./assets/js/exercise-runner.js"></script><script src="./assets/js/b3-practice-core.js"></script><script src="./assets/js/b3-practice.js"></script><script src="./assets/js/site-header.js"></script>
+ <script src="./assets/js/exercise-runner.js"></script><script src="./assets/js/b3-practice-core.js"></script><script src="./assets/js/b3-practice.js"></script><script src="./assets/js/study-entry.js"></script>
+<script src="./assets/js/site-header.js"></script>
 </body></html>

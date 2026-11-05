@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}595c42b8eb59`;
+const CACHE_NAME = `${CACHE_PREFIX}fa5e139264e8`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -130,6 +130,9 @@ const CORE_ASSETS = [
     "./assets/js/site-header.js",
     "./assets/js/site-map-pages.js",
     "./assets/js/storage.js",
+    "./assets/js/study-entry.js",
+    "./assets/js/study-session-core.js",
+    "./assets/js/study-session.js",
     "./assets/js/today.js",
     "./assets/js/topic-picker.js",
     "./assets/js/topic-practice.js",
@@ -571,7 +574,16 @@ async function navigationResponse(request) {
   try {
     return await cacheResponse(request, await fetch(request));
   } catch (error) {
-    return (await caches.match(request)) || (await caches.match(new URL("index.html", self.registration.scope).href));
+    const exact = await caches.match(request);
+    if (exact) return exact;
+    const address = new URL(request.url);
+    if (address.pathname.endsWith(".html")) {
+      address.search = "";
+      address.hash = "";
+      const page = await caches.match(address.href);
+      if (page) return page;
+    }
+    return caches.match(new URL("index.html", self.registration.scope).href);
   }
 }
 

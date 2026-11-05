@@ -1,42 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Today</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
-    <link rel="stylesheet" href="./assets/css/theme.css">
-    <link rel="stylesheet" href="./assets/css/site.css">
-    <link rel="stylesheet" href="./assets/css/pages.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Practice — Maltese Study Site</title>
+  <meta name="description" content="Continue a short B1, B2 or B3 Maltese practice session, save answers and ask a parent for help.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+  <link rel="stylesheet" href="./assets/css/theme.css"><link rel="stylesheet" href="./assets/css/site.css"><link rel="stylesheet" href="./assets/css/pages.css">
 </head>
-<body>
-<div class="page">
-    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
-    <section class="hero today-hero">
-        <div class="hero-band"></div>
-        <div class="hero-body">
-            <div>
-                <span class="tag">Daily study</span>
-                <h1>Today</h1>
-                <p class="lead">Continue with the work that is due, useful, and small enough to finish now.</p>
-                <div class="pill-row">
-                    <span class="pill"><strong data-today-ready>0</strong>&nbsp;ready</span>
-                    <span class="pill"><strong data-today-mastered>0</strong>&nbsp;mastered</span>
-                    <span class="pill">saved locally</span>
-                </div>
-            </div>
-            <aside class="note">
-                <p><strong>Session length</strong></p>
-                <div class="segmented-toggle" data-today-duration aria-label="Choose session length">
-                    <button class="toggle-chip" type="button" data-minutes="10">10 min</button>
-                    <button class="toggle-chip" type="button" data-minutes="20">20 min</button>
-                    <button class="toggle-chip" type="button" data-minutes="30">30 min</button>
-                </div>
-            </aside>
+<body><div class="page">
+  <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+  <main class="section stack" data-study-root>
+    <div><h1>My practice</h1><p>One short session. Your place and answers are saved.</p></div>
+    <p class="muted-note" role="status" data-study-status>Preparing your practice…</p>
+    <section class="stack" data-study-home aria-label="Choose your practice">
+      <div class="segmented-toggle" aria-label="Choose practice level">
+        <button class="toggle-chip" type="button" data-study-level="b1" aria-pressed="true">B1</button>
+        <button class="toggle-chip" type="button" data-study-level="b2" aria-pressed="false">B2</button>
+        <button class="toggle-chip" type="button" data-study-level="b3" aria-pressed="false">B3</button>
+      </div>
+      <section class="content-card" aria-labelledby="study-topic-title">
+        <h2 id="study-topic-title" data-study-topic-title>Your next topic</h2>
+        <p data-study-home-status>Six short questions, one at a time.</p>
+        <div class="toolbar-row"><button class="action-button" type="button" data-study-start disabled>Start practice</button></div>
+        <p data-study-assigned-note hidden></p>
+        <div class="toolbar-row"><a class="action-link" href="#study-topics">Choose a topic</a><a class="action-link" href="./review_cards.html?quick=due&amp;limit=6#review-stage">Repeat words</a></div>
+      </section>
+      <details class="study-disclosure" id="study-topics" data-study-topics>
+        <summary>Choose a topic</summary>
+        <div class="study-disclosure-body stack">
+          <label class="study-field">Topic<select class="study-input" data-study-topic>
+          <option value="b1-introductions" data-level="b1">B1 · Jien u Int</option>
+          <option value="b1-residence" data-level="b1">B1 · Fejn Noqgħod</option>
+          <option value="b1-school" data-level="b1">B1 · L-Iskola</option>
+          <option value="b1-animals" data-level="b1">B1 · L-Annimali</option>
+          <option value="b1-colours" data-level="b1">B1 · Il-Kuluri</option>
+          <option value="b1-food" data-level="b1">B1 · L-Ikel</option>
+          <option value="b1-family" data-level="b1">B1 · Il-Familja</option>
+          <option value="b2-school-bag" data-level="b2">B2 · Fil-Basket tal-Iskola</option>
+          <option value="b2-imperative" data-level="b2">B2 · Iftaħ il-Ktieb u Aqra</option>
+          <option value="b2-weather" data-level="b2">B2 · It-Temp</option>
+          <option value="b2-clothes" data-level="b2">B2 · Il-Ħwejjeġ</option>
+          <option value="b2-hobbies" data-level="b2">B2 · Xi Nħobb Nagħmel</option>
+          <option value="b2-town" data-level="b2">B2 · Fil-Pjazza</option>
+          <option value="b2-recycling" data-level="b2">B2 · Nirriċiklaw l-Iskart</option>
+          <option value="b3-feelings" data-level="b3">B3 · Feelings and the body</option>
+          <option value="b3-sport" data-level="b3">B3 · Sport and healthy habits</option>
+          <option value="b3-calendar" data-level="b3">B3 · Days, months and dates</option>
+          <option value="b3-festivals" data-level="b3">B3 · Festivals and preferences</option>
+          <option value="b3-people" data-level="b3">B3 · People, possession and jobs</option>
+          <option value="b3-ambitions" data-level="b3">B3 · Ambitions and hobbies</option>
+          <option value="b3-town" data-level="b3">B3 · My town and future plans</option>
+          </select></label>
+          <p>Started sessions stay saved when you switch topics.</p>
+          <a class="action-link" data-study-reference href="./course_path.html">Full topic reference</a>
         </div>
+      </details>
     </section>
-
-    <main class="section today-shell" data-today-root aria-live="polite">
+    <section class="content-card stack" data-study-session hidden aria-labelledby="study-session-title">
+      <div class="toolbar-row"><button class="study-link-button" type="button" data-study-back>Save and pause</button><span class="status-chip" data-study-step-status>Question 1 of 6</span></div>
+      <h2 id="study-session-title" data-study-session-title></h2>
+      <div data-study-exercise></div>
+      <div class="toolbar-row"><button class="action-button" type="button" data-study-hint>Hint</button><button class="action-button" type="button" data-study-model>See an example</button></div>
+      <div class="info-card" data-study-help hidden><strong>Something to remember</strong><p data-study-help-explanation></p><p lang="mt" data-study-help-mt></p><p lang="en" data-study-help-en></p></div>
+      <p class="study-feedback" role="status" data-study-feedback></p>
+      <div class="toolbar-row"><button class="action-button" type="button" data-study-next disabled>Next question</button><button class="study-link-button" type="button" data-study-ask>Leave this for a parent</button></div>
+    </section>
+    <section class="content-card" data-study-finish hidden aria-labelledby="study-finish-title">
+      <h2 id="study-finish-title" tabindex="-1">Your session is finished</h2>
+      <p data-study-result></p><p data-study-result-help></p>
+      <p>You can finish for now. Your work is saved.</p>
+      <div class="toolbar-row"><button class="action-button" type="button" data-study-done>Finish for now</button><button class="study-link-button" type="button" data-study-new>Another short session</button></div>
+    </section>
+    <details class="study-disclosure" data-study-parent>
+      <summary>For a parent</summary>
+      <div class="study-disclosure-body stack">
+        <section class="stack" aria-labelledby="study-assignment-title">
+          <h2 id="study-assignment-title">Choose the next topic</h2>
+          <label class="study-field">Practice topic<select class="study-input" data-study-assignment>
+          <option value="b1-introductions" data-level="b1">B1 · Jien u Int</option>
+          <option value="b1-residence" data-level="b1">B1 · Fejn Noqgħod</option>
+          <option value="b1-school" data-level="b1">B1 · L-Iskola</option>
+          <option value="b1-animals" data-level="b1">B1 · L-Annimali</option>
+          <option value="b1-colours" data-level="b1">B1 · Il-Kuluri</option>
+          <option value="b1-food" data-level="b1">B1 · L-Ikel</option>
+          <option value="b1-family" data-level="b1">B1 · Il-Familja</option>
+          <option value="b2-school-bag" data-level="b2">B2 · Fil-Basket tal-Iskola</option>
+          <option value="b2-imperative" data-level="b2">B2 · Iftaħ il-Ktieb u Aqra</option>
+          <option value="b2-weather" data-level="b2">B2 · It-Temp</option>
+          <option value="b2-clothes" data-level="b2">B2 · Il-Ħwejjeġ</option>
+          <option value="b2-hobbies" data-level="b2">B2 · Xi Nħobb Nagħmel</option>
+          <option value="b2-town" data-level="b2">B2 · Fil-Pjazza</option>
+          <option value="b2-recycling" data-level="b2">B2 · Nirriċiklaw l-Iskart</option>
+          <option value="b3-feelings" data-level="b3">B3 · Feelings and the body</option>
+          <option value="b3-sport" data-level="b3">B3 · Sport and healthy habits</option>
+          <option value="b3-calendar" data-level="b3">B3 · Days, months and dates</option>
+          <option value="b3-festivals" data-level="b3">B3 · Festivals and preferences</option>
+          <option value="b3-people" data-level="b3">B3 · People, possession and jobs</option>
+          <option value="b3-ambitions" data-level="b3">B3 · Ambitions and hobbies</option>
+          <option value="b3-town" data-level="b3">B3 · My town and future plans</option>
+          </select></label>
+          <button class="action-button" type="button" data-study-assign>Use this topic</button>
+          <p role="status" data-study-assignment-status></p>
+        </section>
+        <section class="stack" aria-labelledby="study-parent-help-title">
+          <h2 id="study-parent-help-title">Things to work on together</h2>
+          <p data-study-parent-summary>No help requests yet.</p>
+          <article class="study-card" data-study-help-slot="0" hidden>
+            <strong data-help-topic></strong><p data-help-prompt></p>
+            <div class="toolbar-row"><a class="action-link" data-help-open href="./course_path.html">Open topic</a><button class="study-link-button" type="button" data-help-resolve>We have discussed this</button></div>
+          </article>
+          <article class="study-card" data-study-help-slot="1" hidden>
+            <strong data-help-topic></strong><p data-help-prompt></p>
+            <div class="toolbar-row"><a class="action-link" data-help-open href="./course_path.html">Open topic</a><button class="study-link-button" type="button" data-help-resolve>We have discussed this</button></div>
+          </article>
+          <article class="study-card" data-study-help-slot="2" hidden>
+            <strong data-help-topic></strong><p data-help-prompt></p>
+            <div class="toolbar-row"><a class="action-link" data-help-open href="./course_path.html">Open topic</a><button class="study-link-button" type="button" data-help-resolve>We have discussed this</button></div>
+          </article>
+          <article class="study-card" data-study-help-slot="3" hidden>
+            <strong data-help-topic></strong><p data-help-prompt></p>
+            <div class="toolbar-row"><a class="action-link" data-help-open href="./course_path.html">Open topic</a><button class="study-link-button" type="button" data-help-resolve>We have discussed this</button></div>
+          </article>
+          <article class="study-card" data-study-help-slot="4" hidden>
+            <strong data-help-topic></strong><p data-help-prompt></p>
+            <div class="toolbar-row"><a class="action-link" data-help-open href="./course_path.html">Open topic</a><button class="study-link-button" type="button" data-help-resolve>We have discussed this</button></div>
+          </article>
+          <article class="study-card" data-study-help-slot="5" hidden>
+            <strong data-help-topic></strong><p data-help-prompt></p>
+            <div class="toolbar-row"><a class="action-link" data-help-open href="./course_path.html">Open topic</a><button class="study-link-button" type="button" data-help-resolve>We have discussed this</button></div>
+          </article>
+          <div class="toolbar-row"><button class="action-button" type="button" data-help-prev disabled>Previous requests</button><span data-help-page></span><button class="action-button" type="button" data-help-next disabled>Next requests</button></div>
+        </section>
+        <details class="study-disclosure" data-study-legacy>
+          <summary>Detailed progress and longer review</summary>
+          <div class="study-disclosure-body stack">
+            <p>Chapter objectives, knowledge checks and scheduled review keep their own results. A short session does not complete a whole chapter.</p>
+            <div class="segmented-toggle" data-today-duration aria-label="Choose longer review length"><button class="toggle-chip" type="button" data-minutes="10">10 min</button><button class="toggle-chip" type="button" data-minutes="20">20 min</button><button class="toggle-chip" type="button" data-minutes="30">30 min</button></div>
+    <div class="stack" data-today-root aria-live="polite">
         <section class="today-primary">
             <div>
                 <span class="tag">Next action</span>
@@ -78,13 +178,14 @@
             <a class="action-link" href="./course_path.html">Full learning path</a>
             <a class="action-link" href="./review_cards.html">Manage review cards</a>
         </nav>
-    </main>
+    </div>
+          </div>
+        </details>
+      </div>
+    </details>
+  </main>
 </div>
-<script src="./assets/js/storage.js"></script>
-<script src="./assets/js/review-store.js"></script>
-<script src="./assets/js/mistake-store.js"></script>
-<script src="./assets/js/exercise-runner.js"></script>
-<script src="./assets/js/today.js"></script>
-<script src="./assets/js/site-header.js"></script>
-</body>
-</html>
+<script src="./assets/js/storage.js"></script><script src="./assets/js/review-store.js"></script><script src="./assets/js/mistake-store.js"></script>
+<script src="./assets/js/exercise-runner.js"></script><script src="./assets/js/b3-practice-core.js"></script><script src="./assets/js/study-session-core.js"></script>
+<script src="./assets/js/today.js"></script><script src="./assets/js/study-session.js"></script><script src="./assets/js/study-entry.js"></script><script src="./assets/js/site-header.js"></script>
+</body></html>

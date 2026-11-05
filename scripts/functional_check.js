@@ -321,6 +321,8 @@ async function main() {
       await page.reload({ waitUntil: "networkidle" });
       assert((await page.locator("[data-today-review-count]").textContent()).trim() === "1 due", "Today did not count due review cards.");
       assert((await page.locator("[data-today-target-count]").textContent()).trim() === "1 due", "Today did not count due course targets.");
+      await page.locator('[data-study-parent] > summary').click();
+      await page.locator('[data-study-legacy] > summary').click();
       await page.locator('[data-minutes="30"]').click();
       assert(await page.evaluate(() => localStorage.getItem("malti_today_minutes_v1")) === "30", "Today did not save the selected duration.");
       const primary = page.locator("[data-today-primary]");

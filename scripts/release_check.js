@@ -90,6 +90,62 @@ async function browserCheck(release) {
     page.on("response", (response) => { if (response.status() >= 400) failed.push(response.url()); });
     page.on("request", (request) => { if (request.url().includes(prefix + "assets/")) requested.push(request.url()); });
     const base = `http://127.0.0.1:${server.address().port}${prefix}`;
+    const studyKey = "malti_topic_practice_v1";
+    const studyState = () => page.evaluate((key) => {
+      const state = JSON.parse(localStorage.getItem(key)).studySession;
+      return { levelId: state.levelId, chapterId: state.chapterId, session: state.sessions[state.chapterId] };
+    }, studyKey);
+    const studyReady = async (level) => {
+      await page.waitForFunction((id) => document.querySelector(`[data-study-level="${id}"]`)?.ariaPressed === "true"
+        && document.querySelector("[data-study-start]")?.disabled === false, level);
+      assert.ok(await page.locator("[data-study-start]").isVisible(), "Released practice start is hidden");
+    };
+    const studyAnswer = () => page.locator("[data-study-exercise]").evaluate((panel) => {
+      const text = panel.querySelector("[data-exercise-answer]");
+      if (text) return text.value;
+      const selects = [...panel.querySelectorAll("select[data-match-index]")];
+      if (selects.length) return selects.map((select) => select.value);
+      if (panel.querySelector(".exercise-order-bank")) return [...panel.querySelectorAll(".exercise-order-answer .exercise-token")].map((token) => token.textContent);
+      return panel.querySelector('input[type="radio"]:checked')?.value || "";
+    });
+    const startStudy = async (level, saved) => {
+      await studyReady(level);
+      await page.locator("[data-study-start]").click();
+      await page.locator("[data-study-session]").waitFor({ state: "visible" });
+      assert.equal(await page.locator("[data-study-exercise] .exercise-item:visible").count(), 1, "Released practice must show one question at a time");
+      const current = await studyState();
+      assert.equal(current.levelId, level);
+      assert.equal(current.session.routeId, level);
+      assert.equal(current.session.entries.length, 6, "Released practice did not create six questions");
+      assert.equal(new Set(current.session.entries.map((entry) => entry.item.id)).size, 6, "Released practice repeats a question");
+      assert.match(await page.locator("[data-study-session-title]").textContent(), new RegExp("^" + level.toUpperCase() + " · "));
+      if (saved) {
+        assert.equal(current.chapterId, saved.chapterId, "Released practice resumed a different topic");
+        assert.equal(current.session.id, saved.session.id, "Released practice lost its saved session");
+        assert.equal(current.session.index, saved.session.index, "Released practice lost its place");
+        const itemId = saved.session.entries[saved.session.index].item.id;
+        assert.equal(current.session.entries[current.session.index].item.id, itemId, "Released practice changed the current question");
+        assert.deepEqual(await studyAnswer(), saved.session.drafts[itemId], "Released practice lost its visible draft");
+      }
+      return current;
+    };
+    const saveStudyDraft = async () => {
+      const panel = page.locator("[data-study-exercise]");
+      if (await panel.locator("[data-exercise-answer]").count()) await panel.locator("[data-exercise-answer]").fill("A saved release-check draft");
+      else if (await panel.locator('input[type="radio"]').count()) await panel.locator('input[type="radio"]').first().check();
+      else if (await panel.locator("select[data-match-index]").count()) {
+        for (const select of await panel.locator("select[data-match-index]").all()) {
+          const value = await select.locator("option").evaluateAll((options) => options.find((option) => option.value)?.value);
+          await select.selectOption(value);
+        }
+      } else await panel.locator(".exercise-order-bank .exercise-token").first().click();
+      const expected = await studyAnswer();
+      await page.waitForFunction(({ key, expected }) => {
+        const state = JSON.parse(localStorage.getItem(key)).studySession, session = state.sessions[state.chapterId];
+        return JSON.stringify(session.drafts[session.entries[session.index].item.id]) === JSON.stringify(expected);
+      }, { key: studyKey, expected });
+      return studyState();
+    };
     await page.goto(base + "greetings.html", { waitUntil: "networkidle" });
     await page.locator(".lp-phrase.study-card").first().waitFor();
     await page.evaluate(async () => {
@@ -118,6 +174,26 @@ async function browserCheck(release) {
       const missing = await context.request.get(base + resource);
       assert.equal(missing.status(), 404, `Withdrawn audio is still published: ${resource}`);
     }
+    await page.goto(base + "today.html?level=b3", { waitUntil: "networkidle" });
+    await studyReady("b3");
+    for (const script of ["study-session-core.js", "study-session.js", "study-entry.js"]) {
+      const resource = `/assets/${release.revision}/js/${script}`;
+      assert.equal(await page.locator(`script[src=".${resource}"]`).count(), 1, `Released practice script is not versioned: ${script}`);
+      assert.ok(requested.some((url) => new URL(url).pathname.endsWith(resource)), `Released practice script did not load: ${script}`);
+    }
+    await startStudy("b3");
+    const savedB3 = await saveStudyDraft(), b3Address = page.url();
+    await page.locator("[data-study-back]").click();
+    await page.locator('[data-study-level="b1"]').click();
+    await studyReady("b1");
+    assert.equal(await page.locator("[data-study-topic]").inputValue(), "b1-introductions", "Released B1 default topic is incorrect");
+    assert.ok(requested.some((url) => new URL(url).pathname.endsWith("/data/course/chapters/b1-introductions.json")), "Released B1 lazy chapter payload did not load");
+    await startStudy("b1");
+    const savedB1 = await saveStudyDraft(), b1Address = page.url();
+    await page.locator("[data-study-back]").click();
+    await page.locator('[data-study-level="b3"]').click();
+    await startStudy("b3", savedB3);
+    await page.locator("[data-study-back]").click();
     await page.goto(base + "particles_prepositions.html", { waitUntil: "networkidle" });
     await context.setOffline(true);
     await page.reload({ waitUntil: "networkidle" });
@@ -128,12 +204,21 @@ async function browserCheck(release) {
     assert.deepEqual(await readingText.allTextContents(), completeText, "Offline reading text differs from the complete online text");
     assert.deepEqual(await readingQuestions.allTextContents(), completeQuestions, "Offline reading questions differ");
     assert.equal(await page.locator('[data-tonina-reading] audio').count(), 0, "Offline page restored the withdrawn player");
+    for (const [level, address, saved] of [["b1", b1Address, savedB1], ["b3", b3Address, savedB3]]) {
+      await page.goto(address, { waitUntil: "networkidle" });
+      await studyReady(level);
+      assert.equal(await page.locator("[data-study-start]").textContent(), "Continue practice", "Offline practice did not offer the saved session");
+      await startStudy(level, saved);
+      await page.reload({ waitUntil: "networkidle" });
+      await startStudy(level, saved);
+      await page.locator("[data-study-back]").click();
+    }
     assert.ok(!requested.some((url) => url.includes('/audio/tonina.m4a')), "Reading page requested the withdrawn recording");
     assert.ok(requested.length > 10, "Release did not exercise asset loading");
     assert.ok(requested.every((url) => url.includes(`/assets/${release.revision}/`)), "Unversioned browser request");
     assert.deepEqual(errors, []);
     assert.deepEqual(failed, []);
-    console.log("ok deployed subpath: CSS imports, speaking/data, table renderer, mixed/recall/reading banks, complete offline text and withdrawn audio absence");
+    console.log("ok deployed subpath: CSS imports, speaking/data, table renderer, mixed/recall/reading banks, complete offline text, B1/B3 one-question sessions and drafts under subpath, withdrawn audio absence");
   } finally {
     if (browser) await browser.close();
     await new Promise((resolve) => server.close(resolve));

@@ -82,7 +82,9 @@
     "course:lint": "npm run course:graph:check && npm run course:provenance:check && npm run course:examples:check && npm run course:supplements:check && npm run course:assessments:check && npm run course:milestones:check && npm run course:bindings:check && npm run course:verbs:check && npm run coverage:check && npm run depth:check && npm run course:payloads:check && npm run course:payloads:budget && npm run course:quality && node ./scripts/course_lint.js",
     "links:lint": "node ./scripts/links_lint.js",
     "functional:test": "node ./scripts/functional_check.js",
-    "functional:list": "node ./scripts/functional_check.js --list"
+    "functional:list": "node ./scripts/functional_check.js --list",
+    "study:core:check": "node ./scripts/study_session_core_check.js",
+    "study:check": "npm run study:core:check && node ./scripts/study_session_check.js"
   },
   "repository": {
     "type": "git",
