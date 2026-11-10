@@ -49,6 +49,87 @@
         };
     }
 
+    // The colour pairs and noun genders come from the reviewed Colours reference.
+    const colourPairs = [
+        { english: 'white', masculine: 'abjad', feminine: 'bajda' },
+        { english: 'red', masculine: 'aħmar', feminine: 'ħamra' },
+        { english: 'yellow', masculine: 'isfar', feminine: 'safra' }
+    ];
+    const phrase = (maltese, english) => ({ maltese, english });
+    const colourExamples = pair => phrase(`flokk ${pair.masculine} · libsa ${pair.feminine}`,
+        `a ${pair.english} T-shirt · a ${pair.english} dress`);
+
+    function colourSupport(entry) {
+        if (entry.chapterId !== 'b1-colours') return null;
+        const form = entry.item.reviewCard?.maltese;
+        const pair = colourPairs.find(value => value.masculine === form || value.feminine === form);
+        if (!pair) return null;
+        const feminine = pair.feminine === form;
+        const noun = feminine ? 'kaxxa (box)' : 'flokk (T-shirt)';
+        const gender = feminine ? 'feminine' : 'masculine';
+        const transfer = feminine
+            ? { prompt: phrase('Il-qmis hija ___.', `The shirt is ${pair.english}.`), model: `Il-qmis hija ${form}.`, cue: 'Qmis (shirt) is feminine.' }
+            : { prompt: phrase('Il-bieb huwa ___.', `The door is ${pair.english}.`), model: `Il-bieb huwa ${form}.`, cue: 'Bieb (door) is masculine.' };
+        return { clue: `${noun} is ${gender}. Look for the ${gender} form of the colour.`,
+            model: colourExamples(colourPairs[pair === colourPairs[0] ? 1 : 0]), transfer };
+    }
+
+    const words = value => text(value).normalize('NFKC').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+    function modelGivesAnswer(item, model) {
+        const answers = item.type === 'matching' ? array(item.pairs).map(pair => pair.right)
+            : item.accepted || [item.answer];
+        return answers.map(words).filter(Boolean).some(answer => [model.maltese, model.english]
+            .some(value => ` ${words(value)} `.includes(` ${answer} `)));
+    }
+
+    function supportFor(entry, catalog) {
+        const colour = colourSupport(entry);
+        if (colour) return colour;
+        const item = entry.item;
+        const clues = {
+            'true-false': 'Read both parts of the statement. Do the Maltese words match the meaning?',
+            'multiple-choice': 'Read the question again. Say the Maltese words and look for the choice that fits.',
+            'fill-blank': 'Read the whole sentence and its meaning. Think about what kind of word fits in the gap.',
+            'order-words': 'Say the phrase aloud. Choose the word that comes first, then build the rest.',
+            matching: 'Start with one pair you know. Then look at the choices that are left.'
+        };
+        const scaffold = item.prompt.match(/“([^”]*_{2,}[^”]*)”/)?.[1];
+        const alternatives = scaffold ? array(catalog).filter(candidate => candidate.chapterId === entry.chapterId
+            && candidate.item.id !== item.id && candidate.item.prompt.includes(`“${scaffold}”`)) : [];
+        const model = [entry, ...alternatives].map(candidate => candidate.help.model)
+            .find(value => value?.maltese && !modelGivesAnswer(item, value));
+        return { clue: clues[item.type], model };
+    }
+
+    function warmupFor(plan) {
+        if (plan.chapterId === 'b1-colours') return {
+            goal: 'I can describe the colour of clothes.',
+            phrases: [phrase('flokk abjad', 'a white T-shirt'), phrase('libsa bajda', 'a white dress'),
+                phrase('flokk aħmar', 'a red T-shirt'), phrase('libsa ħamra', 'a red dress')],
+            model: phrase('Il-qmis bajda.', 'The shirt is white.'),
+            tip: 'Qmis (shirt) is feminine, so it takes bajda. Learn both forms of the colour as a pair.'
+        };
+        if (plan.chapterId === 'b3-calendar') return {
+            goal: 'I can say when something happens.',
+            phrases: [phrase('It-Tnejn', 'Monday'), phrase('It-Tlieta', 'Tuesday'),
+                phrase('fl-erbgħa', 'at four'), phrase('fil-ħamsa', 'at five')],
+            model: phrase('Il-lezzjoni tibda fl-erbgħa.', 'The lesson starts at four.'),
+            tip: 'Put the time phrase after the activity. Fl-erbgħa tells you when the lesson starts.'
+        };
+        const entries = array(plan.entries);
+        const pairs = new Map();
+        for (const entry of entries) {
+            const card = entry.item.reviewCard;
+            const model = entry.help.model;
+            const pair = entry.routeId === 'b3' || !card?.maltese || !card?.english ? model : card;
+            if (pair?.maltese && pair.english) pairs.set(pair.maltese, phrase(pair.maltese, pair.english));
+        }
+        const model = entries.map(entry => entry.help.model).find(value => value?.maltese && value.english);
+        return { goal: plan.goal || 'I can use these Maltese words and phrases.',
+            phrases: [...pairs.values()].slice(0, 4), model,
+            tip: 'Say the example aloud. Find the Maltese word or phrase that carries the meaning.' };
+    }
+
     function selectCourse(entries, progress, pending, at, size) {
         const queued = new Set(cleanQueue(pending).map(queueKey));
         const used = new Set(), skillCounts = new Map(), selected = [];
@@ -105,7 +186,9 @@
         });
         const entries = ['b1', 'b2'].includes(routeId) && chapter
             ? selectCourse(catalog, object(opts.targetProgress) ? opts.targetProgress : {}, opts.helpQueue, now(opts.now), limit(opts.limit)) : [];
-        return { routeId, chapterId, title: text(chapter?.title || chapterId), entries, catalog: copy(catalog) };
+        const objective = text(chapter.objectives?.[0]?.label);
+        const goal = objective ? 'I can ' + objective[0].toLowerCase() + objective.slice(1) : '';
+        return { routeId, chapterId, title: text(chapter.title || chapterId), goal, entries, catalog: copy(catalog) };
     }
 
     function planB3(bank, raw, options) {
@@ -154,20 +237,39 @@
         return object(catalog) && owns(catalog, id) ? catalog[id] : null;
     }
 
+    function gradingKey(item) {
+        return JSON.stringify([item.type, item.answer, item.accepted, item.choices, item.pairs, item.tokens]);
+    }
+
     function resumeSession(raw, itemsById) {
         if (!object(raw) || raw.schemaVersion !== 1 || !key(raw.id) || !['b1', 'b2', 'b3'].includes(raw.routeId)
             || !Array.isArray(raw.entries) || !raw.entries.length || raw.entries.length > 6) return null;
-        const seen = new Set(), entries = [];
+        const seen = new Set(), entries = [], updated = [];
         for (const saved of raw.entries) {
             const id = saved?.item?.id;
             const current = lookup(itemsById, id);
             if (!key(id) || seen.has(id) || !current || !publishable(current.item) || current.routeId !== raw.routeId
                 || current.chapterId !== saved.chapterId) return null;
+            if (gradingKey(saved.item) !== gradingKey(current.item)) updated.push(id);
             seen.add(id); entries.push({ ...copy(current), canonicalItem: copy(current.item) });
         }
         const session = { ...copy(raw), entries, index: Math.min(entries.length, count(raw.index)),
             drafts: object(raw.drafts) ? copy(raw.drafts) : {}, results: object(raw.results) ? copy(raw.results) : {},
             hints: object(raw.hints) ? copy(raw.hints) : {}, helpQueue: cleanQueue(raw.helpQueue) };
+        // Old answers remain in the backup and cannot be applied to changed keys.
+        for (const id of updated) {
+            if (session.results[id]?.checked) {
+                session.results[id].previousQuestion = true;
+                continue;
+            }
+            if (owns(session.drafts, id)) {
+                session.previousDrafts = { ...(object(session.previousDrafts) ? session.previousDrafts : {}), [id]: session.drafts[id] };
+                delete session.drafts[id];
+            }
+            if (!session.results[id]?.assisted) delete session.hints[id];
+            if (object(session.examples)) delete session.examples[id];
+            if (object(session.solutions)) delete session.solutions[id];
+        }
         // A persisted index cannot silently skip unsubmitted work.
         for (let index = 0; index < session.index; index += 1) {
             const result = session.results[entries[index].item.id];
@@ -195,7 +297,7 @@
 
     function beginRetry(session) {
         const next = copy(session), id = currentId(next), old = id && next.results[id];
-        if (!old?.checked) return next;
+        if (!old?.checked || old.previousQuestion) return next;
         next.hints[id] = true;
         next.results[id] = { ...old, checked: false, correct: null, assisted: true, deferred: false };
         return next;
@@ -261,5 +363,5 @@
             complete: count(session?.index) >= array(session?.entries).length, helpCount: cleanQueue(session?.helpQueue).length };
     }
 
-    return Object.freeze({ planCourse, planB3, createSession, resumeSession, updateDraft, useHint, beginRetry, requestHelp, recordResult, advance, stepSet, summary });
+    return Object.freeze({ planCourse, planB3, warmupFor, supportFor, createSession, resumeSession, updateDraft, useHint, beginRetry, requestHelp, recordResult, advance, stepSet, summary });
 }));

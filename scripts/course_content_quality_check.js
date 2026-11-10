@@ -80,6 +80,7 @@ if (supplementItems.size !== expectedKeys.size) fail(`expected ${expectedKeys.si
 
 if (assessments.schemaVersion !== 2) fail("course_target_assessments schemaVersion must be 2");
 const assessmentTypes = new Set();
+const trueFalsePools = new Map();
 (assessments.sets || []).forEach((set) => {
   const setTypes = new Set((set.items || []).map((item) => item.type));
   setTypes.forEach((type) => assessmentTypes.add(type));
@@ -88,6 +89,12 @@ const assessmentTypes = new Set();
   }
   if (set.kind === "checkpoint" && set.targetCount > 1 && !setTypes.has("matching")) fail(`${set.id} has no matching task`);
   (set.items || []).forEach((item) => {
+    if (item.type === "true-false") {
+      const pool = set.kind === "checkpoint" ? `${set.chapterId} checkpoints` : set.id;
+      const answers = trueFalsePools.get(pool) || [];
+      answers.push(item.answer);
+      trueFalsePools.set(pool, answers);
+    }
     if (item.assessmentMode === "production" && !String(item.prompt || "").includes("_____")) {
       fail(`${set.id}/${item.id} production prompt has no contextual cloze`);
     }
@@ -96,6 +103,11 @@ const assessmentTypes = new Set();
     }
   });
 });
+for (const [pool, answers] of trueFalsePools) {
+  if (answers.length > 1 && (!answers.includes(true) || !answers.includes(false))) {
+    fail(`${pool} must contain both true and false answer keys`);
+  }
+}
 ["multiple-choice", "true-false", "fill-blank", "matching", "order-words"].forEach((type) => {
   if (!assessmentTypes.has(type)) fail(`generated assessments do not exercise ${type}`);
 });

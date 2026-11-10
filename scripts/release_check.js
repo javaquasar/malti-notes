@@ -75,7 +75,7 @@ async function browserCheck(release) {
     const file = path.resolve(release.output, relative);
     if (!file.startsWith(release.output + path.sep)) { response.writeHead(403).end(); return; }
     fs.readFile(file, (error, data) => {
-      response.writeHead(error ? 404 : 200, { "Content-Type": ({ ".html": "text/html", ".js": "application/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".wasm": "application/wasm" })[path.extname(file)] || "application/octet-stream" });
+      response.writeHead(error ? 404 : 200, { "Content-Type": ({ ".html": "text/html", ".js": "application/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".wasm": "application/wasm", ".wav": "audio/wav" })[path.extname(file)] || "application/octet-stream" });
       response.end(error ? "Not found" : data);
     });
   });
@@ -91,6 +91,23 @@ async function browserCheck(release) {
     page.on("request", (request) => { if (request.url().includes(prefix + "assets/")) requested.push(request.url()); });
     const base = `http://127.0.0.1:${server.address().port}${prefix}`;
     const studyKey = "malti_topic_practice_v1";
+    const calendarAudio = async () => {
+      await page.locator('#b3-calendar-audio > summary').click();
+      const audio = page.locator('#b3-calendar-audio audio');
+      assert.equal(await audio.getAttribute('src'), `./assets/${release.revision}/audio/b3-calendar-weekday.wav`);
+      const play = page.getByRole('button', { name: 'Play phrase', exact: true });
+      const bounds = await play.boundingBox();
+      assert.ok(bounds && bounds.x >= 0 && bounds.x + bounds.width <= page.viewportSize().width, 'Weekday playback control must fit the viewport');
+      await play.focus();
+      await play.press('Enter');
+      await page.waitForFunction(() => document.querySelector('#b3-calendar-audio audio').ended);
+      const duration = await audio.evaluate(clip => clip.duration);
+      assert.ok(duration > 0.6 && duration < 2, `Unexpected duration for the weekday phrase: ${duration}`);
+      const answer = page.locator('#b3-calendar-audio details');
+      assert.equal(await answer.evaluate(details => details.open), false);
+      await answer.locator('summary').click();
+      assert.match(await answer.innerText(), /Nhar it-Tlieta.*Tuesday/s);
+    };
     const studyState = () => page.evaluate((key) => {
       const state = JSON.parse(localStorage.getItem(key)).studySession;
       return { levelId: state.levelId, chapterId: state.chapterId, session: state.sessions[state.chapterId] };
@@ -174,6 +191,13 @@ async function browserCheck(release) {
       const missing = await context.request.get(base + resource);
       assert.equal(missing.status(), 404, `Withdrawn audio is still published: ${resource}`);
     }
+    await page.goto(base + 'today.html?level=b3&topic=b3-calendar', { waitUntil: 'networkidle' });
+    await studyReady('b3');
+    await page.getByRole('link', { name: 'Make a plan with Nina', exact: true }).click();
+    await page.waitForURL(/b3_revision\.html#b3-calendar-plan$/);
+    await page.setViewportSize({ width: 320, height: 844 });
+    await calendarAudio();
+    await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto(base + "today.html?level=b3", { waitUntil: "networkidle" });
     await studyReady("b3");
     for (const script of ["study-session-core.js", "study-session.js", "study-entry.js"]) {
@@ -204,6 +228,8 @@ async function browserCheck(release) {
     assert.deepEqual(await readingText.allTextContents(), completeText, "Offline reading text differs from the complete online text");
     assert.deepEqual(await readingQuestions.allTextContents(), completeQuestions, "Offline reading questions differ");
     assert.equal(await page.locator('[data-tonina-reading] audio').count(), 0, "Offline page restored the withdrawn player");
+    await page.goto(base + 'b3_revision.html#b3-calendar-plan', { waitUntil: 'networkidle' });
+    await calendarAudio();
     for (const [level, address, saved] of [["b1", b1Address, savedB1], ["b3", b3Address, savedB3]]) {
       await page.goto(address, { waitUntil: "networkidle" });
       await studyReady(level);
@@ -218,7 +244,7 @@ async function browserCheck(release) {
     assert.ok(requested.every((url) => url.includes(`/assets/${release.revision}/`)), "Unversioned browser request");
     assert.deepEqual(errors, []);
     assert.deepEqual(failed, []);
-    console.log("ok deployed subpath: CSS imports, speaking/data, table renderer, mixed/recall/reading banks, complete offline text, B1/B3 one-question sessions and drafts under subpath, withdrawn audio absence");
+    console.log("ok deployed subpath: CSS imports, speaking/data, table renderer, mixed/recall/reading banks, complete offline text, B1/B3 one-question sessions and drafts under subpath, licensed B3 weekday audio online and offline, withdrawn audio absence");
   } finally {
     if (browser) await browser.close();
     await new Promise((resolve) => server.close(resolve));

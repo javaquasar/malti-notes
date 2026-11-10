@@ -109,6 +109,22 @@ check('resume restores drafts and authoritative source content without silently 
     const duplicate = clone(active); duplicate.entries[1] = clone(duplicate.entries[0]);
     assert.equal(core.resumeSession(duplicate, mapFor(source)), null);
 });
+check('a revised question key keeps historic checks but does not apply an old draft to a new answer', () => {
+    const active = session(), id = active.entries[0].item.id, updated = plan();
+    const item = updated.catalog.find(entry => entry.item.id === id).item;
+    item.answer = item.choices.find(choice => choice !== item.answer);
+    const drafted = core.updateDraft(active, id, active.entries[0].item.answer);
+    const restored = core.resumeSession(drafted, mapFor(updated));
+    assert.equal(restored.drafts[id], undefined);
+    assert.equal(restored.previousDrafts[id], drafted.drafts[id]);
+    assert.equal(restored.entries[0].item.answer, item.answer);
+    const checked = core.recordResult(drafted, { itemId: id, correct: true, attemptToken: 'old-version' });
+    const restoredCheck = core.resumeSession(checked, mapFor(updated));
+    assert.equal(restoredCheck.results[id].previousQuestion, true);
+    assert.equal(core.summary(restoredCheck).independentCorrect, 1);
+    assert.deepEqual(core.beginRetry(restoredCheck), restoredCheck);
+    assert.equal(core.advance(restoredCheck).index, 1);
+});
 check('unsubmitted work cannot advance and wrong or stale completion events do not record an attempt', () => {
     const active = session(), id = active.entries[0].item.id;
     assert.deepEqual(core.advance(active), active);

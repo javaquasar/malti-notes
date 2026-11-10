@@ -48,7 +48,22 @@ all original pattern references against that archive. The page does not load it.
 The same supplied and visually checked Malti.B 3 transcript guides the forms.
 Questions, connected readings, translations and speaking models are authored
 for this site. They are not presented as textbook quotations or independently
-certified linguistic examples. No new listening recording is implied.
+certified linguistic examples.
+
+## Calendar audio excerpt
+
+The standalone weekday exercise uses the Google FLEURS `mt_mt` development
+split, sentence ID `1530`, recording `audio/dev/3205230329642468311.wav`.
+The [dataset card](https://huggingface.co/datasets/google/fleurs) licenses the
+recordings under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+and requests attribution to [Conneau et al. (2022)](https://arxiv.org/abs/2205.12446).
+The source WAV is in [Google's Maltese archive](https://storage.googleapis.com/xtreme_translations/FLEURS102/mt_mt.tar.gz)
+with SHA-256 `006518e563db970b6f4d358bd3922c55f17a913f186e740cd21acdc3962b4abf`.
+
+The site WAV contains the phrase `nhar it-Tlieta` from 3.137000 to 4.018625 seconds
+at the original 16 kHz mono sample rate, with 15 dB of gain for playback.
+The excerpt SHA-256 is `926cd9ef7085141a91f7095582f00c55b338c0dcf517a163dc4aab36e095bad8`.
+Nina's separate timetable passage remains available as a reader-led listening exercise.
 
 ## Rendering and style contract
 

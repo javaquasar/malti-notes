@@ -1032,7 +1032,7 @@
       "maltese": "sħab",
       "english": "clouds",
       "example": "Illum hemm ħafna sħab.",
-      "exampleTranslation": "Today there is a lot of clouds.",
+      "exampleTranslation": "There are a lot of clouds today.",
       "examplePattern": "weather-today",
       "exampleReview": "reviewed-template",
       "source": {
@@ -1048,7 +1048,7 @@
       "sourceLabel": "B2, Chapter 3, p. 29",
       "notes": [
         "Example: Illum hemm ħafna sħab.",
-        "Translation: Today there is a lot of clouds.",
+        "Translation: There are a lot of clouds today.",
         "Source: B2, Chapter 3, p. 29"
       ],
       "glossReview": "reviewed",
@@ -1719,8 +1719,8 @@
           "targetIds": [
             "b2-weather-istagun"
           ],
-          "prompt": "True or false: “istaġun” means “wind” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “istaġun” means “season” in this chapter.",
+          "answer": true,
           "explanation": "istaġun means “season”.",
           "reviewCard": {
             "maltese": "istaġun",
@@ -1754,8 +1754,8 @@
           "targetIds": [
             "b2-weather-xitwa"
           ],
-          "prompt": "True or false: “xitwa” means “cold” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “xitwa” means “winter” in this chapter.",
+          "answer": true,
           "explanation": "xitwa means “winter”.",
           "reviewCard": {
             "maltese": "xitwa",
@@ -1969,8 +1969,8 @@
           "targetIds": [
             "b2-weather-shab"
           ],
-          "prompt": "True or false: “sħab” means “wind” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “sħab” means “clouds” in this chapter.",
+          "answer": true,
           "explanation": "sħab means “clouds”.",
           "reviewCard": {
             "maltese": "sħab",
@@ -1983,7 +1983,7 @@
           "targetIds": [
             "b2-weather-shab"
           ],
-          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (Today there is a lot of clouds.)",
+          "prompt": "Complete the Maltese sentence: “Illum hemm ħafna _____.” (There are a lot of clouds today.)",
           "answer": "sħab",
           "explanation": "The complete sentence is “Illum hemm ħafna sħab.”",
           "reviewCard": {
@@ -2042,8 +2042,8 @@
           "targetIds": [
             "b2-weather-shana"
           ],
-          "prompt": "True or false: “sħana” means “cold” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “sħana” means “heat / hot weather” in this chapter.",
+          "answer": true,
           "explanation": "sħana means “heat / hot weather”.",
           "reviewCard": {
             "maltese": "sħana",
@@ -2235,8 +2235,8 @@
           "targetIds": [
             "b2-weather-staguni"
           ],
-          "prompt": "True or false: “staġuni” means “spring” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “staġuni” means “seasons” in this chapter.",
+          "answer": true,
           "explanation": "staġuni means “seasons”.",
           "reviewCard": {
             "maltese": "staġuni",
@@ -2428,8 +2428,8 @@
           "targetIds": [
             "b2-weather-xitwa"
           ],
-          "prompt": "True or false: “xitwa” means “sun” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “xitwa” means “winter” in this chapter.",
+          "answer": true,
           "explanation": "xitwa means “winter”.",
           "reviewCard": {
             "maltese": "xitwa",
@@ -2501,8 +2501,8 @@
           "targetIds": [
             "b2-weather-xita"
           ],
-          "prompt": "True or false: “xita” means “thunder” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “xita” means “rain” in this chapter.",
+          "answer": true,
           "explanation": "xita means “rain”.",
           "reviewCard": {
             "maltese": "xita",
@@ -2767,8 +2767,8 @@
           "targetIds": [
             "b2-weather-l-oghla-temperatura"
           ],
-          "prompt": "True or false: “l-ogħla temperatura” means “the lowest temperature” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “l-ogħla temperatura” means “the highest temperature” in this chapter.",
+          "answer": true,
           "explanation": "l-ogħla temperatura means “the highest temperature”.",
           "reviewCard": {
             "maltese": "l-ogħla temperatura",

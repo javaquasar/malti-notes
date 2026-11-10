@@ -1728,9 +1728,9 @@
       "id": "b2-school-bag-basket-tal-iskola",
       "maltese": "basket tal-iskola",
       "english": "school bag",
-      "example": "Hemm basket tal-iskola fil-basket tal-iskola.",
-      "exampleTranslation": "The school bag contains the school bag.",
-      "examplePattern": "school-bag-object",
+      "example": "Fil-basket tal-iskola tiegħi għandi ktieb.",
+      "exampleTranslation": "I have a book in my school bag.",
+      "examplePattern": "school-bag-contents",
       "exampleReview": "reviewed-template",
       "source": {
         "book": "B2",
@@ -1744,8 +1744,8 @@
       },
       "sourceLabel": "B2, Chapter 1, p. 5",
       "notes": [
-        "Example: Hemm basket tal-iskola fil-basket tal-iskola.",
-        "Translation: The school bag contains the school bag.",
+        "Example: Fil-basket tal-iskola tiegħi għandi ktieb.",
+        "Translation: I have a book in my school bag.",
         "Source: B2, Chapter 1, p. 5"
       ],
       "glossReview": "reviewed",
@@ -1758,10 +1758,10 @@
     {
       "id": "b2-school-bag-pokit",
       "maltese": "pokit",
-      "english": "pocket",
-      "example": "Hemm pokit fil-basket tal-iskola.",
-      "exampleTranslation": "The school bag contains the pocket.",
-      "examplePattern": "school-bag-object",
+      "english": "pencil case",
+      "example": "Fil-pokit hemm lapes.",
+      "exampleTranslation": "There is a pencil in the pencil case.",
+      "examplePattern": "pencil-case",
       "exampleReview": "reviewed-template",
       "source": {
         "book": "B2",
@@ -1775,8 +1775,8 @@
       },
       "sourceLabel": "B2, Chapter 1, p. 3",
       "notes": [
-        "Example: Hemm pokit fil-basket tal-iskola.",
-        "Translation: The school bag contains the pocket.",
+        "Example: Fil-pokit hemm lapes.",
+        "Translation: There is a pencil in the pencil case.",
         "Source: B2, Chapter 1, p. 3"
       ],
       "glossReview": "reviewed",
@@ -3203,7 +3203,7 @@
           "prompt": "What is the lesson meaning of “basket tal-iskola”?",
           "choices": [
             "school bag",
-            "pocket",
+            "pencil case",
             "pencil sharpener"
           ],
           "answer": "school bag",
@@ -3220,8 +3220,8 @@
           "targetIds": [
             "b2-school-bag-fajl"
           ],
-          "prompt": "True or false: “fajl” means “pencil sharpener” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “fajl” means “file” in this chapter.",
+          "answer": true,
           "explanation": "fajl means “file”.",
           "reviewCard": {
             "maltese": "fajl",
@@ -3290,8 +3290,8 @@
           "targetIds": [
             "b2-school-bag-zghira"
           ],
-          "prompt": "True or false: “żgħira” means “book” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “żgħira” means “small” in this chapter.",
+          "answer": true,
           "explanation": "żgħira means “small”.",
           "reviewCard": {
             "maltese": "żgħira",
@@ -3396,7 +3396,7 @@
           "prompt": "What is the lesson meaning of “basket tal-iskola”?",
           "choices": [
             "school bag",
-            "pocket",
+            "pencil case",
             "pencil sharpener"
           ],
           "answer": "school bag",
@@ -3412,13 +3412,13 @@
           "targetIds": [
             "b2-school-bag-basket-tal-iskola"
           ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the school bag.)",
+          "prompt": "Complete the Maltese sentence: “Fil-_____ tiegħi għandi ktieb.” (I have a book in my school bag.)",
           "answer": "basket tal-iskola",
-          "explanation": "The complete sentence is “Hemm basket tal-iskola fil-basket tal-iskola.”",
+          "explanation": "The complete sentence is “Fil-basket tal-iskola tiegħi għandi ktieb.”",
           "reviewCard": {
             "maltese": "basket tal-iskola",
             "english": "school bag",
-            "example": "Hemm basket tal-iskola fil-basket tal-iskola."
+            "example": "Fil-basket tal-iskola tiegħi għandi ktieb."
           },
           "type": "order-words",
           "tokens": [
@@ -3433,12 +3433,12 @@
           "targetIds": [
             "b2-school-bag-pokit"
           ],
-          "prompt": "True or false: “pokit” means “pencil sharpener” in this chapter.",
-          "answer": false,
-          "explanation": "pokit means “pocket”.",
+          "prompt": "True or false: “pokit” means “pencil case” in this chapter.",
+          "answer": true,
+          "explanation": "pokit means “pencil case”.",
           "reviewCard": {
             "maltese": "pokit",
-            "english": "pocket"
+            "english": "pencil case"
           }
         },
         {
@@ -3447,13 +3447,13 @@
           "targetIds": [
             "b2-school-bag-pokit"
           ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the pocket.)",
+          "prompt": "Complete the Maltese sentence: “Fil-_____ hemm lapes.” (There is a pencil in the pencil case.)",
           "answer": "pokit",
-          "explanation": "The complete sentence is “Hemm pokit fil-basket tal-iskola.”",
+          "explanation": "The complete sentence is “Fil-pokit hemm lapes.”",
           "reviewCard": {
             "maltese": "pokit",
-            "english": "pocket",
-            "example": "Hemm pokit fil-basket tal-iskola."
+            "english": "pencil case",
+            "example": "Fil-pokit hemm lapes."
           },
           "type": "fill-blank",
           "accepted": [
@@ -3506,8 +3506,8 @@
           "targetIds": [
             "b2-school-bag-kulur"
           ],
-          "prompt": "True or false: “kulur” means “pencil” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kulur” means “colouring pencil / crayon (school equipment)” in this chapter.",
+          "answer": true,
           "explanation": "kulur means “colouring pencil / crayon (school equipment)”.",
           "reviewCard": {
             "maltese": "kulur",
@@ -3579,8 +3579,8 @@
           "targetIds": [
             "b2-school-bag-fajl"
           ],
-          "prompt": "True or false: “fajl” means “book” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “fajl” means “file” in this chapter.",
+          "answer": true,
           "explanation": "fajl means “file”.",
           "reviewCard": {
             "maltese": "fajl",
@@ -3624,7 +3624,7 @@
             },
             {
               "left": "pokit",
-              "right": "pocket"
+              "right": "pencil case"
             },
             {
               "left": "temprina",
@@ -3845,8 +3845,8 @@
           "targetIds": [
             "b2-school-bag-pitazz"
           ],
-          "prompt": "True or false: “pitazz” means “paper / card” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “pitazz” means “copybook / notebook” in this chapter.",
+          "answer": true,
           "explanation": "pitazz means “copybook / notebook”.",
           "reviewCard": {
             "maltese": "pitazz",
@@ -3965,8 +3965,8 @@
           "targetIds": [
             "b2-school-bag-kolla"
           ],
-          "prompt": "True or false: “kolla” means “timetable” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kolla” means “glue” in this chapter.",
+          "answer": true,
           "explanation": "kolla means “glue”.",
           "reviewCard": {
             "maltese": "kolla",
@@ -4038,8 +4038,8 @@
           "targetIds": [
             "b2-school-bag-riga"
           ],
-          "prompt": "True or false: “riga” means “beautiful / nice (masculine)” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “riga” means “ruler” in this chapter.",
+          "answer": true,
           "explanation": "riga means “ruler”.",
           "reviewCard": {
             "maltese": "riga",
@@ -4497,8 +4497,8 @@
           "targetIds": [
             "b2-school-bag-zghir"
           ],
-          "prompt": "True or false: “żgħir” means “small (plural)” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “żgħir” means “small” in this chapter.",
+          "answer": true,
           "explanation": "żgħir means “small”.",
           "reviewCard": {
             "maltese": "żgħir",
@@ -4570,8 +4570,8 @@
           "targetIds": [
             "b2-school-bag-zghar"
           ],
-          "prompt": "True or false: “żgħar” means “new (feminine)” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “żgħar” means “small (plural)” in this chapter.",
+          "answer": true,
           "explanation": "żgħar means “small (plural)”.",
           "reviewCard": {
             "maltese": "żgħar",
@@ -4643,8 +4643,8 @@
           "targetIds": [
             "b2-school-bag-gdida"
           ],
-          "prompt": "True or false: “ġdida” means “old” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “ġdida” means “new (feminine)” in this chapter.",
+          "answer": true,
           "explanation": "ġdida means “new (feminine)”.",
           "reviewCard": {
             "maltese": "ġdida",
@@ -4836,8 +4836,8 @@
           "targetIds": [
             "b2-school-bag-qodma"
           ],
-          "prompt": "True or false: “qodma” means “modern” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “qodma” means “old (plural)” in this chapter.",
+          "answer": true,
           "explanation": "qodma means “old (plural)”.",
           "reviewCard": {
             "maltese": "qodma",
@@ -5029,8 +5029,8 @@
           "targetIds": [
             "b2-school-bag-antik"
           ],
-          "prompt": "True or false: “antik” means “antique / old (plural)” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “antik” means “antique / old (masculine)” in this chapter.",
+          "answer": true,
           "explanation": "antik means “antique / old (masculine)”.",
           "reviewCard": {
             "maltese": "antik",
@@ -5102,8 +5102,8 @@
           "targetIds": [
             "b2-school-bag-antiki"
           ],
-          "prompt": "True or false: “antiki” means “colourful (feminine)” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “antiki” means “antique / old (plural)” in this chapter.",
+          "answer": true,
           "explanation": "antiki means “antique / old (plural)”.",
           "reviewCard": {
             "maltese": "antiki",
@@ -5405,7 +5405,7 @@
           "prompt": "What is the lesson meaning of “maħmuġa”?",
           "choices": [
             "school bag",
-            "pocket",
+            "pencil case",
             "dirty (feminine)"
           ],
           "answer": "dirty (feminine)",

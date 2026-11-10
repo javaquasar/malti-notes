@@ -19,12 +19,31 @@
         <button class="toggle-chip" type="button" data-study-level="b3" aria-pressed="false">B3</button>
       </div>
       <section class="content-card" aria-labelledby="study-topic-title">
-        <h2 id="study-topic-title" data-study-topic-title>Your next topic</h2>
+        <h2 id="study-topic-title" tabindex="-1" data-study-topic-title>Your next topic</h2>
         <p data-study-home-status>Six short questions, one at a time.</p>
+        <p data-study-goal hidden></p>
         <div class="toolbar-row"><button class="action-button" type="button" data-study-start disabled>Start practice</button></div>
         <p data-study-assigned-note hidden></p>
         <div class="toolbar-row"><a class="action-link" href="#study-topics">Choose a topic</a><a class="action-link" href="./review_cards.html?quick=due&amp;limit=6#review-stage">Repeat words</a></div>
       </section>
+      <details class="study-disclosure" data-study-warmup hidden>
+        <summary>Learn first</summary>
+        <div class="study-disclosure-body stack">
+          <p>Say these in Maltese and check what they mean.</p>
+          <ul>
+            <li data-study-phrase hidden><span lang="mt"></span> — <span lang="en"></span></li>
+            <li data-study-phrase hidden><span lang="mt"></span> — <span lang="en"></span></li>
+            <li data-study-phrase hidden><span lang="mt"></span> — <span lang="en"></span></li>
+            <li data-study-phrase hidden><span lang="mt"></span> — <span lang="en"></span></li>
+          </ul>
+          <div class="study-contrast" data-study-warmup-example>
+            <strong>Look at this example</strong>
+            <p lang="mt" data-study-warmup-mt></p><p lang="en" data-study-warmup-en></p>
+            <p data-study-warmup-tip></p>
+          </div>
+        </div>
+      </details>
+      <p data-study-calendar-home hidden><a class="action-link" href="./b3_revision.html#b3-calendar-plan">Make a plan with Nina</a></p>
       <details class="study-disclosure" id="study-topics" data-study-topics>
         <summary>Choose a topic</summary>
         <div class="study-disclosure-body stack">
@@ -60,8 +79,25 @@
       <div class="toolbar-row"><button class="study-link-button" type="button" data-study-back>Save and pause</button><span class="status-chip" data-study-step-status>Question 1 of 6</span></div>
       <h2 id="study-session-title" data-study-session-title></h2>
       <div data-study-exercise></div>
-      <div class="toolbar-row"><button class="action-button" type="button" data-study-hint>Hint</button><button class="action-button" type="button" data-study-model>See an example</button></div>
-      <div class="info-card" data-study-help hidden><strong>Something to remember</strong><p data-study-help-explanation></p><p lang="mt" data-study-help-mt></p><p lang="en" data-study-help-en></p></div>
+      <div class="toolbar-row">
+        <button class="action-button" type="button" data-study-hint aria-controls="study-help" aria-expanded="false">Hint</button>
+      </div>
+      <div class="info-card" id="study-help" data-study-help hidden>
+        <strong>Something to remember</strong><p data-study-help-explanation></p>
+        <button class="action-button" type="button" data-study-model aria-controls="study-help-example" aria-expanded="false" hidden>See a similar example</button>
+        <div id="study-help-example" data-study-help-example hidden><p lang="mt" data-study-help-mt></p><p lang="en" data-study-help-en></p></div>
+        <button class="action-button" type="button" data-study-solution aria-controls="study-help-answer" aria-expanded="false" hidden>Show the answer</button>
+        <p id="study-help-answer" data-study-help-answer hidden></p>
+      </div>
+      <section class="study-contrast" data-study-transfer hidden aria-labelledby="study-transfer-title">
+        <h3 id="study-transfer-title">Try the rule in a new phrase</h3>
+        <p>Say the missing colour in Maltese, then compare.</p>
+        <p><span lang="mt" data-study-transfer-prompt></span> <span lang="en" data-study-transfer-meaning></span></p>
+        <details class="study-disclosure" data-study-transfer-model>
+          <summary>Compare my phrase</summary>
+          <div class="study-disclosure-body"><p lang="mt" data-study-transfer-mt></p><p data-study-transfer-cue></p></div>
+        </details>
+      </section>
       <p class="study-feedback" role="status" data-study-feedback></p>
       <div class="toolbar-row"><button class="action-button" type="button" data-study-next disabled>Next question</button><button class="study-link-button" type="button" data-study-ask>Leave this for a parent</button></div>
     </section>
@@ -69,6 +105,7 @@
       <h2 id="study-finish-title" tabindex="-1">Your session is finished</h2>
       <p data-study-result></p><p data-study-result-help></p>
       <p>You can finish for now. Your work is saved.</p>
+      <p data-study-calendar-finish hidden><a class="action-link" href="./b3_revision.html#b3-calendar-plan">Use what you learned: make a plan with Nina</a></p>
       <div class="toolbar-row"><button class="action-button" type="button" data-study-done>Finish for now</button><button class="study-link-button" type="button" data-study-new>Another short session</button></div>
     </section>
     <details class="study-disclosure" data-study-parent>

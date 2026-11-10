@@ -137,6 +137,7 @@ function contextualExample(target, gloss) {
       return result(`Hemm ${word} qrib id-dar.`, `The ${meaning} is near the house.`, "place-near-home");
     case "b1-school":
       if (sets.schoolClothes.has(word)) return result(`Nilbes ${word} l-iskola.`, `I wear ${meaning} at school.`, "school-clothing");
+      if (word === "bitħa") return result("Hemm bitħa kbira fl-iskola.", "There is a big yard at school.", "school-yard");
       return result(`Hemm ${word} fil-bini.`, `The ${meaning} is in the building.`, "school-place");
     case "b1-animals":
       if (word === "brama") return result("Nara brama fil-baħar.", "I see a jellyfish in the sea.", "jellyfish-in-sea");
@@ -161,6 +162,8 @@ function contextualExample(target, gloss) {
       if (["tenis", "passeġġata", "żfin"].includes(word)) return result(`Inħobb ${word}.`, `I like ${meaning}.`, "family-activity");
       return result(`Hemm ${word} qrib id-dar.`, `The ${meaning} is near the house.`, "family-place");
     case "b2-school-bag":
+      if (word === "basket tal-iskola") return result("Fil-basket tal-iskola tiegħi għandi ktieb.", "I have a book in my school bag.", "school-bag-contents");
+      if (word === "pokit") return result("Fil-pokit hemm lapes.", "There is a pencil in the pencil case.", "pencil-case");
       if (word === "kulur") return result("Hemm kulur fil-basket tal-iskola.", "There is a colouring pencil or crayon in the school bag.", "school-colouring-equipment");
       if (sets.schoolBagMasculine.has(word)) return result(`Il-ktieb huwa ${word}.`, `The book is ${meaning}.`, "object-adjective-masculine");
       if (sets.schoolBagFeminine.has(word)) return result(`Il-karta hija ${word}.`, `The paper is ${meaning}.`, "object-adjective-feminine");
@@ -180,6 +183,7 @@ function contextualExample(target, gloss) {
       if (sets.weatherAdjectives.has(word)) return result(`It-temp huwa ${word}.`, `The weather is ${meaning}.`, "weather-adjective");
       if (word === "l-ogħla temperatura") return result("L-ogħla temperatura hija tletin grad.", "The highest temperature is thirty degrees.", "temperature-range");
       if (word === "l-inqas temperatura") return result("L-inqas temperatura hija għaxar gradi.", "The lowest temperature is ten degrees.", "temperature-range");
+      if (word === "sħab") return result("Illum hemm ħafna sħab.", "There are a lot of clouds today.", "weather-today");
       return result(`Illum hemm ħafna ${word}.`, `Today there is a lot of ${meaning}.`, "weather-today");
     case "b2-clothes":
       if (sets.numbers.has(word)) return result(`In-numru huwa ${word}.`, `The number is ${meaning}.`, "number");

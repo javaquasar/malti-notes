@@ -175,9 +175,16 @@ async function main() {
     });
 
     await check('Wrong/retry, hint and ask-parent remain honest; six steps finish without legacy checkpoint or SRS changes', async () => {
-      const f = await fixture('six-step-session');
+      const f = await fixture('six-step-session', { width: 390 });
       try {
-        const page = f.page; await open(page); await level(page, 'b1', 'b1-colours'); const initial = await start(page);
+        const page = f.page; await open(page); await level(page, 'b1', 'b1-colours');
+        assert.match(await page.locator('[data-study-goal]').innerText(), /colour of clothes/);
+        assert.equal(await page.locator('[data-study-warmup]').evaluate(node => node.open), true);
+        assert.equal(await page.locator('[data-study-phrase]:visible').count(), 4);
+        assert.match(await page.locator('[data-study-warmup-tip]').innerText(), /feminine/);
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await capture(page, 'study-colours-warmup.png');
+        const initial = await start(page);
         assert.equal(await page.locator('[data-study-next]').isDisabled(), true);
         const beforeEmpty = await jsonStorage(page, 'malti_course_target_progress_v1'); await page.locator('[data-study-exercise]').getByRole('button', { name: 'Check answers', exact: true }).click(); assert.match(await page.locator('[data-study-feedback]').innerText(), /Choose or write an answer first/); assert.equal((await current(page)).session.index, 0); assert.equal((await current(page)).session.results[initial.entries[0].item.id], undefined); assert.deepEqual(await jsonStorage(page, 'malti_course_target_progress_v1'), beforeEmpty);
         const wrong = await submit(page, false), wrongProgress = await jsonStorage(page, 'malti_course_target_progress_v1');
@@ -198,8 +205,33 @@ async function main() {
         await level(page, 'b2', b2); await start(page); const parkedB2 = (await current(page)).entry.item.id; await answer(page, items.get(parkedB2), false); const parkedB2Answer = await page.locator('[data-study-exercise] input[type="radio"]:checked').inputValue(); await page.locator('[data-study-back]').click();
         await level(page, 'b3', bank.chapters[1].id); await start(page); await page.locator('[data-study-back]').click();
         await level(page, 'b1'); assert.equal(await page.locator('[data-study-topic]').inputValue(), 'b1-colours'); await start(page); assert.equal((await current(page)).entry.item.id, draftId); assert.equal(await page.locator('[data-study-exercise] [data-exercise-answer]').inputValue(), 'unfinished personal answer');
-        const beforeHint = await jsonStorage(page, 'malti_course_target_progress_v1'); await page.locator('[data-study-hint]').click(); assert.equal(await page.locator('[data-study-help]').isVisible(), true); assert.equal(await page.locator('[data-study-help-mt]').isHidden(), true); await page.locator('[data-study-model]').click(); assert.equal(await page.locator('[data-study-help-mt]').isVisible(), true); assert.equal(await page.locator('[data-study-help-en]').isVisible(), true); assert((await page.locator('[data-study-help-mt]').innerText()).trim()); assert((await page.locator('[data-study-help-en]').innerText()).trim()); await submit(page);
-        const hinted = (await current(page)).session.results[draftId]; assert.equal(hinted.assisted, true); for (const target of items.get(draftId).targetIds || []) assert.deepEqual((await jsonStorage(page, 'malti_course_target_progress_v1'))[target], beforeHint[target]); await next(page);
+        const beforeHint = await jsonStorage(page, 'malti_course_target_progress_v1');
+        const solution = items.get(draftId).answer;
+        assert.equal(await page.locator('[data-study-model]').isHidden(), true);
+        await page.locator('[data-study-hint]').click();
+        assert.match(await page.locator('[data-study-help]').innerText(), /Kaxxa|kaxxa/);
+        assert(!((await page.locator('[data-study-help]').innerText()).includes(solution)), 'The first clue does not reveal the answer');
+        assert.equal(await page.locator('[data-study-help-mt]').isHidden(), true);
+        assert.equal(await page.locator('[data-study-solution]').isHidden(), true);
+        await page.locator('[data-study-model]').click();
+        assert.match(await page.locator('[data-study-help-mt]').innerText(), /flokk.*libsa/);
+        assert(!((await page.locator('[data-study-help]').innerText()).includes(solution)), 'The worked contrast uses a different colour');
+        assert.equal(await page.locator('[data-study-help-answer]').isHidden(), true);
+        await reload(page, true);
+        assert.equal(await page.locator('[data-study-model]').getAttribute('aria-expanded'), 'true');
+        await page.locator('[data-study-help]').evaluate(node => node.scrollIntoView({ block: 'center' }));
+        await capture(page, 'study-colours-staged-hint.png');
+        await page.locator('[data-study-solution]').click();
+        assert((await page.locator('[data-study-help-answer]').innerText()).includes(solution));
+        await submit(page);
+        const hinted = (await current(page)).session.results[draftId]; assert.equal(hinted.assisted, true);
+        for (const target of items.get(draftId).targetIds || []) assert.deepEqual((await jsonStorage(page, 'malti_course_target_progress_v1'))[target], beforeHint[target]);
+        assert.match(await page.locator('[data-study-transfer-prompt]').innerText(), /Il-qmis hija ___/);
+        assert.equal(await page.locator('[data-study-transfer-mt]').isHidden(), true);
+        await page.locator('[data-study-transfer-model] > summary').click();
+        assert.equal(await page.locator('[data-study-transfer-mt]').innerText(), `Il-qmis hija ${solution}.`);
+        assert.deepEqual(await jsonStorage(page, 'malti_course_target_progress_v1'), beforeHint);
+        await next(page);
         const skipped = (await current(page)).entry; const beforeAsk = await jsonStorage(page, 'malti_course_target_progress_v1'); await page.locator('[data-study-ask]').click();
         const afterAsk = await current(page); assert.equal(afterAsk.session.index, 3); assert.equal(afterAsk.session.results[skipped.item.id].deferred, true); assert.equal(afterAsk.session.results[skipped.item.id].correct, null); assert.deepEqual(await jsonStorage(page, 'malti_course_target_progress_v1'), beforeAsk);
         for (let step = 3; step < 6; step++) { const entry = await submit(page); const attempt = (await current(page)).session.results[entry.item.id].attempts; const targets = await jsonStorage(page, 'malti_course_target_progress_v1'); await page.locator('[data-study-exercise] form').evaluate(form => form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }))); assert.equal((await current(page)).session.results[entry.item.id].attempts, attempt, 'Duplicate native submit does not double count'); assert.deepEqual(await jsonStorage(page, 'malti_course_target_progress_v1'), targets); await next(page); }
@@ -209,6 +241,7 @@ async function main() {
         assert.equal(await page.locator('[data-study-result]').innerText(), '5 answers checked out of 6: 3 correct on your own and 2 correct with help.'); assert.match(await page.locator('[data-study-result-help]').innerText(), /1 question(?:s)? left for a parent/); await preserved(page); assert.deepEqual(await axe(page), []);
         await capture(page, 'study-finish-honest.png');
         const beforeReload = (await stored(page)).studySession.completedSessions; await reload(page); assert.deepEqual((await stored(page)).studySession.completedSessions, beforeReload, 'Reload does not duplicate completed sessions');
+        assert.equal(await page.locator('[data-study-warmup]').evaluate(node => node.open), false, 'Review can start without redoing the mini-lesson');
         await page.locator('[data-study-parent] > summary').click(); const resolvedKey = await page.locator('[data-study-help-slot]:visible').first().getAttribute('data-help-key'); await page.locator('[data-study-help-slot]:visible [data-help-resolve]').first().click(); await level(page, 'b2'); assert.equal(await page.locator('[data-study-topic]').inputValue(), b2); await start(page); assert.equal((await current(page)).entry.item.id, parkedB2); assert.equal(await page.locator('[data-study-exercise] input[type="radio"]:checked').inputValue(), parkedB2Answer); assert(!(await stored(page)).studySession.helpQueue.some(entry => [entry.routeId, entry.chapterId, entry.skillId || entry.itemId, entry.mode].join('::') === resolvedKey), 'A parked session must not resurrect a resolved parent request');
         await page.addScriptTag({ url: base + '/assets/js/progress-backup.js' }); const exported = await page.evaluate(key => JSON.parse(window.MaltiProgressBackup.exportBackup().data[key]), key); assert.deepEqual(exported.studySession, (await stored(page)).studySession); assert.deepEqual(exported.tonina, legacyTopic.tonina); await preserved(page);
         return { tasks: 6, independentCorrect: 3, correctWithHelp: 2, deferred: 1, parkedTopics: ['b1-colours', b2, bank.chapters[1].id], ids: initial.entries.map(entry => entry.item.id) };

@@ -33,6 +33,25 @@ exception or visual baseline is introduced or changed.
 - Step items do not contain reviewCard payloads, preventing per-session copies
   of the same Review card. Existing word review stays in the shared Review store.
 
+## Learn first and apply the rule
+
+The first visit to a topic offers a short goal, useful language from the lesson
+and a worked example. The Colours pilot compares masculine and feminine forms
+using clothes, with a separate example showing why the feminine form fits.
+On return, the learner can resume or start practice with the warm-up collapsed.
+
+During a question, Hint gives a clue first. When a separate example is available,
+the learner can open it next, then explicitly show the answer. The Colours pilot
+uses a different colour in that example. After checking, a short oral exercise
+uses the same colour with another noun and a separate model for comparison.
+The oral exercise is self-checked. The six-question results retain the original
+target and separate independent answers from answers with help.
+
+In B3 Calendar, the home and finish cards link to the existing timetable and a
+new plan-making task. The learner uses the timetable to choose a time, then
+makes a two-sentence plan with a saved self-check. A separate reader prompt
+lets someone read the original timetable passage aloud.
+
 ## Progress and help
 
 Independent course attempts update their original target progress through the
@@ -56,8 +75,10 @@ review schedules, manual objectives and original checkpoint records are retained
 Sessions are parked per chapter. Switching level/topic or selecting a parent
 assignment keeps earlier drafts. The most recently selected level/topic is
 restored when no explicit URL selection is supplied. Each resumed item is
-rehydrated from current authoritative data; invalid older drafts are retained
-in archived session data when a fresh session is explicitly started.
+rehydrated from current authoritative data. If a question's answer key changes,
+an earlier checked result stays in the session history. An older draft for
+that question is kept in the backup and the learner answers the revised question
+separately. Invalid older sessions are archived when a fresh session starts.
 
 Input/change/composition, token clicks, pause and page exit preserve drafts.
 Restored checked feedback is displayed without replaying submission or adding

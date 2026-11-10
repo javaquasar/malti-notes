@@ -66,6 +66,7 @@ const coreAssets = [
   "./assets/data/b3_context_examples.json",
   "./assets/data/b3_context_exercises.json",
   "./assets/data/b3_speaking_tasks.json",
+  "./assets/audio/b3-calendar-weekday.wav",
   "./assets/img/b3-town-map.svg",
   "./assets/data/lesson01_exercises.json",
   "./assets/data/lesson01_practice.json",

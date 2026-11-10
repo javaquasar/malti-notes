@@ -244,6 +244,34 @@
       ]
     },
     {
+      "id": "b3-calendar-plan-check",
+      "chapterId": "b3-calendar",
+      "contextId": "b3-calendar-context",
+      "title": "1. Find a time",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "b3-calendar-plan-choose-time",
+          "type": "multiple-choice",
+          "prompt": "You can meet at 16:00. Nina can only play before her activity starts. Which day works for both of you?",
+          "choices": [
+            "Monday at 16:00",
+            "Tuesday at 16:00",
+            "Thursday at 16:00"
+          ],
+          "answer": "Tuesday at 16:00",
+          "explanation": "On Tuesday swimming starts at 17:00, so Nina is free at 16:00. On Monday her lesson starts at 16:00. On Thursday piano starts at 15:30.",
+          "reviewCard": {
+            "maltese": "Nhar it-Tlieta fl-erbgħa.",
+            "english": "On Tuesday at four."
+          },
+          "chapterId": "b3-calendar",
+          "contextId": "b3-calendar-context",
+          "assessmentMode": "recognition"
+        }
+      ]
+    },
+    {
       "id": "b3-festivals-context-check",
       "chapterId": "b3-festivals",
       "contextId": "b3-festivals-context",

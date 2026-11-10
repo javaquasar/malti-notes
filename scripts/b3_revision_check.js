@@ -42,7 +42,7 @@ async function main() {
   });
   try {
     await page.goto(base+'b3_revision.html');
-    await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===128 && document.querySelectorAll('.exercise-item').length===70);
+    await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===129 && document.querySelectorAll('.exercise-item').length===71);
     assert.equal(await page.locator('main > .course-chapter-list > article').count(),7);
     assert.equal(await page.locator('h1').innerText(),'B3 Revision');
     assert.doesNotMatch(await page.locator('main, .hero').allTextContents().then(parts=>parts.join(' ')), /Malti\.B|Book pp\.|book mastery|book-aligned|the book uses|Chapter [1-7]/i);
@@ -70,7 +70,7 @@ async function main() {
     await bookmark.focus();await page.keyboard.press('Space');
     assert.equal(await bookmark.getAttribute('aria-pressed'),'true');
     assert.equal(await page.evaluate(()=>window.MaltiReviewStore.getStats().total),2);
-    await page.reload();await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===128);
+    await page.reload();await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===129);
     assert.equal(await page.locator('[data-bank-item="b3-feelings-models-1"] .review-add-button').getAttribute('aria-pressed'),'true');
 
     // An unsuccessful attempt must give feedback and save the relevant missed card.
@@ -103,7 +103,7 @@ async function main() {
       assert.match(await container.locator('.exercise-result').innerText(),new RegExp(`${set.items.length}/${set.items.length}.*passed`));
       console.log('PASS grading '+set.id);
     }
-    await page.reload();await page.waitForFunction(()=>document.querySelectorAll('.exercise-item').length===70);
+    await page.reload();await page.waitForFunction(()=>document.querySelectorAll('.exercise-item').length===71);
     for(const set of foundationSets)assert.match(await page.locator(`[data-exercise-set="${set.id}"] .status-chip`).textContent(),new RegExp(`Best ${set.items.length}/${set.items.length}.*passed`));
     const retained=await page.evaluate(()=>({course:window.MaltiStorage.getJson('malti_course_progress_v1'),check:window.MaltiExerciseRunner.getProgress()['b2-hobbies-check'],card:window.MaltiReviewStore.getCard('sentence::b2-preserved')}));
     assert.deepEqual(retained,{course:oldProgress,check:oldCheck,card:oldCard});
@@ -118,7 +118,7 @@ async function main() {
     await page.goto(base+'all_pages.html');
     await page.getByRole('link',{name:'B3 Revision',exact:true}).last().waitFor();
     await page.goto(base+'b3_revision.html');await page.locator('[data-theme-select]').waitFor();
-    await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===128);
+    await page.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===129);
     const audits=[];
     const axeSource=fs.readFileSync(require.resolve('axe-core/axe.min.js'),'utf8');
     for(const theme of ['classic','forest','contrast']) {
@@ -150,7 +150,7 @@ async function main() {
     await page.setViewportSize({width:1440,height:1000});
     await page.locator('[data-theme-select]').selectOption('forest');await page.reload();
     assert.equal(await page.locator('html').getAttribute('data-theme'),'forest');
-    await page.waitForFunction(()=>document.querySelectorAll('.exercise-item').length===70);
+    await page.waitForFunction(()=>document.querySelectorAll('.exercise-item').length===71);
     const savedChecks=await page.evaluate(()=>window.MaltiExerciseRunner.getProgress());
     const offlineContext=await browser.newContext();
     const offlinePage=await offlineContext.newPage();
@@ -159,14 +159,14 @@ async function main() {
     catch(error){if(!error.message.includes('Execution context was destroyed'))throw error;}
     await offlinePage.waitForFunction(()=>Boolean(navigator.serviceWorker.controller));
     await offlinePage.reload({waitUntil:'networkidle'});
-    await offlinePage.waitForFunction(()=>document.querySelectorAll('.exercise-item').length===70);
+    await offlinePage.waitForFunction(()=>document.querySelectorAll('.exercise-item').length===71);
     await offlinePage.evaluate(checks=>window.MaltiStorage.setJson('malti_exercise_progress_v1',checks),savedChecks);
     await offlineContext.setOffline(true);await offlinePage.reload();
-    await offlinePage.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===128 && document.querySelectorAll('.exercise-item').length===70);
+    await offlinePage.waitForFunction(()=>document.querySelectorAll('[data-bank-item]').length===129 && document.querySelectorAll('.exercise-item').length===71);
     assert.equal(await offlinePage.locator('[data-exercise-set="b3-town-check"] .status-chip').textContent(),'Best 6/6 · passed');
     await offlineContext.close();
     assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
-    const report={chapters:7,items:128,questions:70,foundationSetsGraded:7,allFoundationSetsGraded:true,missedCardsCorrect:true,legacyProgressPreserved:true,sharedB2SurfaceMatches:true,bookmarkAndDisclosureKeyboard:true,offlineReload:true,audits,errors,failed,auditImportProbes:[...new Set(auditImportProbes)]};
+    const report={chapters:7,items:129,questions:71,foundationSetsGraded:7,allFoundationSetsGraded:true,missedCardsCorrect:true,legacyProgressPreserved:true,sharedB2SurfaceMatches:true,bookmarkAndDisclosureKeyboard:true,offlineReload:true,audits,errors,failed,auditImportProbes:[...new Set(auditImportProbes)]};
     fs.writeFileSync(path.join(output,'validation.json'),JSON.stringify(report,null,2)+'\n');
     console.log('PASS B3 revision: all sets, persistence, bookmarks, B2 styles, 9 accessibility/layout combinations and offline reload.');
   } finally {await browser.close();await new Promise(resolve=>server.close(resolve));}

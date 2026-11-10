@@ -1188,9 +1188,9 @@
       "id": "b1-school-bitha",
       "maltese": "bitħa",
       "english": "school yard / courtyard",
-      "example": "Hemm bitħa fil-bini.",
-      "exampleTranslation": "The school yard is in the building.",
-      "examplePattern": "school-place",
+      "example": "Hemm bitħa kbira fl-iskola.",
+      "exampleTranslation": "There is a big yard at school.",
+      "examplePattern": "school-yard",
       "exampleReview": "reviewed-template",
       "source": {
         "book": "B1",
@@ -1204,8 +1204,8 @@
       },
       "sourceLabel": "B1, Chapter 3, p. 32",
       "notes": [
-        "Example: Hemm bitħa fil-bini.",
-        "Translation: The school yard is in the building.",
+        "Example: Hemm bitħa kbira fl-iskola.",
+        "Translation: There is a big yard at school.",
         "Source: B1, Chapter 3, p. 32"
       ],
       "glossReview": "reviewed",
@@ -1908,8 +1908,8 @@
           "targetIds": [
             "b1-school-tojlit"
           ],
-          "prompt": "True or false: “tojlit” means “clinic” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “tojlit” means “toilet” in this chapter.",
+          "answer": true,
           "explanation": "tojlit means “toilet”.",
           "reviewCard": {
             "maltese": "tojlit",
@@ -1978,8 +1978,8 @@
           "targetIds": [
             "b1-school-kamra-tal-banju"
           ],
-          "prompt": "True or false: “kamra tal-banju” means “toilet” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kamra tal-banju” means “bathroom” in this chapter.",
+          "answer": true,
           "explanation": "kamra tal-banju means “bathroom”.",
           "reviewCard": {
             "maltese": "kamra tal-banju",
@@ -2158,8 +2158,8 @@
           "targetIds": [
             "b1-school-klassi"
           ],
-          "prompt": "True or false: “klassi” means “clinic” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “klassi” means “class” in this chapter.",
+          "answer": true,
           "explanation": "klassi means “class”.",
           "reviewCard": {
             "maltese": "klassi",
@@ -2231,8 +2231,8 @@
           "targetIds": [
             "b1-school-bitha"
           ],
-          "prompt": "True or false: “bitħa” means “hall” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “bitħa” means “school yard / courtyard” in this chapter.",
+          "answer": true,
           "explanation": "bitħa means “school yard / courtyard”.",
           "reviewCard": {
             "maltese": "bitħa",
@@ -2245,13 +2245,13 @@
           "targetIds": [
             "b1-school-bitha"
           ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-bini.” (The school yard is in the building.)",
+          "prompt": "Complete the Maltese sentence: “Hemm _____ kbira fl-iskola.” (There is a big yard at school.)",
           "answer": "bitħa",
-          "explanation": "The complete sentence is “Hemm bitħa fil-bini.”",
+          "explanation": "The complete sentence is “Hemm bitħa kbira fl-iskola.”",
           "reviewCard": {
             "maltese": "bitħa",
             "english": "school yard / courtyard",
-            "example": "Hemm bitħa fil-bini."
+            "example": "Hemm bitħa kbira fl-iskola."
           },
           "type": "fill-blank",
           "accepted": [
@@ -2351,8 +2351,8 @@
           "targetIds": [
             "b1-school-ufficcju"
           ],
-          "prompt": "True or false: “uffiċċju” means “toilet” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “uffiċċju” means “office” in this chapter.",
+          "answer": true,
           "explanation": "uffiċċju means “office”.",
           "reviewCard": {
             "maltese": "uffiċċju",
@@ -2424,8 +2424,8 @@
           "targetIds": [
             "b1-school-coff"
           ],
-          "prompt": "True or false: “ċoff” means “shirt” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “ċoff” means “bow / ribbon” in this chapter.",
+          "answer": true,
           "explanation": "ċoff means “bow / ribbon”.",
           "reviewCard": {
             "maltese": "ċoff",
@@ -2617,8 +2617,8 @@
           "targetIds": [
             "b1-school-kalzetta"
           ],
-          "prompt": "True or false: “kalzetta” means “jacket” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kalzetta” means “sock” in this chapter.",
+          "answer": true,
           "explanation": "kalzetta means “sock”.",
           "reviewCard": {
             "maltese": "kalzetta",
@@ -2883,8 +2883,8 @@
           "targetIds": [
             "b1-school-kamra-tas-sodda"
           ],
-          "prompt": "True or false: “kamra tas-sodda” means “bathroom” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kamra tas-sodda” means “bedroom” in this chapter.",
+          "answer": true,
           "explanation": "kamra tas-sodda means “bedroom”.",
           "reviewCard": {
             "maltese": "kamra tas-sodda",
@@ -3032,8 +3032,8 @@
           "targetIds": [
             "b1-school-kcina"
           ],
-          "prompt": "True or false: “kċina” means “living room” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kċina” means “kitchen” in this chapter.",
+          "answer": true,
           "explanation": "kċina means “kitchen”.",
           "reviewCard": {
             "maltese": "kċina",

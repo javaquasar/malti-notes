@@ -112,11 +112,33 @@
     find('[data-help-prev]').disabled = helpPage === 0;
     find('[data-help-next]').disabled = start + slots.length >= pending.length;
   }
+  function refreshWarmup(current, saved) {
+    const warmup = core.warmupFor(plan);
+    const panel = find('[data-study-warmup]');
+    const hasPractised = Boolean(saved) || (current.completedSessions || []).some(value => value.chapterId === route.id);
+    panel.hidden = !warmup.phrases.length;
+    panel.open = !panel.hidden && !hasPractised;
+    find('[data-study-goal]').hidden = hasPractised || panel.hidden;
+    say('[data-study-goal]', warmup.goal);
+    panel.querySelectorAll('[data-study-phrase]').forEach((slot, index) => {
+      const phrase = warmup.phrases[index];
+      slot.hidden = !phrase;
+      slot.querySelector('[lang="mt"]').textContent = phrase?.maltese || '';
+      slot.querySelector('[lang="en"]').textContent = phrase?.english || '';
+    });
+    find('[data-study-warmup-example]').hidden = !warmup.model;
+    say('[data-study-warmup-mt]', warmup.model?.maltese || '');
+    say('[data-study-warmup-en]', warmup.model?.english || '');
+    say('[data-study-warmup-tip]', warmup.tip);
+    find('[data-study-calendar-home]').hidden = route.id !== 'b3-calendar';
+  }
   function refreshHome() {
     if (!route || !plan) return;
     say('[data-study-topic-title]', route.levelId.toUpperCase() + ' · ' + route.title);
-    const saved = core.resumeSession(object(state().sessions)[route.id], plan.catalog);
+    const current = state();
+    const saved = core.resumeSession(object(current.sessions)[route.id], plan.catalog);
     const unfinished = saved && !core.summary(saved).complete;
+    refreshWarmup(current, saved);
     find('[data-study-start]').textContent = unfinished ? 'Continue practice' : 'Start practice';
     find('[data-study-start]').disabled = !plan.entries.length;
     say('[data-study-home-status]', unfinished
@@ -160,8 +182,45 @@
     say('[data-study-result-help]', summary.deferred
       ? `${summary.deferred} question${summary.deferred === 1 ? '' : 's'} left for a parent. You can look at it together later.`
       : summary.helpCount ? 'Some questions are saved to practise together later.' : 'Your next practice will use your results.');
+    find('[data-study-calendar-finish]').hidden = session.chapterId !== 'b3-calendar';
     refreshHelpQueue(); status('Session finished. Your work is saved.');
     find('#study-finish-title').focus();
+  }
+  function showSupport(entry, result) {
+    const id = entry.item.id, support = core.supportFor(entry, plan.catalog);
+    const hinted = session.hints[id] === true;
+    const example = hinted && object(session.examples)[id] === true && Boolean(support.model);
+    const solution = hinted && object(session.solutions)[id] === true;
+    const checked = result?.checked === true;
+    const hint = find('[data-study-hint]');
+    const model = find('[data-study-model]');
+    const answer = find('[data-study-solution]');
+    hint.hidden = checked;
+    hint.ariaExpanded = String(hinted);
+    model.hidden = checked || !hinted || !support.model;
+    model.ariaExpanded = String(example);
+    answer.hidden = checked || !hinted || (Boolean(support.model) && !example);
+    answer.ariaExpanded = String(solution);
+    find('[data-study-help]').hidden = !hinted || checked;
+    say('[data-study-help-explanation]', support.clue);
+    find('[data-study-help-example]').hidden = !example;
+    find('[data-study-help-mt]').hidden = !example;
+    find('[data-study-help-en]').hidden = !example || !support.model.english;
+    say('[data-study-help-mt]', example ? support.model.maltese : '');
+    say('[data-study-help-en]', example ? support.model.english : '');
+    const correct = entry.item.type === 'matching' ? entry.item.pairs.map(pair => `${pair.left} → ${pair.right}`).join('; ')
+      : entry.item.type === 'true-false' ? entry.item.answer ? 'True' : 'False' : entry.item.answer;
+    find('[data-study-help-answer]').hidden = !solution;
+    say('[data-study-help-answer]', solution ? `Answer: ${correct}. ${entry.help.explanation}` : '');
+    const transfer = support.transfer;
+    find('[data-study-transfer]').hidden = !checked || result.previousQuestion === true || !transfer;
+    find('[data-study-transfer-model]').open = false;
+    if (transfer) {
+      say('[data-study-transfer-prompt]', transfer.prompt.maltese);
+      say('[data-study-transfer-meaning]', `(${transfer.prompt.english})`);
+      say('[data-study-transfer-mt]', transfer.model);
+      say('[data-study-transfer-cue]', transfer.cue);
+    }
   }
   function drawStep() {
     if (!session || core.summary(session).complete) { if (session) showFinish(); return; }
@@ -172,6 +231,7 @@
     activeSet.items[0].sourcePage = entry.help.sourcePage && entry.help.sourcePage !== 'course_chapter.html'
       ? entry.help.sourcePage : sourceLink(route);
     runner.render(panel, activeSet);
+    panel.hidden = result?.previousQuestion === true;
     const runnerHeading = panel.querySelector('header');
     if (runnerHeading) runnerHeading.hidden = true;
     restoreAnswer(entry.item, session.drafts[entry.item.id]);
@@ -181,7 +241,7 @@
       feedback.hidden = false;
       feedback.textContent = result.feedback || (result.correct ? 'Correct. ' : 'Keep practising. ') + entry.help.explanation;
       panel.querySelector('button[type="submit"]').hidden = true;
-      panel.querySelectorAll('.exercise-actions button').forEach(button => { if (button.textContent === 'Try again') button.hidden = false; });
+      panel.querySelectorAll('.exercise-actions button').forEach(button => { if (button.textContent === 'Try again') button.hidden = Boolean(result.previousQuestion); });
       setAnswerDisabled(true);
     }
     say('[data-study-session-title]', route.levelId.toUpperCase() + ' · ' + route.title);
@@ -189,14 +249,11 @@
     find('[data-study-next]').disabled = !result?.checked;
     find('[data-study-next]').textContent = session.index + 1 === session.entries.length ? 'See my result' : 'Next question';
     const assisted = session.hints[entry.item.id] === true;
-    find('[data-study-help]').hidden = !assisted;
-    say('[data-study-help-explanation]', entry.help.explanation || 'Look carefully at the words in the question.');
-    say('[data-study-help-mt]', entry.help.model?.maltese || '');
-    say('[data-study-help-en]', entry.help.model?.english || '');
-    const example = object(session.examples)[entry.item.id] === true;
-    find('[data-study-help-mt]').hidden = !example;
-    find('[data-study-help-en]').hidden = !example;
-    say('[data-study-feedback]', result?.checked ? result.correct ? 'Answer checked. You can go to the next question.' : 'You can try again, use a hint, or leave this for a parent.' : assisted ? 'This attempt uses a hint. Your independent results stay separate.' : '');
+    showSupport(entry, result);
+    const feedback = result?.previousQuestion ? 'You checked an earlier version of this question. Your result is saved. Go to the next question.'
+      : result?.checked ? result.correct ? 'You can go to the next question.' : 'You can try again or leave this for a parent.'
+      : assisted ? 'This attempt uses a hint. Your independent results stay separate.' : '';
+    say('[data-study-feedback]', feedback);
     find('[data-study-home]').hidden = true; find('[data-study-finish]').hidden = true; find('[data-study-session]').hidden = false;
     rendering = false;
     status('');
@@ -223,12 +280,13 @@
     find('[data-study-session]').scrollIntoView({ block: 'start' });
     find('[data-study-session-title]').tabIndex = -1; find('[data-study-session-title]').focus();
   }
-  function assist(example) {
-    if (!session) return;
+  function assist(stage) {
+    const id = session?.entries[session.index]?.item.id;
+    if (!id || session.results[id]?.checked) return;
     remember();
-    const id = session.entries[session.index]?.item.id;
-    session = session.results[id]?.checked ? core.beginRetry(session) : core.useHint(session);
-    session.examples = { ...object(session.examples), [id]: example || object(session.examples)[id] === true };
+    session = core.useHint(session);
+    if (stage === 'example') session.examples = { ...object(session.examples), [id]: true };
+    if (stage === 'solution') session.solutions = { ...object(session.solutions), [id]: true };
     persistSession(); drawStep();
   }
   const guarded = action => async event => { try { await action(event); } catch (error) { status(error.message); find('[data-study-start]').disabled = !plan?.entries.length; } };
@@ -241,14 +299,19 @@
       const id = button.dataset.studyLevel;
       await selectRoute(routes.find(candidate => candidate.id === object(state().topicsByLevel)[id] && candidate.levelId === id) || routes.find(candidate => candidate.levelId === id));
     })));
-    topicSelect.addEventListener('change', guarded(() => selectRoute(routes.find(candidate => candidate.id === topicSelect.value))));
+    topicSelect.addEventListener('change', guarded(async () => {
+      await selectRoute(routes.find(candidate => candidate.id === topicSelect.value));
+      find('[data-study-topics]').open = false;
+      find('[data-study-topic-title]').focus();
+    }));
     root.querySelector('a[href="#study-topics"]').addEventListener('click', event => {
       event.preventDefault(); find('[data-study-topics]').open = true; topicSelect.focus();
     });
     find('[data-study-start]').addEventListener('click', guarded(() => startPractice()));
     find('[data-study-back]').addEventListener('click', () => { remember(); find('[data-study-session]').hidden = true; find('[data-study-home]').hidden = false; refreshHome(); status('Your place and answers are saved.'); });
-    find('[data-study-hint]').addEventListener('click', () => assist(false));
-    find('[data-study-model]').addEventListener('click', () => assist(true));
+    find('[data-study-hint]').addEventListener('click', () => assist('clue'));
+    find('[data-study-model]').addEventListener('click', () => assist('example'));
+    find('[data-study-solution]').addEventListener('click', () => assist('solution'));
     find('[data-study-next]').addEventListener('click', () => { if (!session || !session.results[session.entries[session.index]?.item.id]?.checked) return; session = core.advance(session); persistSession(); drawStep(); });
     find('[data-study-ask]').addEventListener('click', () => { if (!session) return; remember(); session.helpQueue = state().helpQueue || []; session = core.requestHelp(session); persistSession(); drawStep(); status('Saved for a parent. You can continue with the next question.'); });
     find('[data-study-done]').addEventListener('click', () => { find('[data-study-finish]').hidden = true; find('[data-study-home]').hidden = false; refreshHome(); status('Practice finished. Your work is saved.'); });
@@ -307,7 +370,8 @@
           [{ itemId: entry.item.id, patternId: entry.skillId, mode: entry.mode, correct: result.correct }]) } });
       }
       persistSession(); setAnswerDisabled(true); find('[data-study-next]').disabled = false;
-      say('[data-study-feedback]', result.correct ? 'Answer checked. You can go to the next question.' : 'You can try again, use a hint, or leave this for a parent.');
+      showSupport(entry, saved);
+      say('[data-study-feedback]', result.correct ? 'Answer checked. You can go to the next question.' : 'You can try again or leave this for a parent.');
       refreshHelpQueue();
     });
     const params = new URLSearchParams(location.search), current = state();

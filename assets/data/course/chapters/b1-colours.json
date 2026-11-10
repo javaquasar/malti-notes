@@ -2974,59 +2974,59 @@
       "title": "Il-Kuluri Entry Diagnostic",
       "items": [
         {
-          "id": "b1-colours-abjad-diagnostic-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-abjad"
           ],
-          "prompt": "What is the lesson meaning of “abjad”?",
-          "choices": [
-            "white",
-            "white (feminine)",
-            "red"
-          ],
-          "answer": "white",
-          "explanation": "abjad means “white” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use abjad. Il-flokk huwa abjad.",
           "reviewCard": {
             "maltese": "abjad",
             "english": "white"
-          }
+          },
+          "id": "b1-colours-abjad-diagnostic-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is white.)",
+          "choices": [
+            "abjad",
+            "bajda",
+            "iswed"
+          ],
+          "answer": "abjad"
         },
         {
-          "id": "b1-colours-isfar-diagnostic-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-isfar"
           ],
-          "prompt": "True or false: “isfar” means “red” in this chapter.",
-          "answer": false,
-          "explanation": "isfar means “yellow”.",
+          "explanation": "Il-flokk is masculine, so use isfar. Il-flokk huwa isfar.",
           "reviewCard": {
             "maltese": "isfar",
             "english": "yellow"
-          }
+          },
+          "id": "b1-colours-isfar-diagnostic-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-flokk huwa safra.” correctly says “The shirt is yellow.”",
+          "answer": false
         },
         {
-          "id": "b1-colours-griza-diagnostic-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-griza"
           ],
-          "prompt": "What is the lesson meaning of “griża”?",
-          "choices": [
-            "yellow",
-            "grey (feminine)",
-            "red (feminine)"
-          ],
-          "answer": "grey (feminine)",
-          "explanation": "griża means “grey (feminine)” in this chapter.",
+          "explanation": "Il-kaxxa is feminine, so use griża. Il-kaxxa hija griża.",
           "reviewCard": {
             "maltese": "griża",
             "english": "grey (feminine)"
-          }
+          },
+          "id": "b1-colours-griza-diagnostic-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-kaxxa hija _____. (The box is grey.)",
+          "choices": [
+            "ħamra",
+            "griża",
+            "griż"
+          ],
+          "answer": "griża"
         },
         {
           "id": "b1-colours-roza-diagnostic-recognition-true-false",
@@ -3035,8 +3035,8 @@
           "targetIds": [
             "b1-colours-roza"
           ],
-          "prompt": "True or false: “roża” means “yellow” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “roża” means “pink” in this chapter.",
+          "answer": true,
           "explanation": "roża means “pink”.",
           "reviewCard": {
             "maltese": "roża",
@@ -3070,8 +3070,8 @@
           "targetIds": [
             "b1-colours-strixxa"
           ],
-          "prompt": "True or false: “strixxa” means “grey” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “strixxa” means “stripe” in this chapter.",
+          "answer": true,
           "explanation": "strixxa means “stripe”.",
           "reviewCard": {
             "maltese": "strixxa",
@@ -3167,24 +3167,24 @@
       "title": "Il-Kuluri Checkpoint 1",
       "items": [
         {
-          "id": "b1-colours-abjad-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-abjad"
           ],
-          "prompt": "What is the lesson meaning of “abjad”?",
-          "choices": [
-            "white",
-            "white (feminine)",
-            "red"
-          ],
-          "answer": "white",
-          "explanation": "abjad means “white” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use abjad. Il-flokk huwa abjad.",
           "reviewCard": {
             "maltese": "abjad",
             "english": "white"
-          }
+          },
+          "id": "b1-colours-abjad-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is white.)",
+          "choices": [
+            "abjad",
+            "bajda",
+            "iswed"
+          ],
+          "answer": "abjad"
         },
         {
           "id": "b1-colours-abjad-production",
@@ -3206,19 +3206,19 @@
           ]
         },
         {
-          "id": "b1-colours-bajda-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-bajda"
           ],
-          "prompt": "True or false: “bajda” means “red” in this chapter.",
-          "answer": false,
-          "explanation": "bajda means “white (feminine)”.",
+          "explanation": "Il-kaxxa is feminine, so use bajda. Il-kaxxa hija bajda.",
           "reviewCard": {
             "maltese": "bajda",
             "english": "white (feminine)"
-          }
+          },
+          "id": "b1-colours-bajda-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija abjad.” correctly says “The box is white.”",
+          "answer": false
         },
         {
           "id": "b1-colours-bajda-production",
@@ -3240,24 +3240,24 @@
           ]
         },
         {
-          "id": "b1-colours-ahmar-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-ahmar"
           ],
-          "prompt": "What is the lesson meaning of “aħmar”?",
-          "choices": [
-            "yellow",
-            "red",
-            "red (feminine)"
-          ],
-          "answer": "red",
-          "explanation": "aħmar means “red” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use aħmar. Il-flokk huwa aħmar.",
           "reviewCard": {
             "maltese": "aħmar",
             "english": "red"
-          }
+          },
+          "id": "b1-colours-ahmar-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is red.)",
+          "choices": [
+            "isfar",
+            "aħmar",
+            "ħamra"
+          ],
+          "answer": "aħmar"
         },
         {
           "id": "b1-colours-ahmar-production",
@@ -3279,19 +3279,19 @@
           ]
         },
         {
-          "id": "b1-colours-hamra-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-hamra"
           ],
-          "prompt": "True or false: “ħamra” means “yellow” in this chapter.",
-          "answer": false,
-          "explanation": "ħamra means “red (feminine)”.",
+          "explanation": "Il-kaxxa is feminine, so use ħamra. Il-kaxxa hija ħamra.",
           "reviewCard": {
             "maltese": "ħamra",
             "english": "red (feminine)"
-          }
+          },
+          "id": "b1-colours-hamra-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija aħmar.” correctly says “The box is red.”",
+          "answer": false
         },
         {
           "id": "b1-colours-hamra-production",
@@ -3313,24 +3313,24 @@
           ]
         },
         {
-          "id": "b1-colours-isfar-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-isfar"
           ],
-          "prompt": "What is the lesson meaning of “isfar”?",
-          "choices": [
-            "green",
-            "grey",
-            "yellow"
-          ],
-          "answer": "yellow",
-          "explanation": "isfar means “yellow” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use isfar. Il-flokk huwa isfar.",
           "reviewCard": {
             "maltese": "isfar",
             "english": "yellow"
-          }
+          },
+          "id": "b1-colours-isfar-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is yellow.)",
+          "choices": [
+            "safra",
+            "griż",
+            "isfar"
+          ],
+          "answer": "isfar"
         },
         {
           "id": "b1-colours-isfar-production",
@@ -3352,19 +3352,19 @@
           ]
         },
         {
-          "id": "b1-colours-safra-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-safra"
           ],
-          "prompt": "True or false: “safra” means “grey” in this chapter.",
-          "answer": false,
-          "explanation": "safra means “yellow”.",
+          "explanation": "Il-kaxxa is feminine, so use safra. Il-kaxxa hija safra.",
           "reviewCard": {
             "maltese": "safra",
             "english": "yellow"
-          }
+          },
+          "id": "b1-colours-safra-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija safra.” correctly says “The box is yellow.”",
+          "answer": true
         },
         {
           "id": "b1-colours-safra-production",
@@ -3433,24 +3433,24 @@
       "title": "Il-Kuluri Checkpoint 2",
       "items": [
         {
-          "id": "b1-colours-ahdar-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-ahdar"
           ],
-          "prompt": "What is the lesson meaning of “aħdar”?",
-          "choices": [
-            "green",
-            "grey (feminine)",
-            "black"
-          ],
-          "answer": "green",
-          "explanation": "aħdar means “green” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use aħdar. Il-flokk huwa aħdar.",
           "reviewCard": {
             "maltese": "aħdar",
             "english": "green"
-          }
+          },
+          "id": "b1-colours-ahdar-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is green.)",
+          "choices": [
+            "aħdar",
+            "ħadra",
+            "iswed"
+          ],
+          "answer": "aħdar"
         },
         {
           "id": "b1-colours-ahdar-production",
@@ -3472,19 +3472,19 @@
           ]
         },
         {
-          "id": "b1-colours-hadra-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-hadra"
           ],
-          "prompt": "True or false: “ħadra” means “black” in this chapter.",
-          "answer": false,
-          "explanation": "ħadra means “green”.",
+          "explanation": "Il-kaxxa is feminine, so use ħadra. Il-kaxxa hija ħadra.",
           "reviewCard": {
             "maltese": "ħadra",
             "english": "green"
-          }
+          },
+          "id": "b1-colours-hadra-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija aħdar.” correctly says “The box is green.”",
+          "answer": false
         },
         {
           "id": "b1-colours-hadra-production",
@@ -3506,24 +3506,24 @@
           ]
         },
         {
-          "id": "b1-colours-griz-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-griz"
           ],
-          "prompt": "What is the lesson meaning of “griż”?",
-          "choices": [
-            "brown",
-            "grey",
-            "black (feminine)"
-          ],
-          "answer": "grey",
-          "explanation": "griż means “grey” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use griż. Il-flokk huwa griż.",
           "reviewCard": {
             "maltese": "griż",
             "english": "grey"
-          }
+          },
+          "id": "b1-colours-griz-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is grey.)",
+          "choices": [
+            "isfar",
+            "griż",
+            "griża"
+          ],
+          "answer": "griż"
         },
         {
           "id": "b1-colours-griz-production",
@@ -3545,19 +3545,19 @@
           ]
         },
         {
-          "id": "b1-colours-griza-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-griza"
           ],
-          "prompt": "True or false: “griża” means “brown” in this chapter.",
-          "answer": false,
-          "explanation": "griża means “grey (feminine)”.",
+          "explanation": "Il-kaxxa is feminine, so use griża. Il-kaxxa hija griża.",
           "reviewCard": {
             "maltese": "griża",
             "english": "grey (feminine)"
-          }
+          },
+          "id": "b1-colours-griza-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija griża.” correctly says “The box is grey.”",
+          "answer": true
         },
         {
           "id": "b1-colours-griza-production",
@@ -3579,24 +3579,24 @@
           ]
         },
         {
-          "id": "b1-colours-iswed-recognition",
-          "type": "multiple-choice",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-iswed"
           ],
-          "prompt": "What is the lesson meaning of “iswed”?",
-          "choices": [
-            "orange",
-            "pink",
-            "black"
-          ],
-          "answer": "black",
-          "explanation": "iswed means “black” in this chapter.",
+          "explanation": "Il-flokk is masculine, so use iswed. Il-flokk huwa iswed.",
           "reviewCard": {
             "maltese": "iswed",
             "english": "black"
-          }
+          },
+          "id": "b1-colours-iswed-recognition",
+          "type": "multiple-choice",
+          "prompt": "Choose the right colour form. Il-flokk huwa _____. (The shirt is black.)",
+          "choices": [
+            "sewda",
+            "abjad",
+            "iswed"
+          ],
+          "answer": "iswed"
         },
         {
           "id": "b1-colours-iswed-production",
@@ -3618,19 +3618,19 @@
           ]
         },
         {
-          "id": "b1-colours-sewda-recognition-true-false",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-sewda"
           ],
-          "prompt": "True or false: “sewda” means “pink” in this chapter.",
-          "answer": false,
-          "explanation": "sewda means “black (feminine)”.",
+          "explanation": "Il-kaxxa is feminine, so use sewda. Il-kaxxa hija sewda.",
           "reviewCard": {
             "maltese": "sewda",
             "english": "black (feminine)"
-          }
+          },
+          "id": "b1-colours-sewda-recognition-true-false",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija sewda.” correctly says “The box is black.”",
+          "answer": true
         },
         {
           "id": "b1-colours-sewda-production",
@@ -4010,8 +4010,8 @@
           "targetIds": [
             "b1-colours-kaxxa"
           ],
-          "prompt": "True or false: “kaxxa” means “triangles” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “kaxxa” means “box” in this chapter.",
+          "answer": true,
           "explanation": "kaxxa means “box”.",
           "reviewCard": {
             "maltese": "kaxxa",
@@ -4083,8 +4083,8 @@
           "targetIds": [
             "b1-colours-trijanglu"
           ],
-          "prompt": "True or false: “trijanglu” means “stripes” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “trijanglu” means “triangle” in this chapter.",
+          "answer": true,
           "explanation": "trijanglu means “triangle”.",
           "reviewCard": {
             "maltese": "trijanglu",
@@ -4156,8 +4156,8 @@
           "targetIds": [
             "b1-colours-strixxa"
           ],
-          "prompt": "True or false: “strixxa” means “country” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “strixxa” means “stripe” in this chapter.",
+          "answer": true,
           "explanation": "strixxa means “stripe”.",
           "reviewCard": {
             "maltese": "strixxa",
@@ -4276,8 +4276,8 @@
           "targetIds": [
             "b1-colours-bandiera"
           ],
-          "prompt": "True or false: “bandiera” means “Italy” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “bandiera” means “flag” in this chapter.",
+          "answer": true,
           "explanation": "bandiera means “flag”.",
           "reviewCard": {
             "maltese": "bandiera",
@@ -4422,8 +4422,8 @@
           "targetIds": [
             "b1-colours-ingilterra"
           ],
-          "prompt": "True or false: “Ingilterra” means “France” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “Ingilterra” means “England” in this chapter.",
+          "answer": true,
           "explanation": "Ingilterra means “England”.",
           "reviewCard": {
             "maltese": "Ingilterra",
@@ -4542,8 +4542,8 @@
           "targetIds": [
             "b1-colours-spanja"
           ],
-          "prompt": "True or false: “Spanja” means “Ukraine” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “Spanja” means “Spain” in this chapter.",
+          "answer": true,
           "explanation": "Spanja means “Spain”.",
           "reviewCard": {
             "maltese": "Spanja",
@@ -4808,8 +4808,8 @@
           "targetIds": [
             "b1-colours-filippini"
           ],
-          "prompt": "True or false: “Filippini” means “Libya” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “Filippini” means “the Philippines” in this chapter.",
+          "answer": true,
           "explanation": "Filippini means “the Philippines”.",
           "reviewCard": {
             "maltese": "Filippini",
@@ -4954,8 +4954,8 @@
           "targetIds": [
             "b1-colours-awstralja"
           ],
-          "prompt": "True or false: “Awstralja” means “white” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “Awstralja” means “Australia” in this chapter.",
+          "answer": true,
           "explanation": "Awstralja means “Australia”.",
           "reviewCard": {
             "maltese": "Awstralja",

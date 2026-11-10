@@ -18,6 +18,11 @@ async function main(){
  fs.mkdirSync(output,{recursive:true});
  const server=http.createServer((request,response)=>{
   const pathname=new URL(request.url,'http://localhost').pathname;
+  if(pathname==='/__b3-seed.html'){
+   response.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});
+   response.end('<!doctype html><title>Offline setup</title>');
+   return;
+  }
   const file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));
   if(!file.startsWith(root+path.sep)){response.writeHead(403);response.end();return;}
   fs.readFile(file,(error,data)=>{response.writeHead(error?404:200,{'Content-Type':(mime[path.extname(file)]||'application/octet-stream')+'; charset=utf-8'});response.end(error?'Missing':data);});
@@ -57,11 +62,11 @@ async function main(){
  try{
   await page.goto(base+'b3_revision.html');await ready();
   assert.equal(await page.locator('[data-b3-context] [data-bank-item]').count(),29);
-  assert.equal(await page.locator('[data-b3-speaking] [data-bank-item]').count(),7);
+  assert.equal(await page.locator('[data-b3-speaking] [data-bank-item]').count(),8);
   assert.equal(await page.locator('[data-b3-context] [data-bank-translation]:visible').count(),0);
   assert.equal(await page.locator('[data-b3-daily-start]').isEnabled(),true);
   assert.equal(await page.locator('link[rel="stylesheet"]').count(),3);
-  passed('all seven context and speaking blocks mount with optional English support');
+  passed('seven context and eight speaking blocks mount with optional English support');
 
   const legacy={threeWords:{answers:{preserved:'dar, kelb, ktieb'}},mixedHistory:{keep:{attempts:2}}};
   const oldCheck={attempts:3,bestScore:12,lastScore:11,total:14,passed:true,updatedAt:'2026-10-01T12:00:00Z'};
@@ -138,15 +143,64 @@ async function main(){
   assert.equal(final.length,14);assert.ok(final.every(id=>!exercised.has(id)));
   passed('fresh final test grades fourteen independent transfer questions');
 
-  for(const set of contexts.sets){
+  for(const set of contexts.sets.filter(set=>set.id!=='b3-calendar-plan-check')){
    const panel=page.locator(`[data-exercise-set="${set.id}"]`);await open(panel);await solve(panel);
   }
-  const calendar=page.locator('#b3-calendar [data-b3-context-owner] table');
+  const calendar=page.locator('#b3-calendar-plan table');
   assert.match(await calendar.innerText(),/16:00/);assert.match(await calendar.innerText(),/17:00/);assert.match(await calendar.innerText(),/15:30/);
   const toggle=page.locator('#b3-calendar [data-b3-toggle-translations]');await toggle.check();
   assert.equal(await page.locator('#b3-calendar [data-b3-context] [data-bank-translation]:visible').count(),4);
   await toggle.uncheck();
   passed('all 28 comprehension questions agree with connected text, timetable and neighbourhood clues');
+
+  await page.setViewportSize({width:320,height:844});
+  const calendarPlan=page.locator('#b3-calendar-plan');
+  assert.equal(await calendarPlan.isVisible(),true);
+  assert.ok(await calendarPlan.evaluate(element=>element.scrollWidth<=element.clientWidth));
+  const availableDays=await calendarPlan.locator('tbody tr').evaluateAll(rows=>rows
+   .filter(row=>row.cells[1].textContent.trim().match(/\d{2}:\d{2}$/)?.[0] > '16:00')
+   .map(row=>row.cells[0].textContent.trim()));
+  assert.deepEqual(availableDays,['It-Tlieta']);
+  const listener=calendarPlan.locator('details').filter({has:page.getByText('Listen with someone (optional)',{exact:true})});
+  const reader=listener.locator('details');
+  assert.equal(await listener.getAttribute('open'),null);
+  await listener.locator(':scope > summary').focus();await page.keyboard.press('Enter');
+  assert.equal(await listener.locator('ol li').count(),2);
+  assert.equal(await reader.locator('p[lang="mt"]').isVisible(),false);
+  await reader.locator(':scope > summary').click();
+  assert.match(await reader.locator('p[lang="mt"]').innerText(),/It-Tlieta tipprattika l-għawm fil-ħamsa/);
+  await listener.locator(':scope > summary').click();
+  const calendarCheck=calendarPlan.locator('[data-exercise-set="b3-calendar-plan-check"]');
+  const choice=calendarCheck.getByRole('radio',{name:'Tuesday at 16:00',exact:true});
+  await choice.focus();await page.keyboard.press('Space');
+  assert.equal(await choice.isChecked(),true);
+  await calendarCheck.getByRole('button',{name:'Check answers',exact:true}).click();
+  assert.match(await calendarCheck.locator('.exercise-result').innerText(),/1\/1.*passed/);
+
+  const previousCalendarDraft='Għeluq snini fit-tnejn ta’ April.';
+  await page.evaluate(draft=>{
+   const storage=window.MaltiStorage;
+   const all=storage.getJson('malti_topic_practice_v1');
+   const b3=all.b3Revision;
+   storage.setJson('malti_topic_practice_v1',{...all,b3Revision:{...b3,speaking:{...b3.speaking,'b3-calendar':{draft}}}});
+  },previousCalendarDraft);
+  const planOwner=calendarPlan.locator('[data-b3-speaking-owner="b3-calendar-plan"]');
+  const planDraft="Nhar it-Tlieta se niltaqa' ma' Nina fl-erbgħa. Se nilagħbu flimkien.";
+  await planOwner.locator('[data-bank-item] > summary').click();
+  await planOwner.locator('textarea').fill(planDraft);
+  await planOwner.locator('[data-b3-speaking-check]').first().focus();await page.keyboard.press('Space');
+  assert.equal(await planOwner.locator('[data-b3-speaking-check]').count(),3);
+  assert.equal(await planOwner.getByText('On Tuesday I will meet Nina at four.',{exact:false}).isVisible(),false);
+  await planOwner.getByRole('button',{name:'Show model answer',exact:true}).click();
+  assert.equal(await planOwner.getByText('On Tuesday I will meet Nina at four.',{exact:false}).isVisible(),true);
+  await reload();
+  await planOwner.locator('[data-bank-item] > summary').click();
+  assert.equal(await planOwner.locator('textarea').inputValue(),planDraft);
+  assert.equal(await planOwner.locator('[data-b3-speaking-check]').first().isChecked(),true);
+  assert.equal((await scoped()).speaking['b3-calendar'].draft,previousCalendarDraft);
+  assert.match(await calendarCheck.locator('.status-chip').textContent(),/Best 1\/1/);
+  await page.setViewportSize({width:1440,height:1000});
+  passed('Calendar scenario offers one valid time, optional listening and an independent two-sentence draft with three checks');
 
   const task=speaking.tasks[0];const owner=page.locator(`[data-b3-speaking-owner="${task.chapterId}"]`);await open(owner);
   const prompt=owner.locator('[data-bank-item] > summary');await prompt.focus();await page.keyboard.press('Enter');
@@ -187,21 +241,27 @@ async function main(){
   await page.screenshot({path:path.join(screenshots,'today-desktop.png')});
 
   const offlineContext=await browser.newContext({viewport:{width:390,height:844}});
-  const offline=await offlineContext.newPage();await offline.goto(base+'b3_revision.html');
-  try{await offline.evaluate(async()=>{await Promise.race([navigator.serviceWorker.ready,new Promise((_,reject)=>setTimeout(()=>reject(new Error('Offline worker installation did not finish.')),15000))]);});}catch(error){if(!error.message.includes('Execution context was destroyed'))throw error;}
-  await offline.waitForFunction(()=>Boolean(navigator.serviceWorker.controller));await offline.reload({waitUntil:'networkidle'});
+  const offline=await offlineContext.newPage();
+  // Register before opening the app so its controllerchange reload cannot race test navigation.
+  await offline.goto(base+'__b3-seed.html');
+  await offline.evaluate(async()=>{await navigator.serviceWorker.register('./service-worker.js');});
+  await offline.waitForFunction(()=>navigator.serviceWorker.controller?.state==='activated');
+  await offline.goto(base+'b3_revision.html',{waitUntil:'networkidle'});
   await offline.waitForFunction(()=>document.querySelector('[data-b3-practice-root]')?.dataset.b3Ready==='true');
   await offline.evaluate(topic=>window.MaltiStorage.setJson('malti_topic_practice_v1',topic),preserved.topic);
   await offlineContext.setOffline(true);await offline.reload();
   await offline.waitForFunction(()=>document.querySelector('[data-b3-practice-root]')?.dataset.b3Ready==='true');
   const offlineDraft=await offline.evaluate(()=>window.MaltiStorage.getJson('malti_topic_practice_v1').b3Revision.speaking['b3-feelings'].draft);
   assert.equal(offlineDraft,preserved.topic.b3Revision.speaking['b3-feelings'].draft);
+  const offlinePlan=offline.locator('#b3-calendar-plan');
+  await offlinePlan.locator('[data-b3-speaking] [data-bank-item] > summary').click();
+  assert.equal(await offlinePlan.locator('textarea').inputValue(),planDraft);
   const practice=offline.locator('#b3-town [data-b3-chapter-start]');await open(practice);await practice.click();
   assert.equal(await offline.locator('#b3-town [data-b3-chapter-panel] .exercise-item').count(),6);
   await offlineContext.close();
   passed('all new data, guided drafts, diagram and dynamic practice reopen offline');
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
-  fs.writeFileSync(path.join(output,'validation.json'),JSON.stringify({checks,variantsGraded:126,freshFinalGraded:14,contextQuestionsGraded:28,recognitionAndProductionSeparate:true,spacedReviewAntiInflation:true,repairFlow:true,unfinishedSessionAndRepairResume:true,speakingPersistenceAndInvalidation:true,legacyProgressPreserved:true,backupIncludesDrafts:true,offline:true,errors,failed},null,2)+'\n');
+  fs.writeFileSync(path.join(output,'validation.json'),JSON.stringify({checks,variantsGraded:126,freshFinalGraded:14,contextQuestionsGraded:28,calendarPlan:true,recognitionAndProductionSeparate:true,spacedReviewAntiInflation:true,repairFlow:true,unfinishedSessionAndRepairResume:true,speakingPersistenceAndInvalidation:true,legacyProgressPreserved:true,backupIncludesDrafts:true,offline:true,errors,failed},null,2)+'\n');
   console.log(`PASS B3 enhancements: ${checks} scenario groups.`);
  }catch(error){await page.screenshot({path:path.join(output,'failure.png'),fullPage:false}).catch(()=>{});throw error;}
  finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

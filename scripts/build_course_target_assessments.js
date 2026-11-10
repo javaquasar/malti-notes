@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { createHash } = require("node:crypto");
 
 const root = path.resolve(__dirname, "..");
 const outputFile = path.join(root, "assets", "data", "course_target_assessments.json");
@@ -8,6 +9,10 @@ const bindings = readJson("assets/data/course_target_bindings.json");
 const course = readJson("assets/data/course_path.json");
 const glosses = readJson("assets/data/course_target_glosses.json").glosses;
 const contextualExamples = readJson("assets/data/course_target_examples.json").examples;
+const colourPairs = readJson("assets/data/colors.json").groups
+  .find((group) => group.id === "core-colours").items
+  .map((item) => [item.lemma, item.verifiedClaims?.feminine?.value])
+  .filter(([masculine, feminine]) => masculine && feminine && masculine !== feminine);
 const grammarTargets = new Map(readJson("assets/data/grammar_targets.json").targets.map((target) => [target.id, target]));
 const requestedLevels = new Set(
   (process.env.COURSE_ASSESSMENT_LEVELS || "B1,B2")
@@ -61,10 +66,9 @@ function multipleChoiceItem(entry, index, meanings, suffix = "recognition") {
   };
 }
 
-function trueFalseItem(entry, index, meanings, suffix = "recognition") {
+function trueFalseItem(entry, index, meanings, correct, suffix) {
   const { target, meaning } = entry;
   const distractor = rotate(meanings, index + 1).find((value) => value !== meaning);
-  const correct = index % 2 === 0;
   const shownMeaning = correct ? meaning : distractor;
   return {
     id: `${target.id}-${suffix}-true-false`,
@@ -78,11 +82,63 @@ function trueFalseItem(entry, index, meanings, suffix = "recognition") {
   };
 }
 
-function recognitionItem(entry, index, meanings, suffix = "recognition") {
+function colourRecognitionItem({ target, meaning }, index, pair, correct, suffix) {
+  const form = target.sourceRequirement;
+  const formIndex = pair.indexOf(form);
+  const otherForm = pair[1 - formIndex];
+  const { context, cloze } = clozeExample(target);
+  const gender = formIndex === 0 ? "masculine" : "feminine";
+  const noun = context.maltese.split(" ")[0];
+  const id = `${target.id}-${suffix}`;
+  const shared = {
+    assessmentMode: "recognition",
+    targetIds: [target.id],
+    explanation: `${noun} is ${gender}, so use ${form}. ${context.maltese}`,
+    reviewCard: { maltese: form, english: meaning }
+  };
+  if (index % 2 !== 0) {
+    const sentence = cloze.replace("_____", correct ? form : otherForm);
+    return {
+      ...shared,
+      id: `${id}-true-false`,
+      type: "true-false",
+      prompt: `True or false? “${sentence}” correctly says “${context.english}”`,
+      answer: correct
+    };
+  }
+  const otherColours = colourPairs
+    .filter((candidate) => candidate !== pair && contextualExamples[`${target.chapterId}::${candidate[formIndex]}`])
+    .map((candidate) => candidate[formIndex]);
+  return {
+    ...shared,
+    id,
+    type: "multiple-choice",
+    prompt: `Choose the right colour form. ${cloze} (${context.english})`,
+    choices: rotate([form, otherForm, otherColours[index % otherColours.length]], index % 3),
+    answer: form
+  };
+}
+
+function recognitionItem(entry, index, meanings, trueTargets, suffix = "recognition") {
   if (entry.target.type === "grammar") return grammarAssessmentItem(entry.target, "recognition", suffix);
+  const correct = trueTargets.has(entry.target.id);
+  if (entry.target.chapterId === "b1-colours") {
+    const pair = colourPairs.find((forms) => forms.includes(entry.target.sourceRequirement));
+    if (pair) return colourRecognitionItem(entry, index, pair, correct, suffix);
+  }
   return index % 2 === 0
     ? multipleChoiceItem(entry, index, meanings, suffix)
-    : trueFalseItem(entry, index, meanings, suffix);
+    : trueFalseItem(entry, index, meanings, correct, suffix);
+}
+
+function trueTargetsFor(entries, suffix) {
+  // Keep the existing question types and IDs. Choose half of the actual
+  // true/false candidates by stable hash, independently of display order.
+  const candidates = entries.flatMap(({ target }, index) => index % 2 === 1 && target.type !== "grammar"
+    ? [{ id: target.id, key: createHash("sha256").update(`${suffix}/${target.id}`).digest("hex") }]
+    : []);
+  candidates.sort((left, right) => left.key.localeCompare(right.key));
+  return new Set(candidates.slice(0, Math.ceil(candidates.length / 2)).map(({ id }) => id));
 }
 
 function clozeExample(target) {
@@ -152,12 +208,15 @@ function buildSets(chapter, targets) {
     level: chapter.id.startsWith("b1-") ? "B1" : "B2",
     passPercent: 75
   };
+  const diagnosticTargets = diagnosticEntries(entries);
+  const diagnosticTrueTargets = trueTargetsFor(diagnosticTargets, "diagnostic-recognition");
+  const checkpointTrueTargets = trueTargetsFor(entries, "recognition");
   const diagnostic = {
     ...shared,
     id: `${chapter.id}-diagnostic`,
     kind: "diagnostic",
     title: `${chapter.title} Entry Diagnostic`,
-    items: diagnosticEntries(entries).map((entry, index) => recognitionItem(entry, index, meanings, "diagnostic-recognition"))
+    items: diagnosticTargets.map((entry, index) => recognitionItem(entry, index, meanings, diagnosticTrueTargets, "diagnostic-recognition"))
   };
   const checkpoints = chunks(entries, 6).map((chunk, checkpointIndex) => ({
     ...shared,
@@ -168,7 +227,7 @@ function buildSets(chapter, targets) {
     title: `${chapter.title} Checkpoint ${checkpointIndex + 1}`,
     items: [
       ...chunk.flatMap((entry, index) => [
-        recognitionItem(entry, checkpointIndex * 6 + index, meanings),
+        recognitionItem(entry, checkpointIndex * 6 + index, meanings, checkpointTrueTargets),
         productionItem(entry)
       ]),
       ...(chunk.length > 1 ? [matchingItem(chunk, checkpointIndex)] : [])

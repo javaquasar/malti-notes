@@ -18,6 +18,18 @@
     return response.json();
   };
 
+  const weekdayClip = root.querySelector('[data-b3-weekday-audio]');
+  const weekdayError = root.querySelector('[data-b3-weekday-error]');
+  root.querySelector('[data-b3-weekday-play]')?.addEventListener('click', async () => {
+    try {
+      if (weekdayClip.readyState > 0) weekdayClip.currentTime = 0;
+      await weekdayClip.play();
+      weekdayError.hidden = true;
+    } catch {
+      weekdayError.hidden = false;
+    }
+  });
+
   async function initialize() {
     if (!storage || !core || !runner) throw new Error('The shared study tools are unavailable. Reload the page.');
     const [bank, contexts, speaking] = await Promise.all([
@@ -245,44 +257,45 @@
       if (panel && items.length && items.length===saved.ids.length) mountSession(key,panel,{id:saved.setId,title,passPercent:70,items},object(saved.answers));
     }
 
+    const speakingTasks = speaking.tasks.map(task => ({ ...task, id: task.id ?? task.chapterId }));
     const speakingViews={};
     const speakingRecords=object(state().speaking);
-    for (const task of speaking.tasks) {
-      const record=object(speakingRecords[task.chapterId]);
+    for (const task of speakingTasks) {
+      const record=object(speakingRecords[task.id]);
       speakingViews[task.groupId]={presentation:'selfAssessment',state:{answers:{[task.slug]:record.draft || ''},ratings:{[task.slug]:record.rating || ''}}};
-      const owner=root.querySelector(`[data-b3-speaking-owner="${task.chapterId}"]`);
+      const owner=root.querySelector(`[data-b3-speaking-owner="${task.id}"]`);
       owner.querySelectorAll('[data-b3-speaking-check]').forEach(input=>{
         input.checked=object(record.checklist)[input.dataset.b3SpeakingCheck]===true;
         input.addEventListener('change',()=>{
           const previous=object(state().speaking);
-          const current=object(previous[task.chapterId]);
-          save({speaking:{...previous,[task.chapterId]:{...current,checklist:{...object(current.checklist),[input.dataset.b3SpeakingCheck]:input.checked}}}});
+          const current=object(previous[task.id]);
+          save({speaking:{...previous,[task.id]:{...current,checklist:{...object(current.checklist),[input.dataset.b3SpeakingCheck]:input.checked}}}});
           speakingStatus(task);
         });
       });
     }
     function speakingStatus(task) {
-      const owner=root.querySelector(`[data-b3-speaking-owner="${task.chapterId}"]`);
-      const record=object(object(state().speaking)[task.chapterId]);
+      const owner=root.querySelector(`[data-b3-speaking-owner="${task.id}"]`);
+      const record=object(object(state().speaking)[task.id]);
       const checked=Object.values(object(record.checklist)).filter(Boolean).length;
       setText('[data-b3-speaking-status]',`${record.draft?'Draft saved':'Write your own response'} · ${checked}/${task.checklist.length} self-checks${record.rating?' · '+(record.rating==='confident'?'confident':'needs practice')+' (self-assessed)':''}`,owner);
     }
     root.addEventListener('malti-bank-draft',event=>{
-      const task=speaking.tasks.find(task=>task.slug===event.detail.slug);
+      const task=speakingTasks.find(task=>task.slug===event.detail.slug);
       if(!task)return;
       const records=object(state().speaking);
-      const previous=object(records[task.chapterId]);
-      save({speaking:{...records,[task.chapterId]:{...previous,draft:event.detail.value,rating:null,checklist:{}}}});
-      const owner=root.querySelector(`[data-b3-speaking-owner="${task.chapterId}"]`);
+      const previous=object(records[task.id]);
+      save({speaking:{...records,[task.id]:{...previous,draft:event.detail.value,rating:null,checklist:{}}}});
+      const owner=root.querySelector(`[data-b3-speaking-owner="${task.id}"]`);
       owner.querySelectorAll('[data-b3-speaking-check]').forEach(input=>{input.checked=false;});
       owner.querySelectorAll('.toolbar-row .action-button[aria-pressed]').forEach(button=>{button.ariaPressed='false';});
       speakingStatus(task);
     });
     root.addEventListener('malti-bank-rating',event=>{
-      const task=speaking.tasks.find(task=>task.slug===event.detail.slug);
+      const task=speakingTasks.find(task=>task.slug===event.detail.slug);
       if(!task)return;
       const records=object(state().speaking);
-      save({speaking:{...records,[task.chapterId]:{...object(records[task.chapterId]),rating:event.detail.value}}});
+      save({speaking:{...records,[task.id]:{...object(records[task.id]),rating:event.detail.value}}});
       speakingStatus(task);
     });
     await window.renderExampleBanksFromData({
@@ -293,7 +306,7 @@
     await window.renderExampleBanksFromData({
       dataUrl:'./assets/data/b3_context_examples.json',data:contexts,groupAttribute:'data-b3-context',reviewPrefix:'b3-context',sourcePage:'b3_revision.html',groupViews:readingViews,numbered:false
     });
-    speaking.tasks.forEach(speakingStatus);
+    speakingTasks.forEach(speakingStatus);
     root.querySelectorAll('[data-b3-toggle-translations]').forEach(input=>{
       const toggle=()=>input.closest('[data-b3-context-owner]').querySelectorAll('[data-bank-translation]').forEach(element=>{element.hidden=!input.checked;});
       input.addEventListener('change',toggle);

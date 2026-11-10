@@ -274,8 +274,8 @@
           "targetIds": [
             "b1-animals-emu"
           ],
-          "prompt": "True or false: “emu” means “jellyfish” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “emu” means “emu” in this chapter.",
+          "answer": true,
           "explanation": "emu means “emu”.",
           "reviewCard": {
             "maltese": "emu",
@@ -291,8 +291,8 @@
           "targetIds": [
             "b1-animals-fekruna"
           ],
-          "prompt": "True or false: “fekruna” means “hen” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “fekruna” means “turtle” in this chapter.",
+          "answer": true,
           "explanation": "fekruna means “turtle”.",
           "reviewCard": {
             "maltese": "fekruna",
@@ -344,19 +344,19 @@
           "sourceChapterId": "b1-animals"
         },
         {
-          "id": "course-milestone-b1-b1-colours-recognition-1",
-          "type": "true-false",
           "assessmentMode": "recognition",
           "targetIds": [
             "b1-colours-bajda"
           ],
-          "prompt": "True or false: “bajda” means “red” in this chapter.",
-          "answer": false,
-          "explanation": "bajda means “white (feminine)”.",
+          "explanation": "Il-kaxxa is feminine, so use bajda. Il-kaxxa hija bajda.",
           "reviewCard": {
             "maltese": "bajda",
             "english": "white (feminine)"
           },
+          "id": "course-milestone-b1-b1-colours-recognition-1",
+          "type": "true-false",
+          "prompt": "True or false? “Il-kaxxa hija abjad.” correctly says “The box is white.”",
+          "answer": false,
           "sourceAssessmentId": "b1-colours-bajda-recognition-true-false",
           "sourceChapterId": "b1-colours"
         },
@@ -367,8 +367,8 @@
           "targetIds": [
             "b1-colours-bandiera"
           ],
-          "prompt": "True or false: “bandiera” means “Italy” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “bandiera” means “flag” in this chapter.",
+          "answer": true,
           "explanation": "bandiera means “flag”.",
           "reviewCard": {
             "maltese": "bandiera",
@@ -502,8 +502,8 @@
           "targetIds": [
             "b1-family-genituri"
           ],
-          "prompt": "True or false: “ġenituri” means “mother” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “ġenituri” means “parents” in this chapter.",
+          "answer": true,
           "explanation": "ġenituri means “parents”.",
           "reviewCard": {
             "maltese": "ġenituri",
@@ -624,8 +624,8 @@
           "targetIds": [
             "b2-school-bag-antiki"
           ],
-          "prompt": "True or false: “antiki” means “colourful (feminine)” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “antiki” means “antique / old (plural)” in this chapter.",
+          "answer": true,
           "explanation": "antiki means “antique / old (plural)”.",
           "reviewCard": {
             "maltese": "antiki",
@@ -640,13 +640,13 @@
           "targetIds": [
             "b2-school-bag-basket-tal-iskola"
           ],
-          "prompt": "Complete the Maltese sentence: “Hemm _____ fil-basket tal-iskola.” (The school bag contains the school bag.)",
+          "prompt": "Complete the Maltese sentence: “Fil-_____ tiegħi għandi ktieb.” (I have a book in my school bag.)",
           "answer": "basket tal-iskola",
-          "explanation": "The complete sentence is “Hemm basket tal-iskola fil-basket tal-iskola.”",
+          "explanation": "The complete sentence is “Fil-basket tal-iskola tiegħi għandi ktieb.”",
           "reviewCard": {
             "maltese": "basket tal-iskola",
             "english": "school bag",
-            "example": "Hemm basket tal-iskola fil-basket tal-iskola."
+            "example": "Fil-basket tal-iskola tiegħi għandi ktieb."
           },
           "type": "order-words",
           "tokens": [
@@ -684,8 +684,8 @@
           "targetIds": [
             "b2-imperative-aghmel"
           ],
-          "prompt": "True or false: “agħmel” means “one” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “agħmel” means “do / make (singular command)” in this chapter.",
+          "answer": true,
           "explanation": "agħmel means “do / make (singular command)”.",
           "reviewCard": {
             "maltese": "agħmel",
@@ -1012,8 +1012,8 @@
           "targetIds": [
             "b2-town-ieqaf"
           ],
-          "prompt": "True or false: “Ieqaf” means “Turn right” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “Ieqaf” means “stop (singular command)” in this chapter.",
+          "answer": true,
           "explanation": "Ieqaf means “stop (singular command)”.",
           "reviewCard": {
             "maltese": "Ieqaf",
@@ -1029,8 +1029,8 @@
           "targetIds": [
             "b2-town-imxi-dritt"
           ],
-          "prompt": "True or false: “Imxi dritt” means “Go up” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “Imxi dritt” means “Go straight” in this chapter.",
+          "answer": true,
           "explanation": "Imxi dritt means “Go straight”.",
           "reviewCard": {
             "maltese": "Imxi dritt",
@@ -1202,8 +1202,8 @@
           "targetIds": [
             "b1-introductions-cajtier"
           ],
-          "prompt": "True or false: “ċajtier” means “funny / playful” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “ċajtier” means “playful / funny (masculine)” in this chapter.",
+          "answer": true,
           "explanation": "ċajtier means “playful / funny (masculine)”.",
           "reviewCard": {
             "maltese": "ċajtier",
@@ -1445,8 +1445,8 @@
           "targetIds": [
             "b1-family-hu"
           ],
-          "prompt": "True or false: “ħu” means “sister” in this chapter.",
-          "answer": false,
+          "prompt": "True or false: “ħu” means “brother” in this chapter.",
+          "answer": true,
           "explanation": "ħu means “brother”.",
           "reviewCard": {
             "maltese": "ħu",
