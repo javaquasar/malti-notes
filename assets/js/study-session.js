@@ -5,6 +5,7 @@
   if (!root) return;
   const KEY = 'malti_topic_practice_v1';
   const storage = window.MaltiStorage, core = window.MaltiStudySessionCore, runner = window.MaltiExerciseRunner;
+  const { LESSON05, ROUTE_IDS } = core;
   const object = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
   const all = () => object(storage.getJson(KEY, {}));
   const state = () => object(all().studySession);
@@ -24,7 +25,15 @@
   let course, manifest, b3, routes = [], route, plan, session, activeSet;
   let rendering = false, submitted = false, handled = false, selectionVersion = 0, helpPage = 0;
 
+  const isLesson05 = entry => (entry.levelId || entry.routeId) === LESSON05.levelId;
+  const routeTitle = entry => (entry.levelLabel || entry.levelId.toUpperCase()) + ' · ' + entry.title;
+  const parentQueue = () => (state().helpQueue || []).filter(entry => !isLesson05(entry));
+  const repeatCount = () => core.lesson05Repeats(plan.catalog, state().helpQueue).length;
+  const repeatLabel = count => `Repeat ${count} question${count === 1 ? '' : 's'}`;
+  const retryAdvice = () => isLesson05(route) ? 'You can try again or repeat this question later.' : 'You can try again or leave this for a parent.';
+
   function sourceLink(entry) {
+    if (isLesson05(entry)) return './noun_plurals.html#practice';
     return entry.levelId === 'b3' ? './b3_revision.html#' + entry.id
       : './course_chapter.html?chapter=' + encodeURIComponent(entry.id);
   }
@@ -33,10 +42,12 @@
       targetProgress: runner.getTargetProgress(), helpQueue: state().helpQueue || [] };
     if (selected.levelId === 'b3') return core.planB3(b3, object(all().b3Revision).core, options);
     if (!payloads.has(selected.id)) {
-      const summary = manifest.chapters.find(chapter => chapter.id === selected.id);
-      payloads.set(selected.id, load(summary.file).catch(error => { payloads.delete(selected.id); throw error; }));
+      const file = isLesson05(selected) ? './assets/data/lesson05_exercises.json'
+        : manifest.chapters.find(chapter => chapter.id === selected.id).file;
+      payloads.set(selected.id, load(file).catch(error => { payloads.delete(selected.id); throw error; }));
     }
     const payload = await payloads.get(selected.id);
+    if (isLesson05(selected)) return core.planLesson05(payload, state().helpQueue);
     return core.planCourse({ course, assessments: payload.assessmentSets, supplements: payload.supplementalItems,
       targets: payload.targets || [] }, options);
   }
@@ -91,7 +102,7 @@
     panel.querySelectorAll('input, select, .exercise-token').forEach(input => { input.disabled = disabled; });
   }
   function refreshHelpQueue() {
-    const pending = state().helpQueue || [], slots = [...root.querySelectorAll('[data-study-help-slot]')];
+    const pending = parentQueue(), slots = [...root.querySelectorAll('[data-study-help-slot]')];
     helpPage = Math.max(0, Math.min(helpPage, Math.ceil(pending.length / slots.length) - 1));
     const start = helpPage * slots.length;
     slots.forEach((slot, index) => {
@@ -134,16 +145,19 @@
   }
   function refreshHome() {
     if (!route || !plan) return;
-    say('[data-study-topic-title]', route.levelId.toUpperCase() + ' · ' + route.title);
+    say('[data-study-topic-title]', routeTitle(route));
     const current = state();
     const saved = core.resumeSession(object(current.sessions)[route.id], plan.catalog);
     const unfinished = saved && !core.summary(saved).complete;
     refreshWarmup(current, saved);
-    find('[data-study-start]').textContent = unfinished ? 'Continue practice' : 'Start practice';
+    const repeats = isLesson05(route) ? repeatCount() : 0;
+    find('[data-study-start]').textContent = unfinished ? 'Continue practice' : repeats ? repeatLabel(repeats) : 'Start practice';
     find('[data-study-start]').disabled = !plan.entries.length;
     say('[data-study-home-status]', unfinished
       ? `Continue at question ${saved.index + 1} of ${saved.entries.length}. Your answers are saved.`
-      : `${plan.entries.length} short questions, one at a time.`);
+      : isLesson05(route) ? repeats ? 'Answer again without hints to clear your repeat list.'
+        : `${plan.catalog.length} questions. Write a complete sentence in Maltese for each one.`
+        : `${plan.entries.length} short questions, one at a time.`);
     topicSelect.value = route.id;
     [...topicSelect.options].forEach(option => { option.hidden = option.dataset.level !== route.levelId; option.disabled = option.hidden; });
     root.querySelectorAll('[data-study-level]').forEach(button => { button.ariaPressed = String(button.dataset.studyLevel === route.levelId); });
@@ -179,9 +193,18 @@
     const summary = core.summary(session);
     find('[data-study-home]').hidden = true; find('[data-study-session]').hidden = true; find('[data-study-finish]').hidden = false;
     say('[data-study-result]', `${summary.checked} answer${summary.checked === 1 ? '' : 's'} checked out of ${summary.total}: ${summary.independentCorrect} correct on your own and ${summary.correct - summary.independentCorrect} correct with help.`);
-    say('[data-study-result-help]', summary.deferred
-      ? `${summary.deferred} question${summary.deferred === 1 ? '' : 's'} left for a parent. You can look at it together later.`
-      : summary.helpCount ? 'Some questions are saved to practise together later.' : 'Your next practice will use your results.');
+    if (isLesson05(route)) {
+      const repeats = repeatCount();
+      say('[data-study-result-help]', repeats
+        ? 'Missed, skipped and helped answers are saved for another try in My practice.'
+        : 'You answered every question in this session correctly on your own.');
+      say('[data-study-new]', repeats ? repeatLabel(repeats) : 'Start full practice again');
+    } else {
+      say('[data-study-result-help]', summary.deferred
+        ? `${summary.deferred} question${summary.deferred === 1 ? '' : 's'} left for a parent. You can look at it together later.`
+        : parentQueue().length ? 'Some questions are saved to practise together later.' : 'Your next practice will use your results.');
+      say('[data-study-new]', 'Another short session');
+    }
     find('[data-study-calendar-finish]').hidden = session.chapterId !== 'b3-calendar';
     refreshHelpQueue(); status('Session finished. Your work is saved.');
     find('#study-finish-title').focus();
@@ -244,16 +267,19 @@
       panel.querySelectorAll('.exercise-actions button').forEach(button => { if (button.textContent === 'Try again') button.hidden = Boolean(result.previousQuestion); });
       setAnswerDisabled(true);
     }
-    say('[data-study-session-title]', route.levelId.toUpperCase() + ' · ' + route.title);
+    say('[data-study-session-title]', routeTitle(route));
     say('[data-study-step-status]', `Question ${session.index + 1} of ${session.entries.length}`);
     find('[data-study-next]').disabled = !result?.checked;
     find('[data-study-next]').textContent = session.index + 1 === session.entries.length ? 'See my result' : 'Next question';
+    find('[data-study-reading]').hidden = !isLesson05(route) || entry.item.sourcePage !== 'places_events.html#lesson05-il-festi';
     const assisted = session.hints[entry.item.id] === true;
     showSupport(entry, result);
     const feedback = result?.previousQuestion ? 'You checked an earlier version of this question. Your result is saved. Go to the next question.'
-      : result?.checked ? result.correct ? 'You can go to the next question.' : 'You can try again or leave this for a parent.'
+      : result?.checked ? result.correct ? 'You can go to the next question.' : retryAdvice()
       : assisted ? 'This attempt uses a hint. Your independent results stay separate.' : '';
     say('[data-study-feedback]', feedback);
+    say('[data-study-ask]', isLesson05(route) ? 'Save for later' : 'Leave this for a parent');
+    find('[data-study-ask]').hidden = isLesson05(route) && result?.checked === true;
     find('[data-study-home]').hidden = true; find('[data-study-finish]').hidden = true; find('[data-study-session]').hidden = false;
     rendering = false;
     status('');
@@ -294,7 +320,7 @@
   async function initialize() {
     [course, manifest, b3] = await Promise.all([load('./assets/data/course_path.json'), load('./assets/data/course/manifest.json'), load('./assets/data/b3_practice_bank.json')]);
     routes = course.levels.flatMap(level => level.chapters.map(chapter => ({ id: chapter.id, levelId: level.id, title: chapter.title })))
-      .concat(b3.chapters.map(chapter => ({ id: chapter.id, levelId: 'b3', title: chapter.title })));
+      .concat(b3.chapters.map(chapter => ({ id: chapter.id, levelId: 'b3', title: chapter.title })), LESSON05);
     root.querySelectorAll('[data-study-level]').forEach(button => button.addEventListener('click', guarded(async () => {
       const id = button.dataset.studyLevel;
       await selectRoute(routes.find(candidate => candidate.id === object(state().topicsByLevel)[id] && candidate.levelId === id) || routes.find(candidate => candidate.levelId === id));
@@ -313,7 +339,11 @@
     find('[data-study-model]').addEventListener('click', () => assist('example'));
     find('[data-study-solution]').addEventListener('click', () => assist('solution'));
     find('[data-study-next]').addEventListener('click', () => { if (!session || !session.results[session.entries[session.index]?.item.id]?.checked) return; session = core.advance(session); persistSession(); drawStep(); });
-    find('[data-study-ask]').addEventListener('click', () => { if (!session) return; remember(); session.helpQueue = state().helpQueue || []; session = core.requestHelp(session); persistSession(); drawStep(); status('Saved for a parent. You can continue with the next question.'); });
+    find('[data-study-ask]').addEventListener('click', () => {
+      if (!session) return;
+      remember(); session.helpQueue = state().helpQueue || []; session = core.requestHelp(session); persistSession(); drawStep();
+      status(isLesson05(route) ? 'Saved to repeat in My practice.' : 'Saved for a parent. You can continue with the next question.');
+    });
     find('[data-study-done]').addEventListener('click', () => { find('[data-study-finish]').hidden = true; find('[data-study-home]').hidden = false; refreshHome(); status('Practice finished. Your work is saved.'); });
     find('[data-study-new]').addEventListener('click', guarded(() => startPractice(true)));
     find('[data-study-assign]').addEventListener('click', guarded(async () => {
@@ -321,7 +351,7 @@
       if (!selected) return;
       remember(); save({ assignment: { levelId: selected.levelId, chapterId: selected.id } });
       await selectRoute(selected);
-      say('[data-study-assignment-status]', selected.levelId.toUpperCase() + ' · ' + selected.title + ' is chosen. Earlier sessions stay saved.');
+      say('[data-study-assignment-status]', routeTitle(selected) + ' is chosen. Earlier sessions stay saved.');
     }));
     root.querySelectorAll('[data-help-resolve]').forEach(button => button.addEventListener('click', () => {
       const id = button.closest('[data-study-help-slot]').dataset.helpKey;
@@ -371,11 +401,12 @@
       }
       persistSession(); setAnswerDisabled(true); find('[data-study-next]').disabled = false;
       showSupport(entry, saved);
-      say('[data-study-feedback]', result.correct ? 'Answer checked. You can go to the next question.' : 'You can try again or leave this for a parent.');
+      if (isLesson05(route)) find('[data-study-ask]').hidden = true;
+      say('[data-study-feedback]', result.correct ? 'Answer checked. You can go to the next question.' : retryAdvice());
       refreshHelpQueue();
     });
     const params = new URLSearchParams(location.search), current = state();
-    const level = ['b1', 'b2', 'b3'].includes(params.get('level')) ? params.get('level') : ['b1', 'b2', 'b3'].includes(current.levelId) ? current.levelId : 'b1';
+    const level = ROUTE_IDS.includes(params.get('level')) ? params.get('level') : ROUTE_IDS.includes(current.levelId) ? current.levelId : 'b1';
     const requested = params.get('topic') || params.get('chapter') || object(current.topicsByLevel)[level];
     await selectRoute(routes.find(candidate => candidate.id === requested && candidate.levelId === level) || routes.find(candidate => candidate.levelId === level));
   }

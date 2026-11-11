@@ -8,6 +8,8 @@
     'use strict';
     const MODES = ['recognition', 'production'];
     const TYPES = ['multiple-choice', 'true-false', 'fill-blank', 'order-words', 'matching'];
+    const LESSON05 = Object.freeze({ id: 'lesson05-mixed', levelId: 'lesson05', levelLabel: 'Lesson 05', title: 'Mixed practice' });
+    const ROUTE_IDS = Object.freeze(['b1', 'b2', 'b3', LESSON05.levelId]);
     const blocked = new Set(['__proto__', 'prototype', 'constructor']);
     const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
     const owns = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
@@ -24,6 +26,7 @@
     const now = value => timestamp(value) ?? Date.now();
     const iso = value => new Date(now(value)).toISOString();
     const limit = value => Number.isFinite(value) ? Math.min(6, count(value)) : 6;
+    const sessionLimit = routeId => routeId === LESSON05.levelId ? 12 : 6;
     const publishable = item => object(item) && key(item.id) && item.verificationStatus !== 'needs-review'
         && TYPES.includes(item.type) && MODES.includes(item.assessmentMode) && !!text(item.prompt).trim();
     const queueKey = entry => [entry.routeId, entry.chapterId, entry.skillId || entry.itemId, entry.mode].join('::');
@@ -98,7 +101,7 @@
             && candidate.item.id !== item.id && candidate.item.prompt.includes(`“${scaffold}”`)) : [];
         const model = [entry, ...alternatives].map(candidate => candidate.help.model)
             .find(value => value?.maltese && !modelGivesAnswer(item, value));
-        return { clue: clues[item.type], model };
+        return { clue: text(item.hint) || clues[item.type], model };
     }
 
     function warmupFor(plan) {
@@ -223,8 +226,25 @@
         return { routeId, chapterId, title: text(array(bank?.chapters).find(chapter => chapter.id === chapterId)?.title || 'B3 practice'), entries, catalog: copy(catalog) };
     }
 
+    function lesson05Repeats(catalog, queue) {
+        const pending = new Set(cleanQueue(queue).map(queueKey));
+        return catalog.filter(entry => pending.has(queueKey({ ...entry, itemId: entry.item.id })));
+    }
+
+    function planLesson05(bank, queue) {
+        const { id: chapterId, levelId: routeId, title } = LESSON05;
+        const set = array(bank?.sets).find(value => value.id === chapterId && value.verificationStatus !== 'needs-review');
+        const catalog = array(set?.items).filter(publishable).map(item => ({
+            item: copy(item), routeId, chapterId, chapterTitle: title, originSetId: set.id,
+            skillId: item.id, mode: item.assessmentMode, help: helpFor(item)
+        }));
+        const repeats = lesson05Repeats(catalog, queue);
+        return { routeId, chapterId, title, entries: repeats.length ? repeats : catalog, catalog };
+    }
+
     function createSession(plan, options) {
-        const opts = object(options) ? options : {}, entries = array(plan?.entries).filter(entry => publishable(entry.item)).slice(0, 6).map(copy);
+        const opts = object(options) ? options : {};
+        const entries = array(plan?.entries).filter(entry => publishable(entry.item)).slice(0, sessionLimit(plan?.routeId)).map(copy);
         const createdAt = iso(opts.now), id = key(opts.id) ? opts.id : 's' + now(opts.now).toString(36);
         return { schemaVersion: 1, id, routeId: text(plan?.routeId), chapterId: text(plan?.chapterId), title: text(plan?.title),
             entries, index: 0, drafts: {}, results: {}, hints: {}, helpQueue: cleanQueue(opts.helpQueue),
@@ -242,8 +262,8 @@
     }
 
     function resumeSession(raw, itemsById) {
-        if (!object(raw) || raw.schemaVersion !== 1 || !key(raw.id) || !['b1', 'b2', 'b3'].includes(raw.routeId)
-            || !Array.isArray(raw.entries) || !raw.entries.length || raw.entries.length > 6) return null;
+        if (!object(raw) || raw.schemaVersion !== 1 || !key(raw.id) || !ROUTE_IDS.includes(raw.routeId)
+            || !Array.isArray(raw.entries) || !raw.entries.length || raw.entries.length > sessionLimit(raw.routeId)) return null;
         const seen = new Set(), entries = [], updated = [];
         for (const saved of raw.entries) {
             const id = saved?.item?.id;
@@ -363,5 +383,5 @@
             complete: count(session?.index) >= array(session?.entries).length, helpCount: cleanQueue(session?.helpQueue).length };
     }
 
-    return Object.freeze({ planCourse, planB3, warmupFor, supportFor, createSession, resumeSession, updateDraft, useHint, beginRetry, requestHelp, recordResult, advance, stepSet, summary });
+    return Object.freeze({ ROUTE_IDS, LESSON05, planCourse, planB3, planLesson05, lesson05Repeats, warmupFor, supportFor, createSession, resumeSession, updateDraft, useHint, beginRetry, requestHelp, recordResult, advance, stepSet, summary });
 }));

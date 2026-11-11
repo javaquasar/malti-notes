@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Practice — Maltese Study Site</title>
-  <meta name="description" content="Continue a short B1, B2 or B3 Maltese practice session, save answers and ask a parent for help.">
+  <meta name="description" content="Practise Maltese with B1, B2, B3 or Lesson 05. Save your answers and repeat questions that need more practice.">
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
   <link rel="stylesheet" href="./assets/css/theme.css"><link rel="stylesheet" href="./assets/css/site.css"><link rel="stylesheet" href="./assets/css/pages.css">
 </head>
@@ -17,6 +17,7 @@
         <button class="toggle-chip" type="button" data-study-level="b1" aria-pressed="true">B1</button>
         <button class="toggle-chip" type="button" data-study-level="b2" aria-pressed="false">B2</button>
         <button class="toggle-chip" type="button" data-study-level="b3" aria-pressed="false">B3</button>
+        <button class="toggle-chip" type="button" data-study-level="lesson05" aria-pressed="false">Lesson 05</button>
       </div>
       <section class="content-card" aria-labelledby="study-topic-title">
         <h2 id="study-topic-title" tabindex="-1" data-study-topic-title>Your next topic</h2>
@@ -69,6 +70,7 @@
           <option value="b3-people" data-level="b3">B3 · People, possession and jobs</option>
           <option value="b3-ambitions" data-level="b3">B3 · Ambitions and hobbies</option>
           <option value="b3-town" data-level="b3">B3 · My town and future plans</option>
+          <option value="lesson05-mixed" data-level="lesson05">Lesson 05 · Mixed practice</option>
           </select></label>
           <p>Started sessions stay saved when you switch topics.</p>
           <a class="action-link" data-study-reference href="./course_path.html">Full topic reference</a>
@@ -81,6 +83,7 @@
       <div data-study-exercise></div>
       <div class="toolbar-row">
         <button class="action-button" type="button" data-study-hint aria-controls="study-help" aria-expanded="false">Hint</button>
+        <a class="action-link" href="./places_events.html#lesson05-il-festi" target="_blank" rel="noopener" data-study-reading hidden>Read Il-Festi (new tab)</a>
       </div>
       <div class="info-card" id="study-help" data-study-help hidden>
         <strong>Something to remember</strong><p data-study-help-explanation></p>
@@ -135,6 +138,7 @@
           <option value="b3-people" data-level="b3">B3 · People, possession and jobs</option>
           <option value="b3-ambitions" data-level="b3">B3 · Ambitions and hobbies</option>
           <option value="b3-town" data-level="b3">B3 · My town and future plans</option>
+          <option value="lesson05-mixed" data-level="lesson05">Lesson 05 · Mixed practice</option>
           </select></label>
           <button class="action-button" type="button" data-study-assign>Use this topic</button>
           <p role="status" data-study-assignment-status></p>

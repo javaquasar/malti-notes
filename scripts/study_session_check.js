@@ -11,10 +11,12 @@ fs.mkdirSync(output, { recursive: true });
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const course = read('assets/data/course_path.json');
 const bank = read('assets/data/b3_practice_bank.json');
+const lesson05 = read('assets/data/lesson05_exercises.json').sets.find(set => set.id === 'lesson05-mixed');
 const chapterFiles = course.levels.flatMap(level => level.chapters.map(chapter => ({ ...chapter, levelId: level.id, data: read('assets/data/course/chapters/' + chapter.id + '.json') })));
 const originalSets = chapterFiles.flatMap(chapter => chapter.data.assessmentSets);
 const items = new Map(originalSets.flatMap(set => set.items).map(item => [item.id, item]));
 bank.chapters.forEach(chapter => chapter.patterns.forEach(pattern => [...pattern.variants, pattern.transfer].filter(Boolean).forEach(item => items.set(item.id, item))));
+lesson05.items.forEach(item => items.set(item.id, item));
 const wholeCheckIds = new Set([...originalSets.map(set => set.id), ...bank.chapters.map(chapter => chapter.id + '-check'), 'b3-mixed-check', bank.finalSet.id]);
 const key = 'malti_topic_practice_v1';
 const record = { attempts: 5, correct: 4, streak: 2, lastAt: '2026-10-01T12:00:00.000Z', dueAt: '2099-01-01T00:00:00.000Z', lastItemId: 'preserved-item', lastCorrect: true, spacedSuccesses: 2, lastSpacedSuccessAt: '2026-10-01T12:00:00.000Z' };
@@ -82,7 +84,7 @@ async function fixture(label, { width = 1280, theme = 'classic', serviceWorkers 
 async function ready(page) {
   assert.equal(await page.locator('[data-study-root]').count(), 1, 'The study HTML must be returned at ' + page.url() + ' (received title: ' + await page.title() + ')');
   await page.locator('[data-study-root]').waitFor();
-  await page.waitForFunction(() => document.querySelectorAll('[data-study-topic] option').length === 21 && !document.querySelector('[data-study-start]')?.disabled);
+  await page.waitForFunction(() => document.querySelector('[data-study-topic]').value && !document.querySelector('[data-study-start]')?.disabled);
   await page.evaluate(async () => { await document.fonts.ready; });
 }
 async function open(page, suffix = '') { page.__phase = 'navigation'; await page.goto(base + '/today.html' + suffix, { waitUntil: 'networkidle' }); await ready(page); page.__phase = 'online'; }
@@ -98,12 +100,12 @@ async function level(page, id, chapterId) {
     await page.waitForFunction(({ key, chapterId }) => JSON.parse(localStorage.getItem(key)).studySession.chapterId === chapterId && !document.querySelector('[data-study-start]').disabled, { key, chapterId });
   }
 }
-async function start(page) {
+async function start(page, size = 6) {
   await page.locator('[data-study-start]').click();
   await page.locator('[data-study-session]').waitFor({ state: 'visible' });
   await page.locator('[data-study-exercise] .exercise-item').waitFor({ state: 'visible' });
   const { session } = await current(page);
-  assert.equal(session.entries.length, 6); assert.equal(new Set(session.entries.map(entry => entry.item.id)).size, 6);
+  assert.equal(session.entries.length, size); assert.equal(new Set(session.entries.map(entry => entry.item.id)).size, size);
   assert.equal(await page.locator('[data-study-exercise] .exercise-item:visible').count(), 1);
   session.entries.forEach(entry => assert(items.has(entry.item.id), 'Authored item identity ' + entry.item.id));
   return session;
@@ -119,8 +121,10 @@ async function answer(page, item, correct = true) {
   else if (item.type === 'matching') for (const [index, pair] of item.pairs.entries()) await container.locator('select').nth(index).selectOption(pair.right);
   else throw Error('Unsupported authored task: ' + item.type);
 }
-async function submit(page, correct = true) {
-  const before = await current(page); await answer(page, items.get(before.entry.item.id), correct);
+async function submit(page, correct = true, sentence) {
+  const before = await current(page);
+  if (sentence === undefined) await answer(page, items.get(before.entry.item.id), correct);
+  else await page.locator('[data-study-exercise] [data-exercise-answer]').fill(sentence);
   await page.locator('[data-study-exercise]').getByRole('button', { name: 'Check answers', exact: true }).click();
   await page.waitForFunction(({ key, id }) => { const state = JSON.parse(localStorage.getItem(key)).studySession; return state.sessions[state.chapterId].results[id]?.checked; }, { key, id: before.entry.item.id });
   assert.match(await page.locator('[data-study-exercise] .exercise-result').innerText(), correct ? /^1\/1/ : /^0\/1/);
@@ -270,6 +274,61 @@ async function main() {
     await check('B3 writes only independent pattern results and preserves previous B3 drafts, metadata and SRS', async () => {
       const f = await fixture('b3-pattern-progress');
       try { const page = f.page; await open(page); await level(page, 'b3', bank.chapters[0].id); await start(page); const independent = await submit(page); const state = await stored(page), result = state.b3Revision.core.patterns[independent.skillId][independent.mode]; assert.equal(result.attempts, 1); assert.equal(result.correct, 1); assert.equal(result.spacedSuccesses, 1); await next(page); const beforeHelp = (await stored(page)).b3Revision.core; await page.locator('[data-study-hint]').click(); await submit(page); assert.deepEqual((await stored(page)).b3Revision.core, beforeHelp, 'Helped B3 answers must not earn independent credit'); assert.deepEqual(await axe(page), []); await next(page); await page.locator('[data-study-ask]').click(); assert.deepEqual((await stored(page)).b3Revision.core, beforeHelp); await preserved(page); await capture(page, 'study-b3-task.png'); return { pattern: independent.skillId, mode: independent.mode, independentAttempts: 1, independentSpacedSuccesses: 1 }; } finally { await f.close(); }
+    });
+
+    await check('Lesson 05 grades 12 whole sentences and repeats only missed, assisted or deferred answers', async () => {
+      const f = await fixture('lesson05-mixed', { width: 390 });
+      try {
+        const page = f.page;
+        await page.goto(base + '/noun_plurals.html#practice');
+        await page.getByRole('link', { name: 'Start Lesson 05 mixed practice' }).click();
+        await ready(page);
+        const initial = await start(page, 12);
+        const [missed, assisted, skipped] = lesson05.items;
+        const reading = page.getByRole('link', { name: 'Read Il-Festi (new tab)' });
+        assert.equal(await reading.count(), 0);
+        await submit(page, false, 'Boċċi ħodor');
+        const feedback = page.locator('[data-study-exercise] .exercise-feedback');
+        assert((await feedback.innerText()).includes(missed.answer));
+        assert((await feedback.innerText()).includes(missed.explanation));
+        await reload(page);
+        const resumed = await start(page, 12);
+        assert.equal(resumed.id, initial.id);
+        assert((await feedback.innerText()).includes(missed.explanation));
+        await next(page);
+
+        await page.locator('[data-study-hint]').click();
+        assert.equal(await page.locator('[data-study-help-explanation]').innerText(), assisted.hint);
+        await submit(page);
+        await next(page);
+        await page.getByRole('button', { name: 'Save for later' }).click();
+        for (const item of lesson05.items.slice(3)) {
+          assert.equal((await current(page)).entry.item.id, item.id);
+          if (item.sourcePage.endsWith('#lesson05-il-festi')) assert.equal(await reading.isVisible(), true);
+          await submit(page);
+          await next(page);
+        }
+        assert.equal(await page.locator('[data-study-new]').innerText(), 'Repeat 3 questions');
+        await reload(page);
+        assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 3 questions');
+        const repeats = await start(page, 3);
+        assert.deepEqual(repeats.entries.map(entry => entry.item.id), [missed.id, assisted.id, skipped.id]);
+        await submit(page, true, missed.accepted[1] + '.');
+        await next(page);
+        for (const item of [assisted, skipped]) {
+          assert.equal((await current(page)).entry.item.id, item.id);
+          await submit(page);
+          await next(page);
+        }
+        assert.equal(await page.locator('[data-study-new]').innerText(), 'Start full practice again');
+        assert.deepEqual((await stored(page)).studySession.helpQueue, []);
+        await preserved(page);
+        await page.locator('[data-study-new]').click();
+        await page.locator('[data-study-session]').waitFor({ state: 'visible' });
+        assert.equal(await page.locator('[data-study-step-status]').innerText(), 'Question 1 of 12');
+        assert.deepEqual(await axe(page), []);
+        return { initial: 12, repeated: 3, cleared: true };
+      } finally { await f.close(); }
     });
 
     await check('Parent assignment, manual help pagination and resolution persist without grading', async () => {
