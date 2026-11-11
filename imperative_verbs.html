@@ -53,6 +53,7 @@
                 <li><a href="#present-to-imperative">Present -> Imperative Drill</a></li>
                 <li><a href="#tricky-imperatives">Irregular / Tricky Imperatives</a></li>
                 <li><a href="#imperative-shortlist">Imperative Shortlist</a></li>
+                <li><a href="#lesson05-commands">Lesson 05 Commands and Advice</a></li>
             </ul>
             <p class="mini">
                 This page keeps the verb list compact and practical. Use the lookup section when you want the full paradigm behind a table entry.
@@ -144,6 +145,16 @@
                 </div>
                 <p class="footer-note">Click any verb in the first column to open its full forms. Use the page button above to save the whole shortlist into review cards.</p>
             </section>
+<section class="content-card" id="lesson05-commands">
+<h2>Lesson 05 Commands and Advice</h2>
+<p>Use a singular command for one listener and a plural command for a group. The surrounding words tell you who is being addressed.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Lesson 05 command forms"><table class="table-soft"><caption>Lesson 05 command forms</caption><thead><tr><th scope="col">Verb</th><th scope="col">One listener</th><th scope="col">Group</th><th scope="col">English</th></tr></thead><tbody data-bank-layout="table" data-example-group="lesson05-command-forms"></tbody></table></div><details class="study-disclosure"><summary>Advice and root examples</summary><div class="study-disclosure-body stack">
+<div data-example-group="lesson05-command-advice"></div>
+</div></details><details class="study-disclosure"><summary>Language from the shop poster</summary><div class="study-disclosure-body stack">
+<div data-example-group="lesson05-poster-vocabulary"></div>
+</div></details><details class="study-disclosure"><summary>Check your commands</summary><div class="study-disclosure-body stack">
+<div data-exercise-set="lesson05-imperative-check" data-exercise-src="./assets/data/lesson05_exercises.json"></div>
+</div></details>
+</section>
         </main>
     </div>
 </div>
@@ -163,5 +174,41 @@ window.MaltiImperativeVerbPage = {
 <script src="./assets/js/verb-trigger.js"></script>
 <script src="./assets/js/verb-lookup-loader.js"></script>
 <script src="./assets/js/site-header.js"></script>
+<script src="./assets/js/learning-content.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script>
+window.renderExampleBanksFromData({
+    "dataUrl": "./assets/data/imperative_verbs_examples.json",
+    "groupAttribute": "data-example-group",
+    "sourcePage": "imperative_verbs.html",
+    "reviewPrefix": "lesson05-commands",
+    "defaultTopic": "Imperative Verbs",
+    "numbered": false,
+    "groupViews": {
+        "lesson05-command-forms": {
+            "presentation": "table",
+            "columns": [
+                {
+                    "field": "lemma",
+                    "lang": "mt"
+                },
+                {
+                    "field": "singular",
+                    "lang": "mt"
+                },
+                {
+                    "field": "plural",
+                    "lang": "mt"
+                },
+                {
+                    "field": "english",
+                    "lang": "en"
+                }
+            ]
+        }
+    }
+});
+</script>
 </body>
 </html>

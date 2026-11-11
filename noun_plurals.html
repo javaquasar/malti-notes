@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maltese sound and broken plurals, dual forms, sentence agreement and interactive practice.">
+    <title>Noun Plurals in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <nav aria-label="Noun plural sections"><ul>
+                <li><a href="#patterns">Sound, broken and dual plurals</a></li>
+                <li><a href="#forms">Singular and plural forms</a></li>
+                <li><a href="#sentences">Agreement in sentences</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul></nav>
+        </aside>
+        <main class="content">
+            <section class="content-card">
+                <span class="tag">MQF 2 · Lesson 05</span>
+                <h1>Noun Plurals</h1>
+                <p lang="mt">L-għadd · Il-plural sħiħ, miksur u mtenni</p>
+                <p>Compare common noun forms, practise sentence agreement, and check which plural a context requires.</p>
+                <div class="toolbar-row"><a class="action-link" href="./gender_agreement.html">Gender and agreement</a><a class="action-link" href="./collective_nouns.html">Collective nouns</a></div>
+            </section>
+<section class="content-card" id="patterns">
+<h2>Sound, broken and dual plurals</h2>
+<div class="grid-3">
+<article class="study-card"><strong>Sound plural</strong><span>An ending is added or replaced. The stem may also change.</span><p lang="mt">flokk → flokkijiet · festa → festi · wejter → wejters</p></article>
+<article class="study-card"><strong>Broken plural</strong><span>The internal pattern changes.</span><p lang="mt">kelb → klieb · skola → skejjel · għalqa → għelieqi</p></article>
+<article class="study-card"><strong>Dual</strong><span>Some nouns have a special form for two.</span><p lang="mt">sena → sentejn · ġimgħa → ġimagħtejn</p></article>
+</div><p>Some nouns have both kinds of plural. <span lang="mt">Bankijiet</span> refers to benches and <span lang="mt">banek</span> to financial banks.</p>
+</section>
+<section class="content-card" id="forms">
+<h2>Singular and plural forms</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Maltese noun forms from Lesson 05"><table class="table-soft"><caption>Maltese noun forms from Lesson 05</caption><thead><tr><th scope="col">Singular</th><th scope="col">Plural</th><th scope="col">English</th></tr></thead><tbody data-bank-layout="table" data-example-group="lesson05-noun-forms"></tbody></table></div>
+</section>
+<section class="content-card" id="sentences">
+<h2>Agreement in sentences</h2>
+<p>Check the verb and adjective when the noun becomes plural. When a worksheet marks specific words, change those words only.</p><details class="study-disclosure"><summary>Sentence models with English</summary><div class="study-disclosure-body stack">
+<div data-example-group="lesson05-plural-models"></div>
+</div></details>
+</section>
+<section class="content-card" id="practice">
+<h2>Practice</h2>
+<div data-exercise-set="lesson05-plural-choice" data-exercise-src="./assets/data/lesson05_exercises.json"></div>
+<details class="study-disclosure"><summary>Match and write plural forms</summary><div class="study-disclosure-body stack">
+<div data-exercise-set="lesson05-plural-context" data-exercise-src="./assets/data/lesson05_exercises.json"></div>
+</div></details>
+</section>
+            <noscript>Enable JavaScript to load the word forms and practice.</noscript>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/learning-content.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/site-header.js"></script>
+<script>
+window.renderExampleBanksFromData({
+    "dataUrl": "./assets/data/noun_plurals_examples.json",
+    "groupAttribute": "data-example-group",
+    "sourcePage": "noun_plurals.html",
+    "reviewPrefix": "noun-plurals",
+    "defaultTopic": "Noun Plurals",
+    "numbered": false,
+    "groupViews": {
+        "lesson05-noun-forms": {
+            "presentation": "table",
+            "columns": [
+                {
+                    "field": "singular",
+                    "lang": "mt"
+                },
+                {
+                    "field": "plural",
+                    "lang": "mt"
+                },
+                {
+                    "field": "english",
+                    "lang": "en"
+                }
+            ]
+        }
+    }
+});
+</script>
+</body>
+</html>

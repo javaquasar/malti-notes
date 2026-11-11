@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}97c00fabf7be`;
+const CACHE_NAME = `${CACHE_PREFIX}ceca0f13a3d8`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -39,6 +39,7 @@ const CORE_ASSETS = [
     "./memory_game.html",
     "./mistakes.html",
     "./modals_needs.html",
+    "./noun_plurals.html",
     "./numbers_calendar_time.html",
     "./particles_prepositions.html",
     "./picture_description.html",
@@ -171,6 +172,11 @@ const CORE_ASSETS = [
     "./assets/data/reading_red_cave_examples.json",
     "./assets/data/directions_particles_examples.json",
     "./assets/data/gender_agreement_examples.json",
+    "./assets/data/noun_plurals_examples.json",
+    "./assets/data/imperative_verbs_examples.json",
+    "./assets/data/directions_town_examples.json",
+    "./assets/data/places_events_examples.json",
+    "./assets/data/lesson05_exercises.json",
     "./assets/data/gender_agreement_exercises.json",
     "./assets/data/food_examples.json",
     "./assets/data/restaurant_ordering_examples.json",
