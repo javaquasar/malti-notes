@@ -3,6 +3,81 @@
   margin-bottom: var(--space-section);
 }
 
+.route-game,
+.route-directions,
+.route-settings {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.route-game-heading,
+.route-map-heading,
+.route-map-key,
+.route-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.route-game-heading,
+.route-map-heading,
+.route-map-key { justify-content: space-between; }
+
+.route-game-heading > *,
+.route-map-heading > *,
+.route-brief,
+.route-position,
+.route-directions > h2,
+.route-directions > p { margin: 0; }
+
+.route-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--grid-gap-md);
+}
+
+.route-map-panel {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+}
+
+.route-board { display: block; width: 100%; height: auto; }
+.route-brief { min-height: 1.5em; }
+.route-map-key { justify-content: start; column-gap: var(--space-xl); }
+.route-challenge { display: grid; gap: var(--space-md); }
+.route-side { min-width: 0; }
+
+[data-route-road]:not([data-edge-state="open"]) > [data-route-road-open],
+[data-route-road]:not([data-edge-state="closed"]) > [data-route-road-closed] { display: none; }
+
+.route-conditions,
+.route-phrases {
+  display: grid;
+  gap: var(--space-sm);
+  margin: 0;
+}
+
+.route-conditions { padding-inline-start: var(--space-xl); }
+.route-conditions li > span { display: block; }
+.route-phrases { list-style: none; padding: 0; }
+.route-phrase {
+  display: grid;
+  justify-items: start;
+  width: 100%;
+  text-align: start;
+  white-space: normal;
+}
+
+.route-text-map { padding-inline-start: var(--space-xl); }
+.route-text-map li + li { margin-top: var(--space-xs); }
+
+@media (max-width: 980px) {
+  .route-map-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
 .modal-overview-stack {
   margin-top: var(--flow-gap-lg);
 }

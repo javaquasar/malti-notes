@@ -145,11 +145,11 @@ async function preserved(page) {
   assert.deepEqual((await jsonStorage(page, 'malti_course_target_progress_v1'))['preserved-target'], legacyTargets['preserved-target']);
 }
 async function capture(page, name) { await page.screenshot({ path: path.join(output, name), animations: 'disabled' }); report.screenshots.push(name); }
-async function axe(page) {
+async function axe(page, selector = '[data-study-root]') {
   page.__phase = 'audit';
   try {
     await page.addScriptTag({ path: path.join(root, 'node_modules/axe-core/axe.min.js') });
-    return await page.evaluate(async () => (await window.axe.run({ include: ['[data-study-root]'] }, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] } })).violations.map(issue => ({ id: issue.id, impact: issue.impact, nodes: issue.nodes.map(node => ({ target: node.target, summary: node.failureSummary })) })));
+    return await page.evaluate(async selector => (await window.axe.run({ include: [selector] }, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] } })).violations.map(issue => ({ id: issue.id, impact: issue.impact, nodes: issue.nodes.map(node => ({ target: node.target, summary: node.failureSummary })) })), selector);
   } finally { await page.waitForLoadState('networkidle'); page.__phase = 'online'; }
 }
 async function main() {
@@ -346,161 +346,225 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('Route game checks written directions and updates live directions with every move', async () => {
-      const f = await fixture('route-game', { width: 390 });
+    await check('All three neighbourhoods and twelve route challenges are solvable', () => {
+      const core = require(path.join(root, 'assets/js/route-game-core.js'));
+      function pathTo(map, start, goal, avoid = -1) {
+        const queue = [[start]], visited = new Set([start, avoid]);
+        for (const route of queue) {
+          if (route.at(-1) === goal) return route;
+          core.headings.forEach((_, heading) => {
+            const next = core.neighbour(map, route.at(-1), heading);
+            if (next !== -1 && !visited.has(next)) {
+              visited.add(next);
+              queue.push([...route, next]);
+            }
+          });
+        }
+        return null;
+      }
+      function evaluate(map, round, nodes) {
+        const trail = nodes.map((at, index) => {
+          const heading = index === 0 ? round.heading
+            : core.headings.findIndex((_, direction) => core.neighbour(map, nodes[index - 1], direction) === at);
+          assert.notEqual(heading, -1, 'Every step must follow an open road');
+          return { at, heading };
+        });
+        return core.evaluateMission(map, round, trail).map(condition => condition.state);
+      }
+      let count = 0;
+      for (const map of core.neighbourhoods) {
+        assert.equal(map.places.length, 20);
+        for (const goal of map.places.keys()) assert(pathTo(map, 0, goal), map.id + ' must be connected');
+        for (const round of core.missionRounds(map)) {
+          assert([2, 3].includes(round.ordinal));
+          const prefix = [round.start];
+          while (prefix.at(-1) !== round.turnAt) {
+            const next = core.neighbour(map, prefix.at(-1), round.heading);
+            assert(next !== -1 && !prefix.includes(next));
+            prefix.push(next);
+          }
+          const turn = core.neighbour(map, round.turnAt, core.rotate(round.heading, round.side));
+          const via = pathTo(map, turn, round.via, round.goal);
+          const finish = pathTo(map, round.via, round.goal);
+          assert(via && finish, 'Challenge needs a valid route to its waypoint and goal');
+          assert.deepEqual(evaluate(map, round, [...prefix, ...via, ...finish.slice(1)]), ['done', 'done', 'done']);
+          assert.equal(core.instructions(map, round).length, 3);
+          count += 1;
+        }
+      }
+      const open = core.neighbourhoods[0], first = core.missionRounds(open)[0];
+      for (const route of [[0, 1, 2, 6, 5, 9, 10], [0, 1, 2, 6, 5, 4, 8, 9, 10]]) {
+        assert.deepEqual(evaluate(open, first, route), ['done', 'done', 'done']);
+      }
+      assert.deepEqual(evaluate(open, first, [0, 1, 2, 6, 10]), ['done', 'done', 'missed']);
+      assert.equal(evaluate(open, first, [0, 1, 2, 3])[1], 'missed');
+      assert.equal(evaluate(open, first, [0, 1, 2, 1])[1], 'missed');
+      assert.equal(count, 12);
+      return { maps: core.neighbourhoods.length, challenges: count, alternativesAccepted: 2 };
+    });
+
+    await check('Writing and live modes preserve the route and link each bilingual phrase to the map', async () => {
+      const f = await fixture('route-game', { width: 390, hasTouch: true });
       try {
         const page = f.page;
         await page.addInitScript(() => { if (location.pathname.endsWith('/route_game.html')) Math.random = () => 0; });
         await page.goto(base + '/directions_town.html#lesson05-routes');
         await page.getByRole('link', { name: 'Play the Maltese Route Game' }).click();
         await page.waitForFunction(() => Boolean(document.querySelector('[data-route-start-name]')?.textContent));
+        const button = name => page.getByRole('button', { name, exact: true });
+        const tapNode = index => page.locator('[data-route-node="' + index + '"]').tap();
         const position = page.locator('[data-route-position]');
         const feedback = page.locator('[data-route-feedback]');
         const model = page.locator('[data-route-model]');
         const write = page.getByRole('textbox', { name: 'Your directions' });
-        const straight = page.getByRole('button', { name: 'Go straight' });
-        const left = page.getByRole('button', { name: 'Turn left' });
-        const right = page.getByRole('button', { name: 'Turn right' });
-        const undo = page.getByRole('button', { name: 'Undo last move' });
-        const verify = page.getByRole('button', { name: 'Check route' });
-        const newRoute = page.getByRole('button', { name: 'New route' });
+        const phrases = page.locator('[data-route-phrases]');
+        const segment = () => page.locator('[data-route-segment]').evaluate(line =>
+          Array.from({ length: line.points.numberOfItems }, (_, index) => {
+            const { x, y } = line.points.getItem(index);
+            return [x, y];
+          }));
+        const coordinates = index => page.locator('[data-route-landmark="' + index + '"]').evaluate(label => {
+          const { e, f } = label.parentElement.transform.baseVal.getItem(0).matrix;
+          return [e, f];
+        });
+        await page.getByText('Game settings', { exact: true }).tap();
+        await button('Write your own').tap();
+        await button('New route').tap();
         assert.equal(await page.locator('[data-route-start-name]').innerText(), 'Il-posta');
         assert.equal(await page.locator('[data-route-goal-name]').innerText(), 'L-iskola');
-        assert.equal(await page.locator('[data-route-start-heading]').innerText(), 'Start facing east');
-        await verify.click();
+        assert.equal(await page.locator('[data-route-start-heading]').textContent(), 'Start facing east');
+        await button('Check route').tap();
         assert.match(await feedback.innerText(), /Keep going/);
-        assert.equal(await model.isVisible(), false);
-        await left.click();
-        assert.match(await position.innerText(), /no road/);
-        await straight.focus(); await straight.press('Enter');
+        await tapNode(6);
+        assert.match(await position.innerText(), /one block away.*0 blocks/);
+        assert.equal(await page.locator('[data-route-ring="1"]').evaluate(ring => ring.r.baseVal.value), 10);
+        await button('Go straight').focus(); await button('Go straight').press('Enter');
         assert.match(await position.innerText(), /Il-knisja.*1 block/);
-        await undo.click();
+        await button('Undo last move').tap();
         assert.match(await position.innerText(), /Il-posta.*0 blocks/);
-        await straight.click(); await straight.click(); await right.click();
-        assert.equal(await page.locator('[data-route-trail]').evaluate(line => line.points.numberOfItems), 4);
-        await verify.click();
+        for (const index of [1, 2, 6]) await tapNode(index);
+        await button('Check route').tap();
         assert.equal(await write.evaluate(node => node === document.activeElement), true);
         assert.equal(await model.isVisible(), false);
         await write.fill("Ibqa' sejjer dritt. Dur fuq il-lemin.");
-        await verify.click();
+        await button('Check route').tap();
         assert.match(await feedback.innerText(), /reaches the goal/);
-        assert.match(await model.locator('[lang="mt"]').innerText(), /aqsam triq waħda.*ħdejn il-knisja.*il-lemin.*ħdejn l-iskola/i);
-        assert.match(await model.locator('[lang="en"]').innerText(), /one side street.*the church.*right at the corner by the bakery.*the school/);
-        await undo.click(); await undo.click(); await right.click(); await left.click();
-        await write.fill('Dur fuq il-lemin ħdejn il-knisja u mbagħad dur fuq ix-xellug ħdejn il-pjazza.');
-        await verify.click();
-        assert.match(await model.locator('[lang="en"]').innerText(), /right at the corner by the church.*left at the corner by the square.*the school/);
-        await newRoute.click();
+        assert.match(await phrases.innerText(), /one side street.*the church.*right at the corner by the bakery.*the school/s);
+        const turn = page.locator('[data-route-phrase]').filter({ hasText: 'Turn right at the corner by the bakery.' });
+        await turn.focus(); await turn.press('Enter');
+        assert.equal(await turn.getAttribute('aria-pressed'), 'true');
+        assert.deepEqual(await segment(), await Promise.all([1, 2, 6].map(coordinates)));
+        await turn.press('Enter');
+        assert.deepEqual(await segment(), []);
+
+        await button('New route').tap();
         assert.equal(await page.locator('[data-route-goal-name]').innerText(), 'Il-klinika');
         assert.equal(await write.inputValue(), '');
-        assert.equal(await model.isVisible(), false);
-        await straight.click(); await straight.click(); await straight.click(); await right.click();
-        await write.fill('Aqsam żewġ toroq. Dur fuq il-lemin.');
-        await verify.click();
-        assert.match(await model.locator('[lang="en"]').innerText(), /two side streets.*the church.*the bakery.*the clinic/);
-
-        await newRoute.click();
-        const liveMode = page.getByRole('button', { name: 'Live directions', exact: true });
-        const writeMode = page.getByRole('button', { name: 'Write your own', exact: true });
-        const english = model.locator('[lang="en"]');
         await write.fill('Draft to keep');
-        await liveMode.focus(); await liveMode.press('Enter');
-        assert.equal(await liveMode.getAttribute('aria-pressed'), 'true');
+        await button('Live directions').tap();
         assert.equal(await write.isVisible(), false);
-        assert.equal(await verify.isVisible(), false);
         assert.equal(await model.isVisible(), false);
-        await straight.click();
-        assert.equal(await model.isVisible(), true);
-        assert.match(await model.locator('[lang="mt"]').innerText(), /tasal ħdejn il-knisja/);
-        assert.match(await english.innerText(), /reach the church/);
-        const firstStep = await english.innerText();
-        await left.click();
-        assert.equal(await english.innerText(), firstStep);
-        await straight.click();
-        assert.match(await english.innerText(), /reach the bakery.*one side street.*go past the church/i);
-        await undo.click();
-        assert.equal(await english.innerText(), firstStep);
-        await writeMode.click();
+        await tapNode(1);
+        assert(await model.evaluate(element => element.closest('[data-route-inline]')?.previousElementSibling.matches('[aria-label="Route controls"]')));
+        const first = await phrases.innerText();
+        assert.match(first, /tasal ħdejn il-knisja.*reach the church/s);
+        assert.equal(await page.locator('[data-route-start-ring]').evaluate(ring => ring.r.baseVal.value), 17);
+        await button('Turn back').tap();
+        assert.match(await phrases.innerText(), /Turn back by the church.*reach the post office/s);
+        await button('Undo last move').tap();
+        assert.equal(await phrases.innerText(), first);
+        await tapNode(2);
+        assert.match(await phrases.innerText(), /one side street.*Go past the church/s);
+        const landmark = page.locator('[data-route-phrase]').filter({ hasText: 'Go past the church.' });
+        await landmark.tap();
+        assert.deepEqual(await segment(), await Promise.all([0, 1, 2].map(coordinates)));
+        await page.getByText('Game settings', { exact: true }).tap();
+        await capture(page, 'route-live-390.png');
+        await button('Undo last move').tap();
+        assert.deepEqual(await segment(), []);
+        assert.equal(await phrases.innerText(), first);
+        await page.getByText('Game settings', { exact: true }).tap();
+        await button('Write your own').tap();
         assert.equal(await write.inputValue(), 'Draft to keep');
         assert.equal(await model.isVisible(), false);
-        await liveMode.click();
-        assert.equal(await english.innerText(), firstStep);
-        await straight.click(); await right.click();
-        assert.match(await english.innerText(), /right at the corner by the bakery.*the school/);
-        assert.equal(await feedback.innerText(), 'You reached the goal.');
-        await newRoute.click();
-        assert.equal(await liveMode.getAttribute('aria-pressed'), 'true');
-        assert.equal(await model.isVisible(), false);
-        assert.equal(await page.locator('[data-route-live-empty]').isVisible(), true);
-        return { keyboard: true, alternatePath: true, oneAndTwoCrossings: true, reroll: true, liveUpdates: true };
+        return { keyboard: true, touch: true, liveUpdates: true, linkedSegments: true };
       } finally { await f.close(); }
     });
 
-    await check('Map taps, mobile directions and route challenges share the same route state', async () => {
-      const f = await fixture('route-challenges', { width: 390, hasTouch: true });
+    await check('Read and follow keeps English optional, checks all conditions, and supports closed streets', async () => {
+      const f = await fixture('route-reading', { width: 390, hasTouch: true });
       try {
         const page = f.page;
         await page.addInitScript(() => { Math.random = () => 0; });
         await page.goto(base + '/route_game.html', { waitUntil: 'networkidle' });
         const button = name => page.getByRole('button', { name, exact: true });
-        const node = id => page.locator('[data-route-node="' + id + '"]');
-        const position = page.locator('[data-route-position]');
-        const model = page.locator('[data-route-model-en]');
+        const tapNode = index => page.locator('[data-route-node="' + index + '"]').tap();
+        const settings = page.getByText('Game settings', { exact: true });
+        const condition = page.locator('[data-condition-state]');
+        const translation = page.locator('[data-condition-en]');
         const feedback = page.locator('[data-route-feedback]');
-        const challenge = page.locator('[data-route-challenge]');
-        const requirement = challenge.locator('[data-route-challenge-en]');
-        const progress = challenge.locator('[data-route-challenge-status]');
-        await button('Live directions').tap();
-        assert(await model.evaluate(element => element.closest('[data-route-inline]')?.previousElementSibling.matches('[aria-label="Route controls"]')));
-        await node(6).tap();
-        assert.match(await position.innerText(), /one block away.*0 blocks/);
-        assert.equal(await page.locator('[data-route-dot="1"]').evaluate(dot => dot.r.baseVal.value), 8);
-        await node(1).tap();
-        assert.match(await model.innerText(), /reach the church/);
-        assert.equal(await page.locator('[data-route-start-ring]').evaluate(ring => ring.r.baseVal.value), 18);
-        await button('Turn back').focus(); await button('Turn back').press('Enter');
-        assert.match(await model.innerText(), /Turn back by the church.*reach the post office/);
+        const labelsFit = () => page.locator('[data-route-landmark]').evaluateAll(labels => labels.every((label, index) => {
+          const box = label.getBoundingClientRect();
+          return box.width > 0 && (index % 4 === 3 || box.right < labels[index + 1].getBoundingClientRect().left);
+        }));
+        assert.equal(await page.locator('[data-route-settings]').evaluate(node => node.open), false);
+        assert.equal(await page.locator('[data-route-map-name]').innerText(), 'Open Quarter');
+        assert(await labelsFit());
+        const bounds = await page.locator('[data-route-map]').boundingBox();
+        assert(bounds.y + bounds.height < 844, 'The complete map should fit in the initial mobile viewport');
+        assert.equal(await translation.first().isVisible(), false);
+        await button('Show English').tap();
+        assert.match(await translation.first().innerText(), /Go past the church/);
+        await button('Hide English').tap();
+        assert.equal(await translation.first().isVisible(), false);
+        await capture(page, 'route-reading-390.png');
+
+        for (const index of [1, 5, 9, 10]) await tapNode(index);
+        assert.equal(await translation.first().isVisible(), false);
+        await button('Check route').tap();
+        assert.match(await feedback.innerText(), /turned at the church.*Go straight past/);
+        assert.equal(await translation.first().isVisible(), true);
+        assert.equal(await page.locator('[data-route-problem] circle').evaluate(ring => ring.r.baseVal.value), 19);
+        for (let index = 0; index < 4; index++) await button('Undo last move').tap();
+        for (const index of [1, 2, 6, 5, 9, 10]) await tapNode(index);
+        assert.deepEqual(await condition.allInnerTexts(), ['✓ Done', '✓ Done', '✓ Done']);
+        await button('Check route').focus(); await button('Check route').press('Enter');
+        assert.match(await feedback.innerText(), /followed all three instructions/);
+        assert(await page.locator('[data-route-model]').isVisible());
+        const turn = page.locator('[data-route-phrase]').filter({ hasText: 'Turn right at the second street.' });
+        await turn.tap();
+        assert.equal(await turn.getAttribute('aria-pressed'), 'true');
+        assert.equal(await page.locator('[data-route-segment]').evaluate(line => line.points.numberOfItems), 3);
         await button('Undo last move').tap();
-        assert.match(await position.innerText(), /Il-knisja.*1 block/);
+        await button('Undo last move').tap();
+        for (const index of [4, 8, 9, 10]) await tapNode(index);
+        await button('Check route').tap();
+        assert.match(await feedback.innerText(), /followed all three instructions/);
+        await button('New challenge').tap();
+        assert.equal(await translation.first().isVisible(), false);
+        assert.match(await page.locator('[data-condition-mt]').nth(1).innerText(), /fit-tielet triq/);
+
+        await settings.tap();
+        await page.getByLabel('Neighbourhood').selectOption('old-town');
+        assert.equal(await page.locator('[data-route-map-name]').innerText(), 'Old Town');
+        assert(await labelsFit());
+        assert.equal(await page.locator('[data-route-road="0-1"]').getAttribute('data-edge-state'), 'missing');
+        await tapNode(1);
+        assert.match(await page.locator('[data-route-position]').innerText(), /one block away.*0 blocks/);
+        await page.getByLabel('Neighbourhood').selectOption('harbour');
+        assert.equal(await page.locator('[data-route-map-name]').innerText(), 'Harbour Lanes');
+        assert(await labelsFit());
+        assert.equal(await page.locator('[data-route-road="5-9"]').getAttribute('data-edge-state'), 'closed');
+        await tapNode(5); await tapNode(9);
+        assert.match(await page.locator('[data-route-position]').innerText(), /road is closed.*1 block/);
+        assert.equal(await page.locator('[data-route-ring="9"]').evaluate(ring => ring.r.baseVal.value), 0);
+        assert.match(await page.locator('[data-route-text-map]').textContent(), /south closed/);
+        await settings.tap();
         await page.setViewportSize({ width: 1280, height: 900 });
-        await page.waitForFunction(() => document.querySelector('[data-route-side] [data-route-model-en]'));
-        assert.match(await model.innerText(), /reach the church/);
-        await page.setViewportSize({ width: 390, height: 844 });
-        await page.waitForFunction(() => document.querySelector('[data-route-inline] [data-route-model-en]'));
-
-        await button('New challenge').tap();
-        assert.match(await requirement.innerText(), /church.*turn right at the third street/);
-        await node(1).tap(); await node(5).tap(); await node(6).tap(); await node(7).tap();
-        assert.match(await progress.innerText(), /turned too early/);
-        assert.match(await feedback.innerText(), /reached the goal.*Undo/);
-        await button('Write your own').tap();
-        const write = page.getByRole('textbox', { name: 'Your directions' });
-        await write.fill('Għaddi minn ħdejn il-knisja.');
-        await button('Check route').tap();
-        assert.equal(await model.isVisible(), false);
-        assert.match(await feedback.innerText(), /reached the goal.*Undo/);
-        await button('Live directions').tap();
-        for (let index = 0; index < 3; index++) await button('Undo last move').tap();
-        assert.equal(await progress.innerText(), '');
-        await node(2).tap(); await node(3).tap();
-        assert.equal(await page.locator('[data-route-goal-ring]').evaluate(ring => ring.r.baseVal.value), 18);
-        await node(7).tap();
-        assert.match(await progress.innerText(), /landmark.*required turn/);
-        assert.equal(await feedback.innerText(), 'Challenge complete. You reached the goal.');
-        assert.match(await model.innerText(), /two side streets.*right at the corner by the bank.*the clinic/);
-
-        await button('New challenge').tap();
-        assert.match(await requirement.innerText(), /church.*turn right at the second street/);
-        assert.match(await challenge.locator('[data-route-challenge-mt]').innerText(), /il-knisja.*fit-tieni triq/);
-        await button('Write your own').tap();
-        await node(1).tap(); await node(2).tap(); await node(6).tap();
-        await write.fill('Għaddi minn ħdejn il-knisja u dur fuq il-lemin fit-tieni triq.');
-        await button('Check route').tap();
-        assert(await model.isVisible());
-        assert.equal(await feedback.innerText(), 'Challenge complete. You reached the goal.');
-        await button('New route').tap();
-        assert.equal(await challenge.isVisible(), false);
-        return { taps: true, keyboardBacktrack: true, responsivePlacement: true, challengeTurns: [2, 3] };
+        await page.waitForFunction(() => document.querySelector('[data-route-side] [data-route-conditions]'));
+        await capture(page, 'route-harbour-1280.png');
+        assert.deepEqual(await axe(page, '[data-route-game]'), []);
+        return { mobileFirst: true, hint: true, feedback: true, deadEndsAndClosures: true };
       } finally { await f.close(); }
     });
 

@@ -1,261 +1,357 @@
 (() => {
   'use strict';
+
   const root = document.querySelector('[data-route-game]');
   if (!root) return;
+  const core = window.MaltiRouteGame;
   const find = selector => root.querySelector(selector);
+  const all = selector => [...root.querySelectorAll(selector)];
   const say = (selector, value) => { find(selector).textContent = value; };
-  const columns = 4;
-  const labelOffset = 39;
-  const directions = [
-    { dx: 0, dy: -1, name: 'north' }, { dx: 1, dy: 0, name: 'east' },
-    { dx: 0, dy: 1, name: 'south' }, { dx: -1, dy: 0, name: 'west' }
-  ];
-  const sides = { 1: { mt: 'il-lemin', en: 'right' }, 3: { mt: 'ix-xellug', en: 'left' } };
-  const landmarks = [...root.querySelectorAll('[data-route-landmark]')].map((label, index) => ({
-    col: index % columns, row: Math.floor(index / columns), maltese: label.textContent,
-    english: label.dataset.english, x: Number(label.getAttribute('x')), y: Number(label.getAttribute('y')) - labelOffset
-  }));
-  const rounds = landmarks.flatMap((from, start) => landmarks.flatMap((to, goal) => {
-    const dx = to.col - from.col, dy = to.row - from.row;
-    if (!dx || !dy || Math.abs(dx) + Math.abs(dy) < 3) return [];
-    const heading = Math.abs(dx) >= Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0);
-    return [{ start, goal, heading }];
-  }));
-  const challengeRounds = rounds.filter(({ start, goal, heading }) => heading % 2 === 1
-    && Math.abs(landmarks[goal].col - landmarks[start].col) >= 2);
+
+  const svg = find('[data-route-map]');
+  const labels = all('[data-route-landmark]');
+  const labelMeasure = find('[data-route-label-measure]');
+  const coordinates = labels.map(label => {
+    const { e: x, f: y } = label.parentElement.transform.baseVal.getItem(0).matrix;
+    return { x, y };
+  });
+  const icons = all('[data-route-icon]');
+  const rings = all('[data-route-ring]');
+  const roads = all('[data-route-road]');
+  const compact = window.matchMedia('(max-width: 980px)');
+  const directions = find('[data-route-directions]');
+  const inline = find('[data-route-inline]');
+  const side = find('[data-route-side]');
   const model = find('[data-route-model]');
   const form = find('[data-route-form]');
-  const modes = [...root.querySelectorAll('[data-route-mode]')];
-  const description = find('[data-route-description]');
-  const map = find('[data-route-map]');
-  const trailPoints = find('[data-route-trail]').points;
+  const draft = find('[data-route-description]');
+  const mapSelect = find('[data-route-map-select]');
+  const conditionList = find('[data-route-conditions]');
+  const phraseList = find('[data-route-phrases]');
+  const modeButtons = all('[data-route-mode]');
+  const trailLines = [find('[data-route-trail-edge]'), find('[data-route-trail]')];
+  const segmentLines = [find('[data-route-segment-edge]'), find('[data-route-segment]')];
+  const startMarker = find('[data-route-start-marker]');
+  const goalMarker = find('[data-route-goal-marker]');
   const walker = find('[data-route-walker]');
-  const dots = [...map.querySelectorAll('[data-route-dot]')];
-  const compact = window.matchMedia('(max-width: 980px)');
-  const directionsPanel = find('[data-route-directions]');
-  const inlinePanel = find('[data-route-inline]');
-  const sidePanel = find('[data-route-side]');
-  let round, challenge, trail, mode = 'write', checked = false;
+  const problem = find('[data-route-problem]');
+  const modeTitles = { read: 'Read & follow', write: 'Give directions', live: 'Live directions' };
+  const conditionStates = { done: '✓ Done', missed: '! Review', pending: 'To do' };
 
-  const point = index => landmarks[index];
-  const current = () => trail[trail.length - 1];
-  const maltese = index => point(index).maltese.toLocaleLowerCase('mt');
-  const facing = heading => directions[heading].name;
+  let map = core.neighbourhoods[0];
+  let round, trail, result, activePhrase = -1, phrases = [], mode = 'read', english = false;
+
+  const current = () => trail.at(-1);
   const reachedGoal = () => current().at === round.goal;
-  const turnFrom = (heading, nextHeading) => (nextHeading - heading + directions.length) % directions.length;
+  const hasMission = () => Boolean(round.ordinal);
+  const place = index => core.place(map, index);
+  const face = heading => core.headings[heading].name;
 
-  function adjacent(index, heading) {
-    const { dx, dy } = directions[heading];
-    const col = point(index).col + dx, row = point(index).row + dy;
-    const next = row * columns + col;
-    return col >= 0 && col < columns && point(next) ? next : -1;
+  function drawLine(lines, points) {
+    for (const line of lines) {
+      line.points.clear();
+      for (const { at } of points) {
+        const vertex = svg.createSVGPoint();
+        Object.assign(vertex, coordinates[at]);
+        line.points.appendItem(vertex);
+      }
+    }
   }
 
   function placeMarker(marker, index) {
-    const { x, y } = point(index);
+    const { x, y } = coordinates[index];
     marker.transform.baseVal.getItem(0).setTranslate(x, y);
   }
 
-  function position() {
+  function mountDirections() {
+    const useInline = compact.matches && mode !== 'write';
+    const host = useInline ? inline : side;
+    if (directions.parentElement !== host) host.append(directions);
+    inline.hidden = !useInline;
+    side.hidden = useInline;
+  }
+
+  function renderRows(container, template, entries, fill) {
+    container.replaceChildren(...entries.map((entry, index) => {
+      const fragment = template.content.cloneNode(true);
+      fill(fragment, entry, index);
+      return fragment;
+    }));
+  }
+
+  function renderTextMap() {
+    renderRows(find('[data-route-text-map]'), find('[data-route-text-template]'), map.places, (fragment, _, index) => {
+      const [name, englishName] = place(index);
+      const ways = core.headings.flatMap((direction, heading) => {
+        const next = core.neighbour(map, index, heading);
+        if (next !== -1) return [direction.name + ' to ' + place(next)[1]];
+        const possible = core.gridNeighbour(index, heading);
+        return possible !== -1 && core.roadState(map, core.edgeKey(index, possible)) === 'closed'
+          ? [direction.name + ' closed'] : [];
+      });
+      fragmentText(fragment, '[data-route-text-place]', name);
+      fragmentText(fragment, '[data-route-text-ways]', ' (' + englishName + ') · ' + ways.join(', '));
+    });
+  }
+
+  function fragmentText(fragment, selector, value) {
+    fragment.querySelector(selector).textContent = value;
+  }
+
+  function paintMap() {
+    say('[data-route-map-name]', map.name);
+    say('[data-route-map-level]', map.difficulty);
+    say('#route-svg-title', map.name + ' street map');
+    find('[data-route-scenery]').href.baseVal = '#route-scenery-' + map.id;
+    mapSelect.value = map.id;
+    labels.forEach((label, index) => {
+      const name = place(index)[0];
+      labelMeasure.textContent = name;
+      label.textContent = name;
+      label.textLength.baseVal.value = Math.min(labelMeasure.getComputedTextLength(), 94);
+      icons[index].href.baseVal = '#route-icon-' + map.places[index];
+    });
+    labelMeasure.textContent = '';
+    roads.forEach(road => { road.dataset.edgeState = core.roadState(map, road.dataset.routeRoad); });
+    renderTextMap();
+  }
+
+  function updatePosition(message = '') {
     const { at, heading } = current(), count = trail.length - 1;
-    return `${point(at).maltese}. Facing ${facing(heading)}. ${count} ${count === 1 ? 'block' : 'blocks'} walked.`;
+    const position = place(at)[0] + ' · Facing ' + face(heading) + ' · ' + count + (count === 1 ? ' block' : ' blocks');
+    say('[data-route-position]', message ? message + ' ' + position : position);
   }
 
-  function placeDirections() {
-    const inline = mode === 'live' && compact.matches;
-    const panel = inline ? inlinePanel : sidePanel;
-    if (directionsPanel.parentElement !== panel) panel.append(directionsPanel);
-    inlinePanel.hidden = !inline;
-    sidePanel.hidden = inline;
+  function paintTrail() {
+    drawLine(trailLines, trail);
+    placeMarker(walker, current().at);
+    walker.transform.baseVal.getItem(1).setRotate(current().heading * 90, 0, 0);
+    const available = reachedGoal() ? [] : core.headings.map((_, heading) => core.neighbour(map, current().at, heading));
+    rings.forEach((ring, index) => {
+      ring.r.baseVal.value = available.includes(index) && index !== round.start && index !== round.goal ? 10 : 0;
+    });
+    find('[data-route-start-ring]').r.baseVal.value = available.includes(round.start) ? 17 : 0;
+    find('[data-route-goal-ring]').r.baseVal.value = available.includes(round.goal) ? 17 : 0;
+    find('[data-route-undo]').disabled = trail.length < 2;
+    problem.querySelector('circle').r.baseVal.value = result?.at == null ? 0 : 19;
+    if (result?.at != null) placeMarker(problem, result.at);
   }
 
-  function challengeProgress() {
-    if (!challenge) return '';
-    const firstTurn = trail.findIndex(step => step.heading !== round.heading);
-    const junction = firstTurn === -1 ? trail.length - 1 : firstTurn - 1;
-    if (junction > challenge.junction) return 'late';
-    if (firstTurn === -1) return 'pending';
-    if (junction < challenge.junction) return 'early';
-    return trail[firstTurn].heading === challenge.heading ? 'met' : 'wrong-side';
+  function selectPhrase(index) {
+    activePhrase = index;
+    [...phraseList.querySelectorAll('[data-route-phrase]')].forEach((button, position) => {
+      button.ariaPressed = String(position === index);
+    });
+    const phrase = phrases[index];
+    drawLine(segmentLines, phrase ? trail.slice(phrase.from, phrase.to + 1) : []);
+    if (phrase) {
+      const from = place(trail[phrase.from].at)[1], to = place(trail[phrase.to].at)[1];
+      say('[data-route-highlight-status]', 'Highlighted from ' + from + ' to ' + to + '.');
+    } else {
+      say('[data-route-highlight-status]', '');
+    }
   }
 
-  function refreshChallenge() {
-    find('[data-route-challenge]').hidden = !challenge;
-    if (!challenge) return;
-    const side = sides[turnFrom(round.heading, challenge.heading)];
-    const street = challenge.junction === 2 ? { mt: 'fit-tieni', en: 'second' } : { mt: 'fit-tielet', en: 'third' };
-    say('[data-route-challenge-mt]', `Għaddi minn ħdejn ${maltese(challenge.landmark)} u dur fuq ${side.mt} ${street.mt} triq.`);
-    say('[data-route-challenge-en]', `Go past ${point(challenge.landmark).english}, then turn ${side.en} at the ${street.en} street.`);
-    const messages = {
-      late: 'You passed the required turn. Undo back to that street.',
-      early: 'You turned too early. Undo your first turn and go straight to the required street.',
-      'wrong-side': `You reached the right street. Undo the turn and turn ${side.en}.`,
-      met: 'You passed the landmark and made the required turn.'
-    };
-    say('[data-route-challenge-status]', messages[challengeProgress()] || '');
+  function renderPhrases() {
+    const show = trail.length > 1 && (mode === 'live' || result?.passed);
+    model.hidden = !show;
+    if (!show) {
+      phrases = [];
+      phraseList.replaceChildren();
+      selectPhrase(-1);
+      return;
+    }
+    say('#route-model-title', reachedGoal() ? 'Directions to the goal' : 'Directions so far');
+    phrases = core.routePhrases(map, trail, round);
+    renderRows(phraseList, find('[data-route-phrase-template]'), phrases, (fragment, phrase, index) => {
+      fragment.querySelector('[data-route-phrase]').dataset.routePhrase = String(index);
+      fragmentText(fragment, '[data-route-phrase-mt]', phrase.mt);
+      fragmentText(fragment, '[data-route-phrase-en]', phrase.en);
+    });
+    selectPhrase(-1);
   }
 
-  function refreshDirections() {
-    const live = mode === 'live';
-    const hasMoves = trail.length > 1;
-    form.hidden = live;
-    find('#route-write-help').hidden = live;
-    find('[data-route-live-empty]').hidden = !live || hasMoves;
-    find('[data-route-compare]').hidden = live;
-    say('#route-write-heading', live ? 'Live directions' : 'Give directions');
-    const liveTitle = reachedGoal() ? 'Directions to the goal' : 'Directions so far';
-    say('#route-model-title', live ? liveTitle : 'Model for your route');
-    const showModel = live ? hasMoves : checked;
-    model.hidden = !showModel;
-    if (showModel) modelRoute();
+  function renderChallenge(steps, progress) {
+    const reading = mode === 'read';
+    const translation = !reading || english;
+    const firstUnfinished = progress.findIndex(step => step.state !== 'done');
+    const brief = find('[data-route-brief]');
+    brief.hidden = !hasMission();
+    if (hasMission()) {
+      brief.textContent = firstUnfinished === -1
+        ? 'Mur ħdejn ' + place(round.goal)[0].toLocaleLowerCase('mt') + '.'
+        : steps[firstUnfinished].mt;
+    }
+    find('[data-route-challenge]').hidden = !hasMission();
+    find('[data-route-free-challenge]').hidden = hasMission();
+    const hint = find('[data-route-hint]');
+    hint.hidden = !reading;
+    hint.ariaPressed = String(english);
+    hint.textContent = english ? 'Hide English' : 'Show English';
+    find('[data-route-check]').hidden = !reading;
+    renderRows(conditionList, find('[data-route-condition-template]'), steps, (fragment, step, index) => {
+      fragmentText(fragment, '[data-condition-mt]', step.mt);
+      const translated = fragment.querySelector('[data-condition-en]');
+      translated.textContent = step.en;
+      translated.hidden = !translation;
+      const state = progress[index].state;
+      fragmentText(fragment, '[data-condition-state]', conditionStates[state]);
+    });
   }
 
-  function refreshFeedback() {
-    let message = '';
-    if (reachedGoal()) {
-      if (challenge && challengeProgress() !== 'met') message = 'You reached the goal. Undo moves to follow the challenge instruction.';
-      else if (challenge && (checked || mode === 'live')) message = 'Challenge complete. You reached the goal.';
-      else if (checked) message = 'Your route reaches the goal.';
-      else if (mode === 'live') message = 'You reached the goal.';
-      else message = 'You reached the goal. Check the route after you write your directions.';
+  function renderFeedback(progress) {
+    let message = result?.message || '';
+    if (!message && mode !== 'read') {
+      message = progress.find(step => step.state === 'missed')?.message || '';
+      if (!message && reachedGoal()) {
+        message = mode === 'write' ? 'You reached the goal. Write your directions and check the route.'
+          : hasMission() ? 'Challenge complete. You reached the goal.' : 'You reached the goal.';
+      }
     }
     say('[data-route-feedback]', message);
   }
 
-  function draw() {
-    trailPoints.clear();
-    for (const step of trail) {
-      const vertex = map.createSVGPoint();
-      vertex.x = point(step.at).x;
-      vertex.y = point(step.at).y;
-      trailPoints.appendItem(vertex);
-    }
-    placeMarker(walker, current().at);
-    walker.transform.baseVal.getItem(1).setRotate(current().heading * 90, 0, 0);
-    const next = reachedGoal() ? [] : directions.map((_, heading) => adjacent(current().at, heading));
-    dots.forEach(dot => { dot.r.baseVal.value = next.includes(Number(dot.dataset.routeDot)) ? 8 : 4; });
-    find('[data-route-start-ring]').r.baseVal.value = next.includes(round.start) ? 18 : 0;
-    find('[data-route-goal-ring]').r.baseVal.value = next.includes(round.goal) ? 18 : 0;
-    find('[data-route-undo]').disabled = trail.length === 1;
-    say('[data-route-position]', position());
-    checked = false;
-    refreshChallenge();
-    refreshDirections();
-    refreshFeedback();
+  function renderDirections() {
+    const writing = mode === 'write';
+    form.hidden = !writing;
+    find('#route-write-help').hidden = !writing;
+    find('[data-route-live-empty]').hidden = mode !== 'live' || trail.length > 1;
+    say('#route-write-heading', modeTitles[mode]);
+    const progress = hasMission() ? core.evaluateMission(map, round, trail) : [];
+    const steps = hasMission() ? core.instructions(map, round) : [];
+    renderChallenge(steps, progress);
+    renderPhrases();
+    renderFeedback(progress);
   }
 
-  function newRound(withChallenge = false) {
-    const pool = withChallenge ? challengeRounds : rounds;
-    const next = pool.filter(candidate => candidate !== round);
-    round = next[Math.floor(Math.random() * next.length)];
-    challenge = withChallenge ? {
-      landmark: adjacent(round.start, round.heading),
-      junction: Math.abs(point(round.goal).col - point(round.start).col),
-      heading: point(round.goal).row > point(round.start).row ? 2 : 0
-    } : null;
+  function changeMode(next) {
+    mode = next;
+    modeButtons.forEach(button => { button.ariaPressed = String(button.dataset.routeMode === mode); });
+    mountDirections();
+  }
+
+  function newRound(withMission) {
+    const pool = withMission ? core.missionRounds(map) : core.freeRounds(map);
+    const alternatives = pool.filter(candidate => candidate.id !== round?.id);
+    round = alternatives[Math.floor(Math.random() * alternatives.length)];
     trail = [{ at: round.start, heading: round.heading }];
-    description.value = '';
-    say('[data-route-start-name]', point(round.start).maltese);
-    say('[data-route-goal-name]', point(round.goal).maltese);
-    say('[data-route-start-heading]', `Start facing ${facing(round.heading)}`);
-    placeMarker(find('[data-route-start-marker]'), round.start);
-    placeMarker(find('[data-route-goal-marker]'), round.goal);
-    draw();
-    say('[data-route-position]', `New ${challenge ? 'challenge' : 'route'} to ${point(round.goal).maltese}. ${position()}`);
+    draft.value = '';
+    result = null;
+    english = false;
+    say('[data-route-start-name]', place(round.start)[0]);
+    say('[data-route-goal-name]', place(round.goal)[0]);
+    say('[data-route-start-heading]', 'Start facing ' + face(round.heading));
+    placeMarker(startMarker, round.start);
+    placeMarker(goalMarker, round.goal);
+    paintTrail();
+    updatePosition();
+    renderDirections();
+  }
+
+  function refreshMove() {
+    result = null;
+    paintTrail();
+    updatePosition();
+    renderDirections();
   }
 
   function travel(heading, missing = 'There is no road that way.') {
-    if (reachedGoal()) {
-      refreshFeedback();
+    if (reachedGoal()) return;
+    const from = current().at;
+    const next = heading === -1 ? -1 : core.neighbour(map, from, heading);
+    if (next === -1) {
+      const candidate = heading === -1 ? -1 : core.gridNeighbour(from, heading);
+      const blocked = candidate !== -1 && core.roadState(map, core.edgeKey(from, candidate)) === 'closed';
+      updatePosition(blocked ? 'That road is closed. Choose a ringed intersection.' : missing);
       return;
     }
-    const destination = heading === -1 ? -1 : adjacent(current().at, heading);
-    if (destination === -1) {
-      say('[data-route-position]', `${missing} ${position()}`);
-      return;
-    }
-    trail.push({ at: destination, heading });
-    draw();
+    trail.push({ at: next, heading });
+    refreshMove();
   }
 
-  function modelRoute() {
-    const legs = [];
-    trail.slice(1).forEach((step, index) => {
-      const previous = trail[index], last = legs[legs.length - 1];
-      if (last?.heading === step.heading) last.stops.push(step.at);
-      else legs.push({ from: previous.at, turn: turnFrom(previous.heading, step.heading), heading: step.heading, stops: [step.at] });
-    });
-    const mt = [], en = [];
-    for (const { from, turn, stops } of legs) {
-      if (turn === 2) {
-        mt.push(`Dur lura ħdejn ${maltese(from)}.`);
-        en.push(`Turn back by ${point(from).english}.`);
-      } else if (turn) {
-        mt.push(`Dur fuq ${sides[turn].mt} mal-kantuniera ħdejn ${maltese(from)}.`);
-        en.push(`Turn ${sides[turn].en} at the corner by ${point(from).english}.`);
-      }
-      const goal = stops[stops.length - 1], passed = stops.slice(0, -1);
-      mt.push(`Ibqa' sejjer dritt sakemm tasal ħdejn ${maltese(goal)}.`);
-      en.push(`Keep going straight until you reach ${point(goal).english}.`);
-      if (passed.length) {
-        mt.push(passed.length === 1 ? 'Fit-triq, aqsam triq waħda.' : 'Fit-triq, aqsam żewġ toroq.');
-        en.push(`On the way, cross ${passed.length === 1 ? 'one side street' : 'two side streets'}.`);
-        for (const at of passed) {
-          mt.push(`Għaddi minn ħdejn ${maltese(at)}.`);
-          en.push(`Go past ${point(at).english}.`);
-        }
-      }
+  function checkRoute() {
+    if (mode === 'read') english = true;
+    const progress = hasMission() ? core.evaluateMission(map, round, trail) : [];
+    const unmet = progress.find(step => step.state !== 'done');
+    if (unmet) {
+      result = { passed: false, message: unmet.message, at: unmet.at };
+    } else if (!reachedGoal()) {
+      result = { passed: false, message: 'Keep going to ' + place(round.goal)[1] + '.' };
+    } else if (mode === 'write' && !draft.value.trim()) {
+      result = { passed: false, message: 'Write your directions in Maltese, then check the route.' };
+      draft.focus();
+    } else {
+      result = {
+        passed: true,
+        message: hasMission() ? 'Challenge complete. You followed all three instructions and reached the goal.'
+          : 'Your route reaches the goal. Compare your sentences with the model.'
+      };
     }
-    say('[data-route-model-mt]', mt.join(' '));
-    say('[data-route-model-en]', en.join(' '));
+    paintTrail();
+    renderDirections();
+    if (result.passed && mode === 'write') find('#route-model-title').focus();
   }
 
-  root.querySelectorAll('[data-route-move]').forEach(button => {
-    button.addEventListener('click', () => {
-      const heading = (current().heading + Number(button.dataset.routeMove) + directions.length) % directions.length;
-      travel(heading);
-    });
-  });
-  map.addEventListener('click', event => {
-    const node = event.target.closest('[data-route-node]');
-    if (!node) return;
-    const index = Number(node.dataset.routeNode);
-    const heading = directions.findIndex((_, heading) => adjacent(current().at, heading) === index);
+  all('[data-route-move]').forEach(button => button.addEventListener('click', () => {
+    travel(core.rotate(current().heading, Number(button.dataset.routeMove)));
+  }));
+  svg.addEventListener('click', event => {
+    const target = event.target.closest('[data-route-node]');
+    if (!target) return;
+    const next = Number(target.dataset.routeNode);
+    const heading = core.headings.findIndex((_, direction) => core.gridNeighbour(current().at, direction) === next);
     travel(heading, 'Choose an intersection one block away.');
   });
-  find('[data-route-undo]').addEventListener('click', () => {
-    if (trail.length > 1) { trail.pop(); draw(); }
+  phraseList.addEventListener('click', event => {
+    const button = event.target.closest('[data-route-phrase]');
+    if (!button) return;
+    const index = Number(button.dataset.routePhrase);
+    selectPhrase(index === activePhrase ? -1 : index);
+    if (activePhrase !== -1 && event.detail > 0 && compact.matches && svg.getBoundingClientRect().bottom < 0) {
+      svg.scrollIntoView({ block: 'nearest' });
+    }
   });
-  find('[data-route-new]').addEventListener('click', () => newRound());
-  find('[data-route-challenge-new]').addEventListener('click', () => newRound(true));
-  modes.forEach(button => button.addEventListener('click', () => {
-    mode = button.dataset.routeMode;
-    modes.forEach(option => { option.ariaPressed = String(option === button); });
-    placeDirections();
-    refreshDirections();
-    refreshFeedback();
+  find('[data-route-undo]').addEventListener('click', () => {
+    if (trail.length < 2) return;
+    trail.pop();
+    refreshMove();
+  });
+  find('[data-route-new]').addEventListener('click', () => {
+    if (mode === 'read') changeMode('write');
+    newRound(false);
+  });
+  all('[data-route-challenge-new], [data-route-free-challenge]').forEach(button => {
+    button.addEventListener('click', () => newRound(true));
+  });
+  modeButtons.forEach(button => button.addEventListener('click', () => {
+    const next = button.dataset.routeMode;
+    if (mode === next) return;
+    changeMode(next);
+    result = null;
+    if (mode === 'read' && !hasMission()) newRound(true);
+    else {
+      paintTrail();
+      renderDirections();
+    }
   }));
-  compact.addEventListener('change', placeDirections);
+  mapSelect.addEventListener('change', () => {
+    map = core.neighbourhoods.find(candidate => candidate.id === mapSelect.value);
+    paintMap();
+    round = null;
+    newRound(mode === 'read');
+  });
+  compact.addEventListener('change', mountDirections);
+  find('[data-route-hint]').addEventListener('click', () => {
+    english = !english;
+    renderDirections();
+  });
+  find('[data-route-check]').addEventListener('click', checkRoute);
   form.addEventListener('submit', event => {
     event.preventDefault();
-    if (!reachedGoal()) {
-      say('[data-route-feedback]', `You are at ${point(current().at).maltese}. Keep going to ${point(round.goal).maltese}.`);
-      return;
-    }
-    if (challenge && challengeProgress() !== 'met') {
-      refreshFeedback();
-      return;
-    }
-    if (!description.value.trim()) {
-      say('[data-route-feedback]', 'Write your directions in Maltese, then check the route.');
-      description.focus();
-      return;
-    }
-    checked = true;
-    refreshDirections();
-    refreshFeedback();
-    find('#route-model-title').focus();
+    checkRoute();
   });
-  placeDirections();
-  newRound();
+
+  paintMap();
+  mountDirections();
+  newRound(true);
 })();
