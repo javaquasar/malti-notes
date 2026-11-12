@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}1bbd2b509bf6`;
+const CACHE_NAME = `${CACHE_PREFIX}ea8c50240a59`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -50,6 +50,7 @@ const CORE_ASSETS = [
     "./reading_red_cave.html",
     "./restaurant_ordering.html",
     "./review_cards.html",
+    "./route_game.html",
     "./school_classroom.html",
     "./sentence_builder.html",
     "./shopping_clothes.html",
@@ -127,6 +128,7 @@ const CORE_ASSETS = [
     "./assets/js/render-vocab-table.js",
     "./assets/js/review-cards.js",
     "./assets/js/review-store.js",
+    "./assets/js/route-game.js",
     "./assets/js/seen-words.js",
     "./assets/js/site-header.js",
     "./assets/js/site-map-pages.js",

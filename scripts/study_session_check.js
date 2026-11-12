@@ -286,26 +286,38 @@ async function main() {
         const initial = await start(page, 12);
         const [missed, assisted, skipped] = lesson05.items;
         const reading = page.getByRole('link', { name: 'Read Il-Festi (new tab)' });
+        const model = page.locator('[data-study-checked-answer]');
+        async function expectModel(item) {
+          assert(await model.isVisible());
+          assert.equal(await model.locator('[lang="mt"]').innerText(), item.answer + '.');
+          assert(item.answerTranslation);
+          assert.equal(await model.locator('[lang="en"]').innerText(), item.answerTranslation);
+        }
         assert.equal(await reading.count(), 0);
+        assert.equal(await model.isVisible(), false);
         await submit(page, false, 'Boċċi ħodor');
         const feedback = page.locator('[data-study-exercise] .exercise-feedback');
-        assert((await feedback.innerText()).includes(missed.answer));
+        await expectModel(missed);
         assert((await feedback.innerText()).includes(missed.explanation));
         await reload(page);
         const resumed = await start(page, 12);
         assert.equal(resumed.id, initial.id);
+        await expectModel(missed);
         assert((await feedback.innerText()).includes(missed.explanation));
         await next(page);
 
         await page.locator('[data-study-hint]').click();
+        assert.equal(await model.isVisible(), false);
         assert.equal(await page.locator('[data-study-help-explanation]').innerText(), assisted.hint);
         await submit(page);
+        await expectModel(assisted);
         await next(page);
         await page.getByRole('button', { name: 'Save for later' }).click();
         for (const item of lesson05.items.slice(3)) {
           assert.equal((await current(page)).entry.item.id, item.id);
           if (item.sourcePage.endsWith('#lesson05-il-festi')) assert.equal(await reading.isVisible(), true);
           await submit(page);
+          await expectModel(item);
           await next(page);
         }
         assert.equal(await page.locator('[data-study-new]').innerText(), 'Repeat 3 questions');
@@ -313,11 +325,14 @@ async function main() {
         assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 3 questions');
         const repeats = await start(page, 3);
         assert.deepEqual(repeats.entries.map(entry => entry.item.id), [missed.id, assisted.id, skipped.id]);
+        assert.equal(await model.isVisible(), false);
         await submit(page, true, missed.accepted[1] + '.');
+        await expectModel(missed);
         await next(page);
         for (const item of [assisted, skipped]) {
           assert.equal((await current(page)).entry.item.id, item.id);
           await submit(page);
+          await expectModel(item);
           await next(page);
         }
         assert.equal(await page.locator('[data-study-new]').innerText(), 'Start full practice again');
@@ -328,6 +343,96 @@ async function main() {
         assert.equal(await page.locator('[data-study-step-status]').innerText(), 'Question 1 of 12');
         assert.deepEqual(await axe(page), []);
         return { initial: 12, repeated: 3, cleared: true };
+      } finally { await f.close(); }
+    });
+
+    await check('Route game checks written directions and updates live directions with every move', async () => {
+      const f = await fixture('route-game', { width: 390 });
+      try {
+        const page = f.page;
+        await page.addInitScript(() => { if (location.pathname.endsWith('/route_game.html')) Math.random = () => 0; });
+        await page.goto(base + '/directions_town.html#lesson05-routes');
+        await page.getByRole('link', { name: 'Play the Maltese Route Game' }).click();
+        await page.waitForFunction(() => Boolean(document.querySelector('[data-route-start-name]')?.textContent));
+        const position = page.locator('[data-route-position]');
+        const feedback = page.locator('[data-route-feedback]');
+        const model = page.locator('[data-route-model]');
+        const write = page.getByRole('textbox', { name: 'Your directions' });
+        const straight = page.getByRole('button', { name: 'Go straight' });
+        const left = page.getByRole('button', { name: 'Turn left' });
+        const right = page.getByRole('button', { name: 'Turn right' });
+        const undo = page.getByRole('button', { name: 'Undo last move' });
+        const verify = page.getByRole('button', { name: 'Check route' });
+        const newRoute = page.getByRole('button', { name: 'New route' });
+        assert.equal(await page.locator('[data-route-start-name]').innerText(), 'Il-posta');
+        assert.equal(await page.locator('[data-route-goal-name]').innerText(), 'L-iskola');
+        assert.equal(await page.locator('[data-route-start-heading]').innerText(), 'Start facing east');
+        await verify.click();
+        assert.match(await feedback.innerText(), /Keep going/);
+        assert.equal(await model.isVisible(), false);
+        await left.click();
+        assert.match(await position.innerText(), /no road/);
+        await straight.focus(); await straight.press('Enter');
+        assert.match(await position.innerText(), /Il-knisja.*1 block/);
+        await undo.click();
+        assert.match(await position.innerText(), /Il-posta.*0 blocks/);
+        await straight.click(); await straight.click(); await right.click();
+        assert.equal(await page.locator('[data-route-trail]').evaluate(line => line.points.numberOfItems), 4);
+        await verify.click();
+        assert.equal(await write.evaluate(node => node === document.activeElement), true);
+        assert.equal(await model.isVisible(), false);
+        await write.fill("Ibqa' sejjer dritt. Dur fuq il-lemin.");
+        await verify.click();
+        assert.match(await feedback.innerText(), /reaches the goal/);
+        assert.match(await model.locator('[lang="mt"]').innerText(), /aqsam triq waħda.*ħdejn il-knisja.*il-lemin.*ħdejn l-iskola/i);
+        assert.match(await model.locator('[lang="en"]').innerText(), /one side street.*the church.*right at the corner by the bakery.*the school/);
+        await undo.click(); await undo.click(); await right.click(); await left.click();
+        await write.fill('Dur fuq il-lemin ħdejn il-knisja u mbagħad dur fuq ix-xellug ħdejn il-pjazza.');
+        await verify.click();
+        assert.match(await model.locator('[lang="en"]').innerText(), /right at the corner by the church.*left at the corner by the square.*the school/);
+        await newRoute.click();
+        assert.equal(await page.locator('[data-route-goal-name]').innerText(), 'Il-klinika');
+        assert.equal(await write.inputValue(), '');
+        assert.equal(await model.isVisible(), false);
+        await straight.click(); await straight.click(); await straight.click(); await right.click();
+        await write.fill('Aqsam żewġ toroq. Dur fuq il-lemin.');
+        await verify.click();
+        assert.match(await model.locator('[lang="en"]').innerText(), /two side streets.*the church.*the bakery.*the clinic/);
+
+        await newRoute.click();
+        const liveMode = page.getByRole('button', { name: 'Live directions', exact: true });
+        const writeMode = page.getByRole('button', { name: 'Write your own', exact: true });
+        const english = model.locator('[lang="en"]');
+        await write.fill('Draft to keep');
+        await liveMode.focus(); await liveMode.press('Enter');
+        assert.equal(await liveMode.getAttribute('aria-pressed'), 'true');
+        assert.equal(await write.isVisible(), false);
+        assert.equal(await verify.isVisible(), false);
+        assert.equal(await model.isVisible(), false);
+        await straight.click();
+        assert.equal(await model.isVisible(), true);
+        assert.match(await model.locator('[lang="mt"]').innerText(), /tasal ħdejn il-knisja/);
+        assert.match(await english.innerText(), /reach the church/);
+        const firstStep = await english.innerText();
+        await left.click();
+        assert.equal(await english.innerText(), firstStep);
+        await straight.click();
+        assert.match(await english.innerText(), /reach the bakery.*one side street.*go past the church/i);
+        await undo.click();
+        assert.equal(await english.innerText(), firstStep);
+        await writeMode.click();
+        assert.equal(await write.inputValue(), 'Draft to keep');
+        assert.equal(await model.isVisible(), false);
+        await liveMode.click();
+        assert.equal(await english.innerText(), firstStep);
+        await straight.click(); await right.click();
+        assert.match(await english.innerText(), /right at the corner by the bakery.*the school/);
+        assert.equal(await feedback.innerText(), 'You reached the goal.');
+        await newRoute.click();
+        assert.equal(await liveMode.getAttribute('aria-pressed'), 'true');
+        assert.equal(await model.isVisible(), false);
+        assert.equal(await page.locator('[data-route-live-empty]').isVisible(), true);
+        return { keyboard: true, alternatePath: true, oneAndTwoCrossings: true, reroll: true, liveUpdates: true };
       } finally { await f.close(); }
     });
 

@@ -245,6 +245,17 @@
       say('[data-study-transfer-cue]', transfer.cue);
     }
   }
+  function showCheckedAnswer(entry, result) {
+    const { answer, answerTranslation } = entry.item;
+    const visible = Boolean(answerTranslation && result?.checked && !result.previousQuestion);
+    find('[data-study-checked-answer]').hidden = !visible;
+    say('[data-study-checked-mt]', visible ? answer + '.' : '');
+    say('[data-study-checked-en]', visible ? answerTranslation : '');
+    if (visible) {
+      panel.querySelector('.exercise-feedback').textContent = `${result.correct ? 'Correct.' : 'Not yet.'} ${entry.help.explanation}`;
+    }
+  }
+
   function drawStep() {
     if (!session || core.summary(session).complete) { if (session) showFinish(); return; }
     rendering = true;
@@ -274,6 +285,7 @@
     find('[data-study-reading]').hidden = !isLesson05(route) || entry.item.sourcePage !== 'places_events.html#lesson05-il-festi';
     const assisted = session.hints[entry.item.id] === true;
     showSupport(entry, result);
+    showCheckedAnswer(entry, result);
     const feedback = result?.previousQuestion ? 'You checked an earlier version of this question. Your result is saved. Go to the next question.'
       : result?.checked ? result.correct ? 'You can go to the next question.' : retryAdvice()
       : assisted ? 'This attempt uses a hint. Your independent results stay separate.' : '';
@@ -401,6 +413,7 @@
       }
       persistSession(); setAnswerDisabled(true); find('[data-study-next]').disabled = false;
       showSupport(entry, saved);
+      showCheckedAnswer(entry, saved);
       if (isLesson05(route)) find('[data-study-ask]').hidden = true;
       say('[data-study-feedback]', result.correct ? 'Answer checked. You can go to the next question.' : retryAdvice());
       refreshHelpQueue();
