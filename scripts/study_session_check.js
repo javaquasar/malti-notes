@@ -403,6 +403,48 @@ async function main() {
       return { maps: core.neighbourhoods.length, challenges: count, alternativesAccepted: 2 };
     });
 
+    await check('Game settings open over the map without moving the title or changing the route', async () => {
+      const f = await fixture('route-settings', { width: 390, hasTouch: true });
+      try {
+        const page = f.page;
+        await page.goto(base + '/route_game.html', { waitUntil: 'networkidle' });
+        const title = page.getByRole('heading', { name: 'Maltese Route Game' });
+        const map = page.locator('[data-route-map]');
+        const toggle = page.locator('[data-route-settings] summary');
+        const panel = page.locator('.route-settings');
+        const neighbourhood = page.getByLabel('Neighbourhood');
+        const position = page.locator('[data-route-position]');
+        const dimensions = async () => ({
+          title: await title.boundingBox(), map: await map.boundingBox(), toggle: await toggle.boundingBox()
+        });
+        for (const width of [320, 390, 1280]) {
+          await page.setViewportSize({ width, height: 844 });
+          await page.evaluate(() => window.scrollTo(0, 0));
+          const before = await dimensions();
+          const initialPosition = await position.innerText();
+          assert.equal(await panel.isVisible(), false);
+          await toggle.focus(); await toggle.press('Enter');
+          await panel.waitFor({ state: 'visible' });
+          assert.deepEqual(await dimensions(), before);
+          const bounds = await panel.boundingBox();
+          assert(bounds.x >= 0 && bounds.x + bounds.width <= width);
+          assert(bounds.y >= before.toggle.y + before.toggle.height);
+          assert.equal(await panel.evaluate(el => el.scrollWidth > el.clientWidth), false);
+          if (width !== 320) await capture(page, 'route-settings-' + width + '.png');
+          await neighbourhood.focus();
+          await page.keyboard.press('Escape');
+          assert.equal(await panel.isVisible(), false);
+          assert.equal(await toggle.evaluate(el => el === document.activeElement), true);
+          await toggle.tap();
+          await title.tap();
+          assert.equal(await panel.isVisible(), false);
+          assert.equal(await position.innerText(), initialPosition);
+          assert.deepEqual(await dimensions(), before);
+        }
+        return { widths: [320, 390, 1280], escape: true, outsideTap: true };
+      } finally { await f.close(); }
+    });
+
     await check('Writing and live modes preserve the route and link each bilingual phrase to the map', async () => {
       const f = await fixture('route-game', { width: 390, hasTouch: true });
       try {
@@ -413,6 +455,7 @@ async function main() {
         await page.waitForFunction(() => Boolean(document.querySelector('[data-route-start-name]')?.textContent));
         const button = name => page.getByRole('button', { name, exact: true });
         const tapNode = index => page.locator('[data-route-node="' + index + '"]').tap();
+        const settings = page.locator('[data-route-settings] summary');
         const position = page.locator('[data-route-position]');
         const feedback = page.locator('[data-route-feedback]');
         const model = page.locator('[data-route-model]');
@@ -427,7 +470,7 @@ async function main() {
           const { e, f } = label.parentElement.transform.baseVal.getItem(0).matrix;
           return [e, f];
         });
-        await page.getByText('Game settings', { exact: true }).tap();
+        await settings.tap();
         await button('Write your own').tap();
         await button('New route').tap();
         assert.equal(await page.locator('[data-route-start-name]').innerText(), 'Il-posta');
@@ -457,11 +500,14 @@ async function main() {
         await turn.press('Enter');
         assert.deepEqual(await segment(), []);
 
+        await settings.tap();
         await button('New route').tap();
         assert.equal(await page.locator('[data-route-goal-name]').innerText(), 'Il-klinika');
         assert.equal(await write.inputValue(), '');
         await write.fill('Draft to keep');
+        await settings.tap();
         await button('Live directions').tap();
+        await settings.tap();
         assert.equal(await write.isVisible(), false);
         assert.equal(await model.isVisible(), false);
         await tapNode(1);
@@ -478,13 +524,13 @@ async function main() {
         const landmark = page.locator('[data-route-phrase]').filter({ hasText: 'Go past the church.' });
         await landmark.tap();
         assert.deepEqual(await segment(), await Promise.all([0, 1, 2].map(coordinates)));
-        await page.getByText('Game settings', { exact: true }).tap();
         await capture(page, 'route-live-390.png');
         await button('Undo last move').tap();
         assert.deepEqual(await segment(), []);
         assert.equal(await phrases.innerText(), first);
-        await page.getByText('Game settings', { exact: true }).tap();
+        await settings.tap();
         await button('Write your own').tap();
+        await settings.tap();
         assert.equal(await write.inputValue(), 'Draft to keep');
         assert.equal(await model.isVisible(), false);
         return { keyboard: true, touch: true, liveUpdates: true, linkedSegments: true };
@@ -546,12 +592,15 @@ async function main() {
 
         await settings.tap();
         await page.getByLabel('Neighbourhood').selectOption('old-town');
+        await settings.tap();
         assert.equal(await page.locator('[data-route-map-name]').innerText(), 'Old Town');
         assert(await labelsFit());
         assert.equal(await page.locator('[data-route-road="0-1"]').getAttribute('data-edge-state'), 'missing');
         await tapNode(1);
         assert.match(await page.locator('[data-route-position]').innerText(), /one block away.*0 blocks/);
+        await settings.tap();
         await page.getByLabel('Neighbourhood').selectOption('harbour');
+        await settings.tap();
         assert.equal(await page.locator('[data-route-map-name]').innerText(), 'Harbour Lanes');
         assert(await labelsFit());
         assert.equal(await page.locator('[data-route-road="5-9"]').getAttribute('data-edge-state'), 'closed');
@@ -559,7 +608,6 @@ async function main() {
         assert.match(await page.locator('[data-route-position]').innerText(), /road is closed.*1 block/);
         assert.equal(await page.locator('[data-route-ring="9"]').evaluate(ring => ring.r.baseVal.value), 0);
         assert.match(await page.locator('[data-route-text-map]').textContent(), /south closed/);
-        await settings.tap();
         await page.setViewportSize({ width: 1280, height: 900 });
         await page.waitForFunction(() => document.querySelector('[data-route-side] [data-route-conditions]'));
         await capture(page, 'route-harbour-1280.png');

@@ -23,6 +23,8 @@
   const inline = find('[data-route-inline]');
   const side = find('[data-route-side]');
   const model = find('[data-route-model]');
+  const settings = find('[data-route-settings]');
+  const settingsToggle = settings.querySelector('summary');
   const form = find('[data-route-form]');
   const draft = find('[data-route-description]');
   const mapSelect = find('[data-route-map-select]');
@@ -319,6 +321,17 @@
   find('[data-route-new]').addEventListener('click', () => {
     if (mode === 'read') changeMode('write');
     newRound(false);
+    settings.open = false;
+    settingsToggle.focus();
+  });
+  document.addEventListener('click', event => {
+    if (settings.open && !settings.contains(event.target)) settings.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (!settings.open || event.key !== 'Escape' || event.defaultPrevented) return;
+    event.preventDefault();
+    settings.open = false;
+    settingsToggle.focus();
   });
   all('[data-route-challenge-new], [data-route-free-challenge]').forEach(button => {
     button.addEventListener('click', () => newRound(true));

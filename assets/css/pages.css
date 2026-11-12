@@ -24,6 +24,27 @@
 .route-map-heading,
 .route-map-key { justify-content: space-between; }
 
+.route-game-heading {
+  position: relative;
+  z-index: 2;
+}
+
+[data-route-settings] {
+  inline-size: 11em;
+  max-inline-size: 100%;
+}
+
+.route-settings {
+  position: absolute;
+  inset-block-start: calc(100% + var(--space-sm));
+  inset-inline-end: 0;
+  inline-size: min(30rem, 100%);
+}
+
+@media (max-width: 600px) {
+  .route-settings { inset-inline: 0; inline-size: auto; }
+}
+
 .route-game-heading > *,
 .route-map-heading > *,
 .route-brief,
