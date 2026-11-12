@@ -4,6 +4,8 @@
   const root = document.querySelector('[data-route-game]');
   if (!root) return;
   const core = window.MaltiRouteGame;
+  const audio = window.MaltiGameAudio;
+  const soundKey = 'malti_route_game_sound_v1';
   const find = selector => root.querySelector(selector);
   const all = selector => [...root.querySelectorAll(selector)];
   const say = (selector, value) => { find(selector).textContent = value; };
@@ -42,6 +44,9 @@
   const model = find('[data-route-model]');
   const settings = find('[data-route-settings]');
   const settingsToggle = settings.querySelector('summary');
+  const soundSelect = find('[data-route-sound]');
+  soundSelect.value = audio?.readEnabled(soundKey) === false ? 'off' : 'on';
+  const playSound = type => audio?.play(type, { enabled: soundSelect.value === 'on' });
   const form = find('[data-route-form]');
   const draft = find('[data-route-description]');
   const mapSelect = find('[data-route-map-select]');
@@ -67,7 +72,9 @@
 
   const current = () => trail.at(-1);
   const reachedGoal = () => current().at === round.goal;
-  const hasMission = () => Boolean(round.ordinal || round.ride);
+  const hasMission = () => Boolean(round.ordinal || round.rides);
+  const hasTransfer = () => round.rides?.length > 1;
+  const routeComplete = progress => reachedGoal() && progress.every(step => step.state === 'done');
   const place = index => core.place(map, index);
   const face = heading => core.headings[heading].name;
 
@@ -122,7 +129,7 @@
         return possible !== -1 && core.roadState(map, core.edgeKey(index, possible)) === 'closed'
           ? [direction.name + ' closed'] : [];
       });
-      ways.push(...core.departures(map, index).map(service => core.serviceName(map, service) + ' to ' + place(service.to)[1]));
+      ways.push(...core.departures(map, index).map(service => core.serviceName(service) + ' to ' + place(service.to)[1]));
       fragmentText(fragment, '[data-route-text-place]', name);
       fragmentText(fragment, '[data-route-text-ways]', ' (' + englishName + ') · ' + ways.join(', '));
     });
@@ -173,7 +180,7 @@
     scenery.href.baseVal = '#route-scenery-' + map.id;
     find('[data-route-clip]').height.baseVal.value = height;
     find('[data-route-frame]').height.baseVal.value = height - 2;
-    find('[data-route-transit-help]').hidden = !map.transit;
+    find('[data-route-transit-help]').hidden = !map.services;
     mapSelect.value = map.id;
     const terminals = new Set((map.services || []).flatMap(service => [service.from, service.to]));
     labelSlots.forEach((slot, index) => {
@@ -248,11 +255,15 @@
   function renderDepartures() {
     const available = reachedGoal() ? [] : core.departures(map, current().at);
     transitPanel.hidden = !available.length;
-    if (available.length) say('#route-transit-heading', map.transit.plural + ' from ' + place(current().at)[1]);
+    if (available.length) {
+      const kind = available[0].kind;
+      const label = available.every(service => service.kind === kind) ? core.serviceTypes[kind].plural : 'Departures';
+      say('#route-transit-heading', label + ' from ' + place(current().at)[1]);
+    }
     renderRows(departureList, find('[data-route-service-template]'), available, (fragment, service) => {
       const choice = fragment.querySelector('[data-route-service]');
       choice.dataset.routeService = service.number;
-      choice.textContent = core.serviceName(map, service) + ' · ' + service.destination;
+      choice.textContent = core.serviceName(service) + ' · ' + service.destination;
     });
     showPreview(null);
   }
@@ -273,7 +284,7 @@
     const started = performance.now();
     const transform = vehicle.transform.baseVal.getItem(0);
     placeMarker(vehicle, ride.from);
-    vehicle.querySelector('use').href.baseVal = '#route-icon-' + place(ride.from)[2];
+    vehicle.querySelector('use').href.baseVal = '#route-icon-' + core.serviceTypes[ride.kind].icon;
     walker.dataset.routeEmpty = 'true';
     vehicle.dataset.routeEmpty = 'false';
 
@@ -353,7 +364,8 @@
   }
 
   function renderPhrases() {
-    const show = trail.length > 1 && (mode === 'live' || result?.passed);
+    const live = mode === 'live' && !(hasTransfer() && reachedGoal());
+    const show = trail.length > 1 && (live || result?.passed);
     model.hidden = !show;
     if (!show) {
       phrases = [];
@@ -382,9 +394,9 @@
     const brief = find('[data-route-brief]');
     brief.hidden = !hasMission();
     if (hasMission()) {
-      brief.textContent = firstUnfinished === -1
-        ? 'Mur ħdejn ' + place(round.goal)[0].toLocaleLowerCase('mt') + '.'
-        : steps[firstUnfinished].mt;
+      if (firstUnfinished !== -1) brief.textContent = steps[firstUnfinished].mt;
+      else if (hasTransfer()) brief.textContent = 'Ikteb id-direzzjonijiet bil-Malti.';
+      else brief.textContent = 'Mur ħdejn ' + place(round.goal)[0].toLocaleLowerCase('mt') + '.';
     }
     find('[data-route-challenge]').hidden = !hasMission();
     find('[data-route-free-challenge]').hidden = hasMission();
@@ -392,7 +404,7 @@
     hint.hidden = !reading;
     hint.ariaPressed = String(english);
     hint.textContent = english ? 'Hide English' : 'Show English';
-    find('[data-route-check]').hidden = !reading;
+    find('[data-route-check]').hidden = !reading || (hasTransfer() && firstUnfinished === -1);
     renderRows(conditionList, find('[data-route-condition-template]'), steps, (fragment, step, index) => {
       fragmentText(fragment, '[data-condition-mt]', step.mt);
       const translated = fragment.querySelector('[data-condition-en]');
@@ -405,27 +417,35 @@
 
   function renderFeedback(progress) {
     let message = result?.message || '';
-    if (!message && mode !== 'read') {
+    if (!message && (mode !== 'read' || hasTransfer())) {
       message = progress.find(step => step.state === 'missed')?.message || '';
       if (!message && reachedGoal()) {
-        message = mode === 'write' ? 'You reached the goal. Write your directions and check the route.'
-          : hasMission() ? 'Challenge complete. You reached the goal.' : 'You reached the goal.';
+        if (hasTransfer()) message = 'Transfer complete. Describe the whole route in Maltese.';
+        else if (mode === 'write') message = 'You reached the goal. Write your directions and check the route.';
+        else message = hasMission() ? 'Challenge complete. You reached the goal.' : 'You reached the goal.';
       }
     }
     say('[data-route-feedback]', message);
   }
 
   function renderDirections() {
-    const writing = mode === 'write';
-    form.hidden = !writing;
-    find('#route-write-help').hidden = !writing;
-    find('[data-route-live-empty]').hidden = mode !== 'live' || trail.length > 1;
-    say('#route-write-heading', modeTitles[mode]);
     const progress = hasMission() ? core.evaluateMission(map, round, trail) : [];
     const steps = hasMission() ? core.instructions(map, round) : [];
+    const transfer = hasTransfer();
+    const writing = transfer ? routeComplete(progress) : mode === 'write';
+    form.hidden = !writing;
+    find('#route-write-help').hidden = !writing;
+    say('#route-write-help', transfer
+      ? 'Describe how to get to the bus stop, which bus to take, how to reach the quay, which ferry to board and how to walk to the goal.'
+      : 'Write directions in Maltese. Include turns, side streets and landmarks.');
+    say('[data-route-write-label]', transfer ? 'Your Maltese description' : 'Your directions');
+    say('[data-route-write-submit]', transfer ? 'Compare with model' : 'Check route');
+    find('[data-route-live-empty]').hidden = mode !== 'live' || trail.length > 1;
+    say('#route-write-heading', transfer && writing ? 'Describe the whole route' : modeTitles[mode]);
     renderChallenge(steps, progress);
     renderPhrases();
     renderFeedback(progress);
+    return progress;
   }
 
   function changeMode(next) {
@@ -436,7 +456,8 @@
 
   function newRound(withMission) {
     stopRideAnimation();
-    const pool = withMission ? core.missionRounds(map) : core.freeRounds(map);
+    const needsMission = withMission || map.missions.some(mission => mission.rides?.length > 1);
+    const pool = needsMission ? core.missionRounds(map) : core.freeRounds(map);
     const alternatives = pool.filter(candidate => candidate.id !== round?.id);
     round = alternatives[Math.floor(Math.random() * alternatives.length)];
     trail = [{ at: round.start, heading: round.heading }];
@@ -459,7 +480,7 @@
     result = null;
     paintTrail();
     updatePosition(message);
-    renderDirections();
+    return renderDirections();
   }
 
   function travel(heading, missing = 'There is no road that way.') {
@@ -470,44 +491,49 @@
       const candidate = heading === -1 ? -1 : core.gridNeighbour(map, from, heading);
       const blocked = candidate !== -1 && core.roadState(map, core.edgeKey(from, candidate)) === 'closed';
       updatePosition(blocked ? 'That road is closed. Choose a ringed intersection.' : missing);
+      playSound('miss');
       return;
     }
     trail.push({ at: next, heading });
-    refreshMove();
+    const progress = refreshMove();
+    playSound(routeComplete(progress) ? 'success' : 'tick');
   }
 
   function board() {
     const ride = previewedRide;
     if (!ride) return;
     trail.push({ at: ride.to, heading: ride.heading, ride });
-    refreshMove(core.serviceName(map, ride) + ' arrived at ' + place(ride.to)[1] + '.');
+    const progress = refreshMove(core.serviceName(ride) + ' arrived at ' + place(ride.to)[1] + '.');
+    playSound(progress.some(step => step.state === 'missed') ? 'miss' : 'success');
     animateRide(ride);
     find('[data-route-move="0"]').focus({ preventScroll: true });
   }
 
   function checkRoute() {
-    if (mode === 'read') english = true;
+    const writing = mode === 'write' || hasTransfer();
+    if (mode === 'read' && !hasTransfer()) english = true;
     const progress = hasMission() ? core.evaluateMission(map, round, trail) : [];
     const unmet = progress.find(step => step.state !== 'done');
     if (unmet) {
       result = { passed: false, message: unmet.message, at: unmet.at };
     } else if (!reachedGoal()) {
       result = { passed: false, message: 'Keep going to ' + place(round.goal)[1] + '.' };
-    } else if (mode === 'write' && !draft.value.trim()) {
+    } else if (writing && !draft.value.trim()) {
       result = { passed: false, message: 'Write your directions in Maltese, then check the route.' };
       draft.focus();
     } else {
-      result = {
-        passed: true,
-        message: hasMission() ? 'Challenge complete. You followed all three instructions and reached the goal.'
-          : 'Your route reaches the goal. Compare your sentences with the model.'
-      };
+      const message = hasTransfer() ? 'Compare your Maltese description with the model.'
+        : hasMission() ? 'Challenge complete. You followed all three instructions and reached the goal.'
+        : 'Your route reaches the goal. Compare your sentences with the model.';
+      result = { passed: true, message };
     }
     paintTrail();
     renderDirections();
-    if (result.passed && mode === 'write') find('#route-model-title').focus();
+    playSound(result.passed ? 'victory' : 'miss');
+    if (result.passed && writing) find('#route-model-title').focus();
   }
 
+  soundSelect.addEventListener('change', () => audio?.writeEnabled(soundKey, soundSelect.value === 'on'));
   all('[data-route-move]').forEach(button => button.addEventListener('click', () => {
     travel(core.rotate(current().heading, Number(button.dataset.routeMove)));
   }));
@@ -534,7 +560,10 @@
     const choice = event.target.closest('[data-route-service]');
     if (!choice) return;
     const ride = core.departures(map, current().at).find(service => service.number === choice.dataset.routeService);
-    if (ride) showPreview(previewedRide?.number === ride.number ? null : ride);
+    if (ride) {
+      showPreview(previewedRide?.number === ride.number ? null : ride);
+      playSound('tick');
+    }
   });
   find('[data-route-board]').addEventListener('click', board);
   vocabularyToggle.addEventListener('click', () => setVocabulary(vocabulary.hidden));
@@ -552,10 +581,12 @@
     if (trail.length < 2) return;
     trail.pop();
     refreshMove();
+    playSound('tick');
   });
   find('[data-route-new]').addEventListener('click', () => {
-    if (mode === 'read') changeMode('write');
+    if (mode === 'read' && !hasTransfer()) changeMode('write');
     newRound(false);
+    playSound('refresh');
     settings.open = false;
     settingsToggle.focus();
   });
@@ -569,7 +600,10 @@
     settingsToggle.focus();
   });
   all('[data-route-challenge-new], [data-route-free-challenge]').forEach(button => {
-    button.addEventListener('click', () => newRound(true));
+    button.addEventListener('click', () => {
+      newRound(true);
+      playSound('refresh');
+    });
   });
   modeButtons.forEach(button => button.addEventListener('click', () => {
     const next = button.dataset.routeMode;

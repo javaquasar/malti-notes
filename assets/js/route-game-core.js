@@ -13,6 +13,10 @@
     { mt: 'żewġ toroq', en: 'two side streets' }, { mt: 'tliet toroq', en: 'three side streets' },
     { mt: "erba' toroq", en: 'four side streets' }, { mt: 'ħames toroq', en: 'five side streets' }
   ];
+  const serviceTypes = {
+    bus: { label: 'Bus', plural: 'Buses', maltese: 'il-karozza tal-linja', numberPrefix: ' numru', icon: 'bus' },
+    ferry: { label: 'Ferry', plural: 'Ferries', maltese: 'il-lanċa', numberPrefix: '', icon: 'quay' }
+  };
   // Direction patterns follow the Lesson 05 dialogue bank on directions_town.html.
   const landmarks = {
     post: ['Il-posta', 'the post office'], church: ['Il-knisja', 'the church'],
@@ -79,7 +83,6 @@
     },
     {
       id: 'ferry-crossing', name: 'Ferry Crossing', difficulty: 'Ferry routes',
-      transit: { label: 'Ferry', plural: 'Ferries', maltese: 'il-lanċa' },
       places: [
         'post', 'church', 'cafe', 'bank', 'school', 'square', 'bakery', 'library',
         'garden', 'market', 'quay-a', 'shop',
@@ -88,26 +91,25 @@
       ],
       services: [
         {
-          number: 'F1', from: 10, to: 21, destination: 'South Quay', returnDestination: 'North Quay',
+          kind: 'ferry', number: 'F1', from: 10, to: 21, destination: 'South Quay', returnDestination: 'North Quay',
           via: [{ x: 269, y: 265 }, { x: 227, y: 307 }, { x: 174, y: 359 }, { x: 163, y: 408 }],
           label: { x: 215, y: 322 }
         },
         {
-          number: 'F2', from: 10, to: 23, destination: 'East Quay', returnDestination: 'North Quay',
+          kind: 'ferry', number: 'F2', from: 10, to: 23, destination: 'East Quay', returnDestination: 'North Quay',
           via: [{ x: 286, y: 264 }, { x: 337, y: 311 }, { x: 374, y: 362 }, { x: 379, y: 412 }],
           label: { x: 348, y: 327 }
         }
       ],
       missions: [
-        { start: 0, heading: 1, departure: 10, service: 'F1', goal: 26 },
-        { start: 4, heading: 1, departure: 10, service: 'F2', goal: 27 },
-        { start: 24, heading: 1, departure: 21, service: 'F1', goal: 3 },
-        { start: 27, heading: 0, departure: 23, service: 'F2', goal: 7 }
+        { start: 0, heading: 1, rides: [{ from: 10, number: 'F1' }], goal: 26 },
+        { start: 4, heading: 1, rides: [{ from: 10, number: 'F2' }], goal: 27 },
+        { start: 24, heading: 1, rides: [{ from: 21, number: 'F1' }], goal: 3 },
+        { start: 27, heading: 0, rides: [{ from: 23, number: 'F2' }], goal: 7 }
       ]
     },
     {
       id: 'bus-link', name: 'Bus Link', difficulty: 'Intertown routes',
-      transit: { label: 'Bus', plural: 'Buses', maltese: 'il-karozza tal-linja numru' },
       places: [
         'school', 'square', 'pharmacy', 'post', 'library', 'garden', 'bank', 'cafe',
         'clinic', 'shop', 'stop-a', 'church',
@@ -117,21 +119,57 @@
       missing: ['21-22', '25-26'],
       services: [
         {
-          number: '31', from: 10, to: 21, destination: 'Garden Town', returnDestination: 'North Town',
+          kind: 'bus', number: '31', from: 10, to: 21, destination: 'Garden Town', returnDestination: 'North Town',
           via: [{ x: 271, y: 265 }, { x: 219, y: 306 }, { x: 166, y: 360 }, { x: 163, y: 430 }],
           label: { x: 208, y: 322 }
         },
         {
-          number: '47', from: 10, to: 23, destination: 'Market Town', returnDestination: 'North Town',
+          kind: 'bus', number: '47', from: 10, to: 23, destination: 'Market Town', returnDestination: 'North Town',
           via: [{ x: 288, y: 263 }, { x: 341, y: 311 }, { x: 374, y: 364 }, { x: 379, y: 430 }],
           label: { x: 352, y: 329 }
         }
       ],
       missions: [
-        { start: 0, heading: 1, departure: 10, service: '31', goal: 25 },
-        { start: 3, heading: 2, departure: 10, service: '47', goal: 26 },
-        { start: 24, heading: 0, departure: 21, service: '31', goal: 3 },
-        { start: 27, heading: 0, departure: 23, service: '47', goal: 11 }
+        { start: 0, heading: 1, rides: [{ from: 10, number: '31' }], goal: 25 },
+        { start: 3, heading: 2, rides: [{ from: 10, number: '47' }], goal: 26 },
+        { start: 24, heading: 0, rides: [{ from: 21, number: '31' }], goal: 3 },
+        { start: 27, heading: 0, rides: [{ from: 23, number: '47' }], goal: 11 }
+      ]
+    },
+    {
+      id: 'bus-to-ferry', name: 'Bus to Ferry', difficulty: 'Transfer challenge',
+      places: [
+        'post', 'church', 'square', 'library', 'school', 'garden', 'stop-a', 'pharmacy',
+        'stop-b', 'cafe', 'harbour', 'stop-c', 'bakery', 'bank', 'quay-a', 'market',
+        null, null, null, null,
+        'fountain', 'quay-b', 'clinic', 'quay-c', 'museum', 'tower', 'shop', 'chapel'
+      ],
+      missing: ['4-8', '5-9', '6-10', '7-11', '10-11', '14-15'],
+      services: [
+        {
+          kind: 'bus', number: '31', from: 6, to: 8, destination: 'Harbour', returnDestination: 'North Town',
+          via: [{ x: 255, y: 161 }, { x: 184, y: 182 }, { x: 108, y: 185 }, { x: 55, y: 201 }],
+          label: { x: 133, y: 185 }
+        },
+        {
+          kind: 'bus', number: '47', from: 6, to: 11, destination: 'Market Town', returnDestination: 'North Town',
+          via: [{ x: 286, y: 155 }, { x: 329, y: 169 }, { x: 366, y: 186 }, { x: 379, y: 205 }],
+          label: { x: 335, y: 172 }
+        },
+        {
+          kind: 'ferry', number: 'F1', from: 14, to: 21, destination: 'South Quay', returnDestination: 'Harbour',
+          via: [{ x: 271, y: 344 }, { x: 231, y: 387 }, { x: 174, y: 423 }, { x: 163, y: 453 }],
+          label: { x: 216, y: 398 }
+        },
+        {
+          kind: 'ferry', number: 'F2', from: 14, to: 23, destination: 'East Quay', returnDestination: 'Harbour',
+          via: [{ x: 286, y: 341 }, { x: 334, y: 382 }, { x: 370, y: 424 }, { x: 379, y: 453 }],
+          label: { x: 347, y: 398 }
+        }
+      ],
+      missions: [
+        { start: 0, heading: 1, rides: [{ from: 6, number: '31' }, { from: 14, number: 'F1' }], goal: 24 },
+        { start: 3, heading: 3, rides: [{ from: 6, number: '31' }, { from: 14, number: 'F2' }], goal: 27 }
       ]
     }
   ];
@@ -189,16 +227,19 @@
     });
   }
 
-  const serviceName = (map, service) => `${map.transit.label} ${service.number}`;
+  const serviceName = service => `${serviceTypes[service.kind].label} ${service.number}`;
 
   function passInstruction(map, at) {
     return { mt: `Għaddi minn ħdejn ${mt(map, at)}.`, en: `Go past ${en(map, at)}.` };
   }
 
-  function rideInstruction(map, service) {
+  function rideInstruction(map, service, includeNumber = true) {
+    const type = serviceTypes[service.kind];
+    const maltese = includeNumber ? `${type.maltese}${type.numberPrefix} ${service.number}` : type.maltese;
+    const english = includeNumber ? serviceName(service) : `the ${type.label.toLowerCase()}`;
     return {
-      mt: `Aqbad ${map.transit.maltese} ${service.number} u inżel ħdejn ${mt(map, service.to)}.`,
-      en: `Take ${serviceName(map, service)} and get off at ${en(map, service.to)}.`
+      mt: `Aqbad ${maltese} u inżel ħdejn ${mt(map, service.to)}.`,
+      en: `Take ${english} and get off at ${en(map, service.to)}.`
     };
   }
 
@@ -217,21 +258,23 @@
   function missionRounds(map) {
     return map.missions.map(mission => {
       const id = `mission-${mission.start}-${mission.goal}`;
-      if (mission.service) {
-        const ride = departures(map, mission.departure).find(service => service.number === mission.service);
-        return { ...mission, id, ride };
+      if (mission.rides) {
+        const rides = mission.rides.map(({ from, number }) =>
+          departures(map, from).find(service => service.number === number));
+        return { ...mission, id, rides };
       }
       return { ...mission, id, ordinal: junctionsAhead(map, mission.start, mission.heading).indexOf(mission.turnAt) + 1 };
     });
   }
 
   function instructions(map, round) {
-    if (round.ride) {
-      return [
-        { mt: `Mur ħdejn ${mt(map, round.departure)}.`, en: `Walk to ${en(map, round.departure)}.` },
-        rideInstruction(map, round.ride),
-        { mt: `Wara, mur bil-mixi ħdejn ${mt(map, round.goal)}.`, en: `Then walk to ${en(map, round.goal)}.` }
-      ];
+    if (round.rides) {
+      const walk = at => ({ mt: `Wara, mur bil-mixi ħdejn ${mt(map, at)}.`, en: `Then walk to ${en(map, at)}.` });
+      const steps = round.rides.flatMap((ride, index) => [
+        index === 0 ? { mt: `Mur ħdejn ${mt(map, ride.from)}.`, en: `Walk to ${en(map, ride.from)}.` } : walk(ride.from),
+        rideInstruction(map, ride, round.rides.length === 1)
+      ]);
+      return [...steps, walk(round.goal)];
     }
     const side = sides[round.side], ordinal = ordinals[round.ordinal];
     return [
@@ -243,34 +286,52 @@
   }
 
   function evaluateTransit(map, round, trail) {
-    const boardIndex = trail.findIndex(step => step.ride);
-    const boarded = boardIndex === -1 ? null : trail[boardIndex].ride;
-    const beforeBoarding = boardIndex === -1 ? trail : trail.slice(0, boardIndex);
+    const boardings = trail.flatMap(({ ride }, index) => ride ? [{ ride, index }] : []);
     const current = trail.at(-1).at;
-    const wentToStop = beforeBoarding.some(step => step.at === round.departure);
-    const stop = wentToStop ? { state: 'done' } : {
-      state: boarded ? 'missed' : 'pending',
-      at: boarded?.from ?? current,
-      message: `Walk to ${en(map, round.departure)} before boarding.`
-    };
-    const rightRide = boarded?.number === round.ride.number && boarded.from === round.departure && boarded.to === round.ride.to;
-    const ride = rightRide ? { state: 'done' } : {
-      state: boarded ? 'missed' : 'pending',
-      at: boarded?.from ?? round.departure,
-      message: boarded
-        ? `You took ${serviceName(map, boarded)} from ${en(map, boarded.from)}. Undo the ride and take ${serviceName(map, round.ride)} from ${en(map, round.departure)}.`
-        : `Take ${serviceName(map, round.ride)} to ${en(map, round.ride.to)}.`
-    };
-    const finished = rightRide && current === round.goal;
-    const walk = finished ? { state: 'done' } : {
-      state: current === round.goal ? 'missed' : 'pending', at: current,
-      message: `After getting off at ${en(map, round.ride.to)}, walk to ${en(map, round.goal)}.`
-    };
-    return [stop, ride, walk];
+    const done = { state: 'done' };
+    const progress = Array(round.rides.length * 2 + 1).fill({ state: 'pending' });
+    let lastArrival = 0;
+    for (const [index, expected] of round.rides.entries()) {
+      const boarding = boardings[index];
+      const actual = boarding?.ride;
+      const walkedToStop = trail.slice(lastArrival, boarding?.index).some(step => step.at === expected.from);
+      progress[index * 2] = walkedToStop ? done : {
+        state: actual ? 'missed' : 'pending',
+        at: actual?.from ?? current,
+        message: `Walk to ${en(map, expected.from)} before boarding.`
+      };
+      if (actual?.number !== expected.number || actual.from !== expected.from || actual.to !== expected.to) {
+        progress[index * 2 + 1] = {
+          state: actual ? 'missed' : 'pending',
+          at: actual?.from ?? expected.from,
+          message: actual
+            ? `You took ${serviceName(actual)} from ${en(map, actual.from)}. Undo the ride and take ${serviceName(expected)} from ${en(map, expected.from)}.`
+            : `Take ${serviceName(expected)} to ${en(map, expected.to)}.`
+        };
+        return progress;
+      }
+      progress[index * 2 + 1] = done;
+      lastArrival = boarding.index;
+    }
+
+    const extra = boardings[round.rides.length]?.ride;
+    const finish = progress.length - 1;
+    if (extra) {
+      progress[finish] = {
+        state: 'missed', at: extra.from,
+        message: `You took an extra ride on ${serviceName(extra)}. Undo it and walk to ${en(map, round.goal)}.`
+      };
+    } else {
+      progress[finish] = current === round.goal ? done : {
+        state: 'pending', at: current,
+        message: `After getting off at ${en(map, round.rides.at(-1).to)}, walk to ${en(map, round.goal)}.`
+      };
+    }
+    return progress;
   }
 
   function evaluateMission(map, round, trail) {
-    if (round.ride) return evaluateTransit(map, round, trail);
+    if (round.rides) return evaluateTransit(map, round, trail);
     const current = trail.at(-1).at;
     const turnIndex = trail.findIndex(step => step.heading !== round.heading);
     const beforeTurn = turnIndex === -1 ? trail.length : turnIndex;
@@ -364,7 +425,7 @@
 
   const api = {
     columns, headings, neighbourhoods, rotate, edgeKey, gridNeighbour, neighbour, roadState,
-    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceName, passInstruction
+    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceTypes, serviceName, passInstruction
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else window.MaltiRouteGame = api;

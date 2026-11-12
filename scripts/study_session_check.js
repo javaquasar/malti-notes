@@ -346,7 +346,7 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('All five maps and twenty walking and transit challenges are solvable', () => {
+    await check('All six maps and twenty-two walking and transit challenges are solvable', () => {
       const core = require(path.join(root, 'assets/js/route-game-core.js'));
       function pathTo(map, start, goal, avoid = -1) {
         const queue = [[start]], visited = new Set([start, avoid]);
@@ -373,7 +373,7 @@ async function main() {
       const states = (map, round, trail) => core.evaluateMission(map, round, trail).map(condition => condition.state);
       const evaluate = (map, round, nodes) => states(map, round, walkingTrail(map, nodes, round.heading));
       let count = 0;
-      for (const map of core.neighbourhoods.filter(map => !map.transit)) {
+      for (const map of core.neighbourhoods.filter(map => !map.services)) {
         assert.equal(map.places.length, 20);
         for (const goal of map.places.keys()) assert(pathTo(map, 0, goal), map.id + ' must be connected');
         for (const round of core.missionRounds(map)) {
@@ -402,30 +402,50 @@ async function main() {
       assert.equal(evaluate(open, first, [0, 1, 2, 1])[1], 'missed');
       assert.equal(count, 12);
       let journeys = 0;
-      for (const map of core.neighbourhoods.filter(map => map.transit)) {
+      for (const map of core.neighbourhoods.filter(map => map.services)) {
         assert.equal(map.places.length, 28);
         for (const round of core.missionRounds(map)) {
-          const ride = round.ride;
-          assert(ride);
-          const toStop = pathTo(map, round.start, round.departure);
-          const onward = pathTo(map, ride.to, round.goal);
-          assert(toStop && onward);
-          assert.equal(pathTo(map, round.departure, ride.to), null);
-          const trail = walkingTrail(map, toStop, round.heading);
-          assert.deepEqual(states(map, round, trail), ['done', 'pending', 'pending']);
-          const other = core.departures(map, round.departure).find(option => option.number !== ride.number);
-          if (other) assert.equal(states(map, round, [...trail, { at: other.to, heading: other.heading, ride: other }])[1], 'missed');
-          trail.push({ at: ride.to, heading: ride.heading, ride });
-          assert.deepEqual(states(map, round, trail), ['done', 'done', 'pending']);
-          trail.push(...walkingTrail(map, onward, ride.heading).slice(1));
-          assert.deepEqual(states(map, round, trail), ['done', 'done', 'done']);
-          const description = core.routePhrases(map, trail, round).find(phrase => phrase.en.includes(core.serviceName(map, ride)));
-          assert.equal(trail[description.from].at, ride.from);
-          assert.equal(trail[description.to].at, ride.to);
+          const trail = [{ at: round.start, heading: round.heading }];
+          const expected = Array(round.rides.length * 2 + 1).fill('pending');
+          assert.equal(core.instructions(map, round).length, expected.length);
+          for (const [index, ride] of round.rides.entries()) {
+            const approach = pathTo(map, trail.at(-1).at, ride.from);
+            assert(approach && approach.length > 1, 'The player must walk to each departure');
+            assert.equal(pathTo(map, ride.from, ride.to), null, 'The ride cannot be replaced by walking');
+            trail.push(...walkingTrail(map, approach, trail.at(-1).heading).slice(1));
+            expected[index * 2] = 'done';
+            assert.deepEqual(states(map, round, trail), expected);
+            const other = core.departures(map, ride.from).find(option => option.number !== ride.number);
+            if (other) {
+              const wrongTrail = [...trail, { at: other.to, heading: other.heading, ride: other }];
+              assert.equal(states(map, round, wrongTrail)[index * 2 + 1], 'missed');
+            }
+            trail.push({ at: ride.to, heading: ride.heading, ride });
+            expected[index * 2 + 1] = 'done';
+            assert.deepEqual(states(map, round, trail), expected);
+          }
+          const arrival = trail.at(-1);
+          const onward = pathTo(map, arrival.at, round.goal);
+          assert(onward && onward.length > 1);
+          const walkToGoal = walkingTrail(map, onward, arrival.heading).slice(1);
+          trail.push(...walkToGoal);
+          assert(states(map, round, trail).every(state => state === 'done'));
+          const phrases = core.routePhrases(map, trail, round);
+          for (const ride of round.rides) {
+            const description = phrases.find(phrase => phrase.en.includes(core.serviceName(ride)));
+            assert.equal(trail[description.from].at, ride.from);
+            assert.equal(trail[description.to].at, ride.to);
+          }
+          const back = core.departures(map, arrival.at).find(service => service.number === arrival.ride.number);
+          const extraRide = [
+            ...trail.slice(0, -walkToGoal.length), { at: back.to, heading: back.heading, ride: back },
+            arrival, ...walkToGoal
+          ];
+          assert.equal(states(map, round, extraRide).at(-1), 'missed');
           journeys += 1;
         }
       }
-      assert.equal(journeys, 8);
+      assert.equal(journeys, 10);
       return { maps: core.neighbourhoods.length, walking: count, journeys, alternativesAccepted: 2 };
     });
 
@@ -805,6 +825,116 @@ async function main() {
         assert.deepEqual(await size(), originalSize);
         assert.equal(await board.isVisible(), false);
         return { ferry: true, bus: true, wrongService: true, vocabulary: true, preview: true, selectedFromMap: true };
+      } finally { await f.close(); }
+    });
+
+    await check('A bus-to-ferry transfer unlocks Maltese writing after both correct rides, with a saved sound setting', async () => {
+      const f = await fixture('route-transfer', { width: 390, hasTouch: true });
+      try {
+        const page = f.page;
+        await page.addInitScript(() => {
+          Math.random = () => 0;
+          window.routeToneCount = 0;
+          const createOscillator = AudioContext.prototype.createOscillator;
+          AudioContext.prototype.createOscillator = function () {
+            window.routeToneCount += 1;
+            return createOscillator.call(this);
+          };
+        });
+        await page.goto(base + '/route_game.html', { waitUntil: 'networkidle' });
+        const button = name => page.getByRole('button', { name, exact: true });
+        const settings = page.locator('[data-route-settings] summary');
+        const sound = page.getByLabel('Sound effects');
+        const position = page.locator('[data-route-position]');
+        const feedback = page.locator('[data-route-feedback]');
+        const departures = page.locator('[data-route-transit]');
+        const form = page.locator('[data-route-form]');
+        const model = page.locator('[data-route-model]');
+        const states = () => page.locator('[data-condition-state]').allInnerTexts();
+        const toneCount = () => page.evaluate(() => window.routeToneCount);
+        const walk = async indices => {
+          for (const index of indices) await page.locator('[data-route-node="' + index + '"]').tap();
+        };
+        const take = async (name, destination) => {
+          const before = await position.innerText();
+          await button(name).tap();
+          assert.equal(await position.innerText(), before);
+          assert.equal(await page.locator('[data-route-preview-summary]').innerText(), 'Get off at ' + destination + '.');
+          await button('Board').tap();
+          assert.match(await position.innerText(), new RegExp('arrived at ' + destination));
+        };
+
+        await settings.tap();
+        assert.equal(await sound.inputValue(), 'on');
+        await page.getByLabel('Neighbourhood').selectOption('bus-to-ferry');
+        await settings.tap();
+        assert.equal(await page.locator('[data-route-map-name]').innerText(), 'Bus to Ferry');
+        assert.equal(await page.locator('[data-route-transit-tag]:visible').count(), 4);
+        assert.deepEqual(await states(), Array(5).fill('To do'));
+        assert.equal(await form.isVisible(), false);
+        assert.equal(await toneCount(), 0);
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await capture(page, 'route-transfer-390.png');
+
+        await walk([1, 2, 6]);
+        assert(await toneCount() > 0, 'Walking uses the shared sound engine');
+        assert.match(await departures.getByRole('heading').innerText(), /Buses from Stop A/);
+        await take('Bus 47 · Market Town', 'Stop C');
+        assert.match(await feedback.innerText(), /Bus 47.*Undo the ride.*Bus 31/);
+        await button('Undo last move').tap();
+        await take('Bus 31 · Harbour', 'Stop B');
+        assert.equal(await form.isVisible(), false);
+        assert.deepEqual(await states(), ['✓ Done', '✓ Done', 'To do', 'To do', 'To do']);
+
+        await walk([9, 10, 14]);
+        assert.match(await departures.getByRole('heading').innerText(), /Ferries from Quay A/);
+        await take('Ferry F2 · East Quay', 'Quay C');
+        await walk([22, 21, 20, 24]);
+        assert.match(await position.innerText(), /Il-mużew/);
+        assert.match(await feedback.innerText(), /Ferry F2.*Undo the ride.*Ferry F1/);
+        assert.equal(await form.isVisible(), false);
+        for (let index = 0; index < 5; index++) await button('Undo last move').tap();
+
+        await take('Ferry F1 · South Quay', 'Quay B');
+        assert.equal(await form.isVisible(), false);
+        await walk([20, 24]);
+        assert.deepEqual(await states(), Array(5).fill('✓ Done'));
+        assert.match(await position.innerText(), /Il-mużew.*2 rides/);
+        assert.equal(await model.isVisible(), false);
+        const draft = page.getByRole('textbox', { name: 'Your Maltese description' });
+        await draft.waitFor();
+        await button('Compare with model').tap();
+        assert.equal(await model.isVisible(), false);
+        const answer = 'Mur ħdejn il-waqfa A. Aqbad il-karozza tal-linja numru 31 u inżel ħdejn il-waqfa B. Mur ħdejn il-moll A. Aqbad il-lanċa F1 u inżel ħdejn il-moll B. Mur bil-mixi ħdejn il-mużew.';
+        await draft.fill(answer);
+        const beforeFinish = await toneCount();
+        await button('Compare with model').focus();
+        await button('Compare with model').press('Enter');
+        assert(await toneCount() > beforeFinish, 'Finishing the description plays the victory sound');
+        const english = (await model.locator('[data-route-phrase-en]').allInnerTexts()).join(' ');
+        assert.match(english, /Bus 31.*Ferry F1.*reach the museum/);
+        assert.equal(await draft.inputValue(), answer);
+        assert.deepEqual(await axe(page, '[data-route-game]'), []);
+
+        await button('Undo last move').tap();
+        assert.equal(await form.isVisible(), false);
+        assert.equal(await model.isVisible(), false);
+        await walk([24]);
+        assert.equal(await draft.inputValue(), answer);
+        await settings.tap();
+        await sound.selectOption('off');
+        await button('Write your own').tap();
+        const beforeMuted = await toneCount();
+        await button('New route').tap();
+        assert.equal(await page.locator('[data-route-goal-name]').innerText(), 'Il-kappella');
+        assert.deepEqual(await states(), Array(5).fill('To do'));
+        assert.equal(await form.isVisible(), false);
+        await button('Go straight').tap();
+        assert.equal(await toneCount(), beforeMuted, 'Muted controls must not create audio');
+        await page.reload({ waitUntil: 'networkidle' });
+        await settings.tap();
+        assert.equal(await sound.inputValue(), 'off');
+        return { ridesInOrder: 2, writingGated: true, alternateRoute: true, soundPersists: true };
       } finally { await f.close(); }
     });
 

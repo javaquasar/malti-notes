@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maltese Route Game</title>
-  <meta name="description" content="Follow Maltese directions through five illustrated maps. Walk through town, cross by ferry or choose a bus between towns.">
+  <meta name="description" content="Follow Maltese directions across six illustrated maps. Walk, ride, and describe a bus-to-ferry journey.">
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
   <link rel="stylesheet" href="./assets/css/theme.css">
   <link rel="stylesheet" href="./assets/css/site.css">
@@ -31,6 +31,13 @@
               <option value="harbour">Harbour Lanes · Advanced</option>
               <option value="ferry-crossing">Ferry Crossing</option>
               <option value="bus-link">Bus Link</option>
+              <option value="bus-to-ferry">Bus to Ferry</option>
+            </select>
+          </label>
+          <label class="study-field">Sound effects
+            <select class="study-input" data-route-sound>
+              <option value="on">On</option>
+              <option value="off">Off</option>
             </select>
           </label>
           <div class="route-actions">
@@ -98,6 +105,21 @@
             <g fill="#385a44" text-anchor="middle" font-family="inherit" font-size="15" font-weight="700">
               <text x="107" y="273">North Town</text><text x="94" y="423">Garden Town</text><text x="308" y="422">Market Town</text>
             </g>
+          </symbol>
+          <symbol id="route-scenery-bus-to-ferry" viewBox="0 0 434 592">
+            <rect width="434" height="592" fill="#e6dfbe"/>
+            <path d="M0 151q63 17 124 10t133-4t177-5v45q-62-8-123-2t-123-2t-188 2z" fill="#c8d4aa"/>
+            <path d="M0 323q54 15 109 4t108 3t108-2t109 3v121q-52-13-106-2t-108-1t-111 0t-109 2z" fill="#a8d4d1"/>
+            <path d="M0 332q54 15 109 4t108 3t108-2t109 3M0 443q54-13 109-2t111 0t108 1t106 2" fill="none" stroke="#e8edce" stroke-width="4"/>
+            <path d="M38 357q8-5 16 0t16 0m33 55q8-5 16 0t16 0m162-58q8-5 16 0t16 0m47 52q8-5 16 0t16 0" fill="none" stroke="#669faa" stroke-width="2" stroke-linecap="round"/>
+            <use href="#route-icon-quay" x="58" y="362" width="54" height="47"/>
+            <path d="M263 316h16v36h-16zm-108 126h16v26h-16zm216 0h16v26h-16z" fill="#d7b486" stroke="#b18d66"/>
+            <g fill="#eadabb" stroke="#d0bd9d">
+              <rect x="67" y="64" width="84" height="62" rx="10"/><rect x="175" y="64" width="84" height="62" rx="10"/><rect x="283" y="64" width="84" height="62" rx="10"/>
+              <rect x="67" y="232" width="84" height="62" rx="10"/><rect x="175" y="232" width="84" height="62" rx="10"/>
+              <rect x="67" y="484" width="84" height="62" rx="10"/><rect x="175" y="484" width="84" height="62" rx="10"/><rect x="283" y="484" width="84" height="62" rx="10"/>
+            </g>
+            <g fill="#a2b385"><circle cx="107" cy="104" r="7"/><circle cx="237" cy="100" r="7"/><circle cx="124" cy="271" r="7"/><circle cx="221" cy="261" r="7"/><circle cx="114" cy="515" r="7"/><circle cx="321" cy="531" r="7"/></g>
           </symbol>
           <symbol id="route-roofs" viewBox="0 0 315 313">
             <g transform="translate(19 16)"><path d="M0 4 8 0h26l7 5v14H0z" fill="#d4be91" opacity=".59"/><path d="M0 5h29v14H0z" fill="#f4e3c4" opacity=".72"/><path d="M31 20h19v10H31z" fill="#eddbc0"/><circle cx="56" cy="11" r="6" fill="#93aa7e"/><circle cx="63" cy="17" r="5" fill="#a6b68a"/></g>
@@ -191,6 +213,7 @@
           </g>
           <g fill="none" stroke="#3e6a67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8">
             <polyline data-route-transit-line/><polyline data-route-transit-line/>
+            <polyline data-route-transit-line/><polyline data-route-transit-line/>
           </g>
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <polyline data-route-trail-edge stroke="#fff8df" stroke-width="12"/>
@@ -202,6 +225,8 @@
             <polyline data-route-motion-path visibility="hidden" pointer-events="none"/>
           </g>
           <g font-family="inherit" font-size="16" font-weight="700" text-anchor="middle" fill="#254943" aria-hidden="true">
+            <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
+            <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
             <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
             <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
           </g>
@@ -359,10 +384,11 @@
           <p id="route-write-help" hidden>Write directions in Maltese. Include turns, side streets and landmarks.</p>
           <p class="muted-note" data-route-live-empty hidden>Make a move to see directions in Maltese and English.</p>
           <form class="route-directions" data-route-form hidden>
-            <label class="study-field">Your directions
+            <label class="study-field">
+              <span data-route-write-label>Your directions</span>
               <textarea class="study-input" rows="4" lang="mt" aria-describedby="route-write-help" data-route-description></textarea>
             </label>
-            <button class="action-button" type="submit">Check route</button>
+            <button class="action-button" type="submit" data-route-write-submit>Check route</button>
           </form>
           <section data-route-model hidden aria-labelledby="route-model-title">
             <h3 id="route-model-title" tabindex="-1">Directions so far</h3>
@@ -404,6 +430,7 @@
   </main>
 </div>
 <script src="./assets/js/storage.js"></script>
+<script src="./assets/js/game-audio.js"></script>
 <script src="./assets/js/route-game-core.js"></script>
 <script src="./assets/js/route-game.js"></script>
 <script src="./assets/js/site-header.js"></script>
