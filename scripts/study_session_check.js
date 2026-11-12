@@ -492,8 +492,8 @@ async function main() {
             const { x, y } = line.points.getItem(index);
             return [x, y];
           }));
-        const coordinates = index => page.locator('[data-route-landmark="' + index + '"]').evaluate(label => {
-          const { e, f } = label.parentElement.transform.baseVal.getItem(0).matrix;
+        const coordinates = index => page.locator('[data-route-label-slot="' + index + '"]').evaluate(slot => {
+          const { e, f } = slot.parentElement.transform.baseVal.getItem(0).matrix;
           return [e, f];
         });
         await settings.tap();
@@ -642,7 +642,7 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('Ferries and intertown buses board at stops, check the service, and resume walking after arrival', async () => {
+    await check('Touch players can inspect landmarks, preview and board transport, undo rides, and select route segments', async () => {
       const f = await fixture('route-transit', { width: 390, hasTouch: true });
       try {
         const page = f.page;
@@ -657,6 +657,15 @@ async function main() {
         const translation = page.locator('[data-condition-en]');
         const map = page.locator('[data-route-map]');
         const toggle = page.locator('[data-route-settings] summary');
+        const vehicle = page.locator('[data-route-vehicle]');
+        const selection = page.locator('[data-route-selection]');
+        const boardButton = button('Board');
+        const points = locator => locator.evaluate(line =>
+          Array.from({ length: line.points.numberOfItems }, (_, index) => {
+            const { x, y } = line.points.getItem(index);
+            return [x, y];
+          }));
+        const transitLine = index => page.locator('[data-route-transit-line]').nth(index);
         const size = () => map.evaluate(svg => [svg.viewBox.baseVal.width, svg.viewBox.baseVal.height]);
         const setMap = async (id, mode) => {
           await toggle.tap();
@@ -664,6 +673,47 @@ async function main() {
           await page.getByLabel('Neighbourhood').selectOption(id);
           await toggle.tap();
         };
+        const preview = async (name, index, stop) => {
+          const before = await position.innerText();
+          await button(name).tap();
+          assert.equal(await button(name).getAttribute('aria-pressed'), 'true');
+          assert.equal(await position.innerText(), before);
+          assert.equal(await page.locator('[data-route-preview-summary]').innerText(), 'Get off at ' + stop + '.');
+          assert.deepEqual(await points(page.locator('[data-route-preview-line]')), await points(transitLine(index)));
+        };
+        const waitForRide = async () => {
+          await vehicle.waitFor({ state: 'hidden' });
+          const samples = await page.evaluate(() => window.routeVehicleSamples.splice(0));
+          assert(new Set(samples).size > 1, 'The vehicle moves through multiple points of the route');
+          assert.equal(await boardButton.isVisible(), false);
+          assert.deepEqual(await points(page.locator('[data-route-preview-line]')), []);
+        };
+        const selectOnMap = async (sentence, index) => {
+          const phrase = page.locator('[data-route-phrase]').filter({ hasText: sentence });
+          const hit = page.locator('[data-route-phrase-hit="' + await phrase.getAttribute('data-route-phrase') + '"]');
+          await map.scrollIntoViewIfNeeded();
+          const { x, y } = await hit.evaluate(path => {
+            const point = path.getPointAtLength(path.getTotalLength() * 0.43).matrixTransform(path.getScreenCTM());
+            return { x: point.x, y: point.y };
+          });
+          await page.touchscreen.tap(x, y);
+          assert.equal(await phrase.getAttribute('aria-pressed'), 'true');
+          assert.equal(await selection.locator('[lang="en"]').innerText(), sentence);
+          assert.equal(await selection.locator('[lang="mt"]').innerText(), await phrase.locator('[lang="mt"]').innerText());
+          assert.deepEqual(await points(page.locator('[data-route-segment]')), await points(transitLine(index)));
+        };
+        await page.evaluate(() => {
+          const marker = document.querySelector('[data-route-vehicle]');
+          window.routeVehicleSamples = [];
+          function sample() {
+            if (marker.dataset.routeEmpty === 'false') {
+              const { e, f } = marker.transform.baseVal.getItem(0).matrix;
+              window.routeVehicleSamples.push(e + ',' + f);
+            }
+            requestAnimationFrame(sample);
+          }
+          requestAnimationFrame(sample);
+        });
         const states = () => page.locator('[data-condition-state]').allInnerTexts();
         const finish = async () => {
           await button('Check route').tap();
@@ -677,21 +727,41 @@ async function main() {
         assert.equal(await board.isVisible(), false);
         assert.equal(await translation.first().isVisible(), false);
         assert.equal(await page.locator('[data-route-node="13"]').isVisible(), false);
+        const startingPosition = await position.innerText();
+        const vocabulary = button('Map vocabulary');
+        await vocabulary.tap();
+        await map.scrollIntoViewIfNeeded();
+        const icon = await page.locator('[data-route-icon="6"]').boundingBox();
+        await page.touchscreen.tap(icon.x + icon.width / 2, icon.y + icon.height / 2);
+        const card = page.locator('[data-route-landmark-card]');
+        assert.equal(await card.locator('[data-route-landmark-name]').innerText(), 'Il-forn');
+        assert.equal(await card.locator('[data-route-landmark-en]').innerText(), 'the bakery');
+        assert.equal(await card.locator('[data-route-landmark-example]').innerText(), 'Għaddi minn ħdejn il-forn.');
+        assert.equal(await position.innerText(), startingPosition);
+        await page.getByLabel('Landmark', { exact: true }).selectOption('1');
+        assert.equal(await card.locator('[data-route-landmark-en]').innerText(), 'the church');
+        await vocabulary.tap();
         await tapNode(21);
         assert.match(await position.innerText(), /one block away.*0 blocks/);
         await walk([1, 2, 6, 10]);
         assert(await board.isVisible());
         assert.match(await board.getByRole('heading').innerText(), /Ferries from Quay A/);
-        await button('Ferry F2 · East Quay').tap();
+        await preview('Ferry F1 · South Quay', 0, 'Quay B');
+        await preview('Ferry F2 · East Quay', 1, 'Quay C');
+        assert.equal(await button('Ferry F1 · South Quay').getAttribute('aria-pressed'), 'false');
+        await boardButton.tap();
+        await waitForRide();
         assert.match(await position.innerText(), /Ferry F2 arrived at Quay C.*4 blocks.*1 ride/);
-        await walk([22, 26]);
         await button('Check route').tap();
         assert.match(await feedback.innerText(), /took Ferry F2.*take Ferry F1/);
         assert(await translation.first().isVisible());
-        for (let index = 0; index < 3; index++) await button('Undo last move').tap();
-        assert.match(await position.innerText(), /Il-moll A.*4 blocks/);
+        await button('Undo last move').tap();
+        assert.match(await position.innerText(), /Il-moll A.*4 blocks$/);
         await button('Ferry F1 · South Quay').focus();
         await button('Ferry F1 · South Quay').press('Enter');
+        await boardButton.focus();
+        await boardButton.press('Enter');
+        await waitForRide();
         assert.match(await position.innerText(), /Ferry F1 arrived at Quay B.*Facing south/);
         await walk([22, 26]);
         await finish();
@@ -701,37 +771,40 @@ async function main() {
         await toggle.tap();
         await button('Live directions').tap();
         await toggle.tap();
-        const ferry = page.locator('[data-route-phrase]').filter({ hasText: 'Take Ferry F1 and get off at Quay B.' });
-        await ferry.tap();
-        assert.equal(await ferry.getAttribute('aria-pressed'), 'true');
-        const selected = await page.locator('[data-route-segment]').evaluate(line => line.points.numberOfItems);
-        assert.equal(selected, 6);
+        await selectOnMap('Take Ferry F1 and get off at Quay B.', 0);
 
         await setMap('bus-link', 'Read & follow');
         assert.deepEqual(await size(), [originalSize[0], 592]);
         assert.equal(await board.isVisible(), false);
         await walk([1, 2, 6, 10]);
         assert.match(await board.getByRole('heading').innerText(), /Buses from Stop A/);
-        await button('Bus 47 · Market Town').tap();
+        await preview('Bus 47 · Market Town', 1, 'Stop C');
+        await boardButton.tap();
+        await waitForRide();
         assert.match(await position.innerText(), /Bus 47 arrived at Stop C/);
         await tapNode(21);
         assert.match(await position.innerText(), /one block away.*Stop|one block away.*Il-waqfa C/);
         await button('Check route').tap();
         assert.match(await feedback.innerText(), /took Bus 47.*take Bus 31/);
         await button('Undo last move').tap();
-        await button('Bus 31 · Garden Town').scrollIntoViewIfNeeded();
+        await preview('Bus 31 · Garden Town', 0, 'Stop B');
         await capture(page, 'route-bus-departures-390.png');
         assert.deepEqual(await axe(page, '[data-route-game]'), []);
-        await button('Bus 31 · Garden Town').tap();
+        await boardButton.tap();
+        await waitForRide();
         assert.match(await position.innerText(), /Bus 31 arrived at Stop B/);
         await walk([25]);
         await finish();
         await page.evaluate(() => window.scrollTo(0, 0));
         await capture(page, 'route-bus-390.png');
+        await toggle.tap();
+        await button('Live directions').tap();
+        await toggle.tap();
+        await selectOnMap('Take Bus 31 and get off at Stop B.', 0);
         await setMap('open');
         assert.deepEqual(await size(), originalSize);
         assert.equal(await board.isVisible(), false);
-        return { ferry: true, bus: true, wrongService: true, highlightedRide: true, unchangedWidth: true };
+        return { ferry: true, bus: true, wrongService: true, vocabulary: true, preview: true, selectedFromMap: true };
       } finally { await f.close(); }
     });
 

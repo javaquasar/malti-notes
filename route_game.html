@@ -56,9 +56,14 @@
 
       <svg class="route-board" viewBox="0 0 434 424" role="img" aria-labelledby="route-svg-title route-svg-desc" data-route-map>
         <title id="route-svg-title">Town map</title>
-        <desc id="route-svg-desc">North is up. Rings show available moves, a pointer shows where you face, and barriers mark closed roads. Use the movement buttons or the text map to explore.</desc>
+        <desc id="route-svg-desc">North is up. Rings show available moves, a pointer shows where you face, and barriers mark closed roads. Use the movement buttons or the text map to explore. Map vocabulary lists landmark names and translations.</desc>
         <defs>
           <clipPath id="route-map-frame"><rect width="434" height="424" rx="16" data-route-clip/></clipPath>
+          <polyline data-route-hit-shape/>
+          <g data-route-label-templates>
+            <text lengthAdjust="spacingAndGlyphs" lang="mt"></text>
+            <text lengthAdjust="spacingAndGlyphs" lang="mt" font-size="16" font-weight="700"></text>
+          </g>
           <symbol id="route-transit-blocks" viewBox="0 0 434 592">
             <g fill="#eadabb" stroke="#d0bd9d">
               <rect x="67" y="64" width="84" height="62" rx="10"/><rect x="175" y="64" width="84" height="62" rx="10"/><rect x="283" y="64" width="84" height="62" rx="10"/>
@@ -190,43 +195,45 @@
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <polyline data-route-trail-edge stroke="#fff8df" stroke-width="12"/>
             <polyline data-route-trail stroke="#246c72" stroke-width="7"/>
+            <polyline data-route-preview-edge stroke="#fff8df" stroke-width="13"/>
+            <polyline data-route-preview-line stroke="#214d72" stroke-width="7" stroke-dasharray="11 6"/>
             <polyline data-route-segment-edge stroke="#fff8df" stroke-width="14"/>
             <polyline data-route-segment stroke="#9d381f" stroke-width="9"/>
+            <polyline data-route-motion-path visibility="hidden" pointer-events="none"/>
           </g>
           <g font-family="inherit" font-size="16" font-weight="700" text-anchor="middle" fill="#254943" aria-hidden="true">
             <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
             <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
           </g>
-          <g text-anchor="middle" font-family="inherit" font-size="17" font-weight="700" fill="#203a36" paint-order="stroke" stroke="#fbefd3" stroke-width="3" stroke-linejoin="round">
-            <text visibility="hidden" aria-hidden="true" data-route-label-measure></text>
-            <g transform="translate(55 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="0" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="0" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="0" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="1" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="1" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="1" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="2" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="2" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="2" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="3" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="3" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="3" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(55 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="4" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="4" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="4" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="5" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="5" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="5" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="6" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="6" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="6" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="7" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="7" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="7" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(55 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="8" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="8" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="8" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="9" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="9" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="9" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="10" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="10" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="10" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="11" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="11" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="11" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(55 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="12" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="12" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="12" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="13" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="13" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="13" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="14" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="14" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="14" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="15" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="15" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="15" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(55 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="16" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="16" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="16" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="17" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="17" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="17" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="18" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="18" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="18" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="19" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="19" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="19" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(55 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="20" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="20" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="20" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="21" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="21" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="21" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="22" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="22" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="22" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="23" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="23" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="23" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(55 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="24" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="24" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="24" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(163 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="25" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="25" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="25" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(271 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="26" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="26" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="26" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
-            <g transform="translate(379 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="27" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="27" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="27" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+          <g data-route-labels text-anchor="middle" font-family="inherit" font-size="15" font-weight="500" fill="#203a36" paint-order="stroke" stroke="#fbefd3" stroke-width="1.7" stroke-linejoin="round">
+            <g transform="translate(55 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="0" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="0" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="0" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="1" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="1" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="1" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="2" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="2" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="2" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 53)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="3" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="3" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="3" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="4" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="4" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="4" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="5" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="5" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="5" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="6" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="6" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="6" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 137)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="7" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="7" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="7" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="8" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="8" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="8" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="9" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="9" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="9" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="10" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="10" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="10" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 221)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="11" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="11" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="11" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="12" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="12" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="12" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="13" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="13" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="13" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="14" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="14" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="14" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 305)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="15" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="15" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="15" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="16" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="16" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="16" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="17" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="17" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="17" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="18" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="18" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="18" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="19" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="19" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="19" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="20" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="20" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="20" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="21" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="21" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="21" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="22" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="22" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="22" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="23" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="23" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="23" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="24" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="24" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="24" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="25" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="25" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="25" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="26" href="#route-icon-house" x="5" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="26" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="26" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="27" href="#route-icon-house" x="0" y="-51" width="50" height="43" stroke="none"/><g data-route-label-slot="27" transform="translate(0 23) scale(1)"></g><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="27" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
           </g>
           <g data-route-start-marker transform="translate(0 0)">
             <circle r="0" fill="none" stroke="#1e6260" stroke-width="2.6" data-route-start-ring/>
@@ -238,51 +245,87 @@
             <rect x="-11" y="-11" width="22" height="22" rx="3" fill="#fff3d6" stroke="#a5462e" stroke-width="2"/>
             <text y="5" fill="#693320" text-anchor="middle" font-size="14" font-weight="700">G</text>
           </g>
+          <g data-route-preview-stop transform="translate(0 0)" data-route-empty="true" aria-hidden="true">
+            <circle r="15" fill="none" stroke="#fff8df" stroke-width="7"/>
+            <circle r="15" fill="none" stroke="#214d72" stroke-width="3"/>
+          </g>
+          <g data-route-landmark-marker transform="translate(0 0)" data-route-empty="true" aria-hidden="true">
+            <ellipse cx="29" cy="-26" rx="25" ry="21" fill="none" stroke="#fff8df" stroke-width="5"/>
+            <ellipse cx="29" cy="-26" rx="25" ry="21" fill="none" stroke="#7f4a29" stroke-width="2.5"/>
+          </g>
           <g data-route-walker transform="translate(0 0) rotate(0)">
             <circle r="14" fill="none" stroke="#195f5c" stroke-width="2.6"/>
             <path d="M0 -24 6 -14 0 -17 -6 -14Z" fill="#195f5c" stroke="#fff4dd" stroke-width="1.4"/>
+          </g>
+          <g data-route-vehicle transform="translate(0 0)" data-route-empty="true" pointer-events="none" aria-hidden="true">
+            <circle r="17" fill="#fff8df" stroke="#214d72" stroke-width="2.5"/>
+            <use href="#route-icon-quay" x="-16" y="-14" width="32" height="28"/>
           </g>
           <g data-route-problem transform="translate(0 0)"><circle r="0" fill="none" stroke="#9d381f" stroke-width="3" stroke-dasharray="4 3"/></g>
           <g transform="translate(22 24)" fill="#315650" text-anchor="middle" font-size="12" font-weight="700" aria-hidden="true">
             <text y="-7">N</text><path d="M0 -2 4 7 0 5 -4 7Z"/>
           </g>
           <g fill="transparent" pointer-events="all" cursor="pointer" aria-hidden="true">
-            <rect x="6" y="16" width="98" height="66" data-route-node="0"/>
-            <rect x="114" y="16" width="98" height="66" data-route-node="1"/>
-            <rect x="222" y="16" width="98" height="66" data-route-node="2"/>
-            <rect x="330" y="16" width="98" height="66" data-route-node="3"/>
-            <rect x="6" y="100" width="98" height="66" data-route-node="4"/>
-            <rect x="114" y="100" width="98" height="66" data-route-node="5"/>
-            <rect x="222" y="100" width="98" height="66" data-route-node="6"/>
-            <rect x="330" y="100" width="98" height="66" data-route-node="7"/>
-            <rect x="6" y="184" width="98" height="66" data-route-node="8"/>
-            <rect x="114" y="184" width="98" height="66" data-route-node="9"/>
-            <rect x="222" y="184" width="98" height="66" data-route-node="10"/>
-            <rect x="330" y="184" width="98" height="66" data-route-node="11"/>
-            <rect x="6" y="268" width="98" height="66" data-route-node="12"/>
-            <rect x="114" y="268" width="98" height="66" data-route-node="13"/>
-            <rect x="222" y="268" width="98" height="66" data-route-node="14"/>
-            <rect x="330" y="268" width="98" height="66" data-route-node="15"/>
-            <rect x="6" y="352" width="98" height="66" data-route-node="16"/>
-            <rect x="114" y="352" width="98" height="66" data-route-node="17"/>
-            <rect x="222" y="352" width="98" height="66" data-route-node="18"/>
-            <rect x="330" y="352" width="98" height="66" data-route-node="19"/>
-            <rect x="6" y="436" width="98" height="66" data-route-node="20"/>
-            <rect x="114" y="436" width="98" height="66" data-route-node="21"/>
-            <rect x="222" y="436" width="98" height="66" data-route-node="22"/>
-            <rect x="330" y="436" width="98" height="66" data-route-node="23"/>
-            <rect x="6" y="520" width="98" height="66" data-route-node="24"/>
-            <rect x="114" y="520" width="98" height="66" data-route-node="25"/>
-            <rect x="222" y="520" width="98" height="66" data-route-node="26"/>
-            <rect x="330" y="520" width="98" height="66" data-route-node="27"/>
+            <rect x="3" y="2" width="104" height="80" data-route-node="0"/>
+            <rect x="111" y="2" width="104" height="80" data-route-node="1"/>
+            <rect x="219" y="2" width="104" height="80" data-route-node="2"/>
+            <rect x="327" y="2" width="104" height="80" data-route-node="3"/>
+            <rect x="3" y="86" width="104" height="80" data-route-node="4"/>
+            <rect x="111" y="86" width="104" height="80" data-route-node="5"/>
+            <rect x="219" y="86" width="104" height="80" data-route-node="6"/>
+            <rect x="327" y="86" width="104" height="80" data-route-node="7"/>
+            <rect x="3" y="170" width="104" height="80" data-route-node="8"/>
+            <rect x="111" y="170" width="104" height="80" data-route-node="9"/>
+            <rect x="219" y="170" width="104" height="80" data-route-node="10"/>
+            <rect x="327" y="170" width="104" height="80" data-route-node="11"/>
+            <rect x="3" y="254" width="104" height="80" data-route-node="12"/>
+            <rect x="111" y="254" width="104" height="80" data-route-node="13"/>
+            <rect x="219" y="254" width="104" height="80" data-route-node="14"/>
+            <rect x="327" y="254" width="104" height="80" data-route-node="15"/>
+            <rect x="3" y="338" width="104" height="80" data-route-node="16"/>
+            <rect x="111" y="338" width="104" height="80" data-route-node="17"/>
+            <rect x="219" y="338" width="104" height="80" data-route-node="18"/>
+            <rect x="327" y="338" width="104" height="80" data-route-node="19"/>
+            <rect x="3" y="422" width="104" height="80" data-route-node="20"/>
+            <rect x="111" y="422" width="104" height="80" data-route-node="21"/>
+            <rect x="219" y="422" width="104" height="80" data-route-node="22"/>
+            <rect x="327" y="422" width="104" height="80" data-route-node="23"/>
+            <rect x="3" y="506" width="104" height="80" data-route-node="24"/>
+            <rect x="111" y="506" width="104" height="80" data-route-node="25"/>
+            <rect x="219" y="506" width="104" height="80" data-route-node="26"/>
+            <rect x="327" y="506" width="104" height="80" data-route-node="27"/>
           </g>
+          <g data-route-phrase-hits fill="none" stroke="transparent" stroke-width="44" stroke-linecap="butt" stroke-linejoin="round" pointer-events="stroke" cursor="pointer" aria-hidden="true"></g>
         </g>
         <rect x="1" y="1" width="432" height="422" rx="16" fill="none" stroke="#ba9b75" stroke-width="2" pointer-events="none" data-route-frame/>
       </svg>
-        <p class="route-position" role="status" data-route-position></p>
+        <div class="study-card study-card-compact" data-route-selection hidden>
+          <strong lang="mt" data-route-selection-mt></strong>
+          <span lang="en" data-route-selection-en></span>
+        </div>
+        <div class="route-actions">
+          <p class="route-position" role="status" data-route-position></p>
+          <button class="toggle-chip" type="button" data-route-vocabulary-toggle aria-pressed="false" aria-controls="route-vocabulary">Map vocabulary</button>
+        </div>
+        <div class="route-directions" id="route-vocabulary" data-route-vocabulary hidden>
+          <div class="study-field">
+            <label for="route-landmark-select">Landmark</label>
+            <select class="study-input" id="route-landmark-select" data-route-landmark-select></select>
+          </div>
+          <div class="study-card study-card-compact" aria-live="polite" data-route-landmark-card>
+            <strong lang="mt" data-route-landmark-name></strong>
+            <span lang="en" data-route-landmark-en></span>
+            <p lang="mt" data-route-landmark-example></p>
+            <p class="muted-note" lang="en" data-route-landmark-example-en></p>
+          </div>
+        </div>
         <section class="route-directions" data-route-transit hidden aria-labelledby="route-transit-heading">
           <h3 id="route-transit-heading"></h3>
           <div class="route-actions" data-route-departures></div>
+          <div class="route-actions" data-route-boarding hidden>
+            <p class="route-position" role="status" data-route-preview-summary></p>
+            <button class="action-button" type="button" data-route-board>Board</button>
+          </div>
         </section>
         <div class="route-actions" role="group" aria-label="Route controls">
           <button class="action-button study-icon-button" type="button" data-route-move="0" aria-label="Go straight" title="Go straight"><span aria-hidden="true">↑</span></button>
@@ -323,7 +366,7 @@
           </form>
           <section data-route-model hidden aria-labelledby="route-model-title">
             <h3 id="route-model-title" tabindex="-1">Directions so far</h3>
-            <p class="muted-note">Select a sentence to highlight that stretch of road.</p>
+            <p class="muted-note" data-route-highlight-help></p>
             <ol class="route-phrases" role="list" data-route-phrases></ol>
             <p class="visually-hidden" role="status" data-route-highlight-status></p>
           </section>
@@ -353,7 +396,10 @@
       <li><strong lang="mt" data-route-text-place></strong><span data-route-text-ways></span></li>
     </template>
     <template data-route-service-template>
-      <button class="action-button" type="button" data-route-service></button>
+      <button class="toggle-chip" type="button" data-route-service aria-pressed="false"></button>
+    </template>
+    <template data-route-landmark-option-template>
+      <option lang="mt"></option>
     </template>
   </main>
 </div>

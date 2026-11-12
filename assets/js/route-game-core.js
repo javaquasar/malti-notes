@@ -191,6 +191,10 @@
 
   const serviceName = (map, service) => `${map.transit.label} ${service.number}`;
 
+  function passInstruction(map, at) {
+    return { mt: `Għaddi minn ħdejn ${mt(map, at)}.`, en: `Go past ${en(map, at)}.` };
+  }
+
   function rideInstruction(map, service) {
     return {
       mt: `Aqbad ${map.transit.maltese} ${service.number} u inżel ħdejn ${mt(map, service.to)}.`,
@@ -231,7 +235,7 @@
     }
     const side = sides[round.side], ordinal = ordinals[round.ordinal];
     return [
-      { mt: `Għaddi minn ħdejn ${mt(map, round.pass)}.`, en: `Go past ${en(map, round.pass)}.` },
+      passInstruction(map, round.pass),
       { mt: `Dur fuq ${side.mt} ${ordinal.mt} triq.`, en: `Turn ${side.en} at the ${ordinal.en} street.` },
       { mt: `Mur ħdejn ${mt(map, round.via)} qabel ma tasal ħdejn ${mt(map, round.goal)}.`,
         en: `Go via ${en(map, round.via)} before reaching ${en(map, round.goal)}.` }
@@ -322,26 +326,27 @@
     }
     const phrases = [];
     const firstTurn = trail.findIndex(step => step.heading !== trail[0].heading);
-    const add = (mt, en, from, to) => phrases.push({ mt, en, from, to });
+    const add = (mt, en, from, to, tapFrom) => phrases.push({ mt, en, from, to, tapFrom });
     for (const { start, end, heading, ride } of legs) {
       if (ride) {
         const sentence = rideInstruction(map, ride);
-        add(sentence.mt, sentence.en, start, end);
+        add(sentence.mt, sentence.en, start, end, start);
         continue;
       }
       const from = trail[start].at, goal = trail[end].at;
       const turn = turnFrom(trail[start].heading, heading);
       const turnStart = trail[start].ride ? start : Math.max(0, start - 1);
+      // Show the approach when highlighting a turn. Its tap target starts at the corner.
       if (turn === 2) {
-        add(`Dur lura ħdejn ${mt(map, from)}.`, `Turn back by ${en(map, from)}.`, turnStart, start + 1);
+        add(`Dur lura ħdejn ${mt(map, from)}.`, `Turn back by ${en(map, from)}.`, turnStart, start + 1, start);
       } else if (turn) {
         const ordinal = start + 1 === firstTurn && from === round?.turnAt ? ordinals[round.ordinal] : null;
         const malteseTurn = ordinal ? `${ordinal.mt} triq` : `mal-kantuniera ħdejn ${mt(map, from)}`;
         const englishTurn = ordinal ? `at the ${ordinal.en} street` : `at the corner by ${en(map, from)}`;
-        add(`Dur fuq ${sides[turn].mt} ${malteseTurn}.`, `Turn ${sides[turn].en} ${englishTurn}.`, turnStart, start + 1);
+        add(`Dur fuq ${sides[turn].mt} ${malteseTurn}.`, `Turn ${sides[turn].en} ${englishTurn}.`, turnStart, start + 1, start);
       }
       add(`Ibqa' sejjer dritt sakemm tasal ħdejn ${mt(map, goal)}.`,
-        `Keep going straight until you reach ${en(map, goal)}.`, start, end);
+        `Keep going straight until you reach ${en(map, goal)}.`, start, end, turn ? start + 1 : start);
       const passed = [];
       for (let index = start + 1; index < end; index += 1) passed.push(index);
       const junctions = passed.filter(index => isJunction(map, trail[index].at, heading));
@@ -350,8 +355,8 @@
         add(`Fit-triq, aqsam ${count.mt}.`, `On the way, cross ${count.en}.`, junctions[0] - 1, junctions.at(-1) + 1);
       }
       for (const index of passed) {
-        const at = trail[index].at;
-        add(`Għaddi minn ħdejn ${mt(map, at)}.`, `Go past ${en(map, at)}.`, index - 1, index + 1);
+        const sentence = passInstruction(map, trail[index].at);
+        add(sentence.mt, sentence.en, index - 1, index + 1);
       }
     }
     return phrases;
@@ -359,7 +364,7 @@
 
   const api = {
     columns, headings, neighbourhoods, rotate, edgeKey, gridNeighbour, neighbour, roadState,
-    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceName
+    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceName, passInstruction
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else window.MaltiRouteGame = api;
