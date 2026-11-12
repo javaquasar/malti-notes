@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const columns = 4, rows = 5;
+  const columns = 4;
   const headings = [
     { dx: 0, dy: -1, name: 'north' }, { dx: 1, dy: 0, name: 'east' },
     { dx: 0, dy: 1, name: 'south' }, { dx: -1, dy: 0, name: 'west' }
@@ -10,7 +10,8 @@
   const ordinals = { 2: { mt: 'fit-tieni', en: 'second' }, 3: { mt: 'fit-tielet', en: 'third' } };
   const crossings = [
     null, { mt: 'triq waħda', en: 'one side street' },
-    { mt: 'żewġ toroq', en: 'two side streets' }, { mt: 'tliet toroq', en: 'three side streets' }
+    { mt: 'żewġ toroq', en: 'two side streets' }, { mt: 'tliet toroq', en: 'three side streets' },
+    { mt: "erba' toroq", en: 'four side streets' }, { mt: 'ħames toroq', en: 'five side streets' }
   ];
   // Direction patterns follow the Lesson 05 dialogue bank on directions_town.html.
   const landmarks = {
@@ -24,7 +25,11 @@
     market: ['Is-suq', 'the market'], chapel: ['Il-kappella', 'the chapel'],
     theatre: ['It-teatru', 'the theatre'], bus: ['Il-waqfa', 'the bus stop'],
     fountain: ['Il-funtana', 'the fountain'], tower: ['It-torri', 'the tower'],
-    harbour: ['Il-port', 'the harbour']
+    harbour: ['Il-port', 'the harbour'],
+    'quay-a': ['Il-moll A', 'Quay A', 'quay'], 'quay-b': ['Il-moll B', 'Quay B', 'quay'],
+    'quay-c': ['Il-moll C', 'Quay C', 'quay'],
+    'stop-a': ['Il-waqfa A', 'Stop A', 'bus'], 'stop-b': ['Il-waqfa B', 'Stop B', 'bus'],
+    'stop-c': ['Il-waqfa C', 'Stop C', 'bus']
   };
   const neighbourhoods = [
     {
@@ -71,6 +76,63 @@
         { start: 2, heading: 2, pass: 6, turnAt: 10, side: 1, via: 13, goal: 4 },
         { start: 17, heading: 0, pass: 13, turnAt: 9, side: 1, via: 10, goal: 7 }
       ]
+    },
+    {
+      id: 'ferry-crossing', name: 'Ferry Crossing', difficulty: 'Ferry routes',
+      transit: { label: 'Ferry', plural: 'Ferries', maltese: 'il-lanċa' },
+      places: [
+        'post', 'church', 'cafe', 'bank', 'school', 'square', 'bakery', 'library',
+        'garden', 'market', 'quay-a', 'shop',
+        null, null, null, null, null, null, null, null,
+        'fountain', 'quay-b', 'museum', 'quay-c', 'pharmacy', 'bus', 'tower', 'cinema'
+      ],
+      services: [
+        {
+          number: 'F1', from: 10, to: 21, destination: 'South Quay', returnDestination: 'North Quay',
+          via: [{ x: 269, y: 265 }, { x: 227, y: 307 }, { x: 174, y: 359 }, { x: 163, y: 408 }],
+          label: { x: 215, y: 322 }
+        },
+        {
+          number: 'F2', from: 10, to: 23, destination: 'East Quay', returnDestination: 'North Quay',
+          via: [{ x: 286, y: 264 }, { x: 337, y: 311 }, { x: 374, y: 362 }, { x: 379, y: 412 }],
+          label: { x: 348, y: 327 }
+        }
+      ],
+      missions: [
+        { start: 0, heading: 1, departure: 10, service: 'F1', goal: 26 },
+        { start: 4, heading: 1, departure: 10, service: 'F2', goal: 27 },
+        { start: 24, heading: 1, departure: 21, service: 'F1', goal: 3 },
+        { start: 27, heading: 0, departure: 23, service: 'F2', goal: 7 }
+      ]
+    },
+    {
+      id: 'bus-link', name: 'Bus Link', difficulty: 'Intertown routes',
+      transit: { label: 'Bus', plural: 'Buses', maltese: 'il-karozza tal-linja numru' },
+      places: [
+        'school', 'square', 'pharmacy', 'post', 'library', 'garden', 'bank', 'cafe',
+        'clinic', 'shop', 'stop-a', 'church',
+        null, null, null, null, null, null, null, null,
+        'bakery', 'stop-b', 'chapel', 'stop-c', 'fountain', 'museum', 'market', 'tower'
+      ],
+      missing: ['21-22', '25-26'],
+      services: [
+        {
+          number: '31', from: 10, to: 21, destination: 'Garden Town', returnDestination: 'North Town',
+          via: [{ x: 271, y: 265 }, { x: 219, y: 306 }, { x: 166, y: 360 }, { x: 163, y: 430 }],
+          label: { x: 208, y: 322 }
+        },
+        {
+          number: '47', from: 10, to: 23, destination: 'Market Town', returnDestination: 'North Town',
+          via: [{ x: 288, y: 263 }, { x: 341, y: 311 }, { x: 374, y: 364 }, { x: 379, y: 430 }],
+          label: { x: 352, y: 329 }
+        }
+      ],
+      missions: [
+        { start: 0, heading: 1, departure: 10, service: '31', goal: 25 },
+        { start: 3, heading: 2, departure: 10, service: '47', goal: 26 },
+        { start: 24, heading: 0, departure: 21, service: '31', goal: 3 },
+        { start: 27, heading: 0, departure: 23, service: '47', goal: 11 }
+      ]
     }
   ];
 
@@ -80,22 +142,27 @@
   const row = index => Math.floor(index / columns);
   const edgeKey = (from, to) => from < to ? `${from}-${to}` : `${to}-${from}`;
   const place = (map, index) => landmarks[map.places[index]];
-  const mt = (map, index) => place(map, index)[0].toLocaleLowerCase('mt');
+  const mt = (map, index) => {
+    const name = place(map, index)[0];
+    return name[0].toLocaleLowerCase('mt') + name.slice(1);
+  };
   const en = (map, index) => place(map, index)[1];
 
   function roadState(map, edge) {
+    if (edge.split('-').some(index => !map.places[Number(index)])) return 'missing';
     if (map.closed?.includes(edge)) return 'closed';
     return map.missing?.includes(edge) ? 'missing' : 'open';
   }
 
-  function gridNeighbour(index, heading) {
+  function gridNeighbour(map, index, heading) {
     const { dx, dy } = headings[heading];
     const x = col(index) + dx, y = row(index) + dy;
-    return x < 0 || x >= columns || y < 0 || y >= rows ? -1 : y * columns + x;
+    const target = y * columns + x;
+    return x < 0 || x >= columns || y < 0 || !map.places[target] ? -1 : target;
   }
 
   function neighbour(map, from, heading) {
-    const to = gridNeighbour(from, heading);
+    const to = gridNeighbour(map, from, heading);
     return to !== -1 && roadState(map, edgeKey(from, to)) === 'open' ? to : -1;
   }
 
@@ -111,8 +178,29 @@
     return junctions;
   }
 
+  function departures(map, from) {
+    return (map.services || []).flatMap(service => {
+      if (service.from === from) return [{ ...service, heading: 2 }];
+      if (service.to !== from) return [];
+      return [{
+        ...service, from, to: service.from, heading: 0, destination: service.returnDestination,
+        via: [...service.via].reverse()
+      }];
+    });
+  }
+
+  const serviceName = (map, service) => `${map.transit.label} ${service.number}`;
+
+  function rideInstruction(map, service) {
+    return {
+      mt: `Aqbad ${map.transit.maltese} ${service.number} u inżel ħdejn ${mt(map, service.to)}.`,
+      en: `Take ${serviceName(map, service)} and get off at ${en(map, service.to)}.`
+    };
+  }
+
   function freeRounds(map) {
-    return map.places.flatMap((_, start) => map.places.flatMap((_, goal) => {
+    return map.places.flatMap((startPlace, start) => map.places.flatMap((goalPlace, goal) => {
+      if (!startPlace || !goalPlace) return [];
       const dx = col(goal) - col(start), dy = row(goal) - row(start);
       if (!dx || !dy || Math.abs(dx) + Math.abs(dy) < 3) return [];
       const horizontal = dx > 0 ? 1 : 3, vertical = dy > 0 ? 2 : 0;
@@ -123,13 +211,24 @@
   }
 
   function missionRounds(map) {
-    return map.missions.map(mission => ({
-      ...mission, id: `mission-${mission.start}-${mission.goal}`,
-      ordinal: junctionsAhead(map, mission.start, mission.heading).indexOf(mission.turnAt) + 1
-    }));
+    return map.missions.map(mission => {
+      const id = `mission-${mission.start}-${mission.goal}`;
+      if (mission.service) {
+        const ride = departures(map, mission.departure).find(service => service.number === mission.service);
+        return { ...mission, id, ride };
+      }
+      return { ...mission, id, ordinal: junctionsAhead(map, mission.start, mission.heading).indexOf(mission.turnAt) + 1 };
+    });
   }
 
   function instructions(map, round) {
+    if (round.ride) {
+      return [
+        { mt: `Mur ħdejn ${mt(map, round.departure)}.`, en: `Walk to ${en(map, round.departure)}.` },
+        rideInstruction(map, round.ride),
+        { mt: `Wara, mur bil-mixi ħdejn ${mt(map, round.goal)}.`, en: `Then walk to ${en(map, round.goal)}.` }
+      ];
+    }
     const side = sides[round.side], ordinal = ordinals[round.ordinal];
     return [
       { mt: `Għaddi minn ħdejn ${mt(map, round.pass)}.`, en: `Go past ${en(map, round.pass)}.` },
@@ -139,7 +238,35 @@
     ];
   }
 
+  function evaluateTransit(map, round, trail) {
+    const boardIndex = trail.findIndex(step => step.ride);
+    const boarded = boardIndex === -1 ? null : trail[boardIndex].ride;
+    const beforeBoarding = boardIndex === -1 ? trail : trail.slice(0, boardIndex);
+    const current = trail.at(-1).at;
+    const wentToStop = beforeBoarding.some(step => step.at === round.departure);
+    const stop = wentToStop ? { state: 'done' } : {
+      state: boarded ? 'missed' : 'pending',
+      at: boarded?.from ?? current,
+      message: `Walk to ${en(map, round.departure)} before boarding.`
+    };
+    const rightRide = boarded?.number === round.ride.number && boarded.from === round.departure && boarded.to === round.ride.to;
+    const ride = rightRide ? { state: 'done' } : {
+      state: boarded ? 'missed' : 'pending',
+      at: boarded?.from ?? round.departure,
+      message: boarded
+        ? `You took ${serviceName(map, boarded)} from ${en(map, boarded.from)}. Undo the ride and take ${serviceName(map, round.ride)} from ${en(map, round.departure)}.`
+        : `Take ${serviceName(map, round.ride)} to ${en(map, round.ride.to)}.`
+    };
+    const finished = rightRide && current === round.goal;
+    const walk = finished ? { state: 'done' } : {
+      state: current === round.goal ? 'missed' : 'pending', at: current,
+      message: `After getting off at ${en(map, round.ride.to)}, walk to ${en(map, round.goal)}.`
+    };
+    return [stop, ride, walk];
+  }
+
   function evaluateMission(map, round, trail) {
+    if (round.ride) return evaluateTransit(map, round, trail);
     const current = trail.at(-1).at;
     const turnIndex = trail.findIndex(step => step.heading !== round.heading);
     const beforeTurn = turnIndex === -1 ? trail.length : turnIndex;
@@ -189,16 +316,22 @@
     const legs = [];
     for (let index = 1; index < trail.length; index += 1) {
       const step = trail[index], last = legs.at(-1);
-      if (last?.heading === step.heading) last.end = index;
+      if (step.ride) legs.push({ start: index - 1, end: index, ride: step.ride });
+      else if (last?.heading === step.heading) last.end = index;
       else legs.push({ start: index - 1, end: index, heading: step.heading });
     }
     const phrases = [];
     const firstTurn = trail.findIndex(step => step.heading !== trail[0].heading);
     const add = (mt, en, from, to) => phrases.push({ mt, en, from, to });
-    for (const { start, end, heading } of legs) {
+    for (const { start, end, heading, ride } of legs) {
+      if (ride) {
+        const sentence = rideInstruction(map, ride);
+        add(sentence.mt, sentence.en, start, end);
+        continue;
+      }
       const from = trail[start].at, goal = trail[end].at;
       const turn = turnFrom(trail[start].heading, heading);
-      const turnStart = Math.max(0, start - 1);
+      const turnStart = trail[start].ride ? start : Math.max(0, start - 1);
       if (turn === 2) {
         add(`Dur lura ħdejn ${mt(map, from)}.`, `Turn back by ${en(map, from)}.`, turnStart, start + 1);
       } else if (turn) {
@@ -225,8 +358,8 @@
   }
 
   const api = {
-    columns, rows, headings, neighbourhoods, rotate, edgeKey, gridNeighbour, neighbour, roadState,
-    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases
+    columns, headings, neighbourhoods, rotate, edgeKey, gridNeighbour, neighbour, roadState,
+    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceName
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else window.MaltiRouteGame = api;

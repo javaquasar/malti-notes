@@ -346,7 +346,7 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('All three neighbourhoods and twelve route challenges are solvable', () => {
+    await check('All five maps and twenty walking and transit challenges are solvable', () => {
       const core = require(path.join(root, 'assets/js/route-game-core.js'));
       function pathTo(map, start, goal, avoid = -1) {
         const queue = [[start]], visited = new Set([start, avoid]);
@@ -362,17 +362,18 @@ async function main() {
         }
         return null;
       }
-      function evaluate(map, round, nodes) {
-        const trail = nodes.map((at, index) => {
-          const heading = index === 0 ? round.heading
+      function walkingTrail(map, nodes, startHeading) {
+        return nodes.map((at, index) => {
+          const heading = index === 0 ? startHeading
             : core.headings.findIndex((_, direction) => core.neighbour(map, nodes[index - 1], direction) === at);
           assert.notEqual(heading, -1, 'Every step must follow an open road');
           return { at, heading };
         });
-        return core.evaluateMission(map, round, trail).map(condition => condition.state);
       }
+      const states = (map, round, trail) => core.evaluateMission(map, round, trail).map(condition => condition.state);
+      const evaluate = (map, round, nodes) => states(map, round, walkingTrail(map, nodes, round.heading));
       let count = 0;
-      for (const map of core.neighbourhoods) {
+      for (const map of core.neighbourhoods.filter(map => !map.transit)) {
         assert.equal(map.places.length, 20);
         for (const goal of map.places.keys()) assert(pathTo(map, 0, goal), map.id + ' must be connected');
         for (const round of core.missionRounds(map)) {
@@ -400,7 +401,32 @@ async function main() {
       assert.equal(evaluate(open, first, [0, 1, 2, 3])[1], 'missed');
       assert.equal(evaluate(open, first, [0, 1, 2, 1])[1], 'missed');
       assert.equal(count, 12);
-      return { maps: core.neighbourhoods.length, challenges: count, alternativesAccepted: 2 };
+      let journeys = 0;
+      for (const map of core.neighbourhoods.filter(map => map.transit)) {
+        assert.equal(map.places.length, 28);
+        for (const round of core.missionRounds(map)) {
+          const ride = round.ride;
+          assert(ride);
+          const toStop = pathTo(map, round.start, round.departure);
+          const onward = pathTo(map, ride.to, round.goal);
+          assert(toStop && onward);
+          assert.equal(pathTo(map, round.departure, ride.to), null);
+          const trail = walkingTrail(map, toStop, round.heading);
+          assert.deepEqual(states(map, round, trail), ['done', 'pending', 'pending']);
+          const other = core.departures(map, round.departure).find(option => option.number !== ride.number);
+          if (other) assert.equal(states(map, round, [...trail, { at: other.to, heading: other.heading, ride: other }])[1], 'missed');
+          trail.push({ at: ride.to, heading: ride.heading, ride });
+          assert.deepEqual(states(map, round, trail), ['done', 'done', 'pending']);
+          trail.push(...walkingTrail(map, onward, ride.heading).slice(1));
+          assert.deepEqual(states(map, round, trail), ['done', 'done', 'done']);
+          const description = core.routePhrases(map, trail, round).find(phrase => phrase.en.includes(core.serviceName(map, ride)));
+          assert.equal(trail[description.from].at, ride.from);
+          assert.equal(trail[description.to].at, ride.to);
+          journeys += 1;
+        }
+      }
+      assert.equal(journeys, 8);
+      return { maps: core.neighbourhoods.length, walking: count, journeys, alternativesAccepted: 2 };
     });
 
     await check('Game settings open over the map without moving the title or changing the route', async () => {
@@ -549,7 +575,7 @@ async function main() {
         const condition = page.locator('[data-condition-state]');
         const translation = page.locator('[data-condition-en]');
         const feedback = page.locator('[data-route-feedback]');
-        const labelsFit = () => page.locator('[data-route-landmark]').evaluateAll(labels => labels.every((label, index) => {
+        const labelsFit = () => page.locator('[data-route-landmark]:visible').evaluateAll(labels => labels.every((label, index) => {
           const box = label.getBoundingClientRect();
           return box.width > 0 && (index % 4 === 3 || box.right < labels[index + 1].getBoundingClientRect().left);
         }));
@@ -613,6 +639,99 @@ async function main() {
         await capture(page, 'route-harbour-1280.png');
         assert.deepEqual(await axe(page, '[data-route-game]'), []);
         return { mobileFirst: true, hint: true, feedback: true, deadEndsAndClosures: true };
+      } finally { await f.close(); }
+    });
+
+    await check('Ferries and intertown buses board at stops, check the service, and resume walking after arrival', async () => {
+      const f = await fixture('route-transit', { width: 390, hasTouch: true });
+      try {
+        const page = f.page;
+        await page.addInitScript(() => { Math.random = () => 0; });
+        await page.goto(base + '/route_game.html', { waitUntil: 'networkidle' });
+        const button = name => page.getByRole('button', { name, exact: true });
+        const tapNode = index => page.locator('[data-route-node="' + index + '"]').tap();
+        const walk = async nodes => { for (const index of nodes) await tapNode(index); };
+        const board = page.locator('[data-route-transit]');
+        const position = page.locator('[data-route-position]');
+        const feedback = page.locator('[data-route-feedback]');
+        const translation = page.locator('[data-condition-en]');
+        const map = page.locator('[data-route-map]');
+        const toggle = page.locator('[data-route-settings] summary');
+        const size = () => map.evaluate(svg => [svg.viewBox.baseVal.width, svg.viewBox.baseVal.height]);
+        const setMap = async (id, mode) => {
+          await toggle.tap();
+          if (mode) await button(mode).tap();
+          await page.getByLabel('Neighbourhood').selectOption(id);
+          await toggle.tap();
+        };
+        const states = () => page.locator('[data-condition-state]').allInnerTexts();
+        const finish = async () => {
+          await button('Check route').tap();
+          assert.match(await feedback.innerText(), /followed all three instructions/);
+          assert.deepEqual(await states(), ['✓ Done', '✓ Done', '✓ Done']);
+        };
+        const originalSize = await size();
+
+        await setMap('ferry-crossing');
+        assert.deepEqual(await size(), [originalSize[0], 592]);
+        assert.equal(await board.isVisible(), false);
+        assert.equal(await translation.first().isVisible(), false);
+        assert.equal(await page.locator('[data-route-node="13"]').isVisible(), false);
+        await tapNode(21);
+        assert.match(await position.innerText(), /one block away.*0 blocks/);
+        await walk([1, 2, 6, 10]);
+        assert(await board.isVisible());
+        assert.match(await board.getByRole('heading').innerText(), /Ferries from Quay A/);
+        await button('Ferry F2 · East Quay').tap();
+        assert.match(await position.innerText(), /Ferry F2 arrived at Quay C.*4 blocks.*1 ride/);
+        await walk([22, 26]);
+        await button('Check route').tap();
+        assert.match(await feedback.innerText(), /took Ferry F2.*take Ferry F1/);
+        assert(await translation.first().isVisible());
+        for (let index = 0; index < 3; index++) await button('Undo last move').tap();
+        assert.match(await position.innerText(), /Il-moll A.*4 blocks/);
+        await button('Ferry F1 · South Quay').focus();
+        await button('Ferry F1 · South Quay').press('Enter');
+        assert.match(await position.innerText(), /Ferry F1 arrived at Quay B.*Facing south/);
+        await walk([22, 26]);
+        await finish();
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await capture(page, 'route-ferry-390.png');
+
+        await toggle.tap();
+        await button('Live directions').tap();
+        await toggle.tap();
+        const ferry = page.locator('[data-route-phrase]').filter({ hasText: 'Take Ferry F1 and get off at Quay B.' });
+        await ferry.tap();
+        assert.equal(await ferry.getAttribute('aria-pressed'), 'true');
+        const selected = await page.locator('[data-route-segment]').evaluate(line => line.points.numberOfItems);
+        assert.equal(selected, 6);
+
+        await setMap('bus-link', 'Read & follow');
+        assert.deepEqual(await size(), [originalSize[0], 592]);
+        assert.equal(await board.isVisible(), false);
+        await walk([1, 2, 6, 10]);
+        assert.match(await board.getByRole('heading').innerText(), /Buses from Stop A/);
+        await button('Bus 47 · Market Town').tap();
+        assert.match(await position.innerText(), /Bus 47 arrived at Stop C/);
+        await tapNode(21);
+        assert.match(await position.innerText(), /one block away.*Stop|one block away.*Il-waqfa C/);
+        await button('Check route').tap();
+        assert.match(await feedback.innerText(), /took Bus 47.*take Bus 31/);
+        await button('Undo last move').tap();
+        await button('Bus 31 · Garden Town').scrollIntoViewIfNeeded();
+        await capture(page, 'route-bus-departures-390.png');
+        assert.deepEqual(await axe(page, '[data-route-game]'), []);
+        await button('Bus 31 · Garden Town').tap();
+        assert.match(await position.innerText(), /Bus 31 arrived at Stop B/);
+        await walk([25]);
+        await finish();
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await capture(page, 'route-bus-390.png');
+        await setMap('open');
+        assert.deepEqual(await size(), originalSize);
+        assert.equal(await board.isVisible(), false);
+        return { ferry: true, bus: true, wrongService: true, highlightedRide: true, unchangedWidth: true };
       } finally { await f.close(); }
     });
 

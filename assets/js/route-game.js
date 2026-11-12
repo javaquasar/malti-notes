@@ -16,8 +16,15 @@
     return { x, y };
   });
   const icons = all('[data-route-icon]');
+  const targets = all('[data-route-node]');
   const rings = all('[data-route-ring]');
   const roads = all('[data-route-road]');
+  const scenery = find('[data-route-scenery]');
+  const transitLines = all('[data-route-transit-line]');
+  const transitTags = all('[data-route-transit-tag]');
+  const transitPanel = find('[data-route-transit]');
+  const departureList = find('[data-route-departures]');
+  const bottomMargin = svg.viewBox.baseVal.height - coordinates[core.neighbourhoods[0].places.length - 1].y;
   const compact = window.matchMedia('(max-width: 980px)');
   const directions = find('[data-route-directions]');
   const inline = find('[data-route-inline]');
@@ -45,19 +52,24 @@
 
   const current = () => trail.at(-1);
   const reachedGoal = () => current().at === round.goal;
-  const hasMission = () => Boolean(round.ordinal);
+  const hasMission = () => Boolean(round.ordinal || round.ride);
   const place = index => core.place(map, index);
   const face = heading => core.headings[heading].name;
 
   function drawLine(lines, points) {
     for (const line of lines) {
       line.points.clear();
-      for (const { at } of points) {
+      for (const point of points) {
         const vertex = svg.createSVGPoint();
-        Object.assign(vertex, coordinates[at]);
+        Object.assign(vertex, point);
         line.points.appendItem(vertex);
       }
     }
+  }
+
+  function trailGeometry(steps) {
+    return steps.flatMap((step, index) => index > 0 && step.ride
+      ? [...step.ride.via, coordinates[step.at]] : [coordinates[step.at]]);
   }
 
   function placeMarker(marker, index) {
@@ -82,15 +94,17 @@
   }
 
   function renderTextMap() {
-    renderRows(find('[data-route-text-map]'), find('[data-route-text-template]'), map.places, (fragment, _, index) => {
+    const active = map.places.flatMap((landmark, index) => landmark ? [index] : []);
+    renderRows(find('[data-route-text-map]'), find('[data-route-text-template]'), active, (fragment, index) => {
       const [name, englishName] = place(index);
       const ways = core.headings.flatMap((direction, heading) => {
         const next = core.neighbour(map, index, heading);
         if (next !== -1) return [direction.name + ' to ' + place(next)[1]];
-        const possible = core.gridNeighbour(index, heading);
+        const possible = core.gridNeighbour(map, index, heading);
         return possible !== -1 && core.roadState(map, core.edgeKey(index, possible)) === 'closed'
           ? [direction.name + ' closed'] : [];
       });
+      ways.push(...core.departures(map, index).map(service => core.serviceName(map, service) + ' to ' + place(service.to)[1]));
       fragmentText(fragment, '[data-route-text-place]', name);
       fragmentText(fragment, '[data-route-text-ways]', ' (' + englishName + ') · ' + ways.join(', '));
     });
@@ -100,32 +114,70 @@
     fragment.querySelector(selector).textContent = value;
   }
 
+  function paintTransitLines() {
+    transitLines.forEach((line, index) => {
+      const service = map.services?.[index], tag = transitTags[index];
+      drawLine([line], service ? [coordinates[service.from], ...service.via, coordinates[service.to]] : []);
+      tag.dataset.routeEmpty = String(!service);
+      if (service) {
+        const { x, y } = service.label;
+        tag.transform.baseVal.getItem(0).setTranslate(x, y);
+        fragmentText(tag, 'text', service.number);
+      }
+    });
+  }
+
   function paintMap() {
     say('[data-route-map-name]', map.name);
     say('[data-route-map-level]', map.difficulty);
     say('#route-svg-title', map.name + ' street map');
-    find('[data-route-scenery]').href.baseVal = '#route-scenery-' + map.id;
+    const height = coordinates[map.places.length - 1].y + bottomMargin;
+    svg.viewBox.baseVal.height = height;
+    scenery.height.baseVal.value = height;
+    scenery.href.baseVal = '#route-scenery-' + map.id;
+    find('[data-route-clip]').height.baseVal.value = height;
+    find('[data-route-frame]').height.baseVal.value = height - 2;
+    find('[data-route-transit-help]').hidden = !map.transit;
     mapSelect.value = map.id;
     labels.forEach((label, index) => {
-      const name = place(index)[0];
+      const landmark = place(index);
+      const empty = String(!landmark);
+      label.parentElement.dataset.routeEmpty = empty;
+      targets[index].dataset.routeEmpty = empty;
+      if (!landmark) return;
+      const name = landmark[0];
       labelMeasure.textContent = name;
       label.textContent = name;
       label.textLength.baseVal.value = Math.min(labelMeasure.getComputedTextLength(), 94);
-      icons[index].href.baseVal = '#route-icon-' + map.places[index];
+      icons[index].href.baseVal = '#route-icon-' + (landmark[2] || map.places[index]);
     });
     labelMeasure.textContent = '';
     roads.forEach(road => { road.dataset.edgeState = core.roadState(map, road.dataset.routeRoad); });
+    paintTransitLines();
     renderTextMap();
   }
 
   function updatePosition(message = '') {
-    const { at, heading } = current(), count = trail.length - 1;
+    const { at, heading } = current(), rides = trail.filter(step => step.ride).length;
+    const count = trail.length - 1 - rides;
     const position = place(at)[0] + ' · Facing ' + face(heading) + ' · ' + count + (count === 1 ? ' block' : ' blocks');
-    say('[data-route-position]', message ? message + ' ' + position : position);
+    const travelCount = rides ? position + ' · ' + rides + (rides === 1 ? ' ride' : ' rides') : position;
+    say('[data-route-position]', message ? message + ' ' + travelCount : travelCount);
+  }
+
+  function renderDepartures() {
+    const available = reachedGoal() ? [] : core.departures(map, current().at);
+    transitPanel.hidden = !available.length;
+    if (available.length) say('#route-transit-heading', map.transit.plural + ' from ' + place(current().at)[1]);
+    renderRows(departureList, find('[data-route-service-template]'), available, (fragment, service) => {
+      const choice = fragment.querySelector('[data-route-service]');
+      choice.dataset.routeService = service.number;
+      choice.textContent = core.serviceName(map, service) + ' · ' + service.destination;
+    });
   }
 
   function paintTrail() {
-    drawLine(trailLines, trail);
+    drawLine(trailLines, trailGeometry(trail));
     placeMarker(walker, current().at);
     walker.transform.baseVal.getItem(1).setRotate(current().heading * 90, 0, 0);
     const available = reachedGoal() ? [] : core.headings.map((_, heading) => core.neighbour(map, current().at, heading));
@@ -137,6 +189,7 @@
     find('[data-route-undo]').disabled = trail.length < 2;
     problem.querySelector('circle').r.baseVal.value = result?.at == null ? 0 : 19;
     if (result?.at != null) placeMarker(problem, result.at);
+    renderDepartures();
   }
 
   function selectPhrase(index) {
@@ -145,7 +198,7 @@
       button.ariaPressed = String(position === index);
     });
     const phrase = phrases[index];
-    drawLine(segmentLines, phrase ? trail.slice(phrase.from, phrase.to + 1) : []);
+    drawLine(segmentLines, phrase ? trailGeometry(trail.slice(phrase.from, phrase.to + 1)) : []);
     if (phrase) {
       const from = place(trail[phrase.from].at)[1], to = place(trail[phrase.to].at)[1];
       say('[data-route-highlight-status]', 'Highlighted from ' + from + ' to ' + to + '.');
@@ -250,10 +303,10 @@
     renderDirections();
   }
 
-  function refreshMove() {
+  function refreshMove(message) {
     result = null;
     paintTrail();
-    updatePosition();
+    updatePosition(message);
     renderDirections();
   }
 
@@ -262,13 +315,22 @@
     const from = current().at;
     const next = heading === -1 ? -1 : core.neighbour(map, from, heading);
     if (next === -1) {
-      const candidate = heading === -1 ? -1 : core.gridNeighbour(from, heading);
+      const candidate = heading === -1 ? -1 : core.gridNeighbour(map, from, heading);
       const blocked = candidate !== -1 && core.roadState(map, core.edgeKey(from, candidate)) === 'closed';
       updatePosition(blocked ? 'That road is closed. Choose a ringed intersection.' : missing);
       return;
     }
     trail.push({ at: next, heading });
     refreshMove();
+  }
+
+  function board(number) {
+    if (reachedGoal()) return;
+    const ride = core.departures(map, current().at).find(service => service.number === number);
+    if (!ride) return;
+    trail.push({ at: ride.to, heading: ride.heading, ride });
+    refreshMove(core.serviceName(map, ride) + ' arrived at ' + place(ride.to)[1] + '.');
+    find('[data-route-move="0"]').focus({ preventScroll: true });
   }
 
   function checkRoute() {
@@ -301,8 +363,12 @@
     const target = event.target.closest('[data-route-node]');
     if (!target) return;
     const next = Number(target.dataset.routeNode);
-    const heading = core.headings.findIndex((_, direction) => core.gridNeighbour(current().at, direction) === next);
+    const heading = core.headings.findIndex((_, direction) => core.gridNeighbour(map, current().at, direction) === next);
     travel(heading, 'Choose an intersection one block away.');
+  });
+  departureList.addEventListener('click', event => {
+    const choice = event.target.closest('[data-route-service]');
+    if (choice) board(choice.dataset.routeService);
   });
   phraseList.addEventListener('click', event => {
     const button = event.target.closest('[data-route-phrase]');

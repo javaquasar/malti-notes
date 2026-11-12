@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maltese Route Game</title>
-  <meta name="description" content="Read Maltese directions and find your way through three illustrated neighbourhoods. Practise turns, side streets and landmarks.">
+  <meta name="description" content="Follow Maltese directions through five illustrated maps. Walk through town, cross by ferry or choose a bus between towns.">
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
   <link rel="stylesheet" href="./assets/css/theme.css">
   <link rel="stylesheet" href="./assets/css/site.css">
@@ -29,6 +29,8 @@
               <option value="open">Open Quarter · Beginner</option>
               <option value="old-town">Old Town · Intermediate</option>
               <option value="harbour">Harbour Lanes · Advanced</option>
+              <option value="ferry-crossing">Ferry Crossing</option>
+              <option value="bus-link">Bus Link</option>
             </select>
           </label>
           <div class="route-actions">
@@ -56,7 +58,42 @@
         <title id="route-svg-title">Town map</title>
         <desc id="route-svg-desc">North is up. Rings show available moves, a pointer shows where you face, and barriers mark closed roads. Use the movement buttons or the text map to explore.</desc>
         <defs>
-          <clipPath id="route-map-frame"><rect width="434" height="424" rx="16"/></clipPath>
+          <clipPath id="route-map-frame"><rect width="434" height="424" rx="16" data-route-clip/></clipPath>
+          <symbol id="route-transit-blocks" viewBox="0 0 434 592">
+            <g fill="#eadabb" stroke="#d0bd9d">
+              <rect x="67" y="64" width="84" height="62" rx="10"/><rect x="175" y="64" width="84" height="62" rx="10"/><rect x="283" y="64" width="84" height="62" rx="10"/>
+              <rect x="67" y="148" width="84" height="62" rx="10"/><rect x="175" y="148" width="84" height="62" rx="10"/><rect x="283" y="148" width="84" height="62" rx="10"/>
+              <rect x="67" y="484" width="84" height="62" rx="10"/><rect x="283" y="484" width="84" height="62" rx="10"/>
+            </g>
+            <g fill="#bf8e70" opacity=".62">
+              <path d="M86 86h34v20H86zm108 0h34v20h-34zm108 0h34v20h-34zM86 170h34v20H86zm108 0h34v20h-34zm108 0h34v20h-34zM86 504h34v20H86zm216 0h34v20h-34z"/>
+            </g>
+            <g fill="#a2b385"><circle cx="137" cy="107" r="7"/><circle cx="245" cy="107" r="7"/><circle cx="353" cy="107" r="7"/><circle cx="137" cy="191" r="7"/><circle cx="245" cy="191" r="7"/><circle cx="353" cy="191" r="7"/><circle cx="137" cy="529" r="7"/><circle cx="353" cy="529" r="7"/></g>
+          </symbol>
+          <symbol id="route-icon-quay" viewBox="0 0 48 42">
+            <path d="M4 31q6-3 12 0t12 0t12 0m-36 6q6-3 12 0t12 0t12 0" fill="none" stroke="#528f99" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 24h35l-6 7H12z" fill="#3f6074"/><path d="M12 16h24v8H12z" fill="#fff1cc"/><path d="M19 10h12v7H19z" fill="#c2674a"/><path d="M16 19h4m4 0h4m4 0h2" stroke="#286565" stroke-width="2"/>
+          </symbol>
+          <symbol id="route-scenery-ferry-crossing" viewBox="0 0 434 592">
+            <path d="M0 0h434v592H0z" fill="#e6dfbe"/>
+            <path d="M0 239q57 18 108 4t107 7t109-1t110-3v203q-51 12-107-1t-106 5t-116-1t-105 6z" fill="#a8d4d1"/>
+            <path d="M0 247q57 18 108 4t107 7t109-1t110-3m0 187q-51 12-107-1t-106 5t-116-1t-105 6" fill="none" stroke="#e8edce" stroke-width="4"/>
+            <path d="M36 284q8-5 16 0t16 0m34 24q8-5 16 0t16 0m-91 81q8-5 16 0t16 0m218-105q8-5 16 0t16 0m30 120q8-5 16 0t16 0m-132-11q8-5 16 0t16 0m-174 23q8-5 16 0t16 0" fill="none" stroke="#669faa" stroke-width="2" stroke-linecap="round"/>
+            <use href="#route-icon-quay" x="64" y="327" width="54" height="47"/>
+            <path d="M262 230h18v34h-18zm-107 203h16v34h-16zm216 0h16v34h-16z" fill="#d7b486" stroke="#b18d66"/>
+            <use href="#route-transit-blocks" width="434" height="592"/>
+            <rect x="175" y="484" width="84" height="62" rx="10" fill="#eadabb" stroke="#d0bd9d"/>
+          </symbol>
+          <symbol id="route-scenery-bus-link" viewBox="0 0 434 592">
+            <path d="M0 0h434v592H0z" fill="#e3e7c7"/>
+            <path d="M0 253q46-10 93 13t112 15t110-8t119-9v180q-51-12-97-5t-113-4t-114-10t-110 11z" fill="#c8d4aa"/>
+            <path d="M0 309q64-33 133 0t108 5m-241 25q58-30 128 1t89 2m-217 27q55-28 119-5m315-59q-28-18-69-9m69 43q-29-18-48-8m-183 81q33 22 75 7" fill="none" stroke="#a5ba88" stroke-width="2" stroke-linecap="round"/>
+            <path d="M209 450q-11 44 4 82t6 60" fill="none" stroke="#aabf91" stroke-width="12"/>
+            <use href="#route-transit-blocks" width="434" height="592"/>
+            <g fill="#385a44" text-anchor="middle" font-family="inherit" font-size="15" font-weight="700">
+              <text x="107" y="273">North Town</text><text x="94" y="423">Garden Town</text><text x="308" y="422">Market Town</text>
+            </g>
+          </symbol>
           <symbol id="route-roofs" viewBox="0 0 315 313">
             <g transform="translate(19 16)"><path d="M0 4 8 0h26l7 5v14H0z" fill="#d4be91" opacity=".59"/><path d="M0 5h29v14H0z" fill="#f4e3c4" opacity=".72"/><path d="M31 20h19v10H31z" fill="#eddbc0"/><circle cx="56" cy="11" r="6" fill="#93aa7e"/><circle cx="63" cy="17" r="5" fill="#a6b68a"/></g>
             <g transform="translate(127 16)"><path d="M0 4 8 0h26l7 5v14H0z" fill="#c58a6d" opacity=".59"/><path d="M0 5h29v14H0z" fill="#f4e3c4" opacity=".72"/><path d="M31 20h19v10H31z" fill="#eddbc0"/><circle cx="56" cy="11" r="6" fill="#93aa7e"/><circle cx="63" cy="17" r="5" fill="#a6b68a"/></g>
@@ -132,12 +169,33 @@
           <g data-route-road="16-17"><line x1="55" y1="389" x2="163" y2="389" data-route-road-open/><g data-route-road-closed><line x1="55" y1="389" x2="163" y2="389" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="98" y="382" width="22" height="14"/></g></g>
           <g data-route-road="17-18"><line x1="163" y1="389" x2="271" y2="389" data-route-road-open/><g data-route-road-closed><line x1="163" y1="389" x2="271" y2="389" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="206" y="382" width="22" height="14"/></g></g>
           <g data-route-road="18-19"><line x1="271" y1="389" x2="379" y2="389" data-route-road-open/><g data-route-road-closed><line x1="271" y1="389" x2="379" y2="389" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="314" y="382" width="22" height="14"/></g></g>
+          <g data-route-road="16-20"><line x1="55" y1="389" x2="55" y2="473" data-route-road-open/><g data-route-road-closed><line x1="55" y1="389" x2="55" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="44" y="424" width="22" height="14"/></g></g>
+          <g data-route-road="17-21"><line x1="163" y1="389" x2="163" y2="473" data-route-road-open/><g data-route-road-closed><line x1="163" y1="389" x2="163" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="152" y="424" width="22" height="14"/></g></g>
+          <g data-route-road="18-22"><line x1="271" y1="389" x2="271" y2="473" data-route-road-open/><g data-route-road-closed><line x1="271" y1="389" x2="271" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="260" y="424" width="22" height="14"/></g></g>
+          <g data-route-road="19-23"><line x1="379" y1="389" x2="379" y2="473" data-route-road-open/><g data-route-road-closed><line x1="379" y1="389" x2="379" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="368" y="424" width="22" height="14"/></g></g>
+          <g data-route-road="20-21"><line x1="55" y1="473" x2="163" y2="473" data-route-road-open/><g data-route-road-closed><line x1="55" y1="473" x2="163" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="98" y="466" width="22" height="14"/></g></g>
+          <g data-route-road="20-24"><line x1="55" y1="473" x2="55" y2="557" data-route-road-open/><g data-route-road-closed><line x1="55" y1="473" x2="55" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="44" y="508" width="22" height="14"/></g></g>
+          <g data-route-road="21-22"><line x1="163" y1="473" x2="271" y2="473" data-route-road-open/><g data-route-road-closed><line x1="163" y1="473" x2="271" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="206" y="466" width="22" height="14"/></g></g>
+          <g data-route-road="21-25"><line x1="163" y1="473" x2="163" y2="557" data-route-road-open/><g data-route-road-closed><line x1="163" y1="473" x2="163" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="152" y="508" width="22" height="14"/></g></g>
+          <g data-route-road="22-23"><line x1="271" y1="473" x2="379" y2="473" data-route-road-open/><g data-route-road-closed><line x1="271" y1="473" x2="379" y2="473" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="314" y="466" width="22" height="14"/></g></g>
+          <g data-route-road="22-26"><line x1="271" y1="473" x2="271" y2="557" data-route-road-open/><g data-route-road-closed><line x1="271" y1="473" x2="271" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="260" y="508" width="22" height="14"/></g></g>
+          <g data-route-road="23-27"><line x1="379" y1="473" x2="379" y2="557" data-route-road-open/><g data-route-road-closed><line x1="379" y1="473" x2="379" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="368" y="508" width="22" height="14"/></g></g>
+          <g data-route-road="24-25"><line x1="55" y1="557" x2="163" y2="557" data-route-road-open/><g data-route-road-closed><line x1="55" y1="557" x2="163" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="98" y="550" width="22" height="14"/></g></g>
+          <g data-route-road="25-26"><line x1="163" y1="557" x2="271" y2="557" data-route-road-open/><g data-route-road-closed><line x1="163" y1="557" x2="271" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="206" y="550" width="22" height="14"/></g></g>
+          <g data-route-road="26-27"><line x1="271" y1="557" x2="379" y2="557" data-route-road-open/><g data-route-road-closed><line x1="271" y1="557" x2="379" y2="557" stroke="#99765e" stroke-width="4" stroke-dasharray="6 7"/><use href="#route-barrier" x="314" y="550" width="22" height="14"/></g></g>
+          </g>
+          <g fill="none" stroke="#3e6a67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8">
+            <polyline data-route-transit-line/><polyline data-route-transit-line/>
           </g>
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <polyline data-route-trail-edge stroke="#fff8df" stroke-width="12"/>
             <polyline data-route-trail stroke="#246c72" stroke-width="7"/>
             <polyline data-route-segment-edge stroke="#fff8df" stroke-width="14"/>
             <polyline data-route-segment stroke="#9d381f" stroke-width="9"/>
+          </g>
+          <g font-family="inherit" font-size="16" font-weight="700" text-anchor="middle" fill="#254943" aria-hidden="true">
+            <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
+            <g transform="translate(0 0)" data-route-transit-tag data-route-empty="true"><rect x="-16" y="-12" width="32" height="24" rx="8" fill="#fff5d8" stroke="#3e6a67"/><text y="5"></text></g>
           </g>
           <g text-anchor="middle" font-family="inherit" font-size="17" font-weight="700" fill="#203a36" paint-order="stroke" stroke="#fbefd3" stroke-width="3" stroke-linejoin="round">
             <text visibility="hidden" aria-hidden="true" data-route-label-measure></text>
@@ -161,6 +219,14 @@
             <g transform="translate(163 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="17" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="17" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="17" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
             <g transform="translate(271 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="18" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="18" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="18" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
             <g transform="translate(379 389)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="19" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="19" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="19" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="20" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="20" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="20" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="21" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="21" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="21" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="22" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="22" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="22" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 473)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="23" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="23" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="23" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(55 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="24" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="24" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="24" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(163 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="25" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="25" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="25" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(271 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="26" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="26" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="26" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
+            <g transform="translate(379 557)"><ellipse cx="29" cy="-9" rx="17" ry="4" fill="#9b805a" opacity=".22" stroke="none"/><use data-route-icon="27" href="#route-icon-house" x="10" y="-44" width="40" height="36" stroke="none"/><text y="23" lengthAdjust="spacingAndGlyphs" data-route-landmark="27" lang="mt"></text><circle r="3.5" fill="#27524d" stroke="#fff4dd" stroke-width="2"/><circle r="0" data-route-ring="27" fill="none" stroke="#1e6260" stroke-width="2.6"/></g>
           </g>
           <g data-route-start-marker transform="translate(0 0)">
             <circle r="0" fill="none" stroke="#1e6260" stroke-width="2.6" data-route-start-ring/>
@@ -201,11 +267,23 @@
             <rect x="114" y="352" width="98" height="66" data-route-node="17"/>
             <rect x="222" y="352" width="98" height="66" data-route-node="18"/>
             <rect x="330" y="352" width="98" height="66" data-route-node="19"/>
+            <rect x="6" y="436" width="98" height="66" data-route-node="20"/>
+            <rect x="114" y="436" width="98" height="66" data-route-node="21"/>
+            <rect x="222" y="436" width="98" height="66" data-route-node="22"/>
+            <rect x="330" y="436" width="98" height="66" data-route-node="23"/>
+            <rect x="6" y="520" width="98" height="66" data-route-node="24"/>
+            <rect x="114" y="520" width="98" height="66" data-route-node="25"/>
+            <rect x="222" y="520" width="98" height="66" data-route-node="26"/>
+            <rect x="330" y="520" width="98" height="66" data-route-node="27"/>
           </g>
         </g>
-        <rect x="1" y="1" width="432" height="422" rx="16" fill="none" stroke="#ba9b75" stroke-width="2" pointer-events="none"/>
+        <rect x="1" y="1" width="432" height="422" rx="16" fill="none" stroke="#ba9b75" stroke-width="2" pointer-events="none" data-route-frame/>
       </svg>
         <p class="route-position" role="status" data-route-position></p>
+        <section class="route-directions" data-route-transit hidden aria-labelledby="route-transit-heading">
+          <h3 id="route-transit-heading"></h3>
+          <div class="route-actions" data-route-departures></div>
+        </section>
         <div class="route-actions" role="group" aria-label="Route controls">
           <button class="action-button study-icon-button" type="button" data-route-move="0" aria-label="Go straight" title="Go straight"><span aria-hidden="true">↑</span></button>
           <button class="action-button study-icon-button" type="button" data-route-move="-1" aria-label="Turn left" title="Turn left"><span aria-hidden="true">←</span></button>
@@ -218,6 +296,7 @@
           <summary>Map in text</summary>
           <div class="study-disclosure-body">
             <p>Each move goes one block. Left and right are relative to your heading. For street numbers, count the intersections with an open side street.</p>
+            <p data-route-transit-help hidden>Walk to a quay or bus stop, then choose a service. Route numbers are for practice.</p>
             <ul class="route-text-map" data-route-text-map></ul>
           </div>
         </details>
@@ -272,6 +351,9 @@
     </template>
     <template data-route-text-template>
       <li><strong lang="mt" data-route-text-place></strong><span data-route-text-ways></span></li>
+    </template>
+    <template data-route-service-template>
+      <button class="action-button" type="button" data-route-service></button>
     </template>
   </main>
 </div>

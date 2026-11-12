@@ -66,6 +66,7 @@
 }
 
 .route-board { display: block; width: 100%; height: auto; }
+.route-board [data-route-empty="true"] { display: none; }
 .route-brief { min-height: 1.5em; }
 .route-map-key { justify-content: start; column-gap: var(--space-xl); }
 .route-challenge { display: grid; gap: var(--space-md); }
