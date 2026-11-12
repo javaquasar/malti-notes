@@ -30,51 +30,61 @@
       <div class="toolbar-row">
         <h2 id="route-map-heading">Town map</h2>
         <button class="action-button" type="button" data-route-new>New route</button>
+        <button class="action-button" type="button" data-route-challenge-new>New challenge</button>
       </div>
       <div class="toolbar-row">
         <span class="status-chip"><span>S · Start <b lang="mt" data-route-start-name></b></span></span>
         <span class="status-chip"><span>G · Goal <b lang="mt" data-route-goal-name></b></span></span>
         <span class="status-chip" data-route-start-heading></span>
       </div>
+      <section class="info-card" data-route-challenge hidden aria-labelledby="route-challenge-title">
+        <h3 id="route-challenge-title">Route challenge</h3>
+        <p lang="mt" data-route-challenge-mt></p>
+        <p lang="en" data-route-challenge-en></p>
+        <p role="status" data-route-challenge-status></p>
+      </section>
+      <p>Tap a highlighted intersection or use the buttons to move one block. Left and right follow the direction you are facing.</p>
       <svg class="image-frame" viewBox="0 0 480 263" role="img" aria-labelledby="route-svg-title route-svg-desc" data-route-map>
         <title id="route-svg-title">Town map</title>
-        <desc id="route-svg-desc">North is up. Roads connect neighbouring landmarks in a rectangular grid. The text version follows the map.</desc>
+        <desc id="route-svg-desc">North is up. Roads connect neighbouring landmarks in a rectangular grid. Larger dots mark available moves. A text version follows the movement controls.</desc>
         <rect x="1" y="1" width="478" height="261" rx="14" fill="var(--surface-paper)" stroke="var(--border-default)"/>
         <path d="M62 42H419 M62 128H419 M62 214H419 M62 42V214 M181 42V214 M300 42V214 M419 42V214"
           fill="none" stroke="var(--text-muted)" stroke-width="3" opacity=".65"/>
         <polyline data-route-trail fill="none" stroke="var(--text-brand)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
         <g fill="var(--text-primary)" font-family="inherit" font-size="18" text-anchor="middle"
           stroke="var(--surface-paper)" stroke-width="6" paint-order="stroke">
-          <circle cx="62" cy="42" r="4"/>
+          <circle cx="62" cy="42" r="4" data-route-dot="0"/>
           <text x="62" y="81" data-route-landmark="0" data-english="the post office" lang="mt">Il-posta</text>
-          <circle cx="181" cy="42" r="4"/>
+          <circle cx="181" cy="42" r="4" data-route-dot="1"/>
           <text x="181" y="81" data-route-landmark="1" data-english="the church" lang="mt">Il-knisja</text>
-          <circle cx="300" cy="42" r="4"/>
+          <circle cx="300" cy="42" r="4" data-route-dot="2"/>
           <text x="300" y="81" data-route-landmark="2" data-english="the bakery" lang="mt">Il-forn</text>
-          <circle cx="419" cy="42" r="4"/>
+          <circle cx="419" cy="42" r="4" data-route-dot="3"/>
           <text x="419" y="81" data-route-landmark="3" data-english="the bank" lang="mt">Il-bank</text>
-          <circle cx="62" cy="128" r="4"/>
+          <circle cx="62" cy="128" r="4" data-route-dot="4"/>
           <text x="62" y="167" data-route-landmark="4" data-english="the garden" lang="mt">Il-ġnien</text>
-          <circle cx="181" cy="128" r="4"/>
+          <circle cx="181" cy="128" r="4" data-route-dot="5"/>
           <text x="181" y="167" data-route-landmark="5" data-english="the square" lang="mt">Il-pjazza</text>
-          <circle cx="300" cy="128" r="4"/>
+          <circle cx="300" cy="128" r="4" data-route-dot="6"/>
           <text x="300" y="167" data-route-landmark="6" data-english="the school" lang="mt">L-iskola</text>
-          <circle cx="419" cy="128" r="4"/>
+          <circle cx="419" cy="128" r="4" data-route-dot="7"/>
           <text x="419" y="167" data-route-landmark="7" data-english="the clinic" lang="mt">Il-klinika</text>
-          <circle cx="62" cy="214" r="4"/>
+          <circle cx="62" cy="214" r="4" data-route-dot="8"/>
           <text x="62" y="253" data-route-landmark="8" data-english="the shop" lang="mt">Il-ħanut</text>
-          <circle cx="181" cy="214" r="4"/>
+          <circle cx="181" cy="214" r="4" data-route-dot="9"/>
           <text x="181" y="253" data-route-landmark="9" data-english="the cinema" lang="mt">Iċ-ċinema</text>
-          <circle cx="300" cy="214" r="4"/>
+          <circle cx="300" cy="214" r="4" data-route-dot="10"/>
           <text x="300" y="253" data-route-landmark="10" data-english="the museum" lang="mt">Il-mużew</text>
-          <circle cx="419" cy="214" r="4"/>
+          <circle cx="419" cy="214" r="4" data-route-dot="11"/>
           <text x="419" y="253" data-route-landmark="11" data-english="the pharmacy" lang="mt">L-ispiżerija</text>
         </g>
         <g data-route-start-marker transform="translate(0 0)">
+          <circle r="0" fill="none" stroke="var(--text-brand)" stroke-width="2" data-route-start-ring/>
           <circle r="12" fill="var(--surface-paper)" stroke="var(--text-brand)" stroke-width="2"/>
           <text y="5" fill="var(--text-primary)" text-anchor="middle" font-size="14" font-weight="bold">S</text>
         </g>
         <g data-route-goal-marker transform="translate(0 0)">
+          <circle r="0" fill="none" stroke="var(--text-brand)" stroke-width="2" data-route-goal-ring/>
           <rect x="-11" y="-11" width="22" height="22" rx="3" fill="var(--surface-paper)" stroke="var(--text-brand)" stroke-width="2"/>
           <text y="5" fill="var(--text-primary)" text-anchor="middle" font-size="14" font-weight="bold">G</text>
         </g>
@@ -82,7 +92,30 @@
           <circle r="16" fill="none" stroke="var(--text-brand)" stroke-width="2"/>
           <path d="M0 -24L-5 -17H5Z" fill="var(--text-brand)"/>
         </g>
+        <g fill="transparent" pointer-events="all" cursor="pointer" aria-hidden="true">
+          <rect x="9" y="21" width="106" height="73" data-route-node="0"/>
+          <rect x="128" y="21" width="106" height="73" data-route-node="1"/>
+          <rect x="247" y="21" width="106" height="73" data-route-node="2"/>
+          <rect x="366" y="21" width="106" height="73" data-route-node="3"/>
+          <rect x="9" y="107" width="106" height="73" data-route-node="4"/>
+          <rect x="128" y="107" width="106" height="73" data-route-node="5"/>
+          <rect x="247" y="107" width="106" height="73" data-route-node="6"/>
+          <rect x="366" y="107" width="106" height="73" data-route-node="7"/>
+          <rect x="9" y="193" width="106" height="73" data-route-node="8"/>
+          <rect x="128" y="193" width="106" height="73" data-route-node="9"/>
+          <rect x="247" y="193" width="106" height="73" data-route-node="10"/>
+          <rect x="366" y="193" width="106" height="73" data-route-node="11"/>
+        </g>
       </svg>
+      <p data-route-position class="study-progress-status" role="status"></p>
+      <div class="toolbar-row" role="group" aria-label="Route controls">
+        <button class="action-button" type="button" data-route-move="0">Go straight</button>
+        <button class="action-button" type="button" data-route-move="-1">Turn left</button>
+        <button class="action-button" type="button" data-route-move="1">Turn right</button>
+        <button class="action-button" type="button" data-route-move="2">Turn back</button>
+        <button class="study-link-button" type="button" data-route-undo>Undo last move</button>
+      </div>
+      <section class="stack" data-route-inline hidden aria-labelledby="route-write-heading"></section>
       <details class="study-disclosure">
         <summary>Text version of the map</summary>
         <div class="study-disclosure-body">
@@ -92,16 +125,9 @@
           <p><strong>South row</strong> <span lang="mt">Il-ħanut · Iċ-ċinema · Il-mużew · L-ispiżerija</span></p>
         </div>
       </details>
-      <p data-route-position class="study-progress-status" role="status"></p>
-      <p>Each move takes you one block. Left and right are relative to the way you are facing.</p>
-      <div class="toolbar-row" role="group" aria-label="Route controls">
-        <button class="action-button" type="button" data-route-move="0">Go straight</button>
-        <button class="action-button" type="button" data-route-move="-1">Turn left</button>
-        <button class="action-button" type="button" data-route-move="1">Turn right</button>
-        <button class="study-link-button" type="button" data-route-undo>Undo last move</button>
-      </div>
     </section>
-    <section class="content-card stack" aria-labelledby="route-write-heading">
+    <section class="content-card" data-route-side aria-labelledby="route-write-heading">
+      <div class="stack" data-route-directions>
       <h2 id="route-write-heading">Give directions</h2>
       <p id="route-write-help">Write complete sentences in Maltese. Say where to turn, which landmarks to pass and how many side streets to cross without turning.</p>
       <p class="muted-note" data-route-live-empty hidden>Add your first move to see directions in Maltese and English.</p>
@@ -111,13 +137,14 @@
         </label>
         <div class="toolbar-row"><button class="action-button" type="submit">Check route</button></div>
       </form>
-      <p class="study-feedback" role="status" data-route-feedback></p>
       <section class="info-card" data-route-model hidden aria-labelledby="route-model-title">
         <h3 id="route-model-title" tabindex="-1">Model for your route</h3>
         <p lang="mt" data-route-model-mt aria-live="polite"></p>
         <p lang="en" data-route-model-en></p>
         <p data-route-compare>Compare your sentences with the model. Check your turns, street count and landmarks.</p>
       </section>
+      <p role="status" data-route-feedback></p>
+      </div>
     </section>
     </div>
     <noscript>Enable JavaScript to draw a route and play.</noscript>

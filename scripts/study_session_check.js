@@ -69,8 +69,8 @@ async function startServer() {
   await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
   return server;
 }
-async function fixture(label, { width = 1280, theme = 'classic', serviceWorkers = false, topic = null } = {}) {
-  const context = await browser.newContext({ viewport: { width, height: width < 600 ? 844 : 900 }, serviceWorkers: serviceWorkers ? 'allow' : 'block' });
+async function fixture(label, { width = 1280, theme = 'classic', serviceWorkers = false, topic = null, hasTouch = false } = {}) {
+  const context = await browser.newContext({ viewport: { width, height: width < 600 ? 844 : 900 }, serviceWorkers: serviceWorkers ? 'allow' : 'block', hasTouch });
   await context.addInitScript(({ seeds, theme, topic, key }) => {
     localStorage.setItem('malti_site_theme', theme);
     if (localStorage.getItem('__study_check_seeded')) return;
@@ -433,6 +433,74 @@ async function main() {
         assert.equal(await model.isVisible(), false);
         assert.equal(await page.locator('[data-route-live-empty]').isVisible(), true);
         return { keyboard: true, alternatePath: true, oneAndTwoCrossings: true, reroll: true, liveUpdates: true };
+      } finally { await f.close(); }
+    });
+
+    await check('Map taps, mobile directions and route challenges share the same route state', async () => {
+      const f = await fixture('route-challenges', { width: 390, hasTouch: true });
+      try {
+        const page = f.page;
+        await page.addInitScript(() => { Math.random = () => 0; });
+        await page.goto(base + '/route_game.html', { waitUntil: 'networkidle' });
+        const button = name => page.getByRole('button', { name, exact: true });
+        const node = id => page.locator('[data-route-node="' + id + '"]');
+        const position = page.locator('[data-route-position]');
+        const model = page.locator('[data-route-model-en]');
+        const feedback = page.locator('[data-route-feedback]');
+        const challenge = page.locator('[data-route-challenge]');
+        const requirement = challenge.locator('[data-route-challenge-en]');
+        const progress = challenge.locator('[data-route-challenge-status]');
+        await button('Live directions').tap();
+        assert(await model.evaluate(element => element.closest('[data-route-inline]')?.previousElementSibling.matches('[aria-label="Route controls"]')));
+        await node(6).tap();
+        assert.match(await position.innerText(), /one block away.*0 blocks/);
+        assert.equal(await page.locator('[data-route-dot="1"]').evaluate(dot => dot.r.baseVal.value), 8);
+        await node(1).tap();
+        assert.match(await model.innerText(), /reach the church/);
+        assert.equal(await page.locator('[data-route-start-ring]').evaluate(ring => ring.r.baseVal.value), 18);
+        await button('Turn back').focus(); await button('Turn back').press('Enter');
+        assert.match(await model.innerText(), /Turn back by the church.*reach the post office/);
+        await button('Undo last move').tap();
+        assert.match(await position.innerText(), /Il-knisja.*1 block/);
+        await page.setViewportSize({ width: 1280, height: 900 });
+        await page.waitForFunction(() => document.querySelector('[data-route-side] [data-route-model-en]'));
+        assert.match(await model.innerText(), /reach the church/);
+        await page.setViewportSize({ width: 390, height: 844 });
+        await page.waitForFunction(() => document.querySelector('[data-route-inline] [data-route-model-en]'));
+
+        await button('New challenge').tap();
+        assert.match(await requirement.innerText(), /church.*turn right at the third street/);
+        await node(1).tap(); await node(5).tap(); await node(6).tap(); await node(7).tap();
+        assert.match(await progress.innerText(), /turned too early/);
+        assert.match(await feedback.innerText(), /reached the goal.*Undo/);
+        await button('Write your own').tap();
+        const write = page.getByRole('textbox', { name: 'Your directions' });
+        await write.fill('Għaddi minn ħdejn il-knisja.');
+        await button('Check route').tap();
+        assert.equal(await model.isVisible(), false);
+        assert.match(await feedback.innerText(), /reached the goal.*Undo/);
+        await button('Live directions').tap();
+        for (let index = 0; index < 3; index++) await button('Undo last move').tap();
+        assert.equal(await progress.innerText(), '');
+        await node(2).tap(); await node(3).tap();
+        assert.equal(await page.locator('[data-route-goal-ring]').evaluate(ring => ring.r.baseVal.value), 18);
+        await node(7).tap();
+        assert.match(await progress.innerText(), /landmark.*required turn/);
+        assert.equal(await feedback.innerText(), 'Challenge complete. You reached the goal.');
+        assert.match(await model.innerText(), /two side streets.*right at the corner by the bank.*the clinic/);
+
+        await button('New challenge').tap();
+        assert.match(await requirement.innerText(), /church.*turn right at the second street/);
+        assert.match(await challenge.locator('[data-route-challenge-mt]').innerText(), /il-knisja.*fit-tieni triq/);
+        await button('Write your own').tap();
+        await node(1).tap(); await node(2).tap(); await node(6).tap();
+        await write.fill('Għaddi minn ħdejn il-knisja u dur fuq il-lemin fit-tieni triq.');
+        await button('Check route').tap();
+        assert(await model.isVisible());
+        assert.equal(await feedback.innerText(), 'Challenge complete. You reached the goal.');
+        await button('New route').tap();
+        assert.equal(await challenge.isVisible(), false);
+        return { taps: true, keyboardBacktrack: true, responsivePlacement: true, challengeTurns: [2, 3] };
       } finally { await f.close(); }
     });
 
