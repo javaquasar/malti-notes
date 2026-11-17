@@ -828,7 +828,8 @@ async function main() {
       }));
       assert(attachedPronounTable.hasLightSurface, "Attached-pronoun table lost its shared light fill.");
       assert(!attachedPronounTable.hasOuterCard, "Attached-pronoun table still has a second outer frame.");
-      assert(await page.locator('[data-example-group] > article').count() === 70, "Health lesson did not render all examples.");
+      assert(await page.locator('[data-example-group^="health-"] > article').count() === 70, "Health lesson did not render all core examples.");
+      assert(await page.locator('[data-lesson01-group="lesson01-needs"] > article').count() === 4, "Health lesson did not render the four basic-needs examples.");
       const healthBulkIds = await page.locator("[data-page-sentence-review-add]").evaluate((button) => (
         JSON.parse(button.dataset.items || "[]").map((item) => item.id)
       ));

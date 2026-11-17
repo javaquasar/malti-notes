@@ -29,7 +29,7 @@ CSSOM counts include declarations inside media rules. Surface declarations are b
 
 | Stylesheet | All declarations | Surface candidates | Control surface candidates | Important |
 | --- | ---: | ---: | ---: | ---: |
-| assets/css/pages.css | 963 | 556 | 166 | 9 |
+| assets/css/pages.css | 1037 | 566 | 166 | 9 |
 | assets/css/lesson01-practice.css | 50 | 4 | 0 | 0 |
 | assets/css/topic-picker.css | 0 | 0 | 0 | 0 |
 | assets/css/vocabulary-games.css | 485 | 374 | 0 | 0 |

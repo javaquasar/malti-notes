@@ -279,9 +279,9 @@
                         <span lang="mt" data-postcard-rides-mt></span>
                         <span lang="en" data-postcard-rides-en></span>
                     </div>
-                    <div data-example-group="route-postcard-writing"></div>
+                    <div data-example-group="route-postcard-writing" data-bank-layout="comprehension"></div>
                 </div>
-                <div data-example-group="postcard-writing"></div>
+                <div data-example-group="postcard-writing" data-bank-layout="comprehension"></div>
                 <details class="study-disclosure">
                     <summary>Check your postcard</summary>
                     <div class="study-disclosure-body">
@@ -335,7 +335,7 @@
         saved[field] = { ...saved[field], [slug]: value };
         if (field === "answers" && saved.ratings?.[slug]) {
             delete saved.ratings[slug];
-            writing.querySelectorAll(`[data-bank-item="${slug}"] [aria-pressed]`).forEach(button => {
+            writing.querySelectorAll(`[data-bank-item="${slug}"] .action-button[aria-pressed]`).forEach(button => {
                 button.ariaPressed = "false";
             });
         }
@@ -353,7 +353,6 @@
         sourcePage: "transport_travel.html",
         defaultTopic: "Transport and Travel",
         reviewPrefix: "transport-travel",
-        individualReviewGroups: ["transport-frequency", "transport-grammar", "transport-qa", "transport-story-bank", "postcard-phrases"],
         groupViews: {
             "postcard-writing": { presentation: "selfAssessment", state: getPractice().postcards },
             "route-postcard-writing": { presentation: "selfAssessment", state: trip && getPractice().routePostcards?.[trip.id] }

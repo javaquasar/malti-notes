@@ -11,6 +11,8 @@
             sourcePage: page,
             defaultTopic: "MQF 2",
             reviewPrefix: "lesson01-" + stem,
+            // These groups own their section controls and must not claim the primary page toolbar.
+            pageToolbarSelector: ":not(*)",
             numbered: false
         });
         window.dispatchEvent(new CustomEvent("malti-lesson01-ready"));
