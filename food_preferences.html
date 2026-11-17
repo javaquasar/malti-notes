@@ -202,9 +202,11 @@
 
             <section class="content-card" id="junk-food">
                 <h2 lang="mt">Il-Junk Food</h2>
-                <p>Read about Lara and Daniel's class, then answer six questions about the story.</p>
+                <p>Read about Lara and Daniel's class, then answer six questions about the story. <a href="#food-labels">Compare the food labels</a> to practise <span lang="mt">fih</span>, <span lang="mt">fiha</span> and <span lang="mt">fihom</span>.</p>
                 <label class="study-check"><input type="checkbox" data-junk-food-english aria-controls="junk-food-reading">Show English translation</label>
-                <div id="junk-food-reading" data-example-group="junk-food-reading"></div>
+                <div class="study-contrast" id="junk-food-reading" data-example-group="junk-food-reading"></div>
+                <template data-food-evidence-mark><mark id="junk-food-evidence" tabindex="-1"></mark></template>
+                <template data-food-evidence-link><p><a href="#junk-food-evidence" data-food-evidence>Find this sentence in the text</a></p></template>
                 <details class="study-disclosure">
                     <summary>Vocabulary and food groups</summary>
                     <div class="study-disclosure-body stack">
@@ -216,6 +218,28 @@
                 </details>
                 <h3>Reading questions</h3>
                 <div data-exercise-set="junk-food-check" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                <details class="study-disclosure" id="food-labels">
+                    <summary>Compare two food labels</summary>
+                    <div class="study-disclosure-body stack">
+                        <p>Read the two practice labels and compare the amounts. Use <span lang="mt">fih</span> for <span lang="mt">il-pakkett</span>, <span lang="mt">fiha</span> for <span lang="mt">il-patata</span> and <span lang="mt">fihom</span> for <span lang="mt">il-gallettini</span>.</p>
+                        <div class="grid-2" role="group" aria-label="Practice food labels">
+                            <article class="study-card" data-practice-label="crisps">
+                                <strong lang="mt">Patata tal-pakkett</strong>
+                                <span>Crisps · per 100 g</span>
+                                <span>Salt <span lang="mt">(melħ)</span> <strong>1.4 g</strong></span>
+                                <span>Sugar <span lang="mt">(zokkor)</span> <strong>2 g</strong></span>
+                            </article>
+                            <article class="study-card" data-practice-label="biscuits">
+                                <strong lang="mt">Gallettini</strong>
+                                <span>Biscuits · per 100 g</span>
+                                <span>Salt <span lang="mt">(melħ)</span> <strong>0.4 g</strong></span>
+                                <span>Sugar <span lang="mt">(zokkor)</span> <strong>18 g</strong></span>
+                            </article>
+                        </div>
+                        <p><span lang="mt">Aktar … minn</span> means “more … than”. With the article, use forms like <span lang="mt">mill-patata</span> and <span lang="mt">mill-gallettini</span>.</p>
+                        <div data-exercise-set="food-label-comparison" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                    </div>
+                </details>
                 <details class="study-disclosure">
                     <summary>Talk about food</summary>
                     <div class="study-disclosure-body">
@@ -398,13 +422,72 @@ window.renderExampleBanksFromData({
         "junk-food-reading": { presentation: "reading" }
     }
 }).then(() => {
-    const toggle = document.querySelector("[data-junk-food-english]");
-    const translations = document.querySelectorAll("#junk-food-reading [data-bank-translation]");
+    const section = document.querySelector("#junk-food");
+    const reading = section.querySelector("#junk-food-reading");
+    const toggle = section.querySelector("[data-junk-food-english]");
+    const translations = reading.querySelectorAll("[data-bank-translation]");
     const updateTranslation = () => translations.forEach(paragraph => {
         paragraph.hidden = !toggle.checked;
     });
     toggle.addEventListener("change", updateTranslation);
     updateTranslation();
+
+    const check = section.querySelector('[data-exercise-set="junk-food-check"]');
+    const markTemplate = section.querySelector("[data-food-evidence-mark]");
+    const linkTemplate = section.querySelector("[data-food-evidence-link]");
+    const references = {
+        "food-meaning-junk": ["junk-means-rubbish", 0],
+        "food-salt-label": ["read-the-label", 1],
+        "food-sugar-label": ["read-the-label", 2],
+        "food-potato-method": ["potatoes-and-snacks", 0],
+        "food-break-snack": ["potatoes-and-snacks", 1],
+        "food-group": ["dairy-products", 1]
+    };
+    const paragraphs = new Map([...reading.querySelectorAll("[data-bank-primary]")].map(node => [
+        node.dataset.bankPrimary, { node, text: node.textContent }
+    ]));
+    let highlighted;
+    const clearHighlight = () => {
+        if (highlighted) highlighted.node.textContent = highlighted.text;
+        highlighted = null;
+    };
+    const highlight = itemId => {
+        const [slug, index] = references[itemId];
+        const passage = paragraphs.get(slug);
+        const sentences = passage.text.split(/(?<=\.) /);
+        const mark = markTemplate.content.firstElementChild.cloneNode(true);
+        clearHighlight();
+        mark.textContent = sentences[index];
+        const before = sentences.slice(0, index).join(" ");
+        const after = sentences.slice(index + 1).join(" ");
+        passage.node.replaceChildren(before && before + " ", mark, after && " " + after);
+        highlighted = passage;
+        return mark;
+    };
+
+    window.addEventListener("malti-exercise-complete", event => {
+        const { setId, results } = event.detail;
+        if (setId !== check.dataset.exerciseSet) return;
+        const supported = results.filter(result => Object.hasOwn(references, result.itemId));
+        if (!supported.length) return;
+        supported.forEach(({ itemId }) => {
+            const item = check.querySelector(`[data-exercise-item="${itemId}"]`);
+            if (item.querySelector("[data-food-evidence]")) return;
+            const link = linkTemplate.content.cloneNode(true);
+            link.querySelector("a").dataset.foodEvidence = itemId;
+            item.querySelector(".exercise-feedback").after(link);
+        });
+        highlight((supported.find(result => !result.correct) || supported[0]).itemId);
+    });
+    new MutationObserver(clearHighlight).observe(check, { childList: true });
+    check.addEventListener("click", event => {
+        const link = event.target.closest("[data-food-evidence]");
+        if (!link) return;
+        event.preventDefault();
+        const mark = highlight(link.dataset.foodEvidence);
+        mark.scrollIntoView({ block: "center" });
+        mark.focus({ preventScroll: true });
+    });
 });
 </script>
 <script src="./assets/js/vocab-review-page.js"></script>

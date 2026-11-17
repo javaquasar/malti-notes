@@ -268,6 +268,19 @@
                         <div data-example-group="postcard-phrases"></div>
                     </div>
                 </details>
+                <div class="stack" id="route-postcards" data-route-postcards hidden>
+                    <h3>Write about your route</h3>
+                    <p>Use the same journey for both recipients. Say where you went, how you got there and what you saw on the way or at your destination. Change the greeting and the closing to suit the reader.</p>
+                    <div class="study-card">
+                        <strong>Your route</strong>
+                        <span lang="mt" data-postcard-route-mt></span>
+                        <span lang="en" data-postcard-route-en></span>
+                        <strong>Transport</strong>
+                        <span lang="mt" data-postcard-rides-mt></span>
+                        <span lang="en" data-postcard-rides-en></span>
+                    </div>
+                    <div data-example-group="route-postcard-writing"></div>
+                </div>
                 <div data-example-group="postcard-writing"></div>
                 <details class="study-disclosure">
                     <summary>Check your postcard</summary>
@@ -294,15 +307,30 @@
 <script src="./assets/js/learning-content.js"></script>
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/transport-compact-toggle.js"></script>
+<script src="./assets/js/route-game-core.js"></script>
 <script>
 {
     const storage = window.MaltiStorage;
     const practiceKey = "malti_topic_practice_v1";
     const getPractice = () => storage.getJson(practiceKey, {}) || {};
-    const writing = document.querySelector('[data-example-group="postcard-writing"]');
-    const saveWriting = (field, { slug, value }) => {
+    const writing = document.querySelector("#postcards");
+    const trip = window.MaltiRouteGame.postcardJourney(new URLSearchParams(location.search));
+    if (trip) {
+        const card = writing.querySelector("[data-route-postcards]");
+        const show = (selector, pairs, lang, divider, fallback) => {
+            card.querySelector(selector).textContent = pairs.map(pair => pair[lang]).join(divider) || fallback;
+        };
+        show("[data-postcard-route-mt]", trip.stops, 0, " → ");
+        show("[data-postcard-route-en]", trip.stops, 1, " → ");
+        show("[data-postcard-rides-mt]", trip.rides, 0, " → ", "Bil-mixi");
+        show("[data-postcard-rides-en]", trip.rides, 1, " → ", "On foot");
+        card.hidden = false;
+    }
+    const saveWriting = (field, { groupId, slug, value }) => {
+        const fromGame = groupId === "route-postcard-writing";
+        if (fromGame ? !trip : groupId !== "postcard-writing") return;
         const progress = getPractice();
-        const saved = { ...progress.postcards };
+        const saved = { ...(fromGame ? progress.routePostcards?.[trip.id] : progress.postcards) };
         if (saved[field]?.[slug] === value) return;
         saved[field] = { ...saved[field], [slug]: value };
         if (field === "answers" && saved.ratings?.[slug]) {
@@ -311,7 +339,10 @@
                 button.ariaPressed = "false";
             });
         }
-        storage.setJson(practiceKey, { ...progress, postcards: saved });
+        const change = fromGame
+            ? { routePostcards: { ...progress.routePostcards, [trip.id]: saved } }
+            : { postcards: saved };
+        storage.setJson(practiceKey, { ...progress, ...change });
     };
     writing.addEventListener("malti-bank-draft", event => saveWriting("answers", event.detail));
     writing.addEventListener("malti-bank-rating", event => saveWriting("ratings", event.detail));
@@ -324,8 +355,11 @@
         reviewPrefix: "transport-travel",
         individualReviewGroups: ["transport-frequency", "transport-grammar", "transport-qa", "transport-story-bank", "postcard-phrases"],
         groupViews: {
-            "postcard-writing": { presentation: "selfAssessment", state: getPractice().postcards }
+            "postcard-writing": { presentation: "selfAssessment", state: getPractice().postcards },
+            "route-postcard-writing": { presentation: "selfAssessment", state: trip && getPractice().routePostcards?.[trip.id] }
         }
+    }).then(() => {
+        if (trip && location.hash === "#route-postcards") writing.querySelector("[data-route-postcards]").scrollIntoView();
     });
 }
 window.MaltiVocabReviewPage = {

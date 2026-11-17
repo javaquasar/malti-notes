@@ -154,8 +154,9 @@
     find('[data-study-start]').disabled = !plan.entries.length;
     say('[data-study-home-status]', unfinished
       ? `Continue at question ${saved.index + 1} of ${saved.entries.length}. Your answers are saved.`
-      : isFixedPractice(route) ? repeats ? 'Answer again without hints to clear your repeat list.'
-        : `${plan.catalog.length} questions. Write a complete sentence in Maltese for each one.`
+      : isFixedPractice(route) ? repeats ? (route.repeatSetId ? 'Try a different example for each question on your repeat list.'
+        : 'Answer again without hints to clear your repeat list.')
+        : `${plan.fullCount} questions. Write a complete sentence in Maltese for each one.`
         : `${plan.entries.length} short questions, one at a time.`);
     topicSelect.value = route.id;
     [...topicSelect.options].forEach(option => { option.hidden = option.dataset.level !== route.levelId; option.disabled = option.hidden; });

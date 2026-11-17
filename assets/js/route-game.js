@@ -445,6 +445,11 @@
     renderChallenge(steps, progress);
     renderPhrases();
     renderFeedback(progress);
+    const postcard = find('[data-route-postcard]');
+    postcard.hidden = !routeComplete(progress) || ((writing || mode === 'read') && !result?.passed);
+    if (!postcard.hidden) {
+      postcard.href = './transport_travel.html?' + core.postcardQuery(map, round, trail) + '#route-postcards';
+    }
     return progress;
   }
 

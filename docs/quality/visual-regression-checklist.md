@@ -32,6 +32,10 @@ Compare a new run against the baseline:
 npm run visual:diff:baseline -- --current visual-regression/screenshots/<new-timestamp>
 ```
 
+## Cleanup before publication
+
+`npm run release:build` runs `npm run visual:screenshots:clean` before packaging the site. The cleanup removes generated PNG captures and their dated capture metadata from `visual-regression/screenshots/`. Approved reference images live in the baseline directories.
+
 ## Pages
 
 - `index.html`

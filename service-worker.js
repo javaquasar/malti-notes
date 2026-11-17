@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}b70287ff5288`;
+const CACHE_NAME = `${CACHE_PREFIX}7dc249126a73`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -93,6 +93,7 @@ const CORE_ASSETS = [
     "./assets/js/b3-practice-core.js",
     "./assets/js/b3-practice.js",
     "./assets/js/cloud-sync-core.js",
+    "./assets/js/context-listening.js",
     "./assets/js/course-chapter.js",
     "./assets/js/course-context.js",
     "./assets/js/course-exam.js",
@@ -202,6 +203,10 @@ const CORE_ASSETS = [
     "./assets/data/b3_context_exercises.json",
     "./assets/data/b3_speaking_tasks.json",
     "./assets/audio/b3-calendar-weekday.wav",
+    "./assets/audio/context-dar-place.mp3",
+    "./assets/audio/context-dar-turn.mp3",
+    "./assets/audio/context-daq-soup.mp3",
+    "./assets/audio/context-daqq-guitar.mp3",
     "./assets/img/b3-town-map.svg",
     "./assets/data/lesson01_exercises.json",
     "./assets/data/lesson01_practice.json",

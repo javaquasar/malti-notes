@@ -16,7 +16,7 @@
         }),
         Object.freeze({
             id: 'words-reading-postcards', levelId: 'mixed', levelLabel: 'Mixed practice',
-            title: 'Words, reading and postcards',
+            title: 'Words, reading and postcards', repeatSetId: 'words-reading-postcards-repeat',
             practiceFile: './assets/data/language_context_exercises.json', sourcePage: 'homonyms_synonyms.html#practice',
             readingPage: 'food_preferences.html#junk-food', readingTitle: 'Il-Junk Food'
         })
@@ -239,19 +239,36 @@
     }
 
     function repeatEntries(catalog, queue) {
-        const pending = new Set(cleanQueue(queue).map(queueKey));
-        return catalog.filter(entry => pending.has(queueKey({ ...entry, itemId: entry.item.id })));
+        const pending = new Map(cleanQueue(queue).map(entry => [queueKey(entry), entry]));
+        const variantsBySkill = new Map();
+        for (const entry of catalog) {
+            const id = queueKey(entry);
+            if (!pending.has(id)) continue;
+            if (!variantsBySkill.has(id)) variantsBySkill.set(id, []);
+            variantsBySkill.get(id).push(entry);
+        }
+        return Array.from(variantsBySkill, ([id, variants]) => {
+            const last = variants.findIndex(entry => entry.item.id === pending.get(id).itemId);
+            return variants[(last + 1) % variants.length];
+        });
     }
 
     function planFixedPractice(bank, route, queue) {
         const { id: chapterId, levelId: routeId, title } = route;
-        const set = array(bank?.sets).find(value => value.id === chapterId && value.verificationStatus !== 'needs-review');
-        const catalog = array(set?.items).filter(publishable).map(item => ({
-            item: copy(item), routeId, chapterId, chapterTitle: title, originSetId: set.id,
-            skillId: item.id, mode: item.assessmentMode, help: helpFor(item)
-        }));
+        const namedSet = id => array(bank?.sets).find(set => set.id === id && set.verificationStatus !== 'needs-review');
+        const set = namedSet(chapterId);
+        const repeatSet = route.repeatSetId ? namedSet(route.repeatSetId) : null;
+        const entryFor = (item, skillId, originSetId) => ({
+            item: copy(item), routeId, chapterId, chapterTitle: title, originSetId,
+            skillId, mode: item.assessmentMode, help: helpFor(item)
+        });
+        const originals = array(set?.items).filter(publishable).map(item => entryFor(item, item.id, set.id));
+        const modes = new Map(originals.map(entry => [entry.skillId, entry.mode]));
+        const alternatives = array(repeatSet?.items).filter(item => publishable(item)
+            && modes.get(item.repeatOf) === item.assessmentMode).map(item => entryFor(item, item.repeatOf, repeatSet.id));
+        const catalog = originals.concat(alternatives);
         const repeats = repeatEntries(catalog, queue);
-        return { routeId, chapterId, title, entries: repeats.length ? repeats : catalog, catalog };
+        return { routeId, chapterId, title, entries: repeats.length ? repeats : originals, catalog, fullCount: originals.length };
     }
 
     function createSession(plan, options) {

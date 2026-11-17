@@ -5,6 +5,7 @@
   "scripts": {
     "ui:policy:check": "node ./scripts/ui_policy_check.js",
     "ui:policy:describe": "node ./scripts/ui_policy_check.js --describe",
+    "prerelease:build": "npm run visual:screenshots:clean",
     "release:build": "node ./scripts/build_release.js",
     "release:check": "node ./scripts/release_check.js",
     "ui:runtime:check": "node ./scripts/ui_runtime_check.js",
@@ -39,6 +40,7 @@
     "search:check": "node ./scripts/build_search_index.js --check",
     "visual:smoke": "node ./scripts/visual_smoke_check.js",
     "visual:screenshots": "node ./scripts/visual_screenshots.js",
+    "visual:screenshots:clean": "node ./scripts/clean_visual_screenshots.js",
     "visual:ci": "node ./scripts/visual_ci_check.js",
     "visual:diff": "node ./scripts/visual_diff.js",
     "visual:baseline": "node ./scripts/visual_baseline.js",

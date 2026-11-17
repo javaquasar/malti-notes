@@ -423,9 +423,36 @@
     return phrases;
   }
 
+  function postcardQuery(map, round, trail) {
+    const via = [...new Set(trail.slice(1, -1).map(step => step.at))]
+      .filter(index => index !== round.start && index !== round.goal && place(map, index)).slice(0, 2);
+    const rides = [...new Set(trail.filter(step => step.ride).map(step => step.ride.number))];
+    const query = new URLSearchParams({ trip: map.id, from: round.start, to: round.goal });
+    via.forEach(index => query.append('via', index));
+    rides.forEach(number => query.append('ride', number));
+    return query.toString();
+  }
+
+  function postcardJourney(query) {
+    const map = neighbourhoods.find(candidate => candidate.id === query.get('trip'));
+    if (!map) return null;
+    const from = query.get('from'), to = query.get('to'), via = query.getAll('via');
+    const stops = [from, ...via, to];
+    if (via.length > 2 || new Set(stops).size !== stops.length
+        || !stops.every(index => typeof index === 'string' && /^(0|[1-9][0-9]*)$/.test(index) && place(map, Number(index)))) return null;
+    const rides = query.getAll('ride');
+    const services = rides.map(number => (map.services || []).find(service => service.number === number));
+    if (new Set(rides).size !== rides.length || services.some(service => !service)) return null;
+    return {
+      id: [map.id, stops.join('.'), rides.join('.')].join(':'),
+      stops: stops.map(index => place(map, Number(index))),
+      rides: services.map(service => [`${serviceTypes[service.kind].maltese} ${service.number}`, serviceName(service)])
+    };
+  }
+
   const api = {
     columns, headings, neighbourhoods, rotate, edgeKey, gridNeighbour, neighbour, roadState,
-    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceTypes, serviceName, passInstruction
+    place, freeRounds, missionRounds, instructions, evaluateMission, routePhrases, departures, serviceTypes, serviceName, passInstruction, postcardQuery, postcardJourney
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else window.MaltiRouteGame = api;

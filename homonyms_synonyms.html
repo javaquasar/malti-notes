@@ -20,6 +20,7 @@
                 <ul>
                     <li><a href="#homonyms">Homonyms and similar spellings</a></li>
                     <li><a href="#synonyms">Synonyms</a></li>
+                    <li><a href="#listening">Listen for the clue</a></li>
                     <li><a href="#practice">Practice</a></li>
                 </ul>
             </nav>
@@ -60,8 +61,86 @@
                     </div>
                 </details>
             </section>
+            <section class="content-card" id="listening" data-context-listening>
+                <h2>Listen for the clue</h2>
+                <p>Play each Maltese sentence and pick the words that help you interpret it. Open the transcript whenever you want to read along.</p>
+                <details class="study-disclosure" data-context-clip>
+                    <summary>Dar · first clip</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="toolbar-row">
+                            <button class="action-button" type="button" data-context-play aria-controls="context-audio-dar-place">Play audio</button>
+                        </div>
+                        <audio id="context-audio-dar-place" lang="mt" preload="none" src="./assets/audio/context-dar-place.mp3" hidden></audio>
+                        <p data-context-audio-status role="status" hidden></p>
+                        <div data-exercise-set="listen-dar-place" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                        <details class="study-disclosure">
+                            <summary>Read transcript</summary>
+                            <div class="study-disclosure-body">
+                                <p lang="mt">Il-qattus raqad quddiem id-dar.</p>
+                                <p lang="en">The cat slept in front of the house.</p>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+                <details class="study-disclosure" data-context-clip>
+                    <summary>Dar · second clip</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="toolbar-row">
+                            <button class="action-button" type="button" data-context-play aria-controls="context-audio-dar-turn">Play audio</button>
+                        </div>
+                        <audio id="context-audio-dar-turn" lang="mt" preload="none" src="./assets/audio/context-dar-turn.mp3" hidden></audio>
+                        <p data-context-audio-status role="status" hidden></p>
+                        <div data-exercise-set="listen-dar-turn" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                        <details class="study-disclosure">
+                            <summary>Read transcript</summary>
+                            <div class="study-disclosure-body">
+                                <p lang="mt">Ix-xufier dar fuq ix-xellug.</p>
+                                <p lang="en">The driver turned left.</p>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+                <details class="study-disclosure" data-context-clip>
+                    <summary>Daq or daqq · first clip</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="toolbar-row">
+                            <button class="action-button" type="button" data-context-play aria-controls="context-audio-daq-soup">Play audio</button>
+                        </div>
+                        <audio id="context-audio-daq-soup" lang="mt" preload="none" src="./assets/audio/context-daq-soup.mp3" hidden></audio>
+                        <p data-context-audio-status role="status" hidden></p>
+                        <div data-exercise-set="listen-daq-soup" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                        <details class="study-disclosure">
+                            <summary>Read transcript</summary>
+                            <div class="study-disclosure-body">
+                                <p lang="mt">Pawlu daq is-soppa.</p>
+                                <p lang="en">Pawlu tasted the soup.</p>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+                <details class="study-disclosure" data-context-clip>
+                    <summary>Daq or daqq · second clip</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="toolbar-row">
+                            <button class="action-button" type="button" data-context-play aria-controls="context-audio-daqq-guitar">Play audio</button>
+                        </div>
+                        <audio id="context-audio-daqq-guitar" lang="mt" preload="none" src="./assets/audio/context-daqq-guitar.mp3" hidden></audio>
+                        <p data-context-audio-status role="status" hidden></p>
+                        <div data-exercise-set="listen-daqq-guitar" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                        <details class="study-disclosure">
+                            <summary>Read transcript</summary>
+                            <div class="study-disclosure-body">
+                                <p lang="mt">Pawlu daqq il-kitarra.</p>
+                                <p lang="en">Pawlu played the guitar.</p>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+                <p class="mini">The clips use a synthetic Maltese voice.</p>
+            </section>
             <section class="content-card" id="practice">
                 <h2>Practice</h2>
+                <div data-exercise-set="word-clues-in-context" data-exercise-src="./assets/data/language_context_exercises.json"></div>
                 <div data-exercise-set="homonyms-in-context" data-exercise-src="./assets/data/language_context_exercises.json"></div>
                 <details class="study-disclosure">
                     <summary>Match and replace synonyms</summary>
@@ -82,6 +161,7 @@
 <script src="./assets/js/learning-content.js"></script>
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/context-listening.js"></script>
 <script src="./assets/js/site-header.js"></script>
 <script>
 window.renderExampleBanksFromData({

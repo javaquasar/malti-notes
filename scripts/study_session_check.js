@@ -14,11 +14,12 @@ const bank = read('assets/data/b3_practice_bank.json');
 const lesson05 = read('assets/data/lesson05_exercises.json').sets.find(set => set.id === 'lesson05-mixed');
 const languageSets = read('assets/data/language_context_exercises.json').sets;
 const contextPractice = languageSets.find(set => set.id === 'words-reading-postcards');
+const contextRepeats = languageSets.find(set => set.id === 'words-reading-postcards-repeat');
 const chapterFiles = course.levels.flatMap(level => level.chapters.map(chapter => ({ ...chapter, levelId: level.id, data: read('assets/data/course/chapters/' + chapter.id + '.json') })));
 const originalSets = chapterFiles.flatMap(chapter => chapter.data.assessmentSets);
 const items = new Map(originalSets.flatMap(set => set.items).map(item => [item.id, item]));
 bank.chapters.forEach(chapter => chapter.patterns.forEach(pattern => [...pattern.variants, pattern.transfer].filter(Boolean).forEach(item => items.set(item.id, item))));
-[...lesson05.items, ...contextPractice.items].forEach(item => items.set(item.id, item));
+[...lesson05.items, ...contextPractice.items, ...contextRepeats.items].forEach(item => items.set(item.id, item));
 const wholeCheckIds = new Set([...originalSets.map(set => set.id), ...bank.chapters.map(chapter => chapter.id + '-check'), 'b3-mixed-check', bank.finalSet.id]);
 const key = 'malti_topic_practice_v1';
 const record = { attempts: 5, correct: 4, streak: 2, lastAt: '2026-10-01T12:00:00.000Z', dueAt: '2099-01-01T00:00:00.000Z', lastItemId: 'preserved-item', lastCorrect: true, spacedSuccesses: 2, lastSpacedSuccessAt: '2026-10-01T12:00:00.000Z' };
@@ -56,7 +57,7 @@ function track(page, label) {
 }
 async function startServer() {
   const actualRoot = fs.realpathSync.native(root);
-  const mime = { '.html': 'text/html; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.wasm': 'application/wasm', '.webmanifest': 'application/manifest+json', '.woff2': 'font/woff2' };
+  const mime = { '.html': 'text/html; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.mp3': 'audio/mpeg', '.wasm': 'application/wasm', '.webmanifest': 'application/manifest+json', '.woff2': 'font/woff2' };
   const server = http.createServer(async (request, response) => {
     try {
       const pathname = decodeURIComponent(new URL(request.url, 'http://local').pathname);
@@ -348,7 +349,7 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('Topic examples, reading questions and postcard drafts work on a phone', async () => {
+    await check('Listening, context clues, reading evidence, food labels and postcard drafts work on a phone', async () => {
       const f = await fixture('words-reading-postcards-topics', { width: 390, hasTouch: true });
       const { page } = f;
       async function visit(pathname) {
@@ -380,6 +381,32 @@ async function main() {
         assert.match(await synonym.locator('.exercise-feedback').innerText(), /^Correct/);
         await page.locator('#homonyms').scrollIntoViewIfNeeded();
         await capture(page, 'homonyms-synonyms-phone.png');
+        for (const slug of ['dar-place', 'dar-turn', 'daq-soup', 'daqq-guitar']) {
+          const set = 'listen-' + slug;
+          const clip = page.locator('[data-context-clip]').filter({ has: page.locator('[data-exercise-set="' + set + '"]') });
+          await clip.locator(':scope > summary').click();
+          const audio = clip.locator('audio');
+          await clip.getByRole('button', { name: 'Play audio' }).click();
+          await page.waitForFunction(slug => document.getElementById('context-audio-' + slug).currentTime > 0, slug);
+          assert(await audio.evaluate(player => player.duration > 1));
+          await clip.getByRole('button', { name: 'Pause audio' }).click();
+          assert(await audio.evaluate(player => player.paused));
+          const [item] = languageSets.find(entry => entry.id === set).items;
+          await clip.getByRole('radio', { name: item.answer, exact: true }).check();
+          await clip.getByRole('button', { name: 'Check answers' }).click();
+          assert.match(await clip.locator('.exercise-result').innerText(), /^1\/1/);
+          assert.equal(await clip.locator('p[lang="mt"]').isVisible(), false);
+          await clip.getByText('Read transcript', { exact: true }).click();
+          assert((await clip.locator('p[lang="mt"]').innerText()).endsWith('.'));
+          await capture(page, 'context-audio-' + slug + '-phone.png');
+          await clip.locator(':scope > summary').click();
+        }
+        const contextSet = page.locator('[data-exercise-set="word-clues-in-context"]');
+        for (const item of languageSets.find(set => set.id === 'word-clues-in-context').items) {
+          await contextSet.locator('[data-exercise-item="' + item.id + '"]').getByRole('radio', { name: item.answer, exact: true }).check();
+        }
+        await contextSet.getByRole('button', { name: 'Check answers' }).click();
+        assert.match(await contextSet.locator('.exercise-result').innerText(), /^4\/4/);
 
         await visit('/food_preferences.html#junk-food');
         const english = page.getByRole('checkbox', { name: 'Show English translation' });
@@ -400,6 +427,35 @@ async function main() {
         const readingCheck = page.locator('[data-exercise-set="junk-food-check"]');
         await readingCheck.getByRole('button', { name: 'Check answers' }).click();
         assert.match(await readingCheck.locator('.exercise-result').innerText(), /^6\/6/);
+        const evidence = page.locator('#junk-food-reading mark');
+        assert.match(await evidence.innerText(), /tfisser «żibel»/);
+        const evidenceLinks = readingCheck.getByRole('link', { name: 'Find this sentence in the text' });
+        assert.equal(await evidenceLinks.count(), 6);
+        await readingCheck.locator('[data-exercise-item="food-sugar-label"]').getByRole('link').click();
+        assert.equal(await evidence.innerText(), 'Il-gallettini fihom ħafna zokkor.');
+        assert.equal(await evidence.count(), 1);
+        assert(await evidence.evaluate(mark => document.activeElement === mark));
+        await capture(page, 'junk-food-evidence-phone.png');
+        await readingCheck.getByRole('button', { name: 'Try again' }).click();
+        assert.equal(await evidence.count(), 0);
+        assert.equal(await evidenceLinks.count(), 0);
+
+        await page.locator('#food-labels > summary').click();
+        const labelCards = page.getByRole('group', { name: 'Practice food labels' });
+        const crisps = labelCards.locator('[data-practice-label="crisps"]');
+        const biscuits = labelCards.locator('[data-practice-label="biscuits"]');
+        assert.match(await crisps.innerText(), /Salt \(melħ\)\s+1\.4 g\s+Sugar \(zokkor\)\s+2 g/i);
+        assert.match(await biscuits.innerText(), /Salt \(melħ\)\s+0\.4 g\s+Sugar \(zokkor\)\s+18 g/i);
+        assert(await labelCards.evaluate(cards => [...cards.querySelectorAll('strong')].every(label => label.getBoundingClientRect().right <= innerWidth)));
+        assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+        const labels = page.locator('[data-exercise-set="food-label-comparison"]');
+        for (const item of languageSets.find(set => set.id === 'food-label-comparison').items) {
+          await labels.locator('[data-exercise-item="' + item.id + '"] [data-exercise-answer]').fill(item.answer);
+        }
+        await labels.getByRole('button', { name: 'Check answers' }).click();
+        assert.match(await labels.locator('.exercise-result').innerText(), /^3\/3/);
+        await labelCards.scrollIntoViewIfNeeded();
+        await capture(page, 'food-labels-phone.png');
 
         await visit('/transport_travel.html#postcards');
         const friend = page.locator('[data-bank-item="postcard-friend"]');
@@ -484,12 +540,29 @@ async function main() {
         await reload(page);
         assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 3 questions');
         const repeats = await start(page, 3);
-        assert.deepEqual(repeats.entries.map(entry => entry.item.id), [missed.id, assisted.id, skipped.id]);
-        for (const item of [missed, assisted, skipped]) {
+        const choices = [missed, assisted, skipped].map(original => contextRepeats.items.find(item => item.repeatOf === original.id));
+        assert.deepEqual(repeats.entries.map(entry => entry.item.id), choices.map(item => item.id));
+        assert.deepEqual(repeats.entries.map(entry => entry.skillId), [missed.id, assisted.id, skipped.id]);
+        const repeatedDraft = page.locator('[data-study-exercise] [data-exercise-answer]');
+        await repeatedDraft.fill('Malli wasal ħdejn il-bank');
+        await reload(page);
+        assert.equal((await start(page, 3)).id, repeats.id);
+        assert.equal(await repeatedDraft.inputValue(), 'Malli wasal ħdejn il-bank');
+        await submit(page, false, 'Malli wasal ħdejn il-bank, dahar fuq il-lemin');
+        await expectModel(choices[0]);
+        await next(page);
+        for (const item of choices.slice(1)) {
           await submit(page);
           await expectModel(item);
           await next(page);
         }
+        assert.equal(await page.locator('[data-study-new]').innerText(), 'Repeat 1 question');
+        await reload(page);
+        const rotated = await start(page, 1);
+        assert.equal(rotated.entries[0].item.id, missed.id);
+        await submit(page);
+        await expectModel(missed);
+        await next(page);
         assert.equal(await page.locator('[data-study-new]').innerText(), 'Start full practice again');
         assert.deepEqual((await stored(page)).studySession.helpQueue, []);
         await preserved(page);
@@ -1055,6 +1128,8 @@ async function main() {
         await draft.waitFor();
         await button('Compare with model').tap();
         assert.equal(await model.isVisible(), false);
+        const postcard = page.getByRole('link', { name: 'Write a postcard about this route' });
+        assert.equal(await postcard.count(), 0);
         const answer = 'Mur ħdejn il-waqfa A. Aqbad il-karozza tal-linja numru 31 u inżel ħdejn il-waqfa B. Mur ħdejn il-moll A. Aqbad il-lanċa F1 u inżel ħdejn il-moll B. Mur bil-mixi ħdejn il-mużew.';
         await draft.fill(answer);
         const beforeFinish = await toneCount();
@@ -1063,6 +1138,10 @@ async function main() {
         assert(await toneCount() > beforeFinish, 'Finishing the description plays the victory sound');
         const english = (await model.locator('[data-route-phrase-en]').allInnerTexts()).join(' ');
         assert.match(english, /Bus 31.*Ferry F1.*reach the museum/);
+        const tripUrl = new URL(await postcard.getAttribute('href'), page.url());
+        assert.deepEqual(tripUrl.searchParams.getAll('ride'), ['31', 'F1']);
+        assert.equal(tripUrl.hash, '#route-postcards');
+        assert(await postcard.isVisible());
         assert.equal(await draft.inputValue(), answer);
         assert.deepEqual(await axe(page, '[data-route-game]'), []);
 
@@ -1071,6 +1150,7 @@ async function main() {
         assert.equal(await model.isVisible(), false);
         await walk([24]);
         assert.equal(await draft.inputValue(), answer);
+        assert.equal(await postcard.count(), 0);
         await settings.tap();
         await sound.selectOption('off');
         await button('Write your own').tap();
@@ -1084,7 +1164,42 @@ async function main() {
         await page.reload({ waitUntil: 'networkidle' });
         await settings.tap();
         assert.equal(await sound.inputValue(), 'off');
-        return { ridesInOrder: 2, writingGated: true, alternateRoute: true, soundPersists: true };
+        const tripPage = await f.context.newPage();
+        track(tripPage, 'route-postcard-from-transfer');
+        tripPage.__phase = 'navigation';
+        await tripPage.goto(tripUrl.href, { waitUntil: 'networkidle' });
+        tripPage.__phase = 'online';
+        assert.match(await tripPage.locator('[data-postcard-route-mt]').innerText(), /Il-mużew$/);
+        assert.equal(await tripPage.locator('[data-postcard-rides-en]').innerText(), 'Bus 31 → Ferry F1');
+        const activity = tripPage.locator('[data-route-postcards]');
+        const postcards = [
+          ['friend', 'Għażiża Maya, mort sal-mużew!', 'Dear Maya'],
+          ['colleagues', 'Għeżież kollegi, mort sal-mużew!', 'Dear colleagues']
+        ];
+        for (const [recipient, draft, greeting] of postcards) {
+          const card = activity.locator('[data-bank-item="route-postcard-' + recipient + '"]');
+          await card.locator('summary').click();
+          await card.getByRole('textbox', { name: 'Your answer' }).fill(draft);
+          await card.getByRole('button', { name: 'Show model answer' }).click();
+          assert((await card.locator('[data-bank-translation]').last().innerText()).startsWith(greeting));
+        }
+        tripPage.__phase = 'navigation';
+        await tripPage.reload({ waitUntil: 'networkidle' });
+        tripPage.__phase = 'online';
+        for (const [recipient, draft] of postcards) {
+          const card = activity.locator('[data-bank-item="route-postcard-' + recipient + '"]');
+          await card.locator('summary').click();
+          assert.equal(await card.getByRole('textbox', { name: 'Your answer' }).inputValue(), draft);
+        }
+        const baseCard = tripPage.locator('[data-bank-item="postcard-friend"]');
+        await baseCard.locator('summary').click();
+        assert.equal(await baseCard.getByRole('textbox', { name: 'Your answer' }).inputValue(), '');
+        await activity.locator('h3').scrollIntoViewIfNeeded();
+        await capture(tripPage, 'route-postcards-phone.png');
+        assert(await tripPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+        assert.deepEqual(await axe(tripPage, '#route-postcards'), []);
+        await preserved(tripPage);
+        return { ridesInOrder: 2, writingGated: true, alternateRoute: true, soundPersists: true, postcardDrafts: 2 };
       } finally { await f.close(); }
     });
 
