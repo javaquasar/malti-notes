@@ -56,6 +56,7 @@
                 <li><a href="#alternatives">Alternative Routes</a></li>
                 <li><a href="#questions">Questions and Answers</a></li>
                 <li><a href="#story-bank">Story Bank</a></li>
+                <li><a href="#postcards">Postcards</a></li>
             </ul>
             <p class="mini">
                 This page keeps the language simple and practical, so it can be reused in speaking tasks and short writing.
@@ -257,6 +258,33 @@
                 <h2>Story Bank</h2>
                 <div data-example-group="transport-story-bank"></div>
             </section>
+            <section class="content-card" id="postcards">
+                <h2>Postcards</h2>
+                <p lang="mt">Kitba ta' kartolina</p>
+                <p>Choose a recipient and write a short postcard in Maltese. Your drafts are saved in this browser. Open the model to compare your greeting, message and closing with the example and its English translation.</p>
+                <details class="study-disclosure">
+                    <summary>Useful postcard phrases</summary>
+                    <div class="study-disclosure-body">
+                        <div data-example-group="postcard-phrases"></div>
+                    </div>
+                </details>
+                <div data-example-group="postcard-writing"></div>
+                <details class="study-disclosure">
+                    <summary>Check your postcard</summary>
+                    <div class="study-disclosure-body">
+                        <ul>
+                            <li>Greet the person or group you are writing to.</li>
+                            <li>Say where you are and what the weather is like.</li>
+                            <li>Describe something you did or plan to do.</li>
+                            <li>Close with a wish or goodbye and sign your name.</li>
+                        </ul>
+                    </div>
+                </details>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./polite_phrases.html">Polite phrases</a>
+                    <a class="action-link" href="./today.html?level=mixed&amp;topic=words-reading-postcards">Start mixed practice</a>
+                </div>
+            </section>
         </main>
     </div>
 </div>
@@ -267,14 +295,39 @@
 <script src="./assets/js/render-example-banks.js"></script>
 <script src="./assets/js/transport-compact-toggle.js"></script>
 <script>
-window.renderExampleBanksFromData({
-    dataUrl: "./assets/data/transport_examples.json",
-    groupAttribute: "data-example-group",
-    cardClass: "study-card",
-    sourcePage: "transport_travel.html",
-    defaultTopic: "Transport and Travel",
-    reviewPrefix: "transport-travel"
-});
+{
+    const storage = window.MaltiStorage;
+    const practiceKey = "malti_topic_practice_v1";
+    const getPractice = () => storage.getJson(practiceKey, {}) || {};
+    const writing = document.querySelector('[data-example-group="postcard-writing"]');
+    const saveWriting = (field, { slug, value }) => {
+        const progress = getPractice();
+        const saved = { ...progress.postcards };
+        if (saved[field]?.[slug] === value) return;
+        saved[field] = { ...saved[field], [slug]: value };
+        if (field === "answers" && saved.ratings?.[slug]) {
+            delete saved.ratings[slug];
+            writing.querySelectorAll(`[data-bank-item="${slug}"] [aria-pressed]`).forEach(button => {
+                button.ariaPressed = "false";
+            });
+        }
+        storage.setJson(practiceKey, { ...progress, postcards: saved });
+    };
+    writing.addEventListener("malti-bank-draft", event => saveWriting("answers", event.detail));
+    writing.addEventListener("malti-bank-rating", event => saveWriting("ratings", event.detail));
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/transport_examples.json",
+        groupAttribute: "data-example-group",
+        cardClass: "study-card",
+        sourcePage: "transport_travel.html",
+        defaultTopic: "Transport and Travel",
+        reviewPrefix: "transport-travel",
+        individualReviewGroups: ["transport-frequency", "transport-grammar", "transport-qa", "transport-story-bank", "postcard-phrases"],
+        groupViews: {
+            "postcard-writing": { presentation: "selfAssessment", state: getPractice().postcards }
+        }
+    });
+}
 window.MaltiVocabReviewPage = {
     dataUrl: "./assets/data/transport.json",
     sourcePage: "transport_travel.html",

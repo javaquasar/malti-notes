@@ -5,7 +5,7 @@
   if (!root) return;
   const KEY = 'malti_topic_practice_v1';
   const storage = window.MaltiStorage, core = window.MaltiStudySessionCore, runner = window.MaltiExerciseRunner;
-  const { LESSON05, ROUTE_IDS } = core;
+  const { PRACTICE_ROUTES, ROUTE_IDS } = core;
   const object = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
   const all = () => object(storage.getJson(KEY, {}));
   const state = () => object(all().studySession);
@@ -25,15 +25,15 @@
   let course, manifest, b3, routes = [], route, plan, session, activeSet;
   let rendering = false, submitted = false, handled = false, selectionVersion = 0, helpPage = 0;
 
-  const isLesson05 = entry => (entry.levelId || entry.routeId) === LESSON05.levelId;
+  const isFixedPractice = entry => PRACTICE_ROUTES.some(route => route.levelId === (entry.levelId || entry.routeId));
   const routeTitle = entry => (entry.levelLabel || entry.levelId.toUpperCase()) + ' · ' + entry.title;
-  const parentQueue = () => (state().helpQueue || []).filter(entry => !isLesson05(entry));
-  const repeatCount = () => core.lesson05Repeats(plan.catalog, state().helpQueue).length;
+  const parentQueue = () => (state().helpQueue || []).filter(entry => !isFixedPractice(entry));
+  const repeatCount = () => core.repeatEntries(plan.catalog, state().helpQueue).length;
   const repeatLabel = count => `Repeat ${count} question${count === 1 ? '' : 's'}`;
-  const retryAdvice = () => isLesson05(route) ? 'You can try again or repeat this question later.' : 'You can try again or leave this for a parent.';
+  const retryAdvice = () => isFixedPractice(route) ? 'You can try again or repeat this question later.' : 'You can try again or leave this for a parent.';
 
   function sourceLink(entry) {
-    if (isLesson05(entry)) return './noun_plurals.html#practice';
+    if (entry.sourcePage) return './' + entry.sourcePage;
     return entry.levelId === 'b3' ? './b3_revision.html#' + entry.id
       : './course_chapter.html?chapter=' + encodeURIComponent(entry.id);
   }
@@ -42,12 +42,11 @@
       targetProgress: runner.getTargetProgress(), helpQueue: state().helpQueue || [] };
     if (selected.levelId === 'b3') return core.planB3(b3, object(all().b3Revision).core, options);
     if (!payloads.has(selected.id)) {
-      const file = isLesson05(selected) ? './assets/data/lesson05_exercises.json'
-        : manifest.chapters.find(chapter => chapter.id === selected.id).file;
+      const file = selected.practiceFile || manifest.chapters.find(chapter => chapter.id === selected.id).file;
       payloads.set(selected.id, load(file).catch(error => { payloads.delete(selected.id); throw error; }));
     }
     const payload = await payloads.get(selected.id);
-    if (isLesson05(selected)) return core.planLesson05(payload, state().helpQueue);
+    if (selected.practiceFile) return core.planFixedPractice(payload, selected, state().helpQueue);
     return core.planCourse({ course, assessments: payload.assessmentSets, supplements: payload.supplementalItems,
       targets: payload.targets || [] }, options);
   }
@@ -150,12 +149,12 @@
     const saved = core.resumeSession(object(current.sessions)[route.id], plan.catalog);
     const unfinished = saved && !core.summary(saved).complete;
     refreshWarmup(current, saved);
-    const repeats = isLesson05(route) ? repeatCount() : 0;
+    const repeats = isFixedPractice(route) ? repeatCount() : 0;
     find('[data-study-start]').textContent = unfinished ? 'Continue practice' : repeats ? repeatLabel(repeats) : 'Start practice';
     find('[data-study-start]').disabled = !plan.entries.length;
     say('[data-study-home-status]', unfinished
       ? `Continue at question ${saved.index + 1} of ${saved.entries.length}. Your answers are saved.`
-      : isLesson05(route) ? repeats ? 'Answer again without hints to clear your repeat list.'
+      : isFixedPractice(route) ? repeats ? 'Answer again without hints to clear your repeat list.'
         : `${plan.catalog.length} questions. Write a complete sentence in Maltese for each one.`
         : `${plan.entries.length} short questions, one at a time.`);
     topicSelect.value = route.id;
@@ -193,7 +192,7 @@
     const summary = core.summary(session);
     find('[data-study-home]').hidden = true; find('[data-study-session]').hidden = true; find('[data-study-finish]').hidden = false;
     say('[data-study-result]', `${summary.checked} answer${summary.checked === 1 ? '' : 's'} checked out of ${summary.total}: ${summary.independentCorrect} correct on your own and ${summary.correct - summary.independentCorrect} correct with help.`);
-    if (isLesson05(route)) {
+    if (isFixedPractice(route)) {
       const repeats = repeatCount();
       say('[data-study-result-help]', repeats
         ? 'Missed, skipped and helped answers are saved for another try in My practice.'
@@ -249,7 +248,8 @@
     const { answer, answerTranslation } = entry.item;
     const visible = Boolean(answerTranslation && result?.checked && !result.previousQuestion);
     find('[data-study-checked-answer]').hidden = !visible;
-    say('[data-study-checked-mt]', visible ? answer + '.' : '');
+    const maltese = visible && !/[.!?]$/.test(answer) ? answer + '.' : answer;
+    say('[data-study-checked-mt]', visible ? maltese : '');
     say('[data-study-checked-en]', visible ? answerTranslation : '');
     if (visible) {
       panel.querySelector('.exercise-feedback').textContent = `${result.correct ? 'Correct.' : 'Not yet.'} ${entry.help.explanation}`;
@@ -282,7 +282,12 @@
     say('[data-study-step-status]', `Question ${session.index + 1} of ${session.entries.length}`);
     find('[data-study-next]').disabled = !result?.checked;
     find('[data-study-next]').textContent = session.index + 1 === session.entries.length ? 'See my result' : 'Next question';
-    find('[data-study-reading]').hidden = !isLesson05(route) || entry.item.sourcePage !== 'places_events.html#lesson05-il-festi';
+    const reading = find('[data-study-reading]');
+    reading.hidden = !route.readingPage || entry.item.sourcePage !== route.readingPage;
+    if (!reading.hidden) {
+      reading.href = './' + route.readingPage;
+      reading.textContent = `Read ${route.readingTitle} (new tab)`;
+    }
     const assisted = session.hints[entry.item.id] === true;
     showSupport(entry, result);
     showCheckedAnswer(entry, result);
@@ -290,8 +295,8 @@
       : result?.checked ? result.correct ? 'You can go to the next question.' : retryAdvice()
       : assisted ? 'This attempt uses a hint. Your independent results stay separate.' : '';
     say('[data-study-feedback]', feedback);
-    say('[data-study-ask]', isLesson05(route) ? 'Save for later' : 'Leave this for a parent');
-    find('[data-study-ask]').hidden = isLesson05(route) && result?.checked === true;
+    say('[data-study-ask]', isFixedPractice(route) ? 'Save for later' : 'Leave this for a parent');
+    find('[data-study-ask]').hidden = isFixedPractice(route) && result?.checked === true;
     find('[data-study-home]').hidden = true; find('[data-study-finish]').hidden = true; find('[data-study-session]').hidden = false;
     rendering = false;
     status('');
@@ -332,7 +337,7 @@
   async function initialize() {
     [course, manifest, b3] = await Promise.all([load('./assets/data/course_path.json'), load('./assets/data/course/manifest.json'), load('./assets/data/b3_practice_bank.json')]);
     routes = course.levels.flatMap(level => level.chapters.map(chapter => ({ id: chapter.id, levelId: level.id, title: chapter.title })))
-      .concat(b3.chapters.map(chapter => ({ id: chapter.id, levelId: 'b3', title: chapter.title })), LESSON05);
+      .concat(b3.chapters.map(chapter => ({ id: chapter.id, levelId: 'b3', title: chapter.title })), PRACTICE_ROUTES);
     root.querySelectorAll('[data-study-level]').forEach(button => button.addEventListener('click', guarded(async () => {
       const id = button.dataset.studyLevel;
       await selectRoute(routes.find(candidate => candidate.id === object(state().topicsByLevel)[id] && candidate.levelId === id) || routes.find(candidate => candidate.levelId === id));
@@ -354,7 +359,7 @@
     find('[data-study-ask]').addEventListener('click', () => {
       if (!session) return;
       remember(); session.helpQueue = state().helpQueue || []; session = core.requestHelp(session); persistSession(); drawStep();
-      status(isLesson05(route) ? 'Saved to repeat in My practice.' : 'Saved for a parent. You can continue with the next question.');
+      status(isFixedPractice(route) ? 'Saved to repeat in My practice.' : 'Saved for a parent. You can continue with the next question.');
     });
     find('[data-study-done]').addEventListener('click', () => { find('[data-study-finish]').hidden = true; find('[data-study-home]').hidden = false; refreshHome(); status('Practice finished. Your work is saved.'); });
     find('[data-study-new]').addEventListener('click', guarded(() => startPractice(true)));
@@ -414,7 +419,7 @@
       persistSession(); setAnswerDisabled(true); find('[data-study-next]').disabled = false;
       showSupport(entry, saved);
       showCheckedAnswer(entry, saved);
-      if (isLesson05(route)) find('[data-study-ask]').hidden = true;
+      if (isFixedPractice(route)) find('[data-study-ask]').hidden = true;
       say('[data-study-feedback]', result.correct ? 'Answer checked. You can go to the next question.' : retryAdvice());
       refreshHelpQueue();
     });

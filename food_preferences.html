@@ -59,6 +59,7 @@
                 <li><a href="#supermarket-dialogue">At the Supermarket</a></li>
                 <li><a href="#supermarket-practice">Shopping Practice</a></li>
                 <li><a href="#shopping-conversation">Your Shopping Conversation</a></li>
+                <li><a href="#junk-food" lang="mt">Il-Junk Food</a></li>
                 <li><a href="#kitchen-details">Cooking and Serving</a></li>
                 <li><a href="#questions">Food Question Patterns</a></li>
                 <li><a href="#breakfast">Breakfast</a></li>
@@ -199,6 +200,36 @@
                 <p class="study-feedback" role="status" data-practice-error></p>
             </section>
 
+            <section class="content-card" id="junk-food">
+                <h2 lang="mt">Il-Junk Food</h2>
+                <p>Read about Lara and Daniel's class, then answer six questions about the story.</p>
+                <label class="study-check"><input type="checkbox" data-junk-food-english aria-controls="junk-food-reading">Show English translation</label>
+                <div id="junk-food-reading" data-example-group="junk-food-reading"></div>
+                <details class="study-disclosure">
+                    <summary>Vocabulary and food groups</summary>
+                    <div class="study-disclosure-body stack">
+                        <h3>Words from the reading and food labels</h3>
+                        <div data-example-group="junk-food-words"></div>
+                        <h3>Food groups</h3>
+                        <div data-example-group="food-groups"></div>
+                    </div>
+                </details>
+                <h3>Reading questions</h3>
+                <div data-exercise-set="junk-food-check" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                <details class="study-disclosure">
+                    <summary>Talk about food</summary>
+                    <div class="study-disclosure-body">
+                        <ul>
+                            <li><span lang="mt">X'tiekol s-soltu waqt il-brejk?</span> What do you usually eat during your break?</li>
+                            <li><span lang="mt">Kif issajjar il-patata d-dar?</span> How do you cook potatoes at home?</li>
+                            <li><span lang="mt">Xi tfittex fuq tikketta tal-ikel?</span> What do you look for on a food label?</li>
+                        </ul>
+                    </div>
+                </details>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./today.html?level=mixed&amp;topic=words-reading-postcards">Start mixed practice</a>
+                </div>
+            </section>
             <section class="content-card" id="kitchen-details">
                 <h2>Cooking and Serving</h2>
                 <div class="grid-auto" data-food-group="food-kitchen-details"></div>
@@ -362,7 +393,18 @@ window.renderExampleBanksFromData({
     defaultTopic: "Food Preferences",
     reviewPrefix: "food-preferences",
     pageToolbarSelector: "#shopping .toolbar-row",
-    pageBulkLabel: "Add all food phrases"
+    pageBulkLabel: "Add all food phrases",
+    groupViews: {
+        "junk-food-reading": { presentation: "reading" }
+    }
+}).then(() => {
+    const toggle = document.querySelector("[data-junk-food-english]");
+    const translations = document.querySelectorAll("#junk-food-reading [data-bank-translation]");
+    const updateTranslation = () => translations.forEach(paragraph => {
+        paragraph.hidden = !toggle.checked;
+    });
+    toggle.addEventListener("change", updateTranslation);
+    updateTranslation();
 });
 </script>
 <script src="./assets/js/vocab-review-page.js"></script>

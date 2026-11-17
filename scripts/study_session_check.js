@@ -12,11 +12,13 @@ const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const course = read('assets/data/course_path.json');
 const bank = read('assets/data/b3_practice_bank.json');
 const lesson05 = read('assets/data/lesson05_exercises.json').sets.find(set => set.id === 'lesson05-mixed');
+const languageSets = read('assets/data/language_context_exercises.json').sets;
+const contextPractice = languageSets.find(set => set.id === 'words-reading-postcards');
 const chapterFiles = course.levels.flatMap(level => level.chapters.map(chapter => ({ ...chapter, levelId: level.id, data: read('assets/data/course/chapters/' + chapter.id + '.json') })));
 const originalSets = chapterFiles.flatMap(chapter => chapter.data.assessmentSets);
 const items = new Map(originalSets.flatMap(set => set.items).map(item => [item.id, item]));
 bank.chapters.forEach(chapter => chapter.patterns.forEach(pattern => [...pattern.variants, pattern.transfer].filter(Boolean).forEach(item => items.set(item.id, item))));
-lesson05.items.forEach(item => items.set(item.id, item));
+[...lesson05.items, ...contextPractice.items].forEach(item => items.set(item.id, item));
 const wholeCheckIds = new Set([...originalSets.map(set => set.id), ...bank.chapters.map(chapter => chapter.id + '-check'), 'b3-mixed-check', bank.finalSet.id]);
 const key = 'malti_topic_practice_v1';
 const record = { attempts: 5, correct: 4, streak: 2, lastAt: '2026-10-01T12:00:00.000Z', dueAt: '2099-01-01T00:00:00.000Z', lastItemId: 'preserved-item', lastCorrect: true, spacedSuccesses: 2, lastSpacedSuccessAt: '2026-10-01T12:00:00.000Z' };
@@ -343,6 +345,154 @@ async function main() {
         assert.equal(await page.locator('[data-study-step-status]').innerText(), 'Question 1 of 12');
         assert.deepEqual(await axe(page), []);
         return { initial: 12, repeated: 3, cleared: true };
+      } finally { await f.close(); }
+    });
+
+    await check('Topic examples, reading questions and postcard drafts work on a phone', async () => {
+      const f = await fixture('words-reading-postcards-topics', { width: 390, hasTouch: true });
+      const { page } = f;
+      async function visit(pathname) {
+        page.__phase = 'navigation';
+        await page.goto(base + pathname, { waitUntil: 'networkidle' });
+        page.__phase = 'online';
+        assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'The page fits the viewport');
+      }
+      try {
+        await visit('/homonyms_synonyms.html');
+        assert.equal(await page.locator('[data-example-group="same-spelling-examples"] article').count(), 6);
+        await page.getByText('Compare words that sound alike', { exact: true }).click();
+        assert.equal(await page.locator('[data-example-group="similar-spelling-examples"] article:visible').count(), 26);
+        await page.getByText('See the synonym pairs', { exact: true }).click();
+        assert.equal(await page.locator('[data-example-group="synonym-words"] tr:visible').count(), 29);
+        const homonym = page.locator('[data-exercise-item="choose-dar"]');
+        await homonym.getByRole('radio', { name: 'dar', exact: true }).check();
+        await page.locator('[data-exercise-set="homonyms-in-context"]').getByRole('button', { name: 'Check answers' }).click();
+        assert.match(await homonym.locator('.exercise-feedback').innerText(), /^Correct/);
+        await page.locator('summary').filter({ hasText: /^Match and replace synonyms$/ }).click();
+        const match = page.locator('[data-exercise-item="match-context-synonym"]');
+        for (const [index, word] of ['xufier', 'speranza', 'delizzju', 'btala'].entries()) {
+          await match.locator('select').nth(index).selectOption(word);
+        }
+        const synonym = page.locator('[data-exercise-item="replace-driver"]');
+        await synonym.locator('[data-exercise-answer]').fill('Ix-xufier waqaf ħdejn l-iskola.');
+        await page.locator('[data-exercise-set="synonyms-in-context"]').getByRole('button', { name: 'Check answers' }).click();
+        assert.match(await match.locator('.exercise-feedback').innerText(), /^Correct/);
+        assert.match(await synonym.locator('.exercise-feedback').innerText(), /^Correct/);
+        await page.locator('#homonyms').scrollIntoViewIfNeeded();
+        await capture(page, 'homonyms-synonyms-phone.png');
+
+        await visit('/food_preferences.html#junk-food');
+        const english = page.getByRole('checkbox', { name: 'Show English translation' });
+        const translations = page.locator('#junk-food-reading [data-bank-translation]');
+        assert.equal(await translations.count(), 4);
+        assert.equal(await page.locator('#junk-food-reading [data-bank-translation]:visible').count(), 0);
+        await english.check();
+        assert.equal(await page.locator('#junk-food-reading [data-bank-translation]:visible').count(), 4);
+        assert.match(await translations.first().innerText(), /rubbish/);
+        await capture(page, 'junk-food-phone.png');
+        await english.uncheck();
+        assert.equal(await translations.first().isVisible(), false);
+        for (const item of languageSets.find(set => set.id === 'junk-food-check').items) {
+          const question = page.locator('[data-exercise-item="' + item.id + '"]');
+          if (item.type === 'fill-blank') await question.locator('[data-exercise-answer]').fill(item.answer);
+          else await question.getByRole('radio', { name: item.answer, exact: true }).check();
+        }
+        const readingCheck = page.locator('[data-exercise-set="junk-food-check"]');
+        await readingCheck.getByRole('button', { name: 'Check answers' }).click();
+        assert.match(await readingCheck.locator('.exercise-result').innerText(), /^6\/6/);
+
+        await visit('/transport_travel.html#postcards');
+        const friend = page.locator('[data-bank-item="postcard-friend"]');
+        const colleagues = page.locator('[data-bank-item="postcard-colleagues"]');
+        const friendDraft = 'Għażiża Maya, tislijiet minn Ruma!';
+        const colleaguesDraft = 'Għeżież kollegi, tislijiet minn Pariġi!';
+        for (const [card, draft, greeting] of [[friend, friendDraft, 'Dear Maya'], [colleagues, colleaguesDraft, 'Dear colleagues']]) {
+          await card.locator('summary').click();
+          const model = card.locator('[data-bank-translation]').last();
+          assert.equal(await model.isVisible(), false);
+          await card.getByRole('textbox', { name: 'Your answer' }).fill(draft);
+          await card.getByRole('button', { name: 'Show model answer' }).click();
+          assert(await model.isVisible());
+          assert((await model.innerText()).startsWith(greeting));
+          await card.getByRole('button', { name: 'Confident' }).click();
+        }
+        page.__phase = 'navigation';
+        await page.reload({ waitUntil: 'networkidle' });
+        page.__phase = 'online';
+        for (const [card, draft] of [[friend, friendDraft], [colleagues, colleaguesDraft]]) {
+          await card.locator('summary').click();
+          assert.equal(await card.getByRole('textbox', { name: 'Your answer' }).inputValue(), draft);
+          assert.equal(await card.getByRole('button', { name: 'Confident' }).getAttribute('aria-pressed'), 'true');
+        }
+        await colleagues.locator('summary').click();
+        await friend.getByRole('button', { name: 'Show model answer' }).click();
+        await friend.getByRole('textbox', { name: 'Your answer' }).fill(friendDraft + ' Elena.');
+        assert.equal(await friend.getByRole('button', { name: 'Confident' }).getAttribute('aria-pressed'), 'false');
+        await page.locator('#postcards h2').scrollIntoViewIfNeeded();
+        await capture(page, 'postcards-phone.png');
+        assert.deepEqual(await axe(page, '#postcards'), []);
+        await preserved(page);
+      } finally { await f.close(); }
+    });
+
+    await check('Words, reading and postcards gives bilingual feedback and repeats just the questions needing practice', async () => {
+      const f = await fixture('words-reading-postcards-practice', { width: 390 });
+      try {
+        const { page } = f;
+        page.__phase = 'navigation';
+        await page.goto(base + '/homonyms_synonyms.html#practice', { waitUntil: 'networkidle' });
+        await page.getByRole('link', { name: 'Start mixed practice' }).click();
+        await ready(page);
+        page.__phase = 'online';
+        const heading = page.locator('[data-study-topic-title]');
+        assert.equal(await heading.innerText(), 'Mixed practice · Words, reading and postcards');
+        const initial = await start(page, 12);
+        const [missed, assisted, skipped] = contextPractice.items;
+        const model = page.locator('[data-study-checked-answer]');
+        const textLink = page.getByRole('link', { name: 'Read Il-Junk Food (new tab)' });
+        const feedback = page.locator('[data-study-exercise] .exercise-feedback');
+        async function expectModel(item) {
+          assert(await model.isVisible());
+          const sentence = /[.!?]$/.test(item.answer) ? item.answer : item.answer + '.';
+          assert.equal(await model.locator('[lang="mt"]').innerText(), sentence);
+          assert.equal(await model.locator('[lang="en"]').innerText(), item.answerTranslation);
+          assert((await feedback.innerText()).includes(item.explanation));
+        }
+        assert.equal(await model.isVisible(), false);
+        await submit(page, false, 'Pawlu dahar mal-kantuniera');
+        await expectModel(missed);
+        await reload(page);
+        assert.equal((await start(page, 12)).id, initial.id);
+        await expectModel(missed);
+        await capture(page, 'words-reading-postcards-feedback-phone.png');
+        await next(page);
+        await page.locator('[data-study-hint]').click();
+        assert.equal(await model.isVisible(), false);
+        assert.equal(await page.locator('[data-study-help-explanation]').innerText(), assisted.hint);
+        await submit(page);
+        await expectModel(assisted);
+        await next(page);
+        assert.equal(await textLink.getAttribute('href'), './food_preferences.html#junk-food');
+        await page.getByRole('button', { name: 'Save for later' }).click();
+        for (const item of contextPractice.items.slice(3)) {
+          assert.equal((await current(page)).entry.item.id, item.id);
+          assert.equal(await model.isVisible(), false);
+          await submit(page);
+          await expectModel(item);
+          await next(page);
+        }
+        await reload(page);
+        assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 3 questions');
+        const repeats = await start(page, 3);
+        assert.deepEqual(repeats.entries.map(entry => entry.item.id), [missed.id, assisted.id, skipped.id]);
+        for (const item of [missed, assisted, skipped]) {
+          await submit(page);
+          await expectModel(item);
+          await next(page);
+        }
+        assert.equal(await page.locator('[data-study-new]').innerText(), 'Start full practice again');
+        assert.deepEqual((await stored(page)).studySession.helpQueue, []);
+        await preserved(page);
       } finally { await f.close(); }
     });
 

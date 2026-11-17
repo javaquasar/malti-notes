@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "kind": "site",
+    "page": "homonyms_synonyms.html"
+  },
+  "topic": "Words, reading and postcards",
+  "sets": [
+    {
+      "id": "homonyms-in-context",
+      "title": "Choose the word in context",
+      "sourcePage": "homonyms_synonyms.html#practice",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "choose-dar",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Pawlu ___ mal-kantuniera u ra l-baħar.",
+          "choices": [
+            "dahar",
+            "dar",
+            "id-dar"
+          ],
+          "answer": "dar",
+          "explanation": "Here Pawlu is moving. Dar is the past tense of turning. Dahar means back, and id-dar is the house."
+        },
+        {
+          "id": "choose-gara",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Dan ___ lbieraħ filgħaxija.",
+          "choices": [
+            "ġara",
+            "ġar",
+            "ġirien"
+          ],
+          "answer": "ġara",
+          "explanation": "Ġara is a verb here because the sentence says when something happened. A female neighbour can be il-ġara."
+        },
+        {
+          "id": "choose-hassha",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Iz-zija ___ aħjar wara li straħet.",
+          "choices": [
+            "ħassa",
+            "il-ħassa",
+            "ħassha"
+          ],
+          "answer": "ħassha",
+          "explanation": "Ħassha means she felt. Ħassa is lettuce."
+        },
+        {
+          "id": "choose-hatt",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Is-sewwieq ___ il-kaxxi minn fuq it-trakk.",
+          "choices": [
+            "ħadt",
+            "ħatt",
+            "ħadd"
+          ],
+          "answer": "ħatt",
+          "explanation": "Ħatt means he unloaded. Ħadt means I took and ħadd refers to a person in expressions such as ma kien hemm ħadd."
+        },
+        {
+          "id": "choose-tefgha",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Il-ħanut qiegħed ___ ta' ġebla minn hawn.",
+          "choices": [
+            "tefa",
+            "tefa'",
+            "tefgħa"
+          ],
+          "answer": "tefgħa",
+          "explanation": "Tefgħa is a noun for a throw. Tefgħa ta' ġebla is a short distance, a stone's throw."
+        },
+        {
+          "id": "choose-kolla",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Waħħalt ir-ritratt bil-___.",
+          "choices": [
+            "kolla",
+            "kollha",
+            "kollox"
+          ],
+          "answer": "kolla",
+          "explanation": "Kolla is the glue used to stick the photo down. Kollha means all of them or all of it, depending on the noun."
+        },
+        {
+          "id": "write-tefa-light",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Write the missing verb. Qabel ħareġ, ___ d-dawl. (Before leaving, he turned off the light.)",
+          "answer": "tefa",
+          "answerTranslation": "he turned off",
+          "hint": "The spelling depends on whether he turned off the light or threw something.",
+          "explanation": "Tefa means he turned off. Tefa' with a final apostrophe means he threw.",
+          "sourcePage": "homonyms_synonyms.html#homonyms"
+        }
+      ]
+    },
+    {
+      "id": "synonyms-in-context",
+      "title": "Match and replace synonyms",
+      "sourcePage": "homonyms_synonyms.html#practice",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "match-context-synonym",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "prompt": "Match each Maltese word with its synonym.",
+          "pairs": [
+            {
+              "left": "sewwieq",
+              "right": "xufier"
+            },
+            {
+              "left": "tama",
+              "right": "speranza"
+            },
+            {
+              "left": "passatemp",
+              "right": "delizzju"
+            },
+            {
+              "left": "vaganza",
+              "right": "btala"
+            }
+          ],
+          "explanation": "Each pair shares a meaning in this context. The words refer to a driver, hope, a hobby and a holiday."
+        },
+        {
+          "id": "replace-driver",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace is-sewwieq with the right form of xufier. Write the whole sentence. Is-sewwieq waqaf ħdejn l-iskola.",
+          "answer": "Ix-xufier waqaf ħdejn l-iskola",
+          "answerTranslation": "The driver stopped near the school.",
+          "hint": "Check the sound at the start of xufier.",
+          "explanation": "The article becomes ix- before x. The meaning of the sentence stays the same.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "replace-news",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use bxara in place of aħbar. Write the whole sentence. Feraħ bl-aħbar it-tajba.",
+          "answer": "Feraħ bil-bxara t-tajba",
+          "answerTranslation": "He was pleased with the good news.",
+          "hint": "Check what happens to bl- and to the article before the adjective.",
+          "explanation": "Aħbar starts with a vowel, so it follows bl-. With bxara, use bil-bxara. After bxara ends in a vowel, it-tajba becomes t-tajba.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "replace-exam",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace tqil with a synonym for difficult. Write the whole sentence. Kien eżami tqil.",
+          "answer": "Kien eżami diffiċli",
+          "answerTranslation": "It was a difficult exam.",
+          "hint": "Look at how tqil is used in the examples about exams.",
+          "explanation": "Diffiċli keeps the meaning of tqil in this sentence about an exam.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        }
+      ]
+    },
+    {
+      "id": "junk-food-check",
+      "title": "Check your reading",
+      "sourcePage": "food_preferences.html#junk-food",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "food-meaning-junk",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Xi tfisser il-kelma Ingliża «junk»?",
+          "choices": [
+            "Il-kelma «junk» tfisser «ħalib».",
+            "Il-kelma «junk» tfisser «żibel».",
+            "Il-kelma «junk» tfisser «tikketta»."
+          ],
+          "answer": "Il-kelma «junk» tfisser «żibel».",
+          "explanation": "In the first paragraph, the teacher explains that the English word junk means żibel (rubbish)."
+        },
+        {
+          "id": "food-salt-label",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Liema ikel fih ħafna melħ skont it-tikketta?",
+          "choices": [
+            "Il-patata tal-pakkett fiha ħafna melħ.",
+            "Il-gallettini fihom ħafna melħ.",
+            "It-tuffieħa fiha ħafna melħ."
+          ],
+          "answer": "Il-patata tal-pakkett fiha ħafna melħ.",
+          "explanation": "The text says that the crisps contain a lot of salt. It links the biscuits with sugar."
+        },
+        {
+          "id": "food-sugar-label",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "X'fihom il-gallettini skont it-tikketta? Complete the answer. Il-gallettini fihom ___.",
+          "answer": "Il-gallettini fihom ħafna zokkor",
+          "answerTranslation": "The biscuits contain a lot of sugar.",
+          "accepted": [
+            "Il-gallettini fihom ħafna zokkor",
+            "Fihom ħafna zokkor",
+            "Ħafna zokkor"
+          ],
+          "hint": "Find the sentence about il-gallettini in the second paragraph.",
+          "explanation": "The text says il-gallettini fihom ħafna zokkor. Fihom is plural because it refers to the biscuits.",
+          "sourcePage": "food_preferences.html#junk-food"
+        },
+        {
+          "id": "food-potato-method",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Fejn issajjar il-patata Lara? Complete the answer. Lara ssajjar il-patata ___.",
+          "answer": "Lara ssajjar il-patata fil-forn",
+          "answerTranslation": "Lara cooks the potatoes in the oven.",
+          "accepted": [
+            "Lara ssajjar il-patata fil-forn",
+            "Issajjar il-patata fil-forn",
+            "Fil-forn",
+            "Lara ssajjar il-patata fil-forn id-dar",
+            "Lara d-dar issajjar il-patata fil-forn"
+          ],
+          "hint": "Look at the first sentence of the third paragraph.",
+          "explanation": "Lara cooks the potatoes fil-forn (in the oven) at home.",
+          "sourcePage": "food_preferences.html#junk-food"
+        },
+        {
+          "id": "food-break-snack",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "X'jagħżel Daniel għall-brejk?",
+          "choices": [
+            "Daniel jagħżel jogurt.",
+            "Daniel jagħżel kejk.",
+            "Daniel jagħżel tuffieħa."
+          ],
+          "answer": "Daniel jagħżel tuffieħa.",
+          "explanation": "Daniel takes an apple from his bag for his break. Tuffieħa is the singular for an apple."
+        },
+        {
+          "id": "food-group",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "F'liema grupp insibu l-ħalib, il-ġobon u l-jogurt?",
+          "choices": [
+            "Huma prodotti tal-ħalib.",
+            "Huma ħaxix u frott.",
+            "Jagħmlu parti mill-grupp tal-laħam u l-ħut."
+          ],
+          "answer": "Huma prodotti tal-ħalib.",
+          "explanation": "The last paragraph puts milk, cheese and yoghurt in the dairy group, prodotti tal-ħalib."
+        }
+      ]
+    },
+    {
+      "id": "words-reading-postcards",
+      "title": "Words, reading and postcards",
+      "sourcePage": "homonyms_synonyms.html#practice",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "context-turn-corner",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Choose dar or dahar. Write the whole sentence. Pawlu ___ mal-kantuniera.",
+          "answer": "Pawlu dar mal-kantuniera",
+          "answerTranslation": "Pawlu turned at the corner.",
+          "hint": "Pawlu is doing something at the corner. Choose the verb.",
+          "explanation": "Dar is the verb for “he turned” here. Dahar means the back of a person or thing.",
+          "sourcePage": "homonyms_synonyms.html#homonyms"
+        },
+        {
+          "id": "context-driver-article",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use xufier in this sentence and change the article. Is-sewwieq waqaf ħdejn l-iskola.",
+          "answer": "Ix-xufier waqaf ħdejn l-iskola",
+          "answerTranslation": "The driver stopped near the school.",
+          "hint": "The article before x uses the same consonant as xufier.",
+          "explanation": "Is-sewwieq and ix-xufier both mean the driver. Before x, use the article ix-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "context-oven-reading",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Skont is-silta, fejn issajjar il-patata Lara? Complete the whole sentence. Lara ssajjar il-patata ___.",
+          "answer": "Lara ssajjar il-patata fil-forn",
+          "answerTranslation": "Lara cooks the potatoes in the oven.",
+          "accepted": [
+            "Lara ssajjar il-patata fil-forn",
+            "Lara ssajjar il-patata fil-forn id-dar",
+            "Lara d-dar issajjar il-patata fil-forn",
+            "Issajjar il-patata fil-forn"
+          ],
+          "hint": "Read the first sentence in the third paragraph.",
+          "explanation": "In the reading, Lara cooks the potatoes in the oven. Fil-forn joins fi and il-forn.",
+          "sourcePage": "food_preferences.html#junk-food"
+        },
+        {
+          "id": "context-greeting-one",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "You are writing to Maya. Choose Għażiża or Għeżież and write the whole greeting. ___ Maya, tislijiet minn Ruma!",
+          "answer": "Għażiża Maya, tislijiet minn Ruma!",
+          "answerTranslation": "Dear Maya, greetings from Rome!",
+          "accepted": [
+            "Għażiża Maya, tislijiet minn Ruma!",
+            "Għażiża Maya, tislijiet sbieħ minn Ruma",
+            "Għażiża Maya tislijiet minn Ruma",
+            "Għażiża Maya tislijiet sbieħ minn Ruma"
+          ],
+          "hint": "Think of one female recipient.",
+          "explanation": "Għażiża is the feminine singular greeting. Għeżież is used to greet several people.",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "context-never-snow",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Choose qatt or qadd. Write the whole sentence. ___ ma rajt borra f'Malta.",
+          "answer": "Qatt ma rajt borra f'Malta",
+          "answerTranslation": "I've never seen snow in Malta.",
+          "hint": "Look for the word that works with ma rajt to mean never.",
+          "explanation": "Qatt ma means never. Qadd refers to the waist.",
+          "sourcePage": "homonyms_synonyms.html#homonyms"
+        },
+        {
+          "id": "context-sugar-reading",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Skont is-silta, x'fihom il-gallettini? Complete the whole sentence. Il-gallettini fihom ___.",
+          "answer": "Il-gallettini fihom ħafna zokkor",
+          "answerTranslation": "The biscuits contain a lot of sugar.",
+          "hint": "Look for the biscuits in the second paragraph, where the class reads the labels.",
+          "explanation": "The biscuits have a lot of sugar in the text. The crisps are the food the text links with salt.",
+          "sourcePage": "food_preferences.html#junk-food"
+        },
+        {
+          "id": "context-news-article",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use bxara instead of aħbar and adapt the articles. Write the whole sentence. Feraħ bl-aħbar it-tajba.",
+          "answer": "Feraħ bil-bxara t-tajba",
+          "answerTranslation": "He was pleased with the good news.",
+          "hint": "Bxara starts with a consonant and ends with a vowel. Check both parts of the phrase.",
+          "explanation": "Use bil-bxara with the consonant b. After the final a in bxara, the i in it-tajba drops.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "context-cake-piano",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use daq and daqq once each. Write the whole sentence. ___ il-kejk u mbagħad ___ il-pjanu.",
+          "answer": "Daq il-kejk u mbagħad daqq il-pjanu",
+          "answerTranslation": "He tasted the cake and then played the piano.",
+          "hint": "With the cake he tasted something. With the piano he played something.",
+          "explanation": "Daq with one q means he tasted. Daqq with two means he played an instrument.",
+          "sourcePage": "homonyms_synonyms.html#homonyms"
+        },
+        {
+          "id": "context-dairy-reading",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Skont is-silta, liema grupp hu dan? Complete the whole sentence. Il-ħalib, il-ġobon u l-jogurt huma ___.",
+          "answer": "Il-ħalib, il-ġobon u l-jogurt huma prodotti tal-ħalib",
+          "answerTranslation": "Milk, cheese and yoghurt are dairy products.",
+          "accepted": [
+            "Il-ħalib, il-ġobon u l-jogurt huma prodotti tal-ħalib",
+            "Il-ħalib, il-ġobon u l-jogurt huma l-prodotti tal-ħalib",
+            "Il-ħalib, il-ġobon u l-jogurt jagħmlu parti mill-grupp tal-prodotti tal-ħalib",
+            "Il-ħalib il-ġobon u l-jogurt huma prodotti tal-ħalib"
+          ],
+          "hint": "The class names this group in the last paragraph.",
+          "explanation": "Prodotti tal-ħalib means dairy products, the group that includes milk, cheese and yoghurt.",
+          "sourcePage": "food_preferences.html#junk-food"
+        },
+        {
+          "id": "context-difficult-exam",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use a synonym for tqil that means difficult. Write the whole sentence. Kien eżami tqil.",
+          "answer": "Kien eżami diffiċli",
+          "answerTranslation": "It was a difficult exam.",
+          "hint": "Tqil describes difficulty when it refers to the exam in this sentence.",
+          "explanation": "Diffiċli means difficult. With an exam, tqil can have that same meaning.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "context-sunday-nobody",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "It was Sunday and nobody was in the shop. Use Ħadd and ħadd. Write the whole sentence. Nhar il-___, ma kien hemm ___ fil-ħanut.",
+          "answer": "Nhar il-Ħadd, ma kien hemm ħadd fil-ħanut",
+          "answerTranslation": "On Sunday, nobody was in the shop.",
+          "accepted": [
+            "Nhar il-Ħadd, ma kien hemm ħadd fil-ħanut",
+            "Nhar il-Ħadd ma kien hemm ħadd fil-ħanut"
+          ],
+          "hint": "Nhar il- introduces a day. Ma kien hemm introduces the absence of people.",
+          "explanation": "Il-Ħadd is Sunday. In ma kien hemm ħadd, ħadd means nobody because the verb is negative.",
+          "sourcePage": "homonyms_synonyms.html#homonyms"
+        },
+        {
+          "id": "context-postcard-group",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Close your postcard to several colleagues. Choose narak or narawkom and write the whole line. Għeżież kollegi, ___ il-ġimgħa d-dieħla!",
+          "answer": "Għeżież kollegi, narawkom il-ġimgħa d-dieħla!",
+          "answerTranslation": "Dear colleagues, see you all next week!",
+          "accepted": [
+            "Għeżież kollegi, narawkom il-ġimgħa d-dieħla!",
+            "Għeżież kollegi narawkom il-ġimgħa d-dieħla"
+          ],
+          "hint": "Several people will read the postcard. Choose the form addressed to more than one person.",
+          "explanation": "Narawkom means we'll see you all. Narak is addressed to one person.",
+          "sourcePage": "transport_travel.html#postcards"
+        }
+      ]
+    }
+  ]
+}

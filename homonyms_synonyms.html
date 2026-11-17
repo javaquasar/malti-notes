@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Maltese homonyms and synonyms with bilingual examples, word pairs, and practice choosing the right word in context.">
+    <title>Homonyms and Synonyms in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <div class="grid">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <nav aria-label="Homonyms and synonyms sections">
+                <ul>
+                    <li><a href="#homonyms">Homonyms and similar spellings</a></li>
+                    <li><a href="#synonyms">Synonyms</a></li>
+                    <li><a href="#practice">Practice</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <section class="content-card">
+                <h1>Homonyms and Synonyms</h1>
+                <p lang="mt">L-Omonimi u s-Sinonimi</p>
+                <p>Use the words around an expression to work out its meaning. Practise choosing a spelling and replacing a word with a synonym that fits the sentence.</p>
+            </section>
+            <section class="content-card" id="homonyms">
+                <h2>Homonyms and similar spellings</h2>
+                <p><span lang="mt">Dar</span> can mean “house” or “he turned”. In <span lang="mt">f'dar</span> it names a place. After a subject such as <span lang="mt">Pawlu</span>, it can be the verb. The capital letter and article help distinguish <span lang="mt">il-Ħadd</span> (“Sunday”) from <span lang="mt">ħadd</span> (“anyone”).</p>
+                <div data-example-group="same-spelling-examples"></div>
+                <details class="study-disclosure">
+                    <summary>Compare words that sound alike</summary>
+                    <div class="study-disclosure-body">
+                        <p>Look closely at the letters in <span lang="mt">daq</span> and <span lang="mt">daqq</span>, and at the apostrophe in <span lang="mt">tefa</span> and <span lang="mt">tefa'</span>.</p>
+                        <div data-example-group="similar-spelling-examples"></div>
+                    </div>
+                </details>
+            </section>
+            <section class="content-card" id="synonyms">
+                <h2>Synonyms</h2>
+                <p>Synonyms share a meaning in a particular context. <span lang="mt">Tqil</span> means “heavy” for a bag and can mean “difficult” for an exam. When you replace a noun, check its article as well.</p>
+                <div data-example-group="synonym-models"></div>
+                <details class="study-disclosure">
+                    <summary>See the synonym pairs</summary>
+                    <div class="study-disclosure-body">
+                        <div class="table-scroll" tabindex="0" role="region" aria-label="Synonym pairs">
+                            <table class="table-soft">
+                                <caption>Maltese synonyms and their meaning in context</caption>
+                                <thead><tr><th scope="col">Maltese</th><th scope="col">English</th></tr></thead>
+                                <tbody data-example-group="synonym-words"></tbody>
+                            </table>
+                        </div>
+                        <p>See <a href="./body_appearance.html#face">Body and Appearance</a> for more words like <span lang="mt">fomm</span>.</p>
+                    </div>
+                </details>
+            </section>
+            <section class="content-card" id="practice">
+                <h2>Practice</h2>
+                <div data-exercise-set="homonyms-in-context" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                <details class="study-disclosure">
+                    <summary>Match and replace synonyms</summary>
+                    <div class="study-disclosure-body stack">
+                        <div data-exercise-set="synonyms-in-context" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                    </div>
+                </details>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./today.html?level=mixed&amp;topic=words-reading-postcards">Start mixed practice</a>
+                </div>
+            </section>
+            <noscript>Enable JavaScript to load the examples and practice.</noscript>
+        </main>
+    </div>
+</div>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
+<script src="./assets/js/learning-content.js"></script>
+<script src="./assets/js/render-example-banks.js"></script>
+<script src="./assets/js/exercise-runner.js"></script>
+<script src="./assets/js/site-header.js"></script>
+<script>
+window.renderExampleBanksFromData({
+    dataUrl: "./assets/data/homonyms_synonyms_examples.json",
+    sourcePage: "homonyms_synonyms.html",
+    reviewPrefix: "homonyms-synonyms",
+    defaultTopic: "Homonyms and Synonyms",
+    numbered: false,
+    individualReviewGroups: ["same-spelling-examples", "similar-spelling-examples", "synonym-models"],
+    groupViews: {
+        "synonym-words": {
+            presentation: "table",
+            columns: [{ field: "maltese", lang: "mt" }, { field: "english", lang: "en" }]
+        }
+    }
+});
+</script>
+</body>
+</html>

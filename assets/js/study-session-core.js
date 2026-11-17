@@ -8,8 +8,20 @@
     'use strict';
     const MODES = ['recognition', 'production'];
     const TYPES = ['multiple-choice', 'true-false', 'fill-blank', 'order-words', 'matching'];
-    const LESSON05 = Object.freeze({ id: 'lesson05-mixed', levelId: 'lesson05', levelLabel: 'Lesson 05', title: 'Mixed practice' });
-    const ROUTE_IDS = Object.freeze(['b1', 'b2', 'b3', LESSON05.levelId]);
+    const PRACTICE_ROUTES = Object.freeze([
+        Object.freeze({
+            id: 'lesson05-mixed', levelId: 'lesson05', levelLabel: 'Lesson 05', title: 'Mixed practice',
+            practiceFile: './assets/data/lesson05_exercises.json', sourcePage: 'noun_plurals.html#practice',
+            readingPage: 'places_events.html#lesson05-il-festi', readingTitle: 'Il-Festi'
+        }),
+        Object.freeze({
+            id: 'words-reading-postcards', levelId: 'mixed', levelLabel: 'Mixed practice',
+            title: 'Words, reading and postcards',
+            practiceFile: './assets/data/language_context_exercises.json', sourcePage: 'homonyms_synonyms.html#practice',
+            readingPage: 'food_preferences.html#junk-food', readingTitle: 'Il-Junk Food'
+        })
+    ]);
+    const ROUTE_IDS = Object.freeze(['b1', 'b2', 'b3', ...PRACTICE_ROUTES.map(route => route.levelId)]);
     const blocked = new Set(['__proto__', 'prototype', 'constructor']);
     const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
     const owns = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
@@ -26,7 +38,7 @@
     const now = value => timestamp(value) ?? Date.now();
     const iso = value => new Date(now(value)).toISOString();
     const limit = value => Number.isFinite(value) ? Math.min(6, count(value)) : 6;
-    const sessionLimit = routeId => routeId === LESSON05.levelId ? 12 : 6;
+    const sessionLimit = routeId => PRACTICE_ROUTES.some(route => route.levelId === routeId) ? 12 : 6;
     const publishable = item => object(item) && key(item.id) && item.verificationStatus !== 'needs-review'
         && TYPES.includes(item.type) && MODES.includes(item.assessmentMode) && !!text(item.prompt).trim();
     const queueKey = entry => [entry.routeId, entry.chapterId, entry.skillId || entry.itemId, entry.mode].join('::');
@@ -226,19 +238,19 @@
         return { routeId, chapterId, title: text(array(bank?.chapters).find(chapter => chapter.id === chapterId)?.title || 'B3 practice'), entries, catalog: copy(catalog) };
     }
 
-    function lesson05Repeats(catalog, queue) {
+    function repeatEntries(catalog, queue) {
         const pending = new Set(cleanQueue(queue).map(queueKey));
         return catalog.filter(entry => pending.has(queueKey({ ...entry, itemId: entry.item.id })));
     }
 
-    function planLesson05(bank, queue) {
-        const { id: chapterId, levelId: routeId, title } = LESSON05;
+    function planFixedPractice(bank, route, queue) {
+        const { id: chapterId, levelId: routeId, title } = route;
         const set = array(bank?.sets).find(value => value.id === chapterId && value.verificationStatus !== 'needs-review');
         const catalog = array(set?.items).filter(publishable).map(item => ({
             item: copy(item), routeId, chapterId, chapterTitle: title, originSetId: set.id,
             skillId: item.id, mode: item.assessmentMode, help: helpFor(item)
         }));
-        const repeats = lesson05Repeats(catalog, queue);
+        const repeats = repeatEntries(catalog, queue);
         return { routeId, chapterId, title, entries: repeats.length ? repeats : catalog, catalog };
     }
 
@@ -383,5 +395,5 @@
             complete: count(session?.index) >= array(session?.entries).length, helpCount: cleanQueue(session?.helpQueue).length };
     }
 
-    return Object.freeze({ ROUTE_IDS, LESSON05, planCourse, planB3, planLesson05, lesson05Repeats, warmupFor, supportFor, createSession, resumeSession, updateDraft, useHint, beginRetry, requestHelp, recordResult, advance, stepSet, summary });
+    return Object.freeze({ ROUTE_IDS, PRACTICE_ROUTES, planCourse, planB3, planFixedPractice, repeatEntries, warmupFor, supportFor, createSession, resumeSession, updateDraft, useHint, beginRetry, requestHelp, recordResult, advance, stepSet, summary });
 }));

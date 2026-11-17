@@ -87,6 +87,78 @@
         { "maltese": "Jekk it-triq hija qasira, nista' nimxi.", "english": "If the route is short, I can walk." },
         { "maltese": "Għal din it-triq minn Tas-Sliema għall-Belt, il-ferry huwa l-aktar prattiku.", "english": "For this route from Sliema to Valletta, the ferry is the most practical." }
       ]
+    },
+    {
+      "id": "postcard-phrases",
+      "sectionId": "postcards",
+      "title": "Postcard phrases",
+      "itemType": "translation",
+      "containerClass": "grid-2",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "ghaziza",
+          "maltese": "Għażiża Maya,",
+          "english": "Dear Maya,"
+        },
+        {
+          "slug": "gheziez",
+          "maltese": "Għeżież kollegi,",
+          "english": "Dear colleagues,"
+        },
+        {
+          "slug": "tislijiet-sbieh",
+          "maltese": "Tislijiet sbieħ minn Ruma!",
+          "english": "Warm greetings from Rome!"
+        },
+        {
+          "slug": "temp",
+          "maltese": "It-temp sabiħ u hemm ix-xemx.",
+          "english": "The weather is nice and it's sunny."
+        },
+        {
+          "slug": "inselli",
+          "maltese": "Inselli għalik,",
+          "english": "Best wishes to you,"
+        },
+        {
+          "slug": "narawkom",
+          "maltese": "Narawkom il-ġimgħa d-dieħla!",
+          "english": "See you all next week!"
+        }
+      ]
+    },
+    {
+      "id": "postcard-writing",
+      "sectionId": "postcards",
+      "title": "Write a postcard",
+      "itemType": "questionAnswer",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "postcard-friend",
+          "question": {
+            "maltese": "Ikteb kartolina lil ħabiba minn Ruma.",
+            "english": "Write a postcard to a friend from Rome."
+          },
+          "answer": {
+            "maltese": "Għażiża Maya, tislijiet sbieħ minn Ruma! It-temp sabiħ u llum rajna l-Kolossew. Għada se nimxu fiċ-ċentru. Inselli għalik, Elena.",
+            "english": "Dear Maya, warm greetings from Rome! The weather is lovely and today we saw the Colosseum. Tomorrow we'll walk around the city centre. Best wishes, Elena."
+          }
+        },
+        {
+          "slug": "postcard-colleagues",
+          "question": {
+            "maltese": "Ikteb kartolina lill-kollegi tiegħek minn Pariġi.",
+            "english": "Write a postcard to your colleagues from Paris."
+          },
+          "answer": {
+            "maltese": "Għeżież kollegi, tislijiet minn Pariġi! Hawn kiesaħ. Ilbieraħ żorna mużew. Narawkom fl-uffiċċju l-ġimgħa d-dieħla! Tislijiet, David.",
+            "english": "Dear colleagues, greetings from Paris! It's cold here. Yesterday we visited a museum. See you at the office next week! Best wishes, David."
+          }
+        }
+      ]
     }
   ]
 }
