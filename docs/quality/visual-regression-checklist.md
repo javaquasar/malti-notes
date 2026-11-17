@@ -36,6 +36,8 @@ npm run visual:diff:baseline -- --current visual-regression/screenshots/<new-tim
 
 `npm run release:build` runs `npm run visual:screenshots:clean` before packaging the site. The cleanup removes generated PNG captures and their dated capture metadata from `visual-regression/screenshots/`. Approved reference images live in the baseline directories.
 
+The pre-push hook also runs cleanup before an update to `origin/main`, after validating the outgoing commits. Install the current hook in this checkout with `npm run materials:hooks:install`.
+
 ## Pages
 
 - `index.html`

@@ -1,3 +1,15 @@
 #!/bin/sh
 # malti-materials-policy-hook
-exec node scripts/materials_git_gate.js --push
+updates=$(cat) || exit $?
+printf '%s\n' "$updates" | node scripts/materials_git_gate.js --push || exit $?
+
+if [ "$1" = origin ]; then
+  while read -r local_ref local_sha remote_ref remote_sha; do
+    [ "$remote_ref" = refs/heads/main ] || continue
+    case "$local_sha" in
+      *[!0]*) exec node scripts/clean_visual_screenshots.js ;;
+    esac
+  done <<EOF
+$updates
+EOF
+fi
