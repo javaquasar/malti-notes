@@ -780,6 +780,14 @@
         return filters.direction || "maltese-to-english";
     }
 
+    window.MaltiReviewPronunciation = function () {
+        if (!currentCard || currentCard.type !== "word-card") return null;
+        const revealed = byId("review-grade-actions")?.hidden === false;
+        if (!revealed && getWordDirection() !== "maltese-to-english") return null;
+        return { id: currentCard.id, maltese: currentCard.maltese };
+    };
+
+
     function getPrimaryVerbMeaning(value) {
         var text = String(value || "").trim();
         if (!text) {

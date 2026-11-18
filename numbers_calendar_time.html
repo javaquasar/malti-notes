@@ -88,10 +88,13 @@
         </aside>
 
         <main class="content">
-            <section class="content-card" id="numbers">
+            <section class="content-card" id="numbers" data-word-audio-list>
                 <span class="tag">Numbers</span>
                 <h2>Core Numbers</h2>
-                <div class="number-grid">
+                <div class="toolbar-row">
+                    <a class="action-link" href="#calendar-cardinals">Open counting cards</a>
+                </div>
+                <div class="grid-3">
                     <div class="number-column">
                         <h3>1-10</h3>
                         <ul class="number-list" data-course-static-scope>
@@ -194,7 +197,7 @@
                         </div>
                     </div>
                     <div data-vocab-view-panel="cards">
-                        <div class="grid-auto" data-calendar-group="calendar-ordinals"></div>
+                        <div class="grid-auto" data-calendar-group="calendar-ordinals" data-word-audio-list></div>
                     </div>
                     <div data-vocab-view-panel="table" hidden>
                         <div data-vocab-table-group="calendar-ordinals"></div>
@@ -508,13 +511,18 @@
                 <h3>Quantities</h3>
                 <div class="grid-auto" id="calendar-quantity-words" data-calendar-group="calendar-quantity-words"></div>
                 <h3>Counting numbers</h3>
-                <div class="grid-auto" id="calendar-cardinals" data-calendar-group="calendar-cardinals"></div>
+                <div class="grid-auto" id="calendar-cardinals" data-calendar-group="calendar-cardinals" data-word-audio-list></div>
                 <h3>Birthdays and age</h3>
                 <div class="grid-auto" id="calendar-birthdays" data-calendar-group="calendar-birthdays"></div>
             </section>
         </main>
     </div>
 </div>
+    <template data-word-audio-template>
+        <button class="action-button study-icon-button" type="button" data-word-audio-button data-word-audio-icon aria-label="Play audio" title="Play audio">🔊</button>
+    </template>
+    <audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+    <p class="visually-hidden" role="status" data-word-audio-status></p>
     <script src="./assets/js/storage.js"></script>
     <script src="./assets/js/review-store.js"></script>
     <script src="./assets/js/mistake-store.js"></script>
@@ -569,6 +577,7 @@
     <script src="./assets/js/numbers-tools.js"></script>
     <script src="./assets/js/numbers-helper.js"></script>
     <script src="./assets/js/numbers-expansion.js"></script>
+    <script src="./assets/js/word-audio.js"></script>
     <script src="./assets/js/site-header.js"></script>
 <script src="./assets/js/lesson01-supplements.js" data-lesson01-src="./assets/data/numbers_calendar_time_lesson01_examples.json"></script>
 </body>

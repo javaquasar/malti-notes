@@ -84,7 +84,7 @@
                     <span class="status-chip" data-review-summary>0 saved, 0 due</span>
                     <span class="mini">Add the core colours to review and practise them as quick cards.</span>
                 </div>
-                <div class="grid-auto" data-color-group="core-colours"></div>
+                <div class="grid-auto" data-color-group="core-colours" data-word-audio-list></div>
             </section>
 
             <section class="content-card" id="extra-shades">
@@ -190,6 +190,11 @@
         </main>
     </div>
 </div>
+    <template data-word-audio-template>
+        <button class="action-button study-icon-button" type="button" data-word-audio-button data-word-audio-icon aria-label="Play audio" title="Play audio">🔊</button>
+    </template>
+    <audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+    <p class="visually-hidden" role="status" data-word-audio-status></p>
     <script src="./assets/js/storage.js"></script>
     <script src="./assets/js/review-store.js"></script>
     <script src="./assets/js/render-vocab-cards.js"></script>
@@ -243,6 +248,7 @@
         .catch(function (error) { console.error(error); });
     </script>
     <script src="./assets/js/vocab-review-page.js"></script>
+    <script src="./assets/js/word-audio.js"></script>
     <script src="./assets/js/site-header.js"></script>
 </body>
 </html>

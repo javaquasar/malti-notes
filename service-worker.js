@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "malti-notes-";
-const CACHE_NAME = `${CACHE_PREFIX}86b7e8a9540e`;
+const CACHE_NAME = `${CACHE_PREFIX}5d065d1aad3d`;
 const CORE_ASSETS = [
     "./",
     "./about_me.html",
@@ -149,6 +149,7 @@ const CORE_ASSETS = [
     "./assets/js/vocab-review-page.js",
     "./assets/js/vocab-view-toggle.js",
     "./assets/js/vocabulary-games.js",
+    "./assets/js/word-audio.js",
     "./assets/js/word-search-bank.js",
     "./assets/js/word-search-game.js",
     "./assets/js/year4-exam.js",
@@ -173,6 +174,7 @@ const CORE_ASSETS = [
     "./assets/data/about_me_options.json",
     "./assets/data/numbers_expansion.json",
     "./assets/data/numbers_time_drills.json",
+    "./assets/data/word_pronunciation.json",
     "./assets/data/particles_prepositions_examples.json",
     "./assets/data/reading_red_cave_examples.json",
     "./assets/data/directions_particles_examples.json",
@@ -224,6 +226,68 @@ const CORE_ASSETS = [
   ];
 const LAZY_ASSETS = [
     "./assets/data/vocabulary_review_catalog.json",
+    "./assets/audio/vocabulary/colour-abjad.mp3",
+    "./assets/audio/vocabulary/colour-ahdar.mp3",
+    "./assets/audio/vocabulary/colour-ahmar.mp3",
+    "./assets/audio/vocabulary/colour-blu.mp3",
+    "./assets/audio/vocabulary/colour-griz.mp3",
+    "./assets/audio/vocabulary/colour-ikkulurit.mp3",
+    "./assets/audio/vocabulary/colour-isfar.mp3",
+    "./assets/audio/vocabulary/colour-iswed.mp3",
+    "./assets/audio/vocabulary/colour-kannella.mp3",
+    "./assets/audio/vocabulary/colour-orangjo.mp3",
+    "./assets/audio/vocabulary/colour-roza.mp3",
+    "./assets/audio/vocabulary/colour-vjola.mp3",
+    "./assets/audio/vocabulary/number-0.mp3",
+    "./assets/audio/vocabulary/number-1.mp3",
+    "./assets/audio/vocabulary/number-10.mp3",
+    "./assets/audio/vocabulary/number-100.mp3",
+    "./assets/audio/vocabulary/number-11.mp3",
+    "./assets/audio/vocabulary/number-12.mp3",
+    "./assets/audio/vocabulary/number-13.mp3",
+    "./assets/audio/vocabulary/number-14.mp3",
+    "./assets/audio/vocabulary/number-15.mp3",
+    "./assets/audio/vocabulary/number-16.mp3",
+    "./assets/audio/vocabulary/number-17.mp3",
+    "./assets/audio/vocabulary/number-18.mp3",
+    "./assets/audio/vocabulary/number-19.mp3",
+    "./assets/audio/vocabulary/number-2.mp3",
+    "./assets/audio/vocabulary/number-20.mp3",
+    "./assets/audio/vocabulary/number-3.mp3",
+    "./assets/audio/vocabulary/number-30.mp3",
+    "./assets/audio/vocabulary/number-4.mp3",
+    "./assets/audio/vocabulary/number-40.mp3",
+    "./assets/audio/vocabulary/number-5.mp3",
+    "./assets/audio/vocabulary/number-50.mp3",
+    "./assets/audio/vocabulary/number-6.mp3",
+    "./assets/audio/vocabulary/number-60.mp3",
+    "./assets/audio/vocabulary/number-7.mp3",
+    "./assets/audio/vocabulary/number-70.mp3",
+    "./assets/audio/vocabulary/number-8.mp3",
+    "./assets/audio/vocabulary/number-80.mp3",
+    "./assets/audio/vocabulary/number-9.mp3",
+    "./assets/audio/vocabulary/number-90.mp3",
+    "./assets/audio/vocabulary/number-disgha-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-erbgha-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-hamsa-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-sebgha-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-sitta-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-tlieta-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-tmienja-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-tnejn-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-tombla.mp3",
+    "./assets/audio/vocabulary/number-wiehed-u-ghoxrin.mp3",
+    "./assets/audio/vocabulary/number-wiehed-u-tletin.mp3",
+    "./assets/audio/vocabulary/ordinal-id-disa.mp3",
+    "./assets/audio/vocabulary/ordinal-il-hames.mp3",
+    "./assets/audio/vocabulary/ordinal-ir-raba.mp3",
+    "./assets/audio/vocabulary/ordinal-is-seba.mp3",
+    "./assets/audio/vocabulary/ordinal-is-sitt.mp3",
+    "./assets/audio/vocabulary/ordinal-it-tielet.mp3",
+    "./assets/audio/vocabulary/ordinal-it-tieni.mp3",
+    "./assets/audio/vocabulary/ordinal-it-tmien.mp3",
+    "./assets/audio/vocabulary/ordinal-l-ewwel.mp3",
+    "./assets/audio/vocabulary/ordinal-l-ghaxar.mp3",
     "./assets/img/mdi/balcony.svg",
     "./assets/img/mdi/bottle-wine-outline.svg",
     "./assets/img/mdi/cupboard-outline.svg",
@@ -638,7 +702,7 @@ async function mediaResponse(request) {
   }
   end = Math.min(end, length - 1);
   return new Response(bytes.slice(start, end + 1), { status: 206, headers: {
-    "Content-Type": response.headers.get("Content-Type") || "audio/mp4", "Accept-Ranges": "bytes",
+    "Content-Type": response.headers.get("Content-Type") || (request.url.endsWith(".mp3") ? "audio/mpeg" : "audio/mp4"), "Accept-Ranges": "bytes",
     "Content-Range": "bytes " + start + "-" + end + "/" + length, "Content-Length": String(end - start + 1)
   } });
 }
@@ -661,7 +725,7 @@ self.addEventListener("fetch", (event) => {
     })));
   } else if (request.mode === "navigate") {
     event.respondWith(navigationResponse(request));
-  } else if (url.pathname.endsWith(".m4a") && LAZY_ASSET_URLS.has(url.href)) {
+  } else if ((url.pathname.endsWith(".m4a") || url.pathname.endsWith(".mp3")) && LAZY_ASSET_URLS.has(url.href)) {
     event.respondWith(mediaResponse(request));
   } else if (LAZY_ASSET_URLS.has(url.href)) {
     event.respondWith(lazyAssetResponse(request));

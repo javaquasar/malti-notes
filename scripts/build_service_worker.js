@@ -45,6 +45,7 @@ const coreAssets = [
   "./assets/data/about_me_options.json",
   "./assets/data/numbers_expansion.json",
   "./assets/data/numbers_time_drills.json",
+  "./assets/data/word_pronunciation.json",
   "./assets/data/particles_prepositions_examples.json",
   "./assets/data/reading_red_cave_examples.json",
   "./assets/data/directions_particles_examples.json",
@@ -88,6 +89,7 @@ const coreAssets = [
 
 const lazyAssets = [
   './assets/data/vocabulary_review_catalog.json',
+  ...walk("assets/audio/vocabulary", ".mp3").sort().map((file) => "./" + file),
   ...walk('assets/img/mdi', '.svg').sort().map((file) => './' + file),
   ...[...require('./vocabulary_image_inventory').vocabularyFiles().keys()].map((file) => './assets/data/' + file),
   './assets/data/year4_revision_vocabulary.json',
@@ -209,7 +211,7 @@ async function mediaResponse(request) {
   }
   end = Math.min(end, length - 1);
   return new Response(bytes.slice(start, end + 1), { status: 206, headers: {
-    "Content-Type": response.headers.get("Content-Type") || "audio/mp4", "Accept-Ranges": "bytes",
+    "Content-Type": response.headers.get("Content-Type") || (request.url.endsWith(".mp3") ? "audio/mpeg" : "audio/mp4"), "Accept-Ranges": "bytes",
     "Content-Range": "bytes " + start + "-" + end + "/" + length, "Content-Length": String(end - start + 1)
   } });
 }
@@ -232,7 +234,7 @@ self.addEventListener("fetch", (event) => {
     })));
   } else if (request.mode === "navigate") {
     event.respondWith(navigationResponse(request));
-  } else if (url.pathname.endsWith(".m4a") && LAZY_ASSET_URLS.has(url.href)) {
+  } else if ((url.pathname.endsWith(".m4a") || url.pathname.endsWith(".mp3")) && LAZY_ASSET_URLS.has(url.href)) {
     event.respondWith(mediaResponse(request));
   } else if (LAZY_ASSET_URLS.has(url.href)) {
     event.respondWith(lazyAssetResponse(request));
