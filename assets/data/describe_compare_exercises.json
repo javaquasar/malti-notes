@@ -1,0 +1,1433 @@
+{
+  "sets": [
+    {
+      "id": "opposites-match",
+      "title": "Match the opposites",
+      "sourcePage": "opposites.html#match",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "opposites-matching-words",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "prompt": "Find the opposite of each word.",
+          "pairs": [
+            {
+              "left": "magħluq",
+              "right": "miftuħ"
+            },
+            {
+              "left": "maħmuġ",
+              "right": "nadif"
+            },
+            {
+              "left": "niexef",
+              "right": "imxarrab"
+            },
+            {
+              "left": "xemxi",
+              "right": "imsaħħab"
+            },
+            {
+              "left": "twil",
+              "right": "qasir"
+            }
+          ],
+          "explanation": "The pairs contrast closed and open, dirty and clean, dry and wet, sunny and cloudy, and tall and short."
+        },
+        {
+          "id": "opposites-matching-actions",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "prompt": "Find the opposite action. Keep the same person and tense.",
+          "pairs": [
+            {
+              "left": "nixtri",
+              "right": "inbigħ"
+            },
+            {
+              "left": "jiftħu",
+              "right": "jagħlqu"
+            },
+            {
+              "left": "nixgħel",
+              "right": "nitfi"
+            },
+            {
+              "left": "jitla'",
+              "right": "jinżel"
+            },
+            {
+              "left": "daħal",
+              "right": "ħareġ"
+            }
+          ],
+          "explanation": "Match buying with selling, opening with closing, switching on with switching off, going up with going down, and going in with going out."
+        }
+      ]
+    },
+    {
+      "id": "opposites-listen-closed",
+      "title": "Choose the opposite",
+      "sourcePage": "opposites.html#listen",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "opposites-listen-closed-answer",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Play the clip and choose the opposite of the Maltese word you hear.",
+          "choices": [
+            "maħmuġ",
+            "miftuħ",
+            "sħun"
+          ],
+          "answer": "miftuħ",
+          "explanation": "Magħluq means closed. Miftuħ means open.",
+          "sourcePage": "opposites.html#listen"
+        }
+      ]
+    },
+    {
+      "id": "opposites-listen-quiet",
+      "title": "Choose the opposite",
+      "sourcePage": "opposites.html#listen",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "opposites-listen-quiet-answer",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Play the clip and choose the opposite of the Maltese word you hear.",
+          "choices": [
+            "nadif",
+            "qasir",
+            "storbjuż"
+          ],
+          "answer": "storbjuż",
+          "explanation": "Kwiet means quiet. Storbjuż means noisy.",
+          "sourcePage": "opposites.html#listen"
+        }
+      ]
+    },
+    {
+      "id": "opposites-listen-cloudy",
+      "title": "Choose the opposite",
+      "sourcePage": "opposites.html#listen",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "opposites-listen-cloudy-answer",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Play the clip and choose the opposite of the Maltese word you hear.",
+          "choices": [
+            "xemxi",
+            "mxarrab",
+            "dgħajjef"
+          ],
+          "answer": "xemxi",
+          "explanation": "Imsaħħab means cloudy. Xemxi means sunny.",
+          "sourcePage": "opposites.html#listen"
+        }
+      ]
+    },
+    {
+      "id": "opposites-context",
+      "title": "Choose the adjective in context",
+      "sourcePage": "opposites.html#opposites-context",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "opposite-context-pasta",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Dan l-għaġin ___. Għidli kif għamiltu.",
+          "choices": [
+            "delizzjuż",
+            "irqiq",
+            "vojt"
+          ],
+          "answer": "delizzjuż",
+          "explanation": "Delizzjuż describes how good the pasta tastes.",
+          "sourcePage": "opposites.html#opposites-context"
+        },
+        {
+          "id": "opposite-context-bad-day",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Kelli ġurnata ___. Kollox marli bil-kontra.",
+          "choices": [
+            "ħażina",
+            "ħażin",
+            "mimli"
+          ],
+          "answer": "ħażina",
+          "explanation": "Ġurnata is feminine singular. Ħażina fits both the agreement and the meaning.",
+          "sourcePage": "opposites.html#opposites-context"
+        },
+        {
+          "id": "opposite-context-rain",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Wara li mxejna fix-xita, sirna kollha ___.",
+          "choices": [
+            "mxarbin",
+            "niexef",
+            "imdejjaq"
+          ],
+          "answer": "mxarbin",
+          "explanation": "Use the plural mxarbin for the people who got wet.",
+          "sourcePage": "opposites.html#opposites-context"
+        },
+        {
+          "id": "opposite-context-room",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Il-kamra ___ ħafna. Hemm spazju għal sodda waħda biss.",
+          "choices": [
+            "żgħira",
+            "żgħir",
+            "twal"
+          ],
+          "answer": "żgħira",
+          "explanation": "Kamra is feminine. If there is room for only one bed, żgħira fits the meaning.",
+          "sourcePage": "opposites.html#opposites-context"
+        },
+        {
+          "id": "opposite-context-bar",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Il-bar hu ___. M'hemmx ċans insibu post.",
+          "choices": [
+            "mimli",
+            "vojt",
+            "sabiħa"
+          ],
+          "answer": "mimli",
+          "explanation": "Mimli means full. That is why there is no room in the bar.",
+          "sourcePage": "opposites.html#opposites-context"
+        },
+        {
+          "id": "opposite-context-good-news",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Wara li smajt l-aħbar it-tajba, ħassejtni ___ ħafna.",
+          "choices": [
+            "eċitat",
+            "irrabjat",
+            "maħmuġ"
+          ],
+          "answer": "eċitat",
+          "explanation": "Eċitat means excited, which fits hearing good news.",
+          "sourcePage": "opposites.html#opposites-context"
+        }
+      ]
+    },
+    {
+      "id": "comparison-form-practice",
+      "title": "Complete the comparisons",
+      "sourcePage": "comparisons.html#comparison-practice",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "comparison-form-anna",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Anna (twila) ___ minn Lina.",
+          "answer": "itwal",
+          "explanation": "Use itwal for taller.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-horse",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Iż-żiemel (kbir) ___ mill-kelb.",
+          "answer": "ikbar",
+          "explanation": "Kbir has the comparative forms ikbar and akbar.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "ikbar",
+            "akbar"
+          ]
+        },
+        {
+          "id": "comparison-form-box",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Din il-kaxxa (tqila) ___ mill-oħra.",
+          "answer": "itqal",
+          "explanation": "Itqal means heavier.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-dress",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Il-libsa l-ħamra (sabiħa) ___ mill-bajda.",
+          "answer": "isbaħ",
+          "explanation": "Isbaħ compares how beautiful the two dresses are.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-uncle",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Iz-ziju Pawlu (oħxon) ___ minn missieri.",
+          "answer": "eħxen",
+          "explanation": "The comparative of oħxon is eħxen.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-rozina",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Rożina (ċkejkna) ___ minn oħti.",
+          "answer": "iċken",
+          "explanation": "Iċken means smaller.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-book",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Dan il-ktieb (irħis) ___ mill-ieħor.",
+          "answer": "irħas",
+          "explanation": "Irħas and orħos both mean cheaper.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "irħas",
+            "orħos"
+          ]
+        },
+        {
+          "id": "comparison-form-wood",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "L-injam (ħafif) ___ miċ-ċomb.",
+          "answer": "eħfef",
+          "explanation": "Eħfef is lighter in the comparison of weight.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-grandfather",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "In-nannu (xiħ) ___ min-nanna.",
+          "answer": "ixjeħ",
+          "explanation": "Ixjeħ compares the age of people.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-silk",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Il-ħarir (fin) ___ mix-xoqqa.",
+          "answer": "ifjen",
+          "explanation": "Ifjen means finer.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        },
+        {
+          "id": "comparison-form-strawberries",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Il-frawli (tajjeb) ___ mill-ħawħ.",
+          "answer": "itjeb",
+          "explanation": "Itjeb here compares taste.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "itjeb",
+            "aħjar"
+          ]
+        },
+        {
+          "id": "comparison-form-tower",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "It-torri (qadim) ___ mill-villa.",
+          "answer": "eqdem",
+          "explanation": "Eqdem compares the age of things.",
+          "sourcePage": "comparisons.html#degrees-of-comparison"
+        }
+      ]
+    },
+    {
+      "id": "comparison-sentence-practice",
+      "title": "Correct the whole sentence",
+      "sourcePage": "comparisons.html#comparison-practice",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "compare-fix-than-buses-correction",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Fix the word that means 'than'. Write the whole sentence. It-treni fl-Italja huma aktar veloċi tal-karozzi tal-linja hawnhekk.",
+          "answer": "It-treni fl-Italja huma aktar veloċi mill-karozzi tal-linja hawnhekk.",
+          "explanation": "Use minn for than. With il-karozzi it becomes mill-karozzi.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "answerTranslation": "Trains in Italy are faster than the buses here.",
+          "reviewCard": {
+            "maltese": "It-treni fl-Italja huma aktar veloċi mill-karozzi tal-linja hawnhekk.",
+            "english": "Trains in Italy are faster than the buses here."
+          }
+        },
+        {
+          "id": "compare-fix-than-yesterday-correction",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use agħar in place of aktar ħażin. Write the whole sentence. Illum inħossni aktar ħażin mill-bieraħ.",
+          "answer": "Illum inħossni agħar mill-bieraħ.",
+          "explanation": "Agħar is a one-word form for worse. Mill-bieraħ introduces the comparison with yesterday.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "answerTranslation": "I feel worse today than yesterday.",
+          "reviewCard": {
+            "maltese": "Illum inħossni agħar mill-bieraħ.",
+            "english": "I feel worse today than yesterday."
+          }
+        },
+        {
+          "id": "compare-important-document-correction",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Rewrite with importanti after dokument. Dan huwa l-aktar importanti dokument fil-fajl kollu.",
+          "answer": "Dan huwa l-aktar dokument importanti fil-fajl kollu.",
+          "explanation": "Place l-aktar before dokument and importanti after it.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "accepted": [
+            "Dan huwa l-aktar dokument importanti fil-fajl kollu.",
+            "Dan huwa d-dokument l-aktar importanti fil-fajl kollu."
+          ],
+          "answerTranslation": "This is the most important document in the whole file.",
+          "reviewCard": {
+            "maltese": "Dan huwa l-aktar dokument importanti fil-fajl kollu.",
+            "english": "This is the most important document in the whole file."
+          }
+        },
+        {
+          "id": "compare-capable-colleague-correction",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Rewrite with brava after kollega. Marija hija l-aktar brava kollega fl-uffiċċju.",
+          "answer": "Marija hija l-aktar kollega brava fl-uffiċċju.",
+          "explanation": "The noun kollega follows l-aktar in this pattern. Brava describes Marija.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "accepted": [
+            "Marija hija l-aktar kollega brava fl-uffiċċju.",
+            "Marija hija l-kollega l-aktar brava fl-uffiċċju."
+          ],
+          "answerTranslation": "Marija is the most capable colleague in the office.",
+          "reviewCard": {
+            "maltese": "Marija hija l-aktar kollega brava fl-uffiċċju.",
+            "english": "Marija is the most capable colleague in the office."
+          }
+        },
+        {
+          "id": "comparison-apartment-correction",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use ikbar or akbar in place of aktar kbir. Write the whole sentence. Dan l-appartament huwa aktar kbir minn dak ta' qablu.",
+          "answer": "Dan l-appartament huwa ikbar minn dak ta' qablu.",
+          "explanation": "Both ikbar and akbar are one-word forms for bigger.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "accepted": [
+            "Dan l-appartament huwa ikbar minn dak ta' qablu.",
+            "Dan l-appartament huwa akbar minn dak ta' qablu."
+          ],
+          "answerTranslation": "This flat is bigger than the previous one.",
+          "reviewCard": {
+            "maltese": "Dan l-appartament huwa ikbar minn dak ta' qablu.",
+            "english": "This flat is bigger than the previous one."
+          }
+        }
+      ]
+    },
+    {
+      "id": "comparison-car-check",
+      "title": "Check the reading",
+      "sourcePage": "comparisons.html#car-reading",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "car-comprehension-size",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "What does Ġanni want at the beginning of the story?",
+          "choices": [
+            "Karozza eqdem.",
+            "Karozza ifjen u ikbar.",
+            "Karozza iżgħar."
+          ],
+          "answer": "Karozza ifjen u ikbar.",
+          "explanation": "Ifjen means finer and ikbar means bigger.",
+          "sourcePage": "comparisons.html#car-reading"
+        },
+        {
+          "id": "car-comprehension-age",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Which car did he avoid?",
+          "choices": [
+            "L-isbaħ waħda.",
+            "L-ifjen waħda.",
+            "L-eqdem waħda."
+          ],
+          "answer": "L-eqdem waħda.",
+          "explanation": "L-eqdem means the oldest.",
+          "sourcePage": "comparisons.html#car-reading"
+        },
+        {
+          "id": "car-comprehension-price",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "What do we learn about the car he likes best?",
+          "choices": [
+            "Il-prezz tagħha huwa ogħla.",
+            "Il-prezz tagħha huwa orħos.",
+            "Il-prezz huwa l-istess."
+          ],
+          "answer": "Il-prezz tagħha huwa ogħla.",
+          "explanation": "Ogħla means higher when comparing prices.",
+          "sourcePage": "comparisons.html#car-reading"
+        }
+      ]
+    },
+    {
+      "id": "adjective-agreement-in-pictures",
+      "title": "Adjective agreement in the pictures",
+      "sourcePage": "picture_description.html#people-in-the-kitchen",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "picture-agreement-cupboards",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "The cupboards are white. Which form completes 'L-armarji tal-kċina huma ___'?",
+          "choices": [
+            "abjad",
+            "bajda",
+            "bojod"
+          ],
+          "answer": "bojod",
+          "explanation": "The cupboards are plural, so use bojod.",
+          "sourcePage": "picture_description.html#people-in-the-kitchen"
+        },
+        {
+          "id": "picture-agreement-top",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "The girl's top is yellow. Which form completes 'Il-flokk huwa ___'?",
+          "choices": [
+            "safra",
+            "isfar",
+            "sofor"
+          ],
+          "answer": "isfar",
+          "explanation": "Flokk is masculine singular, so use isfar.",
+          "sourcePage": "picture_description.html#people-in-the-kitchen"
+        },
+        {
+          "id": "picture-agreement-car",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "The car is white. Which form completes 'Il-karozza hija ___'?",
+          "choices": [
+            "bajda",
+            "abjad",
+            "bojod"
+          ],
+          "answer": "bajda",
+          "explanation": "Karozza is feminine singular, so use bajda.",
+          "sourcePage": "picture_description.html#street-under-clouds"
+        },
+        {
+          "id": "picture-agreement-roofs",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "The roofs are red. Which form completes 'Is-soqfa huma ___'?",
+          "choices": [
+            "ħamra",
+            "aħmar",
+            "ħomor"
+          ],
+          "answer": "ħomor",
+          "explanation": "Soqfa is plural, so use ħomor.",
+          "sourcePage": "picture_description.html#countryside-path"
+        },
+        {
+          "id": "picture-agreement-day",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "It is a sunny day. Which form completes 'Hija ġurnata ___'?",
+          "choices": [
+            "xemxi",
+            "xemxija",
+            "imsaħħab"
+          ],
+          "answer": "xemxija",
+          "explanation": "Ġurnata is feminine singular, so use xemxija.",
+          "sourcePage": "picture_description.html#playing-with-water"
+        }
+      ]
+    },
+    {
+      "id": "shopping-list-practice",
+      "title": "Shopping list practice",
+      "sourcePage": "food_preferences.html#shopping-list",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "shopping-list-eggs",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "What does tliet bajdiet mean?",
+          "choices": [
+            "three eggs",
+            "three loaves",
+            "three litres"
+          ],
+          "answer": "three eggs",
+          "explanation": "Bajdiet is a countable plural of bajda, an egg.",
+          "sourcePage": "food_preferences.html#shopping-list"
+        },
+        {
+          "id": "shopping-list-cheese",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the Maltese phrase for cheese with holes.",
+          "choices": [
+            "ġobon tat-tursina",
+            "ġobon tat-toqba",
+            "zalza tat-tadam"
+          ],
+          "answer": "ġobon tat-toqba",
+          "explanation": "Toqba means hole. Ġobon tat-tursina means blue cheese.",
+          "sourcePage": "food_preferences.html#shopping-list"
+        },
+        {
+          "id": "shopping-list-juice",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Complete the list reminder. Tinsiex tixtri meraq tal-___ (peach).",
+          "answer": "ħawħ",
+          "explanation": "Meraq tal-ħawħ means peach juice.",
+          "sourcePage": "food_preferences.html#shopping-list"
+        }
+      ]
+    },
+    {
+      "id": "describe-and-compare",
+      "title": "Describe and Compare",
+      "sourcePage": "comparisons.html#comparison-practice",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "describe-car-colour",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence that means 'This car is red'.",
+          "choices": [
+            "Din il-karozza aħmar.",
+            "Din il-karozza ħamra.",
+            "Din il-karozza ħomor."
+          ],
+          "answer": "Din il-karozza ħamra.",
+          "explanation": "Karozza is feminine singular, so the adjective is ħamra.",
+          "sourcePage": "gender_agreement.html#adjective-number",
+          "answerTranslation": "This car is red.",
+          "reviewCard": {
+            "maltese": "Din il-karozza ħamra.",
+            "english": "This car is red."
+          },
+          "errorFocus": [
+            "aħmar",
+            "ħomor"
+          ]
+        },
+        {
+          "id": "describe-maltese-singer",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence about a Maltese female singer.",
+          "choices": [
+            "Il-kantanta hija Maltin.",
+            "Il-kantanta hija Malti.",
+            "Il-kantanta hija Maltija."
+          ],
+          "answer": "Il-kantanta hija Maltija.",
+          "explanation": "Kantanta names a female singer. Match it with Maltija.",
+          "sourcePage": "gender_agreement.html#adjectives-from-places",
+          "answerTranslation": "The female singer is Maltese.",
+          "reviewCard": {
+            "maltese": "Il-kantanta hija Maltija.",
+            "english": "The female singer is Maltese."
+          },
+          "errorFocus": [
+            "Malti",
+            "Maltin"
+          ]
+        },
+        {
+          "id": "describe-white-cupboards",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Choose abjad, bajda or bojod and write the whole sentence. L-armarji tal-kċina huma ___.",
+          "answer": "L-armarji tal-kċina huma bojod.",
+          "explanation": "Armarji means cupboards, so use bojod, the plural of abjad.",
+          "sourcePage": "picture_description.html#people-in-the-kitchen",
+          "hint": "Check whether armarji names one cupboard or several.",
+          "answerTranslation": "The kitchen cupboards are white.",
+          "reviewCard": {
+            "maltese": "L-armarji tal-kċina huma bojod.",
+            "english": "The kitchen cupboards are white."
+          },
+          "errorFocus": [
+            "abjad",
+            "bajda"
+          ]
+        },
+        {
+          "id": "describe-wet-after-rain",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace nexfin with the opposite. Write the whole sentence. Wara x-xita, it-tfal kienu nexfin.",
+          "answer": "Wara x-xita, it-tfal kienu mxarbin.",
+          "explanation": "Mxarbin is the plural form used to describe people who are wet.",
+          "sourcePage": "picture_description.html#playing-with-water",
+          "hint": "Use an adjective that describes several people who got wet.",
+          "answerTranslation": "After the rain, the children were wet.",
+          "reviewCard": {
+            "maltese": "Wara x-xita, it-tfal kienu mxarbin.",
+            "english": "After the rain, the children were wet."
+          },
+          "errorFocus": [
+            "nexfin",
+            "imxarrab",
+            "imxarrba"
+          ]
+        },
+        {
+          "id": "describe-open-door",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the opposite of 'Il-bieb magħluq'.",
+          "choices": [
+            "Il-bieb miftuħ.",
+            "Il-bieb maħmuġ.",
+            "Il-bieb rieqed."
+          ],
+          "answer": "Il-bieb miftuħ.",
+          "explanation": "Magħluq means closed. The opposite for a door is miftuħ.",
+          "sourcePage": "opposites.html#opposites-context",
+          "answerTranslation": "The door is open.",
+          "reviewCard": {
+            "maltese": "Il-bieb miftuħ.",
+            "english": "The door is open."
+          },
+          "errorFocus": [
+            "magħluq",
+            "miftuħa"
+          ],
+          "errorFocusNotes": {
+            "miftuħa": "Use the masculine form miftuħ with bieb."
+          }
+        },
+        {
+          "id": "compare-horse-and-dog",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use the comparative of kbir. Write the whole sentence. Iż-żiemel ___ mill-kelb.",
+          "answer": "Iż-żiemel ikbar mill-kelb.",
+          "explanation": "Kbir becomes ikbar or akbar in comparisons about size.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "Iż-żiemel ikbar mill-kelb.",
+            "Iż-żiemel akbar mill-kelb.",
+            "Iż-żiemel huwa ikbar mill-kelb.",
+            "Iż-żiemel huwa akbar mill-kelb.",
+            "Iż-żiemel hu ikbar mill-kelb.",
+            "Iż-żiemel hu akbar mill-kelb."
+          ],
+          "answerTranslation": "The horse is bigger than the dog.",
+          "reviewCard": {
+            "maltese": "Iż-żiemel ikbar mill-kelb.",
+            "english": "The horse is bigger than the dog."
+          },
+          "errorFocus": [
+            "kbir",
+            "kbira",
+            "l-ikbar",
+            "l-akbar",
+            "tal-kelb"
+          ],
+          "errorFocusNotes": {
+            "tal-kelb": "Use mill-kelb to say than the dog. Minn joins the definite article."
+          }
+        },
+        {
+          "id": "compare-our-street",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use the one-word comparative of dejqa. Write the whole sentence. It-triq tagħna ___ minn tagħkom.",
+          "answer": "It-triq tagħna idjaq minn tagħkom.",
+          "explanation": "Dejqa describes one street. Idjaq compares its width with another street.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "It-triq tagħna idjaq minn tagħkom.",
+            "It-triq tagħna hija idjaq minn tagħkom.",
+            "It-triq tagħna hi idjaq minn tagħkom."
+          ],
+          "answerTranslation": "Our street is narrower than yours.",
+          "reviewCard": {
+            "maltese": "It-triq tagħna idjaq minn tagħkom.",
+            "english": "Our street is narrower than yours."
+          },
+          "errorFocus": [
+            "dejqa",
+            "dejjaq",
+            "l-idjaq"
+          ]
+        },
+        {
+          "id": "compare-quiet-rooms",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use aktar, iktar or iżjed to say 'quieter'. Write the whole sentence. Il-kamra tagħna hija ___ minn tagħkom.",
+          "answer": "Il-kamra tagħna hija aktar kwieta minn tagħkom.",
+          "explanation": "Put aktar, iktar or iżjed before the feminine form kwieta.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "Il-kamra tagħna hija aktar kwieta minn tagħkom.",
+            "Il-kamra tagħna hija iktar kwieta minn tagħkom.",
+            "Il-kamra tagħna hija iżjed kwieta minn tagħkom."
+          ],
+          "answerTranslation": "Our room is quieter than yours.",
+          "reviewCard": {
+            "maltese": "Il-kamra tagħna hija aktar kwieta minn tagħkom.",
+            "english": "Our room is quieter than yours."
+          },
+          "errorFocus": [
+            "kwiet",
+            "kwieti",
+            "l-aktar"
+          ],
+          "errorFocusNotes": {
+            "l-aktar": "Use aktar, iktar or iżjed to compare two rooms. L-aktar picks out the quietest room in a group."
+          }
+        },
+        {
+          "id": "compare-tallest-student",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence that means 'Rita was the tallest student in the class'.",
+          "choices": [
+            "Rita kienet studenta twila fil-klassi.",
+            "Rita kienet l-itwal studenta fil-klassi.",
+            "Rita kienet itwal minn studenta fil-klassi."
+          ],
+          "answer": "Rita kienet l-itwal studenta fil-klassi.",
+          "explanation": "Use l-itwal to pick out the tallest student in the group.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "answerTranslation": "Rita was the tallest student in the class.",
+          "reviewCard": {
+            "maltese": "Rita kienet l-itwal studenta fil-klassi.",
+            "english": "Rita was the tallest student in the class."
+          },
+          "errorFocus": [
+            "itwal",
+            "twila",
+            "l-itwal student"
+          ],
+          "errorFocusNotes": {
+            "l-itwal student": "Use studenta for Rita. L-itwal stays the same."
+          }
+        },
+        {
+          "id": "compare-fix-than-buses",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Fix the word that means 'than'. Write the whole sentence. It-treni fl-Italja huma aktar veloċi tal-karozzi tal-linja hawnhekk.",
+          "answer": "It-treni fl-Italja huma aktar veloċi mill-karozzi tal-linja hawnhekk.",
+          "explanation": "Use minn for than. With il-karozzi it becomes mill-karozzi.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "answerTranslation": "Trains in Italy are faster than the buses here.",
+          "reviewCard": {
+            "maltese": "It-treni fl-Italja huma aktar veloċi mill-karozzi tal-linja hawnhekk.",
+            "english": "Trains in Italy are faster than the buses here."
+          },
+          "errorFocus": [
+            "tal-karozzi",
+            "minn il-karozzi"
+          ]
+        },
+        {
+          "id": "compare-important-document",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Rewrite with importanti after dokument. Dan huwa l-aktar importanti dokument fil-fajl kollu.",
+          "answer": "Dan huwa l-aktar dokument importanti fil-fajl kollu.",
+          "explanation": "Place l-aktar before dokument and importanti after it.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "accepted": [
+            "Dan huwa l-aktar dokument importanti fil-fajl kollu.",
+            "Dan huwa d-dokument l-aktar importanti fil-fajl kollu."
+          ],
+          "answerTranslation": "This is the most important document in the whole file.",
+          "reviewCard": {
+            "maltese": "Dan huwa l-aktar dokument importanti fil-fajl kollu.",
+            "english": "This is the most important document in the whole file."
+          },
+          "errorFocus": [
+            "importanti dokument"
+          ]
+        },
+        {
+          "id": "compare-path-with-road",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "In the picture pair, the path looks narrower than the road. Write the whole sentence. Il-mogħdija tidher ___ mit-triq.",
+          "answer": "Il-mogħdija tidher idjaq mit-triq.",
+          "explanation": "Use idjaq for narrower. Minn plus it-triq becomes mit-triq.",
+          "sourcePage": "picture_description.html#compare-scenes",
+          "answerTranslation": "The path looks narrower than the road.",
+          "reviewCard": {
+            "maltese": "Il-mogħdija tidher idjaq mit-triq.",
+            "english": "The path looks narrower than the road."
+          },
+          "errorFocus": [
+            "dejqa",
+            "dejjaq",
+            "tal-triq",
+            "minn it-triq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "describe-and-compare-repeat",
+      "title": "Describe and Compare review",
+      "sourcePage": "comparisons.html#comparison-practice",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "describe-table-shape",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence that means 'This table is round'.",
+          "choices": [
+            "Din il-mejda tonda.",
+            "Din il-mejda tond.",
+            "Din il-mejda tondi."
+          ],
+          "answer": "Din il-mejda tonda.",
+          "explanation": "Mejda is feminine singular. Use tonda for one round table.",
+          "sourcePage": "gender_agreement.html#adjective-number",
+          "answerTranslation": "This table is round.",
+          "reviewCard": {
+            "maltese": "Din il-mejda tonda.",
+            "english": "This table is round."
+          },
+          "repeatOf": "describe-car-colour",
+          "errorFocus": [
+            "tond",
+            "tondi"
+          ]
+        },
+        {
+          "id": "describe-maltese-male-singer",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence about a Maltese male singer.",
+          "choices": [
+            "Il-kantant huwa Maltija.",
+            "Il-kantant huwa Malti.",
+            "Il-kantant huwa Maltin."
+          ],
+          "answer": "Il-kantant huwa Malti.",
+          "explanation": "Kantant is masculine singular, so use Malti.",
+          "sourcePage": "gender_agreement.html#adjectives-from-places",
+          "answerTranslation": "The male singer is Maltese.",
+          "reviewCard": {
+            "maltese": "Il-kantant huwa Malti.",
+            "english": "The male singer is Maltese."
+          },
+          "repeatOf": "describe-maltese-singer",
+          "errorFocus": [
+            "Maltija",
+            "Maltin"
+          ]
+        },
+        {
+          "id": "describe-green-trees",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Choose aħdar, ħadra or ħodor and write the whole sentence. Is-siġar huma ___.",
+          "answer": "Is-siġar huma ħodor.",
+          "explanation": "Siġar is plural. The plural colour form is ħodor.",
+          "sourcePage": "gender_agreement.html#adjective-number",
+          "answerTranslation": "The trees are green.",
+          "reviewCard": {
+            "maltese": "Is-siġar huma ħodor.",
+            "english": "The trees are green."
+          },
+          "repeatOf": "describe-white-cupboards",
+          "errorFocus": [
+            "aħdar",
+            "ħadra"
+          ]
+        },
+        {
+          "id": "describe-swimmers-after-pool",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace nexfin with the opposite. Write the whole sentence. Wara li ħarġu mill-pixxina, l-għawwiema kienu nexfin.",
+          "answer": "Wara li ħarġu mill-pixxina, l-għawwiema kienu mxarbin.",
+          "explanation": "Use mxarbin as the opposite of nexfin for a group of people.",
+          "answerTranslation": "After they got out of the pool, the swimmers were wet.",
+          "sourcePage": "opposites.html#opposites-context",
+          "repeatOf": "describe-wet-after-rain",
+          "errorFocus": [
+            "nexfin",
+            "imxarrab",
+            "imxarrba"
+          ],
+          "reviewCard": {
+            "maltese": "Wara li ħarġu mill-pixxina, l-għawwiema kienu mxarbin.",
+            "english": "After they got out of the pool, the swimmers were wet."
+          }
+        },
+        {
+          "id": "describe-hot-water",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace kiesaħ with the opposite and write the whole sentence. L-ilma huwa kiesaħ.",
+          "answer": "L-ilma huwa sħun.",
+          "explanation": "Sħun is the opposite of kiesaħ, and both forms here go with ilma.",
+          "sourcePage": "opposites.html#opposites-context",
+          "answerTranslation": "The water is hot.",
+          "reviewCard": {
+            "maltese": "L-ilma huwa sħun.",
+            "english": "The water is hot."
+          },
+          "repeatOf": "describe-wet-after-rain",
+          "errorFocus": [
+            "kiesaħ",
+            "sħuna"
+          ]
+        },
+        {
+          "id": "describe-closed-window",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the opposite of 'It-tieqa miftuħa'.",
+          "choices": [
+            "It-tieqa magħluq.",
+            "It-tieqa magħluqa.",
+            "It-tieqa nadifa."
+          ],
+          "answer": "It-tieqa magħluqa.",
+          "explanation": "The opposite of miftuħa is magħluqa. The ending agrees with tieqa.",
+          "sourcePage": "opposites.html#opposites-context",
+          "answerTranslation": "The window is closed.",
+          "reviewCard": {
+            "maltese": "It-tieqa magħluqa.",
+            "english": "The window is closed."
+          },
+          "repeatOf": "describe-open-door",
+          "errorFocus": [
+            "miftuħa",
+            "magħluq"
+          ]
+        },
+        {
+          "id": "compare-box-weight",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use the comparative of tqila. Write the whole sentence. Din il-kaxxa ___ mill-oħra.",
+          "answer": "Din il-kaxxa itqal mill-oħra.",
+          "explanation": "Tqila is the positive form. Use itqal for heavier.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "Din il-kaxxa itqal mill-oħra.",
+            "Din il-kaxxa hija itqal mill-oħra.",
+            "Din il-kaxxa hi itqal mill-oħra."
+          ],
+          "answerTranslation": "This box is heavier than the other one.",
+          "reviewCard": {
+            "maltese": "Din il-kaxxa itqal mill-oħra.",
+            "english": "This box is heavier than the other one."
+          },
+          "repeatOf": "compare-horse-and-dog",
+          "errorFocus": [
+            "tqila",
+            "tqil",
+            "l-itqal",
+            "tal-oħra"
+          ],
+          "errorFocusNotes": {
+            "tal-oħra": "Use mill-oħra to say than the other one."
+          }
+        },
+        {
+          "id": "compare-two-streets",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use the one-word comparative of dejqa. Write the whole sentence. Din it-triq ___ minn dik.",
+          "answer": "Din it-triq idjaq minn dik.",
+          "explanation": "Use idjaq for narrower and minn dik for than that one.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "Din it-triq idjaq minn dik.",
+            "Din it-triq hija idjaq minn dik.",
+            "Din it-triq hi idjaq minn dik."
+          ],
+          "answerTranslation": "This street is narrower than that one.",
+          "reviewCard": {
+            "maltese": "Din it-triq idjaq minn dik.",
+            "english": "This street is narrower than that one."
+          },
+          "repeatOf": "compare-our-street",
+          "errorFocus": [
+            "dejqa",
+            "dejjaq",
+            "l-idjaq"
+          ]
+        },
+        {
+          "id": "compare-spacious-rooms",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Use aktar, iktar or iżjed to say 'more spacious'. Write the whole sentence. Din il-kamra hija ___ mill-oħra.",
+          "answer": "Din il-kamra hija iżjed spazjuża mill-oħra.",
+          "explanation": "Spazjuża agrees with kamra. Put iżjed, aktar or iktar before it.",
+          "sourcePage": "comparisons.html#degrees-of-comparison",
+          "accepted": [
+            "Din il-kamra hija iżjed spazjuża mill-oħra.",
+            "Din il-kamra hija aktar spazjuża mill-oħra.",
+            "Din il-kamra hija iktar spazjuża mill-oħra."
+          ],
+          "answerTranslation": "This room is more spacious than the other one.",
+          "reviewCard": {
+            "maltese": "Din il-kamra hija iżjed spazjuża mill-oħra.",
+            "english": "This room is more spacious than the other one."
+          },
+          "repeatOf": "compare-quiet-rooms",
+          "errorFocus": [
+            "spazjuż",
+            "spazjużi",
+            "l-aktar",
+            "tal-oħra"
+          ],
+          "errorFocusNotes": {
+            "tal-oħra": "Use mill-oħra to say than the other one.",
+            "l-aktar": "Use aktar, iktar or iżjed when comparing two rooms."
+          }
+        },
+        {
+          "id": "compare-best-car",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence that means 'Ġanni chose the best car'.",
+          "choices": [
+            "Ġanni għażel karozza tajba.",
+            "Ġanni għażel karozza aħjar.",
+            "Ġanni għażel l-aħjar karozza."
+          ],
+          "answer": "Ġanni għażel l-aħjar karozza.",
+          "explanation": "L-aħjar is the superlative used to choose the best car from the group.",
+          "sourcePage": "comparisons.html#car-reading",
+          "answerTranslation": "Ġanni chose the best car.",
+          "reviewCard": {
+            "maltese": "Ġanni għażel l-aħjar karozza.",
+            "english": "Ġanni chose the best car."
+          },
+          "repeatOf": "compare-tallest-student",
+          "errorFocus": [
+            "aħjar",
+            "tajjeb",
+            "tajba"
+          ]
+        },
+        {
+          "id": "compare-fix-than-yesterday",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Fix the word that means 'than'. Write the whole sentence. Illum inħossni agħar tal-bieraħ.",
+          "answer": "Illum inħossni agħar mill-bieraħ.",
+          "explanation": "Use minn to introduce the second part of the comparison. With il-bieraħ the form is mill-bieraħ.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "answerTranslation": "I feel worse today than yesterday.",
+          "reviewCard": {
+            "maltese": "Illum inħossni agħar mill-bieraħ.",
+            "english": "I feel worse today than yesterday."
+          },
+          "repeatOf": "compare-fix-than-buses",
+          "errorFocus": [
+            "tal-bieraħ",
+            "minn il-bieraħ"
+          ]
+        },
+        {
+          "id": "compare-capable-colleague",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Rewrite with brava after kollega. Marija hija l-aktar brava kollega fl-uffiċċju.",
+          "answer": "Marija hija l-aktar kollega brava fl-uffiċċju.",
+          "explanation": "The noun kollega follows l-aktar in this pattern. Brava describes Marija.",
+          "sourcePage": "comparisons.html#comparison-practice",
+          "accepted": [
+            "Marija hija l-aktar kollega brava fl-uffiċċju.",
+            "Marija hija l-kollega l-aktar brava fl-uffiċċju."
+          ],
+          "answerTranslation": "Marija is the most capable colleague in the office.",
+          "reviewCard": {
+            "maltese": "Marija hija l-aktar kollega brava fl-uffiċċju.",
+            "english": "Marija is the most capable colleague in the office."
+          },
+          "repeatOf": "compare-important-document",
+          "errorFocus": [
+            "brava kollega"
+          ]
+        },
+        {
+          "id": "compare-road-with-path",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Reverse the comparison. The road looks wider than the path. Write the whole sentence. It-triq tidher ___ mill-mogħdija.",
+          "answer": "It-triq tidher usa' mill-mogħdija.",
+          "explanation": "Usa' is the comparative of wiesa'. Mill-mogħdija means than the path.",
+          "sourcePage": "picture_description.html#compare-scenes",
+          "answerTranslation": "The road looks wider than the path.",
+          "reviewCard": {
+            "maltese": "It-triq tidher usa' mill-mogħdija.",
+            "english": "The road looks wider than the path."
+          },
+          "repeatOf": "compare-path-with-road",
+          "errorFocus": [
+            "wiesgħa",
+            "wiesa'",
+            "tal-mogħdija",
+            "minn il-mogħdija"
+          ]
+        },
+        {
+          "id": "describe-white-bicycle",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose the sentence that means 'The bicycle is white'.",
+          "choices": [
+            "Ir-rota abjad.",
+            "Ir-rota bajda.",
+            "Ir-rota bojod."
+          ],
+          "answer": "Ir-rota bajda.",
+          "explanation": "Rota is feminine singular, so use bajda.",
+          "answerTranslation": "The bicycle is white.",
+          "sourcePage": "gender_agreement.html#adjective-number",
+          "repeatOf": "describe-car-colour",
+          "errorFocus": [
+            "abjad",
+            "bojod"
+          ],
+          "reviewCard": {
+            "maltese": "Ir-rota bajda.",
+            "english": "The bicycle is white."
+          }
+        }
+      ]
+    },
+    {
+      "id": "opposites-sentence-listening",
+      "title": "Complete the contrasts",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "listen-contrast-quiet-and-noisy",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Clip 1. Write the missing adjective.",
+          "answer": "storbjuż",
+          "answerTranslation": "The room was quiet, but the bar was noisy.",
+          "explanation": "Storbjuż is the opposite of kwiet. Use the masculine form with bar.",
+          "sourcePage": "opposites.html#sentence-listening",
+          "reviewCard": {
+            "maltese": "Il-kamra kienet kwieta, imma l-bar kien storbjuż.",
+            "english": "The room was quiet, but the bar was noisy."
+          }
+        },
+        {
+          "id": "listen-contrast-closed-and-open",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Clip 2. Write the missing adjective.",
+          "answer": "miftuħ",
+          "answerTranslation": "The bank was closed, but the shop was open.",
+          "explanation": "Miftuħ is the opposite of magħluq. Use it with the masculine noun ħanut.",
+          "sourcePage": "opposites.html#sentence-listening",
+          "reviewCard": {
+            "maltese": "Il-bank kien magħluq, imma l-ħanut kien miftuħ.",
+            "english": "The bank was closed, but the shop was open."
+          }
+        },
+        {
+          "id": "listen-contrast-dirty-and-clean",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Clip 3. Write the missing adjective.",
+          "answer": "nadifa",
+          "answerTranslation": "The table was dirty, but the floor was clean.",
+          "explanation": "Nadifa is the feminine form of nadif, the opposite of maħmuġ. It agrees with art.",
+          "sourcePage": "opposites.html#sentence-listening",
+          "reviewCard": {
+            "maltese": "Il-mejda kienet maħmuġa, imma l-art kienet nadifa.",
+            "english": "The table was dirty, but the floor was clean."
+          }
+        }
+      ]
+    },
+    {
+      "id": "comparison-choose-car",
+      "title": "Three ways to compare prices",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "car-price",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Describe the price of car A with the positive form. Write the whole sentence. Il-prezz tal-karozza A huwa ___.",
+          "answer": "Il-prezz tal-karozza A huwa rħis.",
+          "accepted": [
+            "Il-prezz tal-karozza A huwa rħis.",
+            "Il-prezz tal-karozza A huwa irħis.",
+            "Il-prezz tal-karozza A hu rħis.",
+            "Il-prezz tal-karozza A irħis."
+          ],
+          "answerTranslation": "Car A has a low price.",
+          "explanation": "Rħis is a masculine adjective that describes the price of one car. Irħis is also used.",
+          "sourcePage": "comparisons.html#choose-a-car",
+          "reviewCard": {
+            "maltese": "Il-prezz tal-karozza A huwa rħis.",
+            "english": "Car A has a low price."
+          }
+        },
+        {
+          "id": "compare-car-prices",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Compare the prices of car A and car B. Write the whole sentence. Il-karozza A hija ___ mill-karozza B.",
+          "answer": "Il-karozza A hija irħas mill-karozza B.",
+          "accepted": [
+            "Il-karozza A hija irħas mill-karozza B.",
+            "Il-karozza A hija orħos mill-karozza B.",
+            "Il-karozza A hija rħas mill-karozza B.",
+            "Il-karozza A hi irħas mill-karozza B.",
+            "Il-karozza A irħas mill-karozza B.",
+            "Il-karozza A orħos mill-karozza B.",
+            "A hija irħas minn B."
+          ],
+          "answerTranslation": "Car A is cheaper than car B.",
+          "explanation": "Use irħas or orħos to compare prices. Minn plus il-karozza becomes mill-karozza.",
+          "sourcePage": "comparisons.html#choose-a-car",
+          "reviewCard": {
+            "maltese": "Il-karozza A hija irħas mill-karozza B.",
+            "english": "Car A is cheaper than car B."
+          }
+        },
+        {
+          "id": "choose-cheapest-car",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Choose the cheapest of the three cars and explain why. Complete the full sentence. Nagħżel il-karozza ___ għax hija ___ mit-tlieta.",
+          "answer": "Nagħżel il-karozza A għax hija l-irħas mit-tlieta.",
+          "accepted": [
+            "Nagħżel il-karozza A għax hija l-irħas mit-tlieta.",
+            "Nagħżel il-karozza A għax hija l-orħos mit-tlieta.",
+            "Nagħżel il-karozza A għax hi l-irħas mit-tlieta.",
+            "Nagħżel il-karozza A għax hi l-orħos mit-tlieta.",
+            "Nagħżel il-karozza A għax l-irħas mit-tlieta.",
+            "Se nagħżel il-karozza A għax hija l-irħas mit-tlieta."
+          ],
+          "answerTranslation": "I'd choose car A because it's the cheapest of the three.",
+          "explanation": "L-irħas and l-orħos pick out the cheapest option in a group. Mit-tlieta means of the three.",
+          "sourcePage": "comparisons.html#choose-a-car",
+          "reviewCard": {
+            "maltese": "Nagħżel il-karozza A għax hija l-irħas mit-tlieta.",
+            "english": "I'd choose car A because it's the cheapest of the three."
+          }
+        }
+      ]
+    },
+    {
+      "id": "shopping-listen-and-write",
+      "title": "What goes on the list?",
+      "passPercent": 100,
+      "items": [
+        {
+          "id": "shopping-at-home",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "What do they already have at home?",
+          "choices": [
+            "Il-ħobż u l-ħalib.",
+            "Il-ġobon u l-meraq.",
+            "Il-ħobż u l-bajd."
+          ],
+          "answer": "Il-ħobż u l-ħalib.",
+          "answerTranslation": "Bread and milk.",
+          "explanation": "Għandna means we have. Il-ħobż is bread and il-ħalib is milk.",
+          "sourcePage": "food_preferences.html#shopping-listening",
+          "reviewCard": {
+            "maltese": "Il-ħobż u l-ħalib.",
+            "english": "Bread and milk."
+          }
+        },
+        {
+          "id": "shopping-buy-eggs",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Shopping list: Write the quantity and the Maltese word for eggs.",
+          "answer": "tliet bajdiet",
+          "answerTranslation": "three eggs",
+          "explanation": "Use tliet before a noun and use the countable plural bajdiet for eggs.",
+          "sourcePage": "food_preferences.html#shopping-listening",
+          "reviewCard": {
+            "maltese": "tliet bajdiet",
+            "english": "three eggs"
+          }
+        },
+        {
+          "id": "shopping-buy-cheese",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Shopping list: Write the kind of cheese they want in Maltese.",
+          "answer": "ġobon tat-toqba",
+          "answerTranslation": "Emmental cheese",
+          "explanation": "Tat-toqba identifies the cheese with holes.",
+          "sourcePage": "food_preferences.html#shopping-listening",
+          "reviewCard": {
+            "maltese": "ġobon tat-toqba",
+            "english": "Emmental cheese"
+          }
+        },
+        {
+          "id": "shopping-buy-juice",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Shopping list: Write the quantity, the container and the kind of juice in Maltese.",
+          "answer": "żewġ fliexken meraq tal-ħawħ",
+          "accepted": [
+            "żewġ fliexken meraq tal-ħawħ",
+            "żewġ fliexken ta' meraq tal-ħawħ"
+          ],
+          "answerTranslation": "two bottles of peach juice",
+          "explanation": "Żewġ fliexken means two bottles. Tal-ħawħ tells you the juice is peach.",
+          "sourcePage": "food_preferences.html#shopping-listening",
+          "reviewCard": {
+            "maltese": "żewġ fliexken meraq tal-ħawħ",
+            "english": "two bottles of peach juice"
+          }
+        }
+      ]
+    }
+  ]
+}

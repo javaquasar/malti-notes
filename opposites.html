@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Maltese opposites with bilingual word pairs, audio in two voices, matching and sentence practice.">
+    <title>Opposites in Maltese</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+<div class="page">
+    <header class="site-header"><a class="site-brand" href="./index.html">Maltese Study Site</a></header>
+    <section class="hero">
+        <div class="hero-band"></div>
+        <div class="hero-body">
+            <div><h1>Opposites</h1><p class="lead">Listen to pairs such as <span lang="mt">magħluq</span> and <span lang="mt">miftuħ</span>, then use them in sentences.</p></div>
+        </div>
+    </section>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#word-pairs">Word pairs</a></li>
+                <li><a href="#match">Match the opposites</a></li>
+                <li><a href="#listen">Listen and choose</a></li>
+                <li><a href="#sentence-listening">Listen to complete sentences</a></li>
+                <li><a href="#opposites-context">Opposites in context</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <section class="content-card stack" id="word-pairs">
+                <h2>Word pairs</h2>
+                <div class="toolbar-row">
+                    <label class="study-field">
+                        <span>Pronunciation voice</span>
+                        <select class="study-input" data-word-audio-voice disabled>
+                            <option value="mt-MT-GraceNeural">Grace</option>
+                            <option value="mt-MT-JosephNeural">Joseph</option>
+                        </select>
+                    </label>
+                    <a class="action-link" href="./review_cards.html">Open Review Cards</a>
+                </div>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Qualities">
+                    <table class="table-soft">
+                        <caption>Qualities</caption>
+                        <thead><tr><th scope="col">Maltese</th><th scope="col">Opposite</th><th scope="col">English</th></tr></thead>
+                        <tbody data-example-group="opposite-qualities" data-bank-layout="table" data-word-audio-list></tbody>
+                    </table>
+                </div>
+                <details class="study-disclosure">
+                    <summary>Actions and states</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="table-scroll" tabindex="0" role="region" aria-label="Actions and states">
+                            <table class="table-soft">
+                                <caption>Actions and states</caption>
+                                <thead><tr><th scope="col">Maltese</th><th scope="col">Opposite</th><th scope="col">English</th></tr></thead>
+                                <tbody data-example-group="opposite-actions" data-bank-layout="table" data-word-audio-list></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+                <details class="study-disclosure">
+                    <summary>Position, order and quantity</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="table-scroll" tabindex="0" role="region" aria-label="Position, order and quantity">
+                            <table class="table-soft">
+                                <caption>Position, order and quantity</caption>
+                                <thead><tr><th scope="col">Maltese</th><th scope="col">Opposite</th><th scope="col">English</th></tr></thead>
+                                <tbody data-example-group="opposite-other" data-bank-layout="table" data-word-audio-list></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+            </section>
+            <section class="content-card" id="match">
+                <h2>Match the opposites</h2>
+                <div data-exercise-set="opposites-match" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+            </section>
+            <section class="content-card stack" id="listen">
+                <h2>Listen and choose</h2>
+                <p>Play the clip, then choose the opposite of the word you hear.</p>
+                <div class="stack">
+                    <details class="study-disclosure">
+                        <summary>Sound A</summary>
+                        <div class="study-disclosure-body stack">
+                            <button class="action-button" type="button" data-word-audio-button data-word-audio-text="magħluq" disabled>Play audio</button>
+                            <div data-exercise-set="opposites-listen-closed" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                        </div>
+                    </details>
+                    <details class="study-disclosure">
+                        <summary>Sound B</summary>
+                        <div class="study-disclosure-body stack">
+                            <button class="action-button" type="button" data-word-audio-button data-word-audio-text="kwiet" disabled>Play audio</button>
+                            <div data-exercise-set="opposites-listen-quiet" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                        </div>
+                    </details>
+                    <details class="study-disclosure">
+                        <summary>Sound C</summary>
+                        <div class="study-disclosure-body stack">
+                            <button class="action-button" type="button" data-word-audio-button data-word-audio-text="imsaħħab" disabled>Play audio</button>
+                            <div data-exercise-set="opposites-listen-cloudy" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+            <section class="content-card stack" id="sentence-listening" data-checked-model>
+                <h2>Listen to complete sentences</h2>
+                <p>Listen to each clip and write the opposite that completes it. Use the pronunciation voice above to switch between Grace and Joseph.</p>
+                <div class="grid-3">
+                    <article class="study-card stack">
+                        <h3>Clip 1</h3>
+                        <button class="action-button" type="button" data-word-audio-button data-word-audio-text="Il-kamra kienet kwieta, imma l-bar kien..." data-word-audio-label="clip 1" aria-label="Play audio for clip 1" disabled>Play audio</button>
+                    </article>
+                    <article class="study-card stack">
+                        <h3>Clip 2</h3>
+                        <button class="action-button" type="button" data-word-audio-button data-word-audio-text="Il-bank kien magħluq, imma l-ħanut kien..." data-word-audio-label="clip 2" aria-label="Play audio for clip 2" disabled>Play audio</button>
+                    </article>
+                    <article class="study-card stack">
+                        <h3>Clip 3</h3>
+                        <button class="action-button" type="button" data-word-audio-button data-word-audio-text="Il-mejda kienet maħmuġa, imma l-art kienet..." data-word-audio-label="clip 3" aria-label="Play audio for clip 3" disabled>Play audio</button>
+                    </article>
+                </div>
+                <div data-exercise-set="opposites-sentence-listening" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                <div class="stack" data-checked-model-content hidden>
+                    <h3>Complete sentences and translations</h3>
+                    <div data-example-group="opposites-sentence-models" data-bank-layout="reading" data-word-audio-list></div>
+                </div>
+            </section>
+            <section class="content-card stack" id="opposites-context">
+                <h2>Opposites in context</h2>
+                <div data-exercise-set="opposites-context" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                <details class="study-disclosure">
+                    <summary>Example sentences</summary>
+                    <div class="study-disclosure-body stack">
+                        <div data-example-group="opposite-models" data-bank-layout="reading" data-word-audio-list></div>
+                    </div>
+                </details>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./today.html?level=mixed&amp;topic=describe-and-compare">Start Describe and Compare</a>
+                    <a class="action-link" href="./homonyms_synonyms.html">Homonyms and Synonyms</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+    <script src="./assets/js/storage.js"></script>
+    <script src="./assets/js/review-store.js"></script>
+    <script src="./assets/js/mistake-store.js"></script>
+    <script src="./assets/js/learning-content.js"></script>
+    <script src="./assets/js/render-example-banks.js"></script>
+    <script src="./assets/js/exercise-runner.js"></script>
+    <script src="./assets/js/topic-practice.js"></script>
+    <script>
+    window.renderExampleBanksFromData({
+        dataUrl: "./assets/data/opposites_examples.json",
+        sourcePage: "opposites.html",
+        reviewPrefix: "opposites",
+        defaultTopic: "Opposites",
+        groupViews: {
+            "opposite-qualities": { presentation: "table", columns: [{ field: "word", lang: "mt" }, { field: "opposite", lang: "mt" }, { field: "meaning", lang: "en" }] },
+            "opposite-actions": { presentation: "table", columns: [{ field: "word", lang: "mt" }, { field: "opposite", lang: "mt" }, { field: "meaning", lang: "en" }] },
+            "opposite-other": { presentation: "table", columns: [{ field: "word", lang: "mt" }, { field: "opposite", lang: "mt" }, { field: "meaning", lang: "en" }] },
+            "opposite-models": { presentation: "reading" },
+            "opposites-sentence-models": { presentation: "reading" }
+        }
+    });
+    </script>
+    <template data-word-audio-template>
+        <button class="action-button study-icon-button" type="button" data-word-audio-button data-word-audio-icon aria-label="Play audio" title="Play audio">🔊</button>
+    </template>
+    <audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+    <p class="visually-hidden" role="status" data-word-audio-status></p>
+    <script src="./assets/js/word-audio.js"></script>
+    <script src="./assets/js/site-header.js"></script>
+</body>
+</html>

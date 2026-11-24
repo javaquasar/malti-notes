@@ -245,15 +245,51 @@
       say('[data-study-transfer-cue]', transfer.cue);
     }
   }
+
+  function incorrectWord(item, value) {
+    if (!item.errorFocus || typeof value !== 'string') return null;
+    const tokenize = text => Array.from(text.matchAll(/[\p{L}\p{N}][\p{L}\p{M}\p{N}'\u2018\u2019\u00b4\x60-]*/gu));
+    const fold = token => token[0].normalize('NFC').toLocaleLowerCase().replace(/[\u2018\u2019\u00b4\x60]/g, "'");
+    const words = tokenize(value), normalized = words.map(fold);
+    for (const phrase of item.errorFocus) {
+      const target = tokenize(phrase).map(fold);
+      const start = normalized.findIndex((_, index) => target.every((word, offset) => normalized[index + offset] === word));
+      if (start !== -1) {
+        const last = words[start + target.length - 1];
+        return { start: words[start].index, end: last.index + last[0].length, explanation: item.errorFocusNotes?.[phrase] };
+      }
+    }
+
+    const mismatches = new Set();
+    for (const answer of item.accepted || [item.answer]) {
+      const expected = tokenize(answer).map(fold);
+      if (expected.length !== words.length) continue;
+      const differences = expected.flatMap((word, index) => word === normalized[index] ? [] : [index]);
+      if (differences.length === 1) mismatches.add(differences[0]);
+    }
+    if (mismatches.size !== 1) return null;
+    const [position] = mismatches, word = words[position];
+    return { start: word.index, end: word.index + word[0].length };
+  }
+
   function showCheckedAnswer(entry, result) {
     const { answer, answerTranslation } = entry.item;
     const visible = Boolean(answerTranslation && result?.checked && !result.previousQuestion);
     find('[data-study-checked-answer]').hidden = !visible;
+    const pronunciation = find('[data-study-checked-audio-for]');
+    if (pronunciation) pronunciation.hidden = !visible || pronunciation.dataset.studyCheckedAudioFor !== entry.chapterId;
     const maltese = visible && !/[.!?]$/.test(answer) ? answer + '.' : answer;
     say('[data-study-checked-mt]', visible ? maltese : '');
     say('[data-study-checked-en]', visible ? answerTranslation : '');
+    const draft = session.drafts[entry.item.id];
+    const mistake = visible && !result.correct ? incorrectWord(entry.item, draft) : null;
+    find('[data-study-incorrect]').hidden = !mistake;
+    say('[data-study-incorrect-before]', mistake ? draft.slice(0, mistake.start) : '');
+    say('[data-study-incorrect-word]', mistake ? draft.slice(mistake.start, mistake.end) : '');
+    say('[data-study-incorrect-after]', mistake ? draft.slice(mistake.end) : '');
+
     if (visible) {
-      panel.querySelector('.exercise-feedback').textContent = `${result.correct ? 'Correct.' : 'Not yet.'} ${entry.help.explanation}`;
+      panel.querySelector('.exercise-feedback').textContent = `${result.correct ? 'Correct.' : 'Not yet.'} ${mistake?.explanation || entry.help.explanation}`;
     }
   }
 

@@ -781,7 +781,7 @@
     }
 
     window.MaltiReviewPronunciation = function () {
-        if (!currentCard || currentCard.type !== "word-card") return null;
+        if (!currentCard || !["word-card", "sentence-card"].includes(currentCard.type)) return null;
         const revealed = byId("review-grade-actions")?.hidden === false;
         if (!revealed && getWordDirection() !== "maltese-to-english") return null;
         return { id: currentCard.id, maltese: currentCard.maltese };

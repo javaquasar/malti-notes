@@ -73,6 +73,7 @@
           <option value="b3-town" data-level="b3">B3 · My town and future plans</option>
           <option value="lesson05-mixed" data-level="lesson05">Lesson 05 · Mixed practice</option>
           <option value="words-reading-postcards" data-level="mixed">Words, reading and postcards</option>
+          <option value="describe-and-compare" data-level="mixed">Describe and Compare</option>
           </select></label>
           <p>Started sessions stay saved when you switch topics.</p>
           <a class="action-link" data-study-reference href="./course_path.html">Full topic reference</a>
@@ -83,10 +84,24 @@
       <div class="toolbar-row"><button class="study-link-button" type="button" data-study-back>Save and pause</button><span class="status-chip" data-study-step-status>Question 1 of 6</span></div>
       <h2 id="study-session-title" data-study-session-title></h2>
       <div data-study-exercise></div>
+      <div class="info-card" data-study-incorrect hidden>
+        <strong>Revisit this part of your answer</strong>
+        <p lang="mt"><span data-study-incorrect-before></span><mark data-study-incorrect-word></mark><span data-study-incorrect-after></span></p>
+      </div>
       <div class="info-card" data-study-checked-answer hidden>
         <strong>Correct answer</strong>
         <p lang="mt" data-study-checked-mt></p>
         <p lang="en" data-study-checked-en></p>
+        <div class="toolbar-row" data-study-checked-audio-for="describe-and-compare" hidden>
+          <label class="study-field">
+              <span>Pronunciation voice</span>
+              <select class="study-input" data-word-audio-voice disabled>
+                  <option value="mt-MT-GraceNeural">Grace</option>
+                  <option value="mt-MT-JosephNeural">Joseph</option>
+              </select>
+          </label>
+          <button class="action-button" type="button" data-word-audio-button data-word-audio-source="[data-study-checked-mt]" disabled>Play audio</button>
+        </div>
       </div>
       <div class="toolbar-row">
         <button class="action-button" type="button" data-study-hint aria-controls="study-help" aria-expanded="false">Hint</button>
@@ -147,6 +162,7 @@
           <option value="b3-town" data-level="b3">B3 · My town and future plans</option>
           <option value="lesson05-mixed" data-level="lesson05">Lesson 05 · Mixed practice</option>
           <option value="words-reading-postcards" data-level="mixed">Words, reading and postcards</option>
+          <option value="describe-and-compare" data-level="mixed">Describe and Compare</option>
           </select></label>
           <button class="action-button" type="button" data-study-assign>Use this topic</button>
           <p role="status" data-study-assignment-status></p>
@@ -237,4 +253,7 @@
 <script src="./assets/js/storage.js"></script><script src="./assets/js/review-store.js"></script><script src="./assets/js/mistake-store.js"></script>
 <script src="./assets/js/exercise-runner.js"></script><script src="./assets/js/b3-practice-core.js"></script><script src="./assets/js/study-session-core.js"></script>
 <script src="./assets/js/today.js"></script><script src="./assets/js/study-session.js"></script><script src="./assets/js/study-entry.js"></script><script src="./assets/js/site-header.js"></script>
+    <audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+    <p class="visually-hidden" role="status" data-word-audio-status></p>
+    <script src="./assets/js/word-audio.js"></script>
 </body></html>

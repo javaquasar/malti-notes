@@ -22,6 +22,8 @@
                 <li><a href="#adjectives">Adjective Forms</a></li>
                 <li><a href="#sentences">Agreement in Context</a></li>
                 <li><a href="#verbs">Past-Tense Verb Forms</a></li>
+                <li><a href="#adjective-number">Adjectives in the singular and plural</a></li>
+                <li><a href="#adjectives-from-places">Adjectives from nouns</a></li>
                 <li><a href="#practice">Practice</a></li>
                 <li><a href="#whole-sentences">Whole-Sentence Agreement</a></li>
                 <li><a href="#mixed-review">Mixed Review</a></li>
@@ -64,6 +66,44 @@
                     <thead><tr><th scope="col">Masculine</th><th scope="col">Feminine</th><th scope="col">Meaning</th></tr></thead>
                     <tbody data-bank-layout="table" data-example-group="gender-adjectives"></tbody>
                 </table></div>
+            </section>
+            <section class="content-card stack" id="adjective-number">
+                <h2>Adjectives in the singular and plural</h2>
+                <p>Match the adjective to the noun. Compare <span lang="mt">qattus iswed</span>, <span lang="mt">qattusa sewda</span> and <span lang="mt">qtates suwed</span>.</p>
+                <label class="study-field">
+                    <span>Pronunciation voice</span>
+                    <select class="study-input" data-word-audio-voice disabled>
+                        <option value="mt-MT-GraceNeural">Grace</option>
+                        <option value="mt-MT-JosephNeural">Joseph</option>
+                    </select>
+                </label>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Masculine, feminine and plural adjectives">
+                    <table class="table-soft">
+                        <caption>Masculine, feminine and plural adjectives</caption>
+                        <thead><tr><th scope="col">Masculine</th><th scope="col">Feminine</th><th scope="col">Plural</th><th scope="col">English</th></tr></thead>
+                        <tbody data-example-group="adjective-number-forms" data-bank-layout="table" data-word-audio-list></tbody>
+                    </table>
+                </div>
+                <div class="toolbar-row">
+                    <a class="action-link" href="./picture_description.html#picture-adjective-practice">Practise with pictures</a>
+                </div>
+            </section>
+            <section class="content-card stack" id="adjectives-from-places">
+                <h2>Adjectives from nouns</h2>
+                <p>Some adjectives use <span lang="mt">-i</span>, <span lang="mt">-ija</span> and <span lang="mt">-in</span>. Learn the stem with its three forms, as in <span lang="mt">Għawdxi</span>, <span lang="mt">Għawdxija</span> and <span lang="mt">Għawdxin</span>.</p>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Adjectives from places and materials">
+                    <table class="table-soft">
+                        <caption>Adjectives from places and materials</caption>
+                        <thead><tr><th scope="col">Masculine</th><th scope="col">Feminine</th><th scope="col">Plural</th><th scope="col">English</th></tr></thead>
+                        <tbody data-example-group="adjectives-from-place-names" data-bank-layout="table" data-word-audio-list></tbody>
+                    </table>
+                </div>
+                <details class="study-disclosure">
+                    <summary>Examples with nouns</summary>
+                    <div class="study-disclosure-body stack">
+                        <div data-example-group="adjective-derived-models" data-bank-layout="reading" data-word-audio-list></div>
+                    </div>
+                </details>
             </section>
             <section class="content-card" id="sentences">
                 <h2>Agreement in Context</h2>
@@ -153,6 +193,9 @@ window.renderExampleBanksFromData({
     defaultTopic: "Gender and Agreement",
     numbered: false,
     groupViews: {
+        "adjective-number-forms": { presentation: "table", columns: [{ field: "masculine", lang: "mt" }, { field: "feminine", lang: "mt" }, { field: "plural", lang: "mt" }, { field: "english", lang: "en" }] },
+        "adjectives-from-place-names": { presentation: "table", columns: [{ field: "masculine", lang: "mt" }, { field: "feminine", lang: "mt" }, { field: "plural", lang: "mt" }, { field: "english", lang: "en" }] },
+        "adjective-derived-models": { presentation: "reading" },
         "gender-people": { presentation: "table", columns: [{ field: "masculine", lang: "mt" }, { field: "feminine", lang: "mt" }, { field: "english", lang: "en" }] },
         "gender-animals": { presentation: "table", columns: [{ field: "masculine", lang: "mt" }, { field: "feminine", lang: "mt" }, { field: "english", lang: "en" }] },
         "gender-adjectives": { presentation: "table", columns: [{ field: "masculine", lang: "mt" }, { field: "feminine", lang: "mt" }, { field: "english", lang: "en" }] }
@@ -160,5 +203,11 @@ window.renderExampleBanksFromData({
 });
 </script>
 <script src="./assets/js/site-header.js"></script>
+    <template data-word-audio-template>
+        <button class="action-button study-icon-button" type="button" data-word-audio-button data-word-audio-icon aria-label="Play audio" title="Play audio">🔊</button>
+    </template>
+    <audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+    <p class="visually-hidden" role="status" data-word-audio-status></p>
+    <script src="./assets/js/word-audio.js"></script>
 </body>
 </html>

@@ -58,6 +58,9 @@ const coreAssets = [
   "./assets/data/gender_agreement_exercises.json",
   "./assets/data/food_examples.json",
   "./assets/data/homonyms_synonyms_examples.json",
+  "./assets/data/opposites_examples.json",
+  "./assets/data/comparisons_examples.json",
+  "./assets/data/describe_compare_exercises.json",
   "./assets/data/language_context_exercises.json",
   "./assets/data/transport_examples.json",
   "./assets/data/restaurant_ordering_examples.json",
@@ -89,6 +92,10 @@ const coreAssets = [
 
 const lazyAssets = [
   './assets/data/vocabulary_review_catalog.json',
+  "./assets/img/picture-people-in-kitchen.png",
+  "./assets/img/picture-playing-with-water.png",
+  "./assets/img/picture-countryside-path.png",
+  "./assets/img/picture-street-under-clouds.jpeg",
   ...walk("assets/audio/vocabulary", ".mp3").sort().map((file) => "./" + file),
   ...walk('assets/img/mdi', '.svg').sort().map((file) => './' + file),
   ...[...require('./vocabulary_image_inventory').vocabularyFiles().keys()].map((file) => './assets/data/' + file),

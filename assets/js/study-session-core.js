@@ -19,9 +19,15 @@
             title: 'Words, reading and postcards', repeatSetId: 'words-reading-postcards-repeat',
             practiceFile: './assets/data/language_context_exercises.json', sourcePage: 'homonyms_synonyms.html#practice',
             readingPage: 'food_preferences.html#junk-food', readingTitle: 'Il-Junk Food'
+        }),
+        Object.freeze({
+            id: 'describe-and-compare', levelId: 'mixed', levelLabel: 'Mixed practice',
+            title: 'Describe and Compare', repeatSetId: 'describe-and-compare-repeat',
+            practiceFile: './assets/data/describe_compare_exercises.json', sourcePage: 'comparisons.html#comparison-practice',
+            readingPage: 'comparisons.html#car-reading', readingTitle: 'Ġanni jagħżel karozza'
         })
     ]);
-    const ROUTE_IDS = Object.freeze(['b1', 'b2', 'b3', ...PRACTICE_ROUTES.map(route => route.levelId)]);
+    const ROUTE_IDS = Object.freeze(['b1', 'b2', 'b3', ...new Set(PRACTICE_ROUTES.map(route => route.levelId))]);
     const blocked = new Set(['__proto__', 'prototype', 'constructor']);
     const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
     const owns = (value, key) => Object.prototype.hasOwnProperty.call(value, key);

@@ -1,15 +1,27 @@
 {
   "schemaVersion": 2,
-  "source": { "kind": "site", "page": "comparisons.html" },
+  "source": {
+    "kind": "site",
+    "page": "comparisons.html"
+  },
   "groups": [
     {
       "id": "comparisons-invariant-adjectives",
       "title": "Invariant Adjectives",
       "itemType": "example",
       "items": [
-        { "maltese": "ktieb interessanti", "english": "an interesting book" },
-        { "maltese": "dar interessanti", "english": "an interesting house" },
-        { "maltese": "kotba interessanti", "english": "interesting books" }
+        {
+          "maltese": "ktieb interessanti",
+          "english": "an interesting book"
+        },
+        {
+          "maltese": "dar interessanti",
+          "english": "an interesting house"
+        },
+        {
+          "maltese": "kotba interessanti",
+          "english": "interesting books"
+        }
       ]
     },
     {
@@ -17,10 +29,22 @@
       "title": "Comparing People",
       "itemType": "example",
       "items": [
-        { "maltese": "Huwa itwal minn ħuh.", "english": "He is taller than his brother." },
-        { "maltese": "Hija iqsar minn oħtha.", "english": "She is shorter than her sister." },
-        { "maltese": "Dan it-tifel huwa iżgħar minn dak it-tifel.", "english": "This boy is smaller than that boy." },
-        { "maltese": "Dik il-mara tidher isbaħ.", "english": "That woman looks more beautiful." }
+        {
+          "maltese": "Huwa itwal minn ħuh.",
+          "english": "He is taller than his brother."
+        },
+        {
+          "maltese": "Hija iqsar minn oħtha.",
+          "english": "She is shorter than her sister."
+        },
+        {
+          "maltese": "Dan it-tifel huwa iżgħar minn dak it-tifel.",
+          "english": "This boy is smaller than that boy."
+        },
+        {
+          "maltese": "Dik il-mara tidher isbaħ.",
+          "english": "That woman looks more beautiful."
+        }
       ]
     },
     {
@@ -28,10 +52,22 @@
       "title": "Comparing Homes and Places",
       "itemType": "example",
       "items": [
-        { "maltese": "Din id-dar akbar minn dik.", "english": "This house is bigger than that one." },
-        { "maltese": "Il-kamra tiegħi iżgħar minn tiegħek.", "english": "My room is smaller than yours." },
-        { "maltese": "Valletta hija aktar storika minn belt żgħira.", "english": "Valletta is more historic than a small town." },
-        { "maltese": "Dan il-post aħjar għall-mixjiet.", "english": "This place is better for walks." }
+        {
+          "maltese": "Din id-dar akbar minn dik.",
+          "english": "This house is bigger than that one."
+        },
+        {
+          "maltese": "Il-kamra tiegħi iżgħar minn tiegħek.",
+          "english": "My room is smaller than yours."
+        },
+        {
+          "maltese": "Valletta hija aktar storika minn belt żgħira.",
+          "english": "Valletta is more historic than a small town."
+        },
+        {
+          "maltese": "Dan il-post aħjar għall-mixjiet.",
+          "english": "This place is better for walks."
+        }
       ]
     },
     {
@@ -39,10 +75,22 @@
       "title": "Comparing Objects",
       "itemType": "example",
       "items": [
-        { "maltese": "Din il-mejda akbar minn dik il-mejda.", "english": "This table is bigger than that table." },
-        { "maltese": "Dan is-siġġu aktar komdu.", "english": "This chair is more comfortable." },
-        { "maltese": "Dan il-flokk irħis aktar.", "english": "This shirt is cheaper." },
-        { "maltese": "Din il-karozza aħjar minn dik.", "english": "This car is better than that one." }
+        {
+          "maltese": "Din il-mejda akbar minn dik il-mejda.",
+          "english": "This table is bigger than that table."
+        },
+        {
+          "maltese": "Dan is-siġġu aktar komdu.",
+          "english": "This chair is more comfortable."
+        },
+        {
+          "maltese": "Dan il-flokk irħis aktar.",
+          "english": "This shirt is cheaper."
+        },
+        {
+          "maltese": "Din il-karozza aħjar minn dik.",
+          "english": "This car is better than that one."
+        }
       ]
     },
     {
@@ -52,18 +100,36 @@
       "items": [
         {
           "slug": "which-house-is-bigger",
-          "question": { "maltese": "Liema dar akbar?", "english": "Which house is bigger?" },
-          "answer": { "maltese": "Din id-dar akbar.", "english": "This house is bigger." }
+          "question": {
+            "maltese": "Liema dar akbar?",
+            "english": "Which house is bigger?"
+          },
+          "answer": {
+            "maltese": "Din id-dar akbar.",
+            "english": "This house is bigger."
+          }
         },
         {
           "slug": "who-is-taller",
-          "question": { "maltese": "Min itwal?", "english": "Who is taller?" },
-          "answer": { "maltese": "Hija itwal.", "english": "She is taller." }
+          "question": {
+            "maltese": "Min itwal?",
+            "english": "Who is taller?"
+          },
+          "answer": {
+            "maltese": "Hija itwal.",
+            "english": "She is taller."
+          }
         },
         {
           "slug": "which-chair-is-more-comfortable",
-          "question": { "maltese": "Liema siġġu aktar komdu?", "english": "Which chair is more comfortable?" },
-          "answer": { "maltese": "Dan is-siġġu aktar komdu.", "english": "This chair is more comfortable." }
+          "question": {
+            "maltese": "Liema siġġu aktar komdu?",
+            "english": "Which chair is more comfortable?"
+          },
+          "answer": {
+            "maltese": "Dan is-siġġu aktar komdu.",
+            "english": "This chair is more comfortable."
+          }
         }
       ]
     },
@@ -72,58 +138,645 @@
       "title": "Comparison Phrase Bank",
       "itemType": "example",
       "items": [
-        { "maltese": "Dan akbar minn dak.", "english": "This is bigger than that." },
-        { "maltese": "Dan iżgħar minn dak.", "english": "This is smaller than that." },
-        { "maltese": "Din isbaħ minn dik.", "english": "This is more beautiful than that." },
-        { "maltese": "Dan aħjar minn dak.", "english": "This is better than that." },
-        { "maltese": "Huwa itwal minn ħuh.", "english": "He is taller than his brother." },
-        { "maltese": "Hija itwal minn oħtha.", "english": "She is taller than her sister." },
-        { "maltese": "Huwa iqsar minn missieru.", "english": "He is shorter than his father." },
-        { "maltese": "Hija iqsar minn ommha.", "english": "She is shorter than her mother." },
-        { "maltese": "Dan it-tifel ikbar minn dak.", "english": "This boy is bigger than that one." },
-        { "maltese": "Din it-tifla iżgħar minn dik.", "english": "This girl is smaller than that one." },
-        { "maltese": "Din id-dar akbar minn dik.", "english": "This house is bigger than that one." },
-        { "maltese": "Il-kamra tiegħi iżgħar minn tiegħek.", "english": "My room is smaller than yours." },
-        { "maltese": "Din il-kamra isbaħ.", "english": "This room is more beautiful." },
-        { "maltese": "Dan is-salott aktar komdu.", "english": "This living room is more comfortable." },
-        { "maltese": "Dan is-siġġu aktar komdu minn dak.", "english": "This chair is more comfortable than that one." },
-        { "maltese": "Din il-mejda akbar minn dik il-mejda.", "english": "This table is bigger than that table." },
-        { "maltese": "Dan il-flokk irħis aktar.", "english": "This shirt is cheaper." },
-        { "maltese": "Din il-libsa aktar għalja.", "english": "This dress is more expensive." },
-        { "maltese": "Dawn iż-żraben aħjar minn dawk.", "english": "These shoes are better than those." },
-        { "maltese": "Dan il-ktieb eħfef.", "english": "This book is lighter." },
-        { "maltese": "Dak il-ktieb itqal.", "english": "That book is heavier." },
-        { "maltese": "Il-karozza tiegħi akbar.", "english": "My car is bigger." },
-        { "maltese": "Ir-rota tiegħi iżgħar.", "english": "My bicycle is smaller." },
-        { "maltese": "Il-karozza aħjar għall-vjaġġ twil.", "english": "The car is better for a long trip." },
-        { "maltese": "Ir-rota aħjar għall-belt.", "english": "The bicycle is better for the city." },
-        { "maltese": "Dan il-kelb ikbar minn dak il-qattus.", "english": "This dog is bigger than that cat." },
-        { "maltese": "Iż-żiemel akbar mill-kelb.", "english": "The horse is bigger than the dog." },
-        { "maltese": "Il-fenek iżgħar mill-kelb.", "english": "The rabbit is smaller than the dog." },
-        { "maltese": "Din il-ġiraffa itwal mill-iljun.", "english": "This giraffe is taller than the lion." },
-        { "maltese": "Valletta aktar storika minn post modern.", "english": "Valletta is more historic than a modern place." },
-        { "maltese": "Dan il-post isbaħ bil-lejl.", "english": "This place is more beautiful at night." },
-        { "maltese": "Il-baħar aħjar fis-sajf.", "english": "The sea is better in summer." },
-        { "maltese": "It-temp illum aħjar minn ilbieraħ.", "english": "The weather today is better than yesterday." },
-        { "maltese": "Illum hemm aktar xemx.", "english": "Today there is more sun." },
-        { "maltese": "Illum hemm inqas riħ.", "english": "Today there is less wind." },
-        { "maltese": "Dan ir-restorant aħjar minn dak.", "english": "This restaurant is better than that one." },
-        { "maltese": "Din il-pizza akbar minn dik.", "english": "This pizza is bigger than that one." },
-        { "maltese": "Din is-soppa aktar sħuna.", "english": "This soup is hotter." },
-        { "maltese": "Dan il-kafè aħjar.", "english": "This coffee is better." },
-        { "maltese": "Din il-borża akbar mill-oħra.", "english": "This bag is bigger than the other one." },
-        { "maltese": "Dan il-mobile aktar modern.", "english": "This mobile phone is more modern." },
-        { "maltese": "Dak il-kompjuter aktar mgħaġġel.", "english": "That computer is faster." },
-        { "maltese": "Din il-klassi aktar kwieta.", "english": "This class is quieter." },
-        { "maltese": "Dan l-eżami aktar diffiċli.", "english": "This exam is more difficult." },
-        { "maltese": "Il-Malti aktar diffiċli mill-Ingliż?", "english": "Is Maltese more difficult than English?" },
-        { "maltese": "Le, għalija l-Malti aktar sabiħ.", "english": "No, for me Maltese is more beautiful." },
-        { "maltese": "Din il-lezzjoni aktar faċli.", "english": "This lesson is easier." },
-        { "maltese": "Din il-paġna aħjar għar-reviżjoni.", "english": "This page is better for revision." },
-        { "maltese": "Dan l-eżempju aktar ċar.", "english": "This example is clearer." },
-        { "maltese": "Din il-persuna aktar ferriħa minn dik.", "english": "This person is more cheerful than that one." },
-        { "maltese": "Dan l-istudent aktar kunfidenti.", "english": "This student is more confident." },
-        { "maltese": "Jien aħjar illum minn ilbieraħ.", "english": "I am better today than yesterday." }
+        {
+          "maltese": "Dan akbar minn dak.",
+          "english": "This is bigger than that."
+        },
+        {
+          "maltese": "Dan iżgħar minn dak.",
+          "english": "This is smaller than that."
+        },
+        {
+          "maltese": "Din isbaħ minn dik.",
+          "english": "This is more beautiful than that."
+        },
+        {
+          "maltese": "Dan aħjar minn dak.",
+          "english": "This is better than that."
+        },
+        {
+          "maltese": "Huwa itwal minn ħuh.",
+          "english": "He is taller than his brother."
+        },
+        {
+          "maltese": "Hija itwal minn oħtha.",
+          "english": "She is taller than her sister."
+        },
+        {
+          "maltese": "Huwa iqsar minn missieru.",
+          "english": "He is shorter than his father."
+        },
+        {
+          "maltese": "Hija iqsar minn ommha.",
+          "english": "She is shorter than her mother."
+        },
+        {
+          "maltese": "Dan it-tifel ikbar minn dak.",
+          "english": "This boy is bigger than that one."
+        },
+        {
+          "maltese": "Din it-tifla iżgħar minn dik.",
+          "english": "This girl is smaller than that one."
+        },
+        {
+          "maltese": "Din id-dar akbar minn dik.",
+          "english": "This house is bigger than that one."
+        },
+        {
+          "maltese": "Il-kamra tiegħi iżgħar minn tiegħek.",
+          "english": "My room is smaller than yours."
+        },
+        {
+          "maltese": "Din il-kamra isbaħ.",
+          "english": "This room is more beautiful."
+        },
+        {
+          "maltese": "Dan is-salott aktar komdu.",
+          "english": "This living room is more comfortable."
+        },
+        {
+          "maltese": "Dan is-siġġu aktar komdu minn dak.",
+          "english": "This chair is more comfortable than that one."
+        },
+        {
+          "maltese": "Din il-mejda akbar minn dik il-mejda.",
+          "english": "This table is bigger than that table."
+        },
+        {
+          "maltese": "Dan il-flokk irħis aktar.",
+          "english": "This shirt is cheaper."
+        },
+        {
+          "maltese": "Din il-libsa aktar għalja.",
+          "english": "This dress is more expensive."
+        },
+        {
+          "maltese": "Dawn iż-żraben aħjar minn dawk.",
+          "english": "These shoes are better than those."
+        },
+        {
+          "maltese": "Dan il-ktieb eħfef.",
+          "english": "This book is lighter."
+        },
+        {
+          "maltese": "Dak il-ktieb itqal.",
+          "english": "That book is heavier."
+        },
+        {
+          "maltese": "Il-karozza tiegħi akbar.",
+          "english": "My car is bigger."
+        },
+        {
+          "maltese": "Ir-rota tiegħi iżgħar.",
+          "english": "My bicycle is smaller."
+        },
+        {
+          "maltese": "Il-karozza aħjar għall-vjaġġ twil.",
+          "english": "The car is better for a long trip."
+        },
+        {
+          "maltese": "Ir-rota aħjar għall-belt.",
+          "english": "The bicycle is better for the city."
+        },
+        {
+          "maltese": "Dan il-kelb ikbar minn dak il-qattus.",
+          "english": "This dog is bigger than that cat."
+        },
+        {
+          "maltese": "Iż-żiemel akbar mill-kelb.",
+          "english": "The horse is bigger than the dog."
+        },
+        {
+          "maltese": "Il-fenek iżgħar mill-kelb.",
+          "english": "The rabbit is smaller than the dog."
+        },
+        {
+          "maltese": "Din il-ġiraffa itwal mill-iljun.",
+          "english": "This giraffe is taller than the lion."
+        },
+        {
+          "maltese": "Valletta aktar storika minn post modern.",
+          "english": "Valletta is more historic than a modern place."
+        },
+        {
+          "maltese": "Dan il-post isbaħ bil-lejl.",
+          "english": "This place is more beautiful at night."
+        },
+        {
+          "maltese": "Il-baħar aħjar fis-sajf.",
+          "english": "The sea is better in summer."
+        },
+        {
+          "maltese": "It-temp illum aħjar minn ilbieraħ.",
+          "english": "The weather today is better than yesterday."
+        },
+        {
+          "maltese": "Illum hemm aktar xemx.",
+          "english": "Today there is more sun."
+        },
+        {
+          "maltese": "Illum hemm inqas riħ.",
+          "english": "Today there is less wind."
+        },
+        {
+          "maltese": "Dan ir-restorant aħjar minn dak.",
+          "english": "This restaurant is better than that one."
+        },
+        {
+          "maltese": "Din il-pizza akbar minn dik.",
+          "english": "This pizza is bigger than that one."
+        },
+        {
+          "maltese": "Din is-soppa aktar sħuna.",
+          "english": "This soup is hotter."
+        },
+        {
+          "maltese": "Dan il-kafè aħjar.",
+          "english": "This coffee is better."
+        },
+        {
+          "maltese": "Din il-borża akbar mill-oħra.",
+          "english": "This bag is bigger than the other one."
+        },
+        {
+          "maltese": "Dan il-mobile aktar modern.",
+          "english": "This mobile phone is more modern."
+        },
+        {
+          "maltese": "Dak il-kompjuter aktar mgħaġġel.",
+          "english": "That computer is faster."
+        },
+        {
+          "maltese": "Din il-klassi aktar kwieta.",
+          "english": "This class is quieter."
+        },
+        {
+          "maltese": "Dan l-eżami aktar diffiċli.",
+          "english": "This exam is more difficult."
+        },
+        {
+          "maltese": "Il-Malti aktar diffiċli mill-Ingliż?",
+          "english": "Is Maltese more difficult than English?"
+        },
+        {
+          "maltese": "Le, għalija l-Malti aktar sabiħ.",
+          "english": "No, for me Maltese is more beautiful."
+        },
+        {
+          "maltese": "Din il-lezzjoni aktar faċli.",
+          "english": "This lesson is easier."
+        },
+        {
+          "maltese": "Din il-paġna aħjar għar-reviżjoni.",
+          "english": "This page is better for revision."
+        },
+        {
+          "maltese": "Dan l-eżempju aktar ċar.",
+          "english": "This example is clearer."
+        },
+        {
+          "maltese": "Din il-persuna aktar ferriħa minn dik.",
+          "english": "This person is more cheerful than that one."
+        },
+        {
+          "maltese": "Dan l-istudent aktar kunfidenti.",
+          "english": "This student is more confident."
+        },
+        {
+          "maltese": "Jien aħjar illum minn ilbieraħ.",
+          "english": "I am better today than yesterday."
+        }
+      ]
+    },
+    {
+      "id": "comparison-degree-table",
+      "title": "One-word forms",
+      "itemType": "translation",
+      "source": {
+        "kind": "site",
+        "page": "comparisons.html",
+        "file": "komp super pp.pptx; Il-gradi tal-aġġettivi, pp. 5, 7 and 10"
+      },
+      "items": [
+        {
+          "slug": "tall",
+          "positive": "twil / twila",
+          "comparative": "itwal",
+          "superlative": "l-itwal",
+          "english": "tall or long",
+          "maltese": "twil / twila / itwal / l-itwal"
+        },
+        {
+          "slug": "large",
+          "positive": "kbir / kbira",
+          "comparative": "ikbar / akbar",
+          "superlative": "l-ikbar / l-akbar",
+          "english": "big or older in age",
+          "maltese": "kbir / kbira / ikbar / akbar / l-ikbar / l-akbar"
+        },
+        {
+          "slug": "heavy",
+          "positive": "tqil / tqila",
+          "comparative": "itqal",
+          "superlative": "l-itqal",
+          "english": "heavy",
+          "maltese": "tqil / tqila / itqal / l-itqal"
+        },
+        {
+          "slug": "beautiful",
+          "positive": "sabiħ / sabiħa",
+          "comparative": "isbaħ",
+          "superlative": "l-isbaħ",
+          "english": "beautiful",
+          "maltese": "sabiħ / sabiħa / isbaħ / l-isbaħ"
+        },
+        {
+          "slug": "thick",
+          "positive": "oħxon / ħoxna",
+          "comparative": "eħxen",
+          "superlative": "l-eħxen",
+          "english": "thick",
+          "maltese": "oħxon / ħoxna / eħxen / l-eħxen"
+        },
+        {
+          "slug": "tiny",
+          "positive": "ċkejken / ċkejkna",
+          "comparative": "iċken",
+          "superlative": "l-iċken",
+          "english": "tiny",
+          "maltese": "ċkejken / ċkejkna / iċken / l-iċken"
+        },
+        {
+          "slug": "cheap",
+          "positive": "irħis",
+          "comparative": "irħas / orħos",
+          "superlative": "l-irħas / l-orħos",
+          "english": "cheap",
+          "maltese": "irħis / irħas / orħos / l-irħas / l-orħos"
+        },
+        {
+          "slug": "light",
+          "positive": "ħafif / ħafifa",
+          "comparative": "eħfef",
+          "superlative": "l-eħfef",
+          "english": "light or easy",
+          "maltese": "ħafif / ħafifa / eħfef / l-eħfef"
+        },
+        {
+          "slug": "old-person",
+          "positive": "xiħ",
+          "comparative": "ixjeħ",
+          "superlative": "l-ixjeħ",
+          "english": "old in age",
+          "maltese": "xiħ / ixjeħ / l-ixjeħ"
+        },
+        {
+          "slug": "fine",
+          "positive": "fin",
+          "comparative": "ifjen",
+          "superlative": "l-ifjen",
+          "english": "fine",
+          "maltese": "fin / ifjen / l-ifjen"
+        },
+        {
+          "slug": "good",
+          "positive": "tajjeb / tajba",
+          "comparative": "aħjar / itjeb",
+          "superlative": "l-aħjar / l-itjeb",
+          "english": "good or tasty",
+          "maltese": "tajjeb / tajba / aħjar / itjeb / l-aħjar / l-itjeb"
+        },
+        {
+          "slug": "old-thing",
+          "positive": "qadim / qadima",
+          "comparative": "eqdem",
+          "superlative": "l-eqdem",
+          "english": "old, for things",
+          "maltese": "qadim / qadima / eqdem / l-eqdem"
+        },
+        {
+          "slug": "bad",
+          "positive": "ħażin / ħażina",
+          "comparative": "agħar / eħżen",
+          "superlative": "l-agħar / l-eħżen",
+          "english": "bad",
+          "maltese": "ħażin / ħażina / agħar / eħżen / l-agħar / l-eħżen"
+        },
+        {
+          "slug": "ugly",
+          "positive": "ikrah",
+          "comparative": "ikreh",
+          "superlative": "l-ikreh",
+          "english": "ugly",
+          "maltese": "ikrah / ikreh / l-ikreh"
+        },
+        {
+          "slug": "new",
+          "positive": "ġdid / ġdida",
+          "comparative": "iġded",
+          "superlative": "l-iġded",
+          "english": "new",
+          "maltese": "ġdid / ġdida / iġded / l-iġded"
+        },
+        {
+          "slug": "narrow",
+          "positive": "dejjaq / dejqa",
+          "comparative": "idjaq",
+          "superlative": "l-idjaq",
+          "english": "narrow",
+          "maltese": "dejjaq / dejqa / idjaq / l-idjaq"
+        },
+        {
+          "slug": "strong",
+          "positive": "qawwi",
+          "comparative": "aqwa",
+          "superlative": "l-aqwa",
+          "english": "strong",
+          "maltese": "qawwi / aqwa / l-aqwa"
+        },
+        {
+          "slug": "dear",
+          "positive": "għażiż",
+          "comparative": "egħżeż",
+          "superlative": "l-egħżeż",
+          "english": "dear",
+          "maltese": "għażiż / egħżeż / l-egħżeż"
+        },
+        {
+          "slug": "short",
+          "positive": "qasir / qasira",
+          "comparative": "iqsar",
+          "superlative": "l-iqsar",
+          "english": "short",
+          "maltese": "qasir / qasira / iqsar / l-iqsar"
+        },
+        {
+          "slug": "small",
+          "positive": "żgħir / żgħira",
+          "comparative": "iżgħar",
+          "superlative": "l-iżgħar",
+          "english": "small or young",
+          "maltese": "żgħir / żgħira / iżgħar / l-iżgħar"
+        },
+        {
+          "slug": "high",
+          "positive": "għoli / għolja",
+          "comparative": "ogħla",
+          "superlative": "l-ogħla",
+          "english": "high or more expensive when comparing prices",
+          "maltese": "għoli / għolja / ogħla / l-ogħla"
+        }
+      ]
+    },
+    {
+      "id": "comparison-analytic-table",
+      "title": "Forms with aktar, iktar or iżjed",
+      "itemType": "translation",
+      "source": {
+        "kind": "site",
+        "page": "comparisons.html",
+        "file": "Il-gradi tal-aġġettivi, p. 10; komp super pp.pptx, slides 9–10"
+      },
+      "items": [
+        {
+          "slug": "quiet",
+          "positive": "kwieta",
+          "comparative": "aktar kwieta",
+          "superlative": "l-aktar kwieta",
+          "english": "quiet",
+          "maltese": "kwieta / aktar kwieta / l-aktar kwieta"
+        },
+        {
+          "slug": "tasty",
+          "positive": "bnin",
+          "comparative": "aktar bnin",
+          "superlative": "l-aktar bnin",
+          "english": "tasty",
+          "maltese": "bnin / aktar bnin / l-aktar bnin"
+        },
+        {
+          "slug": "polite",
+          "positive": "pulit",
+          "comparative": "iżjed pulit",
+          "superlative": "l-iżjed pulit",
+          "english": "smartly dressed or polite",
+          "maltese": "pulit / iżjed pulit / l-iżjed pulit"
+        },
+        {
+          "slug": "dominant",
+          "positive": "dominanti",
+          "comparative": "aktar dominanti",
+          "superlative": "l-aktar dominanti",
+          "english": "dominant",
+          "maltese": "dominanti / aktar dominanti / l-aktar dominanti"
+        },
+        {
+          "slug": "red",
+          "positive": "aħmar",
+          "comparative": "aktar aħmar",
+          "superlative": "l-aktar aħmar",
+          "english": "red",
+          "maltese": "aħmar / aktar aħmar / l-aktar aħmar"
+        },
+        {
+          "slug": "sought-after",
+          "positive": "imfittex",
+          "comparative": "iżjed imfittex",
+          "superlative": "l-iżjed imfittex",
+          "english": "sought-after",
+          "maltese": "imfittex / iżjed imfittex / l-iżjed imfittex"
+        },
+        {
+          "slug": "clever",
+          "positive": "bravu",
+          "comparative": "aktar bravu",
+          "superlative": "l-aktar bravu",
+          "english": "clever or skilled",
+          "maltese": "bravu / aktar bravu / l-aktar bravu"
+        },
+        {
+          "slug": "stupid",
+          "positive": "stupidu",
+          "comparative": "aktar stupidu",
+          "superlative": "l-aktar stupidu",
+          "english": "stupid",
+          "maltese": "stupidu / aktar stupidu / l-aktar stupidu"
+        },
+        {
+          "slug": "rich",
+          "positive": "sinjur",
+          "comparative": "iżjed sinjur",
+          "superlative": "l-iżjed sinjur",
+          "english": "rich",
+          "maltese": "sinjur / iżjed sinjur / l-iżjed sinjur"
+        }
+      ]
+    },
+    {
+      "id": "comparison-street-model",
+      "title": "Three degrees in a street description",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "comparisons.html",
+        "file": "Il-gradi tal-aġġettivi, p. 2"
+      },
+      "items": [
+        {
+          "slug": "street-positive",
+          "maltese": "It-triq tagħna dejqa u kwieta.",
+          "english": "Our street is narrow and quiet."
+        },
+        {
+          "slug": "street-comparative",
+          "maltese": "It-triq tagħna idjaq minn tagħkom u aktar kwieta.",
+          "english": "Our street is narrower than yours and quieter."
+        },
+        {
+          "slug": "street-superlative",
+          "maltese": "It-triq tagħna l-idjaq fir-raħal kollu u l-aktar kwieta wkoll.",
+          "english": "Our street is the narrowest in the whole village and also the quietest."
+        }
+      ]
+    },
+    {
+      "id": "comparison-intensity-models",
+      "title": "Intensifying descriptions",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "comparisons.html",
+        "file": "Il-gradi tal-aġġettivi, pp. 8–9"
+      },
+      "items": [
+        {
+          "slug": "too-ambitious",
+          "maltese": "James prużuntuż ferm u ambizzjuż wisq.",
+          "english": "James is very presumptuous and too ambitious."
+        },
+        {
+          "slug": "extremely-important",
+          "maltese": "Dan il-ktieb importantissimu għall-kors li qed tistudja.",
+          "english": "This book is extremely important for the course you are taking."
+        },
+        {
+          "slug": "big-favour",
+          "maltese": "Agħmilli grandissimu pjaċir u ħallini kwieta.",
+          "english": "Do me a very big favour and leave me in peace."
+        },
+        {
+          "slug": "flame-red",
+          "maltese": "aħmar nar",
+          "english": "flame-red"
+        },
+        {
+          "slug": "paper-white",
+          "maltese": "abjad karti",
+          "english": "paper-white"
+        },
+        {
+          "slug": "extremely-high",
+          "maltese": "għoli infern",
+          "english": "extremely high"
+        },
+        {
+          "slug": "hooked",
+          "maltese": "mgħawweġ ganċ",
+          "english": "bent like a hook"
+        }
+      ]
+    },
+    {
+      "id": "comparison-car-reading",
+      "title": "Ġanni jagħżel karozza",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "comparisons.html",
+        "file": "pozittivkomparattivusuperlattiv-140531073953-phpapp01.pdf, pp. 2–6, adapted"
+      },
+      "items": [
+        {
+          "slug": "go-to-buy",
+          "maltese": "Ġanni mar jixtri karozza.",
+          "english": "Ġanni went to buy a car."
+        },
+        {
+          "slug": "wanted-a-bigger-car",
+          "maltese": "Huwa ried karozza ifjen u ikbar milli għandu.",
+          "english": "He wanted a finer and bigger car than his current one."
+        },
+        {
+          "slug": "finest-and-biggest",
+          "maltese": "Għalhekk qed ifittex u jara l-ifjen u l-ikbar karozzi li hawn fis-suq.",
+          "english": "So he is looking at the finest and biggest cars on the market."
+        },
+        {
+          "slug": "better-car",
+          "maltese": "Ried jixtri karozza aħjar milli kellu qabel.",
+          "english": "He wanted to buy a better car than he had before."
+        },
+        {
+          "slug": "pick-the-best",
+          "maltese": "Għalhekk minn fost il-karozzi kollha għażel l-aħjar waħda.",
+          "english": "So out of all the cars he chose the best one."
+        },
+        {
+          "slug": "not-an-older-car",
+          "maltese": "Ma riedx karozza eqdem milli għandu.",
+          "english": "He did not want a car older than the one he has."
+        },
+        {
+          "slug": "not-the-oldest",
+          "maltese": "Għalhekk minn fost il-karozzi kollha ma għażilx l-eqdem waħda.",
+          "english": "So out of all the cars he did not choose the oldest one."
+        },
+        {
+          "slug": "nicer-than-his",
+          "maltese": "Ried ukoll karozza isbaħ milli kellu.",
+          "english": "He also wanted a nicer-looking car than his old one."
+        },
+        {
+          "slug": "pick-the-nicest",
+          "maltese": "Għalhekk Ġanni għażel l-isbaħ karozza.",
+          "english": "So Ġanni chose the most beautiful car."
+        },
+        {
+          "slug": "higher-price",
+          "maltese": "Il-prezz tal-karozza li għoġbitu l-aktar kien ogħla mill-prezz tal-karozza li kellu.",
+          "english": "The price of the car he liked most was higher than the price of his old one."
+        },
+        {
+          "slug": "picked-the-most-expensive",
+          "maltese": "Għalhekk iddeċieda li minn fost il-karozzi kollha li ra jixtri l-ogħla waħda.",
+          "english": "So he decided to buy the most expensive of all the cars he had seen."
+        }
+      ]
+    },
+    {
+      "id": "comparison-car-models",
+      "title": "Model answers for the car choice",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "comparisons.html"
+      },
+      "items": [
+        {
+          "slug": "car-price",
+          "maltese": "Il-prezz tal-karozza A huwa rħis.",
+          "english": "Car A has a low price."
+        },
+        {
+          "slug": "compare-car-prices",
+          "maltese": "Il-karozza A hija irħas mill-karozza B.",
+          "english": "Car A is cheaper than car B."
+        },
+        {
+          "slug": "choose-cheapest-car",
+          "maltese": "Nagħżel il-karozza A għax hija l-irħas mit-tlieta.",
+          "english": "I'd choose car A because it's the cheapest of the three."
+        }
       ]
     }
   ]

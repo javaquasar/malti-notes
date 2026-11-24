@@ -58,6 +58,7 @@
                 <li><a href="#supermarket-quantities">Shopping Quantities</a></li>
                 <li><a href="#supermarket-dialogue">At the Supermarket</a></li>
                 <li><a href="#supermarket-practice">Shopping Practice</a></li>
+                <li><a href="#shopping-listening">Listen and write a shopping list</a></li>
                 <li><a href="#shopping-conversation">Your Shopping Conversation</a></li>
                 <li><a href="#junk-food" lang="mt">Il-Junk Food</a></li>
                 <li><a href="#kitchen-details">Cooking and Serving</a></li>
@@ -181,7 +182,32 @@
                     </details>
                 </div>
                 <div data-exercise-set="food-supermarket-check" data-exercise-src="./assets/data/food_cafe_exercises.json"></div>
+                <section class="stack" id="shopping-list">
+                    <h3>Shopping list phrases</h3>
+                    <label class="study-field">
+                        <span>Pronunciation voice</span>
+                        <select class="study-input" data-word-audio-voice disabled>
+                            <option value="mt-MT-GraceNeural">Grace</option>
+                            <option value="mt-MT-JosephNeural">Joseph</option>
+                        </select>
+                    </label>
+                    <div data-example-group="food-shopping-list-models" data-bank-layout="reading" data-word-audio-list></div>
+                    <div data-exercise-set="shopping-list-practice" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                </section>
                 <p><a href="./restaurant_ordering.html#cafe-coffee">Coffee and café orders</a></p>
+            </section>
+
+            <section class="content-card stack" id="shopping-listening" data-checked-model>
+                <h2>Listen and write a shopping list</h2>
+                <p>Listen to a conversation voiced by Grace and Joseph. Find out what the speakers already have and fill in their shopping list in Maltese.</p>
+                <div class="toolbar-row">
+                    <button class="action-button" type="button" data-word-audio-button data-word-audio-text="X'għandna bżonn mis-supermarkit? Fid-dar għandna l-ħobż u l-ħalib. Għandna bżonn tliet bajdiet. Se nixtri ġobon ukoll. Liema ġobon trid? Ġobon tat-toqba, jekk jogħġbok. Ħu wkoll żewġ fliexken meraq tal-ħawħ. Tajjeb, se nikteb kollox fuq il-lista." data-word-audio-label="the shopping dialogue" aria-label="Play audio for the shopping dialogue" disabled>Play audio</button>
+                </div>
+                <div data-exercise-set="shopping-listen-and-write" data-exercise-src="./assets/data/describe_compare_exercises.json"></div>
+                <div class="stack" data-checked-model-content hidden>
+                    <h3>Dialogue and English translation</h3>
+                    <div data-example-group="shopping-dialogue-transcript" data-bank-layout="reading" data-word-audio-list></div>
+                </div>
             </section>
 
             <section class="content-card" id="shopping-conversation" data-guided-scenario="greengrocer-conversation">
@@ -419,6 +445,8 @@ window.renderExampleBanksFromData({
     pageToolbarSelector: "#shopping .toolbar-row",
     pageBulkLabel: "Add all food phrases",
     groupViews: {
+        "food-shopping-list-models": { presentation: "reading" },
+        "shopping-dialogue-transcript": { presentation: "reading" },
         "junk-food-reading": { presentation: "reading" }
     }
 }).then(() => {
@@ -494,5 +522,11 @@ window.renderExampleBanksFromData({
 <script src="./assets/js/exercise-runner.js"></script>
 <script src="./assets/js/topic-practice.js"></script>
 <script src="./assets/js/site-header.js"></script>
+    <template data-word-audio-template>
+        <button class="action-button study-icon-button" type="button" data-word-audio-button data-word-audio-icon aria-label="Play audio" title="Play audio">🔊</button>
+    </template>
+    <audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+    <p class="visually-hidden" role="status" data-word-audio-status></p>
+    <script src="./assets/js/word-audio.js"></script>
 </body>
 </html>

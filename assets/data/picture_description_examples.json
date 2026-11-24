@@ -1,6 +1,9 @@
 {
   "schemaVersion": 2,
-  "source": { "kind": "site", "page": "picture_description.html" },
+  "source": {
+    "kind": "site",
+    "page": "picture_description.html"
+  },
   "groups": [
     {
       "id": "family-home",
@@ -540,7 +543,10 @@
           "verificationStatus": "verified",
           "verification": {
             "source": "schola-b1-2022",
-            "printedPages": [32, 116],
+            "printedPages": [
+              32,
+              116
+            ],
             "method": "source-pattern",
             "checkedOn": "2026-10-02"
           }
@@ -872,6 +878,343 @@
         {
           "maltese": "X'tixtieq tixtri: tuffieħ jew frott isfar?",
           "english": "What would you like to buy: apples or yellow fruit?"
+        }
+      ]
+    },
+    {
+      "id": "people-in-the-kitchen-questions",
+      "title": "People in the kitchen questions",
+      "itemType": "questionAnswer",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 1 aggettivi.png; description prompts adapted from the supplied image"
+      },
+      "items": [
+        {
+          "slug": "kitchen-action",
+          "question": {
+            "maltese": "X'qed jagħmlu n-nies?",
+            "english": "What are the people doing?"
+          },
+          "answer": {
+            "maltese": "In-nies qed iħejju l-ikel flimkien.",
+            "english": "The people are preparing food together."
+          }
+        },
+        {
+          "slug": "kitchen-cupboards",
+          "question": {
+            "maltese": "X'kulur huma l-armarji tal-kċina?",
+            "english": "What colour are the kitchen cupboards?"
+          },
+          "answer": {
+            "maltese": "L-armarji tal-kċina huma bojod.",
+            "english": "The kitchen cupboards are white."
+          }
+        },
+        {
+          "slug": "kitchen-top",
+          "question": {
+            "maltese": "X'kulur hu l-flokk tat-tifla?",
+            "english": "What colour is the girl's top?"
+          },
+          "answer": {
+            "maltese": "Il-flokk tat-tifla huwa isfar.",
+            "english": "The girl's top is yellow."
+          }
+        }
+      ],
+      "presentation": "disclosure"
+    },
+    {
+      "id": "people-in-the-kitchen-model",
+      "title": "People in the kitchen",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 1 aggettivi.png; model description of visible details"
+      },
+      "items": [
+        {
+          "slug": "preparing-food",
+          "maltese": "In-nies qed iħejju l-ikel flimkien f'kċina kbira u mdawla.",
+          "english": "The people are preparing food together in a large, well-lit kitchen."
+        },
+        {
+          "slug": "full-plates",
+          "maltese": "Fuq il-bank tal-kċina hemm platti mimlijin u frott imqatta'.",
+          "english": "There are full plates and cut fruit on the kitchen counter."
+        },
+        {
+          "slug": "white-cupboards",
+          "maltese": "L-armarji tal-kċina huma bojod u t-tifla liebsa flokk isfar.",
+          "english": "The kitchen cupboards are white, and the girl is wearing a yellow top."
+        }
+      ]
+    },
+    {
+      "id": "playing-with-water-questions",
+      "title": "Playing with water questions",
+      "itemType": "questionAnswer",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 2 aggettivi.png; description prompts adapted from the supplied image"
+      },
+      "items": [
+        {
+          "slug": "water-action",
+          "question": {
+            "maltese": "Biex qed jilagħbu t-tfal?",
+            "english": "What are the children playing with?"
+          },
+          "answer": {
+            "maltese": "It-tfal qed jilagħbu bl-ilma.",
+            "english": "The children are playing with water."
+          }
+        },
+        {
+          "slug": "water-bucket",
+          "question": {
+            "maltese": "X'kulur hu l-barmil tat-tifla?",
+            "english": "What colour is the girl's bucket?"
+          },
+          "answer": {
+            "maltese": "Il-barmil tat-tifla huwa isfar.",
+            "english": "The girl's bucket is yellow."
+          }
+        },
+        {
+          "slug": "water-man",
+          "question": {
+            "maltese": "Ir-raġel niexef jew imxarrab?",
+            "english": "Is the man dry or wet?"
+          },
+          "answer": {
+            "maltese": "Ir-raġel imxarrab.",
+            "english": "The man is wet."
+          }
+        }
+      ],
+      "presentation": "disclosure"
+    },
+    {
+      "id": "playing-with-water-model",
+      "title": "Playing with water",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 2 aggettivi.png; model description of visible details"
+      },
+      "items": [
+        {
+          "slug": "sunny-day",
+          "maltese": "It-tfal qed jilagħbu bl-ilma f'ġurnata xemxija.",
+          "english": "The children are playing with water on a sunny day."
+        },
+        {
+          "slug": "coloured-buckets",
+          "maltese": "It-tifla għandha barmil isfar u t-tifel tal-lemin għandu barmil blu.",
+          "english": "The girl has a yellow bucket, and the boy on the right has a blue bucket."
+        },
+        {
+          "slug": "wet-and-happy",
+          "maltese": "Ir-raġel imxarrab ħafna. It-tfal jidhru ferħanin.",
+          "english": "The man is very wet. The children look happy."
+        }
+      ]
+    },
+    {
+      "id": "countryside-path-questions",
+      "title": "A path in the countryside questions",
+      "itemType": "questionAnswer",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 3.png; description prompts adapted from the supplied image"
+      },
+      "items": [
+        {
+          "slug": "fields-colour",
+          "question": {
+            "maltese": "X'kuluri għandhom l-għelieqi?",
+            "english": "What colours are the fields?"
+          },
+          "answer": {
+            "maltese": "L-għelieqi huma ħodor u sofor.",
+            "english": "The fields are green and yellow."
+          }
+        },
+        {
+          "slug": "countryside-path-width",
+          "question": {
+            "maltese": "Il-mogħdija hija wiesgħa jew dejqa?",
+            "english": "Is the path wide or narrow?"
+          },
+          "answer": {
+            "maltese": "Il-mogħdija hija dejqa.",
+            "english": "The path is narrow."
+          }
+        },
+        {
+          "slug": "distant-mountains",
+          "question": {
+            "maltese": "X'hemm fil-bogħod?",
+            "english": "What is in the distance?"
+          },
+          "answer": {
+            "maltese": "Fil-bogħod hemm muntanji għoljin.",
+            "english": "There are high mountains in the distance."
+          }
+        }
+      ],
+      "presentation": "disclosure"
+    },
+    {
+      "id": "countryside-path-model",
+      "title": "A path in the countryside",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 3.png; model description of visible details"
+      },
+      "items": [
+        {
+          "slug": "green-and-yellow-fields",
+          "maltese": "Fil-wied hemm għelieqi ħodor u sofor.",
+          "english": "There are green and yellow fields in the valley."
+        },
+        {
+          "slug": "narrow-path",
+          "maltese": "Mogħdija dejqa tgħaddi minn ħdejn djar żgħar b'soqfa ħomor.",
+          "english": "A narrow path runs past small houses with red roofs."
+        },
+        {
+          "slug": "mountains",
+          "maltese": "Fil-bogħod hemm muntanji għoljin.",
+          "english": "There are high mountains in the distance."
+        }
+      ]
+    },
+    {
+      "id": "street-under-clouds-questions",
+      "title": "A street under a cloudy sky questions",
+      "itemType": "questionAnswer",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 4 aġġettivi.jpeg; description prompts adapted from the supplied image"
+      },
+      "items": [
+        {
+          "slug": "street-sky",
+          "question": {
+            "maltese": "Kif inhu s-sema?",
+            "english": "What is the sky like?"
+          },
+          "answer": {
+            "maltese": "Is-sema huwa msaħħab.",
+            "english": "The sky is cloudy."
+          }
+        },
+        {
+          "slug": "street-car",
+          "question": {
+            "maltese": "X'kulur hi l-karozza?",
+            "english": "What colour is the car?"
+          },
+          "answer": {
+            "maltese": "Il-karozza hija bajda.",
+            "english": "The car is white."
+          }
+        },
+        {
+          "slug": "street-markings",
+          "question": {
+            "maltese": "X'hemm quddiemna?",
+            "english": "What is in front of us?"
+          },
+          "answer": {
+            "maltese": "Quddiemna hemm marki bojod fejn wieħed jaqsam it-triq.",
+            "english": "In front of us are white markings where people cross the road."
+          }
+        }
+      ],
+      "presentation": "disclosure"
+    },
+    {
+      "id": "street-under-clouds-model",
+      "title": "A street under a cloudy sky",
+      "itemType": "example",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 4 aġġettivi.jpeg; model description of visible details"
+      },
+      "items": [
+        {
+          "slug": "paved-road",
+          "maltese": "It-triq dritta u asfaltata, u s-sema huwa msaħħab.",
+          "english": "The road is straight and paved, and the sky is cloudy."
+        },
+        {
+          "slug": "road-crossing",
+          "maltese": "Quddiemna hemm marki bojod fejn wieħed jaqsam it-triq.",
+          "english": "In front of us are white markings where people cross the road."
+        },
+        {
+          "slug": "white-car-stone",
+          "maltese": "Ftit 'il bogħod hemm karozza bajda u bini tal-ġebel.",
+          "english": "A little way away there is a white car and a stone building."
+        }
+      ]
+    },
+    {
+      "id": "compare-picture-scenes",
+      "title": "Compare two pictures",
+      "itemType": "questionAnswer",
+      "source": {
+        "kind": "site",
+        "page": "picture_description.html",
+        "file": "stampa 3.png; stampa 4 aġġettivi.jpeg; adapted comparison prompts"
+      },
+      "items": [
+        {
+          "slug": "describe-and-compare-pictures",
+          "question": {
+            "maltese": "X'tara fiż-żewġ stampi?",
+            "english": "What can you see in the two pictures?"
+          },
+          "answer": {
+            "maltese": "Fl-ewwel stampa hemm mogħdija dejqa u għelieqi ħodor. Fit-tieni stampa hemm triq wiesgħa u karozza bajda. Il-mogħdija tidher idjaq mit-triq.",
+            "english": "In the first picture there is a narrow path and there are green fields. In the second there is a wide road and a white car. The path looks narrower than the road."
+          }
+        },
+        {
+          "slug": "compare-the-widths",
+          "question": {
+            "maltese": "Qabbel il-mogħdija fil-kampanja mat-triq. Liema waħda tidher idjaq?",
+            "english": "Compare the countryside path with the road. Which looks narrower?"
+          },
+          "answer": {
+            "maltese": "Il-mogħdija fil-kampanja tidher idjaq mit-triq.",
+            "english": "The countryside path looks narrower than the road."
+          }
+        },
+        {
+          "slug": "compare-the-weather",
+          "question": {
+            "maltese": "Qabbel it-temp fl-istampa tat-tfal ma' dak fl-istampa tat-triq.",
+            "english": "Compare the weather in the picture of the children with the weather in the street picture."
+          },
+          "answer": {
+            "maltese": "Fejn qegħdin it-tfal it-temp jidher aktar xemxi milli fit-triq.",
+            "english": "Where the children are, the weather looks sunnier than in the street."
+          }
         }
       ]
     }

@@ -10,6 +10,7 @@
 
     let playing = null;
     let reviewId = null;
+    let voiceDirectory = "";
 
     function showButtonState(button, label, icon) {
         const word = button.dataset.wordAudioLabel;
@@ -32,8 +33,9 @@
             stopPlayback();
             return;
         }
-        const url = button.dataset.wordAudioButton;
-        if (!url) return;
+        const clip = button.dataset.wordAudioButton;
+        if (!clip) return;
+        const url = voiceDirectory ? voiceDirectory + clip.slice(clip.lastIndexOf("/") + 1) : clip;
 
         stopPlayback();
         status.textContent = "";
@@ -52,6 +54,30 @@
         }
     }
 
+    function useVoicePicker(voices, defaultVoice) {
+        if (!voices) return;
+        if (!Object.hasOwn(voices, defaultVoice)) throw new Error("Maltese pronunciation voice is unavailable.");
+
+        const picker = document.querySelector("[data-word-audio-voice]");
+        const storage = window.MaltiStorage;
+        const preferenceKey = "malti_pronunciation_voice_v1";
+        const preferred = storage.getString(preferenceKey);
+        const voice = Object.hasOwn(voices, preferred) ? preferred : defaultVoice;
+        voiceDirectory = voices[voice];
+        if (!picker) return;
+
+        picker.value = voice;
+        picker.disabled = false;
+        picker.addEventListener("change", () => {
+            const selection = picker.value;
+            if (!Object.hasOwn(voices, selection) || voices[selection] === voiceDirectory) return;
+            stopPlayback();
+            status.textContent = "";
+            voiceDirectory = voices[selection];
+            storage.setString(preferenceKey, selection);
+        });
+    }
+
     function useRecordings(clips) {
         function clipFor(word) {
             const key = store.normalizeForKey(word).replace(/\s*\/\s*/g, " / ");
@@ -60,11 +86,13 @@
 
         function attachVocabularyControls() {
             const cards = document.querySelectorAll(
-                "[data-word-audio-list] .number-line, [data-word-audio-list] figure[data-content-id]"
+                "[data-word-audio-list] .number-line, [data-word-audio-list] figure[data-content-id], " +
+                "[data-word-audio-list] article[data-bank-item], [data-word-audio-list] td[lang=mt]"
             );
             for (const card of cards) {
                 if (card.querySelector("[data-word-audio-button]")) continue;
-                const word = card.querySelector(":scope > .num-word") || card.querySelector(":scope > strong");
+                const word = card.matches("td") ? card
+                    : card.querySelector(":scope > .num-word, :scope > [data-bank-primary]") || card.querySelector(":scope > strong");
                 const url = clipFor(word?.textContent);
                 if (!url) continue;
 
@@ -94,7 +122,23 @@
 
         if (template) {
             document.addEventListener("malti-vocab-rendered", attachVocabularyControls);
+            const banks = document.querySelectorAll("[data-word-audio-list][data-example-group]");
+            if (banks.length) {
+                const observer = new MutationObserver(attachVocabularyControls);
+                for (const bank of banks) observer.observe(bank, { childList: true, subtree: true });
+            }
             attachVocabularyControls();
+        }
+        for (const button of document.querySelectorAll("[data-word-audio-text], [data-word-audio-source]")) {
+            const source = button.dataset.wordAudioSource && document.querySelector(button.dataset.wordAudioSource);
+            const sync = () => {
+                const clip = clipFor(source ? source.textContent : button.dataset.wordAudioText);
+                if (playing?.button === button && button.dataset.wordAudioButton !== clip) stopPlayback();
+                button.dataset.wordAudioButton = clip;
+                button.disabled = !clip;
+            };
+            sync();
+            if (source) new MutationObserver(sync).observe(source, { childList: true, characterData: true, subtree: true });
         }
         if (stage && reviewButton) {
             new MutationObserver(syncReviewControl).observe(stage, {
@@ -118,6 +162,9 @@
             if (!response.ok) throw new Error("Could not load Maltese audio.");
             return response.json();
         })
-        .then(({ clips }) => useRecordings(clips))
+        .then(({ clips, voices, defaultVoice }) => {
+            useVoicePicker(voices, defaultVoice);
+            useRecordings(clips);
+        })
         .catch(() => { status.textContent = "Maltese audio is unavailable."; });
 })();

@@ -277,4 +277,13 @@
   mount('[data-open-recall]', recall);
   mount('[data-tonina-listening]', listening);
   mount('[data-mixed-practice]', mixed);
+
+  document.querySelectorAll("[data-checked-model]").forEach(root => {
+    const exercise = root.querySelector("[data-exercise-set]");
+    const model = root.querySelector("[data-checked-model-content]");
+    new MutationObserver(() => { model.hidden = true; }).observe(exercise, { childList: true });
+    window.addEventListener("malti-exercise-complete", event => {
+      if (event.detail.setId === exercise.dataset.exerciseSet) model.hidden = false;
+    });
+  });
 })();
