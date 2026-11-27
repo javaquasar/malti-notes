@@ -1720,7 +1720,9 @@ async function main() {
                 return;
               }
               cards += 1;
-              const buttons = card.querySelectorAll('.review-add-button--icon');
+              // Nested banks are checked separately by their own container.
+              const buttons = Array.from(card.querySelectorAll('.review-add-button--icon')).filter(button =>
+                button.closest('[data-example-group], [data-question-group]') === container);
               let valid = buttons.length === 1 && !!buttons[0].dataset.reviewId;
               if (card.matches('details[data-bank-item]')) {
                 // selfAssessment places the bookmark beside reveal/rating controls inside the disclosure.

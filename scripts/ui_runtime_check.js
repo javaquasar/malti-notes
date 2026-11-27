@@ -106,7 +106,7 @@ async function main() {
     browser = await chromium.launch();
     for (const theme of ["classic", "forest", "contrast"]) {
       for (const width of [1280, 390]) {
-        for (const [file, expectedCount] of Object.entries({ "review_cards.html": 12, "memory_game.html": 3, "word_builder_game.html": 3, "word_search.html": 6, "year4_exam.html": 2 })) {
+        for (const [file, expectedCount] of Object.entries({ "review_cards.html": 13, "memory_game.html": 3, "word_builder_game.html": 3, "word_search.html": 6, "year4_exam.html": 2 })) {
           const context = await browser.newContext({ viewport: { width, height: 960 }, serviceWorkers: "block" });
           await context.addInitScript((theme) => localStorage.setItem("malti_site_theme", theme), theme);
           const page = await context.newPage();
