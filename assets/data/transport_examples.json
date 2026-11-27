@@ -98,8 +98,8 @@
       "items": [
         {
           "slug": "ghaziza",
-          "maltese": "Għażiża Maya,",
-          "english": "Dear Maya,"
+          "maltese": "Għażiża Nina,",
+          "english": "Dear Nina,"
         },
         {
           "slug": "gheziez",
@@ -108,13 +108,13 @@
         },
         {
           "slug": "tislijiet-sbieh",
-          "maltese": "Tislijiet sbieħ minn Ruma!",
-          "english": "Warm greetings from Rome!"
+          "maltese": "Tislijiet minn Għawdex!",
+          "english": "Greetings from Gozo!"
         },
         {
           "slug": "temp",
-          "maltese": "It-temp sabiħ u hemm ix-xemx.",
-          "english": "The weather is nice and it's sunny."
+          "maltese": "Hawn ħafna riħ illum.",
+          "english": "It's very windy here today."
         },
         {
           "slug": "inselli",
@@ -124,38 +124,99 @@
         {
           "slug": "narawkom",
           "maltese": "Narawkom il-ġimgħa d-dieħla!",
-          "english": "See you all next week!"
+          "english": "We'll see you all next week!"
+        },
+        {
+          "slug": "ghaziz",
+          "maltese": "Għażiż Mark,",
+          "english": "Dear Mark,"
+        },
+        {
+          "slug": "inselli-group",
+          "maltese": "Inselli għalikom,",
+          "english": "Best wishes to you all,"
+        },
+        {
+          "slug": "nurik",
+          "maltese": "Meta niġi lura, nurik ir-ritratti.",
+          "english": "When I get back, I'll show you the photos."
+        },
+        {
+          "slug": "nurikom",
+          "maltese": "Meta niġi lura, nurikom ir-ritratti.",
+          "english": "When I get back, I'll show the photos to all of you."
+        }
+      ]
+    },
+    {
+      "id": "seaside-postcard-writing",
+      "sectionId": "postcards",
+      "title": "Holiday by the Sea",
+      "itemType": "questionAnswer",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "postcard-marsalforn",
+          "question": {
+            "maltese": "Ikteb kartolina lil Mark minn Marsalforn.",
+            "english": "Write a postcard to Mark from Marsalforn."
+          },
+          "answer": {
+            "maltese": "Għażiż Mark,\n\nTislijiet minn Għawdex! Qed inqatta' l-vaganza tiegħi ħdejn il-baħar f'Marsalforn.",
+            "english": "Dear Mark,\n\nGreetings from Gozo! I'm spending my holiday by the sea in Marsalforn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "seaside-postcard-continuation",
+      "sectionId": "postcards",
+      "title": "Holiday by the Sea continued",
+      "itemType": "example",
+      "containerClass": "stack",
+      "cardClass": "study-card",
+      "items": [
+        {
+          "slug": "marsalforn-swimming",
+          "maltese": "It-temp hu sħun u xemxi, u l-baħar hu kalm. Ilbieraħ mort ngħum fir-Ramla l-Ħamra.",
+          "english": "It's warm and sunny, and the sea is calm. Yesterday I went swimming at Ramla Bay."
+        },
+        {
+          "slug": "marsalforn-photos",
+          "maltese": "Illum żort ix-Xlendi u ħadt xi ritratti tal-bajja. Narak meta niġi lura Malta!\n\nInselli għalik,\nArtur Buzov",
+          "english": "Today I visited Xlendi and took some photos of the bay. See you when I get back to Malta!\n\nBest wishes,\nArtur Buzov"
         }
       ]
     },
     {
       "id": "postcard-writing",
       "sectionId": "postcards",
-      "title": "Write a postcard",
+      "title": "One trip, two readers",
       "itemType": "questionAnswer",
       "containerClass": "stack",
       "cardClass": "study-card",
       "items": [
         {
-          "slug": "postcard-friend",
+          "slug": "postcard-birgu-friend",
           "question": {
-            "maltese": "Ikteb kartolina lil ħabiba minn Ruma.",
-            "english": "Write a postcard to a friend from Rome."
+            "maltese": "Ikteb kartolina lil Nina mill-Birgu.",
+            "english": "Write a postcard to your friend Nina from Birgu."
           },
           "answer": {
-            "maltese": "Għażiża Maya, tislijiet sbieħ minn Ruma! It-temp sabiħ u llum rajna l-Kolossew. Għada se nimxu fiċ-ċentru. Inselli għalik, Elena.",
-            "english": "Dear Maya, warm greetings from Rome! The weather is lovely and today we saw the Colosseum. Tomorrow we'll walk around the city centre. Best wishes, Elena."
+            "maltese": "Għażiża Nina,\n\nSe ndum jumejn fil-Birgu. Hawn ħafna riħ. Żort il-forti. Xrobt kafè fil-pjazza. Se nurik ir-ritratti.\n\nInselli għalik,\nDaniel",
+            "english": "Dear Nina,\n\nI'll be in Birgu for two days. It's very windy. I visited the fort. I had coffee in the square. I'll show you the photos.\n\nBest wishes,\nDaniel"
           }
         },
         {
-          "slug": "postcard-colleagues",
+          "slug": "postcard-birgu-colleagues",
           "question": {
-            "maltese": "Ikteb kartolina lill-kollegi tiegħek minn Pariġi.",
-            "english": "Write a postcard to your colleagues from Paris."
+            "maltese": "Ikteb kartolina lill-kollegi tiegħek dwar l-istess żjara.",
+            "english": "Write a postcard to your colleagues about the same visit."
           },
           "answer": {
-            "maltese": "Għeżież kollegi, tislijiet minn Pariġi! Hawn kiesaħ. Ilbieraħ żorna mużew. Narawkom fl-uffiċċju l-ġimgħa d-dieħla! Tislijiet, David.",
-            "english": "Dear colleagues, greetings from Paris! It's cold here. Yesterday we visited a museum. See you at the office next week! Best wishes, David."
+            "maltese": "Għeżież kollegi,\n\nSe ndum jumejn fil-Birgu. Hawn ħafna riħ. Żort il-forti. Xrobt kafè fil-pjazza. Se nurikom ir-ritratti.\n\nTislijiet,\nDaniel",
+            "english": "Dear colleagues,\n\nI'll be in Birgu for two days. It's very windy. I visited the fort. I had coffee in the square. I'll show the photos to all of you.\n\nBest wishes,\nDaniel"
           }
         }
       ]
@@ -171,12 +232,12 @@
         {
           "slug": "route-postcard-friend",
           "question": {
-            "maltese": "Ikteb kartolina dwar il-vjaġġ lil ħabiba.",
+            "maltese": "Ikteb kartolina dwar il-vjaġġ lil ħabib.",
             "english": "Write a postcard about the journey to a friend."
           },
           "answer": {
-            "maltese": "Għażiża Maya, tislijiet minn Malta! Illum mort sal-port bil-mixi u rajt il-baħar. Narak dalwaqt! Elena.",
-            "english": "Dear Maya, greetings from Malta! Today I walked to the harbour and saw the sea. See you soon! Elena."
+            "maltese": "Għażiż Joe, dalgħodu qbadt il-karozza tal-linja sal-port. Waqaft ħdejn il-moll u rajt id-dgħajjes. Narak dalwaqt! Marta.",
+            "english": "Dear Joe, this morning I took the bus to the harbour. I stopped next to the quay and saw the boats. See you soon! Marta."
           }
         },
         {
@@ -186,8 +247,8 @@
             "english": "Write a postcard about the same journey to your colleagues."
           },
           "answer": {
-            "maltese": "Għeżież kollegi, tislijiet minn Malta! Illum mort sal-port bil-mixi u rajt il-baħar. Narawkom dalwaqt! Elena.",
-            "english": "Dear colleagues, greetings from Malta! Today I walked to the harbour and saw the sea. See you all soon! Elena."
+            "maltese": "Għeżież kollegi, dalgħodu qbadt il-karozza tal-linja sal-port. Waqaft ħdejn il-moll u rajt id-dgħajjes. Narakom dalwaqt! Marta.",
+            "english": "Dear colleagues, this morning I took the bus to the harbour. I stopped next to the quay and saw the boats. See you all soon! Marta."
           }
         }
       ]

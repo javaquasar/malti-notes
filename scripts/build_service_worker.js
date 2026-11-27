@@ -62,6 +62,7 @@ const coreAssets = [
   "./assets/data/comparisons_examples.json",
   "./assets/data/describe_compare_exercises.json",
   "./assets/data/language_context_exercises.json",
+  "./assets/data/synonym_game_exercises.json",
   "./assets/data/transport_examples.json",
   "./assets/data/restaurant_ordering_examples.json",
   "./assets/data/food_cafe_exercises.json",

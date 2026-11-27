@@ -1,0 +1,597 @@
+{
+  "sets": [
+    {
+      "id": "sib-is-sinonimu",
+      "title": "Sib is-Sinonimu",
+      "items": [
+        {
+          "id": "synonym-choose-arch",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for ħnejja.",
+          "cue": {
+            "maltese": "ħnejja",
+            "english": "arch"
+          },
+          "choices": [
+            "bankina",
+            "arkata",
+            "gallarija",
+            "saqaf"
+          ],
+          "answer": "arkata",
+          "answerTranslation": "arch",
+          "explanation": "An arkata is an arch, like a ħnejja.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "arkata",
+            "english": "arch",
+            "example": "Il-kelb qorob lejn l-arkata.",
+            "exampleTranslation": "The dog went towards the arch."
+          }
+        },
+        {
+          "id": "synonym-choose-day",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for ġurnata.",
+          "cue": {
+            "maltese": "ġurnata",
+            "english": "day"
+          },
+          "choices": [
+            "sena",
+            "filgħodu",
+            "jum",
+            "lejl"
+          ],
+          "answer": "jum",
+          "answerTranslation": "day",
+          "explanation": "Both refer to a day. Jum is masculine and ġurnata is feminine.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "jum",
+            "english": "day",
+            "example": "Kellna jum liberu.",
+            "exampleTranslation": "We had a day off."
+          }
+        },
+        {
+          "id": "synonym-choose-joy",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for ferħ.",
+          "cue": {
+            "maltese": "ferħ",
+            "english": "joy"
+          },
+          "choices": [
+            "għeja",
+            "ħeġġa",
+            "hena",
+            "talba"
+          ],
+          "answer": "hena",
+          "answerTranslation": "joy",
+          "explanation": "Hena and ferħ both refer to joy or happiness.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "hena",
+            "english": "joy",
+            "example": "Ħassejt ħafna hena dakinhar.",
+            "exampleTranslation": "I felt a lot of joy that day."
+          }
+        },
+        {
+          "id": "synonym-choose-question",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for domanda.",
+          "cue": {
+            "maltese": "domanda",
+            "english": "question"
+          },
+          "choices": [
+            "spjegazzjoni",
+            "mistoqsija",
+            "eżempju",
+            "kumment"
+          ],
+          "answer": "mistoqsija",
+          "answerTranslation": "question",
+          "explanation": "In this sense domanda and mistoqsija both mean question.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "mistoqsija",
+            "english": "question",
+            "example": "Staqsejt mistoqsija dwar il-vjaġġ.",
+            "exampleTranslation": "I asked a question about the journey."
+          }
+        },
+        {
+          "id": "synonym-choose-crowd",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for folla.",
+          "cue": {
+            "maltese": "folla",
+            "english": "crowd"
+          },
+          "choices": [
+            "għadd",
+            "kju",
+            "kotra",
+            "familja"
+          ],
+          "answer": "kotra",
+          "answerTranslation": "crowd",
+          "explanation": "A kotra can be a large crowd of people, like a folla.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "kotra",
+            "english": "crowd",
+            "example": "Kotra ta' nies inġabret ħdejn il-palk.",
+            "exampleTranslation": "A large crowd gathered near the stage."
+          }
+        },
+        {
+          "id": "synonym-write-answer",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace ir-risposta with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Ktibt ir-risposta fuq karta.",
+            "target": "ir-risposta",
+            "english": "I wrote the answer on a sheet of paper."
+          },
+          "answer": "Ktibt it-tweġiba fuq karta.",
+          "answerTranslation": "I wrote the answer on a sheet of paper.",
+          "explanation": "Both words mean answer here. Before tweġiba the article is it-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "tweġiba",
+            "english": "answer",
+            "example": "Ktibt it-tweġiba fuq karta.",
+            "exampleTranslation": "I wrote the answer on a sheet of paper."
+          }
+        },
+        {
+          "id": "synonym-write-holiday",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace Il-vaganza with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Il-vaganza damet ġimgħa.",
+            "target": "Il-vaganza",
+            "english": "The holiday lasted a week."
+          },
+          "answer": "Il-btala damet ġimgħa.",
+          "accepted": [
+            "Il-btala damet ġimgħa."
+          ],
+          "answerTranslation": "The holiday lasted a week.",
+          "explanation": "Vaganza and btala both refer to a holiday. Both take il- in this sentence.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "btala",
+            "english": "holiday",
+            "example": "Il-btala damet ġimgħa.",
+            "exampleTranslation": "The holiday lasted a week."
+          }
+        },
+        {
+          "id": "synonym-write-driver",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace Is-sewwieq with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Is-sewwieq stenna ħdejn il-vann.",
+            "target": "Is-sewwieq",
+            "english": "The driver waited by the van."
+          },
+          "answer": "Ix-xufier stenna ħdejn il-vann.",
+          "answerTranslation": "The driver waited by the van.",
+          "explanation": "Sewwieq and xufier both mean driver here. Before x, the definite article becomes ix-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "xufier",
+            "english": "driver",
+            "example": "Ix-xufier stenna ħdejn il-vann.",
+            "exampleTranslation": "The driver waited by the van."
+          }
+        },
+        {
+          "id": "synonym-write-hope",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace speranza with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Għandi speranza li se nirbaħ.",
+            "target": "speranza",
+            "english": "I'm hopeful that I'll win."
+          },
+          "answer": "Għandi tama li se nirbaħ.",
+          "answerTranslation": "I'm hopeful that I'll win.",
+          "explanation": "Tama can replace speranza in this expression of hope.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "tama",
+            "english": "hope",
+            "example": "Għandi tama li se nirbaħ.",
+            "exampleTranslation": "I'm hopeful that I'll win."
+          }
+        },
+        {
+          "id": "synonym-write-newspaper",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace il-gazzetta with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Poġġejt il-gazzetta fuq is-siġġu.",
+            "target": "il-gazzetta",
+            "english": "I put the newspaper on the chair."
+          },
+          "answer": "Poġġejt il-ġurnal fuq is-siġġu.",
+          "answerTranslation": "I put the newspaper on the chair.",
+          "explanation": "Ġurnal can mean newspaper in this context. Keep the article il-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "ġurnal",
+            "english": "newspaper",
+            "example": "Poġġejt il-ġurnal fuq is-siġġu.",
+            "exampleTranslation": "I put the newspaper on the chair."
+          }
+        },
+        {
+          "id": "synonym-choose-invitation",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for invit.",
+          "cue": {
+            "maltese": "invit",
+            "english": "invitation"
+          },
+          "choices": [
+            "laqgħa",
+            "kartolina",
+            "stedina",
+            "avviż"
+          ],
+          "answer": "stedina",
+          "answerTranslation": "invitation",
+          "explanation": "Stedina is another word for an invitation.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "stedina",
+            "english": "invitation",
+            "example": "Irċevejt stedina għall-kunċert.",
+            "exampleTranslation": "I received an invitation to the concert."
+          },
+          "repeatOnly": true
+        },
+        {
+          "id": "synonym-write-exhibition",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace Il-wirja with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Il-wirja tiftaħ fid-disgħa.",
+            "target": "Il-wirja",
+            "english": "The exhibition opens at nine."
+          },
+          "answer": "L-esibizzjoni tiftaħ fid-disgħa.",
+          "answerTranslation": "The exhibition opens at nine.",
+          "explanation": "Both words mean exhibition here. Esibizzjoni starts with a vowel, so il-wirja becomes l-esibizzjoni.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "esibizzjoni",
+            "english": "exhibition",
+            "example": "L-esibizzjoni tiftaħ fid-disgħa.",
+            "exampleTranslation": "The exhibition opens at nine."
+          },
+          "repeatOnly": true
+        }
+      ]
+    },
+    {
+      "id": "sib-is-sinonimu-repeat",
+      "title": "Sib is-Sinonimu · Repeat practice",
+      "items": [
+        {
+          "id": "synonym-choose-arch-reverse",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for arkata.",
+          "cue": {
+            "maltese": "arkata",
+            "english": "arch"
+          },
+          "choices": [
+            "tieqa",
+            "ħnejja",
+            "għatba",
+            "ħajt"
+          ],
+          "answer": "ħnejja",
+          "answerTranslation": "arch",
+          "explanation": "Both ħnejja and arkata refer to an arch.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "ħnejja",
+            "english": "arch",
+            "example": "Poġġejna l-bank taħt il-ħnejja.",
+            "exampleTranslation": "We put the bench under the arch."
+          },
+          "repeatOf": "synonym-choose-arch"
+        },
+        {
+          "id": "synonym-choose-day-reverse",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for jum.",
+          "cue": {
+            "maltese": "jum",
+            "english": "day"
+          },
+          "choices": [
+            "nofsinhar",
+            "ġurnata",
+            "xahar",
+            "lejla"
+          ],
+          "answer": "ġurnata",
+          "answerTranslation": "day",
+          "explanation": "Ġurnata can refer to a day, just like jum.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "ġurnata",
+            "english": "day",
+            "example": "Qattajna ġurnata fil-kampanja.",
+            "exampleTranslation": "We spent a day in the countryside."
+          },
+          "repeatOf": "synonym-choose-day"
+        },
+        {
+          "id": "synonym-choose-joy-reverse",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for hena.",
+          "cue": {
+            "maltese": "hena",
+            "english": "joy"
+          },
+          "choices": [
+            "serħan",
+            "ferħ",
+            "inkwiet",
+            "dwejjaq"
+          ],
+          "answer": "ferħ",
+          "answerTranslation": "joy",
+          "explanation": "Ferħ is another word for joy or happiness.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "ferħ",
+            "english": "joy",
+            "example": "Tara l-ferħ f'għajnejha.",
+            "exampleTranslation": "You can see the joy in her eyes."
+          },
+          "repeatOf": "synonym-choose-joy"
+        },
+        {
+          "id": "synonym-choose-invitation-reverse",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for stedina.",
+          "cue": {
+            "maltese": "stedina",
+            "english": "invitation"
+          },
+          "choices": [
+            "ċavetta",
+            "invit",
+            "ittra",
+            "formola"
+          ],
+          "answer": "invit",
+          "answerTranslation": "invitation",
+          "explanation": "Invit and stedina both mean invitation.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "invit",
+            "english": "invitation",
+            "example": "Bagħatli invit għat-tieġ.",
+            "exampleTranslation": "He sent me an invitation to the wedding."
+          },
+          "repeatOf": "synonym-choose-invitation"
+        },
+        {
+          "id": "synonym-choose-crowd-reverse",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for kotra.",
+          "cue": {
+            "maltese": "kotra",
+            "english": "crowd"
+          },
+          "choices": [
+            "folla",
+            "parata",
+            "festa",
+            "grupp"
+          ],
+          "answer": "folla",
+          "answerTranslation": "crowd",
+          "explanation": "Folla can mean a crowd of people, like kotra.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "folla",
+            "english": "crowd",
+            "example": "Kien hemm folla kbira fil-pjazza wara l-logħba.",
+            "exampleTranslation": "There was a large crowd in the square after the game."
+          },
+          "repeatOf": "synonym-choose-crowd"
+        },
+        {
+          "id": "synonym-write-exhibition-retry",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace Fl-esibizzjoni with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Fl-esibizzjoni kien hemm ritratti ta' Għawdex.",
+            "target": "Fl-esibizzjoni",
+            "english": "There were photos of Gozo at the exhibition."
+          },
+          "answer": "Fil-wirja kien hemm ritratti ta' Għawdex.",
+          "answerTranslation": "There were photos of Gozo at the exhibition.",
+          "explanation": "Use fil-wirja for 'at the exhibition'. The preposition fi joins the article il-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "wirja",
+            "english": "exhibition",
+            "example": "Fil-wirja kien hemm ritratti ta' Għawdex.",
+            "exampleTranslation": "There were photos of Gozo at the exhibition."
+          },
+          "repeatOf": "synonym-write-exhibition"
+        },
+        {
+          "id": "synonym-write-holiday-retry",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace il-btala with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Waqt il-btala qrajt żewġ kotba.",
+            "target": "il-btala",
+            "english": "I read two books during the holiday."
+          },
+          "answer": "Waqt il-vaganza qrajt żewġ kotba.",
+          "answerTranslation": "I read two books during the holiday.",
+          "explanation": "Il-vaganza can replace il-btala here. Waqt means during.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "vaganza",
+            "english": "holiday",
+            "example": "Waqt il-vaganza qrajt żewġ kotba.",
+            "exampleTranslation": "I read two books during the holiday."
+          },
+          "repeatOf": "synonym-write-holiday"
+        },
+        {
+          "id": "synonym-write-driver-retry",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace Ix-xufier with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Ix-xufier ipparkja fil-bitħa.",
+            "target": "Ix-xufier",
+            "english": "The driver parked in the courtyard."
+          },
+          "answer": "Is-sewwieq ipparkja fil-bitħa.",
+          "answerTranslation": "The driver parked in the courtyard.",
+          "explanation": "Sewwieq can replace xufier here. Use is- before sewwieq.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "sewwieq",
+            "english": "driver",
+            "example": "Is-sewwieq ipparkja fil-bitħa.",
+            "exampleTranslation": "The driver parked in the courtyard."
+          },
+          "repeatOf": "synonym-write-driver"
+        },
+        {
+          "id": "synonym-write-hope-retry",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace tama with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Fadal ftit tama.",
+            "target": "tama",
+            "english": "There is a little hope left."
+          },
+          "answer": "Fadal ftit speranza.",
+          "answerTranslation": "There is a little hope left.",
+          "explanation": "Speranza can replace tama here. Ftit means a little.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "speranza",
+            "english": "hope",
+            "example": "Fadal ftit speranza.",
+            "exampleTranslation": "There is a little hope left."
+          },
+          "repeatOf": "synonym-write-hope"
+        },
+        {
+          "id": "synonym-write-newspaper-retry",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace fil-ġurnal with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Fittixt ir-riżultat fil-ġurnal.",
+            "target": "fil-ġurnal",
+            "english": "I looked for the result in the newspaper."
+          },
+          "answer": "Fittixt ir-riżultat fil-gazzetta.",
+          "answerTranslation": "I looked for the result in the newspaper.",
+          "explanation": "In this context fil-gazzetta also means 'in the newspaper'. Keep fil-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "gazzetta",
+            "english": "newspaper",
+            "example": "Fittixt ir-riżultat fil-gazzetta.",
+            "exampleTranslation": "I looked for the result in the newspaper."
+          },
+          "repeatOf": "synonym-write-newspaper"
+        },
+        {
+          "id": "synonym-choose-question-reverse",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for mistoqsija.",
+          "cue": {
+            "maltese": "mistoqsija",
+            "english": "question"
+          },
+          "choices": [
+            "domanda",
+            "talba",
+            "ordni",
+            "nota"
+          ],
+          "answer": "domanda",
+          "answerTranslation": "question",
+          "explanation": "Domanda can be used for a question, just like mistoqsija.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "domanda",
+            "english": "question",
+            "example": "Għandi domanda dwar il-biljett.",
+            "exampleTranslation": "I have a question about the ticket."
+          },
+          "repeatOf": "synonym-choose-question"
+        },
+        {
+          "id": "synonym-write-answer-retry",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace it-tweġiba with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Qrajt it-tweġiba darbtejn.",
+            "target": "it-tweġiba",
+            "english": "I read the answer twice."
+          },
+          "answer": "Qrajt ir-risposta darbtejn.",
+          "answerTranslation": "I read the answer twice.",
+          "explanation": "Risposta can replace tweġiba. Match the article to the initial r.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "risposta",
+            "english": "answer",
+            "example": "Qrajt ir-risposta darbtejn.",
+            "exampleTranslation": "I read the answer twice."
+          },
+          "repeatOf": "synonym-write-answer"
+        }
+      ]
+    }
+  ]
+}

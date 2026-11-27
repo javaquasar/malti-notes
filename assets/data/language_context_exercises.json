@@ -312,14 +312,12 @@
           "id": "context-greeting-one",
           "type": "fill-blank",
           "assessmentMode": "production",
-          "prompt": "You are writing to Maya. Choose Għażiża or Għeżież and write the whole greeting. ___ Maya, tislijiet minn Ruma!",
-          "answer": "Għażiża Maya, tislijiet minn Ruma!",
-          "answerTranslation": "Dear Maya, greetings from Rome!",
+          "prompt": "You are writing to Anna. Choose Għażiża or Għeżież and write the whole greeting. ___ Anna, tislijiet mill-Imdina!",
+          "answer": "Għażiża Anna, tislijiet mill-Imdina!",
+          "answerTranslation": "Dear Anna, greetings from Mdina!",
           "accepted": [
-            "Għażiża Maya, tislijiet minn Ruma!",
-            "Għażiża Maya, tislijiet sbieħ minn Ruma",
-            "Għażiża Maya tislijiet minn Ruma",
-            "Għażiża Maya tislijiet sbieħ minn Ruma"
+            "Għażiża Anna, tislijiet mill-Imdina!",
+            "Għażiża Anna, tislijiet sbieħ mill-Imdina!"
           ],
           "hint": "Think of one female recipient.",
           "explanation": "Għażiża is the feminine singular greeting. Għeżież is used to greet several people.",
@@ -801,6 +799,261 @@
           ],
           "answer": "il-kitarra",
           "explanation": "Il-kitarra means the guitar. Daqq with two q's means he played it."
+        }
+      ]
+    },
+    {
+      "id": "snack-dialogue-check",
+      "title": "Check the dialogue",
+      "sourcePage": "food_preferences.html#snack-dialogue",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "snack-time",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Kemm għandhom ħin qabel tibda l-logħba?",
+          "choices": [
+            "Għandhom ħames minuti.",
+            "Għandhom għaxar minuti.",
+            "Għandhom kwarta."
+          ],
+          "answer": "Għandhom għaxar minuti.",
+          "answerTranslation": "They have ten minutes.",
+          "explanation": "Ruben says they have ten minutes before the game.",
+          "sourcePage": "food_preferences.html#snack-dialogue"
+        },
+        {
+          "id": "snack-price",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Kemm jiswa l-ħobż bil-ġobon?",
+          "choices": [
+            "Il-ħobż bil-ġobon jiswa żewġ ewro.",
+            "Il-ħobż bil-ġobon jiswa ewro.",
+            "Il-ħobż bil-ġobon jiswa tliet ewro."
+          ],
+          "answer": "Il-ħobż bil-ġobon jiswa żewġ ewro.",
+          "answerTranslation": "The bread with cheese costs two euros.",
+          "explanation": "The bread with cheese costs two euros. The crisps cost one euro.",
+          "sourcePage": "food_preferences.html#snack-dialogue"
+        },
+        {
+          "id": "snack-drink",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "X'se tixrob Nadja? Complete the whole sentence. Nadja se tixrob ___.",
+          "answer": "Nadja se tixrob l-ilma.",
+          "answerTranslation": "Nadja will drink water.",
+          "accepted": [
+            "Nadja se tixrob l-ilma.",
+            "Se tixrob l-ilma.",
+            "Nadja se tixrob ilma.",
+            "Se tixrob ilma."
+          ],
+          "explanation": "She asks for a bottle of water. Flixkun ilma means a bottle of water.",
+          "sourcePage": "food_preferences.html#snack-dialogue"
+        },
+        {
+          "id": "snack-reason",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Għaliex Nadja se tieħu l-ħobż bil-ġobon?",
+          "choices": [
+            "Għax Ruben se jaqsam il-gallettini magħha.",
+            "Għax il-ħobż bil-ġobon jiswa inqas mill-patata.",
+            "Għax illum għadha ma kielet xejn."
+          ],
+          "answer": "Għax illum għadha ma kielet xejn.",
+          "answerTranslation": "Because she hasn't eaten anything today.",
+          "explanation": "Nadja explains that she hasn't eaten anything today. She also asks for water.",
+          "sourcePage": "food_preferences.html#snack-dialogue"
+        }
+      ]
+    },
+    {
+      "id": "postcard-register",
+      "title": "Postcards for friends and colleagues",
+      "sourcePage": "transport_travel.html#postcards",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "postcard-register-greet-man",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a greeting for a postcard to your friend Paul.",
+          "choices": [
+            "Għeżież Paul,",
+            "Għażiż Paul,",
+            "Għażiża Paul,"
+          ],
+          "answer": "Għażiż Paul,",
+          "answerTranslation": "Dear Paul,",
+          "explanation": "Għażiż addresses one man. Għażiża addresses one woman and Għeżież addresses a group.",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-greet-group",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "You are writing to the whole team at work. Choose the greeting for the group.",
+          "choices": [
+            "Għażiż kollegi,",
+            "Għażiża kollegi,",
+            "Għeżież kollegi,"
+          ],
+          "answer": "Għeżież kollegi,",
+          "answerTranslation": "Dear colleagues,",
+          "explanation": "Kollegi is plural here, so the adjective in the greeting is Għeżież.",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-show-one",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Tell one friend that you'll show them the photos tomorrow. Write the whole sentence. Għada ___ ir-ritratti.",
+          "answer": "Għada nurik ir-ritratti.",
+          "answerTranslation": "Tomorrow I'll show you the photos.",
+          "accepted": [
+            "Għada nurik ir-ritratti.",
+            "Għada se nurik ir-ritratti."
+          ],
+          "hint": "Choose nurik or nurikom.",
+          "explanation": "Nurik addresses one person. Nurikom addresses several people.",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-see-group",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "You're writing on your own to several colleagues. Say “I'll see you all on Monday.” Write the whole sentence. ___ it-Tnejn.",
+          "answer": "Narakom it-Tnejn.",
+          "answerTranslation": "I'll see you all on Monday.",
+          "accepted": [
+            "Narakom it-Tnejn.",
+            "Se narakom it-Tnejn."
+          ],
+          "hint": "Choose narak, narakom or narawkom.",
+          "explanation": "In narakom, n- marks one speaker and -kom addresses several people. Narawkom means we'll see you all.",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-close-one",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Write a closing to one friend. Complete the whole line. Inselli ___.",
+          "answer": "Inselli għalik.",
+          "answerTranslation": "Best wishes to you.",
+          "hint": "Choose għalik or għalikom.",
+          "explanation": "Għalik is the form for one person. Għalikom is the form for several people.",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-close-group",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Close a postcard to all your colleagues. Complete the whole line. Inselli ___.",
+          "answer": "Inselli għalikom.",
+          "answerTranslation": "Best wishes to you all.",
+          "hint": "Choose għalik or għalikom.",
+          "explanation": "Use għalikom for the whole group. The ending -kom refers to several people.",
+          "sourcePage": "transport_travel.html#postcards"
+        }
+      ]
+    },
+    {
+      "id": "postcard-register-repeat",
+      "title": "Practise postcard phrases again",
+      "sourcePage": "transport_travel.html#postcards",
+      "passPercent": 75,
+      "items": [
+        {
+          "id": "postcard-register-greet-woman-repeat",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a greeting for a postcard to your friend Susanna.",
+          "choices": [
+            "Għażiż Susanna,",
+            "Għeżież Susanna,",
+            "Għażiża Susanna,"
+          ],
+          "answer": "Għażiża Susanna,",
+          "answerTranslation": "Dear Susanna,",
+          "explanation": "Għażiża is the feminine singular greeting.",
+          "repeatOf": "postcard-register-greet-man",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-greet-friends-repeat",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a greeting for a postcard to a group of friends.",
+          "choices": [
+            "Għeżież ħbieb,",
+            "Għażiża ħbieb,",
+            "Għażiż ħbieb,"
+          ],
+          "answer": "Għeżież ħbieb,",
+          "answerTranslation": "Dear friends,",
+          "explanation": "Ħbieb is plural, so the greeting uses Għeżież.",
+          "repeatOf": "postcard-register-greet-group",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-show-one-repeat",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Write to one friend. Say you'll show them the tickets when you arrive. Write the whole sentence. Meta nasal, ___ il-biljetti.",
+          "answer": "Meta nasal, nurik il-biljetti.",
+          "answerTranslation": "When I arrive, I'll show you the tickets.",
+          "accepted": [
+            "Meta nasal, nurik il-biljetti.",
+            "Meta nasal, se nurik il-biljetti."
+          ],
+          "hint": "Choose nurik or nurikom.",
+          "explanation": "Nurik is used with one reader, whether the reader is male or female.",
+          "repeatOf": "postcard-register-show-one",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-see-group-repeat",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "You are the only sender. Tell the other volunteers you'll see them all on Wednesday. Write the whole sentence. ___ l-Erbgħa.",
+          "answer": "Narakom l-Erbgħa.",
+          "answerTranslation": "I'll see you all on Wednesday.",
+          "accepted": [
+            "Narakom l-Erbgħa.",
+            "Se narakom l-Erbgħa."
+          ],
+          "hint": "Choose narak, narakom or narawkom.",
+          "explanation": "Narakom matches one sender greeting several readers.",
+          "repeatOf": "postcard-register-see-group",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-close-one-repeat",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Reply to a postcard from your aunt. Complete the whole closing line. Inselli ___, zija.",
+          "answer": "Inselli għalik, zija.",
+          "answerTranslation": "Best wishes to you, Auntie.",
+          "hint": "Choose għalik or għalikom.",
+          "explanation": "Zija is one recipient, so use għalik.",
+          "repeatOf": "postcard-register-close-one",
+          "sourcePage": "transport_travel.html#postcards"
+        },
+        {
+          "id": "postcard-register-close-group-repeat",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Reply to all the friends you travelled with. Complete the whole closing line. Inselli ___, ħbieb.",
+          "answer": "Inselli għalikom, ħbieb.",
+          "answerTranslation": "Best wishes to you all, friends.",
+          "hint": "Choose għalik or għalikom.",
+          "explanation": "Use għalikom when you're addressing several friends.",
+          "repeatOf": "postcard-register-close-group",
+          "sourcePage": "transport_travel.html#postcards"
         }
       ]
     }

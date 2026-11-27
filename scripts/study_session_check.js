@@ -13,13 +13,18 @@ const course = read('assets/data/course_path.json');
 const bank = read('assets/data/b3_practice_bank.json');
 const lesson05 = read('assets/data/lesson05_exercises.json').sets.find(set => set.id === 'lesson05-mixed');
 const languageSets = read('assets/data/language_context_exercises.json').sets;
+const synonymSets = read('assets/data/synonym_game_exercises.json').sets;
+const synonymRound = synonymSets[0].items.filter(item => !item.repeatOnly);
+const postcardPractice = languageSets.find(set => set.id === 'postcard-register');
+const postcardRepeats = languageSets.find(set => set.id === 'postcard-register-repeat');
 const contextPractice = languageSets.find(set => set.id === 'words-reading-postcards');
 const contextRepeats = languageSets.find(set => set.id === 'words-reading-postcards-repeat');
 const chapterFiles = course.levels.flatMap(level => level.chapters.map(chapter => ({ ...chapter, levelId: level.id, data: read('assets/data/course/chapters/' + chapter.id + '.json') })));
 const originalSets = chapterFiles.flatMap(chapter => chapter.data.assessmentSets);
 const items = new Map(originalSets.flatMap(set => set.items).map(item => [item.id, item]));
 bank.chapters.forEach(chapter => chapter.patterns.forEach(pattern => [...pattern.variants, pattern.transfer].filter(Boolean).forEach(item => items.set(item.id, item))));
-[...lesson05.items, ...contextPractice.items, ...contextRepeats.items].forEach(item => items.set(item.id, item));
+const fixedSets = [lesson05, contextPractice, contextRepeats, postcardPractice, postcardRepeats, ...synonymSets];
+fixedSets.flatMap(set => set.items).forEach(item => items.set(item.id, item));
 const wholeCheckIds = new Set([...originalSets.map(set => set.id), ...bank.chapters.map(chapter => chapter.id + '-check'), 'b3-mixed-check', bank.finalSet.id]);
 const key = 'malti_topic_practice_v1';
 const record = { attempts: 5, correct: 4, streak: 2, lastAt: '2026-10-01T12:00:00.000Z', dueAt: '2099-01-01T00:00:00.000Z', lastItemId: 'preserved-item', lastCorrect: true, spacedSuccesses: 2, lastSpacedSuccessAt: '2026-10-01T12:00:00.000Z' };
@@ -364,7 +369,11 @@ async function main() {
         await page.getByText('Compare words that sound alike', { exact: true }).click();
         assert.equal(await page.locator('[data-example-group="similar-spelling-examples"] article:visible').count(), 26);
         await page.getByText('See the synonym pairs', { exact: true }).click();
-        assert.equal(await page.locator('[data-example-group="synonym-words"] tr:visible').count(), 29);
+        const synonymRows = page.locator('[data-example-group="synonym-words"] tr:visible');
+        assert.equal(await synonymRows.count(), 32);
+        for (const pair of ['ħnejja / arkata', 'domanda / mistoqsija', 'risposta / tweġiba']) {
+          assert(await synonymRows.getByText(pair, { exact: true }).isVisible());
+        }
         const homonym = page.locator('[data-exercise-item="choose-dar"]');
         await homonym.getByRole('radio', { name: 'dar', exact: true }).check();
         await page.locator('[data-exercise-set="homonyms-in-context"]').getByRole('button', { name: 'Check answers' }).click();
@@ -457,36 +466,85 @@ async function main() {
         await labelCards.scrollIntoViewIfNeeded();
         await capture(page, 'food-labels-phone.png');
 
+        const dialogue = page.locator('#snack-dialogue');
+        await dialogue.locator('summary').tap();
+        const snackTranslation = dialogue.locator('[data-bank-translation]');
+        assert.equal(await snackTranslation.count(), 5);
+        assert.equal(await snackTranslation.first().isVisible(), false);
+        await dialogue.getByRole('checkbox').check();
+        assert.match(await snackTranslation.nth(2).innerText(), /two euros/);
+        assert.equal(await translations.first().isVisible(), false);
+        const snackCheck = dialogue.locator('[data-exercise-set="snack-dialogue-check"]');
+        for (const item of languageSets.find(set => set.id === 'snack-dialogue-check').items) {
+          const question = snackCheck.locator('[data-exercise-item="' + item.id + '"]');
+          if (item.type === 'fill-blank') await question.locator('[data-exercise-answer]').fill(item.answer);
+          else await question.getByRole('radio', { name: item.answer, exact: true }).check();
+        }
+        await snackCheck.getByRole('button', { name: 'Check answers' }).tap();
+        assert.match(await snackCheck.locator('.exercise-result').innerText(), /^4\/4/);
+        assert.match(await snackCheck.locator('[data-exercise-item="snack-drink"] .exercise-feedback').innerText(), /bottle of water/);
+        await dialogue.locator('summary').scrollIntoViewIfNeeded();
+        await capture(page, 'snack-dialogue-phone.png');
+        assert.deepEqual(await axe(page, '#snack-dialogue'), []);
+
+        const earlierDraft = 'Għażiża Lara, hawn kollox sew!';
+        await page.evaluate(({ key, earlierDraft }) => {
+          const state = JSON.parse(localStorage.getItem(key));
+          state.postcards = { answers: { 'postcard-friend': earlierDraft } };
+          localStorage.setItem(key, JSON.stringify(state));
+        }, { key, earlierDraft });
         await visit('/transport_travel.html#postcards');
-        const friend = page.locator('[data-bank-item="postcard-friend"]');
-        const colleagues = page.locator('[data-bank-item="postcard-colleagues"]');
-        const friendDraft = 'Għażiża Maya, tislijiet minn Ruma!';
-        const colleaguesDraft = 'Għeżież kollegi, tislijiet minn Pariġi!';
-        for (const [card, draft, greeting] of [[friend, friendDraft, 'Dear Maya'], [colleagues, colleaguesDraft, 'Dear colleagues']]) {
+        const earlier = page.locator('[data-earlier-postcards]');
+        await earlier.locator('summary').tap();
+        assert.equal(await earlier.locator('p:visible').innerText(), earlierDraft);
+        await earlier.locator('summary').tap();
+        const seaside = page.locator('[data-bank-item="postcard-marsalforn"]');
+        const friend = page.locator('[data-bank-item="postcard-birgu-friend"]');
+        const colleagues = page.locator('[data-bank-item="postcard-birgu-colleagues"]');
+        const friendDraft = 'Għażiża Nina, tislijiet mill-Birgu!';
+        const drafts = [
+          [seaside, "Qiegħed f'Marsalforn!", 'Dear Mark', 'mort ngħum fir-Ramla l-Ħamra'],
+          [friend, friendDraft, 'Dear Nina', 'nurik ir-ritratti'],
+          [colleagues, 'Għeżież kollegi, tislijiet mill-Birgu!', 'Dear colleagues', 'nurikom ir-ritratti']
+        ];
+        for (const [card, draft, greeting, maltese] of drafts) {
           await card.locator('summary').click();
-          const model = card.locator('[data-bank-translation]').last();
+          const model = card.locator('[data-bank-translation]').nth(1);
           assert.equal(await model.isVisible(), false);
-          await card.getByRole('textbox', { name: 'Your answer' }).fill(draft);
+          if (card === seaside) assert.equal(await card.getByText('Artur Buzov', { exact: false }).first().isVisible(), false);
+          const answer = card.getByRole('textbox', { name: 'Your answer' });
+          assert.equal(await answer.inputValue(), '');
+          await answer.fill(draft);
           await card.getByRole('button', { name: 'Show model answer' }).click();
           assert(await model.isVisible());
           assert((await model.innerText()).startsWith(greeting));
+          const malteseModel = (await card.locator('p[lang="mt"]:visible').allTextContents()).join(' ');
+          assert(malteseModel.includes(maltese));
+          if (card === seaside) {
+            const body = card.locator('[data-postcard-continuation]');
+            assert.equal(await body.locator('[data-bank-translation]:visible').count(), 2);
+            assert.match(await body.innerText(), /Ramla Bay[\s\S]+Xlendi[\s\S]+Artur Buzov/);
+            await card.locator('summary').scrollIntoViewIfNeeded();
+            await capture(page, 'seaside-postcard-phone.png');
+          }
           await card.getByRole('button', { name: 'Confident' }).click();
         }
         page.__phase = 'navigation';
         await page.reload({ waitUntil: 'networkidle' });
         page.__phase = 'online';
-        for (const [card, draft] of [[friend, friendDraft], [colleagues, colleaguesDraft]]) {
+        for (const [card, draft] of drafts) {
           await card.locator('summary').click();
           assert.equal(await card.getByRole('textbox', { name: 'Your answer' }).inputValue(), draft);
           assert.equal(await card.getByRole('button', { name: 'Confident' }).getAttribute('aria-pressed'), 'true');
         }
         await colleagues.locator('summary').click();
         await friend.getByRole('button', { name: 'Show model answer' }).click();
-        await friend.getByRole('textbox', { name: 'Your answer' }).fill(friendDraft + ' Elena.');
+        await friend.getByRole('textbox', { name: 'Your answer' }).fill(friendDraft + ' Daniel.');
         assert.equal(await friend.getByRole('button', { name: 'Confident' }).getAttribute('aria-pressed'), 'false');
         await page.locator('#postcards h2').scrollIntoViewIfNeeded();
         await capture(page, 'postcards-phone.png');
         assert.deepEqual(await axe(page, '#postcards'), []);
+        assert.equal((await stored(page)).postcards.answers['postcard-friend'], earlierDraft);
         await preserved(page);
       } finally { await f.close(); }
     });
@@ -564,6 +622,133 @@ async function main() {
         await expectModel(missed);
         await next(page);
         assert.equal(await page.locator('[data-study-new]').innerText(), 'Start full practice again');
+        assert.deepEqual((await stored(page)).studySession.helpQueue, []);
+        await preserved(page);
+      } finally { await f.close(); }
+    });
+
+
+    await check('Postcard phrases in My practice give bilingual feedback and a new situation for a missed ending', async () => {
+      const f = await fixture('postcard-register', { width: 390, hasTouch: true });
+      try {
+        const { page } = f;
+        page.__phase = 'navigation';
+        await page.goto(base + '/transport_travel.html#postcards');
+        await Promise.all([
+          page.waitForURL(base + '/today.html?level=mixed&topic=postcard-register'),
+          page.getByRole('link', { name: 'Practise postcard phrases' }).tap()
+        ]);
+        await page.locator('[data-study-root]').waitFor();
+        await ready(page);
+        page.__phase = 'online';
+        assert.equal(await page.locator('[data-study-topic]').inputValue(), 'postcard-register');
+        const firstRound = await start(page, postcardPractice.items.length);
+        assert.deepEqual(firstRound.entries.map(entry => entry.item.id), postcardPractice.items.map(item => item.id));
+        const missed = postcardPractice.items.find(item => item.id === 'postcard-register-see-group');
+        for (const item of postcardPractice.items) {
+          assert.equal(await page.locator('[data-study-checked-answer]').isVisible(), false);
+          await submit(page, item !== missed, item === missed ? 'Narak it-Tnejn.' : undefined);
+          assert.equal(await page.locator('[data-study-checked-mt]').innerText(), item.answer);
+          assert.equal(await page.locator('[data-study-checked-en]').innerText(), item.answerTranslation);
+          if (item === missed) {
+            assert.match(await page.locator('[data-study-exercise] .exercise-feedback').innerText(), /addresses several people/);
+            await capture(page, 'postcard-phrases-phone.png');
+          }
+          await next(page);
+        }
+        await reload(page);
+        assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 1 question');
+        const replay = await start(page, 1);
+        const variant = postcardRepeats.items.find(item => item.repeatOf === missed.id);
+        assert.equal(replay.entries[0].item.id, variant.id);
+        await submit(page, true, 'Se narakom l-Erbgħa.');
+        assert.equal(await page.locator('[data-study-checked-en]').innerText(), variant.answerTranslation);
+        await next(page);
+        assert.deepEqual((await stored(page)).studySession.helpQueue, []);
+        await preserved(page);
+      } finally { await f.close(); }
+    });
+
+    await check('Sib is-Sinonimu checks ten bilingual questions and repeats game mistakes in My practice', async () => {
+      const f = await fixture('synonym-game', { width: 390, hasTouch: true });
+      try {
+        const { page } = f;
+        page.__phase = 'navigation';
+        await page.goto(base + '/homonyms_synonyms.html#synonyms');
+        await page.getByRole('link', { name: 'Play Sib is-Sinonimu' }).tap();
+        await page.locator('[data-synonym-start]').tap();
+        page.__phase = 'online';
+        const game = page.locator('[data-synonym-game]');
+        const panel = game.locator('[data-synonym-exercise]');
+        const model = game.locator('[data-synonym-checked]');
+        const checkAnswer = panel.getByRole('button', { name: 'Check answers', exact: true });
+        assert.equal(synonymRound.length, 10);
+        assert(synonymRound.some(item => item.id === 'synonym-choose-question'));
+        assert(synonymRound.some(item => item.id === 'synonym-write-answer'));
+        const missed = [synonymRound[0], synonymRound[7]];
+        await checkAnswer.tap();
+        assert.equal(await game.locator('[data-synonym-message]').innerText(), 'Choose a synonym first.');
+        assert.equal(await model.isVisible(), false);
+        assert.deepEqual((await stored(page)).synonymGame.results, {});
+        await capture(page, 'synonym-game-choices-phone.png');
+
+        for (const [index, item] of synonymRound.entries()) {
+          const wrong = missed.includes(item);
+          const question = panel.locator('[data-exercise-item="' + item.id + '"]');
+          assert(await question.isVisible());
+          assert.equal(await game.locator('[data-synonym-progress]').innerText(), 'Question ' + (index + 1) + ' of 10');
+          assert.equal(await model.isVisible(), false);
+          if (item.type === 'multiple-choice') {
+            const choices = question.locator('label.exercise-choice');
+            assert.equal(await choices.count(), 4);
+            const value = wrong ? item.choices.find(choice => choice !== item.answer) : item.answer;
+            await choices.filter({ hasText: value }).tap();
+          } else {
+            const draft = question.locator('[data-exercise-answer]');
+            assert.equal(await game.locator('[data-synonym-target]').innerText(), item.cue.target);
+            const value = wrong ? item.cue.maltese : item.accepted?.[1] || item.answer;
+            await draft.fill(value);
+            if (index === 5) {
+              page.__phase = 'navigation';
+              await page.reload();
+              await page.getByRole('button', { name: 'Continue round' }).tap();
+              page.__phase = 'online';
+              assert.equal(await draft.inputValue(), value);
+              await capture(page, 'synonym-game-sentence-phone.png');
+            }
+          }
+          await checkAnswer.tap();
+          await model.waitFor();
+          assert.equal(await model.locator('[data-synonym-translation]').innerText(), item.answerTranslation);
+          assert.equal(await model.locator('[data-synonym-outcome]').innerText(), wrong ? 'Not quite' : 'Correct');
+          assert.equal(await page.evaluate(() => document.activeElement.hasAttribute('data-synonym-outcome')), true);
+          if (index === 0) {
+            assert.equal(await model.locator('[data-synonym-answer]').innerText(), 'ħnejja / arkata');
+            assert.equal(await model.locator('[data-synonym-example-en]').innerText(), item.reviewCard.exampleTranslation);
+            await capture(page, 'synonym-game-checked-phone.png');
+          }
+          await game.locator('[data-synonym-next]').tap();
+        }
+        assert.equal(await game.locator('[data-synonym-score]').innerText(), '8 of 10 correct.');
+        assert.deepEqual((await stored(page)).studySession.helpQueue.map(entry => entry.itemId), missed.map(item => item.id));
+
+        page.__phase = 'navigation';
+        await Promise.all([
+          page.waitForURL(base + '/today.html?level=mixed&topic=sib-is-sinonimu'),
+          game.getByRole('link', { name: 'Repeat 2 questions in My practice' }).tap()
+        ]);
+        await ready(page);
+        page.__phase = 'online';
+        assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 2 questions');
+        const reprise = await start(page, 2);
+        const variants = missed.map(original => synonymSets[1].items.find(item => item.repeatOf === original.id));
+        assert.deepEqual(reprise.entries.map(entry => entry.item.id), variants.map(item => item.id));
+        for (const item of variants) {
+          assert.equal(await page.locator('[data-study-checked-answer]').isVisible(), false);
+          await submit(page);
+          assert.equal(await page.locator('[data-study-checked-en]').innerText(), item.answerTranslation);
+          await next(page);
+        }
         assert.deepEqual((await stored(page)).studySession.helpQueue, []);
         await preserved(page);
       } finally { await f.close(); }
@@ -1173,7 +1358,7 @@ async function main() {
         assert.equal(await tripPage.locator('[data-postcard-rides-en]').innerText(), 'Bus 31 → Ferry F1');
         const activity = tripPage.locator('[data-route-postcards]');
         const postcards = [
-          ['friend', 'Għażiża Maya, mort sal-mużew!', 'Dear Maya'],
+          ['friend', 'Għażiż Joe, mort sal-mużew!', 'Dear Joe'],
           ['colleagues', 'Għeżież kollegi, mort sal-mużew!', 'Dear colleagues']
         ];
         for (const [recipient, draft, greeting] of postcards) {
@@ -1191,7 +1376,7 @@ async function main() {
           await card.locator('summary').click();
           assert.equal(await card.getByRole('textbox', { name: 'Your answer' }).inputValue(), draft);
         }
-        const baseCard = tripPage.locator('[data-bank-item="postcard-friend"]');
+        const baseCard = tripPage.locator('[data-bank-item="postcard-birgu-friend"]');
         await baseCard.locator('summary').click();
         assert.equal(await baseCard.getByRole('textbox', { name: 'Your answer' }).inputValue(), '');
         await activity.locator('h3').scrollIntoViewIfNeeded();

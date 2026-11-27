@@ -281,19 +281,43 @@
                     </div>
                     <div data-example-group="route-postcard-writing" data-bank-layout="comprehension"></div>
                 </div>
-                <div data-example-group="postcard-writing" data-bank-layout="comprehension"></div>
+                <section class="stack" aria-labelledby="seaside-postcard-title">
+                    <h3 id="seaside-postcard-title">Holiday by the Sea</h3>
+                    <p>You're in Marsalforn, Gozo. It's warm and sunny and the sea is calm. Yesterday you swam at Ramla Bay. Today you took photos in Xlendi. Write five or six sentences to Mark, then compare them with the model.</p>
+                    <div data-example-group="seaside-postcard-writing" data-bank-layout="comprehension"></div>
+                    <div data-example-group="seaside-postcard-continuation" data-bank-layout="reading" data-postcard-continuation="postcard-marsalforn" hidden></div>
+                </section>
+                <section class="stack" aria-labelledby="postcard-readers-title">
+                    <h3 id="postcard-readers-title">One trip, two readers</h3>
+                    <p>You're spending two days in Birgu. It's windy. You visited the fort and had a coffee in the square. Say that you’ll show the reader your photos. Write to your friend Nina and then to your colleagues. Keep the facts and change the greeting, how you address the reader and the closing.</p>
+                    <div data-example-group="postcard-writing" data-bank-layout="comprehension"></div>
+                </section>
                 <details class="study-disclosure">
                     <summary>Check your postcard</summary>
                     <div class="study-disclosure-body">
                         <ul>
-                            <li>Greet the person or group you are writing to.</li>
-                            <li>Say where you are and what the weather is like.</li>
-                            <li>Describe something you did or plan to do.</li>
+                            <li>Use a greeting and forms of address that fit one reader or a group.</li>
+                            <li>Say where you are. Mention the weather for a holiday or how you travelled for a route.</li>
+                            <li>Include both activities from the brief or something you saw on your route.</li>
                             <li>Close with a wish or goodbye and sign your name.</li>
                         </ul>
                     </div>
                 </details>
+                <details class="study-disclosure" data-earlier-postcards hidden>
+                    <summary>Earlier postcard drafts</summary>
+                    <div class="study-disclosure-body stack">
+                        <div class="study-card" data-earlier-draft="postcard-friend" hidden>
+                            <strong>To a friend</strong>
+                            <p lang="mt"></p>
+                        </div>
+                        <div class="study-card" data-earlier-draft="postcard-colleagues" hidden>
+                            <strong>To colleagues</strong>
+                            <p lang="mt"></p>
+                        </div>
+                    </div>
+                </details>
                 <div class="toolbar-row">
+                    <a class="action-link" href="./today.html?level=mixed&amp;topic=postcard-register">Practise postcard phrases</a>
                     <a class="action-link" href="./polite_phrases.html">Polite phrases</a>
                     <a class="action-link" href="./today.html?level=mixed&amp;topic=words-reading-postcards">Start mixed practice</a>
                 </div>
@@ -314,6 +338,16 @@
     const practiceKey = "malti_topic_practice_v1";
     const getPractice = () => storage.getJson(practiceKey, {}) || {};
     const writing = document.querySelector("#postcards");
+    const postcardGroups = new Set(["seaside-postcard-writing", "postcard-writing"]);
+    const savedPostcards = getPractice().postcards;
+    const earlier = writing.querySelector("[data-earlier-postcards]");
+    for (const card of earlier.querySelectorAll("[data-earlier-draft]")) {
+        const draft = savedPostcards?.answers?.[card.dataset.earlierDraft];
+        if (typeof draft !== "string" || !draft.trim()) continue;
+        card.querySelector("p").textContent = draft;
+        card.hidden = false;
+        earlier.hidden = false;
+    }
     const trip = window.MaltiRouteGame.postcardJourney(new URLSearchParams(location.search));
     if (trip) {
         const card = writing.querySelector("[data-route-postcards]");
@@ -328,7 +362,7 @@
     }
     const saveWriting = (field, { groupId, slug, value }) => {
         const fromGame = groupId === "route-postcard-writing";
-        if (fromGame ? !trip : groupId !== "postcard-writing") return;
+        if (fromGame ? !trip : !postcardGroups.has(groupId)) return;
         const progress = getPractice();
         const saved = { ...(fromGame ? progress.routePostcards?.[trip.id] : progress.postcards) };
         if (saved[field]?.[slug] === value) return;
@@ -354,10 +388,19 @@
         defaultTopic: "Transport and Travel",
         reviewPrefix: "transport-travel",
         groupViews: {
-            "postcard-writing": { presentation: "selfAssessment", state: getPractice().postcards },
+            "seaside-postcard-writing": { presentation: "selfAssessment", state: savedPostcards },
+            "seaside-postcard-continuation": { presentation: "reading" },
+            "postcard-writing": { presentation: "selfAssessment", state: savedPostcards },
             "route-postcard-writing": { presentation: "selfAssessment", state: trip && getPractice().routePostcards?.[trip.id] }
         }
     }).then(() => {
+        for (const continuation of writing.querySelectorAll("[data-postcard-continuation]")) {
+            const card = writing.querySelector(`[data-bank-item="${continuation.dataset.postcardContinuation}"]`);
+            const translation = card && [...card.querySelectorAll("[data-bank-translation]")].at(-1);
+            if (!translation) continue;
+            translation.parentElement.append(continuation);
+            continuation.hidden = false;
+        }
         if (trip && location.hash === "#route-postcards") writing.querySelector("[data-route-postcards]").scrollIntoView();
     });
 }

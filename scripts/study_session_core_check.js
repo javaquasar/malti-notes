@@ -57,6 +57,22 @@ check('invalid routes, quarantined items, diagnostic-only banks and zero-sized p
     const onlyDiagnostic = { ...colourPayload, assessments: colourPayload.assessments.filter(set => set.kind === 'diagnostic') };
     assert.equal(core.planCourse(onlyDiagnostic, { levelId: 'b1', chapterId: 'b1-colours' }).entries.length, 0);
 });
+check('earlier synonym tasks remain resumable and repeatable without entering new rounds', () => {
+    const route = core.PRACTICE_ROUTES.find(entry => entry.id === 'sib-is-sinonimu');
+    const bank = read('assets/data/synonym_game_exercises.json');
+    const plan = core.planFixedPractice(bank, route);
+    assert.equal(plan.fullCount, 10);
+    assert.equal(plan.entries.filter(entry => entry.mode === 'recognition').length, 5);
+    assert.equal(plan.entries.filter(entry => entry.mode === 'production').length, 5);
+    const earlier = plan.catalog.find(entry => entry.item.repeatOnly);
+    assert(!plan.entries.some(entry => entry.item.id === earlier.item.id));
+    const session = core.createSession({ ...plan, entries: [earlier] }, { now: NOW });
+    const checked = core.recordResult(session, { itemId: earlier.item.id, correct: false }, { now: NOW });
+    const saved = core.resumeSession(checked, mapFor(plan));
+    assert.equal(saved.results[earlier.item.id].correct, false);
+    const repeats = core.planFixedPractice(bank, route, saved.helpQueue);
+    assert.deepEqual(repeats.entries.map(entry => entry.item.repeatOf), [earlier.item.id]);
+});
 check('B3 delegates selection to its existing scheduler and scopes the original items to the chosen chapter', () => {
     const chapterId = bank.chapters[0].id;
     const before = clone(bank), state = { futureMetadata: { preserve: true } };

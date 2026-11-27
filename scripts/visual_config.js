@@ -39,6 +39,7 @@ const fullPageVisualPages = [
   "verbs_guide.html",
   "weather.html",
   "word_builder_game.html",
+  "synonym_game.html",
   "word_search.html",
   "year4_exam.html"
 ];

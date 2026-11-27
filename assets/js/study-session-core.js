@@ -21,10 +21,20 @@
             readingPage: 'food_preferences.html#junk-food', readingTitle: 'Il-Junk Food'
         }),
         Object.freeze({
+            id: 'postcard-register', levelId: 'mixed', levelLabel: 'Mixed practice',
+            title: 'Postcards for friends and colleagues', repeatSetId: 'postcard-register-repeat',
+            practiceFile: './assets/data/language_context_exercises.json', sourcePage: 'transport_travel.html#postcards'
+        }),
+        Object.freeze({
             id: 'describe-and-compare', levelId: 'mixed', levelLabel: 'Mixed practice',
             title: 'Describe and Compare', repeatSetId: 'describe-and-compare-repeat',
             practiceFile: './assets/data/describe_compare_exercises.json', sourcePage: 'comparisons.html#comparison-practice',
             readingPage: 'comparisons.html#car-reading', readingTitle: 'Ġanni jagħżel karozza'
+        }),
+        Object.freeze({
+            id: 'sib-is-sinonimu', levelId: 'mixed', levelLabel: 'Mixed practice',
+            title: 'Sib is-Sinonimu', repeatSetId: 'sib-is-sinonimu-repeat',
+            practiceFile: './assets/data/synonym_game_exercises.json', sourcePage: 'homonyms_synonyms.html#synonyms'
         })
     ]);
     const ROUTE_IDS = Object.freeze(['b1', 'b2', 'b3', ...new Set(PRACTICE_ROUTES.map(route => route.levelId))]);
@@ -272,9 +282,11 @@
         const modes = new Map(originals.map(entry => [entry.skillId, entry.mode]));
         const alternatives = array(repeatSet?.items).filter(item => publishable(item)
             && modes.get(item.repeatOf) === item.assessmentMode).map(item => entryFor(item, item.repeatOf, repeatSet.id));
+        // Keep earlier items available for resumable sessions and queued repeats.
+        const active = originals.filter(entry => entry.item.repeatOnly !== true);
         const catalog = originals.concat(alternatives);
         const repeats = repeatEntries(catalog, queue);
-        return { routeId, chapterId, title, entries: repeats.length ? repeats : originals, catalog, fullCount: originals.length };
+        return { routeId, chapterId, title, entries: repeats.length ? repeats : active, catalog, fullCount: active.length };
     }
 
     function createSession(plan, options) {

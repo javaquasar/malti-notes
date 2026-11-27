@@ -278,7 +278,7 @@
     find('[data-study-checked-answer]').hidden = !visible;
     const pronunciation = find('[data-study-checked-audio-for]');
     if (pronunciation) pronunciation.hidden = !visible || pronunciation.dataset.studyCheckedAudioFor !== entry.chapterId;
-    const maltese = visible && !/[.!?]$/.test(answer) ? answer + '.' : answer;
+    const maltese = visible && !/[.!?,]$/.test(answer) ? answer + '.' : answer;
     say('[data-study-checked-mt]', visible ? maltese : '');
     say('[data-study-checked-en]', visible ? answerTranslation : '');
     const draft = session.drafts[entry.item.id];

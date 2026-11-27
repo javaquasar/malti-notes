@@ -244,6 +244,14 @@
                 </details>
                 <h3>Reading questions</h3>
                 <div data-exercise-set="junk-food-check" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                <details class="study-disclosure" id="snack-dialogue">
+                    <summary>Choosing a snack</summary>
+                    <div class="study-disclosure-body stack">
+                        <label class="study-check"><input type="checkbox" data-junk-food-english aria-controls="snack-dialogue-reading">Show English translation for the dialogue</label>
+                        <div class="study-contrast" id="snack-dialogue-reading" data-example-group="snack-dialogue-reading" data-bank-layout="reading"></div>
+                        <div data-exercise-set="snack-dialogue-check" data-exercise-src="./assets/data/language_context_exercises.json"></div>
+                    </div>
+                </details>
                 <details class="study-disclosure" id="food-labels">
                     <summary>Compare two food labels</summary>
                     <div class="study-disclosure-body stack">
@@ -447,18 +455,20 @@ window.renderExampleBanksFromData({
     groupViews: {
         "food-shopping-list-models": { presentation: "reading" },
         "shopping-dialogue-transcript": { presentation: "reading" },
-        "junk-food-reading": { presentation: "reading" }
+        "junk-food-reading": { presentation: "reading" },
+        "snack-dialogue-reading": { presentation: "reading" }
     }
 }).then(() => {
     const section = document.querySelector("#junk-food");
     const reading = section.querySelector("#junk-food-reading");
-    const toggle = section.querySelector("[data-junk-food-english]");
-    const translations = reading.querySelectorAll("[data-bank-translation]");
-    const updateTranslation = () => translations.forEach(paragraph => {
-        paragraph.hidden = !toggle.checked;
-    });
-    toggle.addEventListener("change", updateTranslation);
-    updateTranslation();
+    for (const toggle of section.querySelectorAll("[data-junk-food-english]")) {
+        const translations = document.getElementById(toggle.getAttribute("aria-controls")).querySelectorAll("[data-bank-translation]");
+        const updateTranslation = () => translations.forEach(paragraph => {
+            paragraph.hidden = !toggle.checked;
+        });
+        toggle.addEventListener("change", updateTranslation);
+        updateTranslation();
+    }
 
     const check = section.querySelector('[data-exercise-set="junk-food-check"]');
     const markTemplate = section.querySelector("[data-food-evidence-mark]");
