@@ -669,7 +669,7 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('Sib is-Sinonimu checks ten bilingual questions and repeats game mistakes in My practice', async () => {
+    await check('Sib is-Sinonimu mixes five formats, saves pair drafts and repeats only missed skills in My practice', async () => {
       const f = await fixture('synonym-game', { width: 390, hasTouch: true });
       try {
         const { page } = f;
@@ -680,57 +680,94 @@ async function main() {
         page.__phase = 'online';
         const game = page.locator('[data-synonym-game]');
         const panel = game.locator('[data-synonym-exercise]');
+        const board = game.locator('[data-synonym-pairs]');
         const model = game.locator('[data-synonym-checked]');
         const checkAnswer = panel.getByRole('button', { name: 'Check answers', exact: true });
-        assert.equal(synonymRound.length, 10);
-        assert(synonymRound.some(item => item.id === 'synonym-choose-question'));
-        assert(synonymRound.some(item => item.id === 'synonym-write-answer'));
-        const missed = [synonymRound[0], synonymRound[7]];
+        const initial = (await stored(page)).synonymGame;
+        const items = initial.entries.map(entry => entry.item);
+        assert.deepEqual(items.map(item => item.gameFormat), synonymRound.map(item => item.gameFormat));
+        assert.deepEqual(items.map(item => item.id).sort(), synonymRound.map(item => item.id).sort());
+        const missed = [items.find(item => item.gameFormat === 'pairs'), items.find(item => item.gameFormat === 'article')];
         await checkAnswer.tap();
         assert.equal(await game.locator('[data-synonym-message]').innerText(), 'Choose a synonym first.');
         assert.equal(await model.isVisible(), false);
         assert.deepEqual((await stored(page)).synonymGame.results, {});
         await capture(page, 'synonym-game-choices-phone.png');
 
-        for (const [index, item] of synonymRound.entries()) {
+        for (const [index, item] of items.entries()) {
           const wrong = missed.includes(item);
           const question = panel.locator('[data-exercise-item="' + item.id + '"]');
-          assert(await question.isVisible());
+          const progress = game.locator('[data-synonym-progress-marks]');
+          assert.equal(await question.isVisible(), item.type !== 'matching');
           assert.equal(await game.locator('[data-synonym-progress]').innerText(), 'Question ' + (index + 1) + ' of 10');
+          assert.equal(await progress.innerText(), '●'.repeat(index) + '○'.repeat(10 - index));
           assert.equal(await model.isVisible(), false);
           if (item.type === 'multiple-choice') {
-            const choices = question.locator('label.exercise-choice');
-            assert.equal(await choices.count(), 4);
             const value = wrong ? item.choices.find(choice => choice !== item.answer) : item.answer;
-            await choices.filter({ hasText: value }).tap();
+            await question.getByRole('radio', { name: value, exact: true }).check();
+          } else if (item.type === 'matching') {
+            assert(await board.isVisible());
+            const left = board.locator('[data-pair-side="left"]');
+            const right = board.locator('[data-pair-side="right"]');
+            const firstLeft = await left.first().boundingBox();
+            const firstRight = await right.first().boundingBox();
+            assert(Math.abs(firstLeft.y - firstRight.y) < 2, 'Pair columns must be beside one another on a phone');
+            const assigned = item.pairs.map(pair => pair.right);
+            if (wrong) [assigned[0], assigned[1]] = [assigned[1], assigned[0]];
+            for (const [n, rightWord] of assigned.entries()) {
+              const leftWord = left.nth(n);
+              if (n === 0 && wrong) {
+                await leftWord.focus();
+                await leftWord.press('Space');
+                assert.equal(await leftWord.getAttribute('aria-pressed'), 'true');
+              } else await leftWord.tap();
+              await right.filter({ has: page.getByText(rightWord, { exact: true }) }).tap();
+              assert.equal((await leftWord.locator('[data-pair-number]').innerText()).trim(), '· ' + (n + 1));
+              if (n === 0 && wrong) {
+                await checkAnswer.tap();
+                assert.equal(await game.locator('[data-synonym-message]').innerText(), 'Match all three pairs before checking.');
+                assert.equal(await model.isVisible(), false);
+                page.__phase = 'navigation';
+                await page.reload();
+                await page.getByRole('button', { name: 'Continue round' }).tap();
+                page.__phase = 'online';
+                assert.equal((await stored(page)).synonymGame.drafts[item.id][0], rightWord);
+                assert.equal((await leftWord.locator('[data-pair-number]').innerText()).trim(), '· 1');
+                assert.deepEqual(await axe(page, '[data-synonym-round]'), []);
+                await capture(page, 'synonym-game-pairs-phone.png');
+              }
+            }
+            assert.deepEqual((await stored(page)).synonymGame.drafts[item.id], assigned);
           } else {
             const draft = question.locator('[data-exercise-answer]');
             assert.equal(await game.locator('[data-synonym-target]').innerText(), item.cue.target);
-            const value = wrong ? item.cue.maltese : item.accepted?.[1] || item.answer;
-            await draft.fill(value);
-            if (index === 5) {
-              page.__phase = 'navigation';
-              await page.reload();
-              await page.getByRole('button', { name: 'Continue round' }).tap();
-              page.__phase = 'online';
-              assert.equal(await draft.inputValue(), value);
-              await capture(page, 'synonym-game-sentence-phone.png');
-            }
+            await draft.fill(item.answer);
+            assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
           }
           await checkAnswer.tap();
           await model.waitFor();
-          assert.equal(await model.locator('[data-synonym-translation]').innerText(), item.answerTranslation);
+          const sentenceChoice = ['article', 'context'].includes(item.gameFormat);
+          assert.equal(await model.locator('[data-synonym-translation]').innerText(),
+            sentenceChoice ? item.reviewCard.exampleTranslation : item.answerTranslation);
           assert.equal(await model.locator('[data-synonym-outcome]').innerText(), wrong ? 'Not quite' : 'Correct');
+          assert.equal(await progress.innerText(), '●'.repeat(index + 1) + '○'.repeat(9 - index));
           assert.equal(await page.evaluate(() => document.activeElement.hasAttribute('data-synonym-outcome')), true);
-          if (index === 0) {
-            assert.equal(await model.locator('[data-synonym-answer]').innerText(), 'ħnejja / arkata');
-            assert.equal(await model.locator('[data-synonym-example-en]').innerText(), item.reviewCard.exampleTranslation);
+          if (item.gameFormat === 'rewrite') assert.equal(await model.locator('[data-synonym-example]').isVisible(), false);
+          if (item.gameFormat === 'article') {
+            assert.equal(await model.locator('[data-synonym-answer-change]').innerText(), item.answer);
+            assert.match(await model.locator('[data-synonym-explanation]').innerText(), /ix-/);
             await capture(page, 'synonym-game-checked-phone.png');
           }
           await game.locator('[data-synonym-next]').tap();
         }
         assert.equal(await game.locator('[data-synonym-score]').innerText(), '8 of 10 correct.');
+        assert.equal(await game.locator('[data-synonym-meaning-score]').innerText(), '6 of 7 correct');
+        assert.equal(await game.locator('[data-synonym-form-score]').innerText(), '2 of 3 correct');
+        const confusedWords = missed[0].pairs.slice(0, 2).map(pair => pair.left).join(' / ');
+        assert.equal(await game.locator('[data-synonym-meaning-misses]').innerText(), confusedWords);
+        assert.equal(await game.locator('[data-synonym-form-misses]').innerText(), missed[1].cue.target);
         assert.deepEqual((await stored(page)).studySession.helpQueue.map(entry => entry.itemId), missed.map(item => item.id));
+        await capture(page, 'synonym-game-results-phone.png');
 
         page.__phase = 'navigation';
         await Promise.all([
@@ -742,8 +779,8 @@ async function main() {
         assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 2 questions');
         const reprise = await start(page, 2);
         const variants = missed.map(original => synonymSets[1].items.find(item => item.repeatOf === original.id));
-        assert.deepEqual(reprise.entries.map(entry => entry.item.id), variants.map(item => item.id));
-        for (const item of variants) {
+        assert.deepEqual(reprise.entries.map(entry => entry.item.id).sort(), variants.map(item => item.id).sort());
+        for (const { item } of reprise.entries) {
           assert.equal(await page.locator('[data-study-checked-answer]').isVisible(), false);
           await submit(page);
           assert.equal(await page.locator('[data-study-checked-en]').innerText(), item.answerTranslation);

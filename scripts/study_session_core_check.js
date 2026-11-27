@@ -62,8 +62,8 @@ check('earlier synonym tasks remain resumable and repeatable without entering ne
     const bank = read('assets/data/synonym_game_exercises.json');
     const plan = core.planFixedPractice(bank, route);
     assert.equal(plan.fullCount, 10);
-    assert.equal(plan.entries.filter(entry => entry.mode === 'recognition').length, 5);
-    assert.equal(plan.entries.filter(entry => entry.mode === 'production').length, 5);
+    assert.equal(plan.entries.filter(entry => entry.mode === 'recognition').length, 8);
+    assert.equal(plan.entries.filter(entry => entry.mode === 'production').length, 2);
     const earlier = plan.catalog.find(entry => entry.item.repeatOnly);
     assert(!plan.entries.some(entry => entry.item.id === earlier.item.id));
     const session = core.createSession({ ...plan, entries: [earlier] }, { now: NOW });

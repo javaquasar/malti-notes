@@ -28,58 +28,135 @@
             "english": "arch",
             "example": "Il-kelb qorob lejn l-arkata.",
             "exampleTranslation": "The dog went towards the arch."
+          },
+          "gameFormat": "word"
+        },
+        {
+          "id": "synonym-context-exam",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace tqil with a synonym in this sentence. L-eżami kien tqil.",
+          "cue": {
+            "maltese": "L-eżami kien tqil.",
+            "target": "tqil",
+            "english": "The exam was difficult."
+          },
+          "choices": [
+            "faċli",
+            "qasir",
+            "diffiċli"
+          ],
+          "answer": "diffiċli",
+          "answerTranslation": "difficult",
+          "explanation": "With an exam, tqil can describe difficulty. Diffiċli keeps that meaning.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "diffiċli",
+            "english": "difficult",
+            "example": "L-eżami kien diffiċli.",
+            "exampleTranslation": "The exam was difficult."
           }
         },
         {
-          "id": "synonym-choose-day",
-          "type": "multiple-choice",
+          "id": "synonym-pairs-day",
+          "type": "matching",
           "assessmentMode": "recognition",
-          "prompt": "Choose a synonym for ġurnata.",
-          "cue": {
-            "maltese": "ġurnata",
-            "english": "day"
-          },
-          "choices": [
-            "sena",
-            "filgħodu",
-            "jum",
-            "lejl"
+          "gameFormat": "pairs",
+          "prompt": "Match each Maltese word with its synonym.",
+          "pairs": [
+            {
+              "left": "ġurnata",
+              "right": "jum"
+            },
+            {
+              "left": "ferħ",
+              "right": "hena"
+            },
+            {
+              "left": "folla",
+              "right": "kotra"
+            }
           ],
-          "answer": "jum",
-          "answerTranslation": "day",
-          "explanation": "Both refer to a day. Jum is masculine and ġurnata is feminine.",
+          "answer": "ġurnata → jum · ferħ → hena · folla → kotra",
+          "answerTranslation": "day · joy · crowd",
+          "explanation": "Ġurnata and jum refer to a day. Ferħ and hena express joy. Folla and kotra can both refer to a crowd.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "synonym-write-answer",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace ir-risposta with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Ktibt ir-risposta fuq karta.",
+            "target": "ir-risposta",
+            "english": "I wrote the answer on a sheet of paper."
+          },
+          "answer": "Ktibt it-tweġiba fuq karta.",
+          "answerTranslation": "I wrote the answer on a sheet of paper.",
+          "explanation": "Both words mean answer here. Before tweġiba the article is it-.",
           "sourcePage": "homonyms_synonyms.html#synonyms",
           "reviewCard": {
-            "maltese": "jum",
-            "english": "day",
-            "example": "Kellna jum liberu.",
-            "exampleTranslation": "We had a day off."
+            "maltese": "tweġiba",
+            "english": "answer",
+            "example": "Ktibt it-tweġiba fuq karta.",
+            "exampleTranslation": "I wrote the answer on a sheet of paper."
+          },
+          "gameFormat": "rewrite"
+        },
+        {
+          "id": "synonym-context-notice",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace ntebaħ with a synonym in this sentence. Pawlu ntebaħ bl-iżball.",
+          "cue": {
+            "maltese": "Pawlu ntebaħ bl-iżball.",
+            "target": "ntebaħ",
+            "english": "Pawlu noticed the mistake."
+          },
+          "choices": [
+            "induna",
+            "stenna",
+            "nesa"
+          ],
+          "answer": "induna",
+          "answerTranslation": "he noticed",
+          "explanation": "Ntebaħ and induna both mean that Pawlu noticed or became aware of the mistake.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "induna",
+            "english": "he noticed",
+            "example": "Pawlu induna bl-iżball.",
+            "exampleTranslation": "Pawlu noticed the mistake."
           }
         },
         {
-          "id": "synonym-choose-joy",
+          "id": "synonym-article-driver",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
-          "prompt": "Choose a synonym for ferħ.",
+          "gameFormat": "article",
+          "prompt": "Choose the form of xufier that replaces Is-sewwieq. Is-sewwieq niżel mill-vann.",
           "cue": {
-            "maltese": "ferħ",
-            "english": "joy"
+            "maltese": "Is-sewwieq niżel mill-vann.",
+            "target": "Is-sewwieq",
+            "english": "The driver got out of the van."
           },
           "choices": [
-            "għeja",
-            "ħeġġa",
-            "hena",
-            "talba"
+            "Il-xufier",
+            "Ix-xufier",
+            "Is-xufier"
           ],
-          "answer": "hena",
-          "answerTranslation": "joy",
-          "explanation": "Hena and ferħ both refer to joy or happiness.",
+          "answer": "Ix-xufier",
+          "answerTranslation": "the driver",
+          "explanation": "Before x, the definite article takes the form ix-. Use ix-xufier in place of is-sewwieq.",
           "sourcePage": "homonyms_synonyms.html#synonyms",
           "reviewCard": {
-            "maltese": "hena",
-            "english": "joy",
-            "example": "Ħassejt ħafna hena dakinhar.",
-            "exampleTranslation": "I felt a lot of joy that day."
+            "maltese": "Ix-xufier",
+            "english": "the driver",
+            "example": "Ix-xufier niżel mill-vann.",
+            "exampleTranslation": "The driver got out of the van."
           }
         },
         {
@@ -106,7 +183,139 @@
             "english": "question",
             "example": "Staqsejt mistoqsija dwar il-vjaġġ.",
             "exampleTranslation": "I asked a question about the journey."
+          },
+          "gameFormat": "word"
+        },
+        {
+          "id": "synonym-pairs-news",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "gameFormat": "pairs",
+          "prompt": "Match each Maltese word with its synonym.",
+          "pairs": [
+            {
+              "left": "stedina",
+              "right": "invit"
+            },
+            {
+              "left": "tama",
+              "right": "speranza"
+            },
+            {
+              "left": "gazzetta",
+              "right": "ġurnal"
+            }
+          ],
+          "answer": "stedina → invit · tama → speranza · gazzetta → ġurnal",
+          "answerTranslation": "invitation · hope · newspaper",
+          "explanation": "An invit is an invitation. Speranza is another word for hope. Ġurnal means newspaper in this context.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "synonym-context-happen",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace ġara with a synonym in this sentence. Dan ġara nhar it-Tnejn.",
+          "cue": {
+            "maltese": "Dan ġara nhar it-Tnejn.",
+            "target": "ġara",
+            "english": "It happened on Monday."
+          },
+          "choices": [
+            "beda",
+            "seħħ",
+            "ħareġ"
+          ],
+          "answer": "seħħ",
+          "answerTranslation": "it happened",
+          "explanation": "Seħħ and ġara both describe something that happened.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "seħħ",
+            "english": "it happened",
+            "example": "Dan seħħ nhar it-Tnejn.",
+            "exampleTranslation": "It happened on Monday."
           }
+        },
+        {
+          "id": "synonym-write-holiday",
+          "type": "fill-blank",
+          "assessmentMode": "production",
+          "prompt": "Replace Il-vaganza with a synonym. Write the whole sentence.",
+          "cue": {
+            "maltese": "Il-vaganza damet ġimgħa.",
+            "target": "Il-vaganza",
+            "english": "The holiday lasted a week."
+          },
+          "answer": "Il-btala damet ġimgħa.",
+          "accepted": [
+            "Il-btala damet ġimgħa."
+          ],
+          "answerTranslation": "The holiday lasted a week.",
+          "explanation": "Vaganza and btala both refer to a holiday. Both take il- in this sentence.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "btala",
+            "english": "holiday",
+            "example": "Il-btala damet ġimgħa.",
+            "exampleTranslation": "The holiday lasted a week."
+          },
+          "gameFormat": "rewrite"
+        },
+        {
+          "id": "synonym-choose-day",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for ġurnata.",
+          "cue": {
+            "maltese": "ġurnata",
+            "english": "day"
+          },
+          "choices": [
+            "sena",
+            "filgħodu",
+            "jum",
+            "lejl"
+          ],
+          "answer": "jum",
+          "answerTranslation": "day",
+          "explanation": "Both refer to a day. Jum is masculine and ġurnata is feminine.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "jum",
+            "english": "day",
+            "example": "Kellna jum liberu.",
+            "exampleTranslation": "We had a day off."
+          },
+          "repeatOnly": true
+        },
+        {
+          "id": "synonym-choose-joy",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for ferħ.",
+          "cue": {
+            "maltese": "ferħ",
+            "english": "joy"
+          },
+          "choices": [
+            "għeja",
+            "ħeġġa",
+            "hena",
+            "talba"
+          ],
+          "answer": "hena",
+          "answerTranslation": "joy",
+          "explanation": "Hena and ferħ both refer to joy or happiness.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "hena",
+            "english": "joy",
+            "example": "Ħassejt ħafna hena dakinhar.",
+            "exampleTranslation": "I felt a lot of joy that day."
+          },
+          "repeatOnly": true
         },
         {
           "id": "synonym-choose-crowd",
@@ -132,52 +341,8 @@
             "english": "crowd",
             "example": "Kotra ta' nies inġabret ħdejn il-palk.",
             "exampleTranslation": "A large crowd gathered near the stage."
-          }
-        },
-        {
-          "id": "synonym-write-answer",
-          "type": "fill-blank",
-          "assessmentMode": "production",
-          "prompt": "Replace ir-risposta with a synonym. Write the whole sentence.",
-          "cue": {
-            "maltese": "Ktibt ir-risposta fuq karta.",
-            "target": "ir-risposta",
-            "english": "I wrote the answer on a sheet of paper."
           },
-          "answer": "Ktibt it-tweġiba fuq karta.",
-          "answerTranslation": "I wrote the answer on a sheet of paper.",
-          "explanation": "Both words mean answer here. Before tweġiba the article is it-.",
-          "sourcePage": "homonyms_synonyms.html#synonyms",
-          "reviewCard": {
-            "maltese": "tweġiba",
-            "english": "answer",
-            "example": "Ktibt it-tweġiba fuq karta.",
-            "exampleTranslation": "I wrote the answer on a sheet of paper."
-          }
-        },
-        {
-          "id": "synonym-write-holiday",
-          "type": "fill-blank",
-          "assessmentMode": "production",
-          "prompt": "Replace Il-vaganza with a synonym. Write the whole sentence.",
-          "cue": {
-            "maltese": "Il-vaganza damet ġimgħa.",
-            "target": "Il-vaganza",
-            "english": "The holiday lasted a week."
-          },
-          "answer": "Il-btala damet ġimgħa.",
-          "accepted": [
-            "Il-btala damet ġimgħa."
-          ],
-          "answerTranslation": "The holiday lasted a week.",
-          "explanation": "Vaganza and btala both refer to a holiday. Both take il- in this sentence.",
-          "sourcePage": "homonyms_synonyms.html#synonyms",
-          "reviewCard": {
-            "maltese": "btala",
-            "english": "holiday",
-            "example": "Il-btala damet ġimgħa.",
-            "exampleTranslation": "The holiday lasted a week."
-          }
+          "repeatOnly": true
         },
         {
           "id": "synonym-write-driver",
@@ -198,7 +363,8 @@
             "english": "driver",
             "example": "Ix-xufier stenna ħdejn il-vann.",
             "exampleTranslation": "The driver waited by the van."
-          }
+          },
+          "repeatOnly": true
         },
         {
           "id": "synonym-write-hope",
@@ -219,7 +385,8 @@
             "english": "hope",
             "example": "Għandi tama li se nirbaħ.",
             "exampleTranslation": "I'm hopeful that I'll win."
-          }
+          },
+          "repeatOnly": true
         },
         {
           "id": "synonym-write-newspaper",
@@ -240,7 +407,8 @@
             "english": "newspaper",
             "example": "Poġġejt il-ġurnal fuq is-siġġu.",
             "exampleTranslation": "I put the newspaper on the chair."
-          }
+          },
+          "repeatOnly": true
         },
         {
           "id": "synonym-choose-invitation",
@@ -590,6 +758,170 @@
             "exampleTranslation": "I read the answer twice."
           },
           "repeatOf": "synonym-write-answer"
+        },
+        {
+          "id": "synonym-context-exam-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace tqil with a synonym in this sentence. Il-kompitu kien tqil.",
+          "cue": {
+            "maltese": "Il-kompitu kien tqil.",
+            "target": "tqil",
+            "english": "The task was difficult."
+          },
+          "choices": [
+            "diffiċli",
+            "mgħaġġel",
+            "faċli"
+          ],
+          "answer": "diffiċli",
+          "answerTranslation": "difficult",
+          "explanation": "Tqil describes a challenging task here. Diffiċli preserves that meaning.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "diffiċli",
+            "english": "difficult",
+            "example": "Il-kompitu kien diffiċli.",
+            "exampleTranslation": "The task was difficult."
+          },
+          "repeatOf": "synonym-context-exam"
+        },
+        {
+          "id": "synonym-context-notice-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace induna with a synonym in this sentence. Toni induna li l-bieb kien miftuħ.",
+          "cue": {
+            "maltese": "Toni induna li l-bieb kien miftuħ.",
+            "target": "induna",
+            "english": "Toni noticed that the door was open."
+          },
+          "choices": [
+            "talab",
+            "ntebaħ",
+            "għalaq"
+          ],
+          "answer": "ntebaħ",
+          "answerTranslation": "he noticed",
+          "explanation": "Ntebaħ can replace induna when someone notices something.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "ntebaħ",
+            "english": "he noticed",
+            "example": "Toni ntebaħ li l-bieb kien miftuħ.",
+            "exampleTranslation": "Toni noticed that the door was open."
+          },
+          "repeatOf": "synonym-context-notice"
+        },
+        {
+          "id": "synonym-context-happen-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace seħħ with a synonym in this sentence. L-inċident seħħ bil-lejl.",
+          "cue": {
+            "maltese": "L-inċident seħħ bil-lejl.",
+            "target": "seħħ",
+            "english": "The accident happened at night."
+          },
+          "choices": [
+            "dam",
+            "beda",
+            "ġara"
+          ],
+          "answer": "ġara",
+          "answerTranslation": "it happened",
+          "explanation": "Ġara is another way to say that the accident happened.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "ġara",
+            "english": "it happened",
+            "example": "L-inċident ġara bil-lejl.",
+            "exampleTranslation": "The accident happened at night."
+          },
+          "repeatOf": "synonym-context-happen"
+        },
+        {
+          "id": "synonym-article-driver-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "article",
+          "prompt": "Choose the form of xufier that replaces Is-sewwieq. Is-sewwieq sab il-biljett.",
+          "cue": {
+            "maltese": "Is-sewwieq sab il-biljett.",
+            "target": "Is-sewwieq",
+            "english": "The driver found the ticket."
+          },
+          "choices": [
+            "Is-xufier",
+            "Il-xufier",
+            "Ix-xufier"
+          ],
+          "answer": "Ix-xufier",
+          "answerTranslation": "the driver",
+          "explanation": "Xufier starts with x, so the article is ix-.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "Ix-xufier",
+            "english": "the driver",
+            "example": "Ix-xufier sab il-biljett.",
+            "exampleTranslation": "The driver found the ticket."
+          },
+          "repeatOf": "synonym-article-driver"
+        },
+        {
+          "id": "synonym-pairs-day-retry",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "gameFormat": "pairs",
+          "prompt": "Match each bracketed word with its synonym.",
+          "pairs": [
+            {
+              "left": "Kienet [ġurnata] twila.",
+              "right": "jum"
+            },
+            {
+              "left": "Urew il-[ferħ] tagħhom.",
+              "right": "hena"
+            },
+            {
+              "left": "Kien hemm [folla] fil-pjazza.",
+              "right": "kotra"
+            }
+          ],
+          "answer": "Kienet [ġurnata] twila. → jum · Urew il-[ferħ] tagħhom. → hena · Kien hemm [folla] fil-pjazza. → kotra",
+          "answerTranslation": "day · joy · crowd",
+          "explanation": "The brackets identify the word to match. In these contexts, the words mean day, joy and crowd.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-pairs-day"
+        },
+        {
+          "id": "synonym-pairs-news-retry",
+          "type": "matching",
+          "assessmentMode": "recognition",
+          "gameFormat": "pairs",
+          "prompt": "Match each bracketed word with its synonym.",
+          "pairs": [
+            {
+              "left": "Sibt [stedina] fuq il-mejda.",
+              "right": "invit"
+            },
+            {
+              "left": "Għad hemm [tama].",
+              "right": "speranza"
+            },
+            {
+              "left": "Qrajt il-[gazzetta] dalgħodu.",
+              "right": "ġurnal"
+            }
+          ],
+          "answer": "Sibt [stedina] fuq il-mejda. → invit · Għad hemm [tama]. → speranza · Qrajt il-[gazzetta] dalgħodu. → ġurnal",
+          "answerTranslation": "invitation · hope · newspaper",
+          "explanation": "Identify the bracketed words by their meaning in each sentence.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-pairs-news"
         }
       ]
     }

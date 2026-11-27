@@ -15,45 +15,68 @@
     <header class="site-header">
         <a class="site-brand" href="./index.html">Maltese Study Site</a>
     </header>
-    <main class="section stack" data-synonym-game>
+    <main class="section stack grid-gap-sm" data-synonym-game>
         <h1 lang="mt">Sib is-Sinonimu</h1>
-        <section class="content-card" data-synonym-home aria-labelledby="synonym-home-title">
+        <section class="stack grid-gap-sm" data-synonym-home aria-labelledby="synonym-home-title">
             <h2 id="synonym-home-title">Ten questions</h2>
-            <p>Choose five synonyms, then rewrite five sentences. You can repeat missed questions in My practice.</p>
+            <p>Match words, choose synonyms in context and rewrite sentences. Repeat missed questions in My practice.</p>
             <p class="study-progress-status" role="status" data-synonym-loading>Loading the game…</p>
             <div class="toolbar-row">
                 <button class="action-button" type="button" data-synonym-start disabled>Start round</button>
                 <a class="action-link" href="./homonyms_synonyms.html#synonyms">Study the synonym pairs</a>
             </div>
         </section>
-        <section class="content-card" data-synonym-round hidden aria-labelledby="synonym-round-title">
-            <div class="toolbar-row">
-                <span class="status-chip" data-synonym-progress></span>
+        <section class="stack grid-gap-sm" data-synonym-round hidden aria-labelledby="synonym-round-title">
+            <p class="study-progress-status" id="synonym-round-progress">
+                <span data-synonym-progress></span>
+                <span data-synonym-progress-marks aria-hidden="true"></span>
+            </p>
+            <h2 id="synonym-round-title" data-synonym-title tabindex="-1" aria-describedby="synonym-round-progress"></h2>
+            <p data-synonym-direction hidden></p>
+            <p class="lead" lang="mt" data-synonym-cue hidden><strong><span data-synonym-before></span><mark data-synonym-target hidden></mark><span data-synonym-after></span></strong></p>
+            <div class="toolbar-row" data-synonym-pairs hidden>
+                <div class="stack grid-gap-sm" role="group" aria-label="First words">
+                    <button type="button" class="toggle-chip" lang="mt" data-pair-side="left" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
+                    <button type="button" class="toggle-chip" lang="mt" data-pair-side="left" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
+                    <button type="button" class="toggle-chip" lang="mt" data-pair-side="left" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
+                </div>
+                <div class="stack grid-gap-sm" role="group" aria-label="Synonyms">
+                    <button type="button" class="toggle-chip" lang="mt" data-pair-side="right" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
+                    <button type="button" class="toggle-chip" lang="mt" data-pair-side="right" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
+                    <button type="button" class="toggle-chip" lang="mt" data-pair-side="right" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
+                </div>
             </div>
-            <h2 id="synonym-round-title" data-synonym-title tabindex="-1"></h2>
-            <div class="study-contrast">
-                <p data-synonym-direction hidden>Replace the highlighted word with a synonym and write the whole sentence.</p>
-                <p class="lead" lang="mt"><strong><span data-synonym-before></span><mark data-synonym-target hidden></mark><span data-synonym-after></span></strong></p>
-            </div>
-            <div data-synonym-exercise></div>
             <p class="muted-note" role="status" data-synonym-message hidden></p>
-            <div class="info-card" data-synonym-checked hidden>
+            <div data-synonym-exercise></div>
+            <div class="study-contrast" data-synonym-checked hidden>
                 <strong data-synonym-outcome tabindex="-1"></strong>
-                <p lang="mt" data-synonym-answer></p>
+                <p lang="mt" data-synonym-answer><span data-synonym-answer-before></span><mark data-synonym-answer-change hidden></mark><span data-synonym-answer-after></span></p>
                 <p lang="en" data-synonym-translation></p>
-                <div class="study-contrast" data-synonym-example hidden>
+                <div data-synonym-example hidden>
                     <p lang="mt" data-synonym-example-mt></p>
                     <p lang="en" data-synonym-example-en></p>
                 </div>
                 <p data-synonym-explanation></p>
             </div>
-            <div class="toolbar-row">
+            <div class="toolbar-row" data-synonym-next-row hidden>
                 <button class="action-button" type="button" data-synonym-next hidden>Next question</button>
             </div>
         </section>
-        <section class="content-card" data-synonym-finish hidden aria-labelledby="synonym-finish-title">
+        <section class="stack grid-gap-sm" data-synonym-finish hidden aria-labelledby="synonym-finish-title">
             <h2 id="synonym-finish-title" data-synonym-finish-title tabindex="-1">Round complete</h2>
-            <p data-synonym-score></p>
+            <p class="study-progress-status" data-synonym-score></p>
+            <div class="grid-2">
+                <article class="study-card">
+                    <strong>Word meanings and context</strong>
+                    <span data-synonym-meaning-score></span>
+                    <span data-synonym-meaning-review hidden>Revisit <span lang="mt" data-synonym-meaning-misses></span></span>
+                </article>
+                <article class="study-card">
+                    <strong>Articles and rewriting</strong>
+                    <span data-synonym-form-score></span>
+                    <span data-synonym-form-review hidden>Revisit <span lang="mt" data-synonym-form-misses></span></span>
+                </article>
+            </div>
             <div class="toolbar-row">
                 <a class="action-link" data-synonym-repeat href="./today.html?level=mixed&amp;topic=sib-is-sinonimu" hidden>Repeat in My practice</a>
                 <button class="action-button" type="button" data-synonym-again>Play again</button>

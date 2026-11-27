@@ -13,14 +13,30 @@
   const read = () => storage.getJson(key, {});
   const pending = () => read().studySession?.helpQueue || [];
   const exercise = find('exercise');
+  const pairs = find('pairs');
   const start = find('start');
   const next = find('next');
-  let plan, round, activeSet;
+  const pairButtons = {
+    left: [...pairs.querySelectorAll('[data-pair-side="left"]')],
+    right: [...pairs.querySelectorAll('[data-pair-side="right"]')]
+  };
+  const formats = {
+    word: ['Find the synonym', ''],
+    pairs: ['Match the pairs', 'Tap one word from each column. Matching numbers show your pairs.'],
+    context: ['Choose in context', 'Replace the highlighted word with a synonym.'],
+    article: ['Choose the article', 'Pick the synonym with the correct article.'],
+    rewrite: ['Rewrite the sentence', 'Replace the highlighted word and write the whole sentence.']
+  };
+  let plan, round, activeSet, selectedPairWord;
 
   const question = () => round.entries[round.index].item;
+  const formatOf = item => item.gameFormat || (item.type === 'fill-blank' ? 'rewrite' : 'word');
   const choices = () => [...exercise.querySelectorAll('input[type="radio"]')];
+  const matchFields = () => [...exercise.querySelectorAll('[data-match-index]')];
   const field = () => exercise.querySelector('[data-exercise-answer]');
-  const answer = () => field()?.value ?? choices().find(input => input.checked)?.value ?? '';
+  const answer = () => question().type === 'matching'
+    ? matchFields().map(input => input.value)
+    : field()?.value ?? choices().find(input => input.checked)?.value ?? '';
 
   function saveRound(newQueue) {
     const current = read();
@@ -34,6 +50,14 @@
     find('message').hidden = !value;
   }
 
+  function saveDraft() {
+    const item = question();
+    if (round.results[item.id]?.checked) return;
+    round = core.updateDraft(round, item.id, answer());
+    saveRound();
+    message('');
+  }
+
   function shuffle(options) {
     for (let end = options.length - 1; end > 0; end -= 1) {
       const index = Math.floor(Math.random() * (end + 1));
@@ -41,37 +65,114 @@
     }
   }
 
+  function mixedEntries() {
+    // The bank interleaves formats. Shuffle the items within each set of slots.
+    const byFormat = new Map();
+    for (const entry of plan.entries) {
+      const format = formatOf(entry.item);
+      if (!byFormat.has(format)) byFormat.set(format, []);
+      byFormat.get(format).push(entry);
+    }
+    byFormat.forEach(shuffle);
+    return plan.entries.map(({ item }) => byFormat.get(formatOf(item)).pop());
+  }
+
+  function paintPairs() {
+    const matched = matchFields().map(input => input.value);
+    for (const [side, buttons] of Object.entries(pairButtons)) {
+      buttons.forEach((button, index) => {
+        const pair = side === 'left' ? (matched[index] ? index : -1) : matched.indexOf(button.value);
+        button.ariaPressed = String(button === selectedPairWord);
+        button.querySelector('[data-pair-number]').textContent = pair < 0 ? '' : ' · ' + (pair + 1);
+      });
+    }
+  }
+
+  function drawPairs(item, draft) {
+    const fields = matchFields();
+    const right = item.pairs.map(pair => pair.right);
+    shuffle(right);
+    selectedPairWord = null;
+    fields.forEach((input, index) => { input.value = draft?.[index] || ''; });
+    for (const [side, words] of Object.entries({ left: item.pairs.map(pair => pair.left), right })) {
+      pairButtons[side].forEach((button, index) => {
+        button.value = words[index];
+        button.querySelector('[data-pair-word]').textContent = words[index];
+      });
+    }
+    // The shared runner still grades and persists the equivalent select values.
+    exercise.querySelector('[data-exercise-item]').hidden = true;
+    paintPairs();
+  }
+
+  pairs.addEventListener('click', event => {
+    const word = event.target.closest('[data-pair-side]');
+    if (!word || question().type !== 'matching' || round.results[question().id]?.checked) return;
+    if (!selectedPairWord || word.dataset.pairSide === selectedPairWord.dataset.pairSide) {
+      selectedPairWord = word === selectedPairWord ? null : word;
+    } else {
+      const [left, right] = word.dataset.pairSide === 'left' ? [word, selectedPairWord] : [selectedPairWord, word];
+      const fields = matchFields();
+      const input = fields[pairButtons.left.indexOf(left)];
+      const alreadyMatched = fields.find(element => element.value === right.value);
+      if (alreadyMatched) alreadyMatched.value = '';
+      if (alreadyMatched !== input) input.value = right.value;
+      selectedPairWord = null;
+      saveDraft();
+    }
+    paintPairs();
+  });
+
   function drawCue(item) {
-    const { maltese, target } = item.cue;
+    const [title, direction] = formats[formatOf(item)];
+    const { maltese = '', target } = item.cue || {};
     const offset = target ? maltese.indexOf(target) : -1;
     say('before', offset < 0 ? maltese : maltese.slice(0, offset));
     say('target', offset < 0 ? '' : target);
     say('after', offset < 0 ? '' : maltese.slice(offset + target.length));
     find('target').hidden = offset < 0;
-    find('direction').hidden = !target;
-    say('title', target ? 'Replace the word' : 'Find the synonym');
+    find('cue').hidden = !maltese;
+    find('direction').hidden = !direction;
+    say('direction', direction);
+    say('title', title);
+  }
+
+  function drawAnswer(item) {
+    const format = formatOf(item);
+    const example = item.reviewCard;
+    const useExample = format === 'context' || format === 'article';
+    const model = format === 'word' ? item.cue.maltese + ' / ' + item.answer : useExample ? example.example : item.answer;
+    const { maltese = '', target } = item.cue || {};
+    const offset = target ? maltese.indexOf(target) : -1;
+    const before = offset < 0 ? '' : maltese.slice(0, offset);
+    const after = offset < 0 ? '' : maltese.slice(offset + target.length);
+    const changed = offset >= 0 && model.startsWith(before) && model.endsWith(after);
+    say('answer-before', changed ? before : model);
+    say('answer-change', changed ? model.slice(before.length, model.length - after.length) : '');
+    say('answer-after', changed ? after : '');
+    find('answer-change').hidden = !changed;
+    say('translation', useExample ? example.exampleTranslation : item.answerTranslation);
+    find('example').hidden = format !== 'word' || !example?.example;
+    say('example-mt', example?.example || '');
+    say('example-en', example?.exampleTranslation || '');
+    say('explanation', item.explanation);
   }
 
   function showChecked(item, result) {
-    next.hidden = !result?.checked;
-    exercise.querySelector('button[type="submit"]').hidden = !next.hidden;
-    for (const input of exercise.querySelectorAll('input[type="radio"], [data-exercise-answer]')) input.disabled = !next.hidden;
-    const show = result?.checked && !result.previousQuestion;
+    const checked = Boolean(result?.checked);
+    next.hidden = !checked;
+    find('next-row').hidden = !checked;
+    exercise.hidden = checked;
+    pairs.hidden = checked || item.type !== 'matching';
+    say('progress-marks', '●'.repeat(round.index + Number(checked)) + '○'.repeat(round.entries.length - round.index - Number(checked)));
+    const show = checked && !result.previousQuestion;
     find('checked').hidden = !show;
     if (!show) {
       if (result?.previousQuestion) message('This question was updated. Your earlier result is saved.');
       return;
     }
-    const isChoice = item.type === 'multiple-choice';
-    const example = item.reviewCard;
     say('outcome', result.correct ? 'Correct' : 'Not quite');
-    say('answer', isChoice ? item.cue.maltese + ' / ' + item.answer : item.answer);
-    say('translation', item.answerTranslation);
-    find('example').hidden = !example?.example;
-    say('example-mt', example?.example || '');
-    say('example-en', example?.exampleTranslation || '');
-    find('explanation').hidden = isChoice;
-    say('explanation', item.explanation);
+    drawAnswer(item);
   }
 
   function drawQuestion() {
@@ -82,14 +183,15 @@
     runner.render(exercise, activeSet);
     for (const element of exercise.querySelectorAll('header, .exercise-question-header, .exercise-result, .exercise-feedback')) element.hidden = true;
 
-    const draft = round.drafts[item.id] || '';
+    const draft = round.drafts[item.id];
+    if (item.type === 'matching') drawPairs(item, draft);
     choices().forEach(input => {
       input.checked = input.value === draft;
       input.nextElementSibling.lang = 'mt';
     });
     const textField = field();
     if (textField) {
-      textField.value = draft;
+      textField.value = draft || '';
       textField.lang = 'mt';
       textField.ariaLabel = 'Your answer. ' + item.prompt;
     }
@@ -101,12 +203,27 @@
     find('title').focus();
   }
 
+  function showCategory(category, items) {
+    const missed = items.filter(item => !round.results[item.id]?.correct);
+    say(category + '-score', (items.length - missed.length) + ' of ' + items.length + ' correct');
+    find(category + '-review').hidden = missed.length === 0;
+    say(category + '-misses', missed.map(item => {
+      if (item.type !== 'matching') return item.cue.target || item.cue.maltese;
+      const draft = round.drafts[item.id];
+      return item.pairs.filter((pair, index) => pair.right !== draft?.[index]).map(pair => pair.left).join(' / ');
+    }).join(' · '));
+  }
+
   function finishRound() {
     activeSet = null;
     const summary = core.summary(round);
     find('round').hidden = true;
     find('finish').hidden = false;
     say('score', summary.correct + ' of ' + summary.total + ' correct.');
+    const items = round.entries.map(entry => entry.item);
+    const usesForm = item => ['rewrite', 'article'].includes(formatOf(item));
+    showCategory('meaning', items.filter(item => !usesForm(item)));
+    showCategory('form', items.filter(usesForm));
     const count = core.repeatEntries(plan.catalog, pending()).length;
     const repeat = find('repeat');
     repeat.hidden = count === 0;
@@ -115,7 +232,7 @@
   }
 
   function begin(saved) {
-    round = saved || core.createSession(plan);
+    round = saved || core.createSession({ ...plan, entries: mixedEntries() });
     saveRound();
     find('home').hidden = true;
     find('finish').hidden = true;
@@ -123,25 +240,23 @@
     drawQuestion();
   }
 
-  exercise.oninput = () => {
-    const item = question();
-    if (round.results[item.id]?.checked) return;
-    round = core.updateDraft(round, item.id, answer());
-    saveRound();
-    message('');
-  };
+  exercise.oninput = saveDraft;
   exercise.addEventListener('submit', event => {
     const item = question();
-    if (round.results[item.id]?.checked || !answer().trim()) {
+    const value = answer();
+    const complete = Array.isArray(value) ? value.every(Boolean) : Boolean(value.trim());
+    if (round.results[item.id]?.checked || !complete) {
       event.preventDefault();
       event.stopImmediatePropagation();
       if (!round.results[item.id]?.checked) {
-        message(item.type === 'fill-blank' ? 'Write the sentence first.' : 'Choose a synonym first.');
-        (field() || choices()[0]).focus();
+        const prompt = item.type === 'matching' ? 'Match all three pairs before checking.'
+          : item.type === 'fill-blank' ? 'Write the sentence first.' : 'Choose a synonym first.';
+        message(prompt);
+        (field() || choices()[0] || pairButtons.left[value.indexOf('')]).focus();
       }
       return;
     }
-    round = core.updateDraft(round, item.id, answer());
+    round = core.updateDraft(round, item.id, value);
   }, true);
   window.addEventListener('malti-exercise-complete', event => {
     if (event.detail.setId !== activeSet?.id) return;
@@ -154,7 +269,6 @@
     // The shared runner completes its form actions after emitting the result.
     queueMicrotask(() => {
       exercise.querySelector('.exercise-feedback').hidden = true;
-      exercise.querySelectorAll('.exercise-actions button[type="button"]').forEach(button => { button.hidden = true; });
       showChecked(item, round.results[item.id]);
       find('outcome').focus();
     });
