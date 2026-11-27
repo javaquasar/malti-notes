@@ -58,24 +58,25 @@
         if (!voices) return;
         if (!Object.hasOwn(voices, defaultVoice)) throw new Error("Maltese pronunciation voice is unavailable.");
 
-        const picker = document.querySelector("[data-word-audio-voice]");
+        const pickers = document.querySelectorAll("[data-word-audio-voice]");
         const storage = window.MaltiStorage;
         const preferenceKey = "malti_pronunciation_voice_v1";
         const preferred = storage.getString(preferenceKey);
         const voice = Object.hasOwn(voices, preferred) ? preferred : defaultVoice;
         voiceDirectory = voices[voice];
-        if (!picker) return;
-
-        picker.value = voice;
-        picker.disabled = false;
-        picker.addEventListener("change", () => {
-            const selection = picker.value;
-            if (!Object.hasOwn(voices, selection) || voices[selection] === voiceDirectory) return;
-            stopPlayback();
-            status.textContent = "";
-            voiceDirectory = voices[selection];
-            storage.setString(preferenceKey, selection);
-        });
+        for (const picker of pickers) {
+            picker.value = voice;
+            picker.disabled = false;
+            picker.addEventListener("change", () => {
+                const selection = picker.value;
+                if (!Object.hasOwn(voices, selection) || voices[selection] === voiceDirectory) return;
+                stopPlayback();
+                status.textContent = "";
+                voiceDirectory = voices[selection];
+                for (const control of pickers) control.value = selection;
+                storage.setString(preferenceKey, selection);
+            });
+        }
     }
 
     function useRecordings(clips) {

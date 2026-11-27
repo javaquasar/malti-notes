@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sib is-Sinonimu — Maltese Study Site</title>
-    <meta name="description" content="Find Maltese synonyms and use them in sentences in a ten-question game. See the English translation after checking and repeat mistakes in My practice.">
+    <meta name="description" content="Listen to Maltese and find synonyms in a ten-question game. See the English translation after checking and repeat mistakes in My practice.">
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon-option-speech.svg">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/site.css">
@@ -19,7 +19,7 @@
         <h1 lang="mt">Sib is-Sinonimu</h1>
         <section class="stack grid-gap-sm" data-synonym-home aria-labelledby="synonym-home-title">
             <h2 id="synonym-home-title">Ten questions</h2>
-            <p>Match words, choose synonyms in context and rewrite sentences. Repeat missed questions in My practice.</p>
+            <p>Listen for a word, match pairs, choose synonyms in context and rewrite sentences. Repeat missed questions in My practice.</p>
             <p class="study-progress-status" role="status" data-synonym-loading>Loading the game…</p>
             <div class="toolbar-row">
                 <button class="action-button" type="button" data-synonym-start disabled>Start round</button>
@@ -34,6 +34,17 @@
             <h2 id="synonym-round-title" data-synonym-title tabindex="-1" aria-describedby="synonym-round-progress"></h2>
             <p data-synonym-direction hidden></p>
             <p class="lead" lang="mt" data-synonym-cue hidden><strong><span data-synonym-before></span><mark data-synonym-target hidden></mark><span data-synonym-after></span></strong></p>
+            <div class="toolbar-row" data-synonym-listening hidden>
+                <label class="study-field">
+                    <span>Pronunciation voice</span>
+                    <select class="study-input" data-word-audio-voice disabled>
+                        <option value="mt-MT-GraceNeural">Grace</option>
+                        <option value="mt-MT-JosephNeural">Joseph</option>
+                    </select>
+                </label>
+                <button class="action-button" type="button" data-word-audio-button data-word-audio-source="#synonym-listening-word" disabled>Play audio</button>
+                <span id="synonym-listening-word" data-synonym-listening-word lang="mt" hidden></span>
+            </div>
             <div class="toolbar-row" data-synonym-pairs hidden>
                 <div class="stack grid-gap-sm" role="group" aria-label="First words">
                     <button type="button" class="toggle-chip" lang="mt" data-pair-side="left" aria-pressed="false"><span data-pair-word></span><span data-pair-number></span></button>
@@ -85,9 +96,13 @@
     </main>
 </div>
 <script src="./assets/js/storage.js"></script>
+<script src="./assets/js/review-store.js"></script>
 <script src="./assets/js/exercise-runner.js"></script>
 <script src="./assets/js/study-session-core.js"></script>
 <script src="./assets/js/synonym-game.js"></script>
 <script src="./assets/js/site-header.js"></script>
+<audio data-word-audio-player lang="mt" preload="none" hidden></audio>
+<p class="visually-hidden" role="status" data-word-audio-status></p>
+<script src="./assets/js/word-audio.js"></script>
 </body>
 </html>

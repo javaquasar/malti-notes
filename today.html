@@ -85,6 +85,17 @@
     <section class="content-card stack" data-study-session hidden aria-labelledby="study-session-title">
       <div class="toolbar-row"><button class="study-link-button" type="button" data-study-back>Save and pause</button><span class="status-chip" data-study-step-status>Question 1 of 6</span></div>
       <h2 id="study-session-title" data-study-session-title></h2>
+      <div class="toolbar-row" data-study-listening hidden>
+        <label class="study-field">
+          <span>Pronunciation voice</span>
+          <select class="study-input" data-word-audio-voice disabled>
+            <option value="mt-MT-GraceNeural">Grace</option>
+            <option value="mt-MT-JosephNeural">Joseph</option>
+          </select>
+        </label>
+        <button class="action-button" type="button" data-word-audio-button data-word-audio-source="[data-study-listening-word]" disabled>Play audio</button>
+        <span data-study-listening-word lang="mt" hidden></span>
+      </div>
       <div data-study-exercise></div>
       <div class="info-card" data-study-incorrect hidden>
         <strong>Revisit this part of your answer</strong>

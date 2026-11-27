@@ -22,6 +22,7 @@
   };
   const formats = {
     word: ['Find the synonym', ''],
+    listen: ['Listen and choose', 'Play the word and choose its synonym.'],
     pairs: ['Match the pairs', 'Tap one word from each column. Matching numbers show your pairs.'],
     context: ['Choose in context', 'Replace the highlighted word with a synonym.'],
     article: ['Choose the article', 'Pick the synonym with the correct article.'],
@@ -124,8 +125,12 @@
   });
 
   function drawCue(item) {
-    const [title, direction] = formats[formatOf(item)];
-    const { maltese = '', target } = item.cue || {};
+    const format = formatOf(item);
+    const [title, direction] = formats[format];
+    const listening = format === 'listen';
+    find('listening').hidden = !listening;
+    say('listening-word', listening ? item.cue.maltese : '');
+    const { maltese = '', target } = listening ? {} : item.cue || {};
     const offset = target ? maltese.indexOf(target) : -1;
     say('before', offset < 0 ? maltese : maltese.slice(0, offset));
     say('target', offset < 0 ? '' : target);
@@ -141,7 +146,8 @@
     const format = formatOf(item);
     const example = item.reviewCard;
     const useExample = format === 'context' || format === 'article';
-    const model = format === 'word' ? item.cue.maltese + ' / ' + item.answer : useExample ? example.example : item.answer;
+    const isWordPair = format === 'word' || format === 'listen';
+    const model = isWordPair ? item.cue.maltese + ' / ' + item.answer : useExample ? example.example : item.answer;
     const { maltese = '', target } = item.cue || {};
     const offset = target ? maltese.indexOf(target) : -1;
     const before = offset < 0 ? '' : maltese.slice(0, offset);

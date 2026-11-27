@@ -177,6 +177,7 @@
     const next = await planFor(selected);
     if (version !== selectionVersion) return;
     route = selected; plan = next; session = null; activeSet = null;
+    showListening();
     catalogs.set(route.id, plan.catalog);
     const current = state();
     save({ levelId: route.levelId, chapterId: route.id, topicsByLevel: { ...object(current.topicsByLevel), [route.levelId]: route.id } });
@@ -189,6 +190,7 @@
     status(announce ? 'Ready. Start when you are ready.' : 'Your place is saved.');
   }
   function showFinish() {
+    showListening();
     persistSession();
     const summary = core.summary(session);
     find('[data-study-home]').hidden = true; find('[data-study-session]').hidden = true; find('[data-study-finish]').hidden = false;
@@ -211,18 +213,19 @@
   }
   function showSupport(entry, result) {
     const id = entry.item.id, support = core.supportFor(entry, plan.catalog);
+    const listening = entry.item.gameFormat === 'listen';
     const hinted = session.hints[id] === true;
-    const example = hinted && object(session.examples)[id] === true && Boolean(support.model);
-    const solution = hinted && object(session.solutions)[id] === true;
+    const example = !listening && hinted && object(session.examples)[id] === true && Boolean(support.model);
+    const solution = !listening && hinted && object(session.solutions)[id] === true;
     const checked = result?.checked === true;
     const hint = find('[data-study-hint]');
     const model = find('[data-study-model]');
     const answer = find('[data-study-solution]');
     hint.hidden = checked;
     hint.ariaExpanded = String(hinted);
-    model.hidden = checked || !hinted || !support.model;
+    model.hidden = listening || checked || !hinted || !support.model;
     model.ariaExpanded = String(example);
-    answer.hidden = checked || !hinted || (Boolean(support.model) && !example);
+    answer.hidden = listening || checked || !hinted || (Boolean(support.model) && !example);
     answer.ariaExpanded = String(solution);
     find('[data-study-help]').hidden = !hinted || checked;
     say('[data-study-help-explanation]', support.clue);
@@ -272,13 +275,22 @@
     return { start: word.index, end: word.index + word[0].length };
   }
 
+  function showListening(item) {
+    const controls = find('[data-study-listening]');
+    if (!controls) return;
+    const word = item?.gameFormat === 'listen' ? item.cue.maltese : '';
+    say('[data-study-listening-word]', word);
+    controls.hidden = !word;
+  }
+
   function showCheckedAnswer(entry, result) {
     const { answer, answerTranslation } = entry.item;
     const visible = Boolean(answerTranslation && result?.checked && !result.previousQuestion);
     find('[data-study-checked-answer]').hidden = !visible;
     const pronunciation = find('[data-study-checked-audio-for]');
     if (pronunciation) pronunciation.hidden = !visible || pronunciation.dataset.studyCheckedAudioFor !== entry.chapterId;
-    const maltese = visible && !/[.!?,]$/.test(answer) ? answer + '.' : answer;
+    const maltese = entry.item.gameFormat === 'listen' ? entry.item.cue.maltese + ' / ' + answer
+      : visible && !/[.!?,]$/.test(answer) ? answer + '.' : answer;
     say('[data-study-checked-mt]', visible ? maltese : '');
     say('[data-study-checked-en]', visible ? answerTranslation : '');
     const draft = session.drafts[entry.item.id];
@@ -326,6 +338,7 @@
       reading.textContent = `Read ${route.readingTitle} (new tab)`;
     }
     const assisted = session.hints[entry.item.id] === true;
+    showListening(entry.item);
     showSupport(entry, result);
     showCheckedAnswer(entry, result);
     const feedback = result?.previousQuestion ? 'You checked an earlier version of this question. Your result is saved. Go to the next question.'
@@ -388,7 +401,7 @@
       event.preventDefault(); find('[data-study-topics]').open = true; topicSelect.focus();
     });
     find('[data-study-start]').addEventListener('click', guarded(() => startPractice()));
-    find('[data-study-back]').addEventListener('click', () => { remember(); find('[data-study-session]').hidden = true; find('[data-study-home]').hidden = false; refreshHome(); status('Your place and answers are saved.'); });
+    find('[data-study-back]').addEventListener('click', () => { remember(); showListening(); find('[data-study-session]').hidden = true; find('[data-study-home]').hidden = false; refreshHome(); status('Your place and answers are saved.'); });
     find('[data-study-hint]').addEventListener('click', () => assist('clue'));
     find('[data-study-model]').addEventListener('click', () => assist('example'));
     find('[data-study-solution]').addEventListener('click', () => assist('solution'));

@@ -160,31 +160,26 @@
           }
         },
         {
-          "id": "synonym-choose-question",
-          "type": "multiple-choice",
-          "assessmentMode": "recognition",
-          "prompt": "Choose a synonym for domanda.",
+          "id": "synonym-listen-small",
           "cue": {
-            "maltese": "domanda",
-            "english": "question"
+            "maltese": "żgħir",
+            "english": "small"
           },
           "choices": [
-            "spjegazzjoni",
-            "mistoqsija",
-            "eżempju",
-            "kumment"
+            "ċkejken",
+            "għoli",
+            "kwiet",
+            "twil"
           ],
-          "answer": "mistoqsija",
-          "answerTranslation": "question",
-          "explanation": "In this sense domanda and mistoqsija both mean question.",
-          "sourcePage": "homonyms_synonyms.html#synonyms",
-          "reviewCard": {
-            "maltese": "mistoqsija",
-            "english": "question",
-            "example": "Staqsejt mistoqsija dwar il-vjaġġ.",
-            "exampleTranslation": "I asked a question about the journey."
-          },
-          "gameFormat": "word"
+          "answer": "ċkejken",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the word and choose its synonym.",
+          "answerTranslation": "small",
+          "hint": "Play the word again and compare its meaning with the choices.",
+          "explanation": "Żgħir and ċkejken can both describe something small.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
         },
         {
           "id": "synonym-pairs-news",
@@ -457,6 +452,34 @@
             "example": "L-esibizzjoni tiftaħ fid-disgħa.",
             "exampleTranslation": "The exhibition opens at nine."
           },
+          "repeatOnly": true
+        },
+        {
+          "id": "synonym-choose-question",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "prompt": "Choose a synonym for domanda.",
+          "cue": {
+            "maltese": "domanda",
+            "english": "question"
+          },
+          "choices": [
+            "spjegazzjoni",
+            "mistoqsija",
+            "eżempju",
+            "kumment"
+          ],
+          "answer": "mistoqsija",
+          "answerTranslation": "question",
+          "explanation": "In this sense domanda and mistoqsija both mean question.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "mistoqsija",
+            "english": "question",
+            "example": "Staqsejt mistoqsija dwar il-vjaġġ.",
+            "exampleTranslation": "I asked a question about the journey."
+          },
+          "gameFormat": "word",
           "repeatOnly": true
         }
       ]
@@ -922,6 +945,29 @@
           "explanation": "Identify the bracketed words by their meaning in each sentence.",
           "sourcePage": "homonyms_synonyms.html#synonyms",
           "repeatOf": "synonym-pairs-news"
+        },
+        {
+          "id": "synonym-listen-small-retry",
+          "repeatOf": "synonym-listen-small",
+          "cue": {
+            "maltese": "ċkejken",
+            "english": "small"
+          },
+          "choices": [
+            "qasir",
+            "kiesaħ",
+            "żgħir",
+            "miftuħ"
+          ],
+          "answer": "żgħir",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the word and choose its synonym.",
+          "answerTranslation": "small",
+          "hint": "Play the word again and compare its meaning with the choices.",
+          "explanation": "Żgħir and ċkejken can both describe something small.",
+          "sourcePage": "homonyms_synonyms.html#synonyms"
         }
       ]
     }
