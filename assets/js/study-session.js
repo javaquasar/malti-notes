@@ -46,7 +46,10 @@
       payloads.set(selected.id, load(file).catch(error => { payloads.delete(selected.id); throw error; }));
     }
     const payload = await payloads.get(selected.id);
-    if (selected.practiceFile) return core.planFixedPractice(payload, selected, state().helpQueue);
+    if (selected.practiceFile) {
+      const saved = state();
+      return core.planFixedPractice(payload, selected, saved.helpQueue, saved.sessions?.[selected.id]?.entries);
+    }
     return core.planCourse({ course, assessments: payload.assessmentSets, supplements: payload.supplementalItems,
       targets: payload.targets || [] }, options);
   }
@@ -284,13 +287,16 @@
   }
 
   function showCheckedAnswer(entry, result) {
-    const { answer, answerTranslation } = entry.item;
+    const { answer, answerTranslation, cue, gameFormat } = entry.item;
     const visible = Boolean(answerTranslation && result?.checked && !result.previousQuestion);
     find('[data-study-checked-answer]').hidden = !visible;
     const pronunciation = find('[data-study-checked-audio-for]');
     if (pronunciation) pronunciation.hidden = !visible || pronunciation.dataset.studyCheckedAudioFor !== entry.chapterId;
-    const maltese = entry.item.gameFormat === 'listen' ? entry.item.cue.maltese + ' / ' + answer
-      : visible && !/[.!?,]$/.test(answer) ? answer + '.' : answer;
+    let maltese = visible && !/[.!?,]$/.test(answer) ? answer + '.' : answer;
+    if (gameFormat === 'listen') {
+      const pair = (cue.target || cue.maltese) + ' / ' + answer;
+      maltese = cue.target ? cue.maltese + ' (' + pair + ')' : pair;
+    }
     say('[data-study-checked-mt]', visible ? maltese : '');
     say('[data-study-checked-en]', visible ? answerTranslation : '');
     const draft = session.drafts[entry.item.id];

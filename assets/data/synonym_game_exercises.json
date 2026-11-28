@@ -32,31 +32,28 @@
           "gameFormat": "word"
         },
         {
-          "id": "synonym-context-exam",
+          "id": "synonym-listen-prepare",
           "type": "multiple-choice",
           "assessmentMode": "recognition",
-          "gameFormat": "context",
-          "prompt": "Replace tqil with a synonym in this sentence. L-eżami kien tqil.",
+          "gameFormat": "listen",
+          "prompt": "Listen to the sentence and choose a synonym for the main verb.",
           "cue": {
-            "maltese": "L-eżami kien tqil.",
-            "target": "tqil",
-            "english": "The exam was difficult."
+            "maltese": "In-nies qed iħejju l-ikel flimkien.",
+            "english": "The people are preparing food together.",
+            "target": "iħejju"
           },
           "choices": [
-            "faċli",
-            "qasir",
-            "diffiċli"
+            "jixtru",
+            "ibigħu",
+            "jippreparaw",
+            "jieklu"
           ],
-          "answer": "diffiċli",
-          "answerTranslation": "difficult",
-          "explanation": "With an exam, tqil can describe difficulty. Diffiċli keeps that meaning.",
+          "answer": "jippreparaw",
+          "answerTranslation": "The people are preparing food together.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Iħejju and jippreparaw both mean prepare in this kitchen scene.",
           "sourcePage": "homonyms_synonyms.html#synonyms",
-          "reviewCard": {
-            "maltese": "diffiċli",
-            "english": "difficult",
-            "example": "L-eżami kien diffiċli.",
-            "exampleTranslation": "The exam was difficult."
-          }
+          "roundSlot": "listening-phrase"
         },
         {
           "id": "synonym-pairs-day",
@@ -179,7 +176,8 @@
           "answerTranslation": "small",
           "hint": "Play the word again and compare its meaning with the choices.",
           "explanation": "Żgħir and ċkejken can both describe something small.",
-          "sourcePage": "homonyms_synonyms.html#synonyms"
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-word"
         },
         {
           "id": "synonym-pairs-news",
@@ -480,6 +478,175 @@
             "exampleTranslation": "I asked a question about the journey."
           },
           "gameFormat": "word",
+          "repeatOnly": true
+        },
+        {
+          "id": "synonym-listen-task",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the adjective used to describe an exam.",
+          "cue": {
+            "maltese": "tqil",
+            "english": "difficult"
+          },
+          "choices": [
+            "diffiċli",
+            "kwiet",
+            "qasir",
+            "vojt"
+          ],
+          "answer": "diffiċli",
+          "answerTranslation": "difficult",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "When it describes an exam, tqil can mean difficult.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-word"
+        },
+        {
+          "id": "synonym-listen-amount",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the word from a shopping list and choose its synonym.",
+          "cue": {
+            "maltese": "ftit",
+            "english": "a little"
+          },
+          "choices": [
+            "bosta",
+            "naqra",
+            "kollox",
+            "xejn"
+          ],
+          "answer": "naqra",
+          "answerTranslation": "a little",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Ftit and naqra can both mean a little when talking about food.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-word"
+        },
+        {
+          "id": "synonym-listen-capable",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the adjective used to describe a good worker.",
+          "cue": {
+            "maltese": "bravu",
+            "english": "capable"
+          },
+          "choices": [
+            "għajjien",
+            "kwiet",
+            "kapaċi",
+            "għoli"
+          ],
+          "answer": "kapaċi",
+          "answerTranslation": "capable",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Bravu can mean skilful or capable when you describe someone's ability.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-word"
+        },
+        {
+          "id": "synonym-listen-quiet",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen and choose a synonym for the adjective describing the room.",
+          "cue": {
+            "maltese": "Il-kamra kienet kwieta, imma l-bar kien storbjuż.",
+            "english": "The room was quiet, but the bar was noisy.",
+            "target": "kwieta"
+          },
+          "choices": [
+            "siekta",
+            "storbjuża",
+            "mudlama",
+            "kbira"
+          ],
+          "answer": "siekta",
+          "answerTranslation": "The room was quiet, but the bar was noisy.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Siekta also describes a room with little or no noise. It can suggest a stronger sense of silence.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-phrase"
+        },
+        {
+          "id": "synonym-listen-day",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen and choose a synonym for the noun that says when the children are playing.",
+          "cue": {
+            "maltese": "It-tfal qed jilagħbu bl-ilma f'ġurnata xemxija.",
+            "english": "The children are playing with water on a sunny day.",
+            "target": "ġurnata"
+          },
+          "choices": [
+            "xahar",
+            "lejla",
+            "jum",
+            "siegħa"
+          ],
+          "answer": "jum",
+          "answerTranslation": "The children are playing with water on a sunny day.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Jum and ġurnata both mean day. With the masculine jum, the phrase becomes f'jum xemxi.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-phrase"
+        },
+        {
+          "id": "synonym-listen-happy",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen and choose a synonym for the word that describes how the children feel.",
+          "cue": {
+            "maltese": "Ir-raġel imxarrab ħafna. It-tfal jidhru ferħanin.",
+            "english": "The man is very wet. The children look happy.",
+            "target": "ferħanin"
+          },
+          "choices": [
+            "għajjenin",
+            "imdejqin",
+            "kuntenti",
+            "kwieti"
+          ],
+          "answer": "kuntenti",
+          "answerTranslation": "The man is very wet. The children look happy.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Ferħanin and kuntenti can both describe children who feel happy.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "roundSlot": "listening-phrase"
+        },
+        {
+          "id": "synonym-context-exam",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "context",
+          "prompt": "Replace tqil with a synonym in this sentence. L-eżami kien tqil.",
+          "cue": {
+            "maltese": "L-eżami kien tqil.",
+            "target": "tqil",
+            "english": "The exam was difficult."
+          },
+          "choices": [
+            "faċli",
+            "qasir",
+            "diffiċli"
+          ],
+          "answer": "diffiċli",
+          "answerTranslation": "difficult",
+          "explanation": "With an exam, tqil can describe difficulty. Diffiċli keeps that meaning.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "reviewCard": {
+            "maltese": "diffiċli",
+            "english": "difficult",
+            "example": "L-eżami kien diffiċli.",
+            "exampleTranslation": "The exam was difficult."
+          },
           "repeatOnly": true
         }
       ]
@@ -968,6 +1135,172 @@
           "hint": "Play the word again and compare its meaning with the choices.",
           "explanation": "Żgħir and ċkejken can both describe something small.",
           "sourcePage": "homonyms_synonyms.html#synonyms"
+        },
+        {
+          "id": "synonym-listen-task-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the adjective used to describe a school assignment.",
+          "cue": {
+            "maltese": "tqila",
+            "english": "difficult"
+          },
+          "choices": [
+            "faċli",
+            "diffiċli",
+            "sabiħa",
+            "miftuħa"
+          ],
+          "answer": "diffiċli",
+          "answerTranslation": "difficult",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Tqila is the feminine form of tqil. Diffiċli can describe the difficulty of the assignment.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-task"
+        },
+        {
+          "id": "synonym-listen-amount-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the shopping instruction. Choose a synonym for the word that says how much cheese to buy.",
+          "cue": {
+            "maltese": "Ixtri wkoll ftit ġobon tat-toqba.",
+            "english": "Buy some cheese with holes as well.",
+            "target": "ftit"
+          },
+          "choices": [
+            "ħafna",
+            "kollox",
+            "naqra",
+            "xejn"
+          ],
+          "answer": "naqra",
+          "answerTranslation": "Buy some cheese with holes as well.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Ftit ġobon and naqra ġobon both refer to a small amount of cheese.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-amount"
+        },
+        {
+          "id": "synonym-listen-capable-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the description of Marija. Choose a synonym for the adjective describing her.",
+          "cue": {
+            "maltese": "Marija hija l-aktar kollega brava fl-uffiċċju.",
+            "english": "Marija is the most capable colleague in the office.",
+            "target": "brava"
+          },
+          "choices": [
+            "twila",
+            "kapaċi",
+            "kwieta",
+            "għajjiena"
+          ],
+          "answer": "kapaċi",
+          "answerTranslation": "Marija is the most capable colleague in the office.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "In this sentence l-aktar kollega brava and l-aktar kollega kapaċi both refer to the most capable colleague.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-capable"
+        },
+        {
+          "id": "synonym-listen-prepare-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the kitchen scene. Choose a synonym for what the people do with the food.",
+          "cue": {
+            "maltese": "In-nies qed iħejju l-ikel flimkien f'kċina kbira u mdawla.",
+            "english": "The people are preparing food together in a large, well-lit kitchen.",
+            "target": "iħejju"
+          },
+          "choices": [
+            "jippreparaw",
+            "iġorru",
+            "jaraw",
+            "jaqsmu"
+          ],
+          "answer": "jippreparaw",
+          "answerTranslation": "The people are preparing food together in a large, well-lit kitchen.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Jippreparaw keeps the meaning of iħejju in this sentence.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-prepare"
+        },
+        {
+          "id": "synonym-listen-quiet-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the comparison. Choose a synonym for the adjective describing our room.",
+          "cue": {
+            "maltese": "Il-kamra tagħna hija aktar kwieta minn tagħkom.",
+            "english": "Our room is quieter than yours.",
+            "target": "kwieta"
+          },
+          "choices": [
+            "imdawla",
+            "siekta",
+            "imxarrba",
+            "vojta"
+          ],
+          "answer": "siekta",
+          "answerTranslation": "Our room is quieter than yours.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Aktar siekta, like aktar kwieta, describes the room with less noise.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-quiet"
+        },
+        {
+          "id": "synonym-listen-day-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the weather report. Choose a synonym for the noun that refers to yesterday.",
+          "cue": {
+            "maltese": "Ilbieraħ kien jum xemxi. Illum it-temp imsaħħab.",
+            "english": "Yesterday was a sunny day. Today the weather is cloudy.",
+            "target": "jum"
+          },
+          "choices": [
+            "ġimgħa",
+            "xahar",
+            "sena",
+            "ġurnata"
+          ],
+          "answer": "ġurnata",
+          "answerTranslation": "Yesterday was a sunny day. Today the weather is cloudy.",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Ġurnata is feminine, so kien jum xemxi becomes kienet ġurnata xemxija.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-day"
+        },
+        {
+          "id": "synonym-listen-happy-retry",
+          "type": "multiple-choice",
+          "assessmentMode": "recognition",
+          "gameFormat": "listen",
+          "prompt": "Listen to the word that describes someone's mood, then choose its synonym.",
+          "cue": {
+            "maltese": "ferħan",
+            "english": "happy"
+          },
+          "choices": [
+            "kuntent",
+            "irrabjat",
+            "għajjien",
+            "imdejjaq"
+          ],
+          "answer": "kuntent",
+          "answerTranslation": "happy",
+          "hint": "Replay the recording and compare what you heard with the choices.",
+          "explanation": "Ferħan and kuntent can both mean happy. This recording uses a singular form.",
+          "sourcePage": "homonyms_synonyms.html#synonyms",
+          "repeatOf": "synonym-listen-happy"
         }
       ]
     }

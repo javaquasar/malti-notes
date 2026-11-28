@@ -22,13 +22,13 @@
   };
   const formats = {
     word: ['Find the synonym', ''],
-    listen: ['Listen and choose', 'Play the word and choose its synonym.'],
+    listen: ['Listen and choose', ''],
     pairs: ['Match the pairs', 'Tap one word from each column. Matching numbers show your pairs.'],
     context: ['Choose in context', 'Replace the highlighted word with a synonym.'],
     article: ['Choose the article', 'Pick the synonym with the correct article.'],
     rewrite: ['Rewrite the sentence', 'Replace the highlighted word and write the whole sentence.']
   };
-  let plan, round, activeSet, selectedPairWord;
+  let bank, plan, round, activeSet, selectedPairWord;
 
   const question = () => round.entries[round.index].item;
   const formatOf = item => item.gameFormat || (item.type === 'fill-blank' ? 'rewrite' : 'word');
@@ -137,9 +137,10 @@
     say('after', offset < 0 ? '' : maltese.slice(offset + target.length));
     find('target').hidden = offset < 0;
     find('cue').hidden = !maltese;
-    find('direction').hidden = !direction;
-    say('direction', direction);
-    say('title', title);
+    const instruction = listening ? item.prompt : direction;
+    find('direction').hidden = !instruction;
+    say('direction', instruction);
+    say('title', listening && item.cue.target ? 'Listen to a phrase' : title);
   }
 
   function drawAnswer(item) {
@@ -147,8 +148,9 @@
     const example = item.reviewCard;
     const useExample = format === 'context' || format === 'article';
     const isWordPair = format === 'word' || format === 'listen';
-    const model = isWordPair ? item.cue.maltese + ' / ' + item.answer : useExample ? example.example : item.answer;
     const { maltese = '', target } = item.cue || {};
+    const answer = isWordPair ? (target || maltese) + ' / ' + item.answer : useExample ? example.example : item.answer;
+    const model = format === 'listen' && target ? maltese + ' (' + answer + ')' : answer;
     const offset = target ? maltese.indexOf(target) : -1;
     const before = offset < 0 ? '' : maltese.slice(0, offset);
     const after = offset < 0 ? '' : maltese.slice(offset + target.length);
@@ -238,6 +240,9 @@
   }
 
   function begin(saved) {
+    if (!saved) {
+      plan = core.planFixedPractice(bank, route, undefined, read().synonymGame?.entries);
+    }
     round = saved || core.createSession({ ...plan, entries: mixedEntries() });
     saveRound();
     find('home').hidden = true;
@@ -291,7 +296,8 @@
   async function initialize() {
     const response = await fetch(route.practiceFile);
     if (!response.ok) throw new Error('The question bank is unavailable.');
-    plan = core.planFixedPractice(await response.json(), route);
+    bank = await response.json();
+    plan = core.planFixedPractice(bank, route);
     if (!plan.entries.length) throw new Error('The question bank is empty.');
     const saved = core.resumeSession(read().synonymGame, plan.catalog);
     const unfinished = saved && !core.summary(saved).complete ? saved : null;

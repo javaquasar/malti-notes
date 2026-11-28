@@ -269,7 +269,7 @@
         });
     }
 
-    function planFixedPractice(bank, route, queue) {
+    function planFixedPractice(bank, route, queue, previousEntries) {
         const { id: chapterId, levelId: routeId, title } = route;
         const namedSet = id => array(bank?.sets).find(set => set.id === id && set.verificationStatus !== 'needs-review');
         const set = namedSet(chapterId);
@@ -283,7 +283,18 @@
         const alternatives = array(repeatSet?.items).filter(item => publishable(item)
             && modes.get(item.repeatOf) === item.assessmentMode).map(item => entryFor(item, item.repeatOf, repeatSet.id));
         // Keep earlier items available for resumable sessions and queued repeats.
-        const active = originals.filter(entry => entry.item.repeatOnly !== true);
+        const slots = new Map();
+        for (const entry of originals) {
+            if (entry.item.repeatOnly === true) continue;
+            const slot = key(entry.item.roundSlot) ? 'slot:' + entry.item.roundSlot : entry.item.id;
+            if (!slots.has(slot)) slots.set(slot, []);
+            slots.get(slot).push(entry);
+        }
+        const previous = new Set(array(previousEntries).map(entry => entry?.item?.id));
+        const active = Array.from(slots.values(), entries => {
+            const last = entries.findIndex(entry => previous.has(entry.item.id));
+            return entries[(last + 1) % entries.length];
+        });
         const catalog = originals.concat(alternatives);
         const repeats = repeatEntries(catalog, queue);
         return { routeId, chapterId, title, entries: repeats.length ? repeats : active, catalog, fullCount: active.length };

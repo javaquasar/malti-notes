@@ -73,6 +73,38 @@ check('earlier synonym tasks remain resumable and repeatable without entering ne
     const repeats = core.planFixedPractice(bank, route, saved.helpQueue);
     assert.deepEqual(repeats.entries.map(entry => entry.item.repeatOf), [earlier.item.id]);
 });
+check('the synonym round rotates four words and four phrases across its two listening slots', () => {
+    const route = core.PRACTICE_ROUTES.find(entry => entry.id === 'sib-is-sinonimu');
+    const bank = read('assets/data/synonym_game_exercises.json');
+    const slots = new Map([['listening-word', new Set()], ['listening-phrase', new Set()]]);
+    let previous = [];
+    for (let round = 0; round < 4; round += 1) {
+        const planned = core.planFixedPractice(bank, route, [], previous);
+        const listening = planned.entries.filter(entry => entry.item.gameFormat === 'listen');
+        assert.equal(planned.fullCount, 10);
+        assert.equal(planned.entries.length, 10);
+        assert.equal(listening.length, 2);
+        assert.deepEqual(new Set(listening.map(entry => entry.item.roundSlot)), new Set(slots.keys()));
+        for (const { item } of listening) {
+            const seen = slots.get(item.roundSlot);
+            assert(!seen.has(item.id), 'A clip should not recur before its slot has cycled');
+            assert.equal(Boolean(item.cue.target), item.roundSlot === 'listening-phrase');
+            seen.add(item.id);
+        }
+        const saved = core.createSession(planned, { now: NOW });
+        assert.deepEqual(core.resumeSession(saved, mapFor(planned)).entries.map(entry => entry.item.id), planned.entries.map(entry => entry.item.id));
+        previous = planned.entries;
+    }
+    for (const seen of slots.values()) assert.equal(seen.size, 4);
+    const active = core.planFixedPractice(bank, route, [], previous);
+    const phrase = active.entries.find(entry => entry.item.roundSlot === 'listening-phrase');
+    const session = core.createSession({ ...active, entries: [phrase] }, { now: NOW });
+    const missed = core.recordResult(session, { itemId: phrase.item.id, correct: false }, { now: NOW });
+    const repeat = core.planFixedPractice(bank, route, missed.helpQueue, active.entries);
+    assert.equal(repeat.entries.length, 1);
+    assert.equal(repeat.entries[0].item.repeatOf, phrase.item.id);
+    assert.notEqual(repeat.entries[0].item.cue.maltese, phrase.item.cue.maltese);
+});
 check('B3 delegates selection to its existing scheduler and scopes the original items to the chosen chapter', () => {
     const chapterId = bank.chapters[0].id;
     const before = clone(bank), state = { futureMetadata: { preserve: true } };

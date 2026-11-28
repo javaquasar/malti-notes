@@ -669,7 +669,7 @@ async function main() {
       } finally { await f.close(); }
     });
 
-    await check('Sib is-Sinonimu plays both voices, mixes six formats and repeats missed listening and written skills', async () => {
+    await check('Sib is-Sinonimu rotates word and phrase audio, plays both voices and repeats missed skills', async () => {
       const f = await fixture('synonym-game', { width: 390, hasTouch: true });
       try {
         const { page } = f;
@@ -677,8 +677,12 @@ async function main() {
         const { clips } = read('assets/data/word_pronunciation.json');
         const voicePicker = '[data-word-audio-voice]';
         const player = page.locator('[data-word-audio-player]');
+        let preferred = joseph;
+        const listeningAnswer = item => item.cue.target
+          ? item.cue.maltese + ' (' + item.cue.target + ' / ' + item.answer + ')'
+          : item.cue.maltese + ' / ' + item.answer;
         async function playClip(controls, item, voice) {
-          const clip = clips[item.cue.maltese].split('/').at(-1);
+          const clip = clips[item.cue.maltese.toLocaleLowerCase()].split('/').at(-1);
           await controls.locator('[data-word-audio-button]').tap();
           await page.waitForFunction(({ clip, voice }) => {
             const audio = document.querySelector('[data-word-audio-player]');
@@ -686,9 +690,18 @@ async function main() {
               && audio.readyState >= 2 && audio.currentTime > 0 && !audio.error;
           }, { clip, voice });
         }
+        async function playBothVoices(controls, item) {
+          const field = controls.locator(voicePicker);
+          assert.equal(await field.inputValue(), preferred);
+          await playClip(controls, item, preferred === grace ? 'grace' : 'joseph');
+          preferred = preferred === grace ? joseph : grace;
+          await field.selectOption(preferred);
+          assert(await player.evaluate(audio => audio.paused));
+          await playClip(controls, item, preferred === grace ? 'grace' : 'joseph');
+        }
         page.__phase = 'navigation';
         await page.goto(base + '/opposites.html');
-        await page.locator(voicePicker).selectOption(joseph);
+        await page.locator(voicePicker).selectOption(preferred);
         await page.goto(base + '/homonyms_synonyms.html#synonyms');
         await page.getByRole('link', { name: 'Play Sib is-Sinonimu' }).tap();
         await page.locator('[data-synonym-start]').tap();
@@ -700,12 +713,17 @@ async function main() {
         const checkAnswer = panel.getByRole('button', { name: 'Check answers', exact: true });
         const initial = (await stored(page)).synonymGame;
         const items = initial.entries.map(entry => entry.item);
-        assert.deepEqual(items.map(item => item.gameFormat), synonymRound.map(item => item.gameFormat));
-        assert.deepEqual(items.map(item => item.id).sort(), synonymRound.map(item => item.id).sort());
+        assert.equal(items.length, 10);
+        assert.deepEqual(items.filter(item => !item.roundSlot).map(item => item.id).sort(),
+          synonymRound.filter(item => !item.roundSlot).map(item => item.id).sort());
+        const audioItems = items.filter(item => item.gameFormat === 'listen');
+        assert.deepEqual(audioItems.map(item => item.roundSlot).sort(), ['listening-phrase', 'listening-word']);
+        assert(audioItems.every(item => synonymRound.some(authored => authored.id === item.id)));
         const listening = game.locator('[data-synonym-listening]');
-        const missed = items.filter(item => ['pairs', 'article', 'listen'].includes(item.gameFormat))
-          .filter(item => item.gameFormat !== 'pairs' || item === items.find(candidate => candidate.gameFormat === 'pairs'));
-        assert.equal(missed.length, 3);
+        const firstPairs = items.find(item => item.gameFormat === 'pairs');
+        const article = items.find(item => item.gameFormat === 'article');
+        const missed = items.filter(item => item === firstPairs || item === article || audioItems.includes(item));
+        assert.equal(missed.length, 4);
         await checkAnswer.tap();
         assert.equal(await game.locator('[data-synonym-message]').innerText(), 'Choose a synonym first.');
         assert.equal(await model.isVisible(), false);
@@ -725,13 +743,10 @@ async function main() {
             assert.equal(await game.locator('[data-synonym-cue]').isVisible(), false);
             assert.equal(await game.locator('[data-synonym-listening-word]').isVisible(), false);
             assert(!item.choices.includes(item.cue.maltese));
-            assert.equal(await listening.locator(voicePicker).inputValue(), joseph);
-            await playClip(listening, item, 'joseph');
-            await listening.locator(voicePicker).selectOption(grace);
-            assert(await player.evaluate(audio => audio.paused));
-            await playClip(listening, item, 'grace');
+            assert.equal(await game.locator('[data-synonym-title]').innerText(), item.cue.target ? 'Listen to a phrase' : 'Listen and choose');
+            await playBothVoices(listening, item);
             assert.deepEqual(await axe(page, '[data-synonym-round]'), []);
-            await capture(page, 'synonym-game-listening-phone.png');
+            await capture(page, 'synonym-game-' + item.roundSlot + '-phone.png');
           }
           if (item.type === 'multiple-choice') {
             const value = wrong ? item.choices.find(choice => choice !== item.answer) : item.answer;
@@ -784,7 +799,7 @@ async function main() {
           assert.equal(await progress.innerText(), '●'.repeat(index + 1) + '○'.repeat(9 - index));
           assert.equal(await page.evaluate(() => document.activeElement.hasAttribute('data-synonym-outcome')), true);
           if (item.gameFormat === 'rewrite') assert.equal(await model.locator('[data-synonym-example]').isVisible(), false);
-          if (item.gameFormat === 'listen') assert.equal(await model.locator('[data-synonym-answer]').innerText(), item.cue.maltese + ' / ' + item.answer);
+          if (item.gameFormat === 'listen') assert.equal(await model.locator('[data-synonym-answer]').innerText(), listeningAnswer(item));
           if (item.gameFormat === 'article') {
             assert.equal(await model.locator('[data-synonym-answer-change]').innerText(), item.answer);
             assert.match(await model.locator('[data-synonym-explanation]').innerText(), /ix-/);
@@ -792,24 +807,26 @@ async function main() {
           }
           await game.locator('[data-synonym-next]').tap();
         }
-        assert.equal(await game.locator('[data-synonym-score]').innerText(), '7 of 10 correct.');
-        assert.equal(await game.locator('[data-synonym-meaning-score]').innerText(), '5 of 7 correct');
+        assert.equal(await game.locator('[data-synonym-score]').innerText(), '6 of 10 correct.');
+        assert.equal(await game.locator('[data-synonym-meaning-score]').innerText(), '4 of 7 correct');
         assert.equal(await game.locator('[data-synonym-form-score]').innerText(), '2 of 3 correct');
-        const confusedWords = missed[0].pairs.slice(0, 2).map(pair => pair.left).join(' / ');
-        assert.equal(await game.locator('[data-synonym-meaning-misses]').innerText(), confusedWords + ' · ' + missed[2].cue.maltese);
-        assert.equal(await game.locator('[data-synonym-form-misses]').innerText(), missed[1].cue.target);
+        const confusedWords = firstPairs.pairs.slice(0, 2).map(pair => pair.left).join(' / ');
+        const meaningMisses = missed.filter(item => item !== article).map(item => item === firstPairs
+          ? confusedWords : item.cue.target || item.cue.maltese).join(' · ');
+        assert.equal(await game.locator('[data-synonym-meaning-misses]').innerText(), meaningMisses);
+        assert.equal(await game.locator('[data-synonym-form-misses]').innerText(), article.cue.target);
         assert.deepEqual((await stored(page)).studySession.helpQueue.map(entry => entry.itemId), missed.map(item => item.id));
         await capture(page, 'synonym-game-results-phone.png');
 
         page.__phase = 'navigation';
         await Promise.all([
           page.waitForURL(base + '/today.html?level=mixed&topic=sib-is-sinonimu'),
-          game.getByRole('link', { name: 'Repeat 3 questions in My practice' }).tap()
+          game.getByRole('link', { name: 'Repeat 4 questions in My practice' }).tap()
         ]);
         await ready(page);
         page.__phase = 'online';
-        assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 3 questions');
-        const reprise = await start(page, 3);
+        assert.equal(await page.locator('[data-study-start]').innerText(), 'Repeat 4 questions');
+        const reprise = await start(page, 4);
         const variants = missed.map(original => synonymSets[1].items.find(item => item.repeatOf === original.id));
         assert.deepEqual(reprise.entries.map(entry => entry.item.id).sort(), variants.map(item => item.id).sort());
         const hearing = page.locator('[data-study-listening]');
@@ -817,18 +834,17 @@ async function main() {
           assert.equal(await page.locator('[data-study-checked-answer]').isVisible(), false);
           assert.equal(await hearing.isVisible(), item.gameFormat === 'listen');
           if (item.gameFormat === 'listen') {
-            assert.notEqual(item.cue.maltese, missed[2].cue.maltese);
-            assert.equal(await hearing.locator(voicePicker).inputValue(), grace);
+            const original = audioItems.find(question => question.id === item.repeatOf);
+            assert.notEqual(item.cue.maltese, original.cue.maltese);
             assert.equal(await hearing.locator('[data-study-listening-word]').isVisible(), false);
-            await hearing.locator(voicePicker).selectOption(joseph);
-            assert.equal(await page.locator('[data-study-checked-audio-for] ' + voicePicker).inputValue(), joseph);
-            await playClip(hearing, item, 'joseph');
-            await capture(page, 'synonym-game-listening-repeat-phone.png');
+            await playBothVoices(hearing, item);
+            assert.equal(await page.locator('[data-study-checked-audio-for] ' + voicePicker).inputValue(), preferred);
+            await capture(page, 'synonym-game-' + original.roundSlot + '-repeat-phone.png');
           }
           await submit(page);
           assert.equal(await page.locator('[data-study-checked-en]').innerText(), item.answerTranslation);
           if (item.gameFormat === 'listen') {
-            assert.equal(await page.locator('[data-study-checked-mt]').innerText(), item.cue.maltese + ' / ' + item.answer);
+            assert.equal(await page.locator('[data-study-checked-mt]').innerText(), listeningAnswer(item));
           }
           await next(page);
         }
@@ -838,7 +854,14 @@ async function main() {
         page.__phase = 'navigation';
         await page.goto(base + '/opposites.html');
         await page.waitForFunction(() => !document.querySelector('[data-word-audio-voice]').disabled);
-        assert.equal(await page.locator(voicePicker).inputValue(), joseph);
+        assert.equal(await page.locator(voicePicker).inputValue(), preferred);
+        await page.goto(base + '/synonym_game.html');
+        await page.getByRole('button', { name: 'Start round' }).tap();
+        const rotated = (await stored(page)).synonymGame.entries.map(entry => entry.item);
+        assert.equal(rotated.length, 10);
+        const nextAudio = rotated.filter(item => item.gameFormat === 'listen');
+        assert.deepEqual(nextAudio.map(item => item.roundSlot).sort(), ['listening-phrase', 'listening-word']);
+        assert(nextAudio.every(item => !audioItems.some(previous => previous.id === item.id)));
         page.__phase = 'online';
       } finally { await f.close(); }
     });
